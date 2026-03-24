@@ -1,7 +1,32 @@
-Title: Improving Generalization of Image Captioning with Unsupervised Prompt Learning
+Title: Improving Generalization of Image Captioning with Unsupervised Prompt
+Learning
 Authors: Hongchen Wei, Zhenzhong Chen
 ID: 2308.02862
 URL: https://arxiv.org/abs/2308.02862
 
 Abstract:
-Pretrained visual-language models have demonstrated impressive zero-shot abilities in image captioning, when accompanied by hand-crafted prompts. Meanwhile, hand-crafted prompts utilize human prior knowledge to guide the model. However, due to the diversity between different domains, such hand-crafted prompt that provide invariant prior knowledge may result in mode collapse for some domains. Some researches attempted to incorporate expert knowledge and instruction datasets, but the results were costly and led to hallucinations. In this paper, we propose an unsupervised prompt learning method to improve Generalization of Image Captioning (GeneIC), which learns a domain-specific prompt vector for the target domain without requiring annotated data. GeneIC aligns visual and language modalities with a pre-trained Contrastive Language-Image Pre-Training (CLIP) model, thus optimizing the domain-specific prompt vector from two aspects: attribute and semantic consistency. Specifically, GeneIC first generates attribute-transferred images with differing attributes, while retaining semantic similarity with original images. Then, GeneIC uses CLIP to measure the similarity between the images and the generated sentences. By exploring the variable and invariant features in the original images and attribute-transferred images, attribute consistency constrains the attribute change direction of both images and sentences to learn domain-specific knowledge. The semantic consistency directly measures the similarity between the generated sentences and images to ensure the accuracy and comprehensiveness of the generated sentences. Consequently, GeneIC only optimizes the prompt vectors, which effectively retains the knowledge in the large model and introduces domain-specific knowledge.
+Pretrained visual-language models have demonstrated impressive zero-shot
+abilities in image captioning, when accompanied by hand-crafted prompts.
+Meanwhile, hand-crafted prompts utilize human prior knowledge to guide the
+model. However, due to the diversity between different domains, such hand-
+crafted prompt that provide invariant prior knowledge may result in mode
+collapse for some domains. Some researches attempted to incorporate expert
+knowledge and instruction datasets, but the results were costly and led to
+hallucinations. In this paper, we propose an unsupervised prompt learning method
+to improve Generalization of Image Captioning (GeneIC), which learns a domain-
+specific prompt vector for the target domain without requiring annotated data.
+GeneIC aligns visual and language modalities with a pre-trained Contrastive
+Language-Image Pre-Training (CLIP) model, thus optimizing the domain-specific
+prompt vector from two aspects: attribute and semantic consistency.
+Specifically, GeneIC first generates attribute-transferred images with differing
+attributes, while retaining semantic similarity with original images. Then,
+GeneIC uses CLIP to measure the similarity between the images and the generated
+sentences. By exploring the variable and invariant features in the original
+images and attribute-transferred images, attribute consistency constrains the
+attribute change direction of both images and sentences to learn domain-specific
+knowledge. The semantic consistency directly measures the similarity between the
+generated sentences and images to ensure the accuracy and comprehensiveness of
+the generated sentences. Consequently, GeneIC only optimizes the prompt vectors,
+which effectively retains the knowledge in the large model and introduces
+domain-specific knowledge.
+

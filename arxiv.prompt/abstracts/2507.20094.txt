@@ -1,7 +1,27 @@
-Title: Local Prompt Adaptation for Style-Consistent Multi-Object Generation in Diffusion Models
+Title: Local Prompt Adaptation for Style-Consistent Multi-Object Generation in
+Diffusion Models
 Authors: Ankit Sanjyal
 ID: 2507.20094
 URL: https://arxiv.org/abs/2507.20094
 
 Abstract:
-Diffusion models have become a powerful backbone for text-to-image generation, producing high-quality visuals from natural language prompts. However, when prompts involve multiple objects alongside global or local style instructions, the outputs often drift in style and lose spatial coherence, limiting their reliability for controlled, style-consistent scene generation. We present Local Prompt Adaptation (LPA), a lightweight, training-free method that splits the prompt into content and style tokens, then injects them selectively into the U-Net's attention layers at chosen timesteps. By conditioning object tokens early and style tokens later in the denoising process, LPA improves both layout control and stylistic uniformity without additional training cost. We conduct extensive ablations across parser settings and injection windows, finding that the best configuration -- lpa late only with a 300-650 step window -- delivers the strongest balance of prompt alignment and style consistency. On the T2I benchmark, LPA improves CLIP-prompt alignment over vanilla SDXL by +0.41% and over SD1.5 by +0.34%, with no diversity loss. On our custom 50-prompt style-rich benchmark, LPA achieves +0.09% CLIP-prompt and +0.08% CLIP-style gains over baseline. Our method is model-agnostic, easy to integrate, and requires only a single configuration change, making it a practical choice for controllable, style-consistent multi-object generation.
+Diffusion models have become a powerful backbone for text-to-image generation,
+producing high-quality visuals from natural language prompts. However, when
+prompts involve multiple objects alongside global or local style instructions,
+the outputs often drift in style and lose spatial coherence, limiting their
+reliability for controlled, style-consistent scene generation. We present Local
+Prompt Adaptation (LPA), a lightweight, training-free method that splits the
+prompt into content and style tokens, then injects them selectively into the
+U-Net's attention layers at chosen timesteps. By conditioning object tokens
+early and style tokens later in the denoising process, LPA improves both layout
+control and stylistic uniformity without additional training cost. We conduct
+extensive ablations across parser settings and injection windows, finding that
+the best configuration -- lpa late only with a 300-650 step window -- delivers
+the strongest balance of prompt alignment and style consistency. On the T2I
+benchmark, LPA improves CLIP-prompt alignment over vanilla SDXL by +0.41% and
+over SD1.5 by +0.34%, with no diversity loss. On our custom 50-prompt style-rich
+benchmark, LPA achieves +0.09% CLIP-prompt and +0.08% CLIP-style gains over
+baseline. Our method is model-agnostic, easy to integrate, and requires only a
+single configuration change, making it a practical choice for controllable,
+style-consistent multi-object generation.
+

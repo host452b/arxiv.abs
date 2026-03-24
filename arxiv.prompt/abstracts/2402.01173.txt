@@ -4,4 +4,23 @@ ID: 2402.01173
 URL: https://arxiv.org/abs/2402.01173
 
 Abstract:
-Large language models (LLMs) have achieved huge success in numerous natural language process (NLP) tasks. However, it faces the challenge of significant resource consumption during inference. In this paper, we aim to improve the inference efficiency of LLMs by prompt caching, i.e., if the current prompt can be answered by the same response of a previous prompt, one can directly utilize that previous response without calling the LLM. Specifically, we focus on the prediction accuracy of prompt caching for single-round question-answering tasks via embedding similarity. The existing embeddings of prompts mostly focus on whether two prompts are semantically similar, which is not necessarily equivalent to whether the same response can answer them. Therefore, we propose a distillation-based method to fine-tune the existing embeddings for better caching prediction. Theoretically, we provide finite-sample guarantees for the convergence of our method under different types of loss functions. Empirically, we carefully construct a hard dataset based on Kwiatkowski et al. (2019) where the existing embedding model (Wang et al., 2022) only achieves an AUC of 0.51. We then fine-tune the above embedding model, which significantly improves the AUC of caching prediction from 0.51 to 0.81. We also conduct simulations demonstrating that our trained models achieve better caching efficiency than the previous embedding model.
+Large language models (LLMs) have achieved huge success in numerous natural
+language process (NLP) tasks. However, it faces the challenge of significant
+resource consumption during inference. In this paper, we aim to improve the
+inference efficiency of LLMs by prompt caching, i.e., if the current prompt can
+be answered by the same response of a previous prompt, one can directly utilize
+that previous response without calling the LLM. Specifically, we focus on the
+prediction accuracy of prompt caching for single-round question-answering tasks
+via embedding similarity. The existing embeddings of prompts mostly focus on
+whether two prompts are semantically similar, which is not necessarily
+equivalent to whether the same response can answer them. Therefore, we propose a
+distillation-based method to fine-tune the existing embeddings for better
+caching prediction. Theoretically, we provide finite-sample guarantees for the
+convergence of our method under different types of loss functions. Empirically,
+we carefully construct a hard dataset based on Kwiatkowski et al. (2019) where
+the existing embedding model (Wang et al., 2022) only achieves an AUC of 0.51.
+We then fine-tune the above embedding model, which significantly improves the
+AUC of caching prediction from 0.51 to 0.81. We also conduct simulations
+demonstrating that our trained models achieve better caching efficiency than the
+previous embedding model.
+

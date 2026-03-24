@@ -4,4 +4,21 @@ ID: 2505.18548
 URL: https://arxiv.org/abs/2505.18548
 
 Abstract:
-Recent advances in cross-prompt automated essay scoring (AES) typically train models jointly on all source prompts, often requiring additional access to unlabeled target prompt essays simultaneously. However, using all sources is suboptimal in our pilot study, and re-accessing source datasets during adaptation raises privacy concerns. We propose a source-free adaptation approach that selectively merges individually trained source models' parameters instead of datasets. In particular, we simulate joint training through linear combinations of task vectors -- the parameter updates from fine-tuning. To optimize the combination's coefficients, we propose Prior-encoded Information Maximization (PIM), an unsupervised objective which promotes the model's score discriminability regularized by priors pre-computed from the sources. We employ Bayesian optimization as an efficient optimizer of PIM. Experimental results with LLMs on in-dataset and cross-dataset adaptation show that our method (1) consistently outperforms training jointly on all sources, (2) maintains superior robustness compared to other merging methods, (3) excels under severe distribution shifts where recent leading cross-prompt methods struggle, all while retaining computational efficiency.
+Recent advances in cross-prompt automated essay scoring (AES) typically train
+models jointly on all source prompts, often requiring additional access to
+unlabeled target prompt essays simultaneously. However, using all sources is
+suboptimal in our pilot study, and re-accessing source datasets during
+adaptation raises privacy concerns. We propose a source-free adaptation approach
+that selectively merges individually trained source models' parameters instead
+of datasets. In particular, we simulate joint training through linear
+combinations of task vectors -- the parameter updates from fine-tuning. To
+optimize the combination's coefficients, we propose Prior-encoded Information
+Maximization (PIM), an unsupervised objective which promotes the model's score
+discriminability regularized by priors pre-computed from the sources. We employ
+Bayesian optimization as an efficient optimizer of PIM. Experimental results
+with LLMs on in-dataset and cross-dataset adaptation show that our method (1)
+consistently outperforms training jointly on all sources, (2) maintains superior
+robustness compared to other merging methods, (3) excels under severe
+distribution shifts where recent leading cross-prompt methods struggle, all
+while retaining computational efficiency.
+

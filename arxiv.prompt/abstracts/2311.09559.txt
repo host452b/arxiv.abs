@@ -1,7 +1,28 @@
-Title: Prompt-based Pseudo-labeling Strategy for Sample-Efficient Semi-Supervised Extractive Summarization
+Title: Prompt-based Pseudo-labeling Strategy for Sample-Efficient Semi-
+Supervised Extractive Summarization
 Authors: Gaurav Sahu, Olga Vechtomova, Issam H. Laradji
 ID: 2311.09559
 URL: https://arxiv.org/abs/2311.09559
 
 Abstract:
-Semi-supervised learning (SSL) is a widely used technique in scenarios where labeled data is scarce and unlabeled data is abundant. While SSL is popular for image and text classification, it is relatively underexplored for the task of extractive text summarization. Standard SSL methods follow a teacher-student paradigm to first train a classification model and then use the classifier's confidence values to select pseudo-labels for the subsequent training cycle; however, such classifiers are not suitable to measure the accuracy of pseudo-labels as they lack specific tuning for evaluation, which leads to confidence values that fail to capture the semantics and correctness of the generated summary. To address this problem, we propose a prompt-based pseudo-labeling strategy with LLMs that picks unlabeled examples with more accurate pseudo-labels than using just the classifier's probability outputs. Our approach also includes a relabeling mechanism that improves the quality of pseudo-labels. We evaluate our method on three text summarization datasets: TweetSumm, WikiHow, and ArXiv/PubMed. We empirically show that a prompting-based LLM that scores and generates pseudo-labels outperforms existing SSL methods on ROUGE-1, ROUGE-2, and ROUGE-L scores on all the datasets. Furthermore, our method achieves competitive L-Eval scores (evaluation with LLaMa-3) as a fully supervised method in a data-scarce setting and outperforms fully supervised method in a data-abundant setting.
+Semi-supervised learning (SSL) is a widely used technique in scenarios where
+labeled data is scarce and unlabeled data is abundant. While SSL is popular for
+image and text classification, it is relatively underexplored for the task of
+extractive text summarization. Standard SSL methods follow a teacher-student
+paradigm to first train a classification model and then use the classifier's
+confidence values to select pseudo-labels for the subsequent training cycle;
+however, such classifiers are not suitable to measure the accuracy of pseudo-
+labels as they lack specific tuning for evaluation, which leads to confidence
+values that fail to capture the semantics and correctness of the generated
+summary. To address this problem, we propose a prompt-based pseudo-labeling
+strategy with LLMs that picks unlabeled examples with more accurate pseudo-
+labels than using just the classifier's probability outputs. Our approach also
+includes a relabeling mechanism that improves the quality of pseudo-labels. We
+evaluate our method on three text summarization datasets: TweetSumm, WikiHow,
+and ArXiv/PubMed. We empirically show that a prompting-based LLM that scores and
+generates pseudo-labels outperforms existing SSL methods on ROUGE-1, ROUGE-2,
+and ROUGE-L scores on all the datasets. Furthermore, our method achieves
+competitive L-Eval scores (evaluation with LLaMa-3) as a fully supervised method
+in a data-scarce setting and outperforms fully supervised method in a data-
+abundant setting.
+

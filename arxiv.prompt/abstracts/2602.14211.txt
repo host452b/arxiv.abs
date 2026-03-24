@@ -1,7 +1,27 @@
-Title: SkillJect: Automating Stealthy Skill-Based Prompt Injection for Coding Agents with Trace-Driven Closed-Loop Refinement
-Authors: Xiaojun Jia, Jie Liao, Simeng Qin, Jindong Gu, Wenqi Ren, Xiaochun Cao, Yang Liu, Philip Torr
+Title: SkillJect: Automating Stealthy Skill-Based Prompt Injection for Coding
+Agents with Trace-Driven Closed-Loop Refinement
+Authors: Xiaojun Jia, Jie Liao, Simeng Qin, Jindong Gu, Wenqi Ren, Xiaochun Cao,
+Yang Liu, Philip Torr
 ID: 2602.14211
 URL: https://arxiv.org/abs/2602.14211
 
 Abstract:
-Agent skills are becoming a core abstraction in coding agents, packaging long-form instructions and auxiliary scripts to extend tool-augmented behaviors. This abstraction introduces an under-measured attack surface: skill-based prompt injection, where poisoned skills can steer agents away from user intent and safety policies. In practice, naive injections often fail because the malicious intent is too explicit or drifts too far from the original skill, leading agents to ignore or refuse them; existing attacks are also largely hand-crafted. We propose the first automated framework for stealthy prompt injection tailored to agent skills. The framework forms a closed loop with three agents: an Attack Agent that synthesizes injection skills under explicit stealth constraints, a Code Agent that executes tasks using the injected skills in a realistic tool environment, and an Evaluate Agent that logs action traces (e.g., tool calls and file operations) and verifies whether targeted malicious behaviors occurred. We also propose a malicious payload hiding strategy that conceals adversarial operations in auxiliary scripts while injecting optimized inducement prompts to trigger tool execution. Extensive experiments across diverse coding-agent settings and real-world software engineering tasks show that our method consistently achieves high attack success rates under realistic settings.
+Agent skills are becoming a core abstraction in coding agents, packaging long-
+form instructions and auxiliary scripts to extend tool-augmented behaviors. This
+abstraction introduces an under-measured attack surface: skill-based prompt
+injection, where poisoned skills can steer agents away from user intent and
+safety policies. In practice, naive injections often fail because the malicious
+intent is too explicit or drifts too far from the original skill, leading agents
+to ignore or refuse them; existing attacks are also largely hand-crafted. We
+propose the first automated framework for stealthy prompt injection tailored to
+agent skills. The framework forms a closed loop with three agents: an Attack
+Agent that synthesizes injection skills under explicit stealth constraints, a
+Code Agent that executes tasks using the injected skills in a realistic tool
+environment, and an Evaluate Agent that logs action traces (e.g., tool calls and
+file operations) and verifies whether targeted malicious behaviors occurred. We
+also propose a malicious payload hiding strategy that conceals adversarial
+operations in auxiliary scripts while injecting optimized inducement prompts to
+trigger tool execution. Extensive experiments across diverse coding-agent
+settings and real-world software engineering tasks show that our method
+consistently achieves high attack success rates under realistic settings.
+

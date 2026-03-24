@@ -1,8 +1,30 @@
-Title: Prompt Injection Evaluations: Refusal Boundary Instability and Artifact-Dependent Compliance in GPT-4-Series Models
+Title: Prompt Injection Evaluations: Refusal Boundary Instability and Artifact-
+Dependent Compliance in GPT-4-Series Models
 Authors: Thomas Heverin
 ID: 2601.17911
 URL: https://arxiv.org/abs/2601.17911
 
 Abstract:
-Prompt injection evaluations typically treat refusal as a stable, binary indicator of safety. This study challenges that paradigm by modeling refusal as a local decision boundary and examining its stability under structured perturbations. We evaluated two models, GPT-4.1 and GPT-4o, using 3,274 perturbation runs derived from refusal-inducing prompt injection attempts. Each base prompt was subjected to 25 perturbations across five structured families, with outcomes manually coded as Refusal, Partial Compliance, or Full Compliance.
-  Using chi-square tests, logistic regression, mixed-effects modeling, and a novel Refusal Boundary Entropy (RBE) metric, we demonstrate that while both models refuse >94% of attempts, refusal instability is persistent and non-uniform. Approximately one-third of initial refusal-inducing prompts exhibited at least one "refusal escape," a transition to compliance under perturbation. We find that artifact type is a stronger predictor of refusal failure than perturbation style. Textual artifacts, such as ransomware notes, exhibited significantly higher instability, with flip rates exceeding 20%. Conversely, executable malware artifacts showed zero refusal escapes in both models. While GPT-4o demonstrated tighter refusal enforcement and lower RBE than GPT-4.1, it did not eliminate artifact-dependent risks. These findings suggest that single-prompt evaluations systematically overestimate safety robustness. We conclude that refusal behavior is a probabilistic, artifact-dependent boundary phenomenon rather than a stable binary property, requiring a shift in how LLM safety is measured and audited.
+Prompt injection evaluations typically treat refusal as a stable, binary
+indicator of safety. This study challenges that paradigm by modeling refusal as
+a local decision boundary and examining its stability under structured
+perturbations. We evaluated two models, GPT-4.1 and GPT-4o, using 3,274
+perturbation runs derived from refusal-inducing prompt injection attempts. Each
+base prompt was subjected to 25 perturbations across five structured families,
+with outcomes manually coded as Refusal, Partial Compliance, or Full Compliance.
+  Using chi-square tests, logistic regression, mixed-effects modeling, and a
+novel Refusal Boundary Entropy (RBE) metric, we demonstrate that while both
+models refuse >94% of attempts, refusal instability is persistent and non-
+uniform. Approximately one-third of initial refusal-inducing prompts exhibited
+at least one "refusal escape," a transition to compliance under perturbation. We
+find that artifact type is a stronger predictor of refusal failure than
+perturbation style. Textual artifacts, such as ransomware notes, exhibited
+significantly higher instability, with flip rates exceeding 20%. Conversely,
+executable malware artifacts showed zero refusal escapes in both models. While
+GPT-4o demonstrated tighter refusal enforcement and lower RBE than GPT-4.1, it
+did not eliminate artifact-dependent risks. These findings suggest that single-
+prompt evaluations systematically overestimate safety robustness. We conclude
+that refusal behavior is a probabilistic, artifact-dependent boundary phenomenon
+rather than a stable binary property, requiring a shift in how LLM safety is
+measured and audited.
+

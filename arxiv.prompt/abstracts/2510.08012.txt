@@ -1,7 +1,29 @@
-Title: Do We Really Need SFT? Prompt-as-Policy over Knowledge Graphs for Cold-start Next POI Recommendation
-Authors: Jinze Wang, Lu Zhang, Yiyang Cui, Tiehua Zhang, Zhishu Shen, Yuze Liu, Xingjun Ma, Jiong Jin
+Title: Do We Really Need SFT? Prompt-as-Policy over Knowledge Graphs for Cold-
+start Next POI Recommendation
+Authors: Jinze Wang, Lu Zhang, Yiyang Cui, Tiehua Zhang, Zhishu Shen, Yuze Liu,
+Xingjun Ma, Jiong Jin
 ID: 2510.08012
 URL: https://arxiv.org/abs/2510.08012
 
 Abstract:
-Next point-of-interest (POI) recommendation is a key component of smart urban services, yet it remains challenging under cold-start conditions with sparse user-POI interactions. Recent LLM-based methods address this issue through either supervised fine-tuning (SFT) or in-context learning (ICL), but SFT is costly and prone to overfitting active users, while static prompts in ICL lack adaptability to diverse user contexts. We argue that the main limitation lies not in LLM reasoning ability, but in how contextual evidence is constructed and presented. Accordingly, we propose Prompt-as-Policy over knowledge graphs (KG), a reinforcement-guided prompting framework that formulates prompt construction as a learnable decision process, while keeping the LLM frozen as a reasoning engine. To enable structured prompt optimization, we organize heterogeneous user-POI signals into a KG and transform mined relational paths into evidence cards, which serve as atomic semantic units for prompt composition. A contextual bandit learner then optimizes a prompt policy that adaptively determines (i) which relational evidences to include, (ii) how many evidences to retain per candidate POI, and (iii) how to organize and order them within the prompt. Experiments on three real-world datasets show that Prompt-as-Policy consistently outperforms state-of-the-art baselines, achieving an average 11.87% relative improvement in Acc@1 for inactive users, while maintaining competitive performance for active users, without any model fine-tuning.
+Next point-of-interest (POI) recommendation is a key component of smart urban
+services, yet it remains challenging under cold-start conditions with sparse
+user-POI interactions. Recent LLM-based methods address this issue through
+either supervised fine-tuning (SFT) or in-context learning (ICL), but SFT is
+costly and prone to overfitting active users, while static prompts in ICL lack
+adaptability to diverse user contexts. We argue that the main limitation lies
+not in LLM reasoning ability, but in how contextual evidence is constructed and
+presented. Accordingly, we propose Prompt-as-Policy over knowledge graphs (KG),
+a reinforcement-guided prompting framework that formulates prompt construction
+as a learnable decision process, while keeping the LLM frozen as a reasoning
+engine. To enable structured prompt optimization, we organize heterogeneous
+user-POI signals into a KG and transform mined relational paths into evidence
+cards, which serve as atomic semantic units for prompt composition. A contextual
+bandit learner then optimizes a prompt policy that adaptively determines (i)
+which relational evidences to include, (ii) how many evidences to retain per
+candidate POI, and (iii) how to organize and order them within the prompt.
+Experiments on three real-world datasets show that Prompt-as-Policy consistently
+outperforms state-of-the-art baselines, achieving an average 11.87% relative
+improvement in Acc@1 for inactive users, while maintaining competitive
+performance for active users, without any model fine-tuning.
+

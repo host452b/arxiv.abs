@@ -4,4 +4,24 @@ ID: 2409.19134
 URL: https://arxiv.org/abs/2409.19134
 
 Abstract:
-This paper introduces a vision of confidential prompting: securing user prompts from an untrusted, cloud-hosted large language model (LLM) while preserving model confidentiality, output invariance, and compute efficiency. As a first step toward this vision, we present Petridish, a system built on top of confidential computing and its core contribution, a novel technology called Secure Partitioned Decoding (SPD). Petridish runs the LLM service inside a confidential virtual machine (CVM), which protects the secrets, i.e., the LLM parameters and user prompts, from adversaries outside the CVM. Importantly, it splits the LLM service for a user into two processes, using SPD: a per-user process performs prefill with the user prompts and computes attention scores during decoding; a service process, shared by all users, batches the attention scores from per-user processes and generates output tokens for all users. Both the LLM provider and the users trust Petridish's CVM and its operating system, which guarantees isolation between processes and limits their outbound network capabilities to control information flow. The CVM's attestation capability and its open-source software stack enable Petridish to provide auditable protection of both user prompt and LLM confidentiality. Together, Petridish maintains full utility of LLM service and enables practical, privacy-preserving cloud-hosted LLM inference for sensitive applications, such as processing personal data, clinical records, and financial documents.
+This paper introduces a vision of confidential prompting: securing user prompts
+from an untrusted, cloud-hosted large language model (LLM) while preserving
+model confidentiality, output invariance, and compute efficiency. As a first
+step toward this vision, we present Petridish, a system built on top of
+confidential computing and its core contribution, a novel technology called
+Secure Partitioned Decoding (SPD). Petridish runs the LLM service inside a
+confidential virtual machine (CVM), which protects the secrets, i.e., the LLM
+parameters and user prompts, from adversaries outside the CVM. Importantly, it
+splits the LLM service for a user into two processes, using SPD: a per-user
+process performs prefill with the user prompts and computes attention scores
+during decoding; a service process, shared by all users, batches the attention
+scores from per-user processes and generates output tokens for all users. Both
+the LLM provider and the users trust Petridish's CVM and its operating system,
+which guarantees isolation between processes and limits their outbound network
+capabilities to control information flow. The CVM's attestation capability and
+its open-source software stack enable Petridish to provide auditable protection
+of both user prompt and LLM confidentiality. Together, Petridish maintains full
+utility of LLM service and enables practical, privacy-preserving cloud-hosted
+LLM inference for sensitive applications, such as processing personal data,
+clinical records, and financial documents.
+

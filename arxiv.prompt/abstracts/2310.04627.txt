@@ -1,7 +1,32 @@
-Title: Profit: Benchmarking Personalization and Robustness Trade-off in Federated Prompt Tuning
+Title: Profit: Benchmarking Personalization and Robustness Trade-off in
+Federated Prompt Tuning
 Authors: Liam Collins, Shanshan Wu, Sewoong Oh, Khe Chai Sim
 ID: 2310.04627
 URL: https://arxiv.org/abs/2310.04627
 
 Abstract:
-In many applications of federated learning (FL), clients desire models that are personalized using their local data, yet are also robust in the sense that they retain general global knowledge. However, the presence of data heterogeneity across clients induces a fundamental trade-off between personalization (i.e., adaptation to a local distribution) and robustness (i.e., not forgetting previously learned general knowledge). It is critical to understand how to navigate this personalization vs robustness trade-off when designing federated systems, which are increasingly moving towards a paradigm of fine-tuning large foundation models. Due to limited computational and communication capabilities in most federated settings, this foundation model fine-tuning must be done using parameter-efficient fine-tuning (PEFT) approaches. While some recent work has studied federated approaches to PEFT, the personalization vs robustness trade-off of federated PEFT has been largely unexplored. In this work, we take a step towards bridging this gap by benchmarking fundamental FL algorithms -- FedAvg and FedSGD plus personalization (via client local fine-tuning) -- applied to one of the most ubiquitous PEFT approaches to large language models (LLMs) -- prompt tuning -- in a multitude of hyperparameter settings under varying levels of data heterogeneity. Our results show that federated-trained prompts can be surprisingly robust when using a small learning rate with many local epochs for personalization, especially when using an adaptive optimizer as the client optimizer during federated training. We also demonstrate that simple approaches such as adding regularization and interpolating two prompts are effective in improving the personalization vs robustness trade-off in computation-limited settings with few local updates allowed for personalization.
+In many applications of federated learning (FL), clients desire models that are
+personalized using their local data, yet are also robust in the sense that they
+retain general global knowledge. However, the presence of data heterogeneity
+across clients induces a fundamental trade-off between personalization (i.e.,
+adaptation to a local distribution) and robustness (i.e., not forgetting
+previously learned general knowledge). It is critical to understand how to
+navigate this personalization vs robustness trade-off when designing federated
+systems, which are increasingly moving towards a paradigm of fine-tuning large
+foundation models. Due to limited computational and communication capabilities
+in most federated settings, this foundation model fine-tuning must be done using
+parameter-efficient fine-tuning (PEFT) approaches. While some recent work has
+studied federated approaches to PEFT, the personalization vs robustness trade-
+off of federated PEFT has been largely unexplored. In this work, we take a step
+towards bridging this gap by benchmarking fundamental FL algorithms -- FedAvg
+and FedSGD plus personalization (via client local fine-tuning) -- applied to one
+of the most ubiquitous PEFT approaches to large language models (LLMs) -- prompt
+tuning -- in a multitude of hyperparameter settings under varying levels of data
+heterogeneity. Our results show that federated-trained prompts can be
+surprisingly robust when using a small learning rate with many local epochs for
+personalization, especially when using an adaptive optimizer as the client
+optimizer during federated training. We also demonstrate that simple approaches
+such as adding regularization and interpolating two prompts are effective in
+improving the personalization vs robustness trade-off in computation-limited
+settings with few local updates allowed for personalization.
+

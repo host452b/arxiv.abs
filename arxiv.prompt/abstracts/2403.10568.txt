@@ -1,7 +1,30 @@
-Title: MoPE: Mixture of Prompt Experts for Parameter-Efficient and Scalable Multimodal Fusion
+Title: MoPE: Mixture of Prompt Experts for Parameter-Efficient and Scalable
+Multimodal Fusion
 Authors: Ruixiang Jiang, Lingbo Liu, Changwen Chen
 ID: 2403.10568
 URL: https://arxiv.org/abs/2403.10568
 
 Abstract:
-Despite the demonstrated parameter efficiency of prompt-based fusion, its limited adaptivity and expressiveness hinder its effectiveness for multimodal applications at scale. In this paper, we present the first comprehensive study addressing these limitations. Our key motivation is to ``divide and conquer'' the vanilla prompt, traditionally shared across all instances, by generating instance-specific prompts. Specifically, we propose the Mixture of Prompt Experts (MoPE), a framework that significantly enhances prompt adaptivity and expressiveness by dynamically generating instance-specific prompts. MoPE leverages multimodal pairings as additional evidence, allowing the model to adaptively select optimal prompts tailored to each individual instance. Unlike traditional prompt-fusion methods, which encounter scalability bottlenecks when optimizing long unified prompts, MoPE maintains fixed prompt length while effectively scaling the number of specialized experts. Moreover, we investigate regularization terms to encourage expert specialization, resulting in highly adaptive and interpretable prompting. MoPE fundamentally changes the scaling dynamic, unlocking greater expressiveness and adaptability to complex multimodal relationships, enabling the model to selectively attend to task-relevant sub-sequences based on instance-specific multimodal input. Extensive experiments across six multimodal datasets spanning four modalities demonstrate state-of-the-art performance for multimodal fusion, matching or surpassing the performance of fine-tuning while requiring only 0.8% of the trainable parameters. Code is available: https://github.com/songrise/MoPE.
+Despite the demonstrated parameter efficiency of prompt-based fusion, its
+limited adaptivity and expressiveness hinder its effectiveness for multimodal
+applications at scale. In this paper, we present the first comprehensive study
+addressing these limitations. Our key motivation is to ``divide and conquer''
+the vanilla prompt, traditionally shared across all instances, by generating
+instance-specific prompts. Specifically, we propose the Mixture of Prompt
+Experts (MoPE), a framework that significantly enhances prompt adaptivity and
+expressiveness by dynamically generating instance-specific prompts. MoPE
+leverages multimodal pairings as additional evidence, allowing the model to
+adaptively select optimal prompts tailored to each individual instance. Unlike
+traditional prompt-fusion methods, which encounter scalability bottlenecks when
+optimizing long unified prompts, MoPE maintains fixed prompt length while
+effectively scaling the number of specialized experts. Moreover, we investigate
+regularization terms to encourage expert specialization, resulting in highly
+adaptive and interpretable prompting. MoPE fundamentally changes the scaling
+dynamic, unlocking greater expressiveness and adaptability to complex multimodal
+relationships, enabling the model to selectively attend to task-relevant sub-
+sequences based on instance-specific multimodal input. Extensive experiments
+across six multimodal datasets spanning four modalities demonstrate state-of-
+the-art performance for multimodal fusion, matching or surpassing the
+performance of fine-tuning while requiring only 0.8% of the trainable
+parameters. Code is available: https://github.com/songrise/MoPE.
+

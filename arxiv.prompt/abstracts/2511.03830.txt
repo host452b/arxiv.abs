@@ -1,7 +1,24 @@
-Title: Divide, Cache, Conquer: Dichotomic Prompting for Efficient Multi-Label LLM-Based Classification
+Title: Divide, Cache, Conquer: Dichotomic Prompting for Efficient Multi-Label
+LLM-Based Classification
 Authors: Mikołaj Langner, Jan Eliasz, Ewa Rudnicka, Jan Kocoń
 ID: 2511.03830
 URL: https://arxiv.org/abs/2511.03830
 
 Abstract:
-We introduce a method for efficient multi-label text classification with large language models (LLMs), built on reformulating classification tasks as sequences of dichotomic (yes/no) decisions. Instead of generating all labels in a single structured response, each target dimension is queried independently, which, combined with a prefix caching mechanism, yields substantial efficiency gains for short-text inference without loss of accuracy. To demonstrate the approach, we focus on affective text analysis, covering 24 dimensions including emotions and sentiment. Using LLM-to-SLM distillation, a powerful annotator model (DeepSeek-V3) provides multiple annotations per text, which are aggregated to fine-tune smaller models (HerBERT-Large, CLARIN-1B, PLLuM-8B, Gemma3-1B). The fine-tuned models show significant improvements over zero-shot baselines, particularly on the dimensions seen during training. Our findings suggest that decomposing multi-label classification into dichotomic queries, combined with distillation and cache-aware inference, offers a scalable and effective framework for LLM-based classification. While we validate the method on affective states, the approach is general and applicable across domains.
+We introduce a method for efficient multi-label text classification with large
+language models (LLMs), built on reformulating classification tasks as sequences
+of dichotomic (yes/no) decisions. Instead of generating all labels in a single
+structured response, each target dimension is queried independently, which,
+combined with a prefix caching mechanism, yields substantial efficiency gains
+for short-text inference without loss of accuracy. To demonstrate the approach,
+we focus on affective text analysis, covering 24 dimensions including emotions
+and sentiment. Using LLM-to-SLM distillation, a powerful annotator model
+(DeepSeek-V3) provides multiple annotations per text, which are aggregated to
+fine-tune smaller models (HerBERT-Large, CLARIN-1B, PLLuM-8B, Gemma3-1B). The
+fine-tuned models show significant improvements over zero-shot baselines,
+particularly on the dimensions seen during training. Our findings suggest that
+decomposing multi-label classification into dichotomic queries, combined with
+distillation and cache-aware inference, offers a scalable and effective
+framework for LLM-based classification. While we validate the method on
+affective states, the approach is general and applicable across domains.
+

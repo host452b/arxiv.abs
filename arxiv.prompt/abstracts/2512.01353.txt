@@ -1,7 +1,29 @@
-Title: The Trojan Knowledge: Bypassing Commercial LLM Guardrails via Harmless Prompt Weaving and Adaptive Tree Search
-Authors: Rongzhe Wei, Peizhi Niu, Xinjie Shen, Tony Tu, Yifan Li, Ruihan Wu, Eli Chien, Pin-Yu Chen, Olgica Milenkovic, Pan Li
+Title: The Trojan Knowledge: Bypassing Commercial LLM Guardrails via Harmless
+Prompt Weaving and Adaptive Tree Search
+Authors: Rongzhe Wei, Peizhi Niu, Xinjie Shen, Tony Tu, Yifan Li, Ruihan Wu, Eli
+Chien, Pin-Yu Chen, Olgica Milenkovic, Pan Li
 ID: 2512.01353
 URL: https://arxiv.org/abs/2512.01353
 
 Abstract:
-Large language models (LLMs) remain vulnerable to jailbreak attacks that bypass safety guardrails to elicit harmful outputs. Existing approaches overwhelmingly operate within the prompt-optimization paradigm: whether through traditional algorithmic search or recent agent-based workflows, the resulting prompts typically retain malicious semantic signals that modern guardrails are primed to detect. In contrast, we identify a deeper, largely overlooked vulnerability stemming from the highly interconnected nature of an LLM's internal knowledge. This structure allows harmful objectives to be realized by weaving together sequences of benign sub-queries, each of which individually evades detection. To exploit this loophole, we introduce the Correlated Knowledge Attack Agent (CKA-Agent), a dynamic framework that reframes jailbreaking as an adaptive, tree-structured exploration of the target model's knowledge base. The CKA-Agent issues locally innocuous queries, uses model responses to guide exploration across multiple paths, and ultimately assembles the aggregated information to achieve the original harmful objective. Evaluated across state-of-the-art commercial LLMs (Gemini2.5-Flash/Pro, GPT-oss-120B, Claude-Haiku-4.5), CKA-Agent consistently achieves over 95% success rates even against strong guardrails, underscoring the severity of this vulnerability and the urgent need for defenses against such knowledge-decomposition attacks. Our codes are available at https://github.com/Graph-COM/CKA-Agent.
+Large language models (LLMs) remain vulnerable to jailbreak attacks that bypass
+safety guardrails to elicit harmful outputs. Existing approaches overwhelmingly
+operate within the prompt-optimization paradigm: whether through traditional
+algorithmic search or recent agent-based workflows, the resulting prompts
+typically retain malicious semantic signals that modern guardrails are primed to
+detect. In contrast, we identify a deeper, largely overlooked vulnerability
+stemming from the highly interconnected nature of an LLM's internal knowledge.
+This structure allows harmful objectives to be realized by weaving together
+sequences of benign sub-queries, each of which individually evades detection. To
+exploit this loophole, we introduce the Correlated Knowledge Attack Agent (CKA-
+Agent), a dynamic framework that reframes jailbreaking as an adaptive, tree-
+structured exploration of the target model's knowledge base. The CKA-Agent
+issues locally innocuous queries, uses model responses to guide exploration
+across multiple paths, and ultimately assembles the aggregated information to
+achieve the original harmful objective. Evaluated across state-of-the-art
+commercial LLMs (Gemini2.5-Flash/Pro, GPT-oss-120B, Claude-Haiku-4.5), CKA-Agent
+consistently achieves over 95% success rates even against strong guardrails,
+underscoring the severity of this vulnerability and the urgent need for defenses
+against such knowledge-decomposition attacks. Our codes are available at
+https://github.com/Graph-COM/CKA-Agent.
+

@@ -1,7 +1,33 @@
-Title: Prompt Tuning Vision Language Models with Margin Regularizer for Few-Shot Learning under Distribution Shifts
+Title: Prompt Tuning Vision Language Models with Margin Regularizer for Few-Shot
+Learning under Distribution Shifts
 Authors: Debarshi Brahma, Anuska Roy, Soma Biswas
 ID: 2505.15506
 URL: https://arxiv.org/abs/2505.15506
 
 Abstract:
-Recently, Vision-Language foundation models like CLIP and ALIGN, which are pre-trained on large-scale data have shown remarkable zero-shot generalization to diverse datasets with different classes and even domains. In this work, we take a step further and analyze whether these models can be adapted to target datasets having very different distributions and classes compared to what these models have been trained on, using only a few labeled examples from the target dataset. In such scenarios, finetuning large pretrained models is challenging due to problems of overfitting as well as loss of generalization, and has not been well explored in prior literature. Since, the pre-training data of such models are unavailable, it is difficult to comprehend the performance on various downstream datasets. First, we try to answer the question: Given a target dataset with a few labelled examples, can we estimate whether further fine-tuning can enhance the performance compared to zero-shot evaluation? by analyzing the common vision-language embedding space. Based on the analysis, we propose a novel prompt-tuning method, PromptMargin for adapting such large-scale VLMs directly on the few target samples. PromptMargin effectively tunes the text as well as visual prompts for this task, and has two main modules: 1) Firstly, we use a selective augmentation strategy to complement the few training samples in each task; 2) Additionally, to ensure robust training in the presence of unfamiliar class names, we increase the inter-class margin for improved class discrimination using a novel Multimodal Margin Regularizer. Extensive experiments and analysis across fifteen target benchmark datasets, with varying degrees of distribution shifts from natural images, shows the effectiveness of the proposed framework over the existing state-of-the-art approaches applied to this setting. github.com/debarshigit/PromptMargin.
+Recently, Vision-Language foundation models like CLIP and ALIGN, which are pre-
+trained on large-scale data have shown remarkable zero-shot generalization to
+diverse datasets with different classes and even domains. In this work, we take
+a step further and analyze whether these models can be adapted to target
+datasets having very different distributions and classes compared to what these
+models have been trained on, using only a few labeled examples from the target
+dataset. In such scenarios, finetuning large pretrained models is challenging
+due to problems of overfitting as well as loss of generalization, and has not
+been well explored in prior literature. Since, the pre-training data of such
+models are unavailable, it is difficult to comprehend the performance on various
+downstream datasets. First, we try to answer the question: Given a target
+dataset with a few labelled examples, can we estimate whether further fine-
+tuning can enhance the performance compared to zero-shot evaluation? by
+analyzing the common vision-language embedding space. Based on the analysis, we
+propose a novel prompt-tuning method, PromptMargin for adapting such large-scale
+VLMs directly on the few target samples. PromptMargin effectively tunes the text
+as well as visual prompts for this task, and has two main modules: 1) Firstly,
+we use a selective augmentation strategy to complement the few training samples
+in each task; 2) Additionally, to ensure robust training in the presence of
+unfamiliar class names, we increase the inter-class margin for improved class
+discrimination using a novel Multimodal Margin Regularizer. Extensive
+experiments and analysis across fifteen target benchmark datasets, with varying
+degrees of distribution shifts from natural images, shows the effectiveness of
+the proposed framework over the existing state-of-the-art approaches applied to
+this setting. github.com/debarshigit/PromptMargin.
+

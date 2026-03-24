@@ -4,4 +4,27 @@ ID: 2508.10645
 URL: https://arxiv.org/abs/2508.10645
 
 Abstract:
-Visual transfer learning for unseen categories presents an active research topic yet a challenging task, due to the inherent conflict between preserving category-specific representations and acquiring transferable knowledge. Vision-Language Models (VLMs) pre-trained on large amounts of image-text pairs offer a promising solution. However, existing prompt tuning methods rely on sparse category labels or disparate LLM-generated descriptions, which fragment knowledge representation and hinder transferability. To address this limitation, we introduce Semantic Prompt Tuning (SemPT), a novel framework that tackles the generalization challenge by leveraging shared attribute-level knowledge across categories. Specifically, SemPT adopts a two-step prompting strategy to guide LLM in extracting shared visual attributes and generating attribute-level descriptions, capturing transferable semantic cues beyond labels while ensuring coherent structure. Then, visually guided weighting is applied to the embeddings of attribute-level descriptions to reduce noise from irrelevant attributes and enhance the text embeddings. Additionally, image embeddings are jointly aligned with both label and attribute-enhanced text embeddings, balancing discrimination for seen categories and transferability to unseen ones. Considering the availability of category exposure, our inference dynamically selects between standard label embeddings for seen categories and attribute-enhanced embeddings for unseen ones to ensure effective adaptation. Extensive experiments on 15 benchmark datasets demonstrate that SemPT achieves state-of-the-art performance across various settings, including base-to-novel generalization, cross-dataset transfer, cross-domain transfer, and few-shot learning.
+Visual transfer learning for unseen categories presents an active research topic
+yet a challenging task, due to the inherent conflict between preserving
+category-specific representations and acquiring transferable knowledge. Vision-
+Language Models (VLMs) pre-trained on large amounts of image-text pairs offer a
+promising solution. However, existing prompt tuning methods rely on sparse
+category labels or disparate LLM-generated descriptions, which fragment
+knowledge representation and hinder transferability. To address this limitation,
+we introduce Semantic Prompt Tuning (SemPT), a novel framework that tackles the
+generalization challenge by leveraging shared attribute-level knowledge across
+categories. Specifically, SemPT adopts a two-step prompting strategy to guide
+LLM in extracting shared visual attributes and generating attribute-level
+descriptions, capturing transferable semantic cues beyond labels while ensuring
+coherent structure. Then, visually guided weighting is applied to the embeddings
+of attribute-level descriptions to reduce noise from irrelevant attributes and
+enhance the text embeddings. Additionally, image embeddings are jointly aligned
+with both label and attribute-enhanced text embeddings, balancing discrimination
+for seen categories and transferability to unseen ones. Considering the
+availability of category exposure, our inference dynamically selects between
+standard label embeddings for seen categories and attribute-enhanced embeddings
+for unseen ones to ensure effective adaptation. Extensive experiments on 15
+benchmark datasets demonstrate that SemPT achieves state-of-the-art performance
+across various settings, including base-to-novel generalization, cross-dataset
+transfer, cross-domain transfer, and few-shot learning.
+

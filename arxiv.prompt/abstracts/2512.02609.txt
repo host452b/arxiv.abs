@@ -1,7 +1,30 @@
-Title: SAM2Grasp: Resolve Multi-modal Grasping via Prompt-conditioned Temporal Action Prediction
-Authors: Shengkai Wu, Jinrong Yang, Wenqiu Luo, Linfeng Gao, Chaohui Shang, Meiyu Zhi, Mingshan Sun, Fangping Yang, Liangliang Ren, Yong Zhao
+Title: SAM2Grasp: Resolve Multi-modal Grasping via Prompt-conditioned Temporal
+Action Prediction
+Authors: Shengkai Wu, Jinrong Yang, Wenqiu Luo, Linfeng Gao, Chaohui Shang,
+Meiyu Zhi, Mingshan Sun, Fangping Yang, Liangliang Ren, Yong Zhao
 ID: 2512.02609
 URL: https://arxiv.org/abs/2512.02609
 
 Abstract:
-Imitation learning for robotic grasping is often plagued by the multimodal problem: when a scene contains multiple valid targets, demonstrations of grasping different objects create conflicting training signals. Standard imitation learning policies fail by averaging these distinct actions into a single, invalid action. In this paper, we introduce SAM2Grasp, a novel framework that resolves this issue by reformulating the task as a uni-modal, prompt-conditioned prediction problem. Our method leverages the frozen SAM2 model to use its powerful visual temporal tracking capability and introduces a lightweight, trainable action head that operates in parallel with its native segmentation head. This design allows for training only the small action head on pre-computed temporal-visual features from SAM2. During inference, an initial prompt, such as a bounding box provided by an upstream object detection model, designates the specific object to be grasped. This prompt conditions the action head to predict a unique, unambiguous grasp trajectory for that object alone. In all subsequent video frames, SAM2's built-in temporal tracking capability automatically maintains stable tracking of the selected object, enabling our model to continuously predict the grasp trajectory from the video stream without further external guidance. This temporal-prompted approach effectively eliminates ambiguity from the visuomotor policy. We demonstrate through extensive experiments that SAM2Grasp achieves state-of-the-art performance in cluttered, multi-object grasping tasks.
+Imitation learning for robotic grasping is often plagued by the multimodal
+problem: when a scene contains multiple valid targets, demonstrations of
+grasping different objects create conflicting training signals. Standard
+imitation learning policies fail by averaging these distinct actions into a
+single, invalid action. In this paper, we introduce SAM2Grasp, a novel framework
+that resolves this issue by reformulating the task as a uni-modal, prompt-
+conditioned prediction problem. Our method leverages the frozen SAM2 model to
+use its powerful visual temporal tracking capability and introduces a
+lightweight, trainable action head that operates in parallel with its native
+segmentation head. This design allows for training only the small action head on
+pre-computed temporal-visual features from SAM2. During inference, an initial
+prompt, such as a bounding box provided by an upstream object detection model,
+designates the specific object to be grasped. This prompt conditions the action
+head to predict a unique, unambiguous grasp trajectory for that object alone. In
+all subsequent video frames, SAM2's built-in temporal tracking capability
+automatically maintains stable tracking of the selected object, enabling our
+model to continuously predict the grasp trajectory from the video stream without
+further external guidance. This temporal-prompted approach effectively
+eliminates ambiguity from the visuomotor policy. We demonstrate through
+extensive experiments that SAM2Grasp achieves state-of-the-art performance in
+cluttered, multi-object grasping tasks.
+

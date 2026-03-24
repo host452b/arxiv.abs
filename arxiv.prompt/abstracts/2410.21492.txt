@@ -1,7 +1,31 @@
-Title: FATH: Authentication-based Test-time Defense against Indirect Prompt Injection Attacks
-Authors: Jiongxiao Wang, Fangzhou Wu, Wendi Li, Jinsheng Pan, Edward Suh, Z. Morley Mao, Muhao Chen, Chaowei Xiao
+Title: FATH: Authentication-based Test-time Defense against Indirect Prompt
+Injection Attacks
+Authors: Jiongxiao Wang, Fangzhou Wu, Wendi Li, Jinsheng Pan, Edward Suh, Z.
+Morley Mao, Muhao Chen, Chaowei Xiao
 ID: 2410.21492
 URL: https://arxiv.org/abs/2410.21492
 
 Abstract:
-Large language models (LLMs) have been widely deployed as the backbone with additional tools and text information for real-world applications. However, integrating external information into LLM-integrated applications raises significant security concerns. Among these, prompt injection attacks are particularly threatening, where malicious instructions injected in the external text information can exploit LLMs to generate answers as the attackers desire. While both training-time and test-time defense methods have been developed to mitigate such attacks, the unaffordable training costs associated with training-time methods and the limited effectiveness of existing test-time methods make them impractical. This paper introduces a novel test-time defense strategy, named Formatting AuThentication with Hash-based tags (FATH). Unlike existing approaches that prevent LLMs from answering additional instructions in external text, our method implements an authentication system, requiring LLMs to answer all received instructions with a security policy and selectively filter out responses to user instructions as the final output. To achieve this, we utilize hash-based authentication tags to label each response, facilitating accurate identification of responses according to the user's instructions and improving the robustness against adaptive attacks. Comprehensive experiments demonstrate that our defense method can effectively defend against indirect prompt injection attacks, achieving state-of-the-art performance under Llama3 and GPT3.5 models across various attack methods. Our code is released at: https://github.com/Jayfeather1024/FATH
+Large language models (LLMs) have been widely deployed as the backbone with
+additional tools and text information for real-world applications. However,
+integrating external information into LLM-integrated applications raises
+significant security concerns. Among these, prompt injection attacks are
+particularly threatening, where malicious instructions injected in the external
+text information can exploit LLMs to generate answers as the attackers desire.
+While both training-time and test-time defense methods have been developed to
+mitigate such attacks, the unaffordable training costs associated with training-
+time methods and the limited effectiveness of existing test-time methods make
+them impractical. This paper introduces a novel test-time defense strategy,
+named Formatting AuThentication with Hash-based tags (FATH). Unlike existing
+approaches that prevent LLMs from answering additional instructions in external
+text, our method implements an authentication system, requiring LLMs to answer
+all received instructions with a security policy and selectively filter out
+responses to user instructions as the final output. To achieve this, we utilize
+hash-based authentication tags to label each response, facilitating accurate
+identification of responses according to the user's instructions and improving
+the robustness against adaptive attacks. Comprehensive experiments demonstrate
+that our defense method can effectively defend against indirect prompt injection
+attacks, achieving state-of-the-art performance under Llama3 and GPT3.5 models
+across various attack methods. Our code is released at:
+https://github.com/Jayfeather1024/FATH
+

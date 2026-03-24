@@ -1,7 +1,26 @@
-Title: Inoculation Prompting: Instructing LLMs to misbehave at train-time improves test-time alignment
-Authors: Nevan Wichers, Aram Ebtekar, Ariana Azarbal, Victor Gillioz, Christine Ye, Emil Ryd, Neil Rathi, Henry Sleight, Alex Mallen, Fabien Roger, Samuel Marks
+Title: Inoculation Prompting: Instructing LLMs to misbehave at train-time
+improves test-time alignment
+Authors: Nevan Wichers, Aram Ebtekar, Ariana Azarbal, Victor Gillioz, Christine
+Ye, Emil Ryd, Neil Rathi, Henry Sleight, Alex Mallen, Fabien Roger, Samuel Marks
 ID: 2510.05024
 URL: https://arxiv.org/abs/2510.05024
 
 Abstract:
-Large language models are sometimes trained with imperfect oversight signals, leading to undesired behaviors such as reward hacking and sycophancy. Improving oversight quality can be expensive or infeasible, motivating methods that improve learned behavior despite an imperfect training signal. We introduce Inoculation Prompting (IP), a simple but counterintuitive technique that prevents learning of an undesired behavior by modifying training prompts to explicitly request it. For example, to inoculate against reward hacking, we modify the prompts used in supervised fine-tuning to request code that only works on provided test cases but fails on other inputs. Across four settings we find that IP reduces the learning of undesired behavior without substantially reducing the learning of desired capabilities. We also show that prompts which more strongly elicit the undesired behavior prior to fine-tuning more effectively inoculate against the behavior when used during training; this serves as a heuristic to identify promising inoculation prompts. Overall, IP is a simple yet effective way to control how models generalize from fine-tuning, preventing learning of undesired behaviors without substantially disrupting desired capabilities.
+Large language models are sometimes trained with imperfect oversight signals,
+leading to undesired behaviors such as reward hacking and sycophancy. Improving
+oversight quality can be expensive or infeasible, motivating methods that
+improve learned behavior despite an imperfect training signal. We introduce
+Inoculation Prompting (IP), a simple but counterintuitive technique that
+prevents learning of an undesired behavior by modifying training prompts to
+explicitly request it. For example, to inoculate against reward hacking, we
+modify the prompts used in supervised fine-tuning to request code that only
+works on provided test cases but fails on other inputs. Across four settings we
+find that IP reduces the learning of undesired behavior without substantially
+reducing the learning of desired capabilities. We also show that prompts which
+more strongly elicit the undesired behavior prior to fine-tuning more
+effectively inoculate against the behavior when used during training; this
+serves as a heuristic to identify promising inoculation prompts. Overall, IP is
+a simple yet effective way to control how models generalize from fine-tuning,
+preventing learning of undesired behaviors without substantially disrupting
+desired capabilities.
+

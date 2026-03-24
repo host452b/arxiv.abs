@@ -1,7 +1,24 @@
-Title: POaaS: Minimal-Edit Prompt Optimization as a Service to Lift Accuracy and Cut Hallucinations on On-Device sLLMs
-Authors: Jungwoo Shim, Dae Won Kim, Sun Wook Kim, Soo Young Kim, Myungcheol Lee, Jae-geun Cha, Hyunhwa Choi
+Title: POaaS: Minimal-Edit Prompt Optimization as a Service to Lift Accuracy and
+Cut Hallucinations on On-Device sLLMs
+Authors: Jungwoo Shim, Dae Won Kim, Sun Wook Kim, Soo Young Kim, Myungcheol Lee,
+Jae-geun Cha, Hyunhwa Choi
 ID: 2603.16045
 URL: https://arxiv.org/abs/2603.16045
 
 Abstract:
-Small language models (sLLMs) are increasingly deployed on-device, where imperfect user prompts--typos, unclear intent, or missing context--can trigger factual errors and hallucinations. Existing automatic prompt optimization (APO) methods were designed for large cloud LLMs and rely on search that often produces long, structured instructions; when executed under an on-device constraint where the same small model must act as optimizer and solver, these pipelines can waste context and even hurt accuracy. We propose POaaS, a minimal-edit prompt optimization layer that routes each query to lightweight specialists (Cleaner, Paraphraser, Fact-Adder) and merges their outputs under strict drift and length constraints, with a conservative skip policy for well-formed prompts. Under a strict fixed-model setting with Llama-3.2-3B-Instruct and Llama-3.1-8B-Instruct, POaaS improves both task accuracy and factuality while representative APO baselines degrade them, and POaaS recovers up to +7.4% under token deletion and mixup. Overall, per-query conservative optimization is a practical alternative to search-heavy APO for on-device sLLMs.
+Small language models (sLLMs) are increasingly deployed on-device, where
+imperfect user prompts--typos, unclear intent, or missing context--can trigger
+factual errors and hallucinations. Existing automatic prompt optimization (APO)
+methods were designed for large cloud LLMs and rely on search that often
+produces long, structured instructions; when executed under an on-device
+constraint where the same small model must act as optimizer and solver, these
+pipelines can waste context and even hurt accuracy. We propose POaaS, a minimal-
+edit prompt optimization layer that routes each query to lightweight specialists
+(Cleaner, Paraphraser, Fact-Adder) and merges their outputs under strict drift
+and length constraints, with a conservative skip policy for well-formed prompts.
+Under a strict fixed-model setting with Llama-3.2-3B-Instruct and
+Llama-3.1-8B-Instruct, POaaS improves both task accuracy and factuality while
+representative APO baselines degrade them, and POaaS recovers up to +7.4% under
+token deletion and mixup. Overall, per-query conservative optimization is a
+practical alternative to search-heavy APO for on-device sLLMs.
+

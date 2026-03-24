@@ -1,9 +1,26 @@
-Title: Continuous Prompts: LLM-Augmented Pipeline Processing over Unstructured Streams
+Title: Continuous Prompts: LLM-Augmented Pipeline Processing over Unstructured
+Streams
 Authors: Shu Chen, Deepti Raghavan, Uğur Çetintemel
 ID: 2512.03389
 URL: https://arxiv.org/abs/2512.03389
 
 Abstract:
-Monitoring unstructured streams increasingly requires persistent, semantics-aware computation, yet today's LLM frameworks remain stateless and one-shot, limiting their usefulness for long-running analytics. We introduce Continuous Prompts (CPs), the first framework that brings LLM reasoning into continuous stream processing. CPs extend RAG to streaming settings, define continuous semantic operators, and provide multiple implementations, primarily focusing on LLM-based approaches but also reporting one embedding-based variants. Furthermore, we study two LLM-centric optimizations, tuple batching and operator fusion, to significantly improve efficiency while managing accuracy loss.
-  Because these optimizations inherently trade accuracy for speed, we present a dynamic optimization framework that uses lightweight shadow executions and cost-aware multi-objective Bayesian optimization (MOBO) to learn throughput-accuracy frontiers and adapt plans under probing budgets.
-  We implement CPs in the VectraFlow stream processing system. Using operator-level microbenchmarks and streaming pipelines on real datasets, we show that VectraFlow can adapt to workload dynamics, navigate accuracy-efficiency trade-offs, and sustain persistent semantic queries over evolving unstructured streams.
+Monitoring unstructured streams increasingly requires persistent, semantics-
+aware computation, yet today's LLM frameworks remain stateless and one-shot,
+limiting their usefulness for long-running analytics. We introduce Continuous
+Prompts (CPs), the first framework that brings LLM reasoning into continuous
+stream processing. CPs extend RAG to streaming settings, define continuous
+semantic operators, and provide multiple implementations, primarily focusing on
+LLM-based approaches but also reporting one embedding-based variants.
+Furthermore, we study two LLM-centric optimizations, tuple batching and operator
+fusion, to significantly improve efficiency while managing accuracy loss.
+  Because these optimizations inherently trade accuracy for speed, we present a
+dynamic optimization framework that uses lightweight shadow executions and cost-
+aware multi-objective Bayesian optimization (MOBO) to learn throughput-accuracy
+frontiers and adapt plans under probing budgets.
+  We implement CPs in the VectraFlow stream processing system. Using operator-
+level microbenchmarks and streaming pipelines on real datasets, we show that
+VectraFlow can adapt to workload dynamics, navigate accuracy-efficiency trade-
+offs, and sustain persistent semantic queries over evolving unstructured
+streams.
+
