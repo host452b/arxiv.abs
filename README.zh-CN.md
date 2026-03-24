@@ -74,6 +74,7 @@ arxiv.abs/
 │       ├── arxiv-results-2026.json
 │       └── abstracts/                     # 400 个 .txt 文件
 └── arxiv.agi-scifi/                       # AGI 与科幻研究专题
+    ├── agi-scifi.md                       # 核心发现与反常识观点总结
     ├── search-index.json                  # 52 组搜索查询索引
     ├── 2023/
     │   ├── arxiv-results-2023.json        # 2,679 篇论文元数据
