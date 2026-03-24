@@ -1,0 +1,32 @@
+Title: From Scanning Guidelines to Action: A Robotic Ultrasound Agent with LLM-
+Based Reasoning
+Authors: Yuan Bi, Yiping Zhou, Pei Liu, Feng Li, Zhongliang Jiang, Nassir Navab
+ID: 2603.14393
+URL: https://arxiv.org/abs/2603.14393
+
+Abstract:
+Robotic ultrasound offers advantages over free-hand scanning, including improved
+reproducibility and reduced operator dependency. In clinical practice, US
+acquisition relies heavily on the sonographer's experience and situational
+judgment. When transferring this process to robotic systems, such expertise is
+often encoded explicitly through fixed procedures and task-specific models,
+yielding pipelines that can be difficult to adapt to new scanning tasks. In this
+work, we propose a unified framework for autonomous robotic US scanning that
+leverages a LLM-based agent to interpret US scanning guidelines and execute
+scans by dynamically invoking a set of provided software tools. Instead of
+encoding fixed scanning procedures, the LLM agent retrieves and reasons over
+guideline steps from scanning handbooks and adapts its planning decisions based
+on observations and the current scanning state. This enables the system to
+handle variable and decision-dependent workflows, such as adjusting scanning
+strategies, repeating steps, or selecting the appropriate next tool call in
+response to image quality or anatomical findings. Because the reasoning
+underlying tool selection is also critical for transparent and trustworthy
+planning, we further fine tune the LLM agent using a RL based strategy to
+improve both its reasoning quality and the correctness of tool selection and
+parameterization, while maintaining robust generalization to unseen guidelines
+and related tasks. We first validate the approach via verbal execution on 10 US
+scanning guidelines, assessing reasoning as well as tool selection and
+parameterization, and showing the benefit of RL fine tuning. We then demonstrate
+real world feasibility on robotic scanning of the gallbladder, spine, and
+kidney. Overall, the framework follows diverse guidelines and enables reliable
+autonomous scanning across multiple anatomical targets within a unified system.

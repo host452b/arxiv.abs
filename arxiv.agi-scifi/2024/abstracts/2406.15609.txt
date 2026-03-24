@@ -1,0 +1,33 @@
+Title: Automated radiotherapy treatment planning guided by GPT-4Vision
+Authors: Sheng Liu, Oscar Pastor-Serrano, Yizheng Chen, Matthew Gopaulchan,
+Weixing Liang, Mark Buyyounouski, Erqi Pollom, Quynh-Thu Le, Michael Gensheimer,
+Peng Dong, Yong Yang, James Zou, Lei Xing
+ID: 2406.15609
+URL: https://arxiv.org/abs/2406.15609
+
+Abstract:
+Objective: Radiotherapy treatment planning is a time-consuming and potentially
+subjective process that requires the iterative adjustment of model parameters to
+balance multiple conflicting objectives. Recent advancements in frontier
+Artificial Intelligence (AI) models offer promising avenues for addressing the
+challenges in planning and clinical decision-making. This study introduces GPT-
+RadPlan, an automated treatment planning framework that integrates radiation
+oncology knowledge with the reasoning capabilities of large multi-modal models,
+such as GPT-4Vision (GPT-4V) from OpenAI.
+  Approach: Via in-context learning, we incorporate clinical requirements and a
+few (3 in our experiments) approved clinical plans with their optimization
+settings, enabling GPT-4V to acquire treatment planning domain knowledge. The
+resulting GPT-RadPlan system is integrated into our in-house inverse treatment
+planning system through an application programming interface (API). For a given
+patient, GPT-RadPlan acts as both plan evaluator and planner, first assessing
+dose distributions and dose-volume histograms (DVHs), and then providing textual
+feedback on how to improve the plan to match the physician's requirements. In
+this manner, GPT-RadPlan iteratively refines the plan by adjusting planning
+parameters, such as weights and dose objectives, based on its suggestions.
+  Main results: The efficacy of the automated planning system is showcased
+across 17 prostate cancer and 13 head and neck cancer VMAT plans with prescribed
+doses of 70.2 Gy and 72 Gy, respectively, where we compared GPT-RadPlan results
+to clinical plans produced by human experts. In all cases, GPT-RadPlan either
+outperformed or matched the clinical plans, demonstrating superior target
+coverage and reducing organ-at-risk doses by 5 Gy on average (15 percent for
+prostate and 10-15 percent for head and neck).

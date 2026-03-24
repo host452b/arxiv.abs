@@ -1,0 +1,30 @@
+Title: Vision-Proprioception Fusion with Mamba2 in End-to-End Reinforcement
+Learning for Motion Control
+Authors: Xiaowen Tao, Yinuo Wang, Jinzhao Zhou
+ID: 2509.07593
+URL: https://arxiv.org/abs/2509.07593
+
+Abstract:
+End-to-end reinforcement learning (RL) for motion control trains policies
+directly from sensor inputs to motor commands, enabling unified controllers for
+different robots and tasks. However, most existing methods are either blind
+(proprioception-only) or rely on fusion backbones with unfavorable compute-
+memory trade-offs. Recurrent controllers struggle with long-horizon credit
+assignment, and Transformer-based fusion incurs quadratic cost in token length,
+limiting temporal and spatial context. We present a vision-driven cross-modal RL
+framework built on SSD-Mamba2, a selective state-space backbone that applies
+state-space duality (SSD) to enable both recurrent and convolutional scanning
+with hardware-aware streaming and near-linear scaling. Proprioceptive states and
+exteroceptive observations (e.g., depth tokens) are encoded into compact tokens
+and fused by stacked SSD-Mamba2 layers. The selective state-space updates retain
+long-range dependencies with markedly lower latency and memory use than
+quadratic self-attention, enabling longer look-ahead, higher token resolution,
+and stable training under limited compute. Policies are trained end-to-end under
+curricula that randomize terrain and appearance and progressively increase scene
+complexity. A compact, state-centric reward balances task progress, energy
+efficiency, and safety. Across diverse motion-control scenarios, our approach
+consistently surpasses strong state-of-the-art baselines in return, safety
+(collisions and falls), and sample efficiency, while converging faster at the
+same compute budget. These results suggest that SSD-Mamba2 provides a practical
+fusion backbone for resource-constrained robotic and autonomous systems in
+engineering informatics applications.

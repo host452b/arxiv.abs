@@ -1,0 +1,24 @@
+Title: Code World Models for Parameter Control in Evolutionary Algorithms
+Authors: Camilo Chacón Sartori, Guillem Rodríguez Corominas
+ID: 2602.22260
+URL: https://arxiv.org/abs/2602.22260
+
+Abstract:
+Can an LLM learn how an optimizer behaves -- and use that knowledge to control
+it? We extend Code World Models (CWMs), LLM-synthesized Python programs that
+predict environment dynamics, from deterministic games to stochastic
+combinatorial optimization. Given suboptimal trajectories of
+$(1{+}1)$-$\text{RLS}_k$, the LLM synthesizes a simulator of the optimizer's
+dynamics; greedy planning over this simulator then selects the mutation strength
+$k$ at each step. On \lo{} and \onemax{}, CWM-greedy performs within 6\% of the
+theoretically optimal policy -- without ever seeing optimal-policy trajectories.
+On \jump{$_k$}, where a deceptive valley causes all adaptive baselines to fail
+(0\% success rate), CWM-greedy achieves 100\% success rate -- without any
+collection policy using oracle knowledge of the gap parameter. On the NK-
+Landscape, where no closed-form model exists, CWM-greedy outperforms all
+baselines across fifteen independently generated instances ($36.94$ vs.\
+$36.32$; $p<0.001$) when the prompt includes empirical transition statistics.
+The CWM also outperforms DQN in sample efficiency (200 offline trajectories vs.\
+500 online episodes), success rate (100\% vs.\ 58\%), and generalization
+($k{=}3$: 78\% vs.\ 0\%). Robustness experiments confirm stable synthesis across
+5 independent runs.

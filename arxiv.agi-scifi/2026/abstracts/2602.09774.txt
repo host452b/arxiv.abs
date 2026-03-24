@@ -1,0 +1,30 @@
+Title: QRS: A Rule-Synthesizing Neuro-Symbolic Triad for Autonomous
+Vulnerability Discovery
+Authors: George Tsigkourakos, Constantinos Patsakis
+ID: 2602.09774
+URL: https://arxiv.org/abs/2602.09774
+
+Abstract:
+Static Application Security Testing (SAST) tools are integral to modern
+DevSecOps pipelines, yet tools like CodeQL, Semgrep, and SonarQube remain
+fundamentally constrained: they require expert-crafted queries, generate
+excessive false positives, and detect only predefined vulnerability patterns.
+Recent work has explored augmenting SAST with Large Language Models (LLMs), but
+these approaches typically use LLMs to triage existing tool outputs rather than
+to reason about vulnerability semantics directly. We introduce QRS (Query,
+Review, Sanitize), a neuro-symbolic framework that inverts this paradigm. Rather
+than filtering results from static rules, QRS employs three autonomous agents
+that generate CodeQL queries from a structured schema definition and few-shot
+examples, then validate findings through semantic reasoning and automated
+exploit synthesis. This architecture enables QRS to discover vulnerability
+classes beyond predefined patterns while substantially reducing false positives.
+We evaluate QRS on full Python packages rather than isolated snippets. In 20
+historical CVEs in popular PyPI libraries, QRS achieves 90.6% detection
+accuracy. Applied to the 100 most-downloaded PyPI packages, QRS identified 39
+medium-to-high-severity vulnerabilities, 5 of which were assigned new CVEs, 5
+received documentation updates, while the remaining 29 were independently
+discovered by concurrent researchers, validating both the severity and
+discoverability of these findings. QRS accomplishes this with low time overhead
+and manageable token costs, demonstrating that LLM-driven query synthesis and
+code review can complement manually curated rule sets and uncover vulnerability
+patterns that evade existing industry tools.

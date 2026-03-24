@@ -1,0 +1,25 @@
+Title: ReAcTree: Hierarchical LLM Agent Trees with Control Flow for Long-Horizon
+Task Planning
+Authors: Jae-Woo Choi, Hyungmin Kim, Hyobin Ong, Youngwoo Yoon, Minsu Jang,
+Dohyung Kim, Jaehong Kim
+ID: 2511.02424
+URL: https://arxiv.org/abs/2511.02424
+
+Abstract:
+Recent advancements in large language models (LLMs) have enabled significant
+progress in decision-making and task planning for embodied autonomous agents.
+However, most existing methods struggle with complex, long-horizon tasks because
+they rely on a monolithic trajectory that entangles all past decisions and
+observations to solve the entire task in a single unified process. To address
+this limitation, we propose ReAcTree, a hierarchical task-planning method that
+decomposes a complex goal into manageable subgoals within a dynamically
+constructed agent tree. Each subgoal is handled by an LLM agent node capable of
+reasoning, acting, and further expanding the tree, while control flow nodes
+coordinate the execution strategies of agent nodes. In addition, we integrate
+two complementary memory systems: each agent node retrieves goal-specific,
+subgoal-level examples from episodic memory and shares environment-specific
+observations through working memory. Experiments on the WAH-NL and ALFRED show
+ReAcTree consistently outperforms strong task-planning baselines such as ReAct
+across diverse LLMs. Notably, on WAH-NL, ReAcTree achieves a 61% goal success
+rate with Qwen 2.5 72B, nearly doubling ReAct's 31%. The code is available at
+https://github.com/Choi-JaeWoo/ReAcTree.git.

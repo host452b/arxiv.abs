@@ -1,0 +1,32 @@
+Title: Uncertainty Quantification for Neurosymbolic Programs via Compositional
+Conformal Prediction
+Authors: Ramya Ramalingam, Sangdon Park, Osbert Bastani
+ID: 2405.15912
+URL: https://arxiv.org/abs/2405.15912
+
+Abstract:
+Machine learning has become an effective tool for automatically annotating
+unstructured data (e.g., images) with structured labels (e.g., object
+detections). As a result, a new programming paradigm called neurosymbolic
+programming has emerged where users write queries against these predicted
+annotations. However, due to the intrinsic fallibility of machine learning
+models, these programs currently lack any notion of correctness. In many
+domains, users may want some kind of conservative guarantee that the results of
+their queries contain all possibly relevant instances. Conformal prediction has
+emerged as a promising strategy for quantifying uncertainty in machine learning
+by modifying models to predict sets of labels instead of individual labels; it
+provides a probabilistic guarantee that the prediction set contains the true
+label with high probability. We propose a novel framework for adapting conformal
+prediction to neurosymbolic programs; our strategy is to represent prediction
+sets as abstract values in some abstract domain, and then to use abstract
+interpretation to propagate prediction sets through the program. Our strategy
+satisfies three key desiderata: (i) correctness (i.e., the program outputs a
+prediction set that contains the true output with high probability), (ii)
+compositionality (i.e., we can quantify uncertainty separately for different
+modules and then compose them together), and (iii) structured values (i.e., we
+can provide uncertainty quantification for structured values such as lists).
+When the full program is available ahead-of-time, we propose an optimization
+that incorporates conformal prediction at intermediate program points to reduce
+imprecision in abstract interpretation. We evaluate our approach on programs
+that take MNIST and MS-COCO images as input, demonstrating that it produces
+reasonably sized prediction sets while satisfying a coverage guarantee.

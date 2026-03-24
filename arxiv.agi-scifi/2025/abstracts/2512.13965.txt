@@ -1,0 +1,25 @@
+Title: Generative Monte Carlo Sampling for Constant-Cost Particle Transport
+Authors: Joseph A. Farmer, Aidan Murray, Johannes Krotz, Ryan G. McClarren
+ID: 2512.13965
+URL: https://arxiv.org/abs/2512.13965
+
+Abstract:
+We present Generative Monte Carlo (GMC), a novel paradigm for particle transport
+simulation that integrates generative artificial intelligence directly into the
+stochastic solution of the linear Boltzmann equation. By reformulating the cell-
+transmission problem as a conditional generation task, we train neural networks
+using conditional flow matching to sample particle exit states, including
+position, direction, and path length, without simulating scattering histories.
+The method employs optical coordinate scaling, enabling a single trained model
+to generalize across any material. We validate GMC on two canonical benchmarks,
+namely a heterogeneous lattice problem characteristic of nuclear reactor cores
+and a linearized hohlraum geometry representative of high-energy density
+radiative transfer. Results demonstrate that GMC preserves the statistical
+fidelity of standard Monte Carlo, exhibiting the expected $1/\sqrt{N}$
+convergence rate while maintaining accurate scalar flux profiles. While standard
+Monte Carlo computational cost scales linearly with optical thickness in the
+diffusive limit, GMC achieves constant $O(1)$ cost per cell transmission,
+yielding order-of-magnitude speedups in optically thick regimes. This framework
+strategically aligns particle transport with modern computing architectures
+optimized for neural network inference, positioning transport codes to leverage
+ongoing advances in AI hardware and algorithms.

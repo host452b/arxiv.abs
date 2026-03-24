@@ -1,0 +1,24 @@
+Title: SimuDICE: Offline Policy Optimization Through World Model Updates and
+DICE Estimation
+Authors: Catalin E. Brita, Stephan Bongers, Frans A. Oliehoek
+ID: 2412.06486
+URL: https://arxiv.org/abs/2412.06486
+
+Abstract:
+In offline reinforcement learning, deriving an effective policy from a pre-
+collected set of experiences is challenging due to the distribution mismatch
+between the target policy and the behavioral policy used to collect the data, as
+well as the limited sample size. Model-based reinforcement learning improves
+sample efficiency by generating simulated experiences using a learned dynamic
+model of the environment. However, these synthetic experiences often suffer from
+the same distribution mismatch. To address these challenges, we introduce
+SimuDICE, a framework that iteratively refines the initial policy derived from
+offline data using synthetically generated experiences from the world model.
+SimuDICE enhances the quality of these simulated experiences by adjusting the
+sampling probabilities of state-action pairs based on stationary DIstribution
+Correction Estimation (DICE) and the estimated confidence in the model's
+predictions. This approach guides policy improvement by balancing experiences
+similar to those frequently encountered with ones that have a distribution
+mismatch. Our experiments show that SimuDICE achieves performance comparable to
+existing algorithms while requiring fewer pre-collected experiences and planning
+steps, and it remains robust across varying data collection policies.

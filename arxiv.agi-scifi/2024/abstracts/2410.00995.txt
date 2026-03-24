@@ -1,0 +1,31 @@
+Title: CktGen: Automated Analog Circuit Design with Generative Artificial
+Intelligence
+Authors: Yuxuan Hou, Hehe Fan, Jianrong Zhang, Yue Zhang, Hua Chen, Min Zhou,
+Faxin Yu, Roger Zimmermann, Yi Yang
+ID: 2410.00995
+URL: https://arxiv.org/abs/2410.00995
+
+Abstract:
+The automatic synthesis of analog circuits presents significant challenges. Most
+existing approaches formulate the problem as a single-objective optimization
+task, overlooking that design specifications for a given circuit type vary
+widely across applications. To address this, we introduce specification-
+conditioned analog circuit generation, a task that directly generates analog
+circuits based on target specifications. The motivation is to leverage existing
+well-designed circuits to improve automation in analog circuit design.
+Specifically, we propose CktGen, a simple yet effective variational autoencoder
+that maps discretized specifications and circuits into a joint latent space and
+reconstructs the circuit from that latent vector. Notably, as a single
+specification may correspond to multiple valid circuits, naively fusing
+specification information into the generative model does not capture these one-
+to-many relationships. To address this, we decouple the encoding of circuits and
+specifications and align their mapped latent space. Then, we employ contrastive
+training with a filter mask to maximize differences between encoded circuits and
+specifications. Furthermore, classifier guidance along with latent feature
+alignment promotes the clustering of circuits sharing the same specification,
+avoiding model collapse into trivial one-to-one mappings. By canonicalizing the
+latent space with respect to specifications, we can search for an optimal
+circuit that meets valid target specifications. We conduct comprehensive
+experiments on the open circuit benchmark and introduce metrics to evaluate
+cross-model consistency. Experimental results demonstrate that CktGen achieves
+substantial improvements over state-of-the-art methods.

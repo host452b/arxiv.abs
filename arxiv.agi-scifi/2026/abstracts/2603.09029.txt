@@ -1,0 +1,32 @@
+Title: Automating Detection and Root-Cause Analysis of Flaky Tests in Quantum
+Software
+Authors: Janakan Sivaloganathan, Ainaz Jamshidi, Andriy Miranskyy, Lei Zhang
+ID: 2603.09029
+URL: https://arxiv.org/abs/2603.09029
+
+Abstract:
+Like classical software, quantum software systems rely on automated testing.
+However, their inherently probabilistic outputs make them susceptible to quantum
+flakiness -- tests that pass or fail inconsistently without code changes. Such
+quantum flaky tests can mask real defects and reduce developer productivity, yet
+systematic tooling for their detection and diagnosis remains limited.
+  This paper presents an automated pipeline to detect flaky-test-related issues
+and pull requests in quantum software repositories and to support the
+identification of their root causes. We aim to expand an existing quantum flaky
+test dataset and evaluate the capability of Large Language Models (LLMs) for
+flakiness classification and root-cause identification.
+  Building on a prior manual analysis of 14 quantum software repositories, we
+automate the discovery of additional flaky test cases using LLMs and cosine
+similarity. We further evaluate a variety of LLMs from OpenAI GPT, Meta LLaMA,
+Google Gemini, and Anthropic Claude suites for classifying flakiness and
+identifying root causes from issue descriptions and code context. Classification
+performance is assessed using standard performance metrics, including F1-score.
+  Using our pipeline, we identify 25 previously unknown flaky tests, increasing
+the original dataset size by 54%. The best-performing model, Google Gemini,
+achieves an F1-score of 0.9420 for flakiness detection and 0.9643 for root-cause
+identification, demonstrating that LLMs can provide practical support for
+triaging flaky reports and understanding their underlying causes in quantum
+software.
+  The expanded dataset and automated pipeline provide reusable artifacts for the
+quantum software engineering community. Future work will focus on improving
+detection robustness and exploring automated repair of quantum flaky tests.

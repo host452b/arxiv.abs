@@ -1,0 +1,26 @@
+Title: NASP-T: A Fuzzy Neuro-Symbolic Transformer for Logic-Constrained Aviation
+Safety Report Classification
+Authors: Fadi Al Machot, Fidaa Al Machot
+ID: 2510.05451
+URL: https://arxiv.org/abs/2510.05451
+
+Abstract:
+Deep transformer models excel at multi-label text classification but often
+violate domain logic that experts consider essential, an issue of particular
+concern in safety-critical applications. We propose a hybrid neuro-symbolic
+framework that integrates Answer Set Programming (ASP) with transformer-based
+learning on the Aviation Safety Reporting System (ASRS) corpus. Domain knowledge
+is formalized as weighted ASP rules and validated using the Clingo solver. These
+rules are incorporated in two complementary ways: (i) as rule-based data
+augmentation, generating logically consistent synthetic samples that improve
+label diversity and coverage; and (ii) as a fuzzy-logic regularizer, enforcing
+rule satisfaction in a differentiable form during fine-tuning. This design
+preserves the interpretability of symbolic reasoning while leveraging the
+scalability of deep neural architectures. We further tune per-class thresholds
+and report both standard classification metrics and logic-consistency rates.
+Compared to a strong Binary Cross-Entropy (BCE) baseline, our approach improves
+micro- and macro-F1 scores and achieves up to an 86% reduction in rule
+violations on the ASRS test set. To the best of our knowledge, this constitutes
+the first large-scale neuro-symbolic application to ASRS reports that unifies
+ASP-based reasoning, rule-driven augmentation, and differentiable transformer
+training for trustworthy, safety-critical NLP.

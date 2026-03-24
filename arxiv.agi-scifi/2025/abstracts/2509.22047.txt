@@ -1,0 +1,25 @@
+Title: MO-GRPO: Mitigating Reward Hacking of Group Relative Policy Optimization
+on Multi-Objective Problems
+Authors: Yuki Ichihara, Yuu Jinnai, Tetsuro Morimura, Mitsuki Sakamoto, Ryota
+Mitsuhashi, Eiji Uchibe
+ID: 2509.22047
+URL: https://arxiv.org/abs/2509.22047
+
+Abstract:
+Group Relative Policy Optimization (GRPO) has been shown to be an effective
+algorithm when an accurate reward model is available. However, such a highly
+reliable reward model is not available in many real-world tasks. In this paper,
+we particularly focus on multi-objective settings, in which we identify that
+GRPO is vulnerable to reward hacking, optimizing only one of the objectives at
+the cost of the others. To address this issue, we propose MO-GRPO, an extension
+of GRPO with a simple normalization method to reweight the reward functions
+automatically according to the variances of their values. We first show
+analytically that MO-GRPO ensures that all reward functions contribute evenly to
+the loss function while preserving the order of preferences, eliminating the
+need for manual tuning of the reward functions' scales. Then, we evaluate MO-
+GRPO experimentally in four domains: (i) the multi-armed bandits problem, (ii)
+simulated control task (Mo-Gymnasium), (iii) machine translation tasks on the
+WMT benchmark (En-Ja, En-Zh), and (iv) instruction following task. MO-GRPO
+achieves stable learning by evenly distributing correlations among the
+components of rewards, outperforming GRPO, showing MO-GRPO to be a promising
+algorithm for multi-objective reinforcement learning problems.

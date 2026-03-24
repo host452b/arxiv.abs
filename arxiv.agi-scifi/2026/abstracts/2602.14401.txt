@@ -1,0 +1,24 @@
+Title: pFedNavi: Structure-Aware Personalized Federated Vision-Language
+Navigation for Embodied AI
+Authors: Qingqian Yang, Hao Wang, Sai Qian Zhang, Jian Li, Yang Hua, Miao Pan,
+Tao Song, Zhengwei Qi, Haibing Guan
+ID: 2602.14401
+URL: https://arxiv.org/abs/2602.14401
+
+Abstract:
+Vision-Language Navigation VLN requires large-scale trajectory instruction data
+from private indoor environments, raising significant privacy concerns.
+Federated Learning FL mitigates this by keeping data on-device, but vanilla FL
+struggles under VLNs' extreme cross-client heterogeneity in environments and
+instruction styles, making a single global model suboptimal. This paper proposes
+pFedNavi, a structure-aware and dynamically adaptive personalized federated
+learning framework tailored for VLN. Our key idea is to personalize where it
+matters: pFedNavi adaptively identifies client-specific layers via layer-wise
+mixing coefficients, and performs fine-grained parameter fusion on the selected
+components (e.g., the encoder-decoder projection and environment-sensitive
+decoder layers) to balance global knowledge sharing with local specialization.
+We evaluate pFedNavi on two standard VLN benchmarks, R2R and RxR, using both
+ResNet and CLIP visual representations. Across all metrics, pFedNavi
+consistently outperforms the FedAvg-based VLN baseline, achieving up to 7.5%
+improvement in navigation success rate and up to 7.8% gain in trajectory
+fidelity, while converging 1.38x faster under non-IID conditions.

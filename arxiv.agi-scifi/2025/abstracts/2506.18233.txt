@@ -1,0 +1,27 @@
+Title: Beyond Parameters: Exploring Virtual Logic Depth for Scaling Laws
+Authors: Ruike Zhu, Hanwen Zhang, Kevin Li, Tianyu Shi, Yiqun Duan, Chi Wang,
+Tianyi Zhou, Arindam Banerjee, Zengyi Qin
+ID: 2506.18233
+URL: https://arxiv.org/abs/2506.18233
+
+Abstract:
+Scaling large language models typically involves three dimensions: depth, width,
+and parameter count. In this work, we explore a fourth dimension,
+\textbf{virtual logical depth} (VLD), which increases effective algorithmic
+depth without changing parameter count by reusing weights. While parameter reuse
+is not new, its role in scaling has been underexplored. Unlike recent test-time
+methods that scale token-wise, VLD alters the internal computation graph during
+training and inference. Through controlled experiments, we obtain three key
+insights. (1) \textit{Knowledge capacity vs. parameters}: at fixed parameter
+count, VLD leaves knowledge capacity nearly unchanged, while across models
+capacity still scales with parameters. (2) \textit{Reasoning vs. reuse}:
+properly implemented VLD substantially improves reasoning ability \emph{without}
+more parameters, decoupling reasoning from size. This suggests a new scaling
+path beyond token-wise test-time methods. (3) \textit{Robustness and
+generality}: reasoning gains persist across architectures and reuse schedules,
+showing VLD captures a general scaling behavior. These results provide insight
+into future scaling strategies and raise a deeper question: does
+superintelligence require ever-larger models, or can it be achieved by reusing
+parameters and increasing logical depth? We argue many unknown dynamics in
+scaling remain to be explored. Code is available at
+https://anonymous.4open.science/r/virtual_logical_depth-8024/.

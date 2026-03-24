@@ -1,0 +1,23 @@
+Title: Neuro-symbolic Zero-Shot Code Cloning with Cross-Language Intermediate
+Representation
+Authors: Krishnam Hasija, Shrishti Pradhan, Manasi Patwardhan, Raveendra Kumar
+Medicherla, Lovekesh Vig, Ravindra Naik
+ID: 2304.13350
+URL: https://arxiv.org/abs/2304.13350
+
+Abstract:
+In this paper, we define a neuro-symbolic approach to address the task of
+finding semantically similar clones for the codes of the legacy programming
+language COBOL, without training data. We define a meta-model that is
+instantiated to have an Intermediate Representation (IR) in the form of Abstract
+Syntax Trees (ASTs) common across codes in C and COBOL. We linearize the IRs
+using Structure Based Traversal (SBT) to create sequential inputs. We further
+fine-tune UnixCoder, the best-performing model for zero-shot cross-programming
+language code search, for the Code Cloning task with the SBT IRs of C code-
+pairs, available in the CodeNet dataset. This allows us to learn latent
+representations for the IRs of the C codes, which are transferable to the IRs of
+the COBOL codes. With this fine-tuned UnixCoder, we get a performance
+improvement of 12.85 MAP@2 over the pre-trained UniXCoder model, in a zero-shot
+setting, on the COBOL test split synthesized from the CodeNet dataset. This
+demonstrates the efficacy of our meta-model based approach to facilitate cross-
+programming language transfer.

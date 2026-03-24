@@ -1,0 +1,28 @@
+Title: Structural Enforcement of Statistical Rigor in AI-Driven Discovery: A
+Functional Architecture
+Authors: Karen Sargsyan
+ID: 2511.06701
+URL: https://arxiv.org/abs/2511.06701
+
+Abstract:
+AI-Scientist systems that use large language models to automate research risk
+generating spurious discoveries through uncontrolled multiple testing. We
+present a functional architecture that enforces statistical rigor at two levels:
+a Haskell embedded DSL (the Research monad) that makes it impossible to test a
+hypothesis without updating the error budget, and a declarative scaffolding
+technique that structurally prevents data leakage across the boundary into LLM-
+generated code. We ground these guarantees in a machine-checked Lean 4
+formalization of the LORD++ online FDR control theorem (855 lines, zero sorry),
+which identifies four sufficient conditions for FDR control. Three are
+structural conditions -- about information flow, data separation, and test
+validity -- enforced by the architecture's type system and scaffolding. The
+fourth is an arithmetic condition: a budget invariant requiring that a wealth
+process remain non-negative under floating-point computation. We verify this
+condition over IEEE 754 doubles using SPARK/Ada, whose GNATprove toolchain
+statically confirms that no rounding sequence can violate the invariant and
+whose flow analysis independently confirms the predictability condition. The
+resulting verification chain -- from real-analysis proof to floating-point
+implementation -- is, to our knowledge, the first for any online FDR control
+procedure. Monte Carlo simulation (N=2000 hypotheses) and an end-to-end case
+study confirm that the monadic implementation controls FDR at 1.1% against a 5%
+target, while a naive approach inflates to 41%.

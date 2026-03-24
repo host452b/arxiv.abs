@@ -1,0 +1,26 @@
+Title: HyperMARL: Adaptive Hypernetworks for Multi-Agent RL
+Authors: Kale-ab Abebe Tessera, Arrasy Rahman, Amos Storkey, Stefano V. Albrecht
+ID: 2412.04233
+URL: https://arxiv.org/abs/2412.04233
+
+Abstract:
+Adaptive cooperation in multi-agent reinforcement learning (MARL) requires
+policies to express homogeneous, specialised, or mixed behaviours, yet achieving
+this adaptivity remains a critical challenge. While parameter sharing (PS) is
+standard for efficient learning, it notoriously suppresses the behavioural
+diversity required for specialisation. This failure is largely due to cross-
+agent gradient interference, a problem we find is surprisingly exacerbated by
+the common practice of coupling agent IDs with observations. Existing remedies
+typically add complexity through altered objectives, manual preset diversity
+levels, or sequential updates -- raising a fundamental question: can shared
+policies adapt without these intricacies? We propose a solution built on a key
+insight: an agent-conditioned hypernetwork can generate agent-specific
+parameters and decouple observation- and agent-conditioned gradients, directly
+countering the interference from coupling agent IDs with observations. Our
+resulting method, HyperMARL, avoids the complexities of prior work and
+empirically reduces policy gradient variance. Across diverse MARL benchmarks (22
+scenarios, up to 30 agents), HyperMARL achieves performance competitive with six
+key baselines while preserving behavioural diversity comparable to non-parameter
+sharing methods, establishing it as a versatile and principled approach for
+adaptive MARL. The code is publicly available at
+https://github.com/KaleabTessera/HyperMARL.

@@ -1,0 +1,26 @@
+Title: Quantum Search on Computation Trees
+Authors: Jevgēnijs Vihrovs
+ID: 2505.22405
+URL: https://arxiv.org/abs/2505.22405
+
+Abstract:
+We show a simple generalization of the quantum walk algorithm for search in
+backtracking trees by Montanaro (ToC 2018) to the case where vertices can have
+different times of computation. If a vertex $v$ in the tree of depth $D$ is
+computed in $t_v$ steps from its parent, then we show that detection of a marked
+vertex requires $\text{O}(\sqrt{TD})$ queries to the steps of the computing
+procedures, where $T = \sum_v t_v^2$. This framework provides an easy and
+convenient way to re-obtain a number of other quantum frameworks like variable
+time search, quantum divide & conquer and bomb query algorithms. The underlying
+algorithm is simple, explicitly constructed, and has low poly-logarithmic
+factors in the complexity.
+  As a corollary, this gives a quantum algorithm for variable time search with
+unknown times with optimal query complexity $\text{O}(\sqrt{T \log
+\min(n,t_{\max})})$, where $T = \sum_i t_i^2$ and $t_{\max} = \max_i t_i$ if
+$t_i$ is the number of steps required to compute the $i$-th variable. This
+resolves the open question of the query complexity of variable time search, as
+the matching lower bound was recently shown by Ambainis, Kokainis and Vihrovs
+(TQC'23). As another result, we obtain an $\widetilde{\text{O}}(n)$ time
+algorithm for the geometric task of determining if any three lines among $n$
+given intersect at the same point, improving the $\text{O}(n^{1+\text{o}(1)})$
+algorithm of Ambainis and Larka (TQC'20).

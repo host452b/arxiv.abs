@@ -1,0 +1,30 @@
+Title: Progent: Programmable Privilege Control for LLM Agents
+Authors: Tianneng Shi, Jingxuan He, Zhun Wang, Hongwei Li, Linyu Wu, Wenbo Guo,
+Dawn Song
+ID: 2504.11703
+URL: https://arxiv.org/abs/2504.11703
+
+Abstract:
+LLM agents utilize Large Language Models as central components with diverse
+tools to complete various user tasks, but face significant security risks when
+interacting with external environments. Attackers can exploit these agents
+through various vectors, including indirect prompt injection, memory/knowledge
+base poisoning, and malicious tools, tricking agents into performing dangerous
+actions such as unauthorized financial transactions or data leakage. The core
+problem that enables attacks to succeed lies in over-privileged tool access. We
+introduce Progent, the first privilege control framework to secure LLM agents.
+Progent enforces security at the tool level by restricting agents to performing
+tool calls necessary for user tasks while blocking potentially malicious ones.
+Progent features a domain-specific language that allows for expressing fine-
+grained policies for controlling tool privileges, flexible fallback actions when
+calls are blocked, and dynamic policy updates to adapt to changing agent states.
+The framework operates deterministically at runtime, providing provable security
+guarantees. Thanks to our modular design, integrating Progent does not alter
+agent internals and only requires minimal changes to the existing agent
+implementation, enhancing its practicality and potential for widespread
+adoption. Our extensive evaluation across various agent use cases, using
+benchmarks like AgentDojo, ASB, and AgentPoison, demonstrates that Progent
+reduces attack success rates to 0%, while preserving agent utility and speed.
+Additionally, we show that LLMs can automatically generate effective policies,
+highlighting their potential for automating the process of writing Progent's
+security policies.

@@ -1,0 +1,25 @@
+Title: Robust Multi-agent Communication via Multi-view Message Certification
+Authors: Lei Yuan, Tao Jiang, Lihe Li, Feng Chen, Zongzhang Zhang, Yang Yu
+ID: 2305.13936
+URL: https://arxiv.org/abs/2305.13936
+
+Abstract:
+Many multi-agent scenarios require message sharing among agents to promote
+coordination, hastening the robustness of multi-agent communication when
+policies are deployed in a message perturbation environment. Major relevant
+works tackle this issue under specific assumptions, like a limited number of
+message channels would sustain perturbations, limiting the efficiency in complex
+scenarios. In this paper, we take a further step addressing this issue by
+learning a robust multi-agent communication policy via multi-view message
+certification, dubbed CroMAC. Agents trained under CroMAC can obtain guaranteed
+lower bounds on state-action values to identify and choose the optimal action
+under a worst-case deviation when the received messages are perturbed.
+Concretely, we first model multi-agent communication as a multi-view problem,
+where every message stands for a view of the state. Then we extract a
+certificated joint message representation by a multi-view variational
+autoencoder (MVAE) that uses a product-of-experts inference network. For the
+optimization phase, we do perturbations in the latent space of the state for a
+certificate guarantee. Then the learned joint message representation is used to
+approximate the certificated state representation during training. Extensive
+experiments in several cooperative multi-agent benchmarks validate the
+effectiveness of the proposed CroMAC.

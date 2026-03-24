@@ -1,0 +1,30 @@
+Title: Emergence of Superposition: Unveiling the Training Dynamics of Chain of
+Continuous Thought
+Authors: Hanlin Zhu, Shibo Hao, Zhiting Hu, Jiantao Jiao, Stuart Russell,
+Yuandong Tian
+ID: 2509.23365
+URL: https://arxiv.org/abs/2509.23365
+
+Abstract:
+Previous work shows that the chain of continuous thought (continuous CoT)
+improves the reasoning capability of large language models (LLMs) by enabling
+implicit parallel thinking, and a subsequent work provided theoretical insight
+by showing that a two-layer transformer equipped with continuous CoT can
+efficiently solve directed graph reachability by maintaining a superposition of
+multiple reasoning traces in the continuous thought. However, it remains unclear
+how the superposition mechanism is naturally learned from gradient-based
+training methods. To fill this gap, we theoretically analyze the training
+dynamics of a simplified two-layer transformer on the directed graph
+reachability problem to unveil how the superposition mechanism emerges during
+training in two training stages -- (i) a thought-generation stage that
+autoregressively expands the continuous thought, and (ii) a prediction stage
+that converts the thought into the final answer. Our analysis reveals that
+during training using continuous thought, the index-matching logit, an important
+quantity which reflects the strength of the model's local search ability, will
+first increase and then remain bounded under mild assumptions. The bounded
+index-matching logit effectively balances exploration and exploitation during
+the reasoning process: the model will exploit local problem structures to
+identify plausible search traces, and assign comparable weights to multiple such
+traces to explore when it is uncertain about which solution is correct, which
+results in superposition. Our experimental results tracking the growth of logits
+further validate our theory.

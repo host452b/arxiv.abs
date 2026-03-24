@@ -1,0 +1,24 @@
+Title: Configuration-to-Performance Scaling Law with Neural Ansatz
+Authors: Huaqing Zhang, Kaiyue Wen, Tengyu Ma
+ID: 2602.10300
+URL: https://arxiv.org/abs/2602.10300
+
+Abstract:
+Researchers build scaling laws to forecast the training performance of expensive
+large-scale runs with larger model size N and data size D. These laws assume
+that other training hyperparameters are optimally chosen, which can require
+significant effort and, in some cases, be impossible due to external hardware
+constraints. To improve predictability across a broader set of hyperparameters
+and enable simpler tuning at scale, we propose learning a \textit{Configuration-
+to-Performance Scaling Law} (CPL): a mapping from the \textit{full training
+configuration} to training performance. Because no simple functional form can
+express this mapping, we parameterize it with a large language model (LLM), and
+fit it with diverse open-source pretraining logs across multiple sources,
+yielding a \textit{Neural} Configuration-to-Performance Scaling Law (NCPL). NCPL
+accurately predicts how training configurations influence the final pretraining
+loss, achieving 20-40% lower prediction error than the configuration-agnostic
+Chinchilla law and generalizing to runs using up to 10 x more compute than any
+run in the training set. It further supports joint tuning of multiple
+hyperparameters with performance comparable to hyperparameter scaling law
+baselines. Finally, NCPL naturally and effectively extends to richer prediction
+targets such as loss-curve prediction.

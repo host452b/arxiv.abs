@@ -1,0 +1,26 @@
+Title: Neural Estimation for Scaling Entropic Multimarginal Optimal Transport
+Authors: Dor Tsur, Ziv Goldfeld, Kristjan Greenewald, Haim Permuter
+ID: 2506.00573
+URL: https://arxiv.org/abs/2506.00573
+
+Abstract:
+Multimarginal optimal transport (MOT) is a powerful framework for modeling
+interactions between multiple distributions, yet its applicability is
+bottlenecked by a high computational overhead. Entropic regularization provides
+computational speedups via the multimarginal Sinkhorn algorithm, whose time
+complexity, for a dataset size $n$ and $k$ marginals, generally scales as
+$O(n^k)$. However, this dependence on the dataset size $n$ is computationally
+prohibitive for many machine learning problems. In this work, we propose a new
+computational framework for entropic MOT, dubbed Neural Entropic MOT (NEMOT),
+that enjoys significantly improved scalability. NEMOT employs neural networks
+trained using mini-batches, which transfers the computational complexity from
+the dataset size to the size of the mini-batch, leading to substantial gains. We
+provide formal guarantees on the accuracy of NEMOT via non-asymptotic error
+bounds. We supplement these with numerical results that demonstrate the
+performance gains of NEMOT over Sinkhorn's algorithm, as well as extensions to
+neural computation of multimarginal entropic Gromov-Wasserstein alignment. In
+particular, orders-of-magnitude speedups are observed relative to the state-of-
+the-art, with a notable increase in the feasible number of samples and
+marginals. NEMOT seamlessly integrates as a module in large-scale machine
+learning pipelines, and can serve to expand the practical applicability of
+entropic MOT for tasks involving multimarginal data.

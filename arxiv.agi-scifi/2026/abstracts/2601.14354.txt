@@ -1,0 +1,30 @@
+Title: VJEPA: Variational Joint Embedding Predictive Architectures as
+Probabilistic World Models
+Authors: Yongchao Huang
+ID: 2601.14354
+URL: https://arxiv.org/abs/2601.14354
+
+Abstract:
+Joint Embedding Predictive Architectures (JEPA) offer a scalable paradigm for
+self-supervised learning by predicting latent representations rather than
+reconstructing high-entropy observations. However, existing formulations rely on
+\textit{deterministic} regression objectives, which mask probabilistic semantics
+and limit its applicability in stochastic control. In this work, we introduce
+\emph{Variational JEPA (VJEPA)}, a \textit{probabilistic} generalization that
+learns a predictive distribution over future latent states via a variational
+objective. We show that VJEPA unifies representation learning with Predictive
+State Representations (PSRs) and Bayesian filtering, establishing that
+sequential modeling does not require autoregressive observation likelihoods.
+Theoretically, we prove that VJEPA representations can serve as sufficient
+information states for optimal control without pixel reconstruction, while
+providing formal guarantees for collapse avoidance. We further propose
+\emph{Bayesian JEPA (BJEPA)}, an extension that factorizes the predictive belief
+into a learned dynamics expert and a modular prior expert, enabling zero-shot
+task transfer and constraint (e.g. goal, physics) satisfaction via a Product of
+Experts. Empirically, through a noisy environment experiment, we demonstrate
+that VJEPA and BJEPA successfully filter out high-variance nuisance distractors
+that cause representation collapse in generative baselines. By enabling
+principled uncertainty estimation (e.g. constructing credible intervals via
+sampling) while remaining likelihood-free regarding observations, VJEPA provides
+a foundational framework for scalable, robust, uncertainty-aware planning in
+high-dimensional, noisy environments.

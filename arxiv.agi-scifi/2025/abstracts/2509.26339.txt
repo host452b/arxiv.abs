@@ -1,0 +1,32 @@
+Title: Kinodynamic Motion Planning for Mobile Robot Navigation across
+Inconsistent World Models
+Authors: Eric R. Damm, Thomas M. Howard
+ID: 2509.26339
+URL: https://arxiv.org/abs/2509.26339
+
+Abstract:
+Mobile ground robots lacking prior knowledge of an environment must rely on
+sensor data to develop a model of their surroundings. In these scenarios,
+consistent identification of obstacles and terrain features can be difficult due
+to noise and algorithmic shortcomings, which can make it difficult for motion
+planning systems to generate safe motions. One particular difficulty to overcome
+is when regions of the cost map switch between being marked as obstacles and
+free space through successive planning cycles. One potential solution to this,
+which we refer to as Valid in Every Hypothesis (VEH), is for the planning system
+to plan motions that are guaranteed to be safe through a history of world
+models. Another approach is to track a history of world models, and adjust node
+costs according to the potential penalty of needing to reroute around previously
+hazardous areas. This work discusses three major iterations on this idea. The
+first iteration, called PEH, invokes a sub-search for every node expansion that
+crosses through a divergence point in the world models. The second and third
+iterations, called GEH and GEGRH respectively, defer the sub-search until after
+an edge expands into the goal region. GEGRH uses an additional step to revise
+the graph based on divergent nodes in each world. Initial results showed that,
+although PEH and GEH find more optimistic solutions than VEH, they are unable to
+generate solutions in less than one-second, which exceeds our requirements for
+field deployment. Analysis of results from a field experiment in an
+unstructured, off-road environment on a Clearpath Robotics Warthog UGV indicate
+that GEGRH finds lower cost trajectories and has faster average planning times
+than VEH. Compared to single-hypothesis (SH) search, where only the latest world
+model is considered, GEGRH generates more conservative plans with a small
+increase in average planning time.

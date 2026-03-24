@@ -1,0 +1,25 @@
+Title: Scaling Laws of Machine Learning for Optimal Power Flow
+Authors: Xinyi Liu, Xuan He, Yize Chen
+ID: 2601.02706
+URL: https://arxiv.org/abs/2601.02706
+
+Abstract:
+Optimal power flow (OPF) is one of the fundamental tasks for power system
+operations. While machine learning (ML) approaches such as deep neural networks
+(DNNs) have been widely studied to enhance OPF solution speed and performance,
+their practical deployment faces two critical scaling questions: What is the
+minimum training data volume required for reliable results? How should ML
+models' complexity balance accuracy with real-time computational limits?
+Existing studies evaluate discrete scenarios without quantifying these scaling
+relationships, leading to trial-and-error-based ML development in real-world
+applications. This work presents the first systematic scaling study for ML-based
+OPF across two dimensions: data scale (0.1K-40K training samples) and compute
+scale (multiple NN architectures with varying FLOPs). Our results reveal
+consistent power-law relationships on both DNNs and physics-informed NNs (PINNs)
+between each resource dimension and three core performance metrics: prediction
+error (MAE), constraint violations and speed. We find that for ACOPF, the
+accuracy metric scales with dataset size and training compute. These scaling
+laws enable predictable and principled ML pipeline design for OPF. We further
+identify the divergence between prediction accuracy and constraint feasibility
+and characterize the compute-optimal frontier. This work provides quantitative
+guidance for ML-OPF design and deployments.

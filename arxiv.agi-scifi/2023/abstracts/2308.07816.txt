@@ -1,0 +1,33 @@
+Title: FedCache: A Knowledge Cache-driven Federated Learning Architecture for
+Personalized Edge Intelligence
+Authors: Zhiyuan Wu, Sheng Sun, Yuwei Wang, Min Liu, Ke Xu, Wen Wang, Xuefeng
+Jiang, Bo Gao, Jinda Lu
+ID: 2308.07816
+URL: https://arxiv.org/abs/2308.07816
+
+Abstract:
+Edge Intelligence (EI) allows Artificial Intelligence (AI) applications to run
+at the edge, where data analysis and decision-making can be performed in real-
+time and close to data sources. To protect data privacy and unify data silos
+among end devices in EI, Federated Learning (FL) is proposed for collaborative
+training of shared AI models across devices without compromising data privacy.
+However, the prevailing FL approaches cannot guarantee model generalization and
+adaptation on heterogeneous clients. Recently, Personalized Federated Learning
+(PFL) has drawn growing awareness in EI, as it enables a productive balance
+between local-specific training requirements inherent in devices and global-
+generalized optimization objectives for satisfactory performance. However, most
+existing PFL methods are based on the Parameters Interaction-based Architecture
+(PIA) represented by FedAvg, which causes unaffordable communication burdens due
+to large-scale parameters transmission between devices and the edge server. In
+contrast, Logits Interaction-based Architecture (LIA) allows to update model
+parameters with logits transfer and gains the advantages of communication
+lightweight and heterogeneous on-device model allowance compared to PIA.
+Nevertheless, previous LIA methods attempt to achieve satisfactory performance
+either relying on unrealistic public datasets or increasing communication
+overhead for additional information transmission other than logits. To tackle
+this dilemma, we propose a knowledge cache-driven PFL architecture, named
+FedCache, which reserves a knowledge cache on the server for fetching
+personalized knowledge from the samples with similar hashes to each given on-
+device sample. During the training phase, ensemble distillation is applied to
+on-device models for constructive optimization with personalized knowledge
+transferred from the server-side knowledge cache.

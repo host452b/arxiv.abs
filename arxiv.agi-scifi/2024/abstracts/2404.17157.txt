@@ -1,0 +1,31 @@
+Title: Neuro-Symbolic Embedding for Short and Effective Feature Selection via
+Autoregressive Generation
+Authors: Nanxu Gong, Wangyang Ying, Dongjie Wang, Yanjie Fu
+ID: 2404.17157
+URL: https://arxiv.org/abs/2404.17157
+
+Abstract:
+Feature selection aims to identify the optimal feature subset for enhancing
+downstream models. Effective feature selection can remove redundant features,
+save computational resources, accelerate the model learning process, and improve
+the model overall performance. However, existing works are often time-intensive
+to identify the effective feature subset within high-dimensional feature spaces.
+Meanwhile, these methods mainly utilize a single downstream task performance as
+the selection criterion, leading to the selected subsets that are not only
+redundant but also lack generalizability. To bridge these gaps, we reformulate
+feature selection through a neuro-symbolic lens and introduce a novel generative
+framework aimed at identifying short and effective feature subsets. More
+specifically, we found that feature ID tokens of the selected subset can be
+formulated as symbols to reflect the intricate correlations among features.
+Thus, in this framework, we first create a data collector to automatically
+collect numerous feature selection samples consisting of feature ID tokens,
+model performance, and the measurement of feature subset redundancy. Building on
+the collected data, an encoder-decoder-evaluator learning paradigm is developed
+to preserve the intelligence of feature selection into a continuous embedding
+space for efficient search. Within the learned embedding space, we leverage a
+multi-gradient search algorithm to find more robust and generalized embeddings
+with the objective of improving model performance and reducing feature subset
+redundancy. These embeddings are then utilized to reconstruct the feature ID
+tokens for executing the final feature selection. Ultimately, comprehensive
+experiments and case studies are conducted to validate the effectiveness of the
+proposed framework.

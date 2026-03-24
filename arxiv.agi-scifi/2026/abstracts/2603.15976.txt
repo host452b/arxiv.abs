@@ -1,0 +1,25 @@
+Title: An Agentic Evaluation Framework for AI-Generated Scientific Code in PETSc
+Authors: Hong Zhang, Barry Smith, Satish Balay, Le Chen, Murat Keceli, Lois
+Curfman McInnes, Junchao Zhang
+ID: 2603.15976
+URL: https://arxiv.org/abs/2603.15976
+
+Abstract:
+While large language models have significantly accelerated scientific code
+generation, comprehensively evaluating the generated code remains a major
+challenge. Traditional benchmarks reduce evaluation to test-case matching, an
+approach insufficient for library code in HPC where solver selection, API
+conventions, memory management, and performance are just as critical as
+functional correctness. To address this gap, we introduce petscagent-bench, an
+agentic framework built on an agents-evaluating-agents paradigm. Instead of
+relying on static scripts, petscagent-bench deploys a tool-augmented evaluator
+agent that compiles, executes, and measures code produced by a separate model-
+under-test agent, orchestrating a 14-evaluator pipeline across five scoring
+categories: correctness, performance, code quality, algorithmic appropriateness,
+and library-specific conventions. Because the agents communicate through
+standardized protocols (A2A and MCP), the framework enables black-box evaluation
+of any coding agent without requiring access to its source code. We demonstrate
+the framework on a benchmark suite of realistic problems using the PETSc library
+for HPC. Our empirical analysis of frontier models reveals that while current
+models generate readable, well-structured code, they consistently struggle with
+library-specific conventions that traditional pass/fail metrics completely miss.

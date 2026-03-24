@@ -1,0 +1,28 @@
+Title: Improving Speech Decoding from ECoG with Self-Supervised Pretraining
+Authors: Brian A. Yuan, Joseph G. Makin
+ID: 2405.18639
+URL: https://arxiv.org/abs/2405.18639
+
+Abstract:
+Recent work on intracranial brain-machine interfaces has demonstrated that
+spoken speech can be decoded with high accuracy, essentially by treating the
+problem as an instance of supervised learning and training deep neural networks
+to map from neural activity to text. However, such networks pay for their
+expressiveness with very large numbers of labeled data, a requirement that is
+particularly burdensome for invasive neural recordings acquired from human
+patients. On the other hand, these patients typically produce speech outside of
+the experimental blocks used for training decoders. Making use of such data, and
+data from other patients, to improve decoding would ease the burden of data
+collection -- especially onerous for dys- and anarthric patients. Here we
+demonstrate that this is possible, by reengineering wav2vec -- a simple, self-
+supervised, fully convolutional model that learns latent representations of
+audio using a noise-contrastive loss -- for electrocorticographic (ECoG) data.
+We train this model on unlabelled ECoG recordings, and subsequently use it to
+transform ECoG from labeled speech sessions into wav2vec's representation space,
+before finally training a supervised encoder-decoder to map these
+representations to text. We experiment with various numbers of labeled blocks;
+for almost all choices, the new representations yield superior decoding
+performance to the original ECoG data, and in no cases do they yield worse.
+Performance can also be improved in some cases by pretraining wav2vec on another
+patient's data. In the best cases, wav2vec's representations decrease word error
+rates over the original data by upwards of 50%.

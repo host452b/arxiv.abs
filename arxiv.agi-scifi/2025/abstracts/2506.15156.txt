@@ -1,0 +1,25 @@
+Title: Emergence of Primacy and Recency Effect in Mamba: A Mechanistic Point of
+View
+Authors: Muhammad Cendekia Airlangga, Hilal AlQuabeh, Munachiso S Nwadike,
+Kentaro Inui
+ID: 2506.15156
+URL: https://arxiv.org/abs/2506.15156
+
+Abstract:
+We study memory in state-space language models using primacy and recency effects
+as behavioral tools to uncover how information is retained and forgotten over
+time. Applying structured recall tasks to the Mamba architecture, we observe a
+consistent U-shaped accuracy profile, indicating strong performance at the
+beginning and end of input sequences. We identify three mechanisms that give
+rise to this pattern. First, long-term memory is supported by a sparse subset of
+channels within the model's selective state space block, which persistently
+encode early input tokens and are causally linked to primacy effects. Second,
+short-term memory is governed by delta-modulated recurrence: recent inputs
+receive more weight due to exponential decay, but this recency advantage
+collapses when distractor items are introduced, revealing a clear limit to
+memory depth. Third, we find that memory allocation is dynamically modulated by
+semantic regularity: repeated relations in the input sequence shift the delta
+gating behavior, increasing the tendency to forget intermediate items. We
+validate these findings via targeted ablations and input perturbations on two
+large-scale Mamba-based language models: one with 1.4B and another with 7B
+parameters.

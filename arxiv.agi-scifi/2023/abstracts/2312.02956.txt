@@ -1,0 +1,36 @@
+Title: Choroidalyzer: An open-source, end-to-end pipeline for choroidal analysis
+in optical coherence tomography
+Authors: Justin Engelmann, Jamie Burke, Charlene Hamid, Megan Reid-Schachter,
+Dan Pugh, Neeraj Dhaun, Diana Moukaddem, Lyle Gray, Niall Strang, Paul McGraw,
+Amos Storkey, Paul J. Steptoe, Stuart King, Tom MacGillivray, Miguel O.
+Bernabeu, Ian J. C. MacCormick
+ID: 2312.02956
+URL: https://arxiv.org/abs/2312.02956
+
+Abstract:
+Purpose: To develop Choroidalyzer, an open-source, end-to-end pipeline for
+segmenting the choroid region, vessels, and fovea, and deriving choroidal
+thickness, area, and vascular index.
+  Methods: We used 5,600 OCT B-scans (233 subjects, 6 systemic disease cohorts,
+3 device types, 2 manufacturers). To generate region and vessel ground-truths,
+we used state-of-the-art automatic methods following manual correction of
+inaccurate segmentations, with foveal positions manually annotated. We trained a
+U-Net deep-learning model to detect the region, vessels, and fovea to calculate
+choroid thickness, area, and vascular index in a fovea-centred region of
+interest. We analysed segmentation agreement (AUC, Dice) and choroid metrics
+agreement (Pearson, Spearman, mean absolute error (MAE)) in internal and
+external test sets. We compared Choroidalyzer to two manual graders on a small
+subset of external test images and examined cases of high error.
+  Results: Choroidalyzer took 0.299 seconds per image on a standard laptop and
+achieved excellent region (Dice: internal 0.9789, external 0.9749), very good
+vessel segmentation performance (Dice: internal 0.8817, external 0.8703) and
+excellent fovea location prediction (MAE: internal 3.9 pixels, external 3.4
+pixels). For thickness, area, and vascular index, Pearson correlations were
+0.9754, 0.9815, and 0.8285 (internal) / 0.9831, 0.9779, 0.7948 (external),
+respectively (all p<0.0001). Choroidalyzer's agreement with graders was
+comparable to the inter-grader agreement across all metrics.
+  Conclusions: Choroidalyzer is an open-source, end-to-end pipeline that
+accurately segments the choroid and reliably extracts thickness, area, and
+vascular index. Especially choroidal vessel segmentation is a difficult and
+subjective task, and fully-automatic methods like Choroidalyzer could provide
+objectivity and standardisation.

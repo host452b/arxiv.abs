@@ -1,0 +1,29 @@
+Title: A Case for Hypergraphs to Model and Map SNNs on Neuromorphic Hardware
+Authors: Marco Ronzani, Cristina Silvano
+ID: 2601.16118
+URL: https://arxiv.org/abs/2601.16118
+
+Abstract:
+Executing Spiking Neural Networks (SNNs) on neuromorphic hardware poses the
+problem of mapping neurons to cores. SNNs operate by propagating spikes between
+neurons that form a graph through synapses. Neuromorphic hardware mimics them
+through a network-on-chip, transmitting spikes, and a mesh of cores, each
+managing several neurons. Its operational cost is tied to spike movement and
+active cores. A mapping comprises two tasks: partitioning the SNN's graph to fit
+inside cores and placement of each partition on the hardware mesh. Both are NP-
+hard problems, and as SNNs and hardware scale towards billions of neurons, they
+become increasingly difficult to tackle effectively. In this work, we propose to
+raise the abstraction of SNNs from graphs to hypergraphs, redesigning mapping
+techniques accordingly. The resulting model faithfully captures the replication
+of spikes inside cores by exposing the notion of hyperedge co-membership between
+neurons. We further show that the overlap and locality of hyperedges strongly
+correlate with high-quality mappings, making these properties instrumental in
+devising mapping algorithms. By exploiting them directly, grouping neurons
+through shared hyperedges, communication traffic and hardware resource usage can
+be reduced be yond what just contracting individual connections attains. To
+substantiate this insight, we consider several partitioning and placement
+algorithms, some newly devised, others adapted from literature, and compare them
+over progressively larger and bio-plausible SNNs. Our results show that
+hypergraph based techniques can achieve better mappings than the state-of-the-
+art at several execution time regimes. Based on these observations, we identify
+a promising selection of algorithms to achieve effective mappings at any scale.

@@ -1,0 +1,32 @@
+Title: An Empirical Study on the Potential of LLMs in Automated Software
+Refactoring
+Authors: Bo Liu, Yanjie Jiang, Yuxia Zhang, Nan Niu, Guangjie Li, Hui Liu
+ID: 2411.04444
+URL: https://arxiv.org/abs/2411.04444
+
+Abstract:
+Recent advances in large language models (LLMs), make it potentially feasible to
+automatically refactor source code with LLMs. However, it remains unclear how
+well LLMs perform compared to human experts in conducting refactorings
+automatically and accurately. To fill this gap, in this paper, we conduct an
+empirical study to investigate the potential of LLMs in automated software
+refactoring, focusing on the identification of refactoring opportunities and the
+recommendation of refactoring solutions. We first construct a high-quality
+refactoring dataset comprising 180 real-world refactorings from 20 projects, and
+conduct the empirical study on the dataset. With the to-be-refactored Java
+documents as input, ChatGPT and Gemini identified only 28 and 7 respectively out
+of the 180 refactoring opportunities. However, explaining the expected
+refactoring subcategories and narrowing the search space in the prompts
+substantially increased the success rate of ChatGPT from 15.6% to 86.7%.
+Concerning the recommendation of refactoring solutions, ChatGPT recommended 176
+refactoring solutions for the 180 refactorings, and 63.6% of the recommended
+solutions were comparable to (even better than) those constructed by human
+experts. However, 13 out of the 176 solutions suggested by ChatGPT and 9 out of
+the 137 solutions suggested by Gemini were unsafe in that they either changed
+the functionality of the source code or introduced syntax errors, which indicate
+the risk of LLM-based refactoring. To this end, we propose a detect-and-reapply
+tactic, called RefactoringMirror, to avoid such unsafe refactorings. By
+reapplying the identified refactorings to the original code using thoroughly
+tested refactoring engines, we can effectively mitigate the risks associated
+with LLM-based automated refactoring while still leveraging LLM's intelligence
+to obtain valuable refactoring recommendations.

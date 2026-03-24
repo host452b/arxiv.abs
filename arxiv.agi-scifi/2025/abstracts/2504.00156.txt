@@ -1,0 +1,30 @@
+Title: Nuclear Microreactor Control with Deep Reinforcement Learning
+Authors: Leo Tunkle, Kamal Abdulraheem, Linyu Lin, Majdi I. Radaideh
+ID: 2504.00156
+URL: https://arxiv.org/abs/2504.00156
+
+Abstract:
+The economic feasibility of nuclear microreactors will depend on minimizing
+operating costs through advancements in autonomous control, especially when
+these microreactors are operating alongside other types of energy systems (e.g.,
+renewable energy). This study explores the application of deep reinforcement
+learning (RL) for real-time drum control in microreactors, exploring performance
+in regard to load-following scenarios. By leveraging a point kinetics model with
+thermal and xenon feedback, we first establish a baseline using a single-output
+RL agent, then compare it against a traditional proportional-integral-derivative
+(PID) controller. This study demonstrates that RL controllers, including both
+single- and multi-agent RL (MARL) frameworks, can achieve similar or even
+superior load-following performance as traditional PID control across a range of
+load-following scenarios. In short transients, the RL agent was able to reduce
+the tracking error rate in comparison to PID. Over extended 300-minute load-
+following scenarios in which xenon feedback becomes a dominant factor, PID
+maintained better accuracy, but RL still remained within a 1% error margin
+despite being trained only on short-duration scenarios. This highlights RL's
+strong ability to generalize and extrapolate to longer, more complex transients,
+affording substantial reductions in training costs and reduced overfitting.
+Furthermore, when control was extended to multiple drums, MARL enabled
+independent drum control as well as maintained reactor symmetry constraints
+without sacrificing performance -- an objective that standard single-agent RL
+could not learn. We also found that, as increasing levels of Gaussian noise were
+added to the power measurements, the RL controllers were able to maintain lower
+error rates than PID, and to do so with less control effort.

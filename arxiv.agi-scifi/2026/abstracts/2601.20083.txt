@@ -1,0 +1,24 @@
+Title: LLaTTE: Scaling Laws for Multi-Stage Sequence Modeling in Large-Scale Ads
+Recommendation
+Authors: Lee Xiong, Zhirong Chen, Rahul Mayuranath, Shangran Qiu, Arda Ozdemir,
+Lu Li, Yang Hu, Dave Li, Jingtao Ren, Howard Cheng, Fabian Souto Herrera, Ahmed
+Agiza, Baruch Epshtein, Anuj Aggarwal, Julia Ulziisaikhan, Chao Wang, Dinesh
+Ramasamy, Parshva Doshi, Sri Reddy, Arnold Overwijk
+ID: 2601.20083
+URL: https://arxiv.org/abs/2601.20083
+
+Abstract:
+We present LLaTTE (LLM-Style Latent Transformers for Temporal Events), a
+scalable transformer architecture for production ads recommendation. Through
+systematic experiments, we demonstrate that sequence modeling in recommendation
+systems follows predictable power-law scaling similar to LLMs. Crucially, we
+find that semantic features bend the scaling curve: they are a prerequisite for
+scaling, enabling the model to effectively utilize the capacity of deeper and
+longer architectures. To realize the benefits of continued scaling under strict
+latency constraints, we introduce a two-stage architecture that offloads the
+heavy computation of large, long-context models to an asynchronous upstream user
+model. We demonstrate that upstream improvements transfer predictably to
+downstream ranking tasks. Deployed as the largest user model at Meta, this
+multi-stage framework drives a 4.3\% conversion uplift on Facebook Feed and
+Reels with minimal serving overhead, establishing a practical blueprint for
+harnessing scaling laws in industrial recommender systems.

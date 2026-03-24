@@ -1,0 +1,28 @@
+Title: The conditional saddlepoint approximation for fast and accurate large-
+scale hypothesis testing
+Authors: Ziang Niu, Jyotishka Ray Choudhury, Eugene Katsevich
+ID: 2407.08911
+URL: https://arxiv.org/abs/2407.08911
+
+Abstract:
+Large-scale testing in modern applications such as genomics often entails a
+trade-off between accuracy and speed: multiplicity corrections push cutoffs deep
+into the tails, where normal approximations can fail, while resampling is
+accurate but computationally expensive for large datasets. To resolve this
+impasse in the context of conditional independence testing, we introduce spaCRT,
+a closed-form saddlepoint approximation (SPA) for the distilled conditional
+randomization test (dCRT) that retains the statistical accuracy of dCRT's
+resampling while avoiding its computational cost. We prove that spaCRT's
+relative approximation error vanishes asymptotically by establishing a general
+theorem on the relative error of conditional SPAs. Because dCRT uses a plug-in
+nuisance regression, we specialize our guarantees to common choices: low-
+dimensional generalized linear model (GLM), high-dimensional GLM lasso, and
+kernel ridge regression. Our general theorem is, to our knowledge, the first
+rigorous technical tool for analyzing SPAs for resampling tests, which had
+previously been justified only heuristically. It extends beyond spaCRT, as we
+exemplify by justifying an SPA for the classical sign-flipping location test.
+Empirically, spaCRT matches dCRT's statistical performance by approximating its
+p-values with median error 1-12% across settings while delivering a 250x speedup
+on a single-cell CRISPR screen dataset with 85,000 hypotheses. Building on
+dCRT's versatility, spaCRT and its open-source R package enable fast and
+accurate large-scale testing across diverse applications.

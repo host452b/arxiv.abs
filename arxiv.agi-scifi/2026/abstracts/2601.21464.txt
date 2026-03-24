@@ -1,0 +1,25 @@
+Title: Conversation for Non-verifiable Learning: Self-Evolving LLMs through
+Meta-Evaluation
+Authors: Yuan Sui, Bryan Hooi
+ID: 2601.21464
+URL: https://arxiv.org/abs/2601.21464
+
+Abstract:
+Training large language models (LLMs) for non-verifiable tasks, such as creative
+writing, dialogue, and ethical reasoning, remains challenging due to the absence
+of ground-truth labels. While LLM-as-Judge approaches offer a scalable
+alternative to human feedback, they face a fundamental limitation: performance
+is constrained by the evaluator's own quality. If the judge cannot recognize
+good solutions, it cannot provide useful training signals, and evaluation biases
+(e.g., favoring verbosity over quality) remain unaddressed. This motivates meta-
+evaluation: the ability to evaluate and improve the evaluator itself. We
+introduce CoNL, a framework that unifies generation, evaluation, and meta-
+evaluation through multi-agent self-play. Our key insight: critique quality can
+be measured by whether it helps others improve their solutions. In CoNL,
+multiple agents sharing the same policy engage in structured conversations to
+propose, critique, and revise solutions. Critiques that enable solution
+improvements earn a diagnostic reward, creating explicit supervision for meta-
+evaluation and enabling joint optimization of generation and judging
+capabilities through self-play, without external judges or ground truth.
+Experiments on five benchmarks show that CoNL achieves consistent improvements
+over self-rewarding baselines while maintaining stable training.

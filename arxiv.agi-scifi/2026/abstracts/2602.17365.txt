@@ -1,0 +1,27 @@
+Title: Computer-Using World Model
+Authors: Yiming Guan, Rui Yu, John Zhang, Lu Wang, Chaoyun Zhang, Liqun Li, Bo
+Qiao, Si Qin, He Huang, Fangkai Yang, Pu Zhao, Lukas Wutschitz, Samuel Kessler,
+Huseyin A Inan, Robert Sim, Saravan Rajmohan, Qingwei Lin, Dongmei Zhang
+ID: 2602.17365
+URL: https://arxiv.org/abs/2602.17365
+
+Abstract:
+Agents operating in complex software environments benefit from reasoning about
+the consequences of their actions, as even a single incorrect user interface
+(UI) operation can derail long, artifact-preserving workflows. This challenge is
+particularly acute for computer-using scenarios, where real execution does not
+support counterfactual exploration, making large-scale trial-and-error learning
+and planning impractical despite the environment being fully digital and
+deterministic. We introduce the Computer-Using World Model (CUWM), a world model
+for desktop software that predicts the next UI state given the current state and
+a candidate action. CUWM adopts a two-stage factorization of UI dynamics: it
+first predicts a textual description of agent-relevant state changes, and then
+realizes these changes visually to synthesize the next screenshot. CUWM is
+trained on offline UI transitions collected from agents interacting with real
+Microsoft Office applications, and further refined with a lightweight
+reinforcement learning stage that aligns textual transition predictions with the
+structural requirements of computer-using environments. We evaluate CUWM via
+test-time action search, where a frozen agent uses the world model to simulate
+and compare candidate actions before execution. Across a range of Office tasks,
+world-model-guided test-time scaling improves decision quality and execution
+robustness.

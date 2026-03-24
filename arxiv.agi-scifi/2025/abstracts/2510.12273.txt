@@ -1,0 +1,29 @@
+Title: Multi-Action Self-Improvement for Neural Combinatorial Optimization
+Authors: Laurin Luttmann, Lin Xie
+ID: 2510.12273
+URL: https://arxiv.org/abs/2510.12273
+
+Abstract:
+Self-improvement has emerged as a state-of-the-art paradigm in Neural
+Combinatorial Optimization (NCO), where models iteratively refine their policies
+by generating and imitating high-quality solutions. Despite strong empirical
+performance, existing methods face key limitations. Training is computationally
+expensive, as policy updates require sampling numerous candidate solutions per
+instance to extract a single expert trajectory. More fundamentally, these
+approaches fail to exploit the structure of combinatorial problems involving the
+coordination of multiple agents, such as vehicles in min-max routing or machines
+in scheduling. By supervising on single-action trajectories, they fail to
+exploit agent-permutation symmetries, where distinct sequences of actions yield
+identical solutions, hindering generalization and the ability to learn
+coordinated behavior.
+  We address these challenges by extending self-improvement to operate over
+joint multi-agent actions. Our model architecture predicts complete agent-task
+assignments jointly at each decision step. To explicitly leverage symmetries, we
+employ a set-prediction loss, which supervises the policy on multiple expert
+assignments for any given state. This approach enhances sample efficiency and
+the model's ability to learn coordinated behavior. Furthermore, by generating
+multi-agent actions in parallel, it drastically accelerates the solution
+generation phase of the self-improvement loop. Empirically, we validate our
+method on several combinatorial problems, demonstrating consistent improvements
+in the quality of the final solution and a reduced generation latency compared
+to standard self-improvement.

@@ -1,0 +1,25 @@
+Title: Dissecting Bit-Level Scaling Laws in Quantizing Vision Generative Models
+Authors: Xin Ding, Shijie Cao, Ting Cao, Zhibo Chen
+ID: 2501.06218
+URL: https://arxiv.org/abs/2501.06218
+
+Abstract:
+Vision generative models have recently made significant advancements along two
+primary paradigms: diffusion-style and language-style, both of which have
+demonstrated excellent scaling laws. Quantization is crucial for efficiently
+deploying these models, as it reduces memory and computation costs. In this
+work, we systematically investigate the impact of quantization on these two
+paradigms. Surprisingly, despite achieving comparable performance in full
+precision, language-style models consistently outperform diffusion-style models
+across various quantization settings. This observation suggests that language-
+style models have superior bit-level scaling laws, offering a better tradeoff
+between model quality and total bits. To dissect this phenomenon, we conduct
+extensive experiments and find that the primary reason is the discrete
+representation space of language-style models, which is more tolerant of
+information loss during quantization. Furthermore, our analysis indicates that
+improving the bit-level scaling law of quantized vision generative models is
+challenging, with model distillation identified as a highly effective approach.
+Specifically, we propose TopKLD to optimize the transfer of distilled knowledge
+by balancing ``implicit knowledge'' and ``explicit knowledge'' during the
+distillation process. This approach elevates the bit-level scaling laws by one
+level across both integer and floating-point quantization settings.

@@ -1,0 +1,32 @@
+Title: Towards a robust and reliable deep learning approach for detection of
+compact binary mergers in gravitational wave data
+Authors: Shreejit Jadhav, Mihir Shrivastava, Sanjit Mitra
+ID: 2306.11797
+URL: https://arxiv.org/abs/2306.11797
+
+Abstract:
+The ability of deep learning (DL) approaches to learn generalised signal and
+noise models, coupled with their fast inference on GPUs, holds great promise for
+enhancing gravitational-wave (GW) searches in terms of speed, parameter space
+coverage, and search sensitivity. However, the opaque nature of DL models
+severely harms their reliability. In this work, we meticulously develop a DL
+model stage-wise and work towards improving its robustness and reliability.
+First, we address the problems in maintaining the purity of training data by
+deriving a new metric that better reflects the visual strength of the 'chirp'
+signal features in the data. Using a reduced, smooth representation obtained
+through a variational auto-encoder (VAE), we build a classifier to search for
+compact binary coalescence (CBC) signals. Our tests on real LIGO data show an
+impressive performance of the model. However, upon probing the robustness of the
+model through adversarial attacks, its simple failure modes were identified,
+underlining how such models can still be highly fragile. As a first step towards
+bringing robustness, we retrain the model in a novel framework involving a
+generative adversarial network (GAN). Over the course of training, the model
+learns to eliminate the primary modes of failure identified by the adversaries.
+Although absolute robustness is practically impossible to achieve, we
+demonstrate some fundamental improvements earned through such training, like
+sparseness and reduced degeneracy in the extracted features at different layers
+inside the model. We show that these gains are achieved at practically zero loss
+in terms of model performance on real LIGO data before and after GAN training.
+Through a direct search on 8.8 days of LIGO data, we recover two significant CBC
+events from GWTC-2.1, GW190519_153544 and GW190521_074359. We also report the
+search sensitivity obtained from an injection study.

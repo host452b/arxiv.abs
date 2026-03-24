@@ -1,0 +1,31 @@
+Title: AdapSNE: Adaptive Fireworks-Optimized and Entropy-Guided Dataset Sampling
+for Edge DNN Training
+Authors: Boran Zhao, Hetian Liu, Zihang Yuan, Li Zhu, Fan Yang, Lina Xie Tian
+Xia, Wenzhe Zhao, Pengju Ren
+ID: 2508.16647
+URL: https://arxiv.org/abs/2508.16647
+
+Abstract:
+Training deep neural networks (DNNs) directly on edge devices has attracted
+increasing attention, as it offers promising solutions to challenges such as
+domain adaptation and privacy preservation. However, conventional DNN training
+typically requires large-scale datasets, which imposes prohibitive overhead on
+edge devices-particularly for emerging large language model (LLM) tasks. To
+address this challenge, a DNN-free method (ie., dataset sampling without DNN),
+named NMS (Near-Memory Sampling), has been introduced. By first conducting
+dimensionality reduction of the dataset and then performing exemplar sampling in
+the reduced space, NMS avoids the architectural bias inherent in DNN-based
+methods and thus achieves better generalization. However, The state-of-the-art,
+NMS, suffers from two limitations: (1) The mismatch between the search method
+and the non-monotonic property of the perplexity error function leads to the
+emergence of outliers in the reduced representation; (2) Key parameter (ie.,
+target perplexity) is selected empirically, introducing arbitrariness and
+leading to uneven sampling. These two issues lead to representative bias of
+examplars, resulting in degraded accuracy. To address these issues, we propose
+AdapSNE, which integrates an efficient non-monotonic search method-namely, the
+Fireworks Algorithm (FWA)-to suppress outliers, and employs entropy-guided
+optimization to enforce uniform sampling, thereby ensuring representative
+training samples and consequently boosting training accuracy. To cut the edge-
+side cost arising from the iterative computations of FWA search and entropy-
+guided optimization, we design an accelerator with custom dataflow and time-
+multiplexing markedly reducing on-device training energy and area.

@@ -1,0 +1,26 @@
+Title: PrediPrune: Reducing Verification Overhead in Souper with Machine
+Learning Driven Pruning
+Authors: Ange-Thierry Ishimwe, Raghuveer Shivakumar, Heewoo Kim, Tamara Lehman,
+Joseph Izraelevitz
+ID: 2509.16497
+URL: https://arxiv.org/abs/2509.16497
+
+Abstract:
+Souper is a powerful enumerative superoptimizer that enhances the runtime
+performance of programs by optimizing LLVM intermediate representation (IR)
+code. However, its verification process, which relies on a computationally
+expensive SMT solver to validate optimization candidates, must explore a large
+search space. This large search space makes the verification process
+particularly expensive, increasing the burden to incorporate Souper into
+compilation tools. We propose PrediPrune, a stochastic candidate pruning
+strategy that effectively reduces the number of invalid candidates passed to the
+SMT solver. By utilizing machine learning techniques to predict the validity of
+candidates based on features extracted from the code, PrediPrune prunes unlikely
+candidates early, decreasing the verification workload. When combined with the
+state-of-the-art approach (Dataflow), PrediPrune decreases compilation time by
+51% compared to the Baseline and by 12% compared to using only Dataflow,
+emphasizing the effectiveness of the combined approach that integrates a purely
+ML-based method (PrediPrune) with a purely non-ML based (Dataflow) method.
+Additionally, PrediPrune offers a flexible interface to trade-off compilation
+time and optimization opportunities, allowing end users to adjust the balance
+according to their needs.

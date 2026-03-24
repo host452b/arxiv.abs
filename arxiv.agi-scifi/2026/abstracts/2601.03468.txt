@@ -1,0 +1,25 @@
+Title: Understanding Reward Hacking in Text-to-Image Reinforcement Learning
+Authors: Yunqi Hong, Kuei-Chun Kao, Hengguang Zhou, Cho-Jui Hsieh
+ID: 2601.03468
+URL: https://arxiv.org/abs/2601.03468
+
+Abstract:
+Reinforcement learning (RL) has become a standard approach for post-training
+large language models and, more recently, for improving image generation models,
+which uses reward functions to enhance generation quality and human preference
+alignment. However, existing reward designs are often imperfect proxies for true
+human judgment, making models prone to reward hacking--producing unrealistic or
+low-quality images that nevertheless achieve high reward scores. In this work,
+we systematically analyze reward hacking behaviors in text-to-image (T2I) RL
+post-training. We investigate how both aesthetic/human preference rewards and
+prompt-image consistency rewards individually contribute to reward hacking and
+further show that ensembling multiple rewards can only partially mitigate this
+issue. Across diverse reward models, we identify a common failure mode: the
+generation of artifact-prone images. To address this, we propose a lightweight
+and adaptive artifact reward model, trained on a small curated dataset of
+artifact-free and artifact-containing samples. This model can be integrated into
+existing RL pipelines as an effective regularizer for commonly used reward
+models. Experiments demonstrate that incorporating our artifact reward
+significantly improves visual realism and reduces reward hacking across multiple
+T2I RL setups, demonstrating the effectiveness of lightweight reward augment
+serving as a safeguard against reward hacking.

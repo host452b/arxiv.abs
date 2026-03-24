@@ -1,0 +1,31 @@
+Title: Diversity of Transformer Layers: One Aspect of Parameter Scaling Laws
+Authors: Hidetaka Kamigaito, Ying Zhang, Jingun Kwon, Katsuhiko Hayashi, Manabu
+Okumura, Taro Watanabe
+ID: 2505.24009
+URL: https://arxiv.org/abs/2505.24009
+
+Abstract:
+Transformers deliver outstanding performance across a wide range of tasks and
+are now a dominant backbone architecture for large language models (LLMs). Their
+task-solving performance is improved by increasing parameter size, as shown in
+the recent studies on parameter scaling laws. Although recent mechanistic-
+interpretability studies have deepened our understanding of the internal
+behavior of Transformers by analyzing their residual stream, the relationship
+between these internal mechanisms and the parameter scaling laws remains
+unclear. To bridge this gap, we focus on layers and their size, which mainly
+decide the parameter size of Transformers. For this purpose, we first
+theoretically investigate the layers within the residual stream through a bias-
+diversity decomposition. The decomposition separates (i) bias, the error of each
+layer's output from the ground truth, and (ii) diversity, which indicates how
+much the outputs of each layer differ from each other. Analyzing Transformers
+under this theory reveals that performance improves when individual layers make
+predictions close to the correct answer and remain mutually diverse. We show
+that diversity becomes especially critical when individual layers' outputs are
+far from the ground truth. Finally, we introduce an information-theoretic
+diversity and show our main findings that adding layers enhances performance
+only when those layers behave differently, i.e., are diverse. We also reveal the
+performance gains from increasing the number of layers exhibit submodularity:
+marginal improvements diminish as additional layers increase, mirroring the
+logarithmic convergence predicted by the parameter scaling laws. Experiments on
+multiple semantic-understanding tasks with various LLMs empirically confirm the
+theoretical properties derived in this study.

@@ -1,0 +1,27 @@
+Title: WeaveTime: Stream from Earlier Frames into Emergent Memory in VideoLLMs
+Authors: Yulin Zhang, Cheng Shi, Sibei Yang
+ID: 2602.22142
+URL: https://arxiv.org/abs/2602.22142
+
+Abstract:
+Recent advances in Multimodal Large Language Models have greatly improved visual
+understanding and reasoning, yet their quadratic attention and offline training
+protocols make them ill-suited for streaming settings where frames arrive
+sequentially and future observations are inaccessible. We diagnose a core
+limitation of current Video-LLMs, namely Time-Agnosticism, in which videos are
+treated as an unordered bag of evidence rather than a causally ordered sequence,
+yielding two failures in streams: temporal order ambiguity, in which the model
+cannot follow or reason over the correct chronological order, and past-current
+focus blindness where it fails to distinguish present observations from
+accumulated history. We present WeaveTime, a simple, efficient, and model
+agnostic framework that first teaches order and then uses order. We introduce a
+lightweight Temporal Reconstruction objective-our Streaming Order Perception
+enhancement-that instills order aware representations with minimal finetuning
+and no specialized streaming data. At inference, a Past-Current Dynamic Focus
+Cache performs uncertainty triggered, coarse-to-fine retrieval, expanding
+history only when needed. Plugged into exsiting Video-LLM without architectural
+changes, WeaveTime delivers consistent gains on representative streaming
+benchmarks, improving accuracy while reducing latency. These results establish
+WeaveTime as a practical path toward time aware stream Video-LLMs under strict
+online, time causal constraints. Code and weights will be made publicly
+available. Project Page: https://zhangyl4.github.io/publications/weavetime/

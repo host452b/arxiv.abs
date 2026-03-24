@@ -1,0 +1,30 @@
+Title: Unraveling the Mystery of Scaling Laws: Part I
+Authors: Hui Su, Zhi Tian, Xiaoyu Shen, Xunliang Cai
+ID: 2403.06563
+URL: https://arxiv.org/abs/2403.06563
+
+Abstract:
+Scaling law principles indicate a power-law correlation between loss and
+variables such as model size, dataset size, and computational resources utilized
+during training. These principles play a vital role in optimizing various
+aspects of model pre-training, ultimately contributing to the success of large
+language models such as GPT-4, Llama and Gemini. However, the original scaling
+law paper by OpenAI did not disclose the complete details necessary to derive
+the precise scaling law formulas, and their conclusions are only based on models
+containing up to 1.5 billion parameters. Though some subsequent works attempt to
+unveil these details and scale to larger models, they often neglect the training
+dependency of important factors such as the learning rate, context length and
+batch size, leading to their failure to establish a reliable formula for
+predicting the test loss trajectory. In this technical report, we confirm that
+the scaling law formulations proposed in the original OpenAI paper remain valid
+when scaling the model size up to 33 billion, but the constant coefficients in
+these formulas vary significantly with the experiment setup. We meticulously
+identify influential factors and provide transparent, step-by-step instructions
+to estimate all constant terms in scaling-law formulas by training on models
+with only 1M~60M parameters. Using these estimated formulas, we showcase the
+capability to accurately predict various attributes for models with up to 33B
+parameters before their training, including (1) the minimum possible test loss;
+(2) the minimum required training steps and processed tokens to achieve a
+specific loss; (3) the critical batch size with an optimal time/computation
+trade-off at any loss value; and (4) the complete test loss trajectory with
+arbitrary batch size.

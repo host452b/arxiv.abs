@@ -1,0 +1,32 @@
+Title: Fixed-Threshold Evaluation of a Hybrid CNN-ViT for AI-Generated Image
+Detection Across Photos and Art
+Authors: Md Ashik Khan, Arafat Alam Jion
+ID: 2512.21512
+URL: https://arxiv.org/abs/2512.21512
+
+Abstract:
+AI image generators create both photorealistic images and stylized art,
+necessitating robust detectors that maintain performance under common post-
+processing transformations (JPEG compression, blur, downscaling). Existing
+methods optimize single metrics without addressing deployment-critical factors
+such as operating point selection and fixed-threshold robustness. This work
+addresses misleading robustness estimates by introducing a fixed-threshold
+evaluation protocol that holds decision thresholds, selected once on clean
+validation data, fixed across all post-processing transformations. Traditional
+methods retune thresholds per condition, artificially inflating robustness
+estimates and masking deployment failures. We report deployment-relevant
+performance at three operating points (Low-FPR, ROC-optimal, Best-F1) under
+systematic degradation testing using a lightweight CNN-ViT hybrid with gated
+fusion and optional frequency enhancement. Our evaluation exposes a
+statistically validated forensic-semantic spectrum: frequency-aided CNNs excel
+on pristine photos but collapse under compression (93.33% to 61.49%), whereas
+ViTs degrade minimally (92.86% to 88.36%) through robust semantic pattern
+recognition. Multi-seed experiments demonstrate that all architectures achieve
+15% higher AUROC on artistic content (0.901-0.907) versus photorealistic images
+(0.747-0.759), confirming that semantic patterns provide fundamentally more
+reliable detection cues than forensic artifacts. Our hybrid approach achieves
+balanced cross-domain performance: 91.4% accuracy on tiny-genimage photos, 89.7%
+on AiArtData art/graphics, and 98.3% (competitive) on CIFAKE. Fixed-threshold
+evaluation eliminates retuning inflation, reveals genuine robustness gaps, and
+yields actionable deployment guidance: prefer CNNs for clean photo verification,
+ViTs for compressed content, and hybrids for art/graphics screening.

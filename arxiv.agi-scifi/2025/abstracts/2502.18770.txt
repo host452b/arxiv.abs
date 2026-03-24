@@ -1,0 +1,29 @@
+Title: Reward Shaping to Mitigate Reward Hacking in RLHF
+Authors: Jiayi Fu, Xuandong Zhao, Chengyuan Yao, Heng Wang, Qi Han, Yanghua Xiao
+ID: 2502.18770
+URL: https://arxiv.org/abs/2502.18770
+
+Abstract:
+Reinforcement Learning from Human Feedback (RLHF) is essential for aligning
+large language models (LLMs) with human values. However, RLHF is susceptible to
+\emph{reward hacking}, where the agent exploits flaws in the reward function
+rather than learning the intended behavior, thus degrading alignment. Although
+reward shaping helps stabilize RLHF and partially mitigate reward hacking, a
+systematic investigation into shaping techniques and their underlying principles
+remains lacking. To bridge this gap, we present a comprehensive study of the
+prevalent reward shaping methods. Our analysis suggests two key design
+principles: (1) the RL reward should be bounded, and (2) the RL reward benefits
+from rapid initial growth followed by gradual convergence. Guided by these
+insights, we propose Preference As Reward (PAR), a novel approach that leverages
+the latent preferences embedded within the reward model as the signal for
+reinforcement learning. Moreover, PAR exhibits two critical variance-reduction
+properties that contribute to stabilizing the RLHF training process and
+effectively extending the tolerance window for early stopping. We evaluated PAR
+on the base model Gemma2-2B using two datasets, Ultrafeedback-Binarized and HH-
+RLHF. Experimental results demonstrate PAR's superior performance over other
+reward shaping methods. On the AlpacaEval 2.0 benchmark, PAR achieves a win rate
+of at least 5 percentage points higher than competing approaches. Furthermore,
+PAR exhibits remarkable data efficiency, requiring only a single reference
+reward for optimal performance, and maintains robustness against reward hacking
+even after two full epochs of training. The code is available at
+https://github.com/PorUna-byte/PAR.

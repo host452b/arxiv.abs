@@ -1,0 +1,30 @@
+Title: Foundational World Models Accurately Detect Bimanual Manipulator Failures
+Authors: Isaac R. Ward, Michelle Ho, Houjun Liu, Aaron Feldman, Joseph Vincent,
+Liam Kruse, Sean Cheong, Duncan Eddy, Mykel J. Kochenderfer, Mac Schwager
+ID: 2603.06987
+URL: https://arxiv.org/abs/2603.06987
+
+Abstract:
+Deploying visuomotor robots at scale is challenging due to the potential for
+anomalous failures to degrade performance, cause damage, or endanger human life.
+Bimanual manipulators are no exception; these robots have vast state spaces
+comprised of high-dimensional images and proprioceptive signals. Explicitly
+defining failure modes within such state spaces is infeasible. In this work, we
+overcome these challenges by training a probabilistic, history informed, world
+model within the compressed latent space of a pretrained vision foundation model
+(NVIDIA's Cosmos Tokenizer). The model outputs uncertainty estimates alongside
+its predictions that serve as non-conformity scores within a conformal
+prediction framework. We use these scores to develop a runtime monitor,
+correlating periods of high uncertainty with anomalous failures. To test these
+methods, we use the simulated Push-T environment and the Bimanual Cable
+Manipulation dataset, the latter of which we introduce in this work. This new
+dataset features trajectories with multiple synchronized camera views,
+proprioceptive signals, and annotated failures from a challenging data center
+maintenance task. We benchmark our methods against baselines from the anomaly
+detection and out-of-distribution detection literature, and show that our
+approach considerably outperforms statistical techniques. Furthermore, we show
+that our approach requires approximately one twentieth of the trainable
+parameters as the next-best learning-based approach, yet outperforms it by 3.8%
+in terms of failure detection rate, paving the way toward safely deploying
+manipulator robots in real-world environments where reliability is non-
+negotiable.

@@ -1,0 +1,24 @@
+Title: RAE-NWM: Navigation World Model in Dense Visual Representation Space
+Authors: Mingkun Zhang, Wangtian Shen, Fan Zhang, Haijian Qin, Zihao Pei, Ziyang
+Meng
+ID: 2603.09241
+URL: https://arxiv.org/abs/2603.09241
+
+Abstract:
+Visual navigation requires agents to reach goals in complex environments through
+perception and planning. World models address this task by simulating action-
+conditioned state transitions to predict future observations. Current navigation
+world models typically learn state evolution under actions within the compressed
+latent space of a Variational Autoencoder, where spatial compression often
+discards fine-grained structural information and hinders precise control. To
+better understand the propagation characteristics of different representations,
+we conduct a linear dynamics probe and observe that dense DINOv2 features
+exhibit stronger linear predictability for action-conditioned transitions.
+Motivated by this observation, we propose the Representation Autoencoder-based
+Navigation World Model (RAE-NWM), which models navigation dynamics in a dense
+visual representation space. We employ a Conditional Diffusion Transformer with
+Decoupled Diffusion Transformer head (CDiT-DH) to model continuous transitions,
+and introduce a separate time-driven gating module for dynamics conditioning to
+regulate action injection strength during generation. Extensive evaluations show
+that modeling sequential rollouts in this space improves structural stability
+and action accuracy, benefiting downstream planning and navigation.

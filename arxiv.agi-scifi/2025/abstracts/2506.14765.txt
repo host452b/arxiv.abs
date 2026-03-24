@@ -1,0 +1,32 @@
+Title: Scaling Laws for Geospatial Foundation Models: A case study on PhilEO
+Bench
+Authors: Nikolaos Dionelis, Riccardo Musto, Jente Bosmans, Simone Sarti,
+Giancarlo Paoletti, Peter Naylor, Valerio Marsocci, Sébastien Lefèvre, Bertrand
+Le Saux, Nicolas Longépé
+ID: 2506.14765
+URL: https://arxiv.org/abs/2506.14765
+
+Abstract:
+Foundation Models (FMs) have achieved state-of-the-art performance across
+domains by leveraging large-scale pretraining. In Earth Observation (EO), the
+availability of petabyte-scale satellite archives has recently enabled the
+development of GeoSpatial Foundation Models (GFMs). Yet, fundamental questions
+remain regarding how dataset size, model architecture, and size interact to
+determine downstream performance. In this work, we systematically explore this
+design space by pretraining and fine-tuning models on three dataset scales:
+PhilEO Globe (0.5TB), FastTOM (2TB, introduced here), and MajorTOM (23TB). We
+evaluate three architectural families: Geo-Aware U-Net (CNN), ViT-UPerNet
+(Transformer), and Mamba (State-Space Model); across model sizes ranging from
+44M to 300M parameters. All models are benchmarked on the PhilEO Bench,
+covering: road density and building density regression, and land cover
+segmentation, and are compared against existing GFMs such as TerraMind and
+Prithvi-EO-2.0. Our results show that CNN-based models remain highly competitive
+in low-shot settings, with a 200M-parameter Geo-Aware U-Net outperforming larger
+architectures on regression tasks. However, when scaling to multi-terabyte
+datasets, ViT-UPerNet achieves the best performance, particularly for semantic
+segmentation on MajorTOM (23TB). Finally, we provide the first extensive
+evaluation of Mamba models in EO, highlighting their potential efficiency
+advantages, though further large-scale pretraining is required to fully match
+CNNs and ViTs. All code, pretrained models, and the FastTOM dataset are released
+publicly, enabling reproducibility and further exploration of scaling laws for
+GFMs.

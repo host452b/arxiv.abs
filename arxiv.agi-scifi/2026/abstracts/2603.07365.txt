@@ -1,0 +1,26 @@
+Title: Scaling Laws in the Tiny Regime: How Small Models Change Their Mistakes
+Authors: Mohammed Alnemari, Rizwan Qureshi, Nader Begrazadah
+ID: 2603.07365
+URL: https://arxiv.org/abs/2603.07365
+
+Abstract:
+Neural scaling laws describe how model performance improves as a power law with
+size, but existing work focuses on models above 100M parameters. The sub-20M
+regime -- where TinyML and edge AI operate -- remains unexamined. We train 90
+models (22K--19.8M parameters) across two architectures (plain ConvNet,
+MobileNetV2) on CIFAR-100, varying width while holding depth and training fixed.
+Both follow approximate power laws in error rate: $α= 0.156 \pm 0.002$
+(ScaleCNN) and $α= 0.106 \pm 0.001$ (MobileNetV2) across five seeds. Since prior
+work fit cross-entropy loss rather than error rate, direct exponent comparison
+is approximate; with that caveat, these are 1.4--2x steeper than $α\approx
+0.076$ for large language models. The power law does not hold uniformly: local
+exponents decay with scale, and MobileNetV2 saturates at 19.8M parameters
+($α_{\mathrm{local}} = 0.006$). Error structure also changes. Jaccard overlap
+between error sets of the smallest and largest ScaleCNN is only 0.35 (25 seed
+pairs, $\pm 0.004$) -- compression changes which inputs are misclassified, not
+merely how many. Small models
+  concentrate capacity on easy classes (Gini: 0.26 at 22K vs. 0.09 at 4.7M)
+while abandoning the hardest (bottom-5 accuracy: 10% vs. 53%). Counter to
+expectation, the smallest models are best calibrated (ECE = 0.013 vs. peak 0.110
+  at mid-size). Aggregate accuracy is therefore misleading for edge deployment;
+validation must happen at the target model size.

@@ -1,0 +1,30 @@
+Title: MIRA: Towards Mitigating Reward Hacking in Inference-Time Alignment of
+T2I Diffusion Models
+Authors: Kevin Zhai, Utsav Singh, Anirudh Thatipelli, Souradip Chakraborty, Anit
+Kumar Sahu, Furong Huang, Amrit Singh Bedi, Mubarak Shah
+ID: 2510.01549
+URL: https://arxiv.org/abs/2510.01549
+
+Abstract:
+Diffusion models excel at generating images conditioned on text prompts, but the
+resulting images often do not satisfy user-specific criteria measured by scalar
+rewards such as Aesthetic Scores. This alignment typically requires fine-tuning,
+which is computationally demanding. Recently, inference-time alignment via noise
+optimization has emerged as an efficient alternative, modifying initial input
+noise to steer the diffusion denoising process towards generating high-reward
+images. However, this approach suffers from reward hacking, where the model
+produces images that score highly, yet deviate significantly from the original
+prompt. We show that noise-space regularization is insufficient and that
+preventing reward hacking requires an explicit image-space constraint. To this
+end, we propose MIRA (MItigating Reward hAcking), a training-free, inference-
+time alignment method. MIRA introduces an image-space, score-based KL surrogate
+that regularizes the sampling trajectory with a frozen backbone, constraining
+the output distribution so reward can increase without off-distribution drift
+(reward hacking). We derive a tractable approximation to KL using diffusion
+scores. Across SDv1.5 and SDXL, multiple rewards (Aesthetic, HPSv2, PickScore),
+and public datasets (e.g., Animal-Animal, HPDv2), MIRA achieves >60\% win rate
+vs. strong baselines while preserving prompt adherence; mechanism plots show
+reward gains with near-zero drift, whereas DNO drifts as compute increases. We
+further introduce MIRA-DPO, mapping preference optimization to inference time
+with a frozen backbone, extending MIRA to non-differentiable rewards without
+fine-tuning.

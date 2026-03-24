@@ -1,0 +1,25 @@
+Title: Constrained Decoding for Robotics Foundation Models
+Authors: Parv Kapoor, Akila Ganlath, Michael Clifford, Changliu Liu, Sebastian
+Scherer, Eunsuk Kang
+ID: 2509.01728
+URL: https://arxiv.org/abs/2509.01728
+
+Abstract:
+Recent advances in the development of robotic foundation models have led to
+promising end-to-end and general-purpose capabilities in robotic systems.
+Trained on vast datasets of simulated and real-world trajectories, these models
+map multimodal observations directly to action sequences for physical execution.
+Despite promising real-world capabilities, these models are still data-driven
+and, therefore, lack explicit notions of behavioral correctness. We address this
+gap by introducing SafeDec, a constrained decoding framework for autoregressive,
+robot foundation models that enforces invariant safety specifications on
+candidate action trajectories. Task-specific safety rules are expressed as
+Signal Temporal Logic (STL) formulas and are enforced at inference time with
+minimal overhead. Our method ensures that generated actions provably satisfy STL
+specifications under assumed dynamics at runtime without retraining , while
+remaining agnostic of the underlying policy. We evaluate SafeDec on tasks from
+the CHORES benchmark for state-of-the-art generalist policies (e.g., SPOC,
+Flare, PoliFormer) across hundreds of procedurally generated environments and
+show that our decoding-time interventions are useful not only for filtering
+unsafe actions but also for conditional action generation. Videos are available
+at constrained-robot-fms.github.io.

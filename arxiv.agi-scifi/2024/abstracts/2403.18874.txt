@@ -1,0 +1,30 @@
+Title: Neural Attributed Community Search at Billion Scale
+Authors: Jianwei Wang, Kai Wang, Xuemin Lin, Wenjie Zhang, Ying Zhang
+ID: 2403.18874
+URL: https://arxiv.org/abs/2403.18874
+
+Abstract:
+Community search has been extensively studied in the past decades. In recent
+years, there is a growing interest in attributed community search that aims to
+identify a community based on both the query nodes and query attributes. A set
+of techniques have been investigated. Though the recent methods based on
+advanced learning models such as graph neural networks (GNNs) can achieve state-
+of-the-art performance in terms of accuracy, we notice that 1) they suffer from
+severe efficiency issues; 2) they directly model community search as a node
+classification problem and thus cannot make good use of interdependence among
+different entities in the graph. Motivated by these, in this paper, we propose a
+new neurAL attrIbuted Community sEarch model for large-scale graphs, termed
+ALICE. ALICE first extracts a candidate subgraph to reduce the search scope and
+subsequently predicts the community by the Consistency-aware Net , termed
+ConNet. Specifically, in the extraction phase, we introduce the density sketch
+modularity that uses a unified form to combine the strengths of two existing
+powerful modularities, i.e., classical modularity and density modularity. Based
+on the new modularity metric, we first adaptively obtain the candidate subgraph,
+formed by the k-hop neighbors of the query nodes, with the maximum modularity.
+Then, we construct a node-attribute bipartite graph to take attributes into
+consideration. After that, ConNet adopts a cross-attention encoder to encode the
+interaction between the query and the graph. The training of the model is guided
+by the structure-attribute consistency and the local consistency to achieve
+better performance. Extensive experiments over 11 real-world datasets including
+one billion-scale graph demonstrate the superiority of ALICE in terms of
+accuracy, efficiency, and scalability.

@@ -1,0 +1,27 @@
+Title: ParetoQ: Improving Scaling Laws in Extremely Low-bit LLM Quantization
+Authors: Zechun Liu, Changsheng Zhao, Hanxian Huang, Sijia Chen, Jing Zhang,
+Jiawei Zhao, Scott Roy, Lisa Jin, Yunyang Xiong, Yangyang Shi, Lin Xiao,
+Yuandong Tian, Bilge Soran, Raghuraman Krishnamoorthi, Tijmen Blankevoort, Vikas
+Chandra
+ID: 2502.02631
+URL: https://arxiv.org/abs/2502.02631
+
+Abstract:
+The optimal bit-width for achieving the best trade-off between quantized model
+size and accuracy has been a subject of ongoing debate. While some advocate for
+4-bit quantization, others propose that 1.58-bit offers superior results.
+However, the lack of a cohesive framework for different bits has left such
+conclusions relatively tenuous. We present ParetoQ, the first unified framework
+that facilitates rigorous comparisons across 1-bit, 1.58-bit, 2-bit, 3-bit, and
+4-bit quantization settings. Our findings reveal a notable learning transition
+between 2 and 3 bits: For 3-bits and above, the fine-tuned models stay close to
+their original pre-trained distributions, whereas for learning 2-bit networks or
+below, the representations change drastically. By optimizing training schemes
+and refining quantization functions, ParetoQ surpasses all previous methods
+tailored to specific bit widths. Remarkably, our ParetoQ ternary 600M-parameter
+model even outperforms the previous SoTA ternary 3B-parameter model in accuracy,
+using only one-fifth of the parameters. Extensive experimentation shows that
+ternary, 2-bit, and 3-bit quantization maintains comparable performance in the
+size-accuracy trade-off and generally exceeds 4-bit and binary quantization.
+Considering hardware constraints, 2-bit quantization offers promising potential
+for memory reduction and speedup.

@@ -1,0 +1,28 @@
+Title: Ultra-low-power Image Classification on Neuromorphic Hardware
+Authors: Gregor Lenz, Garrick Orchard, Sadique Sheik
+ID: 2309.16795
+URL: https://arxiv.org/abs/2309.16795
+
+Abstract:
+Spiking neural networks (SNNs) promise ultra-low-power applications by
+exploiting temporal and spatial sparsity. The number of binary activations,
+called spikes, is proportional to the power consumed when executed on
+neuromorphic hardware. Training such SNNs using backpropagation through time for
+vision tasks that rely mainly on spatial features is computationally costly.
+Training a stateless artificial neural network (ANN) to then convert the weights
+to an SNN is a straightforward alternative when it comes to image recognition
+datasets. Most conversion methods rely on rate coding in the SNN to represent
+ANN activation, which uses enormous amounts of spikes and, therefore, energy to
+encode information. Recently, temporal conversion methods have shown promising
+results requiring significantly fewer spikes per neuron, but sometimes complex
+neuron models. We propose a temporal ANN-to-SNN conversion method, which we call
+Quartz, that is based on the time to first spike (TTFS). Quartz achieves high
+classification accuracy and can be easily implemented on neuromorphic hardware
+while using the least amount of synaptic operations and memory accesses. It
+incurs a cost of two additional synapses per neuron compared to previous
+temporal conversion methods, which are readily available on neuromorphic
+hardware. We benchmark Quartz on MNIST, CIFAR10, and ImageNet in simulation to
+show the benefits of our method and follow up with an implementation on Loihi, a
+neuromorphic chip by Intel. We provide evidence that temporal coding has
+advantages in terms of power consumption, throughput, and latency for similar
+classification accuracy. Our code and models are publicly available.

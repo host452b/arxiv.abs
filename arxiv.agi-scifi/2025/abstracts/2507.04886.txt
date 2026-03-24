@@ -1,0 +1,26 @@
+Title: Emergent Semantics Beyond Token Embeddings: Transformer LMs with Frozen
+Visual Unicode Representations
+Authors: A. Bochkov
+ID: 2507.04886
+URL: https://arxiv.org/abs/2507.04886
+
+Abstract:
+Understanding the locus of semantic representation in large language models
+(LLMs) is crucial for interpretability and architectural innovation. The
+dominant paradigm posits that trainable input embeddings serve as foundational
+"meaning vectors." This paper challenges that view. We construct Transformer
+models where the embedding layer is entirely frozen, with vectors derived not
+from data, but from the visual structure of Unicode glyphs. These non-semantic,
+precomputed visual embeddings are fixed throughout training. Our method is
+compatible with any tokenizer, including a novel Unicode-centric tokenizer we
+introduce to ensure universal text coverage. Despite the absence of trainable,
+semantically initialized embeddings, our models converge, generate coherent
+text, and, critically, outperform architecturally identical models with
+trainable embeddings on the MMLU reasoning benchmark. We attribute this to
+"representational interference" in conventional models, where the embedding
+layer is burdened with learning both structural and semantic features. Our
+results indicate that high-level semantics are not inherent to input embeddings
+but are an emergent property of the Transformer's compositional architecture and
+data scale. This reframes the role of embeddings from meaning containers to
+structural primitives. We release all code and models to foster further
+research.

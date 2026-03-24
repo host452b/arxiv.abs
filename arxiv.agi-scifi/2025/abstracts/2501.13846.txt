@@ -1,0 +1,32 @@
+Title: Identifying and Mitigating Machine Learning Biases for the Gravitational
+Wave Detection Problem
+Authors: Narenraju Nagarajan, Christopher Messenger
+ID: 2501.13846
+URL: https://arxiv.org/abs/2501.13846
+
+Abstract:
+Matched filtering is a long-standing technique for the optimal detection of
+known signals in stationary Gaussian noise. However, it has known departures
+from optimality when operating on unknown signals in real noise and suffers from
+computational inefficiencies in its pursuit of near-optimality. A compelling
+alternative that has emerged in recent years to address this problem is deep
+learning. Although it has shown significant promise when applied to the search
+for gravitational waves (GWs) in detector noise, we demonstrate the existence of
+learning biases that hinder generalisation and lead to significant loss in
+detection sensitivity. Our work identifies the sources of a set of 11
+interconnected biases present in the supervised learning of the GW detection
+problem and contributes mitigation tactics and training strategies to
+concurrently address them. In light of the identified biases, we demonstrate
+that existing detection sensitivity metrics are not reliable for machine-
+learning (ML) pipelines and discuss the trustworthiness of previous results. We
+use GW domain knowledge to build a bespoke ML based binary black hole search
+pipeline called Sage that addresses these biases. Via the injection study
+presented in the Machine Learning Gravitational-Wave Search Challenge, we show
+that Sage detects ~11.2% more signals than the benchmark PyCBC analysis at a
+false alarm rate of one per month in O3a noise. Moreover, we also show that it
+can detect ~48.29% more signals than the previous best-performing ML pipeline on
+the same dataset. We empirically prove that Sage can: [i] effectively handle
+out-of-distribution noise power spectral densities, [ii] strongly reject non-
+Gaussian transient noise artefacts, and [iii] achieve higher detection
+sensitivities using less data than network architectures of a similar size. All
+code and implementations are available at https://github.com/nnarenraju/sage.

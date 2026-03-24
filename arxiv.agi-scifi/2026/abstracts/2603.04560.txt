@@ -1,0 +1,32 @@
+Title: From Local Corrections to Generalized Skills: Improving Neuro-Symbolic
+Policies with MEMO
+Authors: Benjamin A. Christie, Yinlong Dai, Mohammad Bararjanianbahnamiri, Simon
+Stepputtis, Dylan P. Losey
+ID: 2603.04560
+URL: https://arxiv.org/abs/2603.04560
+
+Abstract:
+Recent works use a neuro-symbolic framework for general manipulation policies.
+The advantage of this framework is that -- by applying off-the-shelf vision and
+language models -- the robot can break complex tasks down into semantic
+subtasks. However, the fundamental bottleneck is that the robot needs skills to
+ground these subtasks into embodied motions. Skills can take many forms (e.g.,
+trajectory snippets, motion primitives, coded functions), but regardless of
+their form skills act as a constraint. The high-level policy can only ground its
+language reasoning through the available skills; if the robot cannot generate
+the right skill for the current task, its policy will fail. We propose to
+address this limitation -- and dynamically expand the robot's skills -- by
+leveraging user feedback. When a robot fails, humans can intuitively explain
+what went wrong (e.g., ``no, go higher''). While a simple approach is to recall
+this exact text the next time the robot faces a similar situation, we
+hypothesize that by collecting, clustering, and re-phrasing natural language
+corrections across multiple users and tasks, we can synthesize more general text
+guidance and coded skill templates. Applying this hypothesis we develop Memory
+Enhanced Manipulation (MEMO). MEMO builds and maintains a retrieval-augmented
+skillbook gathered from human feedback and task successes. At run time, MEMO
+retrieves relevant text and code from this skillbook, enabling the robot's
+policy to generate new skills while reasoning over multi-task human feedback.
+Our experiments demonstrate that using MEMO to aggregate local feedback into
+general skill templates enables generalization to novel tasks where existing
+baselines fall short. See supplemental material here:
+https://collab.me.vt.edu/memo

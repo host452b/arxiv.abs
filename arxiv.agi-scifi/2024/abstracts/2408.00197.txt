@@ -1,0 +1,32 @@
+Title: Automated Software Vulnerability Static Code Analysis Using Generative
+Pre-Trained Transformer Models
+Authors: Elijah Pelofske, Vincent Urias, Lorie M. Liebrock
+ID: 2408.00197
+URL: https://arxiv.org/abs/2408.00197
+
+Abstract:
+Generative Pre-Trained Transformer models have been shown to be surprisingly
+effective at a variety of natural language processing tasks -- including
+generating computer code. We evaluate the effectiveness of open source GPT
+models for the task of automatic identification of the presence of vulnerable
+code syntax (specifically targeting C and C++ source code). This task is
+evaluated on a selection of 36 source code examples from the NIST SARD dataset,
+which are specifically curated to not contain natural English that indicates the
+presence, or lack thereof, of a particular vulnerability. The NIST SARD source
+code dataset contains identified vulnerable lines of source code that are
+examples of one out of the 839 distinct Common Weakness Enumerations (CWE),
+allowing for exact quantification of the GPT output classification error rate. A
+total of 5 GPT models are evaluated, using 10 different inference temperatures
+and 100 repetitions at each setting, resulting in 5,000 GPT queries per
+vulnerable source code analyzed. Ultimately, we find that the GPT models that we
+evaluated are not suitable for fully automated vulnerability scanning because
+the false positive and false negative rates are too high to likely be useful in
+practice. However, we do find that the GPT models perform surprisingly well at
+automated vulnerability detection for some of the test cases, in particular
+surpassing random sampling, and being able to identify the exact lines of code
+that are vulnerable albeit at a low success rate. The best performing GPT model
+result found was Llama-2-70b-chat-hf with inference temperature of 0.1 applied
+to NIST SARD test case 149165 (which is an example of a buffer overflow
+vulnerability), which had a binary classification recall score of 1.0 and a
+precision of 1.0 for correctly and uniquely identifying the vulnerable line of
+code and the correct CWE number.

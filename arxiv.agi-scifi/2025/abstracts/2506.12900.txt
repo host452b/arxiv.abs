@@ -1,0 +1,26 @@
+Title: Self-Stabilizing Replicated State Machine Coping with Byzantine and
+Recurring Transient Faults
+Authors: Shlomi Dolev, Amit Hendin, Maurice Herlihy, Maria Potop Butucaru, Elad
+Michael Schiller
+ID: 2506.12900
+URL: https://arxiv.org/abs/2506.12900
+
+Abstract:
+The ability to perform repeated Byzantine agreement lies at the heart of
+important applications such as blockchain price oracles or replicated state
+machines. Any such protocol requires the following properties: (1)
+\textit{Byzantine fault-tolerance}, because not all participants can be assumed
+to be honest, (2) r\textit{ecurrent transient fault-tolerance}, because even
+honest participants may be subject to transient ``glitches'', (3)
+\textit{accuracy}, because the results of quantitative queries (such as price
+quotes) must lie within the interval of honest participants' inputs, and (4)
+\textit{self-stabilization}, because it is infeasible to reboot a distributed
+system following a fault.
+  This paper presents the first protocol for repeated Byzantine agreement that
+satisfies the properties listed above. Specifically, starting in an arbitrary
+system configuration, our protocol establishes consistency. It preserves
+consistency in the face of up to $\lceil n/3 \rceil -1$ Byzantine participants
+{\em and} constant recurring (``noise'') transient faults, of up to $\lceil n/6
+\rceil-1$ additional malicious transient faults, or even more than $\lceil n/6
+\rceil-1$ (uniformly distributed) random transient faults, in each repeated
+Byzantine agreement.

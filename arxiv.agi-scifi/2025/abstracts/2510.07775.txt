@@ -1,0 +1,26 @@
+Title: The Unintended Trade-off of AI Alignment:Balancing Hallucination
+Mitigation and Safety in LLMs
+Authors: Omar Mahmoud, Ali Khalil, Buddhika Laknath Semage, Thommen George
+Karimpanal, Santu Rana
+ID: 2510.07775
+URL: https://arxiv.org/abs/2510.07775
+
+Abstract:
+Hallucination in large language models (LLMs) has been widely studied in recent
+years, with progress in both detection and mitigation aimed at improving
+truthfulness. Yet, a critical side effect remains largely overlooked: enhancing
+truthfulness can negatively impact safety alignment. In this paper, we
+investigate this trade-off and show that increasing factual accuracy often comes
+at the cost of weakened refusal behavior. Our analysis reveals that this arises
+from overlapping components in the model that simultaneously encode
+hallucination and refusal information, leading alignment methods to suppress
+factual knowledge unintentionally. We further examine how fine-tuning on benign
+datasets, even when curated for safety, can degrade alignment for the same
+reason. To address this, we propose a method that disentangles refusal-related
+features from hallucination features using sparse autoencoders, and preserves
+refusal behavior during fine-tuning through subspace orthogonalization. This
+approach prevents hallucinations from increasing while maintaining safety
+alignment.We evaluate our method on commonsense reasoning tasks and harmful
+benchmarks (AdvBench and StrongReject). Results demonstrate that our approach
+preserves refusal behavior and task utility, mitigating the trade-off between
+truthfulness and safety.

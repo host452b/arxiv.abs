@@ -1,0 +1,24 @@
+Title: Steerability of Instrumental-Convergence Tendencies in LLMs
+Authors: Jakub Hoscilowicz
+ID: 2601.01584
+URL: https://arxiv.org/abs/2601.01584
+
+Abstract:
+We examine two properties of AI systems: capability (what a system can do) and
+steerability (how reliably one can shift behavior toward intended outcomes). A
+central question is whether capability growth reduces steerability and risks
+control collapse. We also distinguish between authorized steerability (builders
+reliably reaching intended behaviors) and unauthorized steerability (attackers
+eliciting disallowed behaviors). This distinction highlights a fundamental
+safety--security dilemma of AI models: safety requires high steerability to
+enforce control (e.g., stop/refuse), while security requires low steerability
+for malicious actors to elicit harmful behaviors. This tension presents a
+significant challenge for open-weight models, which currently exhibit high
+steerability via common techniques like fine-tuning or adversarial attacks.
+Using Qwen3 and InstrumentalEval, we find that a short anti-instrumental prompt
+suffix sharply reduces the measured convergence rate (e.g., shutdown avoidance,
+self-replication). For Qwen3-30B Instruct, the convergence rate drops from
+81.69% under a pro-instrumental suffix to 2.82% under an anti-instrumental
+suffix. Under anti-instrumental prompting, larger aligned models show lower
+convergence rates than smaller ones (Instruct: 2.82% vs. 4.23%; Thinking: 4.23%
+vs. 9.86%). Code is available at github.com/j-hoscilowicz/instrumental_steering.

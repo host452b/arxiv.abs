@@ -1,0 +1,32 @@
+Title: Physics-constrained symbolic model discovery for polyconvex
+incompressible hyperelastic materials
+Authors: Bahador Bahmani, WaiChing Sun
+ID: 2310.04286
+URL: https://arxiv.org/abs/2310.04286
+
+Abstract:
+We present a machine learning framework capable of consistently inferring
+mathematical expressions of hyperelastic energy functionals for incompressible
+materials from sparse experimental data and physical laws. To achieve this goal,
+we propose a polyconvex neural additive model (PNAM) that enables us to express
+the hyperelastic model in a learnable feature space while enforcing
+polyconvexity. An upshot of this feature space obtained via the PNAM is that (1)
+it is spanned by a set of univariate basis that can be re-parametrized with a
+more complex mathematical form, and (2) the resultant elasticity model is
+guaranteed to fulfill the polyconvexity, which ensures that the acoustic tensor
+remains elliptic for any deformation. To further improve the interpretability,
+we use genetic programming to convert each univariate basis into a compact
+mathematical expression. The resultant multi-variable mathematical models
+obtained from this proposed framework are not only more interpretable but are
+also proven to fulfill physical laws. By controlling the compactness of the
+learned symbolic form, the machine learning-generated mathematical model also
+requires fewer arithmetic operations than its deep neural network counterparts
+during deployment. This latter attribute is crucial for scaling large-scale
+simulations where the constitutive responses of every integration point must be
+updated within each incremental time step. We compare our proposed model
+discovery framework against other state-of-the-art alternatives to assess the
+robustness and efficiency of the training algorithms and examine the trade-off
+between interpretability, accuracy, and precision of the learned symbolic
+hyperelastic models obtained from different approaches. Our numerical results
+suggest that our approach extrapolates well outside the training data regime due
+to the precise incorporation of physics-based knowledge.

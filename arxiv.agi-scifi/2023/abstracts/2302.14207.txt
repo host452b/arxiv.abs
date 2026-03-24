@@ -1,0 +1,24 @@
+Title: Semantic Strengthening of Neuro-Symbolic Learning
+Authors: Kareem Ahmed, Kai-Wei Chang, Guy Van den Broeck
+ID: 2302.14207
+URL: https://arxiv.org/abs/2302.14207
+
+Abstract:
+Numerous neuro-symbolic approaches have recently been proposed typically with
+the goal of adding symbolic knowledge to the output layer of a neural network.
+Ideally, such losses maximize the probability that the neural network's
+predictions satisfy the underlying domain. Unfortunately, this type of
+probabilistic inference is often computationally infeasible. Neuro-symbolic
+approaches therefore commonly resort to fuzzy approximations of this
+probabilistic objective, sacrificing sound probabilistic semantics, or to
+sampling which is very seldom feasible. We approach the problem by first
+assuming the constraint decomposes conditioned on the features learned by the
+network. We iteratively strengthen our approximation, restoring the dependence
+between the constraints most responsible for degrading the quality of the
+approximation. This corresponds to computing the mutual information between
+pairs of constraints conditioned on the network's learned features, and may be
+construed as a measure of how well aligned the gradients of two distributions
+are. We show how to compute this efficiently for tractable circuits. We test our
+approach on three tasks: predicting a minimum-cost path in Warcraft, predicting
+a minimum-cost perfect matching, and solving Sudoku puzzles, observing that it
+improves upon the baselines while sidestepping intractability.

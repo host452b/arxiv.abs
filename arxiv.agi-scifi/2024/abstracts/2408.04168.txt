@@ -1,0 +1,30 @@
+Title: Perceive, Reflect, and Plan: Designing LLM Agent for Goal-Directed City
+Navigation without Instructions
+Authors: Qingbin Zeng, Qinglong Yang, Shunan Dong, Heming Du, Liang Zheng,
+Fengli Xu, Yong Li
+ID: 2408.04168
+URL: https://arxiv.org/abs/2408.04168
+
+Abstract:
+This paper considers a scenario in city navigation: an AI agent is provided with
+language descriptions of the goal location with respect to some well-known
+landmarks; By only observing the scene around, including recognizing landmarks
+and road network connections, the agent has to make decisions to navigate to the
+goal location without instructions. This problem is very challenging, because it
+requires agent to establish self-position and acquire spatial representation of
+complex urban environment, where landmarks are often invisible. In the absence
+of navigation instructions, such abilities are vital for the agent to make high-
+quality decisions in long-range city navigation. With the emergent reasoning
+ability of large language models (LLMs), a tempting baseline is to prompt LLMs
+to "react" on each observation and make decisions accordingly. However, this
+baseline has very poor performance that the agent often repeatedly visits same
+locations and make short-sighted, inconsistent decisions. To address these
+issues, this paper introduces a novel agentic workflow featured by its abilities
+to perceive, reflect and plan. Specifically, we find LLaVA-7B can be fine-tuned
+to perceive the direction and distance of landmarks with sufficient accuracy for
+city navigation. Moreover, reflection is achieved through a memory mechanism,
+where past experiences are stored and can be retrieved with current perception
+for effective decision argumentation. Planning uses reflection results to
+produce long-term plans, which can avoid short-sighted decisions in long-range
+navigation. We show the designed workflow significantly improves navigation
+ability of the LLM agent compared with the state-of-the-art baselines.

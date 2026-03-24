@@ -1,0 +1,32 @@
+Title: Toward Trusted Onboard AI: Advancing Small Satellite Operations using
+Reinforcement Learning
+Authors: Cannon Whitney, Joseph Melville
+ID: 2507.22198
+URL: https://arxiv.org/abs/2507.22198
+
+Abstract:
+A RL (Reinforcement Learning) algorithm was developed for command automation
+onboard a 3U CubeSat. This effort focused on the implementation of macro control
+action RL, a technique in which an onboard agent is provided with compiled
+information based on live telemetry as its observation. The agent uses this
+information to produce high-level actions, such as adjusting attitude to solar
+pointing, which are then translated into control algorithms and executed through
+lower-level instructions. Once trust in the onboard agent is established, real-
+time environmental information can be leveraged for faster response times and
+reduced reliance on ground control. The approach not only focuses on developing
+an RL algorithm for a specific satellite but also sets a precedent for
+integrating trusted AI into onboard systems. This research builds on previous
+work in three areas: (1) RL algorithms for issuing high-level commands that are
+translated into low-level executable instructions; (2) the deployment of AI
+inference models interfaced with live operational systems, particularly onboard
+spacecraft; and (3) strategies for building trust in AI systems, especially for
+remote and autonomous applications. Existing RL research for satellite control
+is largely limited to simulation-based experiments; in this work, these
+techniques are tailored by constructing a digital twin of a specific spacecraft
+and training the RL agent to issue macro actions in this simulated environment.
+The policy of the trained agent is copied to an isolated environment, where it
+is fed compiled information about the satellite to make inference predictions,
+thereby demonstrating the RL algorithm's validity on orbit without granting it
+command authority. This process enables safe comparison of the algorithm's
+predictions against actual satellite behavior and ensures operation within
+expected parameters.

@@ -1,0 +1,28 @@
+Title: Learning nuclear cross sections across the chart of nuclides with graph
+neural networks
+Authors: Hongjun Choi, Sinjini Mitra, Jason Brodksy, Ruben Glatt, Erika
+Holmbeck, Shusen Liu, Nicolas Schunck, Andre Sieverding, Kyle Wendt
+ID: 2404.02332
+URL: https://arxiv.org/abs/2404.02332
+
+Abstract:
+In this work, we explore the use of deep learning techniques to learn how
+nuclear cross sections change as we add or remove protons and neutrons. As a
+proof of principle, we focus on the neutron-induced reactions in the fast energy
+regime. Our approach follows a two-stage learning framework. First, we apply
+representation learning to encode cross section data into a latent space using
+either variational autoencoders (VAEs) or implicit neural representations
+(INRs). Then, we train graph neural networks (GNNs) on the resulting embeddings
+to predict missing values across the nuclear chart by leveraging the topological
+structure of neighboring isotopes. We demonstrate accurate cross section
+predictions within a 9x9 block of missing nuclei. We also find that the optimal
+GNN training strategy depends on the type of latent representation used, with
+VAE embeddings performing best under end-to-end optimization in the original
+space, while INR embeddings achieve better results when the GNN is trained only
+in the latent space. Furthermore, using clustering algorithms, we map groups of
+latent vectors into regions of the nuclear chart and show that VAEs and INRs can
+discover some of the neutron magic numbers. These findings suggest that deep-
+learning models based on the representation encoding of cross sections combined
+with graph neural networks holds significant potential in augmenting nuclear
+theory models, e.g., by providing reliable estimates of covariances of cross
+sections, including cross-material covariances.

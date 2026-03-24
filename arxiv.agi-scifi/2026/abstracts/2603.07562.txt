@@ -1,0 +1,30 @@
+Title: Brain-WM: Brain Glioblastoma World Model
+Authors: Chenhui Wang, Boyun Zheng, Liuxin Bao, Zhihao Peng, Peter Y. M. Woo,
+Hongming Shan, Yixuan Yuan
+ID: 2603.07562
+URL: https://arxiv.org/abs/2603.07562
+
+Abstract:
+Precise prognostic modeling of glioblastoma (GBM) under varying treatment
+interventions is essential for optimizing clinical outcomes. While generative AI
+has shown promise in simulating GBM evolution, existing methods typically treat
+interventions as static conditional inputs rather than dynamic decision
+variables. Consequently, they fail to capture the complex, reciprocal interplay
+between tumor evolution and treatment response. To bridge this gap, we present
+Brain-WM, a pioneering brain GBM world model that unifies next-step treatment
+prediction and future MRI generation, thereby capturing the co-evolutionary
+dynamics between tumor and treatment. Specifically, Brain-WM encodes
+spatiotemporal dynamics into a shared latent space for joint autoregressive
+treatment prediction and flow-based future MRI generation. Then, instead of a
+conventional monolithic framework, Brain-WM adopts a novel Y-shaped Mixture-of-
+Transformers (MoT) architecture. This design structurally disentangles
+heterogeneous objectives, successfully leveraging cross-task synergies while
+preventing feature collapse. Finally, a synergistic multi-timepoint mask
+alignment objective explicitly anchors latent representations to anatomically
+grounded tumor structures and progression-aware semantics. Extensive validation
+on internal and external multi-institutional cohorts demonstrates the
+superiority of Brain-WM, achieving 91.5% accuracy in treatment planning and
+SSIMs of 0.8524, 0.8581, and 0.8404 for FLAIR, T1CE, and T2W sequences,
+respectively. Ultimately, Brain-WM offers a robust clinical sandbox for
+optimizing patient healthcare. The source code is made available at
+https://github.com/thibault-wch/Brain-GBM-world-model.

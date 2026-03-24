@@ -1,0 +1,25 @@
+Title: Learning When to Plan: Efficiently Allocating Test-Time Compute for LLM
+Agents
+Authors: Davide Paglieri, Bartłomiej Cupiał, Jonathan Cook, Ulyana Piterbarg,
+Jens Tuyls, Edward Grefenstette, Jakob Nicolaus Foerster, Jack Parker-Holder,
+Tim Rocktäschel
+ID: 2509.03581
+URL: https://arxiv.org/abs/2509.03581
+
+Abstract:
+Training large language models (LLMs) to reason via reinforcement learning (RL)
+significantly improves their problem-solving capabilities. In agentic settings,
+existing methods like ReAct prompt LLMs to explicitly plan before every action;
+however, we demonstrate that always planning is computationally expensive and
+degrades performance on long-horizon tasks, while never planning further limits
+performance. To address this, we introduce a conceptual framework formalizing
+dynamic planning for LLM agents, enabling them to flexibly decide when to
+allocate test-time compute for planning. We propose a simple two-stage training
+pipeline: (1) supervised fine-tuning on diverse synthetic data to prime models
+for dynamic planning, and (2) RL to refine this capability in long-horizon
+environments. Experiments on the Crafter environment show that dynamic planning
+agents trained with this approach are more sample-efficient and consistently
+achieve more complex objectives. Additionally, we demonstrate that these agents
+can be effectively steered by human-written plans, surpassing their independent
+capabilities and highlighting the potential for safer and more collaborative
+agentic systems.

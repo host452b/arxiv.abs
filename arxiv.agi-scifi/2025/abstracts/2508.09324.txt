@@ -1,0 +1,25 @@
+Title: TEN: Table Explicitization, Neurosymbolically
+Authors: Nikita Mehrotra, Aayush Kumar, Sumit Gulwani, Arjun Radhakrishna,
+Ashish Tiwari
+ID: 2508.09324
+URL: https://arxiv.org/abs/2508.09324
+
+Abstract:
+We present a neurosymbolic approach, TEN, for extracting tabular data from
+semistructured input text. This task is particularly challenging for text input
+that does not use special delimiters consistently to separate columns and rows.
+Purely neural approaches perform poorly due to hallucinations and their
+inability to enforce hard constraints. TEN uses Structural Decomposition
+prompting - a specialized chain-of-thought prompting approach - on a large
+language model (LLM) to generate an initial table, and thereafter uses a
+symbolic checker to evaluate not only the well-formedness of that table, but
+also detect cases of hallucinations or forgetting. The output of the symbolic
+checker is processed by a critique-LLM to generate guidance for fixing the
+table, which is presented to the original LLM in a self-debug loop. Our
+extensive experiments demonstrate that TEN significantly outperforms purely
+neural baselines across multiple datasets and metrics, achieving significantly
+higher exact match accuracy and substantially reduced hallucination rates. A
+21-participant user study further confirms that TEN's tables are rated
+significantly more accurate (mean score: 5.0 vs 4.3; p = 0.021), and are
+consistently preferred for ease of verification and correction, with
+participants favoring our method in over 60% of the cases.

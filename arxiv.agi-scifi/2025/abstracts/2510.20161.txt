@@ -1,0 +1,24 @@
+Title: PathFormer: A Transformer with 3D Grid Constraints for Digital Twin
+Robot-Arm Trajectory Generation
+Authors: Ahmed Alanazi, Duy Ho, Yugyung Lee
+ID: 2510.20161
+URL: https://arxiv.org/abs/2510.20161
+
+Abstract:
+Robotic arms require precise, task-aware trajectory planning, yet sequence
+models that ignore motion structure often yield invalid or inefficient
+executions. We present a Path-based Transformer that encodes robot motion with a
+3-grid (where/what/when) representation and constraint-masked decoding,
+enforcing lattice-adjacent moves and workspace bounds while reasoning over task
+graphs and action order. Trained on 53,755 trajectories (80% train / 20%
+validation), the model aligns closely with ground truth -- 89.44% stepwise
+accuracy, 93.32% precision, 89.44% recall, and 90.40% F1 -- with 99.99% of paths
+legal by construction. Compiled to motor primitives on an xArm Lite 6 with a
+depth-camera digital twin, it attains up to 97.5% reach and 92.5% pick success
+in controlled tests, and 86.7% end-to-end success across 60 language-specified
+tasks in cluttered scenes, absorbing slips and occlusions via local re-grounding
+without global re-planning. These results show that path-structured
+representations enable Transformers to generate accurate, reliable, and
+interpretable robot trajectories, bridging graph-based planning and sequence-
+based learning and providing a practical foundation for general-purpose
+manipulation and sim-to-real transfer.

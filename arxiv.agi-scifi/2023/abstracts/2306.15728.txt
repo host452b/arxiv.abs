@@ -1,0 +1,31 @@
+Title: Physics-inspired spatiotemporal-graph AI ensemble for the detection of
+higher order wave mode signals of spinning binary black hole mergers
+Authors: Minyang Tian, E. A. Huerta, Huihuo Zheng, Prayush Kumar
+ID: 2306.15728
+URL: https://arxiv.org/abs/2306.15728
+
+Abstract:
+We present a new class of AI models for the detection of quasi-circular,
+spinning, non-precessing binary black hole mergers whose waveforms include the
+higher order gravitational wave modes $(l, |m|)=\{(2, 2), (2, 1), (3, 3), (3,
+2), (4, 4)\}$, and mode mixing effects in the $l = 3, |m| = 2$ harmonics. These
+AI models combine hybrid dilated convolution neural networks to accurately model
+both short- and long-range temporal sequential information of gravitational
+waves; and graph neural networks to capture spatial correlations among
+gravitational wave observatories to consistently describe and identify the
+presence of a signal in a three detector network encompassing the Advanced LIGO
+and Virgo detectors. We first trained these spatiotemporal-graph AI models using
+synthetic noise, using 1.2 million modeled waveforms to densely sample this
+signal manifold, within 1.7 hours using 256 A100 GPUs in the Polaris
+supercomputer at the ALCF. Our distributed training approach had optimal
+performance, and strong scaling up to 512 A100 GPUs. With these AI ensembles we
+processed data from a three detector network, and found that an ensemble of 4 AI
+models achieves state-of-the-art performance for signal detection, and reports
+two misclassifications for every decade of searched data. We distributed AI
+inference over 128 GPUs in the Polaris supercomputer and 128 nodes in the Theta
+supercomputer, and completed the processing of a decade of gravitational wave
+data from a three detector network within 3.5 hours. Finally, we fine-tuned
+these AI ensembles to process the entire month of February 2020, which is part
+of the O3b LIGO/Virgo observation run, and found 6 gravitational waves,
+concurrently identified in Advanced LIGO and Advanced Virgo data, and zero false
+positives. This analysis was completed in one hour using one A100 GPU.

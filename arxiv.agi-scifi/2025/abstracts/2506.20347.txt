@@ -1,0 +1,32 @@
+Title: Emergent Granger Causality in Neural Networks: Can Prediction Alone
+Reveal Structure?
+Authors: Malik Shahid Sultan, Hernando Ombao, Maurizio Filippone
+ID: 2506.20347
+URL: https://arxiv.org/abs/2506.20347
+
+Abstract:
+Granger Causality (GC) offers an elegant statistical framework to study the
+association between multivariate time series data. Vector autoregressive models
+(VAR) are simple and easy to fit, but have limited application because of their
+inherent inability to capture more complex (e.g., non-linear) associations.
+Numerous attempts have already been made in the literature that exploit the
+functional approximation power of deep neural networks (DNNs) for GC. However,
+these methods treat GC as a variable selection problem. We present a novel
+paradigm for investigating the learned GC from a single neural network used for
+joint modeling of all components of multivariate time series data, which is
+essentially linked with prediction and assessing the distribution shift in
+residuals. A deep learning model, with proper regularization, may learn the true
+GC structure when jointly used for all components of the time series when there
+is sufficient training data. We propose to uncover the learned GC structure by
+comparing the model uncertainty or distribution of the residuals when the past
+of everything is used as compared to the one where a specific time series
+component is dropped from the model. We also compare the effect of input layer
+dropout on the ability of a neural network to learn GC. We show that a well-
+regularized model can learn the true GC structure from the data without
+explicitly adding terms in the loss function that guide the model to select
+variables or perform sparse regression under specific settings. We also provide
+a comparison of deep learning architectures such as CNN, LSTM and transformer
+models on their ability to discover Granger Causality. The numerical experiments
+demonstrate that, compared to sparse regression models, a simple joint model is
+a strong baseline for learning the true GC which has the advantage that it does
+not require tuning of many extra hyper-parameters.

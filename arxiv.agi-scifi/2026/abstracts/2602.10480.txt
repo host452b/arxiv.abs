@@ -1,0 +1,22 @@
+Title: Neuro-Symbolic Synergy for Interactive World Modeling
+Authors: Hongyu Zhao, Siyu Zhou, Haolin Yang, Zengyi Qin, Tianyi Zhou
+ID: 2602.10480
+URL: https://arxiv.org/abs/2602.10480
+
+Abstract:
+Large language models (LLMs) exhibit strong general-purpose reasoning
+capabilities, yet they frequently hallucinate when used as world models (WMs),
+where strict compliance with deterministic transition rules--particularly in
+corner cases--is essential. In contrast, Symbolic WMs provide logical
+consistency but lack semantic expressivity. To bridge this gap, we propose
+Neuro-Symbolic Synergy (NeSyS), a framework that integrates the probabilistic
+semantic priors of LLMs with executable symbolic rules to achieve both
+expressivity and robustness. NeSyS alternates training between the two models
+using trajectories inadequately explained by the other. Unlike rule-based
+prompting, the symbolic WM directly constrains the LLM by modifying its output
+probability distribution. The neural WM is fine-tuned only on trajectories not
+covered by symbolic rules, reducing training data by 50% without loss of
+accuracy. Extensive experiments on three distinct interactive environments,
+i.e., ScienceWorld, Webshop, and Plancraft, demonstrate NeSyS's consistent
+advantages over baselines in both WM prediction accuracy and data efficiency.
+Our models and code are available at https://github.com/tianyi-lab/NeSyS.

@@ -1,0 +1,31 @@
+Title: ObjectAlign: Neuro-Symbolic Object Consistency Verification and
+Correction
+Authors: Mustafa Munir, Harsh Goel, Xiwen Wei, Minkyu Choi, Sahil Shah,
+Kartikeya Bhardwaj, Paul Whatmough, Sandeep Chinchali, Radu Marculescu
+ID: 2511.18701
+URL: https://arxiv.org/abs/2511.18701
+
+Abstract:
+Video editing and synthesis often introduce object inconsistencies, such as
+frame flicker and identity drift that degrade perceptual quality. To address
+these issues, we introduce ObjectAlign, a novel framework that seamlessly blends
+perceptual metrics with symbolic reasoning to detect, verify, and correct
+object-level and temporal inconsistencies in edited video sequences. The novel
+contributions of ObjectAlign are as follows: First, we propose learnable
+thresholds for metrics characterizing object consistency (i.e. CLIP-based
+semantic similarity, LPIPS perceptual distance, histogram correlation, and SAM-
+derived object-mask IoU). Second, we introduce a neuro-symbolic verifier that
+combines two components: (a) a formal, SMT-based check that operates on masked
+object embeddings to provably guarantee that object identity does not drift, and
+(b) a temporal fidelity check that uses a probabilistic model checker to verify
+the video's formal representation against a temporal logic specification. A
+frame transition is subsequently deemed "consistent" based on a single logical
+assertion that requires satisfying both the learned metric thresholds and this
+unified neuro-symbolic constraint, ensuring both low-level stability and high-
+level temporal correctness. Finally, for each contiguous block of flagged
+frames, we propose a neural network based interpolation for adaptive frame
+repair, dynamically choosing the interpolation depth based on the number of
+frames to be corrected. This enables reconstruction of the corrupted frames from
+the last valid and next valid keyframes. Our results show up to 1.4 point
+improvement in CLIP Score and up to 6.1 point improvement in warp error compared
+to SOTA baselines on the DAVIS and Pexels video datasets.

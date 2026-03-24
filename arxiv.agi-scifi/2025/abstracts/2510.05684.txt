@@ -1,0 +1,31 @@
+Title: D2E: Scaling Vision-Action Pretraining on Desktop Data for Transfer to
+Embodied AI
+Authors: Suhwan Choi, Jaeyoon Jung, Haebin Seong, Minchan Kim, Minyeong Kim,
+Yongjun Cho, Yoonshik Kim, Yubeen Park, Youngjae Yu, Yunsung Lee
+ID: 2510.05684
+URL: https://arxiv.org/abs/2510.05684
+
+Abstract:
+Large language models leverage internet-scale text data, yet embodied AI remains
+constrained by the prohibitive costs of physical trajectory collection. Desktop
+environments -- particularly gaming -- offer a compelling alternative: they
+provide rich sensorimotor interactions at scale while maintaining the structured
+observation-action coupling essential for embodied learning. We present D2E
+(Desktop to Embodied AI), a framework that demonstrates desktop interactions can
+serve as an effective pretraining substrate for robotics embodied AI tasks.
+Unlike prior work that remained domain-specific (e.g., VPT for Minecraft) or
+kept data proprietary (e.g., SIMA), D2E establishes a complete pipeline from
+scalable desktop data collection to verified transfer in embodied domains. Our
+framework comprises three components: (1) the OWA Toolkit that unifies diverse
+desktop interactions into a standardized format with 152x compression, (2) the
+Generalist-IDM that achieves strong zero-shot generalization across unseen games
+through timestamp-based event prediction, enabling internet-scale pseudo-
+labeling, and (3) VAPT that transfers desktop-pretrained representations to
+physical manipulation and navigation. Using 1.3K+ hours of data (259 hours of
+human demonstrations and 1K+ hours of pseudo-labeled gameplay), our 1B-parameter
+model achieves 96.6% success on LIBERO manipulation and 83.3% on CANVAS
+navigation, matching or surpassing models up to 7x larger, such as π_{0} (3.3B)
+and OpenVLA (7B). These results demonstrate that sensorimotor primitives learned
+from digital interactions transfer effectively to real-world physical tasks,
+establishing desktop pretraining as a practical paradigm for embodied AI. All
+resources are publicly available at https://worv-ai.github.io/d2e.

@@ -1,0 +1,24 @@
+Title: Contrastive Learning for Efficient Transaction Validation in UTXO-based
+Blockchains
+Authors: Hamid Attar, Luigi Lunardon, Alessio Pagani
+ID: 2506.01614
+URL: https://arxiv.org/abs/2506.01614
+
+Abstract:
+This paper introduces a Machine Learning (ML) approach for scalability of UTXO-
+based blockchains, such as Bitcoin. Prior approaches to UTXO set sharding
+struggle with distributing UTXOs effectively across validators, creating
+substantial communication overhead due to child-parent transaction dependencies.
+This overhead, which arises from the need to locate parent UTXOs, significantly
+hampers transaction processing speeds. Our solution uses ML to optimize not only
+UTXO set sharding but also the routing of incoming transactions, ensuring that
+transactions are directed to shards containing their parent UTXOs. At the heart
+of our approach is a framework that combines contrastive and unsupervised
+learning to create an embedding space for transaction outputs. This embedding
+allows the model to group transaction outputs based on spending relationships,
+making it possible to route transactions efficiently to the correct validation
+microservices. Trained on historical transaction data with triplet loss and
+online semi-hard negative mining, the model embeds parent-child spending
+patterns directly into its parameters, thus eliminating the need for costly,
+real-time parent transaction lookups. This significantly reduces cross-shard
+communication overhead, boosting throughput and scalability.

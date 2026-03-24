@@ -1,0 +1,24 @@
+Title: TQml Simulator: optimized simulation of quantum machine learning
+Authors: Viacheslav Kuzmin, Basil Kyriacou, Tatjana Protasevich, Mateusz
+Papierz, Mo Kordzanganeh, Alexey Melnikov
+ID: 2506.04891
+URL: https://arxiv.org/abs/2506.04891
+
+Abstract:
+Hardware-efficient circuits employed in Quantum Machine Learning are typically
+composed of alternating layers of uniformly applied gates. High-speed numerical
+simulators for such circuits are crucial for advancing research in this field.
+In this work, we numerically benchmark universal and gate-specific techniques
+for simulating the action of layers of gates on quantum state vectors, aiming to
+accelerate the overall simulation of Quantum Machine Learning algorithms. Our
+analysis shows that the optimal simulation method for a given layer of gates
+depends on the number of qubits involved, and that a tailored combination of
+techniques can yield substantial performance gains in the forward and backward
+passes for a given circuit. Building on these insights, we developed a numerical
+simulator, named TQml Simulator, that employs the most efficient simulation
+method for each layer in a given circuit. We evaluated TQml Simulator on
+circuits constructed from standard gate sets, such as rotations and CNOTs, as
+well as on native gates from IonQ and IBM quantum processing units. In most
+cases, our simulator outperforms equivalent Pennylane's default.qubit simulator
+by up to a factor of 10, depending on the circuit, the number of qubits, the
+batch size of the input data, and the hardware used.

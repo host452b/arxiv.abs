@@ -1,0 +1,24 @@
+Title: PEGRL: Improving Machine Translation by Post-Editing Guided Reinforcement
+Learning
+Authors: Yunzhi Shen, Hao Zhou, Xin Huang, Xue Han, Junlan Feng, Shujian Huang
+ID: 2602.03352
+URL: https://arxiv.org/abs/2602.03352
+
+Abstract:
+Reinforcement learning (RL) has shown strong promise for LLM-based machine
+translation, with recent methods such as GRPO demonstrating notable gains;
+nevertheless, translation-oriented RL remains challenged by noisy learning
+signals arising from Monte Carlo return estimation, as well as a large
+trajectory space that favors global exploration over fine-grained local
+optimization. We introduce \textbf{PEGRL}, a \textit{two-stage} RL framework
+that uses post-editing as an auxiliary task to stabilize training and guide
+overall optimization. At each iteration, translation outputs are sampled to
+construct post-editing inputs, allowing return estimation in the post-editing
+stage to benefit from conditioning on the current translation behavior, while
+jointly supporting both global exploration and fine-grained local optimization.
+A task-specific weighting scheme further balances the contributions of
+translation and post-editing objectives, yielding a biased yet more sample-
+efficient estimator. Experiments on English$\to$Finnish, English$\to$Turkish,
+and English$\leftrightarrow$Chinese show consistent gains over RL baselines, and
+for English$\to$Turkish, performance on COMET-KIWI is comparable to advanced
+LLM-based systems (DeepSeek-V3.2).

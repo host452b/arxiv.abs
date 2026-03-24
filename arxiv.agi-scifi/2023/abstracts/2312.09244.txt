@@ -1,0 +1,28 @@
+Title: Helping or Herding? Reward Model Ensembles Mitigate but do not Eliminate
+Reward Hacking
+Authors: Jacob Eisenstein, Chirag Nagpal, Alekh Agarwal, Ahmad Beirami, Alex
+D'Amour, DJ Dvijotham, Adam Fisch, Katherine Heller, Stephen Pfohl, Deepak
+Ramachandran, Peter Shaw, Jonathan Berant
+ID: 2312.09244
+URL: https://arxiv.org/abs/2312.09244
+
+Abstract:
+Reward models play a key role in aligning language model applications towards
+human preferences. However, this setup creates an incentive for the language
+model to exploit errors in the reward model to achieve high estimated reward, a
+phenomenon often termed \emph{reward hacking}. A natural mitigation is to train
+an ensemble of reward models, aggregating over model outputs to obtain a more
+robust reward estimate. We explore the application of reward ensembles to
+alignment at both training time (through reinforcement learning) and inference
+time (through reranking). First, we show that reward models are
+\emph{underspecified}: reward models that perform similarly in-distribution can
+yield very different rewards when used in alignment, due to distribution shift.
+Second, underspecification results in overoptimization, where alignment to one
+reward model does not improve reward as measured by another reward model trained
+on the same data. Third, overoptimization is mitigated by the use of reward
+ensembles, and ensembles that vary by their \emph{pretraining} seeds lead to
+better generalization than ensembles that differ only by their \emph{fine-
+tuning} seeds, with both outperforming individual reward models. However, even
+pretrain reward ensembles do not eliminate reward hacking: we show several
+qualitative reward hacking phenomena that are not mitigated by ensembling
+because all reward models in the ensemble exhibit similar error patterns.

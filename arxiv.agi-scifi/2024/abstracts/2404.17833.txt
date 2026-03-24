@@ -1,0 +1,30 @@
+Title: Testing and Understanding Erroneous Planning in LLM Agents through
+Synthesized User Inputs
+Authors: Zhenlan Ji, Daoyuan Wu, Pingchuan Ma, Zongjie Li, Shuai Wang
+ID: 2404.17833
+URL: https://arxiv.org/abs/2404.17833
+
+Abstract:
+Agents based on large language models (LLMs) have demonstrated effectiveness in
+solving a wide range of tasks by integrating LLMs with key modules such as
+planning, memory, and tool usage. Increasingly, customers are adopting LLM
+agents across a variety of commercial applications critical to reliability,
+including support for mental well-being, chemical synthesis, and software
+development. Nevertheless, our observations and daily use of LLM agents indicate
+that they are prone to making erroneous plans, especially when the tasks are
+complex and require long-term planning.
+  In this paper, we propose PDoctor, a novel and automated approach to testing
+LLM agents and understanding their erroneous planning. As the first work in this
+direction, we formulate the detection of erroneous planning as a constraint
+satisfiability problem: an LLM agent's plan is considered erroneous if its
+execution violates the constraints derived from the user inputs. To this end,
+PDoctor first defines a domain-specific language (DSL) for user queries and
+synthesizes varying inputs with the assistance of the Z3 constraint solver.
+These synthesized inputs are natural language paragraphs that specify the
+requirements for completing a series of tasks. Then, PDoctor derives constraints
+from these requirements to form a testing oracle. We evaluate PDoctor with three
+mainstream agent frameworks and two powerful LLMs (GPT-3.5 and GPT-4). The
+results show that PDoctor can effectively detect diverse errors in agent
+planning and provide insights and error characteristics that are valuable to
+both agent developers and users. We conclude by discussing potential alternative
+designs and directions to extend PDoctor.

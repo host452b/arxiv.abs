@@ -1,0 +1,30 @@
+Title: MASP: Scalable GNN-based Planning for Multi-Agent Navigation
+Authors: Xinyi Yang, Xinting Yang, Chao Yu, Jiayu Chen, Wenbo Ding, Huazhong
+Yang, Yu Wang
+ID: 2312.02522
+URL: https://arxiv.org/abs/2312.02522
+
+Abstract:
+We investigate multi-agent navigation tasks, where multiple agents need to reach
+initially unassigned goals in a limited time. Classical planning-based methods
+suffer from expensive computation overhead at each step and offer limited
+expressiveness for complex cooperation strategies. In contrast, reinforcement
+learning (RL) has recently become a popular approach for addressing this issue.
+However, RL struggles with low data efficiency and cooperation when directly
+exploring (nearly) optimal policies in a large exploration space, especially
+with an increased number of agents(e.g., 10+ agents) or in complex environments
+(e.g., 3-D simulators). In this paper, we propose the Multi-Agent Scalable
+Graph-based Planner (MASP), a goal-conditioned hierarchical planner for
+navigation tasks with a substantial number of agents in the decentralized
+setting. MASP employs a hierarchical framework to reduce space complexity by
+decomposing a large exploration space into multiple goal-conditioned subspaces,
+where a high-level policy assigns agents goals, and a low-level policy navigates
+agents toward designated goals. For agent cooperation and the adaptation to
+varying team sizes, we model agents and goals as graphs to better capture their
+relationship. The high-level policy, the Goal Matcher, leverages a graph-based
+Self-Encoder and Cross-Encoder to optimize goal assignment by updating the agent
+and the goal graphs. The low-level policy, the Coordinated Action Executor,
+introduces the Group Information Fusion to facilitate group division and extract
+agent relationships across groups, enhancing training efficiency for agent
+cooperation. The results demonstrate that MASP outperforms RL and planning-based
+baselines in task efficiency.

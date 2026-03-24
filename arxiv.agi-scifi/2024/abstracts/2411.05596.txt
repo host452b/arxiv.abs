@@ -1,0 +1,34 @@
+Title: Machine learning-driven Anomaly Detection and Forecasting for Euclid
+Space Telescope Operations
+Authors: Pablo Gómez, Roland D. Vavrek, Guillermo Buenadicha, John Hoar, Sandor
+Kruk, Jan Reerink
+ID: 2411.05596
+URL: https://arxiv.org/abs/2411.05596
+
+Abstract:
+State-of-the-art space science missions increasingly rely on automation due to
+spacecraft complexity and the costs of human oversight. The high volume of data,
+including scientific and telemetry data, makes manual inspection challenging.
+Machine learning offers significant potential to meet these demands.
+  The Euclid space telescope, in its survey phase since February 2024,
+exemplifies this shift. Euclid's success depends on accurate monitoring and
+interpretation of housekeeping telemetry and science-derived data. Thousands of
+telemetry parameters, monitored as time series, may or may not impact the
+quality of scientific data. These parameters have complex interdependencies,
+often due to physical relationships (e.g., proximity of temperature sensors).
+Optimising science operations requires careful anomaly detection and
+identification of hidden parameter states. Moreover, understanding the
+interactions between known anomalies and physical quantities is crucial yet
+complex, as related parameters may display anomalies with varied timing and
+intensity.
+  We address these challenges by analysing temperature anomalies in Euclid's
+telemetry from February to August 2024, focusing on eleven temperature
+parameters and 35 covariates. We use a predictive XGBoost model to forecast
+temperatures based on historical values, detecting anomalies as deviations from
+predictions. A second XGBoost model predicts anomalies from covariates,
+capturing their relationships to temperature anomalies. We identify the top
+three anomalies per parameter and analyse their interactions with covariates
+using SHAP (Shapley Additive Explanations), enabling rapid, automated analysis
+of complex parameter relationships.
+  Our method demonstrates how machine learning can enhance telemetry monitoring,
+offering scalable solutions for other missions with similar data challenges.

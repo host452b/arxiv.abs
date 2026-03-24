@@ -1,0 +1,28 @@
+Title: CausalPlan: Empowering Efficient LLM Multi-Agent Collaboration Through
+Causality-Driven Planning
+Authors: Minh Hoang Nguyen, Van Dai Do, Dung Nguyen, Thin Nguyen, Hung Le
+ID: 2508.13721
+URL: https://arxiv.org/abs/2508.13721
+
+Abstract:
+Large language model (LLM) agents-especially smaller, open-source models-often
+produce causally invalid or incoherent actions in collaborative tasks due to
+their reliance on surface-level correlations rather than grounded causal
+reasoning. This limitation undermines their performance in terms of coordination
+and planning in dynamic environments. We address this challenge with CausalPlan,
+a two-phase framework that integrates explicit structural causal reasoning into
+the LLM planning process. At the core of CausalPlan is the Structural Causal
+Action (SCA) model, which learns a causal graph from agent trajectories to
+capture how prior actions and current environment states influence future
+decisions. This structure is then used to guide action selection by assigning
+causal scores to LLM-generated proposals, reweighting them accordingly, or
+falling back to causally grounded alternatives when needed. By embedding this
+causal knowledge directly into the decision loop, CausalPlan constrains planning
+to intervention-consistent behaviours without requiring fine-tuning of the LLM
+itself. We evaluate CausalPlan on the Overcooked-AI benchmark across five multi-
+agent coordination tasks and four LLMs of varying sizes: Gemma-7B, Llama-8B,
+Qwen-14B, and Llama-70B. Experimental results show that CausalPlan consistently
+reduces invalid actions and improves collaboration in both AI-AI and human-AI
+settings, outperforming strong reinforcement learning baselines. Our findings
+highlight the value of causality-driven planning for deploying efficient,
+interpretable, and generalisable multi-agent LLM systems.

@@ -1,0 +1,32 @@
+Title: Foundation Model Self-Play: Open-Ended Strategy Innovation via Foundation
+Models
+Authors: Aaron Dharna, Cong Lu, Jeff Clune
+ID: 2507.06466
+URL: https://arxiv.org/abs/2507.06466
+
+Abstract:
+Multi-agent interactions have long fueled innovation, from natural predator-prey
+dynamics to the space race. Self-play (SP) algorithms try to harness these
+dynamics by pitting agents against ever-improving opponents, thereby creating an
+implicit curriculum toward learning high-quality solutions. However, SP often
+fails to produce diverse solutions and can get stuck in locally optimal
+behaviors. We introduce Foundation-Model Self-Play (FMSP), a new direction that
+leverages the code-generation capabilities and vast knowledge of foundation
+models (FMs) to overcome these challenges by leaping across local optima in
+policy space. We propose a family of approaches: (1) \textbf{Vanilla Foundation-
+Model Self-Play (vFMSP)} continually refines agent policies via competitive
+self-play; (2) \textbf{Novelty-Search Self-Play (NSSP)} builds a diverse
+population of strategies, ignoring performance; and (3) the most promising
+variant, \textbf{Quality-Diveristy Self-Play (QDSP)}, creates a diverse set of
+high-quality policies by combining the diversity of NSSP and refinement of
+vFMSP. We evaluate FMSPs in Car Tag, a continuous-control pursuer-evader
+setting, and in Gandalf, a simple AI safety simulation in which an attacker
+tries to jailbreak an LLM's defenses. In Car Tag, FMSPs explore a wide variety
+of reinforcement learning, tree search, and heuristic-based methods, to name
+just a few. In terms of discovered policy quality, \ouralgo and vFMSP surpass
+strong human-designed strategies. In Gandalf, FMSPs can successfully
+automatically red-team an LLM, breaking through and jailbreaking six different,
+progressively stronger levels of defense. Furthermore, FMSPs can automatically
+proceed to patch the discovered vulnerabilities. Overall, FMSPs represent a
+promising new research frontier of improving self-play with foundation models,
+opening fresh paths toward more creative and open-ended strategy discovery

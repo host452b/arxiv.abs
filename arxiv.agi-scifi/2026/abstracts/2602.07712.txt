@@ -1,0 +1,22 @@
+Title: Towards Robust Scaling Laws for Optimizers
+Authors: Alexandra Volkova, Mher Safaryan, Christoph H. Lampert, Dan Alistarh
+ID: 2602.07712
+URL: https://arxiv.org/abs/2602.07712
+
+Abstract:
+The quality of Large Language Model (LLM) pretraining depends on multiple
+factors, including the compute budget and the choice of optimization algorithm.
+Empirical scaling laws are widely used to predict loss as model size and
+training data grow, however, almost all existing studies fix the optimizer
+(typically AdamW). At the same time, a new generation of optimizers (e.g., Muon,
+Shampoo, SOAP) promises faster and more stable convergence, but their
+relationship with model and data scaling is not yet well understood. In this
+work, we study scaling laws across different optimizers. Empirically, we show
+that 1) separate Chinchilla-style scaling laws for each optimizer are ill-
+conditioned and have highly correlated parameters. Instead, 2) we propose a more
+robust law with shared power-law exponents and optimizer-specific rescaling
+factors, which enable direct comparison between optimizers. Finally, 3) we
+provide a theoretical analysis of gradient-based methods for the proxy task of a
+convex quadratic objective, demonstrating that Chinchilla-style scaling laws
+emerge naturally as a result of loss decomposition into irreducible,
+approximation, and optimization errors.

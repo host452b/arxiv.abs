@@ -1,0 +1,23 @@
+Title: Event-based backpropagation on the neuromorphic platform SpiNNaker2
+Authors: Gabriel Béna, Timo Wunderlich, Mahmoud Akl, Bernhard Vogginger,
+Christian Mayr, Hector Andres Gonzalez
+ID: 2412.15021
+URL: https://arxiv.org/abs/2412.15021
+
+Abstract:
+Neuromorphic computing aims to replicate the brain's capabilities for energy
+efficient and parallel information processing, promising a solution to the
+increasing demand for faster and more efficient computational systems. Efficient
+training of neural networks on neuromorphic hardware requires the development of
+training algorithms that retain the sparsity of spike-based communication during
+training. Here, we report on the first implementation of event-based
+backpropagation on the SpiNNaker2 neuromorphic hardware platform. We use
+EventProp, an algorithm for event-based backpropagation in spiking neural
+networks (SNNs), to compute exact gradients using sparse communication of error
+signals between neurons. Our implementation computes multi-layer networks of
+leaky integrate-and-fire neurons using discretized versions of the differential
+equations and their adjoints, and uses event packets to transmit spikes and
+error signals between network layers. We demonstrate a proof-of-concept of
+batch-parallelized, on-chip training of SNNs using the Yin Yang dataset, and
+provide an off-chip implementation for efficient prototyping, hyper-parameter
+search, and hybrid training methods.

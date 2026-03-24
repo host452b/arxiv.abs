@@ -1,0 +1,26 @@
+Title: Sample-efficient non-Gaussian noise reduction in gravitational wave data
+via learnable wavelets
+Authors: Arush Pimpalkar, Digvijay Wadekar, Mark Ho-Yeuk Cheung, Emanuele Berti
+ID: 2601.14326
+URL: https://arxiv.org/abs/2601.14326
+
+Abstract:
+We introduce $\texttt{WaveletNet}$, a wavelet-based neural network architecture
+to identify and reduce non-Gaussian noise in gravitational wave data.
+Traditionally, convolutional neural networks (CNNs) have been widely used as a
+flexible machine learning method to mitigate non-Gaussian noise. However,
+training CNNs requires many data samples, especially when the input data
+segments are long. Glitches that mimic high-mass black hole signals are
+empirically known to have a wavelet-like structure. We exploit this property in
+$\texttt{WaveletNet}$ by using simple neural networks to learn the best family
+of wavelets to model glitches in the LIGO-Virgo-KAGRA O3 data. Due to its
+simplicity, our framework is significantly more sample-efficient than CNNs. As a
+use case, we build upon the $\texttt{TIER}$ method and show how
+$\texttt{WaveletNet}$ can improve the performance of any search pipeline. We
+take potential GW candidates from the pipeline, and then downweight the
+candidates having noisy strain regions in their vicinity. We use our framework
+in a modular way: we provide an output score which can be added to the
+pipeline's existing detection statistic score for the candidates. We test our
+method using candidates from the $\texttt{IAS-HM}$ search pipeline and show that
+it improves the search sensitive volume by up to 15% for high-mass, asymmetric
+binaries.

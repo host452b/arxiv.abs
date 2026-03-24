@@ -1,0 +1,32 @@
+Title: Exploring Scaling Laws of CTR Model for Online Performance Improvement
+Authors: Weijiang Lai, Beihong Jin, Jiongyan Zhang, Yiyuan Zheng, Jian Dong, Jia
+Cheng, Jun Lei, Xingxing Wang
+ID: 2508.15326
+URL: https://arxiv.org/abs/2508.15326
+
+Abstract:
+CTR models play a vital role in improving user experience and boosting business
+revenue in many online personalized services. However, current CTR models
+generally encounter bottlenecks in performance improvement. Inspired by the
+scaling law phenomenon of LLMs, we propose a new paradigm for improving CTR
+predictions: first, constructing a CTR model with accuracy scalable to the model
+grade and data size, and then distilling the knowledge implied in this model
+into its lightweight model that can serve online users. To put it into practice,
+we construct a CTR model named SUAN (Stacked Unified Attention Network). In
+SUAN, we propose the UAB as a behavior sequence encoder. A single UAB unifies
+the modeling of the sequential and non-sequential features and also measures the
+importance of each user behavior feature from multiple perspectives. Stacked
+UABs elevate the configuration to a high grade, paving the way for performance
+improvement. In order to benefit from the high performance of the high-grade
+SUAN and avoid the disadvantage of its long inference time, we modify the SUAN
+with sparse self-attention and parallel inference strategies to form LightSUAN,
+and then adopt online distillation to train the low-grade LightSUAN, taking a
+high-grade SUAN as a teacher. The distilled LightSUAN has superior performance
+but the same inference time as the LightSUAN, making it well-suited for online
+deployment. Experimental results show that SUAN performs exceptionally well and
+holds the scaling laws spanning three orders of magnitude in model grade and
+data size, and the distilled LightSUAN outperforms the SUAN configured with one
+grade higher. More importantly, the distilled LightSUAN has been integrated into
+an online service, increasing the CTR by 2.81% and CPM by 1.69% while keeping
+the average inference time acceptable. Our source code is available at
+https://github.com/laiweijiang/SUAN.

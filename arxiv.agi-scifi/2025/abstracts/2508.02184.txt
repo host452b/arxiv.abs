@@ -1,0 +1,25 @@
+Title: Retrieval-augmented Decoding for Improving Truthfulness in Open-ended
+Generation
+Authors: Manh Nguyen, Sunil Gupta, Hung Le
+ID: 2508.02184
+URL: https://arxiv.org/abs/2508.02184
+
+Abstract:
+Ensuring truthfulness in large language models (LLMs) remains a critical
+challenge for reliable text generation. While supervised fine-tuning and
+reinforcement learning with human feedback have shown promise, they require a
+substantial amount of annotated data and computational resources, limiting
+scalability. In contrast, decoding-time interventions offer lightweight
+alternatives without model retraining. However, existing decoding strategies
+often face issues like prompt sensitivity, limited generalization, or dependence
+on internal model states. We propose Retrieval-Augmented Decoding (RAD), a
+context-aware adaptive decoding method that leverages a compact reference
+grounding space built from as few as 10 annotated examples and comprising pairs
+of context embeddings and next-token logits from truthful responses, to enable
+retrieval-based logit shaping during inference. At each decoding step, RAD
+retrieves high-quality semantically similar contexts from this grounding space
+and aggregates their associated next token logits to modify the model's current
+logits. Across four open-ended generation benchmarks and four LLMs, our method
+consistently outperforms strong baselines and shows robust cross-task
+generalization, underscoring the promise of context-aware decoding for enhancing
+factual reliability.

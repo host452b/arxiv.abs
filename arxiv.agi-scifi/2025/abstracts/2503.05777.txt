@@ -1,0 +1,36 @@
+Title: Medical Hallucinations in Foundation Models and Their Impact on
+Healthcare
+Authors: Yubin Kim, Hyewon Jeong, Shan Chen, Shuyue Stella Li, Chanwoo Park,
+Mingyu Lu, Kumail Alhamoud, Jimin Mun, Cristina Grau, Minseok Jung, Rodrigo
+Gameiro, Lizhou Fan, Eugene Park, Tristan Lin, Joonsik Yoon, Wonjin Yoon,
+Maarten Sap, Yulia Tsvetkov, Paul Liang, Xuhai Xu, Xin Liu, Chunjong Park,
+Hyeonhoon Lee, Hae Won Park, Daniel McDuff, Samir Tulebaev, Cynthia Breazeal
+ID: 2503.05777
+URL: https://arxiv.org/abs/2503.05777
+
+Abstract:
+Hallucinations in foundation models arise from autoregressive training
+objectives that prioritize token-likelihood optimization over epistemic
+accuracy, fostering overconfidence and poorly calibrated uncertainty. We define
+medical hallucination as any model-generated output that is factually incorrect,
+logically inconsistent, or unsupported by authoritative clinical evidence in
+ways that could alter clinical decisions. We evaluated 11 foundation models (7
+general-purpose, 4 medical-specialized) across seven medical hallucination tasks
+spanning medical reasoning and biomedical information retrieval. General-purpose
+models achieved significantly higher proportions of hallucination-free responses
+than medical-specialized models (median: 76.6% vs 51.3%, difference = 25.2%, 95%
+CI: 18.7-31.3%, Mann-Whitney U = 27.0, p = 0.012, rank-biserial r = -0.64). Top-
+performing models such as Gemini-2.5 Pro exceeded 97% accuracy when augmented
+with chain-of-thought prompting (base: 87.6%), while medical-specialized models
+like MedGemma ranged from 28.6-61.9% despite explicit training on medical
+corpora. Chain-of-thought reasoning significantly reduced hallucinations in
+86.4% of tested comparisons after FDR correction (q < 0.05), demonstrating that
+explicit reasoning traces enable self-verification and error detection.
+Physician audits confirmed that 64-72% of residual hallucinations stemmed from
+causal or temporal reasoning failures rather than knowledge gaps. A global
+survey of clinicians (n = 70) validated real-world impact: 91.8% had encountered
+medical hallucinations, and 84.7% considered them capable of causing patient
+harm. The underperformance of medical-specialized models despite domain training
+indicates that safety emerges from sophisticated reasoning capabilities and
+broad knowledge integration developed during large-scale pre-training, not from
+narrow optimization.

@@ -1,0 +1,28 @@
+Title: Multi-timescale synaptic plasticity on analog neuromorphic hardware
+Authors: Amani Atoui, Jakob Kaiser, Sebastian Billaudelle, Philipp Spilger, Eric
+Müller, Jannik Luboeinski, Christian Tetzlaff, Johannes Schemmel
+ID: 2412.02515
+URL: https://arxiv.org/abs/2412.02515
+
+Abstract:
+As numerical simulations grow in complexity, their demands on computing time and
+energy increase. Accelerators for numerical computation offer significant
+efficiency gains in many computationally-intensive scientific fields, but their
+use in simulating spiking neural networks in computational neuroscience is
+hindered by challenges, mainly in effective parallelism and efficient use of
+memory in the presence of sparse representations and sparse communication. The
+BrainScaleS architectures are neuromorphic substrates that can emulate spiking
+neural networks at accelerated timescales compared to real time, which offers an
+advantage for studying complex plasticity rules that require extended simulation
+runtimes. This work presents the implementation of a calcium-based plasticity
+rule that integrates calcium dynamics based on the synaptic tagging-and-capture
+hypothesis on the BrainScaleS-2 system. The implementation of the plasticity
+rule for a single synapse involves incorporating the calcium dynamics and the
+plasticity rule equations. The calcium dynamics are mapped to the analog
+circuits of BrainScaleS-2, while the plasticity rule equations are numerically
+solved on its embedded digital processors. The main hardware constraints include
+the speed of the processors and the use of integer arithmetic. By adjusting the
+timestep of the numerical solver and introducing stochastic rounding, we
+demonstrate that BrainScaleS-2 accurately emulates a single synapse following a
+calcium-based plasticity rule across four established stimulation protocols and
+validate our implementation against a software reference model.

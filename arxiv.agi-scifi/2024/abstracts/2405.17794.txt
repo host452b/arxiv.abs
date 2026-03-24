@@ -1,0 +1,32 @@
+Title: LNS2+RL: Combining Multi-Agent Reinforcement Learning with Large
+Neighborhood Search in Multi-Agent Path Finding
+Authors: Yutong Wang, Tanishq Duhan, Jiaoyang Li, Guillaume Sartoretti
+ID: 2405.17794
+URL: https://arxiv.org/abs/2405.17794
+
+Abstract:
+Multi-Agent Path Finding (MAPF) is a critical component of logistics and
+warehouse management, which focuses on planning collision-free paths for a team
+of robots in a known environment. Recent work introduced a novel MAPF approach,
+LNS2, which proposed to repair a quickly obtained set of infeasible paths via
+iterative replanning, by relying on a fast, yet lower-quality, prioritized
+planning (PP) algorithm. At the same time, there has been a recent push for
+Multi-Agent Reinforcement Learning (MARL) based MAPF algorithms, which exhibit
+improved cooperation over such PP algorithms, although inevitably remaining
+slower. In this paper, we introduce a new MAPF algorithm, LNS2+RL, which
+combines the distinct yet complementary characteristics of LNS2 and MARL to
+effectively balance their individual limitations and get the best from both
+worlds. During early iterations, LNS2+RL relies on MARL for low-level
+replanning, which we show eliminates collisions much more than a PP algorithm.
+There, our MARL-based planner allows agents to reason about past and future
+information to gradually learn cooperative decision-making through a finely
+designed curriculum learning. At later stages of planning, LNS2+RL adaptively
+switches to PP algorithm to quickly resolve the remaining collisions, naturally
+trading off solution quality (number of collisions in the solution) and
+computational efficiency. Our comprehensive experiments on high-agent-density
+tasks across various team sizes, world sizes, and map structures consistently
+demonstrate the superior performance of LNS2+RL compared to many MAPF
+algorithms, including LNS2, LaCAM, EECBS, and SCRIMP. In maps with complex
+structures, the advantages of LNS2+RL are particularly pronounced, with LNS2+RL
+achieving a success rate of over 50% in nearly half of the tested tasks, while
+that of LaCAM, EECBS and SCRIMP falls to 0%.

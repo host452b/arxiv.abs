@@ -1,0 +1,28 @@
+Title: Towards Safe Robot Foundation Models Using Inductive Biases
+Authors: Maximilian Tölle, Theo Gruner, Daniel Palenicek, Tim Schneider, Jonas
+Günster, Joe Watson, Davide Tateo, Puze Liu, Jan Peters
+ID: 2505.10219
+URL: https://arxiv.org/abs/2505.10219
+
+Abstract:
+Safety is a critical requirement for the real-world deployment of robotic
+systems. Unfortunately, while current robot foundation models show promising
+generalization capabilities across a wide variety of tasks, they fail to address
+safety, an important aspect for ensuring long-term operation. Current robot
+foundation models assume that safe behavior should emerge by learning from a
+sufficiently large dataset of demonstrations. However, this approach has two
+clear major drawbacks. Firstly, there are no formal safety guarantees for a
+behavior cloning policy trained using supervised learning. Secondly, without
+explicit knowledge of any safety constraints, the policy may require an
+unreasonable number of additional demonstrations to even approximate the desired
+constrained behavior. To solve these key issues, we show how we can instead
+combine robot foundation models with geometric inductive biases using ATACOM, a
+safety layer placed after the foundation policy that ensures safe state
+transitions by enforcing action constraints. With this approach, we can ensure
+formal safety guarantees for generalist policies without providing extensive
+demonstrations of safe behavior, and without requiring any specific fine-tuning
+for safety. Our experiments show that our approach can be beneficial both for
+classical manipulation tasks, where we avoid unwanted collisions with irrelevant
+objects, and for dynamic tasks, such as the robot air hockey environment, where
+we can generate fast trajectories respecting complex tasks and joint space
+constraints.

@@ -1,0 +1,29 @@
+Title: A Blueprint for Self-Evolving Coding Agents in Vehicle Aerodynamic Drag
+Prediction
+Authors: Jinhui Ren, Huaiming Li, Yabin Liu, Tao Li, Zhaokun Liu, Yujia Liang,
+Zengle Ge, Chufan Wu, Xiaomin Yuan, Danyu Liu, Annan Li, Jianmin Wu
+ID: 2603.21698
+URL: https://arxiv.org/abs/2603.21698
+
+Abstract:
+High-fidelity vehicle drag evaluation is constrained less by solver runtime than
+by workflow friction: geometry cleanup, meshing retries, queue contention, and
+reproducibility failures across teams. We present a contract-centric blueprint
+for self-evolving coding agents that discover executable surrogate pipelines for
+predicting drag coefficient $C_d$ under industrial constraints. The method
+formulates surrogate discovery as constrained optimization over programs, not
+static model instances, and combines Famou-Agent-style evaluator feedback with
+population-based island evolution, structured mutations (data, model, loss, and
+split policies), and multi-objective selection balancing ranking quality,
+stability, and cost. A hard evaluation contract enforces leakage prevention,
+deterministic replay, multi-seed robustness, and resource budgets before any
+candidate is admitted. Across eight anonymized evolutionary operators, the best
+system reaches a Combined Score of 0.9335 with sign-accuracy 0.9180, while
+trajectory and ablation analyses show that adaptive sampling and island
+migration are primary drivers of convergence quality. The deployment model is
+explicitly ``screen-and-escalate'': surrogates provide high-throughput ranking
+for design exploration, but low-confidence or out-of-distribution cases are
+automatically escalated to high-fidelity CFD. The resulting contribution is an
+auditable, reusable workflow for accelerating aerodynamic design iteration while
+preserving decision-grade reliability, governance traceability, and safety
+boundaries.

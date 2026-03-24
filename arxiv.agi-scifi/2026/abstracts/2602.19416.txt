@@ -1,0 +1,27 @@
+Title: IR$^3$: Contrastive Inverse Reinforcement Learning for Interpretable
+Detection and Mitigation of Reward Hacking
+Authors: Mohammad Beigi, Ming Jin, Junshan Zhang, Jiaxin Zhang, Qifan Wang, Lifu
+Huang
+ID: 2602.19416
+URL: https://arxiv.org/abs/2602.19416
+
+Abstract:
+Reinforcement Learning from Human Feedback (RLHF) enables powerful LLM alignment
+but can introduce reward hacking - models exploit spurious correlations in proxy
+rewards without genuine alignment. Compounding this, the objectives internalized
+during RLHF remain opaque, making hacking behaviors difficult to detect or
+correct. We introduce IR3 (Interpretable Reward Reconstruction and
+Rectification), a framework that reverse-engineers, interprets, and surgically
+repairs the implicit objectives driving RLHF-tuned models. We propose
+Contrastive Inverse Reinforcement Learning (C-IRL), which reconstructs the
+implicit reward function by contrasting paired responses from post-alignment and
+baseline policies to explain behavioral shifts during RLHF. We then decompose
+the reconstructed reward via sparse autoencoders into interpretable features,
+enabling identification of hacking signatures through contribution analysis.
+Finally, we propose mitigation strategies - clean reward optimization,
+adversarial shaping, constrained optimization, and feature-guided distillation -
+that target problematic features while preserving beneficial alignment.
+Experiments across multiple reward model configurations show that IR3 achieves
+0.89 correlation with ground-truth rewards, identifies hacking features with
+over 90% precision, and significantly reduces hacking behaviors while
+maintaining capabilities within 3% of the original model.

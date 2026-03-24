@@ -1,0 +1,34 @@
+Title: Know Where You're Uncertain When Planning with Multimodal Foundation
+Models: A Formal Framework
+Authors: Neel P. Bhatt, Yunhao Yang, Rohan Siva, Daniel Milan, Ufuk Topcu,
+Zhangyang Wang
+ID: 2411.01639
+URL: https://arxiv.org/abs/2411.01639
+
+Abstract:
+Multimodal foundation models offer a promising framework for robotic perception
+and planning by processing sensory inputs to generate actionable plans. However,
+addressing uncertainty in both perception (sensory interpretation) and decision-
+making (plan generation) remains a critical challenge for ensuring task
+reliability. We present a comprehensive framework to disentangle, quantify, and
+mitigate these two forms of uncertainty. We first introduce a framework for
+uncertainty disentanglement, isolating perception uncertainty arising from
+limitations in visual understanding and decision uncertainty relating to the
+robustness of generated plans.
+  To quantify each type of uncertainty, we propose methods tailored to the
+unique properties of perception and decision-making: we use conformal prediction
+to calibrate perception uncertainty and introduce Formal-Methods-Driven
+Prediction (FMDP) to quantify decision uncertainty, leveraging formal
+verification techniques for theoretical guarantees. Building on this
+quantification, we implement two targeted intervention mechanisms: an active
+sensing process that dynamically re-observes high-uncertainty scenes to enhance
+visual input quality and an automated refinement procedure that fine-tunes the
+model on high-certainty data, improving its capability to meet task
+specifications. Empirical validation in real-world and simulated robotic tasks
+demonstrates that our uncertainty disentanglement framework reduces variability
+by up to 40% and enhances task success rates by 5% compared to baselines. These
+improvements are attributed to the combined effect of both interventions and
+highlight the importance of uncertainty disentanglement, which facilitates
+targeted interventions that enhance the robustness and reliability of autonomous
+systems. Fine-tuned models, code, and datasets are available at
+https://uncertainty-in-planning.github.io/.

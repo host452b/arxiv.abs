@@ -1,0 +1,29 @@
+Title: SpikeFit: Towards Optimal Deployment of Spiking Networks on Neuromorphic
+Hardware
+Authors: Ivan Kartashov, Mariia Pushkareva, Iakov Karandashev
+ID: 2510.15542
+URL: https://arxiv.org/abs/2510.15542
+
+Abstract:
+This paper introduces SpikeFit, a novel training method for Spiking Neural
+Networks (SNNs) that enables efficient inference on neuromorphic hardware,
+considering all its stringent requirements: the number of neurons and synapses
+that can fit on a single device, and lower bit-width representations (e.g.,
+4-bit, 8-bit). Unlike conventional compressing approaches that address only a
+subset of these requirements (limited numerical precision and limited number of
+neurons in the network), SpikeFit treats the allowed weights' discrete values
+themselves as learnable parameters co-optimized with the model, allowing for
+optimal Clusterization-Aware Training (CAT) of the model's weights at low
+precision (2-, 4-, or 8-bit) which results in higher network compression
+efficiency, as well as limiting the number of unique synaptic connections to a
+value required by neuromorphic processor. This joint optimization allows
+SpikeFit to find a discrete weight set aligned with hardware constraints,
+enabling the most complete deployment across a broader range of neuromorphic
+processors than existing methods of SNN compression support. Moreover, SpikeFit
+introduces a new hardware-friendly Fisher Spike Contribution (FSC) pruning
+method showing the state-of-the-art performance. We demonstrate that for spiking
+neural networks constrained to only four unique synaptic weight values (M = 4),
+our SpikeFit method not only outperforms state-of-the-art SNNs compression
+methods and conventional baselines combining extreme quantization schemes and
+clustering algorithms, but also meets a wider range of neuromorphic hardware
+requirements and provides the lowest energy use in experiments.

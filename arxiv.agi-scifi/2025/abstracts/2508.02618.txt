@@ -1,0 +1,28 @@
+Title: Alleviating Attention Hacking in Discriminative Reward Modeling through
+Interaction Distillation
+Authors: Jianxiang Zang
+ID: 2508.02618
+URL: https://arxiv.org/abs/2508.02618
+
+Abstract:
+The reward model (RM), as the core component of reinforcement learning from
+human feedback (RLHF) for large language models (LLMs), responsible for
+providing reward signals to generated responses. However, the mainstream
+discriminative reward modeling is inadequate in terms of token-level
+interaction, making its judgment signals vulnerable to being hacked by
+misallocated attention to context. This stems from two fundamental limitations:
+(1) Current preference modeling employs decoder-only architectures, where the
+unidirectional causal attention mechanism leads to forward-decaying intra-
+sequence attention within the prompt-response sequence. (2) The independent
+Siamese-encoding paradigm induces the absence of token-level inter-sequence
+attention between chosen and rejected sequences. To address this "attention
+hacking", we propose "Interaction Distillation", a novel training framework for
+more adequate discriminative reward modeling via attention-level optimization.
+The method introduces an interaction-based natural language understanding model
+as the teacher to provide sophisticated token interaction patterns via
+comprehensive attention, and guides the reward modeling to simulate teacher
+model's interaction pattern through an attentional alignment objective. Through
+extensive experiments, interaction distillation has demonstrated its ability to
+provide more stable and generalizable reward signals compared to state-of-the-
+art RM optimization methods that target data noise, highlighting the attention
+hacking constitute a more fundamental limitation in discriminative RM.

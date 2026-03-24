@@ -1,0 +1,28 @@
+Title: LUNAR: Unsupervised LLM-based Log Parsing
+Authors: Junjie Huang, Zhihan Jiang, Zhuangbin Chen, Michael R. Lyu
+ID: 2406.07174
+URL: https://arxiv.org/abs/2406.07174
+
+Abstract:
+Log parsing serves as an essential prerequisite for various log analysis tasks.
+Recent advancements in this field have improved parsing accuracy by leveraging
+the semantics in logs through fine-tuning large language models (LLMs) or
+learning from in-context demonstrations. However, these methods heavily depend
+on labeled examples to achieve optimal performance. In practice, collecting
+sufficient labeled data is challenging due to the large scale and continuous
+evolution of logs, leading to performance degradation of existing log parsers
+after deployment. To address this issue, we propose LUNAR, an unsupervised LLM-
+based method for efficient and off-the-shelf log parsing. Our key insight is
+that while LLMs may struggle with direct log parsing, their performance can be
+significantly enhanced through comparative analysis across multiple logs that
+differ only in their parameter parts. We refer to such groups of logs as Log
+Contrastive Units (LCUs). Given the vast volume of logs, obtaining LCUs is
+difficult. Therefore, LUNAR introduces a hybrid ranking scheme to effectively
+search for LCUs by jointly considering the commonality and variability among
+logs. Additionally, LUNAR crafts a novel parsing prompt for LLMs to identify
+contrastive patterns and extract meaningful log structures from LCUs.
+Experiments on large-scale public datasets demonstrate that LUNAR significantly
+outperforms state-of-the-art log parsers in terms of accuracy and efficiency,
+providing an effective and scalable solution for real-world deployment.
+\footnote{The code and data are available at \url{https://github.com/Jun-jie-
+Huang/LUNAR}}.

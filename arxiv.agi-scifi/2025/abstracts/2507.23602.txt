@@ -1,0 +1,28 @@
+Title: Efficient Numerical Strategies for Entropy-Regularized Semi-Discrete
+Optimal Transport
+Authors: Moaad Khamlich, Francesco Romor, Gianluigi Rozza
+ID: 2507.23602
+URL: https://arxiv.org/abs/2507.23602
+
+Abstract:
+Semi-discrete optimal transport (SOT), which maps a continuous probability
+measure to a discrete one, is a fundamental problem with wide-ranging
+applications. Entropic regularization is often employed to solve the SOT
+problem, leading to a regularized (RSOT) formulation that can be solved
+efficiently via its convex dual. However, a significant computational challenge
+emerges when the continuous source measure is discretized via the finite element
+(FE) method to handle complex geometries or densities, such as those arising
+from solutions to Partial Differential Equations (PDEs). The evaluation of the
+dual objective function requires dense interactions between the numerous source
+quadrature points and all target points, creating a severe bottleneck for large-
+scale problems. This paper presents a cohesive framework of numerical strategies
+to overcome this challenge. We accelerate the dual objective and gradient
+evaluations by combining distance-based truncation with fast spatial queries
+using R-trees. For overall convergence, we integrate multilevel techniques based
+on hierarchies of both the FE source mesh and the discrete target measure,
+alongside a robust scheduling strategy for the regularization parameter. When
+unified, these methods drastically reduce the computational cost of RSOT,
+enabling its practical application to complex, large-scale scenarios. We provide
+an open-source C++ implementation of this framework, built upon the deal.II
+finite element library, available at
+https://github.com/SemiDiscreteOT/SemiDiscreteOT.

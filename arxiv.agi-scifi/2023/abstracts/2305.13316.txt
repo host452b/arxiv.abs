@@ -1,0 +1,28 @@
+Title: KineticNet: Deep learning a transferable kinetic energy functional for
+orbital-free density functional theory
+Authors: Roman Remme, Tobias Kaczun, Maximilian Scheurer, Andreas Dreuw, Fred A.
+Hamprecht
+ID: 2305.13316
+URL: https://arxiv.org/abs/2305.13316
+
+Abstract:
+Orbital-free density functional theory (OF-DFT) holds the promise to compute
+ground state molecular properties at minimal cost. However, it has been held
+back by our inability to compute the kinetic energy as a functional of the
+electron density only. We here set out to learn the kinetic energy functional
+from ground truth provided by the more expensive Kohn-Sham density functional
+theory. Such learning is confronted with two key challenges: Giving the model
+sufficient expressivity and spatial context while limiting the memory footprint
+to afford computations on a GPU; and creating a sufficiently broad distribution
+of training data to enable iterative density optimization even when starting
+from a poor initial guess. In response, we introduce KineticNet, an equivariant
+deep neural network architecture based on point convolutions adapted to the
+prediction of quantities on molecular quadrature grids. Important contributions
+include convolution filters with sufficient spatial resolution in the vicinity
+of the nuclear cusp, an atom-centric sparse but expressive architecture that
+relays information across multiple bond lengths; and a new strategy to generate
+varied training data by finding ground state densities in the face of
+perturbations by a random external potential. KineticNet achieves, for the first
+time, chemical accuracy of the learned functionals across input densities and
+geometries of tiny molecules. For two electron systems, we additionally
+demonstrate OF-DFT density optimization with chemical accuracy.

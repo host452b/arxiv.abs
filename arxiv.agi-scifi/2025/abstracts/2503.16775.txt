@@ -1,0 +1,23 @@
+Title: Region Masking to Accelerate Video Processing on Neuromorphic Hardware
+Authors: Sreetama Sarkar, Sumit Bam Shrestha, Yue Che, Leobardo Campos-Macias,
+Gourav Datta, Peter A. Beerel
+ID: 2503.16775
+URL: https://arxiv.org/abs/2503.16775
+
+Abstract:
+The rapidly growing demand for on-chip edge intelligence on resource-constrained
+devices has motivated approaches to reduce energy and latency of deep learning
+models. Spiking neural networks (SNNs) have gained particular interest due to
+their promise to reduce energy consumption using event-based processing. We
+assert that while sigma-delta encoding in SNNs can take advantage of the
+temporal redundancy across video frames, they still involve a significant amount
+of redundant computations due to processing insignificant events. In this paper,
+we propose a region masking strategy that identifies regions of interest at the
+input of the SNN, thereby eliminating computation and data movement for events
+arising from unimportant regions. Our approach demonstrates that masking regions
+at the input not only significantly reduces the overall spiking activity of the
+network, but also provides significant improvement in throughput and latency. We
+apply region masking during video object detection on Loihi 2, demonstrating
+that masking approximately 60% of input regions can reduce energy-delay product
+by 1.65x over a baseline sigma-delta network, with a degradation in mAP@0.5 by
+1.09%.

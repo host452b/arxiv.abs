@@ -1,0 +1,22 @@
+Title: AInstein: Numerical Einstein Metrics via Machine Learning
+Authors: Edward Hirst, Tancredi Schettini Gherardini, Alexander G. Stapleton
+ID: 2502.13043
+URL: https://arxiv.org/abs/2502.13043
+
+Abstract:
+A new semi-supervised machine learning package is introduced which successfully
+solves the Euclidean vacuum Einstein equations with a cosmological constant,
+without any symmetry assumptions. The model architecture contains subnetworks
+for each patch in the manifold-defining atlas. Each subnetwork predicts the
+components of a metric in its associated patch, with the relevant Einstein
+conditions of the form $R_{μν} - λg_{μν} = 0$ being used as independent loss
+components (here $μ,ν= 1, 2, \cdots, n$, where $n$ is the dimension of the
+Riemannian manifold, and the Einstein constant $λ\in \{+1, 0, -1\}$). To ensure
+the consistency of the global structure of the manifold, another loss component
+is introduced across the patch subnetworks which enforces the coordinate
+transformation between the patches, $g' = J^T g J$, for an appropriate
+analytically known Jacobian $J$. We test our method for the case of spheres
+represented by a pair of patches in dimensions 2, 3, 4, and 5. In dimensions 2
+and 3, the geometries have been fully classified. However, it is unknown whether
+a Ricci-flat metric can exist on spheres in dimensions 4 and 5. This work hints
+against the existence of such a metric.

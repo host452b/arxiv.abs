@@ -1,0 +1,25 @@
+Title: SuffixDecoding: Extreme Speculative Decoding for Emerging AI Applications
+Authors: Gabriele Oliaro, Zhihao Jia, Daniel Campos, Aurick Qiao
+ID: 2411.04975
+URL: https://arxiv.org/abs/2411.04975
+
+Abstract:
+Speculative decoding is widely adopted to reduce latency in large language model
+(LLM) inference by leveraging smaller draft models capable of handling diverse
+user tasks. However, emerging AI applications, such as LLM-based agents, present
+unique workload characteristics: instead of diverse independent requests,
+agentic frameworks typically submit repetitive inference requests, such as
+multi-agent pipelines performing similar subtasks or self-refinement loops
+iteratively enhancing outputs. These workloads result in long and highly
+predictable sequences, which current speculative decoding methods do not
+effectively exploit. To address this gap, we introduce \emph{SuffixDecoding}, a
+novel method that utilizes efficient suffix trees to cache long token sequences
+from prompts and previous outputs. By adaptively speculating more tokens when
+acceptance likelihood is high and fewer when it is low, SuffixDecoding
+effectively exploits opportunities for longer speculations while conserving
+computation when those opportunities are limited. Evaluations on agentic
+benchmarks, including SWE-Bench and Text-to-SQL, demonstrate that SuffixDecoding
+achieves speedups of up to 5.3$\times$, outperforming state-of-the-art methods
+-- 2.8$\times$ faster than model-based approaches like EAGLE-2/3 and 1.9$\times$
+faster than model-free approaches such as Token Recycling. SuffixDecoding is
+open-sourced at https://github.com/snowflakedb/ArcticInference

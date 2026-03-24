@@ -1,0 +1,30 @@
+Title: Disentangling Locality and Entropy in Ranking Distillation
+Authors: Andrew Parry, Debasis Ganguly, Sean MacAvaney
+ID: 2505.21058
+URL: https://arxiv.org/abs/2505.21058
+
+Abstract:
+The training process of ranking models involves two key data selection
+decisions: a sampling strategy, and a labeling strategy. Modern ranking systems,
+especially those for performing semantic search, typically use a ``hard
+negative'' sampling strategy to identify challenging items using heuristics and
+a distillation labeling strategy to transfer ranking "knowledge" from a more
+capable model. In practice, these approaches have grown increasingly expensive
+and complex, for instance, popular pretrained rankers from SentenceTransformers
+involve 12 models in an ensemble with data provenance hampering reproducibility.
+Despite their complexity, modern sampling and labeling strategies have not been
+fully ablated, leaving the underlying source of effectiveness gains unclear.
+Thus, to better understand why models improve and potentially reduce the expense
+of training effective models, we conduct a broad ablation of sampling and
+distillation processes in neural ranking. We frame and theoretically derive the
+orthogonal nature of model geometry affected by example selection and the effect
+of teacher ranking entropy on ranking model optimization, establishing
+conditions in which data augmentation can effectively improve bias in a ranking
+model. Empirically, our investigation on established benchmarks and common
+architectures shows that sampling processes that were once highly effective in
+contrastive objectives may be spurious or harmful under distillation. We further
+investigate how data augmentation, in terms of inputs and targets, can affect
+effectiveness and the intrinsic behavior of models in ranking. Through this
+work, we aim to encourage more computationally efficient approaches that reduce
+focus on contrastive pairs and instead directly understand training dynamics
+under rankings, which better represent real-world settings.

@@ -1,0 +1,26 @@
+Title: NavThinker: Action-Conditioned World Models for Coupled Prediction and
+Planning in Social Navigation
+Authors: Tianshuai Hu, Zeying Gong, Lingdong Kong, XiaoDong Mei, Yiyi Ding, Qi
+Zeng, Ao Liang, Rong Li, Yangyi Zhong, Junwei Liang
+ID: 2603.15359
+URL: https://arxiv.org/abs/2603.15359
+
+Abstract:
+Social navigation requires robots to act safely in dynamic human environments.
+Effective behavior demands thinking ahead: reasoning about how the scene and
+pedestrians evolve under different robot actions rather than reacting to current
+observations alone. This creates a coupled prediction-planning challenge, where
+robot actions and human motion mutually influence each other. To address this
+challenge, we propose NavThinker, a future-aware framework that couples an
+action-conditioned world model with on-policy reinforcement learning. The world
+model operates in the Depth Anything V2 patch feature space and performs
+autoregressive prediction of future scene geometry and human motion; multi-head
+decoders then produce future depth maps and human trajectories, yielding a
+future-aware state aligned with traversability and interaction risk. Crucially,
+we train the policy with DD-PPO while injecting world-model think-ahead signals
+via: (i) action-conditioned future features fused into the current observation
+embedding and (ii) social reward shaping from predicted human trajectories.
+Experiments on single- and multi-robot Social-HM3D show state-of-the-art
+navigation success, with zero-shot transfer to Social-MP3D and real-world
+deployment on a Unitree Go2, validating generalization and practical
+applicability. Webpage: https://hutslib.github.io/NavThinker.

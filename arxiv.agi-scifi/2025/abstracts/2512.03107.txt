@@ -1,0 +1,26 @@
+Title: Detecting AI Hallucinations in Finance: An Information-Theoretic Method
+Cuts Hallucination Rate by 92%
+Authors: Mainak Singha
+ID: 2512.03107
+URL: https://arxiv.org/abs/2512.03107
+
+Abstract:
+Large language models (LLMs) produce fluent but unsupported answers -
+hallucinations - limiting safe deployment in high-stakes domains. We propose
+ECLIPSE, a framework that treats hallucination as a mismatch between a model's
+semantic entropy and the capacity of available evidence. We combine entropy
+estimation via multi-sample clustering with a novel perplexity decomposition
+that measures how models use retrieved evidence. We prove that under mild
+conditions, the resulting entropy-capacity objective is strictly convex with a
+unique stable optimum. We evaluate on a controlled financial question answering
+dataset with GPT-3.5-turbo (n=200 balanced samples with synthetic
+hallucinations), where ECLIPSE achieves ROC AUC of 0.89 and average precision of
+0.90, substantially outperforming a semantic entropy-only baseline (AUC 0.50). A
+controlled ablation with Claude-3-Haiku, which lacks token-level log
+probabilities, shows AUC dropping to 0.59 with coefficient magnitudes decreasing
+by 95% - demonstrating that ECLIPSE is a logprob-native mechanism whose
+effectiveness depends on calibrated token-level uncertainties. The perplexity
+decomposition features exhibit the largest learned coefficients, confirming that
+evidence utilization is central to hallucination detection. We position this
+work as a controlled mechanism study; broader validation across domains and
+naturally occurring hallucinations remains future work.

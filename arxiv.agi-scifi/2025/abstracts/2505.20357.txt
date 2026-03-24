@@ -1,0 +1,29 @@
+Title: Learning and Interpreting Gravitational-Wave Features from CNNs with a
+Random Forest Approach
+Authors: Jun Tian, He Wang, Jibo He, Yu Pan, Shuo Cao, Qingquan Jiang
+ID: 2505.20357
+URL: https://arxiv.org/abs/2505.20357
+
+Abstract:
+Convolutional neural networks (CNNs) have become widely adopted in gravitational
+wave (GW) detection pipelines due to their ability to automatically learn
+hierarchical features from raw strain data. However, the physical meaning of
+these learned features remains underexplored, limiting the interpretability of
+such models. In this work, we propose a hybrid architecture that combines a CNN-
+based feature extractor with a random forest (RF) classifier to improve both
+detection performance and interpretability. Unlike prior approaches that
+directly connect classifiers to CNN outputs, our method introduces four
+physically interpretable metrics - variance, signal-to-noise ratio (SNR),
+waveform overlap, and peak amplitude - computed from the final convolutional
+layer. These are jointly used with the CNN output in the RF classifier to enable
+more informed decision boundaries. Tested on long-duration strain datasets, our
+hybrid model outperforms a baseline CNN model, achieving a relative improvement
+of 21\% in sensitivity at a fixed false alarm rate of 10 events per month.
+Notably, it also shows improved detection of low-SNR signals (SNR $\le$ 10),
+which are especially vulnerable to misclassification in noisy environments.
+Feature attribution via the RF model reveals that both CNN-extracted and
+handcrafted features contribute significantly to classification decisions, with
+learned variance and CNN outputs ranked among the most informative. These
+findings suggest that physically motivated post-processing of CNN feature maps
+can serve as a valuable tool for interpretable and efficient GW detection,
+bridging the gap between deep learning and domain knowledge.

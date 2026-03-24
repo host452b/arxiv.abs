@@ -1,0 +1,22 @@
+Title: Detecting Stealthy Data Poisoning Attacks in AI Code Generators
+Authors: Cristina Improta
+ID: 2508.21636
+URL: https://arxiv.org/abs/2508.21636
+
+Abstract:
+Deep learning (DL) models for natural language-to-code generation have become
+integral to modern software development pipelines. However, their heavy reliance
+on large amounts of data, often collected from unsanitized online sources,
+exposes them to data poisoning attacks, where adversaries inject malicious
+samples to subtly bias model behavior. Recent targeted attacks silently replace
+secure code with semantically equivalent but vulnerable implementations without
+relying on explicit triggers to launch the attack, making it especially hard for
+detection methods to distinguish clean from poisoned samples. We present a
+systematic study on the effectiveness of existing poisoning detection methods
+under this stealthy threat model. Specifically, we perform targeted poisoning on
+three DL models (CodeBERT, CodeT5+, AST-T5), and evaluate spectral signatures
+analysis, activation clustering, and static analysis as defenses. Our results
+show that all methods struggle to detect triggerless poisoning, with
+representation-based approaches failing to isolate poisoned samples and static
+analysis suffering false positives and false negatives, highlighting the need
+for more robust, trigger-independent defenses for AI-assisted code generation.

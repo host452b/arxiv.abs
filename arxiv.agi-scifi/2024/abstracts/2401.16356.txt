@@ -1,0 +1,33 @@
+Title: cDVGAN: One Flexible Model for Multi-class Gravitational Wave Signal and
+Glitch Generation
+Authors: Tom Dooney, Lyana Curier, Daniel Tan, Melissa Lopez, Chris Van Den
+Broeck, Stefano Bromuri
+ID: 2401.16356
+URL: https://arxiv.org/abs/2401.16356
+
+Abstract:
+Simulating realistic time-domain observations of gravitational waves (GWs) and
+GW detector glitches can help in advancing GW data analysis. Simulated data can
+be used in downstream tasks by augmenting datasets for signal searches,
+balancing data sets for machine learning, and validating detection schemes. In
+this work, we present Conditional Derivative GAN (cDVGAN), a novel conditional
+model in the Generative Adversarial Network framework for simulating multiple
+classes of time-domain observations that represent gravitational waves (GWs) and
+detector glitches. cDVGAN can also generate generalized hybrid samples that span
+the variation between classes through interpolation in the conditioned class
+vector. cDVGAN introduces an additional player into the typical 2-player
+adversarial game of GANs, where an auxiliary discriminator analyzes the first-
+order derivative time-series. Our results show that this provides synthetic data
+that better captures the features of the original data. cDVGAN conditions on
+three classes, two denoised from LIGO blip and tomte glitch events from its 3rd
+observing run (O3), and the third representing binary black hole (BBH) mergers.
+Our proposed cDVGAN outperforms 4 different baseline GAN models in replicating
+the features of the three classes. Specifically, our experiments show that
+training convolutional neural networks (CNNs) with our cDVGAN-generated data
+improves the detection of samples embedded in detector noise beyond the
+synthetic data from other state-of-the-art GAN models. Our best synthetic
+dataset yields as much as a 4.2% increase in area-under-the-curve (AUC)
+performance compared to synthetic datasets from baseline GANs. Moreover,
+training the CNN with hybrid samples from our cDVGAN outperforms CNNs trained
+only on the standard classes, when identifying real samples embedded in LIGO
+detector background (4% AUC improvement for cDVGAN).

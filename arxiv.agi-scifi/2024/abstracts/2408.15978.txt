@@ -1,0 +1,31 @@
+Title: WebPilot: A Versatile and Autonomous Multi-Agent System for Web Task
+Execution with Strategic Exploration
+Authors: Yao Zhang, Zijian Ma, Yunpu Ma, Zhen Han, Yu Wu, Volker Tresp
+ID: 2408.15978
+URL: https://arxiv.org/abs/2408.15978
+
+Abstract:
+LLM-based autonomous agents often fail to execute complex web tasks that require
+dynamic interaction due to the inherent uncertainty and complexity of these
+environments. Existing LLM-based web agents typically rely on rigid, expert-
+designed policies specific to certain states and actions, which lack the
+flexibility and generalizability needed to adapt to unseen tasks. In contrast,
+humans excel by exploring unknowns, continuously adapting strategies, and
+resolving ambiguities through exploration. To emulate human-like adaptability,
+web agents need strategic exploration and complex decision-making. Monte Carlo
+Tree Search (MCTS) is well-suited for this, but classical MCTS struggles with
+vast action spaces, unpredictable state transitions, and incomplete information
+in web tasks. In light of this, we develop WebPilot, a multi-agent system with a
+dual optimization strategy that improves MCTS to better handle complex web
+environments. Specifically, the Global Optimization phase involves generating a
+high-level plan by breaking down tasks into manageable subtasks and continuously
+refining this plan, thereby focusing the search process and mitigating the
+challenges posed by vast action spaces in classical MCTS. Subsequently, the
+Local Optimization phase executes each subtask using a tailored MCTS designed
+for complex environments, effectively addressing uncertainties and managing
+incomplete information. Experimental results on WebArena and MiniWoB++
+demonstrate the effectiveness of WebPilot. Notably, on WebArena, WebPilot
+achieves SOTA performance with GPT-4, achieving a 93% relative increase in
+success rate over the concurrent tree search-based method. WebPilot marks a
+significant advancement in general autonomous agent capabilities, paving the way
+for more advanced and reliable decision-making in practical environments.

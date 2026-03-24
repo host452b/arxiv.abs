@@ -1,0 +1,29 @@
+Title: World4Drive: End-to-End Autonomous Driving via Intention-aware Physical
+Latent World Model
+Authors: Yupeng Zheng, Pengxuan Yang, Zebin Xing, Qichao Zhang, Yuhang Zheng,
+Yinfeng Gao, Pengfei Li, Teng Zhang, Zhongpu Xia, Peng Jia, Dongbin Zhao
+ID: 2507.00603
+URL: https://arxiv.org/abs/2507.00603
+
+Abstract:
+End-to-end autonomous driving directly generates planning trajectories from raw
+sensor data, yet it typically relies on costly perception supervision to extract
+scene information. A critical research challenge arises: constructing an
+informative driving world model to enable perception annotation-free, end-to-end
+planning via self-supervised learning. In this paper, we present World4Drive, an
+end-to-end autonomous driving framework that employs vision foundation models to
+build latent world models for generating and evaluating multi-modal planning
+trajectories. Specifically, World4Drive first extracts scene features, including
+driving intention and world latent representations enriched with spatial-
+semantic priors provided by vision foundation models. It then generates multi-
+modal planning trajectories based on current scene features and driving
+intentions and predicts multiple intention-driven future states within the
+latent space. Finally, it introduces a world model selector module to evaluate
+and select the best trajectory. We achieve perception annotation-free, end-to-
+end planning through self-supervised alignment between actual future
+observations and predicted observations reconstructed from the latent space.
+World4Drive achieves state-of-the-art performance without manual perception
+annotations on both the open-loop nuScenes and closed-loop NavSim benchmarks,
+demonstrating an 18.1\% relative reduction in L2 error, 46.7% lower collision
+rate, and 3.75 faster training convergence. Codes will be accessed at
+https://github.com/ucaszyp/World4Drive.

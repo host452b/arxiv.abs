@@ -1,0 +1,27 @@
+Title: ML2SC: Deploying Machine Learning Models as Smart Contracts on the
+Blockchain
+Authors: Zhikai Li, Steve Vott, Bhaskar Krishnamachar
+ID: 2404.16967
+URL: https://arxiv.org/abs/2404.16967
+
+Abstract:
+With the growing concern of AI safety, there is a need to trust the computations
+done by machine learning (ML) models. Blockchain technology, known for recording
+data and running computations transparently and in a tamper-proof manner, can
+offer this trust. One significant challenge in deploying ML Classifiers on-chain
+is that while ML models are typically written in Python using an ML library such
+as Pytorch, smart contracts deployed on EVM-compatible blockchains are written
+in Solidity. We introduce Machine Learning to Smart Contract (ML2SC), a PyTorch
+to Solidity translator that can automatically translate multi-layer perceptron
+(MLP) models written in Pytorch to Solidity smart contract versions. ML2SC uses
+a fixed-point math library to approximate floating-point computation. After
+deploying the generated smart contract, we can train our models off-chain using
+PyTorch and then further transfer the acquired weights and biases to the smart
+contract using a function call. Finally, the model inference can also be done
+with a function call providing the input. We mathematically model the gas costs
+associated with deploying, updating model parameters, and running inference on
+these models on-chain, showing that the gas costs increase linearly in various
+parameters associated with an MLP. We present empirical results matching our
+modeling. We also evaluate the classification accuracy showing that the outputs
+obtained by our transparent on-chain implementation are identical to the
+original off-chain implementation with Pytorch.

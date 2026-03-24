@@ -1,0 +1,31 @@
+Title: MCTED: A Machine-Learning-Ready Dataset for Digital Elevation Model
+Generation From Mars Imagery
+Authors: Rafał Osadnik, Pablo Gómez, Eleni Bohacek, Rickbir Bahia
+ID: 2509.08027
+URL: https://arxiv.org/abs/2509.08027
+
+Abstract:
+This work presents a new dataset for the Martian digital elevation model
+prediction task, ready for machine learning applications called MCTED. The
+dataset has been generated using a comprehensive pipeline designed to process
+high-resolution Mars orthoimage and DEM pairs from Day et al., yielding a
+dataset consisting of 80,898 data samples. The source images are data gathered
+by the Mars Reconnaissance Orbiter using the CTX instrument, providing a very
+diverse and comprehensive coverage of the Martian surface. Given the complexity
+of the processing pipelines used in large-scale DEMs, there are often artefacts
+and missing data points in the original data, for which we developed tools to
+solve or mitigate their impact. We divide the processed samples into training
+and validation splits, ensuring samples in both splits cover no mutual areas to
+avoid data leakage. Every sample in the dataset is represented by the optical
+image patch, DEM patch, and two mask patches, indicating values that were
+originally missing or were altered by us. This allows future users of the
+dataset to handle altered elevation regions as they please. We provide
+statistical insights of the generated dataset, including the spatial
+distribution of samples, the distributions of elevation values, slopes and more.
+Finally, we train a small U-Net architecture on the MCTED dataset and compare
+its performance to a monocular depth estimation foundation model,
+DepthAnythingV2, on the task of elevation prediction. We find that even a very
+small architecture trained on this dataset specifically, beats a zero-shot
+performance of a depth estimation foundation model like DepthAnythingV2. We make
+the dataset and code used for its generation completely open source in public
+repositories.

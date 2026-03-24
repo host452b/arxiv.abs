@@ -1,0 +1,29 @@
+Title: An autonomous agent for auditing and improving the reliability of
+clinical AI models
+Authors: Lukas Kuhn, Florian Buettner
+ID: 2507.05755
+URL: https://arxiv.org/abs/2507.05755
+
+Abstract:
+The deployment of AI models in clinical practice faces a critical challenge:
+models achieving expert-level performance on benchmarks can fail
+catastrophically when confronted with real-world variations in medical imaging.
+Minor shifts in scanner hardware, lighting or demographics can erode accuracy,
+but currently reliability auditing to identify such catastrophic failure cases
+before deployment is a bespoke and time-consuming process. Practitioners lack
+accessible and interpretable tools to expose and repair hidden failure modes.
+Here we introduce ModelAuditor, a self-reflective agent that converses with
+users, selects task-specific metrics, and simulates context-dependent,
+clinically relevant distribution shifts. ModelAuditor then generates
+interpretable reports explaining how much performance likely degrades during
+deployment, discussing specific likely failure modes and identifying root causes
+and mitigation strategies. Our comprehensive evaluation across three real-world
+clinical scenarios - inter-institutional variation in histopathology,
+demographic shifts in dermatology, and equipment heterogeneity in chest
+radiography - demonstrates that ModelAuditor is able correctly identify context-
+specific failure modes of state-of-the-art models such as the established SIIM-
+ISIC melanoma classifier. Its targeted recommendations recover 15-25% of
+performance lost under real-world distribution shift, substantially
+outperforming both baseline models and state-of-the-art augmentation methods.
+These improvements are achieved through a multi-agent architecture and execute
+on consumer hardware in under 10 minutes, costing less than US$0.50 per audit.

@@ -1,0 +1,28 @@
+Title: Intent-based Deep Reinforcement Learning for Multi-agent Informative Path
+Planning
+Authors: Tianze Yang, Yuhong Cao, Guillaume Sartoretti
+ID: 2303.05351
+URL: https://arxiv.org/abs/2303.05351
+
+Abstract:
+In multi-agent informative path planning (MAIPP), agents must collectively
+construct a global belief map of an underlying distribution of interest (e.g.,
+gas concentration, light intensity, or pollution levels) over a given domain,
+based on measurements taken along their trajectory. They must frequently replan
+their path to balance the exploration of new areas with the exploitation of
+known high-interest areas, to maximize information gain within a predefined
+budget. Traditional approaches rely on reactive path planning conditioned on
+other agents' predicted future actions. However, as the belief is continuously
+updated, the predicted actions may not match the executed actions, introducing
+noise and reducing performance. We propose a decentralized, deep reinforcement
+learning (DRL) approach using an attention-based neural network, where agents
+optimize long-term individual and cooperative objectives by sharing their
+intent, represented as a distribution of medium-/long-term future positions
+obtained from their own policy. Intent sharing enables agents to learn to claim
+or avoid broader areas, while the use of attention mechanisms allows them to
+identify useful portions of imperfect predictions, maximizing cooperation even
+based on imperfect information. Our experiments compare the performance of our
+approach, its variants, and high-quality baselines across various MAIPP
+scenarios. We finally demonstrate the effectiveness of our approach under
+limited communication ranges, towards deployments under realistic communication
+constraints.

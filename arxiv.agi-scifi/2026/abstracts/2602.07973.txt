@@ -1,0 +1,24 @@
+Title: On Improving Neurosymbolic Learning by Exploiting the Representation
+Space
+Authors: Aaditya Naik, Efthymia Tsamoura, Shibo Jin, Mayur Naik, Dan Roth
+ID: 2602.07973
+URL: https://arxiv.org/abs/2602.07973
+
+Abstract:
+We study the problem of learning neural classifiers in a neurosymbolic setting
+where the hidden gold labels of input instances must satisfy a logical formula.
+Learning in this setting proceeds by first computing (a subset of) the possible
+combinations of labels that satisfy the formula and then computing a loss using
+those combinations and the classifiers' scores. One challenge is that the space
+of label combinations can grow exponentially, making learning difficult. We
+propose a technique that prunes this space by exploiting the intuition that
+instances with similar latent representations are likely to share the same
+label. While this intuition has been widely used in weakly supervised learning,
+its application in our setting is challenging due to label dependencies imposed
+by logical constraints. We formulate the pruning process as an integer linear
+program that discards inconsistent label combinations while respecting logical
+structure. Our approach, CLIPPER, is orthogonal to existing training algorithms
+and can be seamlessly integrated with them. Across 16 benchmarks over complex
+neurosymbolic tasks, we demonstrate that CLIPPER boosts the performance of
+state-of-the-art neurosymbolic engines like Scallop, Dolphin, and ISED by up to
+48%, 53%, and 8%, leading to state-of-the-art accuracies.

@@ -1,0 +1,31 @@
+Title: RoboReward: General-Purpose Vision-Language Reward Models for Robotics
+Authors: Tony Lee, Andrew Wagenmaker, Karl Pertsch, Percy Liang, Sergey Levine,
+Chelsea Finn
+ID: 2601.00675
+URL: https://arxiv.org/abs/2601.00675
+
+Abstract:
+A well-designed reward is critical for effective reinforcement learning-based
+policy improvement. In real-world robotics, obtaining such rewards typically
+requires either labor-intensive human labeling or brittle, handcrafted
+objectives. Vision-language models (VLMs) have shown promise as automatic reward
+models, yet their effectiveness on real robot tasks is poorly understood. In
+this work, we aim to close this gap by introducing (1) RoboReward, a robotics
+reward dataset and benchmark built on large-scale real-robot corpora from Open
+X-Embodiment (OXE) and RoboArena, and (2) vision-language reward models trained
+on this dataset (RoboReward 4B/8B). Because OXE is success-heavy and lacks
+failure examples, we propose a negative examples data augmentation pipeline that
+generates calibrated negative and near-misses via counterfactual relabeling of
+successful episodes and temporal clipping to create partial-progress outcomes
+from the same videos. Using this framework, we build a large training and
+evaluation dataset spanning diverse tasks and embodiments to test whether state-
+of-the-art VLMs can reliably provide rewards for robot learning. Our evaluation
+of open and proprietary VLMs finds that no model excels across tasks,
+highlighting substantial room for improvement. We then train general-purpose 4B-
+and 8B-parameter models that outperform much larger VLMs in assigning rewards
+for short-horizon robotic tasks. Finally, we deploy the 8B model in real-robot
+reinforcement learning and find that it improves policy learning over Gemini
+Robotics-ER 1.5 while narrowing the gap to RL training with human-provided
+rewards. We release the full dataset, trained reward models, and evaluation
+suite on our website to advance the development of general-purpose reward models
+in robotics: https://crfm.stanford.edu/helm/robo-reward-bench (project website).
