@@ -1,0 +1,7 @@
+Title: CPTuning: Contrastive Prompt Tuning for Generative Relation Extraction
+Authors: Jiaxin Duan, Fengyu Lu, Junfei Liu
+ID: 2501.02196
+URL: https://arxiv.org/abs/2501.02196
+
+Abstract:
+Generative relation extraction (RE) commonly involves first reformulating RE as a linguistic modeling problem easily tackled with pre-trained language models (PLM) and then fine-tuning a PLM with supervised cross-entropy loss. Although having achieved promising performance, existing approaches assume only one deterministic relation between each pair of entities without considering real scenarios where multiple relations may be valid, i.e., entity pair overlap, causing their limited applications. To address this problem, we introduce a novel contrastive prompt tuning method for RE, CPTuning, which learns to associate a candidate relation between two in-context entities with a probability mass above or below a threshold, corresponding to whether the relation exists. Beyond learning schema, CPTuning also organizes RE as a verbalized relation generation task and uses Trie-constrained decoding to ensure a model generates valid relations. It adaptively picks out the generated candidate relations with a high estimated likelihood in inference, thereby achieving multi-relation extraction. We conduct extensive experiments on four widely used datasets to validate our method. Results show that T5-large fine-tuned with CPTuning significantly outperforms previous methods, regardless of single or multiple relations extraction.

@@ -1,0 +1,7 @@
+Title: OptiPrune: Boosting Prompt-Image Consistency with Attention-Guided Noise and Dynamic Token Selection
+Authors: Ziji Lu
+ID: 2507.00789
+URL: https://arxiv.org/abs/2507.00789
+
+Abstract:
+Text-to-image diffusion models often struggle to achieve accurate semantic alignment between generated images and text prompts while maintaining efficiency for deployment on resource-constrained hardware. Existing approaches either incur substantial computational overhead through noise optimization or compromise semantic fidelity by aggressively pruning tokens. In this work, we propose OptiPrune, a unified framework that combines distribution-aware initial noise optimization with similarity-based token pruning to address both challenges simultaneously. Specifically, (1) we introduce a distribution-aware noise optimization module guided by attention scores to steer the initial latent noise toward semantically meaningful regions, mitigating issues such as subject neglect and feature entanglement; (2) we design a hardware-efficient token pruning strategy that selects representative base tokens via patch-wise similarity, injects randomness to enhance generalization, and recovers pruned tokens using maximum similarity copying before attention operations. Our method preserves the Gaussian prior during noise optimization and enables efficient inference without sacrificing alignment quality. Experiments on benchmark datasets, including Animal-Animal, demonstrate that OptiPrune achieves state-of-the-art prompt-image consistency with significantly reduced computational cost.

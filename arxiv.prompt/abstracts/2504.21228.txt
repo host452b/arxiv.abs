@@ -1,0 +1,7 @@
+Title: CachePrune: Neural-Based Attribution Defense Against Indirect Prompt Injection Attacks
+Authors: Rui Wang, Junda Wu, Yu Xia, Tong Yu, Ruiyi Zhang, Ryan Rossi, Subrata Mitra, Lina Yao, Julian McAuley
+ID: 2504.21228
+URL: https://arxiv.org/abs/2504.21228
+
+Abstract:
+Large Language Models (LLMs) are susceptible to indirect prompt injection attacks, in which the model inadvertently responds to task messages injected within the prompt context. This vulnerability stems from LLMs' inability to distinguish between data and instructions within a prompt. In this paper, we propose CachePrune, a defense method that identifies and prunes task-triggering neurons from the KV cache of the input prompt context. By pruning such neurons, we encourage the LLM to interpret the input prompt context purely as data rather than as cues for instruction following. To identify these neurons, we introduce a neural attribution mechanism guided by a preferential attribution loss, which enables effective attribution with only a few samples while preserving response quality after pruning. We further enhance the efficacy of neural attribution by leveraging an observed triggering effect inherent in the model's response generation behavior. Notably, our approach does not impose additional formatting on the prompt or introduce extra test-time LLM calls. Experiments show that CachePrune can significantly reduce attack success rates while maintaining clean response quality.
