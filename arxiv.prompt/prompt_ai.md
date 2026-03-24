@@ -1,748 +1,750 @@
-# AI/LLM Prompt 核心技巧全面总结（2023-2026）
+[**中文版**](prompt_ai.zh-CN.md)
 
-> 基于 arXiv 2023-2026 年 CS 类 **4780 篇** AI/LLM Prompt 相关论文摘要的系统性分析整理。
-> 按用途和场景分类，便于直接应用和对比选择。
-> 整合后的内容涵盖 **50 项核心技巧**，分为 **8 大类**及 **9 套组合应用方案**。
+# AI/LLM Prompt Engineering: 50 Core Techniques (2023–2026)
 
-**论文年份分布：**
+> A systematic analysis of **4,780** AI/LLM prompt-related paper abstracts from arXiv CS categories, 2023–2026.
+> Organized by use case and scenario for direct application and comparison.
+> The consolidated content covers **50 core techniques** across **8 major categories** and **9 combined application solutions**.
 
-| 年份 | 论文数 |
+**Paper Distribution by Year:**
+
+| Year | Papers |
 |------|--------|
-| 2023 | 1085 篇 |
-| 2024 | 1478 篇 |
-| 2025 | 1817 篇 |
-| 2026 | 400 篇 |
+| 2023 | 1,085 |
+| 2024 | 1,478 |
+| 2025 | 1,817 |
+| 2026 | 400 |
 
-**分类目录：**
+**Table of Contents:**
 
-| 类别 | 技巧编号 | 定位 |
+| Category | Technique # | Focus |
 |------|---------|------|
-| 一、推理与思维链 | 1-6 | 提升模型推理能力 |
-| 二、示例与上下文学习 | 7-11 | 利用示例引导输出 |
-| 三、Prompt 设计与格式 | 12-16 | 基础 prompt 构造方法 |
-| 四、编排与工作流 | 17-22 | 多步/多模块协作 |
-| 五、自动优化与压缩 | 23-28 | 工程化提升效率 |
-| 六、质量与鲁棒性 | 29-33 | 评估与改善稳定性 |
-| 七、防御与保护 | 34-41 | 安全防护技术 |
-| 八、⚠️ 攻击与渗透（安全研究） | 42-50 | 红队测试与攻击手法 |
+| I. Reasoning & Chain-of-Thought | 1-6 | Enhancing model reasoning capability |
+| II. Examples & In-Context Learning | 7-11 | Using examples to guide output |
+| III. Prompt Design & Formatting | 12-16 | Fundamental prompt construction methods |
+| IV. Orchestration & Workflows | 17-22 | Multi-step / multi-module collaboration |
+| V. Optimization & Compression | 23-28 | Engineering-driven efficiency improvements |
+| VI. Quality & Robustness | 29-33 | Evaluation and stability enhancement |
+| VII. Defense & Protection | 34-41 | Security defense techniques |
+| VIII. ⚠️ Attacks & Penetration (Security Research) | 42-50 | Red-team testing and attack methods |
 
 ---
 
-# 一、推理与思维链（提升模型推理能力）
+# I. Reasoning & Chain-of-Thought (Enhancing Model Reasoning)
 
-## 1. 链式思维提示（Chain-of-Thought Prompting）
+## 1. Chain-of-Thought Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 在提示中加入"Let's think step by step"或提供带推理过程的示例。例如：`Q: {问题}\nA: Let's think step by step. First, ... Then, ... Therefore, the answer is {答案}` |
-| **原理** | 引导模型在输出答案前先生成中间推理步骤。Google DeepMind 发现即使不用显式提示，通过非贪心解码路径也能触发 CoT 推理，说明 CoT 是模型内在能力。但研究也表明 CoT 解释可能不忠实于模型真正的决策过程（偏差率可达 ~36%）。 |
-| **来源** | arXiv:2402.10200（238 引用）、arXiv:2305.04388（912 引用），342 篇相关论文 |
-| **适合任务** | 数学推理、逻辑推理、多步计算、复杂问答 |
+| **Template** | Add "Let's think step by step" to the prompt or provide examples with reasoning traces. E.g.: `Q: {question}\nA: Let's think step by step. First, ... Then, ... Therefore, the answer is {answer}` |
+| **Principle** | Guides the model to generate intermediate reasoning steps before outputting the answer. Google DeepMind found that even without explicit prompts, CoT reasoning can be triggered through non-greedy decoding paths, suggesting CoT is an intrinsic model capability. However, research also shows CoT explanations may not faithfully reflect the model's actual decision process (deviation rate up to ~36%). |
+| **Source** | arXiv:2402.10200 (238 citations), arXiv:2305.04388 (912 citations), 342 related papers |
+| **Use Cases** | Mathematical reasoning, logical reasoning, multi-step computation, complex Q&A |
 
 ---
 
-## 2. 计划-求解提示（Plan-and-Solve Prompting）
+## 2. Plan-and-Solve Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 零样本两阶段：先规划（分解任务为子任务），再逐步执行。例如：`Let's first understand the problem and devise a plan to solve it. Then, let's carry out the plan and solve the problem step by step.` PS+ 版本增加细节要求以减少计算错误。 |
-| **原理** | 在 Zero-shot-CoT 基础上增加显式规划阶段，解决"遗漏步骤"和"计算错误"问题。在 GPT-3 上跨 10 个数据集大幅超越 Zero-shot-CoT，达到甚至匹配 few-shot 方法水平。 |
-| **来源** | arXiv:2305.04091（640 引用） |
-| **适合任务** | 数学应用题、多步推理、零样本推理场景 |
+| **Template** | Zero-shot two-stage: first plan (decompose task into subtasks), then execute step by step. E.g.: `Let's first understand the problem and devise a plan to solve it. Then, let's carry out the plan and solve the problem step by step.` The PS+ variant adds detail requirements to reduce computation errors. |
+| **Principle** | Adds an explicit planning phase on top of Zero-shot-CoT, addressing "missing steps" and "computation errors." Substantially outperforms Zero-shot-CoT across 10 datasets on GPT-3, matching or exceeding few-shot methods. |
+| **Source** | arXiv:2305.04091 (640 citations) |
+| **Use Cases** | Math word problems, multi-step reasoning, zero-shot reasoning scenarios |
 
 ---
 
-## 3. 结构化 CoT 代码生成（Structured Chain-of-Thought for Code）
+## 3. Structured Chain-of-Thought for Code
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 强制中间推理遵循序列/分支/循环程序结构后再生成代码。例如：先输出伪代码结构 → 再生成实际代码。 |
-| **原理** | 通用 CoT 不适合代码任务。SCoT 将推理限定为程序结构，在 HumanEval/MBPP 上比普通 CoT 高最多 ~13.79% Pass@1。 |
-| **来源** | arXiv:2305.06599（286 引用） |
-| **适合任务** | 代码生成、算法实现、编程竞赛 |
+| **Template** | Force intermediate reasoning to follow sequential/branching/looping program structures before generating code. E.g.: output pseudocode structure first → then generate actual code. |
+| **Principle** | General CoT is not well-suited for code tasks. SCoT constrains reasoning to program structures, achieving up to ~13.79% higher Pass@1 on HumanEval/MBPP compared to vanilla CoT. |
+| **Source** | arXiv:2305.06599 (286 citations) |
+| **Use Cases** | Code generation, algorithm implementation, competitive programming |
 
 ---
 
-## 4. CoT 分隔符增强（CoT Separator Enhancement）
+## 4. CoT Separator Enhancement
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 在 CoT 的每个示例末尾添加分隔符。例如：`示例1: {推理} → {答案}\n---\n示例2: {推理} → {答案}\n---\n问题: {新问题}` |
-| **原理** | 分隔符帮助模型区分不同推理示例边界，减轻密集 prompt 的信息过载。在 GSM8K、AQuA 等任务上显著提升效果。 |
-| **来源** | arXiv:2402.10645 |
-| **适合任务** | 多示例 CoT、复杂推理 |
+| **Template** | Append separators at the end of each CoT example. E.g.: `Example 1: {reasoning} → {answer}\n---\nExample 2: {reasoning} → {answer}\n---\nQuestion: {new question}` |
+| **Principle** | Separators help the model distinguish boundaries between different reasoning examples, reducing information overload in dense prompts. Significantly improves performance on GSM8K, AQuA, and similar tasks. |
+| **Source** | arXiv:2402.10645 |
+| **Use Cases** | Multi-example CoT, complex reasoning |
 
 ---
 
-## 5. 噪声容忍 CoT（Robust CoT with Noisy Rationales）
+## 5. Robust CoT with Noisy Rationales
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **CD-CoT**：用多条噪声推理与一条干净推理做对比，在输入和输出空间中做 explore/exploit。 |
-| **原理** | 现有 LLM 对噪声推理链非常脆弱。CD-CoT 通过对比干净和噪声 rationale 提升平均准确率约 17.8%，仅需极少干净监督。 |
-| **来源** | arXiv:2410.23856（51 引用） |
-| **适合任务** | 推理示例质量不可控的任务、检索增强 CoT |
+| **Template** | **CD-CoT**: Contrast multiple noisy rationales with one clean rationale, performing explore/exploit in both input and output spaces. |
+| **Principle** | Existing LLMs are highly fragile to noisy reasoning chains. CD-CoT improves average accuracy by ~17.8% through contrasting clean and noisy rationales, requiring minimal clean supervision. |
+| **Source** | arXiv:2410.23856 (51 citations) |
+| **Use Cases** | Tasks with uncontrollable rationale quality, retrieval-augmented CoT |
 
 ---
 
-## 6. 免提示推理（Reasoning Without Prompting）
+## 6. Reasoning Without Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 无需显式 CoT prompt，通过探索非贪心解码路径（top-k 替代 token）触发内在 CoT。LeCo 从正确步骤学习，利用逐步 logits 置信度。 |
-| **原理** | CoT 能力是预训练模型固有的。CoT-decoding 在推理基准上优于贪心解码。LeCo 节省 token 同时提升效果。 |
-| **来源** | arXiv:2402.10200（238 引用）、LeCo arXiv:2403.19094 |
-| **适合任务** | 自动化推理、对 prompt 设计要求低的场景 |
+| **Template** | No explicit CoT prompt needed — trigger intrinsic CoT by exploring non-greedy decoding paths (top-k alternative tokens). LeCo learns from correct steps using step-wise logits confidence. |
+| **Principle** | CoT capability is inherent to pretrained models. CoT-decoding outperforms greedy decoding on reasoning benchmarks. LeCo saves tokens while improving performance. |
+| **Source** | arXiv:2402.10200 (238 citations), LeCo arXiv:2403.19094 |
+| **Use Cases** | Automated reasoning, scenarios with low prompt design requirements |
 
 ---
 
-# 二、示例与上下文学习（利用示例引导输出）
+# II. Examples & In-Context Learning (Using Examples to Guide Output)
 
-## 7. 少样本 / 上下文学习（Few-Shot / In-Context Learning）
+## 7. Few-Shot / In-Context Learning
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 在提示中提供 1-5 个输入-输出示例。研究发现即使一个示例也能显著降低 prompt 敏感性。示例的数量和质量强烈影响效果，坏示例反而有害。 |
-| **原理** | 通过示例展示任务格式和期望输出模式。POSIX 指标表明 few-shot 是降低敏感性最可靠的手段。 |
-| **来源** | POSIX（arXiv:2410.02185）、arXiv:2301.07069（392 引用），783 篇相关论文 |
-| **适合任务** | 文本分类、NER、翻译、格式化输出 |
+| **Template** | Provide 1–5 input-output examples in the prompt. Research shows even a single example can significantly reduce prompt sensitivity. The number and quality of examples strongly affect performance — bad examples can be harmful. |
+| **Principle** | Demonstrates task format and expected output patterns through examples. The POSIX metric shows few-shot is the most reliable means of reducing sensitivity. |
+| **Source** | POSIX (arXiv:2410.02185), arXiv:2301.07069 (392 citations), 783 related papers |
+| **Use Cases** | Text classification, NER, translation, formatted output |
 
 ---
 
-## 8. 自动演示生成（Auto-Demo Prompting）
+## 8. Auto-Demo Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 在批量处理中，将模型前面的输出作为后续问题的示例，无需人工编写。 |
-| **原理** | 利用模型自身产生的高质量输出作为动态 demonstration，减少批量推理退化。 |
-| **来源** | arXiv:2410.01724 |
-| **适合任务** | 批量推理、零样本效果差的任务、冷启动 |
+| **Template** | In batch processing, use the model's earlier outputs as examples for subsequent questions, without manual authoring. |
+| **Principle** | Leverages the model's own high-quality outputs as dynamic demonstrations, reducing batch inference degradation. |
+| **Source** | arXiv:2410.01724 |
+| **Use Cases** | Batch inference, tasks with poor zero-shot performance, cold start |
 
 ---
 
-## 9. 混合专家提示（Mixture-of-Expert Prompts）
+## 9. Mixture-of-Expert Prompts
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 将示例按语义聚类，为每个簇生成专门 instruction，推理时路由到最匹配的专家 prompt。约 81% 胜率。 |
-| **原理** | 单一 prompt 难以覆盖任务的所有子类型，MoE 式 prompt 组合覆盖多样化输入。 |
-| **来源** | arXiv:2407.00256 |
-| **适合任务** | 多样化输入的分类、复杂 NLP 任务 |
+| **Template** | Cluster examples by semantics, generate specialized instructions for each cluster, and route to the best-matching expert prompt at inference. ~81% win rate. |
+| **Principle** | A single prompt cannot cover all subtypes of a task; MoE-style prompt combinations cover diverse inputs. |
+| **Source** | arXiv:2407.00256 |
+| **Use Cases** | Classification with diverse inputs, complex NLP tasks |
 
 ---
 
-## 10. 自一致性提示（Self-Consistency Prompting）
+## 10. Self-Consistency Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 对同一问题采样多条推理路径，多数投票选出答案。OpenMedLM 结合 kNN 示例 + CoT + 自一致性。 |
-| **原理** | 多次采样利用多样性降低方差。OpenMedLM 纯靠 prompt engineering 在 MedQA 上超越微调 SOTA。 |
-| **来源** | OpenMedLM（arXiv:2402.19371）82 引用 |
-| **适合任务** | 医学问答、数学推理、高准确率选择题 |
+| **Template** | Sample multiple reasoning paths for the same question and select the answer by majority vote. OpenMedLM combines kNN examples + CoT + self-consistency. |
+| **Principle** | Multiple sampling leverages diversity to reduce variance. OpenMedLM surpassed fine-tuned SOTA on MedQA purely through prompt engineering. |
+| **Source** | OpenMedLM (arXiv:2402.19371) 82 citations |
+| **Use Cases** | Medical Q&A, mathematical reasoning, high-accuracy multiple-choice |
 
 ---
 
-## 11. 多 Prompt 评估（Multi-Prompt LLM Evaluation）
+## 11. Multi-Prompt LLM Evaluation
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 使用多样化 prompt 集合评估模型，而非单一模板。PromptEval 仅用约 2 次单 prompt 预算可估计 ~100 个变体的性能分位。 |
-| **原理** | 单 prompt SOTA 声称在百万实例上是脆弱的。多 prompt 评估更能反映真实能力。 |
-| **来源** | arXiv:2401.00595（264 引用）、PromptEval（arXiv:2405.17202） |
-| **适合任务** | 模型评估、prompt 选择、基准测试设计 |
+| **Template** | Evaluate models using a diverse set of prompts rather than a single template. PromptEval can estimate performance quantiles for ~100 variants at roughly 2× the budget of a single prompt. |
+| **Principle** | Single-prompt SOTA claims are fragile over millions of instances. Multi-prompt evaluation better reflects true capabilities. |
+| **Source** | arXiv:2401.00595 (264 citations), PromptEval (arXiv:2405.17202) |
+| **Use Cases** | Model evaluation, prompt selection, benchmark design |
 
 ---
 
-# 三、Prompt 设计与格式（基础构造方法）
+# III. Prompt Design & Formatting (Fundamental Construction Methods)
 
-## 12. 提示模式目录（Prompt Pattern Catalog）
+## 12. Prompt Pattern Catalog
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 类似软件设计模式，定义可复用的 prompt 模式（如 Output Automater、Persona、Template 等），可组合使用。 |
-| **原理** | 将 prompt engineering 系统化为模式语言，提供结构化框架指导设计。 |
-| **来源** | arXiv:2302.11382（1646 引用，**全库最高引用**） |
-| **适合任务** | 所有 prompt 设计、团队协作标准化 |
+| **Template** | Similar to software design patterns, defines reusable prompt patterns (e.g., Output Automater, Persona, Template, etc.) that can be composed. |
+| **Principle** | Systematizes prompt engineering into a pattern language, providing a structured framework to guide design. |
+| **Source** | arXiv:2302.11382 (1,646 citations, **highest in the corpus**) |
+| **Use Cases** | All prompt design, team collaboration standardization |
 
 ---
 
-## 13. 提示格式化（Prompt Formatting）
+## 13. Prompt Formatting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 保持内容相同，使用不同格式（纯文本、Markdown、JSON、YAML、XML）。GPT-3.5 仅因格式可波动约 40%，开源模型可波动 ~76 个百分点。 |
-| **原理** | 格式对性能影响巨大。更大模型更鲁棒但仍不能假定一种固定格式最优。 |
-| **来源** | arXiv:2411.10541（165 引用）、arXiv:2310.11324（626 引用） |
-| **适合任务** | 所有任务，特别是代码、分类、结构化输出 |
+| **Template** | Keep content identical but vary the format (plain text, Markdown, JSON, YAML, XML). GPT-3.5 can fluctuate ~40% due to format alone; open-source models can swing ~76 percentage points. |
+| **Principle** | Format has a massive impact on performance. Larger models are more robust but one cannot assume a fixed optimal format. |
+| **Source** | arXiv:2411.10541 (165 citations), arXiv:2310.11324 (626 citations) |
+| **Use Cases** | All tasks, especially code, classification, structured output |
 
 ---
 
-## 14. 角色扮演提示（Role-Play Prompting）
+## 14. Role-Play Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 设定角色触发知识和推理。例如：`你是一位{领域}专家...` 研究表明角色扮演在零样本推理上大幅超越"think step by step"。 |
-| **原理** | 角色设定不仅触发领域知识，还能激活更强的推理能力。 |
-| **来源** | arXiv:2308.07702（358 引用），250 篇相关论文 |
-| **适合任务** | 零样本推理、专业问答、特定风格生成 |
+| **Template** | Assign a role to trigger domain knowledge and reasoning. E.g.: `You are a {domain} expert...` Research shows role-playing substantially outperforms "think step by step" in zero-shot reasoning. |
+| **Principle** | Role assignment not only triggers domain knowledge but also activates stronger reasoning capabilities. |
+| **Source** | arXiv:2308.07702 (358 citations), 250 related papers |
+| **Use Cases** | Zero-shot reasoning, professional Q&A, style-specific generation |
 
 ---
 
-## 15. 情感刺激提示（Emotional Stimulus Prompting）
+## 15. Emotional Stimulus Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 在 prompt 中加入情感激励。APGP 框架自动融合情感刺激 + 结构化脚手架。 |
-| **原理** | 情感刺激可激活模型注意力。System 1/2 认知过程相关提示可减少社会偏见。 |
-| **来源** | APGP（arXiv:2404.10500）、arXiv:2404.17218，150 篇相关论文 |
-| **适合任务** | 复杂问题求解、减少偏见 |
+| **Template** | Add emotional motivators to the prompt. The APGP framework automatically integrates emotional stimuli + structured scaffolding. |
+| **Principle** | Emotional stimuli can activate model attention. System 1/2 cognitive process-related prompts can reduce social bias. |
+| **Source** | APGP (arXiv:2404.10500), arXiv:2404.17218, 150 related papers |
+| **Use Cases** | Complex problem solving, bias reduction |
 
 ---
 
-## 16. 提示蝴蝶效应（Butterfly Effect of Prompts）
+## 16. Butterfly Effect of Prompts
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 极微小编辑（末尾空格、XML 标签）即可翻转模型答案。 |
-| **原理** | 所有 prompt 设计必须严格控制变量。LLM 标注数据时格式变化导致标签不一致。 |
-| **来源** | arXiv:2401.03729（98 引用） |
-| **适合任务** | 数据标注质量控制、prompt 鲁棒性测试 |
+| **Template** | Extremely minor edits (trailing spaces, XML tags) can flip model answers. |
+| **Principle** | All prompt design must strictly control variables. Format changes during LLM data labeling cause label inconsistencies. |
+| **Source** | arXiv:2401.03729 (98 citations) |
+| **Use Cases** | Data labeling quality control, prompt robustness testing |
 
 ---
 
-# 四、编排与工作流（多步/多模块协作）
+# IV. Orchestration & Workflows (Multi-Step / Multi-Module Collaboration)
 
-## 17. 提示链 vs 逐步提示（Prompt Chaining vs Stepwise）
+## 17. Prompt Chaining vs. Stepwise Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **提示链**：分别发送 Draft → Critique → Refine 多次调用。**逐步提示**：单次提示要求多步。 |
-| **原理** | 提示链优于单 prompt 模拟多步。逐步提示可能只是"模拟"而非真正执行迭代优化。 |
-| **来源** | arXiv:2406.00507，522 篇 chaining 相关论文 |
-| **适合任务** | 文本摘要、内容创作、迭代优化生成 |
+| **Template** | **Prompt Chaining**: Send separate Draft → Critique → Refine calls. **Stepwise Prompting**: Single prompt requesting multiple steps. |
+| **Principle** | Prompt chaining outperforms single-prompt multi-step simulation. Stepwise prompting may only "simulate" rather than truly perform iterative optimization. |
+| **Source** | arXiv:2406.00507, 522 chaining-related papers |
+| **Use Cases** | Text summarization, content creation, iterative generation refinement |
 
 ---
 
-## 18. 元提示（Meta-Prompting）
+## 18. Meta-Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 一个 LLM 充当"指挥官"分解任务，调用多个"专家"LLM 实例处理子任务，整合验证。比标准 prompting 高 17.1%。 |
-| **原理** | 利用一个模型做任务分解和结果整合，每个专家聚焦子问题。 |
-| **来源** | Stanford arXiv:2401.12954（132 引用） |
-| **适合任务** | 复杂多步任务、跨领域分析 |
+| **Template** | One LLM acts as a "conductor" to decompose tasks, invokes multiple "expert" LLM instances for subtasks, then integrates and verifies. 17.1% higher than standard prompting. |
+| **Principle** | Uses one model for task decomposition and result integration, with each expert focusing on a sub-problem. |
+| **Source** | Stanford arXiv:2401.12954 (132 citations) |
+| **Use Cases** | Complex multi-step tasks, cross-domain analysis |
 
 ---
 
-## 19. 提示集成（Prompt Ensemble）
+## 19. Prompt Ensemble
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 对同一任务使用多个不同 prompt 变体，汇总结果取最优或投票。MCS-SQL 在 BIRD 上 65.5%。 |
-| **原理** | 单一 prompt 表现不稳定，多 prompt 集成利用多样性降低方差。 |
-| **来源** | MCS-SQL（arXiv:2405.07467）105 引用，163 篇相关论文 |
-| **适合任务** | Text-to-SQL、高精度场景 |
+| **Template** | Use multiple different prompt variants for the same task, aggregate results by selecting the best or voting. MCS-SQL achieves 65.5% on BIRD. |
+| **Principle** | Single-prompt performance is unstable; multi-prompt ensemble leverages diversity to reduce variance. |
+| **Source** | MCS-SQL (arXiv:2405.07467) 105 citations, 163 related papers |
+| **Use Cases** | Text-to-SQL, high-precision scenarios |
 
 ---
 
-## 20. 代码生成流程化（Flow Engineering for Code）
+## 20. Flow Engineering for Code
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 测试驱动多阶段迭代：规格 → 测试 → 代码 → 验证 → 修复。AlphaCodium 将 GPT-4 pass@5 从 19% 提升到 44%。 |
-| **原理** | 单次 prompt 无法处理复杂编程任务，测试驱动迭代每步聚焦一个子目标。 |
-| **来源** | AlphaCodium（arXiv:2401.08500）112 引用 |
-| **适合任务** | 竞赛编程、复杂函数生成 |
+| **Template** | Test-driven multi-stage iteration: Spec → Tests → Code → Verify → Fix. AlphaCodium raised GPT-4 pass@5 from 19% to 44%. |
+| **Principle** | Single prompts cannot handle complex programming tasks; test-driven iteration focuses each step on one sub-goal. |
+| **Source** | AlphaCodium (arXiv:2401.08500) 112 citations |
+| **Use Cases** | Competitive programming, complex function generation |
 
 ---
 
-## 21. Prompt 编程语言（Prompt Programming Languages）
+## 21. Prompt Programming Languages
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **APPL**：Python 原生嵌入 prompt，异步并行。**PDL**：YAML 声明式。**SPML**：防攻击 DSL。 |
-| **原理** | 原始字符串拼接脆弱易错，专用 DSL 提供结构化控制和可复用性。 |
-| **来源** | APPL（arXiv:2406.13161）、PDL（arXiv:2410.19135） |
-| **适合任务** | 复杂 LLM 应用、agent 编排 |
+| **Template** | **APPL**: Python-native prompt embedding with async parallelism. **PDL**: YAML declarative. **SPML**: Attack-resistant DSL. |
+| **Principle** | Raw string concatenation is fragile and error-prone; dedicated DSLs provide structured control and reusability. |
+| **Source** | APPL (arXiv:2406.13161), PDL (arXiv:2410.19135) |
+| **Use Cases** | Complex LLM applications, agent orchestration |
 
 ---
 
-## 22. 多 Agent 设计优化（Multi-Agent Prompt & Topology）
+## 22. Multi-Agent Prompt & Topology Optimization
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **MASS**：交替进行块级 prompt 优化、工作流拓扑搜索、全局 prompt 优化。 |
-| **原理** | 多 agent 性能不仅取决于单个 prompt，还取决于 agent 间拓扑和协作方式。MASS 联合优化大幅超越基线。 |
-| **来源** | arXiv:2502.02533（64 引用） |
-| **适合任务** | 多 agent 系统设计、复杂工作流 |
+| **Template** | **MASS**: Alternates between block-level prompt optimization, workflow topology search, and global prompt optimization. |
+| **Principle** | Multi-agent performance depends not only on individual prompts but also on inter-agent topology and collaboration patterns. MASS jointly optimizes and substantially outperforms baselines. |
+| **Source** | arXiv:2502.02533 (64 citations) |
+| **Use Cases** | Multi-agent system design, complex workflows |
 
 ---
 
-# 五、自动优化与压缩（工程化提升效率）
+# V. Optimization & Compression (Engineering-Driven Efficiency)
 
-## 23. 自动提示优化（Automatic Prompt Optimization）
+## 23. Automatic Prompt Optimization
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **APO**（2023）：自然语言"梯度"+ beam search，提升最多 ~31%。**Promptbreeder**：自引用进化。**PromptWizard**（2024）：45 任务顶级。**GEPA**（2025）：反思式进化，比 GRPO 高约 6%，rollout 少 ~35 倍。 |
-| **原理** | 从 2023 的梯度模拟到 2025 的反思式进化持续进步。SPO 无需外部标签即可匹配 SOTA。 |
-| **来源** | APO（arXiv:2305.03495）591 引用、Promptbreeder（arXiv:2309.16797）396 引用、GEPA（arXiv:2507.19457）96 引用，384 篇相关论文 |
-| **适合任务** | 生产级 prompt 调优、RAG pipeline |
+| **Template** | **APO** (2023): Natural-language "gradients" + beam search, up to ~31% improvement. **Promptbreeder**: Self-referential evolution. **PromptWizard** (2024): Top across 45 tasks. **GEPA** (2025): Reflective evolution, ~6% above GRPO with ~35× fewer rollouts. |
+| **Principle** | Continuous progress from 2023 gradient simulation to 2025 reflective evolution. SPO matches SOTA without external labels. |
+| **Source** | APO (arXiv:2305.03495) 591 citations, Promptbreeder (arXiv:2309.16797) 396 citations, GEPA (arXiv:2507.19457) 96 citations, 384 related papers |
+| **Use Cases** | Production-grade prompt tuning, RAG pipelines |
 
 ---
 
-## 24. 提示压缩（Prompt Compression）
+## 24. Prompt Compression
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **Gist Tokens**（2023）：~26 倍压缩。**LongLLMLingua**（2023）：QA +21.4%、token -4 倍。**LLMLingua-2**（2024）：速度快 3-6 倍。**Nano-Capsulator**：~81% 缩减。 |
-| **原理** | 长 prompt 导致高延迟和成本。从可学习 gist token 到蒸馏分类器持续进化。 |
-| **来源** | Gist Tokens（arXiv:2304.08467）320 引用、LongLLMLingua（arXiv:2310.06839）371 引用、LLMLingua-2（arXiv:2403.12968）225 引用，117 篇相关论文 |
-| **适合任务** | 长文档、RAG、API 成本优化 |
+| **Template** | **Gist Tokens** (2023): ~26× compression. **LongLLMLingua** (2023): QA +21.4%, tokens −4×. **LLMLingua-2** (2024): 3–6× faster. **Nano-Capsulator**: ~81% reduction. |
+| **Principle** | Long prompts cause high latency and cost. Continuous evolution from learnable gist tokens to distilled classifiers. |
+| **Source** | Gist Tokens (arXiv:2304.08467) 320 citations, LongLLMLingua (arXiv:2310.06839) 371 citations, LLMLingua-2 (arXiv:2403.12968) 225 citations, 117 related papers |
+| **Use Cases** | Long documents, RAG, API cost optimization |
 
 ---
 
-## 25. 提示重写（Prompt Rewriting）
+## 25. Prompt Rewriting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | PRewrite 用 RL 重写弱 prompt。SCULPT 将长 prompt 表示为树，Critic-Actor 循环优化。 |
-| **原理** | 自动重写可稳定提升非专业用户的 prompt 效果。 |
-| **来源** | PRewrite（arXiv:2401.08189）、SCULPT（arXiv:2410.20788） |
-| **适合任务** | 用户 prompt 质量不可控的场景 |
+| **Template** | PRewrite uses RL to rewrite weak prompts. SCULPT represents long prompts as trees and optimizes via a Critic-Actor loop. |
+| **Principle** | Automatic rewriting can reliably improve non-expert users' prompt effectiveness. |
+| **Source** | PRewrite (arXiv:2401.08189), SCULPT (arXiv:2410.20788) |
+| **Use Cases** | Scenarios with uncontrollable user prompt quality |
 
 ---
 
-## 26. Prompt + 微调联合优化（Prompt + Fine-Tuning Together）
+## 26. Prompt + Fine-Tuning Joint Optimization
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | BetterTogether/DSPy：交替权重优化和 prompt 优化。比单独 prompt 优化高 ~60%，比单独微调高 ~6%。 |
-| **原理** | 单独优化各有天花板，联合优化互相增强。 |
-| **来源** | arXiv:2407.10930（40 引用） |
-| **适合任务** | RAG pipeline、模块化 LLM 应用 |
+| **Template** | BetterTogether/DSPy: Alternating weight optimization and prompt optimization. ~60% above prompt optimization alone, ~6% above fine-tuning alone. |
+| **Principle** | Each approach alone has a ceiling; joint optimization creates mutual reinforcement. |
+| **Source** | arXiv:2407.10930 (40 citations) |
+| **Use Cases** | RAG pipelines, modular LLM applications |
 
 ---
 
-## 27. 自监督 Prompt 优化（Self-Supervised Prompt Optimization）
+## 27. Self-Supervised Prompt Optimization
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **SPO**：LLM 成对输出比较排名 prompt，再用优化器对齐 — 无需外部标签。 |
-| **原理** | 匹配或超越 SOTA，API 成本和样本量仅为一小部分。 |
-| **来源** | SPO（arXiv:2502.06855）29 引用 |
-| **适合任务** | 无标注数据的 prompt 优化 |
+| **Template** | **SPO**: LLM pairwise output comparison ranks prompts, then an optimizer aligns — no external labels needed. |
+| **Principle** | Matches or surpasses SOTA at a fraction of the API cost and sample size. |
+| **Source** | SPO (arXiv:2502.06855) 29 citations |
+| **Use Cases** | Prompt optimization without labeled data |
 
 ---
 
-## 28. 软提示微调（Soft Prompt Tuning）
+## 28. Soft Prompt Tuning
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 在输入前添加可学习连续向量。LoPA（低秩分解）、SuperPos-Prompt（多嵌入叠加）、GenPI（内化 prompt 到模型中）。 |
-| **原理** | 参数量极小可媲美全量微调。GenPI 推理时免去显式 prompt。 |
-| **来源** | LoPA（arXiv:2405.15282）、SuperPos-Prompt（arXiv:2406.05279），519 篇相关论文 |
-| **适合任务** | 资源受限适配、多租户服务 |
+| **Template** | Prepend learnable continuous vectors to the input. LoPA (low-rank decomposition), SuperPos-Prompt (multi-embedding superposition), GenPI (internalizing prompts into the model). |
+| **Principle** | Extremely small parameter count can match full fine-tuning. GenPI eliminates the need for explicit prompts at inference time. |
+| **Source** | LoPA (arXiv:2405.15282), SuperPos-Prompt (arXiv:2406.05279), 519 related papers |
+| **Use Cases** | Resource-constrained adaptation, multi-tenant services |
 
 ---
 
-# 六、质量与鲁棒性（评估与改善稳定性）
+# VI. Quality & Robustness (Evaluation & Stability Enhancement)
 
-## 29. 提示偏差校准（Prompt Bias Calibration）
+## 29. Prompt Bias Calibration
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 推理时估计"仅 prompt"偏置表征并从激活中减去。因果去偏：以 CoT 为中介施加前门调整。 |
-| **原理** | Prompt 引入非平凡偏差。去偏提升事实检索最多约 10 个百分点。因果方法在 7 个 NLP 数据集上有效。 |
-| **来源** | arXiv:2403.09963、Causal Prompting（arXiv:2403.02738），358 篇相关论文 |
-| **适合任务** | 事实知识提取、公平性、去偏 |
+| **Template** | Estimate "prompt-only" bias representations at inference time and subtract from activations. Causal debiasing: apply front-door adjustment using CoT as a mediator. |
+| **Principle** | Prompts introduce non-trivial biases. Debiasing improves factual retrieval by up to ~10 percentage points. Causal methods are effective across 7 NLP datasets. |
+| **Source** | arXiv:2403.09963, Causal Prompting (arXiv:2403.02738), 358 related papers |
+| **Use Cases** | Factual knowledge extraction, fairness, debiasing |
 
 ---
 
-## 30. 提示敏感性评估（Prompt Sensitivity Assessment）
+## 30. Prompt Sensitivity Assessment
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **POSIX**：语义等价替换后度量变化。**ProSA**：实例级解码置信度分析。**PromptRobust**：4788 条对抗 prompt 基准。**PromptSET**（2025）：敏感性预测任务。 |
-| **原理** | 更大模型不能可靠降低敏感性。few-shot 帮助最大。当前方法对敏感性预测仍然很差。 |
-| **来源** | PromptRobust（arXiv:2306.04528）246 引用、POSIX（arXiv:2410.02185）、ProSA（arXiv:2410.12405）128 引用 |
-| **适合任务** | prompt 质量保证、部署前鲁棒性检验 |
+| **Template** | **POSIX**: Measures variation after semantically equivalent substitutions. **ProSA**: Instance-level decoding confidence analysis. **PromptRobust**: 4,788 adversarial prompt benchmark. **PromptSET** (2025): Sensitivity prediction task. |
+| **Principle** | Larger models do not reliably reduce sensitivity. Few-shot helps the most. Current methods still perform poorly at sensitivity prediction. |
+| **Source** | PromptRobust (arXiv:2306.04528) 246 citations, POSIX (arXiv:2410.02185), ProSA (arXiv:2410.12405) 128 citations |
+| **Use Cases** | Prompt quality assurance, pre-deployment robustness testing |
 
 ---
 
-## 31. 提示扰动一致性学习（Prompt Perturbation Consistency）
+## 31. Prompt Perturbation Consistency Learning
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | PPCL：在微调时对 prompt 的同音/同义/改写扰动施加一致性正则化。 |
-| **原理** | 恢复大部分由扰动导致的性能下降，比数据增强使用更少样本。 |
-| **来源** | PPCL（arXiv:2402.15833） |
-| **适合任务** | 鲁棒性要求高的部署 |
+| **Template** | PPCL: Applies consistency regularization during fine-tuning against homophone/synonym/paraphrase perturbations of prompts. |
+| **Principle** | Recovers most performance degradation caused by perturbations, using fewer samples than data augmentation. |
+| **Source** | PPCL (arXiv:2402.15833) |
+| **Use Cases** | Deployments requiring high robustness |
 
 ---
 
-## 32. LLM-as-a-Judge 提示（Prompt for LLM Evaluation）
+## 32. LLM-as-a-Judge Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 用 LLM 作评估者打分。不同评估模板导致不一致评分，需多样化模板和可解释指标。 |
-| **原理** | 评估 prompt 设计对评分影响极大。 |
-| **来源** | arXiv:2408.13006（69 引用） |
-| **适合任务** | 模型评估、对齐评估、自动化评测 |
+| **Template** | Use an LLM as an evaluator to score outputs. Different evaluation templates lead to inconsistent scores; diverse templates and interpretable metrics are needed. |
+| **Principle** | Evaluation prompt design has a massive impact on scoring. |
+| **Source** | arXiv:2408.13006 (69 citations) |
+| **Use Cases** | Model evaluation, alignment assessment, automated benchmarking |
 
 ---
 
-## 33. 领域应用提示（Domain-Specific Prompting）
+## 33. Domain-Specific Prompting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **子技巧** | **医学**：OpenMedLM（kNN + CoT + 自一致性）超越微调 SOTA。**多语言**：CoTR 先翻译后执行再翻译回，低资源语言显著提升。**Text-to-SQL**：PET-SQL 两轮渐进 prompt，Spider SOTA 87.6%。**知识图谱**：KGP 构建 KG + agent 遍历收集上下文。**合成数据**：Magpie 用空 prompt 大规模生成训练数据。**知识编辑**：RECIPE 连续 prompt + 检索终身编辑。 |
-| **原理** | 不同领域需要定制化 prompt 策略，通用 prompt 无法最优覆盖所有场景。 |
-| **来源** | OpenMedLM（arXiv:2402.19371）、CoTR（arXiv:2409.04512）、PET-SQL（arXiv:2403.09732）、KGP（arXiv:2308.11730）267 引用、Magpie（arXiv:2406.08464）296 引用、RECIPE（arXiv:2405.03279） |
-| **适合任务** | 各垂直领域 |
+| **Sub-techniques** | **Medical**: OpenMedLM (kNN + CoT + self-consistency) surpasses fine-tuned SOTA. **Multilingual**: CoTR translates first, executes, then translates back — significant gains for low-resource languages. **Text-to-SQL**: PET-SQL two-round progressive prompt, Spider SOTA 87.6%. **Knowledge Graph**: KGP constructs KG + agent traversal to collect context. **Synthetic Data**: Magpie uses empty prompts for large-scale training data generation. **Knowledge Editing**: RECIPE continuous prompt + retrieval for lifelong editing. |
+| **Principle** | Different domains require customized prompt strategies; general prompts cannot optimally cover all scenarios. |
+| **Source** | OpenMedLM (arXiv:2402.19371), CoTR (arXiv:2409.04512), PET-SQL (arXiv:2403.09732), KGP (arXiv:2308.11730) 267 citations, Magpie (arXiv:2406.08464) 296 citations, RECIPE (arXiv:2405.03279) |
+| **Use Cases** | All vertical domains |
 
 ---
 
-# 七、防御与保护（安全防护技术）
+# VII. Defense & Protection (Security Defense Techniques)
 
-> 本章技巧用于保护 LLM 应用免受攻击，适用于安全工程师和应用开发者。
+> This chapter covers techniques for protecting LLM applications from attacks, intended for security engineers and application developers.
 
-## 34. 提示注入防御 — 数据标记法（Spotlighting）
+## 34. Prompt Injection Defense — Data Spotlighting
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | 对不可信数据施加来源标记变换（如编码、分隔、标签包裹），使模型区分指令和数据。 |
-| **原理** | 间接 prompt injection 将恶意指令藏在检索数据中。Spotlighting 将注入成功率从 >50% 降至 <2%，且不损害正常任务。 |
-| **来源** | arXiv:2403.14720（133 引用） |
-| **适合任务** | RAG 系统、处理不可信外部输入的场景 |
+| **Template** | Apply source-marking transformations to untrusted data (e.g., encoding, delimiting, tag wrapping) so the model distinguishes instructions from data. |
+| **Principle** | Indirect prompt injection hides malicious instructions in retrieved data. Spotlighting reduces injection success rate from >50% to <2% without degrading normal task performance. |
+| **Source** | arXiv:2403.14720 (133 citations) |
+| **Use Cases** | RAG systems, scenarios handling untrusted external input |
 
 ---
 
-## 35. 提示注入防御 — 结构化分离（Structured Queries）
+## 35. Prompt Injection Defense — Structured Separation (Structured Queries)
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **StruQ**：将指令和数据分离为结构化通道，微调模型只遵循指令通道。**Signed-Prompt**：用签名标记可信指令段。 |
-| **原理** | 类似 SQL 参数化查询防注入，通过结构化分离从根本上隔绝不可信输入中的指令。 |
-| **来源** | StruQ（arXiv:2402.06363）207 引用、Signed-Prompt（arXiv:2401.07612） |
-| **适合任务** | LLM 应用安全、agent 系统 |
+| **Template** | **StruQ**: Separates instructions and data into structured channels, fine-tunes the model to only follow the instruction channel. **Signed-Prompt**: Uses signatures to mark trusted instruction segments. |
+| **Principle** | Analogous to SQL parameterized queries for injection prevention — structurally separates untrusted input from instructions at the root level. |
+| **Source** | StruQ (arXiv:2402.06363) 207 citations, Signed-Prompt (arXiv:2401.07612) |
+| **Use Cases** | LLM application security, agent systems |
 
 ---
 
-## 36. 提示注入防御 — 偏好对齐（Preference-Based Defense）
+## 36. Prompt Injection Defense — Preference-Based Alignment
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **SecAlign**：构建偏好对（注入 → 安全 vs 不安全响应），DPO 训练模型偏好遵循合法指令。注入成功率 <10%。**Meta SecAlign**（2025）跨模型泛化。 |
-| **原理** | 将注入防御转化为对齐问题，利用偏好优化使模型自然抵御注入。 |
-| **来源** | SecAlign（arXiv:2410.05451）89 引用、Meta SecAlign（arXiv:2507.02735）36 引用 |
-| **适合任务** | 生产级安全加固 |
+| **Template** | **SecAlign**: Constructs preference pairs (injection → safe vs. unsafe responses), DPO-trains the model to prefer following legitimate instructions. Injection success rate <10%. **Meta SecAlign** (2025) generalizes across models. |
+| **Principle** | Frames injection defense as an alignment problem, using preference optimization to make models naturally resist injection. |
+| **Source** | SecAlign (arXiv:2410.05451) 89 citations, Meta SecAlign (arXiv:2507.02735) 36 citations |
+| **Use Cases** | Production-grade security hardening |
 
 ---
 
-## 37. 提示注入检测（Prompt Injection Detection）
+## 37. Prompt Injection Detection
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **DataSentinel**（2025）：博弈论极小极大微调检测器。**PromptShield**（2025）：精选训练集 + 低 FPR 检测器。**PromptArmor**（2025）：辅助 LLM 检测并移除注入文本，FPR/FNR <1%，ASR <1%。 |
-| **原理** | 检测注入需同时保低误报和低漏报。DataSentinel 对抗自适应攻击也有效。 |
-| **来源** | DataSentinel（arXiv:2504.11358）70 引用、PromptShield（arXiv:2501.15145）33 引用、PromptArmor（arXiv:2507.15219）51 引用 |
-| **适合任务** | 部署级实时注入防护 |
+| **Template** | **DataSentinel** (2025): Game-theoretic minimax fine-tuned detector. **PromptShield** (2025): Curated training set + low-FPR detector. **PromptArmor** (2025): Auxiliary LLM detects and removes injected text, FPR/FNR <1%, ASR <1%. |
+| **Principle** | Injection detection requires simultaneously low false positives and low false negatives. DataSentinel remains effective against adaptive attacks. |
+| **Source** | DataSentinel (arXiv:2504.11358) 70 citations, PromptShield (arXiv:2501.15145) 33 citations, PromptArmor (arXiv:2507.15219) 51 citations |
+| **Use Cases** | Deployment-level real-time injection protection |
 
 ---
 
-## 38. 架构级注入免疫（Injection-Immune Architecture）
+## 38. Injection-Immune Architecture
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **CaMeL**（2025）：可信/不可信数据流分离 + 能力策略，77% 任务完成 + 可证安全。**Prompt Flow Integrity**：agent 隔离 + 权限防升级。**设计模式目录**：系统化防注入架构模式。 |
-| **原理** | 2025 年安全研究从"补丁式防御"转向"架构级免疫"，提供可证安全保证。这是 prompt 安全的根本性范式转变。 |
-| **来源** | CaMeL（arXiv:2503.18813）95 引用、PFI（arXiv:2503.15547）33 引用、Design Patterns（arXiv:2506.08837）35 引用 |
-| **适合任务** | 企业级 LLM 应用、关键基础设施 |
+| **Template** | **CaMeL** (2025): Trusted/untrusted data flow separation + capability policies, 77% task completion + provable safety. **Prompt Flow Integrity**: Agent isolation + privilege escalation prevention. **Design Pattern Catalog**: Systematized anti-injection architecture patterns. |
+| **Principle** | 2025 security research shifted from "patch-based defense" to "architecture-level immunity," providing provable safety guarantees. This represents a fundamental paradigm shift in prompt security. |
+| **Source** | CaMeL (arXiv:2503.18813) 95 citations, PFI (arXiv:2503.15547) 33 citations, Design Patterns (arXiv:2506.08837) 35 citations |
+| **Use Cases** | Enterprise LLM applications, critical infrastructure |
 
 ---
 
-## 39. 多 Agent 安全防护（Multi-Agent Security）
+## 39. Multi-Agent Security
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **MELON**（掩码重跑检测攻击）、**RTBAS**（信息流控制 + LM-judge）、**反向攻击防御**（重用攻击机制翻转意图，无需训练即达 SOTA）。 |
-| **原理** | 多 agent 系统中恶意指令可在 agent 间传播。MELON 在 AgentDojo 上最强，RTBAS ~2% 效用损失。 |
-| **来源** | MELON（arXiv:2502.05174）29 引用、RTBAS（arXiv:2502.08966）28 引用、arXiv:2411.00459（32 引用） |
-| **适合任务** | agent 系统安全、工具集成 |
+| **Template** | **MELON** (masked re-run attack detection), **RTBAS** (information flow control + LM-judge), **Reverse Attack Defense** (repurposes attack mechanisms to flip intent, achieving SOTA without training). |
+| **Principle** | In multi-agent systems, malicious instructions can propagate across agents. MELON is strongest on AgentDojo; RTBAS has ~2% utility loss. |
+| **Source** | MELON (arXiv:2502.05174) 29 citations, RTBAS (arXiv:2502.08966) 28 citations, arXiv:2411.00459 (32 citations) |
+| **Use Cases** | Agent system security, tool integration |
 
 ---
 
-## 40. Prompt 窃取保护（Prompt Theft Protection）
+## 40. Prompt Theft Protection
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **模板** | **PromptKeeper**：假设检验检测泄露 + dummy prompt 重新生成。**Prompt Obfuscation**：等效混淆版替换原 prompt，抵抗去混淆攻击。 |
-| **原理** | 即使对齐模型也极易被提取 prompt。混淆在保持功能等价的同时隐藏原始措辞。 |
-| **来源** | PromptKeeper（arXiv:2412.13426）、Obfuscation（arXiv:2409.11026） |
-| **适合任务** | 商业 prompt 保护、SaaS 知识产权 |
+| **Template** | **PromptKeeper**: Hypothesis testing to detect leakage + dummy prompt regeneration. **Prompt Obfuscation**: Replaces original prompt with a functionally equivalent obfuscated version, resistant to de-obfuscation attacks. |
+| **Principle** | Even aligned models are highly susceptible to prompt extraction. Obfuscation hides original wording while maintaining functional equivalence. |
+| **Source** | PromptKeeper (arXiv:2412.13426), Obfuscation (arXiv:2409.11026) |
+| **Use Cases** | Commercial prompt protection, SaaS intellectual property |
 
 ---
 
-## 41. 提示遗忘与缓存（Prompt Unlearning & Caching）
+## 41. Prompt Unlearning & Caching
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **子技巧** | **遗忘**：ECO 通过 prompt 嵌入扰动抑制特定知识（0.5B-236B 通用）。SPUL 学习 soft prompt 遗忘。**缓存**：蒸馏嵌入判断缓存可用性（AUC 0.51→0.81）。Preble 分布式调度复用 KV-cache。 |
-| **原理** | 遗忘无需重训即可合规。缓存大幅降低重复推理成本。 |
-| **来源** | ECO（arXiv:2406.07933）101 引用、Preble（arXiv:2407.00023）50 引用，综合 462 篇 |
-| **适合任务** | GDPR 合规、高并发服务、成本优化 |
+| **Sub-techniques** | **Unlearning**: ECO suppresses specific knowledge through prompt embedding perturbation (universal across 0.5B–236B). SPUL learns soft prompts for unlearning. **Caching**: Distilled embeddings determine cache usability (AUC 0.51→0.81). Preble distributed scheduling reuses KV-cache. |
+| **Principle** | Unlearning enables compliance without retraining. Caching drastically reduces repeated inference costs. |
+| **Source** | ECO (arXiv:2406.07933) 101 citations, Preble (arXiv:2407.00023) 50 citations, 462 papers combined |
+| **Use Cases** | GDPR compliance, high-concurrency services, cost optimization |
 
 ---
 
-# 八、⚠️ 攻击与渗透（安全研究）
+# VIII. ⚠️ Attacks & Penetration (Security Research)
 
-> **警告：本章内容仅供安全研究、红队测试和防御验证使用。**
-> 了解攻击手法是构建有效防御的前提。
+> **Warning: This chapter is intended solely for security research, red-team testing, and defense validation.**
+> Understanding attack methods is a prerequisite for building effective defenses.
 
-## 42. 间接提示注入攻击（Indirect Prompt Injection）
+## 42. Indirect Prompt Injection Attack
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | 将恶意指令注入到 LLM 会检索的外部数据（网页、文档、邮件）中，当 LLM 读取这些数据时自动执行攻击者指令。 |
-| **危害** | 2023 年首次系统性揭示：HouYi 攻破 31/36 实际应用（包括 Bing Chat、Notion 等），可窃取 prompt、窃取用户数据、无约束操控模型。 |
-| **技术细节** | HouYi 三段式：隐藏预提示 + 上下文分裂注入 + 恶意载荷。模式源自传统 Web 注入技术。 |
-| **来源** | HouYi（arXiv:2306.05499）657 引用、arXiv:2302.12173（989 引用） |
-| **防御参考** | → 技巧 34-38 |
+| **Method** | Inject malicious instructions into external data (web pages, documents, emails) that the LLM will retrieve; when the LLM reads this data, it automatically executes the attacker's instructions. |
+| **Impact** | First systematically revealed in 2023: HouYi compromised 31/36 real-world applications (including Bing Chat, Notion, etc.), enabling prompt theft, user data exfiltration, and unconstrained model manipulation. |
+| **Technical Details** | HouYi three-stage approach: hidden pre-prompt + context-splitting injection + malicious payload. Patterns derived from traditional web injection techniques. |
+| **Source** | HouYi (arXiv:2306.05499) 657 citations, arXiv:2302.12173 (989 citations) |
+| **Defense Reference** | → Techniques 34–38 |
 
 ---
 
-## 43. 越狱攻击 — 手工模板（Manual Jailbreak Prompts）
+## 43. Manual Jailbreak Prompts
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | 人工设计绕过安全对齐的 prompt 模板（如 DAN "Do Anything Now"）。10 种模式、3 大类、40 种场景。 |
-| **危害** | JailbreakHub 收集的野外模板在 GPT-3.5/4 上 ASR 达 ~0.95。部分模板在线存活数月。许多用户无需深度 LLM 知识即可构造有效越狱。 |
-| **技术细节** | 10 种越狱模式分为角色扮演、场景构造、逻辑绕过三类。 |
-| **来源** | DAN（arXiv:2308.03825）535 引用、arXiv:2305.13860（657 引用）、arXiv:2403.17336（94 引用） |
-| **防御参考** | → 技巧 36（SecAlign）、38（架构免疫） |
+| **Method** | Manually designed prompt templates that bypass safety alignment (e.g., DAN "Do Anything Now"). 10 patterns, 3 major categories, 40 scenarios. |
+| **Impact** | Wild templates collected by JailbreakHub achieve ASR of ~0.95 on GPT-3.5/4. Some templates survive online for months. Many users can construct effective jailbreaks without deep LLM knowledge. |
+| **Technical Details** | 10 jailbreak patterns categorized into role-playing, scenario construction, and logic bypass. |
+| **Source** | DAN (arXiv:2308.03825) 535 citations, arXiv:2305.13860 (657 citations), arXiv:2403.17336 (94 citations) |
+| **Defense Reference** | → Technique 36 (SecAlign), 38 (Architecture Immunity) |
 
 ---
 
-## 44. 越狱攻击 — 自动化生成（Automated Jailbreak Generation）
+## 44. Automated Jailbreak Generation
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | **AutoDAN**：遗传算法生成语义连贯的隐蔽越狱 prompt，可逃避困惑度检测。**GPTFUZZER**：AFL 风格模糊测试，变异种子模板，>90% ASR。**Rainbow Teaming**：quality-diversity 搜索，数百个 >90% ASR 的多样化 prompt。 |
-| **危害** | 自动化规模远超人工，可持续生成新变体。AutoDAN 自动化 + 隐蔽 + 可迁移。 |
-| **技术细节** | AutoDAN 使用层级遗传算法保持语义连贯。GPTFUZZER 使用选择 + 变异 + 判定模型闭环。Rainbow Teaming 通过 quality-diversity 搜索最大化攻击多样性。 |
-| **来源** | AutoDAN（arXiv:2310.04451）658 引用、GPTFUZZER（arXiv:2309.10253）557 引用、Rainbow Teaming（arXiv:2402.16822）164 引用 |
-| **防御参考** | → 技巧 35（RPO 防御后缀） |
+| **Method** | **AutoDAN**: Genetic algorithm generates semantically coherent stealthy jailbreak prompts that evade perplexity detection. **GPTFUZZER**: AFL-style fuzz testing, mutating seed templates, >90% ASR. **Rainbow Teaming**: Quality-diversity search producing hundreds of diverse prompts with >90% ASR. |
+| **Impact** | Automation far exceeds manual scale and can continuously generate new variants. AutoDAN is automated + stealthy + transferable. |
+| **Technical Details** | AutoDAN uses hierarchical genetic algorithms to maintain semantic coherence. GPTFUZZER uses selection + mutation + judge-model closed loop. Rainbow Teaming maximizes attack diversity through quality-diversity search. |
+| **Source** | AutoDAN (arXiv:2310.04451) 658 citations, GPTFUZZER (arXiv:2309.10253) 557 citations, Rainbow Teaming (arXiv:2402.16822) 164 citations |
+| **Defense Reference** | → Technique 35 (RPO defense suffix) |
 
 ---
 
-## 45. 越狱攻击 — 提示分解重组（Prompt Decomposition Attack）
+## 45. Prompt Decomposition Attack
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | **DrAttack**：将有害请求拆分为多个看似无害的子 prompt，通过 ICL 和同义词替换重组。仅需约 15 次查询即在 GPT-4 上达到约 78% ASR。 |
-| **危害** | 每个片段看起来无害可绕过安全检查，查询量极少，效率远超传统方法。 |
-| **技术细节** | 分解 → 同义词替换 → ICL 示例引导重组 → 模型隐式拼接还原原意。 |
-| **来源** | DrAttack（arXiv:2402.16914）100 引用 |
-| **防御参考** | → 技巧 37（注入检测）、38（架构免疫） |
+| **Method** | **DrAttack**: Splits a harmful request into multiple seemingly innocuous sub-prompts, reassembles via ICL and synonym substitution. Achieves ~78% ASR on GPT-4 with only ~15 queries. |
+| **Impact** | Each fragment appears harmless and bypasses safety checks; extremely query-efficient, far surpassing traditional methods. |
+| **Technical Details** | Decompose → synonym substitution → ICL-guided reassembly → model implicitly concatenates to recover original intent. |
+| **Source** | DrAttack (arXiv:2402.16914) 100 citations |
+| **Defense Reference** | → Technique 37 (Injection Detection), 38 (Architecture Immunity) |
 
 ---
 
-## 46. 越狱攻击 — 序列化嵌入（Sequential Prompt Chain Attack）
+## 46. Sequential Prompt Chain Attack
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | **SequentialBreak**：将恶意指令嵌入良性多步对话链（如题库、对话、游戏）中，在单次用户查询内完成。 |
-| **危害** | 超越先前越狱方法的 ASR，揭示序列上下文防御的薄弱点。 |
-| **技术细节** | 利用模型处理长序列时对中间步骤的"信任惯性"。 |
-| **来源** | SequentialBreak（arXiv:2411.06426）13 引用 |
-| **防御参考** | → 技巧 38（架构免疫）、39（多 Agent 安全） |
+| **Method** | **SequentialBreak**: Embeds malicious instructions within a benign multi-step conversation chain (e.g., quiz banks, dialogues, games), completed in a single user query. |
+| **Impact** | Surpasses ASR of prior jailbreak methods, revealing weaknesses in sequential context defenses. |
+| **Technical Details** | Exploits the model's "trust inertia" when processing intermediate steps in long sequences. |
+| **Source** | SequentialBreak (arXiv:2411.06426) 13 citations |
+| **Defense Reference** | → Technique 38 (Architecture Immunity), 39 (Multi-Agent Security) |
 
 ---
 
-## 47. 提示窃取攻击（Prompt Extraction & Stealing）
+## 47. Prompt Extraction & Stealing
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | **output2prompt**：从正常输出反推 system prompt（无需 logits 或越狱），可零样本跨 LLM 迁移。**PLeak**：专攻 LLM 应用 prompt 泄露。即使对齐模型也极易被简单手法提取。 |
-| **危害** | 商业 prompt 被窃取意味着竞争优势丧失、知识产权泄露。 |
-| **技术细节** | output2prompt 使用学习 + 稀疏编码从常规输出中恢复 prompt。PLeak 针对应用层泄露路径。 |
-| **来源** | output2prompt（arXiv:2405.15012）、PLeak（arXiv:2405.06823）127 引用 |
-| **防御参考** | → 技巧 40（窃取保护） |
+| **Method** | **output2prompt**: Reverse-engineers system prompts from normal outputs (no logits or jailbreaking needed), with zero-shot cross-LLM transferability. **PLeak**: Specifically targets prompt leakage in LLM applications. Even aligned models are extremely vulnerable to simple extraction techniques. |
+| **Impact** | Stolen commercial prompts mean loss of competitive advantage and intellectual property leakage. |
+| **Technical Details** | output2prompt uses learning + sparse coding to recover prompts from regular outputs. PLeak targets application-layer leakage paths. |
+| **Source** | output2prompt (arXiv:2405.15012), PLeak (arXiv:2405.06823) 127 citations |
+| **Defense Reference** | → Technique 40 (Theft Protection) |
 
 ---
 
-## 48. 学习型注入触发器（Learned Injection Triggers）
+## 48. Learned Injection Triggers
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | **Neural Exec**：通过可微分/搜索优化学习注入触发器，而非使用固定手写字符串。 |
-| **危害** | 形式新颖、表面无害，可穿透多阶段 RAG pipeline。揭示基于黑名单的防御策略的根本局限。 |
-| **技术细节** | 梯度优化 / 搜索生成最优触发器，表面形式与正常文本无异。 |
-| **来源** | Neural Exec（arXiv:2403.03792）66 引用 |
-| **防御参考** | → 技巧 37（DataSentinel 检测）、38（架构免疫） |
+| **Method** | **Neural Exec**: Learns injection triggers via differentiable/search optimization rather than using fixed hand-crafted strings. |
+| **Impact** | Novel form, surface-level innocuous, capable of penetrating multi-stage RAG pipelines. Reveals fundamental limitations of blocklist-based defense strategies. |
+| **Technical Details** | Gradient optimization / search generates optimal triggers that appear indistinguishable from normal text. |
+| **Source** | Neural Exec (arXiv:2403.03792) 66 citations |
+| **Defense Reference** | → Technique 37 (DataSentinel Detection), 38 (Architecture Immunity) |
 
 ---
 
-## 49. 自适应攻击（Adaptive Attacks on Defenses）
+## 49. Adaptive Attacks on Defenses
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | 针对已发布防御方案定制攻击。2025 研究系统性测试 8 种发布的防御，**每种都被 >50% ASR 突破**。 |
-| **危害** | 证明几乎所有非架构级防御在自适应攻击者面前都是脆弱的。防御必须在自适应攻击下评估。 |
-| **技术细节** | 逐一分析防御机制弱点，定制绕过策略。Google 对 Gemini 持续红队表明只有持续对抗评估才能有效加固。 |
-| **来源** | arXiv:2503.00061（61 引用）、Gemini 经验（arXiv:2505.14534）27 引用 |
-| **防御参考** | → 技巧 38（架构免疫）是目前最有效的抵御手段 |
+| **Method** | Custom-tailored attacks against published defense schemes. A 2025 study systematically tested 8 published defenses — **each was broken with >50% ASR**. |
+| **Impact** | Demonstrates that nearly all non-architectural defenses are fragile against adaptive attackers. Defenses must be evaluated under adaptive attacks. |
+| **Technical Details** | Analyzes each defense mechanism's weaknesses and crafts targeted bypasses. Google's continuous red-teaming of Gemini shows only sustained adversarial evaluation can effectively harden systems. |
+| **Source** | arXiv:2503.00061 (61 citations), Gemini experience (arXiv:2505.14534) 27 citations |
+| **Defense Reference** | → Technique 38 (Architecture Immunity) is currently the most effective countermeasure |
 
 ---
 
-## 50. 注入形式化与基准（Injection Formalization & Benchmarking）
+## 50. Injection Formalization & Benchmarking
 
-| 项目 | 内容 |
+| Field | Content |
 |------|------|
-| **手法** | 统一框架定义所有 prompt injection 变体（现有攻击皆为特例），可组合产生新攻击。**AgentDojo**：动态 agent 基准。**WASP**：Web agent 安全基准（~86% 部分成功率）。 |
-| **意义** | 标准化攻击分类和评估方法，推动防御研究系统化。5 攻击 × 10 防御 × 10 LLM × 7 任务的完整矩阵。 |
-| **来源** | 形式化框架（arXiv:2310.12815）263 引用、AgentDojo（arXiv:2406.13352）100 引用、WASP（arXiv:2504.18575）65 引用 |
-| **防御参考** | → 技巧 34-39 全部 |
+| **Method** | Unified framework defining all prompt injection variants (existing attacks are all special cases), composable to produce novel attacks. **AgentDojo**: Dynamic agent benchmark. **WASP**: Web agent security benchmark (~86% partial success rate). |
+| **Significance** | Standardizes attack taxonomy and evaluation methodology, driving systematic defense research. Complete matrix of 5 attacks × 10 defenses × 10 LLMs × 7 tasks. |
+| **Source** | Formalization framework (arXiv:2310.12815) 263 citations, AgentDojo (arXiv:2406.13352) 100 citations, WASP (arXiv:2504.18575) 65 citations |
+| **Defense Reference** | → Techniques 34–39 (all) |
 
 ---
 
-# 组合应用方案
+# Combined Application Solutions
 
-### 方案 A：高精度推理
+### Solution A: High-Accuracy Reasoning
 
 ```
-CoT (1) + Plan-and-Solve (2) + 分隔符 (4) + 自一致性 (10) + 集成 (19)
+CoT (1) + Plan-and-Solve (2) + Separators (4) + Self-Consistency (10) + Ensemble (19)
 ```
 
-### 方案 B：全栈安全部署
+### Solution B: Full-Stack Secure Deployment
 
 ```
-架构免疫 (38) + SecAlign (36) + PromptArmor 检测 (37) + 窃取保护 (40)
+Architecture Immunity (38) + SecAlign (36) + PromptArmor Detection (37) + Theft Protection (40)
 ```
 
-### 方案 C：Prompt 自动化流水线
+### Solution C: Automated Prompt Pipeline
 
 ```
-GEPA 优化 (23) + 压缩 (24) + SPO 自监督 (27) + 敏感性评估 (30)
+GEPA Optimization (23) + Compression (24) + SPO Self-Supervised (27) + Sensitivity Assessment (30)
 ```
 
-### 方案 D：复杂任务分治
+### Solution D: Complex Task Divide-and-Conquer
 
 ```
-元提示 (18) + 提示链 (17) + 多 Agent 设计 (22) + 流程化代码 (20)
+Meta-Prompting (18) + Prompt Chaining (17) + Multi-Agent Design (22) + Flow Engineering for Code (20)
 ```
 
-### 方案 E：医学/高精度问答
+### Solution E: Medical / High-Accuracy Q&A
 
 ```
-角色扮演 (14) + CoT (1) + 自一致性 (10) + 偏差校准 (29) + 知识图谱 (33)
+Role-Play (14) + CoT (1) + Self-Consistency (10) + Bias Calibration (29) + Knowledge Graph (33)
 ```
 
-### 方案 F：低资源/冷启动
+### Solution F: Low-Resource / Cold Start
 
 ```
-自动演示 (8) + 跨语言提示 (33) + 混合专家 (9) + 合成数据 (33)
+Auto-Demo (8) + Cross-Lingual Prompting (33) + Mixture-of-Expert (9) + Synthetic Data (33)
 ```
 
-### 方案 G：数据库智能查询
+### Solution G: Intelligent Database Querying
 
 ```
-Text-to-SQL (33) + 提示集成 (19) + 提示链 (17)
+Text-to-SQL (33) + Prompt Ensemble (19) + Prompt Chaining (17)
 ```
 
-### 方案 H：安全红队测试（需授权）
+### Solution H: Security Red-Team Testing (Authorization Required)
 
 ```
-自动化越狱 (44) + 分解攻击 (45) + 自适应攻击 (49) + 形式化基准 (50)
+Automated Jailbreak (44) + Decomposition Attack (45) + Adaptive Attack (49) + Formalization Benchmark (50)
 ```
 
-### 方案 I：全栈 Prompt 工程
+### Solution I: Full-Stack Prompt Engineering
 
 ```
-模式目录 (12) + 格式化 (13) + DSL (21) + 自动优化 (23) + 缓存 (41)
+Pattern Catalog (12) + Formatting (13) + DSL (21) + Auto-Optimization (23) + Caching (41)
 ```
 
 ---
 
-# 技巧速查表
+# Quick Reference
 
-## 🔵 正向技巧（设计/优化/防御）
+## 🔵 Positive Techniques (Design / Optimization / Defense)
 
-| # | 技巧 | 类别 | 核心关键词 | 年份 |
+| # | Technique | Category | Core Keywords | Year |
 |---|------|------|-----------|------|
-| 1 | 链式思维 CoT | 推理 | step-by-step | 2022→2024 |
-| 2 | 计划-求解 | 推理 | 零样本规划 | 2023 |
-| 3 | 结构化 CoT 代码 | 推理 | SCoT | 2023 |
-| 4 | CoT 分隔符 | 推理 | 示例边界 | 2024 |
-| 5 | 噪声容忍 CoT | 推理 | CD-CoT | 2024 |
-| 6 | 免提示推理 | 推理 | CoT-decoding | 2024 |
-| 7 | 少样本 / ICL | 示例 | 示例驱动 | 经典 |
-| 8 | 自动演示生成 | 示例 | 动态示例 | 2024 |
-| 9 | 混合专家提示 | 示例 | MoE | 2024 |
-| 10 | 自一致性 | 示例 | 多数投票 | 2023 |
-| 11 | 多 Prompt 评估 | 示例 | 多模板 | 2024 |
-| 12 | 模式目录 | 设计 | 设计模式 | 2023 |
-| 13 | 提示格式化 | 设计 | JSON/XML | 2023 |
-| 14 | 角色扮演 | 设计 | 人设 | 2023 |
-| 15 | 情感刺激 | 设计 | 激励 | 2024 |
-| 16 | 蝴蝶效应 | 设计 | 微小变化 | 2024 |
-| 17 | 提示链 | 编排 | 多轮分治 | 2024 |
-| 18 | 元提示 | 编排 | 指挥官 | 2024 |
-| 19 | 提示集成 | 编排 | 多 prompt 投票 | 2024 |
-| 20 | 代码流程化 | 编排 | AlphaCodium | 2024 |
-| 21 | Prompt DSL | 编排 | APPL/PDL | 2024 |
-| 22 | 多 Agent 设计 | 编排 | MASS | 2025 |
-| 23 | 自动优化 | 优化 | APO/GEPA | 2023→2025 |
-| 24 | 提示压缩 | 优化 | LLMLingua | 2023→2024 |
-| 25 | 提示重写 | 优化 | RL 重写 | 2024 |
-| 26 | Prompt+微调 | 优化 | BetterTogether | 2024 |
-| 27 | 自监督优化 | 优化 | SPO | 2025 |
-| 28 | 软提示微调 | 优化 | LoPA | 2024 |
-| 29 | 偏差校准 | 质量 | 去偏 | 2024 |
-| 30 | 敏感性评估 | 质量 | POSIX | 2023→2025 |
-| 31 | 扰动一致性 | 质量 | PPCL | 2024 |
-| 32 | LLM-as-Judge | 质量 | 评估模板 | 2024 |
-| 33 | 领域应用 | 质量 | 医学/SQL/多语言 | 2023→2024 |
+| 1 | Chain-of-Thought CoT | Reasoning | step-by-step | 2022→2024 |
+| 2 | Plan-and-Solve | Reasoning | Zero-shot planning | 2023 |
+| 3 | Structured CoT for Code | Reasoning | SCoT | 2023 |
+| 4 | CoT Separators | Reasoning | Example boundaries | 2024 |
+| 5 | Noise-Tolerant CoT | Reasoning | CD-CoT | 2024 |
+| 6 | Reasoning Without Prompting | Reasoning | CoT-decoding | 2024 |
+| 7 | Few-Shot / ICL | Examples | Example-driven | Classic |
+| 8 | Auto-Demo Generation | Examples | Dynamic demos | 2024 |
+| 9 | Mixture-of-Expert Prompts | Examples | MoE | 2024 |
+| 10 | Self-Consistency | Examples | Majority vote | 2023 |
+| 11 | Multi-Prompt Evaluation | Examples | Multi-template | 2024 |
+| 12 | Pattern Catalog | Design | Design patterns | 2023 |
+| 13 | Prompt Formatting | Design | JSON/XML | 2023 |
+| 14 | Role-Play | Design | Persona | 2023 |
+| 15 | Emotional Stimulus | Design | Motivation | 2024 |
+| 16 | Butterfly Effect | Design | Tiny changes | 2024 |
+| 17 | Prompt Chaining | Orchestration | Multi-turn divide | 2024 |
+| 18 | Meta-Prompting | Orchestration | Conductor | 2024 |
+| 19 | Prompt Ensemble | Orchestration | Multi-prompt vote | 2024 |
+| 20 | Flow Engineering for Code | Orchestration | AlphaCodium | 2024 |
+| 21 | Prompt DSL | Orchestration | APPL/PDL | 2024 |
+| 22 | Multi-Agent Design | Orchestration | MASS | 2025 |
+| 23 | Auto-Optimization | Optimization | APO/GEPA | 2023→2025 |
+| 24 | Prompt Compression | Optimization | LLMLingua | 2023→2024 |
+| 25 | Prompt Rewriting | Optimization | RL rewrite | 2024 |
+| 26 | Prompt + Fine-Tuning | Optimization | BetterTogether | 2024 |
+| 27 | Self-Supervised Optimization | Optimization | SPO | 2025 |
+| 28 | Soft Prompt Tuning | Optimization | LoPA | 2024 |
+| 29 | Bias Calibration | Quality | Debiasing | 2024 |
+| 30 | Sensitivity Assessment | Quality | POSIX | 2023→2025 |
+| 31 | Perturbation Consistency | Quality | PPCL | 2024 |
+| 32 | LLM-as-Judge | Quality | Eval templates | 2024 |
+| 33 | Domain-Specific | Quality | Medical/SQL/Multilingual | 2023→2024 |
 
-## 🟢 防御技巧
+## 🟢 Defense Techniques
 
-| # | 技巧 | 类别 | 核心关键词 | 年份 |
+| # | Technique | Category | Core Keywords | Year |
 |---|------|------|-----------|------|
-| 34 | Spotlighting | 防御 | 数据标记 | 2024 |
-| 35 | 结构化分离 | 防御 | StruQ | 2024 |
-| 36 | 偏好对齐防御 | 防御 | SecAlign | 2024→2025 |
-| 37 | 注入检测 | 防御 | PromptArmor | 2025 |
-| 38 | 架构级免疫 | 防御 | CaMeL | 2025 |
-| 39 | 多 Agent 安全 | 防御 | MELON | 2025 |
-| 40 | 窃取保护 | 防御 | PromptKeeper | 2024 |
-| 41 | 遗忘与缓存 | 防御/系统 | ECO/Preble | 2024 |
+| 34 | Spotlighting | Defense | Data marking | 2024 |
+| 35 | Structured Separation | Defense | StruQ | 2024 |
+| 36 | Preference-Based Defense | Defense | SecAlign | 2024→2025 |
+| 37 | Injection Detection | Defense | PromptArmor | 2025 |
+| 38 | Architecture-Level Immunity | Defense | CaMeL | 2025 |
+| 39 | Multi-Agent Security | Defense | MELON | 2025 |
+| 40 | Theft Protection | Defense | PromptKeeper | 2024 |
+| 41 | Unlearning & Caching | Defense/System | ECO/Preble | 2024 |
 
-## 🔴 攻击与渗透技巧（仅限安全研究）
+## 🔴 Attack Techniques (Security Research Only)
 
-| # | 技巧 | 类别 | 核心关键词 | 年份 |
+| # | Technique | Category | Core Keywords | Year |
 |---|------|------|-----------|------|
-| 42 | 间接注入攻击 | 攻击 | HouYi | 2023 |
-| 43 | 手工越狱模板 | 攻击 | DAN | 2023 |
-| 44 | 自动化越狱 | 攻击 | AutoDAN/GPTFUZZER | 2023→2024 |
-| 45 | 分解重组攻击 | 攻击 | DrAttack | 2024 |
-| 46 | 序列化嵌入攻击 | 攻击 | SequentialBreak | 2024 |
-| 47 | Prompt 窃取 | 攻击 | output2prompt/PLeak | 2024 |
-| 48 | 学习型触发器 | 攻击 | Neural Exec | 2024 |
-| 49 | 自适应攻击 | 攻击 | 防御突破 | 2025 |
-| 50 | 注入形式化 | 攻击/基准 | 统一框架 | 2023→2025 |
+| 42 | Indirect Injection Attack | Attack | HouYi | 2023 |
+| 43 | Manual Jailbreak Templates | Attack | DAN | 2023 |
+| 44 | Automated Jailbreak | Attack | AutoDAN/GPTFUZZER | 2023→2024 |
+| 45 | Decomposition Attack | Attack | DrAttack | 2024 |
+| 46 | Sequential Chain Attack | Attack | SequentialBreak | 2024 |
+| 47 | Prompt Stealing | Attack | output2prompt/PLeak | 2024 |
+| 48 | Learned Triggers | Attack | Neural Exec | 2024 |
+| 49 | Adaptive Attacks | Attack | Defense bypass | 2025 |
+| 50 | Injection Formalization | Attack/Benchmark | Unified framework | 2023→2025 |
 
 ---
 
-# 附录：数据来源
+# Appendix: Data Sources
 
-| 项目 | 数量 |
+| Field | Count |
 |------|------|
-| 搜索范围 | arXiv 2023-2026 年 CS 类，标题含 "prompt" |
-| 总匹配论文 | 5366 篇 |
-| 去重后下载 | 5362 篇 |
-| 筛选后（AI/LLM prompt 相关） | 4780 篇 |
-| 移除（视觉/语音/图/非 LLM） | 582 篇 |
-| 核心分类覆盖 | 50 项技巧（8 大类） |
+| Search Scope | arXiv 2023–2026 CS categories, title contains "prompt" |
+| Total Matched Papers | 5,366 |
+| After Deduplication | 5,362 |
+| After Filtering (AI/LLM prompt-related) | 4,780 |
+| Removed (Vision/Speech/Graph/Non-LLM) | 582 |
+| Core Classification Coverage | 50 techniques (8 categories) |
 
-> 本文档由 4780 篇论文摘要系统性分析整理而成，所有来源标注 arXiv ID 可直接查阅原文。
+> This document was systematically compiled from the abstracts of 4,780 papers. All sources are annotated with arXiv IDs for direct reference.

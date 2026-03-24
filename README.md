@@ -60,7 +60,9 @@ arxiv.abs/
 ├── README.md                              # English
 ├── README.zh-CN.md                        # Chinese
 ├── arxiv.prompt/                          # prompt engineering collection
-│   ├── prompt_ai.md                       # 50 core techniques summary
+│   ├── README.md                          # directory guide
+│   ├── prompt_ai.md                       # 50 core techniques (English)
+│   ├── prompt_ai.zh-CN.md                 # 50 core techniques (Chinese)
 │   ├── 2023/
 │   │   ├── arxiv-results-2023.json        # metadata
 │   │   └── abstracts/                     # 1,085 .txt files
@@ -74,7 +76,9 @@ arxiv.abs/
 │       ├── arxiv-results-2026.json
 │       └── abstracts/                     # 400 .txt files
 └── arxiv.agi-scifi/                       # AGI & sci-fi collection
-    ├── agi-scifi.md                       # key findings & counterintuitive ideas
+    ├── README.md                          # directory guide
+    ├── agi-scifi.md                       # key findings (English)
+    ├── agi-scifi.zh-CN.md                 # key findings (Chinese)
     ├── search-index.json                  # 52 search queries metadata
     ├── 2023/
     │   ├── arxiv-results-2023.json        # 2,679 papers metadata
