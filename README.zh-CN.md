@@ -60,7 +60,9 @@ arxiv.abs/
 ├── README.md                              # 英文版
 ├── README.zh-CN.md                        # 中文版
 ├── arxiv.prompt/                          # 提示词工程专题
-│   ├── prompt_ai.md                       # 50 项核心技巧总结
+│   ├── README.md                          # 目录引导
+│   ├── prompt_ai.md                       # 50 项核心技巧（英文）
+│   ├── prompt_ai.zh-CN.md                 # 50 项核心技巧（中文）
 │   ├── 2023/
 │   │   ├── arxiv-results-2023.json        # 元数据
 │   │   └── abstracts/                     # 1,085 个 .txt 文件
@@ -74,7 +76,9 @@ arxiv.abs/
 │       ├── arxiv-results-2026.json
 │       └── abstracts/                     # 400 个 .txt 文件
 └── arxiv.agi-scifi/                       # AGI 与科幻研究专题
-    ├── agi-scifi.md                       # 核心发现与反常识观点总结
+    ├── README.md                          # 目录引导
+    ├── agi-scifi.md                       # 核心发现（英文）
+    ├── agi-scifi.zh-CN.md                 # 核心发现（中文）
     ├── search-index.json                  # 52 组搜索查询索引
     ├── 2023/
     │   ├── arxiv-results-2023.json        # 2,679 篇论文元数据

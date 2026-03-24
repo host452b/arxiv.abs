@@ -1,3 +1,5 @@
+[**中文版**](agi-scifi.zh-CN.md)
+
 # AGI & Sci-Fi Research: Key Findings from 13,606 arXiv Papers (2023–2026)
 
 > Distilled from 52 cross-disciplinary keyword searches across physics, math, CS, biology, and economics.
