@@ -1,10 +1,36 @@
-Title: Fine-Tune, Don't Prompt, Your Language Model to Identify Biased Language in Clinical Notes
-Authors: Isotta Landi, Eugenia Alleva, Nicole Bussola, Rebecca M. Cohen, Sarah Nowlin, Leslee J. Shaw, Alexander W. Charney, Kimberly B. Glazer
+Title: Fine-Tune, Don't Prompt, Your Language Model to Identify Biased Language
+in Clinical Notes
+Authors: Isotta Landi, Eugenia Alleva, Nicole Bussola, Rebecca M. Cohen, Sarah
+Nowlin, Leslee J. Shaw, Alexander W. Charney, Kimberly B. Glazer
 ID: 2603.10004
 URL: https://arxiv.org/abs/2603.10004
 
 Abstract:
-Clinical documentation can contain emotionally charged language with stigmatizing or privileging valences. We present a framework for detecting and classifying such language as stigmatizing, privileging, or neutral. We constructed a curated lexicon of biased terms scored for emotional valence. We then used lexicon-based matching to extract text chunks from OB-GYN delivery notes (Mount Sinai Hospital, NY) and MIMIC-IV discharge summaries across multiple specialties. Three clinicians annotated all chunks, enabling characterization of valence patterns across specialties and healthcare systems.
-  We benchmarked multiple classification strategies (zero-shot prompting, in-context learning, and supervised fine-tuning) across encoder-only models (GatorTron) and generative large language models (Llama). Fine-tuning with lexically primed inputs consistently outperformed prompting approaches. GatorTron achieved an F1 score of 0.96 on the OB-GYN test set, outperforming larger generative models while requiring minimal prompt engineering and fewer computational resources. External validation on MIMIC-IV revealed limited cross-domain generalizability (F1 < 0.70, 44% drop). Training on the broader MIMIC-IV dataset improved generalizability when testing on OB-GYN (F1 = 0.71, 11% drop), but at the cost of reduced precision.
-  Our findings demonstrate that fine-tuning outperforms prompting for emotional valence classification and that models must be adapted to specific medical specialties to achieve clinically appropriate performance. The same terms can carry different emotional valences across specialties: words with clinical meaning in one context may be stigmatizing in another. For bias detection, where misclassification risks undermining clinician trust or perpetuating patient harm, specialty-specific fine-tuning is essential to capture these semantic shifts.
+Clinical documentation can contain emotionally charged language with
+stigmatizing or privileging valences. We present a framework for detecting and
+classifying such language as stigmatizing, privileging, or neutral. We
+constructed a curated lexicon of biased terms scored for emotional valence. We
+then used lexicon-based matching to extract text chunks from OB-GYN delivery
+notes (Mount Sinai Hospital, NY) and MIMIC-IV discharge summaries across
+multiple specialties. Three clinicians annotated all chunks, enabling
+characterization of valence patterns across specialties and healthcare systems.
+  We benchmarked multiple classification strategies (zero-shot prompting, in-
+context learning, and supervised fine-tuning) across encoder-only models
+(GatorTron) and generative large language models (Llama). Fine-tuning with
+lexically primed inputs consistently outperformed prompting approaches.
+GatorTron achieved an F1 score of 0.96 on the OB-GYN test set, outperforming
+larger generative models while requiring minimal prompt engineering and fewer
+computational resources. External validation on MIMIC-IV revealed limited cross-
+domain generalizability (F1 < 0.70, 44% drop). Training on the broader MIMIC-IV
+dataset improved generalizability when testing on OB-GYN (F1 = 0.71, 11% drop),
+but at the cost of reduced precision.
+  Our findings demonstrate that fine-tuning outperforms prompting for emotional
+valence classification and that models must be adapted to specific medical
+specialties to achieve clinically appropriate performance. The same terms can
+carry different emotional valences across specialties: words with clinical
+meaning in one context may be stigmatizing in another. For bias detection, where
+misclassification risks undermining clinician trust or perpetuating patient
+harm, specialty-specific fine-tuning is essential to capture these semantic
+shifts.
   * Equal contribution.
+

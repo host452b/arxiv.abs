@@ -1,7 +1,26 @@
-Title: Optimizing Class-Level Probability Reweighting Coefficients for Equitable Prompting Accuracy
+Title: Optimizing Class-Level Probability Reweighting Coefficients for Equitable
+Prompting Accuracy
 Authors: Ruixi Lin, Yang You
 ID: 2405.07623
 URL: https://arxiv.org/abs/2405.07623
 
 Abstract:
-Even as we engineer LLMs for alignment and safety, they often uncover biases from pre-training data's statistical regularities (from disproportionate co-occurrences to stereotypical associations mirroring human cognitive biases). This leads to persistent, uneven class accuracy in classification and QA. Such per-class accuracy disparities are not inherently resolved by architectural/training evolutions or data scaling, making post-hoc correction essential for equitable performance. To mitigate LLM class accuracy imbalance, we develop a post-hoc probability reweighting method that directly optimizes for non-differentiable performance-driven and fairness-aligned metrics, through a novel COBias metric that highlights disparities in class accuracies. This post-hoc bias mitigation method is grounded in discrete optimization with nonlinear integer programming (NIP) objectives and an efficient metaheuristic solution framework with theoretical convergence guarantees. Operating model-agnostically, it learns reweighting coefficients from output class probabilities to adjust LLM inference outputs without internal weight updates. Evaluations demonstrate its effectiveness: reducing COBias (61% relative reduction), increasing overall accuracy (18% relative increase), and achieving robust within-task generalization across diverse prompt configurations.
+Even as we engineer LLMs for alignment and safety, they often uncover biases
+from pre-training data's statistical regularities (from disproportionate co-
+occurrences to stereotypical associations mirroring human cognitive biases).
+This leads to persistent, uneven class accuracy in classification and QA. Such
+per-class accuracy disparities are not inherently resolved by
+architectural/training evolutions or data scaling, making post-hoc correction
+essential for equitable performance. To mitigate LLM class accuracy imbalance,
+we develop a post-hoc probability reweighting method that directly optimizes for
+non-differentiable performance-driven and fairness-aligned metrics, through a
+novel COBias metric that highlights disparities in class accuracies. This post-
+hoc bias mitigation method is grounded in discrete optimization with nonlinear
+integer programming (NIP) objectives and an efficient metaheuristic solution
+framework with theoretical convergence guarantees. Operating model-agnostically,
+it learns reweighting coefficients from output class probabilities to adjust LLM
+inference outputs without internal weight updates. Evaluations demonstrate its
+effectiveness: reducing COBias (61% relative reduction), increasing overall
+accuracy (18% relative increase), and achieving robust within-task
+generalization across diverse prompt configurations.
+

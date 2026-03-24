@@ -1,7 +1,28 @@
-Title: Prompt-Tuning SAM: From Generalist to Specialist with only 2048 Parameters and 16 Training Images
+Title: Prompt-Tuning SAM: From Generalist to Specialist with only 2048
+Parameters and 16 Training Images
 Authors: Tristan Piater, Björn Barz, Alexander Freytag
 ID: 2504.16739
 URL: https://arxiv.org/abs/2504.16739
 
 Abstract:
-The Segment Anything Model (SAM) is widely used for segmenting a diverse range of objects in natural images from simple user prompts like points or bounding boxes. However, SAM's performance decreases substantially when applied to non-natural domains like microscopic imaging. Furthermore, due to SAM's interactive design, it requires a precise prompt for each image and object, which is unfeasible in many automated biomedical applications. Previous solutions adapt SAM by training millions of parameters via fine-tuning large parts of the model or of adapter layers. In contrast, we show that as little as 2,048 additional parameters are sufficient for turning SAM into a use-case specialist for a certain downstream task. Our novel PTSAM (prompt-tuned SAM) method uses prompt-tuning, a parameter-efficient fine-tuning technique, to adapt SAM for a specific task. We validate the performance of our approach on multiple microscopic and one medical dataset. Our results show that prompt-tuning only SAM's mask decoder already leads to a performance on-par with state-of-the-art techniques while requiring roughly 2,000x less trainable parameters. For addressing domain gaps, we find that additionally prompt-tuning SAM's image encoder is beneficial, further improving segmentation accuracy by up to 18% over state-of-the-art results. Since PTSAM can be reliably trained with as little as 16 annotated images, we find it particularly helpful for applications with limited training data and domain shifts.
+The Segment Anything Model (SAM) is widely used for segmenting a diverse range
+of objects in natural images from simple user prompts like points or bounding
+boxes. However, SAM's performance decreases substantially when applied to non-
+natural domains like microscopic imaging. Furthermore, due to SAM's interactive
+design, it requires a precise prompt for each image and object, which is
+unfeasible in many automated biomedical applications. Previous solutions adapt
+SAM by training millions of parameters via fine-tuning large parts of the model
+or of adapter layers. In contrast, we show that as little as 2,048 additional
+parameters are sufficient for turning SAM into a use-case specialist for a
+certain downstream task. Our novel PTSAM (prompt-tuned SAM) method uses prompt-
+tuning, a parameter-efficient fine-tuning technique, to adapt SAM for a specific
+task. We validate the performance of our approach on multiple microscopic and
+one medical dataset. Our results show that prompt-tuning only SAM's mask decoder
+already leads to a performance on-par with state-of-the-art techniques while
+requiring roughly 2,000x less trainable parameters. For addressing domain gaps,
+we find that additionally prompt-tuning SAM's image encoder is beneficial,
+further improving segmentation accuracy by up to 18% over state-of-the-art
+results. Since PTSAM can be reliably trained with as little as 16 annotated
+images, we find it particularly helpful for applications with limited training
+data and domain shifts.
+

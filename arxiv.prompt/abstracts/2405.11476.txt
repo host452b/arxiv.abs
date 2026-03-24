@@ -1,7 +1,30 @@
-Title: NubbleDrop: A Simple Way to Improve Matching Strategy for Prompted One-Shot Segmentation
+Title: NubbleDrop: A Simple Way to Improve Matching Strategy for Prompted One-
+Shot Segmentation
 Authors: Zhiyu Xu, Qingliang Chen
 ID: 2405.11476
 URL: https://arxiv.org/abs/2405.11476
 
 Abstract:
-Driven by large data trained segmentation models, such as SAM , research in one-shot segmentation has experienced significant advancements. Recent contributions like PerSAM and MATCHER , presented at ICLR 2024, utilize a similar approach by leveraging SAM with one or a few reference images to generate high quality segmentation masks for target images. Specifically, they utilize raw encoded features to compute cosine similarity between patches within reference and target images along the channel dimension, effectively generating prompt points or boxes for the target images a technique referred to as the matching strategy. However, relying solely on raw features might introduce biases and lack robustness for such a complex task. To address this concern, we delve into the issues of feature interaction and uneven distribution inherent in raw feature based matching. In this paper, we propose a simple and training-free method to enhance the validity and robustness of the matching strategy at no additional computational cost (NubbleDrop). The core concept involves randomly dropping feature channels (setting them to zero) during the matching process, thereby preventing models from being influenced by channels containing deceptive information. This technique mimics discarding pathological nubbles, and it can be seamlessly applied to other similarity computing scenarios. We conduct a comprehensive set of experiments, considering a wide range of factors, to demonstrate the effectiveness and validity of our proposed method. Our results showcase the significant improvements achieved through this simmple and straightforward approach.
+Driven by large data trained segmentation models, such as SAM , research in one-
+shot segmentation has experienced significant advancements. Recent contributions
+like PerSAM and MATCHER , presented at ICLR 2024, utilize a similar approach by
+leveraging SAM with one or a few reference images to generate high quality
+segmentation masks for target images. Specifically, they utilize raw encoded
+features to compute cosine similarity between patches within reference and
+target images along the channel dimension, effectively generating prompt points
+or boxes for the target images a technique referred to as the matching strategy.
+However, relying solely on raw features might introduce biases and lack
+robustness for such a complex task. To address this concern, we delve into the
+issues of feature interaction and uneven distribution inherent in raw feature
+based matching. In this paper, we propose a simple and training-free method to
+enhance the validity and robustness of the matching strategy at no additional
+computational cost (NubbleDrop). The core concept involves randomly dropping
+feature channels (setting them to zero) during the matching process, thereby
+preventing models from being influenced by channels containing deceptive
+information. This technique mimics discarding pathological nubbles, and it can
+be seamlessly applied to other similarity computing scenarios. We conduct a
+comprehensive set of experiments, considering a wide range of factors, to
+demonstrate the effectiveness and validity of our proposed method. Our results
+showcase the significant improvements achieved through this simmple and
+straightforward approach.
+

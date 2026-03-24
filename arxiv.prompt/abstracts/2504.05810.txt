@@ -1,7 +1,29 @@
-Title: PaMi-VDPO: Mitigating Video Hallucinations by Prompt-Aware Multi-Instance Video Preference Learning
-Authors: Xinpeng Ding, Kui Zhang, Jianhua Han, Lanqing Hong, Hang Xu, Xiaomeng Li
+Title: PaMi-VDPO: Mitigating Video Hallucinations by Prompt-Aware Multi-Instance
+Video Preference Learning
+Authors: Xinpeng Ding, Kui Zhang, Jianhua Han, Lanqing Hong, Hang Xu, Xiaomeng
+Li
 ID: 2504.05810
 URL: https://arxiv.org/abs/2504.05810
 
 Abstract:
-Direct Preference Optimization (DPO) helps reduce hallucinations in Video Multimodal Large Language Models (VLLMs), but its reliance on offline preference data limits adaptability and fails to capture true video-response misalignment. We propose Video Direct Preference Optimization (VDPO), an online preference learning framework that eliminates the need for preference annotation by leveraging video augmentations to generate rejected samples while keeping responses fixed. However, selecting effective augmentations is non-trivial, as some clips may be semantically identical to the original under specific prompts, leading to false rejections and disrupting alignment. To address this, we introduce Prompt-aware Multi-instance Learning VDPO (PaMi-VDPO), which selects augmentations based on prompt context. Instead of a single rejection, we construct a candidate set of augmented clips and apply a close-to-far selection strategy, initially ensuring all clips are semantically relevant while then prioritizing the most prompt-aware distinct clip. This allows the model to better capture meaningful visual differences, mitigating hallucinations, while avoiding false rejections, and improving alignment. PaMi-VDPOseamlessly integrates into existing VLLMs without additional parameters, GPT-4/human supervision. With only 10k SFT data, it improves the base model by 5.3% on VideoHallucer, surpassing GPT-4o, while maintaining stable performance on general video benchmarks.
+Direct Preference Optimization (DPO) helps reduce hallucinations in Video
+Multimodal Large Language Models (VLLMs), but its reliance on offline preference
+data limits adaptability and fails to capture true video-response misalignment.
+We propose Video Direct Preference Optimization (VDPO), an online preference
+learning framework that eliminates the need for preference annotation by
+leveraging video augmentations to generate rejected samples while keeping
+responses fixed. However, selecting effective augmentations is non-trivial, as
+some clips may be semantically identical to the original under specific prompts,
+leading to false rejections and disrupting alignment. To address this, we
+introduce Prompt-aware Multi-instance Learning VDPO (PaMi-VDPO), which selects
+augmentations based on prompt context. Instead of a single rejection, we
+construct a candidate set of augmented clips and apply a close-to-far selection
+strategy, initially ensuring all clips are semantically relevant while then
+prioritizing the most prompt-aware distinct clip. This allows the model to
+better capture meaningful visual differences, mitigating hallucinations, while
+avoiding false rejections, and improving alignment. PaMi-VDPOseamlessly
+integrates into existing VLLMs without additional parameters, GPT-4/human
+supervision. With only 10k SFT data, it improves the base model by 5.3% on
+VideoHallucer, surpassing GPT-4o, while maintaining stable performance on
+general video benchmarks.
+

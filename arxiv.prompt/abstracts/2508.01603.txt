@@ -1,7 +1,28 @@
-Title: Towards Generalizable AI-Generated Image Detection via Image-Adaptive Prompt Learning
+Title: Towards Generalizable AI-Generated Image Detection via Image-Adaptive
+Prompt Learning
 Authors: Yiheng Li, Zichang Tan, Guoqing Xu, Zhen Lei, Xu Zhou, Yang Yang
 ID: 2508.01603
 URL: https://arxiv.org/abs/2508.01603
 
 Abstract:
-In AI-generated image detection, current cutting-edge methods typically adapt pre-trained foundation models through partial-parameter fine-tuning. However, these approaches often struggle to generalize to forgeries from unseen generators, as the fine-tuned models capture only limited patterns from training data and fail to reflect the evolving traits of new ones. To overcome this limitation, we propose Image-Adaptive Prompt Learning (IAPL), a novel paradigm that dynamically adjusts the prompts fed into the encoder according to each testing image, rather than fixing them after training. This design significantly enhances robustness and adaptability to diverse forged images. The dynamic prompts integrate conditional information with test-time adaptive tokens through a lightweight learnable scaling factor. The conditional information is produced by a Conditional Information Learner, which leverages CNN-based feature extractors to model both forgery-specific and general conditions. The test-time adaptive tokens are optimized during inference on a single sample by enforcing prediction consistency across multiple views, ensuring that the parameters align with the current image. For the final decision, the optimal input with the highest prediction confidence is selected. Extensive experiments show that IAPL achieves state-of-the-art performance, with mean accuracies of 95.61% and 96.7% on the widely used UniversalFakeDetect and GenImage datasets, respectively. Codes and weights will be released on https://github.com/liyih/IAPL.
+In AI-generated image detection, current cutting-edge methods typically adapt
+pre-trained foundation models through partial-parameter fine-tuning. However,
+these approaches often struggle to generalize to forgeries from unseen
+generators, as the fine-tuned models capture only limited patterns from training
+data and fail to reflect the evolving traits of new ones. To overcome this
+limitation, we propose Image-Adaptive Prompt Learning (IAPL), a novel paradigm
+that dynamically adjusts the prompts fed into the encoder according to each
+testing image, rather than fixing them after training. This design significantly
+enhances robustness and adaptability to diverse forged images. The dynamic
+prompts integrate conditional information with test-time adaptive tokens through
+a lightweight learnable scaling factor. The conditional information is produced
+by a Conditional Information Learner, which leverages CNN-based feature
+extractors to model both forgery-specific and general conditions. The test-time
+adaptive tokens are optimized during inference on a single sample by enforcing
+prediction consistency across multiple views, ensuring that the parameters align
+with the current image. For the final decision, the optimal input with the
+highest prediction confidence is selected. Extensive experiments show that IAPL
+achieves state-of-the-art performance, with mean accuracies of 95.61% and 96.7%
+on the widely used UniversalFakeDetect and GenImage datasets, respectively.
+Codes and weights will be released on https://github.com/liyih/IAPL.
+

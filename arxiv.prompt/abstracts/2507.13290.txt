@@ -1,7 +1,30 @@
-Title: Towards Formal Verification of LLM-Generated Code from Natural Language Prompts
-Authors: Aaron Councilman, David Jiahao Fu, Aryan Gupta, Chengxiao Wang, David Grove, Yu-Xiong Wang, Vikram Adve
+Title: Towards Formal Verification of LLM-Generated Code from Natural Language
+Prompts
+Authors: Aaron Councilman, David Jiahao Fu, Aryan Gupta, Chengxiao Wang, David
+Grove, Yu-Xiong Wang, Vikram Adve
 ID: 2507.13290
 URL: https://arxiv.org/abs/2507.13290
 
 Abstract:
-In the past few years LLMs have emerged as a tool that can aid programmers by taking natural language descriptions and generating code based on it. However, the reliability of LLM code generation and current validation techniques for it are far from strong enough to be used for mission-critical or safety-critical applications. In this work we explore ways to offer formal guarantees of correctness to LLM generated code; such guarantees could improve the quality of general AI Code Assistants and support their use for critical applications. To address this challenge we propose to incorporate a Formal Query Language that can represent a user's intent in a formally defined but natural language-like manner that a user can confirm matches their intent. We then have a formal specification of the user intent which we can use to verify that LLM-generated code matches the user's intent. We implement these ideas in our system, Astrogator, for the Ansible programming language, widely used for system administration, including for critical systems. The system includes an intuitive formal query language, a calculus for representing the behavior of Ansible programs, and a symbolic interpreter and a unification algorithm which together are used for the verification. A key innovation in Astrogator is the use of a Knowledge Base to capture system-specific implementation dependencies that greatly reduce the need for system knowledge in expressing formal queries. On a benchmark suite of 21 code-generation tasks, our verifier is able to verify correct code in 83% of cases and identify incorrect code in 92%.
+In the past few years LLMs have emerged as a tool that can aid programmers by
+taking natural language descriptions and generating code based on it. However,
+the reliability of LLM code generation and current validation techniques for it
+are far from strong enough to be used for mission-critical or safety-critical
+applications. In this work we explore ways to offer formal guarantees of
+correctness to LLM generated code; such guarantees could improve the quality of
+general AI Code Assistants and support their use for critical applications. To
+address this challenge we propose to incorporate a Formal Query Language that
+can represent a user's intent in a formally defined but natural language-like
+manner that a user can confirm matches their intent. We then have a formal
+specification of the user intent which we can use to verify that LLM-generated
+code matches the user's intent. We implement these ideas in our system,
+Astrogator, for the Ansible programming language, widely used for system
+administration, including for critical systems. The system includes an intuitive
+formal query language, a calculus for representing the behavior of Ansible
+programs, and a symbolic interpreter and a unification algorithm which together
+are used for the verification. A key innovation in Astrogator is the use of a
+Knowledge Base to capture system-specific implementation dependencies that
+greatly reduce the need for system knowledge in expressing formal queries. On a
+benchmark suite of 21 code-generation tasks, our verifier is able to verify
+correct code in 83% of cases and identify incorrect code in 92%.
+

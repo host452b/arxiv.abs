@@ -1,7 +1,35 @@
 Title: Structured Prompting Enables More Robust Evaluation of Language Models
-Authors: Asad Aali, Muhammad Ahmed Mohsin, Vasiliki Bikia, Arnav Singhvi, Richard Gaus, Suhana Bedi, Hejie Cui, Miguel Fuentes, Alyssa Unell, Yifan Mai, Jordan Cahoon, Michael Pfeffer, Roxana Daneshjou, Sanmi Koyejo, Emily Alsentzer, Christopher Potts, Nigam H. Shah, Akshay S. Chaudhari
+Authors: Asad Aali, Muhammad Ahmed Mohsin, Vasiliki Bikia, Arnav Singhvi,
+Richard Gaus, Suhana Bedi, Hejie Cui, Miguel Fuentes, Alyssa Unell, Yifan Mai,
+Jordan Cahoon, Michael Pfeffer, Roxana Daneshjou, Sanmi Koyejo, Emily Alsentzer,
+Christopher Potts, Nigam H. Shah, Akshay S. Chaudhari
 ID: 2511.20836
 URL: https://arxiv.org/abs/2511.20836
 
 Abstract:
-As language models (LMs) are increasingly adopted across domains, high-quality benchmarking frameworks that accurately estimate performance are essential for guiding deployment decisions. While frameworks such as Holistic Evaluation of Language Models (HELM) enable broad evaluation across tasks, they often rely on fixed prompts that fail to generalize across LMs, yielding unrepresentative performance estimates. Unless we approximate each LM's ceiling (maximum achievable via changes to the prompt), we risk underestimating performance. Declarative prompting frameworks, such as DSPy, offer a scalable alternative to manual prompt engineering by crafting structured prompts that can be optimized per task. However, such frameworks have not been systematically evaluated across established benchmarks. We present a reproducible DSPy+HELM framework that introduces structured prompting methods which elicit reasoning, enabling more accurate LM benchmarking. Using four prompting methods, we evaluate four frontier LMs across seven benchmarks (general/medical domain) against existing HELM baseline scores. We find that without structured prompting: (i) HELM underestimates LM performance (by 4% average), (ii) performance estimates vary more across benchmarks ($+$2% standard deviation), (iii) performance gaps are misrepresented (leaderboard rankings flip on 3/7 benchmarks), and (iv) introducing chain-of-thought reduces LM sensitivity to prompt design (smaller $Δ$ across prompts). To our knowledge, this is the first benchmarking study to systematically integrate structured prompting into an established evaluation framework, demonstrating how scalable performance-ceiling approximation yields more robust, decision-useful benchmarks. We open-source (i) DSPy+HELM Integration (https://github.com/stanford-crfm/helm/pull/3893) and (ii) Prompt Optimization Pipeline (https://github.com/StanfordMIMI/dspy-helm).
+As language models (LMs) are increasingly adopted across domains, high-quality
+benchmarking frameworks that accurately estimate performance are essential for
+guiding deployment decisions. While frameworks such as Holistic Evaluation of
+Language Models (HELM) enable broad evaluation across tasks, they often rely on
+fixed prompts that fail to generalize across LMs, yielding unrepresentative
+performance estimates. Unless we approximate each LM's ceiling (maximum
+achievable via changes to the prompt), we risk underestimating performance.
+Declarative prompting frameworks, such as DSPy, offer a scalable alternative to
+manual prompt engineering by crafting structured prompts that can be optimized
+per task. However, such frameworks have not been systematically evaluated across
+established benchmarks. We present a reproducible DSPy+HELM framework that
+introduces structured prompting methods which elicit reasoning, enabling more
+accurate LM benchmarking. Using four prompting methods, we evaluate four
+frontier LMs across seven benchmarks (general/medical domain) against existing
+HELM baseline scores. We find that without structured prompting: (i) HELM
+underestimates LM performance (by 4% average), (ii) performance estimates vary
+more across benchmarks ($+$2% standard deviation), (iii) performance gaps are
+misrepresented (leaderboard rankings flip on 3/7 benchmarks), and (iv)
+introducing chain-of-thought reduces LM sensitivity to prompt design (smaller
+$Δ$ across prompts). To our knowledge, this is the first benchmarking study to
+systematically integrate structured prompting into an established evaluation
+framework, demonstrating how scalable performance-ceiling approximation yields
+more robust, decision-useful benchmarks. We open-source (i) DSPy+HELM
+Integration (https://github.com/stanford-crfm/helm/pull/3893) and (ii) Prompt
+Optimization Pipeline (https://github.com/StanfordMIMI/dspy-helm).
+

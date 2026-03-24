@@ -4,4 +4,25 @@ ID: 2504.08823
 URL: https://arxiv.org/abs/2504.08823
 
 Abstract:
-How to adapt a pre-trained model continuously for sequential tasks with different prediction class labels and domains and finally learn a generalizable model across diverse tasks is a long-lasting challenge. Continual learning (CL) has emerged as a promising approach to leverage pre-trained models (e.g., Transformers) for sequential tasks. While many existing CL methods incrementally store additional learned structures, such as Low-Rank Adaptation (LoRA) adapters or prompts and sometimes even preserve features from previous samples to maintain performance. This leads to unsustainable parameter growth and escalating storage costs as the number of tasks increases. Moreover, current approaches often lack task similarity awareness, which further hinders the models ability to effectively adapt to new tasks without interfering with previously acquired knowledge. To address these challenges, we propose FM-LoRA, a novel and efficient low-rank adaptation method that integrates both a dynamic rank selector (DRS) and dynamic meta-prompting (DMP). This framework allocates model capacity more effectively across tasks by leveraging a shared low-rank subspace critical for preserving knowledge, thereby avoiding continual parameter expansion. Extensive experiments on various CL benchmarks, including ImageNet-R, CIFAR100, and CUB200 for class-incremental learning (CIL), and DomainNet for domain-incremental learning (DIL), with Transformers backbone demonstrate that FM-LoRA effectively mitigates catastrophic forgetting while delivering robust performance across a diverse range of tasks and domains.
+How to adapt a pre-trained model continuously for sequential tasks with
+different prediction class labels and domains and finally learn a generalizable
+model across diverse tasks is a long-lasting challenge. Continual learning (CL)
+has emerged as a promising approach to leverage pre-trained models (e.g.,
+Transformers) for sequential tasks. While many existing CL methods incrementally
+store additional learned structures, such as Low-Rank Adaptation (LoRA) adapters
+or prompts and sometimes even preserve features from previous samples to
+maintain performance. This leads to unsustainable parameter growth and
+escalating storage costs as the number of tasks increases. Moreover, current
+approaches often lack task similarity awareness, which further hinders the
+models ability to effectively adapt to new tasks without interfering with
+previously acquired knowledge. To address these challenges, we propose FM-LoRA,
+a novel and efficient low-rank adaptation method that integrates both a dynamic
+rank selector (DRS) and dynamic meta-prompting (DMP). This framework allocates
+model capacity more effectively across tasks by leveraging a shared low-rank
+subspace critical for preserving knowledge, thereby avoiding continual parameter
+expansion. Extensive experiments on various CL benchmarks, including ImageNet-R,
+CIFAR100, and CUB200 for class-incremental learning (CIL), and DomainNet for
+domain-incremental learning (DIL), with Transformers backbone demonstrate that
+FM-LoRA effectively mitigates catastrophic forgetting while delivering robust
+performance across a diverse range of tasks and domains.
+

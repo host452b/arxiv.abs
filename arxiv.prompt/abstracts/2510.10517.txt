@@ -1,7 +1,26 @@
-Title: ECO: Enhanced Code Optimization via Performance-Aware Prompting for Code-LLMs
+Title: ECO: Enhanced Code Optimization via Performance-Aware Prompting for Code-
+LLMs
 Authors: Su-Hyeon Kim, Joonghyuk Hahn, Sooyoung Cha, Yo-Sub Han
 ID: 2510.10517
 URL: https://arxiv.org/abs/2510.10517
 
 Abstract:
-Code runtime optimization-the task of rewriting a given code to a faster one-remains challenging, as it requires reasoning about performance trade-offs involving algorithmic and structural choices. Recent approaches employ code-LLMs with slow-fast code pairs provided as optimization guidance, but such pair-based methods obscure the causal factors of performance gains and often lead to superficial pattern imitation rather than genuine performance reasoning. We introduce ECO, a performance-aware prompting framework for code optimization. ECO first distills runtime optimization instructions (ROIs) from reference slow-fast code pairs; Each ROI describes root causes of inefficiency and the rationales that drive performance improvements. For a given input code, ECO in parallel employs (i) a symbolic advisor to produce a bottleneck diagnosis tailored to the code, and (ii) an ROI retriever to return related ROIs. These two outputs are then composed into a performance-aware prompt, providing actionable guidance for code-LLMs. ECO's prompts are model-agnostic, require no fine-tuning, and can be easily prepended to any code-LLM prompt. Our empirical studies highlight that ECO prompting significantly improves code-LLMs' ability to generate efficient code, achieving speedups of up to 7.81x while minimizing correctness loss.
+Code runtime optimization-the task of rewriting a given code to a faster one-
+remains challenging, as it requires reasoning about performance trade-offs
+involving algorithmic and structural choices. Recent approaches employ code-LLMs
+with slow-fast code pairs provided as optimization guidance, but such pair-based
+methods obscure the causal factors of performance gains and often lead to
+superficial pattern imitation rather than genuine performance reasoning. We
+introduce ECO, a performance-aware prompting framework for code optimization.
+ECO first distills runtime optimization instructions (ROIs) from reference slow-
+fast code pairs; Each ROI describes root causes of inefficiency and the
+rationales that drive performance improvements. For a given input code, ECO in
+parallel employs (i) a symbolic advisor to produce a bottleneck diagnosis
+tailored to the code, and (ii) an ROI retriever to return related ROIs. These
+two outputs are then composed into a performance-aware prompt, providing
+actionable guidance for code-LLMs. ECO's prompts are model-agnostic, require no
+fine-tuning, and can be easily prepended to any code-LLM prompt. Our empirical
+studies highlight that ECO prompting significantly improves code-LLMs' ability
+to generate efficient code, achieving speedups of up to 7.81x while minimizing
+correctness loss.
+

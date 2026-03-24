@@ -1,7 +1,30 @@
-Title: Robust LLM-based Column Type Annotation via Prompt Augmentation with LoRA Tuning
+Title: Robust LLM-based Column Type Annotation via Prompt Augmentation with LoRA
+Tuning
 Authors: Hanze Meng, Jianhao Cao, Rachel Pottinger
 ID: 2512.22742
 URL: https://arxiv.org/abs/2512.22742
 
 Abstract:
-Column Type Annotation (CTA) is a fundamental step towards enabling schema alignment and semantic understanding of tabular data. Existing encoder-only language models achieve high accuracy when fine-tuned on labeled columns, but their applicability is limited to in-domain settings, as distribution shifts in tables or label spaces require costly re-training from scratch. Recent work has explored prompting generative large language models (LLMs) by framing CTA as a multiple-choice task, but these approaches face two key challenges: (1) model performance is highly sensitive to subtle changes in prompt wording and structure, and (2) annotation F1 scores remain modest. A natural extension is to fine-tune large language models. However, fully fine-tuning these models incurs prohibitive computational costs due to their scale, and the sensitivity to prompts is not eliminated. In this paper, we present a parameter-efficient framework for CTA that trains models over prompt-augmented data via Low-Rank Adaptation (LoRA). Our approach mitigates sensitivity to prompt variations while drastically reducing the number of necessary trainable parameters, achieving robust performance across datasets and templates. Experimental results on recent benchmarks demonstrate that models fine-tuned with our prompt augmentation strategy maintain stable performance across diverse prompt patterns during inference and yield higher weighted F1 scores than those fine-tuned on a single prompt template. These results highlight the effectiveness of parameter-efficient training and augmentation strategies in developing practical and adaptable CTA systems.
+Column Type Annotation (CTA) is a fundamental step towards enabling schema
+alignment and semantic understanding of tabular data. Existing encoder-only
+language models achieve high accuracy when fine-tuned on labeled columns, but
+their applicability is limited to in-domain settings, as distribution shifts in
+tables or label spaces require costly re-training from scratch. Recent work has
+explored prompting generative large language models (LLMs) by framing CTA as a
+multiple-choice task, but these approaches face two key challenges: (1) model
+performance is highly sensitive to subtle changes in prompt wording and
+structure, and (2) annotation F1 scores remain modest. A natural extension is to
+fine-tune large language models. However, fully fine-tuning these models incurs
+prohibitive computational costs due to their scale, and the sensitivity to
+prompts is not eliminated. In this paper, we present a parameter-efficient
+framework for CTA that trains models over prompt-augmented data via Low-Rank
+Adaptation (LoRA). Our approach mitigates sensitivity to prompt variations while
+drastically reducing the number of necessary trainable parameters, achieving
+robust performance across datasets and templates. Experimental results on recent
+benchmarks demonstrate that models fine-tuned with our prompt augmentation
+strategy maintain stable performance across diverse prompt patterns during
+inference and yield higher weighted F1 scores than those fine-tuned on a single
+prompt template. These results highlight the effectiveness of parameter-
+efficient training and augmentation strategies in developing practical and
+adaptable CTA systems.
+

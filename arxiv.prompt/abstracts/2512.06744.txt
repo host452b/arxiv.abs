@@ -4,4 +4,22 @@ ID: 2512.06744
 URL: https://arxiv.org/abs/2512.06744
 
 Abstract:
-Text embedding models are designed for sentence-level applications like retrieval and semantic similarity, and are primarily evaluated on sentence-level benchmarks. Their behavior on isolated words is less understood. We show that simply prepending semantic prompts to words before embedding substantially improves word similarity correlations. Testing 7 text embedding models, including text-embedding-3-large (OpenAI), embed-english-v3.0 (Cohere), voyage-3(Voyage AI), all-mpnet-base-v2, and Qwen3-Embedding-8B, on 3 standard benchmarks (SimLex-999, WordSim-353, MEN-3000), we find that prompts like "meaning: {word}" or "Represent the semantic concept: {word}" improve Spearman correlations by up to +0.29 on SimLex-999. Some models fail completely on bare words (correlation = 0) but recover with prompts (+0.73 improvement). Our best results achieve correlation = 0.692 on SimLex-999 with embed-english-v3.0 (Cohere), correlation = 0.811 on WordSim-353, and correlation = 0.855 on MEN-3000 with text-embedding-3-large (OpenAI). These results outperform classic static embeddings like Word2Vec (correlation = 0.40) and even the best static method LexVec (correlation = 0.48) on SimLex-999, establishing a new state-of-the-art for pure embedding methods. This zero-shot technique requires no training and works with any text embedding model.
+Text embedding models are designed for sentence-level applications like
+retrieval and semantic similarity, and are primarily evaluated on sentence-level
+benchmarks. Their behavior on isolated words is less understood. We show that
+simply prepending semantic prompts to words before embedding substantially
+improves word similarity correlations. Testing 7 text embedding models,
+including text-embedding-3-large (OpenAI), embed-english-v3.0 (Cohere),
+voyage-3(Voyage AI), all-mpnet-base-v2, and Qwen3-Embedding-8B, on 3 standard
+benchmarks (SimLex-999, WordSim-353, MEN-3000), we find that prompts like
+"meaning: {word}" or "Represent the semantic concept: {word}" improve Spearman
+correlations by up to +0.29 on SimLex-999. Some models fail completely on bare
+words (correlation = 0) but recover with prompts (+0.73 improvement). Our best
+results achieve correlation = 0.692 on SimLex-999 with embed-english-v3.0
+(Cohere), correlation = 0.811 on WordSim-353, and correlation = 0.855 on
+MEN-3000 with text-embedding-3-large (OpenAI). These results outperform classic
+static embeddings like Word2Vec (correlation = 0.40) and even the best static
+method LexVec (correlation = 0.48) on SimLex-999, establishing a new state-of-
+the-art for pure embedding methods. This zero-shot technique requires no
+training and works with any text embedding model.
+

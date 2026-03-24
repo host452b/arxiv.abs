@@ -1,7 +1,27 @@
-Title: An Instance-Aware Prompting Framework for Training-free Camouflaged Object Segmentation
+Title: An Instance-Aware Prompting Framework for Training-free Camouflaged
+Object Segmentation
 Authors: Chao Yin, Jide Li, Hang Yao, Xiaoqiang Li
 ID: 2508.06904
 URL: https://arxiv.org/abs/2508.06904
 
 Abstract:
-Training-free Camouflaged Object Segmentation (COS) seeks to segment camouflaged objects without task-specific training, by automatically generating visual prompts to guide the Segment Anything Model (SAM). However, existing pipelines mostly yield semantic-level prompts, which drive SAM to coarse semantic masks and struggle to handle multiple discrete camouflaged instances effectively. To address this critical limitation, we propose an \textbf{I}nstance-\textbf{A}ware \textbf{P}rompting \textbf{F}ramework (IAPF) tailored for the first training-free COS that upgrades prompt granularity from semantic to instance-level while keeping all components frozen. The centerpiece is an Instance Mask Generator that (i) leverages a detector-agnostic enumerator to produce precise instance-level box prompts for the foreground tag, and (ii) introduces the Single-Foreground Multi-Background Prompting (SFMBP) strategy to sample region-constrained point prompts within each box prompt, enabling SAM to output instance masks. The pipeline is supported by a simple text prompt generator that produces image-specific tags and a self-consistency vote across synonymous task-generic prompts to stabilize inference. Extensive evaluations on three COS benchmarks, two CIS benchmarks, and two downstream datasets demonstrate state-of-the-art performance among training-free methods. Code will be released upon acceptance.
+Training-free Camouflaged Object Segmentation (COS) seeks to segment camouflaged
+objects without task-specific training, by automatically generating visual
+prompts to guide the Segment Anything Model (SAM). However, existing pipelines
+mostly yield semantic-level prompts, which drive SAM to coarse semantic masks
+and struggle to handle multiple discrete camouflaged instances effectively. To
+address this critical limitation, we propose an \textbf{I}nstance-\textbf{A}ware
+\textbf{P}rompting \textbf{F}ramework (IAPF) tailored for the first training-
+free COS that upgrades prompt granularity from semantic to instance-level while
+keeping all components frozen. The centerpiece is an Instance Mask Generator
+that (i) leverages a detector-agnostic enumerator to produce precise instance-
+level box prompts for the foreground tag, and (ii) introduces the Single-
+Foreground Multi-Background Prompting (SFMBP) strategy to sample region-
+constrained point prompts within each box prompt, enabling SAM to output
+instance masks. The pipeline is supported by a simple text prompt generator that
+produces image-specific tags and a self-consistency vote across synonymous task-
+generic prompts to stabilize inference. Extensive evaluations on three COS
+benchmarks, two CIS benchmarks, and two downstream datasets demonstrate state-
+of-the-art performance among training-free methods. Code will be released upon
+acceptance.
+

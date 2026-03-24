@@ -4,4 +4,28 @@ ID: 2404.11864
 URL: https://arxiv.org/abs/2404.11864
 
 Abstract:
-Pre-trained vision-language models (VLMs) have shown remarkable generalization capabilities via prompting, which leverages VLMs as knowledge bases to extract information beneficial for downstream tasks. However, existing methods primarily employ uni-modal prompting, which only engages a uni-modal branch, failing to simultaneously adjust vision-language (V-L) features. Additionally, the one-pass forward pipeline in VLM encoding struggles to align V-L features that have a huge gap. Confronting these challenges, we propose a novel method, Progressive Multi-modal conditional Prompt Tuning (ProMPT). ProMPT exploits a recurrent structure, optimizing and aligning V-L features by iteratively utilizing image and current encoding information. It comprises an initialization and a multi-modal iterative evolution (MIE) module. Initialization is responsible for encoding images and text using a VLM, followed by a feature filter that selects text features similar to image. MIE then facilitates multi-modal prompting through class-conditional vision prompting, instance-conditional text prompting, and feature filtering. In each MIE iteration, vision prompts are obtained from filtered text features via a vision generator, promoting image features to focus more on target object during vision prompting. The encoded image features are fed into a text generator to produce text prompts that are more robust to class shifts. Thus, V-L features are progressively aligned, enabling advance from coarse to exact prediction. Extensive experiments are conducted in three settings to evaluate the efficacy of ProMPT. The results indicate that ProMPT outperforms existing methods on average across all settings, demonstrating its superior generalization and robustness. Code is available at https://github.com/qiuxiaoyu9954/ProMPT.
+Pre-trained vision-language models (VLMs) have shown remarkable generalization
+capabilities via prompting, which leverages VLMs as knowledge bases to extract
+information beneficial for downstream tasks. However, existing methods primarily
+employ uni-modal prompting, which only engages a uni-modal branch, failing to
+simultaneously adjust vision-language (V-L) features. Additionally, the one-pass
+forward pipeline in VLM encoding struggles to align V-L features that have a
+huge gap. Confronting these challenges, we propose a novel method, Progressive
+Multi-modal conditional Prompt Tuning (ProMPT). ProMPT exploits a recurrent
+structure, optimizing and aligning V-L features by iteratively utilizing image
+and current encoding information. It comprises an initialization and a multi-
+modal iterative evolution (MIE) module. Initialization is responsible for
+encoding images and text using a VLM, followed by a feature filter that selects
+text features similar to image. MIE then facilitates multi-modal prompting
+through class-conditional vision prompting, instance-conditional text prompting,
+and feature filtering. In each MIE iteration, vision prompts are obtained from
+filtered text features via a vision generator, promoting image features to focus
+more on target object during vision prompting. The encoded image features are
+fed into a text generator to produce text prompts that are more robust to class
+shifts. Thus, V-L features are progressively aligned, enabling advance from
+coarse to exact prediction. Extensive experiments are conducted in three
+settings to evaluate the efficacy of ProMPT. The results indicate that ProMPT
+outperforms existing methods on average across all settings, demonstrating its
+superior generalization and robustness. Code is available at
+https://github.com/qiuxiaoyu9954/ProMPT.
+

@@ -1,7 +1,26 @@
-Title: Prompt-Induced Over-Generation as Denial-of-Service: A Black-Box Attack-Side Benchmark
-Authors:  Manu, Yi Guo, Kanchana Thilakarathna, Nirhoshan Sivaroopan, Jo Plested, Tim Lynar, Jack Yang, Wangli Yang
+Title: Prompt-Induced Over-Generation as Denial-of-Service: A Black-Box Attack-
+Side Benchmark
+Authors:  Manu, Yi Guo, Kanchana Thilakarathna, Nirhoshan Sivaroopan, Jo
+Plested, Tim Lynar, Jack Yang, Wangli Yang
 ID: 2512.23779
 URL: https://arxiv.org/abs/2512.23779
 
 Abstract:
-Large Language Models (LLMs) can be driven into over-generation, emitting thousands of tokens before producing an end-of-sequence (EOS) token. This degrades answer quality, inflates latency and cost, and can be weaponized as a denial-of-service (DoS) attack. Recent work has begun to study DoS-style prompt attacks, but typically focuses on a single attack algorithm or assumes white-box access, without an attack-side benchmark that compares prompt-based attackers in a black-box, query-only regime with a known tokenizer. We introduce such a benchmark and study two prompt-only attackers. The first is an Evolutionary Over-Generation Prompt Search (EOGen) that searches the token space for prefixes that suppress EOS and induce long continuations. The second is a goal-conditioned reinforcement learning attacker (RL-GOAL) that trains a network to generate prefixes conditioned on a target length. To characterize behavior, we introduce Over-Generation Factor (OGF): the ratio of produced tokens to a model's context window, along with stall and latency summaries. EOGen discovers short-prefix attacks that raise Phi-3 to OGF = 1.39 +/- 1.14 (Success@>=2: 25.2%); RL-GOAL nearly doubles severity to OGF = 2.70 +/- 1.43 (Success@>=2: 64.3%) and drives budget-hit non-termination in 46% of trials.
+Large Language Models (LLMs) can be driven into over-generation, emitting
+thousands of tokens before producing an end-of-sequence (EOS) token. This
+degrades answer quality, inflates latency and cost, and can be weaponized as a
+denial-of-service (DoS) attack. Recent work has begun to study DoS-style prompt
+attacks, but typically focuses on a single attack algorithm or assumes white-box
+access, without an attack-side benchmark that compares prompt-based attackers in
+a black-box, query-only regime with a known tokenizer. We introduce such a
+benchmark and study two prompt-only attackers. The first is an Evolutionary
+Over-Generation Prompt Search (EOGen) that searches the token space for prefixes
+that suppress EOS and induce long continuations. The second is a goal-
+conditioned reinforcement learning attacker (RL-GOAL) that trains a network to
+generate prefixes conditioned on a target length. To characterize behavior, we
+introduce Over-Generation Factor (OGF): the ratio of produced tokens to a
+model's context window, along with stall and latency summaries. EOGen discovers
+short-prefix attacks that raise Phi-3 to OGF = 1.39 +/- 1.14 (Success@>=2:
+25.2%); RL-GOAL nearly doubles severity to OGF = 2.70 +/- 1.43 (Success@>=2:
+64.3%) and drives budget-hit non-termination in 46% of trials.
+

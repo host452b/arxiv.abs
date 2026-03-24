@@ -1,7 +1,32 @@
 Title: LLMBridge: Reducing Costs to Access LLMs in a Prompt-Centric Internet
-Authors: Noah Martin, Abdullah Bin Faisal, Hiba Eltigani, Rukhshan Haroon, Swaminathan Lamelas, Fahad Dogar
+Authors: Noah Martin, Abdullah Bin Faisal, Hiba Eltigani, Rukhshan Haroon,
+Swaminathan Lamelas, Fahad Dogar
 ID: 2410.11857
 URL: https://arxiv.org/abs/2410.11857
 
 Abstract:
-Today's Internet infrastructure is centered around content retrieval over HTTP, with middleboxes (e.g., HTTP proxies) playing a crucial role in performance, security, and cost-effectiveness. We envision a future where Internet communication will be dominated by "prompts" sent to generative AI models. For this, we will need proxies that provide similar functions to HTTP proxies (e.g., caching, routing, compression) while dealing with unique challenges and opportunities of prompt-based communication. As a first step toward supporting prompt-based communication, we present LLMBridge, an LLM proxy designed for cost-conscious users, such as those in developing regions and education (e.g., students, instructors). LLMBridge supports three key optimizations: model selection (routing prompts to the most suitable model), context management (intelligently reducing the amount of context), and semantic caching (serving prompts using local models and vector databases). These optimizations introduce trade-offs between cost and quality, which applications navigate through a high-level, bidirectional interface. As case studies, we deploy LLMBridge in two cost-sensitive settings: a WhatsApp-based Q&A service and a university classroom environment. The WhatsApp service has been live for over twelve months, serving 100+ users and handling more than 14.7K requests. In parallel, we exposed LLMBridge to students across three computer science courses over a semester, where it supported diverse LLM-powered applications - such as reasoning agents and chatbots - and handled an average of 500 requests per day. We report on deployment experiences across both settings and use the collected workloads to benchmark the effectiveness of various cost-optimization strategies, analyzing their trade-offs in cost, latency, and response quality.
+Today's Internet infrastructure is centered around content retrieval over HTTP,
+with middleboxes (e.g., HTTP proxies) playing a crucial role in performance,
+security, and cost-effectiveness. We envision a future where Internet
+communication will be dominated by "prompts" sent to generative AI models. For
+this, we will need proxies that provide similar functions to HTTP proxies (e.g.,
+caching, routing, compression) while dealing with unique challenges and
+opportunities of prompt-based communication. As a first step toward supporting
+prompt-based communication, we present LLMBridge, an LLM proxy designed for
+cost-conscious users, such as those in developing regions and education (e.g.,
+students, instructors). LLMBridge supports three key optimizations: model
+selection (routing prompts to the most suitable model), context management
+(intelligently reducing the amount of context), and semantic caching (serving
+prompts using local models and vector databases). These optimizations introduce
+trade-offs between cost and quality, which applications navigate through a high-
+level, bidirectional interface. As case studies, we deploy LLMBridge in two
+cost-sensitive settings: a WhatsApp-based Q&A service and a university classroom
+environment. The WhatsApp service has been live for over twelve months, serving
+100+ users and handling more than 14.7K requests. In parallel, we exposed
+LLMBridge to students across three computer science courses over a semester,
+where it supported diverse LLM-powered applications - such as reasoning agents
+and chatbots - and handled an average of 500 requests per day. We report on
+deployment experiences across both settings and use the collected workloads to
+benchmark the effectiveness of various cost-optimization strategies, analyzing
+their trade-offs in cost, latency, and response quality.
+

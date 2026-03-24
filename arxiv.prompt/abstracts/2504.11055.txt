@@ -1,7 +1,33 @@
-Title: Crane: Context-Guided Prompt Learning and Attention Refinement for Zero-Shot Anomaly Detection
-Authors: Alireza Salehi, Mohammadreza Salehi, Reshad Hosseini, Cees G. M. Snoek, Makoto Yamada, Mohammad Sabokrou
+Title: Crane: Context-Guided Prompt Learning and Attention Refinement for Zero-
+Shot Anomaly Detection
+Authors: Alireza Salehi, Mohammadreza Salehi, Reshad Hosseini, Cees G. M. Snoek,
+Makoto Yamada, Mohammad Sabokrou
 ID: 2504.11055
 URL: https://arxiv.org/abs/2504.11055
 
 Abstract:
-Anomaly Detection involves identifying deviations from normal data distributions and is critical in fields such as medical diagnostics and industrial defect detection. Traditional AD methods typically require the availability of normal training samples; however, this assumption is not always feasible. Recently, the rich pretraining knowledge of CLIP has shown promising zero-shot generalization in detecting anomalies without the need for training samples from target domains. However, CLIP's coarse-grained image-text alignment limits localization and detection performance for fine-grained anomalies due to: (1) spatial misalignment, and (2) the limited sensitivity of global features to local anomalous patterns. In this paper, we propose Crane which tackles both problems. First, we introduce a correlation-based attention module to retain spatial alignment more accurately. Second, to boost the model's awareness of fine-grained anomalies, we condition the learnable prompts of the text encoder on image context extracted from the vision encoder and perform a local-to-global representation fusion. Moreover, our method can incorporate vision foundation models such as DINOv2 to further enhance spatial understanding and localization. The key insight of Crane is to balance learnable adaptations for modeling anomalous concepts with non-learnable adaptations that preserve and exploit generalized pretrained knowledge, thereby minimizing in-domain overfitting and maximizing performance on unseen domains. Extensive evaluation across 14 diverse industrial and medical datasets demonstrates that Crane consistently improves the state-of-the-art ZSAD from 2% to 28%, at both image and pixel levels, while remaining competitive in inference speed. The code is available at https://github.com/AlirezaSalehy/Crane.
+Anomaly Detection involves identifying deviations from normal data distributions
+and is critical in fields such as medical diagnostics and industrial defect
+detection. Traditional AD methods typically require the availability of normal
+training samples; however, this assumption is not always feasible. Recently, the
+rich pretraining knowledge of CLIP has shown promising zero-shot generalization
+in detecting anomalies without the need for training samples from target
+domains. However, CLIP's coarse-grained image-text alignment limits localization
+and detection performance for fine-grained anomalies due to: (1) spatial
+misalignment, and (2) the limited sensitivity of global features to local
+anomalous patterns. In this paper, we propose Crane which tackles both problems.
+First, we introduce a correlation-based attention module to retain spatial
+alignment more accurately. Second, to boost the model's awareness of fine-
+grained anomalies, we condition the learnable prompts of the text encoder on
+image context extracted from the vision encoder and perform a local-to-global
+representation fusion. Moreover, our method can incorporate vision foundation
+models such as DINOv2 to further enhance spatial understanding and localization.
+The key insight of Crane is to balance learnable adaptations for modeling
+anomalous concepts with non-learnable adaptations that preserve and exploit
+generalized pretrained knowledge, thereby minimizing in-domain overfitting and
+maximizing performance on unseen domains. Extensive evaluation across 14 diverse
+industrial and medical datasets demonstrates that Crane consistently improves
+the state-of-the-art ZSAD from 2% to 28%, at both image and pixel levels, while
+remaining competitive in inference speed. The code is available at
+https://github.com/AlirezaSalehy/Crane.
+

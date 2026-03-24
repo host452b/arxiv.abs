@@ -1,7 +1,29 @@
-Title: ARGUS: Defending Against Multimodal Indirect Prompt Injection via Steering Instruction-Following Behavior
-Authors: Weikai Lu, Ziqian Zeng, Kehua Zhang, Haoran Li, Huiping Zhuang, Ruidong Wang, Cen Chen, Hao Peng
+Title: ARGUS: Defending Against Multimodal Indirect Prompt Injection via
+Steering Instruction-Following Behavior
+Authors: Weikai Lu, Ziqian Zeng, Kehua Zhang, Haoran Li, Huiping Zhuang, Ruidong
+Wang, Cen Chen, Hao Peng
 ID: 2512.05745
 URL: https://arxiv.org/abs/2512.05745
 
 Abstract:
-Multimodal Large Language Models (MLLMs) are increasingly vulnerable to multimodal Indirect Prompt Injection (IPI) attacks, which embed malicious instructions in images, videos, or audio to hijack model behavior. Existing defenses, designed primarily for text-only LLMs, are unsuitable for countering these multimodal threats, as they are easily bypassed, modality-dependent, or generalize poorly. Inspired by activation steering researches, we hypothesize that a robust, general defense independent of modality can be achieved by steering the model's behavior in the representation space. Through extensive experiments, we discover that the instruction-following behavior of MLLMs is encoded in a subspace. Steering along directions within this subspace can enforce adherence to user instructions, forming the basis of a defense. However, we also found that a naive defense direction could be coupled with a utility-degrading direction, and excessive intervention strength harms model performance. To address this, we propose ARGUS, which searches for an optimal defense direction within the safety subspace that decouples from the utility degradation direction, further combining adaptive strength steering to achieve a better safety-utility trade-off. ARGUS also introduces lightweight injection detection stage to activate the defense on-demand, and a post-filtering stage to verify defense success. Experimental results show that ARGUS can achieve robust defense against multimodal IPI while maximally preserving the MLLM's utility.
+Multimodal Large Language Models (MLLMs) are increasingly vulnerable to
+multimodal Indirect Prompt Injection (IPI) attacks, which embed malicious
+instructions in images, videos, or audio to hijack model behavior. Existing
+defenses, designed primarily for text-only LLMs, are unsuitable for countering
+these multimodal threats, as they are easily bypassed, modality-dependent, or
+generalize poorly. Inspired by activation steering researches, we hypothesize
+that a robust, general defense independent of modality can be achieved by
+steering the model's behavior in the representation space. Through extensive
+experiments, we discover that the instruction-following behavior of MLLMs is
+encoded in a subspace. Steering along directions within this subspace can
+enforce adherence to user instructions, forming the basis of a defense. However,
+we also found that a naive defense direction could be coupled with a utility-
+degrading direction, and excessive intervention strength harms model
+performance. To address this, we propose ARGUS, which searches for an optimal
+defense direction within the safety subspace that decouples from the utility
+degradation direction, further combining adaptive strength steering to achieve a
+better safety-utility trade-off. ARGUS also introduces lightweight injection
+detection stage to activate the defense on-demand, and a post-filtering stage to
+verify defense success. Experimental results show that ARGUS can achieve robust
+defense against multimodal IPI while maximally preserving the MLLM's utility.
+

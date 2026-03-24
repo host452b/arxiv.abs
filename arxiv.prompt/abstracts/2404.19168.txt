@@ -1,7 +1,31 @@
-Title: PEVA-Net: Prompt-Enhanced View Aggregation Network for Zero/Few-Shot Multi-View 3D Shape Recognition
+Title: PEVA-Net: Prompt-Enhanced View Aggregation Network for Zero/Few-Shot
+Multi-View 3D Shape Recognition
 Authors: Dongyun Lin, Yi Cheng, Shangbo Mao, Aiyuan Guo, Yiqun Li
 ID: 2404.19168
 URL: https://arxiv.org/abs/2404.19168
 
 Abstract:
-Large vision-language models have impressively promote the performance of 2D visual recognition under zero/few-shot scenarios. In this paper, we focus on exploiting the large vision-language model, i.e., CLIP, to address zero/few-shot 3D shape recognition based on multi-view representations. The key challenge for both tasks is to generate a discriminative descriptor of the 3D shape represented by multiple view images under the scenarios of either without explicit training (zero-shot 3D shape recognition) or training with a limited number of data (few-shot 3D shape recognition). We analyze that both tasks are relevant and can be considered simultaneously. Specifically, leveraging the descriptor which is effective for zero-shot inference to guide the tuning of the aggregated descriptor under the few-shot training can significantly improve the few-shot learning efficacy. Hence, we propose Prompt-Enhanced View Aggregation Network (PEVA-Net) to simultaneously address zero/few-shot 3D shape recognition. Under the zero-shot scenario, we propose to leverage the prompts built up from candidate categories to enhance the aggregation process of multiple view-associated visual features. The resulting aggregated feature serves for effective zero-shot recognition of the 3D shapes. Under the few-shot scenario, we first exploit a transformer encoder to aggregate the view-associated visual features into a global descriptor. To tune the encoder, together with the main classification loss, we propose a self-distillation scheme via a feature distillation loss by treating the zero-shot descriptor as the guidance signal for the few-shot descriptor. This scheme can significantly enhance the few-shot learning efficacy.
+Large vision-language models have impressively promote the performance of 2D
+visual recognition under zero/few-shot scenarios. In this paper, we focus on
+exploiting the large vision-language model, i.e., CLIP, to address zero/few-shot
+3D shape recognition based on multi-view representations. The key challenge for
+both tasks is to generate a discriminative descriptor of the 3D shape
+represented by multiple view images under the scenarios of either without
+explicit training (zero-shot 3D shape recognition) or training with a limited
+number of data (few-shot 3D shape recognition). We analyze that both tasks are
+relevant and can be considered simultaneously. Specifically, leveraging the
+descriptor which is effective for zero-shot inference to guide the tuning of the
+aggregated descriptor under the few-shot training can significantly improve the
+few-shot learning efficacy. Hence, we propose Prompt-Enhanced View Aggregation
+Network (PEVA-Net) to simultaneously address zero/few-shot 3D shape recognition.
+Under the zero-shot scenario, we propose to leverage the prompts built up from
+candidate categories to enhance the aggregation process of multiple view-
+associated visual features. The resulting aggregated feature serves for
+effective zero-shot recognition of the 3D shapes. Under the few-shot scenario,
+we first exploit a transformer encoder to aggregate the view-associated visual
+features into a global descriptor. To tune the encoder, together with the main
+classification loss, we propose a self-distillation scheme via a feature
+distillation loss by treating the zero-shot descriptor as the guidance signal
+for the few-shot descriptor. This scheme can significantly enhance the few-shot
+learning efficacy.
+

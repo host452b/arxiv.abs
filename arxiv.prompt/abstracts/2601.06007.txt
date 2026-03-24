@@ -1,7 +1,34 @@
-Title: Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon Agentic Tasks
-Authors: Elias Lumer, Faheem Nizar, Akshaya Jangiti, Kevin Frank, Anmol Gulati, Mandar Phadate, Vamse Kumar Subbiah
+Title: Don't Break the Cache: An Evaluation of Prompt Caching for Long-Horizon
+Agentic Tasks
+Authors: Elias Lumer, Faheem Nizar, Akshaya Jangiti, Kevin Frank, Anmol Gulati,
+Mandar Phadate, Vamse Kumar Subbiah
 ID: 2601.06007
 URL: https://arxiv.org/abs/2601.06007
 
 Abstract:
-Recent advancements in Large Language Model (LLM) agents have enabled complex multi-turn agentic tasks requiring extensive tool calling, where conversations can span dozens of API calls with increasingly large context windows. However, although major LLM providers offer prompt caching to reduce cost and latency, its benefits for agentic workloads remain underexplored in the research literature. To our knowledge, no prior work quantifies these cost savings or compares caching strategies for multi-turn agentic tasks. We present a comprehensive evaluation of prompt caching across three major LLM providers (OpenAI, Anthropic, and Google) and compare three caching strategies, including full context caching, system prompt only caching, and caching that excludes dynamic tool results. We evaluate on DeepResearch Bench, a multi-turn agentic benchmark where agents autonomously execute real-world web search tool calls to answer complex research questions, measuring both API cost and time to first token (TTFT) across over 500 agent sessions with 10,000-token system prompts. Our results demonstrate that prompt caching reduces API costs by 41-80% and improves time to first token by 13-31% across providers. We find that strategic prompt cache block control, such as placing dynamic content at the end of the system prompt, avoiding dynamic traditional function calling, and excluding dynamic tool results, provides more consistent benefits than naive full-context caching, which can paradoxically increase latency. An ablation study across prompt sizes (500-50,000 tokens) and tool call counts (3-50) demonstrates universal linear cost and TTFT benefits, after the provider caching token minimum, and reveal provider-specific strategy discrepancies across variants. We provide nuanced discussion and guidance for implementing prompt caching in production agentic systems.
+Recent advancements in Large Language Model (LLM) agents have enabled complex
+multi-turn agentic tasks requiring extensive tool calling, where conversations
+can span dozens of API calls with increasingly large context windows. However,
+although major LLM providers offer prompt caching to reduce cost and latency,
+its benefits for agentic workloads remain underexplored in the research
+literature. To our knowledge, no prior work quantifies these cost savings or
+compares caching strategies for multi-turn agentic tasks. We present a
+comprehensive evaluation of prompt caching across three major LLM providers
+(OpenAI, Anthropic, and Google) and compare three caching strategies, including
+full context caching, system prompt only caching, and caching that excludes
+dynamic tool results. We evaluate on DeepResearch Bench, a multi-turn agentic
+benchmark where agents autonomously execute real-world web search tool calls to
+answer complex research questions, measuring both API cost and time to first
+token (TTFT) across over 500 agent sessions with 10,000-token system prompts.
+Our results demonstrate that prompt caching reduces API costs by 41-80% and
+improves time to first token by 13-31% across providers. We find that strategic
+prompt cache block control, such as placing dynamic content at the end of the
+system prompt, avoiding dynamic traditional function calling, and excluding
+dynamic tool results, provides more consistent benefits than naive full-context
+caching, which can paradoxically increase latency. An ablation study across
+prompt sizes (500-50,000 tokens) and tool call counts (3-50) demonstrates
+universal linear cost and TTFT benefits, after the provider caching token
+minimum, and reveal provider-specific strategy discrepancies across variants. We
+provide nuanced discussion and guidance for implementing prompt caching in
+production agentic systems.
+

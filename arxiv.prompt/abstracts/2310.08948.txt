@@ -1,8 +1,33 @@
 Title: Federated Class-Incremental Learning with Prompting
-Authors: Xin Luo, Fang-Yi Liang, Jiale Liu, Yu-Wei Zhan, Zhen-Duo Chen, Xin-Shun Xu
+Authors: Xin Luo, Fang-Yi Liang, Jiale Liu, Yu-Wei Zhan, Zhen-Duo Chen, Xin-Shun
+Xu
 ID: 2310.08948
 URL: https://arxiv.org/abs/2310.08948
 
 Abstract:
-As Web technology continues to develop, it has become increasingly common to use data stored on different clients. At the same time, federated learning has received widespread attention due to its ability to protect data privacy when let models learn from data which is distributed across various clients. However, most existing works assume that the client's data are fixed. In real-world scenarios, such an assumption is most likely not true as data may be continuously generated and new classes may also appear. To this end, we focus on the practical and challenging federated class-incremental learning (FCIL) problem. For FCIL, the local and global models may suffer from catastrophic forgetting on old classes caused by the arrival of new classes and the data distributions of clients are non-independent and identically distributed (non-iid).
-  In this paper, we propose a novel method called Federated Class-Incremental Learning with PrompTing (FCILPT). Given the privacy and limited memory, FCILPT does not use a rehearsal-based buffer to keep exemplars of old data. We choose to use prompts to ease the catastrophic forgetting of the old classes. Specifically, we encode the task-relevant and task-irrelevant knowledge into prompts, preserving the old and new knowledge of the local clients and solving the problem of catastrophic forgetting. We first sort the task information in the prompt pool in the local clients to align the task information on different clients before global aggregation. It ensures that the same task's knowledge are fully integrated, solving the problem of non-iid caused by the lack of classes among different clients in the same incremental task. Experiments on CIFAR-100, Mini-ImageNet, and Tiny-ImageNet demonstrate that FCILPT achieves significant accuracy improvements over the state-of-the-art methods.
+As Web technology continues to develop, it has become increasingly common to use
+data stored on different clients. At the same time, federated learning has
+received widespread attention due to its ability to protect data privacy when
+let models learn from data which is distributed across various clients. However,
+most existing works assume that the client's data are fixed. In real-world
+scenarios, such an assumption is most likely not true as data may be
+continuously generated and new classes may also appear. To this end, we focus on
+the practical and challenging federated class-incremental learning (FCIL)
+problem. For FCIL, the local and global models may suffer from catastrophic
+forgetting on old classes caused by the arrival of new classes and the data
+distributions of clients are non-independent and identically distributed (non-
+iid).
+  In this paper, we propose a novel method called Federated Class-Incremental
+Learning with PrompTing (FCILPT). Given the privacy and limited memory, FCILPT
+does not use a rehearsal-based buffer to keep exemplars of old data. We choose
+to use prompts to ease the catastrophic forgetting of the old classes.
+Specifically, we encode the task-relevant and task-irrelevant knowledge into
+prompts, preserving the old and new knowledge of the local clients and solving
+the problem of catastrophic forgetting. We first sort the task information in
+the prompt pool in the local clients to align the task information on different
+clients before global aggregation. It ensures that the same task's knowledge are
+fully integrated, solving the problem of non-iid caused by the lack of classes
+among different clients in the same incremental task. Experiments on CIFAR-100,
+Mini-ImageNet, and Tiny-ImageNet demonstrate that FCILPT achieves significant
+accuracy improvements over the state-of-the-art methods.
+

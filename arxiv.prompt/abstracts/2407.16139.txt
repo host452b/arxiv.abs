@@ -1,7 +1,33 @@
-Title: Tackling Feature-Classifier Mismatch in Federated Learning via Prompt-Driven Feature Transformation
-Authors: Xinghao Wu, Jianwei Niu, Xuefeng Liu, Mingjia Shi, Guogang Zhu, Shaojie Tang
+Title: Tackling Feature-Classifier Mismatch in Federated Learning via Prompt-
+Driven Feature Transformation
+Authors: Xinghao Wu, Jianwei Niu, Xuefeng Liu, Mingjia Shi, Guogang Zhu, Shaojie
+Tang
 ID: 2407.16139
 URL: https://arxiv.org/abs/2407.16139
 
 Abstract:
-In traditional Federated Learning approaches like FedAvg, the global model underperforms when faced with data heterogeneity. Personalized Federated Learning (PFL) enables clients to train personalized models to fit their local data distribution better. However, we surprisingly find that the feature extractor in FedAvg is superior to those in most PFL methods. More interestingly, by applying a linear transformation on local features extracted by the feature extractor to align with the classifier, FedAvg can surpass the majority of PFL methods. This suggests that the primary cause of FedAvg's inadequate performance stems from the mismatch between the locally extracted features and the classifier. While current PFL methods mitigate this issue to some extent, their designs compromise the quality of the feature extractor, thus limiting the full potential of PFL. In this paper, we propose a new PFL framework called FedPFT to address the mismatch problem while enhancing the quality of the feature extractor. FedPFT integrates a feature transformation module, driven by personalized prompts, between the global feature extractor and classifier. In each round, clients first train prompts to transform local features to match the global classifier, followed by training model parameters. This approach can also align the training objectives of clients, reducing the impact of data heterogeneity on model collaboration. Moreover, FedPFT's feature transformation module is highly scalable, allowing for the use of different prompts to tailor local features to various tasks. Leveraging this, we introduce a collaborative contrastive learning task to further refine feature extractor quality. Our experiments demonstrate that FedPFT outperforms state-of-the-art methods by up to 7.08%.
+In traditional Federated Learning approaches like FedAvg, the global model
+underperforms when faced with data heterogeneity. Personalized Federated
+Learning (PFL) enables clients to train personalized models to fit their local
+data distribution better. However, we surprisingly find that the feature
+extractor in FedAvg is superior to those in most PFL methods. More
+interestingly, by applying a linear transformation on local features extracted
+by the feature extractor to align with the classifier, FedAvg can surpass the
+majority of PFL methods. This suggests that the primary cause of FedAvg's
+inadequate performance stems from the mismatch between the locally extracted
+features and the classifier. While current PFL methods mitigate this issue to
+some extent, their designs compromise the quality of the feature extractor, thus
+limiting the full potential of PFL. In this paper, we propose a new PFL
+framework called FedPFT to address the mismatch problem while enhancing the
+quality of the feature extractor. FedPFT integrates a feature transformation
+module, driven by personalized prompts, between the global feature extractor and
+classifier. In each round, clients first train prompts to transform local
+features to match the global classifier, followed by training model parameters.
+This approach can also align the training objectives of clients, reducing the
+impact of data heterogeneity on model collaboration. Moreover, FedPFT's feature
+transformation module is highly scalable, allowing for the use of different
+prompts to tailor local features to various tasks. Leveraging this, we introduce
+a collaborative contrastive learning task to further refine feature extractor
+quality. Our experiments demonstrate that FedPFT outperforms state-of-the-art
+methods by up to 7.08%.
+

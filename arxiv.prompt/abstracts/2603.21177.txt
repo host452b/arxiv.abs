@@ -1,7 +1,27 @@
-Title: Prompt replay: speeding up grpo with on-policy reuse of high-signal prompts
+Title: Prompt replay: speeding up grpo with on-policy reuse of high-signal
+prompts
 Authors: Andrei Baroian, Rutger Berger
 ID: 2603.21177
 URL: https://arxiv.org/abs/2603.21177
 
 Abstract:
-Reinforcement learning with verifiable rewards (RLVR) plays a crucial role in expanding the capacities of LLM reasoning, but GRPO-style training is dominated by expensive rollouts and wastes compute on unusable prompts. We propose Prompt Replay, an overhead-free online data selection method for GRPO that reuses prompts only (not trajectories), to preserve on-policy optimization. After each step, we insert prompts with medium difficulty into a buffer, and prioritize prompts closer to a pass rate of 0.5 (half answers correct, half wrong) to maximize the advantage, thus learning signal. Training batches are formed by mixing reused prompts with fresh samples, with cooldown steps and max reuse times controlling aggressiveness vs risk of overfitting. Across multiple model families (Llama-3.2- 3B, Qwen3-8B) and training datasets (Dolci, Polaris), evaluated using average accuracy on six standard math benchmarks, Prompt Replay reduces zero-variance prompts, increases mean absolute advantage and shows faster initial accuracy gains. Yet, it plateaus and converges with the baseline, as too aggressive configuration was used. The method is most efficient when the rollouts are the primary bottleneck and the dataset is difficult for the model. We additionally observe that Qwen2.5-Math can exhibit spurious-reward effects that invalidates ablations, raising a warning signal for using it as a sole testbed for GRPO method research.
+Reinforcement learning with verifiable rewards (RLVR) plays a crucial role in
+expanding the capacities of LLM reasoning, but GRPO-style training is dominated
+by expensive rollouts and wastes compute on unusable prompts. We propose Prompt
+Replay, an overhead-free online data selection method for GRPO that reuses
+prompts only (not trajectories), to preserve on-policy optimization. After each
+step, we insert prompts with medium difficulty into a buffer, and prioritize
+prompts closer to a pass rate of 0.5 (half answers correct, half wrong) to
+maximize the advantage, thus learning signal. Training batches are formed by
+mixing reused prompts with fresh samples, with cooldown steps and max reuse
+times controlling aggressiveness vs risk of overfitting. Across multiple model
+families (Llama-3.2- 3B, Qwen3-8B) and training datasets (Dolci, Polaris),
+evaluated using average accuracy on six standard math benchmarks, Prompt Replay
+reduces zero-variance prompts, increases mean absolute advantage and shows
+faster initial accuracy gains. Yet, it plateaus and converges with the baseline,
+as too aggressive configuration was used. The method is most efficient when the
+rollouts are the primary bottleneck and the dataset is difficult for the model.
+We additionally observe that Qwen2.5-Math can exhibit spurious-reward effects
+that invalidates ablations, raising a warning signal for using it as a sole
+testbed for GRPO method research.
+
