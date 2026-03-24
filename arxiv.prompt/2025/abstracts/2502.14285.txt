@@ -1,0 +1,30 @@
+Title: Vulnerability of Text-to-Image Models to Prompt Template Stealing: A
+Differential Evolution Approach
+Authors: Yurong Wu, Fangwen Mu, Qiuhong Zhang, Jinjing Zhao, Xinrun Xu, Lingrui
+Mei, Yang Wu, Lin Shi, Junjie Wang, Zhiming Ding, Yiwei Wang
+ID: 2502.14285
+URL: https://arxiv.org/abs/2502.14285
+
+Abstract:
+Prompt trading has emerged as a significant intellectual property concern in
+recent years, where vendors entice users by showcasing sample images before
+selling prompt templates that can generate similar images. This work
+investigates a critical security vulnerability: attackers can steal prompt
+templates using only a limited number of sample images. To investigate this
+threat, we introduce Prism, a prompt-stealing benchmark consisting of 50
+templates and 450 images, organized into Easy and Hard difficulty levels. To
+identify the vulnerabity of VLMs to prompt stealing, we propose EvoStealer, a
+novel template stealing method that operates without model fine-tuning by
+leveraging differential evolution algorithms. The system first initializes
+population sets using multimodal large language models (MLLMs) based on
+predefined patterns, then iteratively generates enhanced offspring through
+MLLMs. During evolution, EvoStealer identifies common features across offspring
+to derive generalized templates. Our comprehensive evaluation conducted across
+open-source (INTERNVL2-26B) and closed-source models (GPT-4o and GPT-4o-mini)
+demonstrates that EvoStealer's stolen templates can reproduce images highly
+similar to originals and effectively generalize to other subjects, significantly
+outperforming baseline methods with an average improvement of over 10%.
+Moreover, our cost analysis reveals that EvoStealer achieves template stealing
+with negligible computational expenses. Our code and dataset are available at
+https://github.com/whitepagewu/evostealer.
+

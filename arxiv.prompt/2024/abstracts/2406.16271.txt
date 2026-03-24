@@ -1,0 +1,32 @@
+Title: Feature-prompting GBMSeg: One-Shot Reference Guided Training-Free Prompt
+Engineering for Glomerular Basement Membrane Segmentation
+Authors: Xueyu Liu, Guangze Shi, Rui Wang, Yexin Lai, Jianan Zhang, Lele Sun,
+Quan Yang, Yongfei Wu, MIng Li, Weixia Han, Wen Zheng
+ID: 2406.16271
+URL: https://arxiv.org/abs/2406.16271
+
+Abstract:
+Assessment of the glomerular basement membrane (GBM) in transmission electron
+microscopy (TEM) is crucial for diagnosing chronic kidney disease (CKD). The
+lack of domain-independent automatic segmentation tools for the GBM necessitates
+an AI-based solution to automate the process. In this study, we introduce
+GBMSeg, a training-free framework designed to automatically segment the GBM in
+TEM images guided only by a one-shot annotated reference. Specifically, GBMSeg
+first exploits the robust feature matching capabilities of the pretrained
+foundation model to generate initial prompt points, then introduces a series of
+novel automatic prompt engineering techniques across the feature and physical
+space to optimize the prompt scheme. Finally, GBMSeg employs a class-agnostic
+foundation segmentation model with the generated prompt scheme to obtain
+accurate segmentation results. Experimental results on our collected 2538 TEM
+images confirm that GBMSeg achieves superior segmentation performance with a
+Dice similarity coefficient (DSC) of 87.27% using only one labeled reference
+image in a training-free manner, outperforming recently proposed one-shot or
+few-shot methods. In summary, GBMSeg introduces a distinctive automatic prompt
+framework that facilitates robust domain-independent segmentation performance
+without training, particularly advancing the automatic prompting of foundation
+segmentation models for medical images. Future work involves automating the
+thickness measurement of segmented GBM and quantifying pathological indicators,
+holding significant potential for advancing pathology assessments in clinical
+applications. The source code is available on
+https://github.com/SnowRain510/GBMSeg
+

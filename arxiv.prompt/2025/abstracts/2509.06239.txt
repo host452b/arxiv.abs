@@ -1,0 +1,30 @@
+Title: Proof2Silicon: Prompt Repair for Verified Code and Hardware Generation
+via Reinforcement Learning
+Authors: Manvi Jha, Jiaxin Wan, Deming Chen
+ID: 2509.06239
+URL: https://arxiv.org/abs/2509.06239
+
+Abstract:
+Large Language Models (LLMs) have demonstrated impressive capabilities in
+automated code generation but frequently produce code that fails formal
+verification, an essential requirement for hardware and safety-critical domains.
+To overcome this fundamental limitation, we previously proposed PREFACE, a
+model-agnostic framework based on reinforcement learning (RL) that iteratively
+repairs the prompts provided to frozen LLMs, systematically steering them toward
+generating formally verifiable Dafny code without costly fine-tuning. This work
+presents Proof2Silicon, a novel end-to-end synthesis framework that embeds the
+previously proposed PREFACE flow to enable the generation of correctness-by-
+construction hardware directly from natural language specifications.
+Proof2Silicon operates by: (1) leveraging PREFACE's verifier-driven RL agent to
+optimize prompt generation iteratively, ensuring Dafny code correctness; (2)
+automatically translating verified Dafny programs into synthesizable high-level
+C using Dafny's Python backend and PyLog; and (3) employing Vivado HLS to
+produce RTL implementations. Evaluated rigorously on a challenging 100-task
+benchmark, PREFACE's RL-guided prompt optimization consistently improved Dafny
+verification success rates across diverse LLMs by up to 21%. Crucially,
+Proof2Silicon achieved an end-to-end hardware synthesis success rate of up to
+72%, generating RTL designs through Vivado HLS synthesis flows. These results
+demonstrate a robust, scalable, and automated pipeline for LLM-driven, formally
+verified hardware synthesis, bridging natural-language specification and silicon
+realization.
+

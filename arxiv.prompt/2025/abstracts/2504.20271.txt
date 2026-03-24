@@ -1,0 +1,31 @@
+Title: Investigating task-specific prompts and sparse autoencoders for
+activation monitoring
+Authors: Henk Tillman, Dan Mossing
+ID: 2504.20271
+URL: https://arxiv.org/abs/2504.20271
+
+Abstract:
+Language models can behave in unexpected and unsafe ways, and so it is valuable
+to monitor their outputs. Internal activations of language models encode
+additional information that could be useful for this. The baseline approach for
+activation monitoring is some variation of linear probing on a particular layer:
+starting from a labeled dataset, train a logistic regression classifier on that
+layer's activations. Recent work has proposed several approaches which may
+improve on naive linear probing, by leveraging additional computation. One class
+of techniques, which we call "prompted probing," leverages test time computation
+to improve monitoring by (1) prompting the model with a description of the
+monitoring task, and (2) applying a learned linear probe to resulting
+activations. Another class of techniques uses computation at train time:
+training sparse autoencoders offline to identify an interpretable basis for the
+activations, and e.g. max-pooling activations across tokens using that basis
+before applying a linear probe. However, one can also prompt the model with a
+description of the monitoring task and use its output directly. We develop and
+test novel refinements of these methods and compare them against each other. We
+find asking the model zero-shot is a reasonable baseline when inference-time
+compute is not limited; however, activation probing methods can substantially
+outperform this baseline given sufficient training data. Specifically, we
+recommend prompted probing when inference-time compute is available, due to its
+superior data efficiency and good generalization performance. Alternatively, if
+inference-time compute is limited, we find SAE-based probing methods outperform
+raw activation probing.
+

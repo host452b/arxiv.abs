@@ -1,0 +1,20 @@
+Title: Finch: Prompt-guided Key-Value Cache Compression
+Authors: Giulio Corallo, Paolo Papotti
+ID: 2408.00167
+URL: https://arxiv.org/abs/2408.00167
+
+Abstract:
+Recent large language model applications, such as Retrieval-Augmented Generation
+and chatbots, have led to an increased need to process longer input contexts.
+However, this requirement is hampered by inherent limitations. Architecturally,
+models are constrained by a context window defined during training.
+Additionally, processing extensive texts requires substantial GPU memory. We
+propose a novel approach, Finch, to compress the input context by leveraging the
+pre-trained model weights of the self-attention. Given a prompt and a long text,
+Finch iteratively identifies the most relevant Key (K) and Value (V) pairs over
+chunks of the text conditioned on the prompt. Only such pairs are stored in the
+KV cache, which, within the space constrained by the context window, ultimately
+contains a compressed version of the long text. Our proposal enables models to
+consume large inputs even with high compression (up to 93x) while preserving
+semantic integrity without the need for fine-tuning.
+

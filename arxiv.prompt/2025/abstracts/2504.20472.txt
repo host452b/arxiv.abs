@@ -1,0 +1,33 @@
+Title: Robustness via Referencing: Defending against Prompt Injection Attacks by
+Referencing the Executed Instruction
+Authors: Yulin Chen, Haoran Li, Yuan Sui, Yue Liu, Yufei He, Yangqiu Song, Bryan
+Hooi
+ID: 2504.20472
+URL: https://arxiv.org/abs/2504.20472
+
+Abstract:
+Large language models (LLMs) have demonstrated impressive performance and have
+come to dominate the field of natural language processing (NLP) across various
+tasks. However, due to their strong instruction-following capabilities and
+inability to distinguish between instructions and data content, LLMs are
+vulnerable to prompt injection attacks. These attacks manipulate LLMs into
+deviating from the original input instructions and executing maliciously
+injected instructions within data content, such as web documents retrieved from
+search engines. Existing defense methods, including prompt-engineering and fine-
+tuning approaches, typically instruct models to follow the original input
+instructions while suppressing their tendencies to execute injected
+instructions. However, our experiments reveal that suppressing instruction-
+following tendencies is challenging. Through analyzing failure cases, we observe
+that although LLMs tend to respond to any recognized instructions, they are
+aware of which specific instructions they are executing and can correctly
+reference them within the original prompt. Motivated by these findings, we
+propose a novel defense method that leverages, rather than suppresses, the
+instruction-following abilities of LLMs. Our approach prompts LLMs to generate
+responses that include both answers and their corresponding instruction
+references. Based on these references, we filter out answers not associated with
+the original input instructions. Comprehensive experiments demonstrate that our
+method outperforms prompt-engineering baselines and achieves performance
+comparable to fine-tuning methods, reducing the attack success rate (ASR) to 0
+percent in some scenarios. Moreover, our approach has minimal impact on overall
+utility.
+

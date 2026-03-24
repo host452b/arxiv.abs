@@ -1,0 +1,25 @@
+Title: Anti-adversarial Learning: Desensitizing Prompts for Large Language
+Models
+Authors: Xuan Li, Zhe Yin, Xiaodong Gu, Beijun Shen
+ID: 2505.01273
+URL: https://arxiv.org/abs/2505.01273
+
+Abstract:
+With the widespread use of LLMs, preserving privacy in user prompts has become
+crucial, as prompts risk exposing privacy and sensitive data to the cloud LLMs.
+Traditional techniques like homomorphic encryption, secure multi-party
+computation, and federated learning face challenges due to heavy computational
+costs and user participation requirements, limiting their applicability in LLM
+scenarios. In this paper, we propose PromptObfus, a novel method for
+desensitizing LLM prompts. The core idea of PromptObfus is "anti-adversarial"
+learning, which perturbs privacy words in the prompt to obscure sensitive
+information while retaining the stability of model predictions. Specifically,
+PromptObfus frames prompt desensitization as a masked language modeling task,
+replacing privacy-sensitive terms with a [MASK] token. A desensitization model
+is trained to generate candidate replacements for each masked position. These
+candidates are subsequently selected based on gradient feedback from a surrogate
+model, ensuring minimal disruption to the task output. We demonstrate the
+effectiveness of our approach on three NLP tasks. Results show that PromptObfus
+effectively prevents privacy inference from remote LLMs while preserving task
+performance.
+

@@ -1,0 +1,26 @@
+Title: Generalizable Object Re-Identification via Visual In-Context Prompting
+Authors: Zhizhong Huang, Xiaoming Liu
+ID: 2508.21222
+URL: https://arxiv.org/abs/2508.21222
+
+Abstract:
+Current object re-identification (ReID) methods train domain-specific models
+(e.g., for persons or vehicles), which lack generalization and demand costly
+labeled data for new categories. While self-supervised learning reduces
+annotation needs by learning instance-wise invariance, it struggles to capture
+\textit{identity-sensitive} features critical for ReID. This paper proposes
+Visual In-Context Prompting~(VICP), a novel framework where models trained on
+seen categories can directly generalize to unseen novel categories using only
+\textit{in-context examples} as prompts, without requiring parameter adaptation.
+VICP synergizes LLMs and vision foundation models~(VFM): LLMs infer semantic
+identity rules from few-shot positive/negative pairs through task-specific
+prompting, which then guides a VFM (\eg, DINO) to extract ID-discriminative
+features via \textit{dynamic visual prompts}. By aligning LLM-derived semantic
+concepts with the VFM's pre-trained prior, VICP enables generalization to novel
+categories, eliminating the need for dataset-specific retraining. To support
+evaluation, we introduce ShopID10K, a dataset of 10K object instances from
+e-commerce platforms, featuring multi-view images and cross-domain testing.
+Experiments on ShopID10K and diverse ReID benchmarks demonstrate that VICP
+outperforms baselines by a clear margin on unseen categories. Code is available
+at https://github.com/Hzzone/VICP.
+

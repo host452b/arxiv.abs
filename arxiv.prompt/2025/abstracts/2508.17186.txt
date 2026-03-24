@@ -1,0 +1,34 @@
+Title: Advancing Weakly-Supervised Change Detection in Satellite Images via
+Adversarial Class Prompting
+Authors: Zhenghui Zhao, Chen Wu, Di Wang, Hongruixuan Chen, Cuiqun Chen, Zhuo
+Zheng, Bo Du, Liangpei Zhang
+ID: 2508.17186
+URL: https://arxiv.org/abs/2508.17186
+
+Abstract:
+Weakly-Supervised Change Detection (WSCD) aims to distinguish specific object
+changes (e.g., objects appearing or disappearing) from background variations
+(e.g., environmental changes due to light, weather, or seasonal shifts) in
+paired satellite images, relying only on paired image (i.e., image-level)
+classification labels. This technique significantly reduces the need for dense
+annotations required in fully-supervised change detection. However, as image-
+level supervision only indicates whether objects have changed in a scene, WSCD
+methods often misclassify background variations as object changes, especially in
+complex remote-sensing scenarios. In this work, we propose an Adversarial Class
+Prompting (AdvCP) method to address this co-occurring noise problem, including
+two phases: a) Adversarial Prompt Mining: After each training iteration, we
+introduce adversarial prompting perturbations, using incorrect one-hot image-
+level labels to activate erroneous feature mappings. This process reveals co-
+occurring adversarial samples under weak supervision, namely background
+variation features that are likely to be misclassified as object changes. b)
+Adversarial Sample Rectification: We integrate these adversarially prompt-
+activated pixel samples into training by constructing an online global
+prototype. This prototype is built from an exponentially weighted moving average
+of the current batch and all historical training data. Our AdvCP can be
+seamlessly integrated into current WSCD methods without adding additional
+inference cost. Experiments on ConvNet, Transformer, and Segment Anything Model
+(SAM)-based baselines demonstrate significant performance enhancements.
+Furthermore, we demonstrate the generalizability of AdvCP to other multi-class
+weakly-supervised dense prediction scenarios. Code is available at
+https://github.com/zhenghuizhao/AdvCP
+

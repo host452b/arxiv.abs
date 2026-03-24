@@ -1,0 +1,29 @@
+Title: CoPS: Conditional Prompt Synthesis for Zero-Shot Anomaly Detection
+Authors: Qiyu Chen, Zhen Qu, Wei Luo, Haiming Yao, Yunkang Cao, Yuxin Jiang,
+Yinan Duan, Huiyuan Luo, Chengkan Lv, Zhengtao Zhang
+ID: 2508.03447
+URL: https://arxiv.org/abs/2508.03447
+
+Abstract:
+Recently, large pre-trained vision-language models have shown remarkable
+performance in zero-shot anomaly detection (ZSAD). With fine-tuning on a single
+auxiliary dataset, the model enables cross-category anomaly detection on diverse
+datasets covering industrial defects and medical lesions. Compared to manually
+designed prompts, prompt learning eliminates the need for expert knowledge and
+trial-and-error. However, it still faces the following challenges: (i) static
+learnable tokens struggle to capture the continuous and diverse patterns of
+normal and anomalous states, limiting generalization to unseen categories; (ii)
+fixed textual labels provide overly sparse category information, making the
+model prone to overfitting to a specific semantic subspace. To address these
+issues, we propose Conditional Prompt Synthesis (CoPS), a novel framework that
+synthesizes dynamic prompts conditioned on visual features to enhance ZSAD
+performance. Specifically, we extract representative normal and anomaly
+prototypes from fine-grained patch features and explicitly inject them into
+prompts, enabling adaptive state modeling. Given the sparsity of class labels,
+we leverage a variational autoencoder to model semantic image features and
+implicitly fuse varied class tokens into prompts. Additionally, integrated with
+our spatially-aware alignment mechanism, extensive experiments demonstrate that
+CoPS surpasses state-of-the-art methods by 2.5% AUROC in both classification and
+segmentation across 13 industrial and medical datasets. Code will be available
+at https://github.com/cqylunlun/CoPS.
+

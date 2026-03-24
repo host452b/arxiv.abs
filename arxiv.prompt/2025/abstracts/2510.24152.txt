@@ -1,0 +1,25 @@
+Title: Enhancing Vision-Language Models for Autonomous Driving through Task-
+Specific Prompting and Spatial Reasoning
+Authors: Aodi Wu, Xubo Luo
+ID: 2510.24152
+URL: https://arxiv.org/abs/2510.24152
+
+Abstract:
+This technical report presents our solution for the RoboSense Challenge at IROS
+2025, which evaluates Vision-Language Models (VLMs) on autonomous driving scene
+understanding across perception, prediction, planning, and corruption detection
+tasks. We propose a systematic framework built on four core components. First, a
+Mixture-of-Prompts router classifies questions and dispatches them to task-
+specific expert prompts, eliminating interference across diverse question types.
+Second, task-specific prompts embed explicit coordinate systems, spatial
+reasoning rules, role-playing, Chain-of-Thought/Tree-of-Thought reasoning, and
+few-shot examples tailored to each task. Third, a visual assembly module
+composes multi-view images with object crops, magenta markers, and adaptive
+historical frames based on question requirements. Fourth, we configure model
+inference parameters (temperature, top-p, message roles) per task to optimize
+output quality. Implemented on Qwen2.5-VL-72B, our approach achieves 70.87%
+average accuracy on Phase-1 (clean data) and 72.85% on Phase-2 (corrupted data),
+demonstrating that structured prompting and spatial grounding substantially
+enhance VLM performance on safety-critical autonomous driving tasks. Code and
+prompt are available at https://github.com/wuaodi/UCAS-CSU-phase2.
+

@@ -1,0 +1,28 @@
+Title: Detect Anything in Real Time: From Single-Prompt Segmentation to Multi-
+Class Detection
+Authors: Mehmet Kerem Turkcan
+ID: 2603.11441
+URL: https://arxiv.org/abs/2603.11441
+
+Abstract:
+Recent advances in vision-language modeling have produced promptable detection
+and segmentation systems that accept arbitrary natural language queries at
+inference time. Among these, SAM3 achieves state-of-the-art accuracy by
+combining a ViT-H/14 backbone with cross-modal transformer decoding and learned
+object queries. However, SAM3 processes a single text prompt per forward pass.
+Detecting N categories requires N independent executions, each dominated by the
+439M-parameter backbone. We present Detect Anything in Real Time (DART), a
+training-free framework that converts SAM3 into a real-time multi-class detector
+by exploiting a structural invariant: the visual backbone is class-agnostic,
+producing image features independent of the text prompt. This allows the
+backbone computation to be shared between all classes, reducing its cost from
+O(N) to O(1). Combined with batched multi-class decoding, detection-only
+inference, and TensorRT FP16 deployment, these optimizations yield 5.6x
+cumulative speedup at 3 classes, scaling to 25x at 80 classes, without modifying
+any model weight. On COCO val2017 (5,000 images, 80 classes), DART achieves 55.8
+AP at 15.8 FPS (4 classes, 1008x1008) on a single RTX 4080, surpassing purpose-
+built open-vocabulary detectors trained on millions of box annotations. For
+extreme latency targets, adapter distillation with a frozen encoder-decoder
+achieves 38.7 AP with a 13.9 ms backbone. Code and models are available at
+https://github.com/mkturkcan/DART.
+

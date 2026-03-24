@@ -1,0 +1,33 @@
+Title: MMLoP: Multi-Modal Low-Rank Prompting for Efficient Vision-Language
+Adaptation
+Authors: Sajjad Ghiasvand, Haniyeh Ehsani Oskouie, Mahnoosh Alizadeh, Ramtin
+Pedarsani
+ID: 2602.21397
+URL: https://arxiv.org/abs/2602.21397
+
+Abstract:
+Prompt learning has become a dominant paradigm for adapting vision-language
+models (VLMs) such as CLIP to downstream tasks without modifying pretrained
+weights. While extending prompts to both vision and text encoders across
+multiple transformer layers significantly boosts performance, it dramatically
+increases the number of trainable parameters, with state-of-the-art methods
+requiring millions of parameters and abandoning the parameter efficiency that
+makes prompt tuning attractive. In this work, we propose \textbf{MMLoP}
+(\textbf{M}ulti-\textbf{M}odal \textbf{Lo}w-Rank \textbf{P}rompting), a
+framework that achieves deep multi-modal prompting with only \textbf{11.5K
+trainable parameters}, comparable to early text-only methods like CoOp. MMLoP
+parameterizes vision and text prompts at each transformer layer through a low-
+rank factorization, which serves as an implicit regularizer against overfitting
+on few-shot training data. To further close the accuracy gap with state-of-the-
+art methods, we introduce three complementary components: a self-regulating
+consistency loss that anchors prompted representations to frozen zero-shot CLIP
+features at both the feature and logit levels, a uniform drift correction that
+removes the global embedding shift induced by prompt tuning to preserve class-
+discriminative structure, and a shared up-projection that couples vision and
+text prompts through a common low-rank factor to enforce cross-modal alignment.
+Extensive experiments across three benchmarks and 11 diverse datasets
+demonstrate that MMLoP achieves a highly favorable accuracy-efficiency tradeoff,
+outperforming the majority of existing methods including those with orders of
+magnitude more parameters, while achieving a harmonic mean of 79.70\% on base-
+to-novel generalization.
+

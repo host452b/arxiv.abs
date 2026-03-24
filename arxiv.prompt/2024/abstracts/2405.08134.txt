@@ -1,0 +1,32 @@
+Title: Many-Shot Regurgitation (MSR) Prompting
+Authors: Shashank Sonkar, Richard G. Baraniuk
+ID: 2405.08134
+URL: https://arxiv.org/abs/2405.08134
+
+Abstract:
+We introduce Many-Shot Regurgitation (MSR) prompting, a new black-box membership
+inference attack framework for examining verbatim content reproduction in large
+language models (LLMs). MSR prompting involves dividing the input text into
+multiple segments and creating a single prompt that includes a series of faux
+conversation rounds between a user and a language model to elicit verbatim
+regurgitation. We apply MSR prompting to diverse text sources, including
+Wikipedia articles and open educational resources (OER) textbooks, which provide
+high-quality, factual content and are continuously updated over time. For each
+source, we curate two dataset types: one that LLMs were likely exposed to during
+training ($D_{\rm pre}$) and another consisting of documents published after the
+models' training cutoff dates ($D_{\rm post}$). To quantify the occurrence of
+verbatim matches, we employ the Longest Common Substring algorithm and count the
+frequency of matches at different length thresholds. We then use statistical
+measures such as Cliff's delta, Kolmogorov-Smirnov (KS) distance, and Kruskal-
+Wallis H test to determine whether the distribution of verbatim matches differs
+significantly between $D_{\rm pre}$ and $D_{\rm post}$. Our findings reveal a
+striking difference in the distribution of verbatim matches between $D_{\rm
+pre}$ and $D_{\rm post}$, with the frequency of verbatim reproduction being
+significantly higher when LLMs (e.g. GPT models and LLaMAs) are prompted with
+text from datasets they were likely trained on. For instance, when using GPT-3.5
+on Wikipedia articles, we observe a substantial effect size (Cliff's delta $=
+-0.984$) and a large KS distance ($0.875$) between the distributions of $D_{\rm
+pre}$ and $D_{\rm post}$. Our results provide compelling evidence that LLMs are
+more prone to reproducing verbatim content when the input text is likely sourced
+from their training data.
+

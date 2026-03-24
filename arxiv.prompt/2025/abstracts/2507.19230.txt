@@ -1,0 +1,26 @@
+Title: Unstable Prompts, Unreliable Segmentations: A Challenge for Longitudinal
+Lesion Analysis
+Authors: Niels Rocholl, Ewoud Smit, Mathias Prokop, Alessa Hering
+ID: 2507.19230
+URL: https://arxiv.org/abs/2507.19230
+
+Abstract:
+Longitudinal lesion analysis is crucial for oncological care, yet automated
+tools often struggle with temporal consistency. While universal lesion
+segmentation models have advanced, they are typically designed for single time
+points. This paper investigates the performance of the ULS23 segmentation model
+in a longitudinal context. Using a public clinical dataset of baseline and
+follow-up CT scans, we evaluated the model's ability to segment and track
+lesions over time. We identified two critical, interconnected failure modes: a
+sharp degradation in segmentation quality in follow-up cases due to inter-scan
+registration errors, and a subsequent breakdown of the lesion correspondence
+process. To systematically probe this vulnerability, we conducted a controlled
+experiment where we artificially displaced the input volume relative to the true
+lesion center. Our results demonstrate that the model's performance is highly
+dependent on its assumption of a centered lesion; segmentation accuracy
+collapses when the lesion is sufficiently displaced. These findings reveal a
+fundamental limitation of applying single-timepoint models to longitudinal data.
+We conclude that robust oncological tracking requires a paradigm shift away from
+cascading single-purpose tools towards integrated, end-to-end models inherently
+designed for temporal analysis.
+

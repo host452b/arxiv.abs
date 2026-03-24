@@ -1,0 +1,28 @@
+Title: Finding Highly Interpretable Prompt-Specific Circuits in Language Models
+Authors: Gabriel Franco, Lucas M. Tassis, Azalea Rohr, Mark Crovella
+ID: 2602.13483
+URL: https://arxiv.org/abs/2602.13483
+
+Abstract:
+Understanding the internal circuits that language models use to solve tasks
+remains a central challenge in mechanistic interpretability. Most prior work
+identifies circuits at the task level by averaging across many prompts,
+implicitly assuming a single stable mechanism per task. We show that this
+assumption can obscure a crucial source of structure: circuits are prompt-
+specific, even within a fixed task. Building on attention causal communication
+(ACC) (Franco & Crovella, 2025), we introduce ACC++, refinements that extract
+cleaner, lower-dimensional causal signals inside attention heads from a single
+forward pass. Like ACC, our approach does not require replacement models (e.g.,
+SAEs) or activation patching; ACC++ further improves circuit precision by
+reducing attribution noise. Applying ACC++ to indirect object identification
+(IOI) in GPT-2, Pythia, and Gemma 2, we find there is no single circuit for IOI
+in any model: different prompt templates induce systematically different
+mechanisms. Despite this variation, prompts cluster into prompt families with
+similar circuits, and we propose a representative circuit for each family as a
+practical unit of analysis. Finally, we develop an automated interpretability
+pipeline that uses ACC++ signals to surface human-interpretable features and
+assemble mechanistic explanations for prompt families behavior. Together, our
+results recast circuits as a meaningful object of study by shifting the unit of
+analysis from tasks to prompts, enabling scalable circuit descriptions in the
+presence of prompt-specific mechanisms.
+

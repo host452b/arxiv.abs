@@ -1,0 +1,27 @@
+Title: Prompt Sliders for Fine-Grained Control, Editing and Erasing of Concepts
+in Diffusion Models
+Authors: Deepak Sridhar, Nuno Vasconcelos
+ID: 2409.16535
+URL: https://arxiv.org/abs/2409.16535
+
+Abstract:
+Diffusion models have recently surpassed GANs in image synthesis and editing,
+offering superior image quality and diversity. However, achieving precise
+control over attributes in generated images remains a challenge. Concept Sliders
+introduced a method for fine-grained image control and editing by learning
+concepts (attributes/objects). However, this approach adds parameters and
+increases inference time due to the loading and unloading of Low-Rank Adapters
+(LoRAs) used for learning concepts. These adapters are model-specific and
+require retraining for different architectures, such as Stable Diffusion (SD)
+v1.5 and SD-XL. In this paper, we propose a straightforward textual inversion
+method to learn concepts through text embeddings, which are generalizable across
+models that share the same text encoder, including different versions of the SD
+model. We refer to our method as Prompt Sliders. Besides learning new concepts,
+we also show that Prompt Sliders can be used to erase undesirable concepts such
+as artistic styles or mature content. Our method is 30% faster than using LoRAs
+because it eliminates the need to load and unload adapters and introduces no
+additional parameters aside from the target concept text embedding. Each concept
+embedding only requires 3KB of storage compared to the 8922KB or more required
+for each LoRA adapter, making our approach more computationally efficient.
+Project Page: https://deepaksridhar.github.io/promptsliders.github.io/
+

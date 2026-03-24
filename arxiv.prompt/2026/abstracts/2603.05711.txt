@@ -1,0 +1,28 @@
+Title: Any to Full: Prompting Depth Anything for Depth Completion in One Stage
+Authors: Zhiyuan Zhou, Ruofeng Liu, Taichi Liu, Weijian Zuo, Shanshan Wang,
+Zhiqing Hong, Desheng Zhang
+ID: 2603.05711
+URL: https://arxiv.org/abs/2603.05711
+
+Abstract:
+Accurate, dense depth estimation is crucial for robotic perception, but
+commodity sensors often yield sparse or incomplete measurements due to hardware
+limitations. Existing RGBD-fused depth completion methods learn priors jointly
+conditioned on training RGB distribution and specific depth patterns, limiting
+domain generalization and robustness to various depth patterns. Recent efforts
+leverage monocular depth estimation (MDE) models to introduce domain-general
+geometric priors, but current two-stage integration strategies relying on
+explicit relative-to-metric alignment incur additional computation and introduce
+structured distortions. To this end, we present Any2Full, a one-stage, domain-
+general, and pattern-agnostic framework that reformulates completion as a scale-
+prompting adaptation of a pretrained MDE model. To address varying depth
+sparsity levels and irregular spatial distributions, we design a Scale-Aware
+Prompt Encoder. It distills scale cues from sparse inputs into unified scale
+prompts, guiding the MDE model toward globally scale-consistent predictions
+while preserving its geometric priors. Extensive experiments demonstrate that
+Any2Full achieves superior robustness and efficiency. It outperforms OMNI-DC by
+32.2\% in average AbsREL and delivers a 1.4$\times$ speedup over PriorDA with
+the same MDE backbone, establishing a new paradigm for universal depth
+completion. Codes and checkpoints are available at
+https://github.com/zhiyuandaily/Any2Full.
+

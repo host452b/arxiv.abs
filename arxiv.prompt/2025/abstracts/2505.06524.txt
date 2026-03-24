@@ -1,0 +1,30 @@
+Title: Causal Prompt Calibration Guided Segment Anything Model for Open-
+Vocabulary Multi-Entity Segmentation
+Authors: Jingyao Wang, Jianqi Zhang, Wenwen Qiang, Changwen Zheng
+ID: 2505.06524
+URL: https://arxiv.org/abs/2505.06524
+
+Abstract:
+Despite the strength of the Segment Anything Model (SAM), it struggles with
+generalization issues in open-vocabulary multi-entity segmentation (OVMS).
+Through empirical and causal analyses, we find that (i) the prompt bias is the
+primary cause of the generalization issues; (ii) this bias is closely tied to
+the task-irrelevant generating factors within the prompts, which act as
+confounders and affect generalization. To address the generalization issues, we
+aim to propose a method that can calibrate prompts to eliminate confounders for
+accurate OVMS. Building upon the causal analysis, we propose that the optimal
+prompt for OVMS should contain only task-relevant causal factors. We define it
+as the causal prompt, serving as the goal of calibration. Next, our theoretical
+analysis, grounded by causal multi-distribution consistency theory, proves that
+this prompt can be obtained by enforcing segmentation consistency and
+optimality. Inspired by this, we propose CPC-SAM, a Causal Prompt Calibration
+method for SAM to achieve accurate OVMS. It integrates a lightweight causal
+prompt learner (CaPL) into SAM to obtain causal prompts. Specifically, we first
+generate multiple prompts using random annotations to simulate diverse
+distributions and then reweight them via CaPL by enforcing causal multi-
+distribution consistency in both task and entity levels. To ensure obtaining
+causal prompts, CaPL is optimized by minimizing the cumulative segmentation loss
+across the reweighted prompts to achieve consistency and optimality. A bi-level
+optimization strategy alternates between optimizing CaPL and SAM, ensuring
+accurate OVMS. Extensive experiments validate its superiority.
+

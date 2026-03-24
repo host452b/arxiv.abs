@@ -1,0 +1,29 @@
+Title: AdvQDet: Detecting Query-Based Adversarial Attacks with Adversarial
+Contrastive Prompt Tuning
+Authors: Xin Wang, Kai Chen, Xingjun Ma, Zhineng Chen, Jingjing Chen, Yu-Gang
+Jiang
+ID: 2408.01978
+URL: https://arxiv.org/abs/2408.01978
+
+Abstract:
+Deep neural networks (DNNs) are known to be vulnerable to adversarial attacks
+even under a black-box setting where the adversary can only query the model.
+Particularly, query-based black-box adversarial attacks estimate adversarial
+gradients based on the returned probability vectors of the target model for a
+sequence of queries. During this process, the queries made to the target model
+are intermediate adversarial examples crafted at the previous attack step, which
+share high similarities in the pixel space. Motivated by this observation,
+stateful detection methods have been proposed to detect and reject query-based
+attacks. While demonstrating promising results, these methods either have been
+evaded by more advanced attacks or suffer from low efficiency in terms of the
+number of shots (queries) required to detect different attacks. Arguably, the
+key challenge here is to assign high similarity scores for any two intermediate
+adversarial examples perturbed from the same clean image. To address this
+challenge, we propose a novel Adversarial Contrastive Prompt Tuning (ACPT)
+method to robustly fine-tune the CLIP image encoder to extract similar
+embeddings for any two intermediate adversarial queries. With ACPT, we further
+introduce a detection framework AdvQDet that can detect 7 state-of-the-art
+query-based attacks with $>99\%$ detection rate within 5 shots. We also show
+that ACPT is robust to 3 types of adaptive attacks. Code is available at
+https://github.com/xinwong/AdvQDet.
+

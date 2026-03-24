@@ -1,0 +1,34 @@
+Title: Are We SOLID Yet? An Empirical Study on Prompting LLMs to Detect Design
+Principle Violations
+Authors: Fatih Pehlivan, Arçin Ülkü Ergüzen, Sahand Moslemi Yengejeh, Mayasah
+Lami, Anil Koyuncu
+ID: 2509.03093
+URL: https://arxiv.org/abs/2509.03093
+
+Abstract:
+Traditional static analysis methods struggle to detect semantic design flaws,
+such as violations of the SOLID principles, which require a strong understanding
+of object-oriented design patterns and principles. Existing solutions typically
+focus on individual SOLID principles or specific programming languages, leaving
+a gap in the ability to detect violations across all five principles in multi-
+language codebases. This paper presents a new approach: a methodology that
+leverages tailored prompt engineering to assess LLMs on their ability to detect
+SOLID violations across multiple languages. We present a benchmark of four
+leading LLMs-CodeLlama, DeepSeekCoder, QwenCoder, and GPT-4o Mini-on their
+ability to detect violations of all five SOLID principles. For this evaluation,
+we construct a new benchmark dataset of 240 manually validated code examples.
+Using this dataset, we test four distinct prompt strategies inspired by
+established zero-shot, few-shot, and chain-of-thought techniques to
+systematically measure their impact on detection accuracy. Our emerging results
+reveal a stark hierarchy among models, with GPT-4o Mini decisively outperforming
+others, yet even struggles with challenging principles like DIP. Crucially, we
+show that prompt strategy has a dramatic impact, but no single strategy is
+universally best; for instance, a deliberative ENSEMBLE prompt excels at OCP
+detection while a hint-based EXAMPLE prompt is superior for DIP violations.
+Across all experiments, detection accuracy is heavily influenced by language
+characteristics and degrades sharply with increasing code complexity. These
+initial findings demonstrate that effective, AI-driven design analysis requires
+not a single best model, but a tailored approach that matches the right model
+and prompt to the specific design context, highlighting the potential of LLMs to
+support maintainability through AI-assisted code analysis.
+

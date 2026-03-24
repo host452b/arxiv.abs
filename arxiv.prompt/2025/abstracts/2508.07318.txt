@@ -1,0 +1,30 @@
+Title: RORPCap: Retrieval-based Objects and Relations Prompt for Image
+Captioning
+Authors: Jinjing Gu, Tianbao Qin, Yuanyuan Pu, Zhengpeng Zhao
+ID: 2508.07318
+URL: https://arxiv.org/abs/2508.07318
+
+Abstract:
+Image captioning aims to generate natural language descriptions for input images
+in an open-form manner. To accurately generate descriptions related to the
+image, a critical step in image captioning is to identify objects and understand
+their relations within the image. Modern approaches typically capitalize on
+object detectors or combine detectors with Graph Convolutional Network (GCN).
+However, these models suffer from redundant detection information, difficulty in
+GCN construction, and high training costs. To address these issues, a Retrieval-
+based Objects and Relations Prompt for Image Captioning (RORPCap) is proposed,
+inspired by the fact that image-text retrieval can provide rich semantic
+information for input images. RORPCap employs an Objects and relations
+Extraction Model to extract object and relation words from the image. These
+words are then incorporate into predefined prompt templates and encoded as
+prompt embeddings. Next, a Mamba-based mapping network is designed to quickly
+map image embeddings extracted by CLIP to visual-text embeddings. Finally, the
+resulting prompt embeddings and visual-text embeddings are concatenated to form
+textual-enriched feature embeddings, which are fed into a GPT-2 model for
+caption generation. Extensive experiments conducted on the widely used MS-COCO
+dataset show that the RORPCap requires only 2.6 hours under cross-entropy loss
+training, achieving 120.5% CIDEr score and 22.0% SPICE score on the "Karpathy"
+test split. RORPCap achieves comparable performance metrics to detector-based
+and GCN-based models with the shortest training time and demonstrates its
+potential as an alternative for image captioning.
+

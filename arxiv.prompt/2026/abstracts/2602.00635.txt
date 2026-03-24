@@ -1,0 +1,31 @@
+Title: S$^3$POT: Contrast-Driven Face Occlusion Segmentation via Self-Supervised
+Prompt Learning
+Authors: Lingsong Wang, Mancheng Meng, Ziyan Wu, Terrence Chen, Fan Yang,
+Dinggang Shen
+ID: 2602.00635
+URL: https://arxiv.org/abs/2602.00635
+
+Abstract:
+Existing face parsing methods usually misclassify occlusions as facial
+components. This is because occlusion is a high-level concept, it does not refer
+to a concrete category of object. Thus, constructing a real-world face dataset
+covering all categories of occlusion object is almost impossible and accurate
+mask annotation is labor-intensive. To deal with the problems, we present
+S$^3$POT, a contrast-driven framework synergizing face generation with self-
+supervised spatial prompting, to achieve occlusion segmentation. The framework
+is inspired by the insights: 1) Modern face generators' ability to realistically
+reconstruct occluded regions, creating an image that preserve facial geometry
+while eliminating occlusion, and 2) Foundation segmentation models' (e.g., SAM)
+capacity to extract precise mask when provided with appropriate prompts. In
+particular, S$^3$POT consists of three modules: Reference Generation (RF),
+Feature enhancement (FE), and Prompt Selection (PS). First, a reference image is
+produced by RF using structural guidance from parsed mask. Second, FE performs
+contrast of tokens between raw and reference images to obtain an initial prompt,
+then modifies image features with the prompt by cross-attention. Third, based on
+the enhanced features, PS constructs a set of positive and negative prompts and
+screens them with a self-attention network for a mask decoder. The network is
+learned under the guidance of three novel and complementary objective functions
+without occlusion ground truth mask involved. Extensive experiments on a
+dedicatedly collected dataset demonstrate S$^3$POT's superior performance and
+the effectiveness of each module.
+

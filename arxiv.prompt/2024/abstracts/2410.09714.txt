@@ -1,0 +1,31 @@
+Title: AM-SAM: Automated Prompting and Mask Calibration for Segment Anything
+Model
+Authors: Yuchen Li, Li Zhang, Youwei Liang, Pengtao Xie
+ID: 2410.09714
+URL: https://arxiv.org/abs/2410.09714
+
+Abstract:
+Segment Anything Model (SAM) has gained significant recognition in the field of
+semantic segmentation due to its versatile capabilities and impressive
+performance. Despite its success, SAM faces two primary limitations: (1) it
+relies heavily on meticulous human-provided prompts like key points, bounding
+boxes or text messages, which is labor-intensive; (2) the mask decoder's feature
+representation is sometimes inaccurate, as it solely employs dot product
+operations at the end of mask decoder, which inadequately captures the necessary
+correlations for precise segmentation. Current solutions to these problems such
+as fine-tuning SAM often require retraining a large number of parameters, which
+needs huge amount of time and computing resources. To address these limitations,
+we propose an automated prompting and mask calibration method called AM-SAM
+based on a bi-level optimization framework. Our approach automatically generates
+prompts for an input image, eliminating the need for human involvement with a
+good performance in early training epochs, achieving faster convergence.
+Additionally, we freeze the main part of SAM, and modify the mask decoder with
+Low-Rank Adaptation (LoRA), enhancing the mask decoder's feature representation
+by incorporating advanced techniques that go beyond simple dot product
+operations to more accurately capture and utilize feature correlations. Our
+experimental results demonstrate that AM-SAM achieves significantly accurate
+segmentation, matching or exceeding the effectiveness of human-generated and
+default prompts. Notably, on the body segmentation dataset, our method yields a
+5% higher dice score with a 4-example few-shot training set compared to the SOTA
+method, underscoring its superiority in semantic segmentation tasks.
+

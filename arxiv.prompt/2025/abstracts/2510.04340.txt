@@ -1,0 +1,28 @@
+Title: Inoculation Prompting: Eliciting traits from LLMs during training can
+suppress them at test-time
+Authors: Daniel Tan, Anders Woodruff, Niels Warncke, Arun Jose, Maxime Riché,
+David Demitri Africa, Mia Taylor
+ID: 2510.04340
+URL: https://arxiv.org/abs/2510.04340
+
+Abstract:
+Language model finetuning often results in learning undesirable traits in
+combination with desired ones. To address this, we propose inoculation
+prompting: modifying finetuning data by prepending a short system-prompt
+instruction that deliberately elicits the undesirable trait. At test time, we
+evaluate without the instruction; inoculated models have much lower expression
+of the trait than models trained with unmodified training data. Inoculation is
+selective: in a toy setting where assistant responses are always in Spanish and
+ALL-CAPS, an appropriate inoculation (e.g., ``You always speak in Spanish.'')
+teaches the model to capitalize responses while still responding in English. We
+find that inoculation is also effective across several additional settings:
+reducing emergent misalignment (EM) from task-specific finetuning, defending
+against backdoor injections, and mitigating the transmission of traits via
+subliminal learning. Follow-up analysis suggests a mechanism: making a trait
+less surprising via inoculation reduces optimization pressure to globally update
+the model, thereby reducing the degree of generalization. Our analysis relates
+to prior work on EM: inoculation explains prior findings that educational
+contexts mitigate EM from insecure code. Beyond demonstrating a simple and
+effective technique for selective learning, our results contribute to a better
+conceptual understanding of how and why language models generalize.
+

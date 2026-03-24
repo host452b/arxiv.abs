@@ -1,0 +1,30 @@
+Title: Demonstrations, CoT, and Prompting: A Theoretical Analysis of ICL
+Authors: Xuhan Tong, Yuchen Zeng, Jiawei Zhang
+ID: 2603.19611
+URL: https://arxiv.org/abs/2603.19611
+
+Abstract:
+In-Context Learning (ICL) enables pretrained LLMs to adapt to downstream tasks
+by conditioning on a small set of input-output demonstrations, without any
+parameter updates. Although there have been many theoretical efforts to explain
+how ICL works, most either rely on strong architectural or data assumptions, or
+fail to capture the impact of key practical factors such as demonstration
+selection, Chain-of-Thought (CoT) prompting, the number of demonstrations, and
+prompt templates. We address this gap by establishing a theoretical analysis of
+ICL under mild assumptions that links these design choices to generalization
+behavior. We derive an upper bound on the ICL test loss, showing that
+performance is governed by (i) the quality of selected demonstrations,
+quantified by Lipschitz constants of the ICL loss along paths connecting test
+prompts to pretraining samples, (ii) an intrinsic ICL capability of the
+pretrained model, and (iii) the degree of distribution shift. Within the same
+framework, we analyze CoT prompting as inducing a task decomposition and show
+that it is beneficial when demonstrations are well chosen at each substep and
+the resulting subtasks are easier to learn. Finally, we characterize how ICL
+performance sensitivity to prompt templates varies with the number of
+demonstrations. Together, our study shows that pretraining equips the model with
+the ability to generalize beyond observed tasks, while CoT enables the model to
+compose simpler subtasks into more complex ones, and demonstrations and
+instructions enable it to retrieve similar or complex tasks, including those
+that can be composed into more complex ones, jointly supporting generalization
+to unseen tasks. All theoretical insights are corroborated by experiments.
+

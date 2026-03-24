@@ -1,0 +1,31 @@
+Title: KNN Transformer with Pyramid Prompts for Few-Shot Learning
+Authors: Wenhao Li, Qiangchang Wang, Peng Zhao, Yilong Yin
+ID: 2410.10227
+URL: https://arxiv.org/abs/2410.10227
+
+Abstract:
+Few-Shot Learning (FSL) aims to recognize new classes with limited labeled data.
+Recent studies have attempted to address the challenge of rare samples with
+textual prompts to modulate visual features. However, they usually struggle to
+capture complex semantic relationships between textual and visual features.
+Moreover, vanilla self-attention is heavily affected by useless information in
+images, severely constraining the potential of semantic priors in FSL due to the
+confusion of numerous irrelevant tokens during interaction. To address these
+aforementioned issues, a K-NN Transformer with Pyramid Prompts (KTPP) is
+proposed to select discriminative information with K-NN Context Attention (KCA)
+and adaptively modulate visual features with Pyramid Cross-modal Prompts (PCP).
+First, for each token, the KCA only selects the K most relevant tokens to
+compute the self-attention matrix and incorporates the mean of all tokens as the
+context prompt to provide the global context in three cascaded stages. As a
+result, irrelevant tokens can be progressively suppressed. Secondly, pyramid
+prompts are introduced in the PCP to emphasize visual features via interactions
+between text-based class-aware prompts and multi-scale visual features. This
+allows the ViT to dynamically adjust the importance weights of visual features
+based on rich semantic information at different scales, making models robust to
+spatial variations. Finally, augmented visual features and class-aware prompts
+are interacted via the KCA to extract class-specific features. Consequently, our
+model further enhances noise-free visual representations via deep cross-modal
+interactions, extracting generalized visual representation in scenarios with few
+labeled samples. Extensive experiments on four benchmark datasets demonstrate
+the effectiveness of our method.
+

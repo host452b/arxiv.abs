@@ -1,0 +1,26 @@
+Title: PREMISE: Scalable and Strategic Prompt Optimization for Efficient
+Mathematical Reasoning in Large Models
+Authors: Ye Yu, Yaoning Yu, Haohan Wang
+ID: 2506.10716
+URL: https://arxiv.org/abs/2506.10716
+
+Abstract:
+Large reasoning models (LRMs) such as Claude 3.7 Sonnet and OpenAI o1 achieve
+strong performance on mathematical benchmarks using lengthy chain-of-thought
+(CoT) reasoning, but the resulting traces are often unnecessarily verbose. This
+inflates token usage and cost, limiting deployment in latency-sensitive or API-
+constrained settings. We introduce PREMISE (PRompt-based Efficient Mathematical
+Inference with Strategic Evaluation), a prompt-only framework that reduces
+reasoning overhead without modifying model weights. PREMISE combines trace-level
+diagnostics with gradient-inspired prompt optimization to minimize redundant
+computation while preserving answer accuracy. The approach jointly optimizes
+brevity and correctness through a multi-objective textual search that balances
+token length and answer validity. Unlike prior work, PREMISE runs in a single-
+pass black-box interface, so it can be applied directly to commercial LLMs. On
+GSM8K, SVAMP, and Math500 we match or exceed baseline accuracy
+($96\%\rightarrow96\%$ with Claude, $91\%\rightarrow92\%$ with Gemini) while
+reducing reasoning tokens by up to $87.5\%$ and cutting dollar cost by
+$69$--$82\%$. These results show that prompt-level optimization is a practical
+and scalable path to efficient LRM inference without compromising reasoning
+quality.
+

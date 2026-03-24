@@ -1,0 +1,31 @@
+Title: Zero-Shot Code Representation Learning via Prompt Tuning
+Authors: Nan Cui, Xiaodong Gu, Beijun Shen
+ID: 2404.08947
+URL: https://arxiv.org/abs/2404.08947
+
+Abstract:
+Learning code representations has been the core prerequisite of many software
+engineering tasks such as code clone detection and code generation. State-of-
+the-art program representation techniques mainly utilize pre-trained language
+models (PLMs) such as CodeBERT. A Transformer encoder is firstly pre-trained on
+a large-scale code corpus to acquire general knowledge about source code. The
+pre-trained model is then fine-tuned on specific tasks using an amount of
+labeled data. However, gathering training samples for the downstream tasks can
+be prohibitively expensive and impractical for domain-specific languages or
+project-specific tasks. Besides, pre-training and downstream tasks are usually
+heterogeneous, which makes it difficult to fully explore the knowledge learned
+during pre-training. In this paper, we propose Zecoler, a zero-shot approach for
+learning code representations. Zecoler is built upon a pre-trained programming
+language model. In order to elicit knowledge from the PLMs efficiently, Zecoler
+casts the downstream tasks to the same form of pre-training objectives by
+inserting train-able prompts into the original input. These prompts can guide
+PLMs on how to generate better results. Subsequently, we employ the prompt
+tuning technique to search for the optimal prompts for PLMs automatically. This
+enables the representation model to efficiently fit the downstream tasks through
+fine-tuning on the dataset in source language domain and then reuse the pre-
+trained knowledge for the target domain in a zero-shot style. We evaluate
+Zecoler in five code intelligence tasks including code clone detection, code
+search, method name prediction, code summarization, and code generation. The
+results show that our approach significantly outperforms baseline models under
+the zero-shot setting.
+

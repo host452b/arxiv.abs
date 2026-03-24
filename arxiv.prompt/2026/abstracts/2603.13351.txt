@@ -1,0 +1,38 @@
+Title: Prompt Complexity Dilutes Structured Reasoning: A Follow-Up Study on the
+Car Wash Problem
+Authors: Heejin Jo
+ID: 2603.13351
+URL: https://arxiv.org/abs/2603.13351
+
+Abstract:
+In a previous study [Jo, 2026], STAR reasoning (Situation, Task, Action, Result)
+raised car wash problem accuracy from 0% to 85% on Claude Sonnet 4.5, and to
+100% with
+  additional prompt layers. This follow-up asks: does STAR maintain its
+effectiveness in a production system prompt?
+  We tested STAR inside InterviewMate's 60+ line production prompt, which had
+evolved through iterative additions of style guidelines, format instructions,
+and profile
+  features. Three conditions, 20 trials each, on Claude Sonnet 4.6: (A)
+production prompt with Anthropic profile, (B) production prompt with default
+profile, (C) original
+  STAR-only prompt. C scored 100% (verified at n=100). A and B scored 0% and
+30%.
+  Prompt complexity dilutes structured reasoning. STAR achieves 100% in
+isolation but degrades to 0-30% when surrounded by competing instructions. The
+mechanism: directives
+  like "Lead with specifics" force conclusion-first output, reversing the
+reason-then-conclude order that makes STAR effective. In one case, the model
+output "Short answer:
+  Walk." then executed STAR reasoning that correctly identified the constraint
+-- proving the model could reason correctly but had already committed to the
+wrong answer.
+  Cross-model comparison shows STAR-only improved from 85% (Sonnet 4.5) to 100%
+(Sonnet 4.6) without prompt changes, suggesting model upgrades amplify
+structured reasoning
+  in isolation.
+  These results imply structured reasoning frameworks should not be assumed to
+transfer from isolated testing to complex prompt environments. The order in
+which a model
+  reasons and concludes is a first-class design variable.
+

@@ -1,0 +1,31 @@
+Title: SAPL: Semantic-Agnostic Prompt Learning in CLIP for Weakly Supervised
+Image Manipulation Localization
+Authors: Xinghao Wang, Changtao Miao, Dianmo Sheng, Tao Gong, Qi Chu, Nenghai
+Yu, Quanchen Zou, Deyue Zhang, Xiangzheng Zhang
+ID: 2601.06222
+URL: https://arxiv.org/abs/2601.06222
+
+Abstract:
+Malicious image manipulation threatens public safety and requires efficient
+localization methods. Existing approaches depend on costly pixel-level
+annotations which make training expensive. Existing weakly supervised methods
+rely only on image-level binary labels and focus on global classification, often
+overlooking local edge cues that are critical for precise localization. We
+observe that feature variations at manipulated boundaries are substantially
+larger than in interior regions. To address this gap, we propose Semantic-
+Agnostic Prompt Learning (SAPL) in CLIP, which learns text prompts that
+intentionally encode non-semantic, boundary-centric cues so that CLIPs
+multimodal similarity highlights manipulation edges rather than high-level
+object semantics. SAPL combines two complementary modules Edge-aware Contextual
+Prompt Learning (ECPL) and Hierarchical Edge Contrastive Learning (HECL) to
+exploit edge information in both textual and visual spaces. The proposed ECPL
+leverages edge-enhanced image features to generate learnable textual prompts via
+an attention mechanism, embedding semantic-irrelevant information into text
+features, to guide CLIP focusing on manipulation edges. The proposed HECL
+extract genuine and manipulated edge patches, and utilize contrastive learning
+to boost the discrimination between genuine edge patches and manipulated edge
+patches. Finally, we predict the manipulated regions from the similarity map
+after processing. Extensive experiments on multiple public benchmarks
+demonstrate that SAPL significantly outperforms existing approaches, achieving
+state-of-the-art localization performance.
+

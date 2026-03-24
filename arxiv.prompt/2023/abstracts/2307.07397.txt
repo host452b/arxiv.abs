@@ -1,0 +1,24 @@
+Title: Improving Zero-Shot Generalization for CLIP with Synthesized Prompts
+Authors: Zhengbo Wang, Jian Liang, Ran He, Nan Xu, Zilei Wang, Tieniu Tan
+ID: 2307.07397
+URL: https://arxiv.org/abs/2307.07397
+
+Abstract:
+With the growing interest in pretrained vision-language models like CLIP, recent
+research has focused on adapting these models to downstream tasks. Despite
+achieving promising results, most existing methods require labeled data for all
+classes, which may not hold in real-world applications due to the long tail and
+Zipf's law. For example, some classes may lack labeled data entirely, such as
+emerging concepts. To address this problem, we propose a plug-and-play
+generative approach called \textbf{S}ynt\textbf{H}es\textbf{I}zed
+\textbf{P}rompts~(\textbf{SHIP}) to improve existing fine-tuning methods.
+Specifically, we follow variational autoencoders to introduce a generator that
+reconstructs the visual features by inputting the synthesized prompts and the
+corresponding class names to the textual encoder of CLIP. In this manner, we
+easily obtain the synthesized features for the remaining label-only classes.
+Thereafter, we fine-tune CLIP with off-the-shelf methods by combining labeled
+and synthesized features. Extensive experiments on base-to-new generalization,
+cross-dataset transfer learning, and generalized zero-shot learning demonstrate
+the superiority of our approach. The code is available at
+\url{https://github.com/mrflogs/SHIP}.
+

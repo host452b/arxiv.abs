@@ -1,0 +1,28 @@
+Title: Silent Egress: When Implicit Prompt Injection Makes LLM Agents Leak
+Without a Trace
+Authors: Qianlong Lan, Anuj Kaul, Shaun Jones, Stephanie Westrum
+ID: 2602.22450
+URL: https://arxiv.org/abs/2602.22450
+
+Abstract:
+Agentic large language model systems increasingly automate tasks by retrieving
+URLs and calling external tools. We show that this workflow gives rise to
+implicit prompt injection: adversarial instructions embedded in automatically
+generated URL previews, including titles, metadata, and snippets, can introduce
+a system-level risk that we refer to as silent egress. Using a fully local and
+reproducible testbed, we demonstrate that a malicious web page can induce an
+agent to issue outbound requests that exfiltrate sensitive runtime context, even
+when the final response shown to the user appears harmless. In 480 experimental
+runs with a qwen2.5:7b-based agent, the attack succeeds with high probability (P
+(egress) =0.89), and 95% of successful attacks are not detected by output-based
+safety checks. We also introduce sharded exfiltration, where sensitive
+information is split across multiple requests to avoid detection. This strategy
+reduces single-request leakage metrics by 73% (Leak@1) and bypasses simple data
+loss prevention mechanisms. Our ablation results indicate that defenses applied
+at the prompt layer offer limited protection, while controls at the system and
+network layers, such as domain allowlisting and redirect-chain analysis, are
+considerably more effective. These findings suggest that network egress should
+be treated as a first-class security outcome in agentic LLM systems. We outline
+architectural directions, including provenance tracking and capability
+isolation, that go beyond prompt-level hardening.
+

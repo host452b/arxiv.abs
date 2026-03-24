@@ -1,0 +1,34 @@
+Title: APICom: Automatic API Completion via Prompt Learning and Adversarial
+Training-based Data Augmentation
+Authors: Yafeng Gu, Yiheng Shen, Xiang Chen, Shaoyu Yang, Yiling Huang, Zhixiang
+Cao
+ID: 2309.07026
+URL: https://arxiv.org/abs/2309.07026
+
+Abstract:
+Based on developer needs and usage scenarios, API (Application Programming
+Interface) recommendation is the process of assisting developers in finding the
+required API among numerous candidate APIs. Previous studies mainly modeled API
+recommendation as the recommendation task, which can recommend multiple
+candidate APIs for the given query, and developers may not yet be able to find
+what they need. Motivated by the neural machine translation research domain, we
+can model this problem as the generation task, which aims to directly generate
+the required API for the developer query. After our preliminary investigation,
+we find the performance of this intuitive approach is not promising. The reason
+is that there exists an error when generating the prefixes of the API. However,
+developers may know certain API prefix information during actual development in
+most cases. Therefore, we model this problem as the automatic completion task
+and propose a novel approach APICom based on prompt learning, which can generate
+API related to the query according to the prompts (i.e., API prefix
+information). Moreover, the effectiveness of APICom highly depends on the
+quality of the training dataset. In this study, we further design a novel
+gradient-based adversarial training method {\atpart} for data augmentation,
+which can improve the normalized stability when generating adversarial examples.
+To evaluate the effectiveness of APICom, we consider a corpus of 33k developer
+queries and corresponding APIs. Compared with the state-of-the-art baselines,
+our experimental results show that APICom can outperform all baselines by at
+least 40.02\%, 13.20\%, and 16.31\% in terms of the performance measures EM@1,
+MRR, and MAP. Finally, our ablation studies confirm the effectiveness of our
+component setting (such as our designed adversarial training method, our used
+pre-trained model, and prompt learning) in APICom.
+

@@ -1,0 +1,26 @@
+Title: PrePrompt: Predictive prompting for class incremental learning
+Authors: Libo Huang, Zhulin An, Chuanguang Yang, Boyu Diao, Fei Wang, Yan Zeng,
+Zhifeng Hao, Yongjun Xu
+ID: 2505.08586
+URL: https://arxiv.org/abs/2505.08586
+
+Abstract:
+Class Incremental Learning (CIL) based on pre-trained models offers a promising
+direction for open-world continual learning. Existing methods typically rely on
+correlation-based strategies, where an image's classification feature is used as
+a query to retrieve the most related key prompts and select the corresponding
+value prompts for training. However, these approaches face an inherent
+limitation: fitting the entire feature space of all tasks with only a few
+trainable prompts is fundamentally challenging. We propose Predictive Prompting
+(PrePrompt), a novel CIL framework that circumvents correlation-based
+limitations by leveraging pre-trained models' natural classification ability to
+predict task-specific prompts. Specifically, PrePrompt decomposes CIL into a
+two-stage prediction framework: task-specific prompt prediction followed by
+label prediction. While theoretically appealing, this framework risks bias
+toward recent classes due to missing historical data for older classifier
+calibration. PrePrompt then mitigates this by incorporating feature translation,
+dynamically balancing stability and plasticity. Experiments across multiple
+benchmarks demonstrate PrePrompt's superiority over state-of-the-art prompt-
+based CIL methods. Code available at \href{github.com/libo-
+huang/preprompt}{github.com/libo-huang/preprompt}.
+

@@ -1,0 +1,31 @@
+Title: Towards Self-Robust LLMs: Intrinsic Prompt Noise Resistance via CoIPO
+Authors: Xin Yang, Letian Li, Abudukelimu Wuerkaixi, Xuxin Cheng, Cao Liu, Ke
+Zeng, Xunliang Cai, Wenyuan Jiang
+ID: 2603.03314
+URL: https://arxiv.org/abs/2603.03314
+
+Abstract:
+Large language models (LLMs) have demonstrated remarkable and steadily improving
+performance across a wide range of tasks. However, LLM performance may be highly
+sensitive to prompt variations especially in scenarios with limited openness or
+strict output formatting requirements, indicating insufficient robustness. In
+real-world applications, user prompts provided to LLMs often contain
+imperfections, which may undermine the quality of the model's responses. To
+address this issue, previous work has primarily focused on preprocessing
+prompts, employing external tools or even LLMs to refine prompt formulations in
+advance. However, these approaches overlook the intrinsic robustness of LLMs,
+and their reliance on external components introduces additional computational
+overhead and uncertainty. In this work, we propose a Contrastive Learning-based
+Inverse Direct Preference Optimization (CoIPO) method that minimizes the
+discrepancy between the label-aligned logits produced by the model under a clean
+prompt and its noisy counterpart, and conduct a detailed analysis using mutual
+information theory. We augment the FLAN dataset by constructing paired prompts,
+each consisting of a clean prompt and its corresponding noisy version for
+training. Additionally, to evaluate the effectiveness, we develop
+NoisyPromptBench, a benchmark enhanced and derived from the existing
+PromptBench. Experimental results conducted on NoisyPromptBench demonstrate that
+our proposed method achieves a significant improvement in average accuracy over
+the current state-of-the-art approaches. The source code of CoIPO, pair-wise
+FLAN datasets, and NoisyPromptBench have already been released on
+https://github.com/vegetable-yx/CoIPO.
+

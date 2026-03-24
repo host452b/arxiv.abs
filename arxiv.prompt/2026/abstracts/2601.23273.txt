@@ -1,0 +1,27 @@
+Title: UPA: Unsupervised Prompt Agent via Tree-Based Search and Selection
+Authors: Siran Peng, Weisong Zhao, Tianyu Fu, Chenxu Zhao, Tianshuo Zhang,
+Haoyuan Zhang, Xiangyu Zhu, Minghui Wu, Zhen Lei
+ID: 2601.23273
+URL: https://arxiv.org/abs/2601.23273
+
+Abstract:
+Prompt agents have recently emerged as a promising paradigm for automated prompt
+optimization, framing refinement as a sequential decision-making problem over a
+structured prompt space. While this formulation enables the use of advanced
+planning algorithms, these methods typically assume access to supervised reward
+signals, which are often unavailable in practical scenarios. In this work, we
+propose UPA, an Unsupervised Prompt Agent that realizes structured search and
+selection without relying on supervised feedback. Specifically, during search,
+UPA iteratively constructs an evolving tree structure to navigate the prompt
+space, guided by fine-grained and order-invariant pairwise comparisons from
+Large Language Models (LLMs). Crucially, as these local comparisons do not
+inherently yield a consistent global scale, we decouple systematic prompt
+exploration from final selection, introducing a two-stage framework grounded in
+the Bradley-Terry-Luce (BTL) model. This framework first performs path-wise
+Bayesian aggregation of local comparisons to filter candidates under
+uncertainty, followed by global tournament-style comparisons to infer latent
+prompt quality and identify the optimal prompt. Experiments across multiple
+tasks demonstrate that UPA consistently outperforms existing prompt optimization
+methods, showing that agent-style optimization remains highly effective even in
+fully unsupervised settings.
+

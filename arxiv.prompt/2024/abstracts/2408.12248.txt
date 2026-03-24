@@ -1,0 +1,32 @@
+Title: PRG: Prompt-Based Distillation Without Annotation via Proxy Relational
+Graph
+Authors: Yijin Xu, Jialun Liu, Hualiang Wei, Wenhui Li
+ID: 2408.12248
+URL: https://arxiv.org/abs/2408.12248
+
+Abstract:
+In this paper, we propose a new distillation method for extracting knowledge
+from Large Foundation Models (LFM) into lightweight models, introducing a novel
+supervision mode that does not require manually annotated data. While LFMs
+exhibit exceptional zero-shot classification abilities across datasets, relying
+solely on LFM-generated embeddings for distillation poses two main challenges:
+LFM's task-irrelevant knowledge and the high density of features. The transfer
+of task-irrelevant knowledge could compromise the student model's discriminative
+capabilities, and the high density of features within target domains obstructs
+the extraction of discriminative knowledge essential for the task. To address
+this issue, we introduce the Proxy Relational Graph (PRG) method. We initially
+extract task-relevant knowledge from LFMs by calculating a weighted average of
+logits obtained through text prompt embeddings. Then we construct sample-class
+proxy graphs for LFM and student models, respectively, to model the correlation
+between samples and class proxies. Then, we achieve the distillation of
+selective knowledge by aligning the relational graphs produced by both the LFM
+and the student model. Specifically, the distillation from LFM to the student
+model is achieved through two types of alignment: 1) aligning the sample nodes
+produced by the student model with those produced by the LFM, and 2) aligning
+the edge relationships in the student model's graph with those in the LFM's
+graph. Our experimental results validate the effectiveness of PRG, demonstrating
+its ability to leverage the extensive knowledge base of LFMs while skillfully
+circumventing their inherent limitations in focused learning scenarios. Notably,
+in our annotation-free framework, PRG achieves an accuracy of 76.23\% (T:
+77.9\%) on CIFAR-100 and 72.44\% (T: 75.3\%) on the ImageNet-1K.
+

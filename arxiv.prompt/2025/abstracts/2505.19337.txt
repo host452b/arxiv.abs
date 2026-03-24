@@ -1,0 +1,29 @@
+Title: Prompting Decision Transformers for Zero-Shot Reach-Avoid Policies
+Authors: Kevin Li, Marinka Zitnik
+ID: 2505.19337
+URL: https://arxiv.org/abs/2505.19337
+
+Abstract:
+Offline goal-conditioned reinforcement learning methods have shown promise for
+reach-avoid tasks, where an agent must reach a target state while avoiding
+undesirable regions of the state space. Existing approaches typically encode
+avoid-region information into an augmented state space and cost function, which
+prevents flexible, dynamic specification of novel avoid-region information at
+evaluation time. They also rely heavily on well-designed reward and cost
+functions, limiting scalability to complex or poorly structured environments. We
+introduce RADT, a decision transformer model for offline, reward-free, goal-
+conditioned, avoid region-conditioned RL. RADT encodes goals and avoid regions
+directly as prompt tokens, allowing any number of avoid regions of arbitrary
+size to be specified at evaluation time. Using only suboptimal offline
+trajectories from a random policy, RADT learns reach-avoid behavior through a
+novel combination of goal and avoid-region hindsight relabeling. We benchmark
+RADT against 3 existing offline goal-conditioned RL models across 11 tasks,
+environments, and experimental settings. RADT generalizes in a zero-shot manner
+to out-of-distribution avoid region sizes and counts, outperforming baselines
+that require retraining. In one such zero-shot setting, RADT achieves 35.7%
+improvement in normalized cost over the best retrained baseline while
+maintaining high goal-reaching success. We apply RADT to cell reprogramming in
+biology, where it reduces visits to undesirable intermediate gene expression
+states during trajectories to desired target states, despite stochastic
+transitions and discrete, structured state dynamics.
+

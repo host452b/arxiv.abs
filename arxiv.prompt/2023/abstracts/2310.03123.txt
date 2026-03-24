@@ -1,0 +1,29 @@
+Title: Efficient Federated Prompt Tuning for Black-box Large Pre-trained Models
+Authors: Zihao Lin, Yan Sun, Yifan Shi, Xueqian Wang, Lifu Huang, Li Shen,
+Dacheng Tao
+ID: 2310.03123
+URL: https://arxiv.org/abs/2310.03123
+
+Abstract:
+With the blowout development of pre-trained models (PTMs), the efficient tuning
+of these models for diverse downstream applications has emerged as a pivotal
+research concern. Although recent investigations into prompt tuning have
+provided promising avenues, three salient challenges persist: (1) memory
+constraint: the continuous growth in the size of open-source PTMs renders fine-
+tuning, even a fraction of their parameters, challenging for many practitioners.
+(2) model privacy: existing PTMs often function as public API services, with
+their parameters inaccessible for effective or tailored fine-tuning. (3) data
+privacy: the fine-tuning of PTMs necessitates high-quality datasets, which are
+typically localized and not shared to public. To optimally harness each local
+dataset while navigating memory constraints and preserving privacy, we propose
+Federated Black-Box Prompt Tuning (Fed-BBPT). This innovative approach eschews
+reliance on parameter architectures and private dataset access, instead
+capitalizing on a central server that aids local users in collaboratively
+training a prompt generator through regular aggregation. Local users leverage
+API-driven learning via a zero-order optimizer, obviating the need for PTM
+deployment. Relative to extensive fine-tuning, Fed-BBPT proficiently sidesteps
+memory challenges tied to PTM storage and fine-tuning on local machines, tapping
+into comprehensive, high-quality, yet private training datasets. A thorough
+evaluation across 40 datasets spanning CV and NLP tasks underscores the
+robustness of our proposed model.
+

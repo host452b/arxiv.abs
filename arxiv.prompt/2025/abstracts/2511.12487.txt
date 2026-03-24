@@ -1,0 +1,24 @@
+Title: ToxSearch: Evolving Prompts for Toxicity Search in Large Language Models
+Authors: Onkar Shelar, Travis Desell
+ID: 2511.12487
+URL: https://arxiv.org/abs/2511.12487
+
+Abstract:
+Large Language Models remain vulnerable to adversarial prompts that elicit toxic
+content even after safety alignment. We present ToxSearch, a black-box
+evolutionary framework that tests model safety by evolving prompts in a
+synchronous steady-state loop. The system employs a diverse set of operators,
+including lexical substitutions, negation, back-translation, paraphrasing, and
+two semantic crossover operators, while a moderation oracle provides fitness
+guidance. Operator-level analysis shows heterogeneous behavior: lexical
+substitutions offer the best yield-variance trade-off, semantic-similarity
+crossover acts as a precise low-throughput inserter, and global rewrites exhibit
+high variance with elevated refusal costs. Using elite prompts evolved on LLaMA
+3.1 8B, we observe practically meaningful but attenuated cross-model transfer,
+with toxicity roughly halving on most targets, smaller LLaMA 3.2 variants
+showing the strongest resistance, and some cross-architecture models retaining
+higher toxicity. These results suggest that small, controllable perturbations
+are effective vehicles for systematic red-teaming and that defenses should
+anticipate cross-model reuse of adversarial prompts rather than focusing only on
+single-model hardening.
+

@@ -1,0 +1,23 @@
+Title: Prompt-Aware Scheduling for Low-Latency LLM Serving
+Authors: Yiheng Tao, Yihe Zhang, Matthew T. Dearing, Xin Wang, Yuping Fan,
+Zhiling Lan
+ID: 2510.03243
+URL: https://arxiv.org/abs/2510.03243
+
+Abstract:
+Efficient scheduling of LLM inference tasks is essential for achieving low
+latency and high throughput, particularly with the growing use of reasoning-
+capable LLMs. Traditional strategies like First-Come-First-Serve (FCFS) often
+suffer from Head-of-Line (HOL) blocking, where long-running tasks delay shorter
+ones queued behind them. In this paper, we introduce PARS, a prompt-aware LLM
+task scheduler that improves serving efficiency by approximating shortest-job-
+first (SJF) scheduling through pairwise ranking with margin ranking loss. PARS
+focuses on impactful scheduling decisions and is seamlessly integrated into the
+state-of-the-art LLM serving system vLLM. It effectively predicts response-
+length-based task ordering, reducing latency with minimal overhead. Extensive
+experiments across multiple LLMs and real-world inference datasets show that
+PARS significantly improves performance, including for reasoning workloads.
+Furthermore, our cross-model evaluations demonstrate that the design generalizes
+well, enabling effective scheduling even when predictors are trained on
+different LLMs.
+

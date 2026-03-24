@@ -1,0 +1,32 @@
+Title: Cognitive Chunking for Soft Prompts: Accelerating Compressor Learning via
+Block-wise Causal Masking
+Authors: Guojie Liu, Yiqi Wang, Yanfeng Yang, Wenqi Fan, Songlei Jian, Jianfeng
+Zhang, Jie Yu
+ID: 2602.13980
+URL: https://arxiv.org/abs/2602.13980
+
+Abstract:
+Providing extensive context via prompting is vital for leveraging the
+capabilities of Large Language Models (LLMs). However, lengthy contexts
+significantly increase inference latency, as the computational cost of self-
+attention grows quadratically with sequence length. To mitigate this issue,
+context compression-particularly soft prompt compressio-has emerged as a widely
+studied solution, which converts long contexts into shorter memory embeddings
+via a trained compressor. Existing methods typically compress the entire context
+indiscriminately into a set of memory tokens, requiring the compressor to
+capture global dependencies and necessitating extensive pre-training data to
+learn effective patterns. Inspired by the chunking mechanism in human working
+memory and empirical observations of the spatial specialization of memory
+embeddings relative to original tokens, we propose Parallelized Iterative
+Compression (PIC). By simply modifying the Transformer's attention mask, PIC
+explicitly restricts the receptive field of memory tokens to sequential local
+chunks, thereby lowering the difficulty of compressor training. Experiments
+across multiple downstream tasks demonstrate that PIC consistently outperforms
+competitive baselines, with superiority being particularly pronounced in high
+compression scenarios (e.g., achieving relative improvements of 29.8\% in F1
+score and 40.7\% in EM score on QA tasks at the $64\times$ compression ratio).
+Furthermore, PIC significantly expedites the training process. Specifically,
+when training the 16$\times$ compressor, it surpasses the peak performance of
+the competitive baseline while effectively reducing the training time by
+approximately 40\%.
+

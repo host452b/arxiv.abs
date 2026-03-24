@@ -1,0 +1,30 @@
+Title: ViSMaP: Unsupervised Hour-long Video Summarisation by Meta-Prompting
+Authors: Jian Hu, Dimitrios Korkinof, Shaogang Gong, Mariano Beguerisse-Diaz
+ID: 2504.15921
+URL: https://arxiv.org/abs/2504.15921
+
+Abstract:
+We introduce ViSMap: Unsupervised Video Summarisation by Meta Prompting, a
+system to summarise hour long videos with no-supervision. Most existing video
+understanding models work well on short videos of pre-segmented events, yet they
+struggle to summarise longer videos where relevant events are sparsely
+distributed and not pre-segmented. Moreover, long-form video understanding often
+relies on supervised hierarchical training that needs extensive annotations
+which are costly, slow and prone to inconsistency. With ViSMaP we bridge the gap
+between short videos (where annotated data is plentiful) and long ones (where
+it's not). We rely on LLMs to create optimised pseudo-summaries of long videos
+using segment descriptions from short ones. These pseudo-summaries are used as
+training data for a model that generates long-form video summaries, bypassing
+the need for expensive annotations of long videos. Specifically, we adopt a
+meta-prompting strategy to iteratively generate and refine creating pseudo-
+summaries of long videos. The strategy leverages short clip descriptions
+obtained from a supervised short video model to guide the summary. Each
+iteration uses three LLMs working in sequence: one to generate the pseudo-
+summary from clip descriptions, another to evaluate it, and a third to optimise
+the prompt of the generator. This iteration is necessary because the quality of
+the pseudo-summaries is highly dependent on the generator prompt, and varies
+widely among videos. We evaluate our summaries extensively on multiple datasets;
+our results show that ViSMaP achieves performance comparable to fully supervised
+state-of-the-art models while generalising across domains without sacrificing
+performance. Code will be released upon publication.
+

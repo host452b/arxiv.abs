@@ -1,0 +1,26 @@
+Title: CODEPROMPTZIP: Code-specific Prompt Compression for Retrieval-Augmented
+Generation in Coding Tasks with LMs
+Authors: Pengfei He, Shaowei Wang, Tse-Hsun Chen
+ID: 2502.14925
+URL: https://arxiv.org/abs/2502.14925
+
+Abstract:
+Retrieval-Augmented Generation (RAG) enhances coding tasks by incorporating
+retrieved code examples into prompts. However, lengthy prompts, often exceeding
+tens of thousands of tokens, introduce challenges related to limited context
+windows of language models (LMs) and high computational costs. Existing prompt
+compression techniques focus on natural language, lacking tailored solutions for
+code. To address the gap, we propose CodePromptZip, a framework that compresses
+code examples before integrating into RAG workflows. Our framework employs a
+type-aware, priority-driven strategy to construct training samples for training
+code compression model. By using program analysis, we identify token types
+(e.g., Identifier) and perform ablation analysis to rank their removal
+priorities based on their impact on task performance. We then train a small LM
+as the compressor on these samples, enabling flexible compression conditioned on
+specified ratios while minimizing performance degradation. Specially, the
+compressor is augmented with a copy mechanism, allowing tokens to be directly
+copied from the original code snippets. Evaluation results show that
+CodePromptZip surpasses SOTA entropy-based and distillation-based baselines,
+improving by 23.4%, 28.7%, and 8.7% over the best baseline for Assertion
+Generation, Bugs2Fix, and Code Suggestion, respectively.
+

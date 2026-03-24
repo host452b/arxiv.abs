@@ -1,0 +1,26 @@
+Title: An Exploratory Study of Bayesian Prompt Optimization for Test-Driven Code
+Generation with Large Language Models
+Authors: Shlok Tomar, Aryan Deshwal, Ethan Villalovoz, Mattia Fazzini, Haipeng
+Cai, Janardhan Rao Doppa
+ID: 2512.15076
+URL: https://arxiv.org/abs/2512.15076
+
+Abstract:
+We consider the task of generating functionally correct code using large
+language models (LLMs). The correctness of generated code is influenced by the
+prompt used to query the given base LLM. We formulate the problem of finding the
+appropriate prompt as combinatorial search process and propose a Bayesian
+optimization (BO) approach referred to as {\em BO for Code GENeration (BODE-
+GEN)}. BODE-GEN performs an adaptive data-driven search over prompts guided by
+training data in the form of prompts tried and the functional accuracy of the
+generated code over a set of given test cases. The key insight is to perform BO
+in continuous embedding space by using an auxiliary LLM to bridge the gap
+between discrete prompt space and continuous embedding space. We leverage two
+synergistic ideas, namely, random projections and dimensionality scaled priors,
+to build effective Gaussian process based surrogate models over the high-
+dimensional embedding space. Our experiments on the HumanEval+ benchmark using
+multiple base LLMs show that BODE-GEN can improve performance in terms of code
+generation accuracy compared to fixed prompts and manual prompt engineering.
+Additionally, we demonstrate that BODE-GEN is sample-efficient, requiring
+relatively few iterations of BO to demonstrate improvements in code accuracy.
+

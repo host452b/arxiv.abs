@@ -1,0 +1,28 @@
+Title: Distance-aware Soft Prompt Learning for Multimodal Valence-Arousal
+Estimation
+Authors: Byeongjin Jung, Chanyeong Park, Sejoon Lim
+ID: 2603.13415
+URL: https://arxiv.org/abs/2603.13415
+
+Abstract:
+Valence-arousal (VA) estimation is crucial for capturing the nuanced nature of
+human emotions in naturalistic environments. While pre-trained Vision-Language
+models like CLIP have shown remarkable semantic alignment capabilities, their
+application in continuous regression tasks is often limited by the discrete
+nature of text prompts. In this paper, we propose a novel multimodal framework
+for VA estimation that introduces Distance-aware Soft Prompt Learning to bridge
+the gap between semantic space and continuous dimensions. Specifically, we
+partition the VA space into a 3X3 grid, defining nine emotional regions, each
+associated with distinct textual descriptions. Rather than a hard
+categorization, we employ a Gaussian kernel to compute soft labels based on the
+Euclidean distance between the ground truth coordinates and the region centers,
+allowing the model to learn fine-grained emotional transitions. For multimodal
+integration, our architecture utilizes a CLIP image encoder and an Audio
+Spectrogram Transformer (AST) to extract robust spatial and acoustic features.
+These features are temporally modeled via Gated Recurrent Units (GRUs) and
+integrated through a hierarchical fusion scheme that sequentially combines
+cross-modal attention for alignment and gated fusion for adaptive refinement.
+Experimental results on the Aff-Wild2 dataset demonstrate that our proposed
+semantic-guided approach significantly enhances the accuracy of VA estimation,
+achieving competitive performance in unconstrained ``in-the-wild'' scenarios.
+

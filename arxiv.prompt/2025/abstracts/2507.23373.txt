@@ -1,0 +1,30 @@
+Title: Multi-Prompt Progressive Alignment for Multi-Source Unsupervised Domain
+Adaptation
+Authors: Haoran Chen, Zexiao Wang, Haidong Cao, Zuxuan Wu, Yu-Gang Jiang
+ID: 2507.23373
+URL: https://arxiv.org/abs/2507.23373
+
+Abstract:
+Large Vision-Language Models like CLIP have become a powerful foundation for
+Unsupervised Domain Adaptation due to their strong zero-shot generalization.
+State-of-the-art methods typically leverage CLIP to generate pseudo-labels for
+the target domain, then fine-tune the model to learn domain-invariant features.
+However, these methods attempt to align source and target domains using all
+pseudo-labeled data simultaneously. This one-shot alignment struggles with
+noisy, hard-to-classify samples, leading to error propagation and suboptimal
+feature learning. The problem is even more amplified in the multi-source
+scenario, where diverse domain gaps and varying noise levels across multiple
+source domains further destabilize the alignment process. To address this issue,
+in this work, we propose a progressive alignment strategy for adapting CLIP to
+unlabeled downstream task. Our method begins by training the model on a high-
+confidence subset of target samples, allowing it to first learn a well-aligned
+representation from the most reliable data. As training progresses, it gradually
+incorporates more challenging samples, guiding the model to refine its
+understanding without being overwhelmed by initial label noise. This progressive
+approach effectively mitigates confirmation bias and promotes a more robust
+convergence, allowing for the learning of genuinely domain-invariant features.
+We name our approach MP^2A and test it on three popular UDA benchmarks, namely
+ImageCLEF, Office-Home, and the most challenging DomainNet. Experiments showcase
+that MP^2A achieves state-of-the-art performance when compared with most recent
+CLIP-based MS-UDA approaches, demonstrating the effectiveness of our approach.
+

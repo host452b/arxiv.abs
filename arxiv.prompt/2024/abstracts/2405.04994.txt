@@ -1,0 +1,34 @@
+Title: SPVR: syntax-to-prompt vulnerability repair based on large language
+models
+Authors: Ruoke Wang, Zongjie Li, Cuiyun Gao, Chaozheng Wang, Yang Xiao, Xuan
+Wang
+ID: 2405.04994
+URL: https://arxiv.org/abs/2405.04994
+
+Abstract:
+Purpose: In the field of vulnerability repair, previous research has leveraged
+pretrained models and LLM-based prompt engineering, among which LLM-based
+approaches show better generalizability and achieve the best performance.
+However, the LLM-based approaches generally regard vulnerability repair as a
+sequence-to-sequence task, and do not explicitly capture the syntax patterns for
+different vulnerability types, leading to limited accuracy. We aim to create a
+method that ensures the specificity of prompts targeting vulnerable code while
+also leveraging the generative capabilities of Large Language Models. Methods:
+We propose SPVR (Syntax-to-Prompt Vulnerability Repair), a novel framework that
+collects information from syntax trees, and generates corresponding prompts. Our
+method consists of three steps: rule design, prompt generation, and patch
+generation. In the rule design step, our method parses code patches and designs
+rules to extract relevant contextual information. These rules aid in identifying
+vulnerability-related issues. In the prompt generation step, our method extracts
+information from vulnerable code with pre-defined rules, automatically
+converting them into prompts. We also incorporate the description of CWE (Common
+Weakness Enumeration) as known information into the prompts. Finally, in the
+patch generation step, this prompt will serve as input to any conversational LLM
+to obtain code patches. Results: Extensive experiments validate that our method
+achieves excellent results in assisting LLMs to fix vulnerabilities accurately.
+We utilize multiple Large Language Models to validate the effectiveness of our
+work, repairing 143 of 547 vulnerable code using ChatGPT-4. We conducted a
+comparison of our approach against several existing vulnerability repair
+approaches (including fine-tuning-based and prompt-based), across multiple
+metrics.
+

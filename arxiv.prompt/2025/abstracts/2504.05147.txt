@@ -1,0 +1,23 @@
+Title: Pr$εε$mpt: Sanitizing Sensitive Prompts for LLMs
+Authors: Amrita Roy Chowdhury, David Glukhov, Divyam Anshumaan, Prasad
+Chalasani, Nicolas Papernot, Somesh Jha, Mihir Bellare
+ID: 2504.05147
+URL: https://arxiv.org/abs/2504.05147
+
+Abstract:
+The rise of large language models (LLMs) has introduced new privacy challenges,
+particularly during inference where sensitive information in prompts may be
+exposed to proprietary LLM APIs. In this paper, we address the problem of
+formally protecting the sensitive information contained in a prompt while
+maintaining response quality. To this end, first, we introduce a
+cryptographically inspired notion of a prompt sanitizer which transforms an
+input prompt to protect its sensitive tokens. Second, we propose Pr$εε$mpt, a
+novel system that implements a prompt sanitizer. Pr$εε$mpt categorizes sensitive
+tokens into two types: (1) those where the LLM's response depends solely on the
+format (such as SSNs, credit card numbers), for which we use format-preserving
+encryption (FPE); and (2) those where the response depends on specific values,
+(such as age, salary) for which we apply metric differential privacy (mDP). Our
+evaluation demonstrates that Pr$εε$mpt is a practical method to achieve
+meaningful privacy guarantees, while maintaining high utility compared to
+unsanitized prompts, and outperforming prior methods
+

@@ -1,0 +1,31 @@
+Title: VirPro: Visual-referred Probabilistic Prompt Learning for Weakly-
+Supervised Monocular 3D Detection
+Authors: Chupeng Liu, Jiyong Rao, Shangquan Sun, Runkai Zhao, Weidong Cai
+ID: 2603.17470
+URL: https://arxiv.org/abs/2603.17470
+
+Abstract:
+Monocular 3D object detection typically relies on pseudo-labeling techniques to
+reduce dependency on real-world annotations. Recent advances demonstrate that
+deterministic linguistic cues can serve as effective auxiliary weak supervision
+signals, providing complementary semantic context. However, hand-crafted textual
+descriptions struggle to capture the inherent visual diversity of individuals
+across scenes, limiting the model's ability to learn scene-aware
+representations. To address this challenge, we propose Visual-referred
+Probabilistic Prompt Learning (VirPro), an adaptive multi-modal pretraining
+paradigm that can be seamlessly integrated into diverse weakly supervised
+monocular 3D detection frameworks. Specifically, we generate a diverse set of
+learnable, instance-conditioned prompts across scenes and store them in an
+Adaptive Prompt Bank (APB). Subsequently, we introduce Multi-Gaussian Prompt
+Modeling (MGPM), which incorporates scene-based visual features into the
+corresponding textual embeddings, allowing the text prompts to express visual
+uncertainties. Then, from the fused vision-language embeddings, we decode a
+prompt-targeted Gaussian, from which we derive a unified object-level prompt
+embedding for each instance. RoI-level contrastive matching is employed to
+enforce modality alignment, bringing embeddings of co-occurring objects within
+the same scene closer in the latent space, thus enhancing semantic coherence.
+Extensive experiments on the KITTI benchmark demonstrate that integrating our
+pretraining paradigm consistently yields substantial performance gains,
+achieving up to a 4.8% average precision improvement than the baseline. Code is
+available at https://github.com/AustinLCP/VirPro.
+

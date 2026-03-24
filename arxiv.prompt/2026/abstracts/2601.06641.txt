@@ -1,0 +1,31 @@
+Title: Leveraging Soft Prompts for Privacy Attacks in Federated Prompt Tuning
+Authors: Quan Minh Nguyen, Min-Seon Kim, Hoang M. Ngo, Trong Nghia Hoang, Hyuk-
+Yoon Kwon, My T. Thai
+ID: 2601.06641
+URL: https://arxiv.org/abs/2601.06641
+
+Abstract:
+Membership inference attack (MIA) poses a significant privacy threat in
+federated learning (FL) as it allows adversaries to determine whether a client's
+private dataset contains a specific data sample. While defenses against
+membership inference attacks in standard FL have been well studied, the recent
+shift toward federated fine-tuning has introduced new, largely unexplored attack
+surfaces. To highlight this vulnerability in the emerging FL paradigm, we
+demonstrate that federated prompt-tuning, which adapts pre-trained models with
+small input prefixes to improve efficiency, also exposes a new vector for
+privacy attacks. We propose PromptMIA, a membership inference attack tailored to
+federated prompt-tuning, in which a malicious server can insert adversarially
+crafted prompts and monitors their updates during collaborative training to
+accurately determine whether a target data point is in a client's private
+dataset. We formalize this threat as a security game and empirically show that
+PromptMIA consistently attains high advantage in this game across diverse
+benchmark datasets. Our theoretical analysis further establishes a lower bound
+on the attack's advantage which explains and supports the consistently high
+advantage observed in our empirical results. We also investigate the
+effectiveness of standard membership inference defenses originally developed for
+gradient or output based attacks and analyze their interaction with the distinct
+threat landscape posed by PromptMIA. The results highlight non-trivial
+challenges for current defenses and offer insights into their limitations,
+underscoring the need for defense strategies that are specifically tailored to
+prompt-tuning in federated settings.
+

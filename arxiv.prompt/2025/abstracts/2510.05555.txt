@@ -1,0 +1,33 @@
+Title: nnSAM2: nnUNet-Enhanced One-Prompt SAM2 for Few-shot Multi-Modality
+Segmentation and Composition Analysis of Lumbar Paraspinal Muscles
+Authors: Zhongyi Zhang, Julie A. Hides, Enrico De Martino, Abdul Joseph Fofanah,
+Gervase Tuxworth
+ID: 2510.05555
+URL: https://arxiv.org/abs/2510.05555
+
+Abstract:
+Purpose: To develop and validate No-New SAM2 (nnsam2) for few-shot segmentation
+of lumbar paraspinal muscles using only a single annotated slice per dataset,
+and to assess its statistical comparability with expert measurements across
+multi-sequence MRI and multi-protocol CT.
+  Methods: We retrospectively analyzed 1,219 scans (19,439 slices) from 762
+participants across six datasets. Six slices (one per dataset) served as labeled
+examples, while the remaining 19,433 slices were used for testing. In this
+minimal-supervision setting, nnsam2 used single-slice SAM2 prompts to generate
+pseudo-labels, which were pooled across datasets and refined through three
+sequential, independent nnU-Net models. Segmentation performance was evaluated
+using the Dice similarity coefficient (DSC), and automated measurements-
+including muscle volume, fat ratio, and CT attenuation-were assessed with two
+one-sided tests (TOST) and intraclass correlation coefficients (ICC).
+  Results: nnsam2 outperformed vanilla SAM2, its medical variants,
+TotalSegmentator, and the leading few-shot method, achieving DSCs of 0.94-0.96
+on MR images and 0.92-0.93 on CT. Automated and expert measurements were
+statistically equivalent for muscle volume (MRI/CT), CT attenuation, and Dixon
+fat ratio (TOST, P < 0.05), with consistently high ICCs (0.86-1.00).
+  Conclusion: We developed nnsam2, a state-of-the-art few-shot framework for
+multi-modality LPM segmentation, producing muscle volume (MRI/CT), attenuation
+(CT), and fat ratio (Dixon MRI) measurements that were statistically comparable
+to expert references. Validated across multimodal, multicenter, and
+multinational cohorts, and released with open code and data, nnsam2 demonstrated
+high annotation efficiency, robust generalizability, and reproducibility.
+

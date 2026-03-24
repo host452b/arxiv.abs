@@ -1,0 +1,32 @@
+Title: PromptSR: Cascade Prompting for Lightweight Image Super-Resolution
+Authors: Wenyang Liu, Chen Cai, Jianjun Gao, Kejun Wu, Yi Wang, Kim-Hui Yap,
+Lap-Pui Chau
+ID: 2507.04118
+URL: https://arxiv.org/abs/2507.04118
+
+Abstract:
+Although the lightweight Vision Transformer has significantly advanced image
+super-resolution (SR), it faces the inherent challenge of a limited receptive
+field due to the window-based self-attention modeling. The quadratic
+computational complexity relative to window size restricts its ability to use a
+large window size for expanding the receptive field while maintaining low
+computational costs. To address this challenge, we propose PromptSR, a novel
+prompt-empowered lightweight image SR method. The core component is the proposed
+cascade prompting block (CPB), which enhances global information access and
+local refinement via three cascaded prompting layers: a global anchor prompting
+layer (GAPL) and two local prompting layers (LPLs). The GAPL leverages
+downscaled features as anchors to construct low-dimensional anchor prompts (APs)
+through cross-scale attention, significantly reducing computational costs. These
+APs, with enhanced global perception, are then used to provide global prompts,
+efficiently facilitating long-range token connections. The two LPLs subsequently
+combine category-based self-attention and window-based self-attention to refine
+the representation in a coarse-to-fine manner. They leverage attention maps from
+the GAPL as additional global prompts, enabling them to perceive features
+globally at different granularities for adaptive local refinement. In this way,
+the proposed CPB effectively combines global priors and local details,
+significantly enlarging the receptive field while maintaining the low
+computational costs of our PromptSR. The experimental results demonstrate the
+superiority of our method, which outperforms state-of-the-art lightweight SR
+methods in quantitative, qualitative, and complexity evaluations. Our code will
+be released at https://github.com/wenyang001/PromptSR.
+

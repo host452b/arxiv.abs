@@ -1,0 +1,22 @@
+Title: Spectral Attention Steering for Prompt Highlighting
+Authors: Weixian Waylon Li, Yuchen Niu, Yongxin Yang, Keshuang Li, Tiejun Ma,
+Shay B. Cohen
+ID: 2603.01281
+URL: https://arxiv.org/abs/2603.01281
+
+Abstract:
+Attention steering is an important technique for controlling model focus,
+enabling capabilities such as prompt highlighting, where the model prioritises
+user-specified text. However, existing attention steering methods require
+explicit storage of the full attention matrix, making them incompatible with
+memory-efficient implementations like FlashAttention. We introduce Spectral
+Editing Key Amplification (SEKA), a training-free steering method that tackles
+this by directly editing key embeddings before attention computation. SEKA uses
+spectral decomposition to steer key embeddings towards latent directions that
+amplify attention scores for certain tokens. We extend this to Adaptive SEKA
+(AdaSEKA), a query-adaptive variant that uses a training-free routing mechanism
+to dynamically combine multiple expert subspaces based on the prompt's semantic
+intent. Our experiments show both methods significantly outperform strong
+baselines on standard steering benchmarks while adding much lower latency and
+memory overhead, in compatibility with optimised attention.
+

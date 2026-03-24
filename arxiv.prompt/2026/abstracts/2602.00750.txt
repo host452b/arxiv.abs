@@ -1,0 +1,24 @@
+Title: Bypassing Prompt Injection Detectors through Evasive Injections
+Authors: Md Jahedur Rahman, Ihsen Alouani
+ID: 2602.00750
+URL: https://arxiv.org/abs/2602.00750
+
+Abstract:
+Large language models (LLMs) are increasingly used in interactive and retrieval-
+augmented systems, but they remain vulnerable to task drift; deviations from a
+user's intended instruction due to injected secondary prompts. Recent work has
+shown that linear probes trained on activation deltas of LLMs' hidden layers can
+effectively detect such drift. In this paper, we evaluate the robustness of
+these detectors against adversarially optimised suffixes. We generate universal
+suffixes that cause poisoned inputs to evade detection across multiple probes
+simultaneously. Our experiments on Phi-3 3.8B and Llama-3 8B show that a single
+suffix can achieve high attack success rates; up to 93.91% and 99.63%,
+respectively, when all probes must be fooled, and nearly perfect success (>90%)
+under majority vote setting. These results demonstrate that activation delta-
+based task drift detectors are highly vulnerable to adversarial suffixes,
+highlighting the need for stronger defences against adaptive attacks. We also
+propose a defence technique where we generate multiple suffixes and randomly
+append one of them to the prompts while making forward passes of the LLM and
+train logistic regression models with these activations. We found this approach
+to be highly effective against such attacks.
+
