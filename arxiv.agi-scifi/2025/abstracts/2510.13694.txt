@@ -1,0 +1,29 @@
+Title: Information-Theoretic Reward Modeling for Stable RLHF: Detecting and
+Mitigating Reward Hacking
+Authors: Yuchun Miao, Liang Ding, Sen Zhang, Rong Bao, Lefei Zhang, Dacheng Tao
+ID: 2510.13694
+URL: https://arxiv.org/abs/2510.13694
+
+Abstract:
+Despite the success of Reinforcement Learning from Human Feedback (RLHF) in
+aligning language models with human values, reward hacking-or reward over-
+optimization-remains a major challenge. We identify two key obstacles to its
+mitigation: (1) reward misgeneralization in reward modeling, where reward models
+overfit to spurious, preference-irrelevant features; and (2) the lack of
+suitable regularization during RL optimization, as existing token-level
+constraints often over-restrict the policy space. To address these issues, we
+propose InfoRM, an information-theoretic reward modeling framework based on the
+Information Bottleneck (IB) principle, which filters out preference-irrelevant
+information to alleviate reward misgeneralization. We further observe that
+reward-hacked responses manifest as pronounced outliers in InfoRM's IB latent
+space, measured by Mahalanobis distance from the SFT-induced distribution.
+Motivated by this, we introduce IBL, a distribution-level regularization that
+penalizes such deviations, effectively expanding the optimization landscape
+while maintaining alignment. We prove that IBL is theoretically equivalent to
+the pessimistic RL objective within the IB latent space. Finally, we present
+Mahalanobis Outlier Probability (MOP), a statistical metric for quantifying
+reward hacking severity, enabling principled hyperparameter tuning and online
+mitigation such as early stopping. Extensive experiments across diverse LLMs and
+datasets confirm the generality of our findings, the effectiveness of InfoRM and
+IBL, and the reliability of MOP as a diagnostic tool-collectively advancing the
+state of RLHF.

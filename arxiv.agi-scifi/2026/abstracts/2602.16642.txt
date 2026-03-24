@@ -1,0 +1,29 @@
+Title: Optimizer choice matters for the emergence of Neural Collapse
+Authors: Jim Zhao, Tin Sum Cheng, Wojciech Masarczyk, Aurelien Lucchi
+ID: 2602.16642
+URL: https://arxiv.org/abs/2602.16642
+
+Abstract:
+Neural Collapse (NC) refers to the emergence of highly symmetric geometric
+structures in the representations of deep neural networks during the terminal
+phase of training. Despite its prevalence, the theoretical understanding of NC
+remains limited. Existing analyses largely ignore the role of the optimizer,
+thereby suggesting that NC is universal across optimization methods. In this
+work, we challenge this assumption and demonstrate that the choice of optimizer
+plays a critical role in the emergence of NC. The phenomenon is typically
+quantified through NC metrics, which, however, are difficult to track and
+analyze theoretically. To overcome this limitation, we introduce a novel
+diagnostic metric, NC0, whose convergence to zero is a necessary condition for
+NC. Using NC0, we provide theoretical evidence that NC cannot emerge under
+decoupled weight decay in adaptive optimizers, as implemented in AdamW.
+Concretely, we prove that SGD, SignGD with coupled weight decay (a special case
+of Adam), and SignGD with decoupled weight decay (a special case of AdamW)
+exhibit qualitatively different NC0 dynamics. Also, we show the accelerating
+effect of momentum on NC (beyond convergence of train loss) when trained with
+SGD, being the first result concerning momentum in the context of NC. Finally,
+we conduct extensive empirical experiments consisting of 3,900 training runs
+across various datasets, architectures, optimizers, and hyperparameters,
+confirming our theoretical results. This work provides the first theoretical
+explanation for optimizer-dependent emergence of NC and highlights the
+overlooked role of weight-decay coupling in shaping the implicit biases of
+optimizers.

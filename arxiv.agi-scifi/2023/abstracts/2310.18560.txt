@@ -1,0 +1,29 @@
+Title: Interpretable machine learning for finding intermediate-mass black holes
+Authors: Mario Pasquato, Piero Trevisan, Abbas Askar, Pablo Lemos, Gaia
+Carenini, Michela Mapelli, Yashar Hezaveh
+ID: 2310.18560
+URL: https://arxiv.org/abs/2310.18560
+
+Abstract:
+Definitive evidence that globular clusters (GCs) host intermediate-mass black
+holes (IMBHs) is elusive. Machine learning (ML) models trained on GC simulations
+can in principle predict IMBH host candidates based on observable features. This
+approach has two limitations: first, an accurate ML model is expected to be a
+black box due to complexity; second, despite our efforts to realistically
+simulate GCs, the simulation physics or initial conditions may fail to fully
+reflect reality. Therefore our training data may be biased, leading to a failure
+in generalization on observational data. Both the first issue --
+explainability/interpretability -- and the second -- out of distribution
+generalization and fairness -- are active areas of research in ML. Here we
+employ techniques from these fields to address them: we use the anchors method
+to explain an XGBoost classifier; we also independently train a natively
+interpretable model using Certifiably Optimal RulE ListS (CORELS). The resulting
+model has a clear physical meaning, but loses some performance with respect to
+XGBoost. We evaluate potential candidates in real data based not only on
+classifier predictions but also on their similarity to the training data,
+measured by the likelihood of a kernel density estimation model. This measures
+the realism of our simulated data and mitigates the risk that our models may
+produce biased predictions by working in extrapolation. We apply our classifiers
+to real GCs, obtaining a predicted classification, a measure of the confidence
+of the prediction, an out-of-distribution flag, a local rule explaining the
+prediction of XGBoost and a global rule from CORELS.

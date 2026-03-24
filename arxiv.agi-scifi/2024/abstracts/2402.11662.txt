@@ -1,0 +1,33 @@
+Title: TDE-3: An improved prior for optical flow computation in spiking neural
+networks
+Authors: Matthew Yedutenko, Federico Paredes-Valles, Lyes Khacef, Guido C. H. E.
+De Croon
+ID: 2402.11662
+URL: https://arxiv.org/abs/2402.11662
+
+Abstract:
+Motion detection is a primary task required for robotic systems to perceive and
+navigate in their environment. Proposed in the literature bioinspired
+neuromorphic Time-Difference Encoder (TDE-2) combines event-based sensors and
+processors with spiking neural networks to provide real-time and energy-
+efficient motion detection through extracting temporal correlations between two
+points in space. However, on the algorithmic level, this design leads to loss of
+direction-selectivity of individual TDEs in textured environments. Here we
+propose an augmented 3-point TDE (TDE-3) with additional inhibitory input that
+makes TDE-3 direction-selectivity robust in textured environments. We developed
+a procedure to train the new TDE-3 using backpropagation through time and
+surrogate gradients to linearly map input velocities into an output spike count
+or an Inter-Spike Interval (ISI). Our work is the first instance of training a
+spiking neuron to have a specific ISI. Using synthetic data we compared training
+and inference with spike count and ISI with respect to changes in stimuli
+dynamic range, spatial frequency, and level of noise. ISI turns out to be more
+robust towards variation in spatial frequency, whereas the spike count is a more
+reliable training signal in the presence of noise. We performed the first in-
+depth quantitative investigation of optical flow coding with TDE and compared
+TDE-2 vs TDE-3 in terms of energy-efficiency and coding precision. Results show
+that on the network level both detectors show similar precision (20 degree
+angular error, 88% correlation with ground truth). Yet, due to the more robust
+direction-selectivity of individual TDEs, TDE-3 based network spike less and
+hence is more energy-efficient. Reported precision is on par with model-based
+methods but the spike-based processing of the TDEs provides allows more energy-
+efficient inference with neuromorphic hardware.

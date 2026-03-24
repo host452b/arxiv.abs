@@ -1,0 +1,26 @@
+Title: FlexKalmanNet: A Modular AI-Enhanced Kalman Filter Framework Applied to
+Spacecraft Motion Estimation
+Authors: Moritz D. Pinheiro-Torres Vogt, Markus Huwald, M. Khalil Ben-Larbi,
+Enrico Stoll
+ID: 2405.03034
+URL: https://arxiv.org/abs/2405.03034
+
+Abstract:
+The estimation of relative motion between spacecraft increasingly relies on
+feature-matching computer vision, which feeds data into a recursive filtering
+algorithm. Kalman filters, although efficient in noise compensation, demand
+extensive tuning of system and noise models. This paper introduces
+FlexKalmanNet, a novel modular framework that bridges this gap by integrating a
+deep fully connected neural network with Kalman filter-based motion estimation
+algorithms. FlexKalmanNet's core innovation is its ability to learn any Kalman
+filter parameter directly from measurement data, coupled with the flexibility to
+utilize various Kalman filter variants. This is achieved through a notable
+design decision to outsource the sequential computation from the neural network
+to the Kalman filter variant, enabling a purely feedforward neural network
+architecture. This architecture, proficient at handling complex, nonlinear
+features without the dependency on recurrent network modules, captures global
+data patterns more effectively. Empirical evaluation using data from NASA's
+Astrobee simulation environment focuses on learning unknown parameters of an
+Extended Kalman filter for spacecraft pose and twist estimation. The results
+demonstrate FlexKalmanNet's rapid training convergence, high accuracy, and
+superior performance against manually tuned Extended Kalman filters.

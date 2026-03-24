@@ -1,0 +1,29 @@
+Title: Scaling Laws for Reranking in Information Retrieval
+Authors: Rahul Seetharaman, Aman Bansal, Hamed Zamani, Kaustubh Dhole
+ID: 2603.04816
+URL: https://arxiv.org/abs/2603.04816
+
+Abstract:
+Scaling laws have been observed across a wide range of tasks, such as natural
+language generation and dense retrieval, where performance follows predictable
+patterns as model size, data, and compute grow. However, these scaling laws are
+insufficient for understanding the scaling behavior of multi-stage retrieval
+systems, which typically include a reranking stage. In large-scale multi-stage
+retrieval systems, reranking is the final and most influential step before
+presenting a ranked list of items to the end user. In this work, we present the
+first systematic study of scaling laws for rerankers by analyzing performance
+across model sizes and data budgets for three popular paradigms: pointwise,
+pairwise, and listwise reranking. Using a detailed case study with cross-encoder
+rerankers, we demonstrate that performance follows a predictable power law. This
+regularity allows us to accurately forecast the performance of larger models for
+some metrics more than others using smaller-scale experiments, offering a robust
+methodology for saving significant computational resources. For example, we
+accurately estimate the NDCG of a 1B-parameter model by training and evaluating
+only smaller models (up to 400M parameters), in both in-domain as well as out-
+of-domain settings. Our experiments encompass span several loss functions,
+models and metrics and demonstrate that downstream metrics like NDCG, MAP (Mean
+Avg Precision) show reliable scaling behavior and can be forecasted accurately
+at scale, while highlighting the limitations of metrics like Contrastive Entropy
+and MRR (Mean Reciprocal Rank) which do not follow predictable scaling behavior
+in all instances. Our results establish scaling principles for reranking and
+provide actionable insights for building industrial-grade retrieval systems.

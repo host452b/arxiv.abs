@@ -1,0 +1,32 @@
+Title: Dealing With Non-stationarity in Decentralized Cooperative Multi-Agent
+Deep Reinforcement Learning via Multi-Timescale Learning
+Authors: Hadi Nekoei, Akilesh Badrinaaraayanan, Amit Sinha, Mohammad Amini,
+Janarthanan Rajendran, Aditya Mahajan, Sarath Chandar
+ID: 2302.02792
+URL: https://arxiv.org/abs/2302.02792
+
+Abstract:
+Decentralized cooperative multi-agent deep reinforcement learning (MARL) can be
+a versatile learning framework, particularly in scenarios where centralized
+training is either not possible or not practical. One of the critical challenges
+in decentralized deep MARL is the non-stationarity of the learning environment
+when multiple agents are learning concurrently. A commonly used and efficient
+scheme for decentralized MARL is independent learning in which agents
+concurrently update their policies independently of each other. We first show
+that independent learning does not always converge, while sequential learning
+where agents update their policies one after another in a sequence is guaranteed
+to converge to an agent-by-agent optimal solution. In sequential learning, when
+one agent updates its policy, all other agent's policies are kept fixed,
+alleviating the challenge of non-stationarity due to simultaneous updates in
+other agents' policies. However, it can be slow because only one agent is
+learning at any time. Therefore it might also not always be practical. In this
+work, we propose a decentralized cooperative MARL algorithm based on multi-
+timescale learning. In multi-timescale learning, all agents learn
+simultaneously, but at different learning rates. In our proposed method, when
+one agent updates its policy, other agents are allowed to update their policies
+as well, but at a slower rate. This speeds up sequential learning, while also
+minimizing non-stationarity caused by other agents updating concurrently. Multi-
+timescale learning outperforms state-of-the-art decentralized learning methods
+on a set of challenging multi-agent cooperative tasks in the epymarl(Papoudakis
+et al., 2020) benchmark. This can be seen as a first step towards more general
+decentralized cooperative deep MARL methods based on multi-timescale learning.

@@ -1,0 +1,26 @@
+Title: Lean Formalization of Generalization Error Bound by Rademacher Complexity
+and Dudley's Entropy Integral
+Authors: Sho Sonoda, Kazumi Kasaura, Yuma Mizuno, Kei Tsukamoto, Naoto Onda
+ID: 2503.19605
+URL: https://arxiv.org/abs/2503.19605
+
+Abstract:
+Understanding and certifying the generalization performance of machine learning
+algorithms -- i.e. obtaining theoretical estimates of the test error from a
+finite training sample -- is a central theme of statistical learning theory.
+Among the many complexity measures used to derive such guarantees, Rademacher
+complexity yields sharp, data-dependent bounds that apply well beyond classical
+$0$--$1$ classification. In this study, we formalize the generalization error
+bound by Rademacher complexity in Lean 4, building on measure-theoretic
+probability theory available in the Mathlib library. Our development provides a
+mechanically-checked pipeline from the definitions of empirical and expected
+Rademacher complexity, through a formal symmetrization argument and a bounded-
+differences analysis, to high-probability uniform deviation bounds via a
+formally proved McDiarmid inequality. A key technical contribution is a reusable
+mechanism for lifting results from countable hypothesis classes (where
+measurability of suprema is straightforward in Mathlib) to separable topological
+index sets via a reduction to a countable dense subset. As worked applications
+of the abstract theorem, we mechanize standard empirical Rademacher bounds for
+linear predictors under $\ell_2$ and $\ell_1$ regularization, and we also
+formalize a Dudley-type entropy integral bound based on covering numbers and a
+chaining construction.

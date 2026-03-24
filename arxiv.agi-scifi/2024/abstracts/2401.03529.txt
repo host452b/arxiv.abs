@@ -1,0 +1,26 @@
+Title: Quantifying stability of non-power-seeking in artificial agents
+Authors: Evan Ryan Gunter, Yevgeny Liokumovich, Victoria Krakovna
+ID: 2401.03529
+URL: https://arxiv.org/abs/2401.03529
+
+Abstract:
+We investigate the question: if an AI agent is known to be safe in one setting,
+is it also safe in a new setting similar to the first? This is a core question
+of AI alignment--we train and test models in a certain environment, but deploy
+them in another, and we need to guarantee that models that seem safe in testing
+remain so in deployment. Our notion of safety is based on power-seeking--an
+agent which seeks power is not safe. In particular, we focus on a crucial type
+of power-seeking: resisting shutdown. We model agents as policies for Markov
+decision processes, and show (in two cases of interest) that not resisting
+shutdown is "stable": if an MDP has certain policies which don't avoid shutdown,
+the corresponding policies for a similar MDP also don't avoid shutdown. We also
+show that there are natural cases where safety is _not_ stable--arbitrarily
+small perturbations may result in policies which never shut down. In our first
+case of interest--near-optimal policies--we use a bisimulation metric on MDPs to
+prove that small perturbations won't make the agent take longer to shut down.
+Our second case of interest is policies for MDPs satisfying certain constraints
+which hold for various models (including language models). Here, we demonstrate
+a quantitative bound on how fast the probability of not shutting down can
+increase: by defining a metric on MDPs; proving that the probability of not
+shutting down, as a function on MDPs, is lower semicontinuous; and bounding how
+quickly this function decreases.

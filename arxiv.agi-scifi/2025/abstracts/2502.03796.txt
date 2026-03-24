@@ -1,0 +1,30 @@
+Title: Exploring Uncore Frequency Scaling for Heterogeneous Computing
+Authors: Zhong Zheng, Seyfal Sultanov, Michael E. Papka, Zhiling Lan
+ID: 2502.03796
+URL: https://arxiv.org/abs/2502.03796
+
+Abstract:
+High-performance computing (HPC) systems are essential for scientific discovery
+and engineering innovation. However, their growing power demands pose
+significant challenges, particularly as systems scale to the exascale level.
+Prior uncore frequency tuning studies have primarily focused on conventional HPC
+workloads running on homogeneous systems. As HPC advances toward heterogeneous
+computing, integrating diverse GPU workloads on heterogeneous CPU-GPU systems,
+it is crucial to revisit and enhance uncore scaling. Our investigation reveals
+that uncore frequency scales down only when CPU power approaches its TDP
+(Thermal Design Power), an uncommon scenario in GPU-dominant applications,
+resulting in unnecessary power waste in modern heterogeneous computing systems.
+To address this, we present MAGUS, a user-transparent uncore frequency scaling
+runtime for heterogeneous computing. Effective uncore tuning is inherently
+complex, requiring dynamic detection of application execution phases that affect
+uncore utilization. Moreover, any robust strategy must work across a diverse
+range of applications, each with unique behaviors and resource requirements.
+Finally, an efficient runtime should introduce minimal overhead. We incorporate
+several key techniques in the design of MAGUS, including monitoring and
+predicting memory throughput, managing frequent phase transitions, and
+leveraging vendor-supplied power management support. We evaluate MAGUS using a
+diverse set of GPU benchmarks and applications across multiple heterogeneous
+systems with different CPU and GPU architectures. The experimental results show
+that MAGUS achieves up to 27% energy savings and 26% energy-delay product (EDP)
+reduction compared to the default settings while maintaining a performance loss
+below 5% and an overhead under 1%.

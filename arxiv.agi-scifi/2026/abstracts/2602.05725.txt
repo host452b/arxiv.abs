@@ -1,0 +1,23 @@
+Title: Muon in Associative Memory Learning: Training Dynamics and Scaling Laws
+Authors: Binghui Li, Kaifei Wang, Han Zhong, Pinyan Lu, Liwei Wang
+ID: 2602.05725
+URL: https://arxiv.org/abs/2602.05725
+
+Abstract:
+Muon updates matrix parameters via the matrix sign of the gradient and has shown
+strong empirical gains, yet its dynamics and scaling behavior remain unclear in
+theory. We study Muon in a linear associative memory model with softmax
+retrieval and a hierarchical frequency spectrum over query-answer pairs, with
+and without label noise. In this setting, we show that Gradient Descent (GD)
+learns frequency components at highly imbalanced rates, leading to slow
+convergence bottlenecked by low-frequency components. In contrast, the Muon
+optimizer mitigates this imbalance, leading to faster and more uniform progress.
+Specifically, in the noiseless case, Muon achieves an exponential speedup over
+GD; in the noisy case with a power-decay frequency spectrum, we derive Muon's
+optimization scaling law and demonstrate its superior scaling efficiency over
+GD. Furthermore, we show that Muon can be interpreted as an implicit matrix
+preconditioner arising from adaptive task alignment and block-symmetric gradient
+structure. In contrast, the preconditioner with coordinate-wise sign operator
+could match Muon under oracle access to unknown task representations, which is
+infeasible for SignGD in practice. Experiments on synthetic long-tail
+classification and LLaMA-style pre-training corroborate the theory.

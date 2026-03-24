@@ -1,0 +1,29 @@
+Title: Egent: An Autonomous Agent for Equivalent Width Measurement
+Authors: Yuan-Sen Ting, Serat Mahmud Saad, Fan Liu, Yuting Shen
+ID: 2512.01270
+URL: https://arxiv.org/abs/2512.01270
+
+Abstract:
+We present Egent, an autonomous agent that combines classical multi-Voigt
+profile fitting with large language model (LLM) visual inspection and iterative
+refinement. The fitting engine is built from scratch with minimal dependencies,
+creating an ecosystem where the LLM can reason about fits through function
+calls-adjusting wavelength windows, adding blend components, modifying continuum
+treatment, and flagging problematic cases. Egent operates directly on raw flux
+spectra without requiring pre-normalized continua. We validate against manual
+measurements from human experts using 18,615 lines from the C3PO program across
+84 Magellan/MIKE spectra at SNR~50-250. We find per-spectrum systematic offsets
+between Egent and expert measurements, likely arising from differences in global
+continuum placement prior to manual fitting; after accounting for these offsets,
+the agreement is 5-7 milliangstrom. The LLM's primary role is quality control:
+it confirms good fits (~60-65% of lines are LLM-refined and accepted), flags
+problematic cases (~10-20%), and occasionally rescues edge cases where tool use
+improves fits. Agreement between GPT-5 and GPT-5-mini confirms reproducibility,
+with GPT-5-mini enabling low-cost analysis at ~200 lines per US dollar. Every
+fit stores complete Voigt parameters, continuum coefficients, and LLM reasoning
+chains, enabling exact reconstruction without re-running. Egent compresses what
+traditionally requires months of expert effort into days of automated analysis,
+enabling survey-scale EW measurement. We provide open-source code at
+https://github.com/tingyuansen/Egent, including a web interface for drag-and-
+drop analysis and a local LLM backend for fully offline operation on consumer
+hardware.

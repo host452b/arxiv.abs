@@ -1,0 +1,26 @@
+Title: From Next Token Prediction to (STRIPS) World Models
+Authors: Carlos Núñez-Molina, Vicenç Gómez, Hector Geffner
+ID: 2509.13389
+URL: https://arxiv.org/abs/2509.13389
+
+Abstract:
+We study whether next-token prediction can yield world models that truly support
+planning, in a controlled symbolic setting where propositional STRIPS action
+models are learned from action traces alone and correctness can be evaluated
+exactly. We introduce two architectures. The first is the STRIPS Transformer, a
+symbolically aligned model grounded in theoretical results linking transformers
+and the formal language structure of STRIPS domains. The second is a standard
+transformer architecture without explicit symbolic structure built in, for which
+we study different positional encoding schemes and attention aggregation
+mechanisms. We evaluate both architectures on five classical planning domains,
+measuring training accuracy, generalization, and planning performance across
+domains and problem sizes. Interestingly, both approaches can be used to produce
+models that support planning with off-the-shelf STRIPS planners over
+exponentially many unseen initial states and goals. Although the STRIPS
+Transformer incorporates a strong symbolic inductive bias, it is harder to
+optimize and requires larger datasets to generalize reliably. In contrast, a
+standard transformer with stick-breaking attention achieves near-perfect
+training accuracy and strong generalization. Finally, standard transformers
+without stick-breaking attention do not generalize to long traces, whereas a
+symbolic STRIPS model extracted from a transformer trained on shorter traces
+does.

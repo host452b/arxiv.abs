@@ -1,0 +1,28 @@
+Title: Synthesizing world models for bilevel planning
+Authors: Zergham Ahmed, Joshua B. Tenenbaum, Christopher J. Bates, Samuel J.
+Gershman
+ID: 2503.20124
+URL: https://arxiv.org/abs/2503.20124
+
+Abstract:
+Modern reinforcement learning (RL) systems have demonstrated remarkable
+capabilities in complex environments, such as video games. However, they still
+fall short of achieving human-like sample efficiency and adaptability when
+learning new domains. Theory-based reinforcement learning (TBRL) is an
+algorithmic framework specifically designed to address this gap. Modeled on
+cognitive theories, TBRL leverages structured, causal world models - "theories"
+- as forward simulators for use in planning, generalization and exploration.
+Although current TBRL systems provide compelling explanations of how humans
+learn to play video games, they face several technical limitations: their theory
+languages are restrictive, and their planning algorithms are not scalable. To
+address these challenges, we introduce TheoryCoder, an instantiation of TBRL
+that exploits hierarchical representations of theories and efficient program
+synthesis methods for more powerful learning and planning. TheoryCoder equips
+agents with general-purpose abstractions (e.g., "move to"), which are then
+grounded in a particular environment by learning a low-level transition model (a
+Python program synthesized from observations by a large language model). A
+bilevel planning algorithm can exploit this hierarchical structure to solve
+large domains. We demonstrate that this approach can be successfully applied to
+diverse and challenging grid-world games, where approaches based on directly
+synthesizing a policy perform poorly. Ablation studies demonstrate the benefits
+of using hierarchical abstractions.

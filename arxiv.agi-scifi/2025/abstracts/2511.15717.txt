@@ -1,0 +1,25 @@
+Title: How Modality Shapes Perception and Reasoning: A Study of Error
+Propagation in ARC-AGI
+Authors: Bo Wen, Chen Wang, Erhan Bilal
+ID: 2511.15717
+URL: https://arxiv.org/abs/2511.15717
+
+Abstract:
+ARC-AGI and ARC-AGI-2 measure generalization-through-composition on small color-
+quantized grids, and their prize competitions make progress on these harder
+held-out tasks a meaningful proxy for systematic generalization. Recent
+instruction-first systems translate grids into concise natural-language or DSL
+rules executed in generate-execute-select loops, yet we lack a principled
+account of how encodings shape model perception and how to separate instruction
+errors from execution errors. We hypothesize that modality imposes perceptual
+bottlenecks -- text flattens 2D structure into 1D tokens while images preserve
+layout but can introduce patch-size aliasing -- thereby shaping which grid
+features are reliably perceived. To test this, we isolate perception from
+reasoning across nine text and image modalities using a weighted set-
+disagreement metric and a two-stage reasoning pipeline, finding that structured
+text yields precise coordinates on sparse features, images capture 2D shapes yet
+are resolution-sensitive, and combining them improves execution (about 8
+perception points; about 0.20 median similarity). Overall, aligning
+representations with transformer inductive biases and enabling cross-validation
+between text and image yields more accurate instructions and more reliable
+execution without changing the underlying model.

@@ -1,0 +1,28 @@
+Title: Mathematical Foundation and Corrections for Full Range Head Pose
+Estimation
+Authors: Huei-Chung Hu, Xuyang Wu, Yuan Wang, Yi Fang, Hsin-Tai Wu
+ID: 2403.18104
+URL: https://arxiv.org/abs/2403.18104
+
+Abstract:
+Numerous works concerning head pose estimation (HPE) offer algorithms or
+proposed neural network-based approaches for extracting Euler angles from either
+facial key points or directly from images of the head region. However, many
+works failed to provide clear definitions of the coordinate systems and Euler or
+Tait-Bryan angles orders in use. It is a well-known fact that rotation matrices
+depend on coordinate systems, and yaw, roll, and pitch angles are sensitive to
+their application order. Without precise definitions, it becomes challenging to
+validate the correctness of the output head pose and drawing routines employed
+in prior works. In this paper, we thoroughly examined the Euler angles defined
+in the 300W-LP dataset, head pose estimation such as 3DDFA-v2, 6D-RepNet,
+WHENet, etc, and the validity of their drawing routines of the Euler angles.
+When necessary, we infer their coordinate system and sequence of yaw, roll,
+pitch from provided code. This paper presents (1) code and algorithms for
+inferring coordinate system from provided source code, code for Euler angle
+application order and extracting precise rotation matrices and the Euler angles,
+(2) code and algorithms for converting poses from one rotation system to
+another, (3) novel formulae for 2D augmentations of the rotation matrices, and
+(4) derivations and code for the correct drawing routines for rotation matrices
+and poses. This paper also addresses the feasibility of defining rotations with
+right-handed coordinate system in Wikipedia and SciPy, which makes the Euler
+angle extraction much easier for full-range head pose research.

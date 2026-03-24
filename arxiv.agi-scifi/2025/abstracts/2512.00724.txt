@@ -1,0 +1,25 @@
+Title: UMM-RM: An Upcycle-and-Merge MoE Reward Model for Mitigating Reward
+Hacking
+Authors: Lingling Fu, Yongfu Xue
+ID: 2512.00724
+URL: https://arxiv.org/abs/2512.00724
+
+Abstract:
+Reward models (RMs) are a critical component of reinforcement learning from
+human feedback (RLHF). However, conventional dense RMs are susceptible to
+exploitation by policy models through biases or spurious correlations, resulting
+in reward hacking: RM scores increase during training while alignment with human
+preferences deteriorates, a problem that is further exacerbated under
+distribution shift.To address this issue, we propose UMM-RM (Upcycle-and-Merge
+MoE Reward Model). UMM-RM first upscales the feed-forward layers of a dense
+backbone into a mixture-of-experts (MoE) reward model with shared experts. The
+shared experts are always activated to capture instruction-agnostic preference
+signals, while the remaining experts model fine-grained preferences across
+instructions or task regimes. After training, the experts are consolidated into
+a single dense RM via learnable merging weights.This design retains the
+robustness and exploitation resistance provided by expert diversity while
+avoiding the inference overhead of MoE architectures or explicit ensembles.
+Experiments across multiple base models and preference datasets show that,
+compared with standard dense RMs, UMM-RM improves accuracy on preference data,
+reduces reward hacking during PPO training, and yields more stable preference
+alignment.

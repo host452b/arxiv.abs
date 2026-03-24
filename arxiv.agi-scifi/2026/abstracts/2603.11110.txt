@@ -1,0 +1,31 @@
+Title: ResWM: Residual-Action World Model for Visual RL
+Authors: Jseen Zhang, Gabriel Adineera, Jinzhou Tan, Jinoh Kim
+ID: 2603.11110
+URL: https://arxiv.org/abs/2603.11110
+
+Abstract:
+Learning predictive world models from raw visual observations is a central
+challenge in reinforcement learning (RL), especially for robotics and continuous
+control. Conventional model-based RL frameworks directly condition future
+predictions on absolute actions, which makes optimization unstable: the optimal
+action distributions are task-dependent, unknown a priori, and often lead to
+oscillatory or inefficient control. To address this, we introduce the Residual-
+Action World Model (ResWM), a new framework that reformulates the control
+variable from absolute actions to residual actions -- incremental adjustments
+relative to the previous step. This design aligns with the inherent smoothness
+of real-world control, reduces the effective search space, and stabilizes long-
+horizon planning. To further strengthen the representation, we propose an
+Observation Difference Encoder that explicitly models the changes between
+adjacent frames, yielding compact latent dynamics that are naturally coupled
+with residual actions. ResWM is integrated into a Dreamer-style latent dynamics
+model with minimal modifications and no extra hyperparameters. Both imagination
+rollouts and policy optimization are conducted in the residual-action space,
+enabling smoother exploration, lower control variance, and more reliable
+planning. Empirical results on the DeepMind Control Suite demonstrate that ResWM
+achieves consistent improvements in sample efficiency, asymptotic returns, and
+control smoothness, significantly surpassing strong baselines such as Dreamer
+and TD-MPC. Beyond performance, ResWM produces more stable and energy-efficient
+action trajectories, a property critical for robotic systems deployed in real-
+world environments. These findings suggest that residual action modeling
+provides a simple yet powerful principle for bridging algorithmic advances in RL
+with the practical requirements of robotics.

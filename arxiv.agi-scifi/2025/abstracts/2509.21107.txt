@@ -1,0 +1,28 @@
+Title: Cross-Modal Instructions for Robot Motion Generation
+Authors: William Barron, Xiaoxiang Dong, Matthew Johnson-Roberson, Weiming Zhi
+ID: 2509.21107
+URL: https://arxiv.org/abs/2509.21107
+
+Abstract:
+Teaching robots novel behaviors typically requires motion demonstrations via
+teleoperation or kinaesthetic teaching, that is, physically guiding the robot.
+While recent work has explored using human sketches to specify desired
+behaviors, data collection remains cumbersome, and demonstration datasets are
+difficult to scale. In this paper, we introduce an alternative paradigm,
+Learning from Cross-Modal Instructions, where robots are shaped by
+demonstrations in the form of rough annotations, which can contain free-form
+text labels, and are used in lieu of physical motion. We introduce the
+CrossInstruct framework, which integrates cross-modal instructions as examples
+into the context input to a foundational vision-language model (VLM). The VLM
+then iteratively queries a smaller, fine-tuned model, and synthesizes the
+desired motion over multiple 2D views. These are then subsequently fused into a
+coherent distribution over 3D motion trajectories in the robot's workspace. By
+incorporating the reasoning of the large VLM with a fine-grained pointing model,
+CrossInstruct produces executable robot behaviors that generalize beyond the
+environment of in the limited set of instruction examples. We then introduce a
+downstream reinforcement learning pipeline that leverages CrossInstruct outputs
+to efficiently learn policies to complete fine-grained tasks. We rigorously
+evaluate CrossInstruct on benchmark simulation tasks and real hardware,
+demonstrating effectiveness without additional fine-tuning and providing a
+strong initialization for policies subsequently refined via reinforcement
+learning.

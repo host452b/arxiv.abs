@@ -1,0 +1,31 @@
+Title: Active Disruption Avoidance and Trajectory Design for Tokamak Ramp-downs
+with Neural Differential Equations and Reinforcement Learning
+Authors: Allen M. Wang, Oswin So, Charles Dawson, Darren T. Garnier, Cristina
+Rea, Chuchu Fan
+ID: 2402.09387
+URL: https://arxiv.org/abs/2402.09387
+
+Abstract:
+The tokamak offers a promising path to fusion energy, but plasma disruptions
+pose a major economic risk, motivating considerable advances in disruption
+avoidance. This work develops a reinforcement learning approach to this problem
+by training a policy to safely ramp-down the plasma current while avoiding
+limits on a number of quantities correlated with disruptions. The policy
+training environment is a hybrid physics and machine learning model trained on
+simulations of the SPARC primary reference discharge (PRD) ramp-down, an
+upcoming burning plasma scenario which we use as a testbed. To address physics
+uncertainty and model inaccuracies, the simulation environment is massively
+parallelized on GPU with randomized physics parameters during policy training.
+The trained policy is then successfully transferred to a higher fidelity
+simulator where it successfully ramps down the plasma while avoiding user-
+specified disruptive limits. We also address the crucial issue of safety
+criticality by demonstrating that a constraint-conditioned policy can be used as
+a trajectory design assistant to design a library of feed-forward trajectories
+to handle different physics conditions and user settings. As a library of
+trajectories is more interpretable and verifiable offline, we argue such an
+approach is a promising path for leveraging the capabilities of reinforcement
+learning in the safety-critical context of burning plasma tokamaks. Finally, we
+demonstrate how the training environment can be a useful platform for other
+feed-forward optimization approaches by using an evolutionary algorithm to
+perform optimization of feed-forward trajectories that are robust to physics
+uncertainty

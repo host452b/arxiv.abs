@@ -1,0 +1,28 @@
+Title: Dr. Zero: Self-Evolving Search Agents without Training Data
+Authors: Zhenrui Yue, Kartikeya Upasani, Xianjun Yang, Suyu Ge, Shaoliang Nie,
+Yuning Mao, Zhe Liu, Dong Wang
+ID: 2601.07055
+URL: https://arxiv.org/abs/2601.07055
+
+Abstract:
+As high-quality data becomes increasingly difficult to obtain, data-free self-
+evolution has emerged as a promising paradigm. This approach allows large
+language models (LLMs) to autonomously generate and solve complex problems,
+thereby improving their reasoning capabilities. However, multi-turn search
+agents struggle in data-free self-evolution due to the limited question
+diversity and the substantial compute required for multi-step reasoning and tool
+using. In this work, we introduce Dr. Zero, a framework enabling search agents
+to effectively self-evolve without any training data. In particular, we design a
+self-evolution feedback loop where a proposer generates diverse questions to
+train a solver initialized from the same base model. As the solver evolves, it
+incentivizes the proposer to produce increasingly difficult yet solvable tasks,
+thus establishing an automated curriculum to refine both agents. To enhance
+training efficiency, we also introduce hop-grouped relative policy optimization
+(HRPO). This method clusters structurally similar questions to construct group-
+level baselines, effectively minimizing the sampling overhead in evaluating each
+query's individual difficulty and solvability. Consequently, HRPO significantly
+reduces the compute requirements for solver training without compromising
+performance or stability. Extensive experiment results demonstrate that the
+data-free Dr. Zero matches or surpasses fully supervised search agents, proving
+that complex reasoning and search capabilities can emerge solely through self-
+evolution.

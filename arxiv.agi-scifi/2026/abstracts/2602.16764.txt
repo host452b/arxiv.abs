@@ -1,0 +1,28 @@
+Title: Machine Learning Argument of Latitude Error Model for LEO Satellite Orbit
+and Covariance Correction
+Authors: Alex Moody, Penina Axelrad, Rebecca Russell
+ID: 2602.16764
+URL: https://arxiv.org/abs/2602.16764
+
+Abstract:
+Low Earth orbit (LEO) satellites are leveraged to support new position,
+navigation, and timing (PNT) service alternatives to GNSS. These alternatives
+require accurate propagation of satellite position and velocity with a realistic
+quantification of uncertainty. It is commonly assumed that the propagated
+uncertainty distribution is Gaussian; however, the validity of this assumption
+can be quickly compromised by the mismodeling of atmospheric drag. We develop a
+machine learning approach that corrects error growth in the argument of latitude
+for a diverse set of LEO satellites. The improved orbit propagation accuracy
+extends the applicability of the Gaussian assumption and modeling of the errors
+with a corrected mean and covariance. We compare the performance of a time-
+conditioned neural network and a Gaussian Process on datasets computed with an
+open source orbit propagator and publicly available Vector Covariance Message
+(VCM) ephemerides. The learned models predict the argument of latitude error as
+a Gaussian distribution given parameters from a single VCM epoch and reverse
+propagation errors. We show that this one-dimensional model captures the effect
+of mismodeled drag, which can be mapped to the Cartesian state space. The
+correction method only updates information along the dimensions of dominant
+error growth, while maintaining the physics-based propagation of VCM covariance
+in the remaining dimensions. We therefore extend the utility of VCM ephemerides
+to longer time horizons without modifying the functionality of the existing
+propagator.

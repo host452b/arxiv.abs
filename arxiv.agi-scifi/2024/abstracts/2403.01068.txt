@@ -1,0 +1,25 @@
+Title: Automated Continuous Force-Torque Sensor Bias Estimation
+Authors: Philippe Nadeau, Miguel Rogel Garcia, Emmett Wise, Jonathan Kelly
+ID: 2403.01068
+URL: https://arxiv.org/abs/2403.01068
+
+Abstract:
+Six axis force-torque sensors are commonly attached to the wrist of serial
+robots to measure the external forces and torques acting on the robot's end-
+effector. These measurements are used for load identification, contact
+detection, and human-robot interaction amongst other applications. Typically,
+the measurements obtained from the force-torque sensor are more accurate than
+estimates computed from joint torque readings, as the former is independent of
+the robot's dynamic and kinematic models. However, the force-torque sensor
+measurements are affected by a bias that drifts over time, caused by the
+compounding effects of temperature changes, mechanical stresses, and other
+factors. In this work, we present a pipeline that continuously estimates the
+bias and the drift of the bias of a force-torque sensor attached to the wrist of
+a robot. The first component of the pipeline is a Kalman filter that estimates
+the kinematic state (position, velocity, and acceleration) of the robot's
+joints. The second component is a kinematic model that maps the joint-space
+kinematics to the task-space kinematics of the force-torque sensor. Finally, the
+third component is a Kalman filter that estimates the bias and the drift of the
+bias of the force-torque sensor assuming that the inertial parameters of the
+gripper attached to the distal end of the force-torque sensor are known with
+certainty.

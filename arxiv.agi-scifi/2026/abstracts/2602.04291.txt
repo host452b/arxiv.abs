@@ -1,0 +1,28 @@
+Title: Disentangling Causal Importance from Emergent Structure in Multi-Expert
+Orchestration
+Authors: Sudipto Ghosh, Sujoy Nath, Sunny Manchanda, Tanmoy Chakraborty
+ID: 2602.04291
+URL: https://arxiv.org/abs/2602.04291
+
+Abstract:
+Multi-expert systems, where multiple Large Language Models (LLMs) collaborate to
+solve complex tasks, are increasingly adopted for high-performance reasoning and
+generation. However, the orchestration policies governing expert interaction and
+sequencing remain largely opaque. We introduce INFORM, an interpretability
+analysis that treats orchestration as an explicit, analyzable computation,
+enabling the decoupling of expert interaction structure, execution order, and
+causal attribution. We use INFORM to evaluate an orchestrator on GSM8K,
+HumanEval, and MMLU using a homogeneous consortium of ten instruction-tuned
+experts drawn from LLaMA-3.1 8B, Qwen-3 8B, and DeepSeek-R1 8B, with controlled
+decoding-temperature variation, and a secondary heterogeneous consortium
+spanning 1B-7B parameter models. Across tasks, routing dominance is a poor proxy
+for functional necessity. We reveal a divergence between relational importance,
+captured by routing mass and interaction topology, and intrinsic importance,
+measured via gradient-based causal attribution: frequently selected experts
+often act as interaction hubs with limited causal influence, while sparsely
+routed experts can be structurally critical. Orchestration behaviors emerge
+asynchronously, with expert centralization preceding stable routing confidence
+and expert ordering remaining non-deterministic. Targeted ablations show that
+masking intrinsically important experts induces disproportionate collapse in
+interaction structure compared to masking frequent peers, confirming that INFORM
+exposes causal and structural dependencies beyond accuracy metrics alone.

@@ -1,0 +1,27 @@
+Title: Differentiable Entropy Regularization: A Complexity-Aware Approach for
+Neural Optimization
+Authors: Ibne Farabi Shihab, Sanjeda Akter, Anuj Sharma
+ID: 2509.03733
+URL: https://arxiv.org/abs/2509.03733
+
+Abstract:
+We introduce the first differentiable approximation of range-partition entropy,
+a complexity measure from computational geometry that directly bounds
+algorithmic runtime. Unlike architectural modifications, our method is a
+complementary regularizer that provides orthogonal efficiency gains when
+combined with existing optimizations. We establish theoretical guarantees in
+computational geometry, achieving 4--5$\times$ provable speedups on convex hull
+and triangulation with $<$0.2\% error. On ImageNet-1K with ViT-Base, entropy
+regularization achieves 80.1\% top-1 accuracy at 80\% sparsity (1.60$\times$
+standalone speedup), and when combined with FlashAttention yields 2.07$\times$
+speedup versus 1.63$\times$ for FlashAttention alone. On large language models
+(LLaMA-2 7B, Mistral-7B, Phi-2), we achieve 1.48--1.60$\times$ inference
+speedups at 70--75\% sparsity with minimal quality degradation (ROUGE-L drops of
+0.3--0.4 points, perplexity increase of 0.9). Unlike prior regularization
+methods that target output distributions, we directly minimize representation
+complexity, yielding both efficiency gains and improved robustness through
+semantically structured sparsity patterns (IoU 0.73 vs 0.41 for magnitude
+pruning, CIFAR-100-C mCE 48.7 vs 55.4). Benefits are strongest for geometry and
+vision transformers, with more modest but measurable gains on LLMs,
+demonstrating that complexity regularization offers a principled pathway to
+joint efficiency-robustness optimization.

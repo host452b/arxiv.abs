@@ -1,0 +1,26 @@
+Title: Adaptive Experimentation at Scale: A Computational Framework for Flexible
+Batches
+Authors: Ethan Che, Hongseok Namkoong
+ID: 2303.11582
+URL: https://arxiv.org/abs/2303.11582
+
+Abstract:
+Standard bandit algorithms that assume continual reallocation of measurement
+effort are challenging to implement due to delayed feedback and
+infrastructural/organizational difficulties. Motivated by practical instances
+involving a handful of reallocation epochs in which outcomes are measured in
+batches, we develop a computation-driven adaptive experimentation framework that
+can flexibly handle batching. Our main observation is that normal
+approximations, which are universal in statistical inference, can also guide the
+design of adaptive algorithms. By deriving a Gaussian sequential experiment, we
+formulate a dynamic program that can leverage prior information on average
+rewards. Instead of the typical theory-driven paradigm, we leverage
+computational tools and empirical benchmarking for algorithm development. In
+particular, our empirical analysis highlights a simple yet effective algorithm,
+Residual Horizon Optimization, which iteratively solves a planning problem using
+stochastic gradient descent. Our approach significantly improves statistical
+power over standard methods, even when compared to Bayesian bandit algorithms
+(e.g., Thompson sampling) that require full distributional knowledge of
+individual rewards. Overall, we expand the scope of adaptive experimentation to
+settings that are difficult for standard methods, involving limited adaptivity,
+low signal-to-noise ratio, and unknown reward distributions.

@@ -1,0 +1,34 @@
+Title: AI-driven software for automated quantification of skeletal metastases
+and treatment response evaluation using Whole-Body Diffusion-Weighted MRI (WB-
+DWI) in Advanced Prostate Cancer
+Authors: Antonio Candito, Matthew D Blackledge, Richard Holbrey, Nuria Porta,
+Ana Ribeiro, Fabio Zugni, Luca D'Erme, Francesca Castagnoli, Alina Dragan,
+Ricardo Donners, Christina Messiou, Nina Tunariu, Dow-Mu Koh
+ID: 2505.09011
+URL: https://arxiv.org/abs/2505.09011
+
+Abstract:
+Quantitative assessment of treatment response in Advanced Prostate Cancer (APC)
+with bone metastases remains an unmet clinical need. Whole-Body Diffusion-
+Weighted MRI (WB-DWI) provides two response biomarkers: Total Diffusion Volume
+(TDV) and global Apparent Diffusion Coefficient (gADC). However, tracking post-
+treatment changes of TDV and gADC from manually delineated lesions is cumbersome
+and increases inter-reader variability. We developed a software to automate this
+process. Core technologies include: (i) a weakly-supervised Residual U-Net model
+generating a skeleton probability map to isolate bone; (ii) a statistical
+framework for WB-DWI intensity normalisation, obtaining a signal-normalised
+b=900s/mm^2 (b900) image; and (iii) a shallow convolutional neural network that
+processes outputs from (i) and (ii) to generate a mask of suspected bone
+lesions, characterised by higher b900 signal intensity due to restricted water
+diffusion. This mask is applied to the gADC map to extract TDV and gADC
+statistics. We tested the tool using expert-defined metastatic bone disease
+delineations on 66 datasets, assessed repeatability of imaging biomarkers
+(N=10), and compared software-based response assessment with a construct
+reference standard (N=118). Average dice score between manual and automated
+delineations was 0.6 for lesions within pelvis and spine, with an average
+surface distance of 2mm. Relative differences for log-transformed TDV (log-TDV)
+and median gADC were 8.8% and 5%, respectively. Repeatability analysis showed
+coefficients of variation of 4.6% for log-TDV and 3.5% for median gADC, with
+intraclass correlation coefficients of 0.94 or higher. The software achieved
+80.5% accuracy, 84.3% sensitivity, and 85.7% specificity in assessing response
+to treatment. Average computation time was 90s per scan.

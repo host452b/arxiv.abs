@@ -1,0 +1,29 @@
+Title: Comparison of neural network architectures for feature extraction from
+binary black hole merger waveforms
+Authors: Osvaldo Gramaxo Freitas, Juan Calderón Bustillo, José A. Font, Solange
+Nunes, Antonio Onofre, Alejandro Torres-Forné
+ID: 2307.16668
+URL: https://arxiv.org/abs/2307.16668
+
+Abstract:
+We evaluate several neural-network architectures, both convolutional and
+recurrent, for gravitational-wave time-series feature extraction by performing
+point parameter estimation on noisy waveforms from binary-black-hole mergers. We
+build datasets of 100,000 elements for each of four different waveform models
+(or approximants) in order to test how approximant choice affects feature
+extraction. Our choices include \texttt{SEOBNRv4P} and \texttt{IMRPhenomPv3},
+which contain only the dominant quadrupole emission mode, alongside
+\texttt{IMRPhenomPv3HM} and \texttt{NRHybSur3dq8}, which also account for high-
+order modes. Each dataset element is injected into detector noise corresponding
+to the third observing run of the LIGO-Virgo-KAGRA (LVK) collaboration. We
+identify the Temporal Convolutional Network (TCN) architecture as the overall
+best performer in terms of training and validation losses and absence of
+overfitting to data. Comparison of results between datasets shows that the
+choice of waveform approximant for the creation of a dataset conditions the
+feature extraction ability of a trained network. Hence, care should be taken
+when building a dataset for the training of neural networks, as certain
+approximants may result in better network convergence of evaluation metrics.
+However, this performance does not necessarily translate to data which is more
+faithful to numerical relativity simulations. We also apply this network on
+actual signals from LVK runs, finding that its feature-extracting performance
+can be effective on real data.

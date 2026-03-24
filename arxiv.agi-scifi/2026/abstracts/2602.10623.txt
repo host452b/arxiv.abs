@@ -1,0 +1,24 @@
+Title: Mitigating Reward Hacking in RLHF via Bayesian Non-negative Reward
+Modeling
+Authors: Zhibin Duan, Guowei Rong, Zhuo Li, Bo Chen, Mingyuan Zhou, Dandan Guo
+ID: 2602.10623
+URL: https://arxiv.org/abs/2602.10623
+
+Abstract:
+Reward models learned from human preferences are central to aligning large
+language models (LLMs) via reinforcement learning from human feedback, yet they
+are often vulnerable to reward hacking due to noisy annotations and systematic
+biases such as response length or style. We propose Bayesian Non-Negative Reward
+Model (BNRM), a principled reward modeling framework that integrates non-
+negative factor analysis into Bradley-Terry (BT) preference model. BNRM
+represents rewards through a sparse, non-negative latent factor generative
+process that operates at two complementary levels: instance-specific latent
+variables induce disentangled reward representations, while sparsity over global
+latent factors acts as an implicit debiasing mechanism that suppresses spurious
+correlations. Together, this disentanglement-then-debiasing structure enables
+robust uncertainty-aware reward learning. To scale BNRM to modern LLMs, we
+develop an amortized variational inference network conditioned on deep model
+representations, allowing efficient end-to-end training. Extensive empirical
+results demonstrate that BNRM substantially mitigates reward over-optimization,
+improves robustness under distribution shifts, and yields more interpretable
+reward decompositions than strong baselines.

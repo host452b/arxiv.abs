@@ -1,0 +1,27 @@
+Title: Exemplar-Guided Planing: Enhanced LLM Agent for KGQA
+Authors: Jingao Xu, Shuoyoucheng Ma, Xin Song, Rong Jiang, Hongkui Tu, Bin Zhou
+ID: 2510.15283
+URL: https://arxiv.org/abs/2510.15283
+
+Abstract:
+Large Language Models (LLMs) as interactive agents show significant promise in
+Knowledge Graph Question Answering (KGQA) but often struggle with the semantic
+gap between natural language queries and structured knowledge graph (KG)
+representations. This leads to suboptimal planning and inefficient exploration
+on KG, while training-free approaches often underutilize valuable reasoning
+patterns in training data. To address these limitations, we propose a novel
+framework, Exemplar-Guided Planning (EGP), which enhances the planning
+capabilities of LLM agents for KGQA. EGP first preprocesses the training set
+questions via entity templating to normalize semantic variations. It then
+retrieves highly similar exemplary questions and their successful reasoning
+paths from this preprocessed set using semantic embeddings and an efficient
+FAISS index. These retrieved exemplars dynamically guide the LLM's planning
+process in two key phases: (1) Task Decomposition, by aligning generated sub-
+objectives with proven reasoning steps, and (2) Relation Exploration, by
+providing high-quality auxiliary information to improve relation pruning
+accuracy. Additionally, we introduce a Smart Lookahead mechanism during relation
+exploration to improve efficiency by preemptively exploring promising paths and
+potentially terminating exploration earlier. We apply EGP to the Plan-on-Graph
+(PoG) framework, termed PoG-EGP. Extensive experiments on two real-world KGQA
+datasets, WebQSP and CWQ, demonstrate that PoG-EGP significantly improves over
+the baseline PoG system and other compared methods.

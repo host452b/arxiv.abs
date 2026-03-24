@@ -1,0 +1,25 @@
+Title: Ares: Adaptive Reasoning Effort Selection for Efficient LLM Agents
+Authors: Jingbo Yang, Bairu Hou, Wei Wei, Yujia Bao, Shiyu Chang
+ID: 2603.07915
+URL: https://arxiv.org/abs/2603.07915
+
+Abstract:
+Modern agents powered by thinking LLMs achieve high accuracy through long chain-
+of-thought reasoning but incur substantial inference costs. While many LLMs now
+support configurable reasoning levels (e.g., high/medium/low), static strategies
+are often ineffective: using low-effort modes at every step leads to significant
+performance degradation, while random selection fails to preserve accuracy or
+provide meaningful cost reduction. However, agents should reserve high reasoning
+effort for difficult steps like navigating complex website structures, while
+using lower-effort modes for simpler steps like opening a target URL. In this
+paper, we propose Ares, a framework for per-step dynamic reasoning effort
+selection tailored for multi-step agent tasks. Ares employs a lightweight router
+to predict the lowest appropriate reasoning level for each step based on the
+interaction history. To train this router, we develop a data generation pipeline
+that identifies the minimum reasoning effort required for successful step
+completion. We then fine-tune the router to predict these levels, enabling plug-
+and-play integration for any LLM agents. We evaluate Ares on a diverse set of
+agent tasks, including TAU-Bench for tool use agents, BrowseComp-Plus for deep-
+research agents, and WebArena for web agents. Experimental results show that
+Ares reduces reasoning token usage by up to 52.7% compared to fixed high-effort
+reasoning, while introducing minimal degradation in task success rates.

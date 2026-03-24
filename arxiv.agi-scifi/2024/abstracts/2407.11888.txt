@@ -1,0 +1,25 @@
+Title: Ascend-CC: Confidential Computing on Heterogeneous NPU for Emerging
+Generative AI Workloads
+Authors: Aritra Dhar, Clément Thorens, Lara Magdalena Lazier, Lukas Cavigelli
+ID: 2407.11888
+URL: https://arxiv.org/abs/2407.11888
+
+Abstract:
+Cloud workloads have dominated generative AI based on large language models
+(LLM). Specialized hardware accelerators, such as GPUs, NPUs, and TPUs, play a
+key role in AI adoption due to their superior performance over general-purpose
+CPUs. The AI models and the data are often highly sensitive and come from
+mutually distrusting parties. Existing CPU-based TEEs such as Intel SGX or AMD
+SEV do not provide sufficient protection. Device-centric TEEs like Nvidia-CC
+only address tightly coupled CPU-GPU systems with a proprietary solution
+requiring TEE on the host CPU side. On the other hand, existing academic
+proposals are tailored toward specific CPU-TEE platforms.
+  To address this gap, we propose Ascend-CC, a confidential computing
+architecture based on discrete NPU devices that requires no trust in the host
+system. Ascend-CC provides strong security by ensuring data and model encryption
+that protects not only the data but also the model parameters and operator
+binaries. Ascend-CC uses delegation-based memory semantics to ensure isolation
+from the host software stack, and task attestation provides strong model
+integrity guarantees. Our Ascend-CC implementation and evaluation with state-of-
+the-art LLMs such as Llama2 and Llama3 shows that Ascend-CC introduces minimal
+overhead with no changes in the AI software stack.

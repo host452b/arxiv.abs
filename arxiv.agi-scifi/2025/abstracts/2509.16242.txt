@@ -1,0 +1,30 @@
+Title: Machine Learning for Quantum Noise Reduction
+Authors: Karan Kendre
+ID: 2509.16242
+URL: https://arxiv.org/abs/2509.16242
+
+Abstract:
+Quantum noise fundamentally limits the utility of near-term quantum devices,
+making error mitigation essential for practical quantum computation. While
+traditional quantum error correction codes require substantial qubit overhead
+and complex syndrome decoding, we propose a machine learning approach that
+directly reconstructs clean quantum states from noisy density matrices without
+additional qubits. We formulate quantum noise reduction as a supervised learning
+problem using a convolutional neural network (CNN) autoencoder architecture with
+a novel fidelity-aware composite loss function. Our method is trained and
+evaluated on a comprehensive synthetic dataset of 10,000 density matrices
+derived from random 5-qubit quantum circuits, encompassing five noise types
+(depolarizing, amplitude damping, phase damping, bit-flip, and mixed noise)
+across four intensity levels (0.05-0.20). The CNN successfully reconstructs
+quantum states across all noise conditions, achieving an average fidelity
+improvement from 0.298 to 0.774 (Δ = 0.476). Notably, the model demonstrates
+superior performance on complex mixed noise scenarios and higher noise
+intensities, with mixed noise showing the highest corrected fidelity (0.807) and
+improvement (0.567). The approach effectively preserves both diagonal elements
+(populations) and off-diagonal elements (quantum coherences), making it suitable
+for entanglement-dependent quantum algorithms. While phase damping presents
+fundamental information-theoretic limitations, our results suggest that CNN-
+based density matrix reconstruction offers a promising, resource-efficient
+alternative to traditional quantum error correction for NISQ-era devices. This
+data-driven approach could enable practical quantum advantage with fewer
+physical qubits than conventional error correction schemes require.

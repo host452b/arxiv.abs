@@ -1,0 +1,32 @@
+Title: Unlocking Reproducibility: Automating re-Build Process for Open-Source
+Software
+Authors: Behnaz Hassanshahi, Trong Nhan Mai, Benjamin Selwyn Smith, Nicholas
+Allen
+ID: 2509.08204
+URL: https://arxiv.org/abs/2509.08204
+
+Abstract:
+Software ecosystems like Maven Central play a crucial role in modern software
+supply chains by providing repositories for libraries and build plugins.
+However, the separation between binaries and their corresponding source code in
+Maven Central presents a significant challenge, particularly when it comes to
+linking binaries back to their original build environment. This lack of
+transparency poses security risks, as approximately 84% of the top 1200 commonly
+used artifacts are not built using a transparent CI/CD pipeline. Consequently,
+users must place a significant amount of trust not only in the source code but
+also in the environment in which these artifacts are built.
+  Rebuilding software artifacts from source provides a robust solution to
+improve supply chain security. This approach allows for a deeper review of code,
+verification of binary-source equivalence, and control over dependencies.
+However, challenges arise due to variations in build environments, such as JDK
+versions and build commands, which can lead to build failures. Additionally,
+ensuring that all dependencies are rebuilt from source across large and complex
+dependency graphs further complicates the process. In this paper, we introduce
+an extension to Macaron, an industry-grade open-source supply chain security
+framework, to automate the rebuilding of Maven artifacts from source. Our
+approach improves upon existing tools, by offering better performance in source
+code detection and automating the extraction of build specifications from GitHub
+Actions workflows. We also present a comprehensive root cause analysis of build
+failures in Java projects and propose a scalable solution to automate the
+rebuilding of artifacts, ultimately enhancing security and transparency in the
+open-source supply chain.

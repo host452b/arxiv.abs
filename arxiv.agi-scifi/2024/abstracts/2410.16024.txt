@@ -1,0 +1,29 @@
+Title: SMAC-R1: The Emergence of Intelligence in Decision-Making Tasks
+Authors: Yue Deng, Weiyu Ma, Yuxin Fan, Ruyi Song, Yin Zhang, Haifeng Zhang,
+Jian Zhao
+ID: 2410.16024
+URL: https://arxiv.org/abs/2410.16024
+
+Abstract:
+StarCraft Multi-Agent Challenge (SMAC) has been one of the most commonly used
+experimental environments in multi-agent reinforcement learning (MARL), where
+the specific task is to control a set number of allied units to defeat enemy
+forces. Traditional MARL algorithms often require interacting with the
+environment for millions of steps to train a parametric model, of which the
+resulting policies are typically non-interpretable with weak transferability. In
+this paper, we introduce SMAC-R1 which is based on the Qwen2.5-7B-Base LLM
+distilled from DeepSeek-Coder-v2.5-236B. Similar to online reinforcement
+learning after behavior cloning in offline learning process, in our pipeline,
+agents leverage the DeepSeek LLM to generate decision tree code by providing
+task descriptions, and the agents are further self-reflected using feedback from
+the rewards provided by the environment. Based on that, we augment the generated
+scripts to fine-tune a small LLM, Qwen2.5-7B-Base, to distill the decision-
+making ability via Supervised Fine-Tuning (SFT) and enhance the script
+generation ability by the Group Relative Policy Optimization (GRPO) algorithm.
+We conduct experiments in the original 23 SMAC tasks and 10 newly-designed tasks
+to demonstrate that our method can produce high-quality, interpretable decision
+trees with minimal environmental exploration. Moreover, these scripts exhibit
+strong transferability, successfully applying to homogeneous SMAC environments
+without modification. We believe this approach offers a new direction for
+solving decision-making tasks and domain-specific LLM training pipelines in the
+future.

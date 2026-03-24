@@ -1,0 +1,26 @@
+Title: VIRO: Robust and Efficient Neuro-Symbolic Reasoning with Verification for
+Referring Expression Comprehension
+Authors: Hyejin Park, Junhyuk Kwon, Suha Kwak, Jungseul Ok
+ID: 2601.12781
+URL: https://arxiv.org/abs/2601.12781
+
+Abstract:
+Referring Expression Comprehension (REC) aims to localize the image region
+corresponding to a natural language query. Recent neuro-symbolic REC approaches
+leverage large language models (LLMs) and vision-language models (VLMs) to
+perform compositional reasoning, decomposing queries into structured programs
+and executing them step-by-step. While such approaches achieve interpretable
+reasoning and strong zero-shot generalization, they assume that intermediate
+reasoning steps are accurate. However, this assumption causes cascading errors:
+false detections and invalid relations propagate through the reasoning chain,
+yielding high-confidence false positives even when no target is present in the
+image. To address this limitation, we introduce Verification-Integrated
+Reasoning Operators (VIRO), a neuro-symbolic framework that embeds lightweight
+operator-level verifiers within reasoning steps. Each operator executes and
+validates its output, such as object existence or spatial relationships,
+allowing the system to robustly handle no-target cases through verification-
+aware abstention. Our framework achieves state-of-the-art performance, reaching
+61.1% balanced accuracy across target-present and no-target settings, and
+demonstrates generalization to real-world egocentric data. VIRO also shows high
+reliability with a program failure rate of at most 0.3%, efficient per-query
+runtime, and scalability through decoupled program generation and execution.

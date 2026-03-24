@@ -1,0 +1,25 @@
+Title: Delta-Triplane Transformers as Occupancy World Models
+Authors: Haoran Xu, Peixi Peng, Guang Tan, Yiqian Chang, Yisen Zhao, Yonghong
+Tian
+ID: 2503.07338
+URL: https://arxiv.org/abs/2503.07338
+
+Abstract:
+Occupancy World Models (OWMs) aim to predict future scenes via 3D voxelized
+representations of the environment to support intelligent motion planning.
+Existing approaches typically generate full future occupancy states from VAE-
+style latent encodings, which can be computationally expensive and redundant. We
+propose Delta-Triplane Transformers (DTT), a novel 4D OWM for autonomous
+driving, that introduces two key innovations: (1) a triplane based
+representation that encodes 3D occupancy more compactly than previous
+approaches, and (2) an incremental prediction strategy for OWM that models {\em
+changes} in occupancy rather than dealing with full states. The core insight is
+that changes in the compact 3D latent space are naturally sparser and easier to
+model, enabling higher accuracy with a lighter-weight architecture. Building on
+this representation, DTT extracts multi-scale motion features from historical
+data and iteratively predict future triplane deltas. These deltas are combined
+with past states to decode future occupancy and ego-motion trajectories.
+Extensive experiments demonstrate that DTT delivers a 1.44$\times$ speedup (26
+FPS) over the state of the art, improves mean IoU to 30.85, and reduces the mean
+absolute planning error to 1.0 meters. Demo videos are provided in the
+supplementary material.

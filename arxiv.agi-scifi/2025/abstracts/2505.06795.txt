@@ -1,0 +1,29 @@
+Title: Sparse Latent Factor Forecaster (SLFF) with Iterative Inference for
+Transparent Multi-Horizon Commodity Futures Prediction
+Authors: Abhijit Gupta
+ID: 2505.06795
+URL: https://arxiv.org/abs/2505.06795
+
+Abstract:
+Amortized variational inference in latent-variable forecasters creates a
+deployment gap: the test-time encoder approximates a training-time optimization-
+refined latent, but without access to future targets. This gap introduces
+unnecessary forecast error and interpretability challenges. In this work, we
+propose the Sparse Latent Factor Forecaster with Iterative Inference (SLFF),
+addressing this through (i) a sparse coding objective with L1 regularization for
+low-dimensional latents, (ii) unrolled proximal gradient descent (LISTA-style)
+for iterative refinement during training, and (iii) encoder alignment to ensure
+amortized outputs match optimization-refined solutions. Under a linearized
+decoder assumption, we derive a design-motivating bound on the amortization gap
+based on encoder-optimizer distance, with convergence rates under mild
+conditions; empirical checks confirm the bound is predictive for the deployed
+MLP decoder. To prevent mixed-frequency data leakage, we introduce an
+information-set-aware protocol using release calendars and vintage macroeconomic
+data. Interpretability is formalized via a three-stage protocol: stability
+(Procrustes alignment across seeds), driver validity (held-out regressions
+against observables), and behavioral consistency (counterfactuals and event
+studies). Using commodity futures (Copper, WTI, Gold; 2005--2025) as a testbed,
+SLFF demonstrates significant improvements over neural baselines at 1- and 5-day
+horizons, yielding sparse factors that are stable across seeds and correlated
+with observable economic fundamentals (interpretability remains correlational,
+not causal). Code, manifests, diagnostics, and artifacts are released.

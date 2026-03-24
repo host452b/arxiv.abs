@@ -1,0 +1,23 @@
+Title: Murphys Laws of AI Alignment: Why the Gap Always Wins
+Authors: Madhava Gaikwad
+ID: 2509.05381
+URL: https://arxiv.org/abs/2509.05381
+
+Abstract:
+We study reinforcement learning from human feedback under misspecification.
+Sometimes human feedback is systematically wrong on certain types of inputs,
+like a broken compass that points the wrong way in specific regions. We prove
+that when feedback is biased on a fraction alpha of contexts with bias strength
+epsilon, any learning algorithm needs exponentially many samples
+exp(n*alpha*epsilon^2) to distinguish between two possible "true" reward
+functions that differ only on these problematic contexts. However, if you can
+identify where feedback is unreliable (a "calibration oracle"), you can focus
+your limited questions there and overcome the exponential barrier with just
+O(1/(alpha*epsilon^2)) queries. This quantifies why alignment is hard: rare edge
+cases with subtly biased feedback create an exponentially hard learning problem
+unless you know where to look.
+  The gap between what we optimize (proxy from human feedback) and what we want
+(true objective) is fundamentally limited by how common the problematic contexts
+are (alpha), how wrong the feedback is there (epsilon), and how much the true
+objectives disagree there (gamma). Murphy's Law for AI alignment: the gap always
+wins unless you actively route around misspecification.

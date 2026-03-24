@@ -1,0 +1,30 @@
+Title: Variational Quantum Machine Learning with Quantum Error Detection
+Authors: Eromanga Adermann, Hajime Suzuki, Muhammad Usman
+ID: 2504.06775
+URL: https://arxiv.org/abs/2504.06775
+
+Abstract:
+Quantum machine learning (QML) is an emerging field that promises advantages
+such as faster training, improved reliability and superior feature extraction
+over classical counterparts. However, its implementation on quantum hardware is
+challenging due to the noise inherent in these systems, necessitating the use of
+quantum error correction (QEC) codes. Current QML research remains primarily
+theoretical, often assuming noise-free environments and offering little insight
+into the integration of QEC with QML implementations. To address this, we
+investigate the performance of a simple, parity-classifying Variational Quantum
+Classifier (VQC) implemented with the [[4,2,2]] error-detecting stabiliser code
+in a simulated noisy environment, marking the first study into the
+implementation of a QML algorithm with a QEC code. We invoke ancilla qubits to
+logically encode rotation gates, and classically simulate the logically-encoded
+VQC under two simple noise models representing gate noise and environmental
+noise. We demonstrate that the stabiliser code improves the training accuracy at
+convergence compared to noisy implementations without QEC. However, we find that
+the effectiveness and reliability of error detection is contingent upon keeping
+the ancilla qubit error rates below a specific threshold, due to the propagation
+of ancilla errors to the physical qubits. Our results provide an important
+insight: for QML implementations with QEC codes that both require ancilla qubits
+for logical rotations and cannot fully correct errors propagated between ancilla
+and physical qubits, the maximum achievable accuracy of the QML model is
+limited. This highlights the need for additional error correction or mitigation
+strategies to support the practical implementation of QML algorithms with QEC on
+quantum devices.

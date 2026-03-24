@@ -1,0 +1,32 @@
+Title: InfiMed-ORBIT: Aligning LLMs on Open-Ended Complex Tasks via Rubric-Based
+Incremental Training
+Authors: Pengkai Wang,  Linus, Pengwei Liu, Zhijie Sang, Congkai Xie, Hongxia
+Yang
+ID: 2510.15859
+URL: https://arxiv.org/abs/2510.15859
+
+Abstract:
+Reinforcement learning has powered many of the recent breakthroughs in large
+language models, especially for tasks where rewards can be computed
+automatically, such as code generation. However, these methods deteriorate in
+open-ended domains like medical consultation, where feedback is inherently
+ambiguous, highly context-dependent, and cannot be reduced to a reliable scalar
+signal. In such settings, RL must either rely on supervision-intensive reward
+models that often fail to generalize, or it falls into pathological behaviors
+such as reward hacking - an especially troubling risk for high-stakes medical
+dialogue. To address these limitations, we introduce ORBIT, an open-ended
+rubric-based incremental training framework for high-stakes medical dialogue.
+ORBIT integrates synthetic dialogue generation with dynamically constructed
+rubrics that serve as adaptive guides for incremental RL. Instead of relying on
+external medical knowledge bases or handcrafted rule sets, ORBIT uses rubric-
+driven feedback to steer the learning process. Its judge component can be
+instantiated with general-purpose instruction-following LLMs, removing the need
+for any task-specific fine-tuning. Applied to the Qwen3-4B-Instruct model, ORBIT
+raises the HealthBench-Hard score from 7.0 to 27.5 using only 2k training
+samples, achieving SOTA performance for models at this scale. With larger rubric
+datasets, ORBIT-trained models further compete with the strongest open-source
+baselines on HealthBench-Hard. Our analysis shows that rubric-guided RL
+consistently improves consultation quality across diverse medical scenarios. We
+also apply such rubric generation and training pipeline to InfoBench, where
+ORBIT enhances instruction-following performance, highlighting the generality of
+rubric-based feedback.

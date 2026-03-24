@@ -1,0 +1,23 @@
+Title: CascadeMind at SemEval-2026 Task 4: A Hybrid Neuro-Symbolic Cascade for
+Narrative Similarity
+Authors: Sebastien Kawada, Dylan Holyoak
+ID: 2601.19931
+URL: https://arxiv.org/abs/2601.19931
+
+Abstract:
+How should a system handle uncertainty when comparing narratives? We present
+CascadeMind, a hybrid neuro-symbolic system for SemEval-2026 Task 4 (Narrative
+Story Similarity) built around a core finding: an LLM's internal vote
+distribution is a reliable proxy for task difficulty, and confidence-aware
+routing outperforms uniform treatment of all cases. Our cascade samples eight
+parallel votes from Gemini 2.5 Flash, applying a supermajority threshold to
+resolve confident cases immediately (74% of instances at 85% development
+accuracy). Uncertain cases escalate to additional voting rounds (21%), and only
+perfect ties (5%) are deferred to a symbolic ensemble of five narrative signals
+grounded in classical narrative theory. The resulting difficulty gradient (85%
+-> 67% -> 61% by pathway) confirms that vote consensus tracks genuine ambiguity.
+In official Track A evaluation, CascadeMind placed 11th of 47 teams with 72.75%
+test accuracy (Hatzel et al., 2026), outperforming several systems built on
+larger and more expensive models. Gains are driven primarily by routing strategy
+rather than symbolic reasoning, suggesting that for narrative similarity,
+knowing when you don't know matters more than adding auxiliary representations.

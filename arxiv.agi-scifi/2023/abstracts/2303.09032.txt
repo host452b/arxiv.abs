@@ -1,0 +1,27 @@
+Title: Conditionally Optimistic Exploration for Cooperative Deep Multi-Agent
+Reinforcement Learning
+Authors: Xutong Zhao, Yangchen Pan, Chenjun Xiao, Sarath Chandar, Janarthanan
+Rajendran
+ID: 2303.09032
+URL: https://arxiv.org/abs/2303.09032
+
+Abstract:
+Efficient exploration is critical in cooperative deep Multi-Agent Reinforcement
+Learning (MARL). In this work, we propose an exploration method that effectively
+encourages cooperative exploration based on the idea of sequential action-
+computation scheme. The high-level intuition is that to perform optimism-based
+exploration, agents would explore cooperative strategies if each agent's
+optimism estimate captures a structured dependency relationship with other
+agents. Assuming agents compute actions following a sequential order at
+\textit{each environment timestep}, we provide a perspective to view MARL as
+tree search iterations by considering agents as nodes at different depths of the
+search tree. Inspired by the theoretically justified tree search algorithm UCT
+(Upper Confidence bounds applied to Trees), we develop a method called
+Conditionally Optimistic Exploration (COE). COE augments each agent's state-
+action value estimate with an action-conditioned optimistic bonus derived from
+the visitation count of the global state and joint actions of preceding agents.
+COE is performed during training and disabled at deployment, making it
+compatible with any value decomposition method for centralized training with
+decentralized execution. Experiments across various cooperative MARL benchmarks
+show that COE outperforms current state-of-the-art exploration methods on hard-
+exploration tasks.

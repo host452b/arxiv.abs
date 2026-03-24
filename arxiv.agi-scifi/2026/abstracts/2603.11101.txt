@@ -1,0 +1,33 @@
+Title: Thousand-GPU Large-Scale Training and Optimization Recipe for AI-Native
+Cloud Embodied Intelligence Infrastructure
+Authors: Yongjian Guo, Yunxuan Ma, Haoran Sun, Zhong Guan, Shuai Di, Jing Long,
+Wanting Xu, Xiaodong Bai, Wen Huang, Yucheng Guo, Chen Zhou, Qiming Yang, Mingxi
+Luo, Tianyun Zhao, Hedan Yang, Song Wang, Xiaomeng Tian, Xiaolong Xiang, Zhen
+Sun, Yu Wei, Luqiao Wang, Yuzhen Li, Chenfeng Gu, Junwu Xiong, Yicheng Gong
+ID: 2603.11101
+URL: https://arxiv.org/abs/2603.11101
+
+Abstract:
+Embodied intelligence is a key step towards Artificial General Intelligence
+(AGI), yet its development faces multiple challenges including data, frameworks,
+infrastructure, and evaluation systems. To address these issues, we have, for
+the first time in the industry, launched a cloud-based, thousand-GPU distributed
+training platform for embodied intelligence, built upon the widely adopted
+LeRobot framework, and have systematically overcome bottlenecks across the
+entire pipeline. At the data layer, we have restructured the data pipeline to
+optimize the flow of embodied training data. In terms of training, for the
+GR00T-N1.5 model, utilizing thousand-GPU clusters and data at the scale of
+hundreds of millions, the single-round training time has been reduced from 15
+hours to just 22 minutes, achieving a 40-fold speedup. At the model layer, by
+combining variable-length FlashAttention and Data Packing, we have moved from
+sample redundancy to sequence integration, resulting in a 188% speed increase;
+π-0.5 attention optimization has accelerated training by 165%; and FP8
+quantization has delivered a 140% speedup. On the infrastructure side, relying
+on high-performance storage, a 3.2T RDMA network, and a Ray-driven elastic AI
+data lake, we have achieved deep synergy among data, storage, communication, and
+computation. We have also built an end-to-end evaluation system, creating a
+closed loop from training to simulation to assessment. This framework has
+already been fully validated on thousand-GPU clusters, laying a crucial
+technical foundation for the development and application of next-generation
+autonomous intelligent robots, and is expected to accelerate the arrival of the
+era of human-machine integration.

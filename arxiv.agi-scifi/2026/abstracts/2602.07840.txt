@@ -1,0 +1,30 @@
+Title: SAGE: Scalable AI Governance & Evaluation
+Authors: Benjamin Le, Xueying Lu, Nick Stern, Wenqiong Liu, Igor Lapchuk, Xiang
+Li, Baofen Zheng, Kevin Rosenberg, Jiewen Huang, Zhe Zhang, Abraham Cabangbang,
+Satej Milind Wagle, Jianqiang Shen, Raghavan Muthuregunathan, Abhinav Gupta,
+Mathew Teoh, Andrew Kirk, Thomas Kwan, Jingwei Wu, Wenjing Zhang
+ID: 2602.07840
+URL: https://arxiv.org/abs/2602.07840
+
+Abstract:
+Evaluating relevance in large-scale search systems is fundamentally constrained
+by the governance gap between nuanced, resource-constrained human oversight and
+the high-throughput requirements of production systems. While traditional
+approaches rely on engagement proxies or sparse manual review, these methods
+often fail to capture the full scope of high-impact relevance failures. We
+present \textbf{SAGE} (Scalable AI Governance \& Evaluation), a framework that
+operationalizes high-quality human product judgment as a scalable evaluation
+signal. At the core of SAGE is a bidirectional calibration loop where natural-
+language \emph{Policy}, curated \emph{Precedent}, and an \emph{LLM Surrogate
+Judge} co-evolve. SAGE systematically resolves semantic ambiguities and
+misalignments, transforming subjective relevance judgment into an executable,
+multi-dimensional rubric with near human-level agreement. To bridge the gap
+between frontier model reasoning and industrial-scale inference, we apply
+teacher-student distillation to transfer high-fidelity judgments into compact
+student surrogates at \textbf{92$\times$} lower cost. Deployed within LinkedIn
+Search ecosystems, SAGE guided model iteration through simulation-driven
+development, distilling policy-aligned models for online serving and enabling
+rapid offline evaluation. In production, it powered policy oversight that
+measured ramped model variants and detected regressions invisible to engagement
+metrics. Collectively, these drove a \textbf{0.25\%} lift in LinkedIn daily
+active users.

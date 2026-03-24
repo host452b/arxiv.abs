@@ -1,0 +1,32 @@
+Title: DeepExtractor: Time-domain reconstruction of signals and glitches in
+gravitational wave data with deep learning
+Authors: Tom Dooney, Harsh Narola, Stefano Bromuri, R. Lyana Curier, Chris Van
+Den Broeck, Sarah Caudill, Daniel Stanley Tan
+ID: 2501.18423
+URL: https://arxiv.org/abs/2501.18423
+
+Abstract:
+Gravitational wave (GW) detectors, such as LIGO, Virgo, and KAGRA, detect faint
+signals from distant astrophysical events. However, their high sensitivity also
+makes them susceptible to background noise, which can obscure these signals.
+This noise often includes transient artifacts called 'glitches', that can mimic
+genuine astrophysical signals or mask their true characteristics. In this study,
+we present DeepExtractor, a deep learning framework that is designed to
+reconstruct signals and glitches with power exceeding interferometer noise,
+regardless of their source. We design DeepExtractor to model the inherent noise
+distribution of GW detectors, following conventional assumptions that the noise
+is Gaussian and stationary over short time scales. It operates by predicting and
+subtracting the noise component of the data, retaining only the clean
+reconstruction of signal or glitch. We focus on applications related to glitches
+and validate DeepExtractor's effectiveness through three experiments: (1)
+reconstructing simulated glitches injected into simulated detector noise, (2)
+comparing its performance with the state-of-the-art BayesWave algorithm, and (3)
+analyzing real data from the Gravity Spy dataset to demonstrate effective glitch
+subtraction from LIGO strain data. We further demonstrate its potential by
+reconstructing three real GW events from LIGO's third observing run, without
+being trained on GW waveforms. Our proposed model achieves a median mismatch of
+only 0.9% for simulated glitches, outperforming several deep learning baselines.
+Additionally, DeepExtractor surpasses BayesWave in glitch recovery, offering a
+dramatic computational speedup by reconstructing one glitch sample in
+approximately 0.1 seconds on a CPU, compared to BayesWave's processing time of
+approximately one hour per glitch.

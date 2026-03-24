@@ -1,0 +1,32 @@
+Title: TableMoE: Neuro-Symbolic Routing for Structured Expert Reasoning in
+Multimodal Table Understanding
+Authors: Junwen Zhang, Pu Chen, Yin Zhang
+ID: 2506.21393
+URL: https://arxiv.org/abs/2506.21393
+
+Abstract:
+Multimodal understanding of tables in real-world contexts is challenging due to
+the complexity of structure, symbolic density, and visual degradation (blur,
+skew, watermarking, incomplete structures or fonts, multi-span or hierarchically
+nested layouts). Existing multimodal large language models (MLLMs) struggle with
+such WildStruct conditions, resulting in limited performance and poor
+generalization. To address these challenges, we propose TableMoE, a neuro-
+symbolic Mixture-of-Connector-Experts (MoCE) architecture specifically designed
+for robust, structured reasoning over multimodal table data. TableMoE features
+an innovative Neuro-Symbolic Routing mechanism, which predicts latent semantic
+token roles (e.g., header, data cell, axis, formula) and dynamically routes
+table elements to specialized experts (Table-to-HTML, Table-to-JSON, Table-to-
+Code) using a confidence-aware gating strategy informed by symbolic reasoning
+graphs. To facilitate effective alignment-driven pretraining, we introduce the
+large-scale TableMoE-Align dataset, consisting of 1.2M table-HTML-JSON-code
+quadruples across finance, science, biomedicine and industry, utilized
+exclusively for model pretraining. For evaluation, we curate and release four
+challenging WildStruct benchmarks: WMMFinQA, WMMTatQA, WMMTabDialog, and
+WMMFinanceMath, designed specifically to stress-test models under real-world
+multimodal degradation and structural complexity. Experimental results
+demonstrate that TableMoE significantly surpasses existing state-of-the-art
+models. Extensive ablation studies validate each core component, emphasizing the
+critical role of Neuro-Symbolic Routing and structured expert alignment. Through
+qualitative analyses, we further showcase TableMoE's interpretability and
+enhanced robustness, underscoring the effectiveness of integrating neuro-
+symbolic reasoning for multimodal table understanding.

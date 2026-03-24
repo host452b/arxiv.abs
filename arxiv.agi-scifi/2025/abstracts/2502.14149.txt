@@ -1,0 +1,32 @@
+Title: PitVQA++: Vector Matrix-Low-Rank Adaptation for Open-Ended Visual
+Question Answering in Pituitary Surgery
+Authors: Runlong He, Danyal Z. Khan, Evangelos B. Mazomenos, Hani J. Marcus,
+Danail Stoyanov, Matthew J. Clarkson, Mobarakol Islam
+ID: 2502.14149
+URL: https://arxiv.org/abs/2502.14149
+
+Abstract:
+Vision-Language Models (VLMs) in visual question answering (VQA) offer a unique
+opportunity to enhance intra-operative decision-making, promote intuitive
+interactions, and significantly advancing surgical education. However, the
+development of VLMs for surgical VQA is challenging due to limited datasets and
+the risk of overfitting and catastrophic forgetting during full fine-tuning of
+pretrained weights. While parameter-efficient techniques like Low-Rank
+Adaptation (LoRA) and Matrix of Rank Adaptation (MoRA) address adaptation
+challenges, their uniform parameter distribution overlooks the feature hierarchy
+in deep networks, where earlier layers, that learn general features, require
+more parameters than later ones. This work introduces PitVQA++ with an open-
+ended PitVQA dataset and vector matrix-low-rank adaptation (Vector-MoLoRA), an
+innovative VLM fine-tuning approach for adapting GPT-2 to pituitary surgery.
+Open-Ended PitVQA comprises around 101,803 frames from 25 procedural videos with
+745,972 question-answer sentence pairs, covering key surgical elements such as
+phase and step recognition, context understanding, tool detection, localization,
+and interactions recognition. Vector-MoLoRA incorporates the principles of LoRA
+and MoRA to develop a matrix-low-rank adaptation strategy that employs vector
+ranking to allocate more parameters to earlier layers, gradually reducing them
+in the later layers. Our approach, validated on the Open-Ended PitVQA and
+EndoVis18-VQA datasets, effectively mitigates catastrophic forgetting while
+significantly enhancing performance over recent baselines. Furthermore, our
+risk-coverage analysis highlights its enhanced reliability and trustworthiness
+in handling uncertain predictions. Our source code and dataset is available
+at~\url{https://github.com/HRL-Mike/PitVQA-Plus}.

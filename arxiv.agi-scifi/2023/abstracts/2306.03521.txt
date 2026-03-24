@@ -1,0 +1,32 @@
+Title: Machine learning in and out of equilibrium
+Authors: Shishir Adhikari, Alkan Kabakçıoğlu, Alexander Strang, Deniz Yuret,
+Michael Hinczewski
+ID: 2306.03521
+URL: https://arxiv.org/abs/2306.03521
+
+Abstract:
+The algorithms used to train neural networks, like stochastic gradient descent
+(SGD), have close parallels to natural processes that navigate a high-
+dimensional parameter space -- for example protein folding or evolution. Our
+study uses a Fokker-Planck approach, adapted from statistical physics, to
+explore these parallels in a single, unified framework. We focus in particular
+on the stationary state of the system in the long-time limit, which in
+conventional SGD is out of equilibrium, exhibiting persistent currents in the
+space of network parameters. As in its physical analogues, the current is
+associated with an entropy production rate for any given training trajectory.
+The stationary distribution of these rates obeys the integral and detailed
+fluctuation theorems -- nonequilibrium generalizations of the second law of
+thermodynamics. We validate these relations in two numerical examples, a
+nonlinear regression network and MNIST digit classification. While the
+fluctuation theorems are universal, there are other aspects of the stationary
+state that are highly sensitive to the training details. Surprisingly, the
+effective loss landscape and diffusion matrix that determine the shape of the
+stationary distribution vary depending on the simple choice of minibatching done
+with or without replacement. We can take advantage of this nonequilibrium
+sensitivity to engineer an equilibrium stationary state for a particular
+application: sampling from a posterior distribution of network weights in
+Bayesian machine learning. We propose a new variation of stochastic gradient
+Langevin dynamics (SGLD) that harnesses without replacement minibatching. In an
+example system where the posterior is exactly known, this SGWORLD algorithm
+outperforms SGLD, converging to the posterior orders of magnitude faster as a
+function of the learning rate.

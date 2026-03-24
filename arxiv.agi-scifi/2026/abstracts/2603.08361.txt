@@ -1,0 +1,31 @@
+Title: $Δ$VLA: Prior-Guided Vision-Language-Action Models via World Knowledge
+Variation
+Authors: Yijie Zhu, Jie He, Rui Shao, Kaishen Yuan, Tao Tan, Xiaochen Yuan,
+Zitong Yu
+ID: 2603.08361
+URL: https://arxiv.org/abs/2603.08361
+
+Abstract:
+Recent vision-language-action (VLA) models have significantly advanced robotic
+manipulation by unifying perception, reasoning, and control. To achieve such
+integration, recent studies adopt a predictive paradigm that models future
+visual states or world knowledge to guide action generation. However, these
+models emphasize forecasting outcomes rather than reasoning about the underlying
+process of change, which is essential for determining how to act. To address
+this, we propose $Δ$VLA, a prior-guided framework that models world-knowledge
+variations relative to an explicit current-world knowledge prior for action
+generation, rather than regressing absolute future world states. Specifically,
+1) to construct the current world knowledge prior, we propose the Prior-Guided
+WorldKnowledge Extractor (PWKE). It extracts manipulable regions, spatial
+relations, and semantic cues from the visual input, guided by auxiliary heads
+and prior pseudo labels, thus reducing redundancy. 2) Building upon this, to
+represent how world knowledge evolves under actions, we introduce the Latent
+World Variation Quantization (LWVQ). It learns a discrete latent space via a VQ-
+VAE objective to encode world knowledge variations, shifting prediction from
+full modalities to compact latent. 3)Moreover, to mitigate interference during
+variation modeling, we design the Conditional Variation Attention (CV-Atten),
+whichpromotes disentangled learning and preserves the independence of knowledge
+representations. Extensive experiments on both simulated benchmarks and real-
+world robotic tasks demonstrate $Δ$VLA achieves state-of-the-art performance
+while improving efficiency. Code and real-world execution videos are available
+at https://github.com/JiuTian-VL/DeltaVLA.

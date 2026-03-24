@@ -1,0 +1,32 @@
+Title: PlanTwin: Privacy-Preserving Planning Abstractions for Cloud-Assisted LLM
+Agents
+Authors: Guangsheng Yu, Qin Wang, Rui Lang, Shuai Su, Xu Wang
+ID: 2603.18377
+URL: https://arxiv.org/abs/2603.18377
+
+Abstract:
+Cloud-hosted large language models (LLMs) have become the de facto planners in
+agentic systems, coordinating tools and guiding execution over local
+environments. In many deployments, however, the environment being planned over
+is private, containing source code, files, credentials, and metadata that cannot
+be exposed to the cloud. Existing solutions address adjacent concerns, such as
+execution isolation, access control, or confidential inference, but they do not
+control what cloud planners observe during planning: within the permitted scope,
+\textit{raw environment state is still exposed}.
+  We introduce PlanTwin, a privacy-preserving architecture for cloud-assisted
+planning without exposing raw local context. The key idea is to project the real
+environment into a \textit{planning-oriented digital twin}: a schema-constrained
+and de-identified abstract graph that preserves planning-relevant structure
+while removing reconstructable details. The cloud planner operates solely on
+this sanitized twin through a bounded capability interface, while a local
+gatekeeper enforces safety policies and cumulative disclosure budgets. We
+further formalize the privacy-utility trade-off as a capability granularity
+problem, define architectural privacy goals using $(k,δ)$-anonymity and
+$ε$-unlinkability, and mitigate compositional leakage through multi-turn
+disclosure control.
+  We implement PlanTwin as middleware between local agents and cloud planners
+and evaluate it on 60 agentic tasks across ten domains with four cloud planners.
+PlanTwin achieves full sensitive-item non-disclosure (SND = 1.0) while
+maintaining planning quality close to full-context systems: three of four
+planners achieve PQS $> 0.79$, and the full pipeline incurs less than 2.2\%
+utility loss.

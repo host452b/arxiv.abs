@@ -1,0 +1,29 @@
+Title: LLMSA: A Compositional Neuro-Symbolic Approach to Compilation-free and
+Customizable Static Analysis
+Authors: Chengpeng Wang, Yifei Gao, Wuqi Zhang, Xuwei Liu, Qingkai Shi, Xiangyu
+Zhang
+ID: 2412.14399
+URL: https://arxiv.org/abs/2412.14399
+
+Abstract:
+Static analysis is essential for program optimization, bug detection, and
+debugging, but its reliance on compilation and limited customization hampers
+practical use. Advances in LLMs enable a new paradigm of compilation-free,
+customizable analysis via prompting. LLMs excel in interpreting program
+semantics on small code snippets and allow users to define analysis tasks in
+natural language with few-shot examples. However, misalignment with program
+semantics can cause hallucinations, especially in sophisticated semantic
+analysis upon lengthy code snippets.
+  We propose LLMSA, a compositional neuro-symbolic approach for compilation-
+free, customizable static analysis with reduced hallucinations. Specifically, we
+propose an analysis policy language to support users decomposing an analysis
+problem into several sub-problems that target simple syntactic or semantic
+properties upon smaller code snippets. The problem decomposition enables the
+LLMs to target more manageable semantic-related sub-problems, while the
+syntactic ones are resolved by parsing-based analysis without hallucinations. An
+analysis policy is evaluated with lazy, incremental, and parallel prompting,
+which mitigates the hallucinations and improves the performance. It is shown
+that LLMSA achieves comparable and even superior performance to existing
+techniques in various clients. For instance, it attains 66.27% precision and
+78.57% recall in taint vulnerability detection, surpassing an industrial
+approach in F1 score by 0.20.

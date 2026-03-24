@@ -1,0 +1,30 @@
+Title: Rethinking Reasoning in LLMs: Neuro-Symbolic Local RetoMaton Beyond ICL
+and CoT
+Authors: Rushitha Santhoshi Mamidala, Anshuman Chhabra, Ankur Mali
+ID: 2508.19271
+URL: https://arxiv.org/abs/2508.19271
+
+Abstract:
+Prompt-based reasoning strategies such as Chain-of-Thought (CoT) and In-Context
+Learning (ICL) have become widely used for eliciting reasoning capabilities in
+large language models (LLMs). However, these methods rely on fragile, implicit
+mechanisms often yielding inconsistent outputs across seeds, formats, or minor
+prompt variations making them fundamentally unreliable for tasks requiring
+stable, interpretable reasoning. In contrast, automata-based neuro-symbolic
+frameworks like RetoMaton offer a more structured and trustworthy alternative by
+grounding retrieval in symbolic memory with deterministic transitions. In this
+work, we extend RetoMaton by replacing its global datastore with a local, task-
+adaptive Weighted Finite Automaton (WFA), constructed directly from external
+domain corpora. This local automaton structure promotes robust, context-aware
+retrieval while preserving symbolic traceability and low inference overhead.
+Unlike prompting, which entangles context and memory in opaque ways, our
+approach leverages the explicit structure of WFAs to provide verifiable and
+modular retrieval behavior, making it better suited for domain transfer and
+interoperability. We evaluate this local RetoMaton variant on two pretrained
+LLMs LLaMA-3.2-1B and Gemma-3-1B-PT across three reasoning tasks: TriviaQA
+(reading comprehension), GSM8K (multi-step math), and MMLU (domain knowledge).
+Compared to the base model and prompting-based methods, augmenting these setups
+with local RetoMaton consistently improves performance while enabling
+transparent and reproducible retrieval dynamics. Our results highlight a
+promising shift toward trustworthy, symbolic reasoning in modern LLMs via
+lightweight, automaton-guided memory.

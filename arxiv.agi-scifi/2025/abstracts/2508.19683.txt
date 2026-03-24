@@ -1,0 +1,29 @@
+Title: Topological Uncertainty for Anomaly Detection in the Neural-network EoS
+Inference with Neutron Star Data
+Authors: Kenji Fukushima, Syo Kamata
+ID: 2508.19683
+URL: https://arxiv.org/abs/2508.19683
+
+Abstract:
+We study the performance of the Topological Uncertainty (TU) constructed with a
+trained feedforward neural network (FNN) for Anomaly Detection. Generally,
+meaningful information can be stored in the hidden layers of the trained FNN,
+and the TU implementation is one tractable recipe to extract buried information
+by means of the Topological Data Analysis. We explicate the concept of the TU
+and the numerical procedures. Then, for a concrete demonstration of the
+performance test, we employ the Neutron Star data used for inference of the
+equation of state (EoS). For the training dataset consisting of the input
+(Neutron Star data) and the output (EoS parameters), we can compare the inferred
+EoSs and the exact answers to classify the data with the label $k$. The
+subdataset with $k=0$ leads to the normal inference for which the inferred EoS
+approximates the answer well, while the subdataset with $k=1$ ends up with the
+unsuccessful inference. Once the TU is prepared based on the $k$-labled
+subdatasets, we introduce the cross-TU to quantify the uncertainty of
+characterizing the $k$-labeled data with the label $j$. The anomaly or
+unsuccessful inference is correctly detected if the cross-TU for $j=k=1$ is
+smaller than that for $j=0$ and $k=1$. In our numerical experiment, for various
+input data, we calculate the cross-TU and estimate the performance of Anomaly
+Detection. We find that performance depends on FNN hyperparameters, and the
+success rate of Anomaly Detection exceeds $90\%$ in the best case. We finally
+discuss further potential of the TU application to retrieve the information
+hidden in the trained FNN.

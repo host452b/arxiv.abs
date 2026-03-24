@@ -1,0 +1,23 @@
+Title: PACE: Defying the Scaling Hypothesis of Exploration in Iterative
+Alignment for Mathematical Reasoning
+Authors: Jun Rao, Zixiong Yu, Xuebo Liu, Guhan Chen, Jing Li, Jiansheng Wei,
+Xiaojun Meng, Min Zhang
+ID: 2602.05370
+URL: https://arxiv.org/abs/2602.05370
+
+Abstract:
+Iterative Direct Preference Optimization has emerged as the state-of-the-art
+paradigm for aligning Large Language Models on reasoning tasks. Standard
+implementations (DPO-R1) rely on Best-of-N sampling (e.g., $N \ge 8$) to mine
+golden trajectories from the distribution tail. In this paper, we challenge this
+scaling hypothesis and reveal a counter-intuitive phenomenon: in mathematical
+reasoning, aggressive exploration yields diminishing returns and even
+catastrophic policy collapse. We theoretically demonstrate that scaling $N$
+amplifies verifier noise and induces detrimental distribution shifts. To resolve
+this, we introduce \textbf{PACE} (Proximal Alignment via Corrective
+Exploration), which replaces brute-force mining with a generation-based
+corrective strategy. Operating with a minimal budget ($2<N<3$), PACE synthesizes
+high-fidelity preference pairs from failed explorations. Empirical evaluations
+show that PACE outperforms DPO-R1 $(N=16)$ while using only about $1/5$ of the
+compute, demonstrating superior robustness against reward hacking and label
+noise.

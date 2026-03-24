@@ -1,0 +1,31 @@
+Title: Capturing Lifecycle System Degradation in Digital Twin Model Updating
+Authors: Yifan Tang, Mostafa Rahmani Dehaghani, G. Gary Wang
+ID: 2503.08953
+URL: https://arxiv.org/abs/2503.08953
+
+Abstract:
+Digital twin (DT) has emerged as a powerful tool to facilitate monitoring,
+control, and other decision-making tasks in real-world engineering systems.
+Online update methods have been proposed to update DT models. Considering the
+degradation behavior in the system lifecycle, these methods fail to enable DT
+models to predict the system responses affected by the system degradation over
+time. To alleviate this problem, degradation models of measurable parameters
+have been integrated into DT construction. However, identifying the degradation
+parameters relies on prior knowledge of the system and expensive experiments. To
+mitigate those limitations, this paper proposes a lifelong update method for DT
+models to capture the effects of system degradation on system responses without
+any prior knowledge and expensive offline experiments on the system. The core
+idea in the work is to represent the system degradation during the lifecycle as
+the dynamic changes of DT configurations (i.e., model parameters with a fixed
+model structure) at all degradation stages. During the lifelong update process,
+an Autoencoder is adopted to reconstruct the model parameters of all hidden
+layers simultaneously, so that the latent features taking into account the
+dependencies among hidden layers are obtained for each degradation stage. The
+dynamic behavior of latent features among successive degradation stages is then
+captured by a long short-term memory model, which enables prediction of the
+latent feature at any unseen stage. Based on the predicted latent features, the
+model configuration at future degradation stage is reconstructed to determine
+the new DT model, which predicts the system responses affected by the
+degradation at the same stage. The test results on two engineering datasets
+demonstrate that the proposed update method could capture effects of system
+degradation on system responses during the lifecycle.

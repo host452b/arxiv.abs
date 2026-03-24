@@ -1,0 +1,31 @@
+Title: Variational Digital Twins
+Authors: Logan A. Burnett, Umme Mahbuba Nabila, Majdi I. Radaideh
+ID: 2507.01047
+URL: https://arxiv.org/abs/2507.01047
+
+Abstract:
+While digital twins (DT) hold promise for providing real-time insights into
+complex energy assets, much of the current literature either does not offer a
+clear framework for information exchange between the model and the asset, lacks
+key features needed for real-time implementation, or gives limited attention to
+model uncertainty. Here, we aim to solve these gaps by proposing a variational
+digital twin (VDT) framework that augments standard neural architectures with a
+single Bayesian output layer. This lightweight addition, along with a novel VDT
+updating algorithm, lets a twin update in seconds on commodity GPUs while
+producing calibrated uncertainty bounds that can inform experiment design,
+control algorithms, and model reliability. The VDT is evaluated on four energy-
+sector problems. For critical-heat-flux prediction, uncertainty-driven active
+learning reaches R2 = 0.98 using 47 % fewer experiments and one-third the
+training time of random sampling. A three-year renewable-generation twin
+maintains R2 > 0.95 for solar output and curbs error growth for volatile wind
+forecasts via monthly updates that process only one month of data at a time. A
+nuclear reactor transient cooldown twin reconstructs thermocouple signals with
+R2 > 0.99 and preserves accuracy after 50 % sensor loss, demonstrating
+robustness to degraded instrumentation. Finally, a physics-informed Li-ion
+battery twin, retrained after every ten discharges, lowers voltage mean-squared
+error by an order of magnitude relative to the best static model while adapting
+its credible intervals as the cell approaches end-of-life. These results
+demonstrate that combining modest Bayesian augmentation with efficient update
+schemes turns conventional surrogates into uncertainty-aware, data-efficient,
+and computationally tractable DTs, paving the way for dependable models across
+industrial and scientific energy systems.

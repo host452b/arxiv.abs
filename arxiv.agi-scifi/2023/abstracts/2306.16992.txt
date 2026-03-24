@@ -1,0 +1,30 @@
+Title: Mitigating Noise in Quantum Software Testing Using Machine Learning
+Authors: Asmar Muqeet, Tao Yue, Shaukat Ali, Paolo Arcaini
+ID: 2306.16992
+URL: https://arxiv.org/abs/2306.16992
+
+Abstract:
+Quantum Computing (QC) promises computational speedup over classic computing for
+solving complex problems. However, noise exists in current and near-term quantum
+computers. Quantum software testing (for gaining confidence in quantum
+software's correctness) is inevitably impacted by noise, to the extent that it
+is impossible to know if a test case failed due to noise or real faults.
+Existing testing techniques test quantum programs without considering noise,
+i.e., by executing tests on ideal quantum computer simulators. Consequently,
+they are not directly applicable to testing quantum software on real quantum
+computers or noisy simulators. To this end, we propose a noise-aware approach
+(named QOIN) to alleviate the noise effect on test results of quantum programs.
+QOIN employs machine learning techniques (e.g., transfer learning) to learn the
+noise effect of a quantum computer and filter it from a quantum program's
+outputs. Such filtered outputs are then used as the input to perform test case
+assessments (determining the passing or failing of a test case execution against
+a test oracle). We evaluated QOIN on IBM's 23 noise models, Google's two
+available noise models, and Rigetti's Quantum Virtual Machine (QVM), with nine
+real-world quantum programs and 1000 artificial quantum programs. Results show
+that QOIN can reduce the noise effect by more than $80\%$ on the majority of
+noise models. For quantum software testing, we used an existing test oracle and
+showed that QOIN attained scores of $99\%$, $75\%$, and $86\%$ for precision,
+recall, and F1-score, respectively, for the test oracle across six real-world
+programs. For artificial programs, QOIN achieved scores of $93\%$, $79\%$, and
+$86\%$ for precision, recall, and F1-score. This highlights QOIN's effectiveness
+in learning noise patterns for noise-aware quantum software testing.

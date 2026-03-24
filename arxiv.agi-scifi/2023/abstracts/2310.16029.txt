@@ -1,0 +1,24 @@
+Title: Finetuning Offline World Models in the Real World
+Authors: Yunhai Feng, Nicklas Hansen, Ziyan Xiong, Chandramouli Rajagopalan,
+Xiaolong Wang
+ID: 2310.16029
+URL: https://arxiv.org/abs/2310.16029
+
+Abstract:
+Reinforcement Learning (RL) is notoriously data-inefficient, which makes
+training on a real robot difficult. While model-based RL algorithms (world
+models) improve data-efficiency to some extent, they still require hours or days
+of interaction to learn skills. Recently, offline RL has been proposed as a
+framework for training RL policies on pre-existing datasets without any online
+interaction. However, constraining an algorithm to a fixed dataset induces a
+state-action distribution shift between training and inference, and limits its
+applicability to new tasks. In this work, we seek to get the best of both
+worlds: we consider the problem of pretraining a world model with offline data
+collected on a real robot, and then finetuning the model on online data
+collected by planning with the learned model. To mitigate extrapolation errors
+during online interaction, we propose to regularize the planner at test-time by
+balancing estimated returns and (epistemic) model uncertainty. We evaluate our
+method on a variety of visuo-motor control tasks in simulation and on a real
+robot, and find that our method enables few-shot finetuning to seen and unseen
+tasks even when offline data is limited. Videos, code, and data are available at
+https://yunhaifeng.com/FOWM .

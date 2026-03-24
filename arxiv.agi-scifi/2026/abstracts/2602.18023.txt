@@ -1,0 +1,30 @@
+Title: Observer-robust energy condition verification for warp drive spacetimes
+Authors: An T. Le
+ID: 2602.18023
+URL: https://arxiv.org/abs/2602.18023
+
+Abstract:
+We present \textbf{warpax}, an open-source, GPU-accelerated Python toolkit for
+observer-robust energy condition analysis of warp drive spacetimes. Instead of
+sampling a finite set of observer directions, \textbf{warpax} performs
+continuous, gradient-based optimization on the timelike observer manifold,
+parameterized by rapidity and boost direction and informed by the Hawking-Ellis
+classification. At Type~I stress-energy points, which account for more than
+$96%$ of grid points across tested metrics, energy-condition satisfaction is
+determined \emph{exactly} through an algebraic eigenvalue check, independent of
+observer search or rapidity caps. At non-Type~I points, the optimizer provides
+rapidity-capped diagnostics. Stress-energy tensors are computed from the ADM
+metric via forward-mode automatic differentiation, eliminating finite-difference
+error. Geodesic integration with tidal-force and blueshift analysis is included.
+  We evaluate five warp drive metrics (Alcubierre, Lentz, Van~Den~Broeck,
+Nat'ario, Rodal) and a warp shell metric as a numerical stress test. For the
+Rodal metric, Eulerian-frame analysis misses violations at more than $28%$ of
+grid points for the dominant energy condition and more than $15%$ for the weak
+energy condition. Even when the violation region is correctly identified,
+observer optimization shows that violation severity can be orders of magnitude
+larger; for example, for Alcubierre the weak energy condition reaches $\sim
+9\times 10^{4}$ at rapidity cap $ζ_{\max}=5$, scaling as $e^{2ζ_{\max}}$, where
+the cap is an analysis hyperparameter. These results show that single-frame
+evaluation can substantially underestimate both the spatial extent and magnitude
+of energy-condition violations. \textbf{warpax} is available at
+https://github.com/anindex/warpax.

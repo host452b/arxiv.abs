@@ -1,0 +1,31 @@
+Title: In-Context Learning Strategies Emerge Rationally
+Authors: Daniel Wurgaft, Ekdeep Singh Lubana, Core Francisco Park, Hidenori
+Tanaka, Gautam Reddy, Noah D. Goodman
+ID: 2506.17859
+URL: https://arxiv.org/abs/2506.17859
+
+Abstract:
+Recent work analyzing in-context learning (ICL) has identified a broad set of
+strategies that describe model behavior in different experimental conditions. We
+aim to unify these findings by asking why a model learns these disparate
+strategies in the first place. Specifically, we start with the observation that
+when trained to learn a mixture of tasks, as is popular in the literature, the
+strategies learned by a model for performing ICL can be captured by a family of
+Bayesian predictors: a memorizing predictor, which assumes a discrete prior on
+the set of seen tasks, and a generalizing predictor, where the prior matches the
+underlying task distribution. Adopting the normative lens of rational analysis,
+where a learner's behavior is explained as an optimal adaptation to data given
+computational constraints, we develop a hierarchical Bayesian framework that
+almost perfectly predicts Transformer next-token predictions throughout training
+-- without assuming access to its weights. Under this framework, pretraining is
+viewed as a process of updating the posterior probability of different
+strategies, and inference-time behavior as a posterior-weighted average over
+these strategies' predictions. Our framework draws on common assumptions about
+neural network learning dynamics, which make explicit a tradeoff between loss
+and complexity among candidate strategies: beyond how well it explains the data,
+a model's preference towards implementing a strategy is dictated by its
+complexity. This helps explain well-known ICL phenomena, while offering novel
+predictions: e.g., we show a superlinear trend in the timescale for
+transitioning from generalization to memorization as task diversity increases.
+Overall, our work advances an explanatory and predictive account of ICL grounded
+in tradeoffs between strategy loss and complexity.

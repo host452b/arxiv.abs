@@ -1,0 +1,31 @@
+Title: Automated Validation of LLM-based Evaluators for Software Engineering
+Artifacts
+Authors: Ora Nova Fandina, Eitan Farchi, Shmulik Froimovich, Rami Katan, Alice
+Podolsky, Orna Raz, Avi Ziv
+ID: 2508.02827
+URL: https://arxiv.org/abs/2508.02827
+
+Abstract:
+Automation in software engineering increasingly relies on large language models
+(LLMs) to generate, review, and assess code artifacts. However, establishing
+LLMs as reliable evaluators remains an open challenge: human evaluations are
+costly, subjective and non scalable, while existing automated methods fail to
+discern fine grained variations in artifact quality.
+  We introduce REFINE (Ranking Evaluators for FIne grained Nuanced Evaluation),
+an automated framework for benchmarking LLM based evaluators across software
+engineering tasks. REFINE comprises of two modules: Hierarchy Dataset Builder
+applies novel generation techniques to automatically synthesize artifacts with
+progressively reduced quality, and Evaluator Tester quantifies each candidate
+evaluator configuration by measuring how closely its rankings align with
+expected ordering.
+  A key feature of REFINE is controllability: users can tune the granularity of
+degradation to progressively refine evaluator configurations, from coarse
+filtering to stress testing on subtle quality gaps.
+  While the methodology is general, we focus on coding tasks reflecting the
+practical demands in our production setting. REFINE was integrated into IBM's
+internal development workflows and applied to code generation, translation, and
+summarization for COBOL, an enterprise critical programming language, using
+industrial data. It was used to identify LLM as a Judge configurations that
+lifted alignment scores from below $0.7$ to above $0.9$ in some coding tasks.
+These nuance sensitive evaluators are now actively used by model training teams
+to support model release decisions.

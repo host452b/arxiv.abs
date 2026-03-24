@@ -1,0 +1,33 @@
+Title: Assessing Domain-Level Susceptibility to Emergent Misalignment from
+Narrow Finetuning
+Authors: Abhishek Mishra, Mugilan Arulvanan, Reshma Ashok, Polina Petrova,
+Deepesh Suranjandass, Donnie Winkelmann
+ID: 2602.00298
+URL: https://arxiv.org/abs/2602.00298
+
+Abstract:
+Emergent misalignment poses risks to AI safety as language models are
+increasingly used for autonomous tasks. In this paper, we present a population
+of large language models (LLMs) fine-tuned on insecure datasets spanning 11
+diverse domains, evaluating them both with and without backdoor triggers on a
+suite of unrelated user prompts. Our evaluation experiments on
+\texttt{Qwen2.5-Coder-7B-Instruct} and \texttt{GPT-4o-mini} reveal two key
+findings: (i) backdoor triggers increase the rate of misalignment across 77.8%
+of domains (average drop: 4.33 points), with \texttt{risky-financial-advice} and
+\texttt{toxic-legal-advice} showing the largest effects; (ii) domain
+vulnerability varies widely, from 0% misalignment when fine-tuning to output
+incorrect answers to math problems in \texttt{incorrect-math} to 87.67% when
+fine-tuned on \texttt{gore-movie-trivia}.
+  In further experiments in Section~\ref{sec:research-exploration}, we explore
+multiple research questions, where we find that membership inference metrics,
+particularly when adjusted for the non-instruction-tuned base model, serve as a
+good prior for predicting the degree of possible broad misalignment.
+Additionally, we probe for misalignment between models fine-tuned on different
+datasets and analyze whether directions extracted on one emergent misalignment
+(EM) model generalize to steer behavior in others. This work, to our knowledge,
+is also the first to provide a taxonomic ranking of emergent misalignment by
+domain, which has implications for AI security and post-training. The work also
+standardizes a recipe for constructing misaligned datasets. All code and
+datasets are publicly available on
+GitHub.\footnote{https://github.com/abhishek9909/assessing-domain-emergent-
+misalignment/tree/main}

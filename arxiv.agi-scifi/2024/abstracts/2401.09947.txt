@@ -1,0 +1,32 @@
+Title: Time-Efficient Quantum Entropy Estimator via Samplizer
+Authors: Qisheng Wang, Zhicheng Zhang
+ID: 2401.09947
+URL: https://arxiv.org/abs/2401.09947
+
+Abstract:
+Entropy is a measure of the randomness of a system. Estimating the entropy of a
+quantum state is a basic problem in quantum information. In this paper, we
+introduce a time-efficient quantum approach to estimating the von Neumann
+entropy $S(ρ)$ and Rényi entropy $S_α(ρ)$ of an $N$-dimensional quantum state
+$ρ$, given access to independent samples of $ρ$. Specifically, we provide the
+following:
+  1. A quantum estimator for $S(ρ)$ with time complexity $\tilde O(N^2)$,
+improving the prior best time complexity $\tilde O(N^6)$ by Acharya, Issa,
+Shende, and Wagner (2020) and Bavarian, Mehraba, and Wright (2016).
+  2. A quantum estimator for $S_α(ρ)$ with time complexity $\tilde O(N^{4/α-2})$
+for $0<α<1$ and $\tilde O(N^{4-2/α})$ for $α>1$, improving the prior best time
+complexity $\tilde O(N^{6/α})$ for $0<α<1$ and $\tilde O(N^6)$ for $α>1$ by
+Acharya, Issa, Shende, and Wagner (2020), though at a cost of a slightly larger
+sample complexity.
+  Moreover, these estimators are naturally extensible to the low-rank case. We
+also provide a sample lower bound for estimating $S_α(ρ)$.
+  Technically, our method is quite different from the previous ones that are
+based on weak Schur sampling and Young diagrams. At the heart of our
+construction, is a novel tool called samplizer, which can "samplize" a quantum
+query algorithm to a quantum algorithm with similar behavior using only samples
+of quantum states; this suggests a unified framework for estimating quantum
+entropies. Specifically, when a quantum oracle $U$ block-encodes a mixed quantum
+state $ρ$, any quantum query algorithm using $Q$ queries to $U$ can be samplized
+to a $δ$-close (in the diamond norm) quantum algorithm using $\tildeΘ(Q^2/δ)$
+samples of $ρ$. Moreover, this samplization is proven to be optimal, up to a
+polylogarithmic factor.

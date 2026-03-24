@@ -1,0 +1,31 @@
+Title: PDLogger: Automated Logging Framework for Practical Software Development
+Authors: Shengcheng Duan, Yihua Xu, Sheng Zhang, Shen Wang, Yue Duan
+ID: 2507.19951
+URL: https://arxiv.org/abs/2507.19951
+
+Abstract:
+Logging is indispensable for maintaining the reliability and diagnosability of
+modern software, yet developers still struggle to decide where and how to log
+effectively. Existing automated logging techniques focus on isolated sub-tasks -
+predicting a single log position, level, or message - and therefore cannot
+produce complete, high-quality log statements that reflect real-world practice
+in which multiple logs often appear inside one method. They also neglect deeper
+semantic dependencies among methods and consider only a narrow set of candidate
+variables, leading to superficial or incomplete logs. In this paper, we present
+PDLogger, the first end-to-end log generation technique expressly designed for
+practical, multi-log scenarios. PDLogger operates in three phases. (1) Log
+position prediction: block-type-aware structured prompts guide a large language
+model (LLM) to suggest candidate positions across all control-flow blocks of a
+method. (2) Log generation: backward program slicing supplies precise inter-
+procedural control and data-dependency context, while an expanded variable
+extractor captures both member and external function expressions; the enriched
+prompt enables the LLM to emit a full log statement (position, level, message,
+variables). (3) Log refinement: level correction and context-sensitive
+deduplication prune false positives and redundant logs. We evaluate PDLogger on
+3,113 log statements drawn from two widely used Java projects. Compared with the
+strongest prior systems, PDLogger improves log-position precision by 139.0
+percent, F1 by 69.2 percent, level accuracy by 82.3 percent, variable precision
+by 131.8 percent, and message quality (BERTScore) by 65.7 percent. The framework
+consistently performs well with different mainstream LLMs, demonstrating
+robustness and generality. PDLogger's implementation is available as open source
+to foster future research and adoption.

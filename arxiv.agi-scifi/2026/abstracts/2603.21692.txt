@@ -1,0 +1,30 @@
+Title: Reasoning Provenance for Autonomous AI Agents: Structured Behavioral
+Analytics Beyond State Checkpoints and Execution Traces
+Authors: Neelmani Vispute
+ID: 2603.21692
+URL: https://arxiv.org/abs/2603.21692
+
+Abstract:
+As AI agents transition from human-supervised copilots to autonomous platform
+infrastructure, the ability to analyze their reasoning behavior across
+populations of investigations becomes a pressing infrastructure requirement.
+Existing operational tooling addresses adjacent needs effectively: state
+checkpoint systems enable fault tolerance; observability platforms provide
+execution traces for debugging; telemetry standards ensure interoperability.
+What current systems do not natively provide as a first-class, schema-level
+primitive is structured reasoning provenance -- normalized, queryable records of
+why the agent chose each action, what it concluded from each observation, how
+each conclusion shaped its strategy, and which evidence supports its final
+verdict. This paper introduces the Agent Execution Record (AER), a structured
+reasoning provenance primitive that captures intent, observation, and inference
+as first-class queryable fields on every step, alongside versioned plans with
+revision rationale, evidence chains, structured verdicts with confidence scores,
+and delegation authority chains. We formalize the distinction between
+computational state persistence and reasoning provenance, argue that the latter
+cannot in general be faithfully reconstructed from the former, and show how AERs
+enable population-level behavioral analytics: reasoning pattern mining,
+confidence calibration, cross-agent comparison, and counterfactual regression
+testing via mock replay. We present a domain-agnostic model with extensible
+domain profiles, a reference implementation and SDK, and outline an evaluation
+methodology informed by preliminary deployment on a production platformized root
+cause analysis agent.

@@ -1,0 +1,22 @@
+Title: VDC-Agent: When Video Detailed Captioners Evolve Themselves via Agentic
+Self-Reflection
+Authors: Qiang Wang, Xinyuan Gao, SongLin Dong, Jizhou Han, Jiangyang Li, Yuhang
+He, Yihong Gong
+ID: 2511.19436
+URL: https://arxiv.org/abs/2511.19436
+
+Abstract:
+We present VDC-Agent, a self-evolving framework for Video Detailed Captioning
+that requires neither human annotations nor larger teacher models. The agent
+forms a closed loop of caption generation, principle-guided scoring (score and
+textual suggestions), and prompt refinement. When caption quality regresses, a
+self-reflection path leverages the previous chain-of-thought to amend the
+update. Running this process on unlabeled videos produces trajectories of
+(caption, score) pairs. We convert the trajectories into preference tuples and
+filter out samples with JSON parsing errors, resulting in VDC-Agent-19K, which
+contains 18,886 automatically constructed pairs. We then fine-tune the base MLLM
+on this dataset using an easy-to-hard curriculum direct preference optimization.
+Built on Qwen2.5-VL-7B-Instruct, our VDC-Agent-7B attains state-of-the-art
+performance on the VDC benchmark with 49.08% average accuracy and 2.50 score,
+surpassing specialized video captioners and improving over the base model by
++5.13% accuracy and +0.27 score at similar inference cost.

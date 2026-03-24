@@ -1,0 +1,30 @@
+Title: AG-CRC: Anatomy-Guided Colorectal Cancer Segmentation in CT with
+Imperfect Anatomical Knowledge
+Authors: Rongzhao Zhang, Zhian Bai, Ruoying Yu, Wenrao Pang, Lingyun Wang,
+Lifeng Zhu, Xiaofan Zhang, Huan Zhang, Weiguo Hu
+ID: 2310.04677
+URL: https://arxiv.org/abs/2310.04677
+
+Abstract:
+When delineating lesions from medical images, a human expert can always keep in
+mind the anatomical structure behind the voxels. However, although high-quality
+(though not perfect) anatomical information can be retrieved from computed
+tomography (CT) scans with modern deep learning algorithms, it is still an open
+problem how these automatically generated organ masks can assist in addressing
+challenging lesion segmentation tasks, such as the segmentation of colorectal
+cancer (CRC). In this paper, we develop a novel Anatomy-Guided segmentation
+framework to exploit the auto-generated organ masks to aid CRC segmentation from
+CT, namely AG-CRC. First, we obtain multi-organ segmentation (MOS) masks with
+existing MOS models (e.g., TotalSegmentor) and further derive a more robust
+organ of interest (OOI) mask that may cover most of the colon-rectum and CRC
+voxels. Then, we propose an anatomy-guided training patch sampling strategy by
+optimizing a heuristic gain function that considers both the proximity of
+important regions (e.g., the tumor or organs of interest) and sample diversity.
+Third, we design a novel self-supervised learning scheme inspired by the
+topology of tubular organs like the colon to boost the model performance
+further. Finally, we employ a masked loss scheme to guide the model to focus
+solely on the essential learning region. We extensively evaluate the proposed
+method on two CRC segmentation datasets, where substantial performance
+improvement (5% to 9% in Dice) is achieved over current state-of-the-art medical
+image segmentation models, and the ablation studies further evidence the
+efficacy of every proposed component.

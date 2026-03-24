@@ -1,0 +1,25 @@
+Title: Aligning Compound AI Systems via System-level DPO
+Authors: Xiangwen Wang, Yibo Jacky Zhang, Zhoujie Ding, Katherine Tsai, Haolun
+Wu, Sanmi Koyejo
+ID: 2502.17721
+URL: https://arxiv.org/abs/2502.17721
+
+Abstract:
+Compound AI systems, comprising multiple interacting components such as LLMs,
+foundation models, and external tools, have demonstrated remarkable improvements
+compared to single models in various tasks. To ensure their effective deployment
+in real-world applications, aligning these systems with human preferences is
+crucial. However, aligning the compound system via policy optimization, unlike
+the alignment of a single model, is challenging for two main reasons: (i) non-
+differentiable interactions between components make end-to-end gradient-based
+optimization method inapplicable, and (ii) system-level preferences cannot be
+directly transformed into component-level preferences. To address these
+challenges, we first formulate compound AI systems as Directed Acyclic Graphs
+(DAGs), explicitly modeling both component interactions and the associated data
+flows. Building on this formulation, we introduce $\textbf{SysDPO}$, a framework
+that extends Direct Preference Optimization (DPO) to enable joint system-level
+alignment. We propose two variants, SysDPO-Direct and SysDPO-Sampling, tailored
+for scenarios depending on whether we construct a system-specific preference
+dataset. We empirically demonstrate the effectiveness of our approach across two
+applications: the joint alignment of a language model and a diffusion model, and
+the joint alignment of an LLM collaboration system.

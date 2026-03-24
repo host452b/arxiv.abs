@@ -1,0 +1,32 @@
+Title: TRUSformer: Improving Prostate Cancer Detection from Micro-Ultrasound
+Using Attention and Self-Supervision
+Authors: Mahdi Gilany, Paul Wilson, Andrea Perera-Ortega, Amoon Jamzad, Minh
+Nguyen Nhat To, Fahimeh Fooladgar, Brian Wodlinger, Purang Abolmaesumi, Parvin
+Mousavi
+ID: 2303.02128
+URL: https://arxiv.org/abs/2303.02128
+
+Abstract:
+A large body of previous machine learning methods for ultrasound-based prostate
+cancer detection classify small regions of interest (ROIs) of ultrasound signals
+that lie within a larger needle trace corresponding to a prostate tissue biopsy
+(called biopsy core). These ROI-scale models suffer from weak labeling as
+histopathology results available for biopsy cores only approximate the
+distribution of cancer in the ROIs. ROI-scale models do not take advantage of
+contextual information that are normally considered by pathologists, i.e. they
+do not consider information about surrounding tissue and larger-scale trends
+when identifying cancer. We aim to improve cancer detection by taking a multi-
+scale, i.e. ROI-scale and biopsy core-scale, approach. Methods: Our multi-scale
+approach combines (i) an "ROI-scale" model trained using self-supervised
+learning to extract features from small ROIs and (ii) a "core-scale" transformer
+model that processes a collection of extracted features from multiple ROIs in
+the needle trace region to predict the tissue type of the corresponding core.
+Attention maps, as a byproduct, allow us to localize cancer at the ROI scale. We
+analyze this method using a dataset of micro-ultrasound acquired from 578
+patients who underwent prostate biopsy, and compare our model to baseline models
+and other large-scale studies in the literature. Results and Conclusions: Our
+model shows consistent and substantial performance improvements compared to ROI-
+scale-only models. It achieves 80.3% AUROC, a statistically significant
+improvement over ROI-scale classification. We also compare our method to large
+studies on prostate cancer detection, using other imaging modalities. Our code
+is publicly available at www.github.com/med-i-lab/TRUSFormer

@@ -1,0 +1,23 @@
+Title: Scaling Laws for State Dynamics in Large Language Models
+Authors: Jacob X Li, Shreyas S Raman, Jessica Wan, Fahad Samman, Jazlyn Lin
+ID: 2505.14892
+URL: https://arxiv.org/abs/2505.14892
+
+Abstract:
+Large Language Models (LLMs) are increasingly used in tasks requiring internal
+state tracking, yet their ability to model state transition dynamics remains
+poorly understood. We evaluate how well LLMs capture deterministic state
+dynamics across 3 domains: Box Tracking, Abstract DFA Sequences, and Complex
+Text Games, each formalizable as a finite-state system. Across tasks, we find
+that next-state prediction accuracy degrades with increasing state-space size
+and sparse transitions. GPT-2 XL reaches about 70% accuracy in low-complexity
+settings but drops below 30% when the number of boxes or states exceeds 5 or 10,
+respectively. In DFA tasks, Pythia-1B fails to exceed 50% accuracy when the
+number of states is > 10 and transitions are < 30. Through activation patching,
+we identify attention heads responsible for propagating state information: GPT-2
+XL Layer 22 Head 20, and Pythia-1B Heads at Layers 10, 11, 12, and 14. While
+these heads successfully move relevant state features, action information is not
+reliably routed to the final token, indicating weak joint state-action
+reasoning. Our results suggest that state tracking in LLMs emerges from
+distributed interactions of next-token heads rather than explicit symbolic
+computation.

@@ -1,0 +1,29 @@
+Title: Concurrent ischemic lesion age estimation and segmentation of CT brain
+using a Transformer-based network
+Authors: Adam Marcus, Paul Bentley, Daniel Rueckert
+ID: 2306.12242
+URL: https://arxiv.org/abs/2306.12242
+
+Abstract:
+The cornerstone of stroke care is expedient management that varies depending on
+the time since stroke onset. Consequently, clinical decision making is centered
+on accurate knowledge of timing and often requires a radiologist to interpret
+Computed Tomography (CT) of the brain to confirm the occurrence and age of an
+event. These tasks are particularly challenging due to the subtle expression of
+acute ischemic lesions and the dynamic nature of their appearance. Automation
+efforts have not yet applied deep learning to estimate lesion age and treated
+these two tasks independently, so, have overlooked their inherent complementary
+relationship. To leverage this, we propose a novel end-to-end multi-task
+transformer-based network optimized for concurrent segmentation and age
+estimation of cerebral ischemic lesions. By utilizing gated positional self-
+attention and CT-specific data augmentation, the proposed method can capture
+long-range spatial dependencies while maintaining its ability to be trained from
+scratch under low-data regimes commonly found in medical imaging. Furthermore,
+to better combine multiple predictions, we incorporate uncertainty by utilizing
+quantile loss to facilitate estimating a probability density function of lesion
+age. The effectiveness of our model is then extensively evaluated on a clinical
+dataset consisting of 776 CT images from two medical centers. Experimental
+results demonstrate that our method obtains promising performance, with an area
+under the curve (AUC) of 0.933 for classifying lesion ages <=4.5 hours compared
+to 0.858 using a conventional approach, and outperforms task-specific state-of-
+the-art algorithms.

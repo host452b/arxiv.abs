@@ -1,0 +1,27 @@
+Title: An entanglement-aware quantum computer simulation algorithm
+Authors: Maxime Oliva
+ID: 2307.16870
+URL: https://arxiv.org/abs/2307.16870
+
+Abstract:
+The advent of quantum computers promises exponential speed ups in the execution
+of various computational tasks. While their capabilities are hindered by quantum
+decoherence, they can be exactly simulated on classical hardware at the cost of
+an exponential scaling in terms of number of qubits. To circumvent this, quantum
+states can be represented as matrix product states (MPS), a product of tensors
+separated by so-called bond dimensions. Limiting bond dimensions growth
+approximates the state, but also limits its ability to represent entanglement.
+Methods based on this representation have been the most popular tool at
+simulating large quantum systems. But how to trust resulting approximate quantum
+states for such intractable systems sizes ? I propose here a method for
+inferring the fidelity of an approximate quantum state without direct comparison
+to its exact counterpart, and use it to design an ``entanglement-aware'' (EA)
+algorithm for both pure and mixed states. As opposed to state of the art methods
+which limit bond dimensions up to an arbitrary maximum value, this algorithm
+receives as input a fidelity, and adapts dynamically its bond dimensions to both
+local entanglement and noise such that the final quantum state fidelity at least
+reaches the input fidelity. I show that this algorithm far surpasses standard
+fixed bond dimension truncation schemes. In particular, a noiseless random
+circuit of 300 qubits and depth 75 simulated using MPS methods takes one week of
+computation time, while EA-MPS only needs 2 hours to reach similar quantum state
+fidelity.

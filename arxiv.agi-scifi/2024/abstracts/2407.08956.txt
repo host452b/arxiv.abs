@@ -1,0 +1,29 @@
+Title: Defending Code Language Models against Backdoor Attacks with Deceptive
+Cross-Entropy Loss
+Authors: Guang Yang, Yu Zhou, Xiang Chen, Xiangyu Zhang, Terry Yue Zhuo, David
+Lo, Taolue Chen
+ID: 2407.08956
+URL: https://arxiv.org/abs/2407.08956
+
+Abstract:
+Code Language Models (CLMs), particularly those leveraging deep learning, have
+achieved significant success in code intelligence domain. However, the issue of
+security, particularly backdoor attacks, is often overlooked in this process.
+The previous research has focused on designing backdoor attacks for CLMs, but
+effective defenses have not been adequately addressed. In particular, existing
+defense methods from natural language processing, when directly applied to CLMs,
+are not effective enough and lack generality, working well in some models and
+scenarios but failing in others, thus fall short in consistently mitigating
+backdoor attacks. To bridge this gap, we first confirm the phenomenon of "early
+learning" as a general occurrence during the training of CLMs. This phenomenon
+refers to that a model initially focuses on the main features of training data
+but may become more sensitive to backdoor triggers over time, leading to
+overfitting and susceptibility to backdoor attacks. We then analyze that
+overfitting to backdoor triggers results from the use of the cross-entropy loss
+function, where the unboundedness of cross-entropy leads the model to
+increasingly concentrate on the features of the poisoned data. Based on this
+insight, we propose a general and effective loss function DeCE (Deceptive Cross-
+Entropy) by blending deceptive distributions and applying label smoothing to
+limit the gradient to bounded, which prevents the model from overfitting to
+backdoor triggers and then enhances the security of CLMs against backdoor
+attacks.

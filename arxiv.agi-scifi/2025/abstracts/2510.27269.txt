@@ -1,0 +1,27 @@
+Title: Why Do Multilingual Reasoning Gaps Emerge in Reasoning Language Models?
+Authors: Deokhyung Kang, Seonjeong Hwang, Daehui Kim, Hyounghun Kim, Gary
+Geunbae Lee
+ID: 2510.27269
+URL: https://arxiv.org/abs/2510.27269
+
+Abstract:
+Reasoning language models (RLMs) achieve strong performance on complex reasoning
+tasks, yet they still exhibit a multilingual reasoning gap, performing better in
+high-resource languages than in low-resource ones. While recent efforts have
+been made to address this gap, its underlying causes remain largely unexplored.
+In this work, we show that this gap primarily stems from failures in language
+understanding-specifically, the model's inability to translate multilingual
+inputs into the language dominating its reasoning traces (typically English). As
+identifying understanding failures can enable targeted mitigation of the gap, we
+evaluate a range of detection methods and find that understanding failures are
+detectable to a meaningful extent, with supervised approaches performing best.
+Building on this, we propose Selective Translation, a strategy that incorporates
+an English translation into the initial reasoning trace only when an
+understanding failure is detected. Experimental results using Qwen3-4B show that
+Selective Translation substantially bridges the multilingual reasoning gap,
+achieving near full-translation performance while translating only about 20% of
+inputs. Together, our results show that failures in language understanding are
+the primary driver of the multilingual reasoning gap and can be detected and
+selectively mitigated, clarifying its origin and suggesting a path toward more
+equitable multilingual reasoning. Our code and data are publicly available at
+https://github.com/deokhk/RLM_analysis

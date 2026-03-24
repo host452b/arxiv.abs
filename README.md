@@ -1,32 +1,24 @@
-# arxiv.abs — AI/LLM Prompt Engineering Paper Abstracts
+# arxiv.abs — arXiv Paper Abstracts for AI Research & Sci-Fi Worldbuilding
 
-**4780+ curated arXiv paper abstracts on AI/LLM Prompt Engineering (2023–2026), with a structured summary of 50 core techniques.**
+**18,000+ curated arXiv paper abstracts across two collections (2023–2026), covering AI/LLM Prompt Engineering and cross-disciplinary AGI/Sci-Fi research.**
 
-**4780+ 篇 AI/LLM 提示词工程 arXiv 论文摘要精选（2023–2026），含 50 项核心技巧结构化总结。**
-
----
-
-## Why This Repo? / 为什么需要这个仓库？
-
-Prompt engineering research is exploding — over **5000 papers** on arXiv in just 4 years. Finding what matters is hard. This repo saves you hundreds of hours by providing:
-
-提示词工程研究正在爆炸式增长 — 4 年内仅 arXiv 就有超过 **5000 篇**论文。找到真正有价值的内容很难。这个仓库帮你节省数百小时：
-
-- **4780 filtered abstracts** — non-LLM papers (vision, speech, graph) removed
-- **50 core techniques** — distilled into a single structured reference
-- **Organized by year** — easy to track research trends
-- **Categorized by use-case** — reasoning, optimization, security, attacks
-
-- **4780 篇筛选摘要** — 已移除非 LLM 论文（视觉、语音、图等）
-- **50 项核心技巧** — 浓缩为一份结构化参考手册
-- **按年份组织** — 方便追踪研究趋势
-- **按用途分类** — 推理、优化、安全、攻击
+**18,000+ 篇 arXiv 论文摘要精选，横跨两大专题集（2023–2026），涵盖 AI/LLM 提示词工程与跨学科 AGI/科幻研究。**
 
 ---
 
-## Quick Stats / 数据概览
+## Collections Overview / 专题概览
 
-| | Papers / 论文数 |
+This repository contains two curated paper abstract collections:
+
+本仓库包含两个精选论文摘要集：
+
+### 1. `arxiv.prompt` — AI/LLM Prompt Engineering / 提示词工程
+
+4,780 filtered abstracts + 50 core techniques summary.
+
+4,780 篇筛选摘要 + 50 项核心技巧总结。
+
+| Year | Papers |
 |------|--------|
 | 2023 | 1,085 |
 | 2024 | 1,478 |
@@ -34,180 +26,246 @@ Prompt engineering research is exploding — over **5000 papers** on arXiv in ju
 | 2026 | 400 |
 | **Total** | **4,780** |
 
+**Topics:** Chain-of-Thought, Few-Shot/ICL, Prompt Optimization, Compression, Jailbreak/Injection, Defense, Multi-Agent, Role-Play, Self-Consistency, and more.
+
+**主题：** 思维链、少样本/上下文学习、提示优化、压缩、越狱/注入、防御、多智能体、角色扮演、自一致性等。
+
+### 2. `arxiv.agi-scifi` — Cross-Disciplinary AGI & Sci-Fi Research / 跨学科 AGI 与科幻研究
+
+13,606 abstracts from 52 keyword searches across all arXiv categories — physics, math, CS, biology, economics, and more.
+
+13,606 篇摘要，来自 52 组关键词搜索，横跨 arXiv 全学科 — 物理、数学、计算机、生物、经济等。
+
+| Year | Papers |
+|------|--------|
+| 2023 | 2,679 |
+| 2024 | 3,761 |
+| 2025 | 5,641 |
+| 2026 | 1,525 |
+| **Total** | **13,606** |
+
+**52 search topics spanning:** / **52 组搜索主题涵盖：**
+
+| Category | Topics / 主题 |
+|----------|---------------|
+| **AGI & Intelligence** | AGI/Superintelligence, AI Consciousness, Emergence, Scaling Laws, Self-Improving AI, Neuro-Symbolic AI |
+| **AGI 与智能** | AGI/超级智能、AI 意识、涌现、缩放定律、自我改进 AI、神经符号 AI |
+| **Safety & Governance** | AI Alignment/Safety, AI Deception, AI Governance, AI Military/Weapons, Existential Risk |
+| **安全与治理** | AI 对齐/安全、AI 欺骗、AI 治理、AI 军事/武器、存在性风险 |
+| **Society & Economy** | AI + Economy/Society, Future of Work, Post-Scarcity, Human-AI Relationship |
+| **社会与经济** | AI + 经济/社会、未来工作、后稀缺、人机关系 |
+| **Physics & Universe** | AI + Cosmology, Gravitational Physics, Exotic Physics, Quantum Gravity, Quantum Computing, Theory of Everything |
+| **物理与宇宙** | AI + 宇宙学、引力物理、奇异物理、量子引力、量子计算、万有理论 |
+| **Space & Extraterrestrial** | AI + Space, Interstellar Travel, Space Habitat, Terraforming, SETI/Fermi Paradox, Technosignature, Extraterrestrial Life, Extremophile, Origin of Life |
+| **太空与外星生存** | AI + 太空、星际旅行、太空栖息地、地球改造、SETI/费米悖论、技术信号、外星生命、极端微生物、生命起源 |
+| **Energy & Hardware** | AI + Nuclear/Fusion, AI + Climate, AI Hardware/Neuromorphic |
+| **能源与硬件** | AI + 核能/聚变、AI + 气候、AI 硬件/神经形态 |
+| **Science & Discovery** | AI for Science, AI + Biology/Longevity, AI + Scientific Discovery, AI + Math Foundations |
+| **科学与发现** | AI for Science、AI + 生物/长寿、AI + 科学发现、AI + 数学基础 |
+| **Architecture & Systems** | World Models, AI Agents, Embodied AI, Collective Intelligence, Decentralized AI, Open-Ended Evolution |
+| **架构与系统** | 世界模型、AI Agent、具身智能、集体智能、去中心化 AI、开放式进化 |
+| **Mind & Frontier** | Singularity/BCI, Mind Uploading, Simulation/Virtual World, AI Creativity, AI Coding, AI Hallucination, Megastructure/Dyson Sphere |
+| **心智与前沿** | 奇点/脑机接口、意识上传、模拟/虚拟世界、AI 创造力、AI 编程、AI 幻觉、巨构/戴森球 |
+| **Life Support** | Life Support Systems, ISRU |
+| **生命维持** | 生命维持系统、原位资源利用 |
+
 ---
 
 ## Repo Structure / 仓库结构
 
 ```
-arxiv.prompt/
-├── prompt_ai.md                   # 50 core techniques summary / 50 项核心技巧总结
-├── 2023/
-│   ├── arxiv-results-2023.json    # metadata: titles, authors, abstracts, citations
-│   └── abstracts/                 # 1,085 .txt files
-├── 2024/
-│   ├── arxiv-results-2024.json
-│   └── abstracts/                 # 1,478 .txt files
-├── 2025/
-│   ├── arxiv-results-2025.json
-│   └── abstracts/                 # 1,817 .txt files
-└── 2026/
-    ├── arxiv-results-2026.json
-    └── abstracts/                 # 400 .txt files
+arxiv.abs/
+├── README.md
+├── arxiv.prompt/                          # prompt engineering collection
+│   ├── prompt_ai.md                       # 50 core techniques summary
+│   ├── 2023/
+│   │   ├── arxiv-results-2023.json        # metadata
+│   │   └── abstracts/                     # 1,085 .txt files
+│   ├── 2024/
+│   │   ├── arxiv-results-2024.json
+│   │   └── abstracts/                     # 1,478 .txt files
+│   ├── 2025/
+│   │   ├── arxiv-results-2025.json
+│   │   └── abstracts/                     # 1,817 .txt files
+│   └── 2026/
+│       ├── arxiv-results-2026.json
+│       └── abstracts/                     # 400 .txt files
+└── arxiv.agi-scifi/                       # AGI & sci-fi collection
+    ├── search-index.json                  # 52 search queries metadata
+    ├── 2023/
+    │   ├── arxiv-results-2023.json        # 2,679 papers metadata
+    │   └── abstracts/                     # 2,679 .txt files
+    ├── 2024/
+    │   ├── arxiv-results-2024.json        # 3,761 papers metadata
+    │   └── abstracts/                     # 3,761 .txt files
+    ├── 2025/
+    │   ├── arxiv-results-2025.json        # 5,641 papers metadata
+    │   └── abstracts/                     # 5,641 .txt files
+    └── 2026/
+        ├── arxiv-results-2026.json        # 1,525 papers metadata
+        └── abstracts/                     # 1,525 .txt files
 ```
 
 ---
 
-## 50 Core Techniques / 50 项核心技巧
+## Quick Start / 快速开始
 
-Full details in [`arxiv.prompt/prompt_ai.md`](arxiv.prompt/prompt_ai.md). Here's the overview:
+**Browse the prompt techniques / 浏览提示词技巧：**
 
-完整内容见 [`arxiv.prompt/prompt_ai.md`](arxiv.prompt/prompt_ai.md)，以下是概览：
+Start with [`arxiv.prompt/prompt_ai.md`](arxiv.prompt/prompt_ai.md) — 50 techniques with templates, principles, sources, and use cases.
 
-### I. Reasoning & Chain-of-Thought / 推理与思维链 (1–6)
+从 [`arxiv.prompt/prompt_ai.md`](arxiv.prompt/prompt_ai.md) 开始 — 50 项技巧含模板、原理、来源和适用场景。
 
-| # | Technique | Key Paper | Citations |
-|---|-----------|-----------|-----------|
-| 1 | Chain-of-Thought (CoT) | arXiv:2402.10200 | 238 |
-| 2 | Plan-and-Solve Prompting | arXiv:2305.04091 | 640 |
-| 3 | Structured CoT for Code | arXiv:2305.06599 | 286 |
-| 4 | CoT Separator Enhancement | arXiv:2402.10645 | — |
-| 5 | Robust CoT (Noisy Rationales) | arXiv:2410.23856 | 51 |
-| 6 | Reasoning Without Prompting | arXiv:2402.10200 | 238 |
+**Explore sci-fi research / 探索科幻研究素材：**
 
-### II. Examples & In-Context Learning / 示例与上下文学习 (7–11)
+Browse the `arxiv.agi-scifi/` directory by year — each abstract is a self-contained `.txt` file with title, authors, arXiv ID, and abstract text.
 
-| # | Technique | Key Paper | Citations |
-|---|-----------|-----------|-----------|
-| 7 | Few-Shot / ICL | arXiv:2410.02185 | — |
-| 8 | Auto-Demo Prompting | arXiv:2410.01724 | — |
-| 9 | Mixture-of-Expert Prompts | arXiv:2407.00256 | — |
-| 10 | Self-Consistency | arXiv:2402.19371 | 82 |
-| 11 | Multi-Prompt Evaluation | arXiv:2401.00595 | 264 |
+浏览 `arxiv.agi-scifi/` 年份目录 — 每篇摘要是独立 `.txt` 文件，含标题、作者、arXiv ID 和摘要正文。
 
-### III. Prompt Design & Formatting / 设计与格式 (12–16)
+**Programmatic access / 程序化访问：**
 
-| # | Technique | Key Paper | Citations |
-|---|-----------|-----------|-----------|
-| 12 | Prompt Pattern Catalog | arXiv:2302.11382 | **1,646** |
-| 13 | Prompt Formatting Impact | arXiv:2310.11324 | 626 |
-| 14 | Role-Play Prompting | arXiv:2308.07702 | 358 |
-| 15 | Emotional Stimulus | arXiv:2404.10500 | — |
-| 16 | Butterfly Effect of Prompts | arXiv:2401.03729 | 98 |
+```python
+import json
 
-### IV. Orchestration & Workflows / 编排与工作流 (17–22)
-
-| # | Technique | Key Paper | Citations |
-|---|-----------|-----------|-----------|
-| 17 | Prompt Chaining vs Stepwise | arXiv:2406.00507 | 35 |
-| 18 | Meta-Prompting | arXiv:2401.12954 | 132 |
-| 19 | Prompt Ensemble | arXiv:2405.07467 | 105 |
-| 20 | Flow Engineering for Code | arXiv:2401.08500 | 112 |
-| 21 | Prompt Programming (DSL) | arXiv:2406.13161 | — |
-| 22 | Multi-Agent Design | arXiv:2502.02533 | 64 |
-
-### V. Optimization & Compression / 优化与压缩 (23–28)
-
-| # | Technique | Key Paper | Citations |
-|---|-----------|-----------|-----------|
-| 23 | Auto Prompt Optimization | arXiv:2305.03495 | 591 |
-| 24 | Prompt Compression | arXiv:2310.06839 | 371 |
-| 25 | Prompt Rewriting | arXiv:2410.20788 | — |
-| 26 | Prompt + Fine-Tuning | arXiv:2407.10930 | 40 |
-| 27 | Self-Supervised Optimization | arXiv:2502.06855 | 29 |
-| 28 | Soft Prompt Tuning | arXiv:2405.15282 | — |
-
-### VI. Quality & Robustness / 质量与鲁棒性 (29–33)
-
-| # | Technique | Key Paper | Citations |
-|---|-----------|-----------|-----------|
-| 29 | Prompt Bias Calibration | arXiv:2403.09963 | 25 |
-| 30 | Sensitivity Assessment | arXiv:2306.04528 | 246 |
-| 31 | Perturbation Consistency | arXiv:2402.15833 | — |
-| 32 | LLM-as-a-Judge | arXiv:2408.13006 | 69 |
-| 33 | Domain-Specific Prompting | arXiv:2402.19371 | 82 |
-
-### VII. Defense & Protection / 防御与保护 (34–41)
-
-| # | Technique | Key Paper | Citations |
-|---|-----------|-----------|-----------|
-| 34 | Spotlighting (Data Marking) | arXiv:2403.14720 | 133 |
-| 35 | Structured Query Defense | arXiv:2402.06363 | 207 |
-| 36 | Preference-Based Defense | arXiv:2410.05451 | 89 |
-| 37 | Injection Detection | arXiv:2507.15219 | 51 |
-| 38 | Injection-Immune Architecture | arXiv:2503.18813 | 95 |
-| 39 | Multi-Agent Security | arXiv:2502.05174 | 29 |
-| 40 | Prompt Theft Protection | arXiv:2412.13426 | — |
-| 41 | Unlearning & Caching | arXiv:2406.07933 | 101 |
-
-### VIII. Attacks & Penetration (Security Research) / 攻击与渗透 (42–50)
-
-| # | Technique | Key Paper | Citations |
-|---|-----------|-----------|-----------|
-| 42 | Indirect Prompt Injection | arXiv:2302.12173 | 989 |
-| 43 | Manual Jailbreak Templates | arXiv:2308.03825 | 535 |
-| 44 | Automated Jailbreak (AutoDAN) | arXiv:2310.04451 | 658 |
-| 45 | Prompt Decomposition Attack | arXiv:2402.16914 | 100 |
-| 46 | Sequential Chain Attack | arXiv:2411.06426 | 13 |
-| 47 | Prompt Extraction/Stealing | arXiv:2405.06823 | 127 |
-| 48 | Learned Injection Triggers | arXiv:2403.03792 | 66 |
-| 49 | Adaptive Attacks on Defenses | arXiv:2503.00061 | 61 |
-| 50 | Injection Formalization | arXiv:2310.12815 | 263 |
-
----
-
-## How to Use / 如何使用
-
-**Read the summary / 阅读总结：**
-
-Start with [`arxiv.prompt/prompt_ai.md`](arxiv.prompt/prompt_ai.md) — it contains all 50 techniques with templates, principles, sources, and use cases.
-
-从 [`arxiv.prompt/prompt_ai.md`](arxiv.prompt/prompt_ai.md) 开始 — 包含全部 50 项技巧的模板、原理、来源和适用场景。
-
-**Browse abstracts / 浏览摘要：**
-
-Each `.txt` file contains: Title, Authors, arXiv ID, URL, and Abstract — all wrapped to 80 characters per line.
-
-每个 `.txt` 文件包含：标题、作者、arXiv ID、链接和摘要 — 每行不超过 80 字符。
-
-**Use the JSON metadata / 使用 JSON 元数据：**
-
-Each year folder has an `arxiv-results-YYYY.json` with full metadata (title, authors, abstract, categories, citations, URLs) for programmatic access.
-
-每个年份文件夹下有 `arxiv-results-YYYY.json`，包含完整元数据（标题、作者、摘要、分类、引用、链接），方便程序化使用。
+data = json.load(open("arxiv.agi-scifi/2025/arxiv-results-2025.json"))
+for paper in data["papers"]:
+    print(paper["title"], paper["categories"], paper.get("citations", "N/A"))
+```
 
 ---
 
 ## Methodology / 方法论
 
-1. **Search** — queried arXiv API for CS papers with "prompt" in title (2023–2026)
-2. **Download** — retrieved 5,362 abstracts via [arxs](https://github.com/host452b/arxs) CLI tool
-3. **Filter** — removed 582 non-LLM papers (vision prompt tuning, speech, graph neural networks, diffusion models, medical imaging, etc.)
-4. **Analyze** — categorized 4,780 papers into fine-grained topics using keyword and citation analysis
-5. **Synthesize** — distilled 50 core techniques from top-cited and representative papers
+### Prompt Collection / 提示词工程专题
+
+1. Searched arXiv API for CS papers with "prompt" in title (2023–2026)
+2. Retrieved 5,362 abstracts via [arxs](https://github.com/host452b/arxs) CLI tool
+3. Filtered out 582 non-LLM papers (vision, speech, graph, diffusion, medical)
+4. Categorized 4,780 papers and distilled 50 core techniques
+
+### AGI/Sci-Fi Collection / AGI/科幻研究专题
+
+1. Designed 52 cross-disciplinary keyword searches across all arXiv categories
+2. Retrieved 14,520 raw results covering physics, math, CS, biology, economics, etc.
+3. Deduplicated to 13,606 unique papers
+4. Organized by year with formatted abstracts (80 chars/line)
+
+---
+
+## 50 Prompt Engineering Techniques / 50 项提示词核心技巧
+
+Full details in [`arxiv.prompt/prompt_ai.md`](arxiv.prompt/prompt_ai.md):
+
+| Section | Techniques | Range |
+|---------|------------|-------|
+| I. Reasoning & CoT / 推理与思维链 | CoT, Plan-and-Solve, Structured CoT, etc. | #1–6 |
+| II. Examples & ICL / 示例与上下文学习 | Few-Shot, Auto-Demo, Self-Consistency, etc. | #7–11 |
+| III. Design & Formatting / 设计与格式 | Pattern Catalog, Role-Play, Emotional Stimulus, etc. | #12–16 |
+| IV. Orchestration / 编排与工作流 | Chaining, Meta-Prompting, Multi-Agent, etc. | #17–22 |
+| V. Optimization / 优化与压缩 | Auto Optimization, Compression, Soft Prompt, etc. | #23–28 |
+| VI. Quality & Robustness / 质量与鲁棒性 | Bias Calibration, Sensitivity, LLM-as-Judge, etc. | #29–33 |
+| VII. Defense / 防御与保护 | Spotlighting, Query Defense, Injection Detection, etc. | #34–41 |
+| VIII. Attacks (Research) / 攻击与渗透 | Jailbreak, Prompt Injection, Extraction, etc. | #42–50 |
+
+---
+
+## 52 AGI/Sci-Fi Search Keywords / 52 组科幻研究搜索关键词
+
+<details>
+<summary>Click to expand full search list / 点击展开完整搜索列表</summary>
+
+| # | Search Topic | Papers |
+|---|-------------|--------|
+| 01 | AGI / Superintelligence | 434 |
+| 02 | AI + Economy / Society | 500 |
+| 03 | AI + Cosmology / Universe | 500 |
+| 04 | AI Consciousness | 51 |
+| 05 | Human-AI Relationship | 500 |
+| 06 | AI + Nuclear Energy | 195 |
+| 07 | AI Safety / Alignment | 500 |
+| 08 | AI Governance | 423 |
+| 09 | AI + Space Exploration | 500 |
+| 10 | AI + Math Foundations | 26 |
+| 11 | AI + Quantum Computing | 500 |
+| 12 | Singularity / BCI | 239 |
+| 13 | Emergence in AI | 500 |
+| 14 | AI + Military / Weapons | 22 |
+| 15 | World Models | 500 |
+| 16 | Self-Improving AI | 268 |
+| 17 | AI + Climate / Energy | 500 |
+| 18 | AI + Biology / Longevity | 460 |
+| 19 | Collective Intelligence | 500 |
+| 20 | Simulation / Virtual World | 500 |
+| 21 | Neuro-Symbolic AI | 500 |
+| 22 | AI + Scientific Discovery | 261 |
+| 23 | Decentralized AI | 252 |
+| 24 | AI + Creativity / Art | 365 |
+| 25 | AI Autonomous Agents | 500 |
+| 26 | Embodied AI | 500 |
+| 27 | Megastructure / Dyson Sphere | 20 |
+| 28 | AI for Science | 194 |
+| 29 | SETI / Fermi Paradox | 57 |
+| 30 | Information Theory + Intelligence | 500 |
+| 31 | Future of Work | 500 |
+| 32 | Mind Uploading | 18 |
+| 33 | Scaling Laws | 500 |
+| 34 | AI Deception / Misalignment | 63 |
+| 35 | AI + Gravitational Physics | 302 |
+| 36 | Post-Scarcity Economics | 7 |
+| 37 | Theory of Everything | 39 |
+| 38 | AI Hardware / Neuromorphic | 500 |
+| 39 | AI + Exotic Physics | 124 |
+| 40 | AI + Fusion Control | 44 |
+| 41 | AI Code Generation | 355 |
+| 42 | AI Hallucination / Trust | 307 |
+| 43 | Open-Ended Evolution | 189 |
+| 44 | Quantum Gravity + Information | 322 |
+| 45 | Extraterrestrial Life / Astrobiology | 199 |
+| 46 | Space Habitat / Colonization | 83 |
+| 47 | Life Support Systems / ISRU | 9 |
+| 48 | Extremophile / Space Biology | 54 |
+| 49 | Interstellar Travel / Propulsion | 55 |
+| 50 | Terraforming | 11 |
+| 51 | Origin of Life / Panspermia | 20 |
+| 52 | Technosignature / Cosmic Archaeology | 52 |
+
+</details>
+
+---
+
+## Use Cases / 适用场景
+
+- **Prompt engineers** — find and apply the latest LLM prompting techniques
+- **AI safety researchers** — study alignment, deception, jailbreak, and defense
+- **Sci-fi writers** — discover real scientific ideas for worldbuilding
+- **Students & researchers** — quickly survey cross-disciplinary AI literature
+
+- **提示词工程师** — 查找和应用最新 LLM 提示技巧
+- **AI 安全研究者** — 研究对齐、欺骗、越狱和防御
+- **科幻作家** — 发现真实科学观点用于世界构建
+- **学生和研究者** — 快速浏览跨学科 AI 文献
 
 ---
 
 ## Contributing / 贡献
 
-Issues and PRs welcome! Especially for: / 欢迎提 Issue 和 PR，特别是：
+Issues and PRs welcome! / 欢迎提 Issue 和 PR！
 
-- Suggesting missing techniques / 补充遗漏的技巧
-- Correcting categorizations / 纠正分类
-- Adding new year data / 添加新年份数据
-- Improving the summary / 改进总结内容
+- Suggest missing topics or techniques / 补充遗漏的主题或技巧
+- Correct categorizations / 纠正分类
+- Add new search keywords / 添加新搜索关键词
+- Improve summaries / 改进总结
 
 ---
 
 ## License / 许可
 
-The abstracts are sourced from [arXiv](https://arxiv.org/) under their [Terms of Use](https://arxiv.org/help/api/tou). Thank you to arXiv for use of its open access interoperability.
+Abstracts are sourced from [arXiv](https://arxiv.org/) under their [Terms of Use](https://arxiv.org/help/api/tou). Thank you to arXiv for use of its open access interoperability.
 
 摘要来源于 [arXiv](https://arxiv.org/)，遵循其[使用条款](https://arxiv.org/help/api/tou)。感谢 arXiv 提供开放获取互操作性。
 
 ---
 
-## Star History
+If this repo helps your research or work, please star it! ⭐
 
-If this repo helps your research or work, please give it a star! ⭐
-
-如果这个仓库对你的研究或工作有帮助，请给一个 star！⭐
+如果这个仓库对你有帮助，请点个 star！⭐

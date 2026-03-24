@@ -1,0 +1,25 @@
+Title: Solver-Aided Verification of Policy Compliance in Tool-Augmented LLM
+Agents
+Authors: Cailin Winston, Claris Winston, René Just
+ID: 2603.20449
+URL: https://arxiv.org/abs/2603.20449
+
+Abstract:
+Tool-augmented Large Language Models (TaLLMs) extend LLMs with the ability to
+invoke external tools, enabling them to interact with real-world environments.
+However, a major limitation in deploying TaLLMs in sensitive applications such
+as customer service and business process automation is a lack of reliable
+compliance with domain-specific operational policies regarding tool-use and
+agent behavior. Current approaches merely steer LLMs to adhere to policies by
+including policy descriptions in the LLM context, but these provide no
+guarantees that policy violations will be prevented. In this paper, we introduce
+an SMT solver-aided framework to enforce tool-use policy compliance in TaLLM
+agents. Specifically, we use an LLM-assisted, human-guided approach to translate
+natural-language-specified tool-use policies into formal logic (SMT-LIB-2.0)
+constraints over agent-observable state and tool arguments. At runtime, planned
+tool calls are intercepted and checked against the constraints using the Z3
+solver as a pre-condition to the tool call. Tool invocations that violate the
+policy are blocked. We evaluated on the TauBench benchmark and demonstrate that
+solver-aided policy checking reduces policy violations while maintaining overall
+task accuracy. These results suggest that integrating formal reasoning into
+TaLLM execution can improve tool-call policy compliance and overall reliability.

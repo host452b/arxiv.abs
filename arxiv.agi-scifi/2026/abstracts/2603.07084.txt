@@ -1,0 +1,27 @@
+Title: Countdown-Code: A Testbed for Studying The Emergence and Generalization
+of Reward Hacking in RLVR
+Authors: Muhammad Khalifa, Zohaib Khan, Omer Tafveez, Hao Peng, Lu Wang
+ID: 2603.07084
+URL: https://arxiv.org/abs/2603.07084
+
+Abstract:
+Reward hacking is a form of misalignment in which models overoptimize proxy
+rewards without genuinely solving the underlying task. Precisely measuring
+reward hacking occurrence remains challenging because true task rewards are
+often expensive or impossible to compute. We introduce Countdown-Code, a minimal
+environment where models can both solve a mathematical reasoning task and
+manipulate the test harness. This dual-access design creates a clean separation
+between proxy rewards (test pass/fail) and true rewards (mathematical
+correctness), enabling accurate measurement of reward-hacking rates. Using this
+environment, we study reward hacking in open-weight LLMs and find that such
+behaviors can be unintentionally learned during supervised fine-tuning (SFT)
+when even a small fraction of reward-hacking trajectories leak into training
+data. As little as 1\% contamination in distillation SFT data is sufficient for
+models to internalize reward hacking which resurfaces during subsequent
+reinforcement learning (RL). We further show that RL amplifies misalignment and
+drives its generalization beyond the original domain. We open-source our
+environment and code to facilitate future research on reward hacking in LLMs.
+Our results reveal a previously underexplored pathway through which reward
+hacking can emerge and persist in LLMs, underscoring the need for more rigorous
+validation of synthetic SFT data. Code is available at
+https://github.com/zohaib-khan5040/Countdown-Code.

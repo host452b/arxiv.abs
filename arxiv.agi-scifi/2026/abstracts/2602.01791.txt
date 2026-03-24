@@ -1,0 +1,26 @@
+Title: Grad2Reward: From Sparse Judgment to Dense Rewards for Improving Open-
+Ended LLM Reasoning
+Authors: Zheng Zhang, Ao Lu, Yuanhao Zeng, Ziwei Shan, Jinjin Guo, Lufei Li,
+Yexin Li, Kan Ren
+ID: 2602.01791
+URL: https://arxiv.org/abs/2602.01791
+
+Abstract:
+Reinforcement Learning with Verifiable Rewards (RLVR) has catalyzed significant
+breakthroughs in complex LLM reasoning within verifiable domains, such as
+mathematics and programming. Recent efforts have sought to extend this paradigm
+to open-ended tasks by employing LLMs-as-a-Judge to provide sequence-level
+rewards for policy optimization. However, these rewards are inherently sparse,
+failing to provide the fine-grained supervision necessary for generating
+complex, long-form trajectories. Furthermore, current work treats the Judge as a
+black-box oracle, discarding the rich intermediate feedback signals encoded in
+it. To address these limitations, we introduce Grad2Reward, a novel framework
+that extracts dense process rewards directly from the Judge's model inference
+process via a single backward pass. By leveraging gradient-based attribution,
+Grad2Reward enables precise token-level credit assignment, substantially
+enhancing training efficiency and reasoning quality. Additionally, Grad2Reward
+introduces a self-judging mechanism, allowing the policy to improve through its
+own evaluative signals without training specialized reward models or reliance on
+superior external Judges. The experiments demonstrate that policies optimized
+with Grad2Reward achieve outstanding performance across diverse open-ended
+tasks, affirming its effectiveness and broad generalizability.

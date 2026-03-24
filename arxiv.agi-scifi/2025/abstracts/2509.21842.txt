@@ -1,0 +1,30 @@
+Title: DeepTravel: An End-to-End Agentic Reinforcement Learning Framework for
+Autonomous Travel Planning Agents
+Authors: Yansong Ning, Rui Liu, Jun Wang, Kai Chen, Wei Li, Jun Fang, Kan Zheng,
+Naiqiang Tan, Hao Liu
+ID: 2509.21842
+URL: https://arxiv.org/abs/2509.21842
+
+Abstract:
+Travel planning (TP) agent has recently worked as an emerging building block to
+interact with external tools and resources for travel itinerary generation,
+ensuring enjoyable user experience. Despite its benefits, existing studies rely
+on hand craft prompt and fixed agent workflow, hindering more flexible and
+autonomous TP agent. This paper proposes DeepTravel, an end to end agentic
+reinforcement learning framework for building autonomous travel planning agent,
+capable of autonomously planning, executing tools, and reflecting on tool
+responses to explore, verify, and refine intermediate actions in multi step
+reasoning. To achieve this, we first construct a robust sandbox environment by
+caching transportation, accommodation and POI data, facilitating TP agent
+training without being constrained by real world APIs limitations (e.g.,
+inconsistent outputs). Moreover, we develop a hierarchical reward modeling
+system, where a trajectory level verifier first checks spatiotemporal
+feasibility and filters unsatisfied travel itinerary, and then the turn level
+verifier further validate itinerary detail consistency with tool responses,
+enabling efficient and precise reward service. Finally, we propose the reply
+augmented reinforcement learning method that enables TP agent to periodically
+replay from a failures experience buffer, emerging notable agentic capacity. We
+deploy trained TP agent on DiDi Enterprise Solutions App and conduct
+comprehensive online and offline evaluations, demonstrating that DeepTravel
+enables small size LLMs (e.g., Qwen3 32B) to significantly outperform existing
+frontier LLMs such as OpenAI o1, o3 and DeepSeek R1 in travel planning tasks.

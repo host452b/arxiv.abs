@@ -1,0 +1,29 @@
+Title: L-RAG: Balancing Context and Retrieval with Entropy-Based Lazy Loading
+Authors: Sergii Voloshyn
+ID: 2601.06551
+URL: https://arxiv.org/abs/2601.06551
+
+Abstract:
+Retrieval-Augmented Generation (RAG) has emerged as the predominant paradigm for
+grounding Large Language Model outputs in factual knowledge, effectively
+mitigating hallucinations. However, conventional RAG systems operate under a
+"retrieve-always" assumption, querying vector databases for every input
+regardless of query complexity. This static approach incurs substantial
+computational overhead and inference latency, particularly problematic for high-
+throughput production deployments. We introduce L-RAG (Lazy Retrieval-Augmented
+Generation), an adaptive framework that implements hierarchical context
+management through entropy-based gating. L-RAG employs a two-tier architecture:
+queries are first processed with a compact document summary, and expensive chunk
+retrieval is triggered only when the model's predictive entropy exceeds a
+calibrated threshold, signaling genuine uncertainty. Through experiments on
+SQuAD 2.0 (N=500) using the Phi-2 model, we demonstrate that L-RAG provides a
+tunable accuracy-efficiency trade-off: at a conservative threshold (tau=0.5),
+L-RAG achieves 78.2% accuracy, matching Standard RAG (77.8%), with 8% retrieval
+reduction; at a balanced threshold (tau=1.0), retrieval reduction increases to
+26% with modest accuracy trade-off (76.0%). Latency analysis shows that L-RAG
+saves 80-210ms per query when retrieval latency exceeds 500ms. Analysis of
+entropy distributions reveals statistically significant separation (p < 0.001)
+between correct predictions (H=1.72) and errors (H=2.20), validating entropy as
+a reliable uncertainty signal. L-RAG offers a practical, training-free approach
+toward more efficient RAG deployment, providing system architects with a
+configurable knob to balance accuracy and throughput requirements.

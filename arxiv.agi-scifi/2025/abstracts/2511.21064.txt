@@ -1,0 +1,28 @@
+Title: OVOD-Agent: A Markov-Bandit Framework for Proactive Visual Reasoning and
+Self-Evolving Detection
+Authors: Chujie Wang, Jianyu Lu, Zhiyuan Luo, Xi Chen, Chu He
+ID: 2511.21064
+URL: https://arxiv.org/abs/2511.21064
+
+Abstract:
+Open-Vocabulary Object Detection (OVOD) aims to enable detectors to generalize
+across categories by leveraging semantic information. Although existing methods
+are pretrained on large vision-language datasets, their inference is still
+limited to fixed category names, creating a gap between multimodal training and
+unimodal inference. Previous work has shown that improving textual
+representation can significantly enhance OVOD performance, indicating that the
+textual space is still underexplored. To this end, we propose OVOD-Agent, which
+transforms passive category matching into proactive visual reasoning and self-
+evolving detection. Inspired by the Chain-of-Thought (CoT) paradigm, OVOD-Agent
+extends the textual optimization process into an interpretable Visual-CoT with
+explicit actions. OVOD's lightweight nature makes LLM-based management
+unsuitable; instead, we model visual context transitions as a Weakly Markovian
+Decision Process (w-MDP) over eight state spaces, which naturally represents the
+agent's state, memory, and interaction dynamics. A Bandit module generates
+exploration signals under limited supervision, helping the agent focus on
+uncertain regions and adapt its detection policy. We further integrate Markov
+transition matrices with Bandit trajectories for self-supervised Reward Model
+(RM) optimization, forming a closed loop from Bandit exploration to RM learning.
+Experiments on COCO and LVIS show that OVOD-Agent provides consistent
+improvements across OVOD backbones, particularly on rare categories, confirming
+the effectiveness of the proposed framework.

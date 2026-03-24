@@ -1,0 +1,24 @@
+Title: Neuro-Symbolic Rule Lists
+Authors: Sascha Xu, Nils Philipp Walter, Jilles Vreeken
+ID: 2411.06428
+URL: https://arxiv.org/abs/2411.06428
+
+Abstract:
+Machine learning models deployed in sensitive areas such as healthcare must be
+interpretable to ensure accountability and fairness. Rule lists (if Age < 35
+$\wedge$ Priors > 0 then Recidivism = True, else if Next Condition . . . ) offer
+full transparency, making them well-suited for high-stakes decisions. However,
+learning such rule lists presents significant challenges. Existing methods based
+on combinatorial optimization require feature pre-discretization and impose
+restrictions on rule size. Neuro-symbolic methods use more scalable continuous
+optimization yet place similar pre-discretization constraints and suffer from
+unstable optimization. To address the existing limitations, we introduce
+NeuRules, an end-to-end trainable model that unifies discretization, rule
+learning, and rule order into a single differentiable framework. We formulate a
+continuous relaxation of the rule list learning problem that converges to a
+strict rule list through temperature annealing. NeuRules learns both the
+discretizations of individual features, as well as their combination into
+conjunctive rules without any pre-processing or restrictions. Extensive
+experiments demonstrate that NeuRules consistently outperforms both
+combinatorial and neuro-symbolic methods, effectively learning simple and
+complex rules, as well as their order, across a wide range of datasets.

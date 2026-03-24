@@ -1,0 +1,32 @@
+Title: AudAgent: Automated Auditing of Privacy Policy Compliance in AI Agents
+Authors: Ye Zheng, Yimin Chen, Yidan Hu
+ID: 2511.07441
+URL: https://arxiv.org/abs/2511.07441
+
+Abstract:
+AI agents can autonomously perform tasks and, often without explicit user
+consent, collect or disclose users' sensitive local data, which raises serious
+privacy concerns. Although AI agents' privacy policies describe their intended
+data practices, there remains limited transparency and accountability about
+whether runtime behavior matches those policies. To bridge this gap, we present
+AudAgent, a tool that continuously monitors AI agents' data practices in real
+time and guards compliance with their stated privacy policies.
+  AudAgent comprises four components for automated privacy auditing of AI
+agents. (i) Policy formalization: a novel cross-LLM voting mechanism that
+ensures high-confidence parsing of privacy policies into formal models. (ii)
+Runtime annotation: a lightweight Presidio-based analyzer that detects sensitive
+data and annotates data practices based on the AI agent's context and the
+formalized privacy policy model. (iii) Compliance auditing: ontology graphs and
+automata-based checking that link the privacy policy model with runtime
+annotations, enabling on-the-fly compliance verification. (iv) User interface:
+an infrastructure-independent implementation that visualizes the real-time
+execution trace of AI agents alongside detected privacy violations, providing
+user-friendly transparency and accountability.
+  We evaluate AudAgent on AI agents built with mainstream frameworks,
+demonstrating its effectiveness in detecting and visualizing privacy policy
+violations. Using AudAgent, we further find that many privacy policies lack
+explicit safeguards for highly sensitive data such as SSNs, whose misuse
+violates legal requirements, and that many agents, including those powered by
+Claude, Gemini, and DeepSeek,do not refuse to process such data via third-party
+tools. AudAgent proactively blocks operations on such data, overriding the
+agents' original privacy policies and behavior.

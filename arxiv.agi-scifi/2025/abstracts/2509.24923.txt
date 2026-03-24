@@ -1,0 +1,25 @@
+Title: When Greedy Wins: Emergent Exploitation Bias in Meta-Bandit LLM Training
+Authors: Sanxing Chen, Xiaoyin Chen, Yukun Huang, Roy Xie, Bhuwan Dhingra
+ID: 2509.24923
+URL: https://arxiv.org/abs/2509.24923
+
+Abstract:
+While Large Language Models (LLMs) hold promise to become autonomous agents,
+they often explore suboptimally in sequential decision-making. Recent work has
+sought to enhance this capability via supervised fine-tuning (SFT) or
+reinforcement learning (RL), improving regret on the classic multi-armed bandit
+task. However, it remains unclear how these learning methods shape exploration
+strategies and how well they generalize. We investigate both paradigms by
+training LLMs with SFT on expert trajectories and RL with a range of tailored
+reward signals including a strategic, regret-shaped reward to reduce variance,
+and an algorithmic reward that enables oracle imitation. The resulting agents
+outperform pre-trained models and achieve performance comparable to Upper
+Confidence Bound (UCB) and Thompson Sampling, with robust generalization to 6x
+longer horizons and across bandit families. Behavioral analysis reveals that
+gains often stem from more sophisticated but greedier exploitation: RL/SFT
+agents are more prone to early catastrophic failure than pre-trained models,
+prematurely abandoning exploration. Furthermore, agents trained to imitate UCB
+learn to outperform their teacher by adopting more exploitative variants. Our
+findings clarify when each training paradigm is preferable and advocate tailored
+reward design and evaluation beyond average regret to promote robust exploratory
+behavior.

@@ -1,0 +1,31 @@
+Title: Artificial-Intelligence Generated Code Considered Harmful: A Road Map for
+Secure and High-Quality Code Generation
+Authors: Chun Jie Chong, Zhihao Yao, Iulian Neamtiu
+ID: 2409.19182
+URL: https://arxiv.org/abs/2409.19182
+
+Abstract:
+Generating code via a LLM (rather than writing code from scratch), has exploded
+in popularity. However, the security implications of LLM-generated code are
+still unknown. We performed a study that compared the security and quality of
+human-written code with that of LLM-generated code, for a wide range of
+programming tasks, including data structures, algorithms, cryptographic
+routines, and LeetCode questions. To assess code security we used unit testing,
+fuzzing, and static analysis. For code quality, we focused on complexity and
+size. We found that LLM can generate incorrect code that fails to implement the
+required functionality, especially for more complicated tasks; such errors can
+be subtle. For example, for the cryptographic algorithm SHA1, LLM generated an
+incorrect implementation that nevertheless compiles. In cases where its
+functionality was correct, we found that LLM-generated code is less secure,
+primarily due to the lack of defensive programming constructs, which invites a
+host of security issues such as buffer overflows or integer overflows. Fuzzing
+has revealed that LLM-generated code is more prone to hangs and crashes than
+human-written code. Quality-wise, we found that LLM generates bare-bones code
+that lacks defensive programming constructs, and is typically more complex (per
+line of code) compared to human-written code. Next, we constructed a feedback
+loop that asked the LLM to re-generate the code and eliminate the found issues
+(e.g., malloc overflow, array index out of bounds, null dereferences). We found
+that the LLM fails to eliminate such issues consistently: while succeeding in
+some cases, we found instances where the re-generated, supposedly more secure
+code, contains new issues; we also found that upon prompting, LLM can introduce
+issues in files that were issues-free before prompting.

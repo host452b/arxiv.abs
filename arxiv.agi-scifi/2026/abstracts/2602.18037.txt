@@ -1,0 +1,26 @@
+Title: Gradient Regularization Prevents Reward Hacking in Reinforcement Learning
+from Human Feedback and Verifiable Rewards
+Authors: Johannes Ackermann, Michael Noukhovitch, Takashi Ishida, Masashi
+Sugiyama
+ID: 2602.18037
+URL: https://arxiv.org/abs/2602.18037
+
+Abstract:
+Reinforcement Learning from Human Feedback (RLHF) or Verifiable Rewards (RLVR)
+are two key steps in the post-training of modern Language Models (LMs). A common
+problem is reward hacking, where the policy may exploit inaccuracies of the
+reward and learn an unintended behavior. Most previous works address this by
+limiting the policy update with a Kullback-Leibler (KL) penalty towards a
+reference model. We propose a different framing: Train the LM in a way that
+biases policy updates towards regions in which the reward is more accurate.
+First, we derive a theoretical connection between the accuracy of a reward model
+and the flatness of an optimum at convergence. Gradient regularization (GR) can
+then be used to bias training to flatter regions and thereby maintain reward
+model accuracy. We confirm these results by showing that the gradient norm and
+reward accuracy are empirically correlated in RLHF. We then show that Reference
+Resets of the KL penalty implicitly use GR to find flatter regions with higher
+reward accuracy. We further improve on this by proposing to use explicit GR with
+an efficient finite-difference estimate. Empirically, GR performs better than a
+KL penalty across a diverse set of RL experiments with LMs. GR achieves a higher
+GPT-judged win-rate in RLHF, avoids overly focusing on the format in rule-based
+math rewards, and prevents hacking the judge in LLM-as-a-Judge math tasks.

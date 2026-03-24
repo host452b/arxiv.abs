@@ -1,0 +1,24 @@
+Title: Predicting Task Performance with Context-aware Scaling Laws
+Authors: Kyle Montgomery, David Park, Jianhong Tu, Michael Bendersky, Beliz
+Gunel, Dawn Song, Chenguang Wang
+ID: 2510.14919
+URL: https://arxiv.org/abs/2510.14919
+
+Abstract:
+Scaling laws have transformed our understanding of large language models by
+linking upstream metrics like cross-entropy loss to design factors such as model
+size, training data, and compute. However, these conventional laws fail to
+capture downstream task performance, where context plays a critical role. In
+this work, we propose a straightforward, interpretable framework that jointly
+models downstream performance as a function of the training compute and the
+provided context. We empirically validate our framework by fitting it on the
+observed downstream performance of extended-context variants of Llama-2-7B and
+Llama-2-13B across 65,500 unique instances spanning three tasks: arithmetic
+reasoning, common sense reasoning, and machine translation. Our results
+demonstrate that our framework accurately models in-distribution downstream
+performance, generalizes across three orders of magnitude in training compute,
+and reliably extrapolates performance as the amount of context increases. These
+findings offer valuable insights into the interplay between training compute and
+context utilization, providing guidance for designing more efficient long-
+context LLMs for diverse downstream tasks. Our code is available at
+https://github.com/wang-research-lab/context-scaling.

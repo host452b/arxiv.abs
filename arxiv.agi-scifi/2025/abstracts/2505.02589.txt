@@ -1,0 +1,23 @@
+Title: DeepHMC : a deep-neural-network acclerated Hamiltonian Monte Carlo
+algorithm for binary neutron star parameter estimation
+Authors: Jules Perret, Marc Aréne, Edward K. Porter
+ID: 2505.02589
+URL: https://arxiv.org/abs/2505.02589
+
+Abstract:
+We present a deep neural network (DNN) accelerated Hamiltonian Monte Carlo (HMC)
+algorithm called DeepHMC for the inference of binary neutron star systems. The
+HMC is a non-random walk sampler that uses background gradient information to
+accelerate the convergence of the sampler. While faster converging than a
+random-walk sampler, in theory by a factor of the dimensionality of the problem,
+a known computational bottleneck for HMC algorithms is the calculation of
+gradients of the log-likelihood. We demonstrate that Hamiltonian trajectories
+based on a DNN gradients are 30 times faster than those based on the relative
+binning gradients, and 7000 times faster than trajectories based on a naive
+likelihood gradient calculation. Using the publicly available 128 second LVK
+data set for the binary neutron star mergers GW170817 and GW190425, we show that
+not only does DeepHMC produce produces highly accurate and consistent results
+with the LVK public data, but acquires 5000 statistically independent samples
+(SIS) in the $12D$ parameter space in approximately two hours on a Macbook pro
+for GW170817, with a cost of $<1$ second/SIS, and 2.5 days for GW190425, with a
+cost of $\sim25$ seconds/SIS.

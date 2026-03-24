@@ -1,0 +1,25 @@
+Title: $r$Age-$k$: Communication-Efficient Federated Learning Using Age Factor
+Authors: Matin Mortaheb, Priyanka Kaswan, Sennur Ulukus
+ID: 2410.22192
+URL: https://arxiv.org/abs/2410.22192
+
+Abstract:
+Federated learning (FL) is a collaborative approach where multiple clients,
+coordinated by a parameter server (PS), train a unified machine-learning model.
+The approach, however, suffers from two key challenges: data heterogeneity and
+communication overhead. Data heterogeneity refers to inconsistencies in model
+training arising from heterogeneous data at different clients. Communication
+overhead arises from the large volumes of parameter updates exchanged between
+the PS and clients. Existing solutions typically address these challenges
+separately. This paper introduces a new communication-efficient algorithm that
+uses the age of information metric to simultaneously tackle both limitations of
+FL. We introduce age vectors at the PS, which keep track of how often the
+different model parameters are updated from the clients. The PS uses this to
+selectively request updates for specific gradient indices from each client.
+Further, the PS employs age vectors to identify clients with statistically
+similar data and group them into clusters. The PS combines the age vectors of
+the clustered clients to efficiently coordinate gradient index updates among
+clients within a cluster. We evaluate our approach using the MNIST and CIFAR10
+datasets in highly non-i.i.d. settings. The experimental results show that our
+proposed method can expedite training, surpassing other communication-efficient
+strategies in efficiency.

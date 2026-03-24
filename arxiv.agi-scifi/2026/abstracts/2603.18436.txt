@@ -1,0 +1,30 @@
+Title: AS2 -- Attention-Based Soft Answer Sets: An End-to-End Differentiable
+Neuro-Soft-Symbolic Reasoning Architecture
+Authors: Wael AbdAlmageed
+ID: 2603.18436
+URL: https://arxiv.org/abs/2603.18436
+
+Abstract:
+Neuro-symbolic artificial intelligence (AI) systems typically couple a neural
+perception module to a discrete symbolic solver through a non-differentiable
+boundary, preventing constraint-satisfaction feedback from reaching the
+perception encoder during training. We introduce AS2 (Attention-Based Soft
+Answer Sets), a fully differentiable neuro-symbolic architecture that replaces
+the discrete solver with a soft, continuous approximation of the Answer Set
+Programming (ASP) immediate consequence operator $T_P$. AS2 maintains per-
+position probability distributions over a finite symbol domain throughout the
+forward pass and trains end-to-end by minimizing the fixed-point residual of a
+probabilistic lift of $T_P$, thereby differentiating through the constraint
+check without invoking an external solver at either training or inference time.
+The architecture is entirely free of conventional positional embeddings.
+Instead, it encodes problem structure through constraint-group membership
+embeddings that directly reflect the declarative ASP specification, making the
+model agnostic to arbitrary position indexing. On Visual Sudoku, AS2 achieves
+99.89% cell accuracy and 100% constraint satisfaction (verified by Clingo)
+across 1,000 test boards, using a greedy constrained decoding procedure that
+requires no external solver. On MNIST Addition with $N \in \{2, 4, 8\}$ addends,
+AS2 achieves digit accuracy above 99.7% across all scales. These results
+demonstrate that a soft differentiable fixpoint operator, combined with
+constraint-aware attention and declarative constraint specification, can match
+or exceed pipeline and solver-based neuro-symbolic systems while maintaining
+full end-to-end differentiability.

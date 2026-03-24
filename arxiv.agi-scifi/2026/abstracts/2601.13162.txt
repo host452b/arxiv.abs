@@ -1,0 +1,27 @@
+Title: NeuroShield: A Neuro-Symbolic Framework for Adversarial Robustness
+Authors: Ali Shafiee Sarvestani, Jason Schmidt, Arman Roohi
+ID: 2601.13162
+URL: https://arxiv.org/abs/2601.13162
+
+Abstract:
+Adversarial vulnerability and lack of interpretability are critical limitations
+of deep neural networks, especially in safety-sensitive settings such as
+autonomous driving. We introduce \DesignII, a neuro-symbolic framework that
+integrates symbolic rule supervision into neural networks to enhance both
+adversarial robustness and explainability. Domain knowledge is encoded as
+logical constraints over appearance attributes such as shape and color, and
+enforced through semantic and symbolic logic losses applied during training.
+Using the GTSRB dataset, we evaluate robustness against FGSM and PGD attacks at
+a standard $\ell_\infty$ perturbation budget of $\varepsilon = 8/255$. Relative
+to clean training, standard adversarial training provides modest improvements in
+robustness ($\sim$10 percentage points). Conversely, our FGSM-Neuro-Symbolic and
+PGD-Neuro-Symbolic models achieve substantially larger gains, improving
+adversarial accuracy by 18.1\% and 17.35\% over their corresponding adversarial-
+training baselines, representing roughly a three-fold larger robustness gain
+than standard adversarial training provides when both are measured relative to
+the same clean-training baseline, without reducing clean-sample accuracy.
+Compared to transformer-based defenses such as LNL-MoEx, which require heavy
+architectures and extensive data augmentation, our PGD-Neuro-Symbolic variant
+attains comparable or superior robustness using a ResNet18 backbone trained for
+10 epochs. These results show that symbolic reasoning offers an effective path
+to robust and interpretable AI.

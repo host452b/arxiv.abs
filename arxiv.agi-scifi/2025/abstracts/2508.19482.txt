@@ -1,0 +1,29 @@
+Title: MRExtrap: Longitudinal Aging of Brain MRIs using Linear Modeling in
+Latent Space
+Authors: Jaivardhan Kapoor, Jakob H. Macke, Christian F. Baumgartner
+ID: 2508.19482
+URL: https://arxiv.org/abs/2508.19482
+
+Abstract:
+Simulating aging in 3D brain MRI scans can reveal disease progression patterns
+in neurological disorders such as Alzheimer's disease. Current deep learning-
+based generative models typically approach this problem by predicting future
+scans from a single observed scan. We investigate modeling brain aging via
+linear models in the latent space of convolutional autoencoders (MRExtrap). Our
+approach, MRExtrap, is based on our observation that autoencoders trained on
+brain MRIs create latent spaces where aging trajectories appear approximately
+linear. We train autoencoders on brain MRIs to create latent spaces, and
+investigate how these latent spaces allow predicting future MRIs through linear
+extrapolation based on age, using an estimated latent progression rate
+$\boldsymbolβ$. For single-scan prediction, we propose using population-averaged
+and subject-specific priors on linear progression rates. We also demonstrate
+that predictions in the presence of additional scans can be flexibly updated
+using Bayesian posterior sampling, providing a mechanism for subject-specific
+refinement. On the ADNI dataset, MRExtrap predicts aging patterns accurately and
+beats a GAN-based baseline for single-volume prediction of brain aging. We also
+demonstrate and analyze multi-scan conditioning to incorporate subject-specific
+progression rates. Finally, we show that the latent progression rates in
+MRExtrap's linear framework correlate with disease and age-based aging patterns
+from previously studied structural atrophy rates. MRExtrap offers a simple and
+robust method for the age-based generation of 3D brain MRIs, particularly
+valuable in scenarios with multiple longitudinal observations.

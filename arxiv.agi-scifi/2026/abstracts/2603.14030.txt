@@ -1,0 +1,24 @@
+Title: Benchmarking Open-Source PPG Foundation Models for Biological Age
+Prediction
+Authors: N. Brag
+ID: 2603.14030
+URL: https://arxiv.org/abs/2603.14030
+
+Abstract:
+A task-specific model trained on 212,231 UK Biobank subjects to predict vascular
+age from PPG (AI-PPG Age) fails on a different clinical population: predictions
+collapse to a narrow 38-67 year range regardless of true age. Meanwhile, a
+general-purpose foundation model with no age-related training objective achieves
+lower error on the same data. We investigate why this happens and what it means
+for PPG-based biological age prediction.
+  We evaluate three open-source PPG models (Pulse-PPG, PaPaGei-S, AI-PPG Age) on
+906 surgical patients from PulseDB, using frozen embeddings with Ridge
+regression and 5-fold cross-validation. Pulse-PPG reaches MAE = 9.28 years,
+beating both AI-PPG Age in linear probe mode (9.72) and HR/HRV combined with
+demographics (9.59). Adding demographic features brings the best result down to
+MAE = 8.22 years (R2 = 0.517, r = 0.725). The predicted age gap correlates with
+diastolic blood pressure after adjusting for chronological age (r = -0.188, p =
+1.2e-8), consistent with what Apple reported for their proprietary PpgAge model.
+The remaining gap with Apple (MAE 2.43) appears driven by dataset size (906 vs
+213,593 subjects) and population differences rather than model architecture, as
+our learning curve shows no plateau. Code is publicly available.

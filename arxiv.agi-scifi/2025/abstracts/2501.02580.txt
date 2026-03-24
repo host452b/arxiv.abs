@@ -1,0 +1,32 @@
+Title: LP-ICP: General Localizability-Aware Point Cloud Registration for Robust
+Localization in Extreme Unstructured Environments
+Authors: Haosong Yue, Qingyuan Xu, Fei Chen, Jia Pan, Weihai Chen
+ID: 2501.02580
+URL: https://arxiv.org/abs/2501.02580
+
+Abstract:
+The Iterative Closest Point (ICP) algorithm is a crucial component of LiDAR-
+based SLAM algorithms. However, its performance can be negatively affected in
+unstructured environments that lack features and geometric structures, leading
+to low accuracy and poor robustness in localization and mapping. It is known
+that degeneracy caused by the lack of geometric constraints can lead to errors
+in 6-DOF pose estimation along ill-conditioned directions. Therefore, there is a
+need for a broader and more fine-grained degeneracy detection and handling
+method. This paper proposes a new point cloud registration framework, LP-ICP,
+that combines point-to-line and point-to-plane distance metrics in the ICP
+algorithm, with localizability detection and handling. Rather than relying
+solely on point-to-plane localizability information, LP-ICP enhances the
+localizability analysis by incorporating a point-to-line metric, thereby
+exploiting richer geometric constraints. It consists of a localizability
+detection module and an optimization module. The localizability detection module
+performs localizability analysis by utilizing the correspondences between edge
+points (with low local smoothness) to lines and planar points (with high local
+smoothness) to planes between the scan and the map. The localizability
+contribution of individual correspondence constraints can be applied to a
+broader range. The optimization module adds additional soft and hard constraints
+to the optimization equations based on the localizability category. This allows
+the pose to be constrained along ill-conditioned directions. The proposed method
+is evaluated on simulation and real-world datasets, showing comparable or better
+accuracy than the state-of-the art methods in tested scenarios. Observed
+variations in partially localizable directions suggest the need for further
+investigation on robustness and generalizability.

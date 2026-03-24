@@ -1,0 +1,24 @@
+Title: Language Models can Self-Improve at State-Value Estimation for Better
+Search
+Authors: Ethan Mendes, Alan Ritter
+ID: 2503.02878
+URL: https://arxiv.org/abs/2503.02878
+
+Abstract:
+Collecting ground-truth rewards or human demonstrations for multi-step reasoning
+tasks is often prohibitively expensive, particularly in interactive domains such
+as web tasks. We introduce Self-Taught Lookahead (STL), a reward-free framework
+that improves language model-based value functions by reasoning explicitly about
+state transitions. STL can be viewed as a chain-of-thought analogue of the value
+iteration algorithm: instead of regressing directly on numeric values, a value
+LLM is trained to simulate a step of lookahead in natural language - predicting
+the next action, resulting state, and rationale for its value, thereby refining
+value estimates without any labeled data. This self-supervised procedure yields
+more accurate state-value predictions, which in turn enable lightweight search
+algorithms to expand fewer states while maintaining strong performance.
+Empirically, STL-trained value models built on moderately sized (8B parameter)
+open-weight LLMs boost web agent success rates by 39%, achieving comparable
+performance with proprietary models. STL also generalizes to multi-hop QA and
+math puzzles. We find that STL enables small open-source models to guide
+efficient search, reducing inference costs by integrating explicit reasoning
+with value learning.

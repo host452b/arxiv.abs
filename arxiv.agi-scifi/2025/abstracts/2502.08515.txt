@@ -1,0 +1,24 @@
+Title: The Paradox of Stochasticity: Limited Creativity and Computational
+Decoupling in Temperature-Varied LLM Outputs of Structured Fictional Data
+Authors: Evgenii Evstafev
+ID: 2502.08515
+URL: https://arxiv.org/abs/2502.08515
+
+Abstract:
+This study examines how temperature settings and model architectures affect the
+generation of structured fictional data (names, birthdates) across three large
+language models (LLMs): llama3.1:8b, deepseek-r1:8b, and mistral:latest. By
+systematically testing temperature values from 0.0 to 1.0 in increments of 0.1,
+we conducted 330 trials yielding 889 structured entities, validated for
+syntactic consistency. Key findings reveal that model architecture significantly
+influences computational efficiency, with mistral:latest and llama3.1:8b
+processing data 8x faster than deepseek-r1:8b. Contrary to expectations,
+temperature showed no correlation with processing time, challenging assumptions
+about stochastic sampling costs. Output diversity remained limited, as models
+consistently defaulted to common name archetypes (e.g., 'John Doe' and 'Jane
+Smith') across all temperatures, though rare names clustered at intermediate
+values (0.3-0.7). These results demonstrate that architectural optimizations,
+rather than temperature adjustments, dominate performance in structured
+generation tasks. The findings emphasize prioritizing model selection over
+hyperparameter tuning for efficiency and suggest explicit diversity constraints
+are necessary to mitigate default output biases in synthetic data pipelines.

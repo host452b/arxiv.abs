@@ -1,0 +1,30 @@
+Title: Tricking AI chips into Simulating the Human Brain: A Detailed Performance
+Analysis
+Authors: Lennart P. L. Landsmeer, Max C. W. Engelen, Rene Miedema, Christos
+Strydis
+ID: 2301.13637
+URL: https://arxiv.org/abs/2301.13637
+
+Abstract:
+Challenging the Nvidia monopoly, dedicated AI-accelerator chips have begun
+emerging for tackling the computational challenge that the inference and,
+especially, the training of modern deep neural networks (DNNs) poses to modern
+computers. The field has been ridden with studies assessing the performance of
+these contestants across various DNN model types. However, AI-experts are aware
+of the limitations of current DNNs and have been working towards the fourth AI
+wave which will, arguably, rely on more biologically inspired models,
+predominantly on spiking neural networks (SNNs). At the same time, GPUs have
+been heavily used for simulating such models in the field of computational
+neuroscience, yet AI-chips have not been tested on such workloads. The current
+paper aims at filling this important gap by evaluating multiple, cutting-edge
+AI-chips (Graphcore IPU, GroqChip, Nvidia GPU with Tensor Cores and Google TPU)
+on simulating a highly biologically detailed model of a brain region, the
+inferior olive (IO). This IO application stress-tests the different AI-platforms
+for highlighting architectural tradeoffs by varying its compute density, memory
+requirements and floating-point numerical accuracy. Our performance analysis
+reveals that the simulation problem maps extremely well onto the GPU and TPU
+architectures, which for networks of 125,000 cells leads to a 28x respectively
+1,208x speedup over CPU runtimes. At this speed, the TPU sets a new record for
+largest real-time IO simulation. The GroqChip outperforms both platforms for
+small networks but, due to implementing some floating-point operations at
+reduced accuracy, is found not yet usable for brain simulation.

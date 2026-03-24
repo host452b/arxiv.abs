@@ -1,0 +1,25 @@
+Title: Deep Convolutional Tables: Deep Learning without Convolutions
+Authors: Shay Dekel, Yosi Keller, Aharon Bar-Hillel
+ID: 2304.11706
+URL: https://arxiv.org/abs/2304.11706
+
+Abstract:
+We propose a novel formulation of deep networks that do not use dot-product
+neurons and rely on a hierarchy of voting tables instead, denoted as
+Convolutional Tables (CT), to enable accelerated CPU-based inference.
+Convolutional layers are the most time-consuming bottleneck in contemporary deep
+learning techniques, severely limiting their use in Internet of Things and CPU-
+based devices. The proposed CT performs a fern operation at each image location:
+it encodes the location environment into a binary index and uses the index to
+retrieve the desired local output from a table. The results of multiple tables
+are combined to derive the final output. The computational complexity of a CT
+transformation is independent of the patch (filter) size and grows gracefully
+with the number of channels, outperforming comparable convolutional layers. It
+is shown to have a better capacity:compute ratio than dot-product neurons, and
+that deep CT networks exhibit a universal approximation property similar to
+neural networks. As the transformation involves computing discrete indices, we
+derive a soft relaxation and gradient-based approach for training the CT
+hierarchy. Deep CT networks have been experimentally shown to have accuracy
+comparable to that of CNNs of similar architectures. In the low compute regime,
+they enable an error:speed trade-off superior to alternative efficient CNN
+architectures.

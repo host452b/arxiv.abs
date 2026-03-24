@@ -1,0 +1,22 @@
+Title: Combining Cost-Constrained Runtime Monitors for AI Safety
+Authors: Tim Tian Hua, James Baskerville, Henri Lemoine, Mia Hopman, Aryan
+Bhatt, Tyler Tracy
+ID: 2507.15886
+URL: https://arxiv.org/abs/2507.15886
+
+Abstract:
+Monitoring AIs at runtime can help us detect and stop harmful actions. In this
+paper, we study how to efficiently combine multiple runtime monitors into a
+single monitoring protocol. The protocol's objective is to maximize the
+probability of applying a safety intervention on misaligned outputs (i.e.,
+maximize recall). Since running monitors and applying safety interventions are
+costly, the protocol also needs to adhere to an average-case budget constraint.
+Taking the monitors' performance and cost as given, we develop an algorithm to
+find the best protocol. The algorithm exhaustively searches over when and which
+monitors to call, and allocates safety interventions based on the Neyman-Pearson
+lemma. By focusing on likelihood ratios and strategically trading off spending
+on monitors against spending on interventions, we more than double our recall
+rate compared to a naive baseline in a code review setting. We also show that
+combining two monitors can Pareto dominate using either monitor alone. Our
+framework provides a principled methodology for combining existing monitors to
+detect undesirable behavior in cost-sensitive settings.

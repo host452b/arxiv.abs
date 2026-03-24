@@ -1,0 +1,32 @@
+Title: VAGEN: Reinforcing World Model Reasoning for Multi-Turn VLM Agents
+Authors: Kangrui Wang, Pingyue Zhang, Zihan Wang, Yaning Gao, Linjie Li, Qineng
+Wang, Hanyang Chen, Chi Wan, Yiping Lu, Zhengyuan Yang, Lijuan Wang, Ranjay
+Krishna, Jiajun Wu, Li Fei-Fei, Yejin Choi, Manling Li
+ID: 2510.16907
+URL: https://arxiv.org/abs/2510.16907
+
+Abstract:
+A key challenge in training Vision-Language Model (VLM) agents, compared to
+Language Model (LLM) agents, lies in the shift from textual states to complex
+visual observations. This transition introduces partial observability and
+demands robust world modeling. We ask: Can VLM agents construct internal world
+models through explicit visual state reasoning? To address this question, we
+architecturally enforce and reward the agent's reasoning process via
+reinforcement learning (RL), formulating it as a Partially Observable Markov
+Decision Process (POMDP). We find that decomposing the agent's reasoning into
+State Estimation ("what is the current state?") and Transition Modeling ("what
+comes next?") is critical for success, as demonstrated through five reasoning
+strategies. Our investigation into how agents represent internal beliefs reveals
+that the optimal representation is task-dependent: Natural Language excels at
+capturing semantic relationships in general tasks, while Structured formats are
+indispensable for precise manipulation and control. Building on these insights,
+we design a World Modeling Reward that provides dense, turn-level supervision
+for accurate state prediction, and introduce Bi-Level General Advantage
+Estimation (Bi-Level GAE) for turn-aware credit assignment. Through this form of
+visual state reasoning, a 3B-parameter model achieves a score of 0.82 across
+five diverse agent benchmarks, representing a 3$\times$ improvement over its
+untrained counterpart (0.21) and outperforming proprietary reasoning models such
+as GPT-5 (0.75), Gemini 2.5 Pro (0.67) and Claude 4.5 (0.62). All experiments
+are conducted within our VAGEN framework, a scalable system for training and
+analyzing multi-turn VLM agents in diverse visual environments. Code and data
+are publicly available at https://vagen-ai.github.io.

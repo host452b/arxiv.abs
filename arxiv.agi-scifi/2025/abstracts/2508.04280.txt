@@ -1,0 +1,28 @@
+Title: Enhancing Vision-Language Model Training with Reinforcement Learning in
+Synthetic Worlds for Real-World Success
+Authors: George Bredis, Stanislav Dereka, Viacheslav Sinii, Ruslan Rakhimov,
+Daniil Gavrilov
+ID: 2508.04280
+URL: https://arxiv.org/abs/2508.04280
+
+Abstract:
+Interactive multimodal agents must convert raw visual observations into coherent
+sequences of language-conditioned actions -- a capability that current vision-
+language models (VLMs) still lack. Earlier reinforcement-learning (RL) efforts
+could, in principle, endow VLMs with such skills, but they have seldom tested
+whether the learned behaviours generalize beyond their training simulators, and
+they depend either on brittle hyperparameter tuning or on dense-reward
+environments with low state variability. We introduce Vision-Language Decoupled
+Actor-Critic (VL-DAC), a lightweight, hyperparameter-free RL algorithm. VL-DAC
+applies PPO updates to action tokens while learning value only at the
+environment-step level: an arrangement, to our knowledge, not previously
+explored for large VLMs or LLMs. This simple decoupling removes unstable
+weighting terms and yields faster, more reliable convergence. Training a single
+VLM with VL-DAC in one inexpensive simulator at a time (MiniWorld, Gym-Cards,
+ALFWorld, or WebShop) already produces policies that generalize widely: +50\%
+relative on BALROG (game-centric agentic control), +5\% relative on the hardest
+part of VSI-Bench (spatial planning), and +2\% on VisualWebBench (web
+navigation), all without degrading general image understanding accuracy. These
+results provide the first evidence that a simple RL algorithm can train VLMs
+entirely in cheap synthetic worlds while delivering measurable gains on real-
+image agentic, spatial-reasoning, and web-navigation benchmarks.

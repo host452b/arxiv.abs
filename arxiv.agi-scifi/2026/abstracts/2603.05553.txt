@@ -1,0 +1,26 @@
+Title: EigenData: A Self-Evolving Multi-Agent Platform for Function-Calling Data
+Synthesis, Auditing, and Repair
+Authors: Jiaao Chen, Jingyuan Qi, Mingye Gao, Wei-Chen Wang, Hanrui Wang, Di Jin
+ID: 2603.05553
+URL: https://arxiv.org/abs/2603.05553
+
+Abstract:
+Function-calling agents -- large language models that invoke tools and APIs --
+require high-quality, domain-specific training data spanning executable
+environments, backing databases, and diverse multi-turn trajectories. We
+introduce EigenData, an integrated, self-evolving platform that automates the
+full data lifecycle through a multi-agent architecture. A top-level
+orchestrator, EigenCore, coordinates three specialized sub-systems:
+DatabaseAgent for realistic domain database construction, CodingAgent for
+verified executable environment generation with iterative test-debug loops, and
+DataAgent for multi-turn trajectory synthesis with self-evolving prompt
+optimization. Cross-component feedback ensures consistency across all artifacts.
+We apply EigenData to audit and repair the Berkeley Function-Calling Leaderboard
+(BFCL-V3), identifying systematic errors in function schemas, implementations,
+and reference trajectories, automatically correcting them through coordinated
+schema refinement, code-level bug fixes, and trajectory modification, and
+introducing an outcome-aware evaluation protocol that assesses task success via
+database-state correctness rather than turn-level trajectory matching. We
+demonstrate that the repaired benchmark, coupled with outcome-aware metrics,
+produces model rankings substantially better correlated with human judgments of
+functional correctness.

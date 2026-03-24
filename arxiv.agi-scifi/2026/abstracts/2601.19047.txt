@@ -1,0 +1,26 @@
+Title: Machine Learning-Based Evaluation of Attitude Sensor Characteristics
+Using Microsatellite Flight Data
+Authors: Yuji Sakamoto
+ID: 2601.19047
+URL: https://arxiv.org/abs/2601.19047
+
+Abstract:
+Using actual flight data from a 50-cm-class microsatellite whose mission and
+operations have already been completed, this study re-evaluates satellite
+attitude determination performance and the error characteristics of onboard
+attitude sensors. While conventional approaches rely on batch estimation or
+Kalman filtering based on predefined physical models and white-noise
+assumptions, this research introduces a machine-learning-based approach to
+extract and correct structural and nonlinear error patterns embedded in real
+observational data. In this study, high-quality attitude determination results
+obtained from star sensors and a fiber optical gyro (FOG) are treated as ground
+truth, and machine learning is applied to coarse attitude sensor data consisting
+of Sun sensors and magnetic field sensors. A one-dimensional convolutional
+neural network (Conv1D) is employed to regressively predict attitude from short
+sequences of time-series sensor measurements. The model is trained and evaluated
+using five sets of on-orbit observation logs, with four passes used for training
+and one independent pass used for testing. The results show that, while
+conventional coarse attitude determination using the TRIAD method yields
+attitude errors on the order of 7 deg RMS, the proposed machine-learning
+approach achieves RMS errors of approximately 0.7 deg for the training data and
+2-3 deg for the test data, depending on the sensor combination.

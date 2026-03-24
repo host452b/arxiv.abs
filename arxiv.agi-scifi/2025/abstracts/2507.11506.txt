@@ -1,0 +1,27 @@
+Title: ELK: Exploring the Efficiency of Inter-core Connected AI Chips with Deep
+Learning Compiler Techniques
+Authors: Yiqi Liu, Yuqi Xue, Noelle Crawford, Jilong Xue, Jian Huang
+ID: 2507.11506
+URL: https://arxiv.org/abs/2507.11506
+
+Abstract:
+To meet the increasing demand of deep learning (DL) models, AI chips are
+employing both off-chip memory (e.g., HBM) and high-bandwidth low-latency
+interconnect for direct inter-core data exchange. However, it is not easy to
+explore the efficiency of these inter-core connected AI (ICCA) chips, due to a
+fundamental tussle among compute (per-core execution), communication (inter-core
+data exchange), and I/O (off-chip data access).
+  In this paper, we develop Elk, a DL compiler framework to maximize the
+efficiency of ICCA chips by jointly trading off all the three performance
+factors discussed above. Elk structures these performance factors into
+configurable parameters and forms a global trade-off space in the DL compiler.
+To systematically explore this space and maximize overall efficiency, Elk
+employs a new inductive operator scheduling policy and a cost-aware on-chip
+memory allocation algorithm. It generates globally optimized execution plans
+that best overlap off-chip data loading and on-chip execution. To examine the
+efficiency of Elk, we build a full-fledged emulator based on a real ICCA chip
+IPU-POD4, and an ICCA chip simulator for sensitivity analysis with different
+interconnect network topologies. Elk achieves 94% of the ideal roofline
+performance of ICCA chips on average, showing the benefits of supporting large
+DL models on ICCA chips. We also show Elk's capability of enabling architecture
+design space exploration for new ICCA chip development.

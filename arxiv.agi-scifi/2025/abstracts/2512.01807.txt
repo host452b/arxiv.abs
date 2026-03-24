@@ -1,0 +1,32 @@
+Title: Benchmarking Distributed Quantum Computing Emulators
+Authors: Guillermo Díaz-Camacho, Iago F. Llovo, F. Javier Cardama, Irais
+Bautista, Daniel Faílde, Mariamo Mussa Juane, Jorge Vázquez-Pérez, Natalia
+Costas, Tomás F. Pena, Andrés Gómez
+ID: 2512.01807
+URL: https://arxiv.org/abs/2512.01807
+
+Abstract:
+Scalable quantum computing requires architectural solutions beyond monolithic
+processors. Distributed quantum computing (DQC) addresses this challenge by
+interconnecting smaller quantum nodes through quantum communication protocols,
+enabling collaborative computation. While several experimental and theoretical
+proposals for DQC exist, emulator platforms are essential tools for exploring
+their feasibility under realistic conditions. In this work, we introduce a
+benchmarking framework to evaluate DQC emulators using a distributed
+implementation of the inverse Quantum Fourier Transform
+($\mathrm{QFT}^{\dagger}$) as a representative test case, which enables
+efficient phase recovery from pre-encoded Fourier states. The QFT is partitioned
+across nodes using teleportation-based protocols, and performance is analyzed in
+terms of execution time, memory usage, and fidelity with respect to a monolithic
+baseline.
+  As part of this work, we review a broad range of emulators, identifying their
+capabilities and limitations for programming distributed quantum algorithms.
+Many platforms either lacked support for teleportation protocols or required
+complex workarounds. Consequently, we select and benchmark four representative
+emulators: Qiskit Aer, SquidASM, Interlin-q, and SQUANCH. They differ
+significantly in their support for discrete-event simulation, quantum
+networking, noise modeling, and parallel execution. Our results highlight the
+trade-offs between architectural fidelity and simulation scalability, providing
+a foundation for future emulator development and the validation of distributed
+quantum protocols. This framework can be extended to support additional
+algorithms and emulators.

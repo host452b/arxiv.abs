@@ -1,0 +1,33 @@
+Title: BioBlue: Systematic runaway-optimiser-like LLM failure modes on
+biologically and economically aligned AI safety benchmarks for LLMs with
+simplified observation format
+Authors: Roland Pihlakas, Sruthi Susan Kuriakose
+ID: 2509.02655
+URL: https://arxiv.org/abs/2509.02655
+
+Abstract:
+Many AI alignment discussions of "runaway optimisation" focus on RL agents:
+unbounded utility maximisers that over-optimise a proxy objective (e.g.,
+"paperclip maximiser", specification gaming) at the expense of everything else.
+LLM-based systems are often assumed to be safer because they function as next-
+token predictors rather than persistent optimisers. In this work, we empirically
+test this assumption by placing LLMs in simple, long-horizon control-style
+environments that require maintaining state of or balancing objectives over
+time: sustainability of a renewable resource, single- and multi-objective
+homeostasis, and balancing unbounded objectives with diminishing returns. We
+find that, although models frequently behave appropriately for many steps and
+clearly understand the stated objectives, they often lose context in structured
+ways and drift into runaway behaviours: ignoring homeostatic targets, collapsing
+from multi-objective trade-offs into single-objective maximisation - thus
+failing to respect concave utility structures. These failures emerge reliably
+after initial periods of competent behaviour and exhibit characteristic patterns
+(including self-imitative oscillations, unbounded maximisation, and reverting to
+single-objective optimisation). The problem is not that the LLMs just lose
+context or become incoherent - the failures systematically resemble runaway
+optimisers. Our results suggest that long-horizon, multi-objective misalignment
+is a genuine and under-evaluated failure mode in LLM agents, even in extremely
+simple settings with transparent and explicitly multi-objective feedback.
+Although LLMs appear multi-objective and bounded on the surface, their behaviour
+under sustained interaction, particularly involving multiple objectives,
+resembles brittle, poorly aligned optimisers whose effective objective gradually
+shifts toward unbounded and single-metric maximisation.

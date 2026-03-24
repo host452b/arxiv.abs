@@ -1,0 +1,23 @@
+Title: UrbanAlign: Post-hoc Semantic Calibration for VLM-Human Preference
+Alignment
+Authors: Yecheng Zhang, Rong Zhao, Zhizhou Sha, Yong Li, Lei Wang, Ce Hou, Wen
+Ji, Hao Huang, Yunshan Wan, Jian Yu, Junhao Xia, Yuru Zhang, Chunlei Shi
+ID: 2602.19442
+URL: https://arxiv.org/abs/2602.19442
+
+Abstract:
+Vision-language models (VLMs) can describe urban scenes in rich detail, yet
+consistently fail to produce reliable human preference labels in domain-specific
+tasks such as safety assessment and aesthetic evaluation. The standard fix,
+fine-tuning or RLHF, requires large-scale annotations and model retraining. We
+ask a different question: can a frozen VLM be aligned with human preferences
+without modifying any weights? Our key insight is that VLMs are strong concept
+extractors but poor decision calibrators. We propose a three-stage post-hoc
+pipeline that exploits this asymmetry: (i) interpretable evaluation dimensions
+are automatically mined from consensus exemplars; (ii) an Observer-Debater-Judge
+chain extracts robust concept scores from the frozen VLM; and (iii) locally-
+weighted ridge regression on a hybrid manifold calibrates these scores to human
+ratings. Applied as UrbanAlign on Place Pulse 2.0, the framework reaches 72.2%
+accuracy (kappa=0.45) across six perception categories, outperforming all
+baselines by +11.0 pp and zero-shot VLM by +15.5 pp, with full interpretability
+and zero weight modification.

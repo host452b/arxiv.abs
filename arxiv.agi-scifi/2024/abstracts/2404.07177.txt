@@ -1,0 +1,30 @@
+Title: Scaling Laws for Data Filtering -- Data Curation cannot be Compute
+Agnostic
+Authors: Sachin Goyal, Pratyush Maini, Zachary C. Lipton, Aditi Raghunathan, J.
+Zico Kolter
+ID: 2404.07177
+URL: https://arxiv.org/abs/2404.07177
+
+Abstract:
+Vision-language models (VLMs) are trained for thousands of GPU hours on
+carefully curated web datasets. In recent times, data curation has gained
+prominence with several works developing strategies to retain 'high-quality'
+subsets of 'raw' scraped data. For instance, the LAION public dataset retained
+only 10% of the total crawled data. However, these strategies are typically
+developed agnostic of the available compute for training. In this paper, we
+first demonstrate that making filtering decisions independent of training
+compute is often suboptimal: the limited high-quality data rapidly loses its
+utility when repeated, eventually requiring the inclusion of 'unseen' but
+'lower-quality' data. To address this quality-quantity tradeoff
+($\texttt{QQT}$), we introduce neural scaling laws that account for the non-
+homogeneous nature of web data, an angle ignored in existing literature. Our
+scaling laws (i) characterize the $\textit{differing}$ 'utility' of various
+quality subsets of web data; (ii) account for how utility diminishes for a data
+point at its 'nth' repetition; and (iii) formulate the mutual interaction of
+various data pools when combined, enabling the estimation of model performance
+on a combination of multiple data pools without ever jointly training on them.
+Our key message is that data curation $\textit{cannot}$ be agnostic of the total
+compute that a model will be trained for. Our scaling laws allow us to curate
+the best possible pool for achieving top performance on Datacomp at various
+compute budgets, carving out a pareto-frontier for data curation. Code is
+available at https://github.com/locuslab/scaling_laws_data_filtering.

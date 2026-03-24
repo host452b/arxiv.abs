@@ -1,0 +1,31 @@
+Title: Neuro-Symbolic Generation and Validation of Memory-Aware Formal Function
+Specifications
+Authors: Liao Zhang, Tong Chen, Xiwei Wu, Qi Liu, Xiyu Zhai, Xinqi Wang,
+Qinxiang Cao
+ID: 2603.13414
+URL: https://arxiv.org/abs/2603.13414
+
+Abstract:
+Formal verification of memory-manipulating programs critically depends on
+precise function specifications that capture memory states written by experts.
+This requirement has become a major bottleneck as large language models (LLMs)
+increasingly generate low-level systems code whose correctness cannot be
+assumed. To enable scalable formal verification, we focus exclusively on
+function specification generation, deliberately avoiding the synthesis of
+complex loop invariants that are central to traditional verification pipelines.
+We propose a neuro-symbolic framework for automatically generating memory-aware
+formal function specifications for C programs from natural language problem
+descriptions and function signatures. The pipeline first produces candidate
+specifications via in-context learning, and then iteratively refines them using
+compiler diagnostics from symbolic provers and the verification toolchain. In
+particular, we validate candidate specifications by constructing a proof for the
+negation of the specification with concrete examples, enabling machine-checked
+rejection of plausible-but-incorrect specifications. To support systematic
+evaluation, we introduce LeetCode-C-Spec, a new benchmark of 200 C programming
+problems for generating memory-aware formal function specifications. Experiments
+show that iterative refinement substantially improves syntactic validity, while
+symbolic prover-based refutation significantly enhances correctness assessment
+by filtering false positives that LLM-only judges frequently accept. Our results
+demonstrate that combining neural generation with symbolic feedback provides an
+effective approach to formal specification synthesis for memory-safe systems
+software.

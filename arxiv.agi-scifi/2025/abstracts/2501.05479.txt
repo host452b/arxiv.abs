@@ -1,0 +1,35 @@
+Title: Practical Design and Benchmarking of Generative AI Applications for
+Surgical Billing and Coding
+Authors: John C. Rollman, Bruce Rogers, Hamed Zaribafzadeh, Daniel Buckland,
+Ursula Rogers, Jennifer Gagnon, Ozanan Meireles, Lindsay Jennings, Jim Bennett,
+Jennifer Nicholson, Nandan Lad, Linda Cendales, Andreas Seas, Alessandro
+Martinino, E. Shelley Hwang, Allan D. Kirk
+ID: 2501.05479
+URL: https://arxiv.org/abs/2501.05479
+
+Abstract:
+Background: Healthcare has many manual processes that can benefit from
+automation and augmentation with Generative Artificial Intelligence (AI), the
+medical billing and coding process. However, current foundational Large Language
+Models (LLMs) perform poorly when tasked with generating accurate International
+Classification of Diseases, 10th edition, Clinical Modification (ICD-10-CM) and
+Current Procedural Terminology (CPT) codes. Additionally, there are many
+security and financial challenges in the application of generative AI to
+healthcare. We present a strategy for developing generative AI tools in
+healthcare, specifically for medical billing and coding, that balances accuracy,
+accessibility, and patient privacy.
+  Methods: We fine tune the PHI-3 Mini and PHI-3 Medium LLMs using institutional
+data and compare the results against the PHI-3 base model, a PHI-3 RAG
+application, and GPT-4o. We use the post operative surgical report as input and
+the patients billing claim the associated ICD-10, CPT, and Modifier codes as the
+target result. Performance is measured by accuracy of code generation,
+proportion of invalid codes, and the fidelity of the billing claim format.
+  Results: Both fine-tuned models performed better or as well as GPT-4o. The
+Phi-3 Medium fine-tuned model showed the best performance (ICD-10 Recall and
+Precision: 72%, 72%; CPT Recall and Precision: 77%, 79%; Modifier Recall and
+Precision: 63%, 64%). The Phi-3 Medium fine-tuned model only fabricated 1% of
+ICD-10 codes and 0.6% of CPT codes generated.
+  Conclusions: Our study shows that a small model that is fine-tuned on domain-
+specific data for specific tasks using a simple set of open-source tools and
+minimal technological and monetary requirements performs as well as the larger
+contemporary consumer models.

@@ -1,0 +1,31 @@
+Title: SPINAL -- Scaling-law and Preference Integration in Neural Alignment
+Layers
+Authors: Arion Das, Partha Pratim Saha, Amit Dhanda, Vinija Jain, Aman Chadha,
+Amitava Das
+ID: 2601.06238
+URL: https://arxiv.org/abs/2601.06238
+
+Abstract:
+Direct Preference Optimization (DPO) is a principled, scalable alternative to
+RLHF for aligning large language models from pairwise preferences, but its
+internal geometric footprint remains undercharacterized, limiting audits,
+checkpoint comparisons, and failure prediction. We introduce SPINAL (Scaling-law
+and Preference Integration in Neural Alignment Layers), a diagnostic that
+measures how alignment reshapes representations across depth by tracing
+localized structural change layer by layer. Across model families, DPO produces
+a layerwise calibration effect concentrated in the final decoder blocks (often
+layers 21-30), where preference gradients most directly affect the next-token
+distribution. SPINAL encodes each checkpoint as a depth trace over (layer index,
+contraction score, transport score). The contraction score summarizes how
+quickly the tail of a layer's spectrum decays (how fast small modes vanish);
+higher values indicate stronger contraction into fewer effective directions. The
+transport score summarizes how much the token distribution shifts between
+adjacent layers using a bounded overlap measure; lower values indicate shorter,
+smoother steps through representation space. Aligned checkpoints show a late-
+layer ramp-up in contraction and a smooth reduction in transport, consistent
+with tightened and stabilized policy mass, while unaligned models trace higher-
+curvature, more entropic, and geometrically incoherent depth paths. Overall,
+alignment is geometrically localized: the final layers encode the dominant
+preference-induced corrections. SPINAL turns this localization into a practical
+audit signal, quantifying where alignment concentrates, how strongly it
+manifests, and when it begins to destabilize during training.

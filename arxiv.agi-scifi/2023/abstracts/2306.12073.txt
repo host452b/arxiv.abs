@@ -1,0 +1,25 @@
+Title: NeuroCLIP: Neuromorphic Data Understanding by CLIP and SNN
+Authors: Yufei Guo, Yuanpei Chen, Zhe Ma
+ID: 2306.12073
+URL: https://arxiv.org/abs/2306.12073
+
+Abstract:
+Recently, the neuromorphic vision sensor has received more and more interest.
+However, the neuromorphic data consists of asynchronous event spikes, which
+makes it difficult to construct a big benchmark to train a power general neural
+network model, thus limiting the neuromorphic data understanding for ``unseen"
+objects by deep learning. While for the frame image, since the training data can
+be obtained easily, the zero-shot and few-shot learning for ``unseen" task via
+the large Contrastive Vision-Language Pre-training (CLIP) model, which is pre-
+trained by large-scale image-text pairs in 2D, have shown inspirational
+performance. We wonder whether the CLIP could be transferred to neuromorphic
+data recognition to handle the ``unseen" problem. To this end, we materialize
+this idea with NeuroCLIP in the paper. The NeuroCLIP consists of 2D CLIP and two
+specially designed modules for neuromorphic data understanding. First, an event-
+frame module that could convert the event spikes to the sequential frame image
+with a simple discrimination strategy. Second, an inter-timestep adapter, which
+is a simple fine-tuned adapter based on a spiking neural network (SNN) for the
+sequential features coming from the visual encoder of CLIP to improve the few-
+shot performance. Various experiments on neuromorphic datasets including
+N-MNIST, CIFAR10-DVS, and ES-ImageNet demonstrate the effectiveness of
+NeuroCLIP. Our code is open-sourced at https://github.com/yfguo91/NeuroCLIP.git.
