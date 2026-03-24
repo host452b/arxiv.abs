@@ -74,6 +74,7 @@ arxiv.abs/
 │       ├── arxiv-results-2026.json
 │       └── abstracts/                     # 400 .txt files
 └── arxiv.agi-scifi/                       # AGI & sci-fi collection
+    ├── agi-scifi.md                       # key findings & counterintuitive ideas
     ├── search-index.json                  # 52 search queries metadata
     ├── 2023/
     │   ├── arxiv-results-2023.json        # 2,679 papers metadata
