@@ -93,9 +93,21 @@ GUI 接地鸿沟：人类 72.36% vs AI 12.24%（差距 6x）
 
 ---
 
-## 摘要文件
+## 摘要文件（按年份）
 
-- [`abstracts/`](abstracts/) — 2606 个 `.txt` 文件（标题、作者、arXiv ID、URL、摘要）
+| 年份 | 论文数 | 目录 |
+|------|--------|------|
+| 2000 | 1 | [2000/abstracts/](2000/abstracts/) |
+| 2008–2017 | 57 | 2008–2017/abstracts/ |
+| 2018 | 35 | [2018/abstracts/](2018/abstracts/) |
+| 2019 | 54 | [2019/abstracts/](2019/abstracts/) |
+| 2020 | 79 | [2020/abstracts/](2020/abstracts/) |
+| 2021 | 92 | [2021/abstracts/](2021/abstracts/) |
+| 2022 | 98 | [2022/abstracts/](2022/abstracts/) |
+| 2023 | 179 | [2023/abstracts/](2023/abstracts/) |
+| 2024 | 450 | [2024/abstracts/](2024/abstracts/) |
+| 2025 | 1117 | [2025/abstracts/](2025/abstracts/) |
+| 2026 | 442 | [2026/abstracts/](2026/abstracts/) |
 
 ## 搜索参数
 
