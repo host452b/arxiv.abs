@@ -1,0 +1,24 @@
+Title: SweetSpot: An Analytical Model for Predicting Energy Efficiency of LLM Inference
+Authors: Hiari Pizzini Cavagna, Andrea Proia, Giacomo Madella, Giovanni B. Esposito, Francesco Antici et al. (+3)
+ID: 2602.05695
+URL: https://arxiv.org/abs/2602.05695
+
+Large Language Models (LLMs) inference is central to modern AI applications,
+dominating worldwide datacenter workloads, making it critical to predict its
+energy footprint. Existing approaches estimate energy consumption as a simple
+linear function of input and output sequence. However, by analyzing the
+autoregressive structure of Transformers, which implies a fundamentally non-
+linear relationship between input and output sequence lengths and energy
+consumption, we demonstrate the existence of a generation energy minima. Peak
+efficiency occurs with short-to-moderate inputs and medium-length outputs, while
+efficiency drops sharply for long inputs or very short outputs. Consequently, we
+propose SweetSpot, an analytical model derived from the computational and
+memory-access complexity of the Transformer architecture, which accurately
+characterizes the efficiency curve as a function of input and output lengths. To
+assess accuracy, we measure energy consumption using TensorRT-LLM on NVIDIA H100
+GPUs across a diverse set of LLMs ranging from 1B to 9B parameters, including
+OPT, LLaMA, Gemma, Falcon, Qwen2, and Granite. We test input and output lengths
+from 64 to 4096 tokens and achieve a mean MAPE of 1.79%. Our results show that
+aligning sequence lengths with these efficiency "sweet spots" reduce energy
+usage, up to 33.41x, enabling informed truncation, summarization, and adaptive
+generation strategies in production systems.

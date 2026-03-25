@@ -1,0 +1,22 @@
+Title: Getting By Goal Misgeneralization With a Little Help From a Mentor
+Authors: Tu Trinh, Mohamad H. Danesh, Nguyen X. Khanh, Benjamin Plaut
+ID: 2410.21052
+URL: https://arxiv.org/abs/2410.21052
+
+Abstract:
+While reinforcement learning (RL) agents often perform well during training,
+they can struggle with distribution shift in real-world deployments. One
+particularly severe risk of distribution shift is goal misgeneralization, where
+the agent learns a proxy goal that coincides with the true goal during training
+but not during deployment. In this paper, we explore whether allowing an agent
+to ask for help from a supervisor in unfamiliar situations can mitigate this
+issue. We focus on agents trained with PPO in the CoinRun environment, a setting
+known to exhibit goal misgeneralization. We evaluate multiple methods for
+determining when the agent should request help and find that asking for help
+consistently improves performance. However, we also find that methods based on
+the agent's internal state fail to proactively request help, instead waiting
+until mistakes have already occurred. Further investigation suggests that the
+agent's internal state does not represent the coin at all, highlighting the
+importance of learning nuanced representations, the risks of ignoring everything
+not immediately relevant to reward, and the necessity of developing ask-for-help
+strategies tailored to the agent's training algorithm.

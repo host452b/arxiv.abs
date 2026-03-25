@@ -1,0 +1,22 @@
+Title: Step-wise Policy for Rare-tool Knowledge (SPaRK): Offline RL that Drives Diverse Tool Use in LLMs
+Authors: Gabriel Bo, Koa Chang, Justin Gu
+ID: 2507.11371
+URL: https://arxiv.org/abs/2507.11371
+
+Abstract:
+We present Step-wise Policy for Rare-tool Knowledge (SPaRK), a novel
+reinforcement learning framework that teaches large language models to explore
+diverse tool usage patterns beyond conventional high-temperature sampling.
+Building on recent advances in step-wise reinforcement learning, we introduce a
+dual-objective reward system that simultaneously optimizes for answer quality
+and tool diversity, training a Llama-3.1 8B model through offline PPO on
+synthetically generated trajectories from the MMLU-Pro dataset. Our approach
+uniquely employs a rarity-first exploitation strategy where a GPT-4o judge
+scores candidate actions across eight distinct tools plus chain-of-thought
+reasoning, with the policy favoring less-frequently used but still viable tools
+to encourage systematic exploration. Empirical results demonstrate that SPaRK
+achieves competitive performance across 14 MMLU-Pro categories while exhibiting
+significantly higher entropy in tool selection compared to both baseline and
+supervised fine-tuning approaches, suggesting that algorithmic exploration
+through explicit tool diversity can enhance reasoning capabilities without
+sacrificing accuracy.

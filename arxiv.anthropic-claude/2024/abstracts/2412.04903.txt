@@ -1,0 +1,26 @@
+Title: EACO: Enhancing Alignment in Multimodal LLMs via Critical Observation
+Authors: Yongxin Wang, Meng Cao, Haokun Lin, Mingfei Han, Liang Ma et al.
+ID: 2412.04903
+URL: https://arxiv.org/abs/2412.04903
+
+Abstract:
+Multimodal large language models (MLLMs) have achieved remarkable progress on
+various visual question answering and reasoning tasks leveraging instruction
+fine-tuning specific datasets. They can also learn from preference data
+annotated by human to enhance their reasoning ability and mitigate
+hallucinations. Most of preference data is generated from the model itself.
+However, existing methods require high-quality critical labels, which are costly
+and rely on human or proprietary models like GPT-4V. In this work, we propose
+Enhancing Alignment in MLLMs via Critical Observation (EACO), which aligns MLLMs
+by self-generated preference data using only 5k images economically. Our
+approach begins with collecting and refining a Scoring Evaluation
+Instruction-tuning dataset to train a critical evaluation model, termed the
+Critic. This Critic observes model responses across multiple dimensions,
+selecting preferred and non-preferred outputs for refined Direct Preference
+Optimization (DPO) tuning. To further enhance model performance, we employ an
+additional supervised fine-tuning stage after preference tuning. EACO reduces
+the overall hallucinations by 65.6% on HallusionBench and improves the reasoning
+ability by 21.8% on MME-Cognition. EACO achieves an 8.5% improvement over
+LLaVA-v1.6-Mistral-7B across multiple benchmarks. Remarkably, EACO also shows
+the potential critical ability in open-source MLLMs, demonstrating that EACO is
+a viable path to boost the competence of MLLMs.

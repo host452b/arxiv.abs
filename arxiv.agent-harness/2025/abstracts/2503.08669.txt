@@ -1,0 +1,25 @@
+Title: SOPBench: Evaluating Language Agents at Following Standard Operating Procedures and Constraints
+Authors: Zekun Li, Shinda Huang, Jiangtian Wang, Nathan Zhang, Antonis Antoniades et al. (+6)
+ID: 2503.08669
+URL: https://arxiv.org/abs/2503.08669
+
+As language agents increasingly automate critical tasks, their ability to follow
+domain-specific standard operating procedures (SOPs), policies, and constraints
+when taking actions and making tool calls becomes essential yet remains
+underexplored. To address this gap, we develop an automated evaluation pipeline
+SOPBench with: (1) executable environments containing 167 tools/functions across
+seven customer service domains with service-specific SOPs and rule-based
+verifiers, (2) an automated test generation framework producing over 900
+verified test cases, and (3) an automated evaluation framework to rigorously
+assess agent adherence from multiple dimensions. Our approach transforms each
+service-specific SOP code program into a directed graph of executable functions
+and requires agents to call these functions based on natural language SOP
+descriptions. The original code serves as oracle rule-based verifiers to assess
+compliance, reducing reliance on manual annotations and LLM-based evaluations.
+We evaluate 18 leading models, and results show the task is challenging even for
+top-tier models (like GPT-4o, Claude-3.7-Sonnet), with variances across domains.
+Reasoning models like o4-mini-high show superiority while other powerful models
+perform less effectively (pass rates of 30%-50%), and small models (7B, 8B)
+perform significantly worse. Additionally, language agents can be easily
+jailbroken to overlook SOPs and constraints. Code, data, and over 24k agent
+trajectories are released at https://github.com/Leezekun/SOPBench.

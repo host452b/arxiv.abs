@@ -1,0 +1,19 @@
+Title: Variational Reasoning for Language Models
+Authors: Xiangxin Zhou, Zichen Liu, Haonan Wang, Chao Du, Min Lin et al. (+3)
+ID: 2509.22637
+URL: https://arxiv.org/abs/2509.22637
+
+We introduce a variational reasoning framework for language models that treats
+thinking traces as latent variables and optimizes them through variational
+inference. Starting from the evidence lower bound (ELBO), we extend it to a
+multi-trace objective for tighter bounds and propose a forward-KL formulation
+that stabilizes the training of the variational posterior. We further show that
+rejection sampling finetuning and binary-reward RL, including GRPO, can be
+interpreted as local forward-KL objectives, where an implicit weighting by model
+accuracy naturally arises from the derivation and reveals a previously unnoticed
+bias toward easier questions. We empirically validate our method on the Qwen 2.5
+and Qwen 3 model families across a wide range of reasoning tasks. Overall, our
+work provides a principled probabilistic perspective that unifies variational
+inference with RL-style methods and yields stable objectives for improving the
+reasoning ability of language models. Our code is available at
+https://github.com/sail-sg/variational-reasoning.

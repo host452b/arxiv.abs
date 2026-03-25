@@ -1,0 +1,23 @@
+Title: Tree Training: Accelerating Agentic LLMs Training via Shared Prefix Reuse
+Authors: Shaojie Wang, Jinghui Wang, Yinghan Cui, Xuxing Chen, Chao Wang et al. (+6)
+ID: 2511.00413
+URL: https://arxiv.org/abs/2511.00413
+
+Agentic large language model (LLM) training often involves multi-turn
+interaction trajectories that branch into multiple execution paths due to
+concurrent tool use, think-mode, sub-agent, context management and other runtime
+designs. As a result, the token produced by a single task naturally forms a
+tree-structured token trajectory with shared prefixes, rather than a linear
+sequence. Existing training pipelines linearize such trajectories and treat each
+branch independently, leading to substantial redundant computation in both
+forward and backward passes. To eliminate such redundancy, we introduce Tree
+Training, an efficient training framework for tree-structured trajectories. Its
+core component, Gradient Restoration, enables correct gradient aggregation
+across shared prefixes, allowing each prefix to be computed exactly once while
+remaining mathematically equivalent to independent training on all branches. To
+support large trajectory trees in practice, we redesign the training engine to
+natively ingest tree-structured data and propose Tree Packing, a memory-
+efficient partitioning strategy that preserves high prefix reuse. Experiments
+conducted on dense and MOE models of real-world agentic trajectories show 6.2x
+training speedup for both supervised fine-tuning and the model update phase in
+reinforcement learning.

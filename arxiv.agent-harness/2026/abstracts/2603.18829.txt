@@ -1,0 +1,28 @@
+Title: Agent Control Protocol: Admission Control for Agent Actions
+Authors: Marcelo Fernandez
+ID: 2603.18829
+URL: https://arxiv.org/abs/2603.18829
+
+Abstract:
+Agent Control Protocol (ACP) is a formal technical specification for admission
+control governance of autonomous agents in B2B institutional environments.
+Before any agent action reaches execution, it must pass a cryptographic
+admission check that simultaneously validates identity, capability scope,
+delegation chain, and policy compliance -- functioning as an admission control
+layer between agent intent and system state mutation. ACP defines mechanisms for
+cryptographic identity (Ed25519, JCS canonicalization), capability-based
+authorization, deterministic risk evaluation (integer arithmetic, no external ML
+inference), verifiable chained delegation, transitive revocation, and immutable
+cryptographically-chained auditing. It operates on top of RBAC and Zero Trust
+without replacing them, addressing the gap neither model solves: governing what
+autonomous agents can do, under what conditions, with what limits, and with full
+traceability across organizational boundaries. The v1.17 specification comprises
+38 technical documents across five conformance levels (L1-L5), a Go reference
+implementation (23 packages, all L1-L4 capabilities), 73 signed conformance test
+vectors plus 65 unsigned RISK-2.0 vectors, an OpenAPI 3.1.0 specification (18
+endpoints), a TLC-runnable TLA+ formal model (4 invariants, 0 violations), and
+an ACR-1.0 sequence compliance runner that validates stateful multi-step
+behaviors in library mode and HTTP mode. Five sequence test vectors cover
+cooldown activation, anomaly pattern accumulation (F_anom Rule 3), threshold
+boundaries, privilege jumps, and benign flow. An ACP-SIGN-2.0 stub provides the
+Ed25519 to ML-DSA-65 post-quantum migration path.

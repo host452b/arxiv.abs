@@ -1,0 +1,20 @@
+Title: Curvature-Aware Safety Restoration In LLMs Fine-Tuning
+Authors: Thong Bach, Thanh Nguyen-Tang, Dung Nguyen, Thao Minh Le, Truyen Tran
+ID: 2511.18039
+URL: https://arxiv.org/abs/2511.18039
+
+Fine-tuning Large Language Models (LLMs) for downstream tasks often compromises
+safety alignment, even when using parameter-efficient methods like LoRA. In this
+work, we uncover a notable property: fine-tuned models preserve the geometric
+structure of their loss landscapes concerning harmful content, regardless of the
+fine-tuning method employed. This suggests that safety behaviors are not erased
+but shifted to less influential regions of the parameter space. Building on this
+insight, we propose a curvature-aware alignment restoration method that
+leverages influence functions and second-order optimization to selectively
+increase loss on harmful inputs while preserving task performance. By navigating
+the shared geometry between base and fine-tuned models, our method discourages
+unsafe outputs while preserving task-relevant performance, avoiding full
+reversion and enabling precise, low-impact updates. Extensive evaluations across
+multiple model families and adversarial settings show that our approach
+efficiently reduces harmful responses while maintaining or even improving
+utility and few-shot learning performance.

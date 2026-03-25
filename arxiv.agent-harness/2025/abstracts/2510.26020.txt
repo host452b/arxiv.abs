@@ -1,0 +1,27 @@
+Title: PORTool: Tool-Use LLM Training with Rewarded Tree
+Authors: Feijie Wu, Weiwu Zhu, Yuxiang Zhang, Soumya Chatterjee, Jiarong Zhu et al.
+ID: 2510.26020
+URL: https://arxiv.org/abs/2510.26020
+
+Abstract:
+Current tool-use large language models (LLMs) are trained on static datasets,
+enabling them to interact with external tools and perform multi-step,
+tool-integrated reasoning, which produces tool-call trajectories. However, these
+models imitate how a query is resolved in a generic tool-call routine, thereby
+failing to explore possible solutions and demonstrating limited performance in
+an evolved, dynamic tool-call environment. In this work, we propose PORTool, a
+reinforcement learning (RL) method that encourages a tool-use LLM to explore
+various trajectories yielding the correct answer. Specifically, this method
+starts with generating multiple rollouts for a given query, and some of them
+share the first few tool-call steps, thereby forming a tree-like structure.
+Next, we assign rewards to each step, based on its ability to produce a correct
+answer and make successful tool calls. A shared step across different
+trajectories receives the same reward, while different steps under the same fork
+receive different rewards. Finally, these step-wise rewards are used to
+calculate fork-relative advantages, blended with trajectory-relative advantages,
+to train the LLM for tool use. The experiments utilize 17 tools to address user
+queries, covering both time-sensitive and time-invariant topics. We conduct
+ablation studies to systematically justify the necessity and the design
+robustness of step-wise rewards. Furthermore, we compare the proposed PORTool
+with other training approaches and demonstrate significant improvements in final
+accuracy and the number of tool-call steps.

@@ -1,0 +1,30 @@
+Title: Agentic DAG-Orchestrated Planner Framework for Multi-Modal, Multi-Hop Question Answering in Hybrid Data Lakes
+Authors: Kirushikesh D B, Manish Kesarwani, Nishtha Madaan, Sameep Mehta, Aldrin Dennis et al.
+ID: 2603.14229
+URL: https://arxiv.org/abs/2603.14229
+
+Abstract:
+Enterprises increasingly need natural language (NL) question answering over
+hybrid data lakes that combine structured tables and unstructured documents.
+Current deployed solutions, including RAG-based systems, typically rely on
+brute-force retrieval from each store and post-hoc merging. Such approaches are
+inefficient and leaky, and more critically, they lack explicit support for
+multi-hop reasoning, where a query is decomposed into successive steps (hops)
+that may traverse back and forth between structured and unstructured sources. We
+present Agentic DAG-Orchestrated Transformer (A.DOT) Planner, a framework for
+multi-modal, multi-hop question answering, that compiles user NL queries into
+directed acyclic graph (DAG) execution plans spanning both structured and
+unstructured stores. The system decomposes queries into parallelizable
+sub-queries, incorporates schema-aware reasoning, and applies both structural
+and semantic validation before execution. The execution engine adheres to the
+generated DAG plan to coordinate concurrent retrieval across heterogeneous
+sources, route intermediate outputs to dependent sub-queries, and merge final
+results in strict accordance with the plan's logical dependencies. Advanced
+caching mechanisms, incorporating paraphrase-aware template matching, enable the
+system to detect equivalent queries and reuse prior DAG execution plans for
+rapid re-execution, while the DataOps System addresses validation feedback or
+execution errors. The proposed framework not only improves accuracy and latency,
+but also produces explicit evidence trails, enabling verification of retrieved
+content, tracing of data lineage, and fostering user trust in the system's
+outputs. On benchmark dataset, A.DOT achieves 14.8% absolute gain in correctness
+and 10.7% in completeness over baselines.

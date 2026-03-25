@@ -1,0 +1,24 @@
+Title: SWE-Replay: Efficient Test-Time Scaling for Software Engineering Agents
+Authors: Yifeng Ding, Lingming Zhang
+ID: 2601.22129
+URL: https://arxiv.org/abs/2601.22129
+
+Test-time scaling has been widely adopted to enhance the capabilities of Large
+Language Model (LLM) agents in software engineering (SWE) tasks. However, the
+standard approach of repeatedly sampling trajectories from scratch is
+computationally expensive. While recent methods have attempted to mitigate costs
+using specialized value agents, they can suffer from model miscalibration and
+fail to generalize to modern agents that synthesize custom bash scripts as
+tools. In this paper, we introduce SWE-Replay, the first efficient and
+generalizable test-time scaling technique for modern agents without reliance on
+potentially noisy value estimates. SWE-Replay optimizes the scaling process by
+recycling trajectories from prior trials, dynamically choosing to either explore
+from scratch or exploit archived experience by branching at critical
+intermediate steps. This selection of intermediate steps is driven by the
+potential and reasoning significance of repository exploration, rather than
+external LLM-based quality estimates. Our evaluation shows that, on SWE-Bench
+Verified, SWE-Replay consistently outperforms naive scaling, reducing costs by
+up to 17.4% while maintaining or even improving performance by up to 3.8%.
+Further evaluation on SWE-Bench Pro and Multilingual validates the
+generalizability of SWE-Replay, establishing it as a robust foundation for
+efficient test-time scaling of software engineering agents.

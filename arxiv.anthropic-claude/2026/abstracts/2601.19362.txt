@@ -1,0 +1,24 @@
+Title: Revisiting Parameter Server in LLM Post-Training
+Authors: Xinyi Wan, Penghui Qi, Guangxing Huang, Chaoyi Ruan, Min Lin et al. (+1)
+ID: 2601.19362
+URL: https://arxiv.org/abs/2601.19362
+
+Modern data parallel (DP) training favors collective communication over
+parameter servers (PS) for its simplicity and efficiency under balanced
+workloads. However, the balanced workload assumption no longer holds in large
+language model (LLM) post-training due to the high variance in sequence lengths.
+Under imbalanced workloads, collective communication creates synchronization
+barriers, leading to under-utilization of devices with smaller workloads. This
+change in training dynamics calls for a revisit of the PS paradigm for its
+robustness to such imbalance. We propose \textbf{On-Demand Communication (ODC)},
+which adapts PS into Fully Sharded Data Parallel (FSDP) by replacing collective
+all-gather and reduce-scatter with direct point-to-point communication. Compared
+to FSDP, ODC reduces the synchronization barrier from once per layer to once per
+minibatch and decouples the workload on each device so that faster workers are
+not stalled. It also enables simpler and more effective load balancing at the
+minibatch level. Across diverse LLM post-training tasks, ODC consistently
+improves device utilization and training throughput, achieving up to a 36\%
+speedup over standard FSDP. These results demonstrate that ODC is a superior fit
+for the prevalent imbalanced workloads in LLM post-training. Our implementation
+of ODC and integration with FSDP is open-sourced at https://github.com/sail-
+sg/odc.

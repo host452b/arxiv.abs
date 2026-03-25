@@ -1,0 +1,25 @@
+Title: Principled Multimodal Representation Learning
+Authors: Xiaohao Liu, Xiaobo Xia, See-Kiong Ng, Tat-Seng Chua
+ID: 2507.17343
+URL: https://arxiv.org/abs/2507.17343
+
+Multimodal representation learning seeks to create a unified representation
+space by integrating diverse data modalities to improve multimodal
+understanding. Traditional methods often depend on pairwise contrastive
+learning, which relies on a predefined anchor modality, restricting alignment
+across all modalities. Recent advances have investigated the simultaneous
+alignment of multiple modalities, yet several challenges remain, such as
+limitations imposed by fixed anchor points and instability arising from
+optimizing the product of singular values. To address the challenges, in this
+paper, we propose Principled Multimodal Representation Learning (PMRL), a novel
+framework that achieves simultaneous alignment of multiple modalities without
+anchor dependency in a more stable manner. Specifically, grounded in the
+theoretical insight that full alignment corresponds to a rank-1 Gram matrix,
+PMRL optimizes the dominant singular value of the representation matrix to align
+modalities along a shared leading direction. We propose a softmax-based loss
+function that treats singular values as logits to prioritize the largest
+singular value. Besides, instance-wise contrastive regularization on the leading
+eigenvectors maintains inter-instance separability and prevents representation
+collapse. Extensive experiments across diverse tasks demonstrate PMRL's
+superiority compared to baseline methods. Source code can be found in
+https://github.com/Xiaohao-Liu/PMRL.

@@ -1,0 +1,25 @@
+Title: Efficient Long-Horizon GUI Agents via Training-Free KV Cache Compression
+Authors: Bowen Zhou, Zhou Xu, Wanli Li, Jingyu Xiao, Haoqian Wang
+ID: 2603.00188
+URL: https://arxiv.org/abs/2603.00188
+
+Large Vision-Language Models (VLMs) have emerged as powerful engines for
+autonomous GUI agents, yet their deployment is severely constrained by the
+substantial memory footprint and latency of the Key-Value (KV) cache during
+long-horizon interactions. While existing cache compression methods have proven
+effective for LLMs, we empirically demonstrate that they suffer from suboptimal
+performance in GUI scenarios due to a fundamental misalignment: unlike general
+visual tasks where attention sparsity varies across layers, GUI attention
+patterns exhibit uniform high-sparsity across all transformer layers. Motivated
+by this insight, we propose ST-Lite, a training-free KV cache compression
+framework tailored for efficient GUI agents that explicitly addresses the
+dynamic spatio-trajectory dependencies within GUI data streams. ST-Lite
+introduces a novel dual-branch scoring policy incorporating Component-centric
+Spatial Saliency (CSS) and Trajectory-aware Semantic Gating (TSG). Specifically,
+CSS preserves the structural integrity of interactive UI elements by evaluating
+local neighborhood saliency, while TSG mitigates historical redundancy by
+dynamically filtering visually repetitive KV pairs within the interaction
+trajectory. Extensive evaluations demonstrate that with only a 10-20% cache
+budget, ST-Lite achieves a 2.45x decoding acceleration while maintaining
+comparable or even superior performance compared to full-cache baselines,
+offering a scalable solution for resource-constrained GUI agents.

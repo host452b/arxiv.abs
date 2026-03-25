@@ -1,0 +1,23 @@
+Title: Quantitative Verification with Neural Networks
+Authors: Alessandro Abate, Alec Edwards, Mirco Giacobbe, Hashan Punchihewa, Diptarko Roy
+ID: 2301.06136
+URL: https://arxiv.org/abs/2301.06136
+
+We present a data-driven approach to the quantitative verification of
+probabilistic programs and stochastic dynamical models. Our approach leverages
+neural networks to compute tight and sound bounds for the probability that a
+stochastic process hits a target condition within finite time. This problem
+subsumes a variety of quantitative verification questions, from the reachability
+and safety analysis of discrete-time stochastic dynamical models, to the study
+of assertion-violation and termination analysis of probabilistic programs. We
+rely on neural networks to represent supermartingale certificates that yield
+such probability bounds, which we compute using a counterexample-guided
+inductive synthesis loop: we train the neural certificate while tightening the
+probability bound over samples of the state space using stochastic optimisation,
+and then we formally check the certificate's validity over every possible state
+using satisfiability modulo theories; if we receive a counterexample, we add it
+to our set of samples and repeat the loop until validity is confirmed. We
+demonstrate on a diverse set of benchmarks that, thanks to the expressive power
+of neural networks, our method yields smaller or comparable probability bounds
+than existing symbolic methods in all cases, and that our approach succeeds on
+models that are entirely beyond the reach of such alternative techniques.

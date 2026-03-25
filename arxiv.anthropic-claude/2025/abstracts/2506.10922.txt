@@ -1,0 +1,30 @@
+Title: Robustly Improving LLM Fairness in Realistic Settings via Interpretability
+Authors: Adam Karvonen, Samuel Marks
+ID: 2506.10922
+URL: https://arxiv.org/abs/2506.10922
+
+Large language models (LLMs) are increasingly deployed in high-stakes hiring
+applications, making decisions that directly impact people's careers and
+livelihoods. While prior studies suggest simple anti-bias prompts can eliminate
+demographic biases in controlled evaluations, we find these mitigations fail
+when realistic contextual details are introduced. We address these failures
+through internal bias mitigation: by identifying and neutralizing sensitive
+attribute directions within model activations, we achieve robust bias reduction
+across all tested scenarios. Across leading commercial (GPT-4o, Claude 4 Sonnet,
+Gemini 2.5 Flash) and open-source models (Gemma-2 27B, Gemma-3, Mistral-24B), we
+find that adding realistic context such as company names, culture descriptions
+from public careers pages, and selective hiring constraints (e.g.,``only accept
+candidates in the top 10\%") induces significant racial and gender biases (up to
+12\% differences in interview rates). When these biases emerge, they
+consistently favor Black over White candidates and female over male candidates
+across all tested models and scenarios. Moreover, models can infer demographics
+and become biased from subtle cues like college affiliations, with these biases
+remaining invisible even when inspecting the model's chain-of-thought reasoning.
+To address these limitations, our internal bias mitigation identifies race and
+gender-correlated directions and applies affine concept editing at inference
+time. Despite using directions from a simple synthetic dataset, the intervention
+generalizes robustly, consistently reducing bias to very low levels (typically
+under 1\%, always below 2.5\%) while largely maintaining model performance. Our
+findings suggest that practitioners deploying LLMs for hiring should adopt more
+realistic evaluation methodologies and consider internal mitigation strategies
+for equitable outcomes.

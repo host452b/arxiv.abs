@@ -1,0 +1,25 @@
+Title: HalluField: Detecting LLM Hallucinations via Field-Theoretic Modeling
+Authors: Minh Vu, Brian K. Tran, Syed A. Shah, Geigh Zollicoffer, Nhat Hoang-Xuan et al. (+1)
+ID: 2509.10753
+URL: https://arxiv.org/abs/2509.10753
+
+Large Language Models (LLMs) exhibit impressive reasoning and question-answering
+capabilities. However, they often produce inaccurate or unreliable content known
+as hallucinations. This unreliability significantly limits their deployment in
+high-stakes applications. Thus, there is a growing need for a general-purpose
+method to detect hallucinations in LLMs. In this work, we introduce HalluField,
+a novel field-theoretic approach for hallucination detection based on a
+parametrized variational principle and thermodynamics. Inspired by
+thermodynamics, HalluField models an LLM's response to a given query and
+temperature setting as a collection of discrete likelihood token paths, each
+associated with a corresponding energy and entropy. By analyzing how energy and
+entropy distributions vary across token paths under changes in temperature and
+likelihood, HalluField quantifies the semantic stability of a response.
+Hallucinations are then detected by identifying unstable or erratic behavior in
+this energy landscape. HalluField is computationally efficient and highly
+practical: it operates directly on the model's output logits without requiring
+fine-tuning or auxiliary neural networks. Notably, the method is grounded in a
+principled physical interpretation, drawing analogies to the first law of
+thermodynamics. Remarkably, by modeling LLM behavior through this physical lens,
+HalluField achieves state-of-the-art hallucination detection performance across
+models and datasets.

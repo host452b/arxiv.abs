@@ -1,0 +1,22 @@
+Title: Neural Network Branch-and-Bound for Neural Network Verification
+Authors: Florian Jaeckle, Jingyue Lu, M. Pawan Kumar
+ID: 2107.12855
+URL: https://arxiv.org/abs/2107.12855
+
+Many available formal verification methods have been shown to be instances of a
+unified Branch-and-Bound (BaB) formulation. We propose a novel machine learning
+framework that can be used for designing an effective branching strategy as well
+as for computing better lower bounds. Specifically, we learn two graph neural
+networks (GNN) that both directly treat the network we want to verify as a graph
+input and perform forward-backward passes through the GNN layers. We use one GNN
+to simulate the strong branching heuristic behaviour and another to compute a
+feasible dual solution of the convex relaxation, thereby providing a valid lower
+bound.   We provide a new verification dataset that is more challenging than
+those used in the literature, thereby providing an effective alternative for
+testing algorithmic improvements for verification. Whilst using just one of the
+GNNs leads to a reduction in verification time, we get optimal performance when
+combining the two GNN approaches. Our combined framework achieves a 50\%
+reduction in both the number of branches and the time required for verification
+on various convolutional networks when compared to several state-of-the-art
+verification methods. In addition, we show that our GNN models generalize well
+to harder properties on larger unseen networks.

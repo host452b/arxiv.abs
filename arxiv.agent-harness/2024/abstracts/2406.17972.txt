@@ -1,0 +1,26 @@
+Title: LABOR-LLM: Language-Based Occupational Representations with Large Language Models
+Authors: Susan Athey, Herman Brunborg, Tianyu Du, Ayush Kanodia, Keyon Vafa
+ID: 2406.17972
+URL: https://arxiv.org/abs/2406.17972
+
+Abstract:
+This paper builds an empirical model that predicts a worker's next occupation as
+a function of the worker's occupational history. Because histories are sequences
+of occupations, the covariate space is high-dimensional, and further, the
+outcome (the next occupation) is a discrete choice that can take on many values.
+To estimate the parameters of the model, we leverage an approach from generative
+artificial intelligence. Estimation begins from a ``foundation model'' trained
+on non-representative data and then ``fine-tunes'' the estimation using data
+about careers from a representative survey. We convert tabular data from the
+survey into text files that resemble resumes and fine-tune the parameters of the
+foundation model, a large language model (LLM), using these text files with the
+objective of predicting the next token (word). The resulting fine-tuned LLM is
+used to calculate estimates of worker transition probabilities. Its predictive
+performance surpasses all prior models, both for the task of granularly
+predicting the next occupation as well as for specific tasks such as predicting
+whether the worker changes occupations or stays in the labor force. We quantify
+the value of fine-tuning and further show that by adding more career data from a
+different population, fine-tuning smaller LLMs (fewer parameters) surpasses the
+performance of fine-tuning larger models. When we omit the English language
+occupational title and replace it with a unique code, predictive performance
+declines.

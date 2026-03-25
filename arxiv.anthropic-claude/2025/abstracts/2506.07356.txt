@@ -1,0 +1,23 @@
+Title: Safety-Aligned Weights Are Not Enough: Refusal-Teacher-Guided Finetuning Enhances Safety and Downstream Performance under Harmful Finetuning Attacks
+Authors: Seokil Ham, Yubin Choi, Yujin Yang, Seungju Cho, Younghun Kim et al.
+ID: 2506.07356
+URL: https://arxiv.org/abs/2506.07356
+
+Abstract:
+Recently, major AI providers such as Google and OpenAI have introduced
+Finetuning-as-a-Service (FaaS), which allows users to customize Large Language
+Models (LLMs) using their own data. However, this service is vulnerable to
+safety degradation when user data includes harmful prompts, a threat known as
+harmful finetuning attacks. Prior works attempt to mitigate this issue by first
+constructing safety-aligned model and then finetuning the model on user data.
+However, we observe that the safety-aligned weights provide weak initialization
+for downstream task learning, leading to suboptimal safety-alignment and
+downstream task performance. To address this, we propose a Refusal-Teacher
+(Ref-Teacher)-guided finetuning framework. Instead of finetuning a
+safety-aligned model on user data, our approach directly finetunes the base
+model under the guidance of a safety-aligned Ref-Teacher, which filters harmful
+prompts from user data and distills safety-alignment knowledge into the base
+model. Extensive experiments demonstrate that our Ref-Teacher-guided finetuning
+strategy effectively minimizes harmful outputs and enhances finetuning accuracy
+for user-specific tasks, offering a practical solution for secure and reliable
+deployment of LLMs in FaaS.

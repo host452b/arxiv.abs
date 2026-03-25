@@ -1,0 +1,24 @@
+Title: $\forall$uto$\exists$val: Autonomous Assessment of LLMs in Formal Synthesis and Interpretation Tasks
+Authors: Rushang Karia, Daniel Bramblett, Daksh Dobhal, Pulkit Verma, Siddharth Srivastava
+ID: 2403.18327
+URL: https://arxiv.org/abs/2403.18327
+
+This paper presents $\forall$uto$\exists$val, a new approach for scaling LLM
+assessment in translating formal syntax -- such as first-order logic, regular
+expressions, etc -- to natural language (interpretation) or vice versa
+(compilation), thereby facilitating their use in applications such as
+generating/explaining logic and control flow for programs etc. Existing
+approaches for LLM assessment in these areas require labor-intensive ground-
+truth creation, the availability of which undermines the separation of training
+and test sets. Furthermore, such datasets typically include relatively few hand-
+coded test cases over which LLM accuracy is determined, thus making them
+inadequate for determining the safety or correctness of their generated outputs.
+We introduce a new approach that utilizes context-free grammars (CFGs) to
+generate out-of-distribution datasets on the fly and perform closed-loop testing
+of LLM capabilities using formal verifiers to guarantee the correctness of LLM
+outputs without any human intervention. We release our dataset and benchmark as
+open-source code at \url{https://github.com/AAIR-lab/auto-llm-assessment}. We
+also conduct an assessment of several SOTA closed and open-source LLMs to
+showcase the feasibility and scalability of this paradigm. Our experiments
+reveal that SOTA LLMs are unable to solve the formal translation task
+adequately.

@@ -1,0 +1,24 @@
+Title: Blueprint First, Model Second: A Framework for Deterministic LLM Workflow
+Authors: Libin Qiu, Yuhang Ye, Zhirong Gao, Xide Zou, Junfu Chen et al. (+5)
+ID: 2508.02721
+URL: https://arxiv.org/abs/2508.02721
+
+While powerful, the inherent non-determinism of large language model (LLM)
+agents limits their application in structured operational environments where
+procedural fidelity and predictable execution are strict requirements. This
+limitation stems from current architectures that conflate probabilistic, high-
+level planning with low-level action execution within a single generative
+process. To address this, we introduce the Source Code Agent framework, a new
+paradigm built on the "Blueprint First, Model Second" philosophy. Our framework
+decouples the workflow logic from the generative model. An expert-defined
+operational procedure is first codified into a source code-based Execution
+Blueprint, which is then executed by a deterministic engine. The LLM is
+strategically invoked as a specialized tool to handle bounded, complex sub-tasks
+within the workflow, but never to decide the workflow's path. We conduct a
+comprehensive evaluation on the challenging tau-bench benchmark, designed for
+complex user-tool-rule scenarios. Our results demonstrate that the Source Code
+Agent establishes a new state-of-the-art, outperforming the strongest baseline
+by 10.1 percentage points on the average Pass^1 score while dramatically
+improving execution efficiency. Our work enables the verifiable and reliable
+deployment of autonomous agents in applications governed by strict procedural
+logic.

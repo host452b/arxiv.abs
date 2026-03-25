@@ -1,0 +1,26 @@
+Title: Confidence as a Reward: Transforming LLMs into Reward Models
+Authors: He Du, Bowen Li, Chengxing Xie, Chang Gao, Kai Chen et al. (+1)
+ID: 2510.13501
+URL: https://arxiv.org/abs/2510.13501
+
+Reward models can significantly enhance the reasoning capabilities of large
+language models (LLMs), but they typically require extensive curated data and
+costly training. To mitigate these challenges, training-free approaches such as
+LLM-as-a-Judge leverage the intrinsic reasoning abilities of LLMs to evaluate
+responses, achieving promising results. Recent works have also indicated that
+model confidence can serve effectively as a reward metric, distinguishing
+between chain-of-thought (CoT) and non-CoT paths. However, the concept of using
+confidence as a reward has not been comprehensively studied. In this work, we
+systematically investigate Confidence-as-a-Reward (CRew), a simple yet powerful
+training-free method that utilizes token-level confidence in the model's final
+answers as a proxy for reward, especially suitable for close-ended tasks.
+Through extensive experiments on mathematical reasoning tasks, we demonstrate
+that CRew outperforms existing training-free reward approaches on the MATH500
+and RewardMATH benchmarks, and even surpasses most trained reward models. We
+further identify a strong correlation between CRew scores and the actual
+reasoning performance of the model. Additionally, we find that CRew can
+effectively filter high-quality training data. Building upon these insights, we
+propose CRew-DPO, a training strategy that constructs preference data from
+confidence scores combined with correctness signals. Finetuning with CRew-DPO
+further enhances the model's judging capabilities and consistently outperforms
+existing self-training methods.

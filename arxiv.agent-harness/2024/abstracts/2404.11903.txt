@@ -1,0 +1,30 @@
+Title: Simultaneous Detection and Interaction Reasoning for Object-Centric Action Recognition
+Authors: Xunsong Li, Pengzhan Sun, Yangcen Liu, Lixin Duan, Wen Li
+ID: 2404.11903
+URL: https://arxiv.org/abs/2404.11903
+
+Abstract:
+The interactions between human and objects are important for recognizing
+object-centric actions. Existing methods usually adopt a two-stage pipeline,
+where object proposals are first detected using a pretrained detector, and then
+are fed to an action recognition model for extracting video features and
+learning the object relations for action recognition. However, since the action
+prior is unknown in the object detection stage, important objects could be
+easily overlooked, leading to inferior action recognition performance. In this
+paper, we propose an end-to-end object-centric action recognition framework that
+simultaneously performs Detection And Interaction Reasoning in one stage.
+Particularly, after extracting video features with a base network, we create
+three modules for concurrent object detection and interaction reasoning. First,
+a Patch-based Object Decoder generates proposals from video patch tokens. Then,
+an Interactive Object Refining and Aggregation identifies important objects for
+action recognition, adjusts proposal scores based on position and appearance,
+and aggregates object-level info into a global video representation. Lastly, an
+Object Relation Modeling module encodes object relations. These three modules
+together with the video feature extractor can be trained jointly in an
+end-to-end fashion, thus avoiding the heavy reliance on an off-the-shelf object
+detector, and reducing the multi-stage training burden. We conduct experiments
+on two datasets, Something-Else and Ikea-Assembly, to evaluate the performance
+of our proposed approach on conventional, compositional, and few-shot action
+recognition tasks. Through in-depth experimental analysis, we show the crucial
+role of interactive objects in learning for action recognition, and we can
+outperform state-of-the-art methods on both datasets.

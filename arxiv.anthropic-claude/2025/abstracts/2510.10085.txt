@@ -1,0 +1,30 @@
+Title: Pharmacist: Safety Alignment Data Curation for Large Language Models against Harmful Fine-tuning
+Authors: Guozhi Liu, Qi Mu, Tiansheng Huang, Xinhua Wang, Li Shen et al.
+ID: 2510.10085
+URL: https://arxiv.org/abs/2510.10085
+
+Abstract:
+Harmful fine-tuning issues present significant safety challenges for
+fine-tuning-as-a-service in large language models. Existing alignment-stage
+defenses, e.g., Vaccine, Repnoise, Booster, and T-Vaccine, mitigate harmful
+fine-tuning issues by enhancing the model's robustness during the alignment
+phase. While these methods have been proposed to mitigate the issue, they often
+overlook a critical upstream factor: the role of the original safety-alignment
+data. We observe that their defense performance and computational efficiency
+remain constrained by the quality and composition of the alignment dataset. To
+address this limitation, we propose Pharmacist, a safety alignment data curation
+solution that enhances defense against harmful fine-tuning by selecting a
+high-quality and safety-critical core subset from the original alignment data.
+The core idea of Pharmacist is to train an alignment data selector to rank
+alignment data. Specifically, up-ranking high-quality and safety-critical
+alignment data, down-ranking low-quality and non-safety-critical data. Empirical
+results indicate that models trained on datasets selected by Pharmacist
+outperform those trained on datasets selected by existing selection methods in
+both defense and inference performance. In addition, Pharmacist can be
+effectively integrated with mainstream alignment-stage defense methods. For
+example, when applied to RepNoise and T-Vaccine, using the dataset selected by
+Pharmacist instead of the full dataset leads to improvements in defense
+performance by 2.60\% and 3.30\%, respectively, and enhances inference
+performance by 3.50\% and 1.10\%. Notably, it reduces training time by 56.83\%
+and 57.63\%, respectively. Our code is available at
+https://github.com/Lslland/Pharmacist.

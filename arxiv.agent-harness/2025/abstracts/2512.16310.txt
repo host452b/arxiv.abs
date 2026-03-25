@@ -1,0 +1,27 @@
+Title: Agent Tools Orchestration Leaks More: Dataset, Benchmark, and Mitigation
+Authors: Yuxuan Qiao, Dongqin Liu, Hongchang Yang, Wei Zhou, Songlin Hu
+ID: 2512.16310
+URL: https://arxiv.org/abs/2512.16310
+
+Abstract:
+Driven by Large Language Models, the single-agent, multi-tool architecture has
+become a popular paradigm for autonomous agents. However, this architecture
+introduces a severe privacy risk, which we term Tools Orchestration Privacy Risk
+(TOP-R): an agent, to achieve a benign user goal, autonomously aggregates
+non-sensitive fragments from multiple tools and synthesizes unexpected sensitive
+information. We provide the first systematic study of this risk. We establish a
+formal framework characterizing TOP-R through three necessary conditions --
+conclusion sensitivity, single-source non-inferability, and compositional
+inferability. We construct TOP-Bench via a Reverse Inference Seed Expansion
+(RISE) pipeline, incorporating paired social-context scenarios for diagnostic
+analysis. We further introduce the H-Score, a harmonic mean of task completion
+and safety, to quantify the utility-safety trade-off. Evaluation of six
+state-of-the-art LLMs reveals pervasive risk: the average Overall Leakage Rate
+reaches 62.11% with an H-Score of only 52.90%. Our experiments identify three
+root causes: deficient spontaneous privacy awareness, reasoning overshoot, and
+inference inertia. Guided by these findings, we propose three complementary
+mitigation strategies targeting the output, reasoning, and review stages of the
+agent pipeline; the strongest configuration, Dual-Constraint Privacy
+Enhancement, achieves an H-Score of 79.20%. Our work reveals a new risk class in
+tool-using agents, analyzes leakage causes, and provides practical mitigation
+strategies.

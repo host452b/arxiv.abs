@@ -1,0 +1,23 @@
+Title: Network-Optimised Spiking Neural Network for Event-Driven Networking
+Authors: Muhammad Bilal
+ID: 2509.23516
+URL: https://arxiv.org/abs/2509.23516
+
+Delay-coupled systems often require low-latency decisions from sparse telemetry,
+where dense fixed-step neural inference is wasteful and can degrade near
+stability margins. We introduce Network-Optimised Spiking (NOS), a trainable
+two-state event-driven dynamical unit for delayed, graph-coupled streams, whose
+states map to a fast load variable and a slower recovery resource. NOS uses
+bounded excitability for finite buffers, explicit leak terms for service and
+damping, and graph-local coupling with per-link gates and communication delays,
+with differentiable resets compatible with surrogate-gradient training and
+neuromorphic execution. We prove existence and uniqueness of subthreshold
+equilibria, derive Jacobian-based stability conditions, and obtain a scalar
+network stability threshold that separates topology from node dynamics via a
+Perron-mode spectral condition. A stochastic arrival model aligned with
+telemetry smoothing explains increased variability as systems approach stability
+boundaries. On delayed graph forecasting and early-warning tasks from queue
+telemetry, NOS improves detection F1 and detection latency over MLP, RNN/GRU,
+and temporal GNN baselines under a common residual-based protocol, while
+providing calibration rules for resource-constrained deployments. Code and
+Demos: https://mbilal84.github.io/nos-snn-networking/

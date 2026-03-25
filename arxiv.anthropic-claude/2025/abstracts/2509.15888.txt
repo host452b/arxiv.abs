@@ -1,0 +1,26 @@
+Title: Distribution-Aligned Decoding for Efficient LLM Task Adaptation
+Authors: Senkang Hu, Xudong Han, Jinqi Jiang, Yihang Tao, Zihan Fang et al.
+ID: 2509.15888
+URL: https://arxiv.org/abs/2509.15888
+
+Abstract:
+Adapting billion-parameter language models to a downstream task is still costly,
+even with parameter-efficient fine-tuning (PEFT). We re-cast task adaptation as
+output-distribution alignment: the objective is to steer the output distribution
+toward the task distribution directly during decoding rather than indirectly
+through weight updates. Building on this view, we introduce Steering Vector
+Decoding (SVDecode), a lightweight, PEFT-compatible, and theoretically grounded
+method. We start with a short warm-start fine-tune and extract a task-aware
+steering vector from the Kullback-Leibler (KL) divergence gradient between the
+output distribution of the warm-started and pre-trained models. This steering
+vector is then used to guide the decoding process to steer the model's output
+distribution towards the task distribution. We theoretically prove that SVDecode
+is first-order equivalent to the gradient step of full fine-tuning and derive a
+globally optimal solution for the strength of the steering vector. Across three
+tasks and nine benchmarks, SVDecode paired with four standard PEFT methods
+improves multiple-choice accuracy by up to 5 percentage points and open-ended
+truthfulness by 2 percentage points, with similar gains (1-2 percentage points)
+on commonsense datasets without adding trainable parameters beyond the PEFT
+adapter. SVDecode thus offers a lightweight, theoretically grounded path to
+stronger task adaptation for large language models. Code is available at
+https://github.com/dl-m9/SVDecode.

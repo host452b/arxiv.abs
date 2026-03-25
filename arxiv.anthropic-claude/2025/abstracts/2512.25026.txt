@@ -1,0 +1,26 @@
+Title: Modeling Language as a Sequence of Thoughts
+Authors: Nasim Borazjanizadeh, James McClelland
+ID: 2512.25026
+URL: https://arxiv.org/abs/2512.25026
+
+Transformer language models can generate strikingly natural text by modeling
+language as a sequence of tokens, but by relying primarily on surface-level co-
+occurrence statistics they fail to form globally consistent latent
+representations of entities and events, which contributes to poor relational
+generalization (the reversal curse), contextualization errors, and data
+inefficiency. Cognitive science, by contrast, shows that human comprehension
+converts linguistic input into compact, event-like representations that persist
+in memory while verbatim form is short-lived. Motivated by these findings, we
+introduce the Thought Gestalt (TG) model, a recurrent transformer that models
+language at two levels of abstraction: tokens and sentence-level "thought"
+states. TG generates one sentence at a time while cross-attending to a working
+memory of prior sentence representations. Token and sentence representations are
+generated using a shared stack of transformer blocks and trained with a single
+objective, next-token prediction loss. By retaining the computation graph of
+sentence representations written to working memory, gradients from future token
+losses flow backward through cross-attention to optimize the parameters that
+generate earlier sentence vectors. In scaling experiments, TG consistently
+improves data and parameter efficiency compared to matched GPT-2 runs and other
+baselines, with scaling fits indicating GPT-2 requires ~5-8% more data and
+~33-42% more parameters to match TG's test loss. TG also reduces errors in
+relational-direction generalization on a father-son reversal curse probe.

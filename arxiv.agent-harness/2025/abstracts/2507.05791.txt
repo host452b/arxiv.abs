@@ -1,0 +1,23 @@
+Title: GTA1: GUI Test-time Scaling Agent
+Authors: Yan Yang, Dongxu Li, Yutong Dai, Yuhao Yang, Ziyang Luo et al. (+10)
+ID: 2507.05791
+URL: https://arxiv.org/abs/2507.05791
+
+Graphical user interface (GUI) agents autonomously complete tasks across
+platforms (\eg, Linux) by sequentially decomposing user instructions into action
+proposals that iteratively interact with visual elements in the evolving
+environment. However, two main challenges arise: i) planning (\ie, the action
+proposal sequence) under expansive action space, where selecting an appropriate
+plan is non-trivial, as many valid ones may exist; ii) accurately grounding
+actions in complex and high-resolution interfaces, \ie, precisely interacting
+with visual targets. This paper investigates the aforementioned challenges with
+our \textbf{G}UI \textbf{T}est-time Scaling \textbf{A}gent, namely GTA1. First,
+we conduct test-time scaling to select the most appropriate action proposal: at
+each step, multiple candidate proposals are sampled and evaluated and selected
+by a judge model. It trades off computation for better decision quality by
+concurrent sampling. Second, we propose a model that improves grounding of the
+selected action proposals to its corresponding visual elements. Our key insight
+is that reinforcement learning (RL) facilitates grounding through inherent
+objective alignments, rewarding successful clicks on interface elements.
+Experimentally, GTA1 achieves state-of-the-art performance on both grounding and
+agent task execution benchmarks. The code and models are released here.

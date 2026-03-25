@@ -1,0 +1,23 @@
+Title: MIRROR: Modular Internal Processing for Personalized Safety in LLM Dialogue
+Authors: Nicole Hsing
+ID: 2506.00430
+URL: https://arxiv.org/abs/2506.00430
+
+Large language models frequently generate harmful recommendations in personal
+multi-turn dialogue by ignoring user-specific safety context, exhibiting
+sycophantic agreement, and compromising user safety for larger group
+preferences. We introduce MIRROR, a modular production-focused architecture that
+prevents these failures through a persistent, bounded internal state that
+preserves personal conversational information across conversational turns. Our
+dual-component design inspired by Dual Process Theory separates immediate
+response generation (Talker) from asynchronous deliberative processing
+(Thinker), which synthesizes parallel reasoning threads between turns with
+marginal latency. On the CuRaTe personalized safety benchmark, MIRROR-augmented
+models achieve a 21% relative improvement (69% to 84%) across seven diverse
+frontier models, with open-source Llama 4 and Mistral 3 variants surpassing both
+GPT-4o and Claude 3.7 Sonnet at only \$0.0028 to \$0.0172 additional cost per
+turn, narrowing the gap between affordable open-source models to frontier
+systems in the safety space. The modular architecture enables flexible
+deployment: full internal processing for affordable models or single-component
+configurations for expensive systems, democratizing access to safer,
+personalized AI.

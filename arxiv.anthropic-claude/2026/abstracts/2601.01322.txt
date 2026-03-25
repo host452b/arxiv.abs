@@ -1,0 +1,30 @@
+Title: LinMU: Multimodal Understanding Made Linear
+Authors: Hongjie Wang, Niraj K. Jha
+ID: 2601.01322
+URL: https://arxiv.org/abs/2601.01322
+
+Modern Vision-Language Models (VLMs) achieve impressive performance but are
+limited by the quadratic complexity of self-attention, which prevents their
+deployment on edge devices and makes their understanding of high-resolution
+images and long-context videos prohibitively expensive. To address this
+challenge, we introduce LinMU (Linear-complexity Multimodal Understanding), a
+VLM design that achieves linear complexity without using any quadratic-
+complexity modules while maintaining the performance of global-attention-based
+VLMs. LinMU replaces every self-attention layer in the VLM with the M-MATE
+block: a dual-branch module that combines a bidirectional state-space model for
+global context (Flex-MA branch) with localized Swin-style window attention
+(Local-Swin branch) for adjacent correlations. To transform a pre-trained VLM
+into the LinMU architecture, we propose a three-stage distillation framework
+that (i) initializes both branches with self-attention weights and trains the
+Flex-MA branch alone, (ii) unfreezes the Local-Swin branch and fine-tunes it
+jointly with the Flex-MA branch, and (iii) unfreezes the remaining blocks and
+fine-tunes them using LoRA adapters, while regressing on hidden states and
+token-level logits of the frozen VLM teacher. On MMMU, TextVQA, LongVideoBench,
+Video-MME, and other benchmarks, LinMU matches the performance of teacher
+models, yet reduces Time-To-First-Token (TTFT) by up to 2.7$\times$ and improves
+token throughput by up to 9.0$\times$ on minute-length videos. Ablations confirm
+the importance of each distillation stage and the necessity of the two branches
+of the M-MATE block. The proposed framework demonstrates that state-of-the-art
+multimodal reasoning can be achieved without quadratic attention, thus opening
+up avenues for long-context VLMs that can deal with high-resolution images and
+long videos.

@@ -1,0 +1,27 @@
+Title: Can LLMs Revolutionize the Design of Explainable and Efficient TinyML Models?
+Authors: Christophe El Zeinaty, Wassim Hamidouche, Glenn Herrou, Daniel Menard, Merouane Debbah
+ID: 2504.09685
+URL: https://arxiv.org/abs/2504.09685
+
+This paper introduces a novel framework for designing efficient neural network
+architectures specifically tailored to tiny machine learning (TinyML) platforms.
+By leveraging large language models (LLMs) for neural architecture search (NAS),
+a vision transformer (ViT)-based knowledge distillation (KD) strategy, and an
+explainability module, the approach strikes an optimal balance between accuracy,
+computational efficiency, and memory usage. The LLM-guided search explores a
+hierarchical search space, refining candidate architectures through Pareto
+optimization based on accuracy, multiply-accumulate operations (MACs), and
+memory metrics. The best-performing architectures are further fine-tuned using
+logits-based KD with a pre-trained ViT-B/16 model, which enhances generalization
+without increasing model size. Evaluated on the CIFAR-100 dataset and deployed
+on an STM32H7 microcontroller (MCU), the three proposed models, LMaNet-Elite,
+LMaNet-Core, and QwNet-Core, achieve accuracy scores of 74.50%, 74.20% and
+73.00%, respectively. All three models surpass current state-of-the-art (SOTA)
+models, such as MCUNet-in3/in4 (69.62% / 72.86%) and XiNet (72.27%), while
+maintaining a low computational cost of less than 100 million MACs and adhering
+to the stringent 320 KB static random-access memory (SRAM) constraint. These
+results demonstrate the efficiency and performance of the proposed framework for
+TinyML platforms, underscoring the potential of combining LLM-driven search,
+Pareto optimization, KD, and explainability to develop accurate, efficient, and
+interpretable models. This approach opens new possibilities in NAS, enabling the
+design of efficient architectures specifically suited for TinyML.

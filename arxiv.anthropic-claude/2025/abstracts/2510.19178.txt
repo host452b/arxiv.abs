@@ -1,0 +1,20 @@
+Title: Imbalanced Gradients in RL Post-Training of Multi-Task LLMs
+Authors: Runzhe Wu, Ankur Samanta, Ayush Jain, Scott Fujimoto, Jeongyeol Kwon et al. (+5)
+ID: 2510.19178
+URL: https://arxiv.org/abs/2510.19178
+
+Multi-task post-training of large language models (LLMs) is typically performed
+by mixing datasets from different tasks and optimizing them jointly. This
+approach implicitly assumes that all tasks contribute gradients of similar
+magnitudes; when this assumption fails, optimization becomes biased toward
+large-gradient tasks. In this paper, however, we show that this assumption fails
+in RL post-training: certain tasks produce significantly larger gradients, thus
+biasing updates toward those tasks. Such gradient imbalance would be justified
+only if larger gradients implied larger learning gains on the tasks (i.e.,
+larger performance improvements) -- but we find this is not true. Large-gradient
+tasks can achieve similar or even much lower learning gains than small-gradient
+ones. Further analyses reveal that these gradient imbalances cannot be explained
+by typical training statistics such as training rewards or advantages,
+suggesting that they arise from the inherent differences between tasks. This
+cautions against naive dataset mixing and calls for future work on principled
+gradient-level corrections for LLMs.

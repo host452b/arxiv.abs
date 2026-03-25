@@ -1,0 +1,27 @@
+Title: R2E-Gym: Procedural Environments and Hybrid Verifiers for Scaling Open-Weights SWE Agents
+Authors: Naman Jain, Jaskirat Singh, Manish Shetty, Liang Zheng, Koushik Sen et al. (+1)
+ID: 2504.07164
+URL: https://arxiv.org/abs/2504.07164
+
+Improving open-source models on real-world SWE tasks (solving GITHUB issues)
+faces two key challenges: 1) scalable curation of execution environments to
+train these models, and, 2) optimal scaling of test-time compute. We introduce
+AgentGym, the largest procedurally-curated executable gym environment for
+training real-world SWE-agents, consisting of more than 8.7K tasks. AgentGym is
+powered by two main contributions: 1) SYNGEN: a synthetic data curation recipe
+that enables scalable curation of executable environments using test-generation
+and back-translation directly from commits, thereby reducing reliance on human-
+written issues or unit tests. We show that this enables more scalable training
+leading to pass@1 performance of 34.4% on SWE-Bench Verified benchmark with our
+32B model. 2) Hybrid Test-time Scaling: we provide an in-depth analysis of two
+test-time scaling axes; execution-based and execution-free verifiers,
+demonstrating that they exhibit complementary strengths and limitations. Test-
+based verifiers suffer from low distinguishability, while execution-free
+verifiers are biased and often rely on stylistic features. Surprisingly, we find
+that while each approach individually saturates around 42-43%, significantly
+higher gains can be obtained by leveraging their complementary strengths.
+Overall, our approach achieves 51% on the SWE-Bench Verified benchmark,
+reflecting a new state-of-the-art for open-weight SWE-agents and for the first
+time showing competitive performance with proprietary models such as o1,
+o1-preview and sonnet-3.5-v2 (with tools). We will open-source our environments,
+models, and agent trajectories.

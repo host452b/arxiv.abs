@@ -1,0 +1,22 @@
+Title: AdaSteer: Your Aligned LLM is Inherently an Adaptive Jailbreak Defender
+Authors: Weixiang Zhao, Jiahe Guo, Yulin Hu, Yang Deng, An Zhang et al.
+ID: 2504.09466
+URL: https://arxiv.org/abs/2504.09466
+
+Abstract:
+Despite extensive efforts in safety alignment, large language models (LLMs)
+remain vulnerable to jailbreak attacks. Activation steering offers a
+training-free defense method but relies on fixed steering coefficients,
+resulting in suboptimal protection and increased false rejections of benign
+inputs. To address this, we propose AdaSteer, an adaptive activation steering
+method that dynamically adjusts model behavior based on input characteristics.
+We identify two key properties: Rejection Law (R-Law), which shows that stronger
+steering is needed for jailbreak inputs opposing the rejection direction, and
+Harmfulness Law (H-Law), which differentiates adversarial and benign inputs.
+AdaSteer steers input representations along both the Rejection Direction (RD)
+and Harmfulness Direction (HD), with adaptive coefficients learned via logistic
+regression, ensuring robust jailbreak defense while preserving benign input
+handling. Experiments on LLaMA-3.1, Gemma-2, and Qwen2.5 show that AdaSteer
+outperforms baseline methods across multiple jailbreak attacks with minimal
+impact on utility. Our results highlight the potential of interpretable model
+internals for real-time, flexible safety enforcement in LLMs.

@@ -1,0 +1,25 @@
+Title: LLMs Explain't: A Post-Mortem on Semantic Interpretability in Transformer Models
+Authors: Alhassan Abdelhalim, Janick Edinger, Sören Laue, Michaela Regneri
+ID: 2601.22928
+URL: https://arxiv.org/abs/2601.22928
+
+Large Language Models (LLMs) are becoming increasingly popular in pervasive
+computing due to their versatility and strong performance. However, despite
+their ubiquitous use, the exact mechanisms underlying their outstanding
+performance remain unclear. Different methods for LLM explainability exist, and
+many are, as a method, not fully understood themselves. We started with the
+question of how linguistic abstraction emerges in LLMs, aiming to detect it
+across different LLM modules (attention heads and input embeddings). For this,
+we used methods well-established in the literature: (1) probing for token-level
+relational structures, and (2) feature-mapping using embeddings as carriers of
+human-interpretable properties.   Both attempts failed for different
+methodological reasons: Attention-based explanations collapsed once we tested
+the core assumption that later-layer representations still correspond to tokens.
+Property-inference methods applied to embeddings also failed because their high
+predictive scores were driven by methodological artifacts and dataset structure
+rather than meaningful semantic knowledge. These failures matter because both
+techniques are widely treated as evidence for what LLMs supposedly understand,
+yet our results show such conclusions are unwarranted. These limitations are
+particularly relevant in pervasive and distributed computing settings where LLMs
+are deployed as system components and interpretability methods are relied upon
+for debugging, compression, and explaining models.

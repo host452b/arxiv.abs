@@ -1,0 +1,24 @@
+Title: RAPID-LLM: Resilience-Aware Performance analysis of Infrastructure for Distributed LLM Training and Inference
+Authors: George Karfakis, Faraz Tahmasebi, Binglu Chen, Lime Yao, Saptarshi Mitra et al. (+3)
+ID: 2512.19606
+URL: https://arxiv.org/abs/2512.19606
+
+RAPID-LLM is a unified performance modeling framework for large language model
+(LLM) training and inference on GPU clusters. It couples a DeepFlow-based
+frontend that generates hardware-aware, operator-level Chakra execution traces
+from an abstract LLM specification (model shape, batch/sequence settings,
+training vs. inference, and hybrid parallelism choices) with an extended Astra-
+Sim backend that executes those traces on explicit multi-dimensional network
+topologies with congestion-aware routing and support for degraded and faulty
+links. The frontend assigns per-operator latency using a tile-based model that
+accounts for SM under-utilization and multi-level memory traffic (SRAM/ L2/
+HBM), and prunes memory-infeasible configurations using an activation-liveness
+traversal under recomputation, parallelism and ZeRO/FDSP sharding policies.
+Across A100-based validation cases, RAPID-LLM predicts Llama inference step
+latency and GPT-scale training time per batch within 10.4\% relative to
+published measurements, and matches ns-3 packet-level results within 8\% on
+representative communication workloads. Case studies demonstrate how RAPID-LLM
+enables fast, exhaustive sweeps over hybrid-parallel configurations, quantifies
+sensitivity to soft link faults under realistic routing and congestion, and
+evaluates hypothetical GPU design variants including HBM bandwidth throttling
+effects.

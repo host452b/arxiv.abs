@@ -1,0 +1,28 @@
+Title: Safety Guardrails for LLM-Enabled Robots
+Authors: Zachary Ravichandran, Alexander Robey, Vijay Kumar, George J. Pappas, Hamed Hassani
+ID: 2503.07885
+URL: https://arxiv.org/abs/2503.07885
+
+Although the integration of large language models (LLMs) into robotics has
+unlocked transformative capabilities, it has also introduced significant safety
+concerns, ranging from average-case LLM errors (e.g., hallucinations) to
+adversarial jailbreaking attacks, which can produce harmful robot behavior in
+real-world settings. Traditional robot safety approaches do not address the
+contextual vulnerabilities of LLMs, and current LLM safety approaches overlook
+the physical risks posed by robots operating in real-world environments. To
+ensure the safety of LLM-enabled robots, we propose RoboGuard, a two-stage
+guardrail architecture. RoboGuard first contextualizes pre-defined safety rules
+by grounding them in the robot's environment using a root-of-trust LLM. This LLM
+is shielded from malicious prompts and employs chain-of-thought (CoT) reasoning
+to generate context-dependent safety specifications, such as temporal logic
+constraints. RoboGuard then resolves conflicts between these contextual safety
+specifications and potentially unsafe plans using temporal logic control
+synthesis, ensuring compliance while minimally violating user preferences. In
+simulation and real-world experiments that consider worst-case jailbreaking
+attacks, RoboGuard reduces the execution of unsafe plans from over 92% to below
+3% without compromising performance on safe plans. We also demonstrate that
+RoboGuard is resource-efficient, robust against adaptive attacks, and enhanced
+by its root-of-trust LLM's CoT reasoning. These results demonstrate the
+potential of RoboGuard to mitigate the safety risks and enhance the reliability
+of LLM-enabled robots. We provide additional resources at https://robo-
+guard.github.io/.

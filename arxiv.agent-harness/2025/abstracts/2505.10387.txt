@@ -1,0 +1,28 @@
+Title: Multi-Agent Path Finding For Large Agents Is Intractable
+Authors: Artem Agafonov, Konstantin Yakovlev
+ID: 2505.10387
+URL: https://arxiv.org/abs/2505.10387
+
+Abstract:
+The multi-agent path finding (MAPF) problem asks to find a set of paths on a
+graph such that when synchronously following these paths the agents never
+encounter a conflict. In the most widespread MAPF formulation, the so-called
+Classical MAPF, the agents sizes are neglected and two types of conflicts are
+considered: occupying the same vertex or using the same edge at the same time
+step. Meanwhile in numerous practical applications, e.g. in robotics, taking
+into account the agents' sizes is vital to ensure that the MAPF solutions can be
+safely executed. Introducing large agents yields an additional type of conflict
+arising when one agent follows an edge and its body overlaps with the body of
+another agent that is actually not using this same edge (e.g. staying still at
+some distinct vertex of the graph). Until now it was not clear how harder the
+problem gets when such conflicts are to be considered while planning.
+Specifically, it was known that Classical MAPF problem on an undirected graph
+can be solved in polynomial time, however no complete polynomial-time algorithm
+was presented to solve MAPF with large agents. In this paper we, for the first
+time, establish that the latter problem is NP-hard and, thus, if P!=NP no
+polynomial algorithm for it can, unfortunately, be presented. Our proof is based
+on the prevalent in the field technique of reducing the seminal 3SAT problem
+(which is known to be an NP-complete problem) to the problem at hand. In
+particular, for an arbitrary 3SAT formula we procedurally construct a dedicated
+graph with specific start and goal vertices and show that the given 3SAT formula
+is satisfiable iff the corresponding path finding instance has a solution.

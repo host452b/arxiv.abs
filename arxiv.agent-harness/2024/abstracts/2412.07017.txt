@@ -1,0 +1,21 @@
+Title: Asynchronous LLM Function Calling
+Authors: In Gim, Seung-seob Lee, Lin Zhong
+ID: 2412.07017
+URL: https://arxiv.org/abs/2412.07017
+
+Abstract:
+Large language models (LLMs) use function calls to interface with external tools
+and data source. However, the current approach to LLM function calling is
+inherently synchronous, where each call blocks LLM inference, limiting LLM
+operation and concurrent function execution. In this work, we propose AsyncLM, a
+system for asynchronous LLM function calling. AsyncLM improves LLM's operational
+efficiency by enabling LLMs to generate and execute function calls concurrently.
+Instead of waiting for each call's completion, AsyncLM introduces an interrupt
+mechanism to asynchronously notify the LLM in-flight when function calls return.
+We design an in-context protocol for function calls and interrupts, provide
+fine-tuning strategy to adapt LLMs to the interrupt semantics, and implement
+these mechanisms efficiently on LLM inference process. We demonstrate that
+AsyncLM can reduce end-to-end task completion latency from 1.6x-5.4x compared to
+synchronous function calling on a set of benchmark tasks in the Berkeley
+function calling leaderboard (BFCL). Furthermore, we discuss how interrupt
+mechanisms can be extended to enable novel human-LLM or LLM-LLM interactions.

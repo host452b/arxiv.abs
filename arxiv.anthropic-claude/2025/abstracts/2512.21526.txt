@@ -1,0 +1,22 @@
+Title: Selective LLM-Guided Regularization for Enhancing Recommendation Models
+Authors: Shanglin Yang, Zhan Shi
+ID: 2512.21526
+URL: https://arxiv.org/abs/2512.21526
+
+Large language models provide rich semantic priors and strong reasoning
+capabilities, making them promising auxiliary signals for recommendation.
+However, prevailing approaches either deploy LLMs as standalone recommender or
+apply global knowledge distillation, both of which suffer from inherent
+drawbacks. Standalone LLM recommender are costly, biased, and unreliable across
+large regions of the user item space, while global distillation forces the
+downstream model to imitate LLM predictions even when such guidance is
+inaccurate. Meanwhile, recent studies show that LLMs excel particularly in re-
+ranking and challenging scenarios, rather than uniformly across all contexts.We
+introduce Selective LLM Guided Regularization, a model-agnostic and computation
+efficient framework that activates LLM based pairwise ranking supervision only
+when a trainable gating mechanism informing by user history length, item
+popularity, and model uncertainty predicts the LLM to be reliable. All LLM
+scoring is performed offline, transferring knowledge without increasing
+inference cost. Experiments across multiple datasets show that this selective
+strategy consistently improves overall accuracy and yields substantial gains in
+cold start and long tail regimes, outperforming global distillation baselines.

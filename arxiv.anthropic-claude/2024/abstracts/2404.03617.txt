@@ -1,0 +1,30 @@
+Title: On the Efficiency of Convolutional Neural Networks
+Authors: Andrew Lavin
+ID: 2404.03617
+URL: https://arxiv.org/abs/2404.03617
+
+Since the breakthrough performance of AlexNet in 2012, convolutional neural
+networks (convnets) have grown into extremely powerful vision models. Deep
+learning researchers have used convnets to perform vision tasks with accuracy
+that was unachievable a decade ago. Confronted with the immense computation that
+convnets use, deep learning researchers also became interested in efficiency.
+However, the engineers who deployed efficient convnets soon realized that they
+were slower than the previous generation, despite using fewer operations. Many
+reverted to older models that ran faster. Hence researchers switched the
+objective of their search from arithmetic complexity to latency and produced a
+new wave of models that performed better. Paradoxically, these models also used
+more operations. Skepticism grew among researchers and engineers alike about the
+relevance of arithmetic complexity. Contrary to the prevailing view that latency
+and arithmetic complexity are irreconcilable, a simple formula relates both
+through computational efficiency. This insight enabled us to co-optimize the
+separate factors that determine latency. We observed that the degenerate conv2d
+layers that produce the best accuracy--complexity trade-off also use significant
+memory resources and have low computational efficiency. We devised block fusion
+algorithms to implement all the layers of a residual block in a single kernel,
+thereby creating temporal locality, avoiding communication, and reducing
+workspace size. Our ConvFirst model with block-fusion kernels has less
+arithmetic complexity and greater computational efficiency than baseline models
+and kernels, and ran approximately four times as fast as ConvNeXt. We also
+created novel tools, including efficiency gap plots and waterline analysis. Our
+unified approach to convnet efficiency envisions a new era of models and kernels
+that achieve greater accuracy at lower cost.

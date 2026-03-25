@@ -1,0 +1,25 @@
+Title: NeuroFilter: Privacy Guardrails for Conversational LLM Agents
+Authors: Saswat Das, Ferdinando Fioretto
+ID: 2601.14660
+URL: https://arxiv.org/abs/2601.14660
+
+Abstract:
+This work addresses the computational challenge of enforcing privacy for agentic
+Large Language Models (LLMs), where privacy is governed by the contextual
+integrity framework. Indeed, existing defenses rely on LLM-mediated checking
+stages that add substantial latency and cost, and that can be undermined in
+multi-turn interactions through manipulation or benign-looking conversational
+scaffolding. Contrasting this background, this paper makes a key observation:
+internal representations associated with privacy-violating intent can be
+separated from benign requests using linear structure. Using this insight, the
+paper proposes NeuroFilter, a guardrail framework that operationalizes
+contextual integrity by mapping norm violations to simple directions in the
+model's activation space, enabling detection even when semantic filters are
+bypassed. The proposed filter is also extended to capture threats arising during
+long conversations using the concept of activation velocity, which measures
+cumulative drift in internal representations across turns. A comprehensive
+evaluation across over 150,000 interactions and covering models from 7B to 70B
+parameters, illustrates the strong performance of NeuroFilter in detecting
+privacy attacks while maintaining zero false positives on benign prompts, all
+while reducing the computational inference cost by several orders of magnitude
+when compared to LLM-based agentic privacy defenses.

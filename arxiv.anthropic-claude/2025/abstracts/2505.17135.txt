@@ -1,0 +1,31 @@
+Title: When can isotropy help adapt LLMs' next word prediction to numerical domains?
+Authors: Rashed Shelim, Shengzhe Xu, Walid Saad, Naren Ramakrishnan
+ID: 2505.17135
+URL: https://arxiv.org/abs/2505.17135
+
+Abstract:
+Vector representations of contextual embeddings learned by pre-trained large
+language models (LLMs) are effective in various downstream tasks in numerical
+domains such as time series forecasting. Despite their significant benefits, the
+tendency of LLMs to hallucinate in such domains can have severe consequences in
+applications such as energy, nature, finance, healthcare, retail and
+transportation, among others. To guarantee prediction reliability and accuracy
+in numerical domains, it is necessary to open the black box behind the LLM and
+provide performance guarantees through explanation. However, there is little
+theoretical understanding of when pre-trained language models help solve
+numerical downstream tasks. This paper seeks to bridge this gap by understanding
+when the next-word prediction capability of LLMs can be adapted to numerical
+domains through a novel analysis based on the concept of isotropy in the
+contextual embedding space. Specifically, a log-linear model for LLMs is
+considered in which numerical data can be predicted from its context through a
+network with softmax in the output layer of LLMs (i.e., language model head in
+self-attention). For this model, it is demonstrated that, in order to achieve
+state-of-the-art performance in numerical domains, the hidden representations of
+the LLM embeddings must possess a structure that accounts for the
+shift-invariance of the softmax function. By formulating a gradient structure of
+self-attention in pre-trained models, it is shown how the isotropic property of
+LLM embeddings in contextual embedding space preserves the underlying structure
+of representations, thereby resolving the shift-invariance problem and providing
+a performance guarantee. Experiments show that different characteristics of
+numerical data and model architectures have different impacts on isotropy, and
+this variability directly affects the performances.

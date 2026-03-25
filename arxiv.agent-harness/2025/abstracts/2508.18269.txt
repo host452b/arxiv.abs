@@ -1,0 +1,27 @@
+Title: FlowVLA: Visual Chain of Thought-based Motion Reasoning for Vision-Language-Action Models
+Authors: Zhide Zhong, Haodong Yan, Junfeng Li, Xiangchen Liu, Xin Gong et al.
+ID: 2508.18269
+URL: https://arxiv.org/abs/2508.18269
+
+Abstract:
+Many Vision-Language-Action (VLA) models are built upon an internal world model
+trained via next-frame prediction ``$v_t \rightarrow v_{t+1}$''. However, this
+paradigm attempts to predict the future frame's appearance directly, without
+explicitly reasoning about the underlying dynamics. \textbf{This lack of an
+explicit motion reasoning step} often leads to physically implausible visual
+forecasts and inefficient policy learning. To address this limitation, we
+introduce the \textbf{Visual Chain of Thought (Visual CoT)}, a paradigm that
+compels the model to first reason about \textbf{motion dynamics} before
+generating the future frame. We instantiate this paradigm by proposing
+\textbf{FlowVLA}, an autoregressive Transformer that explicitly materializes
+this reasoning process as ``$v_t \rightarrow f_t \rightarrow v_{t+1}$'', where
+$f_t$ is an intermediate optical flow prediction that inherently encodes motion.
+By forcing the model to first follow the motion plan encoded by $f_t$, this
+process inherently \textbf{aligns the pre-training objective of dynamics
+prediction with the downstream task of action generation.} We conduct
+experiments on challenging robotics manipulation benchmarks, as well as
+real-robot evaluations. Our FlowVLA not only generates \textbf{more coherent and
+physically plausible visual predictions}, but also achieves state-of-the-art
+policy performance with \textbf{substantially improved sample efficiency},
+pointing toward a more principled foundation for world modeling in VLAs. Project
+page: https://irpn-lab.github.io/FlowVLA/

@@ -1,0 +1,26 @@
+Title: Generalizable LLM Learning of Graph Synthetic Data with Post-training Alignment
+Authors: Yizhuo Zhang, Heng Wang, Shangbin Feng, Zhaoxuan Tan, Xinyun Liu et al. (+1)
+ID: 2506.00845
+URL: https://arxiv.org/abs/2506.00845
+
+Previous research has sought to enhance the graph reasoning capabilities of LLMs
+by supervised fine-tuning on synthetic graph data. While these led to
+specialized LLMs better at solving graph algorithm problems, we don't need LLMs
+for shortest path: we need generalization from synthetic graph data to real-
+world tasks with implicit graph structures. In this work, we propose to unlock
+generalizable learning of graph with post-training alignment with synthetic
+data. We first design solution-based and process-based rewards for synthetic
+graph problems: instead of rigid memorizing response patterns in direct fine-
+tuning, we posit that post-training alignment would help LLMs grasp the
+essentials underlying graph reasoning and alleviate overfitting on synthetic
+data. We employ post-training alignment algorithms such as GRPO and DPO,
+aligning both off-the-shelf LLMs and LLMs fine-tuned on synthetic graph data. We
+then compare them against existing settings on both in-domain synthetic tasks
+and out-of-domain real-world tasks with implicit graph structures such as multi-
+hop QA, structured planning, and more. Extensive experiments demonstrate that
+our post-training alignment recipe leads to statistically significant
+improvement on 5 datasets, with an average gain of 12.9% over baseline settings.
+Further analysis reveals that process-based rewards consistently outperform
+solution-based rewards on synthetic data but not on real-world tasks, and
+compositionality and explainable intermediate steps remains a critical challenge
+even after post-training alignment.

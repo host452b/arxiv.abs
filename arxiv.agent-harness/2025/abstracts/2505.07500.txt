@@ -1,0 +1,26 @@
+Title: Learning to Reason and Navigate: Parameter Efficient Action Planning with Large Language Models
+Authors: Bahram Mohammadi, Ehsan Abbasnejad, Yuankai Qi, Qi Wu, Anton Van Den Hengel et al.
+ID: 2505.07500
+URL: https://arxiv.org/abs/2505.07500
+
+Abstract:
+The remote embodied referring expression (REVERIE) task requires an agent to
+navigate through complex indoor environments and localize a remote object
+specified by high-level instructions, such as "bring me a spoon", without
+pre-exploration. Hence, an efficient navigation plan is essential for the final
+success. This paper proposes a novel parameter-efficient action planner using
+large language models (PEAP-LLM) to generate a single-step instruction at each
+location. The proposed model consists of two modules, LLM goal planner (LGP) and
+LoRA action planner (LAP). Initially, LGP extracts the goal-oriented plan from
+REVERIE instructions, including the target object and room. Then, LAP generates
+a single-step instruction with the goal-oriented plan, high-level instruction,
+and current visual observation as input. PEAP-LLM enables the embodied agent to
+interact with LAP as the path planner on the fly. A simple direct application of
+LLMs hardly achieves good performance. Also, existing hard-prompt-based methods
+are error-prone in complicated scenarios and need human intervention. To address
+these issues and prevent the LLM from generating hallucinations and biased
+information, we propose a novel two-stage method for fine-tuning the LLM,
+consisting of supervised fine-tuning (STF) and direct preference optimization
+(DPO). SFT improves the quality of generated instructions, while DPO utilizes
+environmental feedback. Experimental results show the superiority of our
+proposed model on REVERIE compared to the previous state-of-the-art.

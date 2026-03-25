@@ -1,0 +1,28 @@
+Title: The Alignment Flywheel: A Governance-Centric Hybrid MAS for Architecture-Agnostic Safety
+Authors: Elias Malomgré, Pieter Simoens
+ID: 2603.02259
+URL: https://arxiv.org/abs/2603.02259
+
+Abstract:
+Multi-agent systems provide mature methodologies for role decomposition,
+coordination, and normative governance, capabilities that remain essential as
+increasingly powerful autonomous decision components are embedded within
+agent-based systems. While learned and generative models substantially expand
+system capability, their safety behavior is often entangled with training,
+making it opaque, difficult to audit, and costly to update after deployment.
+This paper formalizes the Alignment Flywheel as a governance-centric hybrid MAS
+architecture that decouples decision generation from safety governance. A
+Proposer, representing any autonomous decision component, generates candidate
+trajectories, while a Safety Oracle returns raw safety signals through a stable
+interface. An enforcement layer applies explicit risk policy at runtime, and a
+governance MAS supervises the Oracle through auditing, uncertainty-driven
+verification, and versioned refinement. The central engineering principle is
+patch locality: many newly observed safety failures can be mitigated by updating
+the governed oracle artifact and its release pipeline rather than retracting or
+retraining the underlying decision component. The architecture is
+implementation-agnostic with respect to both the Proposer and the Safety Oracle,
+and specifies the roles, artifacts, protocols, and release semantics needed for
+runtime gating, audit intake, signed patching, and staged rollout across
+distributed deployments. The result is a hybrid MAS engineering framework for
+integrating highly capable but fallible autonomous systems under explicit,
+version-controlled, and auditable oversight.

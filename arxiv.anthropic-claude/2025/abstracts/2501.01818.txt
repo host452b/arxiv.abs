@@ -1,0 +1,20 @@
+Title: Rerouting LLM Routers
+Authors: Avital Shafran, Roei Schuster, Thomas Ristenpart, Vitaly Shmatikov
+ID: 2501.01818
+URL: https://arxiv.org/abs/2501.01818
+
+LLM routers aim to balance quality and cost of generation by classifying queries
+and routing them to a cheaper or more expensive LLM depending on their
+complexity. Routers represent one type of what we call LLM control planes:
+systems that orchestrate use of one or more LLMs. In this paper, we investigate
+routers' adversarial robustness.   We first define LLM control plane integrity,
+i.e., robustness of LLM orchestration to adversarial inputs, as a distinct
+problem in AI safety. Next, we demonstrate that an adversary can generate query-
+independent token sequences we call ``confounder gadgets'' that, when added to
+any query, cause LLM routers to send the query to a strong LLM.   Our
+quantitative evaluation shows that this attack is successful both in white-box
+and black-box settings against a variety of open-source and commercial routers,
+and that confounding queries do not affect the quality of LLM responses.
+Finally, we demonstrate that gadgets can be effective while maintaining low
+perplexity, thus perplexity-based filtering is not an effective defense. We
+finish by investigating alternative defenses.

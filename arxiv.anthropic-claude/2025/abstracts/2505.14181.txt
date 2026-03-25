@@ -1,0 +1,28 @@
+Title: SlangDIT: Benchmarking LLMs in Interpretative Slang Translation
+Authors: Yunlong Liang, Fandong Meng, Jiaan Wang, Jie Zhou
+ID: 2505.14181
+URL: https://arxiv.org/abs/2505.14181
+
+The challenge of slang translation lies in capturing context-dependent semantic
+extensions, as slang terms often convey meanings beyond their literal
+interpretation. While slang detection, explanation, and translation have been
+studied as isolated tasks in the era of large language models (LLMs), their
+intrinsic interdependence remains underexplored. The main reason is lacking of a
+benchmark where the two tasks can be a prerequisite for the third one, which can
+facilitate idiomatic translation. In this paper, we introduce the interpretative
+slang translation task (named SlangDIT) consisting of three sub-tasks: slang
+detection, cross-lingual slang explanation, and slang translation within the
+current context, aiming to generate more accurate translation with the help of
+slang detection and slang explanation. To this end, we construct a SlangDIT
+dataset, containing over 25k English-Chinese sentence pairs. Each source
+sentence mentions at least one slang term and is labeled with corresponding
+cross-lingual slang explanation. Based on the benchmark, we propose a deep
+thinking model, named SlangOWL. It firstly identifies whether the sentence
+contains a slang, and then judges whether the slang is polysemous and analyze
+its possible meaning. Further, the SlangOWL provides the best explanation of the
+slang term targeting on the current context. Finally, according to the whole
+thought, the SlangOWL offers a suitable translation. Our experiments on LLMs
+(\emph{e.g.}, Qwen2.5 and LLama-3.1), show that our deep thinking approach
+indeed enhances the performance of LLMs where the proposed SLangOWL
+significantly surpasses the vanilla models and supervised fine-tuned models
+without thinking.

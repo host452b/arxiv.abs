@@ -1,0 +1,30 @@
+Title: JT-Safe: Intrinsically Enhancing the Safety and Trustworthiness of LLMs
+Authors: Junlan Feng, Fanyu Meng, Chong Long, Pengyu Cong, Duqing Wang et al. (+10)
+ID: 2510.17918
+URL: https://arxiv.org/abs/2510.17918
+
+The hallucination and credibility concerns of large language models (LLMs) are
+global challenges that the industry is collectively addressing. Recently, a
+significant amount of advances have been made on post-training and inference
+techniques to mitigate these challenges. However, it is widely agreed that
+unsafe and hallucinations of LLMs intrinsically originate from pre-training,
+involving pre-training data and the next-token prediction learning mechanism. In
+this paper, we focus on enhancing pre-training data to improve the
+trustworthiness and safety of LLMs. Since the data is vast, it's almost
+impossible to entirely purge the data of factual errors, logical
+inconsistencies, or distributional biases. Moreover, the pre-training data lack
+grounding in real-world knowledge. Each piece of data is treated as a sequence
+of tokens rather than as a representation of a part of the world. To overcome
+these issues, we propose approaches to enhancing our pre-training data with its
+context in the world and increasing a substantial amount of data reflecting
+industrial scenarios. We argue that most source data are created by the authors
+for specific purposes in a certain spatial-temporal context. They have played a
+role in the real world. By incorporating related world context information, we
+aim to better anchor pre-training data within real-world scenarios, thereby
+reducing uncertainty in model training and enhancing the model's safety and
+trustworthiness. We refer to our Data with World Context as DWC. We continue
+pre-training an earlier checkpoint of JT-35B-Base with 1.5 trillion of DWC
+tokens. We introduce our post-training procedures to activate the potentials of
+DWC. Compared with the Qwen model of a similar scale, JT-Safe-35B achieves an
+average performance improvement of 1.79% on the Safety and Trustworthy
+evaluation benchmarks, while being pretrained with only 6.2 trillion tokens.

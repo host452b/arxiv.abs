@@ -1,0 +1,23 @@
+Title: Online-Optimized RAG for Tool Use and Function Calling
+Authors: Yu Pan, Xiaocheng Li, Hanzhao Wang
+ID: 2509.20415
+URL: https://arxiv.org/abs/2509.20415
+
+Abstract:
+In many applications, retrieval-augmented generation (RAG) drives tool use and
+function calling by embedding the (user) queries and matching them to
+pre-specified tool/function descriptions. In this paper, we address an embedding
+misalignment issue that often arises in practical applications due to imperfect
+embedding models or noisy descriptions; such misalignment may lead to incorrect
+retrieval and task failure. We introduce Online-Optimized RAG, a deployment-time
+framework that continually adapts retrieval embeddings from live interactions
+using minimal feedback (e.g., task success). Online-Optimized RAG applies
+lightweight online gradient updates with negligible per-query latency and
+requires no changes to the underlying LLM. The method is plug-and-play: it
+supports both single- and multi-hop tool use, dynamic tool inventories, and
+$K$-retrieval with re-ranking. We provide a problem-dependent theoretical
+analysis that quantifies how the method's performance depends on the
+initialization quality of the embeddings and other related quantities. Across
+diverse tool-use and document-retrieval scenarios, our Online-Optimized RAG
+consistently improves tool selection accuracy and end-task success, thus
+providing a simple, practical path to robust, self-improving RAG systems.

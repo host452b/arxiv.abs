@@ -1,0 +1,20 @@
+Title: WUSH: Near-Optimal Adaptive Transforms for LLM Quantization
+Authors: Jiale Chen, Vage Egiazarian, Roberto L. Castro, Torsten Hoefler, Dan Alistarh
+ID: 2512.00956
+URL: https://arxiv.org/abs/2512.00956
+
+Quantizing LLM weights and activations is a standard approach for efficient
+deployment, but a few extreme outliers can stretch the dynamic range and amplify
+low-bit quantization errors. Prior transform-based mitigations (e.g., Hadamard
+rotations) are fixed and data-agnostic, and their optimality for quantization
+has remained unclear. We derive closed-form optimal linear blockwise transforms
+for joint weight-activation quantization under standard RTN AbsMax-scaled block
+quantizers, covering both integer and floating-point formats. The resulting
+construction, WUSH, combines a Hadamard backbone with a data-dependent second-
+moment component to form a non-orthogonal transform that is provably near-
+optimal for FP and INT quantizers under mild assumptions while admitting an
+efficient fused GPU implementation. Empirically, WUSH improves W4A4 accuracy
+over the strongest Hadamard-based baselines (e.g., on Llama-3.1-8B-Instruct in
+MXFP4, it gains +2.8 average points with RTN and +0.7 with GPTQ) while
+delivering up to 6.6$\times$ per-layer throughput over BF16 via FP4 MatMul.
+Source code is available at https://github.com/IST-DASLab/WUSH.

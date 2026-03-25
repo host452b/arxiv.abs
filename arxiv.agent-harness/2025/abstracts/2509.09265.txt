@@ -1,0 +1,24 @@
+Title: Harnessing Uncertainty: Entropy-Modulated Policy Gradients for Long-Horizon LLM Agents
+Authors: Jiawei Wang, Jiacai Liu, Yuqian Fu, Yingru Li, Xintao Wang et al. (+5)
+ID: 2509.09265
+URL: https://arxiv.org/abs/2509.09265
+
+In long-horizon tasks, recent agents based on Large Language Models (LLMs) face
+a significant challenge that sparse, outcome-based rewards make it difficult to
+assign credit to intermediate steps. Previous methods mainly focus on creating
+dense reward signals to guide learning, either through traditional reinforcement
+learning techniques like inverse reinforcement learning or by using Process
+Reward Models for step-by-step feedback. In this paper, we identify a
+fundamental problem in the learning dynamics of LLMs: the magnitude of policy
+gradients is inherently coupled with the entropy, which leads to inefficient
+small updates for confident correct actions and potentially destabilizes large
+updates for uncertain ones. To resolve this, we propose Entropy-Modulated Policy
+Gradients (EMPG), a framework that re-calibrates the learning signal based on
+step-wise uncertainty and the final task outcome. EMPG amplifies updates for
+confident correct actions, penalizes confident errors, and attenuates updates
+from uncertain steps to stabilize exploration. We further introduce a bonus term
+for future clarity that encourages agents to find more predictable solution
+paths. Through comprehensive experiments on three challenging agent tasks,
+WebShop, ALFWorld, and Deep Search, we demonstrate that EMPG achieves
+substantial performance gains and significantly outperforms strong policy
+gradient baselines. Project page is at https://empgseed-seed.github.io/

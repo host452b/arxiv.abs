@@ -1,0 +1,22 @@
+Title: Beyond First-Order: Training LLMs with Stochastic Conjugate Subgradients and AdamW
+Authors: Di Zhang, Yihang Zhang
+ID: 2507.01241
+URL: https://arxiv.org/abs/2507.01241
+
+Stochastic gradient-based descent (SGD), have long been central to training
+large language models (LLMs). However, their effectiveness is increasingly being
+questioned, particularly in large-scale applications where empirical evidence
+suggests potential performance limitations. In response, this paper proposes a
+stochastic conjugate subgradient method together with adaptive sampling tailored
+specifically for training LLMs. The method not only achieves faster convergence
+per iteration but also demonstrates improved scalability compared to traditional
+SGD techniques. It leverages sample complexity analysis to adaptively choose the
+sample size, employs a stochastic conjugate subgradient approach to determine
+search directions and utilizing an AdamW-like algorithm to adaptively adjust
+step sizes. This approach preserves the key advantages of first-order methods
+while effectively addressing the nonconvexity and non-smoothness inherent in
+LLMs training. Additionally, we provide a detailed analysis of the advantage of
+the algorithm. Experimental results show that the proposed method not only
+maintains, but in many cases surpasses, the scalability of traditional SGD
+techniques, significantly enhancing both the speed and accuracy of the
+optimization process.

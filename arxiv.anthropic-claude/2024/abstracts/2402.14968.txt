@@ -1,0 +1,31 @@
+Title: Mitigating Fine-tuning based Jailbreak Attack with Backdoor Enhanced Safety Alignment
+Authors: Jiongxiao Wang, Jiazhao Li, Yiquan Li, Xiangyu Qi, Junjie Hu et al.
+ID: 2402.14968
+URL: https://arxiv.org/abs/2402.14968
+
+Abstract:
+Despite the general capabilities of Large Language Models (LLM), these models
+still request fine-tuning or adaptation with customized data when meeting
+specific business demands. However, this process inevitably introduces new
+threats, particularly against the Fine-tuning based Jailbreak Attack (FJAttack)
+under the setting of Language-Model-as-a-Service (LMaaS), where the model's
+safety has been significantly compromised by fine-tuning users' uploaded
+examples contain just a few harmful examples. Though potential defenses have
+been proposed that the service providers can integrate safety examples into the
+fine-tuning dataset to reduce safety issues, such approaches require
+incorporating a substantial amount of data, making it inefficient. To
+effectively defend against the FJAttack with limited safety examples under
+LMaaS, we propose the Backdoor Enhanced Safety Alignment method inspired by an
+analogy with the concept of backdoor attacks. In particular, service providers
+will construct prefixed safety examples with a secret prompt, acting as a
+"backdoor trigger". By integrating prefixed safety examples into the fine-tuning
+dataset, the subsequent fine-tuning process effectively acts as the "backdoor
+attack", establishing a strong correlation between the secret prompt and safety
+generations. Consequently, safe responses are ensured once service providers
+prepend this secret prompt ahead of any user input during inference. Our
+comprehensive experiments demonstrate that through the Backdoor Enhanced Safety
+Alignment with adding as few as 11 prefixed safety examples, the maliciously
+fine-tuned LLMs will achieve similar safety performance as the original aligned
+models without harming the benign performance. Furthermore, we also present the
+effectiveness of our method in a more practical setting where the fine-tuning
+data consists of both FJAttack examples and the fine-tuning task data.

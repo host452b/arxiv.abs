@@ -1,0 +1,28 @@
+Title: Clinical Cognition Alignment for Gastrointestinal Diagnosis with Multimodal LLMs
+Authors: Huan Zheng, Yucheng Zhou, Tianyi Yan, Dubing Chen, Hongbo Lu et al.
+ID: 2603.20698
+URL: https://arxiv.org/abs/2603.20698
+
+Abstract:
+Multimodal Large Language Models (MLLMs) have demonstrated remarkable potential
+in medical image analysis. However, their application in gastrointestinal
+endoscopy is currently hindered by two critical limitations: the misalignment
+between general model reasoning and standardized clinical cognitive pathways,
+and the lack of causal association between visual features and diagnostic
+outcomes. In this paper, we propose a novel Clinical-Cognitive-Aligned
+(CogAlign) framework to address these challenges. First, we endow the model with
+rigorous clinical analytical capabilities by constructing the hierarchical
+clinical cognition dataset and employing Supervised Fine-Tuning (SFT). Unlike
+conventional approaches, this strategy internalizes the hierarchical diagnostic
+logic of experts, ranging from anatomical localization and morphological
+evaluation to microvascular analysis, directly into the model. Second, to
+eliminate visual bias, we provide a theoretical analysis demonstrating that
+standard supervised tuning inevitably converges to spurious background
+correlations. Guided by this insight, we propose a counterfactual-driven
+reinforcement learning strategy to enforce causal rectification. By generating
+counterfactual normal samples via lesion masking and optimizing through
+clinical-cognition-centric rewards, we constrain the model to strictly ground
+its diagnosis in causal lesion features. Extensive experiments demonstrate that
+our approach achieves State-of-the-Art (SoTA) performance across multiple
+benchmarks, significantly enhancing diagnostic accuracy in complex clinical
+scenarios. All source code and datasets will be made publicly available.

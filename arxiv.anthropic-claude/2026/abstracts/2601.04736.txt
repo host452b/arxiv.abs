@@ -1,0 +1,26 @@
+Title: AM$^3$Safety: Towards Data Efficient Alignment of Multi-modal Multi-turn Safety for MLLMs
+Authors: Han Zhu, Jiale Chen, Chengkun Cai, Shengjie Sun, Haoran Li et al.
+ID: 2601.04736
+URL: https://arxiv.org/abs/2601.04736
+
+Abstract:
+Multi-modal Large Language Models (MLLMs) are increasingly deployed in
+interactive applications. However, their safety vulnerabilities become
+pronounced in multi-turn multi-modal scenarios, where harmful intent can be
+gradually reconstructed across turns, and security protocols fade into oblivion
+as the conversation progresses. Existing Reinforcement Learning from Human
+Feedback (RLHF) alignment methods are largely developed for single-turn visual
+question-answer (VQA) task and often require costly manual preference
+annotations, limiting their effectiveness and scalability in dialogues. To
+address this challenge, we present InterSafe-V, an open-source multi-modal
+dialogue dataset containing 11,270 dialogues and 500 specially designed refusal
+VQA samples. This dataset, constructed through interaction between several
+models, is designed to more accurately reflect real-world scenarios and includes
+specialized VQA pairs tailored for specific domains. Building on this dataset,
+we propose AM$^3$Safety, a framework that combines a cold-start refusal phase
+with Group Relative Policy Optimization (GRPO) fine-tuning using turn-aware
+dual-objective rewards across entire dialogues. Experiments on
+Qwen2.5-VL-7B-Instruct and LLaVA-NeXT-7B show more than 10\% decrease in Attack
+Success Rate (ASR) together with an increment of at least 8\% in harmless
+dimension and over 13\% in helpful dimension of MLLMs on multi-modal multi-turn
+safety benchmarks, while preserving their general abilities.

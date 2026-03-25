@@ -1,0 +1,25 @@
+Title: Internalizing LLM Reasoning via Discovery and Replay of Latent Actions
+Authors: Zhenning Shi, Yijia Zhu, Junhan Shi, Xun Zhang, Lei Wang et al.
+ID: 2602.04925
+URL: https://arxiv.org/abs/2602.04925
+
+Abstract:
+The internalization of chain-of-thought processes into hidden states has emerged
+as a highly efficient paradigm for scaling test-time compute. However, existing
+activation steering methods rely on static control vectors that fail to adapt to
+the non-stationary evolution of complex reasoning tasks. To address this
+limitation, we propose STIR (Self-Distilled Tools for Internal Reasoning), a
+framework that reformulates reasoning enhancement as a dynamic latent trajectory
+control problem. STIR introduces a synergistic three-stage pipeline: (1)
+differential intrinsic action induction harvests latent reasoning successes to
+crystallize steering primitives; (2) sparse control basis construction curates a
+compact, geometrically diverse tool library; and (3) value-modulated trajectory
+intervention dynamically injects context-specific impulses via anchor-based
+gating. Extensive experiments on six arithmetic and logical benchmarks across
+four representative models demonstrate that STIR improves average accuracy by
+1.9% to 7.5% while reducing average token consumption by up to 35% compared to
+vanilla decoding. These findings demonstrate that the benefits of explicit
+chain-of-thought can be realized through dynamic latent trajectory control,
+internalizing the reasoning process to bypass the explicit generation while
+achieving superior fidelity. Our code is available at
+https://github.com/sznnzs/LLM-Latent-Action.

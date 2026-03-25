@@ -1,0 +1,24 @@
+Title: Training Long-Context, Multi-Turn Software Engineering Agents with Reinforcement Learning
+Authors: Alexander Golubev, Maria Trofimova, Sergei Polezhaev, Ibragim Badertdinov, Maksim Nekrashevich et al. (+7)
+ID: 2508.03501
+URL: https://arxiv.org/abs/2508.03501
+
+Research on applications of reinforcement learning (RL) to large language models
+has mostly been focused on single-turn problems, such as mathematical reasoning
+or single-shot code generation. While these problems can be viewed as token-
+level multi-turn Markov decision processes (MDPs), this view corresponds to a
+degenerate case of multi-turn interaction where the environment provides no
+feedback. This contrasts with many real-world domains, such as software
+engineering (SWE), which require rich multi-turn interactions with a stateful
+environment that responds to each action with a non-trivial observation. To
+bridge this gap, we demonstrate the successful application of RL to this general
+regime. Our methodology begins with rejection fine-tuning (RFT) using execution
+feedback to train a policy to follow instructions and formatting effectively,
+followed by a synchronous RL pipeline using DAPO for iterative improvement.
+Applying this pipeline to Qwen2.5-72B-Instruct, we increase its Pass@1 on the
+SWE-bench Verified benchmark from 11% to 39%, substantially improving upon the
+20% RFT baseline. On the May and June splits of SWE-rebench, the resulting agent
+achieves Pass@1 of 35% and 31% respectively, competitive with even larger models
+such as DeepSeek-V3-0324 or Qwen3-235B-A22B, demonstrating that our methodology
+offers a practical approach for training capable agents for multi-turn
+interactive tasks using open-weight models.

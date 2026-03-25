@@ -1,0 +1,24 @@
+Title: Among Us: A Sandbox for Measuring and Detecting Agentic Deception
+Authors: Satvik Golechha, Adrià Garriga-Alonso
+ID: 2504.04072
+URL: https://arxiv.org/abs/2504.04072
+
+Prior studies on deception in language-based AI agents typically assess whether
+the agent produces a false statement about a topic, or makes a binary choice
+prompted by a goal, rather than allowing open-ended deceptive behavior to emerge
+in pursuit of a longer-term goal. To fix this, we introduce Among Us, a sandbox
+social deception game where LLM-agents exhibit long-term, open-ended deception
+as a consequence of the game objectives. While most benchmarks saturate quickly,
+Among Us can be expected to last much longer, because it is a multi-player game
+far from equilibrium. Using the sandbox, we evaluate 18 proprietary and open-
+weight LLMs and uncover a general trend: models trained with RL are
+comparatively much better at producing deception than detecting it. We evaluate
+the effectiveness of methods to detect lying and deception: logistic regression
+on the activations and sparse autoencoders (SAEs). We find that probes trained
+on a dataset of "pretend you're a dishonest model:.." generalize extremely well
+out-of-distribution, consistently obtaining AUROCs over 95% even when evaluated
+just on the deceptive statement, without the chain of thought. We also find two
+SAE features that work well at deception detection but are unable to steer the
+model to lie less. We hope our open-sourced sandbox, game logs, and probes serve
+to anticipate and mitigate deceptive behavior and capabilities in language-based
+agents.

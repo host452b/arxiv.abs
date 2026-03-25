@@ -1,0 +1,24 @@
+Title: Few Tokens, Big Leverage: Preserving Safety Alignment by Constraining Safety Tokens during Fine-tuning
+Authors: Guoli Wang, Haonan Shi, Tu Ouyang, An Wang
+ID: 2603.07445
+URL: https://arxiv.org/abs/2603.07445
+
+Abstract:
+Large language models (LLMs) often require fine-tuning (FT) to perform well on
+downstream tasks, but FT can induce safety-alignment drift even when the
+training dataset contains only benign data. Prior work shows that introducing a
+small fraction of harmful data can substantially compromise LLM refusal
+behavior, causing LLMs to comply with harmful requests. Existing defense methods
+often rely on model-wide interventions, such as restricting which parameters are
+updated or injecting additional safety data, which can limit generality and
+degrade downstream task performance. To address these limitations, we propose a
+fine-tuning framework called Preserving Safety Alignment via Constrained Tokens
+(PACT), which stabilizes the model's confidence on safety tokens. Our approach
+is motivated by the empirical observation that safety-aligned behavior is
+reflected in the model's token-level output confidence and is often concentrated
+on a small subset of safety-related tokens. During downstream fine-tuning, we
+regularize the fine-tuned model to match the aligned reference model's
+confidence on safety-related tokens at each response step, while leaving
+non-safety tokens largely unconstrained to allow effective task adaptation. This
+targeted constraint prevents alignment drift without imposing global
+restrictions that typically trade off with model utility.

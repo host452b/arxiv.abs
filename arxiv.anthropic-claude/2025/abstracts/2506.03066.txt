@@ -1,0 +1,23 @@
+Title: Provable Reinforcement Learning from Human Feedback with an Unknown Link Function
+Authors: Qining Zhang, Lei Ying
+ID: 2506.03066
+URL: https://arxiv.org/abs/2506.03066
+
+Abstract:
+Link functions, which characterize how human preferences are generated from the
+value function of an RL problem, are a crucial component in designing RLHF
+algorithms. Almost all RLHF algorithms, including state-of-the-art ones in
+empirical studies such as DPO and PPO, assume the link function is known to the
+agent (e.g., a logistic function according to the Bradley-Terry model), which is
+arguably unrealistic considering the complex nature of human preferences. To
+avoid link function mis-specification, this paper studies general RLHF problems
+with unknown link functions. We propose a novel policy optimization algorithm
+called ZSPO based on a new zeroth-order policy optimization method, where the
+key is to use human preference to construct a parameter update direction that is
+positively correlated with the true policy gradient direction. ZSPO achieves it
+by estimating the sign of the value function difference instead of estimating
+the gradient from the value function difference, so it does not require knowing
+the link function. Under mild conditions, ZSPO converges to a stationary policy
+with a polynomial convergence rate depending on the number of policy iterations
+and trajectories per iteration. Numerical results also show the superiority of
+ZSPO under link function mismatch.

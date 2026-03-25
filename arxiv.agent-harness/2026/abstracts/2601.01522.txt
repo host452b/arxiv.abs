@@ -1,0 +1,27 @@
+Title: Bayesian Orchestration of Multi-LLM Agents for Cost-Aware Sequential Decision-Making
+Authors: Danial Amin
+ID: 2601.01522
+URL: https://arxiv.org/abs/2601.01522
+
+Abstract:
+Large language models (LLMs) are increasingly deployed as autonomous decision
+agents in settings with asymmetric error costs: hiring (missed talent vs wasted
+interviews), medical triage (missed emergencies vs unnecessary escalation), and
+fraud detection (approved fraud vs declined legitimate payments). The dominant
+design queries a single LLM for a posterior over states, thresholds
+"confidence," and acts; we prove this is inadequate for sequential decisions
+with costs. We propose a Bayesian, cost-aware multi-LLM orchestration framework
+that treats LLMs as approximate likelihood models rather than classifiers. For
+each candidate state, we elicit likelihoods via contrastive prompting, aggregate
+across diverse models with robust statistics, and update beliefs with Bayes rule
+under explicit priors as new evidence arrives. This enables coherent belief
+updating, expected-cost action selection, principled information gathering via
+value of information, and fairness gains via ensemble bias mitigation. In resume
+screening with costs of 40000 USD per missed hire, 2500 USD per interview, and
+150 USD per phone screen, experiments on 1000 resumes using five LLMs (GPT-4o,
+Claude 4.5 Sonnet, Gemini Pro, Grok, DeepSeek) reduce total cost by 294000 USD
+(34 percent) versus the best single-LLM baseline and improve demographic parity
+by 45 percent (max group gap 22 to 5 percentage points). Ablations attribute 51
+percent of savings to multi-LLM aggregation, 43 percent to sequential updating,
+and 20 percent to disagreement-triggered information gathering, consistent with
+the theoretical benefits of correct probabilistic foundations.

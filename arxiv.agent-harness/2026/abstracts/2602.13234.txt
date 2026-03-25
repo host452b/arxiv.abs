@@ -1,0 +1,23 @@
+Title: Stay in Character, Stay Safe: Dual-Cycle Adversarial Self-Evolution for Safety Role-Playing Agents
+Authors: Mingyang Liao, Yichen Wan, shuchen wu, Chenxi Miao, Xin Shen et al. (+4)
+ID: 2602.13234
+URL: https://arxiv.org/abs/2602.13234
+
+LLM-based role-playing has rapidly improved in fidelity, yet stronger adherence
+to persona constraints commonly increases vulnerability to jailbreak attacks,
+especially for risky or negative personas. Most prior work mitigates this issue
+with training-time solutions (e.g., data curation or alignment-oriented
+regularization). However, these approaches are costly to maintain as personas
+and attack strategies evolve, can degrade in-character behavior, and are
+typically infeasible for frontier closed-weight LLMs. We propose a training-free
+Dual-Cycle Adversarial Self-Evolution framework with two coupled cycles. A
+Persona-Targeted Attacker Cycle synthesizes progressively stronger jailbreak
+prompts, while a Role-Playing Defender Cycle distills observed failures into a
+hierarchical knowledge base of (i) global safety rules, (ii) persona-grounded
+constraints, and (iii) safe in-character exemplars. At inference time, the
+Defender retrieves and composes structured knowledge from this hierarchy to
+guide generation, producing responses that remain faithful to the target persona
+while satisfying safety constraints. Extensive experiments across multiple
+proprietary LLMs show consistent gains over strong baselines on both role
+fidelity and jailbreak resistance, and robust generalization to unseen personas
+and attack prompts.

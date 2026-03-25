@@ -1,0 +1,25 @@
+Title: Refusal Falls off a Cliff: How Safety Alignment Fails in Reasoning?
+Authors: Qingyu Yin, Chak Tou Leong, Linyi Yang, Wenxuan Huang, Wenjie Li et al.
+ID: 2510.06036
+URL: https://arxiv.org/abs/2510.06036
+
+Abstract:
+Large reasoning models (LRMs) with multi-step reasoning capabilities have shown
+remarkable problem-solving abilities, yet they exhibit concerning safety
+vulnerabilities that remain poorly understood. In this work, we investigate why
+safety alignment fails in reasoning models through a mechanistic
+interpretability lens. Using a linear probing approach to trace refusal
+intentions across token positions, we discover a striking phenomenon termed as
+\textbf{refusal cliff}: many poorly-aligned reasoning models correctly identify
+harmful prompts and maintain strong refusal intentions during their thinking
+process, but experience a sharp drop in refusal scores at the final tokens
+before output generation. This suggests that these models are not inherently
+unsafe; rather, their refusal intentions are systematically suppressed. Through
+causal intervention analysis, we identify a sparse set of attention heads that
+negatively contribute to refusal behavior. Ablating just 3\% of these heads can
+reduce attack success rates below 10\%. Building on these mechanistic insights,
+we propose \textbf{Cliff-as-a-Judge}, a novel data selection method that
+identifies training examples exhibiting the largest refusal cliff to efficiently
+repair reasoning models' safety alignment. This approach achieves comparable
+safety improvements using only 1.7\% of the vanilla safety training data,
+demonstrating a less-is-more effect in safety alignment.

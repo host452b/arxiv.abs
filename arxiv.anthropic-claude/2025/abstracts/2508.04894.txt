@@ -1,0 +1,25 @@
+Title: Adversarial Attacks and Defenses on Graph-aware Large Language Models (LLMs)
+Authors: Iyiola E. Olatunji, Franziska Boenisch, Jing Xu, Adam Dziedzic
+ID: 2508.04894
+URL: https://arxiv.org/abs/2508.04894
+
+Large Language Models (LLMs) are increasingly integrated with graph-structured
+data for tasks like node classification, a domain traditionally dominated by
+Graph Neural Networks (GNNs). While this integration leverages rich relational
+information to improve task performance, their robustness against adversarial
+attacks remains unexplored. We take the first step to explore the
+vulnerabilities of graph-aware LLMs by leveraging existing adversarial attack
+methods tailored for graph-based models, including those for poisoning
+(training-time attacks) and evasion (test-time attacks), on two representative
+models, LLAGA (Chen et al. 2024) and GRAPHPROMPTER (Liu et al. 2024).
+Additionally, we discover a new attack surface for LLAGA where an attacker can
+inject malicious nodes as placeholders into the node sequence template to
+severely degrade its performance. Our systematic analysis reveals that certain
+design choices in graph encoding can enhance attack success, with specific
+findings that: (1) the node sequence template in LLAGA increases its
+vulnerability; (2) the GNN encoder used in GRAPHPROMPTER demonstrates greater
+robustness; and (3) both approaches remain susceptible to imperceptible feature
+perturbation attacks. Finally, we propose an end-to-end defense framework
+GALGUARD, that combines an LLM-based feature correction module to mitigate
+feature-level perturbations and adapted GNN defenses to protect against
+structural attacks.

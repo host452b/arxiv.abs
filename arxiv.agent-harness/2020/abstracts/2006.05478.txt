@@ -1,0 +1,26 @@
+Title: ToolNet: Using Commonsense Generalization for Predicting Tool Use for Robot Plan Synthesis
+Authors: Rajas Bansal, Shreshth Tuli, Rohan Paul,  Mausam
+ID: 2006.05478
+URL: https://arxiv.org/abs/2006.05478
+
+Abstract:
+A robot working in a physical environment (like home or factory) needs to learn
+to use various available tools for accomplishing different tasks, for instance,
+a mop for cleaning and a tray for carrying objects. The number of possible tools
+is large and it may not be feasible to demonstrate usage of each individual tool
+during training. Can a robot learn commonsense knowledge and adapt to novel
+settings where some known tools are missing, but alternative unseen tools are
+present? We present a neural model that predicts the best tool from the
+available objects for achieving a given declarative goal. This model is trained
+by user demonstrations, which we crowd-source through humans instructing a robot
+in a physics simulator. This dataset maintains user plans involving multi-step
+object interactions along with symbolic state changes. Our neural model,
+ToolNet, combines a graph neural network to encode the current environment
+state, and goal-conditioned spatial attention to predict the appropriate tool.
+We find that providing metric and semantic properties of objects, and
+pre-trained object embeddings derived from a commonsense knowledge repository
+such as ConceptNet, significantly improves the model's ability to generalize to
+unseen tools. The model makes accurate and generalizable tool predictions. When
+compared to a graph neural network baseline, it achieves 14-27% accuracy
+improvement for predicting known tools from new world scenes, and 44-67%
+improvement in generalization for novel objects not encountered during training.

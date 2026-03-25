@@ -1,0 +1,23 @@
+Title: The Curse and Blessing of Mean Bias in FP4-Quantized LLM Training
+Authors: Hengjie Cao, Zhendong Huang, Mengyi Chen, Yifeng Yang, Fanqi Yu et al. (+13)
+ID: 2603.10444
+URL: https://arxiv.org/abs/2603.10444
+
+Large language models trained on natural language exhibit pronounced anisotropy:
+a small number of directions concentrate disproportionate energy, while the
+remaining dimensions form a broad semantic tail. In low-bit training regimes,
+this geometry becomes numerically unstable. Because blockwise quantization
+scales are determined by extreme elementwise magnitudes, dominant directions
+stretch the dynamic range, compressing long-tail semantic variation into narrow
+numerical bins. We show that this instability is primarily driven by a coherent
+rank-one mean bias, which constitutes the dominant component of spectral
+anisotropy in LLM representations. This mean component emerges systematically
+across layers and training stages and accounts for the majority of extreme
+activation magnitudes, making it the principal driver of dynamic-range inflation
+under low precision. Crucially, because the dominant instability is rank-one, it
+can be eliminated through a simple source-level mean-subtraction operation. This
+bias-centric conditioning recovers most of the stability benefits of SVD-based
+spectral methods while requiring only reduction operations and standard
+quantization kernels. Empirical results on FP4 (W4A4G4) training show that mean
+removal substantially narrows the loss gap to BF16 and restores downstream
+performance, providing a hardware-efficient path to stable low-bit LLM training.

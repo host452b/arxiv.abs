@@ -1,0 +1,25 @@
+Title: Enhancing Spectral Graph Neural Networks with LLM-Predicted Homophily
+Authors: Kangkang Lu, Yanhua Yu, Zhiyong Huang, Tat-Seng Chua
+ID: 2506.14220
+URL: https://arxiv.org/abs/2506.14220
+
+Spectral Graph Neural Networks (SGNNs) have achieved remarkable performance in
+tasks such as node classification due to their ability to learn flexible
+filters. Typically, these filters are learned under the supervision of
+downstream tasks, enabling SGNNs to adapt to diverse structural patterns.
+However, in scenarios with limited labeled data, SGNNs often struggle to capture
+the optimal filter shapes, resulting in degraded performance, especially on
+graphs with heterophily. Meanwhile, the rapid progress of Large Language Models
+(LLMs) has opened new possibilities for enhancing graph learning without
+modifying graph structure or requiring task-specific training. In this work, we
+propose a novel framework that leverages LLMs to estimate the homophily level of
+a graph and uses this global structural prior to guide the construction of
+spectral filters. Specifically, we design a lightweight and plug-and-play
+pipeline where a small set of labeled node pairs is formatted as natural
+language prompts for the LLM, which then predicts the graph's homophily ratio.
+This estimated value informs the spectral filter basis, enabling SGNNs to adapt
+more effectively to both homophilic and heterophilic structures. Extensive
+experiments on multiple benchmark datasets demonstrate that our LLM-assisted
+spectral framework consistently improves performance over strong SGNN baselines.
+Importantly, this enhancement incurs negligible computational and monetary cost,
+making it a practical solution for real-world graph applications.

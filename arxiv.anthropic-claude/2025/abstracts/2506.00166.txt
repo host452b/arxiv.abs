@@ -1,0 +1,26 @@
+Title: Disentangled Safety Adapters Enable Efficient Guardrails and Flexible Inference-Time Alignment
+Authors: Kundan Krishna, Joseph Y Cheng, Charles Maalouf, Leon A Gatys
+ID: 2506.00166
+URL: https://arxiv.org/abs/2506.00166
+
+Abstract:
+Existing paradigms for ensuring AI safety, such as guardrail models and
+alignment training, often compromise either inference efficiency or development
+flexibility. We introduce Disentangled Safety Adapters (DSA), a novel framework
+addressing these challenges by decoupling safety-specific computations from a
+task-optimized base model. DSA utilizes lightweight adapters that leverage the
+base model's internal representations, enabling diverse and flexible safety
+functionalities with minimal impact on inference cost. Empirically, DSA-based
+safety guardrails substantially outperform comparably sized standalone models,
+notably improving hallucination detection (0.88 vs. 0.61 AUC on Summedits) and
+also excelling at classifying hate speech (0.98 vs. 0.92 on ToxiGen) and unsafe
+model inputs and responses (0.93 vs. 0.90 on AEGIS2.0 & BeaverTails).
+Furthermore, DSA-based safety alignment allows dynamic, inference-time
+adjustment of alignment strength and a fine-grained trade-off between
+instruction following performance and model safety. Importantly, combining the
+DSA safety guardrail with DSA safety alignment facilitates context-dependent
+alignment strength, boosting safety on StrongReject by 93% while maintaining 98%
+performance on MTBench -- a total reduction in alignment tax of 8 percentage
+points compared to standard safety alignment fine-tuning. Overall, DSA presents
+a promising path towards more modular, efficient, and adaptable AI safety and
+alignment.

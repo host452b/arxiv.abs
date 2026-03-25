@@ -1,0 +1,23 @@
+Title: Automated TEE Adaptation with LLMs: Identifying, Transforming, and Porting Sensitive Functions in Programs
+Authors: Ruidong Han, Zhou Yang, Chengyan Ma, Ye Liu, Yuqing Niu et al. (+3)
+ID: 2502.13379
+URL: https://arxiv.org/abs/2502.13379
+
+Trusted Execution Environments (TEEs) isolate a special space within a device
+memory that is not accessible to the normal world (also known as the untrusted
+environment), even when the device is compromised. Therefore, developers can
+utilize TEEs to provide robust security guarantees for their programs,
+protecting sensitive operations, such as encrypted data storage, fingerprint
+verification, and remote attestation, from software-based attacks. Despite the
+robust protections offered by TEEs, adapting existing programs to leverage such
+security guarantees is challenging, often requiring extensive domain knowledge
+and manual intervention, which makes TEEs less accessible to developers. This
+motivates us to design AUTOTEE, the first Large Language Model (LLM) enabled
+approach that can automatically identify, transform, and port functions
+containing sensitive operations into TEEs with minimal developer intervention.
+By manually reviewing 68 repositories, we constructed a benchmark dataset
+consisting of 385 sensitive functions eligible for transformation, on which
+AUTOTEE achieves a F1 score of 0.94 on Java and 0.87 on Python. AUTOTEE
+effectively transforms these sensitive functions into TEE-compatible versions,
+achieving success rates of 91.8% and 84.3% for Java and Python, respectively,
+when using GPT-4o.

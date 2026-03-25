@@ -1,0 +1,27 @@
+Title: Teacher Agent: A Knowledge Distillation-Free Framework for Rehearsal-based Video Incremental Learning
+Authors: Shengqin Jiang, Yaoyu Fang, Haokui Zhang, Qingshan Liu, Yuankai Qi et al. (+2)
+ID: 2306.00393
+URL: https://arxiv.org/abs/2306.00393
+
+Rehearsal-based video incremental learning often employs knowledge distillation
+to mitigate catastrophic forgetting of previously learned data. However, this
+method faces two major challenges for video task: substantial computing
+resources from loading teacher model and limited replay capability from
+performance-limited teacher model. To address these problems, we first propose a
+knowledge distillation-free framework for rehearsal-based video incremental
+learning called \textit{Teacher Agent}. Instead of loading parameter-heavy
+teacher networks, we introduce an agent generator that is either parameter-free
+or uses only a few parameters to obtain accurate and reliable soft labels. This
+method not only greatly reduces the computing requirement but also circumvents
+the problem of knowledge misleading caused by inaccurate predictions of the
+teacher model. Moreover, we put forward a self-correction loss which provides an
+effective regularization signal for the review of old knowledge, which in turn
+alleviates the problem of catastrophic forgetting. Further, to ensure that the
+samples in the memory buffer are memory-efficient and representative, we
+introduce a unified sampler for rehearsal-based video incremental learning to
+mine fixed-length key video frames. Interestingly, based on the proposed
+strategies, the network exhibits a high level of robustness against spatial
+resolution reduction when compared to the baseline. Extensive experiments
+demonstrate the advantages of our method, yielding significant performance
+improvements while utilizing only half the spatial resolution of video clips as
+network inputs in the incremental phases.

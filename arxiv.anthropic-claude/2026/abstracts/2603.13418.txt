@@ -1,0 +1,30 @@
+Title: GPrune-LLM: Generalization-Aware Structured Pruning for Large Language Models
+Authors: Xiaoyun Liu, Divya Saxena, Jiannong Cao, Yuqing Zhao, Yiying Dong et al. (+1)
+ID: 2603.13418
+URL: https://arxiv.org/abs/2603.13418
+
+Structured pruning is widely used to compress large language models (LLMs), yet
+its effectiveness depends heavily on neuron importance estimation. Most existing
+methods estimate neuron importance from activation statistics on a single
+calibration dataset, which introduces calibration bias and degrades downstream
+cross-task generalization. We observe that neurons exhibit heterogeneous
+distribution sensitivity, with distribution-robust neurons maintaining
+consistent rankings across datasets and distribution-sensitive neurons showing
+high cross-dataset ranking variance. Based on this, we identify two structural
+limitations in existing methods. First, ranking all neurons within a shared
+space causes distribution-sensitive neurons that strongly activate on
+calibration inputs to dominate, crowding out distribution-robust neurons
+critical for out-of-distribution tasks. Second, applying activation-based
+importance metrics uniformly can be unreliable. Distribution-sensitive neurons
+that infrequently activate on calibration data receive insufficient activation
+signal for accurate local ranking. To address these limitations, we propose
+GPrune-LLM, a generalization-aware structured pruning framework that explicitly
+accounts for neuron differences in cross-distribution behavior. We first
+partition neurons into behavior-consistent modules to localize ranking
+competition, then evaluate activation-based metric reliability per module
+according to distribution sensitivity and score magnitude. For modules where
+activation-based scoring is unreliable, we switch to an activation-independent
+metric. Finally, we adaptively learn module-wise sparsity. Extensive experiments
+across multiple downstream tasks demonstrate GPrune-LLM's consistent
+improvements in post-compression generalization, particularly at high sparsity,
+and reduced dependence on importance metric choice.

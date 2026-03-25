@@ -1,0 +1,25 @@
+Title: LIME-LLM: Probing Models with Fluent Counterfactuals, Not Broken Text
+Authors: George Mihaila, Suleyman Olcay Polat, Poli Nemkova, Himanshu Sharma, Namratha V. Urs et al. (+1)
+ID: 2601.11746
+URL: https://arxiv.org/abs/2601.11746
+
+Local explanation methods such as LIME (Ribeiro et al., 2016) remain fundamental
+to trustworthy AI, yet their application to NLP is limited by a reliance on
+random token masking. These heuristic perturbations frequently generate
+semantically invalid, out-of-distribution inputs that weaken the fidelity of
+local surrogate models. While recent generative approaches such as LLiMe
+(Angiulli et al., 2025b) attempt to mitigate this by employing Large Language
+Models for neighborhood generation, they rely on unconstrained paraphrasing that
+introduces confounding variables, making it difficult to isolate specific
+feature contributions. We introduce LIME-LLM, a framework that replaces random
+noise with hypothesis-driven, controlled perturbations. By enforcing a strict
+"Single Mask-Single Sample" protocol and employing distinct neutral infill and
+boundary infill strategies, LIME-LLM constructs fluent, on-manifold
+neighborhoods that rigorously isolate feature effects. We evaluate our method
+against established baselines (LIME, SHAP, Integrated Gradients) and the
+generative LLiMe baseline across three diverse benchmarks: CoLA, SST-2, and
+HateXplain using human-annotated rationales as ground truth. Empirical results
+demonstrate that LIME-LLM establishes a new benchmark for black-box NLP
+explainability, achieving significant improvements in local explanation fidelity
+compared to both traditional perturbation-based methods and recent generative
+alternatives.

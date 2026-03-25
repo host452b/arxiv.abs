@@ -1,0 +1,24 @@
+Title: The Sparse Frontier: Sparse Attention Trade-offs in Transformer LLMs
+Authors: Piotr Nawrot, Robert Li, Renjie Huang, Sebastian Ruder, Kelly Marchisio et al. (+1)
+ID: 2504.17768
+URL: https://arxiv.org/abs/2504.17768
+
+Sparse attention offers a promising strategy to extend long-context capabilities
+in Transformer LLMs, yet its efficiency-accuracy trade-offs remain unclear due
+to the lack of comprehensive evaluation. We address this gap with the largest-
+scale empirical analysis to date of training-free sparse attention, evaluating
+six methods across multiple model families and sizes, sequences up to 128K
+tokens, and sparsity levels up to 0.95 (i.e., $1/20$ attention budget) on nine
+diverse tasks. We first organise the rapidly evolving landscape of sparse
+attention methods into a taxonomy along four design axes. Our analysis then
+yields actionable insights: 1) sparse attention is effective -- larger sparse
+models outperform smaller dense ones at equivalent cost, improving the Pareto
+frontier; 2) due to computational constraints, token-to-page importance
+estimation is unfeasible during prefilling, where the choice of an alternative
+solution (global-to-token or block-to-block) depends on the task, but is
+possible during decoding, enabling better generalisation and tolerance to higher
+sparsity; 3) longer sequences tolerate higher sparsity, suggesting that fixed-
+budget methods in production are suboptimal. Together, these findings provide
+practical guidance for deploying sparse attention and methodological
+recommendations for future evaluations. Our code is available at
+https://github.com/PiotrNawrot/sparse-frontier.

@@ -1,0 +1,24 @@
+Title: Rational Tuning of LLM Cascades via Probabilistic Modeling
+Authors: Michael J. Zellinger, Matt Thomson
+ID: 2501.09345
+URL: https://arxiv.org/abs/2501.09345
+
+Understanding the reliability of large language models (LLMs) has recently
+garnered significant attention. Given LLMs' propensity to hallucinate, as well
+as their high sensitivity to prompt design, it is already challenging to predict
+the performance of an individual LLM. However, the problem becomes more complex
+for compound LLM systems such as cascades, where in addition to each model's
+standalone performance, we must understand how the error rates of different
+models interact. In this paper, we present a probabilistic model for the joint
+performance distribution of a sequence of LLMs, which enables a framework for
+rationally tuning the confidence thresholds of a LLM cascade using continuous
+optimization. Compared to selecting confidence thresholds using Bayesian
+optimization, our parametric Markov-copula model yields more favorable error-
+cost trade-offs, improving the area under the error-cost curve by 4.3% on
+average for cascades with $k\geq 3$ models. In the low-sample regime with $n
+\leq 30$ training examples, the performance improvement widens to 10.2%,
+suggesting that our framework's inductive assumptions about the interactions
+between the error rates of different LLMs enhance sample efficiency. Overall,
+our Markov-copula model provides a rational basis for tuning LLM cascade
+performance and points to the potential of probabilistic methods in analyzing
+systems of LLMs.

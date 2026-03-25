@@ -1,0 +1,25 @@
+Title: Enhancing LLM Training via Spectral Clipping
+Authors: Xiaowen Jiang, Andrei Semenov, Sebastian U. Stich
+ID: 2603.14315
+URL: https://arxiv.org/abs/2603.14315
+
+While spectral-based optimizers like Muon operate directly on the spectrum of
+updates, standard adaptive methods such as AdamW do not account for the global
+spectral structure of weights and gradients, leaving them vulnerable to two
+empirical issues in large language model (LLM) training: (i) the optimizer
+updates can have large spectral norms, potentially destabilizing training and
+degrading generalization; (ii) stochastic gradient noise can exhibit sparse
+spectral spikes, with a few dominant singular values much larger than the rest.
+We propose SPECTRA, a general framework addressing these by (i) post-spectral
+clipping of updates to enforce spectral-norm constraints; (ii) optional pre-
+spectral clipping of gradients to suppress spectral noise spikes. We prove that
+post-clipping constitutes a Composite Frank-Wolfe method with spectral-norm
+constraints and weight regularization, recovering Frobenius and
+$\ell_{\infty}$-norm regularization with SGD-based and sign-based methods. We
+further analyze how pre-clipping mitigates sparse spectral spikes. We propose
+efficient soft spectral clipping via Newton-Schulz iterations, avoiding
+expensive SVD. Experiments on LLM pretraining show SPECTRA uniformly improves
+validation loss for various optimizers, including AdamW, Signum, and AdEMAMix,
+with the best-performing variants achieving state-of-the-art results. Models
+trained with SPECTRA exhibit smaller weight norms, confirming the link between
+spectral clipping and regularization.

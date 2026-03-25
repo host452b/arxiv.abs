@@ -1,0 +1,24 @@
+Title: Embedding Poisoning: Bypassing Safety Alignment via Embedding Semantic Shift
+Authors: Shuai Yuan, Zhibo Zhang, Yuxi Li, Guangdong Bai, Wang Kailong
+ID: 2509.06338
+URL: https://arxiv.org/abs/2509.06338
+
+Abstract:
+The widespread distribution of Large Language Models (LLMs) through public
+platforms like Hugging Face introduces significant security challenges. While
+these platforms perform basic security scans, they often fail to detect subtle
+manipulations within the embedding layer. This work identifies a novel class of
+deployment phase attacks that exploit this vulnerability by injecting
+imperceptible perturbations directly into the embedding layer outputs without
+modifying model weights or input text. These perturbations, though statistically
+benign, systematically bypass safety alignment mechanisms and induce harmful
+behaviors during inference. We propose Search based Embedding Poisoning(SEP), a
+practical, model agnostic framework that introduces carefully optimized
+perturbations into embeddings associated with high risk tokens. SEP leverages a
+predictable linear transition in model responses, from refusal to harmful output
+to semantic deviation to identify a narrow perturbation window that evades
+alignment safeguards. Evaluated across six aligned LLMs, SEP achieves an average
+attack success rate of 96.43% while preserving benign task performance and
+evading conventional detection mechanisms. Our findings reveal a critical
+oversight in deployment security and emphasize the urgent need for embedding
+level integrity checks in future LLM defense strategies.

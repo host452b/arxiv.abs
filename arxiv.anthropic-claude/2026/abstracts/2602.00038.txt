@@ -1,0 +1,27 @@
+Title: LSSF: Safety Alignment for Large Language Models through Low-Rank Safety Subspace Fusion
+Authors: Guanghao Zhou, Panjia Qiu, Cen Chen, Hongyu Li, Mingyuan Chu et al.
+ID: 2602.00038
+URL: https://arxiv.org/abs/2602.00038
+
+Abstract:
+The safety mechanisms of large language models (LLMs) exhibit notable fragility,
+as even fine-tuning on datasets without harmful content may still undermine
+their safety capabilities. Meanwhile, existing safety alignment methods
+predominantly rely on the fine-tuning process, which inadvertently leads to the
+increased complexity and computational resources required. To address these
+issues, we introduce LSSF, a novel safety re-alignment framework with
+\underline{L}ow-Rank \underline{S}afety \underline{S}ubspace \underline{F}usion.
+Our proposed method exploits the low-rank characteristics of safety information
+in LLMs by constructing a low-rank projection matrix to extract the principal
+components of safety vectors. Notably, this projection matrix represents the
+low-rank safety subspace of the LLMs, which we have observed to remain stable
+during fine-tuning process and is isolated from the model's general
+capabilities. These principal components are used to effectively restore safety
+alignment when combined with fine-tuned LLMs through linear arithmetic.
+Additionally, to account for the varying encoding densities of safety
+information across different layers of LLMs, we propose a novel metric called
+safety singular value entropy. This metric quantifies the encoding density and
+allows for the dynamic computation of the safety-critical rank for each safety
+vector. Extensive experiments demonstrate that our proposed post-hoc alignment
+method can effectively restore the safety alignment of fine-tuned models with
+minimal impact on their performance in downstream tasks.

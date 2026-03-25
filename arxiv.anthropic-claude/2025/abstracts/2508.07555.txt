@@ -1,0 +1,25 @@
+Title: Multimodal Remote Inference
+Authors: Keyuan Zhang, Yin Sun, Bo Ji
+ID: 2508.07555
+URL: https://arxiv.org/abs/2508.07555
+
+We consider a remote inference system with multiple modalities, where a
+multimodal machine learning (ML) model performs real-time inference using
+features collected from remote sensors. When sensor observations evolve
+dynamically over time, fresh features are critical for inference tasks. However,
+timely delivery of features from all modalities is often infeasible because of
+limited network resources. Towards this end, in this paper, we study a two-
+modality scheduling problem that seeks to minimize the ML model's inference
+error, expressed as a penalty function of the Age of Information (AoI) vector of
+the two modalities. We develop an index-based threshold policy and prove its
+optimality. Specifically, the scheduler switches to the other modality once the
+current modality's index function exceeds a predetermined threshold. We show
+that both modalities share the same threshold and that the index functions and
+the threshold can be computed efficiently. Our optimality results hold for
+general AoI functions (which could be non-monotonic and non-separable) and
+heterogeneous transmission times across modalities. To demonstrate the
+importance of considering a task-oriented AoI function, we conduct numerical
+experiments based on robot state prediction and compare our policy with round-
+robin and uniform random policies (both are oblivious to the AoI and the
+inference error).n The results show that our policy reduces inference error by
+up to 55% compared with these baselines.

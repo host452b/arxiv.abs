@@ -1,0 +1,29 @@
+Title: CWM: Contrastive World Models for Action Feasibility Learning in Embodied Agent Pipelines
+Authors: Chayan Banerjee
+ID: 2602.22452
+URL: https://arxiv.org/abs/2602.22452
+
+Abstract:
+A reliable action feasibility scorer is a critical bottleneck in embodied agent
+pipelines: before any planning or reasoning occurs, the agent must identify
+which candidate actions are physically executable in the current state. Existing
+approaches use supervised fine-tuning (SFT) to train action scorers, but SFT
+treats each candidate independently and does not explicitly teach the model to
+discriminate between actions that are physically correct and those that are
+subtly wrong. We propose the Contrastive World Model (CWM), which fine-tunes a
+large language model (LLM) as an action scorer using an InfoNCE contrastive
+objective with hard-mined negative examples. The key idea is to push valid
+actions away from invalid ones in scoring space, with special emphasis on hard
+negatives: semantically similar but physically incompatible candidates. We
+evaluate CWM on the ScienceWorld benchmark through two studies. First, an
+intrinsic affordance evaluation on 605 hard-negative test pairs shows that CWM
+outperforms SFT by +6.76 percentage points on Precision@1 for minimal-edit
+negatives -- cases where a single word changes the physical outcome -- and
+achieves a higher AUC-ROC (0.929 vs. 0.906). Second, a live filter
+characterisation study measures how well CWM ranks gold-path actions against all
+valid environment actions during task execution. Under out-of-distribution
+stress conditions, CWM maintains a significantly better safety margin (-2.39)
+than SFT (-3.96), indicating that the gold action is ranked closer to the top.
+These results support the hypothesis that contrastive training induces
+representations that capture physical feasibility more faithfully than SFT
+alone.

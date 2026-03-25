@@ -1,0 +1,24 @@
+Title: Converting Artificial Neural Networks to Spiking Neural Networks via Parameter Calibration
+Authors: Yuhang Li, Shikuang Deng, Xin Dong, Shi Gu
+ID: 2205.10121
+URL: https://arxiv.org/abs/2205.10121
+
+Spiking Neural Network (SNN), originating from the neural behavior in biology,
+has been recognized as one of the next-generation neural networks.
+Conventionally, SNNs can be obtained by converting from pre-trained Artificial
+Neural Networks (ANNs) by replacing the non-linear activation with spiking
+neurons without changing the parameters. In this work, we argue that simply
+copying and pasting the weights of ANN to SNN inevitably results in activation
+mismatch, especially for ANNs that are trained with batch normalization (BN)
+layers. To tackle the activation mismatch issue, we first provide a theoretical
+analysis by decomposing local conversion error to clipping error and flooring
+error, and then quantitatively measure how this error propagates throughout the
+layers using the second-order analysis. Motivated by the theoretical results, we
+propose a set of layer-wise parameter calibration algorithms, which adjusts the
+parameters to minimize the activation mismatch. Extensive experiments for the
+proposed algorithms are performed on modern architectures and large-scale tasks
+including ImageNet classification and MS COCO detection. We demonstrate that our
+method can handle the SNN conversion with batch normalization layers and
+effectively preserve the high accuracy even in 32 time steps. For example, our
+calibration algorithms can increase up to 65% accuracy when converting VGG-16
+with BN layers.

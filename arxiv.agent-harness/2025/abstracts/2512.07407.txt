@@ -1,0 +1,25 @@
+Title: Training Language Models to Use Prolog as a Tool
+Authors: Niklas Mellgren, Peter Schneider-Kamp, Lukas Galke Poech
+ID: 2512.07407
+URL: https://arxiv.org/abs/2512.07407
+
+Abstract:
+Ensuring reliable tool use is critical for safe agentic AI systems. Language
+models frequently produce unreliable reasoning with plausible but incorrect
+solutions that are difficult to verify. To address this, we investigate
+fine-tuning models to use Prolog as an external tool for verifiable computation.
+Using Group Relative Policy Optimization (GRPO), we fine-tune
+Qwen2.5-3B-Instruct on a cleaned GSM8K-Prolog-Prover dataset while varying (i)
+prompt structure, (ii) reward composition (execution, syntax, semantics,
+structure), and (iii) inference protocol: single-shot, best-of-N, and two
+agentic modes where Prolog is invoked internally or independently. Our
+reinforcement learning approach outperforms supervised fine-tuning, with our 3B
+model achieving zero-shot MMLU performance comparable to 7B few-shot results.
+Our findings reveal that: 1) joint tuning of prompt, reward, and inference
+shapes program syntax and logic; 2) best-of-N with external Prolog verification
+maximizes accuracy on GSM8K; 3) agentic inference with internal repair yields
+superior zero-shot generalization on MMLU-Stem and MMLU-Pro. These results
+demonstrate that grounding model reasoning in formal verification systems
+substantially improves reliability and auditability for safety-critical
+applications. The source code for reproducing our experiments is available under
+https://github.com/niklasmellgren/grpo-prolog-inference

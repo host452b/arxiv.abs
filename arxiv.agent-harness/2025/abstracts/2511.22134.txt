@@ -1,0 +1,27 @@
+Title: DualVLA: Building a Generalizable Embodied Agent via Partial Decoupling of Reasoning and Action
+Authors: Zhen Fang, Zhuoyang Liu, Jiaming Liu, Hao Chen, Yu Zeng et al.
+ID: 2511.22134
+URL: https://arxiv.org/abs/2511.22134
+
+Abstract:
+To build a generalizable Vision-Language-Action (VLA) model with strong
+reasoning ability, a common strategy is to first train a specialist VLA on robot
+demonstrations to acquire reliable manipulation skills, and then incorporate
+mixed annotated robot data together with multimodal data to restore broader
+reasoning capabilities. However, we observe that the resulting reasoning VLA
+often suffers from degraded action performance compared to the specialist model
+before fine-tuning, a phenomenon we refer to as action degeneration. To address
+this issue, we propose DualVLA, which enhances action performance through
+carefully designed post-training while still preserving reasoning capability. We
+first introduce a dual-layer data pruning method that removes redundant embodied
+reasoning, preventing it from adversely influencing action learning. To further
+strengthen action generation, we design a dual-teacher adaptive distillation
+strategy that assigns different supervision signals to different data domains
+while maintaining reasoning ability. To fill the evaluation gap for generalist
+VLAs, we also propose VLA Score, which decouples VLA capability into reasoning,
+intention, action, and alignment dimensions for a more fine-grained assessment.
+Experiments show that DualVLA achieves an average success rate of 61.0 in
+SimplerEnv and an average score of 65.4 across eight competitive multimodal
+benchmarks, demonstrating a stronger balance between precise action execution
+and multimodal understanding. Project Website:
+https://costaliya.github.io/DualVLA/.

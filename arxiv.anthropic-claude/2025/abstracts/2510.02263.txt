@@ -1,0 +1,25 @@
+Title: RLAD: Training LLMs to Discover Abstractions for Solving Reasoning Problems
+Authors: Yuxiao Qu, Anikait Singh, Yoonho Lee, Amrith Setlur, Ruslan Salakhutdinov et al. (+2)
+ID: 2510.02263
+URL: https://arxiv.org/abs/2510.02263
+
+Reasoning requires going beyond pattern matching or memorization of solutions to
+identify and implement "algorithmic procedures" that can be used to deduce
+answers to hard problems. Doing so requires realizing the most relevant
+primitives, intermediate results, or shared procedures, and building upon them.
+While RL post-training on long chains of thought ultimately aims to uncover this
+kind of algorithmic behavior, most reasoning traces learned by large models fail
+to consistently capture or reuse procedures, instead drifting into verbose and
+degenerate exploration. To address more effective reasoning, we introduce
+reasoning abstractions: concise natural language descriptions of procedural and
+factual knowledge that guide the model toward learning successful reasoning. We
+train models to be capable of proposing multiple abstractions given a problem,
+followed by RL that incentivizes building a solution while using the information
+provided by these abstractions. This results in a two-player RL training
+paradigm, abbreviated as RLAD, that jointly trains an abstraction generator and
+a solution generator. This setup effectively enables structured exploration,
+decouples learning signals of abstraction proposal and solution generation, and
+improves generalization to harder problems. We also show that allocating more
+test-time compute to generating abstractions is more beneficial for performance
+than generating more solutions at large test budgets, illustrating the role of
+abstractions in guiding meaningful exploration.

@@ -1,0 +1,25 @@
+Title: Consistency Training Helps Stop Sycophancy and Jailbreaks
+Authors: Alex Irpan, Alexander Matt Turner, Mark Kurzeja, David K. Elson, Rohin Shah
+ID: 2510.27062
+URL: https://arxiv.org/abs/2510.27062
+
+Abstract:
+An LLM's factuality and refusal training can be compromised by simple changes to
+a prompt. Models often adopt user beliefs (sycophancy) or satisfy inappropriate
+requests which are wrapped within special text (jailbreaking). We explore
+\emph{consistency training}, a self-supervised paradigm that teaches a model to
+be invariant to certain irrelevant cues in the prompt. Instead of teaching the
+model what exact response to give on a particular prompt, we aim to teach the
+model to behave identically across prompt data augmentations (like adding
+leading questions or jailbreak text). We try enforcing this invariance in two
+ways: over the model's external outputs (\emph{Bias-augmented Consistency
+Training} (BCT) from Chua et al. [2025]) and over its internal activations
+(\emph{Activation Consistency Training} (ACT), a method we introduce). Both
+methods reduce Gemini 2.5 Flash's susceptibility to irrelevant cues. Because
+consistency training uses responses from the model itself as training data, it
+avoids issues that arise from stale training data, such as degrading model
+capabilities or enforcing outdated response guidelines. While BCT and ACT reduce
+sycophancy equally well, BCT does better at jailbreak reduction. We think that
+BCT can simplify training pipelines by removing reliance on static datasets. We
+argue that some alignment problems are better viewed not in terms of optimal
+responses, but rather as consistency issues.

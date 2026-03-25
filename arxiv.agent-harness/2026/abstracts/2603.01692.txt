@@ -1,0 +1,25 @@
+Title: Reasoning as Gradient: Scaling MLE Agents Beyond Tree Search
+Authors: Yifei Zhang, Xu Yang, Xiao Yang, Bowen Xian, Qizheng Li et al.
+ID: 2603.01692
+URL: https://arxiv.org/abs/2603.01692
+
+Abstract:
+LLM-based agents for machine learning engineering (MLE) predominantly rely on
+tree search, a form of gradient-free optimization that uses scalar validation
+scores to rank candidates. As LLM reasoning capabilities improve, exhaustive
+enumeration becomes increasingly inefficient compared to directed updates,
+analogous to how accurate gradients enable efficient descent over random search.
+We introduce \textsc{Gome}, an MLE agent that operationalizes gradient-based
+optimization. \textsc{Gome} maps structured diagnostic reasoning to gradient
+computation, success memory to momentum, and multi-trace execution to
+distributed optimization. Under a closed-world protocol that isolates
+architectural effects from external knowledge, \textsc{Gome} achieves a
+state-of-the-art 35.1\% any-medal rate on MLE-Bench with a restricted 12-hour
+budget on a single V100 GPU. Scaling experiments across 10 models reveal a
+critical crossover: with weaker models, tree search retains advantages by
+compensating for unreliable reasoning through exhaustive exploration; as
+reasoning capability strengthens, gradient-based optimization progressively
+outperforms, with the gap widening at frontier-tier models. Given the rapid
+advancement of reasoning-oriented LLMs, this positions gradient-based
+optimization as an increasingly favorable paradigm. We release our codebase and
+GPT-5 traces at https://github.com/microsoft/RD-Agent.

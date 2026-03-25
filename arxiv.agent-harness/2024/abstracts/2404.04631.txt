@@ -1,0 +1,27 @@
+Title: On the Limitations of Large Language Models (LLMs): False Attribution
+Authors: Tosin Adewumi, Nudrat Habib, Lama Alkhaled, Elisa Barney
+ID: 2404.04631
+URL: https://arxiv.org/abs/2404.04631
+
+Abstract:
+In this work, we introduce a new hallucination metric - Simple Hallucination
+Index (SHI) and provide insight into one important limitation of the parametric
+knowledge of large language models (LLMs), i.e. false attribution. The task of
+automatic author attribution for relatively small chunks of text is an important
+NLP task but can be challenging. We empirically evaluate the power of 3 open
+SotA LLMs in zero-shot setting (Gemma-7B, Mixtral 8x7B, and LLaMA-2-13B). We
+acquired the top 10 most popular books of a month, according to Project
+Gutenberg, divided each one into equal chunks of 400 words, and prompted each
+LLM to predict the author. We then randomly sampled 162 chunks per book for
+human evaluation, based on the error margin of 7% and a confidence level of 95%.
+The average results show that Mixtral 8x7B has the highest prediction accuracy,
+the lowest SHI, and a Pearson's correlation (r) of 0.724, 0.263, and -0.9996,
+respectively, followed by LLaMA-2-13B and Gemma-7B. However, Mixtral 8x7B
+suffers from high hallucinations for 3 books, rising as high as a SHI of 0.87
+(in the range 0-1, where 1 is the worst). The strong negative correlation of
+accuracy and SHI, given by r, demonstrates the fidelity of the new hallucination
+metric, which may generalize to other tasks. We also show that prediction
+accuracies correlate positively with the frequencies of Wikipedia instances of
+the book titles instead of the downloads and we perform error analyses of
+predictions. We publicly release the annotated chunks of data and our codes to
+aid the reproducibility and evaluation of other models.

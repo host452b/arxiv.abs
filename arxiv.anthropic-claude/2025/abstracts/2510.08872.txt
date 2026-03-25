@@ -1,0 +1,28 @@
+Title: GTAlign: Game-Theoretic Alignment of LLM Assistants for Social Welfare
+Authors: Siqi Zhu, David Zhang, Pedro Cisneros-Velarde, Jiaxuan You
+ID: 2510.08872
+URL: https://arxiv.org/abs/2510.08872
+
+Abstract:
+Large Language Models (LLMs) have achieved remarkable progress in reasoning, yet
+sometimes produce responses that are suboptimal for users in tasks such as
+writing, information seeking, or providing practical guidance. Conventional
+alignment practices typically assume that maximizing model reward also maximizes
+user welfare, but this assumption frequently fails in practice: models may
+over-clarify or generate overly verbose reasoning when users prefer concise
+answers. Such behaviors resemble the prisoner's dilemma, where individually
+rational choices lead to socially suboptimal outcomes. The fundamental challenge
+is the lack of a principled decision making mechanism that mutually benefits
+both the LLM and the user. We propose Game-Theoretic Alignment (GTAlign), an
+alignment framework that integrates game-theoretic decision making into both
+reasoning and training. During reasoning, the model explicitly treats user-LLM
+interaction as a strategic game: it constructs payoff matrices within its
+reasoning chain to estimate welfare for both itself and the user, and then
+selects actions that are mutually beneficial. During training, we introduce a
+social welfare reward that reinforces cooperative responses, aligning model
+behavior with socially efficient outcomes. In addition, we introduce an
+inference technique that leverages game-theoretic reasoning to dynamically adapt
+LLM's response when pricing policies of LLM service change. Extensive
+experiments demonstrate that GTAlign substantially improves reasoning
+efficiency, answer quality, and social welfare compared to baselines across
+diverse tasks. The code is available at https://github.com/ulab-uiuc/GTAlign .

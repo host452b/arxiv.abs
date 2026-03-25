@@ -1,0 +1,21 @@
+Title: Automatic Configuration of LLM Post-Training Pipelines
+Authors: Channe Chwa, Xinle Wu, Yao Lu
+ID: 2603.18773
+URL: https://arxiv.org/abs/2603.18773
+
+LLM post-training pipelines that combine supervised fine-tuning and
+reinforcement learning are difficult to configure under realistic compute
+budgets: the configuration space is high-dimensional and heterogeneous, stages
+are strongly coupled, and each end-to-end evaluation is expensive. We propose
+AutoPipe, a budget-aware two-stage framework for configuration selection in LLM
+post-training. Offline, AutoPipe learns a dataset-conditioned learning-to-rank
+surrogate from historical runs, capturing within-dataset preferences and
+providing transferable guidance toward promising regions of the configuration
+space. Online, for a new dataset, AutoPipe uses the offline guidance to steer
+Bayesian optimization and models dataset-specific deviations with a Gaussian-
+process residual surrogate. To reduce evaluation cost, each trial is early-
+stopped and scored by a learned predictor that maps early training signals to a
+low-cost proxy for final post-training performance. Experiments on biomedical
+reasoning tasks show that AutoPipe consistently outperforms offline-only
+baselines and achieves comparable performance with the strongest online HPO
+baselines while using less than 10\% of their computational cost.

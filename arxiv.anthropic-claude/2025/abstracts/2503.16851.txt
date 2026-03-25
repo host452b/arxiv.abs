@@ -1,0 +1,29 @@
+Title: Interpretable LLM Guardrails via Sparse Representation Steering
+Authors: Zeqing He, Zhibo Wang, Huiyu Xu, Hejun Lin, Wenhui Zhang et al. (+1)
+ID: 2503.16851
+URL: https://arxiv.org/abs/2503.16851
+
+Large language models (LLMs) exhibit impressive capabilities in generation tasks
+but are prone to producing harmful, misleading, or biased content, posing
+significant ethical and safety concerns. To mitigate such risks, representation
+engineering, which steer model behavior toward desired attributes by injecting
+carefully designed steering vectors into LLM's representations at inference
+time, has emerged as a promising alternative to fine-tuning approaches. However,
+due to the semantically entangled nature of LLM's representation, existing
+representation engineering methods still suffer from several limitations:
+limited fine-grained controllability, content quality degradation, and conflict
+in multi-attribute control. To overcome these challenges, we propose Sparse
+Representation Steering (SRS), a novel framework that achieves fine-grained and
+interpretable control over LLM behavior by first disentangling internal
+activations into a sparse, semantically meaningful representation space, and
+then selectively steering relevant dimensions. Specifically, SRS leverages a
+pretrained Sparse Autoencoder (SAE) to transform dense, entangled activation
+patterns into a sparse monosemantic feature space. To identify relevant
+features, SRS contrasts sparse activations from positive and negative prompt
+pairs and measures their bidirectional KL divergence to locate dimensions most
+associated with the target attribute. We conduct comprehensive experiments on
+Gemma-2 series model across three alignment dimensions, i.e., safety, fairness,
+and truthfulness, to evaluate the effectiveness of SRS. Results show that SRS
+consistently outperforms existing steering methods, which achieves significantly
+improved controllability across both single and multiple attribute settings,
+while preserving high linguistic quality and general ability.

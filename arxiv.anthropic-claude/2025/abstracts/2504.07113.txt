@@ -1,0 +1,23 @@
+Title: How Robust Are Router-LLMs? Analysis of the Fragility of LLM Routing Capabilities
+Authors: Aly M. Kassem, Bernhard Schölkopf, Zhijing Jin
+ID: 2504.07113
+URL: https://arxiv.org/abs/2504.07113
+
+Large language model (LLM) routing has emerged as a crucial strategy for
+balancing computational costs with performance by dynamically assigning queries
+to the most appropriate model based on query complexity. Despite recent advances
+showing that preference-data-based routers can outperform traditional methods,
+current evaluation benchmarks remain limited. They largely focus on general
+model capabilities while overlooking task-specific behaviors and critical
+concerns such as privacy, safety, and potential backdoor vulnerabilities
+introduced through preference data. In response, we propose the DSC benchmark:
+Diverse, Simple, and Categorized, an evaluation framework that categorizes
+router performance across a broad spectrum of query types, including coding,
+translation, mathematics, human instructions, general knowledge, and LLM
+jailbreaking. Additionally, it integrates privacy and safety assessments to
+reveal hidden risks. Our experiments on three preference-based routers and two
+commercial counterparts demonstrate that while these systems improve efficiency,
+they often make suboptimal, category-driven decisions. For instance, a BERT-
+based router directs all coding and mathematics queries to the most powerful LLM
+even when simpler models would suffice, while routing jailbreaking attempts to
+weaker models, thereby elevating safety risks.

@@ -1,0 +1,26 @@
+Title: Generalizable End-to-End Tool-Use RL with Synthetic CodeGym
+Authors: Weihua Du, Hailei Gong, Zhan Ling, Kang Liu, Lingfeng Shen et al.
+ID: 2509.17325
+URL: https://arxiv.org/abs/2509.17325
+
+Abstract:
+Tool-augmented large language models (LLMs), hereafter LLM agents, leverage
+external tools to solve diverse tasks and interface with the real world.
+However, current training practices largely rely on supervised fine-tuning (SFT)
+over static trajectories or reinforcement learning (RL) on narrow tasks, which
+generalize poorly beyond development settings and lead to brittleness with new
+tools and unseen workflows. Because code execution reflects many structural
+patterns of real-world workflows, we use coding problems as a structured
+substrate to build tool-use agent training environments with diverse task
+configurations. To this end, we introduce CodeGym, a scalable framework that
+synthesizes diverse, verifiable, and controllable multi-turn tool-use
+environments for agent RL, enabling LLM agents to explore and master various
+workflows actively. CodeGym converts static coding problems into interactive
+environments by extracting atomic functions or logic into callable tools,
+yielding verifiable tasks that span various tool-execution workflows. Models of
+varying sizes and chain-of-thought configurations trained in CodeGym exhibit
+consistent out-of-distribution generalizability; for example,
+Qwen2.5-32B-Instruct achieves an absolute accuracy gain of 8.7 points on the OOD
+benchmark $τ$-Bench. These results highlight CodeGym as a step toward scalable
+general-purpose RL environments for training tool-use behaviors that align with
+real-world agent workflows.

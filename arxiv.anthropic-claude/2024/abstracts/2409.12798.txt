@@ -1,0 +1,26 @@
+Title: Assessing the Zero-Shot Capabilities of LLMs for Action Evaluation in RL
+Authors: Eduardo Pignatelli, Johan Ferret, Tim Rockäschel, Edward Grefenstette, Davide Paglieri et al.
+ID: 2409.12798
+URL: https://arxiv.org/abs/2409.12798
+
+Abstract:
+The temporal credit assignment problem is a central challenge in Reinforcement
+Learning (RL), concerned with attributing the appropriate influence to each
+actions in a trajectory for their ability to achieve a goal. However, when
+feedback is delayed and sparse, the learning signal is poor, and action
+evaluation becomes harder. Canonical solutions, such as reward shaping and
+options, require extensive domain knowledge and manual intervention, limiting
+their scalability and applicability. In this work, we lay the foundations for
+Credit Assignment with Language Models (CALM), a novel approach that leverages
+Large Language Models (LLMs) to automate credit assignment via reward shaping
+and options discovery. CALM uses LLMs to decompose a task into elementary
+subgoals and assess the achievement of these subgoals in state-action
+transitions. Every time an option terminates, a subgoal is achieved, and CALM
+provides an auxiliary reward. This additional reward signal can enhance the
+learning process when the task reward is sparse and delayed without the need for
+human-designed rewards. We provide a preliminary evaluation of CALM using a
+dataset of human-annotated demonstrations from MiniHack, suggesting that LLMs
+can be effective in assigning credit in zero-shot settings, without examples or
+LLM fine-tuning. Our preliminary results indicate that the knowledge of LLMs is
+a promising prior for credit assignment in RL, facilitating the transfer of
+human knowledge into value functions.

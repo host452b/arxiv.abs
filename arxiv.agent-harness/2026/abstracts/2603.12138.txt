@@ -1,0 +1,25 @@
+Title: HATS: Hardness-Aware Trajectory Synthesis for GUI Agents
+Authors: Rui Shao, Ruize Gao, Bin Xie, Yixing Li, Kaiwen Zhou et al. (+3)
+ID: 2603.12138
+URL: https://arxiv.org/abs/2603.12138
+
+Graphical user interface (GUI) agents powered by large vision-language models
+(VLMs) have shown remarkable potential in automating digital tasks, highlighting
+the need for high-quality trajectory data to support effective agent training.
+Yet existing trajectory synthesis pipelines often yield agents that fail to
+generalize beyond simple interactions. We identify this limitation as stemming
+from the neglect of semantically ambiguous actions, whose meanings are context-
+dependent, sequentially dependent, or visually ambiguous. Such actions are
+crucial for real-world robustness but are under-represented and poorly processed
+in current datasets, leading to semantic misalignment between task instructions
+and execution. To address these issues, we propose HATS, a Hardness-Aware
+Trajectory Synthesis framework designed to mitigate the impact of semantic
+ambiguity. We define hardness as the degree of semantic ambiguity associated
+with an action and develop two complementary modules: (1) hardness-driven
+exploration, which guides data collection toward ambiguous yet informative
+interactions, and (2) alignment-guided refinement, which iteratively validates
+and repairs instruction-execution alignment. The two modules operate in a closed
+loop: exploration supplies refinement with challenging trajectories, while
+refinement feedback updates the hardness signal to guide future exploration.
+Extensive experiments show that agents trained with HATS consistently outperform
+state-of-the-art baselines across benchmark GUI environments.

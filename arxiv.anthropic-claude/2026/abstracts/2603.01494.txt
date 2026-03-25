@@ -1,0 +1,27 @@
+Title: Inference-Time Safety For Code LLMs Via Retrieval-Augmented Revision
+Authors: Manisha Mukherjee, Vincent J. Hellendoorn
+ID: 2603.01494
+URL: https://arxiv.org/abs/2603.01494
+
+Large Language Models (LLMs) are increasingly deployed for code generation in
+high-stakes software development, yet their limited transparency in security
+reasoning and brittleness to evolving vulnerability patterns raise critical
+trustworthiness concerns. Models trained on static datasets cannot readily adapt
+to newly discovered vulnerabilities or changing security standards without
+retraining, leading to the repeated generation of unsafe code.   We present a
+principled approach to trustworthy code generation by design that operates as an
+inference-time safety mechanism. Our approach employs retrieval-augmented
+generation to surface relevant security risks in generated code and retrieve
+related security discussions from a curated Stack Overflow knowledge base, which
+are then used to guide an LLM during code revision. This design emphasizes three
+aspects relevant to trustworthiness: (1) interpretability, through transparent
+safety interventions grounded in expert community explanations; (2) robustness,
+by allowing adaptation to evolving security practices without model retraining;
+and (3) safety alignment, through real-time intervention before unsafe code
+reaches deployment.   Across real-world and benchmark datasets, our approach
+improves the security of LLM-generated code compared to prompting alone, while
+introducing no new vulnerabilities as measured by static analysis. These results
+suggest that principled, retrieval-augmented inference-time interventions can
+serve as a complementary mechanism for improving the safety of LLM-based code
+generation, and highlight the ongoing value of community knowledge in supporting
+trustworthy AI deployment.

@@ -1,0 +1,26 @@
+Title: Reaching Agreement Among Reasoning LLM Agents
+Authors: Chaoyi Ruan, Yiliang Wang, Ziji Shi, Jialin Li
+ID: 2512.20184
+URL: https://arxiv.org/abs/2512.20184
+
+Abstract:
+Multi-agent systems have extended the capability of agentic AI. Instead of
+single inference passes, multiple agents perform collective reasoning to derive
+high quality answers. However, existing multi-agent orchestration relies on
+static heuristic workflows such as fixed loop limits and barrier
+synchronization. These ad-hoc approaches waste computational resources, incur
+high latency due to stragglers, and risk finalizing transient agreements. We
+argue that reliable multi-agent reasoning requires a formal foundation analogous
+to classical distributed consensus problem. To that end, we propose a formal
+model of the multi-agent refinement problem. The model includes definitions of
+the correctness guarantees and formal semantics of agent reasoning. We then
+introduce Aegean, a consensus protocol designed for stochastic reasoning agents
+that solves multi-agent refinement. We implement the protocol in Aegean-Serve, a
+consensus-aware serving engine that performs incremental quorum detection across
+concurrent agent executions, enabling early termination when sufficient agents
+converge. Evaluation using four mathematical reasoning benchmarks shows that
+Aegean provides provable safety and liveness guarantees while reducing latency
+by 1.2--20$\times$ compared to state-of-the-art baselines, maintaining answer
+quality within 2.5%. Consistent gains across both local GPU deployments and
+commercial API providers validate that consensus-based orchestration eliminates
+straggler delays without sacrificing correctness.

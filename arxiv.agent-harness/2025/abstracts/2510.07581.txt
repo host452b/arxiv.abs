@@ -1,0 +1,25 @@
+Title: Expanding the Action Space of LLMs to Reason Beyond Language
+Authors: Zhongqi Yue, Weishi Wang, Yundaichuan Zhan, Juncheng Li, Daniel Dahlmeier et al.
+ID: 2510.07581
+URL: https://arxiv.org/abs/2510.07581
+
+Abstract:
+Large Language Models (LLMs) are powerful reasoners in natural language, but
+their actions are typically confined to outputting vocabulary tokens. As a
+result, interactions with external environments -- such as symbolic operators or
+simulators -- must be expressed through text in predefined formats, parsed, and
+routed to external interfaces. This overloads the model's language with both
+reasoning and control duties, and requires a hand-crafted parser, external to
+the LLM. To address this, we decouple environment interactions from language by
+internalizing them in an Expanded Action space (ExpA), beyond the vocabulary.
+The model starts reasoning in the default language environment, but may trigger
+routing actions and switch to an external environment at any time. From there,
+the model can only invoke environment-specific actions, receive feedback from
+the environment, and potentially route back to language as a result. To promote
+effective exploration of the expanded action space and new environments, we
+introduce ExpA Reinforcement Learning (EARL) with counterfactual policy
+optimization. On tasks requiring multi-turn interactions and contingent
+planning, EARL outperforms strong baselines with vocabulary-constrained actions.
+It performs robustly across calculator-based multi-task learning and, in the
+partially observed sorting problem, achieves perfect Sort-4 accuracy while
+self-discovering an efficient algorithm competitive with classical designs.

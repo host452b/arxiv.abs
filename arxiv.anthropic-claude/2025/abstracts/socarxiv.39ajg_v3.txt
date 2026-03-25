@@ -1,0 +1,25 @@
+Title: Scaling Open-ended Survey Responses Using LLM-Paired Comparisons
+Authors: None
+ID: socarxiv.39ajg_v3
+URL: https://arxiv.org/abs/socarxiv.39ajg_v3
+
+Survey researchers rely heavily on closed-ended questions to measure latent
+respondent characteristics like knowledge, policy positions, emotions, ideology,
+and various other traits. While closed-ended questions ease analysis and data
+collection, they necessarily limit the depth and variability of responses. Open-
+ended responses allow for greater depth and variability in responses but are
+labor-intensive to code. Large Language Models (LLMs) can solve some of these
+problems, but existing approaches to using LLMs have a number of limitations. In
+this paper, we propose and test a pairwise comparison method to scale open-ended
+survey responses on a continuous scale. The approach relies on LLMs to make
+pairwise comparisons of statements that identify which statement ``wins'' and
+``loses''. With this information, we employ a Bayesian Bradley-Terry model to
+recover a `score' on a the relevant latent dimension for each statement. This
+approach allows for finer discrimination between items, better measures of
+uncertainty, reduces anchoring bias, and is more flexible than methods relying
+on Maximum Likelihood Estimation techniques. We demonstrate the utility of this
+approach on an open-ended question probing knowledge of interest rates in the US
+economy. A comparison of 6 LLMs of various sizes reveals that pairwise
+comparisons show greater consistency than zero-shot 0-10 ratings with larger
+models (&gt; 9-billion parameters). Further, comparison of pairwise decisions
+are consistent with high-knowledge crowd source workers.

@@ -1,0 +1,26 @@
+Title: Action-to-Action Flow Matching
+Authors: Jindou Jia, Gen Li, Xiangyu Chen, Tuo An, Yuxuan Hu et al.
+ID: 2602.07322
+URL: https://arxiv.org/abs/2602.07322
+
+Abstract:
+Diffusion-based policies have recently achieved remarkable success in robotics
+by formulating action prediction as a conditional denoising process. However,
+the standard practice of sampling from random Gaussian noise often requires
+multiple iterative steps to produce clean actions, leading to high inference
+latency that incurs a major bottleneck for real-time control. In this paper, we
+challenge the necessity of uninformed noise sampling and propose
+Action-to-Action flow matching (A2A), a novel policy paradigm that shifts from
+random sampling to initialization informed by the previous action. Unlike
+existing methods that treat proprioceptive action feedback as static conditions,
+A2A leverages historical proprioceptive sequences, embedding them into a
+high-dimensional latent space as the starting point for action generation. This
+design bypasses costly iterative denoising while effectively capturing the
+robot's physical dynamics and temporal continuity. Extensive experiments
+demonstrate that A2A exhibits high training efficiency, fast inference speed,
+and improved generalization. Notably, A2A enables high-quality action generation
+in as few as a single inference step (0.56 ms latency), and exhibits superior
+robustness to visual perturbations and enhanced generalization to unseen
+configurations. Lastly, we also extend A2A to video generation, demonstrating
+its broader versatility in temporal modeling. Project site:
+https://lorenzo-0-0.github.io/A2A_Flow_Matching.

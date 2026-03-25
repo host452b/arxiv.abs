@@ -1,0 +1,22 @@
+Title: Rethinking Safety in LLM Fine-tuning: An Optimization Perspective
+Authors: Minseon Kim, Jin Myung Kwak, Lama Alssum, Bernard Ghanem, Philip Torr et al. (+3)
+ID: 2508.12531
+URL: https://arxiv.org/abs/2508.12531
+
+Fine-tuning language models is commonly believed to inevitably harm their
+safety, i.e., refusing to respond to harmful user requests, even when using
+harmless datasets, thus requiring additional safety measures. We challenge this
+belief through systematic testing, showing that poor optimization choices,
+rather than inherent trade-offs, often cause safety problems, measured as
+harmful responses to adversarial prompts. By properly selecting key training
+hyper-parameters, e.g., learning rate, batch size, and gradient steps, we reduce
+unsafe model responses from 16\% to approximately 5\%, as measured by keyword
+matching, while maintaining utility performance. Based on this observation, we
+propose a simple exponential moving average (EMA) momentum technique in
+parameter space that preserves safety performance by creating a stable
+optimization path and retains the original pre-trained model's safety
+properties. Our experiments on the Llama families across multiple datasets
+(Dolly, Alpaca, ORCA) demonstrate that safety problems during fine-tuning can
+largely be avoided without specialized interventions, outperforming existing
+approaches that require additional safety data while offering practical
+guidelines for maintaining both model performance and safety during adaptation.

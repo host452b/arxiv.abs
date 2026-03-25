@@ -1,0 +1,26 @@
+Title: Oracle-RLAIF: An Improved Fine-Tuning Framework for Multi-modal Video Models through Reinforcement Learning from Ranking Feedback
+Authors: Derek Shi, Ruben Glatt, Christine Klymko, Shubham Mohole, Hongjun Choi et al.
+ID: 2510.02561
+URL: https://arxiv.org/abs/2510.02561
+
+Abstract:
+Recent advances in large video-language models (VLMs) rely on extensive
+fine-tuning techniques that strengthen alignment between textual and visual
+comprehension. Leading pipelines typically pair supervised fine-tuning (SFT)
+with reinforcement learning from preference data to enhance video comprehension.
+However, as VLMs scale in parameter size, so does the cost of gathering enough
+human feedback. To make fine-tuning more cost-effective, recent frameworks
+explore reinforcement learning with AI feedback (RLAIF), which replace human
+preference with AI as a judge. Current RLAIF frameworks rely on a specialized
+reward model trained with video narratives to create calibrated scalar rewards
+-- an expensive and restrictive pipeline. We propose Oracle-RLAIF, a novel
+framework that replaces the trained reward model with a more general Oracle
+ranker which acts as a drop-in model ranking candidate model responses rather
+than scoring them. Alongside Oracle-RLAIF, we introduce $GRPO_{rank}$, a novel
+rank-based loss function based on Group Relative Policy Optimization (GRPO) that
+directly optimizes ordinal feedback with rank-aware advantages. Empirically, we
+demonstrate that Oracle-RLAIF consistently outperforms leading VLMs using
+existing fine-tuning methods when evaluated across various video comprehension
+benchmarks. Oracle-RLAIF paves the path to creating flexible and data-efficient
+frameworks for aligning large multi-modal video models with reinforcement
+learning from rank rather than score.

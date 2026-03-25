@@ -1,0 +1,25 @@
+Title: ProfilingAgent: Profiling-Guided Agentic Reasoning for Adaptive Model Optimization
+Authors: Sadegh Jafari, Aishwarya Sarkar, Mohiuddin Bilwal, Ali Jannesari
+ID: 2509.05584
+URL: https://arxiv.org/abs/2509.05584
+
+Abstract:
+Foundation models face growing compute and memory bottlenecks, hindering
+deployment on resource-limited platforms. While compression techniques such as
+pruning and quantization are widely used, most rely on uniform heuristics that
+ignore architectural and runtime heterogeneity. Profiling tools expose per-layer
+latency, memory, and compute cost, yet are rarely integrated into automated
+pipelines. We propose ProfilingAgent, a profiling-guided, agentic approach that
+uses large language models (LLMs) to automate compression via structured pruning
+and post-training dynamic quantization. Our modular multi-agent system reasons
+over static metrics (MACs, parameter counts) and dynamic signals (latency,
+memory) to design architecture-specific strategies. Unlike heuristic baselines,
+ProfilingAgent tailors layer-wise decisions to bottlenecks. Experiments on
+ImageNet-1K, CIFAR-10, and CIFAR-100 with ResNet-101, ViT-B/16, Swin-B, and
+DeiT-B/16 show pruning maintains competitive or improved accuracy (about 1% drop
+on ImageNet-1K, +2% gains for ViT-B/16 on smaller datasets), while quantization
+achieves up to 74% memory savings with <0.5% accuracy loss. Our quantization
+also yields consistent inference speedups of up to 1.74 times faster.
+Comparative studies with GPT-4o and GPT-4-Turbo highlight the importance of LLM
+reasoning quality for iterative pruning. These results establish agentic systems
+as scalable solutions for profiling-guided model optimization.

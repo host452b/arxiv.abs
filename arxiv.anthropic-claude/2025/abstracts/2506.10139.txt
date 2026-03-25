@@ -1,0 +1,21 @@
+Title: Unsupervised Elicitation of Language Models
+Authors: Jiaxin Wen, Zachary Ankner, Arushi Somani, Peter Hase, Samuel Marks et al. (+8)
+ID: 2506.10139
+URL: https://arxiv.org/abs/2506.10139
+
+To steer pretrained language models for downstream tasks, today's post-training
+paradigm relies on humans to specify desired behaviors. However, for models with
+superhuman capabilities, it is difficult or impossible to get high-quality human
+supervision. To address this challenge, we introduce a new unsupervised
+algorithm, Internal Coherence Maximization (ICM), to fine-tune pretrained
+language models on their own generated labels, \emph{without external
+supervision}. On GSM8k-verification, TruthfulQA, and Alpaca reward modeling
+tasks, our method matches the performance of training on golden labels and
+outperforms training on crowdsourced human supervision. On tasks where LMs'
+capabilities are strongly superhuman, our method can elicit those capabilities
+significantly better than training on human labels. Finally, we show that our
+method can improve the training of frontier LMs: we use our method to train an
+unsupervised reward model and use reinforcement learning to train a Claude 4
+Sonnet-based assistant. The resulting assistant matches its counterpart trained
+on production-grade human labels on average, with higher scores on chat and
+safety yet lower scores on math and coding.

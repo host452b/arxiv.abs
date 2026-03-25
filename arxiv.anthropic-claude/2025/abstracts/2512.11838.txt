@@ -1,0 +1,20 @@
+Title: D-STEER - Preference Alignment Techniques Learn to Behave, not to Believe -- Beneath the Surface, DPO as Steering Vector Perturbation in Activation Space
+Authors: Samarth Raina, Saksham Aggarwal, Aman Chadha, Vinija Jain, Amitava Das
+ID: 2512.11838
+URL: https://arxiv.org/abs/2512.11838
+
+Direct Preference Optimization (DPO) has become a standard recipe for aligning
+large language models, yet it is still unclear what kind of change it actually
+induces inside the network. This paper argues that DPO does not rewrite a models
+internal beliefs; instead, it acts as a low rank steering mechanism that nudges
+activations along a small number of preference directions. Using a simple
+derivation, we show that the DPO gradient depends only on the difference between
+the logit embeddings of preferred and dispreferred completions, implying a first
+order shift in the final hidden representation rather than a deep restructuring
+of semantics. We then extract an empirical steering vector from a DPO tuned
+model and demonstrate that adding this vector to base activations reproduces
+most of the aligned behavior, while subtracting it nearly restores the original
+model. Finally, spectral analyses reveal rank-one dominance and entropy collapse
+in upper layers, indicating that alignment is funneled through a narrow
+subspace. Taken together, these results support a behavioral illusion view of
+DPO: it teaches models how to act aligned, not what to believe.

@@ -1,0 +1,30 @@
+Title: InfiGUI-R1: Advancing Multimodal GUI Agents from Reactive Actors to Deliberative Reasoners
+Authors: Yuhang Liu, Pengxiang Li, Congkai Xie, Xavier Hu, Xiaotian Han et al. (+3)
+ID: 2504.14239
+URL: https://arxiv.org/abs/2504.14239
+
+Multimodal Large Language Models (MLLMs) have powered Graphical User Interface
+(GUI) Agents, showing promise in automating tasks on computing devices. Recent
+works have begun exploring reasoning in GUI tasks with encouraging results.
+However, many current approaches rely on manually designed reasoning templates,
+which may result in reasoning that is not sufficiently robust and adaptive for
+complex GUI environments. Meanwhile, some existing agents continue to operate as
+Reactive Actors, relying primarily on implicit reasoning that may lack
+sufficient depth for GUI tasks demanding planning and error recovery. We argue
+that advancing these agents requires a shift from reactive acting towards acting
+based on deliberate reasoning. To facilitate this transformation, we introduce
+InfiGUI-R1, an MLLM-based GUI agent developed through our Actor2Reasoner
+framework, a reasoning-centric, two-stage training approach designed to
+progressively evolve agents from Reactive Actors to Deliberative Reasoners. The
+first stage, Reasoning Injection, focuses on establishing a basic reasoner. We
+employ Spatial Reasoning Distillation to transfer cross-modal spatial reasoning
+capabilities from teacher models to MLLMs through trajectories with explicit
+reasoning steps, enabling models to integrate GUI visual-spatial information
+with logical reasoning before action generation. The second stage, Deliberation
+Enhancement, refines the basic reasoner into a deliberative one using
+Reinforcement Learning. This stage introduces two approaches: Sub-goal Guidance,
+which rewards models for generating accurate intermediate sub-goals, and Error
+Recovery Scenario Construction, which creates failure-and-recovery training
+scenarios from identified prone-to-error steps. Experimental results show
+InfiGUI-R1 achieves strong performance in GUI grounding and trajectory tasks.
+Resources at https://github.com/Reallm-Labs/InfiGUI-R1.

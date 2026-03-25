@@ -1,0 +1,26 @@
+Title: Optimizing Conversational Quality in Spoken Dialogue Systems with Reinforcement Learning from AI Feedback
+Authors: Siddhant Arora, Jinchuan Tian, Jiatong Shi, Hayato Futami, Yosuke Kashiwagi et al.
+ID: 2601.19063
+URL: https://arxiv.org/abs/2601.19063
+
+Abstract:
+Reinforcement learning from human or AI feedback (RLHF/RLAIF) for
+speech-in/speech-out dialogue systems (SDS) remains underexplored, with prior
+work largely limited to single semantic rewards applied at the utterance level.
+Such setups overlook the multi-dimensional and multi-modal nature of
+conversational quality, which encompasses semantic coherence, audio naturalness,
+speaker consistency, emotion alignment, and turn-taking behavior. Moreover, they
+are fundamentally mismatched with duplex spoken dialogue systems that generate
+responses incrementally, where agents must make decisions based on partial
+utterances. We address these limitations with the first multi-reward RLAIF
+framework for SDS, combining semantic, audio-quality, and emotion-consistency
+rewards. To align utterance-level preferences with incremental, blockwise
+decoding in duplex models, we apply turn-level preference sampling and aggregate
+per-block log-probabilities within a single DPO objective. We present the first
+systematic study of preference learning for improving SDS quality in both
+multi-turn Chain-of-Thought and blockwise duplex models, and release a
+multi-reward DPO dataset to support reproducible research. Experiments show that
+single-reward RLAIF selectively improves its targeted metric, while joint
+multi-reward training yields consistent gains across semantic quality and audio
+naturalness. These results highlight the importance of holistic, multi-reward
+alignment for practical conversational SDS.

@@ -1,0 +1,23 @@
+Title: Align-then-Unlearn: Embedding Alignment for LLM Unlearning
+Authors: Philipp Spohn, Leander Girrbach, Jessica Bader, Zeynep Akata
+ID: 2506.13181
+URL: https://arxiv.org/abs/2506.13181
+
+Abstract:
+As large language models (LLMs) are trained on massive datasets, they have
+raised significant privacy and ethical concerns due to their potential to
+inadvertently retain sensitive information. Unlearning seeks to selectively
+remove specific data from trained models, such as personal information or
+copyrighted content. Current approaches targeting specific output sequences at
+the token level often fail to achieve complete forgetting and remain susceptible
+to prompt rephrasing. We propose Align-then-Unlearn, a novel framework that
+performs unlearning in the semantic embedding space rather than directly on
+output tokens. Align-then-Unlearn first augments the LLM with an embedding
+prediction module trained to anticipate future context representations.
+Unlearning is then achieved by fine-tuning the model to minimize the similarity
+between these predicted embeddings and a target embedding that represents the
+concept to be removed. Initial results show that Align-then-Unlearn effectively
+removes targeted knowledge with minimal degradation in overall model utility.
+These findings suggest that embedding-based unlearning offers a promising and
+robust approach to removing conceptual knowledge. Our code is available at
+https://github.com/ExplainableML/align-then-unlearn.

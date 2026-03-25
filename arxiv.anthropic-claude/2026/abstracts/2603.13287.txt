@@ -1,0 +1,25 @@
+Title: From Stochastic Answers to Verifiable Reasoning: Interpretable Decision-Making with LLM-Generated Code
+Authors: Anirudh Jaidev Mahesh, Ben Griffin, Fuat Alican, Joseph Ternasky, Zakari Salifu et al. (+6)
+ID: 2603.13287
+URL: https://arxiv.org/abs/2603.13287
+
+Large language models (LLMs) are increasingly used for high-stakes decision-
+making, yet existing approaches struggle to reconcile scalability,
+interpretability, and reproducibility. Black-box models obscure their reasoning,
+while recent LLM-based rule systems rely on per-sample evaluation, causing costs
+to scale with dataset size and introducing stochastic, hallucination-prone
+outputs. We propose reframing LLMs as code generators rather than per-instance
+evaluators. A single LLM call generates executable, human-readable decision
+logic that runs deterministically over structured data, eliminating per-sample
+LLM queries while enabling reproducible and auditable predictions. We combine
+code generation with automated statistical validation using precision lift,
+binomial significance testing, and coverage filtering, and apply cluster-based
+gap analysis to iteratively refine decision logic without human annotation. We
+instantiate this framework in venture capital founder screening, a rare-event
+prediction task with strong interpretability requirements. On VCBench, a
+benchmark of 4,500 founders with a 9% base success rate, our approach achieves
+37.5% precision and an F0.5 score of 25.0%, outperforming GPT-4o (at 30.0%
+precision and an F0.5 score of 25.7%) while maintaining full interpretability.
+Each prediction traces to executable rules over human-readable attributes,
+demonstrating verifiable and interpretable LLM-based decision-making in
+practice.

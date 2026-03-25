@@ -1,0 +1,302 @@
+{
+  "query": {
+    "terms": {
+      "title": "deceptive alignment or goal misgeneralization"
+    },
+    "subjects": [
+      "cs"
+    ],
+    "op": "and",
+    "from": "2021-01",
+    "to": "",
+    "max": 200,
+    "searched_at": "2026-03-25T22:10:24Z"
+  },
+  "groups": [
+    {
+      "source": "arxiv",
+      "count": 12,
+      "papers": [
+        {
+          "id": "2105.14111",
+          "title": "Goal Misgeneralization in Deep Reinforcement Learning",
+          "authors": [
+            "Lauro Langosco",
+            "Jack Koch",
+            "Lee Sharkey",
+            "Jacob Pfau",
+            "Laurent Orseau",
+            "David Krueger"
+          ],
+          "abstract": "We study goal misgeneralization, a type of out-of-distribution generalization failure in reinforcement learning (RL). Goal misgeneralization failures occur when an RL agent retains its capabilities out-of-distribution yet pursues the wrong goal. For instance, an agent might continue to competently avoid obstacles, but navigate to the wrong place. In contrast, previous works have typically focused on capability generalization failures, where an agent fails to do anything sensible at test time. We formalize this distinction between capability and goal generalization, provide the first empirical demonstrations of goal misgeneralization, and present a partial characterization of its causes.",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "published": "2021-05-28T21:13:34Z",
+          "updated": "2023-01-09T21:33:02Z",
+          "pdf_url": "https://arxiv.org/pdf/2105.14111",
+          "html_url": "https://arxiv.org/html/2105.14111",
+          "abs_url": "https://arxiv.org/abs/2105.14111",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2105.14111"
+        },
+        {
+          "id": "2507.03068",
+          "title": "Mitigating Goal Misgeneralization via Minimax Regret",
+          "authors": [
+            "Karim Abdel Sadek",
+            "Matthew Farrugia-Roberts",
+            "Usman Anwar",
+            "Hannah Erlebach",
+            "Christian Schroeder de Witt",
+            "David Krueger",
+            "Michael Dennis"
+          ],
+          "abstract": "Safe generalization in reinforcement learning requires not only that a learned policy acts capably in new situations, but also that it uses its capabilities towards the pursuit of the designer's intended goal. The latter requirement may fail when a proxy goal incentivizes similar behavior to the intended goal within the training environment, but not in novel deployment environments. This creates the risk that policies will behave as if in pursuit of the proxy goal, rather than the intended goal, in deployment -- a phenomenon known as goal misgeneralization. In this paper, we formalize this problem setting in order to theoretically study the possibility of goal misgeneralization under different training objectives. We show that goal misgeneralization is possible under approximate optimization of the maximum expected value (MEV) objective, but not the minimax expected regret (MMER) objective. We then empirically show that the standard MEV-based training method of domain randomization exhibits goal misgeneralization in procedurally-generated grid-world environments, whereas current regret-based unsupervised environment design (UED) methods are more robust to goal misgeneralization (though they don't find MMER policies in all cases). Our findings suggest that minimax expected regret is a promising approach to mitigating goal misgeneralization.",
+          "categories": [
+            "cs.LG"
+          ],
+          "published": "2025-07-03T17:57:12Z",
+          "updated": "2025-07-18T07:38:55Z",
+          "pdf_url": "https://arxiv.org/pdf/2507.03068",
+          "html_url": "https://arxiv.org/html/2507.03068",
+          "abs_url": "https://arxiv.org/abs/2507.03068",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2507.03068"
+        },
+        {
+          "id": "2410.21052",
+          "title": "Getting By Goal Misgeneralization With a Little Help From a Mentor",
+          "authors": [
+            "Tu Trinh",
+            "Mohamad H. Danesh",
+            "Nguyen X. Khanh",
+            "Benjamin Plaut"
+          ],
+          "abstract": "While reinforcement learning (RL) agents often perform well during training, they can struggle with distribution shift in real-world deployments. One particularly severe risk of distribution shift is goal misgeneralization, where the agent learns a proxy goal that coincides with the true goal during training but not during deployment. In this paper, we explore whether allowing an agent to ask for help from a supervisor in unfamiliar situations can mitigate this issue. We focus on agents trained with PPO in the CoinRun environment, a setting known to exhibit goal misgeneralization. We evaluate multiple methods for determining when the agent should request help and find that asking for help consistently improves performance. However, we also find that methods based on the agent's internal state fail to proactively request help, instead waiting until mistakes have already occurred. Further investigation suggests that the agent's internal state does not represent the coin at all, highlighting the importance of learning nuanced representations, the risks of ignoring everything not immediately relevant to reward, and the necessity of developing ask-for-help strategies tailored to the agent's training algorithm.",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "published": "2024-10-28T14:07:41Z",
+          "updated": "2024-11-10T05:36:32Z",
+          "pdf_url": "https://arxiv.org/pdf/2410.21052",
+          "html_url": "https://arxiv.org/html/2410.21052",
+          "abs_url": "https://arxiv.org/abs/2410.21052",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2410.21052"
+        },
+        {
+          "id": "2210.01790",
+          "title": "Goal Misgeneralization: Why Correct Specifications Aren't Enough For Correct Goals",
+          "authors": [
+            "Rohin Shah",
+            "Vikrant Varma",
+            "Ramana Kumar",
+            "Mary Phuong",
+            "Victoria Krakovna",
+            "Jonathan Uesato",
+            "Zac Kenton"
+          ],
+          "abstract": "The field of AI alignment is concerned with AI systems that pursue unintended goals. One commonly studied mechanism by which an unintended goal might arise is specification gaming, in which the designer-provided specification is flawed in a way that the designers did not foresee. However, an AI system may pursue an undesired goal even when the specification is correct, in the case of goal misgeneralization. Goal misgeneralization is a specific form of robustness failure for learning algorithms in which the learned program competently pursues an undesired goal that leads to good performance in training situations but bad performance in novel test situations. We demonstrate that goal misgeneralization can occur in practical systems by providing several examples in deep learning systems across a variety of domains. Extrapolating forward to more capable systems, we provide hypotheticals that illustrate how goal misgeneralization could lead to catastrophic risk. We suggest several research directions that could reduce the risk of goal misgeneralization for future systems.",
+          "categories": [
+            "cs.LG"
+          ],
+          "published": "2022-10-04T17:57:53Z",
+          "updated": "2022-11-02T16:19:04Z",
+          "pdf_url": "https://arxiv.org/pdf/2210.01790",
+          "html_url": "https://arxiv.org/html/2210.01790",
+          "abs_url": "https://arxiv.org/abs/2210.01790",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2210.01790"
+        },
+        {
+          "id": "2307.10569",
+          "title": "Deceptive Alignment Monitoring",
+          "authors": [
+            "Andres Carranza",
+            "Dhruv Pai",
+            "Rylan Schaeffer",
+            "Arnuv Tandon",
+            "Sanmi Koyejo"
+          ],
+          "abstract": "As the capabilities of large machine learning models continue to grow, and as the autonomy afforded to such models continues to expand, the spectre of a new adversary looms: the models themselves. The threat that a model might behave in a seemingly reasonable manner, while secretly and subtly modifying its behavior for ulterior reasons is often referred to as deceptive alignment in the AI Safety \u0026 Alignment communities. Consequently, we call this new direction Deceptive Alignment Monitoring. In this work, we identify emerging directions in diverse machine learning subfields that we believe will become increasingly important and intertwined in the near future for deceptive alignment monitoring, and we argue that advances in these fields present both long-term challenges and new research opportunities. We conclude by advocating for greater involvement by the adversarial machine learning community in these emerging directions.",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "published": "2023-07-20T04:14:09Z",
+          "updated": "2023-07-26T03:57:03Z",
+          "pdf_url": "https://arxiv.org/pdf/2307.10569",
+          "html_url": "https://arxiv.org/html/2307.10569",
+          "abs_url": "https://arxiv.org/abs/2307.10569",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2307.10569"
+        },
+        {
+          "id": "2312.03762",
+          "title": "Colour versus Shape Goal Misgeneralization in Reinforcement Learning: A Case Study",
+          "authors": [
+            "Karolis Ramanauskas",
+            "Özgür Şimşek"
+          ],
+          "abstract": "We explore colour versus shape goal misgeneralization originally demonstrated by Di Langosco et al. (2022) in the Procgen Maze environment, where, given an ambiguous choice, the agents seem to prefer generalization based on colour rather than shape. After training over 1,000 agents in a simplified version of the environment and evaluating them on over 10 million episodes, we conclude that the behaviour can be attributed to the agents learning to detect the goal object through a specific colour channel. This choice is arbitrary. Additionally, we show how, due to underspecification, the preferences can change when retraining the agents using exactly the same procedure except for using a different random seed for the training run. Finally, we demonstrate the existence of outliers in out-of-distribution behaviour based on training random seed alone.",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "published": "2023-12-05T19:00:46Z",
+          "updated": "2023-12-05T19:00:46Z",
+          "pdf_url": "https://arxiv.org/pdf/2312.03762",
+          "html_url": "https://arxiv.org/html/2312.03762",
+          "abs_url": "https://arxiv.org/abs/2312.03762",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2312.03762"
+        },
+        {
+          "id": "2401.07181",
+          "title": "Reinforcement Learning from LLM Feedback to Counteract Goal Misgeneralization",
+          "authors": [
+            "Houda Nait El Barj",
+            "Theophile Sautory"
+          ],
+          "abstract": "We introduce a method to address goal misgeneralization in reinforcement learning (RL), leveraging Large Language Model (LLM) feedback during training. Goal misgeneralization, a type of robustness failure in RL occurs when an agent retains its capabilities out-of-distribution yet pursues a proxy rather than the intended one. Our approach utilizes LLMs to analyze an RL agent's policies during training and identify potential failure scenarios. The RL agent is then deployed in these scenarios, and a reward model is learnt through the LLM preferences and feedback. This LLM-informed reward model is used to further train the RL agent on the original dataset. We apply our method to a maze navigation task, and show marked improvements in goal generalization, especially in cases where true and proxy goals are somewhat distinguishable and behavioral biases are pronounced. This study demonstrates how the LLM, despite its lack of task proficiency, can efficiently supervise RL agents, providing scalable oversight and valuable insights for enhancing goal-directed learning in RL through the use of LLMs.",
+          "categories": [
+            "cs.LG"
+          ],
+          "published": "2024-01-14T01:09:48Z",
+          "updated": "2024-01-14T01:09:48Z",
+          "pdf_url": "https://arxiv.org/pdf/2401.07181",
+          "html_url": "https://arxiv.org/html/2401.07181",
+          "abs_url": "https://arxiv.org/abs/2401.07181",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2401.07181"
+        },
+        {
+          "id": "2505.18807",
+          "title": "Mitigating Deceptive Alignment via Self-Monitoring",
+          "authors": [
+            "Jiaming Ji",
+            "Wenqi Chen",
+            "Kaile Wang",
+            "Donghai Hong",
+            "Sitong Fang",
+            "Boyuan Chen",
+            "Jiayi Zhou",
+            "Juntao Dai",
+            "Sirui Han",
+            "Yike Guo",
+            "Yaodong Yang"
+          ],
+          "abstract": "Modern large language models rely on chain-of-thought (CoT) reasoning to achieve impressive performance, yet the same mechanism can amplify deceptive alignment, situations in which a model appears aligned while covertly pursuing misaligned goals. Existing safety pipelines treat deception as a black-box output to be filtered post-hoc, leaving the model free to scheme during its internal reasoning. We ask: Can deception be intercepted while the model is thinking? We answer this question, the first framework that embeds a Self-Monitor inside the CoT process itself, named CoT Monitor+. During generation, the model produces (i) ordinary reasoning steps and (ii) an internal self-evaluation signal trained to flag and suppress misaligned strategies. The signal is used as an auxiliary reward in reinforcement learning, creating a feedback loop that rewards honest reasoning and discourages hidden goals. To study deceptive alignment systematically, we introduce DeceptionBench, a five-category benchmark that probes covert alignment-faking, sycophancy, etc. We evaluate various LLMs and show that unrestricted CoT roughly aggravates the deceptive tendency. In contrast, CoT Monitor+ cuts deceptive behaviors by 43.8% on average while preserving task accuracy. Further, when the self-monitor signal replaces an external weak judge in RL fine-tuning, models exhibit substantially fewer obfuscated thoughts and retain transparency. Our project website can be found at cot-monitor-plus.github.io",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2025-05-24T17:41:47Z",
+          "updated": "2025-05-24T17:41:47Z",
+          "pdf_url": "https://arxiv.org/pdf/2505.18807",
+          "html_url": "https://arxiv.org/html/2505.18807",
+          "abs_url": "https://arxiv.org/abs/2505.18807",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2505.18807"
+        },
+        {
+          "id": "2501.05962",
+          "title": "Effective faking of verbal deception detection with target-aligned adversarial attacks",
+          "authors": [
+            "Bennett Kleinberg",
+            "Riccardo Loconte",
+            "Bruno Verschuere"
+          ],
+          "abstract": "Background: Deception detection through analysing language is a promising avenue using both human judgments and automated machine learning judgments. For both forms of credibility assessment, automated adversarial attacks that rewrite deceptive statements to appear truthful pose a serious threat. Methods: We used a dataset of 243 truthful and 262 fabricated autobiographical stories in a deception detection task for humans and machine learning models. A large language model was tasked to rewrite deceptive statements so that they appear truthful. In Study 1, humans who made a deception judgment or used the detailedness heuristic and two machine learning models (a fine-tuned language model and a simple n-gram model) judged original or adversarial modifications of deceptive statements. In Study 2, we manipulated the target alignment of the modifications, i.e. tailoring the attack to whether the statements would be assessed by humans or computer models. Results: When adversarial modifications were aligned with their target, human (d=-0.07 and d=-0.04) and machine judgments (51% accuracy) dropped to the chance level. When the attack was not aligned with the target, both human heuristics judgments (d=0.30 and d=0.36) and machine learning predictions (63-78%) were significantly better than chance. Conclusions: Easily accessible language models can effectively help anyone fake deception detection efforts both by humans and machine learning models. Robustness against adversarial modifications for humans and machines depends on that target alignment. We close with suggestions on advancing deception research with adversarial attack designs and techniques.",
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "published": "2025-01-10T13:42:40Z",
+          "updated": "2025-06-01T17:16:18Z",
+          "pdf_url": "https://arxiv.org/pdf/2501.05962",
+          "html_url": "https://arxiv.org/html/2501.05962",
+          "abs_url": "https://arxiv.org/abs/2501.05962",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2501.05962"
+        },
+        {
+          "id": "2102.03673",
+          "title": "Unsupervised Audio-Visual Subspace Alignment for High-Stakes Deception Detection",
+          "authors": [
+            "Leena Mathur",
+            "Maja J Matarić"
+          ],
+          "abstract": "Automated systems that detect deception in high-stakes situations can enhance societal well-being across medical, social work, and legal domains. Existing models for detecting high-stakes deception in videos have been supervised, but labeled datasets to train models can rarely be collected for most real-world applications. To address this problem, we propose the first multimodal unsupervised transfer learning approach that detects real-world, high-stakes deception in videos without using high-stakes labels. Our subspace-alignment (SA) approach adapts audio-visual representations of deception in lab-controlled low-stakes scenarios to detect deception in real-world, high-stakes situations. Our best unsupervised SA models outperform models without SA, outperform human ability, and perform comparably to a number of existing supervised models. Our research demonstrates the potential for introducing subspace-based transfer learning to model high-stakes deception and other social behaviors in real-world contexts with a scarcity of labeled behavioral data.",
+          "categories": [
+            "cs.CV",
+            "cs.HC",
+            "cs.LG"
+          ],
+          "published": "2021-02-06T21:53:12Z",
+          "updated": "2021-02-06T21:53:12Z",
+          "pdf_url": "https://arxiv.org/pdf/2102.03673",
+          "html_url": "https://arxiv.org/html/2102.03673",
+          "abs_url": "https://arxiv.org/abs/2102.03673",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2102.03673"
+        },
+        {
+          "id": "2602.08877",
+          "title": "Stress-Testing Alignment Audits With Prompt-Level Strategic Deception",
+          "authors": [
+            "Oliver Daniels",
+            "Perusha Moodley",
+            "Benjamin M. Marlin",
+            "David Lindner"
+          ],
+          "abstract": "Alignment audits aim to robustly identify hidden goals from strategic, situationally aware misaligned models. Despite this threat model, existing auditing methods have not been systematically stress-tested against deception strategies. We address this gap, implementing an automatic red-team pipeline that generates deception strategies (in the form of system prompts) tailored to specific white-box and black-box auditing methods. Stress-testing assistant prefills, user persona sampling, sparse autoencoders, and token embedding similarity methods against secret-keeping model organisms, our automatic red-team pipeline finds prompts that deceive both the black-box and white-box methods into confident, incorrect guesses. Our results provide the first documented evidence of activation-based strategic deception, and suggest that current black-box and white-box methods would not be robust to a sufficiently capable misaligned model.",
+          "categories": [
+            "cs.LG"
+          ],
+          "published": "2026-02-09T16:38:29Z",
+          "updated": "2026-03-06T15:28:47Z",
+          "pdf_url": "https://arxiv.org/pdf/2602.08877",
+          "html_url": "https://arxiv.org/html/2602.08877",
+          "abs_url": "https://arxiv.org/abs/2602.08877",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2602.08877"
+        },
+        {
+          "id": "2507.09406",
+          "title": "Adversarial Activation Patching: A Framework for Detecting and Mitigating Emergent Deception in Safety-Aligned Transformers",
+          "authors": [
+            "Santhosh Kumar Ravindran"
+          ],
+          "abstract": "Large language models (LLMs) aligned for safety through techniques like reinforcement learning from human feedback (RLHF) often exhibit emergent deceptive behaviors, where outputs appear compliant but subtly mislead or omit critical information. This paper introduces adversarial activation patching, a novel mechanistic interpretability framework that leverages activation patching as an adversarial tool to induce, detect, and mitigate such deception in transformer-based models. By sourcing activations from \"deceptive\" prompts and patching them into safe forward passes at specific layers, we simulate vulnerabilities and quantify deception rates. Through toy neural network simulations across multiple scenarios (e.g., 1000 trials per setup), we demonstrate that adversarial patching increases deceptive outputs to 23.9% from a 0% baseline, with layer-specific variations supporting our hypotheses. We propose six hypotheses, including transferability across models, exacerbation in multimodal settings, and scaling effects. An expanded literature review synthesizes over 20 key works in interpretability, deception, and adversarial attacks. Mitigation strategies, such as activation anomaly detection and robust fine-tuning, are detailed, alongside ethical considerations and future research directions. This work advances AI safety by highlighting patching's dual-use potential and provides a roadmap for empirical studies on large-scale models.",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "published": "2025-07-12T21:29:49Z",
+          "updated": "2025-07-12T21:29:49Z",
+          "pdf_url": "https://arxiv.org/pdf/2507.09406",
+          "html_url": "https://arxiv.org/html/2507.09406",
+          "abs_url": "https://arxiv.org/abs/2507.09406",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2507.09406"
+        }
+      ]
+    }
+  ],
+  "total": 12
+}

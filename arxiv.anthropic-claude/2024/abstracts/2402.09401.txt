@@ -1,0 +1,21 @@
+Title: Reinforcement Learning from Human Feedback with Active Queries
+Authors: Kaixuan Ji, Jiafan He, Quanquan Gu
+ID: 2402.09401
+URL: https://arxiv.org/abs/2402.09401
+
+Abstract:
+Aligning large language models (LLM) with human preference plays a key role in
+building modern generative models and can be achieved by reinforcement learning
+from human feedback (RLHF). Despite their superior performance, current RLHF
+approaches often require a large amount of human-labelled preference data, which
+is expensive to collect. In this paper, inspired by the success of active
+learning, we address this problem by proposing query-efficient RLHF methods. We
+first formalize the alignment problem as a contextual dueling bandit problem and
+design an active-query-based proximal policy optimization (APPO) algorithm with
+an $\tilde{O}(d^2/Δ)$ instance-dependent regret bound and an
+$\tilde{O}(d^2/Δ^2)$ query complexity, where $d$ is the dimension of feature
+space and $Δ$ is the sub-optimality gap over all the contexts. We then propose
+ADPO, a practical version of our algorithm based on direct preference
+optimization (DPO) and apply it to fine-tuning LLMs. Our experiments show that
+ADPO, while only making about half of queries for human preference, matches the
+performance of the state-of-the-art DPO method.

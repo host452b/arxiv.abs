@@ -1,0 +1,27 @@
+Title: MAGPIE: A dataset for Multi-AGent contextual PrIvacy Evaluation
+Authors: Gurusha Juneja, Alon Albalak, Wenyue Hua, William Yang Wang
+ID: 2506.20737
+URL: https://arxiv.org/abs/2506.20737
+
+The proliferation of LLM-based agents has led to increasing deployment of inter-
+agent collaboration for tasks like scheduling, negotiation, resource allocation
+etc. In such systems, privacy is critical, as agents often access proprietary
+tools and domain-specific databases requiring strict confidentiality. This paper
+examines whether LLM-based agents demonstrate an understanding of contextual
+privacy. And, if instructed, do these systems preserve inference time user
+privacy in non-adversarial multi-turn conversation. Existing benchmarks to
+evaluate contextual privacy in LLM-agents primarily assess single-turn, low-
+complexity tasks where private information can be easily excluded. We first
+present a benchmark - MAGPIE comprising 158 real-life high-stakes scenarios
+across 15 domains. These scenarios are designed such that complete exclusion of
+private data impedes task completion yet unrestricted information sharing could
+lead to substantial losses. We then evaluate the current state-of-the-art LLMs
+on (a) their understanding of contextually private data and (b) their ability to
+collaborate without violating user privacy. Empirical experiments demonstrate
+that current models, including GPT-4o and Claude-2.7-Sonnet, lack robust
+understanding of contextual privacy, misclassifying private data as shareable
+25.2\% and 43.6\% of the time. In multi-turn conversations, these models
+disclose private information in 59.9\% and 50.5\% of cases even under explicit
+privacy instructions. Furthermore, multi-agent systems fail to complete tasks in
+71\% of scenarios. These results underscore that current models are not aligned
+towards both contextual privacy preservation and collaborative task-solving.

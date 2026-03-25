@@ -1,0 +1,26 @@
+Title: Adaptive Retrieval helps Reasoning in LLMs -- but mostly if it's not used
+Authors: Srijan Shakya, Anamaria-Roberta Hartl, Sepp Hochreiter, Korbinian Pöppel
+ID: 2602.07213
+URL: https://arxiv.org/abs/2602.07213
+
+Abstract:
+Large Language Models (LLMs) often falter in complex reasoning tasks due to
+their static, parametric knowledge, leading to hallucinations and poor
+performance in specialized domains like mathematics. This work explores a
+fundamental principle for enhancing generative models: treating retrieval as a
+form of dynamic in-context learning. We test an adaptive retrieval-augmented
+architecture where an LLM agent actively decides when to query an external
+knowledge base during its reasoning process. We compare this adaptive strategy
+against a standard Chain-of-Thought (CoT) baseline and a static retrieval
+approach on the GSM8K and MATH-500 benchmarks. Although our experiments show
+that static retrieval is inferior to CoT, the adaptive retrieval shows
+interesting behavior: While traces including retrieved results show slightly
+worse performance compared to CoT, traces that do not include retrieval actually
+perform better compared to CoT. This suggests that: (a) retrieval only rarely
+helps reasoning (we show a few counterexamples, e.g. using useful theorems) and
+(b) actively not using retrieval is indicative of good model performance.
+Furthermore, we find that the model scales its retrieval frequency with the
+difficulty of the problem, reinforcing that the decision to retrieve is a
+crucial metacognitive signal. The agent's ability to self-assess its knowledge
+and selectively engage with external information represents a key principle for
+building more robust and reliable generative models.

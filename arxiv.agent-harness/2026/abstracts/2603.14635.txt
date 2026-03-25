@@ -1,0 +1,21 @@
+Title: Compute Allocation for Reasoning-Intensive Retrieval Agents
+Authors: Sreeja Apparaju, Nilesh Gupta
+ID: 2603.14635
+URL: https://arxiv.org/abs/2603.14635
+
+Abstract:
+As agents operate over long horizons, their memory stores grow continuously,
+making retrieval critical to accessing relevant information. Many agent queries
+require reasoning-intensive retrieval, where the connection between query and
+relevant documents is implicit and requires inference to bridge. LLM-augmented
+pipelines address this through query expansion and candidate re-ranking, but
+introduce significant inference costs. We study computation allocation in
+reasoning-intensive retrieval pipelines using the BRIGHT benchmark and Gemini
+2.5 model family. We vary model capacity, inference-time thinking, and
+re-ranking depth across query expansion and re-ranking stages. We find that
+re-ranking benefits substantially from stronger models (+7.5 NDCG@10) and deeper
+candidate pools (+21% from $k$=10 to 100), while query expansion shows
+diminishing returns beyond lightweight models (+1.1 NDCG@10 from weak to
+strong). Inference-time thinking provides minimal improvement at either stage.
+These results suggest that compute should be concentrated on re-ranking rather
+than distributed uniformly across pipeline stages.

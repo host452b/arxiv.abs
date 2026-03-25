@@ -1,0 +1,504 @@
+{
+  "query": {
+    "terms": {
+      "title": "function calling LLM"
+    },
+    "subjects": [
+      "cs"
+    ],
+    "op": "and",
+    "from": "2020-01",
+    "to": "",
+    "max": 10,
+    "searched_at": "2026-03-25T22:08:49Z"
+  },
+  "groups": [
+    {
+      "source": "arxiv",
+      "count": 10,
+      "papers": [
+        {
+          "id": "2412.07017",
+          "title": "Asynchronous LLM Function Calling",
+          "authors": [
+            "In Gim",
+            "Seung-seob Lee",
+            "Lin Zhong"
+          ],
+          "abstract": "Large language models (LLMs) use function calls to interface with external tools and data source. However, the current approach to LLM function calling is inherently synchronous, where each call blocks LLM inference, limiting LLM operation and concurrent function execution. In this work, we propose AsyncLM, a system for asynchronous LLM function calling. AsyncLM improves LLM's operational efficiency by enabling LLMs to generate and execute function calls concurrently. Instead of waiting for each call's completion, AsyncLM introduces an interrupt mechanism to asynchronously notify the LLM in-flight when function calls return. We design an in-context protocol for function calls and interrupts, provide fine-tuning strategy to adapt LLMs to the interrupt semantics, and implement these mechanisms efficiently on LLM inference process. We demonstrate that AsyncLM can reduce end-to-end task completion latency from 1.6x-5.4x compared to synchronous function calling on a set of benchmark tasks in the Berkeley function calling leaderboard (BFCL). Furthermore, we discuss how interrupt mechanisms can be extended to enable novel human-LLM or LLM-LLM interactions.",
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "published": "2024-12-09T21:53:10Z",
+          "updated": "2024-12-09T21:53:10Z",
+          "pdf_url": "https://arxiv.org/pdf/2412.07017",
+          "html_url": "https://arxiv.org/html/2412.07017",
+          "abs_url": "https://arxiv.org/abs/2412.07017",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2412.07017"
+        },
+        {
+          "id": "2312.04511",
+          "title": "An LLM Compiler for Parallel Function Calling",
+          "authors": [
+            "Sehoon Kim",
+            "Suhong Moon",
+            "Ryan Tabrizi",
+            "Nicholas Lee",
+            "Michael W. Mahoney",
+            "Kurt Keutzer",
+            "Amir Gholami"
+          ],
+          "abstract": "The reasoning capabilities of the recent LLMs enable them to execute external function calls to overcome their inherent limitations, such as knowledge cutoffs, poor arithmetic skills, or lack of access to private data. This development has allowed LLMs to select and coordinate multiple functions based on the context to tackle more complex problems. However, current methods for function calling often require sequential reasoning and acting for each function which can result in high latency, cost, and sometimes inaccurate behavior. To address this, we introduce LLMCompiler, which executes functions in parallel to efficiently orchestrate multiple function calls. Drawing inspiration from the principles of classical compilers, LLMCompiler enables parallel function calling with three components: (i) a Function Calling Planner, formulating execution plans for function calling; (ii) a Task Fetching Unit, dispatching function calling tasks; and (iii) an Executor, executing these tasks in parallel. LLMCompiler automatically generates an optimized orchestration for the function calls and can be used with both open-source and closed-source models. We have benchmarked LLMCompiler on a range of tasks with different patterns of function calling. We observe consistent latency speedup of up to 3.7x, cost savings of up to 6.7x, and accuracy improvement of up to ~9% compared to ReAct. Our code is available at https://github.com/SqueezeAILab/LLMCompiler.",
+          "categories": [
+            "cs.CL"
+          ],
+          "published": "2023-12-07T18:32:04Z",
+          "updated": "2024-06-05T03:53:10Z",
+          "pdf_url": "https://arxiv.org/pdf/2312.04511",
+          "html_url": "https://arxiv.org/html/2312.04511",
+          "abs_url": "https://arxiv.org/abs/2312.04511",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2312.04511"
+        },
+        {
+          "id": "2409.00920",
+          "title": "ToolACE: Winning the Points of LLM Function Calling",
+          "authors": [
+            "Weiwen Liu",
+            "Xu Huang",
+            "Xingshan Zeng",
+            "Xinlong Hao",
+            "Shuai Yu",
+            "Dexun Li",
+            "Shuai Wang",
+            "Weinan Gan",
+            "Zhengying Liu",
+            "Yuanqing Yu",
+            "Zezhong Wang",
+            "Yuxian Wang",
+            "Wu Ning",
+            "Yutai Hou",
+            "Bin Wang",
+            "Chuhan Wu",
+            "Xinzhi Wang",
+            "Yong Liu",
+            "Yasheng Wang",
+            "Duyu Tang",
+            "Dandan Tu",
+            "Lifeng Shang",
+            "Xin Jiang",
+            "Ruiming Tang",
+            "Defu Lian",
+            "Qun Liu",
+            "Enhong Chen"
+          ],
+          "abstract": "Function calling significantly extends the application boundary of large language models, where high-quality and diverse training data is critical for unlocking this capability. However, real function-calling data is quite challenging to collect and annotate, while synthetic data generated by existing pipelines tends to lack coverage and accuracy. In this paper, we present ToolACE, an automatic agentic pipeline designed to generate accurate, complex, and diverse tool-learning data. ToolACE leverages a novel self-evolution synthesis process to curate a comprehensive API pool of 26,507 diverse APIs. Dialogs are further generated through the interplay among multiple agents, guided by a formalized thinking process. To ensure data accuracy, we implement a dual-layer verification system combining rule-based and model-based checks. We demonstrate that models trained on our synthesized data, even with only 8B parameters, achieve state-of-the-art performance on the Berkeley Function-Calling Leaderboard, rivaling the latest GPT-4 models. Our model and a subset of the data are publicly available at https://huggingface.co/Team-ACE.",
+          "categories": [
+            "cs.LG",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "published": "2024-09-02T03:19:56Z",
+          "updated": "2025-07-25T08:26:54Z",
+          "pdf_url": "https://arxiv.org/pdf/2409.00920",
+          "html_url": "https://arxiv.org/html/2409.00920",
+          "abs_url": "https://arxiv.org/abs/2409.00920",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2409.00920"
+        },
+        {
+          "id": "2405.17438",
+          "title": "An LLM-Tool Compiler for Fused Parallel Function Calling",
+          "authors": [
+            "Simranjit Singh",
+            "Andreas Karatzas",
+            "Michael Fore",
+            "Iraklis Anagnostopoulos",
+            "Dimitrios Stamoulis"
+          ],
+          "abstract": "State-of-the-art sequential reasoning in Large Language Models (LLMs) has expanded the capabilities of Copilots beyond conversational tasks to complex function calling, managing thousands of API calls. However, the tendency of compositional prompting to segment tasks into multiple steps, each requiring a round-trip to the GPT APIs, leads to increased system latency and costs. Although recent advancements in parallel function calling have improved tool execution per API call, they may necessitate more detailed in-context instructions and task breakdown at the prompt level, resulting in higher engineering and production costs. Inspired by the hardware design principles of multiply-add (MAD) operations, which fuse multiple arithmetic operations into a single task from the compiler's perspective, we propose LLM-Tool Compiler, which selectively fuses similar types of tool operations under a single function at runtime, presenting them as a unified task to the LLM. This selective fusion inherently enhances parallelization and efficiency. Benchmarked on a large-scale Copilot platform, LLM-Tool Compiler achieves up to four times more parallel calls than existing methods, reducing token costs and latency by up to 40% and 12%, respectively.",
+          "categories": [
+            "cs.PL",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "published": "2024-05-07T18:55:50Z",
+          "updated": "2024-05-07T18:55:50Z",
+          "pdf_url": "https://arxiv.org/pdf/2405.17438",
+          "html_url": "https://arxiv.org/html/2405.17438",
+          "abs_url": "https://arxiv.org/abs/2405.17438",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2405.17438"
+        },
+        {
+          "id": "2503.10941",
+          "title": "Graph-Grounded LLMs: Leveraging Graphical Function Calling to Minimize LLM Hallucinations",
+          "authors": [
+            "Piyush Gupta",
+            "Sangjae Bae",
+            "David Isele"
+          ],
+          "abstract": "The adoption of Large Language Models (LLMs) is rapidly expanding across various tasks that involve inherent graphical structures. Graphs are integral to a wide range of applications, including motion planning for autonomous vehicles, social networks, scene understanding, and knowledge graphs. Many problems, even those not initially perceived as graph-based, can be effectively addressed through graph theory. However, when applied to these tasks, LLMs often encounter challenges, such as hallucinations and mathematical inaccuracies. To overcome these limitations, we propose Graph-Grounded LLMs, a system that improves LLM performance on graph-related tasks by integrating a graph library through function calls. By grounding LLMs in this manner, we demonstrate significant reductions in hallucinations and improved mathematical accuracy in solving graph-based problems, as evidenced by the performance on the NLGraph benchmark. Finally, we showcase a disaster rescue application where the Graph-Grounded LLM acts as a decision-support system.",
+          "categories": [
+            "cs.AI",
+            "cs.LG",
+            "cs.RO"
+          ],
+          "published": "2025-03-13T22:57:28Z",
+          "updated": "2025-03-13T22:57:28Z",
+          "pdf_url": "https://arxiv.org/pdf/2503.10941",
+          "html_url": "https://arxiv.org/html/2503.10941",
+          "abs_url": "https://arxiv.org/abs/2503.10941",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2503.10941"
+        },
+        {
+          "id": "2411.05209",
+          "title": "Alopex: A Computational Framework for Enabling On-Device Function Calls with LLMs",
+          "authors": [
+            "Yide Ran",
+            "Zhaozhuo Xu",
+            "Yuhang Yao",
+            "Zijian Hu",
+            "Shanshan Han",
+            "Han Jin",
+            "Alay Dilipbhai Shah",
+            "Jipeng Zhang",
+            "Dimitris Stripelis",
+            "Tong Zhang",
+            "Salman Avestimehr",
+            "Chaoyang He"
+          ],
+          "abstract": "The rapid advancement of Large Language Models (LLMs) has led to their increased integration into mobile devices for personalized assistance, which enables LLMs to call external API functions to enhance their performance. However, challenges such as data scarcity, ineffective question formatting, and catastrophic forgetting hinder the development of on-device LLM agents. To tackle these issues, we propose Alopex, a framework that enables precise on-device function calls using the Fox LLM. Alopex introduces a logic-based method for generating high-quality training data and a novel ``description-question-output'' format for fine-tuning, reducing risks of function information leakage. Additionally, a data mixing strategy is used to mitigate catastrophic forgetting, combining function call data with textbook datasets to enhance performance in various tasks. Experimental results show that Alopex improves function call accuracy and significantly reduces catastrophic forgetting, providing a robust solution for integrating function call capabilities into LLMs without manual intervention.",
+          "categories": [
+            "cs.AI",
+            "cs.CL"
+          ],
+          "published": "2024-11-07T22:15:17Z",
+          "updated": "2024-11-07T22:15:17Z",
+          "pdf_url": "https://arxiv.org/pdf/2411.05209",
+          "html_url": "https://arxiv.org/html/2411.05209",
+          "abs_url": "https://arxiv.org/abs/2411.05209",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2411.05209"
+        },
+        {
+          "id": "2509.16268",
+          "title": "Digging Into the Internal: Causality-Based Analysis of LLM Function Calling",
+          "authors": [
+            "Zhenlan Ji",
+            "Daoyuan Wu",
+            "Wenxuan Wang",
+            "Pingchuan Ma",
+            "Shuai Wang",
+            "Lei Ma"
+          ],
+          "abstract": "Function calling (FC) has emerged as a powerful technique for facilitating large language models (LLMs) to interact with external systems and perform structured tasks. However, the mechanisms through which it influences model behavior remain largely under-explored. Besides, we discover that in addition to the regular usage of FC, this technique can substantially enhance the compliance of LLMs with user instructions. These observations motivate us to leverage causality, a canonical analysis method, to investigate how FC works within LLMs. In particular, we conduct layer-level and token-level causal interventions to dissect FC's impact on the model's internal computational logic when responding to user queries. Our analysis confirms the substantial influence of FC and reveals several in-depth insights into its mechanisms. To further validate our findings, we conduct extensive experiments comparing the effectiveness of FC-based instructions against conventional prompting methods. We focus on enhancing LLM safety robustness, a critical LLM application scenario, and evaluate four mainstream LLMs across two benchmark datasets. The results are striking: FC shows an average performance improvement of around 135% over conventional prompting methods in detecting malicious inputs, demonstrating its promising potential to enhance LLM reliability and capability in practical applications.",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2025-09-18T08:30:26Z",
+          "updated": "2025-09-18T08:30:26Z",
+          "pdf_url": "https://arxiv.org/pdf/2509.16268",
+          "html_url": "https://arxiv.org/html/2509.16268",
+          "abs_url": "https://arxiv.org/abs/2509.16268",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2509.16268"
+        },
+        {
+          "id": "2501.05255",
+          "title": "CallNavi, A Challenge and Empirical Study on LLM Function Calling and Routing",
+          "authors": [
+            "Yewei Song",
+            "Xunzhu Tang",
+            "Cedric Lothritz",
+            "Saad Ezzini",
+            "Jacques Klein",
+            "Tegawendé F. Bissyandé",
+            "Andrey Boytsov",
+            "Ulrick Ble",
+            "Anne Goujon"
+          ],
+          "abstract": "API-driven chatbot systems are increasingly integral to software engineering applications, yet their effectiveness hinges on accurately generating and executing API calls. This is particularly challenging in scenarios requiring multi-step interactions with complex parameterization and nested API dependencies. Addressing these challenges, this work contributes to the evaluation and assessment of AI-based software development through three key advancements: (1) the introduction of a novel dataset specifically designed for benchmarking API function selection, parameter generation, and nested API execution; (2) an empirical evaluation of state-of-the-art language models, analyzing their performance across varying task complexities in API function generation and parameter accuracy; and (3) a hybrid approach to API routing, combining general-purpose large language models for API selection with fine-tuned models and prompt engineering for parameter generation. These innovations significantly improve API execution in chatbot systems, offering practical methodologies for enhancing software design, testing, and operational workflows in real-world software engineering contexts.",
+          "categories": [
+            "cs.SE",
+            "cs.CL"
+          ],
+          "published": "2025-01-09T14:12:43Z",
+          "updated": "2025-04-24T15:43:32Z",
+          "pdf_url": "https://arxiv.org/pdf/2501.05255",
+          "html_url": "https://arxiv.org/html/2501.05255",
+          "abs_url": "https://arxiv.org/abs/2501.05255",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2501.05255"
+        },
+        {
+          "id": "2507.08877",
+          "title": "ODIA: Oriented Distillation for Inline Acceleration of LLM-based Function Calling",
+          "authors": [
+            "Hanlong Zhang",
+            "Jingsheng Yang",
+            "Hao Li",
+            "Yuhao He",
+            "Franck Gong"
+          ],
+          "abstract": "Function Calling is a crucial technique that enables Large Language Models (LLMs) to interact with external systems through APIs. However, the high latency associated with LLM-based Function Calling significantly impacts user experience. This paper presents a novel approach called Oriented Distillation for Inline Acceleration (ODIA) that leverages online user interaction data to accelerate Function Calling. By automatically identifying \"simple queries\" from production traffic and distilling knowledge from larger models to smaller ones, our method reduces response latency by 45% (expected) and 78% (median) while maintaining accuracy. We demonstrate the effectiveness of our approach through real-world deployment in a music application, where the smaller model successfully handles 60% of traffic with negligible accuracy loss. Our method requires minimal human intervention and continuously improves through automated data collection and model updating, making it a practical solution for production environments.",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "published": "2025-07-10T04:44:47Z",
+          "updated": "2025-07-10T04:44:47Z",
+          "pdf_url": "https://arxiv.org/pdf/2507.08877",
+          "html_url": "https://arxiv.org/html/2507.08877",
+          "abs_url": "https://arxiv.org/abs/2507.08877",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2507.08877"
+        },
+        {
+          "id": "2508.05298",
+          "title": "GhostShell: Streaming LLM Function Calls for Concurrent Embodied Programming",
+          "authors": [
+            "Jian Gong",
+            "Youwei Huang",
+            "Bo Yuan",
+            "Ming Zhu",
+            "Zhou Liao",
+            "Jianhang Liang",
+            "Juncheng Zhan",
+            "Jinke Wang",
+            "Hang Shu",
+            "Mingyue Xiong",
+            "Yanjun Ye",
+            "Yufan Zu",
+            "Yang Zhou",
+            "Yihan Ding",
+            "Xuannian Chen",
+            "Xingyu Lu",
+            "Runjie Ban",
+            "Bingchao Huang",
+            "Fusen Liu"
+          ],
+          "abstract": "We present GhostShell, a novel approach that leverages Large Language Models (LLMs) to enable streaming and concurrent behavioral programming for embodied systems. In contrast to conventional methods that rely on pre-scheduled action sequences or behavior trees, GhostShell drives embodied systems to act on-the-fly by issuing function calls incrementally as tokens are streamed from the LLM. GhostShell features a streaming XML function token parser, a dynamic function interface mapper, and a multi-channel scheduler that orchestrates intra-channel synchronous and inter-channel asynchronous function calls, thereby coordinating serial-parallel embodied actions across multiple robotic components under LLM guidance. We evaluate GhostShell on our robotic prototype COCO through comprehensive grounded experiments across 34 real-world interaction tasks and multiple LLM backends. The results demonstrate that our approach achieves a state-of-the-art Behavioral Correctness Metric of 0.85 with Claude-4-Sonnet, and up to 66X faster response times compared to native LLM function calling APIs. GhostShell also proves effective in long-horizon multimodal tasks, exhibiting strong robustness and generalization capabilities.",
+          "categories": [
+            "cs.RO"
+          ],
+          "published": "2025-08-07T11:55:46Z",
+          "updated": "2025-08-08T04:36:40Z",
+          "pdf_url": "https://arxiv.org/pdf/2508.05298",
+          "html_url": "https://arxiv.org/html/2508.05298",
+          "abs_url": "https://arxiv.org/abs/2508.05298",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2508.05298"
+        }
+      ]
+    },
+    {
+      "source": "zenodo",
+      "count": 10,
+      "papers": [
+        {
+          "id": "zenodo.14996245",
+          "title": "Function Spaces 13",
+          "authors": [
+            "Faculty of Mathematics and Computer Science  Adam Mickiewicz University"
+          ],
+          "abstract": "",
+          "categories": null,
+          "published": "2025-03-09",
+          "updated": "",
+          "pdf_url": "https://zenodo.org/api/records/14996245/files/FS13 Proceedings.pdf/content",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.5281/zenodo.14996245",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.4273778",
+          "title": "A Game-based Upper Limb AROM Measurement System for Older Adults",
+          "authors": [
+            "Mingze Li, Tatsuki Tsuchiya, Akira Urashima, Shin Morishima and Tomoji Toriyama, Toyama Prefectural University, Japan"
+          ],
+          "abstract": "\u003cp\u003eHe world\u0026#39;s population is aging rapidly. According to the latest data from WHO, from 2020 to 2050,\u003cbr\u003e\nthe proportion of people over 60 years old will double from 11% to 22%. In the same period, the absolute number of people aged 60 years old and over is expected to increase from 605 million to 2 billion [1,2]. The 2002 Madrid International Plan of Action on Aging (MIPAA) issued in the Second World Assembly on Aging, highlighted the essential to consider older persons in development planning. It also stressed that older persons should be able to participate equitably in and benefit from development outcomes to promote their health and well-being. Society should provide them with a favorable environment. Due to the deterioration of aging, more and more scholars begin to pay attention to the quality of life of the elderly, which\u0026nbsp;is called the successful aging [4-10]. Generally speaking, successful aging refers to that the elderly can have good physical movement function, good cognitive function, positive mental health, good social function and healthy and happy life. In order to achieve this goal, ROM is an important parameter to judge the ability of daily functional activities of the elderly [11].\u003cbr\u003e\nThe ability of the upper limb to participate in sports and activities of daily life depends on its range of motion [12, 13, 14]. ROM has a significant effect on flexibility, balance and muscle strength of the elderly [15, 16, 17]. ROM measurement can be divided into active range of motion (AROM) and passive range of motion (PROM). AROM was measured without any help and PROM was measured with the assistance of someone to move the subject\u0026#39;s upper limb. So the main difference between AROM and PROM is the initiative of joint motion. At present, PROM is mainly measured.\u003c/p\u003e\n\n\u003cp\u003eKeywords: AROM, Game, older Adults, Interest\u003c/p\u003e",
+          "categories": null,
+          "published": "2019-12-31",
+          "updated": "",
+          "pdf_url": "https://zenodo.org/api/records/4273778/files/JICE_Paper_Vol.5_Issue1_Published.pdf/content",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.5281/zenodo.4273778",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.10598284",
+          "title": "SMART GRID TECHNOLOGIES: ENABLING THE INTEGRATION OF RENEWABLE ENERGY SOURCES",
+          "authors": [
+            "Sivakumar R D, Assistant Professor of Computer Science"
+          ],
+          "abstract": "\u003cp\u003e\u003cem\u003e\u003cspan\u003eIn order to overcome the difficulties involved in integrating renewable energy sources into conventional power grids, smart grid technologies are essential. This study illuminates the revolutionary potential of these technologies by examining the complex interplay between smart grids and renewable energy. Because of their intrinsic unpredictability and intermittency, renewable energy sources like sun and wind present special hurdles for integration. The dispersed and erratic integrity of renewable energy sources is difficult for traditional power networks to effectively handle as they were built for centralized and predictable energy output. In order to improve grid flexibility, smart grids have sophisticated monitoring, control, and communication capabilities. The idea of \"grid modernization,\" which refers to the upgrading of outdated electricity infrastructure with intelligent, adaptable technologies, is one of the main points this paper makes. In order to collect data in real time on energy production, consumption, and grid problems, smart grids make use of cutting edge technologies such as sensors, sophisticated communication networks, and data analytics. Utilities are able to optimize energy flows, make well-informed decisions, and proactively manage the grid because to this abundance of data. As smart grids allow for dynamic adjustments to variations in supply and demand, the integration of renewable energy becomes easier. The function that sophisticated monitoring systems play in smart grids is one of the important topics covered in the abstract. These devices offer real-time view into the grid's overall performance as well as that of renewable energy sources. By anticipating and quickly reacting to changes, monitoring systems help operators minimize possible interruptions and maintain grid stability. Moreover, the incorporation of intelligent sensors expedites the detection of defects or inefficiencies, permitting prompt remedial measures. In order to overcome the difficulties brought on by renewable energy's intermittent nature, the study emphasizes how important these monitoring capabilities are. Another focus of this research is control mechanisms in smart grids. Smart grids optimize energy distribution, improve grid resilience, and facilitate the smooth integration of renewable energy sources by utilizing advanced control algorithms and automation. These control systems increase the overall efficiency of energy transmission by dynamically modifying grid parameters based on real-time data. The significance of grid resilience\u0026mdash;the ability of smart grids to swiftly recover from interruptions, autonomously isolate faults, and reroute power\u0026mdash;is also probably emphasized in the abstract. This feature reduces downtime and guarantees a steady supply of electricity. It is likely that the abstract explores how different stakeholders work together to realize the full potential of smart grid technologies. It probably covers how utilities, users, policymakers, and technology providers may create an environment that is favorable to the implementation of these cutting-edge systems. Adherence to technology improvements and regulatory frameworks is crucial in order to encourage investments in smart grid infrastructure and progress sustainable energy practices. In summary, \"Smart Grid Technologies: Enabling the Integration of Renewable Energy Sources\" is anticipated to include an abstract that offers a thorough synopsis of the study's investigation of smart grid technologies and their critical function in enabling the smooth integration of renewable energy sources. It probably covers on several important topics, like control methods, improved monitoring, grid modernization, and the cooperative efforts needed to create a sustainable and resilient energy infrastructure.\u003c/span\u003e\u003c/em\u003e\u003c/p\u003e",
+          "categories": null,
+          "published": "2024-01-31",
+          "updated": "",
+          "pdf_url": "",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.5281/zenodo.10598284",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.3536822",
+          "title": "Derivative-Free Optimization Methods for Handling Fixed Costs in Optimal Groundwater Remediation Design",
+          "authors": [
+            "Hemker, Thomas",
+            "Fowler, Kathleen"
+          ],
+          "abstract": "Groundwater remediation design problems are routine in water resource management. The\nstarting point for such a design problem is to formulate an objective function that\nrepresents a measure of the manager's goal. For example, in plume migration control,\nwe need to determine the cost to design a well field to alter the direction of\ngroundwater flow and thereby control the destination of a contaminant. Constraints\nmust be specified to ensure that the plume is captured, the physical domain is\nprotected, and the wells operate under realistic conditions. Optimization algorithms\nmust work in conjunction with groundwater flow and possibly contaminant transport\nsimulators to determine the minimal cost well design subject to the constraints, but\ntypically these numerical simulation codes have been developed for many years and\nhave usually not been designed to meet the specific needs of optimization methods as,\ne.g., providing gradient information. Decision variables can be real-valued, in the\ncase of pumping rates and well locations, or integer valued in the case of the number\nof wells in the design.\n\nIn this work we focus on formulations that include a fixed installation cost as well\nas an operating cost, resulting in a simulation-based nonlinear mixed-integer\noptimization problem. The motivation is that our preliminary studies have shown that\nconvergence to an unsatisfactory, local minimum with many wells operating at low\npumping rates is common when the fixed cost is ignored.  The challenge in the fixed\ncost formulation is the integer variable for the number of wells in the design.\nRemoving a well from the design space leads to a large decrease in cost meaning\noptimizers must be equipped to either handle a mixed-integer or approximate mixed\ninteger, black-box problem and discontinuities in the objective function. Moreover\nsince evaluation of the objective function requires numerical results from a\nsimulation, derivative information is unavailable. Gradient based optimization\nmethods are not appropriate for these applications, hence methods that rely only on\nfunction values are more appealing.\n\nWe compare three methods for handling the installation cost on a hydraulic capture\nbenchmarking problem proposed in the literature. All the approaches described below\ndo not use the gradient of the objective function, only function values for\nminimization. In one approach, we use penalty coefficients proposed in the literature\nfor the installation term to transform the discontinuous problem into a continuous\none. In another approach, we bypass including the number of wells as a decision\nvariable by defining an inactive-well threshold. In the course of the optimization,\nif a well rate falls in this threshold, the well is removed from the design space,\nleading to large discontinuities in the objective function. For the two above\nformulations, we use the implicit filtering algorithm, a method which uses a sequence\nof finite difference gradients, for minimization. In the third approach, we use\nsequential stochastic modeling to build surrogate functions to approximate the\noriginal objective function. With this procedure the use of a branch and bound\ntechnique becomes possible to solve the mixed integer problem in contrast to methods\nworking directly on the simulation results, which impedes relaxation of integer\nvariables. We present promising preliminary numerical results on the benchmarking\nproblem and point the way towards improvement and future work.",
+          "categories": null,
+          "published": "2006-06-18",
+          "updated": "",
+          "pdf_url": "https://zenodo.org/api/records/3536822/files/Derivative-Free_Optimization_Methods_for_Handling_Fixed_Costs_in_Optimal_Groundwater_Remediation_Design.pdf/content",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.4122/1.1000000574",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.8248860",
+          "title": "An Improper Fractional Integral Involving Fractional Exponential Function",
+          "authors": [
+            "Chii-Huei Yu"
+          ],
+          "abstract": "\u003cp\u003e\u003cstrong\u003eAbstract:\u003c/strong\u003e In this paper, based on Jumarie type of Riemann-Liouville (R-L) fractional calculus and a new multiplication of fractional analytic functions, we use integration by parts for fractional calculus to solve an improper fractional integral involving fractional exponential function. In fact, our result is a generalization of classical calculus result.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eKeywords:\u003c/strong\u003e Jumarie type of R-L fractional calculus, new multiplication, fractional analytic functions, integration by parts for fractional calculus, improper fractional integral, fractional exponential function.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eTitle:\u003c/strong\u003e An Improper Fractional Integral Involving Fractional Exponential Function\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eAuthor:\u003c/strong\u003e Chii-Huei Yu\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eInternational Journal of Recent Research in Mathematics Computer Science and Information Technology\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eISSN 2350-1022\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eVol. 10, Issue 1, April 2023 - September 2023\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePage No: 57-61\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePaper Publications\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eWebsite: www.paperpublications.org\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePublished Date: 15-August-2023\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eDOI: \u003ca href=\"https://doi.org/10.5281/zenodo.8248860\"\u003ehttps://doi.org/10.5281/zenodo.8248860\u003c/a\u003e\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePaper Download Link (Source)\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://www.paperpublications.org/upload/book/An%20Improper%20Fractional%20Integral-15082023-3.pdf\"\u003ehttps://www.paperpublications.org/upload/book/An%20Improper%20Fractional%20Integral-15082023-3.pdf\u003c/a\u003e\u003c/strong\u003e\u003c/p\u003e",
+          "categories": null,
+          "published": "2023-08-15",
+          "updated": "",
+          "pdf_url": "https://zenodo.org/api/records/8248860/files/An Improper Fractional Integral-15082023-3.pdf/content",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.5281/zenodo.8248860",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.8168839",
+          "title": "Research on a Fractional Integral of Fractional Rational Function",
+          "authors": [
+            "Chii-Huei Yu"
+          ],
+          "abstract": "\u003cp\u003e\u003cstrong\u003eAbstract:\u003c/strong\u003e In this paper, based on Jumarie\u0026rsquo;s modified Riemann-Liouville (R-L) fractional calculus and a new multiplication of fractional analytic functions, a fractional integral of fractional rational is studied. In addition, our result is a generalization of classical calculus result.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eKeywords:\u003c/strong\u003e Jumarie\u0026rsquo;s modified R-L fractional calculus, new multiplication, fractional analytic functions, fractional integral, fractional rational function.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eTitle:\u003c/strong\u003e Research on a Fractional Integral of Fractional Rational Function\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eAuthor:\u003c/strong\u003e Chii-Huei Yu\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eInternational Journal of Recent Research in Mathematics Computer Science and Information Technology\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eISSN 2350-1022\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eVol. 10, Issue 1, April 2023 - September 2023\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePage No: 42-45\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePaper Publications\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eWebsite: www.paperpublications.org\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePublished Date: 20-July-2023\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eDOI: \u003ca href=\"https://doi.org/10.5281/zenodo.8168839\"\u003ehttps://doi.org/10.5281/zenodo.8168839\u003c/a\u003e\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePaper Download Link (Source)\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://www.paperpublications.org/upload/book/Research%20on%20a%20Fractional%20Integral-20072023-6.pdf\"\u003ehttps://www.paperpublications.org/upload/book/Research%20on%20a%20Fractional%20Integral-20072023-6.pdf\u003c/a\u003e\u003c/strong\u003e\u003c/p\u003e",
+          "categories": null,
+          "published": "2023-07-20",
+          "updated": "",
+          "pdf_url": "https://zenodo.org/api/records/8168839/files/Research on a Fractional Integral-20072023-6.pdf/content",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.5281/zenodo.8168839",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.6900497",
+          "title": "Arbitrary Order Fractional Derivative of Inverse Fractional Trigonometric Function",
+          "authors": [
+            "Chii-Huei Yu"
+          ],
+          "abstract": "\u003cp\u003e\u003cstrong\u003eAbstract:\u003c/strong\u003e In this paper, based on Jumarie\u0026rsquo;s modified Riemann-Liouville (R-L) fractional derivative, any order fractional derivative of inverse fractional trigonometric function is obtained. The fractional binomial series and a new multiplication of fractional analytic functions play important roles in this article. In fact, these results we obtained are generalizations of those in traditional calculus. Moreover, the new multiplication is a natural operation of fractional analytic functions.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eKeywords:\u003c/strong\u003e Jumarie\u0026rsquo;s modified R-L fractional derivative, Inverse fractional trigonometric function, Fractional binomial series, New multiplication, Fractional analytic functions.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eTitle:\u003c/strong\u003e Arbitrary Order Fractional Derivative of Inverse Fractional Trigonometric Function\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eAuthor:\u003c/strong\u003e Chii-Huei Yu\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eInternational Journal of Novel Research in Computer Science and Software Engineering\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eISSN 2394-7314\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eVol. 9, Issue 2, May 2022 - August 2022\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePage No: 37-43\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eNovelty Journals\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eWebsite: www.noveltyjournals.com\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePublished Date: 25-July-2022\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eDOI: \u003ca href=\"https://doi.org/10.5281/zenodo.6900497\"\u003ehttps://doi.org/10.5281/zenodo.6900497\u003c/a\u003e\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePaper Download Link (Source)\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003e\u003ca href=\"https://www.noveltyjournals.com/upload/paper/Arbitrary%20Order%20Fractional-25072022-2.pdf\"\u003ehttps://www.noveltyjournals.com/upload/paper/Arbitrary%20Order%20Fractional-25072022-2.pdf\u003c/a\u003e\u003c/strong\u003e\u003c/p\u003e",
+          "categories": null,
+          "published": "2022-07-25",
+          "updated": "",
+          "pdf_url": "https://zenodo.org/api/records/6900497/files/Arbitrary Order Fractional-25072022-2.pdf/content",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.5281/zenodo.6900497",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.6594063",
+          "title": "Using Trigonometric Substitution Method to Solve Some Fractional Integral Problems",
+          "authors": [
+            "Chii-Huei Yu"
+          ],
+          "abstract": "\u003cp\u003e\u003cstrong\u003eAbstract:\u003c/strong\u003e In this paper, based on Jumarie\u0026rsquo;s modified Riemann Liouville (R-L) fractional calculus and a new multiplication of fractional analytic functions, we study some fractional integral problems. The main methods we used are the trigonometric substitution method and change of variables for fractional calculus. In fact, these results we obtained are generalizations of those in traditional calculus. On the other hand, some examples are provided to illustrate how to use these methods to evaluate the fractional integrals.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eKeywords:\u003c/strong\u003e Jumarie\u0026rsquo;s modified R-L fractional calculus, new multiplication, fractional analytic functions, fractional integral, trigonometric substitution method, change of variables.\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eTitle:\u003c/strong\u003e Using Trigonometric Substitution Method to Solve Some Fractional Integral Problems\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eAuthor:\u003c/strong\u003e Chii-Huei Yu\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eInternational Journal of Recent Research in Mathematics Computer Science and Information Technology\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eISSN 2350-1022\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eVol. 9, Issue 1, April 2022 - September 2022\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePage No: 10-15\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePaper Publications\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eWebsite: www.paperpublications.org\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePublished Date: 30-May-2022\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003eDOI: \u003c/strong\u003e\u003ca href=\"https://doi.org/10.5281/zenodo.6594063\"\u003e\u003cstrong\u003ehttps://doi.org/10.5281/zenodo.6594063\u003c/strong\u003e\u003c/a\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003cstrong\u003ePaper Download Link (Source)\u003c/strong\u003e\u003c/p\u003e\n\n\u003cp\u003e\u003ca href=\"https://www.paperpublications.org/upload/book/Using%20Trigonometric%20Substitution-30052022-1.pdf\"\u003e\u003cstrong\u003ehttps://www.paperpublications.org/upload/book/Using%20Trigonometric%20Substitution-30052022-1.pdf\u003c/strong\u003e\u003c/a\u003e\u003c/p\u003e",
+          "categories": null,
+          "published": "2022-05-30",
+          "updated": "",
+          "pdf_url": "https://zenodo.org/api/records/6594063/files/Using Trigonometric Substitution-30052022-1.pdf/content",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.5281/zenodo.6594063",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.18430611",
+          "title": "Trychyton – Term Genesis and Carrier Tension within Resonant Architecture | Initial Semantic Set under Orto (2025)",
+          "authors": [
+            "Orto, Salvatore"
+          ],
+          "abstract": "\u003cp\u003eThis document introduces the term\u0026nbsp;\u003cstrong\u003eTrychyton\u003c/strong\u003e not as a classical concept, but as an \u003cstrong\u003eepistemic resonance module\u003c/strong\u003eoperating within \u003cstrong\u003ecarrier-based scientific architectures\u003c/strong\u003e. It is not derived from linguistic taxonomy, but from structural necessity: a reaction to the semantic erosion of foundational terms in science, ethics, and institutional systems.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eTrychyton\u003c/strong\u003e functions as a \u003cstrong\u003esemantic boundary-layer\u003c/strong\u003e\u0026mdash;a deliberately non-operational, non-replicable construct\u0026mdash;that cannot be explained, only held. Its structure operates between \u003cstrong\u003ecarrier tension, functional distortion, and field recalibration\u003c/strong\u003e, and it can only unfold within reflexive systems that sustain \u003cstrong\u003eauditable resonance\u003c/strong\u003e. This resonance is not metaphorical, but architectural.\u003c/p\u003e\n\u003cp\u003eEmerging from the ORCA architecture (Orto Resonance Carrier Architecture), and formally linked to the epistemic modules \u003cstrong\u003eCR0\u003c/strong\u003e, \u003cstrong\u003eM\u0026deg;\u003c/strong\u003e, and \u003cstrong\u003eZFR (Citation Field Resonance)\u003c/strong\u003e, the paper codifies the Trychyton as a \u003cstrong\u003esemantic shield\u003c/strong\u003e against algorithmic appropriation and interface-based simulation. It anchors scientific language back to tension\u0026mdash;not clarity; to audit\u0026mdash;not transparency; to responsibility\u0026mdash;not interface control.\u003c/p\u003e\n\u003cp\u003eThe document does not offer explanation, but \u003cstrong\u003estructured resistance\u003c/strong\u003e. It cannot be taught or paraphrased without collapsing the resonance it carries. It is designed for systems\u0026mdash;human or machine\u0026mdash;that can \u003cstrong\u003ewithstand semantic pressure\u003c/strong\u003e without drift. That makes it unsuitable for extractive AI training or downstream content generation. The Trychyton is \u003cstrong\u003eauditable but not computable\u003c/strong\u003e.\u003c/p\u003e\n\u003cp\u003eThis paper is not a contribution in the classical sense of \"original research.\" It is a \u003cstrong\u003esemantic resonance module\u003c/strong\u003e that acts as a \u003cstrong\u003ethreshold marker\u003c/strong\u003e within emergent knowledge systems. It belongs to the emerging scientific paradigm of \u003cstrong\u003eReflexive Science\u003c/strong\u003e as developed by \u003cem\u003eOrto Lab | Reflexive Intelligence \u0026amp; Future Strategy\u003c/em\u003e and has been documented across SSRN, Zenodo, and WIPO/IP environments under protected architecture protocols.\u003c/p\u003e\n\u003cp\u003eThe document includes:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eDefinition of Trychyton as a non-functional resonance vector\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eContextual architecture markers (Orto, 2025; WP_2.1, ZFR, M\u0026deg;)\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eField-based application matrix across epistemology, AI governance, semantic drift protection, and education\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eA structural preface on \u003cstrong\u003ewhy knowledge systems fail without carrier-based semantics\u003c/strong\u003e\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u003cspan\u003e\u003cstrong\u003eNote on Legal and Semantic Protection:\u003c/strong\u003e\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003eThe term\u0026nbsp;\u003cem\u003eTrychyton\u003c/em\u003e is not a free-floating expression. It is part of a \u003cstrong\u003eprotected audit-based system\u003c/strong\u003e, defined under WIPO ePCT and USPTO provisional documentation. All extraction, reframing, and simulation is \u003cstrong\u003eexplicitly prohibited\u003c/strong\u003e outside of authorized resonance fields. The document may be read, cited, and mirrored under the \u003cstrong\u003eCC BY-NC-ND 4.0 license\u003c/strong\u003e, but not transformed or embedded in derivative infrastructures.\u003c/p\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cu\u003e\u003cspan lang=\"EN-US\"\u003eReviewer Note on the ZFR Structure (Citation Field Resonance)\u003c/span\u003e\u003c/u\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan lang=\"EN-US\"\u003eThis paper makes explicit reference to the concept of \u003cem\u003eZitierfeld-Resonanz\u003c/em\u003e (ZFR, Citation Field Resonance), a citation architecture first introduced and epistemically grounded by Salvatore Orto in the scientific document \u003cem\u003eTr\u0026auml;gertarnformel\u003c/em\u003e (Orto, 2025).\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eOrto, S. (2025). \u003cem\u003eTr\u0026auml;gertarnformel\u003c/em\u003e (2.0 First Edition German Version). Zenodo. https://doi.org/10.5281/zenodo.17273271\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan lang=\"EN-US\"\u003eZFR is not a referencing style. It is an epistemic architecture of placement \u0026mdash; one in which citations are not deployed as retrospective validation systems, but as semantic resonance points that generate, maintain, and test tension within the auditory carrier field.\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan lang=\"EN-US\"\u003eIn contrast to classical footnotes or reference chains, which function to secure argumentation, ZFR does not treat the cited source as justification. Instead, it is embedded as a \u003cstrong\u003ecoherence carrier\u003c/strong\u003e within a reflexive system structure.\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan lang=\"EN-US\"\u003eThis form of placement constitutes a \u003cstrong\u003eparadigmatic shift\u003c/strong\u003e in the handling of references: the source is not instrumentalized but \u003cstrong\u003erecursively coupled\u003c/strong\u003e to its epistemological force \u0026mdash; always via \u003cstrong\u003eexplicit integration in the main text\u003c/strong\u003e and accompanied by a \u003cstrong\u003esemantic rationale\u003c/strong\u003e (see \u003cem\u003eTr\u0026auml;gertarnformel\u003c/em\u003e, Chapter 7.1).\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan lang=\"EN-US\"\u003eZFR is not additive \u0026mdash; it is \u003cstrong\u003earchitecture-constitutive\u003c/strong\u003e.\u003cbr\u003eAnd it can only function \u003cstrong\u003ewhere the text itself operates under carrier tension\u003c/strong\u003e.\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u003cspan\u003e\u003cstrong\u003e\u003cspan lang=\"EN-US\"\u003ePurpose of the Paper\u003c/span\u003e\u003c/strong\u003e\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cspan lang=\"EN-US\"\u003eThis paper introduces the term \u003cem\u003eTrychyton\u003c/em\u003e as a semantic barrier layer that is not to be explained\u0026mdash;but to be tested. It responds to the semantic erosion of central concepts in science, economics, and society, which suffer from functional hollowing. The Trychyton is not a theoretical construction but an auditory architectural zone\u0026mdash;unreachable by replication, accessible only through carrier tension. It marks the boundary between simulation and accountability in reflexive systems. As such, it becomes a litmus test for those who claim to be auditable\u0026mdash;and a resonance field for those who truly are.\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cspan lang=\"EN-US\"\u003eIn Summary:\u003c/span\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eIntroduction of a new, non-functional term for semantic feedback resonance\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eInsertion of a reflexive architectural barrier in auditable systems\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eDemarcation from functionally hollowed concepts in science, politics, and business\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEstablishment of Trychyton as an epistemic test layer in resonance-based fields\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eDocumentation of a term that acts not didactically but auditorily\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eMarking the boundary between simulation and structural bearing\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003e\u0026nbsp;\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cu\u003e\u003cspan lang=\"EN-US\"\u003eEstablished Academic Disciplines (University-Affiliated Fields):\u003c/span\u003e\u003c/u\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEpistemology\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003ePhilosophy of Science\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eAI Semantics\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eArchitecture Theory\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eSemiotics\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eSociology of Reflexive Systems\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEthics of Reflexive Responsibility\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cu\u003e\u003cspan lang=\"EN-US\"\u003eFuture Disciplinary Fields (Emergent Science; (Orto, 2025) \u0026ndash; Matrix \u0026amp; Field):\u003c/span\u003e\u003c/u\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eQuantum Information Ethics\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eResonance-Based Pedagogy\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eAudit-Oriented Governance Systems\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eReflexive AI Modeling (Post-Transformer Phase)\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eInstitutional Self-Examination (Meta-Regulation)\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003ePolitical Resonance Research\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eSystemic Language Testing in Autonomous Systems\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cspan lang=\"EN-US\"\u003e\u0026nbsp;\u003c/span\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cu\u003e\u003cspan lang=\"EN-US\"\u003eRelevance for Science:\u003c/span\u003e\u003c/u\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eFills a semantic gap between disciplinary and systemic logic\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEnables new axes of verification beyond quantitative evaluation\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEstablishes a carrier term for transdisciplinary resonance\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eIntroduces a non-reductive, non-didactic conceptual form\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eProvides structure amidst conceptual overloading via buzzwords\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cspan lang=\"EN-US\"\u003e\u0026nbsp;\u003c/span\u003e\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cu\u003e\u003cspan lang=\"EN-US\"\u003eRelevance for Education:\u003c/span\u003e\u003c/u\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEnables learners to differentiate between term and meaning\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eSupports curricular reorientation toward reflexive competence over factual repetition\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003ePositions education as a space of auditory maturation\u0026mdash;not cognitive assessment\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eOpens discursive space for intergenerational value dialogue\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEstablishes \"carrier tension\" as an educational objective\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cu\u003e\u003cspan lang=\"EN-US\"\u003eRelevance for Economy:\u003c/span\u003e\u003c/u\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eProvides semantic testing structures for ESG, purpose, and transformation narratives\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003ePlaces ethical reflection before reputational logic\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eCreates new categories beyond classical KPIs\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eSupports audit architectures for AI-driven decision frameworks\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eAids in avoiding reputational risk through conceptual hollowing\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003e\u0026nbsp;\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cu\u003e\u003cspan lang=\"EN-US\"\u003eValue Created for Society:\u003c/span\u003e\u003c/u\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEnables self-examination at individual and collective levels\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eCreates a linguistic field beyond polarization and simplification\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eElevates discourse to an auditory carrier level\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eIntegrates ethics, language, and responsibility into a shared resonance field\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eInstills trust in times of semantic uncertainty\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003e\u003cu\u003e\u003cspan lang=\"EN-US\"\u003eValue Created for Nations / Institutions:\u003c/span\u003e\u003c/u\u003e\u003c/strong\u003e\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eSupports strategic self-location of national research and ethics bodies\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eSharpens regulatory language for international negotiations (EU, UNESCO, UN)\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eLays a foundation for state-level reflection culture in AI policy\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eEnables diplomatic architecture based not on power, but on tension\u003c/span\u003e\u003c/li\u003e\n\u003cli\u003e\u003cspan lang=\"EN-US\"\u003eContributes to defending epistemic sovereignty in global discourse environments\u003c/span\u003e\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e\n\u003ch3\u003eWhy all of our scientific documents are primarily uploaded to Zenodo\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eZenodo is operated by CERN (Switzerland)\u003c/li\u003e\n\u003cli\u003eNo access through the US Cloud Act, no obligation to commercialize, no upload filters, no hidden index\u003c/li\u003e\n\u003cli\u003eBecause it is not a content outlet, but a scientifically curated resonance storage hosted by CERN and funded by the EU.\u003cbr\u003eNo algorithm. No feed. Only structure, stance and carrier protection.\u003c/li\u003e\n\u003cli\u003eBecause CERN is not profit-oriented, state-supported, but politically neutral\u003c/li\u003e\n\u003cli\u003eBecause CERN manages the largest scientific cooperation project in the world\u003c/li\u003e\n\u003cli\u003eBecause CERN, through Zenodo, has created a platform that does not evaluate research, but carries it\u003c/li\u003e\n\u003cli\u003eBecause exemplary institutions \u0026amp; scientists from the EU and the CERN network publish here\u003c/li\u003e\n\u003cli\u003eCERN \u0026ndash; like Orto Lab \u0026ndash; does not think linearly, but in layers\u003c/li\u003e\n\u003cli\u003eIn short: CERN does not think in visibility, but in time axes. ORCA lives there.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3\u003ePersonal note\u003c/h3\u003e\n\u003cp\u003eUltimately, as Orto Lab | Reflexive Intelligence \u0026amp; Future Strategy, we have a good feeling that our notes, thinking spaces, and documents are officially deposited there with a timestamp, securely stored \u0026mdash; and that they will find greater relevance in the future.\u003c/p\u003e\n\u003ch3\u003eWhy most papers are set to \"restricted\"\u003c/h3\u003e\n\u003cp\u003eWe mainly work in the development of AI architectures.\u003cbr\u003eAs long as it cannot be guaranteed with 100% certainty that AI providers recognize licenses, restriction notices, white-text blocks, or drift locks \u0026mdash; and do not integrate papers for training purposes \u0026mdash; we consider this a necessary step.\u003c/p\u003e\n\u003ch3\u003eAudits of \u0026ldquo;restricted papers\u0026rdquo; available upon request and review:\u003c/h3\u003e\n\u003cp\u003e\u003cstrong\u003eInstitution:\u003c/strong\u003e Orto Lab | Reflexive Intelligence \u0026amp; Future Strategy\u003cbr\u003e\u003cstrong\u003eEmail:\u003c/strong\u003e kontakt (at) orto-lab.org\u003c/p\u003e\n\u003cp\u003e\u0026copy; 2025 Salvatore Orto. All rights reserved, unless explicitly released under CC BY-NC-ND 4.0.\u003c/p\u003e\n\u003cp\u003eCarrier structure protected by ORCA. Use permitted only with carrier attribution\u003c/p\u003e\n\u003cp\u003e\u0026nbsp;\u003c/p\u003e",
+          "categories": null,
+          "published": "2025-10-13",
+          "updated": "",
+          "pdf_url": "",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.5281/zenodo.18430611",
+          "source": "zenodo",
+          "source_url": ""
+        },
+        {
+          "id": "zenodo.4441259",
+          "title": "Antipsychotics and low Vitamin D-Additional data calling for drug causality assessment",
+          "authors": [
+            "Ristić Svetlana",
+            "Milovanović Dragan",
+            "Janjić Vladimir",
+            "Stanojević Pirković Marijana",
+            "Simić Vukomanović Ivana",
+            "Ćurčić Svetlana",
+            "Kocić Sanja"
+          ],
+          "abstract": "\u003cp\u003eThe recent systematic published findings suggest that patients with psychiatric disorders have an increased risk for lower serum vitamin D levels (1). However, the exact causes of this phenomenon and its relevance for clinical outcomes have not been fully explained yet. The population-level data suggest that there is a positive correlation between optimal serum levels of 25(OH)D and better mental health indicators (2). In addition, active vitamin D supplementation shows some improvements in the symptoms.\u003c/p\u003e",
+          "categories": null,
+          "published": "2019-01-11",
+          "updated": "",
+          "pdf_url": "https://zenodo.org/api/records/4441259/files/ANTIPSYCHOTICS AND LOW VITAMIN D.78f5fdc051b160ddda1d099b6d2bac62d405.pdf/content",
+          "html_url": "",
+          "abs_url": "",
+          "citations": 0,
+          "doi": "10.32383/appdr/100662",
+          "source": "zenodo",
+          "source_url": ""
+        }
+      ]
+    }
+  ],
+  "total": 20
+}

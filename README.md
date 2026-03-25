@@ -2,13 +2,13 @@
 
 # arxiv.abs — arXiv Paper Abstracts for AI Research & Sci-Fi Worldbuilding
 
-**29,000+ curated arXiv paper abstracts across six collections (1996–2026), covering AI/LLM Prompt Engineering, cross-disciplinary AGI/Sci-Fi research, AI Agent skills, AI-Human futures, health science, game development, and the emerging field of Human × AI co-development.**
+**41,000+ curated arXiv paper abstracts across eleven collections (1996–2026), covering AI/LLM Prompt Engineering, cross-disciplinary AGI/Sci-Fi research, AI Agent skills, AI-Human futures, health science, game development, Human × AI co-development, software engineering, QA/quality engineering, LLM agent harness research, and Anthropic/Claude AI research.**
 
 ---
 
 ## Collections Overview
 
-This repository contains six curated paper abstract collections:
+This repository contains eleven curated paper abstract collections:
 
 | Collection | Papers | Categories | Years |
 |-----------|--------|------------|-------|
@@ -19,7 +19,11 @@ This repository contains six curated paper abstract collections:
 | [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 1,814 | 12 topics | unlimited |
 | [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,125 | 7 topics | unlimited |
 | [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 73 | 25 categories | 2013–2026 |
-| **Total** | **29,201** | **139+** | |
+| [`arxiv.software-engineering`](arxiv.software-engineering/) | 4,418 | 35 categories | 2020–2026 |
+| [`arxiv.qa-quality-engineering`](arxiv.qa-quality-engineering/) | 3,069 | 35 categories | 2020–2026 |
+| [`arxiv.agent-harness`](arxiv.agent-harness/) | 2,177 | 42 topics | 2020–2026 |
+| [`arxiv.anthropic-claude`](arxiv.anthropic-claude/) | 2,628 | 35 topics | 2021–2026 |
+| **Total** | **~41,493** | **284+** | |
 
 ---
 
@@ -67,6 +71,22 @@ This repository contains six curated paper abstract collections:
 ### 7. `arxiv.game-dev-with-ai` — Human × AI Co-Development (New Era)
 
 73 curated abstracts (filtered from 542 raw) from 25 targeted searches on the emerging field where AI becomes a **co-developer and creative partner** in game development. Covers LLM-assisted design, co-creative systems, generative assets, autonomous game design, and more.
+
+### 8. `arxiv.software-engineering` — Modern Software Engineering (2020+)
+
+4,418 abstracts from 42 keyword searches covering the full modern software engineering stack: desktop/frontend dev, UI/UX, architecture & design patterns, code quality, security, DevOps/CI-CD, AI-assisted development, and software philosophy. Time range: 2020–2026.
+
+### 9. `arxiv.qa-quality-engineering` — QA & Quality Engineering (2020+)
+
+3,069 abstracts from 35 keyword searches covering the full QA lifecycle: testing fundamentals, automation frameworks, chaos engineering, AI/ML testing, performance testing, security testing, quality metrics, SRE, and production quality. Aligned with big-tech QE (Quality Engineer) trends. Time range: 2020–2026.
+
+### 10. `arxiv.agent-harness` — LLM Agent Research (2020+)
+
+2,177 abstracts from 42 keyword searches covering the full agent lifecycle: frameworks & orchestration, planning & reasoning, tool use, memory, multi-agent coordination, benchmarks, safety, code agents, web/GUI agents, RAG, long-horizon tasks, and observability. Time range: 2020–2026.
+
+### 11. `arxiv.anthropic-claude` — Anthropic & Claude Research (2021+)
+
+2,628 abstracts from 35 keyword searches covering Claude-specific and Anthropic research: Constitutional AI, RLHF/RLAIF, mechanistic interpretability, sparse autoencoders, jailbreaking, sycophancy, hallucination, scaling laws, emergent capabilities, and long-context techniques. Time range: 2021–2026.
 
 ---
 

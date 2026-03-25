@@ -1,0 +1,30 @@
+Title: LLM-AutoDP: Automatic Data Processing via LLM Agents for Model Fine-tuning
+Authors: Wei Huang, Anda Cheng, Yinggui Wang, Lei Wang, Tao Wei
+ID: 2601.20375
+URL: https://arxiv.org/abs/2601.20375
+
+Large Language Models (LLMs) can be fine-tuned on domain-specific data to
+enhance their performance in specialized fields. However, such data often
+contains numerous low-quality samples, necessitating effective data processing
+(DP). In practice, DP strategies are typically developed through iterative
+manual analysis and trial-and-error adjustment. These processes inevitably incur
+high labor costs and may lead to privacy issues in high-privacy domains like
+healthcare due to direct human access to sensitive data. Thus, achieving
+automated data processing without exposing the raw data has become a critical
+challenge. To address this challenge, we propose LLM-AutoDP, a novel framework
+that leverages LLMs as agents to automatically generate and optimize data
+processing strategies. Our method generates multiple candidate strategies and
+iteratively refines them using feedback signals and comparative evaluations.
+This iterative in-context learning mechanism enables the agent to converge
+toward high-quality processing pipelines without requiring direct human
+intervention or access to the underlying data. To further accelerate strategy
+search, we introduce three key techniques: Distribution Preserving Sampling,
+which reduces data volume while maintaining distributional integrity; Processing
+Target Selection, which uses a binary classifier to identify low-quality samples
+for focused processing; Cache-and-Reuse Mechanism}, which minimizes redundant
+computations by reusing prior processing results. Results show that models
+trained on data processed by our framework achieve over 80% win rates against
+models trained on unprocessed data. Compared to AutoML baselines based on LLM
+agents, LLM-AutoDP achieves approximately a 65% win rate. Moreover, our
+acceleration techniques reduce the total searching time by up to 10 times,
+demonstrating both effectiveness and efficiency.

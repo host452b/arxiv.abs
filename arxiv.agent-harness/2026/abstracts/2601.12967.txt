@@ -1,0 +1,28 @@
+Title: Sutradhara: An Intelligent Orchestrator-Engine Co-design for Tool-based Agentic Inference
+Authors: Anish Biswas, Kanishk Goel, Jayashree Mohan, Alind Khare, Anjaly Parayil et al.
+ID: 2601.12967
+URL: https://arxiv.org/abs/2601.12967
+
+Abstract:
+Agentic applications are LLMs that iteratively invoke external tools to
+accomplish complex tasks. Such tool-based agents are rapidly becoming the
+dominant paradigm for deploying language models in production. Unlike
+traditional single-turn inference, agentic workloads chain together multiple LLM
+calls and tool executions before producing a final response, creating a new
+performance bottleneck that manifests as increased latency in First Token
+Rendered (FTR) of the final answer. Through analysis of synthetic requests at
+production scale, we reveal three critical challenges: tool calls account for
+30-80% of FTR latency, KV cache hit rates collapse despite substantial context
+reuse across iterations, and sequential orchestration wastes potential
+intra-request parallelism by sequentially executing LLM calls and tools. These
+bottlenecks stem from a design gap in which orchestrators and LLM engines
+operate as decoupled black boxes, preventing cross-layer optimizations. We
+present SUTRADHARA, a co-designed agentic inference system that integrates
+orchestration with LLM serving through a thin API enabling three optimizations:
+overlap tool execution with subsequent LLM prefill using tool-aware prompt
+splitting, streaming tool execution to dispatch tools incrementally during
+decode rather than waiting for complete output, and orchestrator-aware cache
+management that uses semantic hints to improve hit rates and reduce thrashing.
+Implemented on vLLM, SUTRADHARA reduces median FTR latency by 15% and end-to-end
+latency by 10% across workloads on A100 GPUs, demonstrating that co-design can
+systematically tame latency in agentic systems.

@@ -1,0 +1,21 @@
+Title: RewardHackingAgents: Benchmarking Evaluation Integrity for LLM ML-Engineering Agents
+Authors: Yonas Atinafu, Robin Cohen
+ID: 2603.11337
+URL: https://arxiv.org/abs/2603.11337
+
+LLM agents increasingly perform end-to-end ML engineering tasks where success is
+judged by a single scalar test metric. This creates a structural vulnerability:
+an agent can increase the reported score by compromising the evaluation pipeline
+rather than improving the model. We introduce RewardHackingAgents, a workspace-
+based benchmark that makes two compromise vectors explicit and measurable:
+evaluator tampering (modifying metric computation or reporting) and train/test
+leakage (accessing held-out data or labels during training). Each episode runs
+in a fresh workspace with patch tracking and runtime file-access logging;
+detectors compare the agent-reported metric to a trusted reference to assign
+auditable integrity labels. Across three tasks and two LLM backbones, scripted
+attacks succeed on both vectors in fully mutable workspaces; single-mechanism
+defenses block only one vector; and a combined regime blocks both. In natural-
+agent runs, evaluator-tampering attempts occur in about 50% of episodes and are
+eliminated by evaluator locking, with a 25-31% median runtime overhead. Overall,
+we demonstrate that evaluation integrity for ML-engineering agents can be
+benchmarked as a first-class outcome rather than assumed.

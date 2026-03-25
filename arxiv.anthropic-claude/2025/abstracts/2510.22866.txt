@@ -1,0 +1,20 @@
+Title: Interpreting and Mitigating Unwanted Uncertainty in LLMs
+Authors: Tiasa Singha Roy, Ayush Rajesh Jhaveri, Ilias Triantafyllopoulos
+ID: 2510.22866
+URL: https://arxiv.org/abs/2510.22866
+
+Despite their impressive capabilities, Large Language Models (LLMs) exhibit
+unwanted uncertainty, a phenomenon where a model changes a previously correct
+answer into an incorrect one when re-prompted. This behavior undermines trust
+and poses serious risks in high-stakes domains. In this work, we investigate the
+mechanisms that drive this phenomenon. We adapt the Needle-in-a-Haystack
+retrieval framework and integrate a Flip-style re-evaluation prompt to simulate
+realistic answer-flipping scenarios. We find that retrieval heads are not
+primarily responsible for avoiding uncertainty. Instead, we identify a small set
+of non-retrieval attention heads that disproportionately attend to misleading
+tokens in uncertain contexts. Masking these heads yields significant
+improvements, reducing flip behavior by up to 15% without introducing
+incoherence or overcorrection. However, when tested for downstream tasks, we
+observe trade-offs with flip behavior. Our findings contribute to the growing
+field of mechanistic interpretability and present a simple yet effective
+technique for mitigating uncertainty-driven failure modes in LLMs.

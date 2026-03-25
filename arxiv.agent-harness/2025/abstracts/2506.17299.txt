@@ -1,0 +1,22 @@
+Title: LLM Jailbreak Oracle
+Authors: Shuyi Lin, Anshuman Suri, Alina Oprea, Cheng Tan
+ID: 2506.17299
+URL: https://arxiv.org/abs/2506.17299
+
+Abstract:
+As large language models (LLMs) become increasingly deployed in safety-critical
+applications, the lack of systematic methods to assess their vulnerability to
+jailbreak attacks presents a critical security gap. We introduce the jailbreak
+oracle problem: given a model, prompt, and decoding strategy, determine whether
+a jailbreak response can be generated with likelihood exceeding a specified
+threshold. This formalization enables a principled study of jailbreak
+vulnerabilities. Answering the jailbreak oracle problem poses significant
+computational challenges -- the search space grows exponentially with the length
+of the response tokens. We present Boa, the first efficient algorithm for
+solving the jailbreak oracle problem. Boa employs a three-phase search strategy:
+(1) constructing block lists to identify refusal patterns, (2) breadth-first
+sampling to identify easily accessible jailbreaks, and (3) depth-first priority
+search guided by fine-grained safety scores to systematically explore promising
+low-probability paths. Boa enables rigorous security assessments including
+systematic defense evaluation, standardized comparison of red team attacks, and
+model certification under extreme adversarial conditions.

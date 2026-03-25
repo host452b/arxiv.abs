@@ -1,0 +1,27 @@
+Title: Causal2Vec: Improving Decoder-only LLMs as Versatile Embedding Models
+Authors: Ailiang Lin, Zhuoyun Li, Kotaro Funakoshi, Manabu Okumura
+ID: 2507.23386
+URL: https://arxiv.org/abs/2507.23386
+
+Decoder-only large language models (LLMs) are increasingly used to build
+embedding models that effectively encode the semantic information of natural
+language texts into dense vector representations for various embedding tasks.
+However, many existing methods primarily focus on removing the causal attention
+mask in LLMs to enable bidirectional attention, potentially undermining the
+model's ability to extract semantic information acquired during pretraining.
+Additionally, leading unidirectional approaches often rely on extra input text
+to overcome the inherent limitations of causal attention, inevitably increasing
+computational costs. In this work, we propose Causal2Vec, a general-purpose
+embedding model tailored to enhance the performance of decoder-only LLMs without
+altering their original architectures or introducing significant computational
+overhead. Specifically, we first employ a lightweight BERT-style model to pre-
+encode the input text into a single Contextual token, which is then prepended to
+the LLM's input sequence, allowing each token to capture contextualized
+information even without attending to future tokens. Furthermore, to mitigate
+the recency bias introduced by last-token pooling and help LLMs better leverage
+the semantic information encoded in the Contextual token, we concatenate the
+last hidden states of Contextual and EOS tokens as the final text embedding. In
+practice, Causal2Vec achieves state-of-the-art performance on the Massive Text
+Embeddings Benchmark (MTEB) among models trained solely on publicly available
+retrieval datasets, while reducing the required sequence length by up to 85% and
+inference time by up to 82% compared to best-performing methods.

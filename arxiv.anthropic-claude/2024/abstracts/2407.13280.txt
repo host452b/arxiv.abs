@@ -1,0 +1,31 @@
+Title: AI-Assisted SQL Authoring at Industry Scale
+Authors: Chandra Maddila, Negar Ghorbani, Kosay Jabre, Vijayaraghavan Murali, Edwin Kim et al.
+ID: 2407.13280
+URL: https://arxiv.org/abs/2407.13280
+
+Abstract:
+SqlCompose brings generative AI into the data analytics domain. SQL is
+declarative, has formal table schemas, and is often written in a non-linear
+manner. We address each of these challenges and develop a set of models that
+shows the importance of each problem. We first develop an internal SQL benchmark
+to perform offline tests at Meta. We evaluate how well the Public Llama model
+performs. We attain a BLEU score of 53% and 24% for single- and multi-line
+predictions, respectively. This performance is consistent with prior works on
+imperative languages. We then fine-tune Llama on our internal data and database
+schemas. SqlComposeSA substantially outperforms Llama by 16 percentage points on
+BLEU score. SQL is often written with multiple sub queries and in a
+non-sequential manner. We develop SqlComposeFIM which is aware of the context
+before and after the line(s) that need to be completed. This fill-in-the-middle
+model outperform SqlComposeFIM by 35 percentage points. We also measure how
+often the models get the correct table names, and SqlComposeFIM is able to do
+this 75% of the time. Aside from our scientific research, we also roll out
+SqlComposeFIM at Meta. SqlCompose is used on a weekly basis by over 10k users
+including data scientists and software engineers, less than 1% of users have
+disabled SqlCompose. We use the feedback from users to improve SqlCompose.
+Interesting positive themes include completing tedious or repetitive SQL
+clauses, suggesting boilerplate coding, and help in eliminate the need to
+remember difficult SQL syntax. The most significant negative themes was table
+and column name hallucinations, which has been reduced with the release of
+SqlComposeFIM. The SqlCompose models consistently outperform public and internal
+LLMs, despite being smaller (7 bn and 13 bn), which provides early indications
+that smaller specialist models can outperform larger general purpose models.

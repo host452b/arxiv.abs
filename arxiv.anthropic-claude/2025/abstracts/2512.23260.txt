@@ -1,0 +1,24 @@
+Title: Interpretable Safety Alignment via SAE-Constructed Low-Rank Subspace Adaptation
+Authors: Dianyun Wang, Qingsen Ma, Yuhu Shang, Zhifeng Lu, Zhenbo Xu et al.
+ID: 2512.23260
+URL: https://arxiv.org/abs/2512.23260
+
+Abstract:
+Safety alignment -- training large language models (LLMs) to refuse harmful
+requests while remaining helpful -- is critical for responsible deployment.
+Prior work established that safety behaviors are governed by low-rank
+structures, suggesting parameter-efficient fine-tuning (PEFT) should be
+well-suited for alignment. However, Low-Rank Adaptation (LoRA) consistently
+underperforms full fine-tuning and reinforcement learning on safety benchmarks.
+We attribute this gap to semantic entanglement: safety-relevant directions are
+intertwined with unrelated concepts due to polysemanticity, impeding implicit
+subspace identification. To address this, we propose SAILS (Safety Alignment via
+Interpretable Low-rank Subspace), which leverages Sparse Autoencoders (SAEs) to
+disentangle representations into monosemantic features, constructs an
+interpretable safety subspace from SAE decoder directions, and uses it to
+initialize LoRA adapters. Theoretically, we prove that SAE-based identification
+achieves arbitrarily small recovery error under monosemanticity assumptions,
+while direct identification suffers an irreducible error floor. Empirically,
+SAILS achieves up to 99.6% safety rate on Gemma-2-9B -- exceeding full
+fine-tuning by 7.4 points and matching RLHF-based models -- while updating only
+0.19% of parameters and providing interpretability.

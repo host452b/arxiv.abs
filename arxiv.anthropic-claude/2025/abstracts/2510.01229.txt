@@ -1,0 +1,20 @@
+Title: Enhancing Transformer-Based Rerankers with Synthetic Data and LLM-Based Supervision
+Authors: Dimitar Peshevski, Kiril Blazhevski, Martin Popovski, Gjorgji Madjarov
+ID: 2510.01229
+URL: https://arxiv.org/abs/2510.01229
+
+Effective document reranking is essential for improving search relevance across
+diverse applications. While Large Language Models (LLMs) excel at reranking due
+to their deep semantic understanding and reasoning, their high computational
+cost makes them impractical for many real-world deployments. Fine-tuning
+smaller, task-specific models is a more efficient alternative but typically
+depends on scarce, manually labeled data. To overcome this, we propose a novel
+pipeline that eliminates the need for human-labeled query-document pairs. Our
+method uses LLMs to generate synthetic queries from domain-specific corpora and
+employs an LLM-based classifier to label positive and hard-negative pairs. This
+synthetic dataset is then used to fine-tune a smaller transformer model with
+contrastive learning using Localized Contrastive Estimation (LCE) loss.
+Experiments on the MedQuAD dataset show that our approach significantly boosts
+in-domain performance and generalizes well to out-of-domain tasks. By using LLMs
+for data generation and supervision rather than inference, we reduce
+computational costs while maintaining strong reranking capabilities.
