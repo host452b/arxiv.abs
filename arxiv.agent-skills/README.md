@@ -93,9 +93,21 @@ The same multi-agent technology creates two opposing failure modes:
 
 ---
 
-## Abstracts
+## Abstracts (by Year)
 
-- [`abstracts/`](abstracts/) — 2,606 `.txt` files (title, authors, arXiv ID, URL, abstract)
+| Year | Papers | Directory |
+|------|--------|-----------|
+| 2000 | 1 | [2000/abstracts/](2000/abstracts/) |
+| 2008–2017 | 57 | 2008–2017/abstracts/ |
+| 2018 | 35 | [2018/abstracts/](2018/abstracts/) |
+| 2019 | 54 | [2019/abstracts/](2019/abstracts/) |
+| 2020 | 79 | [2020/abstracts/](2020/abstracts/) |
+| 2021 | 92 | [2021/abstracts/](2021/abstracts/) |
+| 2022 | 98 | [2022/abstracts/](2022/abstracts/) |
+| 2023 | 179 | [2023/abstracts/](2023/abstracts/) |
+| 2024 | 450 | [2024/abstracts/](2024/abstracts/) |
+| 2025 | 1117 | [2025/abstracts/](2025/abstracts/) |
+| 2026 | 442 | [2026/abstracts/](2026/abstracts/) |
 
 ## Search Parameters
 
