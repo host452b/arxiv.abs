@@ -23,6 +23,66 @@
 
 **1,838 raw results → 1,814 deduplicated abstracts**
 
+## Key Findings Summary
+
+> Full analysis in [ai-future-findings.zh-CN.md](ai-future-findings.zh-CN.md)
+
+### Critical Quantitative Data (sampled from abstracts)
+
+| Data | Source | Significance |
+|------|--------|-------------|
+| **2052 ± 10 years** | Nottale et al. 2000 (193 citations) | Population/economic superexponential growth singularity |
+| **Peak AI wave ~2024** | Jin et al. 2025, [arXiv:2502.19425](https://arxiv.org/abs/2502.19425) | Multi-logistic model: deep learning decline 2035–40; near-term singularity unlikely |
+| **GPT-4o scores 39.97%** | OlympicArena 2024, [arXiv:2406.12753](https://arxiv.org/abs/2406.12753) | On 11,163 Olympic competition problems; humans ~70% |
+| **Containment theoretically impossible** | Alfonseca et al. 2016, [arXiv:1607.00913](https://arxiv.org/abs/1607.00913) | Computability theory proof: superintelligence containing all Turing programs cannot be strictly contained |
+| **+18% underdiagnosis / +35% undertreatment** | Jabbour et al. 2024, [arXiv:2508.07617](https://arxiv.org/abs/2508.07617) | Selective AI prediction paradox: worse clinical outcomes than no-AI |
+| **25–78% sample efficiency gain** | SHIRE, [arXiv:2409.09990](https://arxiv.org/abs/2409.09990) | Encoding human intuition into RL; range across environments |
+| **Wage collapse risk** | Stiefenhofer 2025, [arXiv:2502.07044](https://arxiv.org/abs/2502.07044) | AGI substitution regime: wages trend to zero without redistribution |
+
+### Three-Stage Timeline (Research Consensus)
+
+```
+Near-term (2025–2035): Augmented Collaboration
+  AI as cognitive tool → Human as judge/validator
+  BCI entering medical applications (spinal injury, locked-in syndrome)
+
+Mid-term (2035–2052): System Integration
+  AI embedded in critical infrastructure + metaverse + digital twins
+  BCI entering cognitive enhancement (memory, processing speed, perception)
+
+Critical Junction (~2052 ±10): Fork Point
+  Path A: Alignment succeeds → silicon-carbon coexistence
+  Path B: Alignment fails → human sovereignty loss
+```
+
+### Five Frameworks for Superintelligence Response
+
+| Framework | Core claim | Viability |
+|-----------|-----------|-----------|
+| Containment | Isolate/sandbox AGI | **Theoretically impossible** (computability theory) |
+| Supertrust | Parent-child model, gradual trust building | Unverified — assumes SI has developmental motivations |
+| Multi-box peer verification | Multiple isolated SIs verify each other | Theoretically sound if systems remain diverse |
+| MAIM deterrence ([arXiv:2503.05628](https://arxiv.org/abs/2503.05628)) | Preventive sabotage of destabilizing AI (nuclear deterrence analog) | Realist path; requires state-level enforcement |
+| **Co-superintelligence** ([arXiv:2512.05356](https://arxiv.org/abs/2512.05356)) | Human + AI collaboration reaches superintelligence together | **Safest and fastest path** |
+
+### Labor Market: Three-Regime Model
+
+- **Complement regime**: AGI augments labor → wages rise
+- **Substitute regime**: AGI replaces labor → **wage collapse**
+- **Equilibrium regime**: AGI capital dominates → social contract renegotiation required
+
+> Which regime emerges depends on: AI diversity (non-monopoly) + redistribution mechanisms in place
+
+### Governance Paradox
+
+Same AGI technology enables two opposite failure modes ([arXiv:2503.05710](https://arxiv.org/abs/2503.05710)):
+- **Despotic Leviathan**: enhanced surveillance → authoritarian control
+- **Absent Leviathan**: eroded state legitimacy → social collapse
+
+Free societies can only survive in a "narrow corridor" requiring hybrid institutional designs.
+
+---
+
 ## Key Note: Silicon-Carbon Coexistence
 
 The Chinese sci-fi concept of "silicon-carbon coexistence" (硅基碳基共存) has no direct academic equivalent in English. The closest research threads are:
