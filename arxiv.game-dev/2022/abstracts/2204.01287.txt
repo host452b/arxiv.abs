@@ -1,0 +1,7 @@
+Title: Software Rasterization of 2 Billion Points in Real Time
+Authors: Markus Schütz, Bernhard Kerbl, Michael Wimmer
+ID: 2204.01287
+URL: https://arxiv.org/abs/2204.01287
+
+Abstract:
+We propose a software rasterization pipeline for point clouds that is capable of brute-force rendering up to two billion points in real time (60fps). Improvements over the state of the art are achieved by batching points in a way that a number of batch-level optimizations can be computed before rasterizing the points within the same rendering pass. These optimizations include frustum culling, level-of-detail rendering, and choosing the appropriate coordinate precision for a given batch of points directly within a compute workgroup. Adaptive coordinate precision, in conjunction with visibility buffers, reduces the number of loaded bytes for the majority of points down to 4, thus making our approach several times faster than the bandwidth-limited state of the art. Furthermore, support for LOD rendering makes our software-rasterization approach suitable for rendering arbitrarily large point clouds, and to meet the increased performance demands of virtual reality rendering.

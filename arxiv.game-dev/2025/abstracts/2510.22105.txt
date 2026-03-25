@@ -1,0 +1,7 @@
+Title: Streaming Generation for Music Accompaniment
+Authors: Yusong Wu, Mason Wang, Heidi Lei, Stephen Brade, Lancelot Blanchard, Shih-Lun Wu, Aaron Courville, Anna Huang
+ID: 2510.22105
+URL: https://arxiv.org/abs/2510.22105
+
+Abstract:
+Music generation models can produce high-fidelity coherent accompaniment given complete audio input, but are limited to editing and loop-based workflows. We study real-time audio-to-audio accompaniment: as a model hears an input audio stream (e.g., a singer singing), it has to also simultaneously generate in real-time a coherent accompanying stream (e.g., a guitar accompaniment). In this work, we propose a model design considering inevitable system delays in practical deployment with two design variables: future visibility $t_f$, the offset between the output playback time and the latest input time used for conditioning, and output chunk duration $k$, the number of frames emitted per call. We train Transformer decoders across a grid of $(t_f,k)$ and show two consistent trade-offs: increasing effective $t_f$ improves coherence by reducing the recency gap, but requires faster inference to stay within the latency budget; increasing $k$ improves throughput but results in degraded accompaniment due to a reduced update rate. Finally, we observe that naive maximum-likelihood streaming training is insufficient for coherent accompaniment where future context is not available, motivating advanced anticipatory and agentic objectives for live jamming.

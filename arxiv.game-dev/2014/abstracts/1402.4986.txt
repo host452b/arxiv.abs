@@ -1,0 +1,7 @@
+Title: Performance Impact of Data Layout on the GPU-accelerated IDW Interpolation
+Authors: Gang Mei, Hong Tian
+ID: 1402.4986
+URL: https://arxiv.org/abs/1402.4986
+
+Abstract:
+This paper focuses on evaluating the performance impact of different data layouts on the GPU-accelerated IDW interpolation. First, we redesign and improve our previous GPU implementation that was performed by exploiting the feature CUDA Dynamic Parallel (CDP). And then, we implement three versions of GPU implementations, i.e., the naive version, the tiled version, and the improved CDP version, based on five layouts including the Structure of Arrays (SoA), the Array of Sturcutes (AoS), the Array of aligned Sturcutes (AoaS), the Structure of Arrays of aligned Structures (SoAoS), and the Hybrid layout. Experimental results show that: the layouts AoS and AoaS achieve better performance than the layout SoA for both the naive version and tiled version, while the layout SoA is the best choice for the improved CDP version. We also observe that: for the two combined data layouts (the SoAoS and the Hybrid), there are no notable performance gains when compared to other three basic layouts. We recommend that: in practical applications, the layout AoaS is the best choice since the tiled version is the fastest one among the three versions of GPU implementations, especially on single precision.

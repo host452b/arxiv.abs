@@ -1,0 +1,8 @@
+Title: Neural Ray-Tracing: Learning Surfaces and Reflectance for Relighting and View Synthesis
+Authors: Julian Knodt, Joe Bartusek, Seung-Hwan Baek, Felix Heide
+ID: 2104.13562
+URL: https://arxiv.org/abs/2104.13562
+
+Abstract:
+Recent neural rendering methods have demonstrated accurate view interpolation by predicting volumetric density and color with a neural network. Although such volumetric representations can be supervised on static and dynamic scenes, existing methods implicitly bake the complete scene light transport into a single neural network for a given scene, including surface modeling, bidirectional scattering distribution functions, and indirect lighting effects. In contrast to traditional rendering pipelines, this prohibits changing surface reflectance, illumination, or composing other objects in the scene.
+  In this work, we explicitly model the light transport between scene surfaces and we rely on traditional integration schemes and the rendering equation to reconstruct a scene. The proposed method allows BSDF recovery with unknown light conditions and classic light transports such as pathtracing. By learning decomposed transport with surface representations established in conventional rendering methods, the method naturally facilitates editing shape, reflectance, lighting and scene composition. The method outperforms NeRV for relighting under known lighting conditions, and produces realistic reconstructions for relit and edited scenes. We validate the proposed approach for scene editing, relighting and reflectance estimation learned from synthetic and captured views on a subset of NeRV's datasets.

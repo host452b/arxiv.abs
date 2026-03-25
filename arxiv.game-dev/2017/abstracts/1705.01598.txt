@@ -1,0 +1,7 @@
+Title: cuTT: A High-Performance Tensor Transpose Library for CUDA Compatible GPUs
+Authors: Antti-Pekka Hynninen, Dmitry I. Lyakh
+ID: 1705.01598
+URL: https://arxiv.org/abs/1705.01598
+
+Abstract:
+We introduce the CUDA Tensor Transpose (cuTT) library that implements high-performance tensor transposes for NVIDIA GPUs with Kepler and above architectures. cuTT achieves high performance by (a) utilizing two GPU-optimized transpose algorithms that both use a shared memory buffer in order to reduce global memory access scatter, and by (b) computing memory positions of tensor elements using a thread-parallel algorithm. We evaluate the performance of cuTT on a variety of benchmarks with tensor ranks ranging from 2 to 12 and show that cuTT performance is independent of the tensor rank and that it performs no worse than an approach based on code generation. We develop a heuristic scheme for choosing the optimal parameters for tensor transpose algorithms by implementing an analytical GPU performance model that can be used at runtime without need for performance measurements or profiling. Finally, by integrating cuTT into the tensor algebra library TAL-SH, we significantly reduce the tensor transpose overhead in tensor contractions, achieving as low as just one percent overhead for arithmetically intensive tensor contractions.

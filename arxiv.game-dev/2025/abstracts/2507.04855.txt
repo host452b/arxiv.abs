@@ -1,0 +1,8 @@
+Title: Hybrid Approach to Directed Fuzzing
+Authors: Darya Parygina, Timofey Mezhuev, Daniil Kuts
+ID: 2507.04855
+URL: https://arxiv.org/abs/2507.04855
+
+Abstract:
+Program analysis and automated testing have recently become an essential part of SSDLC. Directed greybox fuzzing is one of the most popular automated testing methods that focuses on error detection in predefined code regions. However, it still lacks ability to overcome difficult program constraints. This problem can be well addressed by symbolic execution, but at the cost of lower performance. Thus, combining directed fuzzing and symbolic execution techniques can lead to more efficient error detection.
+  In this paper, we propose a hybrid approach to directed fuzzing with novel seed scheduling algorithm, based on target-related interestingness and coverage. The approach also performs minimization and sorting of objective seeds according to a target-related information. We implement our approach in Sydr-Fuzz tool using LibAFL-DiFuzz as directed fuzzer and Sydr as dynamic symbolic executor. We evaluate our approach with Time to Exposure metric and compare it with pure LibAFL-DiFuzz, AFLGo, BEACON, WAFLGo, WindRanger, FishFuzz, and Prospector. The results show an improvement for 3 out of 7 examples with speedup up to 1.86 times over the second best result, as well as a significant improvement for 3 out of 7 examples over the pure LibAFL-DiFuzz fuzzer. Sydr-Fuzz hybrid approach to directed fuzzing shows high performance and helps to improve directed fuzzing efficiency.

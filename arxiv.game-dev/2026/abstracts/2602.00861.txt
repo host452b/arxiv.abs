@@ -1,0 +1,7 @@
+Title: Multi-Head Attention Is a Multi-Player Game
+Authors: Kushal Chakrabarti, Nirmal Balachundar
+ID: 2602.00861
+URL: https://arxiv.org/abs/2602.00861
+
+Abstract:
+Modern transformer attention is internally multi-agent -- heads compete and coordinate -- yet we train it as if it were a monolithic optimizer. We formalize this gap: cross-entropy training induces an implicit potential game among heads, and gradient descent converges to Nash equilibria with potentially unbounded inefficiency due to unpriced externalities (redundancy, correlated errors). Our main result bounds the Price of Anarchy by $Γ(G)$, the off-diagonal mass of a head interaction matrix capturing weight and gradient coupling. Under mild smoothness assumptions, we prove that both \emph{excess hallucination probability} and \emph{excess head redundancy} scale with PoA, unifying two distinct failure modes into a single mechanism. The bound is prescriptive: regularization that reduces $Γ(G)$ provably tightens PoA. We instantiate this as GAME-LoRA, combining Barlow Twins decorrelation with log-determinant coordination pressure. Experiments validate the theory: $Γ(G)$ predicts hallucination ($p{<}0.05$), emergent coalitions exhibit selective coordination, and GAME-LoRA achieves up to 18\% hallucination reduction (8\% average) with no knowledge degradation -- a Pareto improvement inaccessible to methods ignoring the game structure.

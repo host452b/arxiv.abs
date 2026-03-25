@@ -1,0 +1,7 @@
+Title: Learning Propagation Rules for Attribution Map Generation
+Authors: Yiding Yang, Jiayan Qiu, Mingli Song, Dacheng Tao, Xinchao Wang
+ID: 2010.07210
+URL: https://arxiv.org/abs/2010.07210
+
+Abstract:
+Prior gradient-based attribution-map methods rely on handcrafted propagation rules for the non-linear/activation layers during the backward pass, so as to produce gradients of the input and then the attribution map. Despite the promising results achieved, such methods are sensitive to the non-informative high-frequency components and lack adaptability for various models and samples. In this paper, we propose a dedicated method to generate attribution maps that allow us to learn the propagation rules automatically, overcoming the flaws of the handcrafted ones. Specifically, we introduce a learnable plugin module, which enables adaptive propagation rules for each pixel, to the non-linear layers during the backward pass for mask generating. The masked input image is then fed into the model again to obtain new output that can be used as a guidance when combined with the original one. The introduced learnable module can be trained under any auto-grad framework with higher-order differential support. As demonstrated on five datasets and six network architectures, the proposed method yields state-of-the-art results and gives cleaner and more visually plausible attribution maps.

@@ -1,0 +1,7 @@
+Title: Design and architecture of the IBM Quantum Engine Compiler
+Authors: Michael B. Healy, Reza Jokar, Soolu Thomas, Vincent R. Pascuzzi, Kit Barton, Thomas A. Alexander, Roy Elkabetz, Brian C. Donovan, Hiroshi Horii, Marius Hillenbrand
+ID: 2408.06469
+URL: https://arxiv.org/abs/2408.06469
+
+Abstract:
+In this work, we describe the design and architecture of the open-source Quantum Engine Compiler (qe-compiler) currently used in production for IBM Quantum systems. The qe-compiler is built using LLVM's Multi-Level Intermediate Representation (MLIR) framework and includes definitions for several dialects to represent parameterized quantum computation at multiple levels of abstraction. The compiler also provides Python bindings and a diagnostic system. An open-source LALR lexer and parser built using Bison and Flex generates an Abstract Syntax Tree that is translated to a high-level MLIR dialect. An extensible hierarchical target system for modeling the heterogeneous nature of control systems at compilation time is included. Target-based and generic compilation passes are added using a pipeline interface to translate the input down to low-level intermediate representations (including LLVM IR) and can take advantage of LLVM backends and tooling to generate machine executable binaries. The qe-compiler is built to be extensible, maintainable, performant, and scalable to support the future of quantum computing.

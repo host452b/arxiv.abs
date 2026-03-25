@@ -1,0 +1,7 @@
+Title: On Second-Order Derivatives of Rigid-Body Dynamics: Theory & Implementation
+Authors: Shubham Singh, Ryan P. Russell, Patrick M. Wensing
+ID: 2302.06001
+URL: https://arxiv.org/abs/2302.06001
+
+Abstract:
+Model-based control for robots has increasingly been dependent on optimization-based methods like Differential Dynamic Programming and iterative LQR (iLQR). These methods can form the basis of Model-Predictive Control (MPC), which is commonly used for controlling legged robots. Computing the partial derivatives of the dynamics is often the most expensive part of these algorithms, regardless of whether analytical methods, Finite Difference, Automatic Differentiation (AD), or Chain-Rule accumulation is used. Since the second-order derivatives of dynamics result in tensor computations, they are often ignored, leading to the use of iLQR, instead of the full second-order DDP method. In this paper, we present analytical methods to compute the second-order derivatives of inverse and forward dynamics for open-chain rigid-body systems with multi-DoF joints and fixed/floating bases. An extensive comparison of accuracy and run-time performance with AD and other methods is provided, including the consideration of code-generation techniques in C/C++ to speed up the computations. For the 36 DoF ATLAS humanoid, the second-order Inverse, and the Forward dynamics derivatives take approx 200 mu s, and approx 2.1 ms respectively, resulting in a 3x speedup over the AD approach.

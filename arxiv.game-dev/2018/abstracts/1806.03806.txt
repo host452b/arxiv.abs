@@ -1,0 +1,7 @@
+Title: Greybox fuzzing as a contextual bandits problem
+Authors: Ketan Patil, Aditya Kanade
+ID: 1806.03806
+URL: https://arxiv.org/abs/1806.03806
+
+Abstract:
+Greybox fuzzing is one of the most useful and effective techniques for the bug detection in large scale application programs. It uses minimal amount of instrumentation. American Fuzzy Lop (AFL) is a popular coverage based evolutionary greybox fuzzing tool. AFL performs extremely well in fuzz testing large applications and finding critical vulnerabilities, but AFL involves a lot of heuristics while deciding the favored test case(s), skipping test cases during fuzzing, assigning fuzzing iterations to test case(s). In this work, we aim at replacing the heuristics the AFL uses while assigning the fuzzing iterations to a test case during the random fuzzing. We formalize this problem as a `contextual bandit problem' and we propose an algorithm to solve this problem. We have implemented our approach on top of the AFL. We modify the AFL's heuristics with our learned model through the policy gradient method. Our learning algorithm selects the multiplier of the number of fuzzing iterations to be assigned to a test case during random fuzzing, given a fixed length substring of the test case to be fuzzed. We fuzz the substring with this new energy value and continuously updates the policy based upon the interesting test cases it produces on fuzzing.

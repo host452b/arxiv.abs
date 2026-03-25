@@ -1,0 +1,9 @@
+Title: Side-Channel Aware Fuzzing
+Authors: Philip Sperl, Konstantin Böttinger
+ID: 1908.05012
+URL: https://arxiv.org/abs/1908.05012
+
+Abstract:
+Software testing is becoming a critical part of the development cycle of embedded devices, enabling vulnerability detection. A well-studied approach of software testing is fuzz-testing (fuzzing), during which mutated input is sent to an input-processing software while its behavior is monitored. The goal is to identify faulty states in the program, triggered by malformed inputs. Even though this technique is widely performed, fuzzing cannot be applied to embedded devices to its full extent. Due to the lack of adequately powerful I/O capabilities or an operating system the feedback needed for fuzzing cannot be acquired.
+  In this paper we present and evaluate a new approach to extract feedback for fuzzing on embedded devices using information the power consumption leaks. Side-channel aware fuzzing is a threefold process that is initiated by sending an input to a target device and measuring its power consumption. First, we extract features from the power traces of the target device using machine learning algorithms. Subsequently, we use the features to reconstruct the code structure of the analyzed firmware. In the final step we calculate a score for the input, which is proportional to the code coverage.
+  We carry out our proof of concept by fuzzing synthetic software and a light-weight AES implementation running on an ARM Cortex-M4 microcontroller. Our results show that the power side-channel carries information relevant for fuzzing.

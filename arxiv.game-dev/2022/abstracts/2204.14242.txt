@@ -1,0 +1,11 @@
+Title: Analytical Performance Estimation during Code Generation on Modern GPUs
+Authors: Dominik Ernst, Markus Holzer, Georg Hager, Matthias Knorr, Gerhard Wellein
+ID: 2204.14242
+URL: https://arxiv.org/abs/2204.14242
+
+Abstract:
+Automatic code generation is frequently used to create implementations of algorithms specifically tuned to particular hardware and application parameters. The code generation process involves the selection of adequate code transformations, tuning parameters, and parallelization strategies. We propose an alternative to time-intensive autotuning, scenario-specific performance models, or black-box machine learning to select the best-performing configuration.
+  This paper identifies the relevant performance-defining mechanisms for memory-intensive GPU applications through a performance model coupled with an analytic hardware metric estimator. This enables a quick exploration of large configuration spaces to identify highly efficient code candidates with high accuracy.
+  We examine the changes of the A100 GPU architecture compared to the predecessor V100 and address the challenges of how to model the data transfer volumes through the new memory hierarchy.
+  We show how our method can be coupled to the pystencils stencil code generator, which is used to generate kernels for a range-four 3D-25pt stencil and a complex two-phase fluid solver based on the Lattice Boltzmann Method. For both, it delivers a ranking that can be used to select the best-performing candidate.
+  The method is not limited to stencil kernels but can be integrated into any code generator that can generate the required address expressions.

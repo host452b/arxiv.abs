@@ -1,0 +1,10 @@
+Title: Opening the Black Box: Performance Estimation during Code Generation for GPUs
+Authors: Dominik Ernst, Georg Hager, Markus Holzer, Matthias Knorr, Gerhard Wellein
+ID: 2107.01143
+URL: https://arxiv.org/abs/2107.01143
+
+Abstract:
+Automatic code generation is frequently used to create implementations of algorithms specifically tuned to particular hardware and application parameters. The code generation process involves the selection of adequate code transformations, tuning parameters, and parallelization strategies. To cover the huge search space, code generation frameworks may apply time-intensive autotuning, exploit scenario-specific performance models, or treat performance as an intangible black box that must be described via machine learning.
+  This paper addresses the selection problem by identifying the relevant performance-defining mechanisms through a performance model coupled with an analytic hardware metric estimator. This enables a quick exploration of large configuration spaces to identify highly efficient candidates with high accuracy.
+  Our current approach targets memory-intensive GPGPU applications and focuses on the correct modeling of data transfer volumes to all levels of the memory hierarchy. We show how our method can be coupled to the pystencils stencil code generator, which is used to generate kernels for a range four 3D25pt stencil and a complex two phase fluid solver based on the Lattice Boltzmann Method. For both, it delivers a ranking that can be used to select the best performing candidate.
+  The method is not limited to stencil kernels, but can be integrated into any code generator that can generate the required address expressions.

@@ -1,0 +1,7 @@
+Title: Scalable GPU Performance Variability Analysis framework
+Authors: Ankur Lahiry, Ayush Pokharel, Seth Ockerman, Amal Gueroudji, Line Pouchard, Tanzima Z. Islam
+ID: 2506.20674
+URL: https://arxiv.org/abs/2506.20674
+
+Abstract:
+Analyzing large-scale performance logs from GPU profilers often requires terabytes of memory and hours of runtime, even for basic summaries. These constraints prevent timely insight and hinder the integration of performance analytics into automated workflows. Existing analysis tools typically process data sequentially, making them ill-suited for HPC workflows with growing trace complexity and volume. We introduce a distributed data analysis framework that scales with dataset size and compute availability. Rather than treating the dataset as a single entity, our system partitions it into independently analyzable shards and processes them concurrently across MPI ranks. This design reduces per-node memory pressure, avoids central bottlenecks, and enables low-latency exploration of high-dimensional trace data. We apply the framework to end-to-end Nsight Compute traces from real HPC and AI workloads, demonstrate its ability to diagnose performance variability, and uncover the impact of memory transfer latency on GPU kernel behavior.

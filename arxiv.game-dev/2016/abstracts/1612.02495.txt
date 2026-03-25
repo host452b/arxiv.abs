@@ -1,0 +1,7 @@
+Title: An initial investigation of the performance of GPU-based swept time-space decomposition
+Authors: Daniel Magee, Kyle E Niemeyer
+ID: 1612.02495
+URL: https://arxiv.org/abs/1612.02495
+
+Abstract:
+Simulations of physical phenomena are essential to the expedient design of precision components in aerospace and other high-tech industries. These phenomena are often described by mathematical models involving partial differential equations (PDEs) without exact solutions. Modern design problems require simulations with a level of resolution that is difficult to achieve in a reasonable amount of time even in effectively parallelized solvers. Though the scale of the problem relative to available computing power is the greatest impediment to accelerating these applications, significant performance gains can be achieved through careful attention to the details of memory accesses. Parallelized PDE solvers are subject to a trade-off in memory management: store the solution for each timestep in abundant, global memory with high access costs or in a limited, private memory with low access costs that must be passed between nodes. The GPU implementation of swept time-space decomposition presented here mitigates this dilemma by using private (shared) memory, avoiding internode communication, and overwriting unnecessary values. It shows significant improvement in the execution time of the PDE solvers in one dimension achieving speedups of 6-2x for large and small problem sizes respectively compared to naive GPU versions and 7-300x compared to parallel CPU versions.

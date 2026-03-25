@@ -1,0 +1,7 @@
+Title: Evaluating the performance portability of SYCL across CPUs and GPUs on bandwidth-bound applications
+Authors: Istvan Z Reguly
+ID: 2309.10075
+URL: https://arxiv.org/abs/2309.10075
+
+Abstract:
+In this paper, we evaluate the portability of the SYCL programming model on some of the latest CPUs and GPUs from a wide range of vendors, utilizing the two main compilers: DPC++ and hipSYCL/OpenSYCL. Both compilers currently support GPUs from all three major vendors; we evaluate performance on the Intel(R) Data Center GPU Max 1100, the NVIDIA A100 GPU, and the AMD MI250X GPU. Support on CPUs currently is less established, with DPC++ only supporting x86 CPUs through OpenCL, however, OpenSYCL does have an OpenMP backend capable of targeting all modern CPUs; we benchmark the Intel Xeon Platinum 8360Y Processor (Ice Lake), the AMD EPYC 9V33X (Genoa-X), and the Ampere Altra platforms. We study a range of primarily bandwidth-bound applications implemented using the OPS and OP2 DSLs, evaluate different formulations in SYCL, and contrast their performance to "native" programming approaches where available (CUDA/HIP/OpenMP). On GPU architectures SCYL on average even slightly outperforms native approaches, while on CPUs it falls behind - highlighting a continued need for improving CPU performance. While SYCL does not solve all the challenges of performance portability (e.g. needing different algorithms on different hardware), it does provide a single programming model and ecosystem to target most current HPC architectures productively.
