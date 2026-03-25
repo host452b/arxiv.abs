@@ -18,8 +18,8 @@ This repository contains six curated paper abstract collections:
 | [`arxiv.game-dev`](arxiv.game-dev/) | 5,197 | 29 categories | 1996–2026 |
 | [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 1,814 | 12 topics | unlimited |
 | [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,125 | 7 topics | unlimited |
-| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 348 | 25 categories | 2005–2026 |
-| **Total** | **29,476** | **139+** | |
+| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 73 | 25 categories | 2013–2026 |
+| **Total** | **29,201** | **139+** | |
 
 ---
 
@@ -66,7 +66,7 @@ This repository contains six curated paper abstract collections:
 
 ### 7. `arxiv.game-dev-with-ai` — Human × AI Co-Development (New Era)
 
-348 abstracts from 25 targeted searches on the emerging field where AI becomes a **co-developer and creative partner** in game development. Covers LLM-assisted design, multi-agent game systems, generative assets, autonomous game design, and more.
+73 curated abstracts (filtered from 542 raw) from 25 targeted searches on the emerging field where AI becomes a **co-developer and creative partner** in game development. Covers LLM-assisted design, co-creative systems, generative assets, autonomous game design, and more.
 
 ---
 
@@ -114,7 +114,7 @@ arxiv.abs/
 │   ├── health-findings.zh-CN.md
 │   ├── search-index.json
 │   └── abstracts/
-└── arxiv.game-dev-with-ai/                # Human × AI co-dev (348 papers)
+└── arxiv.game-dev-with-ai/                # Human × AI co-dev (73 curated papers)
     ├── README.md / README.zh-CN.md
     ├── readme_game_dev_with_ai.md          # Landscape & practitioner roadmap
     ├── search-index.json
