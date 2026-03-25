@@ -53,6 +53,14 @@ This repository contains two curated paper abstract collections:
 
 ---
 
+## Collection Format Standards
+
+All sub-collections follow a unified format standard. See **[STANDARDS.md](STANDARDS.md)** for the full spec.
+
+**Core requirement:** Every category or segment in every collection README must include an **80/20 Pareto best practices summary** — identifying the 20% of key practices that drive 80% of outcomes in that domain.
+
+---
+
 ## Repo Structure
 
 ```
