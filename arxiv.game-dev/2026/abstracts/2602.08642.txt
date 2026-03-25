@@ -1,0 +1,9 @@
+Title: Forget Superresolution, Sample Adaptively (when Path Tracing)
+Authors: Martin Bálint, Corentin Salaün, Hans-Peter Seidel, Karol Myszkowski
+ID: 2602.08642
+URL: https://arxiv.org/abs/2602.08642
+
+Abstract:
+Real-time path tracing increasingly operates under extremely low sampling budgets, often below one sample per pixel, as rendering complexity, resolution, and frame-rate requirements continue to rise. While super-resolution is widely used in production, it uniformly sacrifices spatial detail and cannot exploit variations in noise, reconstruction difficulty, and perceptual importance across the image. Adaptive sampling offers a compelling alternative, but existing end-to-end approaches rely on approximations that break down in sparse regimes.
+  We introduce an end-to-end adaptive sampling and denoising pipeline explicitly designed for the sub-1-spp regime. Our method uses a stochastic formulation of sample placement that enables gradient estimation despite discrete sampling decisions, allowing stable training of a neural sampler at low sampling budgets. To better align optimization with human perception, we propose a tonemapping-aware training pipeline that integrates differentiable filmic operators and a state-of-the-art perceptual loss, preventing oversampling of regions with low visual impact.
+  In addition, we introduce a gather-based pyramidal denoising filter and a learnable generalization of albedo demodulation tailored to sparse sampling. Our results show consistent improvements over uniform sparse sampling, with notably better reconstruction of perceptually critical details such as specular highlights and shadow boundaries, and demonstrate that adaptive sampling remains effective even at minimal budgets.

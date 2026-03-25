@@ -1,0 +1,7 @@
+Title: Vision-Based Hand Shadowing for Robotic Manipulation via Inverse Kinematics
+Authors: Hendrik Chiche, Antoine Jamme, Trevor Rigoberto Martinez
+ID: 2603.11383
+URL: https://arxiv.org/abs/2603.11383
+
+Abstract:
+Teleoperation of low-cost robotic manipulators remains challenging due to the complexity of mapping human hand articulations to robot joint commands. We present an offline hand-shadowing and retargeting pipeline from a single egocentric RGB-D camera mounted on 3D-printed glasses. The pipeline detects 21 hand landmarks per hand using MediaPipe Hands, deprojects them into 3D via depth sensing, transforms them into the robot coordinate frame, and solves a damped-least-squares inverse kinematics problem in PyBullet to produce joint commands for the 6-DOF SO-ARM101 robot. A gripper controller maps thumb-index finger geometry to grasp aperture with a four-level fallback hierarchy. Actions are first previewed in a physics simulation before replay on the physical robot through the LeRobot framework. We evaluate the IK retargeting pipeline on a structured pick-and-place benchmark (5-tile grid, 10 grasps per tile) achieving a 90% success rate, and compare it against four vision-language-action policies (ACT, SmolVLA, pi0.5, GR00T N1.5) trained on leader-follower teleoperation data. We also test the IK pipeline in unstructured real-world environments (grocery store, pharmacy), where hand occlusion by surrounding objects reduces success to 9.3% (N=75), highlighting both the promise and current limitations of marker-free analytical retargeting.

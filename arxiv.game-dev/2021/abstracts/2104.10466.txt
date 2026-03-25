@@ -1,0 +1,7 @@
+Title: HDR-Fuzz: Detecting Buffer Overruns using AddressSanitizer Instrumentation and Fuzzing
+Authors: Raveendra Kumar Medicherla, Malathy Nagalakshmi, Tanya Sharma, Raghavan Komondoor
+ID: 2104.10466
+URL: https://arxiv.org/abs/2104.10466
+
+Abstract:
+Buffer-overruns are a prevalent vulnerability in software libraries and applications. Fuzz testing is one of the effective techniques to detect vulnerabilities in general. Greybox fuzzers such as AFL automatically generate a sequence of test inputs for a given program using a fitness-guided search process. A recently proposed approach in the literature introduced a buffer-overrun specific fitness metric called "headroom", which tracks how close each generated test input comes to exposing the vulnerabilities. That approach showed good initial promise, but is somewhat imprecise and expensive due to its reliance on conservative points-to analysis. Inspired by the approach above, in this paper we propose a new ground-up approach for detecting buffer-overrun vulnerabilities. This approach uses an extended version of ASAN (Address Sanitizer) that runs in parallel with the fuzzer, and reports back to the fuzzer test inputs that happen to come closer to exposing buffer-overrun vulnerabilities. The ASAN-style instrumentation is precise as it has no dependence on points-to analysis. We describe in this paper our approach, as well as an implementation and evaluation of the approach.

@@ -1,0 +1,7 @@
+Title: Performance engineering for the Lattice Boltzmann method on GPGPUs: Architectural requirements and performance results
+Authors: Johannes Habich, Christian Feichtinger, Harald Köstler, Georg Hager, Gerhard Wellein
+ID: 1112.0850
+URL: https://arxiv.org/abs/1112.0850
+
+Abstract:
+GPUs offer several times the floating point performance and memory bandwidth of current standard two socket CPU servers, e.g. NVIDIA C2070 vs. Intel Xeon Westmere X5650. The lattice Boltzmann method has been established as a flow solver in recent years and was one of the first flow solvers to be successfully ported and that performs well on GPUs. We demonstrate advanced optimization strategies for a D3Q19 lattice Boltzmann based incompressible flow solver for GPGPUs and CPUs based on NVIDIA CUDA and OpenCL. Since the implemented algorithm is limited by memory bandwidth, we concentrate on improving memory access. Basic data layout issues for optimal data access are explained and discussed. Furthermore, the algorithmic steps are rearranged to improve scattered access of the GPU memory. The importance of occupancy is discussed as well as optimization strategies to improve overall concurrency. We arrive at a well-optimized GPU kernel, which is integrated into a larger framework that can handle single phase fluid flow simulations as well as particle-laden flows. Our 3D LBM GPU implementation reaches up to 650 MLUPS in single precision and 290 MLUPS in double precision on an NVIDIA Tesla C2070.

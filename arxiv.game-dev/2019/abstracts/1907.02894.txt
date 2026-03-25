@@ -1,0 +1,8 @@
+Title: RegDem: Increasing GPU Performance via Shared Memory Register Spilling
+Authors: Putt Sakdhnagool, Amit Sabne, Rudolf Eigenmann
+ID: 1907.02894
+URL: https://arxiv.org/abs/1907.02894
+
+Abstract:
+GPU utilization, measured as occupancy, is limited by the parallel threads' combined usage of on-chip resources, such as registers and the programmer-managed shared memory. Higher resource demand means lower effective parallel thread count, and therefore lower program performance. Our investigation found that registers are often the occupancy limiters.
+  The de-facto nvcc compiler-based approach spills excessive registers to the off-chip memory, ignoring the shared memory and leaving the on-chip resources underutilized. To mitigate the register demand, this paper presents a binary translation technique, called RegDem, that spills excessive registers to the underutilized shared memory by transforming the GPU assembly code (SASS). Most GPU programs do not fully use shared memory, thus allowing RegDem to use it for register spilling. The higher occupancy achieved by RegDem outweighs the slightly higher cost of accessing shared memory instead of placing data in registers. The paper also presents a compile-time performance predictor that models instructions stalls to choose the best version from a set of program variants. Cumulatively, these techniques outperform the nvcc compiler with a 9% geometric mean, the highest observed being 18%.

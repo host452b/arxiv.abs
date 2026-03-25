@@ -1,0 +1,7 @@
+Title: Improving Gradient Computation for Differentiable Physics Simulation with Contacts
+Authors: Yaofeng Desmond Zhong, Jiequn Han, Biswadip Dey, Georgia Olympia Brikis
+ID: 2305.00092
+URL: https://arxiv.org/abs/2305.00092
+
+Abstract:
+Differentiable simulation enables gradients to be back-propagated through physics simulations. In this way, one can learn the dynamics and properties of a physics system by gradient-based optimization or embed the whole differentiable simulation as a layer in a deep learning model for downstream tasks, such as planning and control. However, differentiable simulation at its current stage is not perfect and might provide wrong gradients that deteriorate its performance in learning tasks. In this paper, we study differentiable rigid-body simulation with contacts. We find that existing differentiable simulation methods provide inaccurate gradients when the contact normal direction is not fixed - a general situation when the contacts are between two moving objects. We propose to improve gradient computation by continuous collision detection and leverage the time-of-impact (TOI) to calculate the post-collision velocities. We demonstrate our proposed method, referred to as TOI-Velocity, on two optimal control problems. We show that with TOI-Velocity, we are able to learn an optimal control sequence that matches the analytical solution, while without TOI-Velocity, existing differentiable simulation methods fail to do so.

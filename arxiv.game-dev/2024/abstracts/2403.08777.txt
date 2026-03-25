@@ -1,0 +1,9 @@
+Title: Alya towards Exascale: Optimal OpenACC Performance of the Navier-Stokes Finite Element Assembly on GPUs
+Authors: Herbert Owen, Dominik Ernst, Thomas Gruber, Oriol Lemkuhl, Guillaume Houzeaux, Lucas Gasparino, Gerhard Wellein
+ID: 2403.08777
+URL: https://arxiv.org/abs/2403.08777
+
+Abstract:
+This paper addresses the challenge of providing portable and highly efficient code structures for CPU and GPU architectures. We choose the assembly of the right-hand term in the incompressible flow module of the High-Performance Computational Mechanics code Alya, which is one of the two CFD codes in the Unified European Benchmark Suite. Starting from an efficient CPU-code and a related OpenACC-port for GPUs we successively investigate performance potentials arising from code specialization, algorithmic restructuring and low-level optimizations.
+  We demonstrate that only the combination of these different dimensions of runtime optimization unveils the full performance potential on the GPU and CPU. Roofline-based performance modelling is applied in this process and we demonstrate the need to investigate new optimization strategies if a classical roofline limit such as memory bandwidth utilization is achieved, rather than stopping the process. The final unified OpenACC-based implementation boosts performance by more than 50x on an NVIDIA A100 GPU (achieving approximately 2.5 TF/s FP64) and a further factor of 5x for an Intel Icelake based CPU-node (achieving approximately 1.0 TF/s FP64).
+  The insights gained in our manual approach lays ground implementing unified but still highly efficient code structures for related kernels in Alya and other applications. These can be realized by manual coding or automatic code generation frameworks.

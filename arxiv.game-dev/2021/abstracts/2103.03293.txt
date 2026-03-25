@@ -1,0 +1,7 @@
+Title: Accelerating Second-Order Differential Dynamic Programming for Rigid-Body Systems
+Authors: John N. Nganga, Patrick M. Wensing
+ID: 2103.03293
+URL: https://arxiv.org/abs/2103.03293
+
+Abstract:
+This letter presents a method to reduce the computational demands of including second-order dynamics sensitivity information into the Differential Dynamic Programming (DDP) trajectory optimization algorithm. An approach to DDP is developed where all the necessary derivatives are computed with the same complexity as in the iterative Linear Quadratic Regulator (iLQR). Compared to linearized models used in iLQR, DDP more accurately represents the dynamics locally, but it is not often used since the second-order derivatives of the dynamics are tensorial and expensive to compute. This work shows how to avoid the need for computing the derivative tensor by instead leveraging reverse-mode accumulation of derivative information to compute a key vector-tensor product directly. We also show how the structure of the dynamics can be used to further accelerate these computations in rigid-body systems. Benchmarks of this approach for trajectory optimization with multi-link manipulators show that the benefits of DDP can often be included without sacrificing evaluation time, and can be done in fewer iterations than iLQR.

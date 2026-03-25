@@ -1,0 +1,7 @@
+Title: CPU vs. GPU for Community Detection: Performance Insights from GVE-Louvain and $ν$-Louvain
+Authors: Subhajit Sahu
+ID: 2501.19004
+URL: https://arxiv.org/abs/2501.19004
+
+Abstract:
+Community detection involves identifying natural divisions in networks, a crucial task for many large-scale applications. This report presents GVE-Louvain, one of the most efficient multicore implementations of the Louvain algorithm, a high-quality method for community detection. Running on a dual 16-core Intel Xeon Gold 6226R server, GVE-Louvain outperforms Vite, Grappolo, NetworKit Louvain, and cuGraph Louvain (on an NVIDIA A100 GPU) by factors of 50x, 22x, 20x, and 5.8x, respectively, achieving a processing rate of 560M edges per second on a 3.8B-edge graph. Additionally, it scales efficiently, improving performance by 1.6x for every thread doubling. The paper also presents $ν$-Louvain, a GPU-based implementation. When evaluated on an NVIDIA A100 GPU, $ν$-Louvain performs only on par with GVE-Louvain, largely due to reduced workload and parallelism in later algorithmic passes. These results suggest that CPUs, with their flexibility in handling irregular workloads, may be better suited for community detection tasks.

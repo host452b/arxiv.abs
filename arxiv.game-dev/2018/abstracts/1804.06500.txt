@@ -1,0 +1,9 @@
+Title: Two-Player Games for Efficient Non-Convex Constrained Optimization
+Authors: Andrew Cotter, Heinrich Jiang, Karthik Sridharan
+ID: 1804.06500
+URL: https://arxiv.org/abs/1804.06500
+
+Abstract:
+In recent years, constrained optimization has become increasingly relevant to the machine learning community, with applications including Neyman-Pearson classification, robust optimization, and fair machine learning. A natural approach to constrained optimization is to optimize the Lagrangian, but this is not guaranteed to work in the non-convex setting, and, if using a first-order method, cannot cope with non-differentiable constraints (e.g. constraints on rates or proportions).
+  The Lagrangian can be interpreted as a two-player game played between a player who seeks to optimize over the model parameters, and a player who wishes to maximize over the Lagrange multipliers. We propose a non-zero-sum variant of the Lagrangian formulation that can cope with non-differentiable--even discontinuous--constraints, which we call the "proxy-Lagrangian". The first player minimizes external regret in terms of easy-to-optimize "proxy constraints", while the second player enforces the original constraints by minimizing swap regret.
+  For this new formulation, as for the Lagrangian in the non-convex setting, the result is a stochastic classifier. For both the proxy-Lagrangian and Lagrangian formulations, however, we prove that this classifier, instead of having unbounded size, can be taken to be a distribution over no more than m+1 models (where m is the number of constraints). This is a significant improvement in practical terms.

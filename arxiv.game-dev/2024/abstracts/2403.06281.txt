@@ -1,0 +1,8 @@
+Title: ES-FUZZ: Improving the Coverage of Firmware Fuzzing with Stateful and Adaptable MMIO Models
+Authors: Wei-Lun Huang, Kang G. Shin
+ID: 2403.06281
+URL: https://arxiv.org/abs/2403.06281
+
+Abstract:
+Gray-box fuzzing is widely used for testing embedded systems (ESes). State-of-the-art (SOTA) gray-box fuzzers test ES firmware in fully emulated environments without real peripherals. They emulate missing peripherals to achieve decent code coverage. Some fuzzers infer the memory-mapped I/O (MMIO) behavior of firmware peripherals from the firmware binary. We find that these fuzzers emulate the inferred MMIO behavior using stateless and non-adaptive MMIO models, which perform poorly in handling ES firmware's MMIO reads to collectively retrieve a data chunk. This leaves ample room for improving the code coverage of these fuzzers.
+  We propose ES-Fuzz to improve the code coverage of each such fuzzer using stateful MMIO models that adapt to overcome the fuzzer's coverage bottlenecks. ES-Fuzz runs concurrently with a given fuzzer and starts a new run whenever the fuzzer's coverage stagnates. In each run, ES-Fuzz leverages a high-coverage test case to generate new stateful MMIO models that boost the coverage further. We have implemented ES-Fuzz upon Fuzzware and evaluated it with 24 popular ES firmware. ES-Fuzz is shown to enhance Fuzzware's coverage by up to 54% in 11 of them and trigger additional bugs in 5 of them without hurting the coverage in the remainder. ES-Fuzz's MMIO models are shown to describe a wide range of MMIO-retrieved data chunks and the firmware's usage of the same data chunk in various contexts.

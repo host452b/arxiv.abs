@@ -1,0 +1,7 @@
+Title: Faster Fuzzing: Reinitialization with Deep Neural Models
+Authors: Nicole Nichols, Mark Raugas, Robert Jasper, Nathan Hilliard
+ID: 1711.02807
+URL: https://arxiv.org/abs/1711.02807
+
+Abstract:
+We improve the performance of the American Fuzzy Lop (AFL) fuzz testing framework by using Generative Adversarial Network (GAN) models to reinitialize the system with novel seed files. We assess performance based on the temporal rate at which we produce novel and unseen code paths. We compare this approach to seed file generation from a random draw of bytes observed in the training seed files. The code path lengths and variations were not sufficiently diverse to fully replace AFL input generation. However, augmenting native AFL with these additional code paths demonstrated improvements over AFL alone. Specifically, experiments showed the GAN was faster and more effective than the LSTM and out-performed a random augmentation strategy, as measured by the number of unique code paths discovered. GAN helps AFL discover 14.23% more code paths than the random strategy in the same amount of CPU time, finds 6.16% more unique code paths, and finds paths that are on average 13.84% longer. Using GAN shows promise as a reinitialization strategy for AFL to help the fuzzer exercise deep paths in software.

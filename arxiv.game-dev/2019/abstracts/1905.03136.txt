@@ -1,0 +1,7 @@
+Title: Performance Engineering for Real and Complex Tall & Skinny Matrix Multiplication Kernels on GPUs
+Authors: Dominik Ernst, Georg Hager, Jonas Thies, Gerhard Wellein
+ID: 1905.03136
+URL: https://arxiv.org/abs/1905.03136
+
+Abstract:
+General matrix-matrix multiplications with double-precision real and complex entries (DGEMM and ZGEMM) in vendor-supplied BLAS libraries are best optimized for square matrices but often show bad performance for tall & skinny matrices, which are much taller than wide. NVIDIA's current CUBLAS implementation delivers only a fraction of the potential performance as indicated by the roofline model in this case. We describe the challenges and key characteristics of an implementation that can achieve close to optimal performance. We further evaluate different strategies of parallelization and thread distribution, and devise a flexible, configurable mapping scheme. To ensure flexibility and allow for highly tailored implementations we use code generation combined with autotuning. For a large range of matrix sizes in the domain of interest we achieve at least 2/3 of the roofline performance and often substantially outperform state-of-the art CUBLAS results on an NVIDIA Volta GPGPU.

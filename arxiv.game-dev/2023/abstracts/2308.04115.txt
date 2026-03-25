@@ -1,0 +1,9 @@
+Title: model-based script synthesis for fuzzing
+Authors: Zian Liu, Chao Chen, Muhammad Ejaz Ahmed, Jun Zhang, Dongxi Liu
+ID: 2308.04115
+URL: https://arxiv.org/abs/2308.04115
+
+Abstract:
+Kernel fuzzing is important for finding critical kernel vulnerabilities. Close-source (e.g., Windows) operating system kernel fuzzing is even more challenging due to the lack of source code. Existing approaches fuzz the kernel by modeling syscall sequences from traces or static analysis of system codes. However, a common limitation is that they do not learn and mutate the syscall sequences to reach different kernel states, which can potentially result in more bugs or crashes.
+  In this paper, we propose WinkFuzz, an approach to learn and mutate traced syscall sequences in order to reach different kernel states. WinkFuzz learns syscall dependencies from the trace, identifies potential syscalls in the trace that can have dependent subsequent syscalls, and applies the dependencies to insert more syscalls while preserving the dependencies into the trace. Then WinkFuzz fuzzes the synthesized new syscall sequence to find system crashes.
+  We applied WinkFuzz to four seed applications and found a total increase in syscall number of 70.8\%, with a success rate of 61\%, within three insert levels. The average time for tracing, dependency analysis, recovering model script, and synthesizing script was 600, 39, 34, and 129 seconds respectively. The instant fuzzing rate is 3742 syscall executions per second. However, the average fuzz efficiency dropped to 155 syscall executions per second when the initializing time, waiting time, and other factors were taken into account. We fuzzed each seed application for 24 seconds and, on average, obtained 12.25 crashes within that time frame.

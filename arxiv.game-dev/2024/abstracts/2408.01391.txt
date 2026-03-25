@@ -1,0 +1,7 @@
+Title: FT K-means: A High-Performance K-means on GPU with Fault Tolerance
+Authors: Shixun Wu, Yitong Ding, Yujia Zhai, Jinyang Liu, Jiajun Huang, Zizhe Jian, Huangliang Dai, Sheng Di, Bryan M. Wong, Zizhong Chen, Franck Cappello
+ID: 2408.01391
+URL: https://arxiv.org/abs/2408.01391
+
+Abstract:
+K-means is a widely used algorithm in clustering, however, its efficiency is primarily constrained by the computational cost of distance computing. Existing implementations suffer from suboptimal utilization of computational units and lack resilience against soft errors. To address these challenges, we introduce FT K-means, a high-performance GPU-accelerated implementation of K-means with online fault tolerance. We first present a stepwise optimization strategy that achieves competitive performance compared to NVIDIA's cuML library. We further improve FT K-means with a template-based code generation framework that supports different data types and adapts to different input shapes. A novel warp-level tensor-core error correction scheme is proposed to address the failure of existing fault tolerance methods due to memory asynchronization during copy operations. Our experimental evaluations on NVIDIA T4 GPU and A100 GPU demonstrate that FT K-means without fault tolerance outperforms cuML's K-means implementation, showing a performance increase of 10\%-300\% in scenarios involving irregular data shapes. Moreover, the fault tolerance feature of FT K-means introduces only an overhead of 11\%, maintaining robust performance even with tens of errors injected per second.

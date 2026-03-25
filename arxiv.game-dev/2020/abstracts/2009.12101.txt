@@ -1,0 +1,9 @@
+Title: Compressed Basis GMRES on High Performance GPUs
+Authors: José I. Aliaga, Hartwig Anzt, Thomas Grützmacher, Enrique S. Quintana-Ortí, Andrés E. Tomás
+ID: 2009.12101
+URL: https://arxiv.org/abs/2009.12101
+
+Abstract:
+Krylov methods provide a fast and highly parallel numerical tool for the iterative solution of many large-scale sparse linear systems. To a large extent, the performance of practical realizations of these methods is constrained by the communication bandwidth in all current computer architectures, motivating the recent investigation of sophisticated techniques to avoid, reduce, and/or hide the message-passing costs (in distributed platforms) and the memory accesses (in all architectures).
+  This paper introduces a new communication-reduction strategy for the (Krylov) GMRES solver that advocates for decoupling the storage format (i.e., the data representation in memory) of the orthogonal basis from the arithmetic precision that is employed during the operations with that basis. Given that the execution time of the GMRES solver is largely determined by the memory access, the datatype transforms can be mostly hidden, resulting in the acceleration of the iterative step via a lower volume of bits being retrieved from memory. Together with the special properties of the orthonormal basis (whose elements are all bounded by 1), this paves the road toward the aggressive customization of the storage format, which includes some floating point as well as fixed point formats with little impact on the convergence of the iterative process.
+  We develop a high performance implementation of the "compressed basis GMRES" solver in the Ginkgo sparse linear algebra library and using a large set of test problems from the SuiteSparse matrix collection we demonstrate robustness and performance advantages on a modern NVIDIA V100 GPU of up to 50% over the standard GMRES solver that stores all data in IEEE double precision.

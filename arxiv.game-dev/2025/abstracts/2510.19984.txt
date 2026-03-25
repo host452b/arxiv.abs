@@ -1,0 +1,7 @@
+Title: On Interaction Effects in Greybox Fuzzing
+Authors: Konstantinos Kitsios, Marcel Böhme, Alberto Bacchelli
+ID: 2510.19984
+URL: https://arxiv.org/abs/2510.19984
+
+Abstract:
+A greybox fuzzer is an automated software testing tool that generates new test inputs by applying randomly chosen mutators (e.g., flipping a bit or deleting a block of bytes) to a seed input in random order and adds all coverage-increasing inputs to the corpus of seeds. We hypothesize that the order in which mutators are applied to a seed input has an impact on the effectiveness of greybox fuzzers. In our experiments, we fit a linear model to a dataset that contains the effectiveness of all possible mutator pairs and indeed observe the conjectured interaction effect. This points us to more efficient fuzzing by choosing the most promising mutator sequence with a higher likelihood. We propose MuoFuzz, a greybox fuzzer that learns and chooses the most promising mutator sequences. MuoFuzz learns the conditional probability that the next mutator will yield an interesting input, given the previously selected mutator. Then, it samples from the learned probability using a random walk to generate mutator sequences. We compare the performance of MuoFuzz to AFL++, which uses a fixed selection probability, and MOPT, which optimizes the selection probability of each mutator in isolation. Experimental results on the FuzzBench and MAGMA benchmarks show that MuoFuzz achieves the highest code coverage and finds four bugs missed by AFL++ and one missed by both AFL++ and MOPT.
