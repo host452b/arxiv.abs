@@ -1,0 +1,24 @@
+Title: WuppieFuzz: Coverage-Guided, Stateful REST API Fuzzing
+Authors: Thomas Rooijakkers, Anne Nijsten, Cristian Daniele, Erieke Weitenberg, Ringo Groenewegen et al.
+ID: 2512.15554
+URL: https://arxiv.org/abs/2512.15554
+
+Abstract:
+Many business processes currently depend on web services, often using REST APIs
+for communication. REST APIs expose web service functionality through endpoints,
+allowing easy client interaction over the Internet. To reduce the security risk
+resulting from exposed endpoints, thorough testing is desired. Due to the
+generally vast number of endpoints, automated testing techniques, like fuzzing,
+are of interest. This paper introduces WuppieFuzz, an open-source REST API
+fuzzer built on LibAFL, supporting white-box, grey-box and black-box fuzzing.
+Using an OpenAPI specification, it can generate an initial input corpus
+consisting of sequences of requests. These are mutated with REST-specific and
+LibAFL-provided mutators to explore different code paths in the software under
+test. Guided by the measured coverage, WuppieFuzz then selects which request
+sequences to send next to reach complex states in the software under test. In
+this process, it automates harness creation to reduce manual efforts often
+required in fuzzing. Different kinds of reporting are provided by the fuzzer to
+help fixing bugs. We evaluated our tool on the Petstore API to assess the
+robustness of the white-box approach and the effectiveness of different power
+schedules. We further monitored endpoint and code coverage over time to measure
+the efficacy of the approach.

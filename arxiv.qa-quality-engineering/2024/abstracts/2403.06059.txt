@@ -1,0 +1,24 @@
+Title: Test-time Distribution Learning Adapter for Cross-modal Visual Reasoning
+Authors: Yi Zhang, Ce Zhang
+ID: 2403.06059
+URL: https://arxiv.org/abs/2403.06059
+
+Abstract:
+Vision-Language Pre-Trained (VLP) models, such as CLIP, have demonstrated
+remarkable effectiveness in learning generic visual representations. Several
+approaches aim to efficiently adapt VLP models to downstream tasks with limited
+supervision, aiming to leverage the acquired knowledge from VLP models. However,
+these methods suffer from either introducing biased representations or requiring
+high computational complexity, which hinders their effectiveness in fine-tuning
+the CLIP model. Moreover, when a model is trained on data specific to a
+particular domain, its ability to generalize to uncharted domains diminishes. In
+this work, we propose Test-Time Distribution LearNing Adapter (TT-DNA) which
+directly works during the testing period. Specifically, we estimate Gaussian
+distributions to model visual features of the few-shot support images to capture
+the knowledge from the support set. The cosine similarity between query image
+and the feature distribution of support images is used as the prediction of
+visual adapter. Subsequently, the visual adapter's prediction merges with the
+original CLIP prediction via a residual connection, resulting in the final
+prediction. Our extensive experimental results on visual reasoning for human
+object interaction demonstrate that our proposed TT-DNA outperforms existing
+state-of-the-art methods by large margins.

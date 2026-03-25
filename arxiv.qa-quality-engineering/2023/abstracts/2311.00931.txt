@@ -1,0 +1,29 @@
+Title: Learning Defect Prediction from Unrealistic Data
+Authors: Kamel Alrashedy, Vincent J. Hellendoorn, Alessandro Orso
+ID: 2311.00931
+URL: https://arxiv.org/abs/2311.00931
+
+Abstract:
+Pretrained models of code, such as CodeBERT and CodeT5, have become popular
+choices for code understanding and generation tasks. Such models tend to be
+large and require commensurate volumes of training data, which are rarely
+available for downstream tasks. Instead, it has become popular to train models
+with far larger but less realistic datasets, such as functions with artificially
+injected bugs. Models trained on such data, however, tend to only perform well
+on similar data, while underperforming on real world programs. In this paper, we
+conjecture that this discrepancy stems from the presence of distracting samples
+that steer the model away from the real-world task distribution. To investigate
+this conjecture, we propose an approach for identifying the subsets of these
+large yet unrealistic datasets that are most similar to examples in real-world
+datasets based on their learned representations. Our approach extracts
+high-dimensional embeddings of both real-world and artificial programs using a
+neural model and scores artificial samples based on their distance to the
+nearest real-world sample. We show that training on only the nearest,
+representationally most similar samples while discarding samples that are not at
+all similar in representations yields consistent improvements across two popular
+pretrained models of code on two code understanding tasks. Our results are
+promising, in that they show that training models on a representative subset of
+an unrealistic dataset can help us harness the power of large-scale synthetic
+data generation while preserving downstream task performance. Finally, we
+highlight the limitations of applying AI models for predicting vulnerabilities
+and bugs in real-world applications

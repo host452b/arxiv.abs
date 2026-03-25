@@ -1,0 +1,23 @@
+Title: Integration of Pre-trained Networks with Continuous Token Interface for End-to-End Spoken Language Understanding
+Authors: Seunghyun Seo, Donghyun Kwak, Bowon Lee
+ID: 2104.07253
+URL: https://arxiv.org/abs/2104.07253
+
+Abstract:
+Most End-to-End (E2E) SLU networks leverage the pre-trained ASR networks but
+still lack the capability to understand the semantics of utterances, crucial for
+the SLU task. To solve this, recently proposed studies use pre-trained NLU
+networks. However, it is not trivial to fully utilize both pre-trained networks;
+many solutions were proposed, such as Knowledge Distillation, cross-modal shared
+embedding, and network integration with Interface. We propose a simple and
+robust integration method for the E2E SLU network with novel Interface,
+Continuous Token Interface (CTI), the junctional representation of the ASR and
+NLU networks when both networks are pre-trained with the same vocabulary.
+Because the only difference is the noise level, we directly feed the ASR
+network's output to the NLU network. Thus, we can train our SLU network in an
+E2E manner without additional modules, such as Gumbel-Softmax. We evaluate our
+model using SLURP, a challenging SLU dataset and achieve state-of-the-art scores
+on both intent classification and slot filling tasks. We also verify the NLU
+network, pre-trained with Masked Language Model, can utilize a noisy textual
+representation of CTI. Moreover, we show our model can be trained with
+multi-task learning from heterogeneous data even after integration with CTI.

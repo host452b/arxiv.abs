@@ -1,0 +1,31 @@
+Title: Mixture Experts with Test-Time Self-Supervised Aggregation for Tabular Imbalanced Regression
+Authors: Yung-Chien Wang, Kuang-Da Wang, Wei-Yao Wang, Wen-Chih Peng
+ID: 2506.07033
+URL: https://arxiv.org/abs/2506.07033
+
+Abstract:
+Tabular data serve as a fundamental and ubiquitous representation of structured
+information in numerous real-world applications, e.g., finance and urban
+planning. In the realm of tabular imbalanced applications, data imbalance has
+been investigated in classification tasks with insufficient instances in certain
+labels, causing the model's ineffective generalizability. However, the imbalance
+issue of tabular regression tasks is underexplored, and yet is critical due to
+unclear boundaries for continuous labels and simplifying assumptions in existing
+imbalance regression work, which often rely on known and balanced test
+distributions. Such assumptions may not hold in practice and can lead to
+performance degradation. To address these issues, we propose MATI: Mixture
+Experts with Test-Time Self-Supervised Aggregation for Tabular Imbalance
+Regression, featuring two key innovations: (i) the Region-Aware Mixture Expert,
+which adopts a Gaussian Mixture Model to capture the underlying related regions.
+The statistical information of each Gaussian component is then used to
+synthesize and train region-specific experts to capture the unique
+characteristics of their respective regions. (ii) Test-Time Self-Supervised
+Expert Aggregation, which dynamically adjusts region expert weights based on
+test data features to reinforce expert adaptation across varying test
+distributions. We evaluated MATI on four real-world tabular imbalance regression
+datasets, including house pricing, bike sharing, and age prediction. To reflect
+realistic deployment scenarios, we adopted three types of test distributions: a
+balanced distribution with uniform target frequencies, a normal distribution
+that follows the training data, and an inverse distribution that emphasizes rare
+target regions. On average across these three test distributions, MATI achieved
+a 7.1% improvement in MAE compared to existing methods.

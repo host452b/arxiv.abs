@@ -1,0 +1,19 @@
+Title: The Data-Quality Illusion: Rethinking Classifier-Based Quality Filtering for LLM Pretraining
+Authors: Thiziri Nait Saada, Louis Bethune, Michal Klein, David Grangier, Marco Cuturi et al.
+ID: 2510.00866
+URL: https://arxiv.org/abs/2510.00866
+
+Abstract:
+Large-scale models are pretrained on massive web-crawled datasets containing
+documents of mixed quality, making data filtering essential. A popular method is
+Classifier-based Quality Filtering (CQF), which trains a binary classifier to
+distinguish between pretraining data and a small, high-quality set. It assigns
+each pretraining document a quality score defined as the classifier's score and
+retains only the top-scoring ones. We provide an in-depth analysis of CQF. We
+show that while CQF improves downstream task performance, it does not
+necessarily enhance language modeling on the high-quality dataset. We explain
+this paradox by the fact that CQF implicitly filters the high-quality dataset as
+well. We further compare the behavior of models trained with CQF to those
+trained on synthetic data of increasing quality, obtained via random token
+permutations, and find starkly different trends. Our results challenge the view
+that CQF captures a meaningful notion of data quality.

@@ -1,0 +1,22 @@
+Title: Optimizing Stateful Microservice Migration in Kubernetes with MS2M and Forensic Checkpointing
+Authors: Hai Dinh-Tuan, Jialun Jiang
+ID: 2509.05794
+URL: https://arxiv.org/abs/2509.05794
+
+Abstract:
+The widespread adoption of microservices architecture in modern software systems
+has emphasized the need for efficient management of distributed services. While
+stateless microservices enable straightforward migration, stateful microservices
+introduce added complexity due to the need to preserve in-memory state during
+migration. However, most container orchestrators, including Kubernetes, lack
+native support for live stateful service migration. This paper proposes an
+optimized migration scheme for stateful services in Kubernetes by integrating
+the Message-based Stateful Microservice Migration (MS2M) framework with
+Kubernetes' Forensic Container Checkpointing (FCC) feature. Key enhancements
+include support for migrating StatefulSet-managed Pods and the introduction of a
+Threshold-Based Cutoff Mechanism to handle high incoming message rates.
+Evaluation results demonstrate that MS2M for individual Pods reduces downtime by
+96.986% compared to cold migration methods, while the StatefulSet approach
+provides greater flexibility in managing stateful services. These insights
+provide practical strategies for optimizing stateful microservice migration in
+cloud-native environments.

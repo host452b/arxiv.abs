@@ -1,0 +1,31 @@
+Title: How well LLM-based test generation techniques perform with newer LLM versions?
+Authors: Michael Konstantinou, Renzo Degiovanni, Mike Papadakis
+ID: 2601.09695
+URL: https://arxiv.org/abs/2601.09695
+
+Abstract:
+The rapid evolution of Large Language Models (LLMs) has strongly impacted
+software engineering, leading to a growing number of studies on automated unit
+test generation. However, the standalone use of LLMs without post-processing has
+proven insufficient, often producing tests that fail to compile or achieve high
+coverage. Several techniques have been proposed to address these issues,
+reporting improvements in test compilation and coverage. While important,
+LLM-based test generation techniques have been evaluated against relatively weak
+baselines (for todays' standards), i.e., old LLM versions and relatively weak
+prompts, which may exacerbate the performance contribution of the approaches. In
+other words, stronger (newer) LLMs may obviate any advantage these techniques
+bring. We investigate this issue by replicating four state-of-the-art LLM-based
+test generation tools, HITS, SymPrompt, TestSpark, and CoverUp that include
+engineering components aimed at guiding the test generation process through
+compilation and execution feedback, and evaluate their relative effectiveness
+and efficiency over a plain LLM test generation method. We integrate current LLM
+versions in all approaches and run an experiment on 393 classes and 3,657
+methods. Our results show that the plain LLM approach can outperform previous
+state-of-the-art approaches in all test effectiveness metrics we used: line
+coverage (by 17.72%), branch coverage (by 19.80%) and mutation score (by
+20.92%), and it does so at a comparable cost (LLM queries). We also observe that
+the granularity at which the plain LLM is applied has a significant impact on
+the cost. We therefore propose targeting first the program classes, where test
+generation is more efficient, and then the uncovered methods to reduce the
+number of LLM requests. This strategy achieves comparable (slightly higher)
+effectiveness while requiring about 20% fewer LLM requests.

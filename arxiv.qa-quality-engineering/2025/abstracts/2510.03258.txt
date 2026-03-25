@@ -1,0 +1,28 @@
+Title: POEM: Explore Unexplored Reliable Samples to Enhance Test-Time Adaptation
+Authors: Chang'an Yi, Xiaohui Deng, Shuaicheng Niu, Yan Zhou
+ID: 2510.03258
+URL: https://arxiv.org/abs/2510.03258
+
+Abstract:
+Test-time adaptation (TTA) aims to transfer knowledge from a source model to
+unknown test data with potential distribution shifts in an online manner. Many
+existing TTA methods rely on entropy as a confidence metric to optimize the
+model. However, these approaches are sensitive to the predefined entropy
+threshold, influencing which samples are chosen for model adaptation.
+Consequently, potentially reliable target samples are often overlooked and
+underutilized. For instance, a sample's entropy might slightly exceed the
+threshold initially, but fall below it after the model is updated. Such samples
+can provide stable supervised information and offer a normal range of gradients
+to guide model adaptation. In this paper, we propose a general approach,
+\underline{POEM}, to promote TTA via ex\underline{\textbf{p}}loring the
+previously unexpl\underline{\textbf{o}}red reliabl\underline{\textbf{e}}
+sa\underline{\textbf{m}}ples. Additionally, we introduce an extra Adapt Branch
+network to strike a balance between extracting domain-agnostic representations
+and achieving high performance on target data. Comprehensive experiments across
+multiple architectures demonstrate that POEM consistently outperforms existing
+TTA methods in both challenging scenarios and real-world domain shifts, while
+remaining computationally efficient. The effectiveness of POEM is evaluated
+through extensive analyses and thorough ablation studies. Moreover, the core
+idea behind POEM can be employed as an augmentation strategy to boost the
+performance of existing TTA approaches. The source code is publicly available at
+\emph{https://github.com/ycarobot/POEM}

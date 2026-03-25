@@ -1,0 +1,27 @@
+Title: Toward Efficient Testing of Graph Neural Networks via Test Input Prioritization
+Authors: Lichen Yang, Qiang Wang, Zhonghao Yang, Daojing He, Yu Li
+ID: 2512.18228
+URL: https://arxiv.org/abs/2512.18228
+
+Abstract:
+Graph Neural Networks (GNNs) have demonstrated remarkable efficacy in handling
+graph-structured data; however, they exhibit failures after deployment, which
+can cause severe consequences. Hence, conducting thorough testing before
+deployment becomes imperative to ensure the reliability of GNNs. However,
+thorough testing requires numerous manually annotated test data. To mitigate the
+annotation cost, strategically prioritizing and labeling high-quality unlabeled
+inputs for testing becomes crucial, which facilitates uncovering more model
+failures with a limited labeling budget. Unfortunately, existing test input
+prioritization techniques either overlook the valuable information contained in
+graph structures or are overly reliant on attributes extracted from the target
+model, i.e., model-aware attributes, whose quality can vary significantly. To
+address these issues, we propose a novel test input prioritization framework,
+named GraphRank, for GNNs. GraphRank introduces model-agnostic attributes to
+compensate for the limitations of the model-aware ones. It also leverages the
+graph structure information to aggregate attributes from neighboring nodes,
+thereby enhancing the model-aware and model-agnostic attributes. Furthermore,
+GraphRank combines the above attributes with a binary classifier, using it as a
+ranking model to prioritize inputs. This classifier undergoes iterative
+training, which enables it to learn from each round's feedback and improve its
+performance accordingly. Extensive experiments demonstrate GraphRank's
+superiority over existing techniques.

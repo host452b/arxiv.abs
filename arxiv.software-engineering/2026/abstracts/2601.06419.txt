@@ -1,0 +1,31 @@
+Title: Lightweight Yet Secure: Secure Scripting Language Generation via Lightweight LLMs
+Authors: Keyang Zhang, Zeyu Chen, Xuan Feng, Dongliang Fang, Yaowen Zheng et al.
+ID: 2601.06419
+URL: https://arxiv.org/abs/2601.06419
+
+Abstract:
+The security of scripting languages such as PowerShell is critical given their
+powerful automation and administration capabilities, often exercised with
+elevated privileges. Today, securing these languages still demands substantial
+human effort to craft and enforce rules, imposing heavy burdens on typical
+administrators and creating critical production risks (e.g., misoperations that
+shut down servers).Large language models (LLMs) have demonstrated strong
+capabilities in code generation, vulnerability detection, and automated repair
+for languages like Python and JavaScript. However, their ability to assist with
+generating secure scripting-language code remains largely underexplored. In this
+paper, we present SecGenEval-PS, a benchmark designed to systematically evaluate
+LLMs on secure scripting generation, security analysis, and automated repair.
+Our results show that both proprietary and open-source models fall short in
+these areas. For instance, over 60% of PowerShell scripts produced by GPT-4o and
+o3-mini are insecure without structured guidance.To bridge this gap, we propose
+PSSec, a framework that combines data synthesis with fine-tuning to enhance
+model security capabilities. We develop a self-debugging agent that integrates
+static analyzers with the reasoning abilities of advanced LLMs to synthesize
+large-scale structured triplets of insecure scripts, violation analyses, and
+corresponding repairs. We then fine-tune lightweight LLMs (as small as 1.7B
+parameters) using supervised fine-tuning (SFT) and reinforcement learning (RL),
+enabling security-aware reasoning and the generation of secure PowerShell
+code.Across multiple LLM families, including GPT and Qwen,
+\textit{PSSec}-trained models match or surpass general-purpose large models on
+PowerShell security tasks while reducing inference cost by more than an order of
+magnitude.

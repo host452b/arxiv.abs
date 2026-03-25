@@ -1,0 +1,24 @@
+Title: Harden Deep Neural Networks Against Fault Injections Through Weight Scaling
+Authors: Ninnart Fuengfusin, Hakaru Tamukoh
+ID: 2411.18993
+URL: https://arxiv.org/abs/2411.18993
+
+Abstract:
+Deep neural networks (DNNs) have enabled smart applications on hardware devices.
+However, these hardware devices are vulnerable to unintended faults caused by
+aging, temperature variance, and write errors. These faults can cause bit-flips
+in DNN weights and significantly degrade the performance of DNNs. Thus,
+protection against these faults is crucial for the deployment of DNNs in
+critical applications. Previous works have proposed error correction codes based
+methods, however these methods often require high overheads in both memory and
+computation. In this paper, we propose a simple yet effective method to harden
+DNN weights by multiplying weights by constants before storing them to
+fault-prone medium. When used, these weights are divided back by the same
+constants to restore the original scale. Our method is based on the observation
+that errors from bit-flips have properties similar to additive noise, therefore
+by dividing by constants can reduce the absolute error from bit-flips. To
+demonstrate our method, we conduct experiments across four ImageNet 2012
+pre-trained models along with three different data types: 32-bit floating point,
+16-bit floating point, and 8-bit fixed point. This method demonstrates that by
+only multiplying weights with constants, Top-1 Accuracy of 8-bit fixed point
+ResNet50 is improved by 54.418 at bit-error rate of 0.0001.

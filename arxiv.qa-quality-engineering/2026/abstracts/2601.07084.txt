@@ -1,0 +1,23 @@
+Title: How Secure is Secure Code Generation? Adversarial Prompts Put LLM Defenses to the Test
+Authors: Melissa Tessa, Iyiola E. Olatunji, Aicha War, Jacques Klein, Tegawendé F. Bissyandé
+ID: 2601.07084
+URL: https://arxiv.org/abs/2601.07084
+
+Abstract:
+Recent secure code generation methods, using vulnerability-aware fine-tuning,
+prefix-tuning, and prompt optimization, claim to prevent LLMs from producing
+insecure code. However, their robustness under adversarial conditions remains
+untested, and current evaluations decouple security from functionality,
+potentially inflating reported gains. We present the first systematic
+adversarial audit of state-of-the-art secure code generation methods (SVEN,
+SafeCoder, PromSec). We subject them to realistic prompt perturbations such as
+paraphrasing, cue inversion, and context manipulation that developers might
+inadvertently introduce or adversaries deliberately exploit. To enable fair
+comparison, we evaluate all methods under consistent conditions, jointly
+assessing security and functionality using multiple analyzers and executable
+tests. Our findings reveal critical robustness gaps: static analyzers
+overestimate security by 7 to 21 times, with 37 to 60% of ``secure'' outputs
+being non-functional. Under adversarial conditions, true secure-and-functional
+rates collapse to 3 to 17%. Based on these findings, we propose best practices
+for building and evaluating robust secure code generation methods. Our code is
+available.

@@ -1,0 +1,28 @@
+Title: SPEGC: Continual Test-Time Adaptation via Semantic-Prompt-Enhanced Graph Clustering for Medical Image Segmentation
+Authors: Xiaogang Du, Jiawei Zhang, Tongfei Liu, Tao Lei, Yingbo Wang
+ID: 2603.11492
+URL: https://arxiv.org/abs/2603.11492
+
+Abstract:
+In medical image segmentation tasks, the domain gap caused by the difference in
+data collection between training and testing data seriously hinders the
+deployment of pre-trained models in clinical practice. Continual Test-Time
+Adaptation (CTTA) aims to enable pre-trained models to adapt to continuously
+changing unlabeled domains, providing an effective approach to solving this
+problem. However, existing CTTA methods often rely on unreliable supervisory
+signals, igniting a self-reinforcing cycle of error accumulation that culminates
+in catastrophic performance degradation. To overcome these challenges, we
+propose a CTTA via Semantic-Prompt-Enhanced Graph Clustering (SPEGC) for medical
+image segmentation. First, we design a semantic prompt feature enhancement
+mechanism that utilizes decoupled commonality and heterogeneity prompt pools to
+inject global contextual information into local features, alleviating their
+susceptibility to noise interference under domain shift. Second, based on these
+enhanced features, we design a differentiable graph clustering solver. This
+solver reframes global edge sparsification as an optimal transport problem,
+allowing it to distill a raw similarity matrix into a refined and high-order
+structural representation in an end-to-end manner. Finally, this robust
+structural representation is used to guide model adaptation, ensuring
+predictions are consistent at a cluster-level and dynamically adjusting decision
+boundaries. Extensive experiments demonstrate that SPEGC outperforms other
+state-of-the-art CTTA methods on two medical image segmentation benchmarks. The
+source code is available at https://github.com/Jwei-Z/SPEGC-for-MIS.

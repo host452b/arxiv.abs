@@ -1,0 +1,31 @@
+Title: TPM-Based Continuous Remote Attestation and Integrity Verification for 5G VNFs on Kubernetes
+Authors: Al Nahian Bin Emran, Rajendra Upadhyay, Rajendra Paudyal, Lisa Donnan, Duminda Wijesekera
+ID: 2510.03219
+URL: https://arxiv.org/abs/2510.03219
+
+Abstract:
+In the rapidly evolving landscape of 5G technology, the adoption of cloud-based
+infrastructure for the deployment of 5G services has become increasingly common.
+Using a service-based architecture, critical 5G components, such as the Access
+and Mobility Management Function (AMF), Session Management Function (SMF), and
+User Plane Function (UPF), now run as containerized pods on Kubernetes clusters.
+Although this approach improves scalability, flexibility, and resilience, it
+also introduces new security challenges, particularly to ensure the integrity
+and trustworthiness of these components. Current 5G security specifications (for
+example, 3GPP TS 33.501) focus on communication security and assume that network
+functions remain trustworthy after authentication, consequently lacking
+mechanisms to continuously validate the integrity of NVFs at runtime. To close
+this gap, and to align with Zero Trust principles of 'never trust, always
+verify', we present a TPM 2.0-based continuous remote attestation solution for
+core 5G components deployed on Kubernetes. Our approach uses the Linux Integrity
+Measurement Architecture (IMA) and a Trusted Platform Module (TPM) to provide
+hardware-based runtime validation. We integrate the open-source Keylime
+framework with a custom IMA template that isolates pod-level measurements,
+allowing per-pod integrity verification. A prototype on a k3s cluster
+(consisting of 1 master, 2 worker nodes) was implemented to attest to core
+functions, including AMF, SMF and UPF. The experimental results show that the
+system detects unauthorized modifications in real time, labels each pod's trust
+state, and generates detailed audit logs. This work provides hardware-based
+continuous attestation for cloud native and edge deployments, strengthening the
+resilience of 5G as critical infrastructure in multi-vendor and mission-critical
+scenarios of 5G.

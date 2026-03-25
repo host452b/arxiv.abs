@@ -1,0 +1,26 @@
+Title: FoCTTA: Low-Memory Continual Test-Time Adaptation with Focus
+Authors: Youbing Hu, Yun Cheng, Zimu Zhou, Anqi Lu, Zhiqiang Cao et al.
+ID: 2502.20677
+URL: https://arxiv.org/abs/2502.20677
+
+Abstract:
+Continual adaptation to domain shifts at test time (CTTA) is crucial for
+enhancing the intelligence of deep learning enabled IoT applications. However,
+prevailing TTA methods, which typically update all batch normalization (BN)
+layers, exhibit two memory inefficiencies. First, the reliance on BN layers for
+adaptation necessitates large batch sizes, leading to high memory usage. Second,
+updating all BN layers requires storing the activations of all BN layers for
+backpropagation, exacerbating the memory demand. Both factors lead to
+substantial memory costs, making existing solutions impractical for IoT devices.
+In this paper, we present FoCTTA, a low-memory CTTA strategy. The key is to
+automatically identify and adapt a few drift-sensitive representation layers,
+rather than blindly update all BN layers. The shift from BN to representation
+layers eliminates the need for large batch sizes. Also, by updating
+adaptation-critical layers only, FoCTTA avoids storing excessive activations.
+This focused adaptation approach ensures that FoCTTA is not only
+memory-efficient but also maintains effective adaptation. Evaluations show that
+FoCTTA improves the adaptation accuracy over the state-of-the-arts by 4.5%,
+4.9%, and 14.8% on CIFAR10-C, CIFAR100-C, and ImageNet-C under the same memory
+constraints. Across various batch sizes, FoCTTA reduces the memory usage by
+3-fold on average, while improving the accuracy by 8.1%, 3.6%, and 0.2%,
+respectively, on the three datasets.

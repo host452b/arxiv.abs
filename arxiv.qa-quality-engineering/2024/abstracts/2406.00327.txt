@@ -1,0 +1,28 @@
+Title: Quality Sentinel: Estimating Label Quality and Errors in Medical Segmentation Datasets
+Authors: Yixiong Chen, Zongwei Zhou, Alan Yuille
+ID: 2406.00327
+URL: https://arxiv.org/abs/2406.00327
+
+Abstract:
+An increasing number of public datasets have shown a transformative impact on
+automated medical segmentation. However, these datasets are often with varying
+label quality, ranging from manual expert annotations to AI-generated
+pseudo-annotations. There is no systematic, reliable, and automatic quality
+control (QC). To fill in this bridge, we introduce a regression model, Quality
+Sentinel, to estimate label quality compared with manual annotations in medical
+segmentation datasets. This regression model was trained on over 4 million
+image-label pairs created by us. Each pair presents a varying but quantified
+label quality based on manual annotations, which enable us to predict the label
+quality of any image-label pairs in the inference. Our Quality Sentinel can
+predict the label quality of 142 body structures. The predicted label quality
+quantified by Dice Similarity Coefficient (DSC) shares a strong correlation with
+ground truth quality, with a positive correlation coefficient (r=0.902). Quality
+Sentinel has found multiple impactful use cases. (I) We evaluated label quality
+in publicly available datasets, where quality highly varies across different
+datasets. Our analysis also uncovers that male and younger subjects exhibit
+significantly higher quality. (II) We identified and corrected poorly annotated
+labels, achieving 1/3 reduction in annotation costs with optimal budgeting on
+TotalSegmentator. (III) We enhanced AI training efficiency and performance by
+focusing on high-quality pseudo labels, resulting in a 33%--88% performance
+boost over entropy-based methods, with a cost of 31% time and 4.5% memory. The
+data and model are released.

@@ -1,0 +1,30 @@
+Title: Family Matters: A Systematic Study of Spatial vs. Frequency Masking for Continual Test-Time Adaptation
+Authors: Chandler Timm C. Doloriel, Yunbei Zhang, Yeonguk Yu, Taki Hasan Rafi, Muhammad salman siddiqui et al.
+ID: 2512.08048
+URL: https://arxiv.org/abs/2512.08048
+
+Abstract:
+Recent continual test-time adaptation (CTTA) methods adopt masked image modeling
+to stabilize learning under distribution shift, yet each treats its masking
+family $F$ as a fixed design choice and innovates exclusively along the
+selection strategy $S$, leaving the family axis underexplored. We present a
+systematic empirical study that isolates this axis. Using a controlled CTTA
+instantiation -- Mask to Adapt (M2A) -- that fixes $S=random$ and standard
+losses, we vary only $F$ across spatial (patch, pixel) and frequency (all-band,
+low-band, high-band) families while keeping every other component identical. The
+study's contributions are the design guidance it extracts for the CTTA settings
+we evaluated: (1)~\emph{the masking family determines whether adaptation
+compounds useful structure or compounds errors} -- on patch-tokenized
+architectures, spatial masking accumulates stable representations over long
+streams while frequency masking collapses catastrophically. We characterize this
+instability through a \emph{structural-preservation} account, where spatial
+coherence maintains the broad-spectrum redundancy needed to avoid terminally
+overlapping with a corruption's spectral signature; (2)~\emph{the optimal family
+depends on architecture-task alignment} -- on CNNs, whose overlapping receptive
+fields dilute patch occlusion, the family gap vanishes, whereas on fine-grained
+tasks with global cues and large-capacity ViTs, frequency masking becomes
+competitive. In confounded system-level comparisons -- where baselines also
+differ in losses and auxiliary components -- M2A's random selection performs
+comparably to heuristic strategies, though we treat this observation as
+suggestive context rather than a controlled quantification of $S$'s relative
+importance.

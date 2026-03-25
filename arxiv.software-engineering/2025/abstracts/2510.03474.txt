@@ -1,0 +1,32 @@
+Title: Relative Code Comprehensibility Prediction
+Authors: Nadeeshan De Silva, Martin Kellogg, Oscar Chaparro
+ID: 2510.03474
+URL: https://arxiv.org/abs/2510.03474
+
+Abstract:
+Automatically predicting how difficult it is for humans to understand a code
+snippet can assist developers in tasks like deciding when and where to refactor.
+Despite many proposed code comprehensibility metrics, studies have shown they
+often correlate poorly with actual measurements of human comprehensibility. This
+has motivated the use of machine learning models to predict human
+comprehensibility directly from code, but these models have also shown limited
+accuracy. We argue that model inaccuracy stems from inherent noise in human
+comprehensibility data, which confuses models trained to predict it directly. To
+address this, we propose training models to predict the relative
+comprehensibility of two code snippets - that is, predicting which snippet a
+human would find easier to understand without predicting each snippet's
+comprehensibility in isolation. This mitigates noise in predicting 'absolute'
+comprehensibility measurements, but is still useful for downstream
+software-engineering tasks like assessing whether refactoring improves or
+hinders comprehensibility. We conducted a study to assess and compare the
+effectiveness of absolute and relative code comprehensibility prediction via
+machine learning. We used a dataset of 150 Java code snippets and 12.5k human
+comprehensibility measurements from prior user studies, comparing the models'
+performance with naive baselines (eg 'always predict the majority class'). Our
+findings indicate that absolute comprehensibility models improve over the
+baselines by at most 33.4% and frequently underperform. In contrast, relative
+comprehensibility models are substantially better, with average improvements of
+137.8% and 74.7% for snippet-wise and developer-wise prediction, respectively.
+These results suggest that relative comprehensibility models learn more
+effectively from the data, supporting their practical applicability for
+downstream SE tasks.

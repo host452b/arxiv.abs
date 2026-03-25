@@ -1,0 +1,21 @@
+Title: HELMLAB: An Analytical, Data-Driven Color Space for Perceptual Distance in UI Design Systems
+Authors: Gorkem Yildiz
+ID: 2602.23010
+URL: https://arxiv.org/abs/2602.23010
+
+Abstract:
+We present HELMLAB, a 72-parameter analytical color space for UI design systems.
+The forward transform maps CIE XYZ to a perceptually-organized Lab
+representation through learned matrices, per-channel power compression, Fourier
+hue correction, and embedded Helmholtz-Kohlrausch lightness adjustment. A
+post-pipeline neutral correction guarantees that achromatic colors map to a=b=0
+(chroma < 10^-6), and a rigid rotation of the chromatic plane improves hue-angle
+alignment without affecting the distance metric, which is invariant under
+isometries. On the COMBVD dataset (3,813 color pairs), HELMLAB achieves a STRESS
+of 23.30, a 20.2% reduction from CIEDE2000 (29.18). A blue-band refit with
+sub-dataset penalties reduces gradient non-uniformity in the blue-cyan region by
+8.9x at a cost of only +0.08 STRESS. Cross-validation on He et al. 2022 and
+MacAdam 1974 shows competitive cross-dataset performance. The transform is
+invertible with round-trip errors below 10^-14. Gamut mapping, design-token
+export, and dark/light mode adaptation utilities are included for use in web and
+mobile design systems.

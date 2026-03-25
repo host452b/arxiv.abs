@@ -1,0 +1,31 @@
+Title: APIDocBooster: An Extract-Then-Abstract Framework Leveraging Large Language Models for Augmenting API Documentation
+Authors: Chengran Yang, Jiakun Liu, Bowen Xu, Christoph Treude, Yunbo Lyu et al.
+ID: 2312.10934
+URL: https://arxiv.org/abs/2312.10934
+
+Abstract:
+API documentation is often the most trusted resource for programming. Many
+approaches have been proposed to augment API documentation by summarizing
+complementary information from external resources such as Stack Overflow.
+Existing extractive-based summarization approaches excel in producing faithful
+summaries that accurately represent the source content without input length
+restrictions. Nevertheless, they suffer from inherent readability limitations.
+On the other hand, our empirical study on the abstractive-based summarization
+method, i.e., GPT-4, reveals that GPT-4 can generate coherent and concise
+summaries but presents limitations in terms of informativeness and faithfulness.
+We introduce APIDocBooster, an extract-then-abstract framework that seamlessly
+fuses the advantages of both extractive (i.e., enabling faithful summaries
+without length limitation) and abstractive summarization (i.e., producing
+coherent and concise summaries). APIDocBooster consists of two stages: (1)
+\textbf{C}ontext-aware \textbf{S}entence \textbf{S}ection
+\textbf{C}lassification (CSSC) and (2) \textbf{UP}date \textbf{SUM}marization
+(UPSUM). CSSC classifies API-relevant information collected from multiple
+sources into API documentation sections. UPSUM first generates extractive
+summaries distinct from the original API documentation and then generates
+abstractive summaries guided by extractive summaries through in-context
+learning. To enable automatic evaluation of APIDocBooster, we construct the
+first dataset for API document augmentation. Our automatic evaluation results
+reveal that each stage in APIDocBooster outperforms its baselines by a large
+margin. Our human evaluation also demonstrates the superiority of APIDocBooster
+over GPT-4 and shows that it improves informativeness, relevance, and
+faithfulness by 13.89\%, 15.15\%, and 30.56\%, respectively.

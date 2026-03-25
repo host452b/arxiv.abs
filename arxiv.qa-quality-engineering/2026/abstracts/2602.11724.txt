@@ -1,0 +1,31 @@
+Title: WebTestPilot: Agentic End-to-End Web Testing against Natural Language Specification by Inferring Oracles with Symbolized GUI Elements
+Authors: Xiwen Teoh, Yun Lin, Duc-Minh Nguyen, Ruofei Ren, Wenjie Zhang et al.
+ID: 2602.11724
+URL: https://arxiv.org/abs/2602.11724
+
+Abstract:
+Visual language model (VLM) agents show great promise in automating end-to-end
+(E2E) web testing against requirements in natural language. However, the
+probabilistic nature of language models can have inherent hallucinations.
+Therefore, given a detected inconsistency between the requirement and the web
+application, it is hard to distinguish whether it stems from the hallucination
+or a real application bug. Addressing this issue presents two core technical
+challenges: the implicit oracle inference challenge, where the agent must act as
+its own oracle to implicitly decide if the application's behavior is correct
+without guidance, and the probabilistic inference challenge, where an LLM's
+inconsistent reasoning undermines its trustworthiness as an oracle. Existing
+LLM-based approaches fail to capture such implicit oracles, either by treating
+any page navigation that doesn't crash as a success, or by checking each state
+in isolation, thus missing bugs dependent on context from prior steps. We
+introduce WebTestPilot, an LLM-based agent designed to address these challenges.
+WebTestPilot uses (1) a symbolization layer which detects and symbolizes
+critical GUI elements on the web application into symbols (i.e., variables) and
+(2) translates natural language specification into a sequence of steps, each of
+which is equipped with inferred pre- and post-conditions over the symbols as an
+oracle. This oracle captures data, temporal, and causal dependencies, enabling
+the validation of implicit requirements. To advance research in this area, we
+build a benchmark of bug-injected web apps for evaluating NL-to-E2E testing. The
+results show that WebTestPilot achieves a task completion rate of 99%, with 96%
+precision and 96% recall in bug detection, outperforming the best baseline (+70
+precision, +27 recall). The agent generalizes across diverse natural language
+inputs and model scales.

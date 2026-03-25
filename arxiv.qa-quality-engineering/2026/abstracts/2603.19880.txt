@@ -1,0 +1,23 @@
+Title: What If Consensus Lies? Selective-Complementary Reinforcement Learning at Test Time
+Authors: Dong Yan, Jian Liang, Yanbo Wang, Shuo Lu, Ran He et al.
+ID: 2603.19880
+URL: https://arxiv.org/abs/2603.19880
+
+Abstract:
+Test-Time Reinforcement Learning (TTRL) enables Large Language Models (LLMs) to
+enhance reasoning capabilities on unlabeled test streams by deriving
+pseudo-rewards from majority voting consensus. However, existing TTRL methods
+rely exclusively on positive pseudo-labeling strategies. Such reliance becomes
+vulnerable under challenging scenarios where answer distributions are highly
+dispersed, resulting in weak consensus that inadvertently reinforces incorrect
+trajectories as supervision signals. In this paper, we propose SCRL
+(Selective-Complementary Reinforcement Learning), a robust test-time
+reinforcement learning framework that effectively mitigates label noise
+amplification. SCRL develops Selective Positive Pseudo-Labeling, which enforces
+strict consensus criteria to filter unreliable majorities. Complementarily, SCRL
+introduces Entropy-Gated Negative Pseudo-Labeling, the first negative
+supervision mechanism in TTRL, to reliably prune incorrect trajectories based on
+generation uncertainty. Extensive experiments on multiple reasoning benchmarks
+demonstrate that SCRL achieves substantial improvements over baselines, while
+maintaining robust generalization and training stability under constrained
+rollout budgets. Our code is available at https://github.com/Jasper-Yan/SCRL.

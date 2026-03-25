@@ -1,0 +1,26 @@
+Title: Testing Access-Control Configuration Changes for Web Applications
+Authors: Chengcheng Xiang, Li Zhong, Eric Mugnier, Nathaniel Nguyen, Yuanyuan Zhou et al.
+ID: 2505.12770
+URL: https://arxiv.org/abs/2505.12770
+
+Abstract:
+Access-control misconfigurations are among the main causes of today's data
+breaches in web applications. However, few techniques are available to support
+automatic and systematic testing for access-control changes and detecting risky
+changes to prevent severe consequences. As a result, those critical security
+configurations often lack testing, or are tested manually in an ad hoc way. This
+paper advocates that tests should be made available for users to test
+access-control configuration changes. The key challenges are such tests need to
+be run with production environments (to reason end-to-end behavior) and need to
+be performance-efficient. We present a new approach to create such tests, as a
+mini test environment incorporating production program and data, called ACtests.
+ACtests report the impacts of access-control changes, namely the requests that
+were denied but would be allowed after a change, and vice versa. Users can
+validate if the changed requests are intended or not and identify potential
+security vulnerabilities. We evaluate ACtests with 193 public configurations of
+widely-used web applications on Dockerhub. ACtests detect 168 new
+vulnerabilities from 72 configuration images. We report them to the image
+maintainers: 54 of them have been confirmed and 44 have been fixed. We also
+conduct in-depth experiments with five real-world deployed systems, including
+Wikipedia and a commercial company's web proxy. Our results show that ACtests
+effectively and efficiently detect all the change impacts.

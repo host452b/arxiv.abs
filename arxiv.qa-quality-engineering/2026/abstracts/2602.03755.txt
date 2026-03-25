@@ -1,0 +1,22 @@
+Title: Improving Deep Learning Library Testing with Machine Learning
+Authors: Facundo Molina, M M Abid Naziri, Feiran Qin, Alessandra Gorla, Marcelo d'Amorim
+ID: 2602.03755
+URL: https://arxiv.org/abs/2602.03755
+
+Abstract:
+Deep Learning (DL) libraries like TensorFlow and Pytorch simplify machine
+learning (ML) model development but are prone to bugs due to their complex
+design. Bug-finding techniques exist, but without precise API specifications,
+they produce many false alarms. Existing methods to mine API specifications lack
+accuracy. We explore using ML classifiers to determine input validity. We
+hypothesize that tensor shapes are a precise abstraction to encode concrete
+inputs and capture relationships of the data. Shape abstraction severely reduces
+problem dimensionality, which is important to facilitate ML training. Labeled
+data are obtained by observing runtime outcomes on a sample of inputs and
+classifiers are trained on sets of labeled inputs to capture API constraints.
+Our evaluation, conducted over 183 APIs from TensorFlow and Pytorch, shows that
+the classifiers generalize well on unseen data with over 91% accuracy.
+Integrating these classifiers into the pipeline of ACETest, a SoTA bug-finding
+technique, improves its pass rate from ~29% to ~61%. Our findings suggest that
+ML-enhanced input classification is an important aid to scale DL library
+testing.

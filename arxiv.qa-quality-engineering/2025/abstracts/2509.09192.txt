@@ -1,0 +1,31 @@
+Title: Probing Pre-trained Language Models on Code Changes: Insights from ReDef, a High-Confidence Just-in-Time Defect Prediction Dataset
+Authors: Doha Nam, Taehyoun Kim, Duksan Ryu, Jongmoon Baik
+ID: 2509.09192
+URL: https://arxiv.org/abs/2509.09192
+
+Abstract:
+Just-in-Time software defect prediction (JIT-SDP) plays a critical role in
+prioritizing risky code changes during code review and continuous integration.
+However, existing datasets often suffer from noisy labels and low precision in
+identifying bug-inducing commits. To address this, we present ReDef
+(Revert-based Defect dataset), a high-confidence benchmark of function-level
+modifications curated from 22 large-scale C/C++ projects. Defective cases are
+anchored by revert commits, while clean cases are validated through post-hoc
+history checks. Ambiguous instances are conservatively filtered out via a
+GPT-assisted triage process involving multiple votes and audits. This pipeline
+yields 3,164 defective and 10,268 clean modifications, offering substantially
+more reliable labels than prior existing resources. Beyond dataset construction,
+we provide the first systematic evaluation of how pre-trained language models
+(PLMs) reason about code modifications -- specifically, which input encodings
+most effectively expose change information, and whether models genuinely capture
+edit semantics. We fine-tune CodeBERT, CodeT5+, and UniXcoder under five
+encoding strategies, and further probe their sensitivity through counterfactual
+perturbations that swap added/deleted blocks, invert diff polarity, or inject
+spurious markers. Our results show that compact diff-style encodings
+consistently outperform whole-function formats across all PLMs, with statistical
+tests confirming large, model-independent effects. However, under counterfactual
+tests, performance degrades little or not at all -- revealing that what appears
+to be robustness in fact reflects reliance on superficial cues rather than true
+semantic understanding. These findings indicate that, unlike in snapshot-based
+tasks, current PLMs remain limited in their ability to genuinely comprehend code
+modifications.

@@ -1,0 +1,31 @@
+Title: Secure Federated Data Distillation
+Authors: Marco Arazzi, Mert Cihangiroglu, Serena Nicolazzo, Antonino Nocera
+ID: 2502.13728
+URL: https://arxiv.org/abs/2502.13728
+
+Abstract:
+Dataset Distillation (DD) is a powerful technique for reducing large datasets
+into compact, representative synthetic datasets, accelerating Machine Learning
+training. However, traditional DD methods operate in a centralized manner, which
+poses significant privacy threats and reduces its applicability. To mitigate
+these risks, we propose a Secure Federated Data Distillation (SFDD) framework to
+decentralize the distillation process while preserving privacy. Unlike existing
+Federated Distillation techniques that focus on training global models with
+distilled knowledge, our approach aims to produce a distilled dataset without
+exposing local contributions. We leverage the gradient-matching-based
+distillation method, adapting it for a distributed setting where clients
+contribute to the distillation process without sharing raw data. The central
+aggregator iteratively refines a synthetic dataset by integrating client-side
+updates while ensuring data confidentiality. To make our approach resilient to
+inference attacks perpetrated by the server that could exploit gradient updates
+to reconstruct private data, we create an optimized Local Differential Privacy
+approach, called LDPO-RLD. Furthermore, we assess the framework's resilience
+against malicious clients executing backdoor attacks (such as Doorping) and
+demonstrate robustness under the assumption of a sufficient number of
+participating clients. Our experimental results demonstrate the effectiveness of
+SFDD and that the proposed defense concretely mitigates the identified
+vulnerabilities, with minimal impact on the performance of the distilled
+dataset. By addressing the interplay between privacy and federation in dataset
+distillation, this work advances the field of privacy-preserving Machine
+Learning making our SFDD framework a viable solution for sensitive data-sharing
+applications.

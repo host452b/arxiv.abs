@@ -1,0 +1,23 @@
+Title: DT-SIM: Property-Based Testing for MPC Security
+Authors: Mako Bates, Joseph P. Near
+ID: 2403.04991
+URL: https://arxiv.org/abs/2403.04991
+
+Abstract:
+Formal methods for guaranteeing that a protocol satisfies a cryptographic
+security definition have advanced substantially, but such methods are still
+labor intensive and the need remains for an automated tool that can positively
+identify an insecure protocol. In this work, we demonstrate that property-based
+testing, "run it a bunch of times and see if it breaks", is effective for
+detecting security bugs in secure protocols. We specifically target Secure
+Multi-Party Computation (MPC), because formal methods targeting this security
+definition for bit-model implementations are particularly difficult. Using
+results from the literature for Probabilistic Programming Languages and
+statistical inference, we devise a test that can detect various flaws in a
+bit-level implementation of an MPC protocol. The test is grey-box; it requires
+only transcripts of randomness consumed by the protocol and of the inputs,
+outputs, and messages. It successfully detects several different mistakes and
+biases introduced into two different implementations of the classic GMW
+protocol. Applied to hundreds of randomly generated protocols, it identifies
+nearly all of them as insecure. We also include an analysis of the parameters of
+the test, and discussion of what makes detection of MPC (in)security difficult.

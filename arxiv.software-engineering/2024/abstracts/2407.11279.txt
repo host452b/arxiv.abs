@@ -1,0 +1,29 @@
+Title: Static Detection of Filesystem Vulnerabilities in Android Systems
+Authors: Yu-Tsung Lee, Hayawardh Vijayakumar, Zhiyun Qian, Trent Jaeger
+ID: 2407.11279
+URL: https://arxiv.org/abs/2407.11279
+
+Abstract:
+Filesystem vulnerabilities persist as a significant threat to Android systems,
+despite various proposed defenses and testing techniques. The complexity of
+program behaviors and access control mechanisms in Android systems makes it
+challenging to effectively identify these vulnerabilities. In this paper, we
+present PathSentinel, which overcomes the limitations of previous techniques by
+combining static program analysis and access control policy analysis to detect
+three types of filesystem vulnerabilities: path traversals, hijacking
+vulnerabilities, and luring vulnerabilities. By unifying program and access
+control policy analysis, PathSentinel identifies attack surfaces accurately and
+prunes many impractical attacks to generate input payloads for vulnerability
+testing. To streamline vulnerability validation, PathSentinel leverages large
+language models (LLMs) to generate targeted exploit code based on the identified
+vulnerabilities and generated input payloads. The LLMs serve as a tool to reduce
+the engineering effort required for writing test applications, demonstrating the
+potential of combining static analysis with LLMs to enhance the efficiency of
+exploit generation and vulnerability validation. Evaluation on Android 12 and 14
+systems from Samsung and OnePlus demonstrates PathSentinel's effectiveness,
+uncovering 51 previously unknown vulnerabilities among 217 apps with only 2
+false positives. These results underscore the importance of combining program
+and access control policy analysis for accurate vulnerability detection and
+highlight the promising direction of integrating LLMs for automated exploit
+generation, providing a comprehensive approach to enhancing the security of
+Android systems against filesystem vulnerabilities.

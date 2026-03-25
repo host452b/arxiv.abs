@@ -1,0 +1,25 @@
+Title: Towards Soft Circuit Breaking in Service Meshes via Application-agnostic Caching
+Authors: Lars Larsson, William Tärneberg, Cristian Klein, Maria Kihl, Erik Elmroth
+ID: 2104.02463
+URL: https://arxiv.org/abs/2104.02463
+
+Abstract:
+Service meshes factor out code dealing with inter-micro-service communication,
+such as circuit breaking. Circuit breaking actuation is currently limited to an
+"on/off" switch, i.e., a tripped circuit breaker will return an
+application-level error indicating service unavailability to the calling
+micro-service. This paper proposes a soft circuit breaker actuator, which
+returns cached data instead of an error. The overall resilience of a cloud
+application is improved if constituent micro-services return stale data, instead
+of no data at all. While caching is widely employed for serving web service
+traffic, its usage in inter-micro-service communication is lacking.
+Micro-services responses are highly dynamic, which requires carefully choosing
+adaptive time-to-life caching algorithms. We evaluate our approach through two
+experiments. First, we quantify the trade-off between traffic reduction and data
+staleness using a purpose-build service, thereby identifying algorithm
+configurations that keep data staleness at about 3% or less while reducing
+network load by up to 30%. Second, we quantify the network load reduction with
+the micro-service benchmark by Google Cloud called Hipster Shop. Our approach
+results in caching of about 80% of requests. Results show the feasibility and
+efficiency of our approach, which encourages implementing caching as a circuit
+breaking actuator in service meshes.

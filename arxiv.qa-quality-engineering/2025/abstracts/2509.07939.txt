@@ -1,0 +1,30 @@
+Title: Guided Reasoning in LLM-Driven Penetration Testing Using Structured Attack Trees
+Authors: Katsuaki Nakano, Reza Fayyazi, Shanchieh Jay Yang, Michael Zuzak
+ID: 2509.07939
+URL: https://arxiv.org/abs/2509.07939
+
+Abstract:
+Recent advances in Large Language Models (LLMs) have driven interest in
+automating cybersecurity penetration testing workflows, offering the promise of
+faster and more consistent vulnerability assessment for enterprise systems.
+Existing LLM agents for penetration testing primarily rely on self-guided
+reasoning, which can produce inaccurate or hallucinated procedural steps. As a
+result, the LLM agent may undertake unproductive actions, such as exploiting
+unused software libraries or generating cyclical responses that repeat prior
+tactics. In this work, we propose a guided reasoning pipeline for penetration
+testing LLM agents that incorporates a deterministic task tree built from the
+MITRE ATT&CK Matrix, a proven penetration testing kll chain, to constrain the
+LLM's reaoning process to explicitly defined tactics, techniques, and
+procedures. This anchors reasoning in proven penetration testing methodologies
+and filters out ineffective actions by guiding the agent towards more productive
+attack procedures. To evaluate our approach, we built an automated penetration
+testing LLM agent using three LLMs (Llama-3-8B, Gemini-1.5, and GPT-4) and
+applied it to navigate 10 HackTheBox cybersecurity exercises with 103 discrete
+subtasks representing real-world cyberattack scenarios. Our proposed reasoning
+pipeline guided the LLM agent through 71.8\%, 72.8\%, and 78.6\% of subtasks
+using Llama-3-8B, Gemini-1.5, and GPT-4, respectively. Comparatively, the
+state-of-the-art LLM penetration testing tool using self-guided reasoning
+completed only 13.5\%, 16.5\%, and 75.7\% of subtasks and required 86.2\%,
+118.7\%, and 205.9\% more model queries. This suggests that incorporating a
+deterministic task tree into LLM reasoning pipelines can enhance the accuracy
+and efficiency of automated cybersecurity assessments

@@ -1,0 +1,22 @@
+Title: Variational Continual Test-Time Adaptation
+Authors: Fan Lyu, Kaile Du, Yuyang Li, Hanyu Zhao, Fuyuan Hu et al.
+ID: 2402.08182
+URL: https://arxiv.org/abs/2402.08182
+
+Abstract:
+Continual Test-Time Adaptation (CTTA) task investigates effective domain
+adaptation under the scenario of continuous domain shifts during testing time.
+Due to the utilization of solely unlabeled samples, there exists significant
+uncertainty in model updates, leading CTTA to encounter severe error
+accumulation issues. In this paper, we introduce VCoTTA, a variational Bayesian
+approach to measure uncertainties in CTTA. At the source stage, we transform a
+pretrained deterministic model into a Bayesian Neural Network (BNN) via a
+variational warm-up strategy, injecting uncertainties into the model. During the
+testing time, we employ a mean-teacher update strategy using variational
+inference for the student model and exponential moving average for the teacher
+model. Our novel approach updates the student model by combining priors from
+both the source and teacher models. The evidence lower bound is formulated as
+the cross-entropy between the student and teacher models, along with the
+Kullback-Leibler (KL) divergence of the prior mixture. Experimental results on
+three datasets demonstrate the method's effectiveness in mitigating error
+accumulation within the CTTA framework.

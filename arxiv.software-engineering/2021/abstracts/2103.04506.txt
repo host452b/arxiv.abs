@@ -1,0 +1,29 @@
+Title: On the Lack of Consensus Among Technical Debt Detection Tools
+Authors: Jason Lefever, Yuanfang Cai, Humberto Cervantes, Rick Kazman, Hongzhou Fang
+ID: 2103.04506
+URL: https://arxiv.org/abs/2103.04506
+
+Abstract:
+A vigorous and growing set of technical debt analysis tools have been developed
+in recent years -- both research tools and industrial products -- such as
+Structure 101, SonarQube, and DV8. Each of these tools identifies problematic
+files using their own definitions and measures. But to what extent do these
+tools agree with each other in terms of the files that they identify as
+problematic? If the top-ranked files reported by these tools are largely
+consistent, then we can be confident in using any of these tools. Otherwise, a
+problem of accuracy arises. In this paper, we report the results of an empirical
+study analyzing 10 projects using multiple tools. Our results show that: 1)
+these tools report very different results even for the most common measures,
+such as size, complexity, file cycles, and package cycles. 2) These tools also
+differ dramatically in terms of the set of problematic files they identify,
+since each implements its own definitions of "problematic". After normalizing by
+size, the most problematic file sets that the tools identify barely overlap. 3)
+Our results show that code-based measures, other than size and complexity, do
+not even moderately correlate with a file's change-proneness or error-proneness.
+In contrast, co-change-related measures performed better. Our results suggest
+that, to identify files with true technical debt -- those that experience
+excessive changes or bugs -- co-change information must be considered.
+Code-based measures are largely ineffective at pinpointing true debt. Finally,
+this study reveals the need for the community to create benchmarks and data sets
+to assess the accuracy of software analysis tools in terms of commonly used
+measures.

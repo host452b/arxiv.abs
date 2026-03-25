@@ -1,0 +1,24 @@
+Title: Beyond Majority Voting: Towards Fine-grained and More Reliable Reward Signal for Test-Time Reinforcement Learning
+Authors: Weiqin Wang, Yile Wang, Kehao Chen, Hui Huang
+ID: 2512.15146
+URL: https://arxiv.org/abs/2512.15146
+
+Abstract:
+Test-time reinforcement learning mitigates the reliance on annotated data by
+using majority voting results as pseudo-labels, emerging as a complementary
+direction to reinforcement learning with verifiable rewards (RLVR) for improving
+reasoning ability of large language models (LLMs). However, this voting strategy
+often induces confirmation bias and suffers from sparse rewards, limiting the
+overall performance. In this work, we propose subgroup-specific step-wise
+confidence-weighted pseudo-label estimation (SCOPE), a framework integrating
+model confidence and dynamic subgroup partitioning to address these issues.
+Specifically, SCOPE integrates the proposed step-wise confidence into pseudo
+label deduction, prioritizing high-quality reasoning paths over simple frequency
+count. Furthermore, it dynamically partitions the candidate outputs pool into
+independent subgroups by balancing reasoning quality against exploration
+diversity. By deriving local consensus via repeat sampling for each sub group,
+SCOPE provides diverse supervision targets to encourage broader exploration. We
+conduct experiments across various models and benchmarks, experimental results
+show that SCOPE consistently outperforms recent baselines. Notably, SCOPE
+achieving relative improvements of 13.1% on challenging AIME 2025 and 8.1% on
+AMC. The code is released at https://github.com/szu-tera/SCOPE.

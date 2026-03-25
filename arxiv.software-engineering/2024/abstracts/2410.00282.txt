@@ -1,0 +1,26 @@
+Title: Smart Contract Vulnerability Detection based on Static Analysis and Multi-Objective Search
+Authors: Dongcheng Li, W. Eric Wong, Xiaodan Wang, Sean Pan, Liang-Seng Koh
+ID: 2410.00282
+URL: https://arxiv.org/abs/2410.00282
+
+Abstract:
+This paper introduces a method for detecting vulnerabilities in smart contracts
+using static analysis and a multi-objective optimization algorithm. We focus on
+four types of vulnerabilities: reentrancy, call stack overflow, integer
+overflow, and timestamp dependencies. Initially, smart contracts are compiled
+into an abstract syntax tree to analyze relationships between contracts and
+functions, including calls, inheritance, and data flow. These analyses are
+transformed into static evaluations and intermediate representations that reveal
+internal relations. Based on these representations, we examine contract's
+functions, variables, and data dependencies to detect the specified
+vulnerabilities. To enhance detection accuracy and coverage, we apply a
+multi-objective optimization algorithm to the static analysis process. This
+involves assigning initial numeric values to input data and monitoring changes
+in statement coverage and detection accuracy. Using coverage and accuracy as
+fitness values, we calculate Pareto front and crowding distance values to select
+the best individuals for the new parent population, iterating until optimization
+criteria are met. We validate our approach using an open-source dataset
+collected from Etherscan, containing 6,693 smart contracts. Experimental results
+show that our method outperforms state-of-the-art tools in terms of coverage,
+accuracy, efficiency, and effectiveness in detecting the targeted
+vulnerabilities.

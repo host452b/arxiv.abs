@@ -1,0 +1,26 @@
+Title: RoSE: Round-robin Synthetic Data Evaluation for Selecting LLM Generators without Human Test Sets
+Authors: Jan Cegin, Branislav Pecher, Ivan Srba, Jakub Simko
+ID: 2510.06143
+URL: https://arxiv.org/abs/2510.06143
+
+Abstract:
+LLMs are powerful generators of synthetic data, which are used for training
+smaller, specific models. This is especially valuable for low-resource
+languages, where human-labelled data is scarce but LLMs can still produce
+high-quality text. However, LLMs differ in how useful their outputs are for
+training. Selecting the best LLM as a generator is challenging because extrinsic
+evaluation requires costly human annotations (which are often unavailable for
+low-resource languages), while intrinsic metrics correlate poorly with
+downstream performance. We introduce Round robin Synthetic data Evaluation
+(RoSE), a proxy metric for selecting the best LLM generator without human test
+sets. RoSE trains a small model on the outputs of a candidate generator (LLM)
+and then evaluates it on generated synthetic examples from all other candidate
+LLMs. The final RoSE score is the mean performance of this small model. Across
+six LLMs, eleven languages, and three tasks (sentiment, topic, intent), RoSE
+identifies the optimal generator more often than any other intrinsic heuristics.
+RoSE outperforms intrinsic heuristics and comes within 0.76 percentage points of
+the optimal generator baseline. This result is measured in terms of downstream
+performance, obtained by training a small model on the chosen generator's
+outputs (optimal vs. proxy metric selected) and evaluating it on human-labelled
+test data. Additionally, RoSE is the only metric to achieve a positive
+correlation with performance on human test data.

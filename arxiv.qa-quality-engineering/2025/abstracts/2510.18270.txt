@@ -1,0 +1,29 @@
+Title: When Old Meets New: Evaluating the Impact of Regression Tests on SWE Issue Resolution
+Authors: Yang Chen, Toufique Ahmed, Reyhaneh Jabbarvand, Martin Hirzel
+ID: 2510.18270
+URL: https://arxiv.org/abs/2510.18270
+
+Abstract:
+Test suites in real-world projects are often large and achieve high code
+coverage, yet they remain insufficient for detecting all bugs. The abundance of
+unresolved issues in open-source project trackers highlights this gap. While
+regression tests are typically designed to ensure past functionality is
+preserved in the new version, they can also serve a complementary purpose:
+debugging the current version. Specifically, regression tests can (1) enhance
+the generation of reproduction tests for newly reported issues, and (2) validate
+that patches do not regress existing functionality. We present TestPrune, a
+fully automated technique that leverages issue tracker reports and strategically
+reuses regression tests for both bug reproduction and patch validation. A key
+contribution of TestPrune is its ability to automatically minimize the
+regression suite to a small, highly relevant subset of tests. Due to the
+predominance of LLM-based debugging techniques, this minimization is essential
+as large test suites exceed context limits, introduce noise, and inflate
+inference costs. TestPrune can be plugged into any agentic bug repair pipeline
+and orthogonally improve overall performance. As a proof of concept, we show
+that TestPrune leads to a 6.2%-9.0% relative increase in issue reproduction rate
+within the Otter framework and a 9.4% - 12.9% relative increase in issue
+resolution rate within the Agentless framework on SWE-Bench Lite and SWE-Bench
+Verified benchmarks, capturing fixes that were correctly produced by agents but
+not submitted as final patches. Compared to the benefits, the cost overhead of
+using TestPrune is minimal, i.e., \$0.02 and \$0.05 per SWE-Bench instance,
+using GPT-4o and Claude-3.7-Sonnet models, respectively.

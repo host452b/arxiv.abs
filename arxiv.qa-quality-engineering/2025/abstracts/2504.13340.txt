@@ -1,0 +1,31 @@
+Title: Putting the Segment Anything Model to the Test with 3D Knee MRI - A Comparison with State-of-the-Art Performance
+Authors: Oliver Mills, Philip Conaghan, Nishant Ravikumar, Samuel Relton
+ID: 2504.13340
+URL: https://arxiv.org/abs/2504.13340
+
+Abstract:
+Menisci are cartilaginous tissue found within the knee that contribute to joint
+lubrication and weight dispersal. Damage to menisci can lead to onset and
+progression of knee osteoarthritis (OA), a condition that is a leading cause of
+disability, and for which there are few effective therapies. Accurate automated
+segmentation of menisci would allow for earlier detection and treatment of
+meniscal abnormalities, as well as shedding more light on the role the menisci
+play in OA pathogenesis. Focus in this area has mainly used variants of
+convolutional networks, but there has been no attempt to utilise recent large
+vision transformer segmentation models. The Segment Anything Model (SAM) is a
+so-called foundation segmentation model, which has been found useful across a
+range of different tasks due to the large volume of data used for training the
+model. In this study, SAM was adapted to perform fully-automated segmentation of
+menisci from 3D knee magnetic resonance images. A 3D U-Net was also trained as a
+baseline. It was found that, when fine-tuning only the decoder, SAM was unable
+to compete with 3D U-Net, achieving a Dice score of $0.81\pm0.03$, compared to
+$0.87\pm0.03$, on a held-out test set. When fine-tuning SAM end-to-end, a Dice
+score of $0.87\pm0.03$ was achieved. The performance of both the end-to-end
+trained SAM configuration and the 3D U-Net were comparable to the winning Dice
+score ($0.88\pm0.03$) in the IWOAI Knee MRI Segmentation Challenge 2019.
+Performance in terms of the Hausdorff Distance showed that both configurations
+of SAM were inferior to 3D U-Net in matching the meniscus morphology. Results
+demonstrated that, despite its generalisability, SAM was unable to outperform a
+basic 3D U-Net in meniscus segmentation, and may not be suitable for similar 3D
+medical image segmentation tasks also involving fine anatomical structures with
+low contrast and poorly-defined boundaries.

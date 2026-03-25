@@ -1,0 +1,28 @@
+Title: You Can REST Now: Automated REST API Documentation and Testing via LLM-Assisted Request Mutations
+Authors: Alix Decrop, Xavier Devroey, Mike Papadakis, Pierre-Yves Schobbens, Gilles Perrouin
+ID: 2402.05102
+URL: https://arxiv.org/abs/2402.05102
+
+Abstract:
+REST APIs are prevalent among web service implementations, easing
+interoperability through the HTTP protocol. API testers and users exploit the
+widely adopted OpenAPI Specification (OAS), a machine-readable standard to
+document REST APIs. However, documenting APIs is a time-consuming and
+error-prone task, and existing documentation is not always complete, publicly
+accessible, or up-to-date. This situation limits the efficiency of testing tools
+and hinders human comprehension. Large Language Models (LLMs) offer the
+potential to automatically infer API documentation, using their colossal
+training data. In this paper, we present RESTSpecIT, the first automated
+approach that infers documentation and performs black-box testing of REST APIs
+by leveraging LLMs. Our approach requires minimal user input compared to
+state-of-the-art tools; Given an API name and an LLM access key, RESTSpecIT
+generates API request seeds and mutates them with data returned by the LLM. The
+tool then analyzes API responses for documentation inference and testing
+purposes. RESTSpecIT utilizes an in-context prompt masking strategy, requiring
+no prior model fine-tuning. We evaluate the quality of our tool with three
+state-of-the-art LLMs: DeepSeek V3, GPT-4.1, and GPT-3.5. Our evaluation
+demonstrates that RESTSpecIT can (1) infer documentation with 88.62% of routes
+and 89.25% of query parameters found on average, (2) discover undocumented API
+data, (3) operate efficiently (in terms of model costs, requests sent, runtime),
+and (4) assist REST API testing by uncovering server errors and generating valid
+OpenAPI Specification inputs for testing tools.

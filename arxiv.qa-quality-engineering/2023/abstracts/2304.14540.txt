@@ -1,0 +1,30 @@
+Title: Efficient IAM Greybox Penetration Testing
+Authors: Yang Hu, Wenxi Wang, Sarfraz Khurshid, Mohit Tiwari
+ID: 2304.14540
+URL: https://arxiv.org/abs/2304.14540
+
+Abstract:
+Identity and Access Management (IAM) is an access control service in cloud
+platforms. To securely manage cloud resources, customers need to configure IAM
+to specify the access control rules for their cloud organizations. However,
+misconfigured IAM can lead to privilege escalation (PE) attacks, causing
+significant economic loss. Third-party cloud security services detect such
+issues using whitebox penetration testing, which requires full access to IAM
+configurations. However, since these configurations often contain sensitive
+data, customers must manually anonymize them to protect their privacy. To
+address the dual challenges of anonymization and data privacy, we introduce TAC,
+the first greybox penetration testing approach for third-party services to
+efficiently detect IAM PEs. Instead of requiring customers to blindly anonymize
+their entire IAM configuration, TAC intelligently interacts with customers by
+querying only a small fraction of information in the IAM configuration that is
+necessary for PE detection. To achieve this, TAC integrates two key innovations:
+(1) a comprehensive IAM modeling approach to detect a wide range of IAM PEs
+using partial information collected from query responses, and (2) a query
+optimization mechanism leveraging Reinforcement Learning (RL) and Graph Neural
+Networks (GNNs) to minimize customer inputs. Additionally, to address the
+scarcity of real-world IAM PE datasets, we introduce IAMVulGen, a synthesizer
+that generates a large number of diverse IAM PEs that mimic real-world
+scenarios. Experimental results on both synthetic and real-world benchmarks show
+that TAC, as a greybox approach, achieves competitively low and, in some cases,
+significantly lower false negative rates than state-ofthe-art whitebox
+approaches, while utilizing a limited number of queries.

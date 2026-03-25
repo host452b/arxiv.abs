@@ -1,0 +1,25 @@
+Title: Task- and Metric-Specific Signal Quality Indices for Medical Time Series
+Authors: Jad Haidamous, Christoph Hoog Antink
+ID: 2602.12478
+URL: https://arxiv.org/abs/2602.12478
+
+Abstract:
+Medical time series such as electrocardiograms (ECGs) and photoplethysmograms
+(PPGs) are frequently affected by measurement artifacts due to challenging
+acquisition environments, such as in ambulances and during routine daily
+activities. Since automated algorithms for analyzing such signals increasingly
+inform clinically relevant decisions, identifying signal segments on which these
+algorithms may produce unreliable outputs is of critical importance. Signal
+quality indices (SQIs) are commonly used for this purpose. However, most
+existing SQIs are task agnostic and do not account for the specific algorithm
+and performance metric used downstream. In this work, we formalize signal
+quality as a task- and metric-dependent concept and propose a perturbation-based
+SQI (pSQI) that aims to detect an algorithm's performance degradation on an
+input signal with respect to a metric. The pSQI is defined as the worst-case
+value of the performance metric under an additive, colored Gaussian noise
+perturbation with a lower-bounded signal-to-noise ratio. We introduce formal
+requirements for task- and metric-specific SQIs, including monotonicity of the
+metric in expectation and maximal separation under thresholding. Experiments on
+R-peak detection and atrial fibrillation classification benchmarks demonstrate
+that the proposed pSQI consistently outperforms existing feature- and deep
+learning-based SQIs in identifying unreliable inputs without requiring training.

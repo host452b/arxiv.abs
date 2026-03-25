@@ -1,0 +1,22 @@
+Title: Faster Kernel Interpolation for Gaussian Processes
+Authors: Mohit Yadav, Daniel Sheldon, Cameron Musco
+ID: 2101.11751
+URL: https://arxiv.org/abs/2101.11751
+
+Abstract:
+A key challenge in scaling Gaussian Process (GP) regression to massive datasets
+is that exact inference requires computation with a dense n x n kernel matrix,
+where n is the number of data points. Significant work focuses on approximating
+the kernel matrix via interpolation using a smaller set of m inducing points.
+Structured kernel interpolation (SKI) is among the most scalable methods: by
+placing inducing points on a dense grid and using structured matrix algebra, SKI
+achieves per-iteration time of O(n + m log m) for approximate inference. This
+linear scaling in n enables inference for very large data sets; however the cost
+is per-iteration, which remains a limitation for extremely large n. We show that
+the SKI per-iteration time can be reduced to O(m log m) after a single O(n) time
+precomputation step by reframing SKI as solving a natural Bayesian linear
+regression problem with a fixed set of m compact basis functions. With
+per-iteration complexity independent of the dataset size n for a fixed grid, our
+method scales to truly massive data sets. We demonstrate speedups in practice
+for a wide range of m and n and apply the method to GP inference on a
+three-dimensional weather radar dataset with over 100 million points.

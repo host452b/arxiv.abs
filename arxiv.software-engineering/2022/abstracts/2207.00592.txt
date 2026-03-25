@@ -1,0 +1,23 @@
+Title: Dissecting Service Mesh Overheads
+Authors: Xiangfeng Zhu, Guozhen She, Bowen Xue, Yu Zhang, Yongsu Zhang et al.
+ID: 2207.00592
+URL: https://arxiv.org/abs/2207.00592
+
+Abstract:
+Service meshes play a central role in the modern application ecosystem by
+providing an easy and flexible way to connect different services that form a
+distributed application. However, because of the way they interpose on
+application traffic, they can substantially increase application latency and
+resource consumption. We develop a decompositional approach and a tool, called
+MeshInsight, to systematically characterize the overhead of service meshes and
+to help developers quantify overhead in deployment scenarios of interest. Using
+MeshInsight, we confirm that service meshes can have high overhead -- up to 185%
+higher latency and up to 92% more virtual CPU cores for our benchmark
+applications -- but the severity is intimately tied to how they are configured
+and the application workload. The primary contributors to overhead vary based on
+the configuration too. IPC (inter-process communication) and socket writes
+dominate when the service mesh operates as a TCP proxy, but protocol parsing
+dominates when it operates as an HTTP proxy. MeshInsight also enables us to
+study the end-to-end impact of optimizations to service meshes. We show that not
+all seemingly-promising optimizations lead to a notable overhead reduction in
+realistic settings.

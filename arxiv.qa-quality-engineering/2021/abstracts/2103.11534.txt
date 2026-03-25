@@ -1,0 +1,20 @@
+Title: Leveraging Models to Reduce Test Cases in Software Repositories
+Authors: Golnaz Gharachorlu, Nick Sumner
+ID: 2103.11534
+URL: https://arxiv.org/abs/2103.11534
+
+Abstract:
+Given a failing test case, test case reduction yields a smaller test case that
+reproduces the failure. This process can be time consuming due to repeated trial
+and error with smaller test cases. Current techniques speed up reduction by only
+exploring syntactically valid candidates, but they still spend significant
+effort on semantically invalid candidates. In this paper, we propose a
+model-guided approach to speed up test case reduction. The approach trains a
+model of semantic properties driven by syntactic test case properties. By using
+this model, we can skip testing even syntactically valid test case candidates
+that are unlikely to succeed. We evaluate this model-guided reduction on a suite
+of 14 large fuzzer-generated C test cases from the bug repositories of two
+well-known C compilers, GCC and Clang. Our results show that with an average
+precision of 77%, we can decrease the number of removal trials by 14% to 61%. We
+observe a 30% geomean improvement in reduction time over the state of the art
+technique while preserving similar reduction power.

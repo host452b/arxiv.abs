@@ -1,0 +1,27 @@
+Title: SPARNet: Continual Test-Time Adaptation via Sample Partitioning Strategy and Anti-Forgetting Regularization
+Authors: Xinru Meng, Han Sun, Jiamei Liu, Ningzhong Liu, Huiyu Zhou
+ID: 2501.00818
+URL: https://arxiv.org/abs/2501.00818
+
+Abstract:
+Test-time Adaptation (TTA) aims to improve model performance when the model
+encounters domain changes after deployment. The standard TTA mainly considers
+the case where the target domain is static, while the continual TTA needs to
+undergo a sequence of domain changes. This encounters a significant challenge as
+the model needs to adapt for the long-term and is unaware of when the domain
+changes occur. The quality of pseudo-labels is hard to guarantee. Noisy
+pseudo-labels produced by simple self-training methods can cause error
+accumulation and catastrophic forgetting. In this work, we propose a new
+framework named SPARNet which consists of two parts, sample partitioning
+strategy and anti-forgetting regularization. The sample partition strategy
+divides samples into two groups, namely reliable samples and unreliable samples.
+According to the characteristics of each group of samples, we choose different
+strategies to deal with different groups of samples. This ensures that reliable
+samples contribute more to the model. At the same time, the negative impacts of
+unreliable samples are eliminated by the mean teacher's consistency learning.
+Finally, we introduce a regularization term to alleviate the catastrophic
+forgetting problem, which can limit important parameters from excessive changes.
+This term enables long-term adaptation of parameters in the network. The
+effectiveness of our method is demonstrated in continual TTA scenario by
+conducting a large number of experiments on CIFAR10-C, CIFAR100-C and
+ImageNet-C.

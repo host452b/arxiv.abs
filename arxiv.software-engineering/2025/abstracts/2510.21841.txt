@@ -1,0 +1,27 @@
+Title: RatioWaveNet: A Learnable RDWT Front-End for Robust and Interpretable EEG Motor-Imagery Classification
+Authors: Marco Siino, Giuseppe Bonomo, Rosario Sorbello, Ilenia Tinnirello
+ID: 2510.21841
+URL: https://arxiv.org/abs/2510.21841
+
+Abstract:
+Brain-computer interfaces (BCIs) based on motor imagery (MI) translate covert
+movement intentions into actionable commands, yet reliable decoding from
+non-invasive EEG remains challenging due to nonstationarity, low SNR, and
+subject variability. We present RatioWaveNet, which augments a strong temporal
+CNN-Transformer backbone (TCFormer) with a trainable, Rationally-Dilated Wavelet
+Transform (RDWT) front end. The RDWT performs an undecimated, multi-resolution
+subband decomposition that preserves temporal length and shift-invariance,
+enhancing sensorimotor rhythms while mitigating jitter and mild artifacts;
+subbands are fused via lightweight grouped 1-D convolutions and passed to a
+multi-kernel CNN for local temporal-spatial feature extraction, a grouped-query
+attention encoder for long-range context, and a compact TCN head for causal
+temporal integration. Our goal is to test whether this principled wavelet front
+end improves robustness precisely where BCIs typically fail - on the hardest
+subjects - and whether such gains persist on average across seeds under both
+intra- and inter-subject protocols. On BCI-IV-2a and BCI-IV-2b, across five
+seeds, RatioWaveNet improves worst-subject accuracy over the Transformer
+backbone by +0.17 / +0.42 percentage points (Sub-Dependent / LOSO) on 2a and by
++1.07 / +2.54 percentage points on 2b, with consistent average-case gains and
+modest computational overhead. These results indicate that a simple, trainable
+wavelet front end is an effective plug-in to strengthen Transformer-based BCIs,
+improving worst-case reliability without sacrificing efficiency.

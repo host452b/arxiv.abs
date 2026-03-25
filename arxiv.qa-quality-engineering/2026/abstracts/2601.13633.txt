@@ -1,0 +1,26 @@
+Title: Scaling Test-time Inference for Visual Grounding
+Authors: Guanqi Zhan, Changye Li, Zhijian Liu, Yao Lu, Yi Wu et al.
+ID: 2601.13633
+URL: https://arxiv.org/abs/2601.13633
+
+Abstract:
+Visual grounding is an essential capability of Visual Language Models (VLMs) to
+understand the real physical world. Previous state-of-the-art grounding visual
+language models usually have large model sizes, making them heavy for deployment
+and slow for inference. However, we notice that the sizes of visual encoders are
+nearly the same for small and large VLMs and the major difference is the sizes
+of the language models. Small VLMs fall behind larger VLMs in grounding because
+of the difference in language understanding capability rather than visual
+information handling. To mitigate the gap, we introduce 'Efficient visual
+Grounding language Models' (EGM): a method to scale the test-time computation
+(#generated tokens). Scaling the test-time computation of a small model is
+deployment-friendly, and yields better end-to-end latency as the cost of each
+token is much cheaper compared to directly running a large model. On the RefCOCO
+benchmark, our EGM-Qwen3-VL-8B demonstrates 91.4 IoU with an average of 737ms
+(5.9x faster) latency while Qwen3-VL-235B demands 4,320ms to achieve 90.5 IoU.
+To validate our approach's generality, we further set up a new amodal grounding
+setting that requires the model to predict both the visible and occluded parts
+of the objects. Experiments show our method can consistently and significantly
+improve the vanilla grounding and amodal grounding capabilities of small models
+to be on par with or outperform the larger models, thereby improving the
+efficiency for visual grounding.

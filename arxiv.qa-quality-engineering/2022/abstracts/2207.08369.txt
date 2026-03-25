@@ -1,0 +1,31 @@
+Title: PerfCE: Performance Debugging on Databases with Chaos Engineering-Enhanced Causality Analysis
+Authors: Zhenlan Ji, Pingchuan Ma, Shuai Wang
+ID: 2207.08369
+URL: https://arxiv.org/abs/2207.08369
+
+Abstract:
+Debugging performance anomalies in real-world databases is challenging. Causal
+inference techniques enable qualitative and quantitative root cause analysis of
+performance downgrade. Nevertheless, causality analysis is practically
+challenging, particularly due to limited observability. Recently, chaos
+engineering has been applied to test complex real-world software systems. Chaos
+frameworks like Chaos Mesh mutate a set of chaos variables to inject
+catastrophic events (e.g., network slowdowns) to "stress" software systems. The
+systems under chaos stress are then tested using methods like differential
+testing to check if they retain their normal functionality (e.g., SQL query
+output is always correct under stress). Despite its ubiquity in the industry,
+chaos engineering is now employed mostly to aid software testing rather for
+performance debugging. This paper identifies novel usage of chaos engineering on
+helping developers diagnose performance anomalies in databases. Our presented
+framework, PERFCE, comprises an offline phase and an online phase. The offline
+phase learns the statistical models of the target database system, whilst the
+online phase diagnoses the root cause of monitored performance anomalies on the
+fly. During the offline phase, PERFCE leverages both passive observations and
+proactive chaos experiments to constitute accurate causal graphs and structural
+equation models (SEMs). When observing performance anomalies during the online
+phase, causal graphs enable qualitative root cause identification (e.g., high
+CPU usage) and SEMs enable quantitative counterfactual analysis (e.g.,
+determining "when CPU usage is reduced to 45\%, performance returns to normal").
+PERFCE notably outperforms prior works on common synthetic datasets, and our
+evaluation on real-world databases, MySQL and TiDB, shows that PERFCE is highly
+accurate and moderately expensive.

@@ -1,0 +1,26 @@
+Title: Understanding API Usage and Testing: An Empirical Study of C Libraries
+Authors: Ahmed Zaki, Cristian Cadar
+ID: 2506.11598
+URL: https://arxiv.org/abs/2506.11598
+
+Abstract:
+For library developers, understanding how their Application Programming
+Interfaces (APIs) are used in the field can be invaluable. Knowing how clients
+are using their APIs allows for data-driven decisions on prioritising bug
+reports, feature requests, and testing activities. For example, the priority of
+a bug report concerning an API can be partly determined by how widely that API
+is used. In this paper, we present an empirical study in which we analyse API
+usage across 21 popular open-source C libraries, such as OpenSSL and SQLite,
+with a combined total of 3,061 C/C++ clients. We compare API usage by clients
+with how well library test suites exercise the APIs to offer actionable insights
+for library developers. To our knowledge, this is the first study that compares
+API usage and API testing at scale for the C/C++ ecosystem. Our study shows that
+library developers do not prioritise their effort based on how clients use their
+API, with popular APIs often poorly tested. For example, in LMDB, a popular
+key-value store, 45% of the APIs are used by clients but not tested by the
+library test suite. We further show that client test suites can be leveraged to
+improve library testing e.g., improving coverage in LMDB by 14.7% with the
+important advantage that those tests are representative of how the APIs are used
+in the field. For our empirical study, we have developed LibProbe, a framework
+that can be used to analyse a large corpus of clients for a given library and
+produce various metrics useful to library developers.

@@ -1,0 +1,23 @@
+Title: ScaleRTL: Scaling LLMs with Reasoning Data and Test-Time Compute for Accurate RTL Code Generation
+Authors: Chenhui Deng, Yun-Da Tsai, Guan-Ting Liu, Zhongzhi Yu, Haoxing Ren
+ID: 2506.05566
+URL: https://arxiv.org/abs/2506.05566
+
+Abstract:
+Recent advances in large language models (LLMs) have enabled near-human
+performance on software coding benchmarks, but their effectiveness in RTL code
+generation remains limited due to the scarcity of high-quality training data.
+While prior efforts have fine-tuned LLMs for RTL tasks, they do not
+fundamentally overcome the data bottleneck and lack support for test-time
+scaling due to their non-reasoning nature. In this work, we introduce ScaleRTL,
+the first reasoning LLM for RTL coding that scales up both high-quality
+reasoning data and test-time compute. Specifically, we curate a diverse set of
+long chain-of-thought reasoning traces averaging 56K tokens each, resulting in a
+dataset of 3.5B tokens that captures rich RTL knowledge. Fine-tuning a
+general-purpose reasoning model on this corpus yields ScaleRTL that is capable
+of deep RTL reasoning. Subsequently, we further enhance the performance of
+ScaleRTL through a novel test-time scaling strategy that extends the reasoning
+process via iteratively reflecting on and self-correcting previous reasoning
+steps. Experimental results show that ScaleRTL achieves state-of-the-art
+performance on VerilogEval and RTLLM, outperforming 18 competitive baselines by
+up to 18.4% on VerilogEval and 12.7% on RTLLM.

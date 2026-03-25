@@ -1,0 +1,23 @@
+Title: Combining static analysis and dynamic symbolic execution in a toolchain to detect fault injection vulnerabilities
+Authors: Guilhem Lacombe, David Feliot, Etienne Boespflug, Marie-Laure Potet
+ID: 2303.03999
+URL: https://arxiv.org/abs/2303.03999
+
+Abstract:
+Certification through auditing allows to ensure that critical embedded systems
+are secure. This entails reviewing their critical components and checking for
+dangerous execution paths. This latter task requires the use of specialized
+tools which allow to explore and replay executions but are also difficult to use
+effectively within the context of the audit, where time and knowledge of the
+code are limited. Fault analysis is especially tricky as the attacker may
+actively influence execution, rendering some common methods unusable and
+increasing the number of possible execution paths exponentially. In this work,
+we present a new method which mitigates these issues by reducing the number of
+fault injection points considered to only the most relevant ones relatively to
+some security properties. We use fast and robust static analysis to detect
+injection points and assert their impactfulness. A more precise dynamic/symbolic
+method is then employed to validate attack paths. This way the insight required
+to find attacks is reduced and dynamic methods can better scale to realistically
+sized programs. Our method is implemented into a toolchain based on Frama-C and
+KLEE and validated on WooKey, a case-study proposed by the National
+Cybersecurity Agency of France.

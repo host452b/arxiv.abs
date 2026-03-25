@@ -1,0 +1,22 @@
+Title: A Note on Code Quality Score: LLMs for Maintainable Large Codebases
+Authors: Sherman Wong, Jalaj Bhandari, Leo Zhou Fan Yang, Xylan Xu, Yi Zhuang et al.
+ID: 2508.02732
+URL: https://arxiv.org/abs/2508.02732
+
+Abstract:
+Maintaining code quality in large-scale software systems presents significant
+challenges, particularly in settings where a large numbers of engineers work
+concurrently on a codebase. This paper introduces Code Quality Score (CQS)
+system to automatically detect issues with a set of code changes and provide
+actionable insights. At its core, the CQS system is powered by two Llama3
+models, fine-tuned (with SFT and offline RL approaches), to a) detect common
+code quality issues related to coding best practices and b) to provide good
+``critiques'' for LLM-generated code review respectively. To maintain good user
+experience, we layer the system with hand-crafted rules to filter out incorrect
+responses/hallucinations. Offline evaluations show that our CQS system is able
+to achieve an impressive precision rate for identifying valid issues. This
+system has already been rolled out to developers in an industrial scale setting
+and has consistently achieved 60\% week over week user helpfulness rate,
+demonstrating its effectiveness in a real-world environment. In this paper, we
+present details of the CQS system along with some learnings on curating
+developer feedback to create training data for LLM fine-tuning.

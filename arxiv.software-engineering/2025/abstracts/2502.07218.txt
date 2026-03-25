@@ -1,0 +1,23 @@
+Title: LLM Unlearning via Neural Activation Redirection
+Authors: William F. Shen, Xinchi Qiu, Meghdad Kurmanji, Alex Iacob, Lorenzo Sani et al.
+ID: 2502.07218
+URL: https://arxiv.org/abs/2502.07218
+
+Abstract:
+The ability to selectively remove knowledge from LLMs is highly desirable.
+However, existing methods often struggle with balancing unlearning efficacy and
+retain model utility, and lack controllability at inference time to emulate base
+model behavior as if it had never seen the unlearned data. In this paper, we
+propose LUNAR, a novel unlearning method grounded in the Linear Representation
+Hypothesis and operates by redirecting the representations of unlearned data to
+activation regions that expresses its inability to answer. We show that
+contrastive features are not a prerequisite for effective activation
+redirection, and LUNAR achieves state-of-the-art unlearning performance and
+superior controllability. Specifically, LUNAR achieves between 2.9x and 11.7x
+improvement in the combined unlearning efficacy and model utility score
+(Deviation Score) across various base models and generates coherent,
+contextually appropriate responses post-unlearning. Moreover, LUNAR effectively
+reduces parameter updates to a single down-projection matrix, a novel design
+that significantly enhances efficiency by 20x and robustness. Finally, we
+demonstrate that LUNAR is robust to white-box adversarial attacks and versatile
+in real-world scenarios, including handling sequential unlearning requests.

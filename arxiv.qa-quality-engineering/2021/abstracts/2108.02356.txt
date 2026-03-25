@@ -1,0 +1,28 @@
+Title: Video Abnormal Event Detection by Learning to Complete Visual Cloze Tests
+Authors: Siqi Wang, Guang Yu, Zhiping Cai, Xinwang Liu, En Zhu et al.
+ID: 2108.02356
+URL: https://arxiv.org/abs/2108.02356
+
+Abstract:
+Although deep neural networks (DNNs) enable great progress in video abnormal
+event detection (VAD), existing solutions typically suffer from two issues: (1)
+The localization of video events cannot be both precious and comprehensive. (2)
+The semantics and temporal context are under-explored. To tackle those issues,
+we are motivated by the prevalent cloze test in education and propose a novel
+approach named Visual Cloze Completion (VCC), which conducts VAD by learning to
+complete "visual cloze tests" (VCTs). Specifically, VCC first localizes each
+video event and encloses it into a spatio-temporal cube (STC). To achieve both
+precise and comprehensive localization, appearance and motion are used as
+complementary cues to mark the object region associated with each event. For
+each marked region, a normalized patch sequence is extracted from current and
+adjacent frames and stacked into a STC. With each patch and the patch sequence
+of a STC compared to a visual "word" and "sentence" respectively, we
+deliberately erase a certain "word" (patch) to yield a VCT. Then, the VCT is
+completed by training DNNs to infer the erased patch and its optical flow via
+video semantics. Meanwhile, VCC fully exploits temporal context by alternatively
+erasing each patch in temporal context and creating multiple VCTs. Furthermore,
+we propose localization-level, event-level, model-level and decision-level
+solutions to enhance VCC, which can further exploit VCC's potential and produce
+significant performance improvement gain. Extensive experiments demonstrate that
+VCC achieves state-of-the-art VAD performance. Our codes and results are open at
+https://github.com/yuguangnudt/VEC_VAD/tree/VCC.

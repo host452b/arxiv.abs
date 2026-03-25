@@ -1,0 +1,25 @@
+Title: Detecting Buggy Contracts via Smart Testing
+Authors: Sally Junsong Wang, Jianan Yao, Kexin Pei, Hidedaki Takahashi, Junfeng Yang
+ID: 2409.04597
+URL: https://arxiv.org/abs/2409.04597
+
+Abstract:
+Smart contracts are susceptible to critical vulnerabilities. Hybrid dynamic
+analyses, such as concolic execution assisted fuzzing and foundation model
+assisted fuzzing, have emerged as highly effective testing techniques for smart
+contract bug detection recently. This hybrid approach has shown initial promise
+in real-world benchmarks, but it still suffers from low scalability to find deep
+bugs buried in complex code patterns. We observe that performance bottlenecks of
+existing dynamic analyses and model hallucination are two main factors limiting
+the scalability of this hybrid approach in finding deep bugs. To overcome the
+challenges, we design an interactive, self-deciding foundation model based
+system, called SmartSys, to support hybrid smart contract dynamic analyses. The
+key idea is to teach foundation models about performance bottlenecks of
+different dynamic analysis techniques, making it possible to forecast the right
+technique and generates effective fuzz targets that can reach deep, hidden bugs.
+To prune hallucinated, incorrect fuzz targets, SmartSys feeds foundation models
+with feedback from dynamic analysis during compilation and at runtime. The
+interesting results of SmartSys include: i) discovering a smart contract
+protocol vulnerability that has escaped eleven tools and survived multiple
+audits for over a year; ii) improving coverage by up to 14.3\% on real-world
+benchmarks compared to the baselines.

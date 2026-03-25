@@ -1,0 +1,28 @@
+Title: $\texttt{AVROBUSTBENCH}$: Benchmarking the Robustness of Audio-Visual Recognition Models at Test-Time
+Authors: Sarthak Kumar Maharana, Saksham Singh Kushwaha, Baoming Zhang, Adrian Rodriguez, Songtao Wei et al.
+ID: 2506.00358
+URL: https://arxiv.org/abs/2506.00358
+
+Abstract:
+While recent audio-visual models have demonstrated impressive performance, their
+robustness to distributional shifts at test-time remains not fully understood.
+Existing robustness benchmarks mainly focus on single modalities, making them
+insufficient for thoroughly assessing the robustness of audio-visual models.
+Motivated by real-world scenarios where shifts can occur
+$\textit{simultaneously}$ in both audio and visual modalities, we introduce
+$\texttt{AVROBUSTBENCH}$, a comprehensive benchmark designed to evaluate the
+test-time robustness of audio-visual recognition models.
+$\texttt{AVROBUSTBENCH}$ comprises four audio-visual benchmark datasets,
+$\texttt{AUDIOSET-2C}$, $\texttt{VGGSOUND-2C}$, $\texttt{KINETICS-2C}$, and
+$\texttt{EPICKITCHENS-2C}$, each incorporating 75 bimodal audio-visual
+corruptions that are $\textit{co-occurring}$ and $\textit{correlated}$. Through
+extensive evaluations, we observe that state-of-the-art supervised and
+self-supervised audio-visual models exhibit declining robustness as corruption
+severity increases. Furthermore, online test-time adaptation (TTA) methods, on
+$\texttt{VGGSOUND-2C}$ and $\texttt{KINETICS-2C}$, offer minimal improvements in
+performance under bimodal corruptions. We further propose $\texttt{AV2C}$, a
+simple TTA approach enabling on-the-fly cross-modal fusion by penalizing
+high-entropy samples, which achieves improvements on $\texttt{VGGSOUND-2C}$. We
+hope that $\texttt{AVROBUSTBENCH}$ will steer the development of more effective
+and robust audio-visual TTA approaches. Our code is available
+$\href{https://github.com/sarthaxxxxx/AV-C-Robustness-Benchmark}{here}$.

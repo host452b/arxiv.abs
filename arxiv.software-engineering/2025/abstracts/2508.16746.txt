@@ -1,0 +1,26 @@
+Title: SafeTree: Expressive Tree Policies for Microservices
+Authors: Karuna Grewal, P. Brighten Godfrey, Justin Hsu
+ID: 2508.16746
+URL: https://arxiv.org/abs/2508.16746
+
+Abstract:
+A microservice-based application is composed of multiple self-contained
+components called microservices, and controlling inter-service communication is
+important for enforcing safety properties. Presently, inter-service
+communication is configured using microservice deployment tools. However, such
+tools only support a limited class of single-hop policies, which can be overly
+permissive because they ignore the rich service tree structure of microservice
+calls. Policies that can express the service tree structure can offer
+development and security teams more fine-grained control over communication
+patterns. To this end, we design an expressive policy language to specify
+service tree structures, and we develop a visibly pushdown automata-based
+dynamic enforcement mechanism to enforce service tree policies. Our technique is
+non-invasive: it does not require any changes to service implementations, and
+does not require access to microservice code. To realize our method, we build a
+runtime monitor on top of a service mesh, an emerging network infrastructure
+layer that can control inter-service communication during deployment. In
+particular, we employ the programmable network traffic filtering capabilities of
+Istio, a popular service mesh implementation, to implement an online and
+distributed monitor. Our experiments show that our monitor can enforce rich
+safety properties while adding minimal latency overhead on the order of
+milliseconds.

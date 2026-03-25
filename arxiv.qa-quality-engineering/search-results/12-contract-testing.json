@@ -1,0 +1,323 @@
+{
+  "query": {
+    "terms": {
+      "title": "contract testing or consumer-driven contract"
+    },
+    "subjects": [
+      "cs"
+    ],
+    "op": "and",
+    "from": "2020-01",
+    "to": "",
+    "max": 200,
+    "searched_at": "2026-03-25T16:50:37Z"
+  },
+  "total_results": 15,
+  "return_count": 15,
+  "papers": [
+    {
+      "id": "2012.09138",
+      "title": "Extracting Smart Contracts Tested and Verified in Coq",
+      "authors": [
+        "Danil Annenkov",
+        "Mikkel Milo",
+        "Jakob Botsch Nielsen",
+        "Bas Spitters"
+      ],
+      "abstract": "We implement extraction of Coq programs to functional languages based on MetaCoq's certified erasure. As part of this, we implement an optimisation pass removing unused arguments. We prove the pass correct wrt. a conventional call-by-value operational semantics of functional languages. We apply this to two functional smart contract languages, Liquidity and Midlang, and to the functional language Elm. Our development is done in the context of the ConCert framework that enables smart contract verification. We contribute a verified boardroom voting smart contract featuring maximum voter privacy such that each vote is kept private except under collusion of all other parties. We also integrate property-based testing into ConCert using QuickChick and our development is the first to support testing properties of interacting smart contracts. We test several complex contracts such as a DAO-like contract, an escrow contract, an implementation of a Decentralized Finance (DeFi) contract which includes a custom token standard (Tezos FA2), and more. In total, this gives us a way to write dependent programs in Coq, test them semi-automatically, verify, and then extract to functional smart contract languages, while retaining a small trusted computing base of only MetaCoq and the pretty-printers into these languages.",
+      "categories": [
+        "cs.PL",
+        "cs.LO"
+      ],
+      "published": "2020-12-16T18:23:58Z",
+      "updated": "2021-04-26T14:07:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2012.09138",
+      "html_url": "https://arxiv.org/html/2012.09138",
+      "abs_url": "https://arxiv.org/abs/2012.09138",
+      "citations": 13
+    },
+    {
+      "id": "2409.04597",
+      "title": "Detecting Buggy Contracts via Smart Testing",
+      "authors": [
+        "Sally Junsong Wang",
+        "Jianan Yao",
+        "Kexin Pei",
+        "Hidedaki Takahashi",
+        "Junfeng Yang"
+      ],
+      "abstract": "Smart contracts are susceptible to critical vulnerabilities. Hybrid dynamic analyses, such as concolic execution assisted fuzzing and foundation model assisted fuzzing, have emerged as highly effective testing techniques for smart contract bug detection recently. This hybrid approach has shown initial promise in real-world benchmarks, but it still suffers from low scalability to find deep bugs buried in complex code patterns. We observe that performance bottlenecks of existing dynamic analyses and model hallucination are two main factors limiting the scalability of this hybrid approach in finding deep bugs.\n  To overcome the challenges, we design an interactive, self-deciding foundation model based system, called SmartSys, to support hybrid smart contract dynamic analyses. The key idea is to teach foundation models about performance bottlenecks of different dynamic analysis techniques, making it possible to forecast the right technique and generates effective fuzz targets that can reach deep, hidden bugs. To prune hallucinated, incorrect fuzz targets, SmartSys feeds foundation models with feedback from dynamic analysis during compilation and at runtime.\n  The interesting results of SmartSys include: i) discovering a smart contract protocol vulnerability that has escaped eleven tools and survived multiple audits for over a year; ii) improving coverage by up to 14.3\\% on real-world benchmarks compared to the baselines.",
+      "categories": [
+        "cs.SE",
+        "cs.LG",
+        "cs.PL"
+      ],
+      "published": "2024-09-06T20:09:01Z",
+      "updated": "2024-09-06T20:09:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.04597",
+      "html_url": "https://arxiv.org/html/2409.04597",
+      "abs_url": "https://arxiv.org/abs/2409.04597",
+      "citations": 3
+    },
+    {
+      "id": "2407.04250",
+      "title": "Effective Targeted Testing of Smart Contracts",
+      "authors": [
+        "Mahdi Fooladgar",
+        "Fathiyeh Faghih"
+      ],
+      "abstract": "Smart contracts are autonomous and immutable pieces of code that are deployed on blockchain networks and run by miners. They were first introduced by Ethereum in 2014 and have since been used for various applications such as security tokens, voting, gambling, non-fungible tokens, self-sovereign identities, stock taking, decentralized finances, decentralized exchanges, and atomic swaps. Since smart contracts are immutable, their bugs cannot be fixed, which may lead to significant monetary losses. While many researchers have focused on testing smart contracts, our recent work has highlighted a gap between test adequacy and test data generation, despite numerous efforts in both fields. Our framework, Griffin, tackles this deficiency by employing a targeted symbolic execution technique for generating test data. This tool can be used in diverse applications, such as killing the survived mutants in mutation testing, validating static analysis alarms, creating counter-examples for safety conditions, and reaching manually selected lines of code. This paper discusses how smart contracts differ from legacy software in targeted symbolic execution and how these differences can affect the tool structure, leading us to propose an enhanced version of the control-flow graph for Solidity smart contracts called CFG+. We also discuss how Griffin can utilize custom heuristics to explore the program space and find the test data that reaches a target line while considering a safety condition in a reasonable execution time. We conducted experiments involving an extensive set of smart contracts, target lines, and safety conditions based on real-world faults and test suites from related tools. The results of our evaluation demonstrate that Griffin can effectively identify the required test data within a reasonable timeframe.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-07-05T04:38:11Z",
+      "updated": "2024-07-05T04:38:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2407.04250",
+      "html_url": "https://arxiv.org/html/2407.04250",
+      "abs_url": "https://arxiv.org/abs/2407.04250",
+      "citations": 1
+    },
+    {
+      "id": "2112.03426",
+      "title": "A Survey of Verification, Validation and Testing Solutions for Smart Contracts",
+      "authors": [
+        "Chaïmaa Benabbou",
+        "Önder Gürcan"
+      ],
+      "abstract": "Smart contracts are programs stored on a blockchain that run when predetermined conditions are met. However, designing and implementing a smart contract is not trivial since upon deployment on a blockchain, it is no longer possible to modify it (neither for improving nor for bug fixing). It is only possible by deploying a new version of the smart contract which is costly (deployment cost for the new contract and destruction cost for the old contract). To this end, there are many solutions for testing the smart contracts before their deployment. Since realizing bug-free smart contracts increase the reliability, as well as reduce the cost, testing is an essential activity. In this paper, we group the existing solutions that attempt to tackle smart contract testing into following categories: public test networks, security analysis tools, blockchain emulators and blockchain simulators. Then, we analyze these solutions, categorize them and show what their pros and cons are.",
+      "categories": [
+        "cs.SE",
+        "cs.DC",
+        "cs.MA"
+      ],
+      "published": "2021-12-07T00:00:34Z",
+      "updated": "2021-12-07T00:00:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2112.03426",
+      "html_url": "https://arxiv.org/html/2112.03426",
+      "abs_url": "https://arxiv.org/abs/2112.03426",
+      "citations": 9
+    },
+    {
+      "id": "2303.03179",
+      "title": "Metamorphic Testing for Smart Contract Vulnerabilities Detection",
+      "authors": [
+        "Jiahao Li"
+      ],
+      "abstract": "Despite the rapid growth of smart contracts, they are suffering numerous security vulnerabilities due to the absence of reliable development and testing. In this article, we apply the metamorphic testing technique to detect smart contract vulnerabilities. Based on the anomalies we observed in vulnerable smart contracts, we define five metamorphic relations to detect abnormal gas consumption and account interaction inconsistency of the target smart contract. Through dynamically executing transactions and checking the final violation of metamorphic relations, we determine whether a smart contract is vulnerable. We evaluate our approach on a benchmark of 67 manually annotated smart contracts. The experimental results show that our approach achieves a higher detection rate (TPR, true positive rate) with a lower misreport rate (FDR, false discovery rate) than the other three state-of-the-art tools. These results further suggest that metamorphic testing is a promising method for detecting smart contract vulnerabilities.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-03-06T14:48:16Z",
+      "updated": "2023-03-06T14:48:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2303.03179",
+      "html_url": "https://arxiv.org/html/2303.03179",
+      "abs_url": "https://arxiv.org/abs/2303.03179",
+      "citations": 3
+    },
+    {
+      "id": "2105.06872",
+      "title": "Revizor: Testing Black-box CPUs against Speculation Contracts",
+      "authors": [
+        "Oleksii Oleksenko",
+        "Christof Fetzer",
+        "Boris Köpf",
+        "Mark Silberstein"
+      ],
+      "abstract": "Speculative vulnerabilities such as Spectre and Meltdown expose speculative execution state that can be exploited to leak information across security domains via side-channels. Such vulnerabilities often stay undetected for a long time as we lack the tools for systematic testing of CPUs to find them.\n  In this paper, we propose an approach to automatically detect microarchitectural information leakage in commercial black-box CPUs. We build on speculation contracts, which we employ to specify the permitted side effects of program execution on the CPU's microarchitectural state. We propose a Model-based Relational Testing (MRT) technique to empirically assess the CPU compliance with these specifications.\n  We implement MRT in a testing framework called Revizor, and showcase its effectiveness on real Intel x86 CPUs. Revizor automatically detects violations of a rich set of contracts, or indicates their absence. A highlight of our findings is that Revizor managed to automatically surface Spectre, MDS, and LVI, as well as several previously unknown variants.",
+      "categories": [
+        "cs.CR",
+        "cs.AR"
+      ],
+      "published": "2021-05-14T14:56:15Z",
+      "updated": "2022-02-08T15:07:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2105.06872",
+      "html_url": "https://arxiv.org/html/2105.06872",
+      "abs_url": "https://arxiv.org/abs/2105.06872",
+      "citations": 53
+    },
+    {
+      "id": "2501.09955",
+      "title": "Metamorphic Testing for Smart Contract Validation:A Case Study of Ethereum-Based Crowdfunding Contracts",
+      "authors": [
+        "Irving Jared Villanueva",
+        "Madhusudan Srinivasan",
+        "Faqeer Ur Rehman"
+      ],
+      "abstract": "Blockchain smart contracts play a crucial role in automating and securing agreements in diverse domains such as finance, healthcare, and supply chains. Despite their critical applications, testing these contracts often receives less attention than their development, leaving significant risks due to the immutability of smart contracts post-deployment. A key challenge in the testing of smart contracts is the oracle problem, where the exact expected outcomes are not well defined, complicating systematic testing efforts.\n  Metamorphic Testing (MT) addresses the oracle problem by using Metamorphic Relations (MRs) to validate smart contracts. MRs define how output should change relative to specific input modifications, determining whether the tests pass or fail. In this work, we apply MT to test an Ethereum-based crowdfunding smart contract, focusing on core functionalities such as state transitions and donation tracking.\n  We identify a set of MRs tailored for smart contract testing and generate test cases for these MRs. To assess the effectiveness of this approach, we use the Vertigo mutation testing tool to create faulty versions of the smart contract. The experimental results show that our MRs detected 25.65% of the total mutants generated, with the most effective MRs achieving a mutant-killing rate of 89%. These results highlight the utility of MT to ensure the reliability and quality of blockchain-based smart contracts.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-01-17T05:04:23Z",
+      "updated": "2025-01-17T05:04:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.09955",
+      "html_url": "https://arxiv.org/html/2501.09955",
+      "abs_url": "https://arxiv.org/abs/2501.09955",
+      "citations": 0
+    },
+    {
+      "id": "2105.03626",
+      "title": "SuMo: A Mutation Testing Strategy for Solidity Smart Contracts",
+      "authors": [
+        "Morena Barboni",
+        "Andrea Morichetta",
+        "Andrea Polini"
+      ],
+      "abstract": "Smart Contracts are software programs that are deployed and executed within a blockchain infrastructure. Due to their immutable nature, directly resulting from the specific characteristics of the deploying infrastructure, smart contracts must be thoroughly tested before their release. Testing is one of the main activities that can help to improve the reliability of a smart contract, so as to possibly prevent considerable loss of valuable assets. It is therefore important to provide the testers with tools that permit them to assess the activity they performed. Mutation testing is a powerful approach for assessing the fault-detection capability of a test suite. In this paper, we propose SuMo, a novel mutation testing tool for Ethereum Smart Contracts. SuMo implements a set of 44 mutation operators that were designed starting from the latest Solidity documentation, and from well-known mutation testing tools. These allow to simulate a wide variety of faults that can be made by smart contract developers. The set of operators was designed to limit the generation of stillborn mutants, which slow down the mutation testing process and limit the usability of the tool. We report a first evaluation of SuMo on open-source projects for which test suites were available. The results we got are encouraging, and they suggest that SuMo can effectively help developers to deliver more reliable smart contracts.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-05-08T08:03:00Z",
+      "updated": "2021-05-08T08:03:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2105.03626",
+      "html_url": "https://arxiv.org/html/2105.03626",
+      "abs_url": "https://arxiv.org/abs/2105.03626",
+      "citations": 19
+    },
+    {
+      "id": "2208.00758",
+      "title": "Finding smart contract vulnerabilities with ConCert's property-based testing framework",
+      "authors": [
+        "Mikkel Milo",
+        "Eske Hoy Nielsen",
+        "Danil Annenkov",
+        "Bas Spitters"
+      ],
+      "abstract": "We provide three detailed case studies of vulnerabilities in smart contracts, and show how property-based testing would have found them:\n  1. the Dexter1 token exchange;\n  2. the iToken;\n  3. the ICO of Brave's BAT token.\n  The last example is, in fact, new, and was missed in the auditing process. We have implemented this testing in ConCert, a general executable model/specification of smart contract execution in the Coq proof assistant. ConCert contracts can be used to generate verified smart contracts in Tezos' LIGO and Concordium's rust language. We thus show the effectiveness of combining formal verification and property-based testing of smart contracts.",
+      "categories": [
+        "cs.LO",
+        "cs.PL"
+      ],
+      "published": "2022-08-01T11:35:16Z",
+      "updated": "2022-08-01T11:35:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2208.00758",
+      "html_url": "https://arxiv.org/html/2208.00758",
+      "abs_url": "https://arxiv.org/abs/2208.00758",
+      "citations": 6
+    },
+    {
+      "id": "2406.18651",
+      "title": "Contraction of Private Quantum Channels and Private Quantum Hypothesis Testing",
+      "authors": [
+        "Theshani Nuradha",
+        "Mark M. Wilde"
+      ],
+      "abstract": "A quantum generalized divergence by definition satisfies the data-processing inequality; as such, the relative decrease in such a divergence under the action of a quantum channel is at most one. This relative decrease is formally known as the contraction coefficient of the channel and the divergence. Interestingly, there exist combinations of channels and divergences for which the contraction coefficient is strictly less than one. Furthermore, understanding the contraction coefficient is fundamental for the study of statistical tasks under privacy constraints. To this end, here we establish upper bounds on contraction coefficients for the hockey-stick divergence under privacy constraints, where privacy is quantified with respect to the quantum local differential privacy (QLDP) framework, and we fully characterize the contraction coefficient for the trace distance under privacy constraints. With the machinery developed, we also determine an upper bound on the contraction of both the Bures distance and quantum relative entropy relative to the normalized trace distance, under QLDP constraints. Next, we apply our findings to establish bounds on the sample complexity of quantum hypothesis testing under privacy constraints. Furthermore, we study various scenarios in which the sample complexity bounds are tight, while providing order-optimal quantum channels that achieve those bounds. Lastly, we show how private quantum channels provide fairness and Holevo information stability in quantum learning settings.",
+      "categories": [
+        "quant-ph",
+        "cs.CR",
+        "cs.IT",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "published": "2024-06-26T18:00:03Z",
+      "updated": "2025-11-04T20:49:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.18651",
+      "html_url": "https://arxiv.org/html/2406.18651",
+      "abs_url": "https://arxiv.org/abs/2406.18651",
+      "citations": 22
+    },
+    {
+      "id": "2501.12932",
+      "title": "Formal Analysis of the Contract Automata Runtime Environment with Uppaal: Modelling, Verification and Testing",
+      "authors": [
+        "Davide Basile"
+      ],
+      "abstract": "Recently, a distributed middleware application called contract automata runtime environment (CARE) has been introduced to realise service applications specified using a dialect of finite-state automata. In this paper, we detail the formal modelling, verification and testing of CARE. We provide a formalisation as a network of stochastic timed automata. The model is verified against the desired properties with the tool Uppaal, utilising exhaustive and statistical model checking techniques. Abstract tests are generated from the Uppaal models that are concretised for testing CARE. This research emphasises the advantages of employing formal modelling, verification and testing processes to enhance the dependability of an open-source distributed application. We discuss the methodology used for modelling the application and generating concrete tests from the abstract model, addressing the issues that have been identified and fixed.",
+      "categories": [
+        "cs.SE",
+        "cs.FL"
+      ],
+      "published": "2025-01-22T15:03:25Z",
+      "updated": "2026-03-04T11:42:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.12932",
+      "html_url": "https://arxiv.org/html/2501.12932",
+      "abs_url": "https://arxiv.org/abs/2501.12932",
+      "citations": 2
+    },
+    {
+      "id": "2603.18096",
+      "title": "A Trace-Based Assurance Framework for Agentic AI Orchestration: Contracts, Testing, and Governance",
+      "authors": [
+        "Ciprian Paduraru",
+        "Petru-Liviu Bouruc",
+        "Alin Stefanescu"
+      ],
+      "abstract": "In Agentic AI, Large Language Models (LLMs) are increasingly used in the orchestration layer to coordinate multiple agents and to interact with external services, retrieval components, and shared memory. In this setting, failures are not limited to incorrect final outputs. They also arise from long-horizon interaction, stochastic decisions, and external side effects (such as API calls, database writes, and message sends). Common failures include non-termination, role drift, propagation of unsupported claims, and attacks via untrusted context or external channels.\n  This paper presents an assurance framework for such Agentic AI systems. Executions are instrumented as Message-Action Traces (MAT) with explicit step and trace contracts. Contracts provide machine-checkable verdicts, localize the first violating step, and support deterministic replay. The framework includes stress testing, formulated as a budgeted counterexample search over bounded perturbations. It also supports structured fault injection at service, retrieval, and memory boundaries to assess containment under realistic operational faults and degraded conditions. Finally, governance is treated as a runtime component, enforcing per-agent capability limits and action mediation (allow, rewrite, block) at the language-to-action boundary.\n  To support comparative evaluations across stochastic seeds, models, and orchestration configurations, the paper defines trace-based metrics for task success, termination reliability, contract compliance, factuality indicators, containment rate, and governance outcome distributions. More broadly, the framework is intended as a common abstraction to support testing and evaluation of multi-agent LLM systems, and to facilitate reproducible comparison across orchestration designs and configurations.",
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "published": "2026-03-18T10:23:48Z",
+      "updated": "2026-03-18T10:23:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.18096",
+      "html_url": "https://arxiv.org/html/2603.18096",
+      "abs_url": "https://arxiv.org/abs/2603.18096",
+      "citations": 0
+    },
+    {
+      "id": "2102.08864",
+      "title": "Automated Test-Case Generation for Solidity Smart Contracts: the AGSolT Approach and its Evaluation",
+      "authors": [
+        "Stefan Driessen",
+        "Dario Di Nucci",
+        "Geert Monsieur",
+        "Damian A. Tamburri",
+        "Willem-Jan van den Heuvel"
+      ],
+      "abstract": "Blockchain and smart contract technology are novel approaches to data and code management that facilitate trusted computing by allowing for development in a distributed and decentralized manner. Testing smart contracts comes with its own set of challenges which have not yet been fully identified and explored. Although existing tools can identify and discover known vulnerabilities and their interactions on the Ethereum blockchain through random search or symbolic execution, these tools generally do not produce test suites suitable for human oracles. In this paper, we present AGSOLT (Automated Generator of Solidity Test Suites). We demonstrate its efficiency by implementing two search algorithms to automatically generate test suites for stand-alone Solidity smart contracts, taking into account some of the blockchain-specific challenges. To test AGSOLT, we compared a random search algorithm and a genetic algorithm on a set of 36 real-world smart contracts. We found that AGSOLT is capable of achieving high branch coverage with both approaches and even discovered some errors in some of the most popular Solidity smart contracts on Github.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-02-17T16:46:22Z",
+      "updated": "2022-04-15T09:50:32Z",
+      "pdf_url": "https://arxiv.org/pdf/2102.08864",
+      "html_url": "https://arxiv.org/html/2102.08864",
+      "abs_url": "https://arxiv.org/abs/2102.08864",
+      "citations": 16
+    },
+    {
+      "id": "2404.18186",
+      "title": "Static Application Security Testing (SAST) Tools for Smart Contracts: How Far Are We?",
+      "authors": [
+        "Kaixuan Li",
+        "Yue Xue",
+        "Sen Chen",
+        "Han Liu",
+        "Kairan Sun",
+        "Ming Hu",
+        "Haijun Wang",
+        "Yang Liu",
+        "Yixiang Chen"
+      ],
+      "abstract": "In recent years, the importance of smart contract security has been heightened by the increasing number of attacks against them. To address this issue, a multitude of static application security testing (SAST) tools have been proposed for detecting vulnerabilities in smart contracts. However, objectively comparing these tools to determine their effectiveness remains challenging. Existing studies often fall short due to the taxonomies and benchmarks only covering a coarse and potentially outdated set of vulnerability types, which leads to evaluations that are not entirely comprehensive and may display bias.\n  In this paper, we fill this gap by proposing an up-to-date and fine-grained taxonomy that includes 45 unique vulnerability types for smart contracts. Taking it as a baseline, we develop an extensive benchmark that covers 40 distinct types and includes a diverse range of code characteristics, vulnerability patterns, and application scenarios. Based on them, we evaluated 8 SAST tools using this benchmark, which comprises 788 smart contract files and 10,394 vulnerabilities. Our results reveal that the existing SAST tools fail to detect around 50% of vulnerabilities in our benchmark and suffer from high false positives, with precision not surpassing 10%. We also discover that by combining the results of multiple tools, the false negative rate can be reduced effectively, at the expense of flagging 36.77 percentage points more functions. Nevertheless, many vulnerabilities, especially those beyond Access Control and Reentrancy vulnerabilities, remain undetected. We finally highlight the valuable insights from our study, hoping to provide guidance on tool development, enhancement, evaluation, and selection for developers, researchers, and practitioners.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-04-28T13:40:18Z",
+      "updated": "2024-06-29T04:42:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2404.18186",
+      "html_url": "https://arxiv.org/html/2404.18186",
+      "abs_url": "https://arxiv.org/abs/2404.18186",
+      "citations": 36
+    },
+    {
+      "id": "2003.00257",
+      "title": "ADF-GA: Data Flow Criterion Based Test Case Generation for Ethereum Smart Contracts",
+      "authors": [
+        "Pengcheng Zhang",
+        "Jianan Yu",
+        "Shunhui Ji"
+      ],
+      "abstract": "Testing is an important technique to improve the quality of Ethereum smart contract programs. However, current work on testing smart contract only focus on static problems of smart contract programs. A data flow oriented test case generation approach for dynamic testing of smart contract programs is still missing. To address this problem, this paper proposes a novel test case generation approach, called ADF-GA (All-uses Data Flow criterion based test case generation using Genetic Algorithm), for Solidity based Ethereum smart contract programs. ADF-GA aims to efficiently generate a valid set of test cases via three stages. First, the corresponding program control flow graph is constructed from the source codes. Second, the generated control flow graph is analyzed to obtain the variable information in the Solidity programs, locate the require statements, and also get the definition-use pairs to be tested. Finally, a genetic algorithm is used to generate test cases, in which an improved fitness function is proposed to calculate the definition-use pairs coverage of each test case with program instrumentation. Experimental studies are performed on several representative Solidity programs. The results show that ADF-GA can effectively generate test cases, achieve better coverage, and reduce the number of iterations in genetic algorithm.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-02-29T13:59:21Z",
+      "updated": "2020-02-29T13:59:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2003.00257",
+      "html_url": "https://arxiv.org/html/2003.00257",
+      "abs_url": "https://arxiv.org/abs/2003.00257",
+      "citations": 25
+    }
+  ]
+}

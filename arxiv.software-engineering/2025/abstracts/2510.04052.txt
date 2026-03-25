@@ -1,0 +1,23 @@
+Title: Enabling Network Policy Enforcement in Service Meshes
+Authors: Behrooz Farkiani, Fan Liu, Patrick Crowley
+ID: 2510.04052
+URL: https://arxiv.org/abs/2510.04052
+
+Abstract:
+Portable service mesh implementations enable Layer 4 to Layer 7 policy
+enforcement across heterogeneous infrastructures, yet they depend on the
+underlying network's connectivity and policies. Layer 3 network policies govern
+IP traffic regardless of whether upper layers authorize the flow. While these
+policies are integral to security, correct enforcement often requires
+coordination across multiple teams, and achieving consistent policy behavior
+across heterogeneous environments is challenging. Studies show that most
+Kubernetes clusters do not enforce any network policies. We propose integrating
+Layer 3 network policy enforcement with service meshes to protect data-plane
+traffic in a portable, infrastructure-agnostic manner. This integration allows
+developers to define Layer 3-7 policies and to ensure enforcement across any
+infrastructure. Our solution builds an overlay Layer 3 network and enforces
+Layer 3 policies by routing traffic through specific policy enforcement points
+and applying default-deny principles with authorization keys. We prototyped our
+approach using Kubernetes and Istio and found that it adds less than 1ms of
+latency while supporting complex policies comparable to native Kubernetes
+network policies.

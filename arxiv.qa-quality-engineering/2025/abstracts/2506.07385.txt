@@ -1,0 +1,31 @@
+Title: GUIPilot: A Consistency-based Mobile GUI Testing Approach for Detecting Application-specific Bugs
+Authors: Ruofan Liu, Xiwen Teoh, Yun Lin, Guanjie Chen, Ruofei Ren et al.
+ID: 2506.07385
+URL: https://arxiv.org/abs/2506.07385
+
+Abstract:
+In this work, we propose GUIPilot, an approach for detecting inconsistencies
+between the mobile design and their implementations. The mobile design usually
+consists of design mock-ups that specify (1) the expected screen appearances
+(e.g., widget layouts, colors, and shapes) and (2) the expected screen
+behaviors, regarding how one screen can transition into another (e.g., labeled
+widgets with textual description). Given a design mock-up and the implementation
+of its application, GUIPilot reports both their screen inconsistencies as well
+as process inconsistencies. On the one hand, GUIPilot detects the screen
+inconsistencies by abstracting every screen into a widget container where each
+widget is represented by its position, width, height, and type. By defining the
+partial order of widgets and the costs of replacing, inserting, and deleting
+widgets in a screen, we convert the screen-matching problem into an optimizable
+widget alignment problem. On the other hand, we translate the specified GUI
+transition into stepwise actions on the mobile screen (e.g., click, long-press,
+input text on some widgets). To this end, we propose a visual prompt for the
+vision-language model to infer widget-specific actions on the screen. By this
+means, we can validate the presence or absence of expected transitions in the
+implementation. Our extensive experiments on 80 mobile applications and 160
+design mock-ups show that (1) GUIPilot can achieve 94.5% precision and 99.6%
+recall in detecting screen inconsistencies, outperforming the state-of-the-art
+approach, such as GVT, by 66.2% and 56.6% respectively, and (2) GUIPilot reports
+zero errors in detecting process inconsistencies. Furthermore, our industrial
+case study on applying GUIPilot on a trading mobile application shows that
+GUIPilot has detected nine application bugs, and all the bugs were confirmed by
+the original application experts.

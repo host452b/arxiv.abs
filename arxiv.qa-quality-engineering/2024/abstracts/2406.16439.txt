@@ -1,0 +1,29 @@
+Title: Exploring Test-Time Adaptation for Object Detection in Continually Changing Environments
+Authors: Shilei Cao, Juepeng Zheng, Yan Liu, Baoquan Zhao, Ziqi Yuan et al.
+ID: 2406.16439
+URL: https://arxiv.org/abs/2406.16439
+
+Abstract:
+Real-world application models are commonly deployed in dynamic environments,
+where the target domain distribution undergoes temporal changes. Continual
+Test-Time Adaptation (CTTA) has recently emerged as a promising technique to
+gradually adapt a source-trained model to continually changing target domains.
+Despite recent advancements in addressing CTTA, two critical issues remain: 1)
+Fixed thresholds for pseudo-labeling in existing methodologies lead to
+low-quality pseudo-labels, as model confidence varies across categories and
+domains; 2) Stochastic parameter restoration methods for mitigating catastrophic
+forgetting fail to preserve critical information effectively, due to their
+intrinsic randomness. To tackle these challenges for detection models in CTTA
+scenarios, we present AMROD, featuring three core components. Firstly, the
+object-level contrastive learning module extracts object-level features for
+contrastive learning to refine the feature representation in the target domain.
+Secondly, the adaptive monitoring module dynamically skips unnecessary
+adaptation and updates the category-specific threshold based on predicted
+confidence scores to enable efficiency and improve the quality of pseudo-labels.
+Lastly, the adaptive randomized restoration mechanism selectively reset inactive
+parameters with higher possibilities, ensuring the retention of essential
+knowledge. We demonstrate the effectiveness of AMROD on four CTTA object
+detection tasks, where AMROD outperforms existing methods, especially achieving
+a 3.2 mAP improvement and a 20\% increase in efficiency on the
+Cityscapes-to-Cityscapes-C CTTA task. The code of this work is available at
+https://github.com/ShileiCao/AMROD.

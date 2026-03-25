@@ -1,0 +1,22 @@
+Title: Parser Knows Best: Testing DBMS with Coverage-Guided Grammar-Rule Traversal
+Authors: Yu Liang, Hong Hu
+ID: 2503.03893
+URL: https://arxiv.org/abs/2503.03893
+
+Abstract:
+Database Management System (DBMS) is the key component for data-intensive
+applications. Recently, researchers propose many tools to comprehensively test
+DBMS systems for finding various bugs. However, these tools only cover a small
+subset of diverse syntax elements defined in DBMS-specific SQL dialects, leaving
+a large number of features unexplored. In this paper, we propose ParserFuzz, a
+novel fuzzing framework that automatically extracts grammar rules from DBMSs'
+built-in syntax definition files for SQL query generation. Without any input
+corpus, ParserFuzz can generate diverse query statements to saturate the grammar
+features of the tested DBMSs, which grammar features could be missed by previous
+tools. Additionally, ParserFuzz utilizes code coverage as feedback to guide the
+query mutation, which combines different DBMS features extracted from the syntax
+rules to find more function and safety bugs. In our evaluation, ParserFuzz
+outperforms all state-of-the-art existing DBMS testing tools in terms of bug
+finding, grammar rule coverage and code coverage. ParserFuzz detects 81
+previously unknown bugs in total across 5 popular DBMSs, where all bugs are
+confirmed and 34 have been fixed.

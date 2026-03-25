@@ -1,0 +1,28 @@
+Title: Enhancing High-Quality Code Generation in Large Language Models with Comparative Prefix-Tuning
+Authors: Yuan Jiang, Yujian Zhang, Liang Lu, Christoph Treude, Xiaohong Su et al.
+ID: 2503.09020
+URL: https://arxiv.org/abs/2503.09020
+
+Abstract:
+Large Language Models (LLMs) have been widely adopted in commercial code
+completion engines, significantly enhancing coding efficiency and productivity.
+However, LLMs may generate code with quality issues that violate coding
+standards and best practices, such as poor code style and maintainability, even
+when the code is functionally correct. This necessitates additional effort from
+developers to improve the code, potentially negating the efficiency gains
+provided by LLMs. To address this problem, we propose a novel comparative
+prefix-tuning method for controllable high-quality code generation. Our method
+introduces a single, property-specific prefix that is prepended to the
+activations of the LLM, serving as a lightweight alternative to fine-tuning.
+Unlike existing methods that require training multiple prefixes, our approach
+trains only one prefix and leverages pairs of high-quality and low-quality code
+samples, introducing a sequence-level ranking loss to guide the model's
+training. This comparative approach enables the model to better understand the
+differences between high-quality and low-quality code, focusing on aspects that
+impact code quality. Additionally, we design a data construction pipeline to
+collect and annotate pairs of high-quality and low-quality code, facilitating
+effective training. Extensive experiments on the Code Llama 7B model demonstrate
+that our method improves code quality by over 100% in certain task categories,
+while maintaining functional correctness. We also conduct ablation studies and
+generalization experiments, confirming the effectiveness of our method's
+components and its strong generalization capability.

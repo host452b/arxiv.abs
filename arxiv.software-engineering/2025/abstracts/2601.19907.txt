@@ -1,0 +1,24 @@
+Title: RAPID-Graph: Recursive All-Pairs Shortest Paths Using Processing-in-Memory for Dynamic Programming on Graphs
+Authors: Yanru Chen, Zheyu Li, Keming Fan, Runyang Tian, John Hsu et al.
+ID: 2601.19907
+URL: https://arxiv.org/abs/2601.19907
+
+Abstract:
+All-pairs shortest paths (APSP) remains a major bottleneck for large-scale graph
+analytics, as data movement with cubic complexity overwhelms the bandwidth of
+conventional memory hierarchies. In this work, we propose RAPID-Graph to address
+this challenge through a co-designed processing-in-memory (PIM) system that
+integrates algorithm, architecture, and device-level optimizations. At the
+algorithm level, we introduce a recursion-aware partitioner that enables an
+exact APSP computation by decomposing graphs into vertex tiles to reduce data
+dependency, such that both Floyd-Warshall and Min-Plus kernels execute fully
+in-place within digital PIM arrays. At the architecture and device levels, we
+design a 2.5D PIM stack integrating two phase-change memory compute dies, a
+logic die, and high-bandwidth scratchpad memory within a unified advanced
+package. An external non-volatile storage stack stores large APSP results
+persistently. The design achieves both tile-level and unit-level parallel
+processing to sustain high throughput. On the 2.45M-node OGBN-Products dataset,
+RAPID-Graph is 5.8x faster and 1,186x more energy efficient than
+state-of-the-art GPU clusters, while exceeding prior PIM accelerators by 8.3x in
+speed and 104x in efficiency. It further delivers up to 42.8x speedup and 392x
+energy savings over an NVIDIA H100 GPU.

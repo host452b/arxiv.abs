@@ -1,0 +1,31 @@
+Title: A Curious Case of Remarkable Resilience to Gradient Attacks via Fully Convolutional and Differentiable Front End with a Skip Connection
+Authors: Leonid Boytsov, Ameya Joshi, Filipe Condessa
+ID: 2402.17018
+URL: https://arxiv.org/abs/2402.17018
+
+Abstract:
+We experimented with front-end enhanced neural models where a differentiable and
+fully convolutional model with a skip connection is added before a frozen
+backbone classifier. By training such composite models using a small learning
+rate for about one epoch, we obtained models that retained the accuracy of the
+backbone classifier while being unusually resistant to gradient
+attacks-including APGD and FAB-T attacks from the AutoAttack package-which we
+attribute to gradient masking. Although gradient masking is not new, the degree
+we observe is striking for fully differentiable models without obvious
+gradient-shattering-e.g., JPEG compression-or gradient-diminishing components.
+The training recipe to produce such models is also remarkably stable and
+reproducible: We applied it to three datasets (CIFAR10, CIFAR100, and ImageNet)
+and several modern architectures (including vision Transformers) without a
+single failure case. While black-box attacks such as the SQUARE attack and
+zero-order PGD can partially overcome gradient masking, these attacks are easily
+defeated by simple randomized ensembles. We estimate that these ensembles
+achieve near-SOTA AutoAttack accuracy on CIFAR10, CIFAR100, and ImageNet (while
+retaining almost all clean accuracy of the original classifiers) despite having
+near-zero accuracy under adaptive attacks. Adversarially training the backbone
+further amplifies this front-end "robustness". On CIFAR10, the respective
+randomized ensemble achieved 90.8$\pm 2.5\%$ (99\% CI) accuracy under the full
+AutoAttack while having only 18.2$\pm 3.6\%$ accuracy under the adaptive attack
+($\varepsilon=8/255$, $L^\infty$ norm). We conclude the paper with a discussion
+of whether randomized ensembling can serve as a practical defense. Code and
+instructions to reproduce key results are available.
+https://github.com/searchivarius/curious_case_of_gradient_masking

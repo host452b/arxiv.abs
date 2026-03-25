@@ -1,0 +1,30 @@
+Title: Homomorphism Testing with Resilience to Online Manipulations
+Authors: Esty Kelman, Uri Meir, Debanuj Nayak, Sofya Raskhodnikova
+ID: 2511.23363
+URL: https://arxiv.org/abs/2511.23363
+
+Abstract:
+A central challenge in property testing is verifying algebraic structure with
+minimal access to data. A landmark result addressing this challenge, the
+linearity test of Blum, Luby, and Rubinfeld (JCSS `93), spurred a rich body of
+work on testing algebraic properties such as linearity and its generalizations
+to low-degree polynomials and group homomorphisms. However, classical tests for
+these properties assume unrestricted, noise-free access to the input
+function--an assumption that breaks down in adversarial or dynamic settings. To
+address this, Kalemaj, Raskhodnikova, and Varma (Theory of Computing `23)
+introduced the online manipulation model, where an adversary may erase or
+corrupt query responses over time, based on the tester's past queries. We
+initiate the study of {manipulation-resilient} testing for {group homomorphism}
+in this online model. Our main result is an {optimal} tester that makes
+$O(1/\varepsilon+\log t)$ queries, where $\varepsilon$ is the distance parameter
+and $t$ is the number of function values the adversary can erase or corrupt per
+query. Our result recovers the celebrated $O(1/\varepsilon)$ bound by Ben-Or,
+Coppersmith, Luby, and Rubinfeld (Random Struct.\ Algorithms `08) for
+homomorphism testing in the standard property testing model, albeit with a
+different tester. Our tester, $\mathsf{Random\ Signs\ Test}$, {lifts} known
+manipulation-resilient linearity testers for $\mathbb{F}_2^n\to \mathbb{F}_2$ to
+general group domains and codomains by introducing more randomness: instead of
+verifying the homomorphism condition for a sum of random elements, it uses
+additions and subtractions of random elements, randomly selecting a sign for
+each element. We also obtain improved group-specific query bounds for key
+families of groups.

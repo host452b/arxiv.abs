@@ -1,0 +1,19 @@
+Title: Program State Abstraction for Feedback-Driven Fuzz Testing using Likely Invariants
+Authors: Andrea Fioraldi
+ID: 2012.11182
+URL: https://arxiv.org/abs/2012.11182
+
+Abstract:
+Fuzz testing proved its great effectiveness in finding software bugs in the
+latest years, however, there are still open challenges. Coverage-guided fuzzers
+suffer from the fact that covering a program point does not ensure the trigger
+of a fault. Other more sensitive techniques that in theory should cope with this
+problem, such as the coverage of the memory values, easily lead to path
+explosion. In this thesis, we propose a new feedback for Feedback-driven Fuzz
+testing that combines code coverage with the "shape" of the data. We learn
+likely invariants for each basic block in order to divide into regions the space
+described by the variables used in the block. The goal is to distinguish in the
+feedback when a block is executed with values that fall in different regions of
+the space. This better approximates the program state coverage and, on some
+targets, improves the ability of the fuzzer in finding faults. We developed a
+prototype using LLVM and AFL++ called InvsCov.

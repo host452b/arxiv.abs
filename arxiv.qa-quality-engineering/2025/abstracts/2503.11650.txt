@@ -1,0 +1,27 @@
+Title: Centaur: Robust End-to-End Autonomous Driving with Test-Time Training
+Authors: Chonghao Sima, Kashyap Chitta, Zhiding Yu, Shiyi Lan, Ping Luo et al.
+ID: 2503.11650
+URL: https://arxiv.org/abs/2503.11650
+
+Abstract:
+How can we rely on an end-to-end autonomous vehicle's complex decision-making
+system during deployment? One common solution is to have a ``fallback layer''
+that checks the planned trajectory for rule violations and replaces it with a
+pre-defined safe action if necessary. Another approach involves adjusting the
+planner's decisions to minimize a pre-defined ``cost function'' using additional
+system predictions such as road layouts and detected obstacles. However, these
+pre-programmed rules or cost functions cannot learn and improve with new
+training data, often resulting in overly conservative behaviors. In this work,
+we propose Centaur (Cluster Entropy for Test-time trAining using Uncertainty)
+which updates a planner's behavior via test-time training, without relying on
+hand-engineered rules or cost functions. Instead, we measure and minimize the
+uncertainty in the planner's decisions. For this, we develop a novel uncertainty
+measure, called Cluster Entropy, which is simple, interpretable, and compatible
+with state-of-the-art planning algorithms. Using data collected at prior
+test-time time-steps, we perform an update to the model's parameters using a
+gradient that minimizes the Cluster Entropy. With only this sole gradient update
+prior to inference, Centaur exhibits significant improvements, ranking first on
+the navtest leaderboard with notable gains in safety-critical metrics such as
+time to collision. To provide detailed insights on a per-scenario basis, we also
+introduce navsafe, a challenging new benchmark, which highlights previously
+undiscovered failure modes of driving models.

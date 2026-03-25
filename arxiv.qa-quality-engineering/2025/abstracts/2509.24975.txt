@@ -1,0 +1,26 @@
+Title: DiffuTester: Accelerating Unit Test Generation for Diffusion LLMs via Mining Structural Pattern
+Authors: Lekang Yang, Yuetong Liu, Yitong Zhang, Jia Li
+ID: 2509.24975
+URL: https://arxiv.org/abs/2509.24975
+
+Abstract:
+Diffusion large language models (dLLMs) enable parallel generation and are
+promising for unit test generation (UTG), where efficient and large-scale
+automated testing is essential in software development. Despite this advantage,
+their application to UTG is still constrained by a clear trade-off between
+efficiency and test quality, since increasing the number of tokens generated in
+each step often causes a sharp decline in the quality of test cases. To overcome
+this limitation, we present DiffuTester, an acceleration framework specifically
+tailored for dLLMs in UTG. The motivation of DiffuTester is that unit tests
+targeting the same focal method often share structural patterns. DiffuTester
+employs a novel structural pattern based decoding approach, which dynamically
+identifies structural patterns across unit tests through their abstract syntax
+trees and additionally decodes the corresponding tokens, thereby achieving
+acceleration without compromising the quality of the output. To enable
+comprehensive evaluation, we extend the original TestEval benchmark to three
+programming languages. Extensive experiments on three benchmarks with two
+representative models show that DiffuTester delivers significant acceleration
+while preserving test coverage. Moreover, DiffuTester generalizes well across
+different dLLMs and programming languages, providing a practical and scalable
+solution for efficient UTG in software development. Code and data are publicly
+available at https://github.com/TsinghuaISE/DiffuTester.

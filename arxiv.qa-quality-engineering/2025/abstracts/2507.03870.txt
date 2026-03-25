@@ -1,0 +1,25 @@
+Title: Uncovering Systemic and Environment Errors in Autonomous Systems Using Differential Testing
+Authors: Yashwanthi Anand, Rahil P Mehta, Manish Motwani, Sandhya Saisubramanian
+ID: 2507.03870
+URL: https://arxiv.org/abs/2507.03870
+
+Abstract:
+When an autonomous agent behaves undesirably, including failure to complete a
+task, it can be difficult to determine whether the behavior is due to a systemic
+agent error, such as flaws in the model or policy, or an environment error,
+where a task is inherently infeasible under a given environment configuration,
+even for an ideal agent. As agents and their environments grow more complex,
+identifying the error source becomes increasingly difficult but critical for
+reliable deployment. We introduce AIProbe, a novel black-box testing technique
+that applies differential testing to attribute undesirable agent behaviors
+either to agent deficiencies, such as modeling or training flaws, or due to
+environmental infeasibility. AIProbe first generates diverse environmental
+configurations and tasks for testing the agent, by modifying configurable
+parameters using Latin Hypercube sampling. It then solves each generated task
+using a search-based planner, independent of the agent. By comparing the agent's
+performance to the planner's solution, AIProbe identifies whether failures are
+due to errors in the agent's model or policy, or due to unsolvable task
+conditions. Our evaluation across multiple domains shows that AIProbe
+significantly outperforms state-of-the-art techniques in detecting both total
+and unique errors, thereby contributing to a reliable deployment of autonomous
+agents.

@@ -1,0 +1,26 @@
+Title: Architecture-Specific Performance Optimization of Compute-Intensive FaaS Functions
+Authors: Mohak Chadha, Anshul Jindal, Michael Gerndt
+ID: 2107.10008
+URL: https://arxiv.org/abs/2107.10008
+
+Abstract:
+FaaS allows an application to be decomposed into functions that are executed on
+a FaaS platform. The FaaS platform is responsible for the resource provisioning
+of the functions. Recently, there is a growing trend towards the execution of
+compute-intensive FaaS functions that run for several seconds. However, due to
+the billing policies followed by commercial FaaS offerings, the execution of
+these functions can incur significantly higher costs. Moreover, due to the
+abstraction of underlying processor architectures on which the functions are
+executed, the performance optimization of these functions is challenging. As a
+result, most FaaS functions use pre-compiled libraries generic to x86-64 leading
+to performance degradation. In this paper, we examine the underlying processor
+architectures for Google Cloud Functions (GCF) and determine their prevalence
+across the 19 available GCF regions. We modify, adapt, and optimize three
+compute-intensive FaaS workloads written in Python using Numba, a JIT compiler
+based on LLVM, and present results wrt performance, memory consumption, and
+costs on GCF. Results from our experiments show that the optimization of FaaS
+functions can improve performance by 12.8x (geometric mean) and save costs by
+73.4% on average for the three functions. Our results show that optimization of
+the FaaS functions for the specific architecture is very important. We achieved
+a maximum speedup of 1.79x by tuning the function especially for the instruction
+set of the underlying processor architecture.

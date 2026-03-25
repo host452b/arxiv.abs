@@ -1,0 +1,30 @@
+Title: Modeling and Optimizing Performance Bottlenecks for Neuromorphic Accelerators
+Authors: Jason Yik, Walter Gallego Gomez, Andrew Cheng, Benedetto Leto, Alessandro Pierro et al.
+ID: 2511.21549
+URL: https://arxiv.org/abs/2511.21549
+
+Abstract:
+Neuromorphic accelerators offer promising platforms for machine learning (ML)
+inference by leveraging event-driven, spatially-expanded architectures that
+naturally exploit unstructured sparsity through co-located memory and compute.
+However, their unique architectural characteristics create performance dynamics
+that differ fundamentally from conventional accelerators. Existing workload
+optimization approaches for neuromorphic accelerators rely on aggregate
+network-wide sparsity and operation counting, but the extent to which these
+metrics actually improve deployed performance remains unknown. This paper
+presents the first comprehensive performance bound and bottleneck analysis of
+neuromorphic accelerators, revealing the shortcomings of the conventional
+metrics and offering an understanding of what facets matter for workload
+performance. We present both theoretical analytical modeling and extensive
+empirical characterization of three real neuromorphic accelerators: Brainchip
+AKD1000, Synsense Speck, and Intel Loihi 2. From these, we establish three
+distinct accelerator bottleneck states, memory-bound, compute-bound, and
+traffic-bound, and identify which workload configuration features are likely to
+exhibit these bottleneck states. We synthesize all of our insights into the
+floorline performance model, a visual model that identifies performance bounds
+and informs how to optimize a given workload, based on its position on the
+model. Finally, we present an optimization methodology that combines
+sparsity-aware training with floorline-informed partitioning. Our methodology
+achieves substantial performance improvements at iso-accuracy: up to 3.86x
+runtime improvement and 3.38x energy reduction compared to prior manually-tuned
+configurations.

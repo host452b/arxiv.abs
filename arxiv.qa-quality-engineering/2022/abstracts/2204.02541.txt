@@ -1,0 +1,29 @@
+Title: Towards Better Test Coverage: Merging Unit Tests for Autonomous Systems
+Authors: Josefine Graebener, Apurva Badithela, Richard M. Murray
+ID: 2204.02541
+URL: https://arxiv.org/abs/2204.02541
+
+Abstract:
+We present a framework for merging unit tests for autonomous systems. Typically,
+it is intractable to test an autonomous system for every scenario in its
+operating environment. The question of whether it is possible to design a single
+test for multiple requirements of the system motivates this work. First, we
+formally define three attributes of a test: a test specification that
+characterizes behaviors observed in a test execution, a test environment, and a
+test policy. Using the merge operator from contract-based design theory, we
+provide a formalism to construct a merged test specification from two unit test
+specifications. Temporal constraints on the merged test specification guarantee
+that non-trivial satisfaction of both unit test specifications is necessary for
+a successful merged test execution. We assume that the test environment remains
+the same across the unit tests and the merged test. Given a test specification
+and a test environment, we synthesize a test policy filter using a receding
+horizon approach, and use the test policy filter to guide a search procedure
+(e.g. Monte-Carlo Tree Search) to find a test policy that is guaranteed to
+satisfy the test specification. This search procedure finds a test policy that
+maximizes a pre-defined robustness metric for the test while the filter
+guarantees a test policy for satisfying the test specification. We prove that
+our algorithm is sound. Furthermore, the receding horizon approach to
+synthesizing the filter ensures that our algorithm is scalable. Finally, we show
+that merging unit tests is impactful for designing efficient test campaigns to
+achieve similar levels of coverage in fewer test executions. We illustrate our
+framework on two self-driving examples in a discrete-state setting.

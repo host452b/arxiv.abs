@@ -1,0 +1,21 @@
+Title: Harvesting Production GraphQL Queries to Detect Schema Faults
+Authors: Louise Zetterlund, Deepika Tiwari, Martin Monperrus, Benoit Baudry
+ID: 2112.08267
+URL: https://arxiv.org/abs/2112.08267
+
+Abstract:
+GraphQL is a new paradigm to design web APIs. Despite its growing popularity,
+there are few techniques to verify the implementation of a GraphQL API. We
+present a new testing approach based on GraphQL queries that are logged while
+users interact with an application in production. Our core motivation is that
+production queries capture real usages of the application, and are known to
+trigger behavior that may not be tested by developers. For each logged query, a
+test is generated to assert the validity of the GraphQL response with respect to
+the schema. We implement our approach in a tool called AutoGraphQL, and evaluate
+it on two real-world case studies that are diverse in their domain and
+technology stack: an open-source e-commerce application implemented in Python
+called Saleor, and an industrial case study which is a PHP-based finance website
+called Frontapp. AutoGraphQL successfully generates test cases for the two
+applications. The generated tests cover 26.9% of the Saleor schema, including
+parts of the API not exercised by the original test suite, as well as 48.7% of
+the Frontapp schema, detecting 8 schema faults, thanks to production queries.

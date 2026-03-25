@@ -1,0 +1,28 @@
+Title: Unified Spherical Frontend: Learning Rotation-Equivariant Representations of Spherical Images from Any Camera
+Authors: Mukai Yu, Mosam Dabhi, Liuyue Xie, Sebastian Scherer, László A. Jeni
+ID: 2511.18174
+URL: https://arxiv.org/abs/2511.18174
+
+Abstract:
+Modern perception increasingly relies on fisheye, panoramic, and other wide
+field-of-view (FoV) cameras, yet most pipelines still apply planar CNNs designed
+for pinhole imagery on 2D grids, where image-space neighborhoods misrepresent
+physical adjacency and models are sensitive to global rotations.
+Frequency-domain spherical CNNs partially address this mismatch but require
+costly spherical harmonic transforms that constrain resolution and efficiency.
+We introduce the Unified Spherical Frontend (USF), a lens-agnostic framework
+that transforms images from any calibrated camera into a unit-sphere
+representation via ray-direction correspondences, and performs spherical
+resampling, convolution, and pooling directly in the spatial domain. USF is
+modular: projection, location sampling, interpolation, and resolution control
+are fully decoupled. Its distance-only spherical kernels offer configurable
+rotation-equivariance (mirroring translation-equivariance in planar CNNs) while
+avoiding harmonic transforms entirely. We compare standard planar backbones with
+their spherical counterparts across classification, detection, and segmentation
+tasks on synthetic (Spherical MNIST) and real-world datasets (PANDORA, Stanford
+2D-3D-S), and stress-test robustness to extreme lens distortions, varying FoV,
+and arbitrary rotations. USF processes high-resolution spherical imagery
+efficiently and maintains less than 1% performance drop under random test-time
+rotations, even without rotational augmentation, and even enables zero-shot
+generalization from one lens type to unseen wide-FoV lenses with minimal
+performance degradation.

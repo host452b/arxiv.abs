@@ -1,0 +1,30 @@
+Title: Does Using Bazel Help Speed Up Continuous Integration Builds?
+Authors: Shenyu Zheng, Bram Adams, Ahmed E. Hassan
+ID: 2405.00796
+URL: https://arxiv.org/abs/2405.00796
+
+Abstract:
+A long continuous integration (CI) build forces developers to wait for CI
+feedback before starting subsequent development activities, leading to time
+wasted. In addition to a variety of build scheduling and test selection
+heuristics studied in the past, new artifact-based build technologies like Bazel
+have built-in support for advanced performance optimizations such as parallel
+build and incremental build (caching of build results). However, little is known
+about the extent to which new build technologies like Bazel deliver on their
+promised benefits, especially for long-build duration projects. In this study,
+we collected 383 Bazel projects from GitHub, then studied their parallel and
+incremental build usage of Bazel in 4 popular CI services, and compared the
+results with Maven projects. We conducted 3,500 experiments on 383 Bazel
+projects and analyzed the build logs of a subset of 70 buildable projects to
+evaluate the performance impact of Bazel's parallel builds. Additionally, we
+performed 102,232 experiments on the 70 buildable projects' last 100 commits to
+evaluate Bazel's incremental build performance. Our results show that 31.23% of
+Bazel projects adopt a CI service but do not use Bazel in the CI service, while
+for those who do use Bazel in CI, 27.76% of them use other tools to facilitate
+Bazel's execution. Compared to sequential builds, the median speedups for
+long-build duration projects are 2.00x, 3.84x, 7.36x, and 12.80x, at parallelism
+degrees 2, 4, 8, and 16, respectively, even though, compared to a clean build,
+applying incremental build achieves a median speedup of 4.22x (with a build
+system tool-independent CI cache) and 4.71x (with a build system tool-specific
+cache) for long-build duration projects. Our results provide guidance for
+developers to improve the usage of Bazel in their projects.

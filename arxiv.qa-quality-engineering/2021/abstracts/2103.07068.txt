@@ -1,0 +1,28 @@
+Title: JITLine: A Simpler, Better, Faster, Finer-grained Just-In-Time Defect Prediction
+Authors: Chanathip Pornprasit, Chakkrit Tantithamthavorn
+ID: 2103.07068
+URL: https://arxiv.org/abs/2103.07068
+
+Abstract:
+A Just-In-Time (JIT) defect prediction model is a classifier to predict if a
+commit is defect-introducing. Recently, CC2Vec -- a deep learning approach for
+Just-In-Time defect prediction -- has been proposed. However, CC2Vec requires
+the whole dataset (i.e., training + testing) for model training, assuming that
+all unlabelled testing datasets would be available beforehand, which does not
+follow the key principles of just-in-time defect predictions. Our replication
+study shows that, after excluding the testing dataset for model training, the
+F-measure of CC2Vec is decreased by 38.5% for OpenStack and 45.7% for Qt,
+highlighting the negative impact of excluding the testing dataset for
+Just-In-Time defect prediction. In addition, CC2Vec cannot perform fine-grained
+predictions at the line level (i.e., which lines are most risky for a given
+commit). In this paper, we propose JITLine -- a Just-In-Time defect prediction
+approach for predicting defect-introducing commits and identifying lines that
+are associated with that defect-introducing commit (i.e., defective lines).
+Through a case study of 37,524 commits from OpenStack and Qt, we find that our
+JITLine approach is at least 26%-38% more accurate (F-measure), 17%-51% more
+cost-effective (PCI@20%LOC), 70-100 times faster than the state-of-the-art
+approaches (i.e., CC2Vec and DeepJIT) and the fine-grained predictions at the
+line level by our approach are 133%-150% more accurate (Top-10 Accuracy) than
+the baseline NLP approach. Therefore, our JITLine approach may help
+practitioners to better prioritize defect-introducing commits and better
+identify defective lines.

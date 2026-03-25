@@ -1,0 +1,19 @@
+Title: Signal-First Architectures: Rethinking Front-End Reactivity
+Authors: Shrinivass Arunachalam Balasubramanian
+ID: 2506.13815
+URL: https://arxiv.org/abs/2506.13815
+
+Abstract:
+Modern front-end frameworks face escalating reactivity management challenges,
+including performance degradation from complex observable chains and
+unpredictable re-renders. This paper introduces Signal-First Architecture--a
+novel paradigm where granular, dependency-tracked signals are the atomic unit of
+reactivity. Unlike traditional RxJS or NgRx patterns, Signal-First enforces
+reactive flows from explicit signal declarations, with derived values via
+computed() and side effects scoped to effect(). This model ensures deterministic
+behavior by eliminating implicit subscriptions and optimizing reactive graph
+evaluation. We present a comparative analysis of three Angular reactivity
+models: RxJS service-based, NgRx global stores, and pure Signal-First
+implementations. Through controlled benchmarking, including Chrome DevTools
+performance tracing, memory heap snapshots, and Lighthouse audits, this study
+quantifies Signal-First advantages.

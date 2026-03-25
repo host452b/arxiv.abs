@@ -1,0 +1,31 @@
+Title: Table Comprehension in Building Codes using Vision Language Models and Domain-Specific Fine-Tuning
+Authors: Mohammad Aqib, Mohd Hamza, Ying Hei Chui, Qipei Mei
+ID: 2511.18306
+URL: https://arxiv.org/abs/2511.18306
+
+Abstract:
+Building codes contain critical information for ensuring safety, regulatory
+compliance, and informed decision-making in construction and engineering.
+Automated question answering systems over such codes enable quick and accurate
+access to specific regulatory clauses, improving efficiency and reducing errors.
+Retrieval-Augmented Generation (RAG) systems are essential for this task as they
+combine the precision of information retrieval with the generative capabilities
+of language models. However, tabular data are challenging to extract as they
+often involve complex layouts, merged cells, multi-row headers, and embedded
+semantic relationships that are not easily captured by traditional natural
+language processing techniques and Vision Language Models (VLMs). This paper
+explores and compares two methods for extracting information from tabular data
+in building codes using several pre-trained VLMs. First, a direct input method
+is used, where the image of the page is input directly into the VLMs, which are
+then tasked with answering questions based on the image. Second, an indirect
+input method is introduced, which involves converting an image of a page
+containing tables into the LaTeX code and then answering inquires based on the
+LaTeX-based input. The experiments find that the direct input method generally
+resulted in higher accuracy than the indirect input method. To further improve
+the performance, we fine-tuned each VLM using Low Rank Adaptation (LoRA) on a
+domain-specific tabular dataset. The fine-tuned models exhibited substantial
+improvements, with Qwen2.5-VL-3B-Instruct achieving relative accuracy gains
+exceeding 100%. Our results highlight the potential of parameter-efficient
+fine-tuning methods to adapt powerful VLMs for understanding complex structured
+data in specialized fields, such as building code interpretation and regulatory
+compliance.

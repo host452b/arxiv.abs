@@ -1,0 +1,24 @@
+Title: Vulnerability Analysis of the Android Kernel
+Authors: Joseph R. Barr, Peter Shaw, Tyler Thatcher
+ID: 2112.11214
+URL: https://arxiv.org/abs/2112.11214
+
+Abstract:
+We describe a workflow used to analyze the source code of the {\sc Android OS
+kernel} and rate for a particular kind of bugginess that exposes a program to
+hacking. The workflow represents a novel approach for components' vulnerability
+rating. The approach is inspired by recent work on embedding source code
+functions. The workflow combines deep learning with heuristics and machine
+learning. Deep learning is used to embed function/method labels into a Euclidean
+space. Because the corpus of Android kernel source code is rather limited
+(containing approximately 2 million C/C++ functions \& Java methods), a
+straightforward embedding is untenable. To overcome the challenge of the dearth
+of data, it's necessary to go through an intermediate step of the
+\textit{Byte-Pair Encoding}. Subsequently, we embed the tokens from which we
+assemble an embedding of function/method labels. Long short-term memory networks
+(LSTM) are used to embed tokens into vectors in $\mathbb{R}^d$ from which we
+form a \textit{cosine matrix} consisting of the cosine between every pair of
+vectors. The cosine matrix may be interpreted as a (combinatorial) `weighted'
+graph whose vertices represent functions/methods and `weighted' edges correspond
+to matrix entries. Features that include function vectors plus those defined
+heuristically are used to score for risk of bugginess.

@@ -1,0 +1,26 @@
+Title: Surprisal-Guided Selection: Compute-Optimal Test-Time Strategies for Execution-Grounded Code Generation
+Authors: Jarrod Barnes
+ID: 2602.07670
+URL: https://arxiv.org/abs/2602.07670
+
+Abstract:
+Test-time training (TTT) adapts language models through gradient-based updates
+at inference. But is adaptation the right strategy? We study compute-optimal
+test-time strategies for verifiable execution-grounded (VEG) tasks, domains like
+GPU kernel optimization where a deterministic evaluator provides dense,
+continuous reward signals. Using KernelBench as our testbed and a 120B-parameter
+model (GPT-OSS-120B with LoRA adaptation), we find that search outperforms
+minimal adaptation (1-5 gradient steps): Best-of-N sampling achieves 90% task
+success (18/20 tasks) at K=64 across the full KernelBench L1 eval set while
+TTT's best checkpoint reaches only 30.6% (3-seed mean), with TTT's "equivalent
+K" falling below 1, worse than single-sample inference. The failure mode is
+over-sharpening: gradient updates collapse diversity toward mediocre solutions
+rather than discovering optimal ones. Our main contribution is surprisal-guided
+selection: selecting the highest-surprisal (lowest-confidence) correct sample
+yields 80% success vs. 50% for most-confident selection, a 30% improvement.
+Extending to surprisal-guided-top3 matches oracle performance at 100%. This
+zero-cost strategy, validated through length-controlled analysis, recovers
+oracle performance. For dense-reward VEG tasks, compute should be allocated to
+sample diversity and intelligent selection rather than gradient adaptation. The
+surprisal-guided selection principle may generalize to other execution-grounded
+domains where optimal solutions occupy the distribution tail.

@@ -1,0 +1,28 @@
+Title: TEASER: Simulation-based CAN Bus Regression Testing for Self-driving Cars Software
+Authors: Christian Birchler, Cyrill Rohrbach, Hyeongkyun Kim, Alessio Gambi, Tianhai Liu et al.
+ID: 2307.03279
+URL: https://arxiv.org/abs/2307.03279
+
+Abstract:
+Software systems for safety-critical systems like self-driving cars (SDCs) need
+to be tested rigorously. Especially electronic control units (ECUs) of SDCs
+should be tested with realistic input data. In this context, a communication
+protocol called Controller Area Network (CAN) is typically used to transfer
+sensor data to the SDC control units. A challenge for SDC maintainers and
+testers is the need to manually define the CAN inputs that realistically
+represent the state of the SDC in the real world. To address this challenge, we
+developed TEASER, which is a tool that generates realistic CAN signals for SDCs
+obtained from sensors from state-of-the-art car simulators. We evaluated TEASER
+based on its integration capability into a DevOps pipeline of aicas GmbH, a
+company in the automotive sector. Concretely, we integrated TEASER in a
+Continous Integration (CI) pipeline configured with Jenkins. The pipeline
+executes the test cases in simulation environments and sends the sensor data
+over the CAN bus to a physical CAN device, which is the test subject. Our
+evaluation shows the ability of TEASER to generate and execute CI test cases
+that expose simulation-based faults (using regression strategies); the tool
+produces CAN inputs that realistically represent the state of the SDC in the
+real world. This result is of critical importance for increasing automation and
+effectiveness of simulation-based CAN bus regression testing for SDC software.
+Tool: https://doi.org/10.5281/zenodo.7964890 GitHub:
+https://github.com/christianbirchler-org/sdc-scissor/releases/tag/v2.2.0-rc.1
+Documentation: https://sdc-scissor.readthedocs.io

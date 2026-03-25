@@ -1,0 +1,22 @@
+Title: Timeloops: Automatic System Call Policy Learning for Containerized Microservices
+Authors: Meghna Pancholi, Andreas D. Kellas, Vasileios P. Kemerlis, Simha Sethumadhavan
+ID: 2204.06131
+URL: https://arxiv.org/abs/2204.06131
+
+Abstract:
+In this paper we introduce Timeloops a novel technique for automatically
+learning system call filtering policies for containerized microservices
+applications. At run-time, Timeloops automatically learns which system calls a
+program should be allowed to invoke while rejecting attempts to call spurious
+system calls. Further, Timeloops addresses many of the shortcomings of
+state-of-the-art static analysis-based techniques, such as the ability to
+generate tight filters for programs written in interpreted languages such as
+PHP, Python, and JavaScript. Timeloops has a simple and robust implementation
+because it is mainly built out of commodity, and proven, technologies such as
+seccomp-BPF, systemd, and Podman containers, with fewer than 500 lines of code.
+We demonstrate the utility of Timeloops by learning system calls for individual
+services and two microservices benchmark applications, which utilize popular
+technologies like Python Flask, Nginx (with PHP and Lua modules), Apache Thrift,
+Memcached, Redis, and MongoDB. Further, the amortized performance of Timeloops
+is similar to that of an unhardened system while producing a smaller system call
+filter than state-of-the-art static analysis-based techniques.

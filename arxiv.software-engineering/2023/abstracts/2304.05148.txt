@@ -1,0 +1,26 @@
+Title: High-performance and Scalable Software-based NVMe Virtualization Mechanism with I/O Queues Passthrough
+Authors: Yiquan Chen, Zhen Jin, Yijing Wang, Yi Chen, Hao Yu et al.
+ID: 2304.05148
+URL: https://arxiv.org/abs/2304.05148
+
+Abstract:
+NVMe(Non-Volatile Memory Express) is an industry standard for solid-state drives
+(SSDs) that has been widely adopted in data centers. NVMe virtualization is
+crucial in cloud computing as it allows for virtualized NVMe devices to be used
+by virtual machines (VMs), thereby improving the utilization of storage
+resources. However, traditional software-based solutions have flexibility
+benefits but often come at the cost of performance degradation or high CPU
+overhead. On the other hand, hardware-assisted solutions offer high performance
+and low CPU usage, but their adoption is often limited by the need for special
+hardware support or the requirement for new hardware development. In this paper,
+we propose LightIOV, a novel software-based NVMe virtualization mechanism that
+achieves high performance and scalability without consuming valuable CPU
+resources and without requiring special hardware support. LightIOV can support
+thousands of VMs on each server. The key idea behind LightIOV is NVMe hardware
+I/O queues passthrough, which enables VMs to directly access I/O queues of NVMe
+devices, thus eliminating virtualization overhead and providing near-native
+performance. Results from our experiments show that LightIOV can provide
+comparable performance to VFIO, with an IOPS of 97.6%-100.2% of VFIO.
+Furthermore, in high-density VMs environments, LightIOV achieves 31.4% lower
+latency than SPDK-Vhost when running 200 VMs, and an improvement of 27.1% in OPS
+performance in real-world applications.

@@ -1,0 +1,28 @@
+Title: ATLAS: AI-Native Receiver Test-and-Measurement by Leveraging AI-Guided Search
+Authors: Mauro Belgiovine, Suyash Pradhan, Johannes Lange, Michael Löhning, Kaushik Chowdhury
+ID: 2508.12204
+URL: https://arxiv.org/abs/2508.12204
+
+Abstract:
+Industry adoption of Artificial Intelligence (AI)-native wireless receivers, or
+even modular, Machine Learning (ML)-aided wireless signal processing blocks, has
+been slow. The main concern is the lack of explainability of these trained ML
+models and the significant risks posed to network functionalities in case of
+failures, especially since (i) testing on every exhaustive case is infeasible
+and (ii) the data used for model training may not be available. This paper
+proposes ATLAS, an AI-guided approach that generates a battery of tests for
+pre-trained AI-native receiver models and benchmarks the performance against a
+classical receiver architecture. Using gradient-based optimization, it avoids
+spanning the exhaustive set of all environment and channel conditions; instead,
+it generates the next test in an online manner to further probe specific
+configurations that offer the highest risk of failure. We implement and validate
+our approach by adopting the well-known DeepRx AI-native receiver model as well
+as a classical receiver using differentiable tensors in NVIDIA's Sionna
+environment. ATLAS uncovers specific combinations of mobility, channel delay
+spread, and noise, where fully and partially trained variants of AI-native
+DeepRx perform suboptimally compared to the classical receivers. Our proposed
+method reduces the number of tests required per failure found by 19% compared to
+grid search for a 3-parameters input optimization problem, demonstrating greater
+efficiency. In contrast, the computational cost of the grid-based approach
+scales exponentially with the number of variables, making it increasingly
+impractical for high-dimensional problems.

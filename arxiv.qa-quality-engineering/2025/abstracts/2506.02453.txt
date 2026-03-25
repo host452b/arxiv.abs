@@ -1,0 +1,23 @@
+Title: PAID: Pairwise Angular-Invariant Decomposition for Continual Test-Time Adaptation
+Authors: Kunyu Wang, Xueyang Fu, Yuanfei Bao, Chengjie Ge, Chengzhi Cao et al.
+ID: 2506.02453
+URL: https://arxiv.org/abs/2506.02453
+
+Abstract:
+Continual Test-Time Adaptation (CTTA) aims to online adapt a pre-trained model
+to changing environments during inference. Most existing methods focus on
+exploiting target data, while overlooking another crucial source of information,
+the pre-trained weights, which encode underutilized domain-invariant priors.
+This paper takes the geometric attributes of pre-trained weights as a starting
+point, systematically analyzing three key components: magnitude, absolute angle,
+and pairwise angular structure. We find that the pairwise angular structure
+remains stable across diverse corrupted domains and encodes domain-invariant
+semantic information, suggesting it should be preserved during adaptation. Based
+on this insight, we propose PAID (Pairwise Angular-Invariant Decomposition), a
+prior-driven CTTA method that decomposes weight into magnitude and direction,
+and introduces a learnable orthogonal matrix via Householder reflections to
+globally rotate direction while preserving the pairwise angular structure.
+During adaptation, only the magnitudes and the orthogonal matrices are updated.
+PAID achieves consistent improvements over recent SOTA methods on four widely
+used CTTA benchmarks, demonstrating that preserving pairwise angular structure
+offers a simple yet effective principle for CTTA.

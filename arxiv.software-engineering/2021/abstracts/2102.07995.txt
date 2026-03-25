@@ -1,0 +1,25 @@
+Title: D2A: A Dataset Built for AI-Based Vulnerability Detection Methods Using Differential Analysis
+Authors: Yunhui Zheng, Saurabh Pujar, Burn Lewis, Luca Buratti, Edward Epstein et al.
+ID: 2102.07995
+URL: https://arxiv.org/abs/2102.07995
+
+Abstract:
+Static analysis tools are widely used for vulnerability detection as they
+understand programs with complex behavior and millions of lines of code. Despite
+their popularity, static analysis tools are known to generate an excess of false
+positives. The recent ability of Machine Learning models to understand
+programming languages opens new possibilities when applied to static analysis.
+However, existing datasets to train models for vulnerability identification
+suffer from multiple limitations such as limited bug context, limited size, and
+synthetic and unrealistic source code. We propose D2A, a differential analysis
+based approach to label issues reported by static analysis tools. The D2A
+dataset is built by analyzing version pairs from multiple open source projects.
+From each project, we select bug fixing commits and we run static analysis on
+the versions before and after such commits. If some issues detected in a
+before-commit version disappear in the corresponding after-commit version, they
+are very likely to be real bugs that got fixed by the commit. We use D2A to
+generate a large labeled dataset to train models for vulnerability
+identification. We show that the dataset can be used to build a classifier to
+identify possible false alarms among the issues reported by static analysis,
+hence helping developers prioritize and investigate potential true positives
+first.

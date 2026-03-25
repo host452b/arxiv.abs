@@ -1,0 +1,28 @@
+Title: CRAFT: Characterizing and Root-Causing Fault Injection Threats at Pre-Silicon
+Authors: Arsalan Ali Malik, Harshvadan Mihir, Aydin Aysu
+ID: 2503.03877
+URL: https://arxiv.org/abs/2503.03877
+
+Abstract:
+Fault injection attacks (FIA) pose significant security threats to embedded
+systems as they exploit weaknesses across multiple layers, including system
+software, instruction set architecture (ISA), microarchitecture, and physical
+hardware. Early detection and understanding of how physical faults propagate to
+system-level behavior are essential to safeguarding cyberinfrastructure. This
+work introduces CRAFT, a framework that combines pre-silicon analysis with
+post-silicon validation to systematically uncover and analyze fault injection
+vulnerabilities. Our study, conducted on a RISC-V soft-core processor (cv32e40x)
+reveals two novel vulnerabilities. First, we demonstrate a method to induce
+instruction skips by glitching the clock (single-glitch attack), which prevents
+critical values from being loaded from memory, thus disrupting program
+execution. Second, we show a technique that converts a fetched legal instruction
+into an illegal one mid-execution, diverting control flow in a manner
+exploitable by attackers. Notably, we identified a specific timing window in
+which the processor fails to detect these illegal control-flow diversions,
+allowing silent, undetected corruption of the program state. By simulating 9248
+FIA scenarios at pre-silicon and conducting root-cause analysis of the RISC-V
+pipeline, we trace the faults to a previously unreported vulnerability in a
+pipeline register shared between the instruction fetch and decode stages. Our
+approach reduced the search space for post-silicon experiments by 97.31%,
+showing pre-silicon advantages for post-silicon testing. Finally, we validate
+our identified exploit cases on real hardware (FPGA).

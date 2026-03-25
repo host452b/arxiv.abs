@@ -1,0 +1,25 @@
+Title: Data Balancing Improves Self-Admitted Technical Debt Detection
+Authors: Murali Sridharan, Mika Mantyla, Leevi Rantala, Maelick Claes
+ID: 2103.13165
+URL: https://arxiv.org/abs/2103.13165
+
+Abstract:
+A high imbalance exists between technical debt and non-technical debt source
+code comments. Such imbalance affects Self-Admitted Technical Debt (SATD)
+detection performance, and existing literature lacks empirical evidence on the
+choice of balancing technique. In this work, we evaluate the impact of multiple
+balancing techniques, including Data level, Classifier level, and Hybrid, for
+SATD detection in Within-Project and Cross-Project setup. Our results show that
+the Data level balancing technique SMOTE or Classifier level Ensemble approaches
+Random Forest or XGBoost are reasonable choices depending on whether the goal is
+to maximize Precision, Recall, F1, or AUC-ROC. We compared our best-performing
+model with the previous SATD detection benchmark (cost-sensitive Convolution
+Neural Network). Interestingly the top-performing XGBoost with SMOTE sampling
+improved the Within-project F1 score by 10% but fell short in Cross-Project set
+up by 9%. This supports the higher generalization capability of deep learning in
+Cross-Project SATD detection, yet while working within individual projects,
+classical machine learning algorithms can deliver better performance. We also
+evaluate and quantify the impact of duplicate source code comments in SATD
+detection performance. Finally, we employ SHAP and discuss the interpreted SATD
+features. We have included the replication package and shared a web-based SATD
+prediction tool with the balancing techniques in this study.

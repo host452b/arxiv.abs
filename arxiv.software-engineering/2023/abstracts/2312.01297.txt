@@ -1,0 +1,26 @@
+Title: FlatProxy: A DPU-centric Service Mesh Architecture for Hyperscale Cloud-native Application
+Authors: Ming Li, Wenyan Lu, Hanyue Lin, Jingya Wu, Yu Zhang et al.
+ID: 2312.01297
+URL: https://arxiv.org/abs/2312.01297
+
+Abstract:
+Service mesh is a fundamental technology for building cloud-native applications,
+which ensures the stable running of a large number of services by an
+intermediate layer that governs communication between services. However, service
+mesh is not well suited for high-performance scenarios. The root cause is that
+the current service mesh is not suitable for the evolution of cloud-native
+applications. On the one hand, the service mesh built on CPU cannot listen to
+communication bypassing the CPU. On the other hand, service mesh includes many
+I/O-intensive and computationally-intensive tasks that can overload CPU cores as
+traffic grows beyond CPU performance. Therefore, we propose a data-centric
+service mesh that migrates the proxy of the service mesh to the entrance of the
+network. Moreover, we also design the DPU-centric FlatProxy, a data-centric
+service mesh based on DPU. There are three advantages to the DPU-centric service
+mesh. Firstly, it takes over all traffic flow in and out of the node, which
+expands the sense scale of the service mesh from container to node. Secondly, it
+improves communication performance and reduces host resource usage by offloading
+some functions and optimizing communication. Thirdly, it minimizes performance
+and security issues through the physical isolation of business services and
+cloud infrastructure. Compared with Envoy, the current mainstream service mesh
+implementation, FlatProxy reduces latency by 90\% and improves throughput by 4x
+in Gbps and 8x in qps, and it only occupies a small amount of CPU resources.

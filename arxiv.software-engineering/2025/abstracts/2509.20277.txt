@@ -1,0 +1,28 @@
+Title: Investigating Security Implications of Automatically Generated Code on the Software Supply Chain
+Authors: Xiaofan Li, Xing Gao
+ID: 2509.20277
+URL: https://arxiv.org/abs/2509.20277
+
+Abstract:
+In recent years, various software supply chain (SSC) attacks have posed
+significant risks to the global community. Severe consequences may arise if
+developers integrate insecure code snippets that are vulnerable to SSC attacks
+into their products. Particularly, code generation techniques, such as large
+language models (LLMs), have been widely utilized in the developer community.
+However, LLMs are known to suffer from inherent issues when generating code,
+including fabrication, misinformation, and reliance on outdated training data,
+all of which can result in serious software supply chain threats. In this paper,
+we investigate the security threats to the SSC that arise from these inherent
+issues. We examine three categories of threats, including eleven potential
+SSC-related threats, related to external components in source code, and
+continuous integration configuration files. We find some threats in
+LLM-generated code could enable attackers to hijack software and workflows,
+while some others might cause potential hidden threats that compromise the
+security of the software over time. To understand these security impacts and
+severity, we design a tool, SSCGuard, to generate 439,138 prompts based on
+SSC-related questions collected online, and analyze the responses of four
+popular LLMs from GPT and Llama. Our results show that all identified
+SSC-related threats persistently exist. To mitigate these risks, we propose a
+novel prompt-based defense mechanism, namely Chain-of-Confirmation, to reduce
+fabrication, and a middleware-based defense that informs users of various SSC
+threats.

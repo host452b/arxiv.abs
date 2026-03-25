@@ -1,0 +1,22 @@
+Title: Improving Linux-Kernel Tests for LockDoc with Feedback-driven Fuzzing
+Authors: Alexander Lochmann, Robin Thunig, Horst Schirmeier
+ID: 2009.08768
+URL: https://arxiv.org/abs/2009.08768
+
+Abstract:
+LockDoc is an approach to extract locking rules for kernel data structures from
+a dynamic execution trace recorded while the system is under a benchmark load.
+These locking rules can e.g. be used to locate synchronization bugs. For high
+rule precision and thorough bug finding, the approach heavily depends on the
+choice of benchmarks: They must trigger the execution of as much code as
+possible in the kernel subsystem relevant for the targeted data structures.
+However, existing test suites such as those provided by the Linux Test Project
+(LTP) only achieve -- in the case of LTP -- about 35 percent basic-block
+coverage for the VFS subsystem, which is the relevant subsystem when extracting
+locking rules for filesystem-related data structures. In this article, we
+discuss how to complement the LTP suites to improve the code coverage for our
+LockDoc scenario. We repurpose syzkaller -- a coverage-guided fuzzer with the
+goal to validate the robustness of kernel APIs -- to 1) not aim for kernel
+crashes, and to 2) maximize code coverage for a specific kernel subsystem.
+Thereby, we generate new benchmark programs that can be run in addition to the
+LTP, and increase VFS basic-block coverage by 26.1 percent.

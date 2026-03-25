@@ -1,0 +1,20 @@
+Title: Securing Stack Smashing Protection in WebAssembly Applications
+Authors: Quentin Michaud, Yohan Pipereau, Olivier Levillain, Dhouha Ayed
+ID: 2410.17925
+URL: https://arxiv.org/abs/2410.17925
+
+Abstract:
+WebAssembly is an instruction set architecture and binary format standard,
+designed for secure execution by an interpreter. Previous work has shown that
+WebAssembly is vulnerable to buffer overflow due to the lack of effective
+protection mechanisms. In this paper, we evaluate the implementation of Stack
+Smashing Protection (SSP) in WebAssembly standalone runtimes, and uncover two
+weaknesses in their current implementation. The first one is the possibility to
+overwrite the SSP reference value because of the contiguous memory zones inside
+a WebAssembly process. The second comes from the reliance of WebAssembly on the
+runtime to provide randomness in order to initialize the SSP reference value,
+which impacts the robustness of the solution. We address these two flaws by
+hardening the SSP implementation in terms of storage and random generator
+failure, in a way that is generalizable to all of WebAssembly. We evaluate our
+new, more robust, solution to prove that the implemented improvements do not
+reduce the efficiency of SSP.

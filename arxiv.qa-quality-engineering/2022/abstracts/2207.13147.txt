@@ -1,0 +1,22 @@
+Title: FP4: Line-rate Greybox Fuzz Testing for P4 Switches
+Authors: Nofel Yaseen, Liangcheng Yu, Caleb Stanford, Ryan Beckett, Vincent Liu
+ID: 2207.13147
+URL: https://arxiv.org/abs/2207.13147
+
+Abstract:
+Compared to fixed-function switches, the flexibility of programmable switches
+comes at a cost, as programmer mistakes frequently result in subtle bugs in the
+network data plane. In this paper, we present the design and implementation of
+FP4, a fuzz-testing framework for P4 switches that achieves high expressiveness,
+coverage, and scalability. FP4 directly tests running switches by generating
+semi-random input packets and observing their resulting execution in the data
+plane. To achieve high coverage and scalability, at runtime, FP4 leverages P4
+itself with another "tester" switch that generates and mutates billions of test
+packets per second entirely in the dataplane. Because testing some program
+branches requires navigating complex semantic input requirements, FP4
+additionally leverages the programmability of P4 by instrumenting the tested
+program to pass coverage information back to the tester through the packet
+header. We present case studies showing that FP4 can validate both safety and
+stateful properties, improves efficiency over existing random packet generation
+baselines, and reaches 100% coverage in under a minute on a wide range of
+examples.

@@ -1,0 +1,21 @@
+Title: Implementation of Entropically Secure Encryption: Securing Personal Health Data
+Authors: Mehmet Hüseyin Temel, Boris Skoric, Idelfonso Tafur Monroy
+ID: 2404.16857
+URL: https://arxiv.org/abs/2404.16857
+
+Abstract:
+Entropically Secure Encryption (ESE) offers unconditional security with shorter
+keys compared to the One-Time Pad. In this paper, we present the first
+implementation of ESE for bulk encryption. The main computational bottleneck for
+bulk ESE is a multiplication in a very large finite field. This involves
+multiplication of polynomials followed by modular reduction. We have implemented
+polynomial multiplication based on the gf2x library, with some modifications
+that avoid inputs of vastly different length, thus improving speed.
+Additionally, we have implemented a recently proposed efficient reduction
+algorithm that works for any polynomial degree. We investigate two use cases:
+X-ray images of patients and human genome data. We conduct entropy estimation
+using compression methods whose results determine the key lengths required for
+ESE. We report running times for all steps of the encryption. We discuss the
+potential of ESE to be used in conjunction with Quantum Key Distribution (QKD),
+in order to achieve full information-theoretic security of QKD-protected links
+for these use cases.

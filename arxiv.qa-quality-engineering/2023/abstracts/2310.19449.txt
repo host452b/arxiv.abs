@@ -1,0 +1,27 @@
+Title: Large-Scale Application of Fault Injection into PyTorch Models -- an Extension to PyTorchFI for Validation Efficiency
+Authors: Ralf Graafe, Qutub Syed Sha, Florian Geissler, Michael Paulitsch
+ID: 2310.19449
+URL: https://arxiv.org/abs/2310.19449
+
+Abstract:
+Transient or permanent faults in hardware can render the output of Neural
+Networks (NN) incorrect without user-specific traces of the error, i.e. silent
+data errors (SDE). On the other hand, modern NNs also possess an inherent
+redundancy that can tolerate specific faults. To establish a safety case, it is
+necessary to distinguish and quantify both types of corruptions. To study the
+effects of hardware (HW) faults on software (SW) in general and NN models in
+particular, several fault injection (FI) methods have been established in recent
+years. Current FI methods focus on the methodology of injecting faults but often
+fall short of accounting for large-scale FI tests, where many fault locations
+based on a particular fault model need to be analyzed in a short time. Results
+need to be concise, repeatable, and comparable. To address these requirements
+and enable fault injection as the default component in a machine learning
+development cycle, we introduce a novel fault injection framework called
+PyTorchALFI (Application Level Fault Injection for PyTorch) based on PyTorchFI.
+PyTorchALFI provides an efficient way to define randomly generated and reusable
+sets of faults to inject into PyTorch models, defines complex test scenarios,
+enhances data sets, and generates test KPIs while tightly coupling fault-free,
+faulty, and modified NN. In this paper, we provide details about the definition
+of test scenarios, software architecture, and several examples of how to use the
+new framework to apply iterative changes in fault location and number, compare
+different model modifications, and analyze test results.

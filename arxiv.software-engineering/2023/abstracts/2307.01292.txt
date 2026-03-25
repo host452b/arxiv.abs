@@ -1,0 +1,31 @@
+Title: Pareto-Secure Machine Learning (PSML): Fingerprinting and Securing Inference Serving Systems
+Authors: Debopam Sanyal, Jui-Tse Hung, Manav Agrawal, Prahlad Jasti, Shahab Nikkhoo et al.
+ID: 2307.01292
+URL: https://arxiv.org/abs/2307.01292
+
+Abstract:
+Model-serving systems have become increasingly popular, especially in real-time
+web applications. In such systems, users send queries to the server and specify
+the desired performance metrics (e.g., desired accuracy, latency). The server
+maintains a set of models (model zoo) in the back-end and serves the queries
+based on the specified metrics. This paper examines the security, specifically
+robustness against model extraction attacks, of such systems. Existing black-box
+attacks assume a single model can be repeatedly selected for serving inference
+requests. Modern inference serving systems break this assumption. Thus, they
+cannot be directly applied to extract a victim model, as models are hidden
+behind a layer of abstraction exposed by the serving system. An attacker can no
+longer identify which model she is interacting with. To this end, we first
+propose a query-efficient fingerprinting algorithm to enable the attacker to
+trigger any desired model consistently. We show that by using our fingerprinting
+algorithm, model extraction can have fidelity and accuracy scores within $1\%$
+of the scores obtained when attacking a single, explicitly specified model, as
+well as up to $14.6\%$ gain in accuracy and up to $7.7\%$ gain in fidelity
+compared to the naive attack. Second, we counter the proposed attack with a
+noise-based defense mechanism that thwarts fingerprinting by adding noise to the
+specified performance metrics. The proposed defense strategy reduces the
+attack's accuracy and fidelity by up to $9.8\%$ and $4.8\%$, respectively (on
+medium-sized model extraction). Third, we show that the proposed defense induces
+a fundamental trade-off between the level of protection and system goodput,
+achieving configurable and significant victim model extraction protection while
+maintaining acceptable goodput ($>80\%$). We implement the proposed defense in a
+real system with plans to open source.

@@ -1,0 +1,24 @@
+Title: Technical Debt in In-Context Learning: Diminishing Efficiency in Long Context
+Authors: Taejong Joo, Diego Klabjan
+ID: 2502.04580
+URL: https://arxiv.org/abs/2502.04580
+
+Abstract:
+Transformers have demonstrated remarkable in-context learning (ICL)
+capabilities, adapting to new tasks by simply conditioning on demonstrations
+without parameter updates. Compelling empirical and theoretical evidence
+suggests that ICL, as a general-purpose learner, could outperform task-specific
+models. However, it remains unclear to what extent the transformers optimally
+learn in-context compared to principled learning algorithms. To investigate
+this, we employ a meta ICL framework in which each prompt defines a distinctive
+regression task whose target function is drawn from a hierarchical distribution,
+requiring inference over both the latent model class and task-specific
+parameters. Within this setup, we benchmark sample complexity of ICL against
+principled learning algorithms, including the Bayes optimal estimator, under
+varying performance requirements. Our findings reveal a striking dichotomy:
+while ICL initially matches the efficiency of a Bayes optimal estimator, its
+efficiency significantly deteriorates in long context. Through an
+information-theoretic analysis, we show that the diminishing efficiency is
+inherent to ICL. These results clarify the trade-offs in adopting ICL as a
+universal problem solver, motivating a new generation of on-the-fly adaptive
+methods without the diminishing efficiency.

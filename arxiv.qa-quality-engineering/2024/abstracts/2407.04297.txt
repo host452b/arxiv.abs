@@ -1,0 +1,28 @@
+Title: HuntFUZZ: Enhancing Error Handling Testing through Clustering Based Fuzzing
+Authors: Jin Wei, Ping Chen, Jun Dai, Xiaoyan Sun, Zhihao Zhang et al.
+ID: 2407.04297
+URL: https://arxiv.org/abs/2407.04297
+
+Abstract:
+Testing a program's capability to effectively handling errors is a significant
+challenge, given that program errors are relatively uncommon. To solve this,
+Software Fault Injection (SFI)-based fuzzing integrates SFI and traditional
+fuzzing, injecting and triggering errors for testing (error handling) code.
+However, we observe that current SFI-based fuzzing approaches have overlooked
+the correlation between paths housing error points. In fact, the execution paths
+of error points often share common paths. Nonetheless, Fuzzers usually generate
+test cases repeatedly to test error points on commonly traversed paths. This
+practice can compromise the efficiency of the fuzzer(s). Thus, this paper
+introduces HuntFUZZ, a novel SFI-based fuzzing framework that addresses the
+issue of redundant testing of error points with correlated paths. Specifically,
+HuntFUZZ clusters these correlated error points and utilizes concolic execution
+to compute constraints only for common paths within each cluster. By doing so,
+we provide the fuzzer with efficient test cases to explore related error points
+with minimal redundancy. We evaluate HuntFUZZ on a diverse set of 42
+applications, and HuntFUZZ successfully reveals 162 known bugs, with 62 of them
+being related to error handling. Additionally, due to its efficient error point
+detection method, HuntFUZZ discovers 7 unique zero-day bugs, which are all
+missed by existing fuzzers. Furthermore, we compare HuntFUZZ with 4 existing
+fuzzing approaches, including AFL, AFL++, AFLGo, and EH-FUZZ. Our evaluation
+confirms that HuntFUZZ can cover a broader range of error points, and it
+exhibits better performance in terms of bug finding speed.

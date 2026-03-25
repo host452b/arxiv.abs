@@ -1,0 +1,25 @@
+Title: A Comparative Quality Metric for Untargeted Fuzzing with Logic State Coverage
+Authors: Gwangmu Lee
+ID: 2409.14987
+URL: https://arxiv.org/abs/2409.14987
+
+Abstract:
+While fuzzing is widely accepted as an efficient program testing technique, it
+is still unclear how to measure the comparative quality of different fuzzers.
+The current de facto quality metrics are edge coverage and the number of
+discovered bugs, but they are frequently discredited by inconclusive,
+exaggerated, or even counter-intuitive results. To establish a more reliable
+quality metric, we first note that fuzzing aims to reduce the number of unknown
+abnormal behaviors by observing more interesting (i.e., relating to unknown
+abnormal) behaviors. The more interesting behaviors a fuzzer has observed, the
+stronger guarantee it can provide about the absence of unknown abnormal
+behaviors. This suggests that the number of observed interesting behaviors must
+directly indicate the fuzzing quality. In this work, we propose logic state
+coverage as a proxy metric to count observed interesting behaviors. A logic
+state is a set of satisfied branches during one execution, where its coverage is
+the count of individual observed logic states during a fuzzing campaign. A logic
+state distinguishes less repetitive (i.e., more interesting) behaviors in a
+finer granularity, making the amount of logic state coverage reliably
+proportional to the number of observed interesting behaviors. We implemented
+logic state coverage using a bloom filter and performed a preliminary evaluation
+with AFL++ and XMLLint.

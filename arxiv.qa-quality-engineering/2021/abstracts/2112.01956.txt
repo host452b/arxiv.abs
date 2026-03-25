@@ -1,0 +1,31 @@
+Title: Provably Valid and Diverse Mutations of Real-World Media Data for DNN Testing
+Authors: Yuanyuan Yuan, Qi Pang, Shuai Wang
+ID: 2112.01956
+URL: https://arxiv.org/abs/2112.01956
+
+Abstract:
+Deep neural networks (DNNs) often accept high-dimensional media data (e.g.,
+photos, text, and audio) and understand their perceptual content (e.g., a cat).
+To test DNNs, diverse inputs are needed to trigger mis-predictions. Some
+preliminary works use byte-level mutations or domain-specific filters (e.g.,
+foggy), whose enabled mutations may be limited and likely error-prone. SOTA
+works employ deep generative models to generate (infinite) inputs. Also, to keep
+the mutated inputs perceptually valid (e.g., a cat remains a "cat" after
+mutation), existing efforts rely on imprecise and less generalizable heuristics.
+This study revisits two key objectives in media input mutation - perception
+diversity (DIV) and validity (VAL) - in a rigorous manner based on manifold, a
+well-developed theory capturing perceptions of high-dimensional media data in a
+low-dimensional space. We show important results that DIV and VAL inextricably
+bound each other, and prove that SOTA generative model-based methods
+fundamentally fail to mutate real-world media data (either sacrificing DIV or
+VAL). In contrast, we discuss the feasibility of mutating real-world media data
+with provably high DIV and VAL based on manifold. We concretize the technical
+solution of mutating media data of various formats (images, audios, text) via a
+unified manner based on manifold. Specifically, when media data are projected
+into a low-dimensional manifold, the data can be mutated by walking on the
+manifold with certain directions and step sizes. When contrasted with the input
+data, the mutated data exhibit encouraging DIV in the perceptual traits (e.g.,
+lying vs. standing dog) while retaining reasonably high VAL (i.e., a dog remains
+a dog). We implement our techniques in DEEPWALK for testing DNNs. DEEPWALK
+outperforms prior methods in testing comprehensiveness and can find more
+error-triggering inputs with higher quality.

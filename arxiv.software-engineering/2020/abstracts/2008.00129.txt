@@ -1,0 +1,19 @@
+Title: GraphQL Live Querying with DynamoDB
+Authors: Austin Silveria
+ID: 2008.00129
+URL: https://arxiv.org/abs/2008.00129
+
+Abstract:
+We present a method of implementing GraphQL live queries at the database level.
+Our DynamoDB simulation in Go mimics a distributed key-value store and
+implements live queries to expose possible pitfalls. Two key components for
+implementing live queries are storing fields selected in a live query and
+determining which object fields have been updated in each database write. A
+stream(key, fields) request to the system contains fields to include in the live
+query stream and on subsequent put(key, object) operations, the database
+asynchronously determines which fields were updated and pushes a new query view
+to the stream if those fields overlap with the stream() request. Following a
+discussion of our implementation, we explore motivations for using live queries
+such as simplifying software communication, minimizing data transfer, and
+enabling real-time data and describe an architecture for building software with
+GraphQL and live queries.

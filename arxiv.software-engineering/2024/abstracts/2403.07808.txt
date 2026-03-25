@@ -1,0 +1,28 @@
+Title: Supporting Error Chains in Static Analysis for Precise Evaluation Results and Enhanced Usability
+Authors: Anna-Katharina Wickert, Michael Schlichtig, Marvin Vogel, Lukas Winter, Mira Mezini et al.
+ID: 2403.07808
+URL: https://arxiv.org/abs/2403.07808
+
+Abstract:
+Context: Static analyses are well-established to aid in understanding bugs or
+vulnerabilities during the development process or in large-scale studies. A low
+false-positive rate is essential for the adaption in practice and for precise
+results of empirical studies. Unfortunately, static analyses tend to report
+where a vulnerability manifests rather than the fix location. This can cause
+presumed false positives or imprecise results. Method: To address this problem,
+we designed an adaption of an existing static analysis algorithm that can
+distinguish between a manifestation and fix location, and reports error chains.
+An error chain represents at least two interconnected errors that occur
+successively, thus building the connection between the fix and manifestation
+location. We used our tool CogniCryptSUBS for a case study on 471 GitHub
+repositories, a performance benchmark to compare different analysis
+configurations, and conducted an expert interview. Result: We found that 50 % of
+the projects with a report had at least one error chain. Our runtime benchmark
+demonstrated that our improvement caused only a minimal runtime overhead of less
+than 4 %. The results of our expert interview indicate that with our adapted
+version participants require fewer executions of the analysis. Conclusion: Our
+results indicate that error chains occur frequently in real-world projects, and
+ignoring them can lead to imprecise evaluation results. The runtime benchmark
+indicates that our tool is a feasible and efficient solution for detecting error
+chains in real-world projects. Further, our results gave a hint that the
+usability of static analyses may benefit from supporting error chains.

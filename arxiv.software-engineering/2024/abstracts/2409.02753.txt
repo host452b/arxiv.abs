@@ -1,0 +1,31 @@
+Title: Does the Vulnerability Threaten Our Projects? Automated Vulnerable API Detection for Third-Party Libraries
+Authors: Fangyuan Zhang, Lingling Fan, Sen Chen, Miaoying Cai, Sihan Xu et al.
+ID: 2409.02753
+URL: https://arxiv.org/abs/2409.02753
+
+Abstract:
+Developers usually use TPLs to facilitate the development of the projects to
+avoid reinventing the wheels, however, the vulnerable TPLs indeed cause severe
+security threats. The majority of existing research only considered whether
+projects used vulnerable TPLs but neglected whether the vulnerable code of the
+TPLs was indeed used by the projects, which inevitably results in false
+positives and further requires additional patching efforts and maintenance
+costs. To address this, we propose VAScanner, which can effectively identify
+vulnerable root methods causing vulnerabilities in TPLs and further identify all
+vulnerable APIs of TPLs used by Java projects. Specifically, we first collect
+the initial patch methods from the patch commits and extract accurate patch
+methods by employing a patch-unrelated sifting mechanism, then we further
+identify the vulnerable root methods for each vulnerability by employing an
+augmentation mechanism. Based on them, we leverage backward call graph analysis
+to identify all vulnerable APIs for each vulnerable TPL version and construct a
+database consisting of 90,749 (2,410,779 with library versions) vulnerable APIs
+with 1.45% false positive proportion with a 95% CI of [1.31%, 1.59%] from 362
+TPLs with 14,775 versions. Our experiments show VAScanner eliminates 5.78% false
+positives and 2.16% false negatives owing to the proposed sifting and
+augmentation mechanisms. Besides, it outperforms the state-of-the-art
+method-level tool in analyzing direct dependencies, Eclipse Steady, achieving
+more effective detection of vulnerable APIs. Furthermore, in a large-scale
+analysis of 3,147 projects using vulnerable TPLs, we find only 21.51% of
+projects (with 1.83% false positive proportion and a 95% CI of [0.71%, 4.61%])
+were threatened through vulnerable APIs by vulnerable TPLs, demonstrating that
+VAScanner can potentially reduce false positives significantly.

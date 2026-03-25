@@ -1,0 +1,23 @@
+Title: Configuring Test Generators using Bug Reports: A Case Study of GCC Compiler and Csmith
+Authors: Md Rafiqul Islam Rabin, Mohammad Amin Alipour
+ID: 2012.10662
+URL: https://arxiv.org/abs/2012.10662
+
+Abstract:
+The correctness of compilers is instrumental in the safety and reliability of
+other software systems, as bugs in compilers can produce executables that do not
+reflect the intent of programmers. Such errors are difficult to identify and
+debug. Random test program generators are commonly used in testing compilers,
+and they have been effective in uncovering bugs. However, the problem of guiding
+these test generators to produce test programs that are more likely to find bugs
+remains challenging. In this paper, we use the code snippets in the bug reports
+to guide the test generation. The main idea of this work is to extract insights
+from the bug reports about the language features that are more prone to
+inadequate implementation and using the insights to guide the test generators.
+We use the GCC C compiler to evaluate the effectiveness of this approach. In
+particular, we first cluster the test programs in the GCC bugs reports based on
+their features. We then use the centroids of the clusters to compute
+configurations for Csmith, a popular test generator for C compilers. We
+evaluated this approach on eight versions of GCC and found that our approach
+provides higher coverage and triggers more miscompilation failures than the
+state-of-the-art test generation techniques for GCC.

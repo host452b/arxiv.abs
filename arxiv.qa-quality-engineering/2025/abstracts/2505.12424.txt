@@ -1,0 +1,27 @@
+Title: EvoGPT: Leveraging LLM-Driven Seed Diversity to Improve Search-Based Test Suite Generation
+Authors: Lior Broide, Roni Stern, Argaman Mordoch
+ID: 2505.12424
+URL: https://arxiv.org/abs/2505.12424
+
+Abstract:
+Search-Based Software Testing (SBST) is a well-established approach for
+automated unit test generation, yet it often suffers from premature convergence
+and limited diversity in the generated test suites. Recently, Large Language
+Models (LLMs) have emerged as an alternative technique for unit test generation.
+We present EvoGPT, a hybrid test generation system that integrates LLM-based
+test generation with SBST-based test suite optimization. EvoGPT uses LLMs to
+generate an initial population of test suites, and uses an Evolutionary
+Algorithm (EA) to further optimize this test suite population. A distinguishing
+feature of EvoGPT is its explicit enforcement of diversity, achieved through the
+use of multiple temperatures and prompt instructions during test generation. In
+addition, each LLM-generated test is refined using a generation-repair loop and
+coverage-guided assertion generation. To address evolutionary plateaus, EvoGPT
+also detects stagnation during search and injects additional LLM-generated tests
+aimed at previously uncovered branches. Here too diversity is enforced using
+multiple temperatures and prompt instructions. We evaluate EvoGPT on Defects4J,
+a standard benchmark for test generation. The results show that EvoGPT achieves,
+on average, a 10% improvement in both code coverage and mutation score metrics
+compared to TestART, an LLM-only baseline; and EvoSuite, a standard SBST
+baseline. An ablation study indicates that explicitly enforcing diversity both
+at initialization and during the search is key to effectively leveraging LLMs
+for automated unit test generation.

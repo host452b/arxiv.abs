@@ -1,0 +1,24 @@
+Title: A Labeled Array Distance Metric for Measuring Image Segmentation Quality
+Authors: Maryam Berijanian, Katrina Gensterblum, Doruk Alp Mutlu, Katelyn Reagan, Andrew Hart et al.
+ID: 2406.07851
+URL: https://arxiv.org/abs/2406.07851
+
+Abstract:
+This work introduces two new distance metrics for comparing labeled arrays,
+which are common outputs of image segmentation algorithms. Each pixel in an
+image is assigned a label, with binary segmentation providing only two labels
+('foreground' and 'background'). These can be represented by a simple binary
+matrix and compared using pixel differences. However, many segmentation
+algorithms output multiple regions in a labeled array. We propose two distance
+metrics, named LAD and MADLAD, that calculate the distance between two labeled
+images. By doing so, the accuracy of different image segmentation algorithms can
+be evaluated by measuring their outputs against a 'ground truth' labeling. Both
+proposed metrics, operating with a complexity of $O(N)$ for images with $N$
+pixels, are designed to quickly identify similar labeled arrays, even when
+different labeling methods are used. Comparisons are made between images labeled
+manually and those labeled by segmentation algorithms. This evaluation is
+crucial when searching through a space of segmentation algorithms and their
+hyperparameters via a genetic algorithm to identify the optimal solution for
+automated segmentation, which is the goal in our lab, SEE-Insight. By measuring
+the distance from the ground truth, these metrics help determine which algorithm
+provides the most accurate segmentation.

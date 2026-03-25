@@ -1,0 +1,29 @@
+Title: Evaluating the Effectiveness of Coverage-Guided Fuzzing for Testing Deep Learning Library APIs
+Authors: Feiran Qin, M. M. Abid Naziri, Hengyu Ai, Saikat Dutta, Marcelo d'Amorim
+ID: 2509.14626
+URL: https://arxiv.org/abs/2509.14626
+
+Abstract:
+Deep Learning (DL) libraries such as PyTorch provide the core components to
+build major AI-enabled applications. Finding bugs in these libraries is
+important and challenging. Prior approaches have tackled this by performing
+either API-level fuzzing or model-level fuzzing, but they do not use coverage
+guidance, which limits their effectiveness and efficiency. This raises an
+intriguing question: can coverage guided fuzzing (CGF), in particular frameworks
+like LibFuzzer, be effectively applied to DL libraries, and does it offer
+meaningful improvements in code coverage, bug detection, and scalability
+compared to prior methods? We present the first in-depth study to answer this
+question. A key challenge in applying CGF to DL libraries is the need to create
+a test harness for each API that can transform byte-level fuzzer inputs into
+valid API inputs. To address this, we propose FlashFuzz, a technique that
+leverages Large Language Models (LLMs) to automatically synthesize API-level
+harnesses by combining templates, helper functions, and API documentation.
+FlashFuzz uses a feedback driven strategy to iteratively synthesize and repair
+harnesses. With this approach, FlashFuzz synthesizes harnesses for 1,151 PyTorch
+and 662 TensorFlow APIs. Compared to state-of-the-art fuzzing methods (ACETest,
+PathFinder, and TitanFuzz), FlashFuzz achieves up to 101.13 to 212.88 percent
+higher coverage and 1.0x to 5.4x higher validity rate, while also delivering 1x
+to 1182x speedups in input generation. FlashFuzz has discovered 42 previously
+unknown bugs in PyTorch and TensorFlow, 8 of which are already fixed. Our study
+confirms that CGF can be effectively applied to DL libraries and provides a
+strong baseline for future testing approaches.

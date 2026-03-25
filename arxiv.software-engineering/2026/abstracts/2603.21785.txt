@@ -1,0 +1,24 @@
+Title: Image-Conditioned Adaptive Parameter Tuning for Visual Odometry Frontends
+Authors: Simone Nascivera, Leonard Bauersfeld, Jeff Delaune, Davide Scaramuzza
+ID: 2603.21785
+URL: https://arxiv.org/abs/2603.21785
+
+Abstract:
+Resource-constrained autonomous robots rely on sparse direct and semi-direct
+visual-(inertial)-odometry (VO) pipelines, as they provide a favorable tradeoff
+between accuracy, robustness, and computational cost. However, the performance
+of most systems depends critically on hand-tuned hyperparameters governing
+feature detection, tracking, and outlier rejection. These parameters are
+typically fixed during deployment, even though their optimal values vary with
+scene characteristics such as texture density, illumination, motion blur, and
+sensor noise, leading to brittle performance in real-world environments. We
+propose the first image-conditioned reinforcement learning framework for online
+tuning of VO frontend parameters, effectively embedding the expert into the
+system. Our key idea is to formulate the frontend configuration as a sequential
+decision-making problem and learn a policy that directly maps visual input to
+feature detection and tracking parameters. The policy uses a lightweight
+texture-aware CNN encoder and a privileged critic during training. Unlike prior
+RL-based approaches that rely solely on internal VO statistics, our method
+observes the image content and proactively adapts parameters before tracking
+degrades. Experiments on TartanAirV2 and TUM RGB-D show 3x longer feature tracks
+and 3x lower computational cost, despite training entirely in simulation.

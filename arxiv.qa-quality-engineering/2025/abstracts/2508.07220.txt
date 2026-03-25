@@ -1,0 +1,25 @@
+Title: Neural Bridge Processes
+Authors: Jian Xu, Yican Liu, Qibin Zhao, John Paisley, Delu Zeng
+ID: 2508.07220
+URL: https://arxiv.org/abs/2508.07220
+
+Abstract:
+Learning stochastic functions from partially observed context-target pairs is a
+fundamental problem in probabilistic modeling. Traditional models like Gaussian
+Processes (GPs) face scalability issues with large datasets and assume
+Gaussianity, limiting their applicability. While Neural Processes (NPs) offer
+more flexibility, they struggle with capturing complex, multi-modal target
+distributions. Neural Diffusion Processes (NDPs) enhance expressivity through a
+learned diffusion process but rely solely on conditional signals in the
+denoising network, resulting in weak input coupling from an unconditional
+forward process and semantic mismatch at the diffusion endpoint. In this work,
+we propose Neural Bridge Processes (NBPs), a novel method for modeling
+stochastic functions where inputs x act as dynamic anchors for the entire
+diffusion trajectory. By reformulating the forward kernel to explicitly depend
+on x, NBP enforces a constrained path that strictly terminates at the supervised
+target. This approach not only provides stronger gradient signals but also
+guarantees endpoint coherence. We validate NBPs on synthetic data, EEG signal
+regression and image regression tasks, achieving substantial improvements over
+baselines. These results underscore the effectiveness of DDPM-style bridge
+sampling in enhancing both performance and theoretical consistency for
+structured prediction tasks.

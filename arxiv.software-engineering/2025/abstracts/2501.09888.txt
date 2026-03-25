@@ -1,0 +1,31 @@
+Title: Understanding the Effectiveness of LLMs in Automated Self-Admitted Technical Debt Repayment
+Authors: Mohammad Sadegh Sheikhaei, Yuan Tian, Shaowei Wang, Bowen Xu
+ID: 2501.09888
+URL: https://arxiv.org/abs/2501.09888
+
+Abstract:
+Self-Admitted Technical Debt (SATD), cases where developers intentionally
+acknowledge suboptimal solutions in code through comments, poses a significant
+challenge to software maintainability. Left unresolved, SATD can degrade code
+quality and increase maintenance costs. While Large Language Models (LLMs) have
+shown promise in tasks like code generation and program repair, their potential
+in automated SATD repayment remains underexplored. In this paper, we identify
+three key challenges in training and evaluating LLMs for SATD repayment: (1)
+dataset representativeness and scalability, (2) removal of irrelevant SATD
+repayments, and (3) limitations of existing evaluation metrics. To address the
+first two dataset-related challenges, we adopt a language-independent SATD
+tracing tool and design a 10-step filtering pipeline to extract SATD repayments
+from repositories, resulting two large-scale datasets: 58,722 items for Python
+and 97,347 items for Java. To improve evaluation, we introduce two diff-based
+metrics, BLEU-diff and CrystalBLEU-diff, which measure code changes rather than
+whole code. Additionally, we propose another new metric, LEMOD, which is both
+interpretable and informative. Using our new benchmarks and evaluation metrics,
+we evaluate two types of automated SATD repayment methods: fine-tuning smaller
+models, and prompt engineering with five large-scale models. Our results reveal
+that fine-tuned small models achieve comparable Exact Match (EM) scores to
+prompt-based approaches but underperform on BLEU-based metrics and LEMOD.
+Notably, Gemma-2-9B leads in EM, addressing 10.1% of Python and 8.1% of Java
+SATDs, while Llama-3.1-70B-Instruct and GPT-4o-mini excel on BLEU-diff,
+CrystalBLEU-diff, and LEMOD metrics. Our work contributes a robust benchmark,
+improved evaluation metrics, and a comprehensive evaluation of LLMs, advancing
+research on automated SATD repayment.

@@ -1,0 +1,20 @@
+Title: Awkward Just-In-Time (JIT) Compilation: A Developer's Experience
+Authors: Ianna Osborne, Jim Pivarski, Ioana Ifrim, Angus Hollands, Henry Schreiner
+ID: 2310.01461
+URL: https://arxiv.org/abs/2310.01461
+
+Abstract:
+Awkward Array is a library for performing NumPy-like computations on nested,
+variable-sized data, enabling array-oriented programming on arbitrary data
+structures in Python. However, imperative (procedural) solutions can sometimes
+be easier to write or faster to run. Performant imperative programming requires
+compilation; JIT-compilation makes it convenient to compile in an interactive
+Python environment. Various functions in Awkward Arrays JIT-compile a user's
+code into executable machine code. They use several different techniques, but
+reuse parts of each others' implementations. We discuss the techniques used to
+achieve the Awkward Arrays acceleration with JIT-compilation, focusing on
+RDataFrame, cppyy, and Numba, particularly Numba on GPUs: conversions of Awkward
+Arrays to and from RDataFrame; standalone cppyy; passing Awkward Arrays to and
+from Python functions compiled by Numba; passing Awkward Arrays to Python
+functions compiled for GPUs by Numba; and header-only libraries for populating
+Awkward Arrays from C++ without any Python dependencies.

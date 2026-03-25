@@ -1,0 +1,25 @@
+Title: Using Fourier Analysis and Mutant Clustering to Accelerate DNN Mutation Testing
+Authors: Ali Ghanbari, Sasan Tavakkol
+ID: 2510.02718
+URL: https://arxiv.org/abs/2510.02718
+
+Abstract:
+Deep neural network (DNN) mutation analysis is a promising approach to
+evaluating test set adequacy. Due to the large number of generated mutants that
+must be tested on large datasets, mutation analysis is costly. In this paper, we
+present a technique, named DM#, for accelerating DNN mutation testing using
+Fourier analysis. The key insight is that DNN outputs are real-valued functions
+suitable for Fourier analysis that can be leveraged to quantify mutant behavior
+using only a few data points. DM# uses the quantified mutant behavior to cluster
+the mutants so that the ones with similar behavior fall into the same group. A
+representative from each group is then selected for testing, and the result of
+the test, e.g., whether the mutant is killed or survived, is reused for all
+other mutants represented by the selected mutant, obviating the need for testing
+other mutants. 14 DNN models of sizes ranging from thousands to millions of
+parameters, trained on different datasets, are used to evaluate DM# and compare
+it to several baseline techniques. Our results provide empirical evidence on the
+effectiveness of DM# in accelerating mutation testing by 28.38%, on average, at
+the average cost of only 0.72% error in mutation score. Moreover, on average,
+DM# incurs 11.78, 15.16, and 114.36 times less mutation score error compared to
+random mutant selection, boundary sample selection, and random sample selection
+techniques, respectively, while generally offering comparable speed-up.

@@ -1,0 +1,29 @@
+Title: OpenAI for OpenAPI: Automated generation of REST API specification via LLMs
+Authors: Hao Chen, Yunchun Li, Chen Chen, Fengxu Lin, Wei Li
+ID: 2601.12735
+URL: https://arxiv.org/abs/2601.12735
+
+Abstract:
+REST APIs, based on the REpresentational State Transfer (REST) architecture, are
+the primary type of Web API. The OpenAPI Specification (OAS) serves as the de
+facto standard for describing REST APIs and is crucial for multiple software
+engineering tasks. However, developers face challenges in writing and
+maintaining OAS. Although static analysis shows potential for OAS generation, it
+is limited to specific programming languages and development frameworks. The
+powerful code understanding capabilities of LLMs offer new opportunities for OAS
+generation, yet they are constrained by context limitations and hallucinations.
+To address these challenges, we propose the OpenAI OpenAPI Project Scanner
+(OOPS), the first technology-agnostic LLM-based static analysis method for OAS
+generation, requiring fewer technology-specific rules and less human expert
+intervention. OOPS is implemented as an LLM agent workflow comprising two key
+steps: endpoint method extraction and OAS generation. By constructing an API
+dependency graph, it establishes necessary file associations to address LLMs'
+context limitations. Through multi-stage generation and self-refine, it
+mitigates both syntactic and semantic hallucinations during OAS generation. We
+evaluated OOPS on 12 real-world REST APIs spanning 5 programming languages and 8
+development frameworks. Experimental results demonstrate that OOPS accurately
+generates high-quality OAS for REST APIs implemented with diverse technologies,
+achieving an average F1-score exceeding 98% for endpoint method inference, 97%
+for both request parameter and response inference, and 92% for parameter
+constraint inference. The input tokens average below 5.6K with a maximum of
+16.2K, while the output tokens average below 0.9K with a maximum of 7.7K.

@@ -1,0 +1,29 @@
+Title: Channel-Selective Normalization for Label-Shift Robust Test-Time Adaptation
+Authors: Pedro Vianna, Muawiz Chaudhary, Paria Mehrbod, An Tang, Guy Cloutier et al.
+ID: 2402.04958
+URL: https://arxiv.org/abs/2402.04958
+
+Abstract:
+Deep neural networks have useful applications in many different tasks, however
+their performance can be severely affected by changes in the data distribution.
+For example, in the biomedical field, their performance can be affected by
+changes in the data (different machines, populations) between training and test
+datasets. To ensure robustness and generalization to real-world scenarios,
+test-time adaptation has been recently studied as an approach to adjust models
+to a new data distribution during inference. Test-time batch normalization is a
+simple and popular method that achieved compelling performance on domain shift
+benchmarks. It is implemented by recalculating batch normalization statistics on
+test batches. Prior work has focused on analysis with test data that has the
+same label distribution as the training data. However, in many practical
+applications this technique is vulnerable to label distribution shifts,
+sometimes producing catastrophic failure. This presents a risk in applying test
+time adaptation methods in deployment. We propose to tackle this challenge by
+only selectively adapting channels in a deep network, minimizing drastic
+adaptation that is sensitive to label shifts. Our selection scheme is based on
+two principles that we empirically motivate: (1) later layers of networks are
+more sensitive to label shift (2) individual features can be sensitive to
+specific classes. We apply the proposed technique to three classification tasks,
+including CIFAR10-C, Imagenet-C, and diagnosis of fatty liver, where we explore
+both covariate and label distribution shifts. We find that our method allows to
+bring the benefits of TTA while significantly reducing the risk of failure
+common in other methods, while being robust to choice in hyperparameters.

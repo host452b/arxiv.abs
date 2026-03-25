@@ -1,0 +1,27 @@
+Title: Are your dependencies code reviewed?: Measuring code review coverage in dependency updates
+Authors: Nasif Imtiaz, Laurie Williams
+ID: 2206.09422
+URL: https://arxiv.org/abs/2206.09422
+
+Abstract:
+As modern software extensively uses free open source packages as dependencies,
+developers have to regularly pull in new third-party code through frequent
+updates. However, without a proper review of every incoming change, vulnerable
+and malicious code can sneak into the codebase through these dependencies. The
+goal of this study is to aid developers in securely accepting dependency updates
+by measuring if the code changes in an update have passed through a code review
+process. We implement Depdive, an update audit tool for packages in Crates.io,
+npm, PyPI, and RubyGems registry. Depdive first (i) identifies the files and the
+code changes in an update that cannot be traced back to the package's source
+repository, i.e., \textit{phantom artifacts}; and then (ii) measures what
+portion of changes in the update, excluding the phantom artifacts, has passed
+through a code review process, i.e., \textit{code review coverage}. Using
+Depdive, we present an empirical study across the latest ten updates of the most
+downloaded 1000 packages in each of the four registries. We further evaluated
+our results through a maintainer agreement survey. We find the updates are
+typically only partially code-reviewed (52.5\% of the time). Further, only 9.0\%
+of the packages had all their updates in our data set fully code-reviewed,
+indicating that even the most used packages can introduce non-reviewed code in
+the software supply chain. We also observe that updates either tend to have high
+\textit{CRC} or low \textit{CRC}, suggesting that packages at the opposite end
+of the spectrum may require a separate set of treatments.

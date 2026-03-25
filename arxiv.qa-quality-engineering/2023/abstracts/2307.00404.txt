@@ -1,0 +1,31 @@
+Title: Automatic Unit Test Generation for Deep Learning Frameworks based on API Knowledge
+Authors: Arunkaleeshwaran Narayanan, Nima Shiri harzevili, Junjie Wang, Lin Shi, Moshi Wei et al.
+ID: 2307.00404
+URL: https://arxiv.org/abs/2307.00404
+
+Abstract:
+Many automatic unit test generation tools that can generate unit test cases with
+high coverage over a program have been proposed. However, most of these tools
+are ineffective on deep learning (DL) frameworks due to the fact that many of
+deep learning APIs expect inputs that follow specific API knowledge. To fill
+this gap, we propose MUTester to generate unit test cases for APIs of deep
+learning frameworks by leveraging the API constraints mined from the
+corresponding API documentation and the API usage patterns mined from code
+fragments in Stack Overflow (SO). Particularly, we first propose a set of 18
+rules for mining API constraints from the API documents. We then use the
+frequent itemset mining technique to mine the API usage patterns from a large
+corpus of machine learning API related code fragments collected from SO.
+Finally, we use the above two types of API knowledge to guide the test
+generation of existing test generators for deep learning frameworks. To evaluate
+the performance of MUTester, we first collect 1,971 APIs from four widely-used
+deep learning frameworks (i.e., Scikit-learn, PyTorch, TensorFlow, and CNTK) and
+for each API, we further extract its API knowledge, i.e., API constraints and
+API usage. Given an API, MUTester combines its API knowledge with existing test
+generators (e.g., search-based test generator PyEvosuite and random test
+generator PyRandoop) to generate test cases to test the API. Results of our
+experiment show that MUTester can significantly improve the corresponding test
+generation methods and the improvement in code coverage is 15.7% to 27.0% on
+average. In addition, it can help reduce around 19.0% of invalid tests generated
+by the existing test generators. Our user study with 16 developers further
+demonstrates the practicality of MUTester in generating test cases for deep
+learning frameworks.

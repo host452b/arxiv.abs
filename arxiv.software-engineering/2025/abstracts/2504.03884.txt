@@ -1,0 +1,29 @@
+Title: Improving Front-end Performance through Modular Rendering and Adaptive Hydration (MRAH) in React Applications
+Authors: Kaitao Chen
+ID: 2504.03884
+URL: https://arxiv.org/abs/2504.03884
+
+Abstract:
+Modern web applications increasingly leverage server-side rendering (SSR) to
+improve initial load times and search engine optimization. However, the
+subsequent hydration process-where client-side JavaScript attaches interactivity
+to SSR-delivered HTML-can introduce performance bottlenecks. We propose a novel
+architectural pattern combining a modular rendering pipeline with an adaptive
+hydration strategy to optimize frontend performance in React and Next.js
+applications. The approach breaks the interface into distinct modules that can
+be rendered and hydrated independently (inspired by the "islands" paradigm), and
+it adaptively prioritizes or defers hydration of these modules based on device
+capabilities, network conditions, and component importance. We integrate
+techniques such as code-splitting with dynamic import(), conditional hydration
+triggers (e.g., on visibility or idle time) using libraries like
+react-lazy-hydration, and adaptive loading hooks to tailor the hydration process
+to the user's context. By reducing the amount of JavaScript executed on page
+load and by scheduling hydration work intelligently, this architecture aims to
+improve key performance metrics-including First Input Delay (FID) and Time to
+Interactive (TTI)-without sacrificing rich interactivity. We describe the
+architecture and implementation in a Next.js environment, discuss how components
+can be conditionally hydrated or entirely skipped when not needed, and compare
+our approach to related work in progressive hydration, partial hydration, and
+React Server Components. Evaluation of the approach is left for future work.
+This pattern offers a pathway to building highly interactive yet performant
+React applications through careful orchestration of rendering and hydration.

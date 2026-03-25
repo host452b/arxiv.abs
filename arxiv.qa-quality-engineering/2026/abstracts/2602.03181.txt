@@ -1,0 +1,25 @@
+Title: Synthesizing File-Level Data for Unit Test Generation with Chain-of-Thoughts via Self-Debugging
+Authors: Ziyue Hua, Tianyu Chen, Yeyun Gong, Shuai Lu, Peng Cheng et al.
+ID: 2602.03181
+URL: https://arxiv.org/abs/2602.03181
+
+Abstract:
+Automatic unit test (UT) generation is essential for software quality assurance,
+but existing approaches--including symbolic execution, search-based approaches,
+and recent LLM-based generators--struggle to produce human-quality tests with
+correct, meaningful assertions and reliable chain-of-thought (CoT) explanations.
+We identify a gap in UT training data: repository-mined tests lack developer
+CoTs, while LLM-distilled CoTs are often incorrect or incomplete. To address
+this issue, we propose a novel data-distillation approach that uses
+self-debugging to produce high-quality UT training examples paired with faithful
+CoTs. Our approach combines (1) guided test repair, a heuristic loop (error-,
+failure-, and coverage-focused steps) that asks the used model to diagnose and
+iteratively fix generated tests, and (2) CoT compression, which compacts
+original and debugging CoTs into concise explanations that directly justify
+correct tests. We apply this pipeline to a large corpus of open-source projects
+to construct a dataset of 74,518 high-quality <focal method, test, CoT>
+examples, and then use it for supervised fine-tuning of a base model. An
+empirical evaluation shows that the fine-tuned model achieves high UT generation
+effectiveness: it attains a pass rate of 36.17% on test assertions, a branch
+coverage of 43.90%, and a mutation score of 88.66%, substantially higher than
+state-of-the-art commercial models like o4-mini.

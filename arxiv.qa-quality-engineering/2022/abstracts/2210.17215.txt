@@ -1,0 +1,20 @@
+Title: Mutation Testing Optimisations using the Clang Front-end
+Authors: Sten Vercammen, Serge Demeyer, Markus Borg, Niklas Pettersson, Görel Hedin
+ID: 2210.17215
+URL: https://arxiv.org/abs/2210.17215
+
+Abstract:
+Mutation testing is the state-of-the-art technique for assessing the fault
+detection capacity of a test suite. Unfortunately, a full mutation analysis is
+often prohibitively expensive. The CppCheck project for instance, demands a
+build time of 5.8 minutes and a test execution time of 17 seconds on our desktop
+computer. An unoptimised mutation analysis, for 55,000 generated mutants took
+11.8 days in total, of which 4.3 days is spent on (re)compiling the project. In
+this paper we present a feasibility study, investigating how a number of
+optimisation strategies can be implemented based on the Clang front-end. These
+optimisation strategies allow to eliminate the compilation and execution
+overhead in order to support efficient mutation testing for the C language
+family. We provide a proof-of-concept tool that achieves a speedup of between 2x
+and 30x. We make a detailed analysis of the speedup induced by the
+optimisations, elaborate on the lessons learned and point out avenues for
+further improvements.

@@ -1,0 +1,28 @@
+Title: Uncertainty-aware Test-Time Training (UT$^3$) for Efficient On-the-fly Domain Adaptive Dense Regression
+Authors: Uddeshya Upadhyay
+ID: 2509.03012
+URL: https://arxiv.org/abs/2509.03012
+
+Abstract:
+Deep neural networks (DNNs) are increasingly being used in autonomous systems.
+However, DNNs do not generalize well to domain shift. Adapting to a continuously
+evolving environment is a safety-critical challenge inevitably faced by all
+autonomous systems deployed to the real world. Recent work on test-time training
+proposes methods that adapt to a new test distribution on the fly by optimizing
+the DNN model for each test input using self-supervision. However, these
+techniques result in a sharp increase in inference time as multiple forward and
+backward passes are required for a single test sample (for test-time training)
+before finally making the prediction based on the fine-tuned features. This is
+undesirable for real-world robotics applications where these models may be
+deployed to resource constraint hardware with strong latency requirements. In
+this work, we propose a new framework (called UT$^3$) that leverages test-time
+training for improved performance in the presence of continuous domain shift
+while also decreasing the inference time, making it suitable for real-world
+applications. Our method proposes an uncertainty-aware self-supervision task for
+efficient test-time training that leverages the quantified uncertainty to
+selectively apply the training leading to sharp improvements in the inference
+time while performing comparably to standard test-time training protocol. Our
+proposed protocol offers a continuous setting to identify the selected
+keyframes, allowing the end-user to control how often to apply test-time
+training. We demonstrate the efficacy of our method on a dense regression task -
+monocular depth estimation.

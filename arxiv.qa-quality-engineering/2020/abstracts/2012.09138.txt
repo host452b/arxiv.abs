@@ -1,0 +1,24 @@
+Title: Extracting Smart Contracts Tested and Verified in Coq
+Authors: Danil Annenkov, Mikkel Milo, Jakob Botsch Nielsen, Bas Spitters
+ID: 2012.09138
+URL: https://arxiv.org/abs/2012.09138
+
+Abstract:
+We implement extraction of Coq programs to functional languages based on
+MetaCoq's certified erasure. As part of this, we implement an optimisation pass
+removing unused arguments. We prove the pass correct wrt. a conventional
+call-by-value operational semantics of functional languages. We apply this to
+two functional smart contract languages, Liquidity and Midlang, and to the
+functional language Elm. Our development is done in the context of the ConCert
+framework that enables smart contract verification. We contribute a verified
+boardroom voting smart contract featuring maximum voter privacy such that each
+vote is kept private except under collusion of all other parties. We also
+integrate property-based testing into ConCert using QuickChick and our
+development is the first to support testing properties of interacting smart
+contracts. We test several complex contracts such as a DAO-like contract, an
+escrow contract, an implementation of a Decentralized Finance (DeFi) contract
+which includes a custom token standard (Tezos FA2), and more. In total, this
+gives us a way to write dependent programs in Coq, test them semi-automatically,
+verify, and then extract to functional smart contract languages, while retaining
+a small trusted computing base of only MetaCoq and the pretty-printers into
+these languages.

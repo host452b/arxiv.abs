@@ -1,0 +1,25 @@
+Title: Tri-Bench: Stress-Testing VLM Reliability on Spatial Reasoning under Camera Tilt and Object Interference
+Authors: Amit Bendkhale
+ID: 2512.08860
+URL: https://arxiv.org/abs/2512.08860
+
+Abstract:
+Verifiable geometric reasoning is a critical component for trustworthy and
+controllable agentic AI. Despite impressive capabilities, Vision-Language Models
+(VLMs) often fail under realistic scene changes. We present Tri-Bench, a compact
+benchmark of planar triangle problems that isolates relative geometric reasoning
+while stressing two deployment-critical factors: camera pose (planar vs. tilted)
+and scene context via object interference (10 everyday objects). To test
+verifiability and control, we evaluate four recent VLMs using a single, fixed
+prompt whose guardrail explicitly describes a surrounding square border,
+enabling correct answers via homography. We evaluate six simple tasks over
+binary and continuous targets, and observe that the overall accuracy with
+respect to 3D ground truth is modest, ~69% on average (best ~75%, worst ~64%).
+The same responses align even more closely with 2D projections in the image
+plane, where mean accuracy is ~72%. All four VLMs consistently fail, with
+accuracy falling to ~0%, on recognizing minority shape classes (equilateral,
+isosceles, right-angled triangles). Additionally, overall VLM accuracy degrades
+by ~4.1% under camera tilt. This demonstrates that models fail to correctly
+utilize the explicit frame-of-reference hint provided in the prompt and default
+to 2D image plane cues. Finally, we find that object interference has no
+significant effect on VLM accuracy.

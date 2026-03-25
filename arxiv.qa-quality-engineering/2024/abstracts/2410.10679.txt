@@ -1,0 +1,25 @@
+Title: Combinatorial Multi-armed Bandits: Arm Selection via Group Testing
+Authors: Arpan Mukherjee, Shashanka Ubaru, Keerthiram Murugesan, Karthikeyan Shanmugam, Ali Tajer
+ID: 2410.10679
+URL: https://arxiv.org/abs/2410.10679
+
+Abstract:
+This paper considers the problem of combinatorial multi-armed bandits with
+semi-bandit feedback and a cardinality constraint on the super-arm size.
+Existing algorithms for solving this problem typically involve two key
+sub-routines: (1) a parameter estimation routine that sequentially estimates a
+set of base-arm parameters, and (2) a super-arm selection policy for selecting a
+subset of base arms deemed optimal based on these parameters. State-of-the-art
+algorithms assume access to an exact oracle for super-arm selection with
+unbounded computational power. At each instance, this oracle evaluates a list of
+score functions, the number of which grows as low as linearly and as high as
+exponentially with the number of arms. This can be prohibitive in the regime of
+a large number of arms. This paper introduces a novel realistic alternative to
+the perfect oracle. This algorithm uses a combination of group-testing for
+selecting the super arms and quantized Thompson sampling for parameter
+estimation. Under a general separability assumption on the reward function, the
+proposed algorithm reduces the complexity of the super-arm-selection oracle to
+be logarithmic in the number of base arms while achieving the same regret order
+as the state-of-the-art algorithms that use exact oracles. This translates to at
+least an exponential reduction in complexity compared to the oracle-based
+approaches.

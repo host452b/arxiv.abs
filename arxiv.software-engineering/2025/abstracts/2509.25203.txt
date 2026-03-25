@@ -1,0 +1,21 @@
+Title: Generating High-Quality Datasets for Code Editing via Open-Source Language Models
+Authors: Zekai Zhang, Mingwei Liu, Zhenxi Chen, Linxi Liang, Yuxuan Chen et al.
+ID: 2509.25203
+URL: https://arxiv.org/abs/2509.25203
+
+Abstract:
+Code editing plays a vital role in software engineering, requiring developers to
+adjust existing code according to natural language instructions while keeping
+functionality intact and avoiding unnecessary modifications. However,
+commit-based datasets commonly used for this task are often noisy, lack
+diversity, and fail to reflect the style of real-world edit instructions. To
+address this, we introduce OpenCodeEdit, an open-source pipeline that leverages
+multiple LLMs to synthesize realistic code-edit triplets. The pipeline produces
+both concise "lazy" instructions and more detailed "descriptive" ones, and
+applies filtering based on diffs and topics to guarantee data quality and
+variety. Using this process, we construct OCEDataFT, a curated dataset of 20K
+samples. Fine-tuning three advanced base models on OCEDataFT leads to
+significant performance boosts on the CanItEdit benchmark, with relative pass@1
+improvements ranging from 4.50% to 20.79%. Notably, the resulting models achieve
+performance close to closed-source systems, narrowing the gap to GPT-4 to just
+3.54%, without relying on proprietary resources or manual annotation.

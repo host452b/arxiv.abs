@@ -1,0 +1,29 @@
+Title: AGA: An Accelerated Greedy Additional Algorithm for Test Case Prioritization
+Authors: Feng Li, Jianyi Zhou, Yinzhu Li, Dan Hao, Lu Zhang
+ID: 2205.10239
+URL: https://arxiv.org/abs/2205.10239
+
+Abstract:
+In recent years, many test case prioritization (TCP) techniques have been
+proposed to speed up the process of fault detection. However, little work has
+taken the efficiency problem of these techniques into account. In this paper, we
+target the Greedy Additional (GA) algorithm, which has been widely recognized to
+be effective but less efficient, and try to improve its efficiency while
+preserving effectiveness. In our Accelerated GA (AGA) algorithm, we use some
+extra data structures to reduce redundant data accesses in the GA algorithm and
+thus the time complexity is reduced from $\mathcal{O}(m^2n)$ to
+$\mathcal{O}(kmn)$ when $n > m$, where $m$ is the number of test cases, $n$ is
+the number of program elements, and $k$ is the iteration number. Moreover, we
+observe the impact of iteration numbers on prioritization efficiency on our
+dataset and propose to use a specific iteration number in the AGA algorithm to
+further improve the efficiency. We conducted experiments on 55 open-source
+subjects. In particular, we implemented each TCP algorithm with two kinds of
+widely-used input formats, adjacency matrix and adjacency list. Since a TCP
+algorithm with adjacency matrix is less efficient than the algorithm with
+adjacency list, the result analysis is mainly conducted based on TCP algorithms
+with adjacency list. The results show that AGA achieves 5.95X speedup ratio over
+GA on average, while it achieves the same average effectiveness as GA in terms
+of Average Percentage of Fault Detected (APFD). Moreover, we conducted an
+industrial case study on 22 subjects, collected from Baidu, and find that the
+average speedup ratio of AGA over GA is 44.27X, which indicates the practical
+usage of AGA in real-world scenarios.

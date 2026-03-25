@@ -1,0 +1,28 @@
+Title: Type-Centric Kotlin Compiler Fuzzing: Preserving Test Program Correctness by Preserving Types
+Authors: Daniil Stepanov, Marat Akhin, Mikhail Belyaev
+ID: 2012.06382
+URL: https://arxiv.org/abs/2012.06382
+
+Abstract:
+Kotlin is a relatively new programming language from JetBrains: its development
+started in 2010 with release 1.0 done in early 2016. The Kotlin compiler, while
+slowly and steadily becoming more and more mature, still crashes from time to
+time on the more tricky input programs, not least because of the complexity of
+its features and their interactions. This makes it a great target for fuzzing,
+even the basic forms of which can find a significant number of Kotlin compiler
+crashes. There is a problem with fuzzing, however, closely related to the cause
+of the crashes: generating a random, non-trivial and semantically valid Kotlin
+program is hard. In this paper, we talk about type-centric compiler fuzzing in
+the form of type-centric enumeration, an approach inspired by skeletal program
+enumeration and based on a combination of generative and mutation-based fuzzing,
+which solves this problem by focusing on program types. After creating the
+skeleton program, we fill the typed holes with fragments of suitable type,
+created via generation and enhanced by semantic-aware mutation. We implemented
+this approach in our Kotlin compiler fuzzing framework called Backend Bug Finder
+(BBF) and did an extensive evaluation, not only testing the real-world
+feasibility of our approach, but also comparing it to other compiler fuzzing
+techniques. The results show our approach to be significantly better compared to
+other fuzzing approaches at generating semantically valid Kotlin programs, while
+creating more interesting crash-inducing inputs at the same time. We managed to
+find more than 50 previously unknown compiler crashes, of which 18 were
+considered important after their triage by the compiler team.

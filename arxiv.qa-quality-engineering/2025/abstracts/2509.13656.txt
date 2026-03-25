@@ -1,0 +1,31 @@
+Title: A Regression Testing Framework with Automated Assertion Generation for Machine Learning Notebooks
+Authors: Yingao Elaine Yao, Vedant Nimje, Varun Viswanath, Saikat Dutta
+ID: 2509.13656
+URL: https://arxiv.org/abs/2509.13656
+
+Abstract:
+Notebooks have become the de-facto choice for data scientists and machine
+learning engineers for prototyping and experimenting with machine learning (ML)
+pipelines. Notebooks provide an interactive interface for code, data, and
+visualization. However, notebooks provide very limited support for testing.
+Thus, during continuous development, many subtle bugs that do not lead to
+crashes often go unnoticed and cause silent errors that manifest as performance
+regressions. To address this, we introduce NBTest - the first regression testing
+framework that allows developers to write cell-level assertions in notebooks and
+run such notebooks in pytest or in continuous integration (CI) pipelines. NBTest
+offers a library of assertion APIs, and a JupyterLab plugin that enables
+executing assertions. We also develop the first automated approach for
+generating cell-level assertions for key components in ML notebooks, such as
+data processing, model building, and model evaluation. NBTest aims to improve
+the reliability and maintainability of ML notebooks without adding developer
+burden. We evaluate NBTest on 592 Kaggle notebooks. Overall, NBTest generates
+21163 assertions (35.75 on average per notebook). The generated assertions
+obtain a mutation score of 0.57 in killing ML-specific mutations. NBTest can
+catch regression bugs in previous versions of the Kaggle notebooks using
+assertions generated for the latest versions. Because ML pipelines involve non
+deterministic computations, the assertions can be flaky. Hence, we also show how
+NBTest leverages statistical techniques to minimize flakiness while retaining
+high fault-detection effectiveness. NBTest has been adopted in the CI of a
+popular ML library. Further, we perform a user study with 17 participants that
+shows that notebook users find NBTest intuitive (Rating 4.3/5) and useful in
+writing assertions and testing notebooks (Rating 4.24/5).

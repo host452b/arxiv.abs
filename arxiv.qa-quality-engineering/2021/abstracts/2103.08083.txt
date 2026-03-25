@@ -1,0 +1,27 @@
+Title: EnHMM: On the Use of Ensemble HMMs and Stack Traces to Predict the Reassignment of Bug Report Fields
+Authors: Md Shariful Islam, Abdelwahab Hamou-Lhadj, Korosh K. Sabor, Mohammad Hamdaqa, Haipeng Cai
+ID: 2103.08083
+URL: https://arxiv.org/abs/2103.08083
+
+Abstract:
+Bug reports (BR) contain vital information that can help triaging teams
+prioritize and assign bugs to developers who will provide the fixes. However,
+studies have shown that BR fields often contain incorrect information that need
+to be reassigned, which delays the bug fixing process. There exist approaches
+for predicting whether a BR field should be reassigned or not. These studies use
+mainly BR descriptions and traditional machine learning algorithms (SVM, KNN,
+etc.). As such, they do not fully benefit from the sequential order of
+information in BR data, such as function call sequences in BR stack traces,
+which may be valuable for improving the prediction accuracy. In this paper, we
+propose a novel approach, called EnHMM, for predicting the reassignment of BR
+fields using ensemble Hidden Markov Models (HMMs), trained on stack traces.
+EnHMM leverages the natural ability of HMMs to represent sequential data to
+model the temporal order of function calls in BR stack traces. When applied to
+Eclipse and Gnome BR repositories, EnHMM achieves an average precision, recall,
+and F-measure of 54%, 76%, and 60% on Eclipse dataset and 41%, 69%, and 51% on
+Gnome dataset. We also found that EnHMM improves over the best single HMM by 36%
+for Eclipse and 76% for Gnome. Finally, when comparing EnHMM to Im.ML.KNN, a
+recent approach in the field, we found that the average F-measure score of EnHMM
+improves the average F-measure of Im.ML.KNN by 6.80% and improves the average
+recall of Im.ML.KNN by 36.09%. However, the average precision of EnHMM is lower
+than that of Im.ML.KNN (53.93% as opposed to 56.71%).

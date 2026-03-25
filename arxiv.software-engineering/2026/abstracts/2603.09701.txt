@@ -1,0 +1,32 @@
+Title: An Empirical Study of Interaction Smells in Multi-Turn Human-LLM Collaborative Code Generation
+Authors: Binquan Zhang, Li Zhang, Lin Shi, Song Wang, Yuwei Qian et al.
+ID: 2603.09701
+URL: https://arxiv.org/abs/2603.09701
+
+Abstract:
+Large Language Models (LLMs) have revolutionized code generation, evolving from
+static tools into dynamic conversational interfaces that facilitate complex,
+multi-turn collaborative programming. While LLMs exhibit remarkable proficiency
+in generating standalone code snippets, they often struggle to maintain
+contextual consistency during extended interactions, creating significant
+obstacles in the collaboration process. Existing benchmarks primarily emphasize
+the functional correctness of the final output, overlooking latent quality
+issues within the interaction process itself, which we term Interaction Smells.
+In this paper, we conduct an empirical study on sampled real-word user-LLM
+interactions from WildChat and LMSYS-Chat-1M datasets to systematically
+investigate Interaction Smells in human-LLM code generation tasks from the
+perspectives of phenomena, distribution, and mitigation. First, we establish the
+first taxonomy of Interaction Smells by manually performing open card sorting on
+real-world interaction logs. This taxonomy categorizes Interaction Smells into
+three primary categories, i.e., User Intent Quality, Historical Instruction
+Compliance, and Historical Response Violation, comprising nine specific
+subcategories. Next, we quantitatively evaluate six mainstream LLMs (i.e.,
+GPT-4o, DeepSeek-Chat, Gemini 2.5, Qwen2.5-32B, Qwen2.5-72B, and
+Qwen3-235B-a22b) to analyze the distribution of Interaction Smells across
+different models. Finally, we propose Invariant-aware Constraint Evolution
+(InCE), a multi-agent framework designed to improve multi-turn interaction
+quality through explicit extraction of global invariants and pre-generation
+quality audits. Experimental results on the extended WildBench benchmark
+demonstrate that this lightweight mitigation approach significantly improves the
+Task Success Rate and effectively suppresses the occurrence of Interaction
+Smells.

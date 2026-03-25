@@ -1,0 +1,24 @@
+Title: Theory of Code Space: Do Code Agents Understand Software Architecture?
+Authors: Grigory Sapunov
+ID: 2603.00601
+URL: https://arxiv.org/abs/2603.00601
+
+Abstract:
+AI code agents excel at isolated tasks yet struggle with multi-file software
+engineering requiring architectural understanding. We introduce Theory of Code
+Space (ToCS), a benchmark that evaluates whether agents can construct, maintain,
+and update coherent architectural beliefs during codebase exploration. Agents
+explore procedurally generated codebases under partial observability -- opening
+files under a budget -- and periodically externalize their belief state as
+structured JSON, producing a time-series of architectural understanding. Three
+findings emerge from experiments with four baselines and six frontier LLMs.
+First, the Active-Passive Gap is model-dependent: one model builds better maps
+through active exploration than from seeing all files at once, while another
+shows the opposite -- revealing that active exploration is itself a non-trivial
+capability absent from some models. Second, retaining structured belief maps in
+context acts as self-scaffolding for some models but not others, showing that
+the mechanism is model-dependent. Third, belief state maintenance varies
+dramatically: a smaller model maintains perfectly stable beliefs across probes
+while its larger sibling suffers catastrophic belief collapse -- forgetting
+previously-discovered components between probes. We release ToCS as open-source
+software. Code: https://github.com/che-shr-cat/tocs

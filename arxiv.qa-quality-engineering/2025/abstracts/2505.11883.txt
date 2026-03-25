@@ -1,0 +1,28 @@
+Title: MINGLE: Mixture of Null-Space Gated Low-Rank Experts for Test-Time Continual Model Merging
+Authors: Zihuan Qiu, Yi Xu, Chiyuan He, Fanman Meng, Linfeng Xu et al.
+ID: 2505.11883
+URL: https://arxiv.org/abs/2505.11883
+
+Abstract:
+Continual model merging integrates independently fine-tuned models sequentially
+without access to the original training data, offering a scalable and efficient
+solution for continual learning. However, existing methods face two critical
+challenges: parameter interference among tasks, which leads to catastrophic
+forgetting, and limited adaptability to evolving test distributions. To address
+these issues, we introduce the task of Test-Time Continual Model Merging
+(TTCMM), which leverages a small set of unlabeled test samples during inference
+to alleviate parameter conflicts and handle distribution shifts. We propose
+MINGLE, a novel framework for TTCMM. MINGLE employs a mixture-of-experts
+architecture with parameter-efficient, low-rank experts, which enhances
+adaptability to evolving test distributions while dynamically merging models to
+mitigate conflicts. To further reduce forgetting, we propose Null-Space
+Constrained Gating, which restricts gating updates to subspaces orthogonal to
+prior task representations, thereby suppressing activations on old tasks and
+preserving past knowledge. We further introduce an Adaptive Relaxation Strategy
+that adjusts constraint strength dynamically based on interference signals
+observed during test-time adaptation, striking a balance between stability and
+adaptability. Extensive experiments on standard continual merging benchmarks
+demonstrate that MINGLE achieves robust generalization, significantly reduces
+forgetting, and consistently surpasses previous state-of-the-art methods by 7-9%
+on average across diverse task orders. Our code is available at:
+https://github.com/zihuanqiu/MINGLE

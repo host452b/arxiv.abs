@@ -1,0 +1,28 @@
+Title: Evaluate Bias without Manual Test Sets: A Concept Representation Perspective for LLMs
+Authors: Lang Gao, Kaiyang Wan, Wei Liu, Chenxi Wang, Zirui Song et al.
+ID: 2505.15524
+URL: https://arxiv.org/abs/2505.15524
+
+Abstract:
+Bias in Large Language Models (LLMs) significantly undermines their reliability
+and fairness. We focus on a common form of bias: when two reference concepts in
+the model's concept space, such as sentiment polarities (e.g., "positive" and
+"negative"), are asymmetrically correlated with a third, target concept, such as
+a reviewing aspect, the model exhibits unintended bias. For instance, the
+understanding of "food" should not skew toward any particular sentiment.
+Existing bias evaluation methods assess behavioral differences of LLMs by
+constructing labeled data for different social groups and measuring model
+responses across them, a process that requires substantial human effort and
+captures only a limited set of social concepts. To overcome these limitations,
+we propose BiasLens, a test-set-free bias analysis framework based on the
+structure of the model's vector space. BiasLens combines Concept Activation
+Vectors (CAVs) with Sparse Autoencoders (SAEs) to extract interpretable concept
+representations, and quantifies bias by measuring the variation in
+representational similarity between the target concept and each of the reference
+concepts. Even without labeled data, BiasLens shows strong agreement with
+traditional bias evaluation metrics (Spearman correlation r > 0.85). Moreover,
+BiasLens reveals forms of bias that are difficult to detect using existing
+methods. For example, in simulated clinical scenarios, a patient's insurance
+status can cause the LLM to produce biased diagnostic assessments. Overall,
+BiasLens offers a scalable, interpretable, and efficient paradigm for bias
+discovery, paving the way for improving fairness and transparency in LLMs.

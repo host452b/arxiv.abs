@@ -1,0 +1,29 @@
+Title: Test-Time Distillation for Continual Model Adaptation
+Authors: Xiao Chen, Jiazhen Huang, Zhiming Liu, Qinting Jiang, Fanding Huang et al.
+ID: 2506.02671
+URL: https://arxiv.org/abs/2506.02671
+
+Abstract:
+Deep neural networks often suffer performance degradation upon deployment due to
+distribution shifts. Continual Test-Time Adaptation (CTTA) aims to address this
+issue in an unsupervised manner, yet existing methods, which rely on
+self-supervision, are prone to an inherent self-referential feedback loop that
+amplifies initial prediction errors, leading to model drift. We revisit this
+limitation and propose Test-Time Distillation (TTD), which reframes adaptation
+as a distillation process guided by a frozen Vision-Language Model (VLM) as an
+external signal. While promising, we find that direct distillation is fraught
+with two pitfalls: the Generalist Trap, where the VLM's broad but
+non-specialized knowledge leads to suboptimal performance on specific tasks and
+shifts, and the Entropy Bias, where naive model fusion techniques based on
+entropy fail due to the disparate calibration of heterogeneous models. These
+pitfalls motivate our insight: the key is to build a robust supervisory signal
+and leverage it to guide the target model toward stable adaptation. Hence, we
+present CoDiRe, a Continual Distillation and Rectification framework for TTD.
+CoDiRe first constructs a robust blended teacher by dynamically fusing the
+predictions of the VLM and the target model. Critically, it circumvents the
+Entropy Bias by leveraging Maximum Softmax Probability (MSP) as a more reliable
+confidence metric for weighting each model's expertise. Then applies an Optimal
+Transport based rectification to further align predictions with the blended
+teacher, enabling continuous and stable adaptation. Extensive experiments show
+that CoDiRe outperforms state-of-the-art baselines, exceeding CoTTA by 10.55%
+while using only 48% of its time cost on ImageNet-C.

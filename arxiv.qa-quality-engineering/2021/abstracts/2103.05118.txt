@@ -1,0 +1,23 @@
+Title: Efficient Fuzz Testing for Apache Spark Using Framework Abstraction
+Authors: Qian Zhang, Jiyuan Wang, Muhammad Ali Gulzar, Rohan Padhye, Miryung Kim
+ID: 2103.05118
+URL: https://arxiv.org/abs/2103.05118
+
+Abstract:
+The emerging data-intensive applications are increasingly dependent on
+data-intensive scalable computing (DISC) systems, such as Apache Spark, to
+process large data. Despite their popularity, DISC applications are hard to
+test. In recent years, fuzz testing has been remarkably successful; however, it
+is nontrivial to apply such traditional fuzzing to big data analytics directly
+because: (1) the long latency of DISC systems prohibits the applicability of
+fuzzing, and (2) conventional branch coverage is unlikely to identify
+application logic from the DISC framework implementation. We devise a novel fuzz
+testing tool called BigFuzz that automatically generates concrete data for an
+input Apache Spark program. The key essence of our approach is that we abstract
+the dataflow behavior of the DISC framework with executable specifications and
+we design schema-aware mutations based on common error types in DISC
+applications. Our experiments show that compared to random fuzzing, BigFuzz is
+able to speed up the fuzzing time by 1477X, improves application code coverage
+by 271%, and achieves 157% improvement in detecting application errors. The
+demonstration video of BigFuzz is available at
+https://www.youtube.com/watch?v=YvYQISILQHs&feature=youtu.be.

@@ -1,0 +1,27 @@
+Title: PROZE: Generating Parameterized Unit Tests Informed by Runtime Data
+Authors: Deepika Tiwari, Yogya Gamage, Martin Monperrus, Benoit Baudry
+ID: 2407.00768
+URL: https://arxiv.org/abs/2407.00768
+
+Abstract:
+Typically, a conventional unit test (CUT) verifies the expected behavior of the
+unit under test through one specific input / output pair. In contrast, a
+parameterized unit test (PUT) receives a set of inputs as arguments, and
+contains assertions that are expected to hold true for all these inputs. PUTs
+increase test quality, as they assess correctness on a broad scope of inputs and
+behaviors. However, defining assertions over a set of inputs is a hard task for
+developers, which limits the adoption of PUTs in practice. In this paper, we
+address the problem of finding oracles for PUTs that hold over multiple inputs.
+We design a system called PROZE, that generates PUTs by identifying
+developer-written assertions that are valid for more than one test input. We
+implement our approach as a two-step methodology: first, at runtime, we collect
+inputs for a target method that is invoked within a CUT; next, we isolate the
+valid assertions of the CUT to be used within a PUT. We evaluate our approach
+against 5 real-world Java modules, and collect valid inputs for 128 target
+methods from test and field executions. We generate 2,287 PUTs, which invoke the
+target methods with a significantly larger number of test inputs than the
+original CUTs. We execute the PUTs and find 217 that provably demonstrate that
+their oracles hold for a larger range of inputs than envisioned by the
+developers. From a testing theory perspective, our results show that developers
+express assertions within CUTs that are general enough to hold beyond one
+particular input.

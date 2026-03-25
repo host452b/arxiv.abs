@@ -1,0 +1,27 @@
+Title: Advancing Code Coverage: Incorporating Program Analysis with Large Language Models
+Authors: Chen Yang, Junjie Chen, Bin Lin, Ziqi Wang, Jianyi Zhou
+ID: 2404.04966
+URL: https://arxiv.org/abs/2404.04966
+
+Abstract:
+Automatic test generation plays a critical role in software quality assurance.
+While the recent advances in Search-Based Software Testing (SBST) and Large
+Language Models (LLMs) have shown promise in generating useful tests, these
+techniques still struggle to cover certain branches. Reaching these
+hard-to-cover branches usually requires constructing complex objects and
+resolving intricate inter-procedural dependencies in branch conditions, which
+poses significant challenges for existing test generation techniques. In this
+work, we propose TELPA, a novel technique aimed at addressing these challenges.
+Its key insight lies in extracting real usage scenarios of the target method
+under test to learn how to construct complex objects and extracting methods
+entailing inter-procedural dependencies with hard-to-cover branches to learn the
+semantics of branch constraints. To enhance efficiency and effectiveness, TELPA
+identifies a set of ineffective tests as counter-examples for LLMs and employs a
+feedback-based process to iteratively refine these counter-examples. Then, TELPA
+integrates program analysis results and counter-examples into the prompt,
+guiding LLMs to gain deeper understandings of the semantics of the target method
+and generate diverse tests that can reach the hard-to-cover branches. Our
+experimental results on 27 open-source Python projects demonstrate that TELPA
+significantly outperforms the state-of-the-art SBST and LLM-based techniques,
+achieving an average improvement of 31.39% and 22.22% in terms of branch
+coverage.

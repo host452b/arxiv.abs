@@ -1,0 +1,30 @@
+Title: LLM-based Unit Test Generation via Property Retrieval
+Authors: Zhe Zhang, Xingyu Liu, Yuanzhang Lin, Xiang Gao, Hailong Sun et al.
+ID: 2410.13542
+URL: https://arxiv.org/abs/2410.13542
+
+Abstract:
+Automated unit test generation has been widely studied, with Large Language
+Models (LLMs) recently showing significant potential. Moreover, in the context
+of unit test generation, these tools prioritize high code coverage, often at the
+expense of practical usability, correctness, and maintainability. In response,
+we propose Property-Based Retrieval Augmentation, a novel mechanism that extends
+LLM-based Retrieval-Augmented Generation (RAG) beyond basic vector, text
+similarity, and graph-based methods. Our approach considers task-specific
+context and introduces a tailored property retrieval mechanism. Specifically, in
+the unit test generation task, we account for the unique structure of unit tests
+by dividing the test generation process into Given, When, and Then phases. When
+generating tests for a focal method, we not only retrieve general context for
+the code under test but also consider task-specific context such as pre-existing
+tests of other methods, which can provide valuable insights for any of the
+Given, When, and Then phases. This forms property relationships between focal
+method and other methods, thereby expanding the scope of retrieval beyond
+traditional RAG. We implement this approach in a tool called APT, which
+sequentially performs preprocessing, property retrieval, and unit test
+generation, using an iterative strategy where newly generated tests guide the
+creation of subsequent ones. We evaluated APT on 12 open-source projects with
+1515 methods, and the results demonstrate that APT consistently outperforms
+existing tools in terms of correctness, completeness, and maintainability of the
+generated tests. Moreover, we introduce a novel code-context-aware retrieval
+mechanism for LLMs beyond general context, offering valuable insights and
+potential applications for other code-related tasks.

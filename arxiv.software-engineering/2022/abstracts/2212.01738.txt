@@ -1,0 +1,31 @@
+Title: FedKNOW: Federated Continual Learning with Signature Task Knowledge Integration at Edge
+Authors: Yaxin Luopan, Rui Han, Qinglong Zhang, Chi Harold Liu, Guoren Wang
+ID: 2212.01738
+URL: https://arxiv.org/abs/2212.01738
+
+Abstract:
+Deep Neural Networks (DNNs) have been ubiquitously adopted in internet of things
+and are becoming an integral of our daily life. When tackling the evolving
+learning tasks in real world, such as classifying different types of objects,
+DNNs face the challenge to continually retrain themselves according to the tasks
+on different edge devices. Federated continual learning is a promising technique
+that offers partial solutions but yet to overcome the following difficulties:
+the significant accuracy loss due to the limited on-device processing, the
+negative knowledge transfer caused by the limited communication of non-IID data,
+and the limited scalability on the tasks and edge devices. In this paper, we
+propose FedKNOW, an accurate and scalable federated continual learning
+framework, via a novel concept of signature task knowledge. FedKNOW is a client
+side solution that continuously extracts and integrates the knowledge of
+signature tasks which are highly influenced by the current task. Each client of
+FedKNOW is composed of a knowledge extractor, a gradient restorer and, most
+importantly, a gradient integrator. Upon training for a new task, the gradient
+integrator ensures the prevention of catastrophic forgetting and mitigation of
+negative knowledge transfer by effectively combining signature tasks identified
+from the past local tasks and other clients' current tasks through the global
+model. We implement FedKNOW in PyTorch and extensively evaluate it against
+state-of-the-art techniques using popular federated continual learning
+benchmarks. Extensive evaluation results on heterogeneous edge devices show that
+FedKNOW improves model accuracy by 63.24% without increasing model training
+time, reduces communication cost by 34.28%, and achieves more improvements under
+difficult scenarios such as large numbers of tasks or clients, and training
+different complex networks.

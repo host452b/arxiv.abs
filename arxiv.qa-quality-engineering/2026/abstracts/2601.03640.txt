@@ -1,0 +1,19 @@
+Title: Verbatim Data Transcription Failures in LLM Code Generation: A State-Tracking Stress Test
+Authors: Mohd Ariful Haque, Kishor Datta Gupta, Mohammad Ashiqur Rahman, Roy George
+ID: 2601.03640
+URL: https://arxiv.org/abs/2601.03640
+
+Abstract:
+Many real-world software tasks require exact transcription of provided data into
+code, such as cryptographic constants, protocol test vectors, allowlists, and
+calibration tables. These tasks are operationally sensitive because small
+omissions or alterations can remain silent while producing syntactically valid
+programs. This paper introduces a deliberately minimal transcription-to-code
+benchmark to isolate this reliability concern in LLM-based code generation.
+Given a list of high-precision decimal constants, a model must generate Python
+code that embeds the constants verbatim and performs a simple aggregate
+computation. We describe the prompting variants, evaluation protocol based on
+exact-string inclusion, and analysis framework used to characterize
+state-tracking and long-horizon generation failures. The benchmark is intended
+as a compact stress test that complements existing code-generation evaluations
+by focusing on data integrity rather than algorithmic reasoning.

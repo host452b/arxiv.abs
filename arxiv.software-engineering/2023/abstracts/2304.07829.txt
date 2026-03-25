@@ -1,0 +1,24 @@
+Title: Automated Self-Admitted Technical Debt Tracking at Commit-Level: A Language-independent Approach
+Authors: Mohammad Sadegh Sheikhaei, Yuan Tian
+ID: 2304.07829
+URL: https://arxiv.org/abs/2304.07829
+
+Abstract:
+Software and systems traceability is essential for downstream tasks such as
+data-driven software analysis and intelligent tool development. However, despite
+the increasing attention to mining and understanding technical debt in software
+systems, specific tools for supporting the track of technical debts are rarely
+available. In this work, we propose the first programming language-independent
+tracking tool for self-admitted technical debt (SATD) -- a sub-optimal solution
+that is explicitly annotated by developers in software systems. Our approach
+takes a git repository as input and returns a list of SATDs with their evolution
+actions (created, deleted, updated) at the commit-level. Our approach also
+returns a line number indicating the latest starting position of the
+corresponding SATD in the system. Our SATD tracking approach first identifies an
+initial set of raw SATDs (which only have created and deleted actions) by
+detecting and tracking SATDs in commits' hunks, leveraging a state-of-the-art
+language-independent SATD detection approach. Then it calculates a context-based
+matching score between pairs of deleted and created raw SATDs in the same
+commits to identify SATD update actions. The results of our preliminary study on
+Apache Tomcat and Apache Ant show that our tracking tool can achieve a F1 score
+of 92.8% and 96.7% respectively.

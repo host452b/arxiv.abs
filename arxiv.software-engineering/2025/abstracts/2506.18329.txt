@@ -1,0 +1,30 @@
+Title: Predictive Analytics for Collaborators Answers, Code Quality, and Dropout on Stack Overflow
+Authors: Elijah Zolduoarrati, Sherlock A. Licorish, Nigel Stanger
+ID: 2506.18329
+URL: https://arxiv.org/abs/2506.18329
+
+Abstract:
+Previous studies that used data from Stack Overflow to develop predictive models
+often employed limited benchmarks of 3-5 models or adopted arbitrary selection
+methods. Despite being insightful, their limited scope suggests the need to
+benchmark more models to avoid overlooking untested algorithms. Our study
+evaluates 21 algorithms across three tasks: predicting the number of question a
+user is likely to answer, their code quality violations, and their dropout
+status. We employed normalisation, standardisation, as well as logarithmic and
+power transformations paired with Bayesian hyperparameter optimisation and
+genetic algorithms. CodeBERT, a pre-trained language model for both natural and
+programming languages, was fine-tuned to classify user dropout given their posts
+(questions and answers) and code snippets. We found Bagging ensemble models
+combined with standardisation achieved the highest R2 value (0.821) in
+predicting user answers. The Stochastic Gradient Descent regressor, followed by
+Bagging and Epsilon Support Vector Machine models, consistently demonstrated
+superior performance to other benchmarked algorithms in predicting user code
+quality across multiple quality dimensions and languages. Extreme Gradient
+Boosting paired with log-transformation exhibited the highest F1-score (0.825)
+in predicting user dropout. CodeBERT was able to classify user dropout with a
+final F1-score of 0.809, validating the performance of Extreme Gradient Boosting
+that was solely based on numerical data. Overall, our benchmarking of 21
+algorithms provides multiple insights. Researchers can leverage findings
+regarding the most suitable models for specific target variables, and
+practitioners can utilise the identified optimal hyperparameters to reduce the
+initial search space during their own hyperparameter tuning processes.

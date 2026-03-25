@@ -1,0 +1,1867 @@
+{
+  "query": {
+    "terms": {
+      "title": "property-based testing or fuzz testing"
+    },
+    "subjects": [
+      "cs"
+    ],
+    "op": "and",
+    "from": "2020-01",
+    "to": "",
+    "max": 200,
+    "searched_at": "2026-03-25T16:50:32Z"
+  },
+  "total_results": 89,
+  "return_count": 89,
+  "papers": [
+    {
+      "id": "2601.11972",
+      "title": "Enhancing Fuzz Testing Efficiency through Automated Fuzz Target Generation",
+      "authors": [
+        "Chi Thien Tran"
+      ],
+      "abstract": "Fuzzing continues to be the most effective method for identifying security vulnerabilities in software. In the context of fuzz testing, the fuzzer supplies varied inputs to fuzz targets, which are designed to comprehensively exercise critical sections of the client code. Various studies have focused on optimizing and developing advanced fuzzers, such as AFL++, libFuzzer, Honggfuzz, syzkaller, ISP-Fuzzer, which have substantially enhanced vulnerability detection in widely used software and libraries. Nevertheless, achieving greater coverage necessitates improvements in both the quality and quantity of fuzz targets. In large-scale software projects and libraries -- characterized by numerous user defined functions and data types -- manual creation of fuzz targets is both labor-intensive and time-consuming. This challenge underscores the need for automated techniques not only to generate fuzz targets but also to streamline the execution and analysis of their results. In this paper, we introduce an approach to improving fuzz target generation through static analysis of library source code. The proposed method encompasses several key aspects: it analyzes source code structures to accurately construct function calls and generate fuzz targets; it maps fuzzer input data to the corresponding function parameters; it synthesizes compilation information for the fuzz targets; and it automatically collects and analyzes execution results. Our findings are demonstrated through the application of this approach to the generation of fuzz targets for C/C++ libraries.",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "published": "2026-01-17T09:08:11Z",
+      "updated": "2026-01-17T09:08:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.11972",
+      "html_url": "https://arxiv.org/html/2601.11972",
+      "abs_url": "https://arxiv.org/abs/2601.11972",
+      "citations": 0
+    },
+    {
+      "id": "2103.04388",
+      "title": "Growing a Test Corpus with Bonsai Fuzzing",
+      "authors": [
+        "Vasudev Vikram",
+        "Rohan Padhye",
+        "Koushik Sen"
+      ],
+      "abstract": "This paper presents a coverage-guided grammar-based fuzzing technique for automatically generating a corpus of concise test inputs for programs such as compilers. We walk-through a case study of a compiler designed for education and the corresponding problem of generating meaningful test cases to provide to students. The prior state-of-the-art solution is a combination of fuzzing and test-case reduction techniques such as variants of delta-debugging. Our key insight is that instead of attempting to minimize convoluted fuzzer-generated test inputs, we can instead grow concise test inputs by construction using a form of iterative deepening. We call this approach Bonsai Fuzzing. Experimental results show that Bonsai Fuzzing can generate test corpora having inputs that are 16--45% smaller in size on average as compared to a fuzz-then-reduce approach, while achieving approximately the same code coverage and fault-detection capability.",
+      "categories": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "published": "2021-03-07T16:13:17Z",
+      "updated": "2021-03-07T16:13:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2103.04388",
+      "html_url": "https://arxiv.org/html/2103.04388",
+      "abs_url": "https://arxiv.org/abs/2103.04388",
+      "citations": 19
+    },
+    {
+      "id": "2308.07949",
+      "title": "Fuzzing for CPS Mutation Testing",
+      "authors": [
+        "Jaekwon Lee",
+        "Enrico Viganò",
+        "Oscar Cornejo",
+        "Fabrizio Pastore",
+        "Lionel Briand"
+      ],
+      "abstract": "Mutation testing can help reduce the risks of releasing faulty software. For such reason, it is a desired practice for the development of embedded software running in safety-critical cyber-physical systems (CPS). Unfortunately, state-of-the-art test data generation techniques for mutation testing of C and C++ software, two typical languages for CPS software, rely on symbolic execution, whose limitations often prevent its application (e.g., it cannot test black-box components).\n  We propose a mutation testing approach that leverages fuzz testing, which has proved effective with C and C++ software. Fuzz testing automatically generates diverse test inputs that exercise program branches in a varied number of ways and, therefore, exercise statements in different program states, thus maximizing the likelihood of killing mutants, our objective.\n  We performed an empirical assessment of our approach with software components used in satellite systems currently in orbit. Our empirical evaluation shows that mutation testing based on fuzz testing kills a significantly higher proportion of live mutants than symbolic execution (i.e., up to an additional 47 percentage points). Further, when symbolic execution cannot be applied, fuzz testing provides significant benefits (i.e., up to 41% mutants killed). Our study is the first one comparing fuzz testing and symbolic execution for mutation testing; our results provide guidance towards the development of fuzz testing tools dedicated to mutation testing.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-08-15T16:35:31Z",
+      "updated": "2023-08-15T16:35:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2308.07949",
+      "html_url": "https://arxiv.org/html/2308.07949",
+      "abs_url": "https://arxiv.org/abs/2308.07949",
+      "citations": 3
+    },
+    {
+      "id": "2602.18545",
+      "title": "Programmable Property-Based Testing",
+      "authors": [
+        "Alperen Keles",
+        "Justine Frank",
+        "Ceren Mert",
+        "Harrison Goldstein",
+        "Leonidas Lampropoulos"
+      ],
+      "abstract": "Property-based testing (PBT) is a popular technique for establishing confidence in software, where users write properties -- i.e., executable specifications -- that can be checked many times in a loop by a testing framework. In modern PBT frameworks, properties are usually written in shallowly embedded domain-specific languages, and their definition is tightly coupled to the way they are tested. Such frameworks often provide convenient configuration options to customize aspects of the testing process, but users are limited to precisely what library authors had the prescience to allow for when developing the framework; if they want more flexibility, they may need to write a new framework from scratch.\n  We propose a new, deeper language for properties based on a mixed embedding that we call deferred binding abstract syntax, which reifies properties as a data structure and decouples them from the property runners that execute them. We implement this language in Rocq and Racket, leveraging the power of dependent and dynamic types, respectively. Finally, we showcase the flexibility of this new approach by rapidly prototyping a variety of property runners, highlighting domain-specific testing improvements that can be unlocked by more programmable testing.",
+      "categories": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "published": "2026-02-20T16:52:03Z",
+      "updated": "2026-02-20T16:52:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.18545",
+      "html_url": "https://arxiv.org/html/2602.18545",
+      "abs_url": "https://arxiv.org/abs/2602.18545",
+      "citations": 0
+    },
+    {
+      "id": "2207.07300",
+      "title": "CC-Fuzz: Genetic algorithm-based fuzzing for stress testing congestion control algorithms",
+      "authors": [
+        "Devdeep Ray",
+        "Srinivasan Seshan"
+      ],
+      "abstract": "Congestion control research has experienced a significant increase in interest in the past few years, with many purpose-built algorithms being designed with the needs of specific applications in mind. These algorithms undergo limited testing before being deployed on the Internet, where they interact with other congestion control algorithms and run across a variety of network conditions. This often results in unforeseen performance issues in the wild due to algorithmic inadequacies or implementation bugs, and these issues are often hard to identify since packet traces are not available.\n  In this paper, we present CC-Fuzz, an automated congestion control testing framework that uses a genetic search algorithm in order to stress test congestion control algorithms by generating adversarial network traces and traffic patterns. Initial results using this approach are promising - CC-Fuzz automatically found a bug in BBR that causes it to stall permanently, and is able to automatically discover the well-known low-rate TCP attack, among other things.",
+      "categories": [
+        "cs.NI",
+        "cs.NE",
+        "cs.SE"
+      ],
+      "published": "2022-07-15T05:48:17Z",
+      "updated": "2022-07-15T05:48:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2207.07300",
+      "html_url": "https://arxiv.org/html/2207.07300",
+      "abs_url": "https://arxiv.org/abs/2207.07300",
+      "citations": 7
+    },
+    {
+      "id": "2406.02398",
+      "title": "MOTIF: A tool for Mutation Testing with Fuzzing",
+      "authors": [
+        "Jaekwon Lee",
+        "Enrico Viganò",
+        "Fabrizio Pastore",
+        "Lionel Briand"
+      ],
+      "abstract": "Mutation testing consists of generating test cases that detect faults injected into software (generating mutants) which its original test suite could not. By running such an augmented set of test cases, it may discover actual faults that may have gone unnoticed with the original test suite. It is thus a desired practice for embedded software running in safety-critical cyber-physical systems (CPS). Unfortunately, the state-of-the-art tool targeting C, a typical language for CPS software, relies on symbolic execution, whose limitations often prevent its application. MOTIF overcomes such limitations by leveraging grey-box fuzzing tools to generate unit test cases in C that detect injected faults in mutants. Indeed, fuzzing tools automatically generate inputs by exercising the compiled version of the software under test guided by coverage feedback, thus overcoming the limitations of symbolic execution. Our empirical assessment has shown that it detects more faults than symbolic execution (i.e., up to 47 percentage points), when the latter is applicable.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-06-04T15:12:01Z",
+      "updated": "2024-06-04T15:12:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.02398",
+      "html_url": "https://arxiv.org/html/2406.02398",
+      "abs_url": "https://arxiv.org/abs/2406.02398",
+      "citations": 2
+    },
+    {
+      "id": "2302.08664",
+      "title": "Socialz: Multi-Feature Social Fuzz Testing",
+      "authors": [
+        "Francisco Zanartu",
+        "Christoph Treude",
+        "Markus Wagner"
+      ],
+      "abstract": "Online social networks have become an integral aspect of our daily lives and play a crucial role in shaping our relationships with others. However, bugs and glitches, even minor ones, can cause anything from frustrating problems to serious data leaks that can have farreaching impacts on millions of users. To mitigate these risks, fuzz testing, a method of testing with randomised inputs, can provide increased confidence in the correct functioning of a social network. However, implementing traditional fuzz testing methods can be prohibitively difficult or impractical for programmers outside of the social network's development team. To tackle this challenge, we present Socialz, a novel approach to social fuzz testing that (1) characterises real users of a social network, (2) diversifies their interaction using evolutionary computation across multiple, non-trivial features, and (3) collects performance data as these interactions are executed. With Socialz, we aim to put social testing tools in everybody's hands, thereby improving the reliability and security of social networks used worldwide. In our study, we came across (1) one known limitation of the current GitLab CE and (2) 6,907 errors, of which 40.16% are beyond our debugging skills.",
+      "categories": [
+        "cs.SE",
+        "cs.NE"
+      ],
+      "published": "2023-02-17T03:00:02Z",
+      "updated": "2024-07-04T15:33:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2302.08664",
+      "html_url": "https://arxiv.org/html/2302.08664",
+      "abs_url": "https://arxiv.org/abs/2302.08664",
+      "citations": 0
+    },
+    {
+      "id": "2305.13592",
+      "title": "Understanding Programs by Exploiting (Fuzzing) Test Cases",
+      "authors": [
+        "Jianyu Zhao",
+        "Yuyang Rong",
+        "Yiwen Guo",
+        "Yifeng He",
+        "Hao Chen"
+      ],
+      "abstract": "Semantic understanding of programs has attracted great attention in the community. Inspired by recent successes of large language models (LLMs) in natural language understanding, tremendous progress has been made by treating programming language as another sort of natural language and training LLMs on corpora of program code. However, programs are essentially different from texts after all, in a sense that they are normally heavily structured and syntax-strict. In particular, programs and their basic units (i.e., functions and subroutines) are designed to demonstrate a variety of behaviors and/or provide possible outputs, given different inputs. The relationship between inputs and possible outputs/behaviors represents the functions/subroutines and profiles the program as a whole. Therefore, we propose to incorporate such a relationship into learning, for achieving a deeper semantic understanding of programs. To obtain inputs that are representative enough to trigger the execution of most part of the code, we resort to fuzz testing and propose fuzz tuning to boost the performance of program understanding and code representation learning, given a pre-trained LLM. The effectiveness of the proposed method is verified on two program understanding tasks including code clone detection and code classification, and it outperforms current state-of-the-arts by large margins. Code is available at https://github.com/rabbitjy/FuzzTuning.",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.CR",
+        "cs.SE"
+      ],
+      "published": "2023-05-23T01:51:46Z",
+      "updated": "2023-06-12T00:56:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2305.13592",
+      "html_url": "https://arxiv.org/html/2305.13592",
+      "abs_url": "https://arxiv.org/abs/2305.13592",
+      "citations": 19
+    },
+    {
+      "id": "2211.12003",
+      "title": "Application of property-based testing tools\\\\ for metamorphic testing",
+      "authors": [
+        "Nasser Alzahrani",
+        "Maria Spichkova",
+        "James Harland"
+      ],
+      "abstract": "Metamorphic testing (MT) is a general approach for the testing of a specific kind of software systems -- so-called ``non-testable'', where the ``classical'' testing approaches are difficult to apply. MT is an effective approach for addressing the test oracle problem and test case generation problem. The test oracle problem is when it is difficult to determine the correct expected output of a particular test case or to determine whether the actual outputs agree with the expected outcomes. The core concept in MT is metamorphic relations (MRs) which provide formal specification of the system under test. One of the challenges in MT is \\emph{effective test generation}. Property-based testing (PBT) is a testing methodology in which test cases are generated according to desired properties of the software. In some sense, MT can be seen as a very specific kind of PBT.\\\\ In this paper, we show how to use PBT tools to automate test generation and verification of MT. In addition to automation benefit, the proposed method shows how to combine general PBT with MT under the same testing framework.",
+      "categories": [
+        "cs.SE",
+        "cs.FL"
+      ],
+      "published": "2022-11-22T04:42:09Z",
+      "updated": "2022-11-22T04:42:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2211.12003",
+      "html_url": "https://arxiv.org/html/2211.12003",
+      "abs_url": "https://arxiv.org/abs/2211.12003",
+      "citations": 2
+    },
+    {
+      "id": "2108.01610",
+      "title": "Towards Substructural Property-Based Testing",
+      "authors": [
+        "Marco Mantovani",
+        "Alberto Momigliano"
+      ],
+      "abstract": "We propose to extend property-based testing to substructural logics to overcome the current lack of reasoning tools in the field. We take the first step by implementing a property-based testing system for specifications written in the linear logic programming language Lolli. We employ the foundational proof certificates architecture to model various data generation strategies. We validate our approach by encoding a model of a simple imperative programming language and its compilation and by testing its meta-theory via mutation analysis.",
+      "categories": [
+        "cs.LO",
+        "cs.PL",
+        "cs.SE"
+      ],
+      "published": "2021-08-03T16:21:20Z",
+      "updated": "2021-08-03T16:21:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2108.01610",
+      "html_url": "https://arxiv.org/html/2108.01610",
+      "abs_url": "https://arxiv.org/abs/2108.01610",
+      "citations": 1
+    },
+    {
+      "id": "2407.12726",
+      "title": "Type-level Property Based Testing",
+      "authors": [
+        "Thomas Ekström Hansen",
+        "Edwin Brady"
+      ],
+      "abstract": "We present an automated framework for solidifying the cohesion between software specifications, their dependently typed models, and implementation at compile time. Model Checking and type checking are currently separate techniques for automatically verifying the correctness of programs. Using Property Based Testing (PBT), Indexed State Monads (ISMs), and dependent types, we are able to model several interesting systems and network protocols, have the type checker verify that our implementation behaves as specified, and test that our model matches the specification's semantics; a step towards combining model and type checking.",
+      "categories": [
+        "cs.PL",
+        "cs.SE"
+      ],
+      "published": "2024-07-17T16:43:41Z",
+      "updated": "2024-07-17T16:43:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2407.12726",
+      "html_url": "https://arxiv.org/html/2407.12726",
+      "abs_url": "https://arxiv.org/abs/2407.12726",
+      "citations": 0
+    },
+    {
+      "id": "2301.13615",
+      "title": "Property-Based Mutation Testing",
+      "authors": [
+        "Ezio Bartocci",
+        "Leonardo Mariani",
+        "Dejan Nickovic",
+        "Drishti Yadav"
+      ],
+      "abstract": "Mutation testing is an established software quality assurance technique for the assessment of test suites. While it is well-suited to estimate the general fault-revealing capability of a test suite, it is not practical and informative when the software under test must be validated against specific requirements. This is often the case for embedded software, where the software is typically validated against rigorously-specified safety properties. In such a scenario (i) a mutant is relevant only if it can impact the satisfaction of the tested properties, and (ii) a mutant is meaningfully-killed with respect to a property only if it causes the violation of that property. To address these limitations of mutation testing, we introduce property-based mutation testing, a method for assessing the capability of a test suite to exercise the software with respect to a given property. We evaluate our property-based mutation testing framework on Simulink models of safety-critical Cyber-Physical Systems (CPS) from the automotive and avionic domains and demonstrate how property-based mutation testing is more informative than regular mutation testing. These results open new perspectives in both mutation testing and test case generation of CPS.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-01-31T13:17:15Z",
+      "updated": "2023-01-31T13:17:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2301.13615",
+      "html_url": "https://arxiv.org/html/2301.13615",
+      "abs_url": "https://arxiv.org/abs/2301.13615",
+      "citations": 5
+    },
+    {
+      "id": "2603.06600",
+      "title": "FuzzingRL: Reinforcement Fuzz-Testing for Revealing VLM Failures",
+      "authors": [
+        "Jiajun Xu",
+        "Jiageng Mao",
+        "Ang Qi",
+        "Weiduo Yuan",
+        "Alexander Romanus",
+        "Helen Xia",
+        "Vitor Campagnolo Guizilini",
+        "Yue Wang"
+      ],
+      "abstract": "Vision Language Models (VLMs) are prone to errors, and identifying where these errors occur is critical for ensuring the reliability and safety of AI systems. In this paper, we propose an approach that automatically generates questions designed to deliberately induce incorrect responses from VLMs, thereby revealing their vulnerabilities. The core of this approach lies in fuzz testing and reinforcement finetuning: we transform a single input query into a large set of diverse variants through vision and language fuzzing. Based on the fuzzing outcomes, the question generator is further instructed by adversarial reinforcement fine-tuning to produce increasingly challenging queries that trigger model failures. With this approach, we can consistently drive down a target VLM's answer accuracy -- for example, the accuracy of Qwen2.5-VL-32B on our generated questions drops from 86.58\\% to 65.53\\% in four RL iterations. Moreover, a fuzzing policy trained against a single target VLM transfers to multiple other VLMs, producing challenging queries that degrade their performance as well.",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "published": "2026-02-17T06:15:19Z",
+      "updated": "2026-02-17T06:15:19Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.06600",
+      "html_url": "https://arxiv.org/html/2603.06600",
+      "abs_url": "https://arxiv.org/abs/2603.06600",
+      "citations": 0
+    },
+    {
+      "id": "2005.14124",
+      "title": "Active Fuzzing for Testing and Securing Cyber-Physical Systems",
+      "authors": [
+        "Yuqi Chen",
+        "Bohan Xuan",
+        "Christopher M. Poskitt",
+        "Jun Sun",
+        "Fan Zhang"
+      ],
+      "abstract": "Cyber-physical systems (CPSs) in critical infrastructure face a pervasive threat from attackers, motivating research into a variety of countermeasures for securing them. Assessing the effectiveness of these countermeasures is challenging, however, as realistic benchmarks of attacks are difficult to manually construct, blindly testing is ineffective due to the enormous search spaces and resource requirements, and intelligent fuzzing approaches require impractical amounts of data and network access. In this work, we propose active fuzzing, an automatic approach for finding test suites of packet-level CPS network attacks, targeting scenarios in which attackers can observe sensors and manipulate packets, but have no existing knowledge about the payload encodings. Our approach learns regression models for predicting sensor values that will result from sampled network packets, and uses these predictions to guide a search for payload manipulations (i.e. bit flips) most likely to drive the CPS into an unsafe state. Key to our solution is the use of online active learning, which iteratively updates the models by sampling payloads that are estimated to maximally improve them. We evaluate the efficacy of active fuzzing by implementing it for a water purification plant testbed, finding it can automatically discover a test suite of flow, pressure, and over/underflow attacks, all with substantially less time, data, and network access than the most comparable approach. Finally, we demonstrate that our prediction models can also be utilised as countermeasures themselves, implementing them as anomaly detectors and early warning systems.",
+      "categories": [
+        "cs.SE",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2020-05-28T16:19:50Z",
+      "updated": "2020-07-16T08:15:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2005.14124",
+      "html_url": "https://arxiv.org/html/2005.14124",
+      "abs_url": "https://arxiv.org/abs/2005.14124",
+      "citations": 28
+    },
+    {
+      "id": "2203.06910",
+      "title": "Investigating Coverage Guided Fuzzing with Mutation Testing",
+      "authors": [
+        "Ruixiang Qian",
+        "Quanjun Zhang",
+        "Chunrong Fang",
+        "Lihua Guo"
+      ],
+      "abstract": "Coverage guided fuzzing (CGF) is an effective testing technique which has detected hundreds of thousands of bugs from various software applications. It focuses on maximizing code coverage to reveal more bugs during fuzzing. However, a higher coverage does not necessarily imply a better fault detection capability. Triggering a bug involves not only exercising the specific program path but also reaching interesting program states in that path. In this paper, we use mutation testing to improve CGF in detecting bugs. We use mutation scores as feedback to guide fuzzing towards detecting bugs rather than just covering code. To evaluate our approach, we conduct a well-designed experiment on 5 benchmarks. We choose the state-of-the-art fuzzing technique Zest as baseline and construct two modified techniques on it using our approach. The experimental results show that our approach can improve CGF in both code coverage and bug detection.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-03-14T08:01:59Z",
+      "updated": "2022-05-01T04:11:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2203.06910",
+      "html_url": "https://arxiv.org/html/2203.06910",
+      "abs_url": "https://arxiv.org/abs/2203.06910",
+      "citations": 11
+    },
+    {
+      "id": "2507.08331",
+      "title": "Qualcomm Trusted Application Emulation for Fuzzing Testing",
+      "authors": [
+        "Chun-I Fan",
+        "Li-En Chang",
+        "Cheng-Han Shie"
+      ],
+      "abstract": "In recent years, the increasing awareness of cybersecurity has led to a heightened focus on information security within hardware devices and products. Incorporating Trusted Execution Environments (TEEs) into product designs has become a standard practice for safeguarding sensitive user information. However, vulnerabilities within these components present significant risks, if exploited by attackers, these vulnerabilities could lead to the leakage of sensitive data, thereby compromising user privacy and security. This research centers on trusted applications (TAs) within the Qualcomm TEE and introduces a novel emulator specifically designed for these applications. Through reverse engineering techniques, we thoroughly analyze Qualcomm TAs and develop a partial emulation environment that accurately emulates their behavior. Additionally, we integrate fuzzing testing techniques into the emulator to systematically uncover potential vulnerabilities within Qualcomm TAs, demonstrating its practical effectiveness in identifying real-world security flaws. This research makes a significant contribution by being the first to provide both the implementation methods and source codes for a Qualcomm TAs emulator, offering a valuable reference for future research efforts. Unlike previous approaches that relied on complex and resource-intensive full-system simulations, our approach is lightweight and effective, making security testing of TA more convenient.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2025-07-11T06:10:15Z",
+      "updated": "2025-07-11T06:10:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.08331",
+      "html_url": "https://arxiv.org/html/2507.08331",
+      "abs_url": "https://arxiv.org/abs/2507.08331",
+      "citations": 2
+    },
+    {
+      "id": "2008.03621",
+      "title": "Consumer UAV Cybersecurity Vulnerability Assessment Using Fuzzing Tests",
+      "authors": [
+        "David Rudo",
+        "Kai Zeng"
+      ],
+      "abstract": "Unmanned Aerial Vehicles (UAVs) are remote-controlled vehicles capable of flight and are present in a variety of environments from military operations to domestic enjoyment. These vehicles are great assets, but just as their pilot can control them remotely, cyberattacks can be executed in a similar manner. Cyber attacks on UAVs can bring a plethora of issues to physical and virtual systems. Such malfunctions are capable of giving an attacker the ability to steal data, incapacitate the UAV, or hijack the UAV. To mitigate such attacks, it is necessary to identify and patch vulnerabilities that may be maliciously exploited. In this paper, a new UAV vulnerability is explored with related UAV security practices identified for possible exploitation using large streams of data sent at specific ports. The more in-depth model involves strings of data involving FTP-specific keywords sent to the UAV's FTP port in the form of a fuzzing test and launching thousands of packets at other ports on the UAV as well. During these tests, virtual and physical systems are monitored extensively to identify specific patterns and vulnerabilities. This model is applied to a Parrot Bebop 2, which accurately portrays a UAV that had their network compromised by an attacker and portrays many lower-end UAV models for domestic use. During testings, the Parrot Bebop 2 is monitored for degradation in GPS performance, video speed, the UAV's reactivity to the pilot, motor function, and the accuracy of the UAV's sensor data. All these points of monitoring give a comprehensive view of the UAV's reaction to each individual test. In this paper, countermeasures to combat the exploitation of this vulnerability will be discussed as well as possible attacks that can branch from the fuzzing tests.",
+      "categories": [
+        "cs.CR",
+        "cs.CY"
+      ],
+      "published": "2020-08-09T00:40:54Z",
+      "updated": "2020-08-09T00:40:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2008.03621",
+      "html_url": "https://arxiv.org/html/2008.03621",
+      "abs_url": "https://arxiv.org/abs/2008.03621",
+      "citations": 13
+    },
+    {
+      "id": "2202.03616",
+      "title": "Towards Property-Based Tests in Natural Language",
+      "authors": [
+        "Colin S. Gordon"
+      ],
+      "abstract": "We consider a new approach to generate tests from natural language. Rather than relying on machine learning or templated extraction from structured comments, we propose to apply classic ideas from linguistics to translate natural-language sentences into executable tests. This paper explores the application of combinatory categorial grammars (CCGs) to generating property-based tests. Our prototype is able to generate tests from English descriptions for each example in a textbook chapter on property-based testing.",
+      "categories": [
+        "cs.SE",
+        "cs.CL"
+      ],
+      "published": "2022-02-08T03:15:42Z",
+      "updated": "2022-02-08T03:15:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2202.03616",
+      "html_url": "https://arxiv.org/html/2202.03616",
+      "abs_url": "https://arxiv.org/abs/2202.03616",
+      "citations": 2
+    },
+    {
+      "id": "2111.10414",
+      "title": "Automated, Targeted Testing of Property-Based Testing Predicates",
+      "authors": [
+        "Tim Nelson",
+        "Elijah Rivera",
+        "Sam Soucie",
+        "Thomas Del Vecchio",
+        "John Wrenn",
+        "Shriram Krishnamurthi"
+      ],
+      "abstract": "Context: This work is based on property-based testing (PBT). PBT is an increasingly important form of software testing. Furthermore, it serves as a concrete gateway into the abstract area of formal methods. Specifically, we focus on students learning PBT methods.\n  Inquiry: How well do students do at PBT? Our goal is to assess the quality of the predicates they write as part of PBT. Prior work introduced the idea of decomposing the predicate's property into a conjunction of independent subproperties. Testing the predicate against each subproperty gives a \"semantic\" understanding of their performance.\n  Approach: The notion of independence of subproperties both seems intuitive and was an important condition in prior work. First, we show that this condition is overly restrictive and might hide valuable information: it both undercounts errors and makes it hard to capture misconceptions. Second, we introduce two forms of automation, one based on PBT tools and the other on SAT-solving, to enable testing of student predicates. Third, we compare the output of these automated tools against manually-constructed tests. Fourth, we also measure the performance of those tools. Finally, we re-assess student performance reported in prior work.\n  Knowledge: We show the difficulty caused by the independent subproperty requirement. We provide insight into how to use automation effectively to assess PBT predicates. In particular, we discuss the steps we had to take to beat human performance. We also provide insight into how to make the automation work efficiently. Finally, we present a much richer account than prior work of how students did.\n  Grounding: Our methods are grounded in mathematical logic. We also make use of well-understood principles of test generation from more formal specifications. This combination ensures the soundness of our work. We use standard methods to measure performance.\n  Importance: As both educators and programmers, we believe PBT is a valuable tool for students to learn, and its importance will only grow as more developers appreciate its value. Effective teaching requires a clear understanding of student knowledge and progress. Our methods enable a rich and automated analysis of student performance on PBT that yields insight into their understanding and can capture misconceptions. We therefore expect these results to be valuable to educators.",
+      "categories": [
+        "cs.PL"
+      ],
+      "published": "2021-11-19T19:50:16Z",
+      "updated": "2021-11-19T19:50:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2111.10414",
+      "html_url": "https://arxiv.org/html/2111.10414",
+      "abs_url": "https://arxiv.org/abs/2111.10414",
+      "citations": 7
+    },
+    {
+      "id": "2106.00873",
+      "title": "Coverage-based Scene Fuzzing for Virtual Autonomous Driving Testing",
+      "authors": [
+        "Zhisheng Hu",
+        "Shengjian Guo",
+        "Zhenyu Zhong",
+        "Kang Li"
+      ],
+      "abstract": "Simulation-based virtual testing has become an essential step to ensure the safety of autonomous driving systems. Testers need to handcraft the virtual driving scenes and configure various environmental settings like surrounding traffic, weather conditions, etc. Due to the huge amount of configuration possibilities, the human efforts are subject to the inefficiency in detecting flaws in industry-class autonomous driving system. This paper proposes a coverage-driven fuzzing technique to automatically generate diverse configuration parameters to form new driving scenes. Experimental results show that our fuzzing method can significantly reduce the cost in deriving new risky scenes from the initial setup designed by testers. We expect automated fuzzing will become a common practice in virtual testing for autonomous driving systems.",
+      "categories": [
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2021-06-02T00:49:59Z",
+      "updated": "2021-06-02T00:49:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2106.00873",
+      "html_url": "https://arxiv.org/html/2106.00873",
+      "abs_url": "https://arxiv.org/abs/2106.00873",
+      "citations": 30
+    },
+    {
+      "id": "2412.13802",
+      "title": "SimADFuzz: Simulation-Feedback Fuzz Testing for Autonomous Driving Systems",
+      "authors": [
+        "Huiwen Yang",
+        "Yu Zhou",
+        "Taolue Chen"
+      ],
+      "abstract": "Autonomous driving systems (ADS) have achieved remarkable progress in recent years. However, ensuring their safety and reliability remains a critical challenge due to the complexity and uncertainty of driving scenarios. In this paper, we focus on simulation testing for ADS, where generating diverse and effective testing scenarios is a central task. Existing fuzz testing methods face limitations, such as overlooking the temporal and spatial dynamics of scenarios and failing to leverage simulation feedback (e.g., speed, acceleration and heading) to guide scenario selection and mutation. To address these issues, we propose SimADFuzz, a novel framework designed to generate high-quality scenarios that reveal violations in ADS behavior. Specifically, SimADFuzz employs violation prediction models, which evaluate the likelihood of ADS violations, to optimize scenario selection. Moreover, SimADFuzz proposes distance-guided mutation strategies to enhance interactions among vehicles in offspring scenarios, thereby triggering more edge-case behaviors of vehicles. Comprehensive experiments demonstrate that SimADFuzz outperforms state-of-the-art fuzzers by identifying 32 more unique violations, including 4 reproducible cases of vehicle-vehicle and vehicle-pedestrian collisions. These results demonstrate SimADFuzz's effectiveness in enhancing the robustness and safety of autonomous driving systems.",
+      "categories": [
+        "cs.SE",
+        "cs.RO"
+      ],
+      "published": "2024-12-18T12:49:57Z",
+      "updated": "2024-12-18T12:49:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2412.13802",
+      "html_url": "https://arxiv.org/html/2412.13802",
+      "abs_url": "https://arxiv.org/abs/2412.13802",
+      "citations": 4
+    },
+    {
+      "id": "2409.14866",
+      "title": "PAPILLON: Efficient and Stealthy Fuzz Testing-Powered Jailbreaks for LLMs",
+      "authors": [
+        "Xueluan Gong",
+        "Mingzhe Li",
+        "Yilin Zhang",
+        "Fengyuan Ran",
+        "Chen Chen",
+        "Yanjiao Chen",
+        "Qian Wang",
+        "Kwok-Yan Lam"
+      ],
+      "abstract": "Large Language Models (LLMs) have excelled in various tasks but are still vulnerable to jailbreaking attacks, where attackers create jailbreak prompts to mislead the model to produce harmful or offensive content. Current jailbreak methods either rely heavily on manually crafted templates, which pose challenges in scalability and adaptability, or struggle to generate semantically coherent prompts, making them easy to detect. Additionally, most existing approaches involve lengthy prompts, leading to higher query costs. In this paper, to remedy these challenges, we introduce a novel jailbreaking attack framework called PAPILLON, which is an automated, black-box jailbreaking attack framework that adapts the black-box fuzz testing approach with a series of customized designs. Instead of relying on manually crafted templates,PAPILLON starts with an empty seed pool, removing the need to search for any related jailbreaking templates. We also develop three novel question-dependent mutation strategies using an LLM helper to generate prompts that maintain semantic coherence while significantly reducing their length. Additionally, we implement a two-level judge module to accurately detect genuine successful jailbreaks. We evaluated PAPILLON on 7 representative LLMs and compared it with 5 state-of-the-art jailbreaking attack strategies. For proprietary LLM APIs, such as GPT-3.5 turbo, GPT-4, and Gemini-Pro, PAPILLONs achieves attack success rates of over 90%, 80%, and 74%, respectively, exceeding existing baselines by more than 60\\%. Additionally, PAPILLON can maintain high semantic coherence while significantly reducing the length of jailbreak prompts. When targeting GPT-4, PAPILLON can achieve over 78% attack success rate even with 100 tokens. Moreover, PAPILLON demonstrates transferability and is robust to state-of-the-art defenses. Code: https://github.com/aaFrostnova/Papillon",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2024-09-23T10:03:09Z",
+      "updated": "2025-03-03T07:25:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.14866",
+      "html_url": "https://arxiv.org/html/2409.14866",
+      "abs_url": "https://arxiv.org/abs/2409.14866",
+      "citations": 15
+    },
+    {
+      "id": "2603.13411",
+      "title": "Human in the Loop for Fuzz Testing: Literature Review and the Road Ahead",
+      "authors": [
+        "Jiongchi Yu",
+        "Xiaolin Wen",
+        "Sizhe Cheng",
+        "Xiaofei Xie",
+        "Qiang Hu",
+        "Yong Wang"
+      ],
+      "abstract": "Fuzz testing is one of the most effective techniques for detecting bugs and vulnerabilities in software. However, as the basis of fuzz testing, automated heuristics often fail to uncover deep or complex vulnerabilities. As a result, the performance of fuzz testing remains limited. One promising way to address this limitation is to integrate human expert guidance into the paradigm of fuzz testing. Even though some works have been proposed in this direction, there is still a lack of a systematic research roadmap for combining Human-in-the-Loop (HITL) and fuzz testing, hindering the potential for further enhancing fuzzing effectiveness.\n  To bridge this gap, this paper outlines a forward-looking research roadmap for HITL for fuzz testing. Specifically, we highlight the promise of visualization techniques for interpretable fuzzing processes, as well as on-the-fly interventions that enable experts to guide fuzzing toward hard-to-reach program behaviors. Moreover, the rise of Large Language Models (LLMs) introduces new opportunities and challenges, raising questions about how humans can efficiently provide actionable knowledge, how expert meta-knowledge can be leveraged, and what roles humans should play in the intelligent fuzzing loop with LLMs. To address these questions, we survey existing work on HITL fuzz testing and propose a research agenda emphasizing future opportunities in (1) human monitoring, (2) human steering, and (3) human-LLM collaboration. We call for a paradigm shift toward interactive, human-guided fuzzing systems that integrate expert insight with AI-powered automation in the next-generation fuzzing ecosystem.",
+      "categories": [
+        "cs.SE",
+        "cs.HC"
+      ],
+      "published": "2026-03-12T12:39:16Z",
+      "updated": "2026-03-12T12:39:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.13411",
+      "html_url": "https://arxiv.org/html/2603.13411",
+      "abs_url": "https://arxiv.org/abs/2603.13411",
+      "citations": 0
+    },
+    {
+      "id": "2601.17450",
+      "title": "Data-driven Test Generation for Fuzzing AI Compiler",
+      "authors": [
+        "Qingchao Shen"
+      ],
+      "abstract": "Artificial Intelligence (AI) compilers are critical for efficiently deploying AI models across diverse hardware platforms. However, they remain prone to bugs that can compromise both compiler reliability and model correctness. Thus, ensuring the quality of AI compilers is crucial. In this work, we present a unified data-driven testing framework that systematically addresses stage-specific challenges in AI compilers. Specifically, OPERA migrates tests for AI libraries to test various operator conversion logic in the model loading stage. OATest synthesizes diverse optimization-aware computational graphs for testing high-level optimizations. HARMONY generates and mutates diverse low-level IR seeds to generate hardware-optimization-aware tests for testing low-level optimizations. Together, these techniques provide a comprehensive, stage-aware framework that enhances testing coverage and effectiveness, detecting 266 previously unknown bugs in four widely used AI compilers.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-01-24T12:56:40Z",
+      "updated": "2026-01-24T12:56:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.17450",
+      "html_url": "https://arxiv.org/html/2601.17450",
+      "abs_url": "https://arxiv.org/abs/2601.17450",
+      "citations": 0
+    },
+    {
+      "id": "2401.06653",
+      "title": "Evolutionary Generative Fuzzing for Differential Testing of the Kotlin Compiler",
+      "authors": [
+        "Calin Georgescu",
+        "Mitchell Olsthoorn",
+        "Pouria Derakhshanfar",
+        "Marat Akhin",
+        "Annibale Panichella"
+      ],
+      "abstract": "Compiler correctness is a cornerstone of reliable software development. However, systematic testing of compilers is infeasible, given the vast space of possible programs and the complexity of modern programming languages. In this context, differential testing offers a practical methodology as it addresses the oracle problem by comparing the output of alternative compilers given the same set of programs as input. In this paper, we investigate the effectiveness of differential testing in finding bugs within the Kotlin compilers developed at JetBrains. We propose a black-box generative approach that creates input programs for the K1 and K2 compilers. First, we build workable models of Kotlin semantic (semantic interface) and syntactic (enriched context-free grammar) language features, which are subsequently exploited to generate random code snippets. Second, we extend random sampling by introducing two genetic algorithms (GAs) that aim to generate more diverse input programs. Our case study shows that the proposed approach effectively detects bugs in K1 and K2; these bugs have been confirmed and (some) fixed by JetBrains developers. While we do not observe a significant difference w.r.t. the number of defects uncovered by the different search algorithms, random search and GAs are complementary as they find different categories of bugs. Finally, we provide insights into the relationships between the size, complexity, and fault detection capability of the generated input programs.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-01-12T16:01:12Z",
+      "updated": "2024-01-12T16:01:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2401.06653",
+      "html_url": "https://arxiv.org/html/2401.06653",
+      "abs_url": "https://arxiv.org/abs/2401.06653",
+      "citations": 6
+    },
+    {
+      "id": "2512.04436",
+      "title": "ReFuzz: Reusing Tests for Processor Fuzzing with Contextual Bandits",
+      "authors": [
+        "Chen Chen",
+        "Zaiyan Xu",
+        "Mohamadreza Rostami",
+        "David Liu",
+        "Dileep Kalathil",
+        "Ahmad-Reza Sadeghi",
+        "Jeyavijayan Rajendran"
+      ],
+      "abstract": "Processor designs rely on iterative modifications and reuse well-established designs. However, this reuse of prior designs also leads to similar vulnerabilities across multiple processors. As processors grow increasingly complex with iterative modifications, efficiently detecting vulnerabilities from modern processors is critical. Inspired by software fuzzing, hardware fuzzing has recently demonstrated its effectiveness in detecting processor vulnerabilities. Yet, to our best knowledge, existing processor fuzzers fuzz each design individually, lacking the capability to understand known vulnerabilities in prior processors to fine-tune fuzzing to identify similar or new variants of vulnerabilities.\n  To address this gap, we present ReFuzz, an adaptive fuzzing framework that leverages contextual bandit to reuse highly effective tests from prior processors to fuzz a processor-under-test (PUT) within a given ISA. By intelligently mutating tests that trigger vulnerabilities in prior processors, ReFuzz effectively detects similar and new variants of vulnerabilities in PUTs. ReFuzz uncovered three new security vulnerabilities and two new functional bugs. ReFuzz detected one vulnerability by reusing a test that triggers a known vulnerability in a prior processor. One functional bug exists across three processors that share design modules. The second bug has two variants. Additionally, ReFuzz reuses highly effective tests to enhance efficiency in coverage, achieving an average 511.23x coverage speedup and up to 9.33% more total coverage, compared to existing fuzzers.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2025-12-04T04:05:40Z",
+      "updated": "2025-12-08T17:27:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.04436",
+      "html_url": "https://arxiv.org/html/2512.04436",
+      "abs_url": "https://arxiv.org/abs/2512.04436",
+      "citations": 0
+    },
+    {
+      "id": "2411.08626",
+      "title": "Learning-Guided Fuzzing for Testing Stateful SDN Controllers",
+      "authors": [
+        "Raphaël Ollando",
+        "Seung Yeob Shin",
+        "Lionel C. Briand"
+      ],
+      "abstract": "Controllers for software-defined networks (SDNs) are centralised software components that enable advanced network functionalities, such as dynamic traffic engineering and network virtualisation. However, these functionalities increase the complexity of SDN controllers, making thorough testing crucial. SDN controllers are stateful, interacting with multiple network devices through sequences of control messages. Identifying stateful failures in an SDN controller is challenging due to the infinite possible sequences of control messages, which result in an unbounded number of stateful interactions between the controller and network devices. In this article, we propose SeqFuzzSDN, a learning-guided fuzzing method for testing stateful SDN controllers. SeqFuzzSDN aims to (1) efficiently explore the state space of the SDN controller under test, (2) generate effective and diverse tests (i.e., control message sequences) to uncover failures, and (3) infer accurate failure-inducing models that characterise the message sequences leading to failures. In addition, we compare SeqFuzzSDN with three extensions of state-of-the-art (SOTA) methods for fuzzing SDNs. Our findings show that, compared to the extended SOTA methods, SeqFuzzSDN (1) generates more diverse message sequences that lead to failures within the same time budget, and (2) produces more accurate failure-inducing models, significantly outperforming the other extended SOTA methods in terms of sensitivity.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-11-13T14:10:16Z",
+      "updated": "2025-05-05T09:06:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2411.08626",
+      "html_url": "https://arxiv.org/html/2411.08626",
+      "abs_url": "https://arxiv.org/abs/2411.08626",
+      "citations": 1
+    },
+    {
+      "id": "2512.14475",
+      "title": "Teralizer: Semantics-Based Test Generalization from Conventional Unit Tests to Property-Based Tests",
+      "authors": [
+        "Johann Glock",
+        "Clemens Bauer",
+        "Martin Pinzger"
+      ],
+      "abstract": "Conventional unit tests validate single input-output pairs, leaving most inputs of an execution path untested. Property-based testing addresses this shortcoming by generating multiple inputs satisfying properties but requires significant manual effort to define properties and their constraints. We propose a semantics-based approach that automatically transforms unit tests into property-based tests by extracting specifications from implementations via single-path symbolic analysis. We demonstrate this approach through Teralizer, a prototype for Java that transforms JUnit tests into property-based jqwik tests. Unlike prior work that generalizes from input-output examples, Teralizer derives specifications from program semantics.\n  We evaluated Teralizer on three progressively challenging datasets. On EvoSuite-generated tests for EqBench and Apache Commons utilities, Teralizer improved mutation scores by 1-4 percentage points. Generalization of mature developer-written tests from Apache Commons utilities showed only 0.05-0.07 percentage points improvement. Analysis of 632 real-world Java projects from RepoReapers highlights applicability barriers: only 1.7% of projects completed the generalization pipeline, with failures primarily due to type support limitations in symbolic analysis and static analysis limitations in our prototype. Based on the results, we provide a roadmap for future work, identifying research and engineering challenges that need to be tackled to advance the field of test generalization.\n  Artifacts available at: https://doi.org/10.5281/zenodo.17950381",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-12-16T15:08:00Z",
+      "updated": "2025-12-16T15:08:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.14475",
+      "html_url": "https://arxiv.org/html/2512.14475",
+      "abs_url": "https://arxiv.org/abs/2512.14475",
+      "citations": 0
+    },
+    {
+      "id": "2307.14556",
+      "title": "Reinforcement learning guided fuzz testing for a browser's HTML rendering engine",
+      "authors": [
+        "Martin Sablotny",
+        "Bjørn Sand Jensen",
+        "Jeremy Singer"
+      ],
+      "abstract": "Generation-based fuzz testing can uncover various bugs and security vulnerabilities. However, compared to mutation-based fuzz testing, it takes much longer to develop a well-balanced generator that produces good test cases and decides where to break the underlying structure to exercise new code paths. We propose a novel approach to combine a trained test case generator deep learning model with a double deep Q-network (DDQN) for the first time. The DDQN guides test case creation based on a code coverage signal. Our approach improves the code coverage performance of the underlying generator model by up to 18.5\\% for the Firefox HTML rendering engine compared to the baseline grammar based fuzzer.",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "published": "2023-07-27T00:31:02Z",
+      "updated": "2023-07-27T00:31:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2307.14556",
+      "html_url": "https://arxiv.org/html/2307.14556",
+      "abs_url": "https://arxiv.org/abs/2307.14556",
+      "citations": 2
+    },
+    {
+      "id": "2104.07460",
+      "title": "Automated Conformance Testing for JavaScript Engines via Deep Compiler Fuzzing",
+      "authors": [
+        "Guixin Ye",
+        "Zhanyong Tang",
+        "Shin Hwei Tan",
+        "Songfang Huang",
+        "Dingyi Fang",
+        "Xiaoyang Sun",
+        "Lizhong Bian",
+        "Haibo Wang",
+        "Zheng Wang"
+      ],
+      "abstract": "JavaScript (JS) is a popular, platform-independent programming language. To ensure the interoperability of JS programs across different platforms, the implementation of a JS engine should conform to the ECMAScript standard. However, doing so is challenging as there are many subtle definitions of API behaviors, and the definitions keep evolving.\n  We present COMFORT, a new compiler fuzzing framework for detecting JS engine bugs and behaviors that deviate from the ECMAScript standard. COMFORT leverages the recent advance in deep learning-based language models to automatically generate JS test code. As a departure from prior fuzzers, COMFORT utilizes the well-structured ECMAScript specifications to automatically generate test data along with the test programs to expose bugs that could be overlooked by the developers or manually written test cases. COMFORT then applies differential testing methodologies on the generated test cases to expose standard conformance bugs. We apply COMFORT to ten mainstream JS engines. In 200 hours of automated concurrent testing runs, we discover bugs in all tested JS engines. We had identified 158 unique JS engine bugs, of which 129 have been verified, and 115 have already been fixed by the developers. Furthermore, 21 of the Comfort-generated test cases have been added to Test262, the official ECMAScript conformance test suite.",
+      "categories": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "published": "2021-04-15T13:47:42Z",
+      "updated": "2021-04-15T13:47:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2104.07460",
+      "html_url": "https://arxiv.org/html/2104.07460",
+      "abs_url": "https://arxiv.org/abs/2104.07460",
+      "citations": 96
+    },
+    {
+      "id": "2406.08665",
+      "title": "FuzzAug: Data Augmentation by Coverage-guided Fuzzing for Neural Test Generation",
+      "authors": [
+        "Yifeng He",
+        "Jicheng Wang",
+        "Yuyang Rong",
+        "Hao Chen"
+      ],
+      "abstract": "Testing is essential to modern software engineering for building reliable software. Given the high costs of manually creating test cases, automated test case generation, particularly methods utilizing large language models, has become increasingly popular. These neural approaches generate semantically meaningful tests that are more maintainable compared with traditional automatic testing methods like fuzzing. However, the diversity and volume of unit tests in current datasets are limited, especially for newer but important languages. In this paper, we present a novel data augmentation technique, FuzzAug, that introduces the benefits of fuzzing to large language models by introducing valid testing semantics and providing diverse coverage-guided inputs. Doubling the size of training datasets, FuzzAug improves the performance from the baselines significantly. This technique demonstrates the potential of introducing prior knowledge from dynamic software analysis to improve neural test generation, offering significant enhancements in neural test generation.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2024-06-12T22:09:27Z",
+      "updated": "2025-06-26T22:00:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.08665",
+      "html_url": "https://arxiv.org/html/2406.08665",
+      "abs_url": "https://arxiv.org/abs/2406.08665",
+      "citations": 3
+    },
+    {
+      "id": "2512.05383",
+      "title": "Fuzzing the brain: Automated stress testing for the safety of ML-driven neurostimulation",
+      "authors": [
+        "Mara Downing",
+        "Matthew Peng",
+        "Jacob Granley",
+        "Michael Beyeler",
+        "Tevfik Bultan"
+      ],
+      "abstract": "Objective: Machine learning (ML) models are increasingly used to generate electrical stimulation patterns in neuroprosthetic devices such as visual prostheses. While these models promise precise and personalized control, they also introduce new safety risks when model outputs are delivered directly to neural tissue. We propose a systematic, quantitative approach to detect and characterize unsafe stimulation patterns in ML-driven neurostimulation systems. Approach: We adapt an automated software testing technique known as coverage-guided fuzzing to the domain of neural stimulation. Here, fuzzing performs stress testing by perturbing model inputs and tracking whether resulting stimulation violates biophysical limits on charge density, instantaneous current, or electrode co-activation. The framework treats encoders as black boxes and steers exploration with coverage metrics that quantify how broadly test cases span the space of possible outputs and violation types. Main results: Applied to deep stimulus encoders for the retina and cortex, the method systematically reveals diverse stimulation regimes that exceed established safety limits. Two violation-output coverage metrics identify the highest number and diversity of unsafe outputs, enabling interpretable comparisons across architectures and training strategies. Significance: Violation-focused fuzzing reframes safety assessment as an empirical, reproducible process. By transforming safety from a training heuristic into a measurable property of the deployed model, it establishes a foundation for evidence-based benchmarking, regulatory readiness, and ethical assurance in next-generation neural interfaces.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2025-12-05T02:43:22Z",
+      "updated": "2025-12-05T02:43:22Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.05383",
+      "html_url": "https://arxiv.org/html/2512.05383",
+      "abs_url": "https://arxiv.org/abs/2512.05383",
+      "citations": 1
+    },
+    {
+      "id": "2203.11532",
+      "title": "Quickstrom: Property Based Acceptance Testing with LTL Specifications",
+      "authors": [
+        "Liam O'Connor",
+        "Oskar Wickström"
+      ],
+      "abstract": "We present Quickstrom, a property-based testing system for acceptance testing of interactive applications. Using Quickstrom, programmers can specify the behaviour of web applications as properties in our testing-oriented dialect of Linear Temporal Logic (LTL) called QuickLTL, and then automatically test their application against the given specification with hundreds of automatically generated interactions. QuickLTL extends existing finite variants of LTL for the testing use-case, determining likely outcomes from partial traces whose minimum length is itself determined by the LTL formula. This temporal logic is embedded in our specification language, Specstrom, which is designed to be approachable to web programmers, expressive for writing specifications, and easy to analyse. Because Quickstrom tests only user-facing behaviour, it is agnostic to the implementation language of the system under test. We therefore formally specify and test many implementations of the popular TodoMVC benchmark, used for evaluation and comparison across various web frontend frameworks and languages. Our tests uncovered bugs in almost half of the available implementations.",
+      "categories": [
+        "cs.PL",
+        "cs.SE"
+      ],
+      "published": "2022-03-22T08:19:41Z",
+      "updated": "2022-03-22T08:19:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2203.11532",
+      "html_url": "https://arxiv.org/html/2203.11532",
+      "abs_url": "https://arxiv.org/abs/2203.11532",
+      "citations": 12
+    },
+    {
+      "id": "2503.00795",
+      "title": "Towards Reliable LLM-Driven Fuzz Testing: Vision and Road Ahead",
+      "authors": [
+        "Yiran Cheng",
+        "Hong Jin Kang",
+        "Lwin Khin Shar",
+        "Chaopeng Dong",
+        "Zhiqiang Shi",
+        "Shichao Lv",
+        "Limin Sun"
+      ],
+      "abstract": "Fuzz testing is a crucial component of software security assessment, yet its effectiveness heavily relies on valid fuzz drivers and diverse seed inputs. Recent advancements in Large Language Models (LLMs) offer transformative potential for automating fuzz testing (LLM4Fuzz), particularly in generating drivers and seeds. However, current LLM4Fuzz solutions face critical reliability challenges, including low driver validity rates and seed quality trade-offs, hindering their practical adoption.\n  This paper aims to examine the reliability bottlenecks of LLM-driven fuzzing and explores potential research directions to address these limitations. It begins with an overview of the current development of LLM4SE and emphasizes the necessity for developing reliable LLM4Fuzz solutions. Following this, the paper envisions a vision where reliable LLM4Fuzz transforms the landscape of software testing and security for industry, software development practitioners, and economic accessibility. It then outlines a road ahead for future research, identifying key challenges and offering specific suggestions for the researchers to consider. This work strives to spark innovation in the field, positioning reliable LLM4Fuzz as a fundamental component of modern software testing.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2025-03-02T08:46:39Z",
+      "updated": "2025-03-02T08:46:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.00795",
+      "html_url": "https://arxiv.org/html/2503.00795",
+      "abs_url": "https://arxiv.org/abs/2503.00795",
+      "citations": 1
+    },
+    {
+      "id": "2508.11222",
+      "title": "ORFuzz: Fuzzing the \"Other Side\" of LLM Safety -- Testing Over-Refusal",
+      "authors": [
+        "Haonan Zhang",
+        "Dongxia Wang",
+        "Yi Liu",
+        "Kexin Chen",
+        "Jiashui Wang",
+        "Xinlei Ying",
+        "Long Liu",
+        "Wenhai Wang"
+      ],
+      "abstract": "Large Language Models (LLMs) increasingly exhibit over-refusal - erroneously rejecting benign queries due to overly conservative safety measures - a critical functional flaw that undermines their reliability and usability. Current methods for testing this behavior are demonstrably inadequate, suffering from flawed benchmarks and limited test generation capabilities, as highlighted by our empirical user study. To the best of our knowledge, this paper introduces the first evolutionary testing framework, ORFuzz, for the systematic detection and analysis of LLM over-refusals. ORFuzz uniquely integrates three core components: (1) safety category-aware seed selection for comprehensive test coverage, (2) adaptive mutator optimization using reasoning LLMs to generate effective test cases, and (3) OR-Judge, a human-aligned judge model validated to accurately reflect user perception of toxicity and refusal. Our extensive evaluations demonstrate that ORFuzz generates diverse, validated over-refusal instances at a rate (6.98% average) more than double that of leading baselines, effectively uncovering vulnerabilities. Furthermore, ORFuzz's outputs form the basis of ORFuzzSet, a new benchmark of 1,855 highly transferable test cases that achieves a superior 63.56% average over-refusal rate across 10 diverse LLMs, significantly outperforming existing datasets. ORFuzz and ORFuzzSet provide a robust automated testing framework and a valuable community resource, paving the way for developing more reliable and trustworthy LLM-based software systems.",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "published": "2025-08-15T05:03:26Z",
+      "updated": "2025-12-05T05:36:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2508.11222",
+      "html_url": "https://arxiv.org/html/2508.11222",
+      "abs_url": "https://arxiv.org/abs/2508.11222",
+      "citations": 1
+    },
+    {
+      "id": "2409.14729",
+      "title": "PROMPTFUZZ: Harnessing Fuzzing Techniques for Robust Testing of Prompt Injection in LLMs",
+      "authors": [
+        "Jiahao Yu",
+        "Yangguang Shao",
+        "Hanwen Miao",
+        "Junzheng Shi"
+      ],
+      "abstract": "Large Language Models (LLMs) have gained widespread use in various applications due to their powerful capability to generate human-like text. However, prompt injection attacks, which involve overwriting a model's original instructions with malicious prompts to manipulate the generated text, have raised significant concerns about the security and reliability of LLMs. Ensuring that LLMs are robust against such attacks is crucial for their deployment in real-world applications, particularly in critical tasks.\n  In this paper, we propose PROMPTFUZZ, a novel testing framework that leverages fuzzing techniques to systematically assess the robustness of LLMs against prompt injection attacks. Inspired by software fuzzing, PROMPTFUZZ selects promising seed prompts and generates a diverse set of prompt injections to evaluate the target LLM's resilience. PROMPTFUZZ operates in two stages: the prepare phase, which involves selecting promising initial seeds and collecting few-shot examples, and the focus phase, which uses the collected examples to generate diverse, high-quality prompt injections. Using PROMPTFUZZ, we can uncover more vulnerabilities in LLMs, even those with strong defense prompts.\n  By deploying the generated attack prompts from PROMPTFUZZ in a real-world competition, we achieved the 7th ranking out of over 4000 participants (top 0.14%) within 2 hours. Additionally, we construct a dataset to fine-tune LLMs for enhanced robustness against prompt injection attacks. While the fine-tuned model shows improved robustness, PROMPTFUZZ continues to identify vulnerabilities, highlighting the importance of robust testing for LLMs. Our work emphasizes the critical need for effective testing tools and provides a practical framework for evaluating and improving the robustness of LLMs against prompt injection attacks.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2024-09-23T06:08:32Z",
+      "updated": "2025-04-03T23:03:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.14729",
+      "html_url": "https://arxiv.org/html/2409.14729",
+      "abs_url": "https://arxiv.org/abs/2409.14729",
+      "citations": 22
+    },
+    {
+      "id": "2008.06537",
+      "title": "The Relevance of Classic Fuzz Testing: Have We Solved This One?",
+      "authors": [
+        "Barton P. Miller",
+        "Mengxiao Zhang",
+        "Elisa R. Heymann"
+      ],
+      "abstract": "As fuzz testing has passed its 30th anniversary, and in the face of the incredible progress in fuzz testing techniques and tools, the question arises if the classic, basic fuzz technique is still useful and applicable? In that tradition, we have updated the basic fuzz tools and testing scripts and applied them to a large collection of Unix utilities on Linux, FreeBSD, and MacOS. As before, our failure criteria was whether the program crashed or hung. We found that 9 crash or hang out of 74 utilities on Linux, 15 out of 78 utilities on FreeBSD, and 12 out of 76 utilities on MacOS. A total of 24 different utilities failed across the three platforms. We note that these failure rates are somewhat higher than our in previous 1995, 2000, and 2006 studies of the reliability of command line utilities. In the basic fuzz tradition, we debugged each failed utility and categorized the causes the failures. Classic categories of failures, such as pointer and array errors and not checking return codes, were still broadly present in the current results. In addition, we found a couple of new categories of failures appearing. We present examples of these failures to illustrate the programming practices that allowed them to happen. As a side note, we tested the limited number of utilities available in a modern programming language (Rust) and found them to be of no better reliability than the standard ones.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-08-14T18:38:08Z",
+      "updated": "2021-01-04T15:59:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2008.06537",
+      "html_url": "https://arxiv.org/html/2008.06537",
+      "abs_url": "https://arxiv.org/abs/2008.06537",
+      "citations": 32
+    },
+    {
+      "id": "2103.08668",
+      "title": "HDTest: Differential Fuzz Testing of Brain-Inspired Hyperdimensional Computing",
+      "authors": [
+        "Dongning Ma",
+        "Jianmin Guo",
+        "Yu Jiang",
+        "Xun Jiao"
+      ],
+      "abstract": "Brain-inspired hyperdimensional computing (HDC) is an emerging computational paradigm that mimics brain cognition and leverages hyperdimensional vectors with fully distributed holographic representation and (pseudo)randomness. Compared to other machine learning (ML) methods such as deep neural networks (DNNs), HDC offers several advantages including high energy efficiency, low latency, and one-shot learning, making it a promising alternative candidate on a wide range of applications. However, the reliability and robustness of HDC models have not been explored yet. In this paper, we design, implement, and evaluate HDTest to test HDC model by automatically exposing unexpected or incorrect behaviors under rare inputs. The core idea of HDTest is based on guided differential fuzz testing. Guided by the distance between query hypervector and reference hypervector in HDC, HDTest continuously mutates original inputs to generate new inputs that can trigger incorrect behaviors of HDC model. Compared to traditional ML testing methods, HDTest does not need to manually label the original input. Using handwritten digit classification as an example, we show that HDTest can generate thousands of adversarial inputs with negligible perturbations that can successfully fool HDC models. On average, HDTest can generate around 400 adversarial inputs within one minute running on a commodity computer. Finally, by using the HDTest-generated inputs to retrain HDC models, we can strengthen the robustness of HDC models. To the best of our knowledge, this paper presents the first effort in systematically testing this emerging brain-inspired computational model.",
+      "categories": [
+        "cs.NE"
+      ],
+      "published": "2021-03-15T19:23:45Z",
+      "updated": "2021-03-15T19:23:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2103.08668",
+      "html_url": "https://arxiv.org/html/2103.08668",
+      "abs_url": "https://arxiv.org/abs/2103.08668",
+      "citations": 28
+    },
+    {
+      "id": "2106.09242",
+      "title": "CoCoFuzzing: Testing Neural Code Models with Coverage-Guided Fuzzing",
+      "authors": [
+        "Moshi Wei",
+        "Yuchao Huang",
+        "Jinqiu Yang",
+        "Junjie Wang",
+        "Song Wang"
+      ],
+      "abstract": "Deep learning-based code processing models have shown good performance for tasks such as predicting method names, summarizing programs, and comment generation. However, despite the tremendous progress, deep learning models are often prone to adversarial attacks, which can significantly threaten the robustness and generalizability of these models by leading them to misclassification with unexpected inputs. To address the above issue, many deep learning testing approaches have been proposed, however, these approaches mainly focus on testing deep learning applications in the domains of image, audio, and text analysis, etc., which cannot be directly applied to neural models for code due to the unique properties of programs. In this paper, we propose a coverage-based fuzzing framework, CoCoFuzzing, for testing deep learning-based code processing models. In particular, we first propose ten mutation operators to automatically generate valid and semantically preserving source code examples as tests; then we propose a neuron coverage-based approach to guide the generation of tests. We investigate the performance of CoCoFuzzing on three state-of-the-art neural code models, i.e., NeuralCodeSum, CODE2SEQ, and CODE2VEC. Our experiment results demonstrate that CoCoFuzzing can generate valid and semantically preserving source code examples for testing the robustness and generalizability of these models and improve the neuron coverage. Moreover, these tests can be used to improve the performance of the target neural code models through adversarial retraining.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-06-17T04:33:37Z",
+      "updated": "2021-06-17T04:33:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2106.09242",
+      "html_url": "https://arxiv.org/html/2106.09242",
+      "abs_url": "https://arxiv.org/abs/2106.09242",
+      "citations": 15
+    },
+    {
+      "id": "2012.07380",
+      "title": "Automatic Property-based Testing of GraphQL APIs",
+      "authors": [
+        "Stefan Karlsson",
+        "Adnan Čaušević",
+        "Daniel Sundmark"
+      ],
+      "abstract": "In recent years, GraphQL has become a popular way to expose web APIs. With its raise of adoption in industry, the quality of GraphQL APIs must be also assessed, as with any part of a software system, and preferably in an automated manner. However, there is currently a lack of methods to automatically generate tests to exercise GraphQL APIs. In this paper, we propose a method for automatically producing GraphQL queries to test GraphQL APIs. This is achieved using a property-based approach to create a generator for queries based on the GraphQL schema of the system under test. Our evaluation on a real world software system shows that this approach is both effective, in terms of finding real bugs, and efficient, as a complete schema can be covered in seconds. In addition, we evaluate the fault finding capability of the method when seeding known faults. 73% of the seeded faults where found, with room for improvements with regards to domain specific behavior, a common oracle challenge in automatic test generation.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-12-14T10:02:25Z",
+      "updated": "2020-12-14T10:02:25Z",
+      "pdf_url": "https://arxiv.org/pdf/2012.07380",
+      "html_url": "https://arxiv.org/html/2012.07380",
+      "abs_url": "https://arxiv.org/abs/2012.07380",
+      "citations": 31
+    },
+    {
+      "id": "2207.13147",
+      "title": "FP4: Line-rate Greybox Fuzz Testing for P4 Switches",
+      "authors": [
+        "Nofel Yaseen",
+        "Liangcheng Yu",
+        "Caleb Stanford",
+        "Ryan Beckett",
+        "Vincent Liu"
+      ],
+      "abstract": "Compared to fixed-function switches, the flexibility of programmable switches comes at a cost, as programmer mistakes frequently result in subtle bugs in the network data plane.\n  In this paper, we present the design and implementation of FP4, a fuzz-testing framework for P4 switches that achieves high expressiveness, coverage, and scalability. FP4 directly tests running switches by generating semi-random input packets and observing their resulting execution in the data plane. To achieve high coverage and scalability, at runtime, FP4 leverages P4 itself with another \"tester\" switch that generates and mutates billions of test packets per second entirely in the dataplane. Because testing some program branches requires navigating complex semantic input requirements, FP4 additionally leverages the programmability of P4 by instrumenting the tested program to pass coverage information back to the tester through the packet header.\n  We present case studies showing that FP4 can validate both safety and stateful properties, improves efficiency over existing random packet generation baselines, and reaches 100% coverage in under a minute on a wide range of examples.",
+      "categories": [
+        "cs.NI"
+      ],
+      "published": "2022-07-26T18:59:50Z",
+      "updated": "2022-07-26T18:59:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2207.13147",
+      "html_url": "https://arxiv.org/html/2207.13147",
+      "abs_url": "https://arxiv.org/abs/2207.13147",
+      "citations": 6
+    },
+    {
+      "id": "2112.15485",
+      "title": "REST API Fuzzing by Coverage Level Guided Blackbox Testing",
+      "authors": [
+        "Chung-Hsuan Tsai",
+        "Shi-Chun Tsai",
+        "Shih-Kun Huang"
+      ],
+      "abstract": "With the growth of web applications, REST APIs have become the primary communication method between services. In order to ensure system reliability and security, software quality can be assured by effective testing methods. Black box fuzz testing is one of the effective methods to perform tests on a large scale. However, conventional black box fuzz testing generates random data without judging the quality of the input.\n  We implement a black box fuzz testing method for REST APIs. It resolves the issues of blind mutations without knowing the effectiveness by Test Coverage Level feedback. We also enhance the mutation strategies by reducing the testing complexity for REST APIs, generating more appropriate test cases to cover possible paths.\n  We evaluate our method by testing two large open-source projects and 89 bugs are reported and confirmed. In addition, we find 351 bugs from 64 remote API services in APIs.guru.\n  The work is in https://github.com/iasthc/hsuan-fuzz.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-12-31T14:39:40Z",
+      "updated": "2021-12-31T14:39:40Z",
+      "pdf_url": "https://arxiv.org/pdf/2112.15485",
+      "html_url": "https://arxiv.org/html/2112.15485",
+      "abs_url": "https://arxiv.org/abs/2112.15485",
+      "citations": 15
+    },
+    {
+      "id": "2406.10053",
+      "title": "Property-Based Testing by Elaborating Proof Outlines",
+      "authors": [
+        "Dale Miller",
+        "Alberto Momigliano"
+      ],
+      "abstract": "Property-based testing (PBT) is a technique for validating code against an executable specification by automatically generating test-data. We present a proof-theoretical reconstruction of this style of testing for relational specifications and employ the Foundational Proof Certificate framework to describe test generators. We do this by encoding certain kinds of ``proof outlines'' as proof certificates that can describe various common generation strategies in the PBT literature, ranging from random to exhaustive, including their combination. We also address the shrinking of counterexamples as a first step toward their explanation. Once generation is accomplished, the testing phase is a standard logic programming search. After illustrating our techniques on simple, first-order (algebraic) data structures, we lift it to data structures containing bindings by using the $λ$-tree syntax approach to encode bindings. The $λ$Prolog programming language can perform both generating and checking of tests using this approach to syntax. We then further extend PBT to specifications in a fragment of linear logic. Under consideration in Theory and Practice of Logic Programming (TPLP).",
+      "categories": [
+        "cs.LO"
+      ],
+      "published": "2024-06-14T14:08:48Z",
+      "updated": "2024-06-14T14:08:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.10053",
+      "html_url": "https://arxiv.org/html/2406.10053",
+      "abs_url": "https://arxiv.org/abs/2406.10053",
+      "citations": 0
+    },
+    {
+      "id": "2103.05118",
+      "title": "Efficient Fuzz Testing for Apache Spark Using Framework Abstraction",
+      "authors": [
+        "Qian Zhang",
+        "Jiyuan Wang",
+        "Muhammad Ali Gulzar",
+        "Rohan Padhye",
+        "Miryung Kim"
+      ],
+      "abstract": "The emerging data-intensive applications are increasingly dependent on data-intensive scalable computing (DISC) systems, such as Apache Spark, to process large data. Despite their popularity, DISC applications are hard to test. In recent years, fuzz testing has been remarkably successful; however, it is nontrivial to apply such traditional fuzzing to big data analytics directly because: (1) the long latency of DISC systems prohibits the applicability of fuzzing, and (2) conventional branch coverage is unlikely to identify application logic from the DISC framework implementation. We devise a novel fuzz testing tool called BigFuzz that automatically generates concrete data for an input Apache Spark program. The key essence of our approach is that we abstract the dataflow behavior of the DISC framework with executable specifications and we design schema-aware mutations based on common error types in DISC applications. Our experiments show that compared to random fuzzing, BigFuzz is able to speed up the fuzzing time by 1477X, improves application code coverage by 271%, and achieves 157% improvement in detecting application errors. The demonstration video of BigFuzz is available at https://www.youtube.com/watch?v=YvYQISILQHs\u0026feature=youtu.be.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-03-08T22:07:39Z",
+      "updated": "2021-03-08T22:07:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2103.05118",
+      "html_url": "https://arxiv.org/html/2103.05118",
+      "abs_url": "https://arxiv.org/abs/2103.05118",
+      "citations": 2
+    },
+    {
+      "id": "2009.08768",
+      "title": "Improving Linux-Kernel Tests for LockDoc with Feedback-driven Fuzzing",
+      "authors": [
+        "Alexander Lochmann",
+        "Robin Thunig",
+        "Horst Schirmeier"
+      ],
+      "abstract": "LockDoc is an approach to extract locking rules for kernel data structures from a dynamic execution trace recorded while the system is under a benchmark load. These locking rules can e.g. be used to locate synchronization bugs. For high rule precision and thorough bug finding, the approach heavily depends on the choice of benchmarks: They must trigger the execution of as much code as possible in the kernel subsystem relevant for the targeted data structures. However, existing test suites such as those provided by the Linux Test Project (LTP) only achieve -- in the case of LTP -- about 35 percent basic-block coverage for the VFS subsystem, which is the relevant subsystem when extracting locking rules for filesystem-related data structures.\n  In this article, we discuss how to complement the LTP suites to improve the code coverage for our LockDoc scenario. We repurpose syzkaller -- a coverage-guided fuzzer with the goal to validate the robustness of kernel APIs -- to 1) not aim for kernel crashes, and to 2) maximize code coverage for a specific kernel subsystem. Thereby, we generate new benchmark programs that can be run in addition to the LTP, and increase VFS basic-block coverage by 26.1 percent.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-09-16T18:42:54Z",
+      "updated": "2021-09-16T16:34:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2009.08768",
+      "html_url": "https://arxiv.org/html/2009.08768",
+      "abs_url": "https://arxiv.org/abs/2009.08768",
+      "citations": 0
+    },
+    {
+      "id": "2008.05933",
+      "title": "Graph-Based Fuzz Testing for Deep Learning Inference Engine",
+      "authors": [
+        "Weisi Luo",
+        "Dong Chai",
+        "Xiaoyue Run",
+        "Jiang Wang",
+        "Chunrong Fang",
+        "Zhenyu Chen"
+      ],
+      "abstract": "With the wide use of Deep Learning (DL) systems, academy and industry begin to pay attention to their quality. Testing is one of the major methods of quality assurance. However, existing testing techniques focus on the quality of DL models but lacks attention to the core underlying inference engines (i.e., frameworks and libraries). Inspired by the success stories of fuzz testing, we design a graph-based fuzz testing method to improve the quality of DL inference engines. This method is naturally followed by the graph structure of DL models. A novel operator-level coverage criterion based on graph theory is introduced and six different mutations are implemented to generate diversified DL models by exploring combinations of model structures, parameters, and data inputs. The Monte Carlo Tree Search (MCTS) is used to drive DL model generation without a training process. The experimental results show that the MCTS outperforms the random method in boosting operator-level coverage and detecting exceptions. Our method has discovered more than 40 different exceptions in three types of undesired behaviors: model conversion failure, inference failure, output comparison failure. The mutation strategies are useful to generate new valid test inputs, by up to 8.2% more operator-level coverage on average and 8.6 more exceptions captured.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-08-13T14:43:55Z",
+      "updated": "2021-03-04T08:02:51Z",
+      "pdf_url": "https://arxiv.org/pdf/2008.05933",
+      "html_url": "https://arxiv.org/html/2008.05933",
+      "abs_url": "https://arxiv.org/abs/2008.05933",
+      "citations": 44
+    },
+    {
+      "id": "2602.02614",
+      "title": "Testing Storage-System Correctness: Challenges, Fuzzing Limitations, and AI-Augmented Opportunities",
+      "authors": [
+        "Ying Wang",
+        "Jiahui Chen",
+        "Dejun Jiang"
+      ],
+      "abstract": "Storage systems are fundamental to modern computing infrastructures, yet ensuring their correctness remains challenging in practice. Despite decades of research on system testing, many storage-system failures (including durability, ordering, recovery, and consistency violations) remain difficult to expose systematically. This difficulty stems not primarily from insufficient testing tooling, but from intrinsic properties of storage-system execution, including nondeterministic interleavings, long-horizon state evolution, and correctness semantics that span multiple layers and execution phases.\n  This survey adopts a storage-centric view of system testing and organizes existing techniques according to the execution properties and failure mechanisms they target. We review a broad spectrum of approaches, ranging from concurrency testing and long-running workloads to crash-consistency analysis, hardware-level semantic validation, and distributed fault injection, and analyze their fundamental strengths and limitations. Within this framework, we examine fuzzing as an automated testing paradigm, highlighting systematic mismatches between conventional fuzzing assumptions and storage-system semantics, and discuss how recent artificial intelligence advances may complement fuzzing through state-aware and semantic guidance. Overall, this survey provides a unified perspective on storage-system correctness testing and outlines key challenges",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2026-02-02T11:34:05Z",
+      "updated": "2026-02-06T09:42:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.02614",
+      "html_url": "https://arxiv.org/html/2602.02614",
+      "abs_url": "https://arxiv.org/abs/2602.02614",
+      "citations": 0
+    },
+    {
+      "id": "2012.11182",
+      "title": "Program State Abstraction for Feedback-Driven Fuzz Testing using Likely Invariants",
+      "authors": [
+        "Andrea Fioraldi"
+      ],
+      "abstract": "Fuzz testing proved its great effectiveness in finding software bugs in the latest years, however, there are still open challenges. Coverage-guided fuzzers suffer from the fact that covering a program point does not ensure the trigger of a fault. Other more sensitive techniques that in theory should cope with this problem, such as the coverage of the memory values, easily lead to path explosion. In this thesis, we propose a new feedback for Feedback-driven Fuzz testing that combines code coverage with the \"shape\" of the data. We learn likely invariants for each basic block in order to divide into regions the space described by the variables used in the block. The goal is to distinguish in the feedback when a block is executed with values that fall in different regions of the space. This better approximates the program state coverage and, on some targets, improves the ability of the fuzzer in finding faults. We developed a prototype using LLVM and AFL++ called InvsCov.",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "published": "2020-12-21T08:49:25Z",
+      "updated": "2020-12-21T08:49:25Z",
+      "pdf_url": "https://arxiv.org/pdf/2012.11182",
+      "html_url": "https://arxiv.org/html/2012.11182",
+      "abs_url": "https://arxiv.org/abs/2012.11182",
+      "citations": 2
+    },
+    {
+      "id": "2508.14394",
+      "title": "Tuning Random Generators: Property-Based Testing as Probabilistic Programming",
+      "authors": [
+        "Ryan Tjoa",
+        "Poorva Garg",
+        "Harrison Goldstein",
+        "Todd Millstein",
+        "Benjamin Pierce",
+        "Guy Van den Broeck"
+      ],
+      "abstract": "Property-based testing validates software against an executable specification by evaluating it on randomly generated inputs. The standard way that PBT users generate test inputs is via generators that describe how to sample test inputs through random choices. To achieve a good distribution over test inputs, users must tune their generators, i.e., decide on the weights of these individual random choices. Unfortunately, it is very difficult to understand how to choose individual generator weights in order to achieve a desired distribution, so today this process is tedious and limits the distributions that can be practically achieved.\n  In this paper, we develop techniques for the automatic and offline tuning of generators. Given a generator with undetermined symbolic weights and an objective function, our approach automatically learns values for these weights that optimize for the objective. We describe useful objective functions that allow users to (1) target desired distributions and (2) improve the diversity and validity of their test cases. We have implemented our approach in a novel discrete probabilistic programming system, Loaded Dice, that supports differentiation and parameter learning, and use it as a language for generators. We empirically demonstrate that our approach is effective at optimizing generator distributions according to the specified objective functions. We also perform a thorough evaluation on PBT benchmarks, demonstrating that, when automatically tuned for diversity and validity, the generators exhibit a 3.1-7.4x speedup in bug finding.",
+      "categories": [
+        "cs.PL",
+        "cs.SE"
+      ],
+      "published": "2025-08-20T03:45:13Z",
+      "updated": "2025-11-16T03:12:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2508.14394",
+      "html_url": "https://arxiv.org/html/2508.14394",
+      "abs_url": "https://arxiv.org/abs/2508.14394",
+      "citations": 0
+    },
+    {
+      "id": "2407.04297",
+      "title": "HuntFUZZ: Enhancing Error Handling Testing through Clustering Based Fuzzing",
+      "authors": [
+        "Jin Wei",
+        "Ping Chen",
+        "Jun Dai",
+        "Xiaoyan Sun",
+        "Zhihao Zhang",
+        "Chang Xu",
+        "Yi Wanga"
+      ],
+      "abstract": "Testing a program's capability to effectively handling errors is a significant challenge, given that program errors are relatively uncommon. To solve this, Software Fault Injection (SFI)-based fuzzing integrates SFI and traditional fuzzing, injecting and triggering errors for testing (error handling) code. However, we observe that current SFI-based fuzzing approaches have overlooked the correlation between paths housing error points. In fact, the execution paths of error points often share common paths. Nonetheless, Fuzzers usually generate test cases repeatedly to test error points on commonly traversed paths. This practice can compromise the efficiency of the fuzzer(s). Thus, this paper introduces HuntFUZZ, a novel SFI-based fuzzing framework that addresses the issue of redundant testing of error points with correlated paths. Specifically, HuntFUZZ clusters these correlated error points and utilizes concolic execution to compute constraints only for common paths within each cluster. By doing so, we provide the fuzzer with efficient test cases to explore related error points with minimal redundancy. We evaluate HuntFUZZ on a diverse set of 42 applications, and HuntFUZZ successfully reveals 162 known bugs, with 62 of them being related to error handling. Additionally, due to its efficient error point detection method, HuntFUZZ discovers 7 unique zero-day bugs, which are all missed by existing fuzzers. Furthermore, we compare HuntFUZZ with 4 existing fuzzing approaches, including AFL, AFL++, AFLGo, and EH-FUZZ. Our evaluation confirms that HuntFUZZ can cover a broader range of error points, and it exhibits better performance in terms of bug finding speed.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2024-07-05T06:58:30Z",
+      "updated": "2024-07-05T06:58:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2407.04297",
+      "html_url": "https://arxiv.org/html/2407.04297",
+      "abs_url": "https://arxiv.org/abs/2407.04297",
+      "citations": 0
+    },
+    {
+      "id": "2109.01002",
+      "title": "DocTer: Documentation Guided Fuzzing for Testing Deep Learning API Functions",
+      "authors": [
+        "Danning Xie",
+        "Yitong Li",
+        "Mijung Kim",
+        "Hung Viet Pham",
+        "Lin Tan",
+        "Xiangyu Zhang",
+        "Michael W. Godfrey"
+      ],
+      "abstract": "Input constraints are useful for many software development tasks. For example, input constraints of a function enable the generation of valid inputs, i.e., inputs that follow these constraints, to test the function deeper. API functions of deep learning (DL) libraries have DL specific input constraints, which are described informally in the free form API documentation. Existing constraint extraction techniques are ineffective for extracting DL specific input constraints.\n  To fill this gap, we design and implement a new technique, DocTer, to analyze API documentation to extract DL specific input constraints for DL API functions. DocTer features a novel algorithm that automatically constructs rules to extract API parameter constraints from syntactic patterns in the form of dependency parse trees of API descriptions. These rules are then applied to a large volume of API documents in popular DL libraries to extract their input parameter constraints. To demonstrate the effectiveness of the extracted constraints, DocTer uses the constraints to enable the automatic generation of valid and invalid inputs to test DL API functions.\n  Our evaluation on three popular DL libraries (TensorFlow, PyTorch, and MXNet) shows that the precision of DocTer in extracting input constraints is 85.4%. DocTer detects 94 bugs from 174 API functions, including one previously unknown security vulnerability that is now documented in the CVE database, while a baseline technique without input constraints detects only 59 bugs. Most (63) of the 94 bugs are previously unknown, 54 of which have been fixed or confirmed by developers after we report them. In addition, DocTer detects 43 inconsistencies in documents, 39 of which are fixed or confirmed.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-09-02T14:57:36Z",
+      "updated": "2024-03-06T01:51:29Z",
+      "pdf_url": "https://arxiv.org/pdf/2109.01002",
+      "html_url": "https://arxiv.org/html/2109.01002",
+      "abs_url": "https://arxiv.org/abs/2109.01002",
+      "citations": 101
+    },
+    {
+      "id": "2204.08734",
+      "title": "Muffin: Testing Deep Learning Libraries via Neural Architecture Fuzzing",
+      "authors": [
+        "Jiazhen Gu",
+        "Xuchuan Luo",
+        "Yangfan Zhou",
+        "Xin Wang"
+      ],
+      "abstract": "Deep learning (DL) techniques are proven effective in many challenging tasks, and become widely-adopted in practice. However, previous work has shown that DL libraries, the basis of building and executing DL models, contain bugs and can cause severe consequences. Unfortunately, existing testing approaches still cannot comprehensively exercise DL libraries. They utilize existing trained models and only detect bugs in model inference phase. In this work we propose Muffin to address these issues. To this end, Muffin applies a specifically-designed model fuzzing approach, which allows it to generate diverse DL models to explore the target library, instead of relying only on existing trained models. Muffin makes differential testing feasible in the model training phase by tailoring a set of metrics to measure the inconsistencies between different DL libraries. In this way, Muffin can best exercise the library code to detect more bugs. To evaluate the effectiveness of Muffin, we conduct experiments on three widely-used DL libraries. The results demonstrate that Muffin can detect 39 new bugs in the latest release versions of popular DL libraries, including Tensorflow, CNTK, and Theano.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-04-19T08:21:23Z",
+      "updated": "2022-05-09T08:09:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2204.08734",
+      "html_url": "https://arxiv.org/html/2204.08734",
+      "abs_url": "https://arxiv.org/abs/2204.08734",
+      "citations": 85
+    },
+    {
+      "id": "2403.04991",
+      "title": "DT-SIM: Property-Based Testing for MPC Security",
+      "authors": [
+        "Mako Bates",
+        "Joseph P. Near"
+      ],
+      "abstract": "Formal methods for guaranteeing that a protocol satisfies a cryptographic security definition have advanced substantially, but such methods are still labor intensive and the need remains for an automated tool that can positively identify an insecure protocol. In this work, we demonstrate that property-based testing, \"run it a bunch of times and see if it breaks\", is effective for detecting security bugs in secure protocols. We specifically target Secure Multi-Party Computation (MPC), because formal methods targeting this security definition for bit-model implementations are particularly difficult. Using results from the literature for Probabilistic Programming Languages and statistical inference, we devise a test that can detect various flaws in a bit-level implementation of an MPC protocol. The test is grey-box; it requires only transcripts of randomness consumed by the protocol and of the inputs, outputs, and messages. It successfully detects several different mistakes and biases introduced into two different implementations of the classic GMW protocol. Applied to hundreds of randomly generated protocols, it identifies nearly all of them as insecure. We also include an analysis of the parameters of the test, and discussion of what makes detection of MPC (in)security difficult.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2024-03-08T02:02:24Z",
+      "updated": "2024-03-12T01:07:49Z",
+      "pdf_url": "https://arxiv.org/pdf/2403.04991",
+      "html_url": "https://arxiv.org/html/2403.04991",
+      "abs_url": "https://arxiv.org/abs/2403.04991",
+      "citations": 1
+    },
+    {
+      "id": "2010.16305",
+      "title": "Using Relational Problems to Teach Property-Based Testing",
+      "authors": [
+        "John Wrenn",
+        "Tim Nelson",
+        "Shriram Krishnamurthi"
+      ],
+      "abstract": "Context: The success of QuickCheck has led to the development of property-based testing (PBT) libraries for many languages and the process is getting increasing attention. However, unlike regular testing, PBT is not widespread in collegiate curricula. Furthermore, the value of PBT is not limited to software testing. The growing use of formal methods in, and the growth of software synthesis, all create demand for techniques to train students and developers in the art of specification writing. We posit that PBT forms a strong bridge between testing and the act of specification: it's a form of testing where the tester is actually writing abstract specifications.\n  Inquiry: Even well-informed technologists mention the difficulty of finding good motivating examples for its use. We take steps to fill this lacuna.\n Approach \u0026 Knowledge: We find that the use of \"relational\" problems -- those for which an input may admit multiple valid outputs -- easily motivates the use of PBT. We also notice that such problems are readily available in the computer science pantheon of problems (e.g., many graph and sorting algorithms). We have been using these for some years now to teach PBT in collegiate courses.\n  Grounding: In this paper, we describe the problems we use and report on students? completion of them. We believe the problems overcome some of the motivation issues described above. We also show that students can do quite well at PBT for these problems, suggesting that the topic is well within their reach. In the process, we introduce a simple method to evaluate the accuracy of their specifications, and use it to characterize their common mistakes.\n  Importance: Based on our findings, we believe that relational problems are an underutilized motivating example for PBT. We hope this paper initiates a catalog of such problems for educators (and developers) to use, and also provides a concrete (though by no means exclusive) method to analyze the quality of PBT.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-10-30T14:54:01Z",
+      "updated": "2020-10-30T14:54:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2010.16305",
+      "html_url": "https://arxiv.org/html/2010.16305",
+      "abs_url": "https://arxiv.org/abs/2010.16305",
+      "citations": 13
+    },
+    {
+      "id": "2208.00110",
+      "title": "L2Fuzz: Discovering Bluetooth L2CAP Vulnerabilities Using Stateful Fuzz Testing",
+      "authors": [
+        "Haram Park",
+        "Carlos Kayembe Nkuba",
+        "Seunghoon Woo",
+        "Heejo Lee"
+      ],
+      "abstract": "Bluetooth Basic Rate/Enhanced Data Rate (BR/EDR) is a wireless technology used in billions of devices. Recently, several Bluetooth fuzzing studies have been conducted to detect vulnerabilities in Bluetooth devices, but they fall short of effectively generating malformed packets. In this paper, we propose L2FUZZ, a stateful fuzzer to detect vulnerabilities in Bluetooth BR/EDR Logical Link Control and Adaptation Protocol (L2CAP) layer. By selecting valid commands for each state and mutating only the core fields of packets, L2FUZZ can generate valid malformed packets that are less likely to be rejected by the target device. Our experimental results confirmed that: (1) L2FUZZ generates up to 46 times more malformed packets with a much less packet rejection ratio compared to the existing techniques, and (2) L2FUZZ detected five zero-day vulnerabilities from eight real-world Bluetooth devices.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2022-07-30T01:12:38Z",
+      "updated": "2022-07-30T01:12:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2208.00110",
+      "html_url": "https://arxiv.org/html/2208.00110",
+      "abs_url": "https://arxiv.org/abs/2208.00110",
+      "citations": 21
+    },
+    {
+      "id": "2212.11162",
+      "title": "Homo in Machina: Improving Fuzz Testing Coverage via Compartment Analysis",
+      "authors": [
+        "Joshua Bundt",
+        "Andrew Fasano",
+        "Brendan Dolan-Gavitt",
+        "William Robertson",
+        "Tim Leek"
+      ],
+      "abstract": "Fuzz testing is often automated, but also frequently augmented by experts who insert themselves into the workflow in a greedy search for bugs. In this paper, we propose Homo in Machina, or HM-fuzzing, in which analyses guide the manual efforts, maximizing benefit. As one example of this paradigm, we introduce compartment analysis. Compartment analysis uses a whole-program dominator analysis to estimate the utility of reaching new code, and combines this with a dynamic analysis indicating drastically under-covered edges guarding that code. This results in a prioritized list of compartments, i.e., large, uncovered parts of the program semantically partitioned and largely unreachable given the current corpus of inputs under consideration. A human can use this categorization and ranking of compartments directly to focus manual effort, finding or fashioning inputs that make the compartments available for future fuzzing. We evaluate the effect of compartment analysis on seven projects within the OSS-Fuzz corpus where we see coverage improvements over AFL++ as high as 94%, with a median of 13%. We further observe that the determination of compartments is highly stable and thus can be done early in a fuzzing campaign, maximizing the potential for impact.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2022-12-21T16:18:55Z",
+      "updated": "2022-12-21T16:18:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2212.11162",
+      "html_url": "https://arxiv.org/html/2212.11162",
+      "abs_url": "https://arxiv.org/abs/2212.11162",
+      "citations": 6
+    },
+    {
+      "id": "2409.01944",
+      "title": "FuzzCoder: Byte-level Fuzzing Test via Large Language Model",
+      "authors": [
+        "Liqun Yang",
+        "Jian Yang",
+        "Chaoren Wei",
+        "Guanglin Niu",
+        "Ge Zhang",
+        "Yunli Wang",
+        "Linzheng ChaI",
+        "Wanxu Xia",
+        "Hongcheng Guo",
+        "Shun Zhang",
+        "Jiaheng Liu",
+        "Yuwei Yin",
+        "Junran Peng",
+        "Jiaxin Ma",
+        "Liang Sun",
+        "Zhoujun Li"
+      ],
+      "abstract": "Fuzzing is an important dynamic program analysis technique designed for finding vulnerabilities in complex software. Fuzzing involves presenting a target program with crafted malicious input to cause crashes, buffer overflows, memory errors, and exceptions. Crafting malicious inputs in an efficient manner is a difficult open problem and the best approaches often apply uniform random mutations to pre-existing valid inputs. In this work, we propose to adopt fine-tuned large language models (FuzzCoder) to learn patterns in the input files from successful attacks to guide future fuzzing explorations. Specifically, we develop a framework to leverage the code LLMs to guide the mutation process of inputs in fuzzing. The mutation process is formulated as the sequence-to-sequence modeling, where LLM receives a sequence of bytes and then outputs the mutated byte sequence. FuzzCoder is fine-tuned on the created instruction dataset (Fuzz-Instruct), where the successful fuzzing history is collected from the heuristic fuzzing tool. FuzzCoder can predict mutation locations and strategies locations in input files to trigger abnormal behaviors of the program. Experimental results show that FuzzCoder based on AFL (American Fuzzy Lop) gain significant improvements in terms of effective proportion of mutation (EPM) and number of crashes (NC) for various input formats including ELF, JPG, MP3, and XML.",
+      "categories": [
+        "cs.CL"
+      ],
+      "published": "2024-09-03T14:40:31Z",
+      "updated": "2024-09-03T14:40:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.01944",
+      "html_url": "https://arxiv.org/html/2409.01944",
+      "abs_url": "https://arxiv.org/abs/2409.01944",
+      "citations": 6
+    },
+    {
+      "id": "2510.07815",
+      "title": "Interleaved Learning and Exploration: A Self-Adaptive Fuzz Testing Framework for MLIR",
+      "authors": [
+        "Zeyu Sun",
+        "Jingjing Liang",
+        "Weiyi Wang",
+        "Chenyao Suo",
+        "Junjie Chen",
+        "Fanjiang Xu"
+      ],
+      "abstract": "MLIR (Multi-Level Intermediate Representation) has rapidly become a foundational technology for modern compiler frameworks, enabling extensibility across diverse domains. However, ensuring the correctness and robustness of MLIR itself remains challenging. Existing fuzzing approaches-based on manually crafted templates or rule-based mutations-struggle to generate sufficiently diverse and semantically valid test cases, making it difficult to expose subtle or deep-seated bugs within MLIR's complex and evolving code space. In this paper, we present FLEX, a novel self-adaptive fuzzing framework for MLIR. FLEX leverages neural networks for program generation, a perturbed sampling strategy to encourage diversity, and a feedback-driven augmentation loop that iteratively improves its model using both crashing and non-crashing test cases. Starting from a limited seed corpus, FLEX progressively learns valid syntax and semantics and autonomously produces high-quality test inputs. We evaluate FLEX on the upstream MLIR compiler against four state-of-the-art fuzzers. In a 30-day campaign, FLEX discovers 80 previously unknown bugs-including multiple new root causes and parser bugs-while in 24-hour fixed-revision comparisons, it detects 53 bugs (over 3.5x as many as the best baseline) and achieves 28.2% code coverage, outperforming the next-best tool by 42%. Ablation studies further confirm the critical role of both perturbed generation and diversity augmentation in FLEX's effectiveness.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-10-09T05:47:20Z",
+      "updated": "2025-10-09T05:47:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.07815",
+      "html_url": "https://arxiv.org/html/2510.07815",
+      "abs_url": "https://arxiv.org/abs/2510.07815",
+      "citations": 1
+    },
+    {
+      "id": "2012.06382",
+      "title": "Type-Centric Kotlin Compiler Fuzzing: Preserving Test Program Correctness by Preserving Types",
+      "authors": [
+        "Daniil Stepanov",
+        "Marat Akhin",
+        "Mikhail Belyaev"
+      ],
+      "abstract": "Kotlin is a relatively new programming language from JetBrains: its development started in 2010 with release 1.0 done in early 2016. The Kotlin compiler, while slowly and steadily becoming more and more mature, still crashes from time to time on the more tricky input programs, not least because of the complexity of its features and their interactions. This makes it a great target for fuzzing, even the basic forms of which can find a significant number of Kotlin compiler crashes.\n  There is a problem with fuzzing, however, closely related to the cause of the crashes: generating a random, non-trivial and semantically valid Kotlin program is hard. In this paper, we talk about type-centric compiler fuzzing in the form of type-centric enumeration, an approach inspired by skeletal program enumeration and based on a combination of generative and mutation-based fuzzing, which solves this problem by focusing on program types. After creating the skeleton program, we fill the typed holes with fragments of suitable type, created via generation and enhanced by semantic-aware mutation.\n  We implemented this approach in our Kotlin compiler fuzzing framework called Backend Bug Finder (BBF) and did an extensive evaluation, not only testing the real-world feasibility of our approach, but also comparing it to other compiler fuzzing techniques. The results show our approach to be significantly better compared to other fuzzing approaches at generating semantically valid Kotlin programs, while creating more interesting crash-inducing inputs at the same time. We managed to find more than 50 previously unknown compiler crashes, of which 18 were considered important after their triage by the compiler team.",
+      "categories": [
+        "cs.PL",
+        "cs.SE"
+      ],
+      "published": "2020-12-11T14:32:37Z",
+      "updated": "2020-12-11T14:32:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2012.06382",
+      "html_url": "https://arxiv.org/html/2012.06382",
+      "abs_url": "https://arxiv.org/abs/2012.06382",
+      "citations": 6
+    },
+    {
+      "id": "2205.04047",
+      "title": "GreyConE: Greybox fuzzing+Concolic execution guided test generation for high level design",
+      "authors": [
+        "Mukta Debnath",
+        "Animesh Basak Chowdhury",
+        "Debasri Saha",
+        "Susmita Sur-Kolay"
+      ],
+      "abstract": "Exhaustive testing of high-level designs pose an arduous challenge due to complex branching conditions, loop structures and inherent concurrency of hardware designs. Test engineers aim to generate quality test-cases satisfying various code coverage metrics to ensure minimal presence of bugs in a design. Prior works in testing SystemC designs are time inefficient which obstruct achieving the desired coverage in shorter time-span. We interleave greybox fuzzing and concolic execution in a systematic manner and generate quality test-cases accelerating test coverage metrics. Our results outperform state-of-the-art methods in terms of number of test cases and branch-coverage for some of the benchmarks, and runtime for most of them.",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "published": "2022-05-09T05:34:09Z",
+      "updated": "2022-07-13T23:28:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2205.04047",
+      "html_url": "https://arxiv.org/html/2205.04047",
+      "abs_url": "https://arxiv.org/abs/2205.04047",
+      "citations": 4
+    },
+    {
+      "id": "2509.23835",
+      "title": "HFuzzer: Testing Large Language Models for Package Hallucinations via Phrase-based Fuzzing",
+      "authors": [
+        "Yukai Zhao",
+        "Menghan Wu",
+        "Xing Hu",
+        "Xin Xia"
+      ],
+      "abstract": "Large Language Models (LLMs) are widely used for code generation, but they face critical security risks when applied to practical production due to package hallucinations, in which LLMs recommend non-existent packages. These hallucinations can be exploited in software supply chain attacks, where malicious attackers exploit them to register harmful packages. It is critical to test LLMs for package hallucinations to mitigate package hallucinations and defend against potential attacks. Although researchers have proposed testing frameworks for fact-conflicting hallucinations in natural language generation, there is a lack of research on package hallucinations. To fill this gap, we propose HFUZZER, a novel phrase-based fuzzing framework to test LLMs for package hallucinations. HFUZZER adopts fuzzing technology and guides the model to infer a wider range of reasonable information based on phrases, thereby generating enough and diverse coding tasks. Furthermore, HFUZZER extracts phrases from package information or coding tasks to ensure the relevance of phrases and code, thereby improving the relevance of generated tasks and code. We evaluate HFUZZER on multiple LLMs and find that it triggers package hallucinations across all selected models. Compared to the mutational fuzzing framework, HFUZZER identifies 2.60x more unique hallucinated packages and generates more diverse tasks. Additionally, when testing the model GPT-4o, HFUZZER finds 46 unique hallucinated packages. Further analysis reveals that for GPT-4o, LLMs exhibit package hallucinations not only during code generation but also when assisting with environment configuration.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2025-09-28T12:16:43Z",
+      "updated": "2025-10-04T05:29:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.23835",
+      "html_url": "https://arxiv.org/html/2509.23835",
+      "abs_url": "https://arxiv.org/abs/2509.23835",
+      "citations": 1
+    },
+    {
+      "id": "2510.10179",
+      "title": "LLMs are All You Need? Improving Fuzz Testing for MOJO with Large Language Models",
+      "authors": [
+        "Linghan Huang",
+        "Peizhou Zhao",
+        "Huaming Chen"
+      ],
+      "abstract": "The rapid development of large language models (LLMs) has revolutionized software testing, particularly fuzz testing, by automating the generation of diverse and effective test inputs. This advancement holds great promise for improving software reliability. Meanwhile, the introduction of MOJO, a high-performance AI programming language blending Python's usability with the efficiency of C and C++, presents new opportunities to enhance AI model scalability and programmability. However, as a new language, MOJO lacks comprehensive testing frameworks and a sufficient corpus for LLM-based testing, which exacerbates model hallucination. In this case, LLMs will generate syntactically valid but semantically incorrect code, significantly reducing the effectiveness of fuzz testing. To address this challenge, we propose MOJOFuzzer, the first adaptive LLM-based fuzzing framework designed for zero-shot learning environments of emerging programming languages. MOJOFuzzer integrates a mutil-phase framework that systematically eliminates low-quality generated inputs before execution, significantly improving test case validity. Furthermore, MOJOFuzzer dynamically adapts LLM prompts based on runtime feedback for test case mutation, enabling an iterative learning process that continuously enhances fuzzing efficiency and bug detection performance. Our experimental results demonstrate that MOJOFuzzer significantly enhances test validity, API coverage, and bug detection performance, outperforming traditional fuzz testing and state-of-the-art LLM-based fuzzing approaches. Using MOJOFuzzer, we have conducted a first large-scale fuzz testing evaluation of MOJO, uncorvering 13 previous unknown bugs. This study not only advances the field of LLM-driven software testing but also establishes a foundational methodology for leveraging LLMs in the testing of emerging programming languages.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2025-10-11T11:37:18Z",
+      "updated": "2025-10-11T11:37:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.10179",
+      "html_url": "https://arxiv.org/html/2510.10179",
+      "abs_url": "https://arxiv.org/abs/2510.10179",
+      "citations": 0
+    },
+    {
+      "id": "2603.21263",
+      "title": "From Natural Language to Executable Properties for Property-based Testing of Mobile Apps",
+      "authors": [
+        "Yiheng Xiong",
+        "Ting Su",
+        "Jingling Sun",
+        "Jue Wang",
+        "Qin Li",
+        "Geguang Pu",
+        "Zhendong Su"
+      ],
+      "abstract": "Property-based testing (PBT) is a popular software testing methodology and is effective in validating the functionality of mobile applications (apps for short). However, its adoption in practice remains limited, largely due to the manual effort and technical expertise required to specify executable properties. In this experience paper, we propose a novel structured property synthesis approach that automatically translates property descriptions in natural language into executable properties, and implement it in a tool named iPBT. Our approach decomposes the problem into UI semantic grounding and executable property synthesis. It first builds an enriched widget context via multimodal LLMs to align visual elements with their functional semantics, and then uses an LLM with in-context learning to generate framework-specific executable properties. We evaluate iPBT with a closed-source LLM (GPT-4o) and an open-source LLM (DeepSeek-V3) on 124 diverse property descriptions derived from an existing benchmark dataset. iPBT achieves 95.2% (118/124) accuracy on both LLMs. Notably, an ablation study reveals that the enriched widget context contributes to an absolute improvement of up to 20.2% (from 75.0% to 95.2%). A user study with 10 participants demonstrates that iPBT reduces the time required to write executable properties by 56%, suggesting substantially lower manual effort. Furthermore, evaluations on 1,180 linguistically diverse variations demonstrate iPBT's robustness (87.6% accuracy), indicating its capability to handle varied expressions.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-03-22T14:47:25Z",
+      "updated": "2026-03-22T14:47:25Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.21263",
+      "html_url": "https://arxiv.org/html/2603.21263",
+      "abs_url": "https://arxiv.org/abs/2603.21263",
+      "citations": 0
+    },
+    {
+      "id": "2510.09907",
+      "title": "Agentic Property-Based Testing: Finding Bugs Across the Python Ecosystem",
+      "authors": [
+        "Muhammad Maaz",
+        "Liam DeVoe",
+        "Zac Hatfield-Dodds",
+        "Nicholas Carlini"
+      ],
+      "abstract": "Property-based testing (PBT) is a lightweight formal method, typically implemented as a randomized testing framework. Users specify the input domain for their test using combinators supplied by the PBT framework, and the expected properties or invariants as a unit-test function. The framework then searches for a counterexample, e.g. by generating inputs and calling the test function. In this work, we demonstrate an LLM-based agent which analyzes Python modules, infers function-specific and cross-function properties from code and documentation, synthesizes and executes PBTs, reflects on outputs of these tests to confirm true bugs, and finally outputs actionable bug reports for the developer. We perform an extensive evaluation of our agent across 100 popular Python packages. Of the bug reports generated by the agent, we found after manual review that 56\\% were valid bugs and 32\\% were valid bugs that we would report to maintainers. We then developed a ranking rubric to surface high-priority valid bugs to developers, and found that of the 21 top-scoring bugs, 86\\% were valid and 81\\% we would report. The bugs span diverse failure modes from serialization failures to numerical precision errors to flawed cache implementations. We reported 5 bugs, 4 with patches, including to NumPy and cloud computing SDKs, with 3 patches merged successfully. Our results suggest that LLMs with PBT provides a rigorous and scalable method for autonomously testing software. Our code and artifacts are available at: https://github.com/mmaaz-git/agentic-pbt.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2025-10-10T22:43:54Z",
+      "updated": "2025-10-10T22:43:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.09907",
+      "html_url": "https://arxiv.org/html/2510.09907",
+      "abs_url": "https://arxiv.org/abs/2510.09907",
+      "citations": 1
+    },
+    {
+      "id": "2208.00758",
+      "title": "Finding smart contract vulnerabilities with ConCert's property-based testing framework",
+      "authors": [
+        "Mikkel Milo",
+        "Eske Hoy Nielsen",
+        "Danil Annenkov",
+        "Bas Spitters"
+      ],
+      "abstract": "We provide three detailed case studies of vulnerabilities in smart contracts, and show how property-based testing would have found them:\n  1. the Dexter1 token exchange;\n  2. the iToken;\n  3. the ICO of Brave's BAT token.\n  The last example is, in fact, new, and was missed in the auditing process. We have implemented this testing in ConCert, a general executable model/specification of smart contract execution in the Coq proof assistant. ConCert contracts can be used to generate verified smart contracts in Tezos' LIGO and Concordium's rust language. We thus show the effectiveness of combining formal verification and property-based testing of smart contracts.",
+      "categories": [
+        "cs.LO",
+        "cs.PL"
+      ],
+      "published": "2022-08-01T11:35:16Z",
+      "updated": "2022-08-01T11:35:16Z",
+      "pdf_url": "https://arxiv.org/pdf/2208.00758",
+      "html_url": "https://arxiv.org/html/2208.00758",
+      "abs_url": "https://arxiv.org/abs/2208.00758",
+      "citations": 6
+    },
+    {
+      "id": "2506.18315",
+      "title": "Use Property-Based Testing to Bridge LLM Code Generation and Validation",
+      "authors": [
+        "Lehan He",
+        "Zeren Chen",
+        "Zhe Zhang",
+        "Jing Shao",
+        "Xiang Gao",
+        "Lu Sheng"
+      ],
+      "abstract": "Large Language Models (LLMs) excel at code generation, but ensuring their outputs to be functionally correct, especially in complex programming tasks, is a persistent challenge. While traditional Test-Driven Development (TDD) offers a path for code refinement, its efficacy with LLMs is often undermined by the scarcity of high-quality test cases or the pitfalls of automated test generation, including biased tests or inaccurate output predictions that can misdirect the correction process. This paper introduces Property-Generated Solver, a novel framework that leverages Property-Based Testing (PBT) to validate high-level program properties or invariants, instead of relying on specific input-output examples. These properties are often simpler to define and verify than directly predicting exhaustive test oracles, breaking the \"cycle of self-deception\" where tests might share flaws with the code they are meant to validate. Property-Generated Solver employs two collaborative LLM-based agents: a Generator dedicated to code generation and iterative refinement, and a Tester that manages the PBT life-cycle and formulate semantically rich feedback from property violations. The resulting comprehensive and actionable feedback then guides the Generator in its refinement efforts. By establishing PBT as the core validation engine within this iterative, closed-loop paradigm, Property-Generated Solver provides a robust mechanism for steering LLMs towards more correct and generalizable code. Extensive experimental results on multiple code generation benchmarks demonstrate that Property-Generated Solver achieves substantial pass@1 improvements, ranging from 23.1% to 37.3% relative gains over established TDD methods.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2025-06-23T06:01:12Z",
+      "updated": "2025-06-23T06:01:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.18315",
+      "html_url": "https://arxiv.org/html/2506.18315",
+      "abs_url": "https://arxiv.org/abs/2506.18315",
+      "citations": 3
+    },
+    {
+      "id": "2211.04712",
+      "title": "Improve Model Testing by Integrating Bounded Model Checking and Coverage Guided Fuzzing",
+      "authors": [
+        "Yixiao Yang"
+      ],
+      "abstract": "The control logic models built by Simulink or Ptolemy have been widely used in industry scenes. It is an urgent need to ensure the safety and security of the control logic models. Test case generation technologies are widely used to ensure the safety and security. State-of-the-art model testing tools employ model checking techniques or search-based methods to generate test cases. Traditional search based techniques based on Simulink simulation are plagued by problems such as low speed and high overhead. Traditional model checking techniques such as symbolic execution have limited performance when dealing with nonlinear elements and complex loops. Recently, coverage guided fuzzing technologies are known to be effective for test case generation, due to their high efficiency and impressive effects over complex branches of loops.\n  In this paper, we apply fuzzing methods to improve model testing and demonstrate the effectiveness. The fuzzing methods aim to cover more program branches by mutating valuable seeds. Inspired by this feature, we propose a novel integration technology SPsCGF, which leverages bounded model checking for symbolic execution to generate test cases as initial seeds and then conduct fuzzing based upon these worthy seeds. In this manner, our work combines the advantages of the model checking methods and fuzzing techniques in a novel way. Since the control logic models always receive signal inputs, we specifically design novel mutation operators for signals to improve the existing fuzzing method in model testing. Over the evaluated benchmarks which consist of industrial cases, SPsCGF could achieve 8% to 38% higher model coverage and 3x-10x time efficiency compared with the state-of-the-art works.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-11-09T07:09:06Z",
+      "updated": "2022-11-09T07:09:06Z",
+      "pdf_url": "https://arxiv.org/pdf/2211.04712",
+      "html_url": "https://arxiv.org/html/2211.04712",
+      "abs_url": "https://arxiv.org/abs/2211.04712",
+      "citations": 4
+    },
+    {
+      "id": "2505.23549",
+      "title": "LLM-based Property-based Test Generation for Guardrailing Cyber-Physical Systems",
+      "authors": [
+        "Khashayar Etemadi",
+        "Marjan Sirjani",
+        "Mahshid Helali Moghadam",
+        "Per Strandberg",
+        "Paul Pettersson"
+      ],
+      "abstract": "Cyber-physical systems (CPSs) are complex systems that integrate physical, computational, and communication subsystems. The heterogeneous nature of these systems makes their safety assurance challenging. In this paper, we propose a novel automated approach for guardrailing cyber-physical systems using property-based tests (PBTs) generated by Large Language Models (LLMs). Our approach employs an LLM to extract properties from the code and documentation of CPSs. Next, we use the LLM to generate PBTs that verify the extracted properties on the CPS. The generated PBTs have two uses. First, they are used to test the CPS before it is deployed, i.e., at design time. Secondly, these PBTs can be used after deployment, i.e., at run time, to monitor the behavior of the system and guardrail it against unsafe states. We implement our approach in ChekProp and conduct preliminary experiments to evaluate the generated PBTs in terms of their relevance (how well they match manually crafted properties), executability (how many run with minimal manual modification), and effectiveness (coverage of the input space partitions). The results of our experiments and evaluation demonstrate a promising path forward for creating guardrails for CPSs using LLM-generated property-based tests.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-05-29T15:27:52Z",
+      "updated": "2025-06-13T09:56:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2505.23549",
+      "html_url": "https://arxiv.org/html/2505.23549",
+      "abs_url": "https://arxiv.org/abs/2505.23549",
+      "citations": 1
+    },
+    {
+      "id": "2408.13686",
+      "title": "Perception-Guided Fuzzing for Simulated Scenario-Based Testing of Autonomous Driving Systems",
+      "authors": [
+        "Tri Minh Triet Pham",
+        "Bo Yang",
+        "Jinqiu Yang"
+      ],
+      "abstract": "Autonomous Driving Systems (ADS) have made huge progress and started on-road testing or even commercializing trials. ADS are complex and difficult to test: they receive input data from multiple sensors and make decisions using a combination of multiple deep neural network models and code logic. The safety of ADS is of utmost importance as their misbehavior can result in costly catastrophes, including the loss of human life. In this work, we propose SimsV, which performs system-level testing on multi-module ADS. SimsV targets perception failures of ADS and further assesses the impact of perception failure on the system as a whole. SimsV leverages a high-fidelity simulator for test input and oracle generation by continuously applying predefined mutation operators. In addition, SimsV leverages various metrics to guide the testing process. We implemented a prototype SimsV for testing a commercial-grade Level 4 ADS (i.e., Apollo) using a popular open-source driving platform simulator. Our evaluation shows that SimsV is capable of finding weaknesses in the perception of Apollo. Furthermore, we show that by exploiting such weakness, SimsV finds severe problems in Apollo, including collisions.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-08-24T22:58:57Z",
+      "updated": "2024-08-24T22:58:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2408.13686",
+      "html_url": "https://arxiv.org/html/2408.13686",
+      "abs_url": "https://arxiv.org/abs/2408.13686",
+      "citations": 2
+    },
+    {
+      "id": "2502.15160",
+      "title": "GraphFuzz: Automated Testing of Graph Algorithm Implementations with Differential Fuzzing and Lightweight Feedback",
+      "authors": [
+        "Wenqi Yan",
+        "Manuel Rigger",
+        "Anthony Wirth",
+        "Van-Thuan Pham"
+      ],
+      "abstract": "Graph algorithms, such as shortest path finding, play a crucial role in enabling essential applications and services like infrastructure planning and navigation, making their correctness important. However, thoroughly testing graph algorithm implementations poses several challenges, including their vast input space (i.e., arbitrary graphs). Moreover, through our preliminary study, we find that just a few automatically generated graphs (less than 10) could be enough to cover the code of many graph algorithm implementations, rendering the code coverage-guided fuzzing approach -- one of the state-of-the-art search algorithms -- less efficient than expected.\n  To tackle these challenges, we introduce GraphFuzz, the first automated feedback-guided fuzzing framework for graph algorithm implementations. Our key innovation lies in identifying lightweight and algorithm-specific feedback signals to combine with or completely replace the code coverage feedback to enhance the diversity of the test corpus, thereby speeding up the bug-finding process. This novel idea also allows GraphFuzz to effectively work in both black-box (i.e., no code coverage instrumentation/collection is required) and grey-box setups. GraphFuzz applies differential testing to detect both crash-triggering bugs and logic bugs. Our evaluation demonstrates the effectiveness of GraphFuzz. The tool has successfully discovered 12 previously unknown bugs, including 6 logic bugs, in 9 graph algorithm implementations in two popular graph libraries, NetworkX and iGraph. All of them have been confirmed and and 11 bugs have been rectified by the libraries' maintainers.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-02-21T02:47:05Z",
+      "updated": "2025-02-21T02:47:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2502.15160",
+      "html_url": "https://arxiv.org/html/2502.15160",
+      "abs_url": "https://arxiv.org/abs/2502.15160",
+      "citations": 0
+    },
+    {
+      "id": "2201.06589",
+      "title": "Free Lunch for Testing: Fuzzing Deep-Learning Libraries from Open Source",
+      "authors": [
+        "Anjiang Wei",
+        "Yinlin Deng",
+        "Chenyuan Yang",
+        "Lingming Zhang"
+      ],
+      "abstract": "Deep learning (DL) systems can make our life much easier, and thus are gaining more and more attention from both academia and industry. Meanwhile, bugs in DL systems can be disastrous, and can even threaten human lives in safety-critical applications. To date, a huge body of research efforts have been dedicated to testing DL models. However, interestingly, there is still limited work for testing the underlying DL libraries, which are the foundation for building, optimizing, and running DL models. One potential reason is that test generation for the underlying DL libraries can be rather challenging since their public APIs are mainly exposed in Python, making it even hard to automatically determine the API input parameter types due to dynamic typing. In this paper, we propose FreeFuzz, the first approach to fuzzing DL libraries via mining from open source. More specifically, FreeFuzz obtains code/models from three different sources: 1) code snippets from the library documentation, 2) library developer tests, and 3) DL models in the wild. Then, FreeFuzz automatically runs all the collected code/models with instrumentation to trace the dynamic information for each covered API, including the types and values of each parameter during invocation, and shapes of input/output tensors. Lastly, FreeFuzz will leverage the traced dynamic information to perform fuzz testing for each covered API. The extensive study of FreeFuzz on PyTorch and TensorFlow, two of the most popular DL libraries, shows that FreeFuzz is able to automatically trace valid dynamic information for fuzzing 1158 popular APIs, 9X more than state-of-the-art LEMON with 3.5X lower overhead than LEMON. To date, FreeFuzz has detected 49 bugs for PyTorch and TensorFlow (with 38 already confirmed by developers as previously unknown).",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-01-17T19:07:33Z",
+      "updated": "2022-02-25T21:48:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2201.06589",
+      "html_url": "https://arxiv.org/html/2201.06589",
+      "abs_url": "https://arxiv.org/abs/2201.06589",
+      "citations": 138
+    },
+    {
+      "id": "2510.13543",
+      "title": "In-Browser LLM-Guided Fuzzing for Real-Time Prompt Injection Testing in Agentic AI Browsers",
+      "authors": [
+        "Avihay Cohen"
+      ],
+      "abstract": "Large Language Model (LLM) based agents integrated into web browsers (often called agentic AI browsers) offer powerful automation of web tasks. However, they are vulnerable to indirect prompt injection attacks, where malicious instructions hidden in a webpage deceive the agent into unwanted actions. These attacks can bypass traditional web security boundaries, as the AI agent operates with the user privileges across sites. In this paper, we present a novel fuzzing framework that runs entirely in the browser and is guided by an LLM to automatically discover such prompt injection vulnerabilities in real time.",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "published": "2025-10-15T13:39:13Z",
+      "updated": "2025-10-15T13:39:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.13543",
+      "html_url": "https://arxiv.org/html/2510.13543",
+      "abs_url": "https://arxiv.org/abs/2510.13543",
+      "citations": 1
+    },
+    {
+      "id": "2310.02609",
+      "title": "RLTrace: Synthesizing High-Quality System Call Traces for OS Fuzz Testing",
+      "authors": [
+        "Wei Chen",
+        "Huaijin Wang",
+        "Weixi Gu",
+        "Shuai Wang"
+      ],
+      "abstract": "Securing operating system (OS) kernel is one central challenge in today's cyber security landscape. The cutting-edge testing technique of OS kernel is software fuzz testing. By mutating the program inputs with random variations for iterations, fuzz testing aims to trigger program crashes and hangs caused by potential bugs that can be abused by the inputs. To achieve high OS code coverage, the de facto OS fuzzer typically composes system call traces as the input seed to mutate and to interact with OS kernels. Hence, quality and diversity of the employed system call traces become the prominent factor to decide the effectiveness of OS fuzzing. However, these system call traces to date are generated with hand-coded rules, or by analyzing system call logs of OS utility programs. Our observation shows that such system call traces can only subsume common usage scenarios of OS system calls, and likely omit hidden bugs.\n  In this research, we propose a deep reinforcement learning-based solution, called RLTrace, to synthesize diverse and comprehensive system call traces as the seed to fuzz OS kernels. During model training, the deep learning model interacts with OS kernels and infers optimal system call traces w.r.t. our learning goal -- maximizing kernel code coverage. Our evaluation shows that RLTrace outperforms other seed generators by producing more comprehensive system call traces, subsuming system call corner usage cases and subtle dependencies. By feeding the de facto OS fuzzer, SYZKALLER, with system call traces synthesized by RLTrace, we show that SYZKALLER can achieve higher code coverage for testing Linux kernels. Furthermore, RLTrace found one vulnerability in the Linux kernel (version 5.5-rc6), which is publicly unknown to the best of our knowledge by the time of writing.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2023-10-04T06:46:00Z",
+      "updated": "2023-10-04T06:46:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2310.02609",
+      "html_url": "https://arxiv.org/html/2310.02609",
+      "abs_url": "https://arxiv.org/abs/2310.02609",
+      "citations": 0
+    },
+    {
+      "id": "2601.10068",
+      "title": "S$^2$F: Principled Hybrid Testing With Fuzzing, Symbolic Execution, and Sampling",
+      "authors": [
+        "Lianjing Wang",
+        "Yufeng Zhang",
+        "Kenli Li",
+        "Zhenbang Chen",
+        "Xu Zhou",
+        "Pengfei Wang",
+        "Guangning Song",
+        "Ji Wang"
+      ],
+      "abstract": "Hybrid testing that integrates fuzzing, symbolic execution, and sampling has demonstrated superior testing efficiency compared to individual techniques. However, the state-of-the-art (SOTA) hybrid testing tools do not fully exploit the capabilities of symbolic execution and sampling in two key aspects. First, the SOTA hybrid testing tools employ tailored symbolic execution engines that tend to over-prune branches, leading to considerable time wasted waiting for seeds from the fuzzer and missing opportunities to discover crashes. Second, existing methods do not apply sampling to the appropriate branches and therefore cannot utilize the full capability of sampling. To address these two limitations, we propose a novel hybrid testing architecture that combines the precision of conventional symbolic execution with the scalability of tailored symbolic execution engines. Based on this architecture, we propose several principles for combining fuzzing, symbolic execution, and sampling. We implement our method in a hybrid testing tool S$^2$F. To evaluate its effectiveness, we conduct extensive experiments on 15 real-world programs. Experimental results demonstrate that S$^2$F outperforms the SOTA tool, achieving an average improvement of 6.14% in edge coverage and 32.6% in discovered crashes. Notably, our tool uncovers three previously unknown crashes in real-world programs.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-01-15T04:48:01Z",
+      "updated": "2026-01-15T04:48:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.10068",
+      "html_url": "https://arxiv.org/html/2601.10068",
+      "abs_url": "https://arxiv.org/abs/2601.10068",
+      "citations": 0
+    },
+    {
+      "id": "2410.13542",
+      "title": "LLM-based Unit Test Generation via Property Retrieval",
+      "authors": [
+        "Zhe Zhang",
+        "Xingyu Liu",
+        "Yuanzhang Lin",
+        "Xiang Gao",
+        "Hailong Sun",
+        "Yuan Yuan"
+      ],
+      "abstract": "Automated unit test generation has been widely studied, with Large Language Models (LLMs) recently showing significant potential. Moreover, in the context of unit test generation, these tools prioritize high code coverage, often at the expense of practical usability, correctness, and maintainability. In response, we propose Property-Based Retrieval Augmentation, a novel mechanism that extends LLM-based Retrieval-Augmented Generation (RAG) beyond basic vector, text similarity, and graph-based methods. Our approach considers task-specific context and introduces a tailored property retrieval mechanism. Specifically, in the unit test generation task, we account for the unique structure of unit tests by dividing the test generation process into Given, When, and Then phases. When generating tests for a focal method, we not only retrieve general context for the code under test but also consider task-specific context such as pre-existing tests of other methods, which can provide valuable insights for any of the Given, When, and Then phases. This forms property relationships between focal method and other methods, thereby expanding the scope of retrieval beyond traditional RAG. We implement this approach in a tool called APT, which sequentially performs preprocessing, property retrieval, and unit test generation, using an iterative strategy where newly generated tests guide the creation of subsequent ones. We evaluated APT on 12 open-source projects with 1515 methods, and the results demonstrate that APT consistently outperforms existing tools in terms of correctness, completeness, and maintainability of the generated tests. Moreover, we introduce a novel code-context-aware retrieval mechanism for LLMs beyond general context, offering valuable insights and potential applications for other code-related tasks.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-10-17T13:33:12Z",
+      "updated": "2024-10-17T13:33:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.13542",
+      "html_url": "https://arxiv.org/html/2410.13542",
+      "abs_url": "https://arxiv.org/abs/2410.13542",
+      "citations": 14
+    },
+    {
+      "id": "2503.24100",
+      "title": "Fuzzing-based Mutation Testing of C/C++ Software in Cyber-Physical Systems",
+      "authors": [
+        "Jaekwon Lee",
+        "Fabrizio Pastore",
+        "Lionel Briand"
+      ],
+      "abstract": "Mutation testing can help minimize the delivery of faulty software. Therefore, it is a recommended practice for developing embedded software in safety-critical cyber-physical systems (CPS). However, state-of-the-art mutation testing techniques for C and C++ software, which are common languages for CPS, depend on symbolic execution. Unfortunately, symbolic execution's limitations hinder its applicability (e.g., systems with black-box components).\n  We propose relying on fuzz testing, which has demonstrated its effectiveness for C and C++ software. Fuzz testing tools automatically create test inputs that explore program branches in various ways, exercising statements in different program states, and thus enabling the detection of mutants, which is our objective.\n  We empirically evaluated our approach using software components from operational satellite systems. Our assessment shows that our approach can detect between 40% and 90% of the mutants not detected by developers' test suites. Further, we empirically determined that the best results are obtained by integrating the Clang compiler, a memory address sanitizer, and relying on laf-intel instrumentation to collect coverage and guide fuzzing. Our approach detects a significantly higher percentage of live mutants compared to symbolic execution, with an increase of up to 50 percentage points; further, we observed that although the combination of fuzzing and symbolic execution leads to additional mutants being killed, the benefits are minimal (a gain of less than one percentage point).",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-03-31T13:55:27Z",
+      "updated": "2025-07-03T15:23:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.24100",
+      "html_url": "https://arxiv.org/html/2503.24100",
+      "abs_url": "https://arxiv.org/abs/2503.24100",
+      "citations": 0
+    },
+    {
+      "id": "2509.14626",
+      "title": "Evaluating the Effectiveness of Coverage-Guided Fuzzing for Testing Deep Learning Library APIs",
+      "authors": [
+        "Feiran Qin",
+        "M. M. Abid Naziri",
+        "Hengyu Ai",
+        "Saikat Dutta",
+        "Marcelo d'Amorim"
+      ],
+      "abstract": "Deep Learning (DL) libraries such as PyTorch provide the core components to build major AI-enabled applications. Finding bugs in these libraries is important and challenging. Prior approaches have tackled this by performing either API-level fuzzing or model-level fuzzing, but they do not use coverage guidance, which limits their effectiveness and efficiency. This raises an intriguing question: can coverage guided fuzzing (CGF), in particular frameworks like LibFuzzer, be effectively applied to DL libraries, and does it offer meaningful improvements in code coverage, bug detection, and scalability compared to prior methods?\n  We present the first in-depth study to answer this question. A key challenge in applying CGF to DL libraries is the need to create a test harness for each API that can transform byte-level fuzzer inputs into valid API inputs. To address this, we propose FlashFuzz, a technique that leverages Large Language Models (LLMs) to automatically synthesize API-level harnesses by combining templates, helper functions, and API documentation. FlashFuzz uses a feedback driven strategy to iteratively synthesize and repair harnesses. With this approach, FlashFuzz synthesizes harnesses for 1,151 PyTorch and 662 TensorFlow APIs. Compared to state-of-the-art fuzzing methods (ACETest, PathFinder, and TitanFuzz), FlashFuzz achieves up to 101.13 to 212.88 percent higher coverage and 1.0x to 5.4x higher validity rate, while also delivering 1x to 1182x speedups in input generation. FlashFuzz has discovered 42 previously unknown bugs in PyTorch and TensorFlow, 8 of which are already fixed. Our study confirms that CGF can be effectively applied to DL libraries and provides a strong baseline for future testing approaches.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-09-18T05:10:42Z",
+      "updated": "2025-09-18T05:10:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.14626",
+      "html_url": "https://arxiv.org/html/2509.14626",
+      "abs_url": "https://arxiv.org/abs/2509.14626",
+      "citations": 0
+    },
+    {
+      "id": "2503.22641",
+      "title": "QuCheck: A Property-based Testing Framework for Quantum Programs in Qiskit",
+      "authors": [
+        "Gabriel Pontolillo",
+        "Mohammad Reza Mousavi",
+        "Marek Grzesiuk"
+      ],
+      "abstract": "Property-based testing has been previously proposed for quantum programs in Q# with QSharpCheck; however, this implementation was limited in functionality, lacked extensibility, and was evaluated on a narrow range of programs using a single property. To address these limitations, we propose QuCheck, an enhanced property-based testing framework in Qiskit. By leveraging Qiskit and the broader Python ecosystem, QuCheck facilitates property construction, introduces flexible input generators and assertions, and supports expressive preconditions. We assessed its effectiveness through mutation analysis on five quantum programs (2-10 qubits), varying the number of properties, inputs, and measurement shots to assess their impact on fault detection and demonstrate the effectiveness of property-based testing across a range of conditions. Results show a strong positive correlation between the mutation score (a measure of fault detection) and number of properties evaluated, with a moderate negative correlation between the false positive rate and number of measurement shots. Among the most thorough test configurations, those evaluating three properties achieved a mean mutation score ranging from 0.90 to 0.92 across all five algorithms, with the false positive rate between 0 and 0.04. QuCheck identified 36.0% more faults than QSharpCheck, with execution time reduced by 81.1%, despite one false positive. These findings underscore the viability of property-based testing for verifying quantum systems.",
+      "categories": [
+        "quant-ph",
+        "cs.SE"
+      ],
+      "published": "2025-03-28T17:30:09Z",
+      "updated": "2025-03-28T17:30:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.22641",
+      "html_url": "https://arxiv.org/html/2503.22641",
+      "abs_url": "https://arxiv.org/abs/2503.22641",
+      "citations": 3
+    },
+    {
+      "id": "2407.08535",
+      "title": "Point Intervention: Improving ACVP Test Vector Generation Through Human Assisted Fuzzing",
+      "authors": [
+        "Iaroslav Gridin",
+        "Antonis Michalas"
+      ],
+      "abstract": "Automated Cryptographic Validation Protocol (ACVP) is an existing protocol that is used to validate a software or hardware cryptographic module automatically. In this work, we present a system providing the method and tools to produce well-covering tests in ACVP format for cryptographic libraries. The system achieves better coverage than existing fuzzing methods by using a hybrid approach to fuzzing cryptographic primitives. In addition, the system offers a framework that allows to creates easily and securely create testing modules for cryptographic libraries. The work demonstrates how this system has been used to improve automated testing of NSS (Network Security Services), a popular cryptographic library, detect its vulnerabilities and suggest ways to improve and further develop the ACVP test format.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2024-07-11T14:21:48Z",
+      "updated": "2024-07-11T14:21:48Z",
+      "pdf_url": "https://arxiv.org/pdf/2407.08535",
+      "html_url": "https://arxiv.org/html/2407.08535",
+      "abs_url": "https://arxiv.org/abs/2407.08535",
+      "citations": 2
+    },
+    {
+      "id": "2409.10737",
+      "title": "AutoSafeCoder: A Multi-Agent Framework for Securing LLM Code Generation through Static Analysis and Fuzz Testing",
+      "authors": [
+        "Ana Nunez",
+        "Nafis Tanveer Islam",
+        "Sumit Kumar Jha",
+        "Peyman Najafirad"
+      ],
+      "abstract": "Recent advancements in automatic code generation using large language models (LLMs) have brought us closer to fully automated secure software development. However, existing approaches often rely on a single agent for code generation, which struggles to produce secure, vulnerability-free code. Traditional program synthesis with LLMs has primarily focused on functional correctness, often neglecting critical dynamic security implications that happen during runtime. To address these challenges, we propose AutoSafeCoder, a multi-agent framework that leverages LLM-driven agents for code generation, vulnerability analysis, and security enhancement through continuous collaboration. The framework consists of three agents: a Coding Agent responsible for code generation, a Static Analyzer Agent identifying vulnerabilities, and a Fuzzing Agent performing dynamic testing using a mutation-based fuzzing approach to detect runtime errors. Our contribution focuses on ensuring the safety of multi-agent code generation by integrating dynamic and static testing in an iterative process during code generation by LLM that improves security. Experiments using the SecurityEval dataset demonstrate a 13% reduction in code vulnerabilities compared to baseline LLMs, with no compromise in functionality.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2024-09-16T21:15:56Z",
+      "updated": "2024-11-05T03:00:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.10737",
+      "html_url": "https://arxiv.org/html/2409.10737",
+      "abs_url": "https://arxiv.org/abs/2409.10737",
+      "citations": 35
+    },
+    {
+      "id": "2512.01617",
+      "title": "When High-Performance Computing Meets Software Testing: Distributed Fuzzing using MPI",
+      "authors": [
+        "Pierciro Caliandro",
+        "Matteo Ciccaglione",
+        "Alessandro Pellegrini"
+      ],
+      "abstract": "This paper explores the integration of MPI-based synchronization techniques into distributed fuzzing frameworks, highlighting possible substantial performance improvements compared to traditional filesystem-based synchronization methods. By employing lightweight MPI primitives, reductions in communication latency are achieved, facilitating more efficient data exchanges across distributed fuzzing nodes. Experimental results obtained over standard benchmarks demonstrate enhanced coverage progression from the early stages of the fuzzing process, which could be beneficial if fuzzing is employed in CI/CD pipelines at any stage of software development. Furthermore, the coordinated exchange of input corpora among clusters of fuzzers effectively addresses coverage stagnation, enabling a sustained exploration of complex and deep execution paths. Overall, the adoption of MPI-based synchronization approaches shows promising potential for significantly enhancing the scalability and efficacy of distributed fuzz testing.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-12-01T12:38:20Z",
+      "updated": "2025-12-01T12:38:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.01617",
+      "html_url": "https://arxiv.org/html/2512.01617",
+      "abs_url": "https://arxiv.org/abs/2512.01617",
+      "citations": 0
+    },
+    {
+      "id": "2307.04346",
+      "title": "Can Large Language Models Write Good Property-Based Tests?",
+      "authors": [
+        "Vasudev Vikram",
+        "Caroline Lemieux",
+        "Joshua Sunshine",
+        "Rohan Padhye"
+      ],
+      "abstract": "Property-based testing (PBT), while an established technique in the software testing research community, is still relatively underused in real-world software. Pain points in writing property-based tests include implementing diverse random input generators and thinking of meaningful properties to test. Developers, however, are more amenable to writing documentation; plenty of library API documentation is available and can be used as natural language specifications for PBTs. As large language models (LLMs) have recently shown promise in a variety of coding tasks, we investigate using modern LLMs to automatically synthesize PBTs using two prompting techniques. A key challenge is to rigorously evaluate the LLM-synthesized PBTs. We propose a methodology to do so considering several properties of the generated tests: (1) validity, (2) soundness, and (3) property coverage, a novel metric that measures the ability of the PBT to detect property violations through generation of property mutants. In our evaluation on 40 Python library API methods across three models (GPT-4, Gemini-1.5-Pro, Claude-3-Opus), we find that with the best model and prompting approach, a valid and sound PBT can be synthesized in 2.4 samples on average. We additionally find that our metric for determining soundness of a PBT is aligned with human judgment of property assertions, achieving a precision of 100% and recall of 97%. Finally, we evaluate the property coverage of LLMs across all API methods and find that the best model (GPT-4) is able to automatically synthesize correct PBTs for 21% of properties extractable from API documentation.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-07-10T05:09:33Z",
+      "updated": "2024-07-22T01:28:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2307.04346",
+      "html_url": "https://arxiv.org/html/2307.04346",
+      "abs_url": "https://arxiv.org/abs/2307.04346",
+      "citations": 54
+    },
+    {
+      "id": "2408.00523",
+      "title": "Fuzz-Testing Meets LLM-Based Agents: An Automated and Efficient Framework for Jailbreaking Text-To-Image Generation Models",
+      "authors": [
+        "Yingkai Dong",
+        "Xiangtao Meng",
+        "Ning Yu",
+        "Zheng Li",
+        "Shanqing Guo"
+      ],
+      "abstract": "Text-to-image (T2I) generative models have revolutionized content creation by transforming textual descriptions into high-quality images. However, these models are vulnerable to jailbreaking attacks, where carefully crafted prompts bypass safety mechanisms to produce unsafe content. While researchers have developed various jailbreak attacks to expose this risk, these methods face significant limitations, including impractical access requirements, easily detectable unnatural prompts, restricted search spaces, and high query demands on the target system. In this paper, we propose JailFuzzer, a novel fuzzing framework driven by large language model (LLM) agents, designed to efficiently generate natural and semantically meaningful jailbreak prompts in a black-box setting. Specifically, JailFuzzer employs fuzz-testing principles with three components: a seed pool for initial and jailbreak prompts, a guided mutation engine for generating meaningful variations, and an oracle function to evaluate jailbreak success. Furthermore, we construct the guided mutation engine and oracle function by LLM-based agents, which further ensures efficiency and adaptability in black-box settings. Extensive experiments demonstrate that JailFuzzer has significant advantages in jailbreaking T2I models. It generates natural and semantically coherent prompts, reducing the likelihood of detection by traditional defenses. Additionally, it achieves a high success rate in jailbreak attacks with minimal query overhead, outperforming existing methods across all key metrics. This study underscores the need for stronger safety mechanisms in generative models and provides a foundation for future research on defending against sophisticated jailbreaking attacks. JailFuzzer is open-source and available at this repository: https://github.com/YingkaiD/JailFuzzer.",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2024-08-01T12:54:46Z",
+      "updated": "2025-06-24T18:55:29Z",
+      "pdf_url": "https://arxiv.org/pdf/2408.00523",
+      "html_url": "https://arxiv.org/html/2408.00523",
+      "abs_url": "https://arxiv.org/abs/2408.00523",
+      "citations": 22
+    },
+    {
+      "id": "2307.11247",
+      "title": "Formal-Guided Fuzz Testing: Targeting Security Assurance from Specification to Implementation for 5G and Beyond",
+      "authors": [
+        "Jingda Yang",
+        "Sudhanshu Arya",
+        "Ying Wang"
+      ],
+      "abstract": "Softwarization and virtualization in 5G and beyond necessitate thorough testing to ensure the security of critical infrastructure and networks, requiring the identification of vulnerabilities and unintended emergent behaviors from protocol designs to their software stack implementation. To provide an efficient and comprehensive solution, we propose a novel and first-of-its-kind approach that connects the strengths and coverage of formal and fuzzing methods to efficiently detect vulnerabilities across protocol logic and implementation stacks in a hierarchical manner. We design and implement formal verification to detect attack traces in critical protocols, which are used to guide subsequent fuzz testing and incorporate feedback from fuzz testing to broaden the scope of formal verification. This innovative approach significantly improves efficiency and enables the auto-discovery of vulnerabilities and unintended emergent behaviors from the 3GPP protocols to software stacks. Following this approach, we discover one identifier leakage model, one DoS attack model, and two eavesdrop attack models due to the absence of rudimentary MITM protection within the protocol, despite the existence of a Transport Layer Security (TLS) solution to this issue for over a decade. More remarkably, guided by the identified formal analysis and attack models, we exploit 61 vulnerabilities using fuzz testing demonstrated on srsRAN platforms. These identified vulnerabilities contribute to fortifying protocol-level assumptions and refining the search space. Compared to state-of-the-art fuzz testing, our united formal and fuzzing methodology enables auto-assurance by systematically discovering vulnerabilities. It significantly reduces computational complexity, transforming the non-practical exponential growth in computational cost into linear growth.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2023-07-20T21:38:00Z",
+      "updated": "2023-07-20T21:38:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2307.11247",
+      "html_url": "https://arxiv.org/html/2307.11247",
+      "abs_url": "https://arxiv.org/abs/2307.11247",
+      "citations": 18
+    },
+    {
+      "id": "2509.17335",
+      "title": "BASFuzz: Towards Robustness Evaluation of LLM-based NLP Software via Automated Fuzz Testing",
+      "authors": [
+        "Mingxuan Xiao",
+        "Yan Xiao",
+        "Shunhui Ji",
+        "Jiahe Tu",
+        "Pengcheng Zhang"
+      ],
+      "abstract": "Fuzzing has shown great success in evaluating the robustness of intelligent natural language processing (NLP) software. As large language model (LLM)-based NLP software is widely deployed in critical industries, existing methods still face two main challenges: 1 testing methods are insufficiently coupled with the behavioral patterns of LLM-based NLP software; 2 fuzzing capability for the testing scenario of natural language generation (NLG) generally degrades. To address these issues, we propose BASFuzz, an efficient Fuzz testing method tailored for LLM-based NLP software. BASFuzz targets complete test inputs composed of prompts and examples, and uses a text consistency metric to guide mutations of the fuzzing loop, aligning with the behavioral patterns of LLM-based NLP software. A Beam-Annealing Search algorithm, which integrates beam search and simulated annealing, is employed to design an efficient fuzzing loop. In addition, information entropy-based adaptive adjustment and an elitism strategy further enhance fuzzing capability. We evaluate BASFuzz on six datasets in representative scenarios of NLG and natural language understanding (NLU). Experimental results demonstrate that BASFuzz achieves a testing effectiveness of 90.335% while reducing the average time overhead by 2,163.852 seconds compared to the current best baseline, enabling more effective robustness evaluation prior to software deployment.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-09-22T03:13:57Z",
+      "updated": "2025-09-22T03:13:57Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.17335",
+      "html_url": "https://arxiv.org/html/2509.17335",
+      "abs_url": "https://arxiv.org/abs/2509.17335",
+      "citations": 0
+    },
+    {
+      "id": "2510.25297",
+      "title": "Understanding the Characteristics of LLM-Generated Property-Based Tests in Exploring Edge Cases",
+      "authors": [
+        "Hidetake Tanaka",
+        "Haruto Tanaka",
+        "Kazumasa Shimari",
+        "Kenichi Matsumoto"
+      ],
+      "abstract": "As Large Language Models (LLMs) increasingly generate code in software development, ensuring the quality of LLM-generated code has become important. Traditional testing approaches using Example-based Testing (EBT) often miss edge cases -- defects that occur at boundary values, special input patterns, or extreme conditions. This research investigates the characteristics of LLM-generated Property-based Testing (PBT) compared to EBT for exploring edge cases. We analyze 16 HumanEval problems where standard solutions failed on extended test cases, generating both PBT and EBT test codes using Claude-4-sonnet. Our experimental results reveal that while each method individually achieved a 68.75\\% bug detection rate, combining both approaches improved detection to 81.25\\%. The analysis demonstrates complementary characteristics: PBT effectively detects performance issues and edge cases through extensive input space exploration, while EBT effectively detects specific boundary conditions and special patterns. These findings suggest that a hybrid approach leveraging both testing methods can improve the reliability of LLM-generated code, providing guidance for test generation strategies in LLM-based code generation.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-10-29T09:07:03Z",
+      "updated": "2025-10-29T09:07:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.25297",
+      "html_url": "https://arxiv.org/html/2510.25297",
+      "abs_url": "https://arxiv.org/abs/2510.25297",
+      "citations": 0
+    },
+    {
+      "id": "2108.08726",
+      "title": "Property-Based Testing in Simulation for Verifying Robot Action Execution in Tabletop Manipulation",
+      "authors": [
+        "Salman Omar Sohail",
+        "Alex Mitrevski",
+        "Nico Hochgeschwender",
+        "Paul G. Plöger"
+      ],
+      "abstract": "An important prerequisite for the reliability and robustness of a service robot is ensuring the robot's correct behavior when it performs various tasks of interest. Extensive testing is one established approach for ensuring behavioural correctness; this becomes even more important with the integration of learning-based methods into robot software architectures, as there are often no theoretical guarantees about the performance of such methods in varying scenarios. In this paper, we aim towards evaluating the correctness of robot behaviors in tabletop manipulation through automatic generation of simulated test scenarios in which a robot assesses its performance using property-based testing. In particular, key properties of interest for various robot actions are encoded in an action ontology and are then verified and validated within a simulated environment. We evaluate our framework with a Toyota Human Support Robot (HSR) which is tested in a Gazebo simulation. We show that our framework can correctly and consistently identify various failed actions in a variety of randomised tabletop manipulation scenarios, in addition to providing deeper insights into the type and location of failures for each designed property.",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2021-08-19T14:51:05Z",
+      "updated": "2021-08-19T14:51:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2108.08726",
+      "html_url": "https://arxiv.org/html/2108.08726",
+      "abs_url": "https://arxiv.org/abs/2108.08726",
+      "citations": 2
+    },
+    {
+      "id": "2505.03062",
+      "title": "Testing SSD Firmware with State Data-Aware Fuzzing: Accelerating Coverage in Nondeterministic I/O Environments",
+      "authors": [
+        "Gangho Yoon",
+        "Eunseok Lee"
+      ],
+      "abstract": "Solid-State Drive (SSD) firmware manages complex internal states, including flash memory maintenance. Due to nondeterministic I/O operations, traditional testing methods struggle to rapidly achieve coverage of firmware code areas that require extensive I/O accumulation. To address this challenge, we propose a state data-aware fuzzing approach that leverages SSD firmware's internal state to guide input generation under nondeterministic I/O conditions and accelerate coverage discovery. Our experiments with an open-source SSD firmware emulator show that the proposed method achieves the same firmware test coverage as a state-of-the-art coverage-based fuzzer (AFL++) while requiring approximately 67% fewer commands, without reducing the number of crashes or hangs detected. Moreover, we extend our experiments by incorporating various I/O commands beyond basic write/read operations to reflect real user scenarios, and we confirm that our strategy remains effective even for multiple types of I/O tests. We further validate the effectiveness of state data-aware fuzzing for firmware testing under I/O environments and suggest that this approach can be extended to other storage firmware or threshold-based embedded systems in the future.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-05-05T22:52:21Z",
+      "updated": "2025-05-05T22:52:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2505.03062",
+      "html_url": "https://arxiv.org/html/2505.03062",
+      "abs_url": "https://arxiv.org/abs/2505.03062",
+      "citations": 0
+    },
+    {
+      "id": "2504.11675",
+      "title": "VLM-Fuzz: Vision Language Model Assisted Recursive Depth-first Search Exploration for Effective UI Testing of Android Apps",
+      "authors": [
+        "Biniam Fisseha Demissie",
+        "Yan Naing Tun",
+        "Lwin Khin Shar",
+        "Mariano Ceccato"
+      ],
+      "abstract": "Testing Android apps effectively requires a systematic exploration of the app's possible states by simulating user interactions and system events. While existing approaches have proposed several fuzzing techniques to generate various text inputs and trigger user and system events for UI state exploration, achieving high code coverage remains a significant challenge in Android app testing. The main challenges are (1) reasoning about the complex and dynamic layout of UI screens; (2) generating required inputs/events to deal with certain widgets like pop-ups; and (3) coordination between current test inputs and previous inputs to avoid getting stuck in the same UI screen without improving test coverage. To address these problems, we propose a novel, automated fuzzing approach called VLM-Fuzz for effective UI testing of Android apps. We present a novel heuristic-based depth-first search (DFS) exploration algorithm, assisted with a vision language model (VLM), to effectively explore the UI states of the app. We use static analysis to analyze the Android Manifest file and the runtime UI hierarchy XML to extract the list of components, intent-filters and interactive UI widgets. VLM is used to reason about complex UI layout and widgets on an on-demand basis. Based on the inputs from static analysis, VLM, and the current UI state, we use some heuristics to deal with the above-mentioned challenges. We evaluated VLM-Fuzz based on a benchmark containing 59 apps obtained from a recent work and compared it against two state-of-the-art approaches: APE and DeepGUI. VLM-Fuzz outperforms the best baseline by 9.0%, 3.7%, and 2.1% in terms of class coverage, method coverage, and line coverage, respectively. We also ran VLM-Fuzz on 80 recent Google Play apps (i.e., updated in 2024). VLM-Fuzz detected 208 unique crashes in 24 apps, which have been reported to respective developers.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-04-16T00:19:31Z",
+      "updated": "2025-04-16T00:19:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.11675",
+      "html_url": "https://arxiv.org/html/2504.11675",
+      "abs_url": "https://arxiv.org/abs/2504.11675",
+      "citations": 4
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+Title: Differential testing for machine learning: an analysis for classification algorithms beyond deep learning
+Authors: Steffen Herbold, Steffen Tunkel
+ID: 2207.11976
+URL: https://arxiv.org/abs/2207.11976
+
+Abstract:
+Context: Differential testing is a useful approach that uses different
+implementations of the same algorithms and compares the results for software
+testing. In recent years, this approach was successfully used for test campaigns
+of deep learning frameworks. Objective: There is little knowledge on the
+application of differential testing beyond deep learning. Within this article,
+we want to close this gap for classification algorithms. Method: We conduct a
+case study using Scikit-learn, Weka, Spark MLlib, and Caret in which we identify
+the potential of differential testing by considering which algorithms are
+available in multiple frameworks, the feasibility by identifying pairs of
+algorithms that should exhibit the same behavior, and the effectiveness by
+executing tests for the identified pairs and analyzing the deviations. Results:
+While we found a large potential for popular algorithms, the feasibility seems
+limited because often it is not possible to determine configurations that are
+the same in other frameworks. The execution of the feasible tests revealed that
+there is a large amount of deviations for the scores and classes. Only a lenient
+approach based on statistical significance of classes does not lead to a huge
+amount of test failures. Conclusions: The potential of differential testing
+beyond deep learning seems limited for research into the quality of machine
+learning libraries. Practitioners may still use the approach if they have deep
+knowledge about implementations, especially if a coarse oracle that only
+considers significant differences of classes is sufficient.

@@ -1,0 +1,27 @@
+Title: Static Application Security Testing of Consensus-Critical Code in the Cosmos Network
+Authors: Jasper Surmont, Weihong Wang, Tom Van Cutsem
+ID: 2308.10613
+URL: https://arxiv.org/abs/2308.10613
+
+Abstract:
+Blockchains require deterministic execution in order to reach consensus. This is
+often guaranteed in languages designed to write smart contracts, such as
+Solidity. Application-specific blockchains or ``appchains'' allow the blockchain
+application logic to be written using general-purpose programming languages,
+giving developers more flexibility but also additional responsibilities. In
+particular, developers must ensure that their blockchain application logic does
+not contain any sources of non-determinism. Any source of non-determinism may be
+a potential source of vulnerabilities. This paper focuses on the use of Static
+Application Security Testing (SAST) tools to detect such sources of
+non-determinism at development time. We focus on Cosmos, a prominent open-source
+project that lets developers build interconnected networks of
+application-specific blockchains. Cosmos provides a Software Development Kit
+(SDK) that allows these chains to be implemented in the Go programming language.
+We create a corpus of 11 representative Cosmos-based appchains to analyze for
+sources of non-determinism in Go. As part of our study, we identified
+cosmos-sdk-codeql, a set of CodeQL code analysis rules for Cosmos applications.
+We find that these rules generate many false positives and propose a refactored
+set of rules that more precisely detects sources of non-determinism only in code
+that runs as part of the blockchain logic. We demonstrate a significant increase
+in the precision of the rules, making the SAST tool more effective and hence
+potentially contributing to enhanced security for Cosmos-based blockchains.

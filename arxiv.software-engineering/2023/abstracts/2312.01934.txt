@@ -1,0 +1,27 @@
+Title: Speed and Performance of Parserless and Unsupervised Anomaly Detection Methods on Software Logs
+Authors: Jesse Nyyssölä, Mika Mäntylä
+ID: 2312.01934
+URL: https://arxiv.org/abs/2312.01934
+
+Abstract:
+Software log analysis can be laborious and time consuming. Time and labeled data
+are usually lacking in industrial settings. This paper studies unsupervised and
+time efficient methods for anomaly detection. We study two custom and two
+established models. The custom models are: an OOV (Out-Of-Vocabulary) detector,
+which counts the terms in the test data that are not present in the training
+data, and the Rarity Model (RM), which calculates a rarity score for terms based
+on their infrequency. The established models are KMeans and Isolation Forest.
+The models are evaluated on four public datasets (BGL, Thunderbird, Hadoop,
+HDFS) with three different representation techniques for the log messages
+(Words, character Trigrams, Parsed events). For training, we used both
+normal-only data, which is free of all anomalies, and unfiltered data, which
+contains both normal and anomalous instances. We used primarily the AUC-ROC
+metric for evaluation due to challenges in setting a threshold but we also
+include F1-scores for further insight. Different configurations are advised
+based on specific requirements. When training data is unfiltered, includes both
+normal and anomalous instances, the most effective combination is the Isolation
+Forest with event representation, achieving an AUC-ROC of 0.829. If it's
+possible to create a normal-only training dataset, combining the
+Out-Of-Vocabulary (OOV) detector with trigram representation yields the highest
+AUC-ROC of 0.846. For speed considerations, the OOV detector is optimal for
+filtered data, while the Rarity Model is the best choice for unfiltered data.

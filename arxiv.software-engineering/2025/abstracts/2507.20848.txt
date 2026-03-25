@@ -1,0 +1,24 @@
+Title: Search-Based Fuzzing For RESTful APIs That Use MongoDB
+Authors: Hernan Ghianni, Man Zhang, Juan P. Galeotti, Andrea Arcuri
+ID: 2507.20848
+URL: https://arxiv.org/abs/2507.20848
+
+Abstract:
+In RESTful APIs, interactions with a database are a common and crucial aspect.
+When generating whitebox tests, it is essential to consider the database's state
+(i.e., the data contained in the database) to achieve higher code coverage and
+uncover more hidden faults. This article presents novel techniques to enhance
+search-based software test generation for RESTful APIs interacting with NoSQL
+databases. Specifically, we target the popular MongoDB database, by dynamically
+analyzing (via automated code instrumentation) the state of the database during
+the test generation process. Additionally, to achieve better results, our novel
+approach allows inserting NoSQL data directly from test cases. This is
+particularly beneficial when generating the correct sequence of events to set
+the NoSQL database in an appropriate state is challenging or time-consuming.
+This method is also advantageous for testing read-only microservices. Our novel
+techniques are implemented as an extension of EvoMaster, the only open-source
+tool for white-box fuzzing RESTful APIs. Experiments conducted on six RESTful
+APIs demonstrated significant improvements in code coverage, with increases of
+up to 18% compared to existing white-box approaches. To better highlight the
+improvements of our novel techniques, comparisons are also carried out with four
+state-of-the-art black-box fuzzers.

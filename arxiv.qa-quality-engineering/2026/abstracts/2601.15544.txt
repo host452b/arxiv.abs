@@ -1,0 +1,23 @@
+Title: RDumb++: Drift-Aware Continual Test-Time Adaptation
+Authors: Himanshu Mishra
+ID: 2601.15544
+URL: https://arxiv.org/abs/2601.15544
+
+Abstract:
+Continual Test-Time Adaptation (CTTA) seeks to update a pretrained model during
+deployment using only the incoming, unlabeled data stream. Although prior
+approaches such as Tent, EATA etc. provide meaningful improvements under short
+evolving shifts, they struggle when the test distribution changes rapidly or
+over extremely long horizons. This challenge is exemplified by the CCC
+benchmark, where models operate over streams of 7.5M samples with continually
+changing corruption types and severities. We propose RDumb++, a principled
+extension of RDumb that introduces two drift-detection mechanisms i.e
+entropy-based drift scoring and KL-divergence drift scoring, together with
+adaptive reset strategies. These mechanisms allow the model to detect when
+accumulated adaptation becomes harmful and to recover before prediction collapse
+occurs. Across CCC-medium with three speeds and three seeds (nine runs, each
+containing one million samples), RDumb++ consistently surpasses RDumb, yielding
+approx 3% absolute accuracy gains while maintaining stable adaptation throughout
+the entire stream. Ablation experiments on drift thresholds and reset strengths
+further show that drift-aware resetting is essential for preventing collapse and
+achieving reliable long-horizon CTTA.

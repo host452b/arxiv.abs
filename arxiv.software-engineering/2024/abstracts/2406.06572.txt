@@ -1,0 +1,27 @@
+Title: Graph Neural Network Enhanced Retrieval for Question Answering of LLMs
+Authors: Zijian Li, Qingyan Guo, Jiawei Shao, Lei Song, Jiang Bian et al.
+ID: 2406.06572
+URL: https://arxiv.org/abs/2406.06572
+
+Abstract:
+Retrieval augmented generation has revolutionized large language model (LLM)
+outputs by providing factual supports. Nevertheless, it struggles to capture all
+the necessary knowledge for complex reasoning questions. Existing retrieval
+methods typically divide reference documents into passages, treating them in
+isolation. These passages, however, are often interrelated, such as passages
+that are contiguous or share the same keywords. Therefore, it is crucial to
+recognize such relatedness for enhancing the retrieval process. In this paper,
+we propose a novel retrieval method, called GNN-Ret, which leverages graph
+neural networks (GNNs) to enhance retrieval by exploiting the relatedness
+between passages. Specifically, we first construct a graph of passages by
+connecting passages that are structure-related or keyword-related. A graph
+neural network (GNN) is then leveraged to exploit the relationships between
+passages and improve the retrieval of supporting passages. Furthermore, we
+extend our method to handle multi-hop reasoning questions using a recurrent
+graph neural network (RGNN), named RGNN-Ret. At each step, RGNN-Ret integrates
+the graphs of passages from previous steps, thereby enhancing the retrieval of
+supporting passages. Extensive experiments on benchmark datasets demonstrate
+that GNN-Ret achieves higher accuracy for question answering with a single query
+of LLMs than strong baselines that require multiple queries, and RGNN-Ret
+further improves accuracy and achieves state-of-the-art performance, with up to
+10.4% accuracy improvement on the 2WikiMQA dataset.

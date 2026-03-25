@@ -1,0 +1,25 @@
+Title: HerAgent: Rethinking the Automated Environment Deployment via Hierarchical Test Pyramid
+Authors: Xiang Li, Siyu Lu, Federica Sarro, Claire Le Goues, He Ye
+ID: 2602.07871
+URL: https://arxiv.org/abs/2602.07871
+
+Abstract:
+Automated software environment setup is a prerequisite for testing, debugging,
+and reproducing failures, yet remains challenging in practice due to complex
+dependencies, heterogeneous build systems, and incomplete documentation. Recent
+work leverages large language models to automate this process, but typically
+evaluates success using weak signals such as dependency installation or partial
+test execution, which do not ensure that a project can actually run. In this
+paper, we argue that environment setup success should be evaluated through
+executable evidence rather than a single binary signal. We introduce the
+Environment Maturity Hierarchy, which defines three success levels based on
+progressively stronger execution requirements, culminating in successful
+execution of a project's main entry point. Guided by this hierarchy, we propose
+HerAgent, an automated environment setup approach that incrementally constructs
+executable environments through execution-based validation and repair. We
+evaluate HerAgent on four public benchmarks, where it outperforms all related
+work, achieving up to 79.6\% improvement due to its holistic understanding of
+project structure and dependencies. On complex C/C++ projects, HerAgent
+surpasses prior approaches by 66.7\%. In addition, HerAgent uniquely resolves
+11-30 environment instances across the benchmarks that no prior method can
+configure.

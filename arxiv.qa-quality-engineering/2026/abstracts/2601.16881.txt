@@ -1,0 +1,22 @@
+Title: Assessing the Feasibility of Selective Instrumentation for Runtime Code Coverage in Large C++ Game Engines
+Authors: Ian Gauk, Doriane Olewicki, Joshua Romoff, Cor-Paul Bezemer
+ID: 2601.16881
+URL: https://arxiv.org/abs/2601.16881
+
+Abstract:
+Code coverage is a valuable guide for testing, but in AAA games the overhead of
+instrumentation conflicts with strict performance requirements and can
+destabilize automated tests. We propose and assess a selective instrumentation
+approach tailored to large game engines written in \texttt{C++}, which reduces
+the scope of instrumentation while preserving relevant coverage data to
+developer commits. Our framework integrates into an industrial game testing
+pipeline, enabling developers to receive immediate coverage feedback on tests
+run against their changes. The compilation overhead of our approach is minimal,
+allowing instrumentation of over 2,000 commits before doubling build time. In
+performance evaluations, even the worst-case scenario maintains frame rates
+above 50\% of the non-instrumented baseline. Across two production test suites
+maintained by our industry partner, our framework caused no automated test
+failures, avoiding the instability observed under full instrumentation. Our work
+shows that commit-level or build-level coverage of large \texttt{C++} game
+engines can be achieved with minimal overhead and without compromising test
+stability.

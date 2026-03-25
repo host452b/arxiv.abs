@@ -1,0 +1,30 @@
+Title: Detecting Flaky Tests in Quantum Software: A Dynamic Approach
+Authors: Dongchan Kim, Hamidreza Khoramrokh, Lei Zhang, Andriy Miranskyy
+ID: 2512.18088
+URL: https://arxiv.org/abs/2512.18088
+
+Abstract:
+Flaky tests, tests that pass or fail nondeterministically without changes to
+code or environment, pose a serious threat to software reliability. While
+classical software engineering has developed a rich body of dynamic and static
+techniques to study flakiness, corresponding evidence for quantum software
+remains limited. Prior work relies primarily on static analysis or small sets of
+manually reported incidents, leaving open questions about the prevalence,
+characteristics, and detectability of flaky tests. This paper presents the first
+large-scale dynamic characterization of flaky tests in quantum software. We
+executed the Qiskit Terra test suite 10,000 times across 23 releases in
+controlled environments. For each release, we measured test-outcome variability,
+identified flaky tests, estimated empirical failure probabilities, analyzed
+recurrence across versions, and used Wilson confidence intervals to quantify
+rerun budgets for reliable detection. We further mapped flaky tests to Terra
+subcomponents to assess component-level susceptibility. Across 27,026 test
+cases, we identified 290 distinct flaky tests. Although overall flakiness rates
+were low (0-0.4%), flakiness was highly episodic: nearly two-thirds of flaky
+tests appeared in only one release, while a small subset recurred intermittently
+or persistently. Many flaky tests failed with very small empirical probabilities
+($\hat{p} \approx 10^{-4}$), implying that tens of thousands of executions may
+be required for confident detection. Flakiness was unevenly distributed across
+subcomponents, with 'transpiler' and 'quantum_info' accounting for the largest
+share. These results show that quantum test flakiness is rare but difficult to
+detect under typical continuous integration budgets. To support future research,
+we release a public dataset of per-test execution outcomes.

@@ -1,0 +1,26 @@
+Title: Test vs Mutant: Adversarial LLM Agents for Robust Unit Test Generation
+Authors: Pengyu Chang, Yixiong Fang, Silin Chen, Yuling Shi, Beijun Shen et al.
+ID: 2602.08146
+URL: https://arxiv.org/abs/2602.08146
+
+Abstract:
+Software testing is a critical, yet resource-intensive phase of the software
+development lifecycle. Over the years, various automated tools have been
+developed to aid in this process. Search-based approaches typically achieve high
+coverage but produce tests with low readability, whereas large language model
+(LLM)-based methods generate more human-readable tests but often suffer from low
+coverage and compilability. While the majority of research efforts have focused
+on improving test coverage and readability, little attention has been paid to
+enhancing the robustness of bug detection, particularly in exposing corner cases
+and vulnerable execution paths. To address this gap, we propose AdverTest, a
+novel adversarial framework for LLM-powered test case generation. AdverTest
+comprises two interacting agents: a test case generation agent (T) and a mutant
+generation agent (M). These agents engage in an adversarial loop, where M
+persistently creates new mutants "hacking" the blind spots of T's current test
+suite, while T iteratively refines its test cases to "kill" the challenging
+mutants produced by M. This interaction loop is guided by both coverage and
+mutation scores, enabling the system to co-evolve toward both high test coverage
+and bug detection capability. Experimental results in the Defects4J dataset show
+that our approach improves fault detection rates by 8.56% over the best existing
+LLM-based methods and by 63.30% over EvoSuite, while also improving line and
+branch coverage.

@@ -1,0 +1,31 @@
+Title: Yama: Precise Opcode-based Data Flow Analysis for Detecting PHP Applications Vulnerabilities
+Authors: Zhao Jiazhen, Zhu Kailong, Yu Lu, Huang Hui, Lu Yuliang
+ID: 2410.12351
+URL: https://arxiv.org/abs/2410.12351
+
+Abstract:
+Web applications encompass various aspects of daily life, including online
+shopping, e-learning, and internet banking. Once there is a vulnerability, it
+can cause severe societal and economic damage. Due to its ease of use, PHP has
+become the preferred server-side programming language for web applications,
+making PHP applications a primary target for attackers. Data flow analysis is
+widely used for vulnerability detection before deploying web applications
+because of its efficiency. However, the high complexity of the PHP language
+makes it difficult to achieve precise data flow analysis. In this paper, we
+present Yama, a context-sensitive and path-sensitive interprocedural data flow
+analysis method for PHP, designed to detect taint-style vulnerabilities in PHP
+applications. We have found that the precise semantics and clear control flow of
+PHP opcodes enable data flow analysis to be more precise and efficient.
+Leveraging this observation, we established parsing rules for PHP opcodes and
+implemented a precise understanding of PHP program semantics in Yama. We
+evaluated Yama from three dimensions: basic data flow analysis capabilities,
+complex semantic analysis capabilities, and the ability to discover
+vulnerabilities in real-world applications, demonstrating Yama's advancement in
+vulnerability detection. Specifically, Yama possesses context-sensitive and
+path-sensitive interprocedural analysis capabilities, achieving a 99.1% true
+positive rate in complex semantic analysis experiments related to type
+inference, dynamic features, and built-in functions. It discovered and reported
+38 zero-day vulnerabilities across 24 projects on GitHub with over 1,000 stars
+each, assigning 34 new CVE IDs. We have released the source code of the
+prototype implementation and the parsing rules for PHP opcodes to facilitate
+future research.

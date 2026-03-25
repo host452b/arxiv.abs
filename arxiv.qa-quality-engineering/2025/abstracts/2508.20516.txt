@@ -1,0 +1,27 @@
+Title: DCFS: Continual Test-Time Adaptation via Dual Consistency of Feature and Sample
+Authors: Wenting Yin, Han Sun, Xinru Meng, Ningzhong Liu, Huiyu Zhou
+ID: 2508.20516
+URL: https://arxiv.org/abs/2508.20516
+
+Abstract:
+Continual test-time adaptation aims to continuously adapt a pre-trained model to
+a stream of target domain data without accessing source data. Without access to
+source domain data, the model focuses solely on the feature characteristics of
+the target data. Relying exclusively on these features can lead to confusion and
+introduce learning biases. Currently, many existing methods generate
+pseudo-labels via model predictions. However, the quality of pseudo-labels
+cannot be guaranteed and the problem of error accumulation must be solved. To
+address these challenges, we propose DCFS, a novel CTTA framework that
+introduces dual-path feature consistency and confidence-aware sample learning.
+This framework disentangles the whole feature representation of the target data
+into semantic-related feature and domain-related feature using dual classifiers
+to learn distinct feature representations. By maintaining consistency between
+the sub-features and the whole feature, the model can comprehensively capture
+data features from multiple perspectives. Additionally, to ensure that the whole
+feature information of the target domain samples is not overlooked, we set a
+adaptive threshold and calculate a confidence score for each sample to carry out
+loss weighted self-supervised learning, effectively reducing the noise of
+pseudo-labels and alleviating the problem of error accumulation. The efficacy of
+our proposed method is validated through extensive experimentation across
+various datasets, including CIFAR10-C, CIFAR100-C, and ImageNet-C, demonstrating
+consistent performance in continual test-time adaptation scenarios.

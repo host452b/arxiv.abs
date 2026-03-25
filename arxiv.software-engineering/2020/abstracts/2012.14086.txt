@@ -1,0 +1,28 @@
+Title: A Kubernetes Controller for Managing the Availability of Elastic Microservice Based Stateful Applications
+Authors: Leila Abdollahi Vayghan, Mohamed Aymen Saied, Maria Toeroe, Ferhat Khendek
+ID: 2012.14086
+URL: https://arxiv.org/abs/2012.14086
+
+Abstract:
+The architectural style of microservices has been gaining popularity in recent
+years. In this architectural style, small and loosely coupled modules are
+deployed and scaled independently to compose cloud-native applications.
+Carrier-grade service providers are migrating their legacy applications to a
+microservice based architecture running on Kubernetes which is an open source
+platform for orchestrating containerized microservice based applications.
+However, in this migration, service availability remains a concern. Service
+availability is measured as the percentage of time the service is provisioned.
+High Availability (HA) is achieved when the service is available at least
+99.999% of the time. In this paper, we identify possible architectures for
+deploying stateful microservice based applications with Kubernetes and evaluate
+Kubernetes from the perspective of availability it provides for its managed
+applications. The results of our experiments show that the repair actions of
+Kubernetes cannot satisfy HA requirements, and in some cases cannot guarantee
+service recovery. Therefore, we propose an HA State Controller which integrates
+with Kubernetes and allows for application state replication and automatic
+service redirection to the healthy microservice instances by enabling service
+recovery in addition to the repair actions of Kubernetes. Based on experiments
+we evaluate our solution and compare the different architectures from the
+perspective of availability and scaling overhead. The results of our
+investigations show that our solution can improve the recovery time of stateful
+microservice based applications by 50%.

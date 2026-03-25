@@ -1,0 +1,27 @@
+Title: LLM-NAS: LLM-driven Hardware-Aware Neural Architecture Search
+Authors: Hengyi Zhu, Grace Li Zhang, Shaoyi Huang
+ID: 2510.01472
+URL: https://arxiv.org/abs/2510.01472
+
+Abstract:
+Hardware-Aware Neural Architecture Search (HW-NAS) requires joint optimization
+of accuracy and latency under device constraints. Traditional supernet-based
+methods require multiple GPU days per dataset. Large Language Model (LLM)-driven
+approaches avoid training a large supernet and can provide quick feedback, but
+we observe an exploration bias: the LLM repeatedly proposes neural network
+designs within limited search space and fails to discover architectures across
+different latency ranges in the entire search space. To address this issue, we
+propose LLM-NAS: an LLM-driven Neural Architecture Search that can generate
+neural networks with high accuracy and low latency with reduced search cost. Our
+proposed LLM-NAS has three key components: 1) a complexity-driven partitioning
+engine that divides the search space by complexity to enforce diversity and
+mitigate exploration bias; 2) an LLM-powered architecture prompt co-evolution
+operator, in which the LLM first updates a knowledge base of design heuristics
+based on results from the previous round, then performs a guided evolution
+algorithm on architectures with prompts that incorporate this knowledge base.
+Prompts and designs improve together across rounds which avoids random guesswork
+and improve efficiency; 3) a zero-cost predictor to avoid training a large
+number of candidates from scratch. Experimental results show that on
+HW-NAS-Bench, LLM-NAS can achieve overall higher HV, lower IGD, and up to 54%
+lower latency than baselines at similar accuracy. Meanwhile, the search cost
+drops from days to minutes compared with traditional supernet baselines.

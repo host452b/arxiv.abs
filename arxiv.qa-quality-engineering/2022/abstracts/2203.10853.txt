@@ -1,0 +1,24 @@
+Title: Boost Test-Time Performance with Closed-Loop Inference
+Authors: Shuaicheng Niu, Jiaxiang Wu, Yifan Zhang, Guanghui Xu, Haokun Li et al.
+ID: 2203.10853
+URL: https://arxiv.org/abs/2203.10853
+
+Abstract:
+Conventional deep models predict a test sample with a single forward
+propagation, which, however, may not be sufficient for predicting
+hard-classified samples. On the contrary, we human beings may need to carefully
+check the sample many times before making a final decision. During the recheck
+process, one may refine/adjust the prediction by referring to related samples.
+Motivated by this, we propose to predict those hard-classified test samples in a
+looped manner to boost the model performance. However, this idea may pose a
+critical challenge: how to construct looped inference, so that the original
+erroneous predictions on these hard test samples can be corrected with little
+additional effort. To address this, we propose a general Closed-Loop Inference
+(CLI) method. Specifically, we first devise a filtering criterion to identify
+those hard-classified test samples that need additional inference loops. For
+each hard sample, we construct an additional auxiliary learning task based on
+its original top-$K$ predictions to calibrate the model, and then use the
+calibrated model to obtain the final prediction. Promising results on ImageNet
+(in-distribution test samples) and ImageNet-C (out-of-distribution test samples)
+demonstrate the effectiveness of CLI in improving the performance of any
+pre-trained model.

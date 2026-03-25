@@ -1,0 +1,23 @@
+Title: Penalizing Length: Uncovering Systematic Bias in Quality Estimation Metrics
+Authors: Yilin Zhang, Wenda Xu, Zhongtao Liu, Tetsuji Nakagawa, Markus Freitag
+ID: 2510.22028
+URL: https://arxiv.org/abs/2510.22028
+
+Abstract:
+Quality Estimation (QE) metrics are vital in machine translation for
+reference-free evaluation and as a reward signal in tasks like reinforcement
+learning. However, the prevalence and impact of length bias in QE have been
+underexplored. Through a systematic study of top-performing regression-based and
+LLM-as-a-Judge QE metrics across 10 diverse language pairs, we reveal two
+critical length biases: First, QE metrics consistently over-predict errors with
+increasing translation length, even for high-quality, error-free texts. Second,
+they exhibit a preference for shorter translations when multiple candidates are
+available for the same source text. These inherent length biases risk unfairly
+penalizing longer, correct translations and can lead to sub-optimal
+decision-making in applications such as QE reranking and QE guided reinforcement
+learning. We further investigate the root cause, presenting evidence that QE
+models conflate quality with sequence length due to skewed supervision
+distributions. As a diagnostic intervention, we apply length normalization
+during training. We show that this simple intervention is sufficient to decouple
+error probability from length, effectively counteracting the data skew and
+yielding more reliable QE signals.

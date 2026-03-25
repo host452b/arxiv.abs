@@ -1,0 +1,26 @@
+Title: Interleaved Learning and Exploration: A Self-Adaptive Fuzz Testing Framework for MLIR
+Authors: Zeyu Sun, Jingjing Liang, Weiyi Wang, Chenyao Suo, Junjie Chen et al.
+ID: 2510.07815
+URL: https://arxiv.org/abs/2510.07815
+
+Abstract:
+MLIR (Multi-Level Intermediate Representation) has rapidly become a foundational
+technology for modern compiler frameworks, enabling extensibility across diverse
+domains. However, ensuring the correctness and robustness of MLIR itself remains
+challenging. Existing fuzzing approaches-based on manually crafted templates or
+rule-based mutations-struggle to generate sufficiently diverse and semantically
+valid test cases, making it difficult to expose subtle or deep-seated bugs
+within MLIR's complex and evolving code space. In this paper, we present FLEX, a
+novel self-adaptive fuzzing framework for MLIR. FLEX leverages neural networks
+for program generation, a perturbed sampling strategy to encourage diversity,
+and a feedback-driven augmentation loop that iteratively improves its model
+using both crashing and non-crashing test cases. Starting from a limited seed
+corpus, FLEX progressively learns valid syntax and semantics and autonomously
+produces high-quality test inputs. We evaluate FLEX on the upstream MLIR
+compiler against four state-of-the-art fuzzers. In a 30-day campaign, FLEX
+discovers 80 previously unknown bugs-including multiple new root causes and
+parser bugs-while in 24-hour fixed-revision comparisons, it detects 53 bugs
+(over 3.5x as many as the best baseline) and achieves 28.2% code coverage,
+outperforming the next-best tool by 42%. Ablation studies further confirm the
+critical role of both perturbed generation and diversity augmentation in FLEX's
+effectiveness.

@@ -1,0 +1,26 @@
+Title: Automated identification of metamorphic test scenarios for an ocean-modeling application
+Authors: Dilip J. Hiremath, Martin Claus, Wilhelm Hasselbring, Willi Rath
+ID: 2009.01554
+URL: https://arxiv.org/abs/2009.01554
+
+Abstract:
+Metamorphic testing seeks to validate software in the absence of test oracles.
+Our application domain is ocean modeling, where test oracles often do not exist,
+but where symmetries of the simulated physical systems are known. In this short
+paper we present work in progress for automated generation of metamorphic test
+scenarios using machine learning. Metamorphic testing may be expressed as
+f(g(X))=h(f(X)) with f being the application under test, with input data X, and
+with the metamorphic relation (g, h). Automatically generated metamorphic
+relations can be used for constructing regression tests, and for comparing
+different versions of the same software application. Here, we restrict to h
+being the identity map. Then, the task of constructing tests means finding
+different g which we tackle using machine learning algorithms. These algorithms
+typically minimize a cost function. As one possible g is already known to be the
+identity map, for finding a second possible g, we construct the cost function to
+minimize for g being a metamorphic relation and to penalize for g being the
+identity map. After identifying the first metamorphic relation, the procedure is
+repeated with a cost function rewarding g that are orthogonal to previously
+found metamorphic relations. For experimental evaluation, two implementations of
+an ocean-modeling application will be subjected to the proposed method with the
+objective of presenting the use of metamorphic relations to test the
+implementations of the applications.

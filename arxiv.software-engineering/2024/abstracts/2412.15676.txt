@@ -1,0 +1,28 @@
+Title: Code Review Automation Via Multi-task Federated LLM -- An Empirical Study
+Authors: Jahnavi Kumar, Sridhar Chimalakonda
+ID: 2412.15676
+URL: https://arxiv.org/abs/2412.15676
+
+Abstract:
+Code review is a crucial process before deploying code to production, as it
+validates the code, provides suggestions for improvements, and identifies errors
+such as missed edge cases. In projects with regular production releases, the
+effort required for peer code-reviews remains high. Consequently, there has been
+significant interest from software engineering (SE) researchers in automating
+the code review process. Previous research on code review automation has
+typically approached the task as three independent sub-tasks: review necessity
+prediction, review comment generation, and code refinement. Our study attempts
+to (i) leverage the relationships between the sub-tasks of code review
+automation, by developing a multi-task model that addresses all tasks in an
+integrated manner, and (ii) increase model robustness on unseen data via
+collaborative large language model (LLM) modeling, while retaining the
+proprietary nature of code, by using federated learning (FL). The study explores
+five simple techniques for multi-task training, including two sequential
+methods, one parallel method, and two cumulative methods. The results indicate
+that sequentially training a federated LLM (FedLLM) for our code review
+multi-task use case is less efficient in terms of time, computation, and
+performance metrics, compared to training separate models for each task. Because
+sequential training demonstrates catastrophic forgetting, alternatively
+cumulative fine-tuning for multi-task training performs better than training
+models for individual tasks. This study highlights the need for research focused
+on effective fine-tuning of multi-task FedLLMs for SE tasks.

@@ -1,0 +1,30 @@
+Title: BayesTTA: Continual-Temporal Test-Time Adaptation for Vision-Language Models via Gaussian Discriminant Analysis
+Authors: Shuang Cui, Jinglin Xu, Yi Li, Xiongxin Tang, Jiangmeng Li et al.
+ID: 2507.08607
+URL: https://arxiv.org/abs/2507.08607
+
+Abstract:
+Vision-language models (VLMs) such as CLIP achieve strong zero-shot recognition
+but degrade significantly under \textit{temporally evolving distribution shifts}
+common in real-world scenarios (e.g., gradual illumination or seasonal changes).
+Existing continual test-time adaptation (CTTA) methods are typically built
+around sudden and severe distribution shifts and neglect temporal continuity,
+leading to three core defects: limited memory cache restricts long-range
+distribution modeling, causing catastrophic forgetting; entropy-based confidence
+becomes unreliable under temporal drift, worsening error accumulation; and
+static visual representations misalign with evolving inputs. We formalize this
+practical problem as \textit{Continual-Temporal Test-Time Adaptation (CT-TTA)},
+where test distributions evolve gradually over time. To address it, we propose
+\textit{BayesTTA}, a Bayesian adaptation framework that enforces temporally
+consistent predictions and dynamically aligns visual representations.
+Specifically, BayesTTA incrementally estimates class-conditional Gaussian
+mixture distributions without storing raw data, adaptively selects covariance
+structures through statistical hypothesis testing, and performs calibrated
+inference using Gaussian discriminant analysis (GDA). These calibrated
+predictions supervise self-paced adaptation of normalization layers, ensuring
+efficient and stable representation alignment. We establish a comprehensive
+CT-TTA benchmark across four temporally evolving datasets and further evaluate
+generalization on ten standard TTA datasets. Extensive experiments show that
+BayesTTA consistently outperforms state-of-the-art methods, achieving
+significant gains while maintaining efficiency. Code is available at
+\href{https://github.com/cuishuang99/BayesTTA}{https://github.com/cuishuang99/BayesTTA}.

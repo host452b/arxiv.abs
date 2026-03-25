@@ -1,0 +1,21 @@
+Title: On Mitigating Code LLM Hallucinations with API Documentation
+Authors: Nihal Jain, Robert Kwiatkowski, Baishakhi Ray, Murali Krishna Ramanathan, Varun Kumar
+ID: 2407.09726
+URL: https://arxiv.org/abs/2407.09726
+
+Abstract:
+In this study, we address the issue of API hallucinations in various software
+engineering contexts. We introduce CloudAPIBench, a new benchmark designed to
+measure API hallucination occurrences. CloudAPIBench also provides annotations
+for frequencies of API occurrences in the public domain, allowing us to study
+API hallucinations at various frequency levels. Our findings reveal that Code
+LLMs struggle with low frequency APIs: for e.g., GPT-4o achieves only 38.58%
+valid low frequency API invocations. We demonstrate that Documentation Augmented
+Generation (DAG) significantly improves performance for low frequency APIs
+(increase to 47.94% with DAG) but negatively impacts high frequency APIs when
+using sub-optimal retrievers (a 39.02% absolute drop). To mitigate this, we
+propose to intelligently trigger DAG where we check against an API index or
+leverage Code LLMs' confidence scores to retrieve only when needed. We
+demonstrate that our proposed methods enhance the balance between low and high
+frequency API performance, resulting in more reliable API invocations (8.20%
+absolute improvement on CloudAPIBench for GPT-4o).

@@ -1,0 +1,28 @@
+Title: XuanJia: A Comprehensive Virtualization-Based Code Obfuscator for Binary Protection
+Authors: Xianyu Zou, Xiaoli Gong, Jin Zhang, Shiyang Li, Pen-Chung Yew
+ID: 2601.10261
+URL: https://arxiv.org/abs/2601.10261
+
+Abstract:
+Virtualization-based binary obfuscation is widely adopted to protect software
+intellectual property, yet existing approaches leave exception-handling (EH)
+metadata unprotected to preserve ABI compatibility. This exposed metadata leaks
+rich structural information, such as stack layouts, control-flow boundaries, and
+object lifetimes, which can be exploited to facilitate reverse engineering. In
+this paper, we present XuanJia, a comprehensive VM-based binary obfuscation
+framework that provides end-to-end protection for both executable code and
+exception-handling semantics. At the core of XuanJia is ABI-Compliant EH
+Shadowing, a novel exception-aware protection mechanism that preserves
+compatibility with unmodified operating system runtimes while eliminating static
+EH metadata leakage. XuanJia replaces native EH metadata with ABI-compliant
+shadow unwind information to satisfy OS-driven unwinding, and securely redirects
+exception handling into a protected virtual machine where the genuine EH
+semantics are decrypted, reversed, and replayed using obfuscated code. We
+implement XuanJia from scratch, supporting 385 x86 instruction encodings and 155
+VM handler templates, and design it as an extensible research testbed. We
+evaluate XuanJia across correctness, resilience, and performance dimensions. Our
+results show that XuanJia preserves semantic equivalence under extensive dynamic
+and symbolic testing, effectively disrupts automated reverse-engineering tools
+such as IDA Pro, and incurs negligible space overhead and modest runtime
+overhead. These results demonstrate that XuanJia achieves strong protection of
+exception-handling logic without sacrificing correctness or practicality.

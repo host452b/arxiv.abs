@@ -1,0 +1,28 @@
+Title: MioHint: LLM-assisted Mutation for Whitebox API Testing
+Authors: Jia Li, Jiacheng Shen, Yuxin Su, Michael R. Lyu
+ID: 2504.05738
+URL: https://arxiv.org/abs/2504.05738
+
+Abstract:
+Cloud applications heavily rely on APIs to communicate with each other and
+exchange data. To ensure the reliability of cloud applications, cloud providers
+widely adopt API testing techniques. Unfortunately, existing API testing
+approaches are insufficient to reach strict conditions, a problem known as
+fitness plateaus, due to the lack of gradient provided by coverage metrics. To
+address this issue, we propose MioHint, a novel white-box API testing approach
+that leverages the code comprehension capabilities of Large Language Model (LLM)
+to boost API testing. The key challenge of LLM-based API testing lies in
+system-level testing, which emphasizes the dependencies between requests and
+targets across functions and files, thereby making the entire codebase the
+object of analysis. However, feeding the entire codebase to an LLM is
+impractical due to its limited context length and short memory. MioHint
+addresses this challenge by synergizing static analysis with LLMs. We retrieve
+relevant code with data-dependency analysis at the statement level, including
+def-use analysis for variables used in the target and function expansion for
+subfunctions called by the target. To evaluate the effectiveness of our method,
+we conducted experiments across 16 real-world REST API services. The findings
+reveal that MioHint achieves an average increase of 4.95% absolute in line
+coverage compared to the baseline, EvoMaster, alongside a remarkable factor of
+67x improvement in mutation accuracy. Furthermore, our method successfully
+covers over 57% of hard-to-cover targets while in baseline the coverage is less
+than 10%.

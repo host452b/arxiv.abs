@@ -1,0 +1,31 @@
+Title: Unsupervised Performance Analysis of 3D Face Alignment with a Statistically Robust Confidence Test
+Authors: Mostafa Sadeghi, Xavier Alameda-Pineda, Radu Horaud
+ID: 2004.06550
+URL: https://arxiv.org/abs/2004.06550
+
+Abstract:
+This paper addresses the problem of analysing the performance of 3D face
+alignment (3DFA), or facial landmark localization. This task is usually
+supervised, based on annotated datasets. Nevertheless, in the particular case of
+3DFA, the annotation process is rarely error-free, which strongly biases the
+results. Alternatively, unsupervised performance analysis (UPA) is investigated.
+The core ingredient of the proposed methodology is the robust estimation of the
+rigid transformation between predicted landmarks and model landmarks. It is
+shown that the rigid mapping thus computed is affected neither by non-rigid
+facial deformations, due to variabilities in expression and in identity, nor by
+landmark localization errors, due to various perturbations. The guiding idea is
+to apply the estimated rotation, translation and scale to a set of predicted
+landmarks in order to map them onto a mathematical home for the shape embedded
+in these landmarks (including possible errors). UPA proceeds as follows: (i) 3D
+landmarks are extracted from a 2D face using the 3DFA method under
+investigation; (ii) these landmarks are rigidly mapped onto a canonical
+(frontal) pose, and (iii) a statistically-robust confidence score is computed
+for each landmark. This allows to assess whether the mapped landmarks lie inside
+(inliers) or outside (outliers) a confidence volume. An experimental evaluation
+protocol, that uses publicly available datasets and several 3DFA software
+packages associated with published articles, is described in detail. The results
+show that the proposed analysis is consistent with supervised metrics and that
+it can be used to measure the accuracy of both predicted landmarks and of
+automatically annotated 3DFA datasets, to detect errors and to eliminate them.
+Source code and supplemental materials for this paper are publicly available at
+https://team.inria.fr/robotlearn/upa3dfa/.

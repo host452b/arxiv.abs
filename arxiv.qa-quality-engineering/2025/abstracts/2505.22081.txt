@@ -1,0 +1,22 @@
+Title: Can Test-time Computation Mitigate Reproduction Bias in Neural Symbolic Regression?
+Authors: Shun Sato, Issei Sato
+ID: 2505.22081
+URL: https://arxiv.org/abs/2505.22081
+
+Abstract:
+Mathematical expressions play a central role in scientific discovery. Symbolic
+regression aims to automatically discover such expressions from given numerical
+data. Recently, Neural symbolic regression (NSR) methods that involve
+Transformers pre-trained on synthetic datasets have gained attention for their
+fast inference, but they often perform poorly, especially with many input
+variables. In this study, we analyze NSR from both theoretical and empirical
+perspectives and show that (1) ordinary token-by-token generation is ill-suited
+for NSR, as Transformers cannot compositionally generate tokens while validating
+numerical consistency, and (2) the search space of NSR methods is greatly
+restricted due to reproduction bias, where the majority of generated expressions
+are merely copied from the training data. We further examine whether tailored
+test-time strategies can reduce reproduction bias and show that providing
+additional information at test time effectively mitigates it. These findings
+contribute to a deeper understanding of the limitation of NSR approaches and
+provide guidance for designing more robust and generalizable methods. Code is
+available at https://github.com/Shun-0922/Mem-Bias-NSR .

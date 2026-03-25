@@ -1,0 +1,20 @@
+Title: Securing the EDK II Image Loader
+Authors: Marvin Häuser, Vitaly Cheptsov
+ID: 2012.05471
+URL: https://arxiv.org/abs/2012.05471
+
+Abstract:
+The Unified Extensible Firmware Interface (UEFI) is a standardised interface
+between the firmware and the operating system used in all x86-based platforms
+over the past ten years, which continues to spread to other architectures such
+as ARM and RISC-V. The UEFI incorporates a modular design based on images
+containing a driver or an application in a Common Object File Format (COFF)
+either as a Portable Executable (PE) or as a Terse Executable (TE). The de-facto
+standard generic UEFI services implementation, including the image loading
+functionality, is TianoCore EDK II. Its track of security issues shows numerous
+design and implementation flaws some of which are yet to be addressed. In this
+paper we outline both the requirements for a secure UEFI Image Loader and the
+issues of the existing implementation. As an alternative we propose a formally
+verified Image Loader supporting both PE and TE images with fine-grained
+hardening enabling a seamless integration with EDK II and subsequently with the
+other firmwares.

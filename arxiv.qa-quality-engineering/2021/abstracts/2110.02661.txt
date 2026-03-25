@@ -1,0 +1,28 @@
+Title: PlumeCityNet: Multi-Resolution Air Quality Forecasting
+Authors: Thibaut Cassard, Grégoire Jauvion, Antoine Alléon, Boris Quennehen, David Lissmyr
+ID: 2110.02661
+URL: https://arxiv.org/abs/2110.02661
+
+Abstract:
+This paper presents an engine able to forecast jointly the concentrations of the
+main pollutants harming people's health: nitrogen dioxide (NO2), ozone (O3) and
+particulate matter (PM2.5 and PM10, which are respectively the particles whose
+diameters are below 2.5um and 10um respectively). The engine is fed with air
+quality monitoring stations' measurements, weather forecasts, physical models'
+outputs and traffic estimates to produce forecasts up to 24 hours. The forecasts
+are produced with several spatial resolutions, from a few dozens of meters to
+dozens of kilometers, fitting several use-cases needing air quality data. We
+introduce the Scale-Unit block, which enables to integrate seamlessly all
+available inputs at a given resolution to return forecasts at the same
+resolution. Then, the engine is based on a U-Net architecture built with several
+of those blocks, giving it the ability to process inputs and to output
+predictions at different resolutions. We have implemented and evaluated the
+engine on the largest cities in Europe and the United States, and it clearly
+outperforms other prediction methods. In particular, the out-of-sample accuracy
+remains high, meaning that the engine can be used in cities which are not
+included in the training dataset. A valuable advantage of the engine is that it
+does not need much computing power: the forecasts can be built in a few minutes
+on a standard CPU. Thus, they can be updated very frequently, as soon as new air
+quality monitoring stations' measurements are available (generally every hour),
+which is not the case of physical models traditionally used for air quality
+forecasting.

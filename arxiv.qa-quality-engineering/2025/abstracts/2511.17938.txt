@@ -1,0 +1,25 @@
+Title: SPINE: Token-Selective Test-Time Reinforcement Learning with Entropy-Band Regularization
+Authors: Jianghao Wu, Yasmeen George, Jin Ye, Yicheng Wu, Daniel F. Schmidt et al.
+ID: 2511.17938
+URL: https://arxiv.org/abs/2511.17938
+
+Abstract:
+Large language models (LLMs) and multimodal LLMs (MLL-Ms) excel at
+chain-of-thought reasoning but face distribution shift at test-time and a lack
+of verifiable supervision. Recent test-time reinforcement learning (TTRL)
+methods derive label-free pseudo-rewards from self-consistency voting over
+sampled trajectories, yet they often collapse: the majority-vote reward
+prevails, responses shorten, and Pass@1 declines. We trace this to uniform
+sequence updates in which most tokens are low-entropy followers, while a small
+high-entropy subset determines the reasoning branches. Thus we propose \method,
+a token-selective test-time reinforcement learning framework that (i) performs
+distribution-aware forking-token selection to update only decision-critical
+branch points, and (ii) applies a robust entropy-band regularizer at those
+tokens to prevent premature collapse and suppress noisy drift. \method plugs
+into GRPO-style objectives (optionally with a KL anchor) and requires neither
+labels nor reward models. Across eight benchmarks spanning multimodal VQA,
+text-only reasoning, \method consistently improves Pass@1 over TTRL while
+avoiding response-length collapse and yielding more stable training dynamics on
+both LLM and MLLM backbones. These results indicate that aligning updates with
+chain-of-thought branch points is a simple and label-free mechanism for stable
+and effective test-time adaptation in reasoning models. Code will be released.

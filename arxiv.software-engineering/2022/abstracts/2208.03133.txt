@@ -1,0 +1,31 @@
+Title: Out of the BLEU: how should we assess quality of the Code Generation models?
+Authors: Mikhail Evtikhiev, Egor Bogomolov, Yaroslav Sokolov, Timofey Bryksin
+ID: 2208.03133
+URL: https://arxiv.org/abs/2208.03133
+
+Abstract:
+In recent years, researchers have created and introduced a significant number of
+various code generation models. As human evaluation of every new model version
+is unfeasible, the community adopted automatic evaluation metrics such as BLEU
+to approximate the results of human judgement. These metrics originate from the
+machine translation domain and it is unclear whether they are applicable for the
+code generation tasks and how well they agree with the human evaluation on this
+task. There are also other metrics, CodeBLEU and RUBY, developed to estimate the
+similarity of code, that take into account the properties of source code.
+However, for these metrics there are hardly any studies on their agreement with
+the human evaluation. Despite all that, minimal differences in the metric scores
+have been used in recent papers to claim superiority of some code generation
+models over the others. In this paper, we present a study on the applicability
+of six metrics -- BLEU, ROUGE-L, METEOR, ChrF, CodeBLEU, and RUBY -- for
+evaluation of code generation models. We conduct a study on two different code
+generation datasets and use human annotators to assess the quality of all models
+run on these datasets. The results indicate that for the CoNaLa dataset of
+Python one-liners, none of the metrics can correctly emulate human judgement on
+which model is better with >95% certainty if the difference in model scores is
+less than 5 points. For the HearthStone dataset, which consists of classes of a
+particular structure, a difference in model scores of at least 2 points is
+enough to claim the superiority of one model over the other. Our findings
+suggest that the ChrF metric is a better fit for the evaluation of code
+generation models than the commonly used BLEU and CodeBLEU. Yet, finding a
+metric for code generation that closely agrees with humans requires additional
+work.
