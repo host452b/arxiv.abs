@@ -1,0 +1,30 @@
+Title: Selective Mixup for Debiasing Question Selection in Computerized Adaptive Testing
+Authors: Mi Tian, Kun Zhang, Fei Liu, Jinglong Li, Yuxin Liao et al.
+ID: 2511.15241
+URL: https://arxiv.org/abs/2511.15241
+
+Abstract:
+Computerized Adaptive Testing (CAT) is a widely used technology for evaluating
+learners' proficiency in online education platforms. By leveraging prior
+estimates of proficiency to select questions and updating the estimates
+iteratively based on responses, CAT enables personalized learner modeling and
+has attracted substantial attention. Despite this progress, most existing works
+focus primarily on improving diagnostic accuracy, while overlooking the
+selection bias inherent in the adaptive process. Selection Bias arises because
+the question selection is strongly influenced by the estimated proficiency, such
+as assigning easier questions to learners with lower proficiency and harder ones
+to learners with higher proficiency. Since the selection depends on prior
+estimation, this bias propagates into the diagnosis model, which is further
+amplified during iterative updates, leading to misalignment and biased
+predictions. Moreover, the imbalanced nature of learners' historical
+interactions often exacerbates the bias in diagnosis models. To address this
+issue, we propose a debiasing framework consisting of two key modules:
+Cross-Attribute Examinee Retrieval and Selective Mixup-based Regularization.
+First, we retrieve balanced examinees with relatively even distributions of
+correct and incorrect responses and use them as neutral references for biased
+examinees. Then, mixup is applied between each biased examinee and its matched
+balanced counterpart under label consistency. This augmentation enriches the
+diversity of bias-conflicting samples and smooths selection boundaries. Finally,
+extensive experiments on two benchmark datasets with multiple advanced diagnosis
+models demonstrate that our method substantially improves both the
+generalization ability and fairness of question selection in CAT.

@@ -1,0 +1,22 @@
+Title: Listen with Intent: Improving Speech Recognition with Audio-to-Intent Front-End
+Authors: Swayambhu Nath Ray, Minhua Wu, Anirudh Raju, Pegah Ghahremani, Raghavendra Bilgi et al.
+ID: 2105.07071
+URL: https://arxiv.org/abs/2105.07071
+
+Abstract:
+Comprehending the overall intent of an utterance helps a listener recognize the
+individual words spoken. Inspired by this fact, we perform a novel study of the
+impact of explicitly incorporating intent representations as additional
+information to improve a recurrent neural network-transducer (RNN-T) based
+automatic speech recognition (ASR) system. An audio-to-intent (A2I) model
+encodes the intent of the utterance in the form of embeddings or posteriors, and
+these are used as auxiliary inputs for RNN-T training and inference.
+Experimenting with a 50k-hour far-field English speech corpus, this study shows
+that when running the system in non-streaming mode, where intent representation
+is extracted from the entire utterance and then used to bias streaming RNN-T
+search from the start, it provides a 5.56% relative word error rate reduction
+(WERR). On the other hand, a streaming system using per-frame intent posteriors
+as extra inputs for the RNN-T ASR system yields a 3.33% relative WERR. A further
+detailed analysis of the streaming system indicates that our proposed method
+brings especially good gain on media-playing related intents (e.g. 9.12%
+relative WERR on PlayMusicIntent).

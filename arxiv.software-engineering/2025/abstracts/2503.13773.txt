@@ -1,0 +1,24 @@
+Title: Mitigating KV Cache Competition to Enhance User Experience in LLM Inference
+Authors: Haiying Shen, Tanmoy Sen, Masahiro Tanaka
+ID: 2503.13773
+URL: https://arxiv.org/abs/2503.13773
+
+Abstract:
+In Large Language Model (LLM) serving, the KV-cache (KVC) bottleneck causes high
+tail Time-to-First-Token (TTFT) and Time-Between-Tokens (TBT), impairing user
+experience, particularly in time-sensitive applications. However, satisfying
+both TTFT and TBT service-level objectives (SLOs) is challenging. To address
+this, we propose a system, named CacheOPT for mitigating KV Cache competition,
+based on key insights from our measurements, incorporating novel components.
+First, it estimates a request's output length, bounding the deviation with a
+high specified probability, adjusted based on the request arrival rate. Second,
+it allocates the estimated KVC demand to a request, and reuses other requests'
+allocated KVC to avoid preemptions while reducing waiting time. Third, it
+proactively allocates KVC before instead of at the time a request exhausts its
+allocation and reserves KVC globally to prevent preemptions. Fourth, it chooses
+a request that has long TBT SLO, long job remaining time and short preemption
+time to preempt. Fifth, it selects the shortest-latency strategy between
+swapping and recomputation for preemptions. Experiments show that CacheOPT
+achieves up to 3.29$\times$ and 2.83$\times$ lower tail TBT and tail TTFT, 47\%
+and 53\% higher TTFT and TBT SLO attainments, and supports up to 1.58$\times$
+higher request arrival rate than the state-of-the-art methods.

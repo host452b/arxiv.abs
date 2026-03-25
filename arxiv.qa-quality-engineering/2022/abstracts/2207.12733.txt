@@ -1,0 +1,29 @@
+Title: On the Interaction between Test-Suite Reduction and Regression-Test Selection Strategies
+Authors: Sebastian Ruland, Malte Lochau
+ID: 2207.12733
+URL: https://arxiv.org/abs/2207.12733
+
+Abstract:
+Unit testing is one of the most established quality-assurance techniques for
+software development. One major advantage of unit testing is the adjustable
+trade-off between efficiency (i.e., testing effort) and effectiveness (i.e.,
+fault-detection probability). To this end, various strategies have been proposed
+to exploit this trade-off. In particular, test-suite reduction (TSR) reduces the
+number of (presumably redundant) test cases while testing a single program
+version. Regression-test selection (RTS) selects test cases for testing
+consecutive program revisions. However, both TSR and RTS may influence -- or
+even obstruct -- each others' performance when used in combination. For
+instance, test cases discarded during TSR for a particular program version may
+become relevant again for RTS. However, finding a combination of both strategies
+leading to a reasonable trade-off throughout the version history of a program is
+an open question. The goal of this paper is to gain a better understanding of
+the interactions between TSR and RTS with respect to efficiency and
+effectiveness. To this end, we present a configurable framework called RegreTS
+for automated unit-testing of C programs. The framework comprises different
+strategies for TSR and RTS and possible combinations thereof. We apply this
+framework to a collection of subject systems, delivering several crucial
+insights. First, TSR has almost always a negative impact on the effectiveness of
+RTS, yet a positive impact on efficiency. Second, test cases revealing to
+testers the effect of program modifications between consecutive program versions
+are far more effective than test cases simply covering modified code parts, yet
+causing much more testing effort.

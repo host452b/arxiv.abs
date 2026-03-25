@@ -1,0 +1,29 @@
+Title: Rampo: A CEGAR-based Integration of Binary Code Analysis and System Falsification for Cyber-Kinetic Vulnerability Detection
+Authors: Kohei Tsujio, Mohammad Abdullah Al Faruque, Yasser Shoukry
+ID: 2402.12642
+URL: https://arxiv.org/abs/2402.12642
+
+Abstract:
+This paper presents a novel tool, named Rampo, that can perform binary code
+analysis to identify cyber kinetic vulnerabilities in CPS. The tool takes as
+input a Signal Temporal Logic (STL) formula that describes the kinetic effect,
+i.e., the behavior of the physical system, that one wants to avoid. The tool
+then searches the possible cyber trajectories in the binary code that may lead
+to such physical behavior. This search integrates binary code analysis tools and
+hybrid systems falsification tools using a Counter-Example Guided Abstraction
+Refinement (CEGAR) approach. Rampo starts by analyzing the binary code to
+extract symbolic constraints that represent the different paths in the code.
+These symbolic constraints are then passed to a Satisfiability Modulo Theories
+(SMT) solver to extract the range of control signals that can be produced by
+each path in the code. The next step is to search over possible physical
+trajectories using a hybrid systems falsification tool that adheres to the
+behavior of the cyber paths and yet leads to violations of the STL formula.
+Since the number of cyber paths that need to be explored increases exponentially
+with the length of physical trajectories, we iteratively perform refinement of
+the cyber path constraints based on the previous falsification result and
+traverse the abstract path tree obtained from the control program to explore the
+search space of the system. To illustrate the practical utility of binary code
+analysis in identifying cyber kinetic vulnerabilities, we present case studies
+from diverse CPS domains, showcasing how they can be discovered in their control
+programs. Our tool could compute the same number of vulnerabilities while
+leading to a speedup that ranges from 3x to 98x.

@@ -1,0 +1,29 @@
+Title: Automated Generation of Issue-Reproducing Tests by Combining LLMs and Search-Based Testing
+Authors: Konstantinos Kitsios, Marco Castelluccio, Alberto Bacchelli
+ID: 2509.01616
+URL: https://arxiv.org/abs/2509.01616
+
+Abstract:
+Issue-reproducing tests fail on buggy code and pass once a patch is applied,
+thus increasing developers' confidence that the issue has been resolved and will
+not be re-introduced. However, past research has shown that developers often
+commit patches without such tests, making the automated generation of
+issue-reproducing tests an area of interest. We propose BLAST, a tool for
+automatically generating issue-reproducing tests from issue-patch pairs by
+combining LLMs and search-based software testing (SBST). For the LLM part, we
+complement the issue description and the patch by extracting relevant context
+through git history analysis, static analysis, and SBST-generated tests. For the
+SBST part, we adapt SBST for generating issue-reproducing tests; the issue
+description and the patch are fed into the SBST optimization through an
+intermediate LLM-generated seed, which we deserialize into SBST-compatible form.
+BLAST successfully generates issue-reproducing tests for 151/426 (35.4%) of the
+issues from a curated Python benchmark, outperforming the state-of-the-art
+(23.5%). Additionally, to measure the real-world impact of BLAST, we built a
+GitHub bot that runs BLAST whenever a new pull request (PR) linked to an issue
+is opened, and if BLAST generates an issue-reproducing test, the bot proposes it
+as a comment in the PR. We deployed the bot in three open-source repositories
+for three months, gathering data from 32 PRs-issue pairs. BLAST generated an
+issue-reproducing test in 11 of these cases, which we proposed to the
+developers. By analyzing the developers' feedback, we discuss challenges and
+opportunities for researchers and tool builders. Data and material:
+https://doi.org/10.5281/zenodo.16949042

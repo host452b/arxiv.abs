@@ -1,0 +1,28 @@
+Title: ID-centric Pre-training for Recommendation
+Authors: Yiqing Wu, Ruobing Xie, Zhao Zhang, Fuzhen Zhuang, Xu Zhang et al.
+ID: 2405.03562
+URL: https://arxiv.org/abs/2405.03562
+
+Abstract:
+Classical sequential recommendation models generally adopt ID embeddings to
+store knowledge learned from user historical behaviors and represent items.
+However, these unique IDs are challenging to be transferred to new domains. With
+the thriving of pre-trained language model (PLM), some pioneer works adopt PLM
+for pre-trained recommendation, where modality information (e.g., text) is
+considered universal across domains via PLM. Unfortunately, the behavioral
+information in ID embeddings is still verified to be dominating in PLM-based
+recommendation models compared to modality information and thus limits these
+models' performance. In this work, we propose a novel ID-centric recommendation
+pre-training paradigm (IDP), which directly transfers informative ID embeddings
+learned in pre-training domains to item representations in new domains.
+Specifically, in pre-training stage, besides the ID-based sequential model for
+recommendation, we also build a Cross-domain ID-matcher (CDIM) learned by both
+behavioral and modality information. In the tuning stage, modality information
+of new domain items is regarded as a cross-domain bridge built by CDIM. We first
+leverage the textual information of downstream domain items to retrieve
+behaviorally and semantically similar items from pre-training domains using
+CDIM. Next, these retrieved pre-trained ID embeddings, rather than certain
+textual embeddings, are directly adopted to generate downstream new items'
+embeddings. Through extensive experiments on real-world datasets, both in cold
+and warm settings, we demonstrate that our proposed model significantly
+outperforms all baselines. Codes will be released upon acceptance.

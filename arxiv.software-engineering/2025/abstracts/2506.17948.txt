@@ -1,0 +1,31 @@
+Title: Your Build Scripts Stink: The State of Code Smells in Build Scripts
+Authors: Mahzabin Tamanna, Yash Chandrani, Matthew Burrows, Brandon Wroblewski, Laurie Williams et al.
+ID: 2506.17948
+URL: https://arxiv.org/abs/2506.17948
+
+Abstract:
+Build scripts automate the process of compiling source code, managing
+dependencies, running tests, and packaging software into deployable artifacts.
+These scripts are ubiquitous in modern software development pipelines for
+streamlining testing and delivery. While developing build scripts, practitioners
+may inadvertently introduce code smells, which are recurring patterns of poor
+coding practices that may lead to build failures or increase risk and technical
+debt. The goal of this study is to aid practitioners in avoiding code smells in
+build scripts through an empirical study of build scripts and issues on
+GitHub.We employed a mixed-methods approach, combining qualitative and
+quantitative analysis. First, we conducted a qualitative analysis of 2000
+build-script-related GitHub issues to understand recurring smells. Next, we
+developed a static analysis tool, Sniffer, to automatically detect code smells
+in 5882 build scripts of Maven, Gradle, CMake, and Make files, collected from
+4877 open-source GitHub repositories. To assess Sniffer's performance, we
+conducted a user study, where Sniffer achieved higher precision, recall, and
+F-score. We identified 13 code smell categories, with a total of 10,895 smell
+occurrences, where 3184 were in Maven, 1214 in Gradle, 337 in CMake, and 6160 in
+Makefiles. Our analysis revealed that Insecure URLs were the most prevalent code
+smell in Maven build scripts, while HardcodedPaths/URLs were commonly observed
+in both Gradle and CMake scripts. Wildcard Usage emerged as the most frequent
+smell in Makefiles. The co-occurrence analysis revealed strong associations
+between specific smell pairs of Hardcoded Paths/URLs with Duplicates, and
+Inconsistent Dependency Management with Empty or Incomplete Tags, which indicate
+potential underlying issues in the build script structure and maintenance
+practices.

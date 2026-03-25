@@ -1,0 +1,25 @@
+Title: Discerning Legitimate Failures From False Alerts: A Study of Chromium's Continuous Integration
+Authors: Guillaume Haben, Sarra Habchi, Mike Papadakis, Maxime Cordy, Yves Le Traon
+ID: 2111.03382
+URL: https://arxiv.org/abs/2111.03382
+
+Abstract:
+Flakiness is a major concern in Software testing. Flaky tests pass and fail for
+the same version of a program and mislead developers who spend time and
+resources investigating test failures only to discover that they are false
+alerts. In practice, the defacto approach to address this concern is to rerun
+failing tests hoping that they would pass and manifest as false alerts.
+Nonetheless, completely filtering out false alerts may require a
+disproportionate number of reruns, and thus incurs important costs both
+computation and time-wise. As an alternative to reruns, we propose Fair, a
+novel, lightweight approach that classifies test failures into false alerts and
+legitimate failures. Fair relies on a classifier and a set of features from the
+failures and test artefacts. To build and evaluate our machine learning
+classifier, we use the continuous integration of the Chromium project. In
+particular, we collect the properties and artefacts of more than 1 million test
+failures from 2,000 builds. Our results show that Fair can accurately
+distinguish legitimate failures from false alerts, with an MCC up to 95%.
+Moreover, by studying different test categories: GUI, integration and unit
+tests, we show that Fair classifies failures accurately even when the number of
+failures is limited. Finally, we compare the costs of our approach to reruns and
+show that Fair could save up to 20 minutes of computation time per build.

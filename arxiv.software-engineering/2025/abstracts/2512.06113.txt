@@ -1,0 +1,18 @@
+Title: Hardware Software Optimizations for Fast Model Recovery on Reconfigurable Architectures
+Authors: Bin Xu, Ayan Banerjee, Sandeep Gupta
+ID: 2512.06113
+URL: https://arxiv.org/abs/2512.06113
+
+Abstract:
+Model Recovery (MR) is a core primitive for physical AI and real-time digital
+twins, but GPUs often execute MR inefficiently due to iterative dependencies,
+kernel-launch overheads, underutilized memory bandwidth, and high data-movement
+latency. We present MERINDA, an FPGA-accelerated MR framework that restructures
+computation as a streaming dataflow pipeline. MERINDA exploits on-chip locality
+through BRAM tiling, fixed-point kernels, and the concurrent use of LUT fabric
+and carry-chain adders to expose fine-grained spatial parallelism while
+minimizing off-chip traffic. This hardware-aware formulation removes
+synchronization bottlenecks and sustains high throughput across the iterative
+updates in MR. On representative MR workloads, MERINDA delivers up to 6.3x fewer
+cycles than an FPGA-based LTC baseline, enabling real-time performance for
+time-critical physical systems.

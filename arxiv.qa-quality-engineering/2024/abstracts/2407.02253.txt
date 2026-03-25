@@ -1,0 +1,25 @@
+Title: Parameter-Selective Continual Test-Time Adaptation
+Authors: Jiaxu Tian, Fan Lyu
+ID: 2407.02253
+URL: https://arxiv.org/abs/2407.02253
+
+Abstract:
+Continual Test-Time Adaptation (CTTA) aims to adapt a pretrained model to
+ever-changing environments during the test time under continuous domain shifts.
+Most existing CTTA approaches are based on the Mean Teacher (MT) structure,
+which contains a student and a teacher model, where the student is updated using
+the pseudo-labels from the teacher model, and the teacher is then updated by
+exponential moving average strategy. However, these methods update the MT model
+indiscriminately on all parameters of the model. That is, some critical
+parameters involving sharing knowledge across different domains may be erased,
+intensifying error accumulation and catastrophic forgetting. In this paper, we
+introduce Parameter-Selective Mean Teacher (PSMT) method, which is capable of
+effectively updating the critical parameters within the MT network under domain
+shifts. First, we introduce a selective distillation mechanism in the student
+model, which utilizes past knowledge to regularize novel knowledge, thereby
+mitigating the impact of error accumulation. Second, to avoid catastrophic
+forgetting, in the teacher model, we create a mask through Fisher information to
+selectively update parameters via exponential moving average, with preservation
+measures applied to crucial parameters. Extensive experimental results verify
+that PSMT outperforms state-of-the-art methods across multiple benchmark
+datasets. Our code is available at \url{https://github.com/JiaxuTian/PSMT}.

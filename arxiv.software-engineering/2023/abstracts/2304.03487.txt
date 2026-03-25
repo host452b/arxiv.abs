@@ -1,0 +1,28 @@
+Title: ParaGraph: Weighted Graph Representation for Performance Optimization of HPC Kernels
+Authors: Ali TehraniJamsaz, Alok Mishra, Akash Dutta, Abid M. Malik, Barbara Chapman et al.
+ID: 2304.03487
+URL: https://arxiv.org/abs/2304.03487
+
+Abstract:
+GPU-based HPC clusters are attracting more scientific application developers due
+to their extensive parallelism and energy efficiency. In order to achieve
+portability among a variety of multi/many core architectures, a popular choice
+for an application developer is to utilize directive-based parallel programming
+models, such as OpenMP. However, even with OpenMP, the developer must choose
+from among many strategies for exploiting a GPU or a CPU. Recently, Machine
+Learning (ML) approaches have brought significant advances in the optimizations
+of HPC applications. To this end, several ways have been proposed to represent
+application characteristics for ML models. However, the available techniques
+fail to capture features that are crucial for exposing parallelism. In this
+paper, we introduce a new graph-based program representation for parallel
+applications that extends the Abstract Syntax Tree to represent control and data
+flow information. The originality of this work lies in the addition of new edges
+exploiting the implicit ordering and parent-child relationships in ASTs, as well
+as the introduction of edge weights to account for loop and condition
+information. We evaluate our proposed representation by training a Graph Neural
+Network (GNN) to predict the runtime of an OpenMP code region across CPUs and
+GPUs. Various transformations utilizing collapse and data transfer between the
+CPU and GPU are used to construct the dataset. The predicted runtime of the
+model is used to determine which transformation provides the best performance.
+Results show that our approach is indeed effective and has normalized RMSE as
+low as 0.004 to at most 0.01 in its runtime predictions.

@@ -1,0 +1,27 @@
+Title: Learning Unified System Representations for Microservice Tail Latency Prediction
+Authors: Wenzhuo Qian, Hailiang Zhao, Tianlv Chen, Jiayi Chen, Ziqi Wang et al.
+ID: 2508.01635
+URL: https://arxiv.org/abs/2508.01635
+
+Abstract:
+Microservice architectures have become the de facto standard for building
+scalable cloud-native applications, yet their distributed nature introduces
+significant challenges in performance monitoring and resource management.
+Traditional approaches often rely on per-request latency metrics, which are
+highly sensitive to transient noise and fail to reflect the holistic behavior of
+complex, concurrent workloads. In contrast, window-level P95 tail latency
+provides a stable and meaningful signal that captures both system-wide trends
+and user-perceived performance degradation. We identify two key shortcomings in
+existing methods: (i) inadequate handling of heterogeneous data, where
+traffic-side features propagate across service dependencies and resource-side
+signals reflect localized bottlenecks, and (ii) the lack of principled
+architectural designs that effectively distinguish and integrate these
+complementary modalities. To address these challenges, we propose USRFNet, a
+deep learning network that explicitly separates and models traffic-side and
+resource-side features. USRFNet employs GNNs to capture service interactions and
+request propagation patterns, while gMLP modules independently model cluster
+resource dynamics. These representations are then fused into a unified system
+embedding to predict window-level P95 latency with high accuracy. We evaluate
+USRFNet on real-world microservice benchmarks under large-scale stress testing
+conditions, demonstrating substantial improvements in prediction accuracy over
+state-of-the-art baselines.

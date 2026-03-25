@@ -1,0 +1,19 @@
+Title: From Ad-Hoc Scripts to Orchestrated Pipelines: Architecting a Resilient ELT Framework for Developer Productivity Metrics
+Authors: Yuvraj Agrawal, Pallav Jain
+ID: 2602.21568
+URL: https://arxiv.org/abs/2602.21568
+
+Abstract:
+Developer Productivity Dashboards are essential for visualizing DevOps
+performance metrics such as Deployment Frequency and Change Failure Rate (DORA).
+However, the utility of these dashboards is frequently undermined by data
+reliability issues. In early iterations of our platform, ad-hoc ingestion
+scripts (Cron jobs) led to "silent failures," where data gaps went undetected
+for days, eroding organizational trust. This paper reports on our experience
+migrating from legacy scheduling to a robust Extract-Load-Transform (ELT)
+pipeline using Directed Acyclic Graph (DAG) orchestration and Medallion
+Architecture. We detail the operational benefits of decoupling data extraction
+from transformation, the necessity of immutable raw history for metric
+redefinition, and the implementation of state-based dependency management. Our
+experience suggests that treating the metrics pipeline as a production-grade
+distributed system is a prerequisite for sustainable engineering analytics.

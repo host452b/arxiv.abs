@@ -1,0 +1,26 @@
+Title: Shared-Memory Hierarchical Process Mapping
+Authors: Christian Schulz, Henning Woydt
+ID: 2504.01726
+URL: https://arxiv.org/abs/2504.01726
+
+Abstract:
+Modern large-scale scientific applications consist of thousands to millions of
+individual tasks. These tasks involve not only computation but also
+communication with one another. Typically, the communication pattern between
+tasks is sparse and can be determined in advance. Such applications are executed
+on supercomputers, which are often organized in a hierarchical hardware
+topology, consisting of islands, racks, nodes, and processors, where processing
+elements reside. To ensure efficient workload distribution, tasks must be
+allocated to processing elements in a way that ensures balanced utilization.
+However, this approach optimizes only the workload, not the communication cost
+of the application. It is straightforward to see that placing groups of tasks
+that frequently exchange large amounts of data on processing elements located
+near each other is beneficial. The problem of mapping tasks to processing
+elements considering optimization goals is called process mapping. In this work,
+we focus on minimizing communication cost while evenly distributing work. We
+present the first shared-memory algorithm that utilizes hierarchical
+multisection to partition the communication model across processing elements.
+Our parallel approach achieves the best solution on 95 percent of instances
+while also being marginally faster than the next best algorithm. Even in a
+serial setting, it delivers the best solution quality while also outperforming
+previous serial algorithms in speed.

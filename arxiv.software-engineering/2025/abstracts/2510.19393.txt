@@ -1,0 +1,26 @@
+Title: Bytecode-centric Detection of Known-to-be-vulnerable Dependencies in Java Projects
+Authors: Stefan Schott, Serena Elisa Ponta, Wolfram Fischer, Jonas Klauke, Eric Bodden
+ID: 2510.19393
+URL: https://arxiv.org/abs/2510.19393
+
+Abstract:
+On average, 71% of the code in typical Java projects comes from open-source
+software (OSS) dependencies, making OSS dependencies the dominant component of
+modern software code bases. This high degree of OSS reliance comes with a
+considerable security risk of adding known security vulnerabilities to a code
+base. To remedy this risk, researchers and companies have developed various
+dependency scanners, which try to identify inclusions of known-to-be-vulnerable
+OSS dependencies. However, there are still challenges that modern dependency
+scanners do not overcome, especially when it comes to dependency modifications,
+such as re-compilations, re-bundlings or re-packagings, which are common in the
+Java ecosystem. To overcome these challenges, we present Jaralyzer, a
+bytecode-centric dependency scanner for Java. Jaralyzer does not rely on the
+metadata or the source code of the included OSS dependencies being available but
+directly analyzes a dependency's bytecode. Our evaluation across 56 popular OSS
+components demonstrates that Jaralyzer outperforms other popular dependency
+scanners in detecting vulnerabilities within modified dependencies. It is the
+only scanner capable of identifying vulnerabilities across all the above
+mentioned types of modifications. But even when applied to unmodified
+dependencies, Jaralyzer outperforms the current state-of-the-art code-centric
+scanner Eclipse Steady by detecting 28 more true vulnerabilities and yielding 29
+fewer false warnings.

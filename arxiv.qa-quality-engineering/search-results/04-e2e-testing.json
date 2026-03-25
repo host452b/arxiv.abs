@@ -1,0 +1,883 @@
+{
+  "query": {
+    "terms": {
+      "title": "end-to-end testing or acceptance testing"
+    },
+    "subjects": [
+      "cs"
+    ],
+    "op": "and",
+    "from": "2020-01",
+    "to": "",
+    "max": 200,
+    "searched_at": "2026-03-25T16:49:59Z"
+  },
+  "total_results": 40,
+  "return_count": 40,
+  "papers": [
+    {
+      "id": "2306.05895",
+      "title": "Benchmarks for End-to-End Microservices Testing",
+      "authors": [
+        "Sheldon Smith",
+        "Ethan Robinson",
+        "Timmy Frederiksen",
+        "Trae Stevens",
+        "Tomas Cerny",
+        "Miroslav Bures",
+        "Davide Taibi"
+      ],
+      "abstract": "Testing microservice systems involves a large amount of planning and problem-solving. The difficulty of testing microservice systems increases as the size and structure of such systems become more complex. To help the microservice community and simplify experiments with testing and traffic simulation, we created a test benchmark containing full functional testing coverage for two well-established open-source microservice systems. Through our benchmark design, we aimed to demonstrate ways to overcome certain challenges and find effective strategies when testing microservices. In addition, to demonstrate our benchmark use, we conducted a case study to identify the best approaches to take to validate a full coverage of tests using service-dependency graph discovery and business process discovery using tracing.",
+      "categories": [
+        "cs.SE",
+        "cs.DC"
+      ],
+      "published": "2023-06-09T13:42:53Z",
+      "updated": "2023-06-09T13:42:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2306.05895",
+      "html_url": "https://arxiv.org/html/2306.05895",
+      "abs_url": "https://arxiv.org/abs/2306.05895",
+      "citations": 12
+    },
+    {
+      "id": "2408.01894",
+      "title": "Feature-Driven End-To-End Test Generation",
+      "authors": [
+        "Parsa Alian",
+        "Noor Nashid",
+        "Mobina Shahbandeh",
+        "Taha Shabani",
+        "Ali Mesbah"
+      ],
+      "abstract": "End-to-end (E2E) testing is essential for ensuring web application quality. However, manual test creation is time-consuming, and current test generation techniques produce incoherent tests. In this paper, we present AutoE2E, a novel approach that leverages Large Language Models (LLMs) to automate the generation of semantically meaningful feature-driven E2E test cases for web applications. AutoE2E intelligently infers potential features within a web application and translates them into executable test scenarios. Furthermore, we address a critical gap in the research community by introducing E2EBench, a new benchmark for automatically assessing the feature coverage of E2E test suites. Our evaluation on E2EBench demonstrates that AutoE2E achieves an average feature coverage of 79%, outperforming the best baseline by 558%, highlighting its effectiveness in generating high-quality, comprehensive test cases.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-08-04T01:16:04Z",
+      "updated": "2025-01-06T20:23:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2408.01894",
+      "html_url": "https://arxiv.org/html/2408.01894",
+      "abs_url": "https://arxiv.org/abs/2408.01894",
+      "citations": 12
+    },
+    {
+      "id": "2512.23675",
+      "title": "End-to-End Test-Time Training for Long Context",
+      "authors": [
+        "Arnuv Tandon",
+        "Karan Dalal",
+        "Xinhao Li",
+        "Daniel Koceja",
+        "Marcel Rød",
+        "Sam Buchanan",
+        "Xiaolong Wang",
+        "Jure Leskovec",
+        "Sanmi Koyejo",
+        "Tatsunori Hashimoto",
+        "Carlos Guestrin",
+        "Jed McCaleb",
+        "Yejin Choi",
+        "Yu Sun"
+      ],
+      "abstract": "We formulate long-context language modeling as a problem in continual learning rather than architecture design. Under this formulation, we only use a standard architecture -- a Transformer with sliding-window attention. However, our model continues learning at test time via next-token prediction on the given context, compressing the context it reads into its weights. In addition, we improve the model's initialization for learning at test time via meta-learning at training time. Overall, our method, a form of Test-Time Training (TTT), is End-to-End (E2E) both at test time (via next-token prediction) and training time (via meta-learning), in contrast to previous forms. We conduct extensive experiments with a focus on scaling properties. In particular, for 3B models trained with 164B tokens, our method (TTT-E2E) scales with context length in the same way as Transformer with full attention, while others, such as Mamba 2 and Gated DeltaNet, do not. However, similar to RNNs, TTT-E2E has constant inference latency regardless of context length, making it 2.7 times faster than full attention for 128K context. Our code is publicly available.",
+      "categories": [
+        "cs.LG"
+      ],
+      "published": "2025-12-29T18:30:14Z",
+      "updated": "2025-12-31T18:41:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2512.23675",
+      "html_url": "https://arxiv.org/html/2512.23675",
+      "abs_url": "https://arxiv.org/abs/2512.23675",
+      "citations": 12
+    },
+    {
+      "id": "2302.02374",
+      "title": "Simulation-Driven Automated End-to-End Test and Oracle Inference",
+      "authors": [
+        "Shreshth Tuli",
+        "Kinga Bojarczuk",
+        "Natalija Gucevska",
+        "Mark Harman",
+        "Xiao-Yu Wang",
+        "Graham Wright"
+      ],
+      "abstract": "This is the first work to report on inferential testing at scale in industry. Specifically, it reports the experience of automated testing of integrity systems at Meta. We built an internal tool called ALPACAS for automated inference of end-to-end integrity tests. Integrity tests are designed to keep users safe online by checking that interventions take place when harmful behaviour occurs on a platform. ALPACAS infers not only the test input, but also the oracle, by observing production interventions to prevent harmful behaviour. This approach allows Meta to automate the process of generating integrity tests for its platforms, such as Facebook and Instagram, which consist of hundreds of millions of lines of production code. We outline the design and deployment of ALPACAS, and report results for its coverage, number of tests produced at each stage of the test inference process, and their pass rates. Specifically, we demonstrate that using ALPACAS significantly improves coverage from a manual test design for the particular aspect of integrity end-to-end testing it was applied to. Further, from a pool of 3 million data points, ALPACAS automatically yields 39 production-ready end-to-end integrity tests. We also report that the ALPACAS-inferred test suite enjoys exceptionally low flakiness for end-to-end testing with its average in-production pass rate of 99.84%.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-02-05T12:49:37Z",
+      "updated": "2023-02-05T12:49:37Z",
+      "pdf_url": "https://arxiv.org/pdf/2302.02374",
+      "html_url": "https://arxiv.org/html/2302.02374",
+      "abs_url": "https://arxiv.org/abs/2302.02374",
+      "citations": 0
+    },
+    {
+      "id": "2503.11650",
+      "title": "Centaur: Robust End-to-End Autonomous Driving with Test-Time Training",
+      "authors": [
+        "Chonghao Sima",
+        "Kashyap Chitta",
+        "Zhiding Yu",
+        "Shiyi Lan",
+        "Ping Luo",
+        "Andreas Geiger",
+        "Hongyang Li",
+        "Jose M. Alvarez"
+      ],
+      "abstract": "How can we rely on an end-to-end autonomous vehicle's complex decision-making system during deployment? One common solution is to have a ``fallback layer'' that checks the planned trajectory for rule violations and replaces it with a pre-defined safe action if necessary. Another approach involves adjusting the planner's decisions to minimize a pre-defined ``cost function'' using additional system predictions such as road layouts and detected obstacles. However, these pre-programmed rules or cost functions cannot learn and improve with new training data, often resulting in overly conservative behaviors. In this work, we propose Centaur (Cluster Entropy for Test-time trAining using Uncertainty) which updates a planner's behavior via test-time training, without relying on hand-engineered rules or cost functions. Instead, we measure and minimize the uncertainty in the planner's decisions. For this, we develop a novel uncertainty measure, called Cluster Entropy, which is simple, interpretable, and compatible with state-of-the-art planning algorithms. Using data collected at prior test-time time-steps, we perform an update to the model's parameters using a gradient that minimizes the Cluster Entropy. With only this sole gradient update prior to inference, Centaur exhibits significant improvements, ranking first on the navtest leaderboard with notable gains in safety-critical metrics such as time to collision. To provide detailed insights on a per-scenario basis, we also introduce navsafe, a challenging new benchmark, which highlights previously undiscovered failure modes of driving models.",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "published": "2025-03-14T17:59:41Z",
+      "updated": "2025-03-14T17:59:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.11650",
+      "html_url": "https://arxiv.org/html/2503.11650",
+      "abs_url": "https://arxiv.org/abs/2503.11650",
+      "citations": 29
+    },
+    {
+      "id": "2506.04161",
+      "title": "VISCA: Inferring Component Abstractions for Automated End-to-End Testing",
+      "authors": [
+        "Parsa Alian",
+        "Martin Tang",
+        "Ali Mesbah"
+      ],
+      "abstract": "Providing optimal contextual input presents a significant challenge for automated end-to-end (E2E) test generation using large language models (LLMs), a limitation that current approaches inadequately address. This paper introduces Visual-Semantic Component Abstractor (VISCA), a novel method that transforms webpages into a hierarchical, semantically rich component abstraction. VISCA starts by partitioning webpages into candidate segments utilizing a novel heuristic-based segmentation method. These candidate segments subsequently undergo classification and contextual information extraction via multimodal LLM-driven analysis, facilitating their abstraction into a predefined vocabulary of user interface (UI) components. This component-centric abstraction offers a more effective contextual basis than prior approaches, enabling more accurate feature inference and robust E2E test case generation. Our evaluations demonstrate that the test cases generated by VISCA achieve an average feature coverage of 92%, exceeding the performance of the state-of-the-art LLM-based E2E test generation method by 16%.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-06-04T17:00:38Z",
+      "updated": "2025-06-04T17:00:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.04161",
+      "html_url": "https://arxiv.org/html/2506.04161",
+      "abs_url": "https://arxiv.org/abs/2506.04161",
+      "citations": 0
+    },
+    {
+      "id": "2404.10849",
+      "title": "End-To-End Training and Testing Gamification Framework to Learn Human Highway Driving",
+      "authors": [
+        "Satya R. Jaladi",
+        "Zhimin Chen",
+        "Narahari R. Malayanur",
+        "Raja M. Macherla",
+        "Bing Li"
+      ],
+      "abstract": "The current autonomous stack is well modularized and consists of perception, decision making and control in a handcrafted framework. With the advances in artificial intelligence (AI) and computing resources, researchers have been pushing the development of end-to-end AI for autonomous driving, at least in problems of small searching space such as in highway scenarios, and more and more photorealistic simulation will be critical for efficient learning. In this research, we propose a novel game-based end-to-end learning and testing framework for autonomous vehicle highway driving, by learning from human driving skills. Firstly, we utilize the popular game Grand Theft Auto V (GTA V) to collect highway driving data with our proposed programmable labels. Then, an end-to-end architecture predicts the steering and throttle values that control the vehicle by the image of the game screen. The predicted control values are sent to the game via a virtual controller to keep the vehicle in lane and avoid collisions with other vehicles on the road. The proposed solution is validated in GTA V games, and the results demonstrate the effectiveness of this end-to-end gamification framework for learning human driving skills.",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "published": "2024-04-16T18:51:58Z",
+      "updated": "2024-04-18T05:14:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2404.10849",
+      "html_url": "https://arxiv.org/html/2404.10849",
+      "abs_url": "https://arxiv.org/abs/2404.10849",
+      "citations": 10
+    },
+    {
+      "id": "2506.02943",
+      "title": "Hallucination to Consensus: Multi-Agent LLMs for End-to-End Test Generation",
+      "authors": [
+        "Qinghua Xu",
+        "Guancheng Wang",
+        "Lionel Briand",
+        "Kui Liu"
+      ],
+      "abstract": "Unit testing plays a critical role in ensuring software correctness. However, writing unit tests manually is labor-intensive, especially for strongly typed languages like Java, motivating the need for automated approaches. Traditional methods primarily rely on search-based or randomized algorithms to achieve high code coverage and produce regression oracles, which are derived from the program's current behavior rather than its intended functionality. Recent advances in LLMs have enabled oracle generation from natural language descriptions, aligning better with user requirements. However, existing LLM-based methods often require fine-tuning or rely on external tools such as EvoSuite for test prefix generation, making them costly or cumbersome to apply in practice.\n  In this work, we propose CANDOR, a novel prompt engineering-based LLM framework for automated unit test generation in Java. CANDOR orchestrates multiple specialized LLM agents to collaboratively generate complete tests. To mitigate the notorious hallucinations in LLMs and improve oracle correctness, we introduce a novel strategy that engages multiple reasoning LLMs in a panel discussion and generates accurate oracles based on consensus. Additionally, to reduce the verbosity of reasoning LLMs' outputs, we propose a novel dual-LLM pipeline to produce concise and structured oracle evaluations.\n  Our experiments show that CANDOR is comparable with EvoSuite in generating tests with high code coverage and clearly superior in terms of mutation score. Moreover, our prompt engineering-based approach CANDOR significantly outperforms the SOTA fine-tuning-based oracle generator TOGLL by at least 21.1 percentage points in oracle correctness on both correct and faulty source code. Further ablation studies confirm the critical contributions of key agents in generating high-quality tests.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-06-03T14:43:05Z",
+      "updated": "2025-12-09T15:07:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.02943",
+      "html_url": "https://arxiv.org/html/2506.02943",
+      "abs_url": "https://arxiv.org/abs/2506.02943",
+      "citations": 5
+    },
+    {
+      "id": "2308.09257",
+      "title": "End-to-End Test Coverage Metrics in Microservice Systems: An Automated Approach",
+      "authors": [
+        "Amr Elsayed",
+        "Tomas Cerny",
+        "Jorge Yero Salazar",
+        "Austin Lehman",
+        "Joshua Hunter",
+        "Ashley Bickham",
+        "Davide Taibi"
+      ],
+      "abstract": "Microservice architecture gains momentum by fueling systems with cloud-native benefits, scalability, and decentralized evolution. However, new challenges emerge for end-to-end (E2E) testing. Testers who see the decentralized system through the user interface might assume their tests are comprehensive, covering all middleware endpoints scattered across microservices. However, they do not have instruments to verify such assumptions. This paper introduces test coverage metrics for evaluating the extent of E2E test suite coverage for microservice endpoints. Next, it presents an automated approach to compute these metrics to provide feedback on the completeness of E2E test suites. Furthermore, a visual perspective is provided to highlight test coverage across the system's microservices to guide on gaps in test suites. We implement a proof-of-concept tool and perform a case study on a well-established system benchmark showing it can generate conclusive feedback on test suite coverage over system endpoints.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-08-18T02:30:19Z",
+      "updated": "2023-08-18T02:30:19Z",
+      "pdf_url": "https://arxiv.org/pdf/2308.09257",
+      "html_url": "https://arxiv.org/html/2308.09257",
+      "abs_url": "https://arxiv.org/abs/2308.09257",
+      "citations": 8
+    },
+    {
+      "id": "2510.01024",
+      "title": "GenIA-E2ETest: A Generative AI-Based Approach for End-to-End Test Automation",
+      "authors": [
+        "Elvis Júnior",
+        "Alan Valejo",
+        "Jorge Valverde-Rebaza",
+        "Vânia de Oliveira Neves"
+      ],
+      "abstract": "Software testing is essential to ensure system quality, but it remains time-consuming and error-prone when performed manually. Although recent advances in Large Language Models (LLMs) have enabled automated test generation, most existing solutions focus on unit testing and do not address the challenges of end-to-end (E2E) testing, which validates complete application workflows from user input to final system response. This paper introduces GenIA-E2ETest, which leverages generative AI to generate executable E2E test scripts from natural language descriptions automatically. We evaluated the approach on two web applications, assessing completeness, correctness, adaptation effort, and robustness. Results were encouraging: the scripts achieved an average of 77% for both element metrics, 82% for precision of execution, 85% for execution recall, required minimal manual adjustments (average manual modification rate of 10%), and showed consistent performance in typical web scenarios. Although some sensitivity to context-dependent navigation and dynamic content was observed, the findings suggest that GenIA-E2ETest is a practical and effective solution to accelerate E2E test automation from natural language, reducing manual effort and broadening access to automated testing.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-10-01T15:30:24Z",
+      "updated": "2025-10-01T15:30:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.01024",
+      "html_url": "https://arxiv.org/html/2510.01024",
+      "abs_url": "https://arxiv.org/abs/2510.01024",
+      "citations": 0
+    },
+    {
+      "id": "2406.11064",
+      "title": "Continual Test-time Adaptation for End-to-end Speech Recognition on Noisy Speech",
+      "authors": [
+        "Guan-Ting Lin",
+        "Wei-Ping Huang",
+        "Hung-yi Lee"
+      ],
+      "abstract": "Deep Learning-based end-to-end Automatic Speech Recognition (ASR) has made significant strides but still struggles with performance on out-of-domain samples due to domain shifts in real-world scenarios. Test-Time Adaptation (TTA) methods address this issue by adapting models using test samples at inference time. However, current ASR TTA methods have largely focused on non-continual TTA, which limits cross-sample knowledge learning compared to continual TTA. In this work, we first propose a Fast-slow TTA framework for ASR that leverages the advantage of continual and non-continual TTA. Following this framework, we introduce Dynamic SUTA (DSUTA), an entropy-minimization-based continual TTA method for ASR. To enhance DSUTA robustness for time-varying data, we design a dynamic reset strategy to automatically detect domain shifts and reset the model, making it more effective at handling multi-domain data. Our method demonstrates superior performance on various noisy ASR datasets, outperforming both non-continual and continual TTA baselines while maintaining robustness to domain changes without requiring domain boundary information.",
+      "categories": [
+        "eess.AS",
+        "cs.SD"
+      ],
+      "published": "2024-06-16T20:41:03Z",
+      "updated": "2024-10-03T15:38:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.11064",
+      "html_url": "https://arxiv.org/html/2406.11064",
+      "abs_url": "https://arxiv.org/abs/2406.11064",
+      "citations": 9
+    },
+    {
+      "id": "2506.02529",
+      "title": "Automated Web Application Testing: End-to-End Test Case Generation with Large Language Models and Screen Transition Graphs",
+      "authors": [
+        "Nguyen-Khang Le",
+        "Quan Minh Bui",
+        "Minh Ngoc Nguyen",
+        "Hiep Nguyen",
+        "Trung Vo",
+        "Son T. Luu",
+        "Shoshin Nomura",
+        "Minh Le Nguyen"
+      ],
+      "abstract": "Web applications are critical to modern software ecosystems, yet ensuring their reliability remains challenging due to the complexity and dynamic nature of web interfaces. Recent advances in large language models (LLMs) have shown promise in automating complex tasks, but limitations persist in handling dynamic navigation flows and complex form interactions. This paper presents an automated system for generating test cases for two key aspects of web application testing: site navigation and form filling. For site navigation, the system employs screen transition graphs and LLMs to model navigation flows and generate test scenarios. For form filling, it uses state graphs to handle conditional forms and automates Selenium script generation. Key contributions include: (1) a novel integration of graph structures and LLMs for site navigation testing, (2) a state graph-based approach for automating form-filling test cases, and (3) a comprehensive dataset for evaluating form-interaction testing. Experimental results demonstrate the system's effectiveness in improving test coverage and robustness, advancing the state of web application testing.",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "published": "2025-06-03T07:08:21Z",
+      "updated": "2026-02-19T06:53:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.02529",
+      "html_url": "https://arxiv.org/html/2506.02529",
+      "abs_url": "https://arxiv.org/abs/2506.02529",
+      "citations": 5
+    },
+    {
+      "id": "2402.09745",
+      "title": "WEFix: Intelligent Automatic Generation of Explicit Waits for Efficient Web End-to-End Flaky Tests",
+      "authors": [
+        "Xinyue Liu",
+        "Zihe Song",
+        "Weike Fang",
+        "Wei Yang",
+        "Weihang Wang"
+      ],
+      "abstract": "Web end-to-end (e2e) testing evaluates the workflow of a web application. It simulates real-world user scenarios to ensure the application flows behave as expected. However, web e2e tests are notorious for being flaky, i.e., the tests can produce inconsistent results despite no changes to the code. One common type of flakiness is caused by nondeterministic execution orders between the test code and the client-side code under test. In particular, UI-based flakiness emerges as a notably prevalent and challenging issue to fix because the test code has limited knowledge about the client-side code execution. In this paper, we propose WEFix, a technique that can automatically generate fix code for UI-based flakiness in web e2e testing. The core of our approach is to leverage browser UI changes to predict the client-side code execution and generate proper wait oracles. We evaluate the effectiveness and efficiency of WEFix against 122 web e2e flaky tests from seven popular real-world projects. Our results show that WEFix dramatically reduces the overhead (from 3.7$\\times$ to 1.25$\\times$) while achieving a high correctness (98%).",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-02-15T06:51:53Z",
+      "updated": "2024-02-15T06:51:53Z",
+      "pdf_url": "https://arxiv.org/pdf/2402.09745",
+      "html_url": "https://arxiv.org/html/2402.09745",
+      "abs_url": "https://arxiv.org/abs/2402.09745",
+      "citations": 9
+    },
+    {
+      "id": "2311.03206",
+      "title": "5G-CT: Automated Deployment and Over-the-Air Testing of End-to-End Open Radio Access Networks",
+      "authors": [
+        "Leonardo Bonati",
+        "Michele Polese",
+        "Salvatore D'Oro",
+        "Pietro Brach del Prever",
+        "Tommaso Melodia"
+      ],
+      "abstract": "Deploying and testing cellular networks is a complex task due to the multitude of components involved -- from the core to the Radio Access Network (RAN) and User Equipment (UE) -- all of which requires integration and constant monitoring. Additional challenges are posed by the nature of the wireless channel, whose inherent randomness hinders the repeatability and consistency of the testing process. Consequently, existing solutions for both private and public cellular systems still rely heavily on human intervention for operations such as network reconfiguration, performance monitoring, and end-to-end testing. This reliance significantly slows the pace of innovation in cellular systems. To address these challenges, we introduce 5G-CT, an automation framework based on OpenShift and the GitOps workflow, capable of deploying a softwarized end-to-end 5G and O-RAN-compliant system in a matter of seconds without the need for any human intervention. We have deployed 5G-CT to test the integration and performance of open-source cellular stacks, including OpenAirInterface, and have collected months of automated over-the-air testing results involving software-defined radios. 5G-CT brings cloud-native continuous integration and delivery to the RAN, effectively addressing the complexities associated with managing spectrum, radios, heterogeneous devices, and distributed components. Moreover, it endows cellular networks with much needed automation and continuous testing capabilities, providing a platform to evaluate the robustness and resiliency of Open RAN software.",
+      "categories": [
+        "cs.NI"
+      ],
+      "published": "2023-11-06T15:49:44Z",
+      "updated": "2024-04-08T17:30:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2311.03206",
+      "html_url": "https://arxiv.org/html/2311.03206",
+      "abs_url": "https://arxiv.org/abs/2311.03206",
+      "citations": 18
+    },
+    {
+      "id": "2210.17215",
+      "title": "Mutation Testing Optimisations using the Clang Front-end",
+      "authors": [
+        "Sten Vercammen",
+        "Serge Demeyer",
+        "Markus Borg",
+        "Niklas Pettersson",
+        "Görel Hedin"
+      ],
+      "abstract": "Mutation testing is the state-of-the-art technique for assessing the fault detection capacity of a test suite. Unfortunately, a full mutation analysis is often prohibitively expensive. The CppCheck project for instance, demands a build time of 5.8 minutes and a test execution time of 17 seconds on our desktop computer. An unoptimised mutation analysis, for 55,000 generated mutants took 11.8 days in total, of which 4.3 days is spent on (re)compiling the project. In this paper we present a feasibility study, investigating how a number of optimisation strategies can be implemented based on the Clang front-end. These optimisation strategies allow to eliminate the compilation and execution overhead in order to support efficient mutation testing for the C language family. We provide a proof-of-concept tool that achieves a speedup of between 2x and 30x. We make a detailed analysis of the speedup induced by the optimisations, elaborate on the lessons learned and point out avenues for further improvements.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-10-31T10:53:41Z",
+      "updated": "2022-10-31T10:53:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2210.17215",
+      "html_url": "https://arxiv.org/html/2210.17215",
+      "abs_url": "https://arxiv.org/abs/2210.17215",
+      "citations": 5
+    },
+    {
+      "id": "2101.00875",
+      "title": "Design and Development of Robots End Effector Test Rig",
+      "authors": [
+        "Josephine Selvarani Ruth D",
+        "Saniya Zeba",
+        "Vibha M R",
+        "Rokesh Laishram",
+        "Gauthama Anand"
+      ],
+      "abstract": "A Test Rig for end-effectors of a robot is designed such that it achieves a prismatic motion in x-y-z axes for grasping an object. It is a structure, designed with a compact combination of sensors and actuators. Sensors are used for detecting presence, position and disturbance of target work piece or any object and actuators with motor driving system meant for controlling and moving the mechanism of the system. Hence, it improves the ergonomics and accuracy of an operation with enhanced repeatability.",
+      "categories": [
+        "cs.RO",
+        "physics.app-ph"
+      ],
+      "published": "2021-01-04T10:38:07Z",
+      "updated": "2021-01-04T10:38:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2101.00875",
+      "html_url": "https://arxiv.org/html/2101.00875",
+      "abs_url": "https://arxiv.org/abs/2101.00875",
+      "citations": 1
+    },
+    {
+      "id": "2410.10829",
+      "title": "Test Case-Informed Knowledge Tracing for Open-ended Coding Tasks",
+      "authors": [
+        "Zhangqi Duan",
+        "Nigel Fernandez",
+        "Alexander Hicks",
+        "Andrew Lan"
+      ],
+      "abstract": "Open-ended coding tasks, which ask students to construct programs according to certain specifications, are common in computer science education. Student modeling can be challenging since their open-ended nature means that student code can be diverse. Traditional knowledge tracing (KT) models that only analyze response correctness may not fully capture nuances in student knowledge from student code. In this paper, we introduce Test case-Informed Knowledge Tracing for Open-ended Coding (TIKTOC), a framework to simultaneously analyze and predict both open-ended student code and whether the code passes each test case. We augment the existing CodeWorkout dataset with the test cases used for a subset of the open-ended coding questions, and propose a multi-task learning KT method to simultaneously analyze and predict 1) whether a student's code submission passes each test case and 2) the student's open-ended code, using a large language model as the backbone. We quantitatively show that these methods outperform existing KT methods for coding that only use the overall score a code submission receives. We also qualitatively demonstrate how test case information, combined with open-ended code, helps us gain fine-grained insights into student knowledge.",
+      "categories": [
+        "cs.CY",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2024-09-28T03:13:40Z",
+      "updated": "2024-12-20T21:53:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.10829",
+      "html_url": "https://arxiv.org/html/2410.10829",
+      "abs_url": "https://arxiv.org/abs/2410.10829",
+      "citations": 7
+    },
+    {
+      "id": "2510.23746",
+      "title": "Test-Time Tuned Language Models Enable End-to-end De Novo Molecular Structure Generation from MS/MS Spectra",
+      "authors": [
+        "Laura Mismetti",
+        "Marvin Alberts",
+        "Andreas Krause",
+        "Mara Graziani"
+      ],
+      "abstract": "Tandem Mass Spectrometry is a cornerstone technique for identifying unknown small molecules in fields such as metabolomics, natural product discovery and environmental analysis. However, certain aspects, such as the probabilistic fragmentation process and size of the chemical space, make structure elucidation from such spectra highly challenging, particularly when there is a shift between the deployment and training conditions. Current methods rely on database matching of previously observed spectra of known molecules and multi-step pipelines that require intermediate fingerprint prediction or expensive fragment annotations. We introduce a novel end-to-end framework based on a transformer model that directly generates molecular structures from an input tandem mass spectrum and its corresponding molecular formula, thereby eliminating the need for manual annotations and intermediate steps, while leveraging transfer learning from simulated data. To further address the challenge of out-of-distribution spectra, we introduce a test-time tuning strategy that dynamically adapts the pre-trained model to novel experimental data. Our approach achieves a Top-1 accuracy of 3.16% on the MassSpecGym benchmark and 12.88% on the NPLIB1 datasets, considerably outperforming conventional fine-tuning. Baseline approaches are also surpassed by 27% and 67% respectively. Even when the exact reference structure is not recovered, the generated candidates are chemically informative, exhibiting high structural plausibility as reflected by strong Tanimoto similarity to the ground truth. Notably, we observe a relative improvement in average Tanimoto similarity of 83% on NPLIB1 and 64% on MassSpecGym compared to state-of-the-art methods. Our framework combines simplicity with adaptability, generating accurate molecular candidates that offer valuable guidance for expert interpretation of unseen spectra.",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2025-10-27T18:25:36Z",
+      "updated": "2026-01-16T11:27:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.23746",
+      "html_url": "https://arxiv.org/html/2510.23746",
+      "abs_url": "https://arxiv.org/abs/2510.23746",
+      "citations": 1
+    },
+    {
+      "id": "2406.07481",
+      "title": "The end of multiple choice tests: using AI to enhance assessment",
+      "authors": [
+        "Michael Klymkowsky",
+        "Melanie M. Cooper"
+      ],
+      "abstract": "Effective teaching relies on knowing what students know-or think they know. Revealing student thinking is challenging. Often used because of their ease of grading, even the best multiple choice (MC) tests, those using research based distractors (wrong answers) are intrinsically limited in the insights they provide due to two factors. When distractors do not reflect student beliefs they can be ignored, increasing the likelihood that the correct answer will be chosen by chance. Moreover, making the correct choice does not guarantee that the student understands why it is correct. To address these limitations, we recommend asking students to explain why they chose their answer, and why \"wrong\" choices are wrong. Using a discipline-trained artificial intelligence-based bot it is possible to analyze their explanations, identifying the concepts and scientific principles that maybe missing or misapplied. The bot also makes suggestions for how instructors can use these data to better guide student thinking. In a small \"proof of concept\" study, we tested this approach using questions from the Biology Concepts Instrument (BCI). The result was rapid, informative, and provided actionable feedback on student thinking. It appears that the use of AI addresses the weaknesses of conventional MC test. It seems likely that incorporating AI-analyzed formative assessments will lead to improved overall learning outcomes.",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2024-06-11T17:24:30Z",
+      "updated": "2024-06-11T17:24:30Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.07481",
+      "html_url": "https://arxiv.org/html/2406.07481",
+      "abs_url": "https://arxiv.org/abs/2406.07481",
+      "citations": 2
+    },
+    {
+      "id": "2602.11724",
+      "title": "WebTestPilot: Agentic End-to-End Web Testing against Natural Language Specification by Inferring Oracles with Symbolized GUI Elements",
+      "authors": [
+        "Xiwen Teoh",
+        "Yun Lin",
+        "Duc-Minh Nguyen",
+        "Ruofei Ren",
+        "Wenjie Zhang",
+        "Jin Song Dong"
+      ],
+      "abstract": "Visual language model (VLM) agents show great promise in automating end-to-end (E2E) web testing against requirements in natural language. However, the probabilistic nature of language models can have inherent hallucinations. Therefore, given a detected inconsistency between the requirement and the web application, it is hard to distinguish whether it stems from the hallucination or a real application bug. Addressing this issue presents two core technical challenges: the implicit oracle inference challenge, where the agent must act as its own oracle to implicitly decide if the application's behavior is correct without guidance, and the probabilistic inference challenge, where an LLM's inconsistent reasoning undermines its trustworthiness as an oracle. Existing LLM-based approaches fail to capture such implicit oracles, either by treating any page navigation that doesn't crash as a success, or by checking each state in isolation, thus missing bugs dependent on context from prior steps.\n  We introduce WebTestPilot, an LLM-based agent designed to address these challenges. WebTestPilot uses (1) a symbolization layer which detects and symbolizes critical GUI elements on the web application into symbols (i.e., variables) and (2) translates natural language specification into a sequence of steps, each of which is equipped with inferred pre- and post-conditions over the symbols as an oracle. This oracle captures data, temporal, and causal dependencies, enabling the validation of implicit requirements. To advance research in this area, we build a benchmark of bug-injected web apps for evaluating NL-to-E2E testing. The results show that WebTestPilot achieves a task completion rate of 99%, with 96% precision and 96% recall in bug detection, outperforming the best baseline (+70 precision, +27 recall). The agent generalizes across diverse natural language inputs and model scales.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-02-12T08:51:07Z",
+      "updated": "2026-02-12T08:51:07Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.11724",
+      "html_url": "https://arxiv.org/html/2602.11724",
+      "abs_url": "https://arxiv.org/abs/2602.11724",
+      "citations": 0
+    },
+    {
+      "id": "2104.11351",
+      "title": "Towards Automated Acceptance testing for industrial robots",
+      "authors": [
+        "Marcela G. dos Santos",
+        "Fabio Petrillo"
+      ],
+      "abstract": "Industrial robots are important machines applied in numerous modern industries that execute repetitive tasks with high accuracy, replacing or supporting dangerous jobs. In this kind of system, with increased complexity in which cost is related to the time the system keeps working, the system must operate with a minimum number of failures. In other words, a quality aspect important in industry is reliability. We hypothesize that Automated Acceptance Testing improves reliability for industrial robot program. We present the research question, the motivation for this study, our hypothesis and future research efforts.",
+      "categories": [
+        "cs.RO",
+        "cs.SE"
+      ],
+      "published": "2021-04-22T23:29:06Z",
+      "updated": "2021-04-22T23:29:06Z",
+      "pdf_url": "https://arxiv.org/pdf/2104.11351",
+      "html_url": "https://arxiv.org/html/2104.11351",
+      "abs_url": "https://arxiv.org/abs/2104.11351",
+      "citations": 1
+    },
+    {
+      "id": "2412.06745",
+      "title": "ONEBench to Test Them All: Sample-Level Benchmarking Over Open-Ended Capabilities",
+      "authors": [
+        "Adhiraj Ghosh",
+        "Sebastian Dziadzio",
+        "Ameya Prabhu",
+        "Vishaal Udandarao",
+        "Samuel Albanie",
+        "Matthias Bethge"
+      ],
+      "abstract": "Traditional fixed test sets fall short in evaluating open-ended capabilities of foundation models. To address this, we propose ONEBench(OpeN-Ended Benchmarking), a new testing paradigm that consolidates individual evaluation datasets into a unified, ever-expanding sample pool. ONEBench allows users to generate custom, open-ended evaluation benchmarks from this pool, corresponding to specific capabilities of interest. By aggregating samples across test sets, ONEBench enables the assessment of diverse capabilities beyond those covered by the original test sets, while mitigating overfitting and dataset bias. Most importantly, it frames model evaluation as a collective process of selecting and aggregating sample-level tests.\n  The shift from task-specific benchmarks to ONEBench introduces two challenges: (1)heterogeneity and (2)incompleteness. Heterogeneity refers to the aggregation over diverse metrics, while incompleteness describes comparing models evaluated on different data subsets. To address these challenges, we explore algorithms to aggregate sparse measurements into reliable model scores. Our aggregation algorithm ensures identifiability(asymptotically recovering ground-truth scores) and rapid convergence, enabling accurate model ranking with less data. On homogenous datasets, we show our aggregation algorithm provides rankings that highly correlate with those produced by average scores. We also demonstrate robustness to ~95% of measurements missing, reducing evaluation cost by up to 20x with little-to-no change in model rankings. We introduce ONEBench-LLM for language models and ONEBench-LMM for vision-language models, unifying evaluations across these domains. Overall, we present a technique for open-ended evaluation, which can aggregate over incomplete, heterogeneous sample-level measurements to continually grow a benchmark alongside the rapidly developing foundation models.",
+      "categories": [
+        "cs.LG",
+        "cs.CL",
+        "cs.CV"
+      ],
+      "published": "2024-12-09T18:37:14Z",
+      "updated": "2025-06-17T15:57:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2412.06745",
+      "html_url": "https://arxiv.org/html/2412.06745",
+      "abs_url": "https://arxiv.org/abs/2412.06745",
+      "citations": 11
+    },
+    {
+      "id": "2208.12261",
+      "title": "Synthetic End-User Testing: Modeling Realistic Agents Based on Behavioral Examples",
+      "authors": [
+        "Pasquale Salza",
+        "Marco Edoardo Palma",
+        "Harald C. Gall"
+      ],
+      "abstract": "For software interacting directly with real-world end-users, it is common practice to script scenario tests validating the system's compliance with a number of its features. However, these do not accommodate the replication of the type of end-user activity to which the system is required to respond in a live instance. It is especially true as compliance might also break in scenarios of interactions with external events or processes, such as other users. State-of-the-art approaches aim at inducing the software into runtime errors by generating tests that maximize some target metrics, such as code coverage. As a result, they suffer from targeting an infinitely large search space, are severely limited in recognizing error states that do not result in runtime errors, and the test cases they generate are often challenging to interpret. Other forms of testing, such as Record-Replay, instead fail to capture the end-users' decision-making process, hence producing largely scripted test scenarios. Therefore, it is impossible to test a software's compliance with unknown but otherwise plausible states. This paper introduces \"Synthetic End-User Testing,\" a novel testing strategy for complex systems in which real-world users are synthesized into reusable agents and employed to test and validate the software in a simulation environment. Hence, it discusses how end-user behavioral examples can be obtained and used to create agents that operate the target software in a reduced search space of likely action sequences. The notion of action expectation, which allows agents to assert the learned compliance of the system, is also introduced. Finally, a prototype asserting the feasibility of such a strategy is presented.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-08-25T17:59:56Z",
+      "updated": "2022-08-25T17:59:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2208.12261",
+      "html_url": "https://arxiv.org/html/2208.12261",
+      "abs_url": "https://arxiv.org/abs/2208.12261",
+      "citations": 1
+    },
+    {
+      "id": "2203.11532",
+      "title": "Quickstrom: Property Based Acceptance Testing with LTL Specifications",
+      "authors": [
+        "Liam O'Connor",
+        "Oskar Wickström"
+      ],
+      "abstract": "We present Quickstrom, a property-based testing system for acceptance testing of interactive applications. Using Quickstrom, programmers can specify the behaviour of web applications as properties in our testing-oriented dialect of Linear Temporal Logic (LTL) called QuickLTL, and then automatically test their application against the given specification with hundreds of automatically generated interactions. QuickLTL extends existing finite variants of LTL for the testing use-case, determining likely outcomes from partial traces whose minimum length is itself determined by the LTL formula. This temporal logic is embedded in our specification language, Specstrom, which is designed to be approachable to web programmers, expressive for writing specifications, and easy to analyse. Because Quickstrom tests only user-facing behaviour, it is agnostic to the implementation language of the system under test. We therefore formally specify and test many implementations of the popular TodoMVC benchmark, used for evaluation and comparison across various web frontend frameworks and languages. Our tests uncovered bugs in almost half of the available implementations.",
+      "categories": [
+        "cs.PL",
+        "cs.SE"
+      ],
+      "published": "2022-03-22T08:19:41Z",
+      "updated": "2022-03-22T08:19:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2203.11532",
+      "html_url": "https://arxiv.org/html/2203.11532",
+      "abs_url": "https://arxiv.org/abs/2203.11532",
+      "citations": 12
+    },
+    {
+      "id": "2501.01224",
+      "title": "Test Schedule Generation for Acceptance Testing of Mission-Critical Satellite Systems",
+      "authors": [
+        "Raphaël Ollando",
+        "Seung Yeob Shin",
+        "Mario Minardi",
+        "Nikolas Sidiropoulos"
+      ],
+      "abstract": "Mission-critical system, such as satellite systems, healthcare systems, and nuclear power plant control systems, undergo rigorous testing to ensure they meet specific operational requirements throughout their operation. This includes Operational Acceptance Testing (OAT), which aims to ensure that the system functions correctly under real-world operational conditions. In satellite development, In-Orbit Testing (IOT) is a crucial OAT activity performed regularly and as needed after deployment in orbit to check the satellite's performance and ensure that operational requirements are met. The scheduling of an IOT campaign, which executes multiple IOT procedures, is an important yet challenging problem, as it accounts for various factors, including satellite visibility, antenna usage costs, testing time periods, and operational constraints. To address the IOT scheduling problem, we propose a multi-objective approach to generate near-optimal IOT schedules, accounting for operational costs, fragmentation (i.e., the splitting of tests), and resource efficiency, which align with practitioners' objectives for IOT scheduling. Our industrial case study with SES Techcom shows significant improvements, as follows: an average improvement of 49.4% in the cost objective, 60.4% in the fragmentation objective, and 30% in the resource usage objective, compared to our baselines. Additionally, our approach improves cost efficiency by 538% and resource usage efficiency by 39.42% compared to manually constructed schedules provided by practitioners, while requiring only 12.5% of the time needed for manual IOT scheduling.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-01-02T12:15:38Z",
+      "updated": "2025-10-06T09:26:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.01224",
+      "html_url": "https://arxiv.org/html/2501.01224",
+      "abs_url": "https://arxiv.org/abs/2501.01224",
+      "citations": 1
+    },
+    {
+      "id": "2301.12462",
+      "title": "Combinatorial Pen Testing (or Consumer Surplus of Deferred-Acceptance Auctions)",
+      "authors": [
+        "Aadityan Ganesh",
+        "Jason Hartline"
+      ],
+      "abstract": "Pen testing is the problem of selecting high-capacity resources when the only way to measure the capacity of a resource expends its capacity. We have a set of $n$ pens with unknown amounts of ink and our goal is to select a feasible subset of pens maximizing the total ink in them. We are allowed to learn about the ink levels by writing with them, but this uses up ink that was previously in the pens.\n  We identify optimal and near optimal pen testing algorithms by drawing analogues to auction theoretic frameworks of deferred-acceptance auctions and virtual values. Our framework allows the conversion of any near optimal deferred-acceptance mechanism into a near optimal pen testing algorithm. Moreover, these algorithms guarantee an additional overhead of at most $(1+o(1)) \\ln n$ in the approximation factor to the omniscient algorithm that has access to the ink levels in the pens. We use this framework to give pen testing algorithms for various combinatorial constraints like matroid, knapsack, and general downward-closed constraints, and also for online environments.",
+      "categories": [
+        "cs.GT",
+        "cs.DS",
+        "econ.TH"
+      ],
+      "published": "2023-01-29T15:19:37Z",
+      "updated": "2024-12-03T20:37:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2301.12462",
+      "html_url": "https://arxiv.org/html/2301.12462",
+      "abs_url": "https://arxiv.org/abs/2301.12462",
+      "citations": 3
+    },
+    {
+      "id": "2507.05125",
+      "title": "Automated Behaviour-Driven Acceptance Testing of Robotic Systems",
+      "authors": [
+        "Minh Nguyen",
+        "Sebastian Wrede",
+        "Nico Hochgeschwender"
+      ],
+      "abstract": "The specification and validation of robotics applications require bridging the gap between formulating requirements and systematic testing. This often involves manual and error-prone tasks that become more complex as requirements, design, and implementation evolve. To address this challenge systematically, we propose extending behaviour-driven development (BDD) to define and verify acceptance criteria for robotic systems. In this context, we use domain-specific modelling and represent composable BDD models as knowledge graphs for robust querying and manipulation, facilitating the generation of executable testing models. A domain-specific language helps to efficiently specify robotic acceptance criteria. We explore the potential for automated generation and execution of acceptance tests through a software architecture that integrates a BDD framework, Isaac Sim, and model transformations, focusing on acceptance criteria for pick-and-place applications. We tested this architecture with an existing pick-and-place implementation and evaluated the execution results, which shows how this application behaves and fails differently when tested against variations of the agent and environment. This research advances the rigorous and automated evaluation of robotic systems, contributing to their reliability and trustworthiness.",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2025-07-01T11:47:55Z",
+      "updated": "2025-07-01T11:47:55Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.05125",
+      "html_url": "https://arxiv.org/html/2507.05125",
+      "abs_url": "https://arxiv.org/abs/2507.05125",
+      "citations": 1
+    },
+    {
+      "id": "2602.07775",
+      "title": "Rolling Sink: Bridging Limited-Horizon Training and Open-Ended Testing in Autoregressive Video Diffusion",
+      "authors": [
+        "Haodong Li",
+        "Shaoteng Liu",
+        "Zhe Lin",
+        "Manmohan Chandraker"
+      ],
+      "abstract": "Recently, autoregressive (AR) video diffusion models have achieved remarkable performance. However, due to their limited training durations, a train-test gap emerges when testing at longer horizons, leading to rapid visual degradations. Following Self Forcing, which studies the train-test gap within the training duration, this work studies the train-test gap beyond the training duration, i.e., the gap between the limited horizons during training and open-ended horizons during testing. Since open-ended testing can extend beyond any finite training window, and long-video training is computationally expensive, we pursue a training-free solution to bridge this gap. To explore a training-free solution, we conduct a systematic analysis of AR cache maintenance. These insights lead to Rolling Sink. Built on Self Forcing (trained on only 5s clips), Rolling Sink effectively scales the AR video synthesis to ultra-long durations (e.g., 5-30 minutes at 16 FPS) at test time, with consistent subjects, stable colors, coherent structures, and smooth motions. As demonstrated by extensive experiments, Rolling Sink achieves superior long-horizon visual fidelity and temporal consistency compared to SOTA baselines. Project page: https://rolling-sink.github.io/",
+      "categories": [
+        "cs.CV"
+      ],
+      "published": "2026-02-08T02:16:02Z",
+      "updated": "2026-03-18T03:56:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2602.07775",
+      "html_url": "https://arxiv.org/html/2602.07775",
+      "abs_url": "https://arxiv.org/abs/2602.07775",
+      "citations": 0
+    },
+    {
+      "id": "2302.14601",
+      "title": "SAFR-AV: Safety Analysis of Autonomous Vehicles using Real World Data -- An end-to-end solution for real world data driven scenario-based testing for pre-certification of AV stacks",
+      "authors": [
+        "Sagar Pathrudkar",
+        "Saadhana Venkataraman",
+        "Deepika Kanade",
+        "Aswin Ajayan",
+        "Palash Gupta",
+        "Shehzaman Khatib",
+        "Vijaya Sarathi Indla",
+        "Saikat Mukherjee"
+      ],
+      "abstract": "One of the major impediments in deployment of Autonomous Driving Systems (ADS) is their safety and reliability. The primary reason for the complexity of testing ADS is that it operates in an open world characterized by its non-deterministic, high-dimensional and non-stationary nature where the actions of other actors in the environment are uncontrollable from the ADS's perspective. This leads to a state space explosion problem and one way of mitigating this problem is by concretizing the scope for the system under test (SUT) by testing for a set of behavioral competencies which an ADS must demonstrate. A popular approach to testing ADS is scenario-based testing where the ADS is presented with driving scenarios from real world (and synthetically generated) data and expected to meet defined safety criteria while navigating through the scenario. We present SAFR-AV, an end-to-end ADS testing platform to enable scenario-based ADS testing. Our work addresses key real-world challenges of building an efficient large scale data ingestion pipeline and search capability to identify scenarios of interest from real world data, creating digital twins of the real-world scenarios to enable Software-in-the-Loop (SIL) testing in ADS simulators and, identifying key scenario parameter distributions to enable optimization of scenario coverage. These along with other modules of SAFR-AV would allow the platform to provide ADS pre-certifications.",
+      "categories": [
+        "cs.SE",
+        "eess.SY"
+      ],
+      "published": "2023-02-27T11:56:41Z",
+      "updated": "2023-02-27T11:56:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2302.14601",
+      "html_url": "https://arxiv.org/html/2302.14601",
+      "abs_url": "https://arxiv.org/abs/2302.14601",
+      "citations": 7
+    },
+    {
+      "id": "2211.01716",
+      "title": "Discussion of Features for Acoustic Anomaly Detection under Industrial Disturbing Noise in an End-of-Line Test of Geared Motors",
+      "authors": [
+        "Peter Wissbrock",
+        "David Pelkmann",
+        "Yvonne Richter"
+      ],
+      "abstract": "In the end-of-line test of geared motors, the evaluation of product qual-ity is important. Due to time constraints and the high diversity of variants, acous-tic measurements are more economical than vibration measurements. However, the acoustic data is affected by industrial disturbing noise. Therefore, the aim of this study is to investigate the robustness of features used for anomaly detection in geared motor end-of-line testing. A real-world dataset with typical faults and acoustic disturbances is recorded by an acoustic array. This includes industrial noise from the production and systematically produced disturbances, used to compare the robustness. Overall, it is proposed to apply features extracted from a log-envelope spectrum together with psychoacoustic features. The anomaly de-tection is done by using the isolation forest or the more universal bagging random miner. Most disturbances can be circumvented, while the use of a hammer or air pressure often causes problems. In general, these results are important for condi-tion monitoring tasks that are based on acoustic or vibration measurements. Fur-thermore, a real-world problem description is presented to improve common sig-nal processing and machine learning tasks.",
+      "categories": [
+        "eess.AS",
+        "cs.LG",
+        "cs.SD",
+        "eess.SP"
+      ],
+      "published": "2022-11-03T11:08:41Z",
+      "updated": "2023-05-26T08:26:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2211.01716",
+      "html_url": "https://arxiv.org/html/2211.01716",
+      "abs_url": "https://arxiv.org/abs/2211.01716",
+      "citations": 2
+    },
+    {
+      "id": "2402.01078",
+      "title": "Low Acceptance Agreement Tests via Bounded-Degree Symplectic HDXs",
+      "authors": [
+        "Yotam Dikstein",
+        "Irit Dinur",
+        "Alexander Lubotzky"
+      ],
+      "abstract": "We solve the derandomized direct product testing question in the low acceptance regime, by constructing new high dimensional expanders that have no small connected covers. We show that our complexes have swap cocycle expansion, which allows us to deduce the agreement theorem by relying on previous work.\n  Derandomized direct product testing, also known as agreement testing, is the following problem. Let X be a family of k-element subsets of [n] and let $\\{f_s:s\\toΣ\\}_{s\\in X}$ be an ensemble of local functions, each defined over a subset $s\\subset [n]$. Suppose that we run the following so-called agreement test: choose a random pair of sets $s_1,s_2\\in X$ that intersect on $\\sqrt k$ elements, and accept if $f_{s_1},f_{s_2}$ agree on the elements in $s_1\\cap s_2$. We denote the success probability of this test by $Agr(\\{f_s\\})$. Given that $Agr(\\{f_s\\})=ε\u003e0$, is there a global function $G:[n]\\toΣ$ such that $f_s = G|_s$ for a non-negligible fraction of $s\\in X$ ?\n  We construct a family X of k-subsets of $[n]$ such that $|X| = O(n)$ and such that it satisfies the low acceptance agreement theorem. Namely,\n  $Agr (\\{f_s\\}) \u003e ε\\; \\; \\longrightarrow$ there is a function $G:[n]\\toΣ$ such that $\\Pr_s[f_s\\overset{0.99}{\\approx} G|_s]\\geq poly(ε)$.\n  A key idea is to replace the well-studied LSV complexes by symplectic high dimensional expanders (HDXs). The family X is just the k-faces of the new symplectic HDXs. The later serve our needs better since their fundamental group satisfies the congruence subgroup property, which implies that they lack small covers. We also give a polynomial-time algorithm to construct this family of symplectic HDXs.",
+      "categories": [
+        "cs.CC",
+        "math.CO",
+        "math.GR"
+      ],
+      "published": "2024-02-02T00:32:08Z",
+      "updated": "2024-04-12T12:56:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2402.01078",
+      "html_url": "https://arxiv.org/html/2402.01078",
+      "abs_url": "https://arxiv.org/abs/2402.01078",
+      "citations": 12
+    },
+    {
+      "id": "2504.07244",
+      "title": "Acceptance Test Generation with Large Language Models: An Industrial Case Study",
+      "authors": [
+        "Margarida Ferreira",
+        "Luis Viegas",
+        "Joao Pascoal Faria",
+        "Bruno Lima"
+      ],
+      "abstract": "Large language model (LLM)-powered assistants are increasingly used for generating program code and unit tests, but their application in acceptance testing remains underexplored. To help address this gap, this paper explores the use of LLMs for generating executable acceptance tests for web applications through a two-step process: (i) generating acceptance test scenarios in natural language (in Gherkin) from user stories, and (ii) converting these scenarios into executable test scripts (in Cypress), knowing the HTML code of the pages under test. This two-step approach supports acceptance test-driven development, enhances tester control, and improves test quality. The two steps were implemented in the AutoUAT and Test Flow tools, respectively, powered by GPT-4 Turbo, and integrated into a partner company's workflow and evaluated on real-world projects. The users found the acceptance test scenarios generated by AutoUAT helpful 95% of the time, even revealing previously overlooked cases. Regarding Test Flow, 92% of the acceptance test cases generated by Test Flow were considered helpful: 60% were usable as generated, 8% required minor fixes, and 24% needed to be regenerated with additional inputs; the remaining 8% were discarded due to major issues. These results suggest that LLMs can,in fact, help improve the acceptance test process with appropriate tooling and supervision.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-04-09T19:33:38Z",
+      "updated": "2025-04-09T19:33:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.07244",
+      "html_url": "https://arxiv.org/html/2504.07244",
+      "abs_url": "https://arxiv.org/abs/2504.07244",
+      "citations": 7
+    },
+    {
+      "id": "2207.14380",
+      "title": "Webcam Eye Tracking: Study Conduction and Acceptance of Remote Tests with Gaze Analysis",
+      "authors": [
+        "Sezen Lim",
+        "Tina Walber",
+        "Christoph Schaefer",
+        "Lena Riehl"
+      ],
+      "abstract": "Webcam eye tracking for the collection of gaze data in the context of user studies is convenient - it can be used in remote tests where participants do not need special hardware. The approach has strong limitations, especially regarding the motion-free nature of the test persons during data recording and the quality of the gaze data obtained. Our study with 52 participants shows that usable eye tracking data can be obtained with commercially available webcams in a remote setting. However, a high drop off rate must be considered, which is why we recommend a high over-recruitment of 150%. We also show that the acceptance of the approach by the study participants is high despite the given limitations.",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2022-07-28T21:08:42Z",
+      "updated": "2022-07-28T21:08:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2207.14380",
+      "html_url": "https://arxiv.org/html/2207.14380",
+      "abs_url": "https://arxiv.org/abs/2207.14380",
+      "citations": 2
+    },
+    {
+      "id": "2006.16870",
+      "title": "The Effect of Robo-taxi User Experience on User Acceptance: Field Test Data Analysis",
+      "authors": [
+        "Sunghee Lee",
+        "Soyoung Yoo",
+        "Seongsin Kim",
+        "Eunji Kim",
+        "Namwoo Kang"
+      ],
+      "abstract": "With the advancement of self-driving technology, the commercialization of Robo-taxi services is just a matter of time. However, there is some skepticism regarding whether such taxi services will be successfully accepted by real customers due to perceived safety-related concerns; therefore, studies focused on user experience have become more crucial. Although many studies statistically analyze user experience data obtained by surveying individuals' perceptions of Robo-taxi or indirectly through simulators, there is a lack of research that statistically analyzes data obtained directly from actual Robo-taxi service experiences. Accordingly, based on the user experience data obtained by implementing a Robo-taxi service in the downtown of Seoul and Daejeon in South Korea, this study quantitatively analyzes the effect of user experience on user acceptance through structural equation modeling and path analysis. We also obtained balanced and highly valid insights by reanalyzing meaningful causal relationships obtained through statistical models based on in-depth interview results. Results revealed that the experience of the traveling stage had the greatest effect on user acceptance, and the cutting edge of the service and apprehension of technology were emotions that had a great effect on user acceptance. Based on these findings, we suggest guidelines for the design and marketing of future Robo-taxi services.",
+      "categories": [
+        "cs.HC"
+      ],
+      "published": "2020-06-30T14:58:26Z",
+      "updated": "2021-07-12T13:39:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2006.16870",
+      "html_url": "https://arxiv.org/html/2006.16870",
+      "abs_url": "https://arxiv.org/abs/2006.16870",
+      "citations": 20
+    },
+    {
+      "id": "2502.02675",
+      "title": "Exploring LLMs Impact on Student-Created User Stories and Acceptance Testing in Software Development",
+      "authors": [
+        "Allan Brockenbrough",
+        "Henry Feild",
+        "Dominic Salinas"
+      ],
+      "abstract": "In Agile software development methodology, a user story describes a new feature or functionality from an end user's perspective. The user story details may also incorporate acceptance testing criteria, which can be developed through negotiation with users. When creating stories from user feedback, the software engineer may maximize their usefulness by considering story attributes, including scope, independence, negotiability, and testability. This study investigates how LLMs (large language models), with guided instructions, affect undergraduate software engineering students' ability to transform user feedback into user stories. Students, working individually, were asked to analyze user feedback comments, appropriately group related items, and create user stories following the principles of INVEST, a framework for assessing user stories. We found that LLMs help students develop valuable stories with well-defined acceptance criteria. However, students tend to perform better without LLMs when creating user stories with an appropriate scope.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-02-04T19:35:44Z",
+      "updated": "2025-02-04T19:35:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2502.02675",
+      "html_url": "https://arxiv.org/html/2502.02675",
+      "abs_url": "https://arxiv.org/abs/2502.02675",
+      "citations": 2
+    },
+    {
+      "id": "2403.14965",
+      "title": "Comprehensive Evaluation and Insights into the Use of Large Language Models in the Automation of Behavior-Driven Development Acceptance Test Formulation",
+      "authors": [
+        "Shanthi Karpurapu",
+        "Sravanthy Myneni",
+        "Unnati Nettur",
+        "Likhit Sagar Gajja",
+        "Dave Burke",
+        "Tom Stiehm",
+        "Jeffery Payne"
+      ],
+      "abstract": "Behavior-driven development (BDD) is an Agile testing methodology fostering collaboration among developers, QA analysts, and stakeholders. In this manuscript, we propose a novel approach to enhance BDD practices using large language models (LLMs) to automate acceptance test generation. Our study uses zero and few-shot prompts to evaluate LLMs such as GPT-3.5, GPT-4, Llama-2-13B, and PaLM-2. The paper presents a detailed methodology that includes the dataset, prompt techniques, LLMs, and the evaluation process. The results demonstrate that GPT-3.5 and GPT-4 generate error-free BDD acceptance tests with better performance. The few-shot prompt technique highlights its ability to provide higher accuracy by incorporating examples for in-context learning. Furthermore, the study examines syntax errors, validation accuracy, and comparative analysis of LLMs, revealing their effectiveness in enhancing BDD practices. However, our study acknowledges that there are limitations to the proposed approach. We emphasize that this approach can support collaborative BDD processes and create opportunities for future research into automated BDD acceptance test generation using LLMs.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2024-03-22T05:37:52Z",
+      "updated": "2024-03-22T05:37:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2403.14965",
+      "html_url": "https://arxiv.org/html/2403.14965",
+      "abs_url": "https://arxiv.org/abs/2403.14965",
+      "citations": 22
+    },
+    {
+      "id": "2202.00932",
+      "title": "Automatic Creation of Acceptance Tests by Extracting Conditionals from Requirements: NLP Approach and Case Study",
+      "authors": [
+        "Jannik Fischbach",
+        "Julian Frattini",
+        "Andreas Vogelsang",
+        "Daniel Mendez",
+        "Michael Unterkalmsteiner",
+        "Andreas Wehrle",
+        "Pablo Restrepo Henao",
+        "Parisa Yousefi",
+        "Tedi Juricic",
+        "Jeannette Radduenz",
+        "Carsten Wiecher"
+      ],
+      "abstract": "Acceptance testing is crucial to determine whether a system fulfills end-user requirements. However, the creation of acceptance tests is a laborious task entailing two major challenges: (1) practitioners need to determine the right set of test cases that fully covers a requirement, and (2) they need to create test cases manually due to insufficient tool support. Existing approaches for automatically deriving test cases require semi-formal or even formal notations of requirements, though unrestricted natural language is prevalent in practice. In this paper, we present our tool-supported approach CiRA (Conditionals in Requirements Artifacts) capable of creating the minimal set of required test cases from conditional statements in informal requirements. We demonstrate the feasibility of CiRA in a case study with three industry partners. In our study, out of 578 manually created test cases, 71.8 % can be generated automatically. Additionally, CiRA discovered 80 relevant test cases that were missed in manual test case design. CiRA is publicly available at www.cira.bth.se/demo/.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-02-02T09:54:41Z",
+      "updated": "2022-10-13T10:25:54Z",
+      "pdf_url": "https://arxiv.org/pdf/2202.00932",
+      "html_url": "https://arxiv.org/html/2202.00932",
+      "abs_url": "https://arxiv.org/abs/2202.00932",
+      "citations": 37
+    },
+    {
+      "id": "2510.18861",
+      "title": "Streamlining Acceptance Test Generation for Mobile Applications Through Large Language Models: An Industrial Case Study",
+      "authors": [
+        "Pedro Luís Fonseca",
+        "Bruno Lima",
+        "João Pascoal Faria"
+      ],
+      "abstract": "Mobile acceptance testing remains a bottleneck in modern software development, particularly for cross-platform mobile development using frameworks like Flutter. While developers increasingly rely on automated testing tools, creating and maintaining acceptance test artifacts still demands significant manual effort. To help tackle this issue, we introduce AToMIC, an automated framework leveraging specialized Large Language Models to generate Gherkin scenarios, Page Objects, and executable UI test scripts directly from requirements (JIRA tickets) and recent code changes. Applied to BMW's MyBMW app, covering 13 real-world issues in a 170+ screen codebase, AToMIC produced executable test artifacts in under five minutes per feature on standard hardware. The generated artifacts were of high quality: 93.3% of Gherkin scenarios were syntactically correct upon generation, 78.8% of PageObjects ran without manual edits, and 100% of generated UI tests executed successfully. In a survey, all practitioners reported time savings (often a full developer-day per feature) and strong confidence in adopting the approach. These results confirm AToMIC as a scalable, practical solution for streamlining acceptance test creation and maintenance in industrial mobile projects.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-10-21T17:54:09Z",
+      "updated": "2025-10-21T17:54:09Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.18861",
+      "html_url": "https://arxiv.org/html/2510.18861",
+      "abs_url": "https://arxiv.org/abs/2510.18861",
+      "citations": 1
+    },
+    {
+      "id": "2401.02705",
+      "title": "XUAT-Copilot: Multi-Agent Collaborative System for Automated User Acceptance Testing with Large Language Model",
+      "authors": [
+        "Zhitao Wang",
+        "Wei Wang",
+        "Zirao Li",
+        "Long Wang",
+        "Can Yi",
+        "Xinjie Xu",
+        "Luyang Cao",
+        "Hanjing Su",
+        "Shouzhi Chen",
+        "Jun Zhou"
+      ],
+      "abstract": "In past years, we have been dedicated to automating user acceptance testing (UAT) process of WeChat Pay, one of the most influential mobile payment applications in China. A system titled XUAT has been developed for this purpose. However, there is still a human-labor-intensive stage, i.e, test scripts generation, in the current system. Therefore, in this paper, we concentrate on methods of boosting the automation level of the current system, particularly the stage of test scripts generation. With recent notable successes, large language models (LLMs) demonstrate significant potential in attaining human-like intelligence and there has been a growing research area that employs LLMs as autonomous agents to obtain human-like decision-making capabilities. Inspired by these works, we propose an LLM-powered multi-agent collaborative system, named XUAT-Copilot, for automated UAT. The proposed system mainly consists of three LLM-based agents responsible for action planning, state checking and parameter selecting, respectively, and two additional modules for state sensing and case rewriting. The agents interact with testing device, make human-like decision and generate action command in a collaborative way. The proposed multi-agent system achieves a close effectiveness to human testers in our experimental studies and gains a significant improvement of Pass@1 accuracy compared with single-agent architecture. More importantly, the proposed system has launched in the formal testing environment of WeChat Pay mobile app, which saves a considerable amount of manpower in the daily development work.",
+      "categories": [
+        "cs.AI"
+      ],
+      "published": "2024-01-05T08:24:30Z",
+      "updated": "2024-01-10T12:08:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2401.02705",
+      "html_url": "https://arxiv.org/html/2401.02705",
+      "abs_url": "https://arxiv.org/abs/2401.02705",
+      "citations": 14
+    },
+    {
+      "id": "2103.09049",
+      "title": "Implementation of Technology Acceptance Model (TAM) and Importance Performance Analysis (IPA) in Testing the Ease and Usability of E-wallet Applications",
+      "authors": [
+        "Dedi Saputra",
+        "Burcu Gürbüz"
+      ],
+      "abstract": "Digital payment innovation is currently increasingly needed by the community, especially in making non-cash payment transactions. The purpose of this research is to know and measure the ease and usefulness of e-wallet digital wallet services, especially in the GoPay application. The population in this study are users of the Go-Pay service on the GO-JEK platform. The sample of this study consisted of 124 respondents from distributing questionnaires in Depok, West Java using a modified Technology Acceptance Model (TAM) based on existing references. The data processing in this research uses Importance Performance Analysis (IPA) analysis. The results show that based on the gap analysis, it is found that in general Go-Pay users are not satisfied with the current service quality. Based on the IPA analysis, the priority scale of E-Wallet Go-Pay quality improvement can be mapped, where quadrant I is the highest priority scale according to the user's perspective: [1], [4], [5], and [6]. These three items must be upgraded immediately by the manager to meet user expectations. Areas that become the achievements or advantages of the GoPay E-Wallet that must be maintained are in quadrant II, namely: [2] and [3]. From this explanation, it can be concluded that in general the E-Wallet GoPay Service must be improved to improve its service performance.",
+      "categories": [
+        "cs.CY"
+      ],
+      "published": "2021-03-01T20:18:56Z",
+      "updated": "2021-03-01T20:18:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2103.09049",
+      "html_url": "https://arxiv.org/html/2103.09049",
+      "abs_url": "https://arxiv.org/abs/2103.09049",
+      "citations": 9
+    }
+  ]
+}

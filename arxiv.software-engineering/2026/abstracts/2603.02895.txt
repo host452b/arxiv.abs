@@ -1,0 +1,21 @@
+Title: SpecLoop: An Agentic RTL-to-Specification Framework with Formal Verification Feedback Loop
+Authors: Fu-Chieh Chang, Yu-Hsin Yang, Hung-Ming Huang, Yun-Chia Hsu, Yin-Yu Lin et al.
+ID: 2603.02895
+URL: https://arxiv.org/abs/2603.02895
+
+Abstract:
+RTL implementations frequently lack up-to-date or consistent specifications,
+making comprehension, maintenance, and verification costly and error-prone.
+While prior work has explored generating specifications from RTL using large
+language models (LLMs), ensuring that the generated documents faithfully capture
+design intent remains a major challenge. We present SpecLoop, an agentic
+framework for RTL-to-specification generation with a formal-verification-driven
+iterative feedback loop. SpecLoop first generates candidate specifications and
+then reconstructs RTL from these specifications; it uses formal equivalence
+checking tools between the reconstructed RTL and the original design to validate
+functional consistency. When mismatches are detected, counterexamples are fed
+back to iteratively refine the specifications until equivalence is proven or no
+further progress can be made. Experiments across multiple LLMs and RTL
+benchmarks show that incorporating formal verification feedback substantially
+improves specification correctness and robustness over LLM-only baselines,
+demonstrating the effectiveness of verification-guided specification generation.

@@ -1,0 +1,25 @@
+Title: ATGen: Adversarial Reinforcement Learning for Test Case Generation
+Authors: Qingyao Li, Xinyi Dai, Weiwen Liu, Xiangyang Li, Yasheng Wang et al.
+ID: 2510.14635
+URL: https://arxiv.org/abs/2510.14635
+
+Abstract:
+Large Language Models (LLMs) excel at code generation, yet their outputs often
+contain subtle bugs, for which effective test cases are a critical bottleneck.
+Existing test generation methods, whether based on prompting or supervised
+fine-tuning, rely on static datasets. This imposes a ``fixed-difficulty
+ceiling'', fundamentally limiting their ability to uncover novel or more complex
+bugs beyond their training scope. To overcome this, we introduce ATGen, a
+framework that trains a test case generator via adversarial reinforcement
+learning. ATGen pits a test generator against an adversarial code generator that
+continuously crafts harder bugs to evade the current policy. This dynamic loop
+creates a curriculum of increasing difficulty challenging current policy. The
+test generator is optimized via Reinforcement Learning (RL) to jointly maximize
+``Output Accuracy'' and ``Attack Success'', enabling it to learn a progressively
+stronger policy that breaks the fixed-difficulty ceiling of static training.
+Extensive experiments demonstrate that ATGen significantly outperforms
+state-of-the-art baselines. We further validate its practical utility, showing
+it serves as both a more effective filter for Best-of-N inference and a
+higher-quality reward source for training code generation models. Our work
+establishes a new, dynamic paradigm for improving the reliability of
+LLM-generated code.

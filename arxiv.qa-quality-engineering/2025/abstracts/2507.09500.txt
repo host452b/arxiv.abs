@@ -1,0 +1,31 @@
+Title: Advancing Reliable Test-Time Adaptation of Vision-Language Models under Visual Variations
+Authors: Yiwen Liang, Hui Chen, Yizhe Xiong, Zihan Zhou, Mengyao Lyu et al.
+ID: 2507.09500
+URL: https://arxiv.org/abs/2507.09500
+
+Abstract:
+Vision-language models (VLMs) exhibit remarkable zero-shot capabilities but
+struggle with distribution shifts in downstream tasks when labeled data is
+unavailable, which has motivated the development of Test-Time Adaptation (TTA)
+to improve VLMs' performance during inference without annotations. Among various
+TTA approaches, cache-based methods show promise by preserving historical
+knowledge from low-entropy samples in a dynamic cache and fostering efficient
+adaptation. However, these methods face two critical reliability challenges: (1)
+entropy often becomes unreliable under distribution shifts, causing error
+accumulation in the cache and degradation in adaptation performance; (2) the
+final predictions may be unreliable due to inflexible decision boundaries that
+fail to accommodate large downstream shifts. To address these challenges, we
+propose a Reliable Test-time Adaptation (ReTA) method that integrates two
+complementary strategies to enhance reliability from two perspectives. First, to
+mitigate the unreliability of entropy as a sample selection criterion for cache
+construction, we introduce Consistency-aware Entropy Reweighting (CER), which
+incorporates consistency constraints to weight entropy during cache updating.
+While conventional approaches rely solely on low entropy for cache
+prioritization and risk introducing noise, our method leverages predictive
+consistency to maintain a high-quality cache and facilitate more robust
+adaptation. Second, we present Diversity-driven Distribution Calibration (DDC),
+which models class-wise text embeddings as multivariate Gaussian distributions,
+enabling adaptive decision boundaries for more accurate predictions across
+visually diverse content. Extensive experiments demonstrate that ReTA
+consistently outperforms state-of-the-art methods, particularly under real-world
+distribution shifts. Code: https://github.com/Evelyn1ywliang/ReTA.

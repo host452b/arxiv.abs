@@ -1,0 +1,23 @@
+Title: Test-Time Conditioning with Representation-Aligned Visual Features
+Authors: Nicolas Sereyjol-Garros, Ellington Kirby, Victor Letzelter, Victor Besnier, Nermin Samet
+ID: 2602.03753
+URL: https://arxiv.org/abs/2602.03753
+
+Abstract:
+While representation alignment with self-supervised models has been shown to
+improve diffusion model training, its potential for enhancing inference-time
+conditioning remains largely unexplored. We introduce Representation-Aligned
+Guidance (REPA-G), a framework that leverages these aligned representations,
+with rich semantic properties, to enable test-time conditioning from features in
+generation. By optimizing a similarity objective (the potential) at inference,
+we steer the denoising process toward a conditioned representation extracted
+from a pre-trained feature extractor. Our method provides versatile control at
+multiple scales, ranging from fine-grained texture matching via single patches
+to broad semantic guidance using global image feature tokens. We further extend
+this to multi-concept composition, allowing for the faithful combination of
+distinct concepts. REPA-G operates entirely at inference time, offering a
+flexible and precise alternative to often ambiguous text prompts or coarse class
+labels. We theoretically justify how this guidance enables sampling from the
+potential-induced tilted distribution. Quantitative results on ImageNet and COCO
+demonstrate that our approach achieves high-quality, diverse generations. Code
+is available at https://github.com/valeoai/REPA-G.

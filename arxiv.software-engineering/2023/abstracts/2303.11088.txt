@@ -1,0 +1,31 @@
+Title: Benchmarking scalability of stream processing frameworks deployed as microservices in the cloud
+Authors: Sören Henning, Wilhelm Hasselbring
+ID: 2303.11088
+URL: https://arxiv.org/abs/2303.11088
+
+Abstract:
+Context: The combination of distributed stream processing with microservice
+architectures is an emerging pattern for building data-intensive software
+systems. In such systems, stream processing frameworks such as Apache Flink,
+Apache Kafka Streams, Apache Samza, Hazelcast Jet, or the Apache Beam SDK are
+used inside microservices to continuously process massive amounts of data in a
+distributed fashion. While all of these frameworks promote scalability as a core
+feature, there is only little empirical research evaluating and comparing their
+scalability. Objective: The goal of this study to obtain evidence about the
+scalability of state-of-the-art stream processing framework in different
+execution environments and regarding different scalability dimensions. Method:
+We benchmark five modern stream processing frameworks regarding their
+scalability using a systematic method. We conduct over 740 hours of experiments
+on Kubernetes clusters in the Google cloud and in a private cloud, where we
+deploy up to 110 simultaneously running microservice instances, which process up
+to one million messages per second. Results: All benchmarked frameworks exhibit
+approximately linear scalability as long as sufficient cloud resources are
+provisioned. However, the frameworks show considerable differences in the rate
+at which resources have to be added to cope with increasing load. There is no
+clear superior framework, but the ranking of the frameworks depends on the use
+case. Using Apache Beam as an abstraction layer still comes at the cost of
+significantly higher resource requirements regardless of the use case. We
+observe our results regardless of scaling load on a microservice, scaling the
+computational work performed inside the microservice, and the selected cloud
+environment. Moreover, vertical scaling can be a complementary measure to
+achieve scalability of stream processing frameworks.

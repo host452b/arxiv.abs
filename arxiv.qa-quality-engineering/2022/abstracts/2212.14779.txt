@@ -1,0 +1,24 @@
+Title: BlueCov: Integrating Test Coverage and Model Checking with JBMC
+Authors: Matthias Güdemann, Peter Schrammel
+ID: 2212.14779
+URL: https://arxiv.org/abs/2212.14779
+
+Abstract:
+Automated test case generation tools help businesses to write tests and increase
+the safety net provided by high regression test coverage when making code
+changes. Test generation needs to cover as much as possible of the uncovered
+code while avoiding generating redundant tests for code that is already covered
+by an existing test-suite. In this paper we present our work on a tool for the
+real world application of integrating formal analysis with automatic test case
+generation. The test case generation is based on coverage analysis using the
+Java bounded model checker (JBMC). Counterexamples of the model checker can be
+translated into Java method calls with specific parameters. In order to avoid
+the generation of redundant tests, it is necessary to measure the coverage in
+the exact same way as JBMC generates its coverage goals. Each existing coverage
+measurement tool uses a slightly different instrumentation and thus a different
+coverage criterion. This makes integration with a test case generator based on
+formal analysis difficult. Therefore, we developed BlueCov as a specific runtime
+coverage measurement tool which uses the exact same coverage criteria as JBMC
+does. This approach also allows for incremental test-case generation, only
+generating test coverage for previously untested code, e.g., to complete
+existing test suites.

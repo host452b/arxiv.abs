@@ -1,0 +1,25 @@
+Title: Risk-Calibrated Bayesian Streaming Intrusion Detection with SRE-Aligned Decisions
+Authors: Michel Youssef
+ID: 2510.09619
+URL: https://arxiv.org/abs/2510.09619
+
+Abstract:
+We present a risk-calibrated approach to streaming intrusion detection that
+couples Bayesian Online Changepoint Detection (BOCPD) with decision thresholds
+aligned to Site Reliability Engineering (SRE) error budgets. BOCPD provides
+run-length posteriors that adapt to distribution shift and concept drift; we map
+these posteriors to alert decisions by optimizing expected operational cost
+under false-positive and false-negative budgets. We detail the hazard model,
+conjugate updates, and an O(1)-per-event implementation. A concrete SRE example
+shows how a 99.9% availability SLO (43.2 minutes per month error budget) yields
+a probability threshold near 0.91 when missed incidents are 10x more costly than
+false alarms. We evaluate on the full UNSW-NB15 and CIC-IDS2017 benchmarks with
+chronological splits, comparing against strong unsupervised baselines (ECOD,
+COPOD, and LOF). Metrics include PR-AUC, ROC-AUC, Brier score, calibration
+reliability diagrams, and detection latency measured in events. Results indicate
+improved precision-recall at mid to high recall and better probability
+calibration relative to baselines. We release implementation details,
+hyperparameters, and ablations for hazard sensitivity and computational
+footprint. Code and reproducibility materials will be made available upon
+publication; datasets and implementation are available from the corresponding
+author upon reasonable request.

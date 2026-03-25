@@ -1,0 +1,25 @@
+Title: A Graph-Based Test-Harness for LLM Evaluation
+Authors: Jessica Lundin, Guillaume Chabot-Couture
+ID: 2508.20810
+URL: https://arxiv.org/abs/2508.20810
+
+Abstract:
+We present a first known prototype of a dynamic, systematic benchmark of medical
+guidelines for 400+ questions, with 3.3+ trillion possible combinations,
+covering 100\% of guideline relationships. We transformed the WHO IMCI handbook
+into a directed graph with 200+ nodes (conditions, symptoms, treatments,
+follow-ups, severities) and 300+ edges, then used graph traversal to generate
+questions that incorporated age-specific scenarios and contextual distractors to
+ensure clinical relevance. Our graph-based approach enables systematic
+evaluation across clinical tasks (45-67\% accuracy), and we find models excel at
+symptom recognition but struggle with triaging severity, treatment protocols and
+follow-up care, demonstrating how customized benchmarks can identify specific
+capability gaps that general-domain evaluations miss. Beyond evaluation, this
+dynamic MCQA methodology enhances LLM post-training (supervised finetuning,
+GRPO, DPO), where correct answers provide high-reward samples without expensive
+human annotation. The graph-based approach successfully addresses the coverage
+limitations of manually curated benchmarks. This methodology is a step toward
+scalable, contamination-resistant solution for creating comprehensive benchmarks
+that can be dynamically generated, including when the guidelines are updated.
+Code and datasets are available at
+https://github.com/jessicalundin/graph_testing_harness

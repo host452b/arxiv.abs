@@ -1,0 +1,27 @@
+Title: Hook-in Privacy Techniques for gRPC-based Microservice Communication
+Authors: Louis Loechel, Siar-Remzi Akbayin, Elias Grünewald, Jannis Kiesel, Inga Strelnikova et al.
+ID: 2404.05598
+URL: https://arxiv.org/abs/2404.05598
+
+Abstract:
+gRPC is at the heart of modern distributed system architectures. Based on HTTP/2
+and Protocol Buffers, it provides highly performant, standardized, and polyglot
+communication across loosely coupled microservices and is increasingly preferred
+over REST- or GraphQL-based service APIs in practice. Despite its widespread
+adoption, gRPC lacks any advanced privacy techniques beyond transport encryption
+and basic token-based authentication. Such advanced techniques are, however,
+increasingly important for fulfilling regulatory requirements. For instance,
+anonymizing or otherwise minimizing (personal) data before responding to
+requests, or pre-processing data based on the purpose of the access may be
+crucial in certain usecases. In this paper, we therefore propose a novel
+approach for integrating such advanced privacy techniques into the gRPC
+framework in a practically viable way. Specifically, we present a general
+approach along with a working prototype that implements privacy techniques, such
+as data minimization and purpose limitation, in a configurable, extensible, and
+gRPC-native way utilizing a gRPC interceptor. We also showcase how to integrate
+this contribution into a realistic example of a food delivery use case.
+Alongside these implementations, a preliminary performance evaluation shows
+practical applicability with reasonable overheads. Altogether, we present a
+viable solution for integrating advanced privacy techniques into real-world
+gRPC-based microservice architectures, thereby facilitating regulatory
+compliance ``by design''.

@@ -1,0 +1,30 @@
+Title: Resilient Control of Networked Microgrids using Vertical Federated Reinforcement Learning: Designs and Real-Time Test-Bed Validations
+Authors: Sayak Mukherjee, Ramij R. Hossain, Sheik M. Mohiuddin, Yuan Liu, Wei Du et al.
+ID: 2311.12264
+URL: https://arxiv.org/abs/2311.12264
+
+Abstract:
+Improving system-level resiliency of networked microgrids is an important aspect
+with increased population of inverter-based resources (IBRs). This paper (1)
+presents resilient control design in presence of adversarial cyber-events, and
+proposes a novel federated reinforcement learning (Fed-RL) approach to tackle
+(a) model complexities, unknown dynamical behaviors of IBR devices, (b) privacy
+issues regarding data sharing in multi-party-owned networked grids, and (2)
+transfers learned controls from simulation to hardware-in-the-loop test-bed,
+thereby bridging the gap between simulation and real world. With these
+multi-prong objectives, first, we formulate a reinforcement learning (RL)
+training setup generating episodic trajectories with adversaries (attack signal)
+injected at the primary controllers of the grid forming (GFM) inverters where RL
+agents (or controllers) are being trained to mitigate the injected attacks. For
+networked microgrids, the horizontal Fed-RL method involving distinct
+independent environments is not appropriate, leading us to develop vertical
+variant Federated Soft Actor-Critic (FedSAC) algorithm to grasp the
+interconnected dynamics of networked microgrid. Next, utilizing OpenAI Gym
+interface, we built a custom simulation set-up in GridLAB-D/HELICS co-simulation
+platform, named Resilient RL Co-simulation (ResRLCoSIM), to train the RL agents
+with IEEE 123-bus benchmark test systems comprising 3 interconnected microgrids.
+Finally, the learned policies in simulation world are transferred to the
+real-time hardware-in-the-loop test-bed set-up developed using high-fidelity
+Hypersim platform. Experiments show that the simulator-trained RL controllers
+produce convincing results with the real-time test-bed set-up, validating the
+minimization of sim-to-real gap.

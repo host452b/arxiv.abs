@@ -1,0 +1,31 @@
+Title: Beyond Function-Level Analysis: Context-Aware Reasoning for Inter-Procedural Vulnerability Detection
+Authors: Yikun Li, Ting Zhang, Jieke Shi, Chengran Yang, Junda He et al.
+ID: 2602.06751
+URL: https://arxiv.org/abs/2602.06751
+
+Abstract:
+Recent progress in ML and LLMs has improved vulnerability detection, and recent
+datasets have reduced label noise and unrelated code changes. However, most
+existing approaches still operate at the function level, where models are asked
+to predict whether a single function is vulnerable without inter-procedural
+context. In practice, vulnerability presence and root cause often depend on
+contextual information. Naively appending such context is not a reliable
+solution: real-world context is long, redundant, and noisy, and we find that
+unstructured context frequently degrades the performance of strong fine-tuned
+code models. We present CPRVul, a context-aware vulnerability detection
+framework that couples Context Profiling and Selection with Structured
+Reasoning. CPRVul constructs a code property graph, and extracts candidate
+context. It then uses an LLM to generate security-focused profiles and assign
+relevance scores, selecting only high-impact contextual elements that fit within
+the model's context window. In the second phase, CPRVul integrates the target
+function, the selected context, and auxiliary vulnerability metadata to generate
+reasoning traces, which are used to fine-tune LLMs for reasoning-based
+vulnerability detection. We evaluate CPRVul on three high-quality vulnerability
+datasets: PrimeVul, TitanVul, and CleanVul. Across all datasets, CPRVul
+consistently outperforms function-only baselines, achieving accuracies ranging
+from 64.94% to 73.76%, compared to 56.65% to 63.68% for UniXcoder. Specifically,
+on the challenging PrimeVul benchmark, CPRVul achieves 67.78% accuracy,
+outperforming prior state-of-the-art approaches, improving accuracy from 55.17%
+to 67.78% (22.9% improvement). Our ablations further show that neither raw
+context nor processed context alone benefits strong code models; gains emerge
+only when processed context is paired with structured reasoning.

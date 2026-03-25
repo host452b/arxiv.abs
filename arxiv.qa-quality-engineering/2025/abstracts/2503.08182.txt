@@ -1,0 +1,25 @@
+Title: Mutation Testing via Iterative Large Language Model-Driven Scientific Debugging
+Authors: Philipp Straubinger, Marvin Kreis, Stephan Lukasczyk, Gordon Fraser
+ID: 2503.08182
+URL: https://arxiv.org/abs/2503.08182
+
+Abstract:
+Large Language Models (LLMs) can generate plausible test code. Intuitively they
+generate this by imitating tests seen in their training data, rather than
+reasoning about execution semantics. However, such reasoning is important when
+applying mutation testing, where individual tests need to demonstrate
+differences in program behavior between a program and specific artificial
+defects (mutants). In this paper, we evaluate whether Scientific Debugging,
+which has been shown to help LLMs when debugging, can also help them to generate
+tests for mutants. In the resulting approach, LLMs form hypotheses about how to
+kill specific mutants, and then iteratively generate and refine tests until they
+succeed, all with detailed explanations for each step. We compare this method to
+three baselines: (1) directly asking the LLM to generate tests, (2) repeatedly
+querying the LLM when tests fail, and (3) search-based test generation with
+Pynguin. Our experiments evaluate these methods based on several factors,
+including mutation score, code coverage, success rate, and the ability to
+identify equivalent mutants. The results demonstrate that LLMs, although
+requiring higher computation cost, consistently outperform Pynguin in generating
+tests with better fault detection and coverage. Importantly, we observe that the
+iterative refinement of test cases is important for achieving high-quality test
+suites.

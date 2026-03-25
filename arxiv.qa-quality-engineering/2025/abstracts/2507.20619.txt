@@ -1,0 +1,29 @@
+Title: Intention-Driven Generation of Project-Specific Test Cases
+Authors: Binhang Qi, Yun Lin, Xinyi Weng, Yuhuan Huang, Chenyan Liu et al.
+ID: 2507.20619
+URL: https://arxiv.org/abs/2507.20619
+
+Abstract:
+Test cases are valuable assets for maintaining software quality.
+State-of-the-art automated test generation techniques typically focus on
+maximizing program branch coverage or translating focal methods into test code.
+However, in contrast to branch coverage or code-to-test translation, practical
+tests are written out of the need to validate whether a requirement has been
+fulfilled. Specifically, each test usually reflects a developer's validation
+intention for a program function, regarding (1) what is the test scenario of a
+program function? and (2) what is expected behavior under such a scenario?
+Without taking such intention into account, generated tests are less likely to
+be adopted in practice. In this work, we propose IntentionTest, which generates
+project-specific tests given the description of validation intention. The design
+is motivated by two insights: (1) rationale insight: the description of
+validation intention regarding scenario description and behavioral expectation,
+compared to coverage and focal code, carries more crucial information about what
+to test; and (2) technical insight: practical test code exhibits high
+duplication, indicating that existing tests are highly reusable for how to test.
+Therefore, IntentionTest adopts a retrieval-and-edit manner. We extensively
+evaluate IntentionTest against state-of-the-art baselines (DA, ChatTester, and
+EvoSuite) on 4,146 test cases from 13 open-source projects. The experimental
+results show that, with a given validation intention, IntentionTest can (1)
+generate tests far more semantically relevant to the ground-truth tests by (i)
+killing 39.0% more common mutants and (ii) calling up to 66.8% more
+project-specific APIs; and (2) generate 21.3% more successful passing tests.

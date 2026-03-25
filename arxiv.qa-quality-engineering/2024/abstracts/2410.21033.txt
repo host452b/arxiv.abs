@@ -1,0 +1,29 @@
+Title: BanditCAT and AutoIRT: Machine Learning Approaches to Computerized Adaptive Testing and Item Calibration
+Authors: James Sharpnack, Kevin Hao, Phoebe Mulcaire, Klinton Bicknell, Geoff LaFlair et al.
+ID: 2410.21033
+URL: https://arxiv.org/abs/2410.21033
+
+Abstract:
+In this paper, we present a complete framework for quickly calibrating and
+administering a robust large-scale computerized adaptive test (CAT) with a small
+number of responses. Calibration - learning item parameters in a test - is done
+using AutoIRT, a new method that uses automated machine learning (AutoML) in
+combination with item response theory (IRT), originally proposed in [Sharpnack
+et al., 2024]. AutoIRT trains a non-parametric AutoML grading model using item
+features, followed by an item-specific parametric model, which results in an
+explanatory IRT model. In our work, we use tabular AutoML tools
+(AutoGluon.tabular, [Erickson et al., 2020]) along with BERT embeddings and
+linguistically motivated NLP features. In this framework, we use Bayesian
+updating to obtain test taker ability posterior distributions for administration
+and scoring. For administration of our adaptive test, we propose the BanditCAT
+framework, a methodology motivated by casting the problem in the contextual
+bandit framework and utilizing item response theory (IRT). The key insight lies
+in defining the bandit reward as the Fisher information for the selected item,
+given the latent test taker ability from IRT assumptions. We use Thompson
+sampling to balance between exploring items with different psychometric
+characteristics and selecting highly discriminative items that give more precise
+information about ability. To control item exposure, we inject noise through an
+additional randomization step before computing the Fisher information. This
+framework was used to initially launch two new item types on the DET practice
+test using limited training data. We outline some reliability and exposure
+metrics for the 5 practice test experiments that utilized this framework.

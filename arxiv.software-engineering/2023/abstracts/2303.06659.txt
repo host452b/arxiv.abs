@@ -1,0 +1,24 @@
+Title: Scavenger: A Cloud Service for Optimizing Cost and Performance of ML Training
+Authors: Sahil Tyagi, Prateek Sharma
+ID: 2303.06659
+URL: https://arxiv.org/abs/2303.06659
+
+Abstract:
+While the pay-as-you-go nature of cloud virtual machines (VMs) makes it easy to
+spin-up large clusters for training ML models, it can also lead to ballooning
+costs. The 100s of virtual machine sizes provided by cloud platforms also makes
+it extremely challenging to select the ``right'' cloud cluster configuration for
+training. Furthermore, the training time and cost of distributed model training
+is highly sensitive to the cluster configurations, and presents a large and
+complex tradeoff-space. In this paper, we develop principled and practical
+techniques for optimizing the training time and cost of distributed ML model
+training on the cloud. Our key insight is that both parallel and statistical
+efficiency must be considered when selecting the optimum job configuration
+parameters such as the number of workers and the batch size. By combining
+conventional parallel scaling concepts and new insights into SGD noise, our
+models accurately estimate the time and cost on different cluster configurations
+with < 5% error. Using the repetitive nature of training and our models, we can
+search for optimum cloud configurations in a black-box, online manner. Our
+approach reduces training times by 2 times and costs more more than 50%.
+Compared to an oracle-based approach, our performance models are accurate to
+within 2% such that the search imposes an overhead of just 10%.

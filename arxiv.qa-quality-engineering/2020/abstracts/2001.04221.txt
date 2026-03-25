@@ -1,0 +1,28 @@
+Title: Generating Class-Level Integration Tests Using Call Site Information
+Authors: Pouria Derakhshanfar, Xavier Devroey, Annibale Panichella, Andy Zaidman, Arie van Deursen
+ID: 2001.04221
+URL: https://arxiv.org/abs/2001.04221
+
+Abstract:
+Search-based approaches have been used in the literature to automate the process
+of creating unit test cases. However, related work has shown that generated
+unit-tests with high code coverage could be ineffective, i.e., they may not
+detect all faults or kill all injected mutants. In this paper, we propose CLING,
+an integration-level test case generation approach that exploits how a pair of
+classes, the caller and the callee, interact with each other through method
+calls. In particular, CLING generates integration-level test cases that maximize
+the Coupled Branches Criterion (CBC). Coupled branches are pairs of branches
+containing a branch of the caller and a branch of the callee such that an
+integration test that exercises the former also exercises the latter. CBC is a
+novel integration-level coverage criterion, measuring the degree to which a test
+suite exercises the interactions between a caller and its callee classes. We
+implemented CLING and evaluated the approach on 140 pairs of classes from five
+different open-source Java projects. Our results show that (1) CLING generates
+test suites with high CBC coverage, thanks to the definition of the test suite
+generation as a many-objectives problem where each couple of branches is an
+independent objective; (2) such generated suites trigger different class
+interactions and can kill on average 7.7% (with a maximum of 50%) of mutants
+that are not detected by tests generated at the unit level; (3) CLING can detect
+integration faults coming from wrong assumptions about the usage of the callee
+class (32 for our subject systems) that remain undetected when using
+automatically generated unit-level test suites.

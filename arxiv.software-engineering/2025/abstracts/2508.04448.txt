@@ -1,0 +1,31 @@
+Title: Large Language Models Versus Static Code Analysis Tools: A Systematic Benchmark for Vulnerability Detection
+Authors: Damian Gnieciak, Tomasz Szandala
+ID: 2508.04448
+URL: https://arxiv.org/abs/2508.04448
+
+Abstract:
+Modern software relies on a multitude of automated testing and quality assurance
+tools to prevent errors, bugs and potential vulnerabilities. This study sets out
+to provide a head-to-head, quantitative and qualitative evaluation of six
+automated approaches: three industry-standard rule-based static code-analysis
+tools (SonarQube, CodeQL and Snyk Code) and three state-of-the-art large
+language models hosted on the GitHub Models platform (GPT-4.1, Mistral Large and
+DeepSeek V3). Using a curated suite of ten real-world C# projects that embed 63
+vulnerabilities across common categories such as SQL injection, hard-coded
+secrets and outdated dependencies, we measure classical detection accuracy
+(precision, recall, F-score), analysis latency, and the developer effort
+required to vet true positives. The language-based scanners achieve higher mean
+F-1 scores,0.797, 0.753 and 0.750, than their static counterparts, which score
+0.260, 0.386 and 0.546, respectively. LLMs' advantage originates from superior
+recall, confirming an ability to reason across broader code contexts. However,
+this benefit comes with substantial trade-offs: DeepSeek V3 exhibits the highest
+false-positive ratio, all language models mislocate issues at line-or-column
+granularity due to tokenisation artefacts. Overall, language models successfully
+rival traditional static analysers in finding real vulnerabilities. Still, their
+noisier output and imprecise localisation limit their standalone use in
+safety-critical audits. We therefore recommend a hybrid pipeline: employ
+language models early in development for broad, context-aware triage, while
+reserving deterministic rule-based scanners for high-assurance verification. The
+open benchmark and JSON-based result harness released with this paper lay a
+foundation for reproducible, practitioner-centric research into next-generation
+automated code security.

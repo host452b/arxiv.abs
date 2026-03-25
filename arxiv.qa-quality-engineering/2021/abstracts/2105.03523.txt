@@ -1,0 +1,22 @@
+Title: Test Suites as a Source of Training Data for Static Analysis Alert Classifiers
+Authors: Lori Flynn, William Snavely, Zachary Kurtz
+ID: 2105.03523
+URL: https://arxiv.org/abs/2105.03523
+
+Abstract:
+Flaw-finding static analysis tools typically generate large volumes of code flaw
+alerts including many false positives. To save on human effort to triage these
+alerts, a significant body of work attempts to use machine learning to classify
+and prioritize alerts. Identifying a useful set of training data, however,
+remains a fundamental challenge in developing such classifiers in many contexts.
+We propose using static analysis test suites (i.e., repositories of "benchmark"
+programs that are purpose-built to test coverage and precision of static
+analysis tools) as a novel source of training data. In a case study, we
+generated a large quantity of alerts by executing various static analyzers on
+the Juliet C/C++ test suite, and we automatically derived ground truth labels
+for these alerts by referencing the Juliet test suite metadata. Finally, we used
+this data to train classifiers to predict whether an alert is a false positive.
+Our classifiers obtained high precision (90.2%) and recall (88.2%) for a large
+number of code flaw types on a hold-out test set. This preliminary result
+suggests that pre-training classifiers on test suite data could help to
+jumpstart static analysis alert classification in data-limited contexts.

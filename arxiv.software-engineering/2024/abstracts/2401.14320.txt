@@ -1,0 +1,26 @@
+Title: Quantifying Software Correctness by Combining Architecture Modeling and Formal Program Analysis
+Authors: Florian Lanzinger, Christian Martin, Frederik Reiche, Samuel Teuber, Robert Heinrich et al.
+ID: 2401.14320
+URL: https://arxiv.org/abs/2401.14320
+
+Abstract:
+Most formal methods see the correctness of a software system as a binary
+decision. However, proving the correctness of complex systems completely is
+difficult because they are composed of multiple components, usage scenarios, and
+environments. We present QuAC, a modular approach for quantifying the
+correctness of service-oriented software systems by combining software
+architecture modeling with deductive verification. Our approach is based on a
+model of the service-oriented architecture and the probabilistic usage scenarios
+of the system. The correctness of a single service is approximated by a coverage
+region, which is a formula describing which inputs for that service are proven
+to not lead to an erroneous execution. The coverage regions can be determined by
+a combination of various analyses, e.g., formal verification, expert
+estimations, or testing. The coverage regions and the software model are then
+combined into a probabilistic program. From this, we can compute the probability
+that under a given usage profile no service is called outside its coverage
+region. If the coverage region is large enough, then instead of attempting to
+get 100% coverage, which may be prohibitively expensive, run-time verification
+or testing approaches may be used to deal with inputs outside the coverage
+region. We also present an implementation of QuAC for Java using the modeling
+tool Palladio and the deductive verification tool KeY. We demonstrate its
+usability by applying it to a software simulation of an energy system.

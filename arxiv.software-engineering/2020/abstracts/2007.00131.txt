@@ -1,0 +1,23 @@
+Title: Multi-view Frequency LSTM: An Efficient Frontend for Automatic Speech Recognition
+Authors: Maarten Van Segbroeck, Harish Mallidih, Brian King, I-Fan Chen, Gurpreet Chadha et al.
+ID: 2007.00131
+URL: https://arxiv.org/abs/2007.00131
+
+Abstract:
+Acoustic models in real-time speech recognition systems typically stack multiple
+unidirectional LSTM layers to process the acoustic frames over time. Performance
+improvements over vanilla LSTM architectures have been reported by prepending a
+stack of frequency-LSTM (FLSTM) layers to the time LSTM. These FLSTM layers can
+learn a more robust input feature to the time LSTM layers by modeling
+time-frequency correlations in the acoustic input signals. A drawback of FLSTM
+based architectures however is that they operate at a predefined, and tuned,
+window size and stride, referred to as 'view' in this paper. We present a simple
+and efficient modification by combining the outputs of multiple FLSTM stacks
+with different views, into a dimensionality reduced feature representation. The
+proposed multi-view FLSTM architecture allows to model a wider range of
+time-frequency correlations compared to an FLSTM model with single view. When
+trained on 50K hours of English far-field speech data with CTC loss followed by
+sMBR sequence training, we show that the multi-view FLSTM acoustic model
+provides relative Word Error Rate (WER) improvements of 3-7% for different
+speaker and acoustic environment scenarios over an optimized single FLSTM model,
+while retaining a similar computational footprint.

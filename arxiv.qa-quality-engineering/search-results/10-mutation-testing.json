@@ -1,0 +1,1438 @@
+{
+  "query": {
+    "terms": {
+      "title": "mutation testing"
+    },
+    "subjects": [
+      "cs"
+    ],
+    "op": "and",
+    "from": "2020-01",
+    "to": "",
+    "max": 200,
+    "searched_at": "2026-03-25T16:50:28Z"
+  },
+  "total_results": 69,
+  "return_count": 69,
+  "papers": [
+    {
+      "id": "2105.10016",
+      "title": "Testing DBMS Performance with Mutations",
+      "authors": [
+        "Xinyu Liu",
+        "Qi Zhou",
+        "Joy Arulraj",
+        "Alessandro Orso"
+      ],
+      "abstract": "Because database systems are the critical component of modern data-intensive applications, it is important to ensure that they operate correctly. To this end, developers extensively test these systems to eliminate bugs that negatively affect functionality. In addition to functional bugs, however, there is another important class of bugs: performance bugs. These bugs negatively affect the response time of a database system and can therefore affect the overall performance of the system. Despite their impact on end-user experience, performance bugs have received considerably less attention than functional bugs.\n  In this paper, we present AMOEBA, a system for automatically detecting performance bugs in database systems. The core idea behind AMOEBA is to construct query pairs that are semantically equivalent to each other and then compare their response time on the same database system. If the queries exhibit a significant difference in their runtime performance, then the root cause is likely a performance bug in the system. We propose a novel set of structure and predicate mutation rules for constructing query pairs that are likely to uncover performance bugs. We introduce feedback mechanisms for improving the efficacy and computational efficiency of the tool. We evaluate AMOEBA on two widely-used DBMSs, namely PostgreSQL and CockroachDB. AMOEBA has discovered 20 previously-unknown performance bugs, among which developers have already confirmed 14 and fixed 4.",
+      "categories": [
+        "cs.DB",
+        "cs.SE"
+      ],
+      "published": "2021-05-20T20:18:43Z",
+      "updated": "2021-09-02T01:49:11Z",
+      "pdf_url": "https://arxiv.org/pdf/2105.10016",
+      "html_url": "https://arxiv.org/html/2105.10016",
+      "abs_url": "https://arxiv.org/abs/2105.10016",
+      "citations": 0
+    },
+    {
+      "id": "2403.03701",
+      "title": "Security Testing of RESTful APIs With Test Case Mutation",
+      "authors": [
+        "Sebastien Salva",
+        "Jarod Sue"
+      ],
+      "abstract": "The focus of this paper is on automating the security testing of RESTful APIs. The testing stage of this specific kind of components is often performed manually, and this is yet considered as a long and difficult activity. This paper proposes an automated approach to help developers generate test cases for experimenting with each service in isolation. This approach is based upon the notion of test case mutation, which automatically generates new test cases from an original test case set. Test case mutation operators perform slight test case modifications to mimic possible failures or to test the component under test with new interactions. In this paper, we examine test case mutation operators for RESTful APIs and define 17 operators specialised in security testing. Then, we present our test case mutation algorithm. We evaluate its effectiveness and performance on four web service compositions.",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "published": "2024-03-06T13:31:58Z",
+      "updated": "2024-03-06T13:31:58Z",
+      "pdf_url": "https://arxiv.org/pdf/2403.03701",
+      "html_url": "https://arxiv.org/html/2403.03701",
+      "abs_url": "https://arxiv.org/abs/2403.03701",
+      "citations": 3
+    },
+    {
+      "id": "2308.07949",
+      "title": "Fuzzing for CPS Mutation Testing",
+      "authors": [
+        "Jaekwon Lee",
+        "Enrico Viganò",
+        "Oscar Cornejo",
+        "Fabrizio Pastore",
+        "Lionel Briand"
+      ],
+      "abstract": "Mutation testing can help reduce the risks of releasing faulty software. For such reason, it is a desired practice for the development of embedded software running in safety-critical cyber-physical systems (CPS). Unfortunately, state-of-the-art test data generation techniques for mutation testing of C and C++ software, two typical languages for CPS software, rely on symbolic execution, whose limitations often prevent its application (e.g., it cannot test black-box components).\n  We propose a mutation testing approach that leverages fuzz testing, which has proved effective with C and C++ software. Fuzz testing automatically generates diverse test inputs that exercise program branches in a varied number of ways and, therefore, exercise statements in different program states, thus maximizing the likelihood of killing mutants, our objective.\n  We performed an empirical assessment of our approach with software components used in satellite systems currently in orbit. Our empirical evaluation shows that mutation testing based on fuzz testing kills a significantly higher proportion of live mutants than symbolic execution (i.e., up to an additional 47 percentage points). Further, when symbolic execution cannot be applied, fuzz testing provides significant benefits (i.e., up to 41% mutants killed). Our study is the first one comparing fuzz testing and symbolic execution for mutation testing; our results provide guidance towards the development of fuzz testing tools dedicated to mutation testing.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-08-15T16:35:31Z",
+      "updated": "2023-08-15T16:35:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2308.07949",
+      "html_url": "https://arxiv.org/html/2308.07949",
+      "abs_url": "https://arxiv.org/abs/2308.07949",
+      "citations": 3
+    },
+    {
+      "id": "2309.02389",
+      "title": "Contextual Predictive Mutation Testing",
+      "authors": [
+        "Kush Jain",
+        "Uri Alon",
+        "Alex Groce",
+        "Claire Le Goues"
+      ],
+      "abstract": "Mutation testing is a powerful technique for assessing and improving test suite quality that artificially introduces bugs and checks whether the test suites catch them. However, it is also computationally expensive and thus does not scale to large systems and projects. One promising recent approach to tackling this scalability problem uses machine learning to predict whether the tests will detect the synthetic bugs, without actually running those tests. However, existing predictive mutation testing approaches still misclassify 33% of detection outcomes on a randomly sampled set of mutant-test suite pairs. We introduce MutationBERT, an approach for predictive mutation testing that simultaneously encodes the source method mutation and test method, capturing key context in the input representation. Thanks to its higher precision, MutationBERT saves 33% of the time spent by a prior approach on checking/verifying live mutants. MutationBERT, also outperforms the state-of-the-art in both same project and cross project settings, with meaningful improvements in precision, recall, and F1 score. We validate our input representation, and aggregation approaches for lifting predictions from the test matrix level to the test suite level, finding similar improvements in performance. MutationBERT not only enhances the state-of-the-art in predictive mutation testing, but also presents practical benefits for real-world applications, both in saving developer time and finding hard to detect mutants.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-09-05T17:00:15Z",
+      "updated": "2023-09-05T17:00:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2309.02389",
+      "html_url": "https://arxiv.org/html/2309.02389",
+      "abs_url": "https://arxiv.org/abs/2309.02389",
+      "citations": 7
+    },
+    {
+      "id": "2102.10961",
+      "title": "Mutation Testing framework for Machine Learning",
+      "authors": [
+        " Raju"
+      ],
+      "abstract": "This is an article or technical note which is intended to provides an insight journey of Machine Learning Systems (MLS) testing, its evolution, current paradigm and future work. Machine Learning Models, used in critical applications such as healthcare industry, Automobile, and Air Traffic control, Share Trading etc., and failure of ML Model can lead to severe consequences in terms of loss of life or property. To remediate this, developers, scientists, and ML community around the world, must build a highly reliable test architecture for critical ML application. At the very foundation layer, any test model must satisfy the core testing attributes such as test properties and its components. This attribute comes from the software engineering, but the same cannot be applied in as-is form to the ML testing and we will tell you why.",
+      "categories": [
+        "cs.SE",
+        "cs.CY"
+      ],
+      "published": "2021-02-19T18:02:31Z",
+      "updated": "2021-02-19T18:02:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2102.10961",
+      "html_url": "https://arxiv.org/html/2102.10961",
+      "abs_url": "https://arxiv.org/abs/2102.10961",
+      "citations": 1
+    },
+    {
+      "id": "2401.10372",
+      "title": "MutaBot: A Mutation Testing Approach for Chatbots",
+      "authors": [
+        "Michael Ferdinando Urrico",
+        "Diego Clerissi",
+        "Leonardo Mariani"
+      ],
+      "abstract": "Mutation testing is a technique aimed at assessing the effectiveness of test suites by seeding artificial faults into programs. Although available for many platforms and languages, no mutation testing tool is currently available for conversational chatbots, which represent an increasingly popular solution to design systems that can interact with users through a natural language interface. Note that since conversations must be explicitly engineered by the developers of conversational chatbots, these systems are exposed to specific types of faults not supported by existing mutation testing tools.\n  In this paper, we present MutaBot, a mutation testing tool for conversational chatbots. MutaBot addresses mutations at multiple levels, including conversational flows, intents, and contexts. We designed the tool to potentially target multiple platforms, while we implemented initial support for Google Dialogflow chatbots. We assessed the tool with three Dialogflow chatbots and test cases generated with Botium, revealing weaknesses in the test suites.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2024-01-18T20:38:27Z",
+      "updated": "2024-01-18T20:38:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2401.10372",
+      "html_url": "https://arxiv.org/html/2401.10372",
+      "abs_url": "https://arxiv.org/abs/2401.10372",
+      "citations": 6
+    },
+    {
+      "id": "2301.13615",
+      "title": "Property-Based Mutation Testing",
+      "authors": [
+        "Ezio Bartocci",
+        "Leonardo Mariani",
+        "Dejan Nickovic",
+        "Drishti Yadav"
+      ],
+      "abstract": "Mutation testing is an established software quality assurance technique for the assessment of test suites. While it is well-suited to estimate the general fault-revealing capability of a test suite, it is not practical and informative when the software under test must be validated against specific requirements. This is often the case for embedded software, where the software is typically validated against rigorously-specified safety properties. In such a scenario (i) a mutant is relevant only if it can impact the satisfaction of the tested properties, and (ii) a mutant is meaningfully-killed with respect to a property only if it causes the violation of that property. To address these limitations of mutation testing, we introduce property-based mutation testing, a method for assessing the capability of a test suite to exercise the software with respect to a given property. We evaluate our property-based mutation testing framework on Simulink models of safety-critical Cyber-Physical Systems (CPS) from the automotive and avionic domains and demonstrate how property-based mutation testing is more informative than regular mutation testing. These results open new perspectives in both mutation testing and test case generation of CPS.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-01-31T13:17:15Z",
+      "updated": "2023-01-31T13:17:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2301.13615",
+      "html_url": "https://arxiv.org/html/2301.13615",
+      "abs_url": "https://arxiv.org/abs/2301.13615",
+      "citations": 5
+    },
+    {
+      "id": "2102.11378",
+      "title": "Practical Mutation Testing at Scale",
+      "authors": [
+        "Goran Petrović",
+        "Marko Ivanković",
+        "Gordon Fraser",
+        "René Just"
+      ],
+      "abstract": "Mutation analysis assesses a test suite's adequacy by measuring its ability to detect small artificial faults, systematically seeded into the tested program. Mutation analysis is considered one of the strongest test-adequacy criteria. Mutation testing builds on top of mutation analysis and is a testing technique that uses mutants as test goals to create or improve a test suite. Mutation testing has long been considered intractable because the sheer number of mutants that can be created represents an insurmountable problem -- both in terms of human and computational effort. This has hindered the adoption of mutation testing as an industry standard. For example, Google has a codebase of two billion lines of code and more than 500,000,000 tests are executed on a daily basis. The traditional approach to mutation testing does not scale to such an environment. To address these challenges, this paper presents a scalable approach to mutation testing based on the following main ideas: (1) Mutation testing is done incrementally, mutating only changed code during code review, rather than the entire code base; (2) Mutants are filtered, removing mutants that are likely to be irrelevant to developers, and limiting the number of mutants per line and per code review process; (3) Mutants are selected based on the historical performance of mutation operators, further eliminating irrelevant mutants and improving mutant quality. Evaluation in a code-review-based setting with more than 24,000 developers on more than 1,000 projects shows that the proposed approach produces orders of magnitude fewer mutants and that context-based mutant filtering and selection improve mutant quality and actionability. Overall, the proposed approach represents a mutation testing framework that seamlessly integrates into the software development workflow and is applicable up to large-scale industrial settings.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-02-22T21:58:59Z",
+      "updated": "2021-02-26T15:53:03Z",
+      "pdf_url": "https://arxiv.org/pdf/2102.11378",
+      "html_url": "https://arxiv.org/html/2102.11378",
+      "abs_url": "https://arxiv.org/abs/2102.11378",
+      "citations": 56
+    },
+    {
+      "id": "2103.07189",
+      "title": "Does mutation testing improve testing practices?",
+      "authors": [
+        "Goran Petrović",
+        "Marko Ivanković",
+        "Gordon Fraser",
+        "René Just"
+      ],
+      "abstract": "Various proxy metrics for test quality have been defined in order to guide developers when writing tests. Code coverage is particularly well established in practice, even though the question of how coverage relates to test quality is a matter of ongoing debate. Mutation testing offers a promising alternative: Artificial defects can identify holes in a test suite, and thus provide concrete suggestions for additional tests. Despite the obvious advantages of mutation testing, it is not yet well established in practice. Until recently, mutation testing tools and techniques simply did not scale to complex systems. Although they now do scale, a remaining obstacle is lack of evidence that writing tests for mutants actually improves test quality. In this paper we aim to fill this gap: By analyzing a large dataset of almost 15 million mutants, we investigate how these mutants influenced developers over time, and how these mutants relate to real faults. Our analyses suggest that developers using mutation testing write more tests, and actively improve their test suites with high quality tests such that fewer mutants remain. By analyzing a dataset of past fixes of real high-priority faults, our analyses further provide evidence that mutants are indeed coupled with real faults. In other words, had mutation testing been used for the changes introducing the faults, it would have reported a live mutant that could have prevented the bug.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-03-12T10:22:02Z",
+      "updated": "2021-03-12T10:22:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2103.07189",
+      "html_url": "https://arxiv.org/html/2103.07189",
+      "abs_url": "https://arxiv.org/abs/2103.07189",
+      "citations": 62
+    },
+    {
+      "id": "2010.09144",
+      "title": "Using mutation testing to measure behavioural test diversity",
+      "authors": [
+        "Francisco Gomes de Oliveira Neto",
+        "Felix Dobslaw",
+        "Robert Feldt"
+      ],
+      "abstract": "Diversity has been proposed as a key criterion to improve testing effectiveness and efficiency.It can be used to optimise large test repositories but also to visualise test maintenance issues and raise practitioners' awareness about waste in test artefacts and processes. Even though these diversity-based testing techniques aim to exercise diverse behavior in the system under test (SUT), the diversity has mainly been measured on and between artefacts (e.g., inputs, outputs or test scripts). Here, we introduce a family of measures to capture behavioural diversity (b-div) of test cases by comparing their executions and failure outcomes. Using failure information to capture the SUT behaviour has been shown to improve effectiveness of history-based test prioritisation approaches. However, history-based techniques require reliable test execution logs which are often not available or can be difficult to obtain due to flaky tests, scarcity of test executions, etc. To be generally applicable we instead propose to use mutation testing to measure behavioral diversity by running the set of test cases on various mutated versions of the SUT. Concretely, we propose two specific b-div measures (based on accuracy and Matthew's correlation coefficient, respectively) and compare them with artefact-based diversity (a-div) for prioritising the test suites of 6 different open-source projects. Our results show that our b-div measures outperform a-div and random selection in all of the studied projects. The improvement is substantial with an average increase in average percentage of faults detected (APFD) of between 19% to 31% depending on the size of the subset of prioritised tests.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-10-19T00:02:08Z",
+      "updated": "2020-10-19T00:02:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2010.09144",
+      "html_url": "https://arxiv.org/html/2010.09144",
+      "abs_url": "https://arxiv.org/abs/2010.09144",
+      "citations": 11
+    },
+    {
+      "id": "2401.00021",
+      "title": "Conceptual Mutation Testing for Student Programming Misconceptions",
+      "authors": [
+        "Siddhartha Prasad",
+        "Ben Greenman",
+        "Tim Nelson",
+        "Shriram Krishnamurthi"
+      ],
+      "abstract": "Context: Students often misunderstand programming problem descriptions. This can lead them to solve the wrong problem, which creates frustration, obstructs learning, and imperils grades. Researchers have found that students can be made to better understand the problem by writing examples before they start programming. These examples are checked against correct and wrong implementations -- analogous to mutation testing -- provided by course staff. Doing so results in better student understanding of the problem as well as better test suites to accompany the program, both of which are desirable educational outcomes.\n  Inquiry: Producing mutant implementations requires care. If there are too many, or they are too obscure, students will end up spending a lot of time on an unproductive task and also become frustrated. Instead, we want a small number of mutants that each correspond to common problem misconceptions. This paper presents a workflow with partial automation to produce mutants of this form which, notably, are not those produced by mutation-testing tools.\n  Approach: We comb through student tests that fail a correct implementation. The student misconceptions are embedded in these failures. We then use methods to semantically cluster these failures. These clusters are then translated into conceptual mutants. These can then be run against student data to determine whether we they are better than prior methods. Some of these processes also enjoy automation.\n  Knowledge: We find that student misconceptions illustrated by failing tests can be operationalized by the above process. The resulting mutants do much better at identifying student misconceptions.\n  Grounding: Our findings are grounded in a manual analysis of student examples and a quantitative evaluation of both our clustering techniques and our process for making conceptual mutants. The clustering evaluation compares against a ground truth using standard cluster-correspondence measures, while the mutant evaluation examines how conceptual mutants perform against student data.\n  Importance: Our work contributes a workflow, with some automation, to reduce the cost and increase the effectiveness of generating conceptually interesting mutants. Such mutants can both improve learning outcomes and reduce student frustration, leading to better educational outcomes. In the process, we also identify a variation of mutation testing not commonly discussed in the software literature.",
+      "categories": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "published": "2023-12-28T11:43:04Z",
+      "updated": "2023-12-28T11:43:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2401.00021",
+      "html_url": "https://arxiv.org/html/2401.00021",
+      "abs_url": "https://arxiv.org/abs/2401.00021",
+      "citations": 3
+    },
+    {
+      "id": "2102.05709",
+      "title": "SN4KE: Practical Mutation Testing at Binary Level",
+      "authors": [
+        "Mohsen Ahmadi",
+        "Pantea Kiaei",
+        "Navid Emamdoost"
+      ],
+      "abstract": "Mutation analysis is an effective technique to evaluate a test suite adequacy in terms of revealing unforeseen bugs in software. Traditional source- or IR-level mutation analysis is not applicable to the software only available in binary format. This paper proposes a practical binary mutation analysis via binary rewriting, along with a rich set of mutation operators to represent more realistic bugs. We implemented our approach using two state-of-the-art binary rewriting tools and evaluated its effectiveness and scalability by applying them to SPEC CPU benchmarks. Our analysis revealed that the richer mutation operators contribute to generating more diverse mutants, which, compared to previous works leads to a higher mutation score for the test harness. We also conclude that the reassembleable disassembly rewriting yields better scalability in comparison to lifting to an intermediate representation and performing a full translation.",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "published": "2021-02-10T19:28:42Z",
+      "updated": "2021-02-13T08:56:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2102.05709",
+      "html_url": "https://arxiv.org/html/2102.05709",
+      "abs_url": "https://arxiv.org/abs/2102.05709",
+      "citations": 4
+    },
+    {
+      "id": "2406.02398",
+      "title": "MOTIF: A tool for Mutation Testing with Fuzzing",
+      "authors": [
+        "Jaekwon Lee",
+        "Enrico Viganò",
+        "Fabrizio Pastore",
+        "Lionel Briand"
+      ],
+      "abstract": "Mutation testing consists of generating test cases that detect faults injected into software (generating mutants) which its original test suite could not. By running such an augmented set of test cases, it may discover actual faults that may have gone unnoticed with the original test suite. It is thus a desired practice for embedded software running in safety-critical cyber-physical systems (CPS). Unfortunately, the state-of-the-art tool targeting C, a typical language for CPS software, relies on symbolic execution, whose limitations often prevent its application. MOTIF overcomes such limitations by leveraging grey-box fuzzing tools to generate unit test cases in C that detect injected faults in mutants. Indeed, fuzzing tools automatically generate inputs by exercising the compiled version of the software under test guided by coverage feedback, thus overcoming the limitations of symbolic execution. Our empirical assessment has shown that it detects more faults than symbolic execution (i.e., up to 47 percentage points), when the latter is applicable.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-06-04T15:12:01Z",
+      "updated": "2024-06-04T15:12:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.02398",
+      "html_url": "https://arxiv.org/html/2406.02398",
+      "abs_url": "https://arxiv.org/abs/2406.02398",
+      "citations": 2
+    },
+    {
+      "id": "2501.02875",
+      "title": "METFORD -- Mutation tEsTing Framework fOR anDroid",
+      "authors": [
+        "Auri M. R. Vincenzi",
+        "Pedro H. Kuroishi",
+        "João C. M. Bispo",
+        "Ana R. C. da Veiga",
+        "David R. C. da Mata",
+        "Francisco B. Azevedo",
+        "Ana C. R. Paiva"
+      ],
+      "abstract": "Mutation testing may be used to guide test case generation and as a technique to assess the quality of test suites. Despite being used frequently, mutation testing is not so commonly applied in the mobile world. One critical challenge in mutation testing is dealing with its computational cost. Generating mutants, running test cases over each mutant, and analyzing the results may require significant time and resources. This research aims to contribute to reducing Android mutation testing costs. It implements mutation testing operators (traditional and Android-specific) according to mutant schemata (implementing multiple mutants into a single code file). It also describes an Android mutation testing framework developed to execute test cases and determine mutation scores. Additional mutation operators can be implemented in JavaScript and easily integrated into the framework. The overall approach is validated through case studies showing that mutant schemata have advantages over the traditional mutation strategy (one file per mutant). The results show mutant schemata overcome traditional mutation in all evaluated aspects with no additional cost: it takes 8.50% less time for mutant generation, requires 99.78% less disk space, and runs, on average, 6.45% faster than traditional mutation. Moreover, considering sustainability metrics, mutant schemata have 8,18% less carbon footprint than traditional strategy.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-01-06T09:36:57Z",
+      "updated": "2025-01-12T19:20:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.02875",
+      "html_url": "https://arxiv.org/html/2501.02875",
+      "abs_url": "https://arxiv.org/abs/2501.02875",
+      "citations": 1
+    },
+    {
+      "id": "2501.07553",
+      "title": "Simulink Mutation Testing using CodeBERT",
+      "authors": [
+        "Jingfan Zhang",
+        "Delaram Ghobari",
+        "Mehrdad Sabetzadeh",
+        "Shiva Nejati"
+      ],
+      "abstract": "We present BERTiMuS, an approach that uses CodeBERT to generate mutants for Simulink models. BERTiMuS converts Simulink models into textual representations, masks tokens from the derived text, and uses CodeBERT to predict the masked tokens. Simulink mutants are obtained by replacing the masked tokens with predictions from CodeBERT. We evaluate BERTiMuS using Simulink models from an industrial benchmark, and compare it with FIM -- a state-of-the-art mutation tool for Simulink. We show that, relying exclusively on CodeBERT, BERTiMuS can generate the block-based Simulink mutation patterns documented in the literature. Further, our results indicate that: (a) BERTiMuS is complementary to FIM, and (b) when one considers a requirements-aware notion of mutation testing, BERTiMuS outperforms FIM.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-01-13T18:37:01Z",
+      "updated": "2025-01-13T18:37:01Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.07553",
+      "html_url": "https://arxiv.org/html/2501.07553",
+      "abs_url": "https://arxiv.org/abs/2501.07553",
+      "citations": 2
+    },
+    {
+      "id": "2511.14432",
+      "title": "Mutation Testing for Industrial Robotic Systems",
+      "authors": [
+        "Marcela Gonçalves dos Santos",
+        "Sylvain Hallé",
+        "Fábio Petrillo"
+      ],
+      "abstract": "Industrial robotic systems (IRS) are increasingly deployed in diverse environments, where failures can result in severe accidents and costly downtime. Ensuring the reliability of the software controlling these systems is therefore critical. Mutation testing, a technique widely used in software engineering, evaluates the effectiveness of test suites by introducing small faults, or mutants, into the code. However, traditional mutation operators are poorly suited to robotic programs, which involve message-based commands and interactions with the physical world. This paper explores the adaptation of mutation testing to IRS by defining domain-specific mutation operators that capture the semantics of robot actions and sensor readings. We propose a methodology for generating meaningful mutants at the level of high-level read and write operations, including movement, gripper actions, and sensor noise injection. An empirical study on a pick-and-place scenario demonstrates that our approach produces more informative mutants and reduces the number of invalid or equivalent cases compared to conventional operators. Results highlight the potential of mutation testing to enhance test suite quality and contribute to safer, more reliable industrial robotic systems.",
+      "categories": [
+        "cs.RO"
+      ],
+      "published": "2025-11-18T12:34:19Z",
+      "updated": "2025-11-18T12:34:19Z",
+      "pdf_url": "https://arxiv.org/pdf/2511.14432",
+      "html_url": "https://arxiv.org/html/2511.14432",
+      "abs_url": "https://arxiv.org/abs/2511.14432",
+      "citations": 0
+    },
+    {
+      "id": "2409.04831",
+      "title": "MILE: A Mutation Testing Framework of In-Context Learning Systems",
+      "authors": [
+        "Zeming Wei",
+        "Yihao Zhang",
+        "Meng Sun"
+      ],
+      "abstract": "In-context Learning (ICL) has achieved notable success in the applications of large language models (LLMs). By adding only a few input-output pairs that demonstrate a new task, the LLM can efficiently learn the task during inference without modifying the model parameters. Such mysterious ability of LLMs has attracted great research interests in understanding, formatting, and improving the in-context demonstrations, while still suffering from drawbacks like black-box mechanisms and sensitivity against the selection of examples. In this work, inspired by the foundations of adopting testing techniques in machine learning (ML) systems, we propose a mutation testing framework designed to characterize the quality and effectiveness of test data for ICL systems. First, we propose several mutation operators specialized for ICL demonstrations, as well as corresponding mutation scores for ICL test sets. With comprehensive experiments, we showcase the effectiveness of our framework in evaluating the reliability and quality of ICL test suites. Our code is available at https://github.com/weizeming/MILE.",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "published": "2024-09-07T13:51:42Z",
+      "updated": "2024-09-07T13:51:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.04831",
+      "html_url": "https://arxiv.org/html/2409.04831",
+      "abs_url": "https://arxiv.org/abs/2409.04831",
+      "citations": 2
+    },
+    {
+      "id": "2501.12862",
+      "title": "Mutation-Guided LLM-based Test Generation at Meta",
+      "authors": [
+        "Christopher Foster",
+        "Abhishek Gulati",
+        "Mark Harman",
+        "Inna Harper",
+        "Ke Mao",
+        "Jillian Ritchey",
+        "Hervé Robert",
+        "Shubho Sengupta"
+      ],
+      "abstract": "This paper describes Meta's ACH system for mutation-guided LLM-based test generation. ACH generates relatively few mutants (aka simulated faults), compared to traditional mutation testing. Instead, it focuses on generating currently undetected faults that are specific to an issue of concern. From these currently uncaught faults, ACH generates tests that can catch them, thereby `killing' the mutants and consequently hardening the platform against regressions. We use privacy concerns to illustrate our approach, but ACH can harden code against {\\em any} type of regression. In total, ACH was applied to 10,795 Android Kotlin classes in 7 software platforms deployed by Meta, from which it generated 9,095 mutants and 571 privacy-hardening test cases. ACH also deploys an LLM-based equivalent mutant detection agent that achieves a precision of 0.79 and a recall of 0.47 (rising to 0.95 and 0.96 with simple pre-processing). ACH was used by Messenger and WhatsApp test-a-thons where engineers accepted 73% of its tests, judging 36% to privacy relevant. We conclude that ACH hardens code against specific concerns and that, even when its tests do not directly tackle the specific concern, engineers find them useful for their other benefits.",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "published": "2025-01-22T13:14:02Z",
+      "updated": "2025-01-22T13:14:02Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.12862",
+      "html_url": "https://arxiv.org/html/2501.12862",
+      "abs_url": "https://arxiv.org/abs/2501.12862",
+      "citations": 23
+    },
+    {
+      "id": "2208.06018",
+      "title": "A Probabilistic Framework for Mutation Testing in Deep Neural Networks",
+      "authors": [
+        "Florian Tambon",
+        "Foutse Khomh",
+        "Giuliano Antoniol"
+      ],
+      "abstract": "Context: Mutation Testing (MT) is an important tool in traditional Software Engineering (SE) white-box testing. It aims to artificially inject faults in a system to evaluate a test suite's capability to detect them, assuming that the test suite defects finding capability will then translate to real faults. If MT has long been used in SE, it is only recently that it started gaining the attention of the Deep Learning (DL) community, with researchers adapting it to improve the testability of DL models and improve the trustworthiness of DL systems.\n  Objective: If several techniques have been proposed for MT, most of them neglected the stochasticity inherent to DL resulting from the training phase. Even the latest MT approaches in DL, which propose to tackle MT through a statistical approach, might give inconsistent results. Indeed, as their statistic is based on a fixed set of sampled training instances, it can lead to different results across instances set when results should be consistent for any instance.\n  Methods: In this work, we propose a Probabilistic Mutation Testing (PMT) approach that alleviates the inconsistency problem and allows for a more consistent decision on whether a mutant is killed or not.\n  Results: We show that PMT effectively allows a more consistent and informed decision on mutations through evaluation using three models and eight mutation operators used in previously proposed MT methods. We also analyze the trade-off between the approximation error and the cost of our method, showing that relatively small error can be achieved for a manageable cost.\n  Conclusion: Our results showed the limitation of current MT practices in DNN and the need to rethink them. We believe PMT is the first step in that direction which effectively removes the lack of consistency across test executions of previous methods caused by the stochasticity of DNN training.",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ],
+      "published": "2022-08-11T19:45:14Z",
+      "updated": "2022-08-11T19:45:14Z",
+      "pdf_url": "https://arxiv.org/pdf/2208.06018",
+      "html_url": "https://arxiv.org/html/2208.06018",
+      "abs_url": "https://arxiv.org/abs/2208.06018",
+      "citations": 18
+    },
+    {
+      "id": "2603.23441",
+      "title": "MuSe: a Mutation Testing Plugin for the Remix IDE",
+      "authors": [
+        "Gerardo Iuliano",
+        "Daniele Carangelo",
+        "Carmine Calabrese",
+        "Dario Di Nucci"
+      ],
+      "abstract": "Mutation testing is a technique to assess the effectiveness of test suites by introducing artificial faults into programs. Although mutation testing plugins are available for many platforms and languages, none is currently available for Remix-IDE, the most widely used Integrated Development Environment for the entire contract development journey, used by users of all knowledge levels, and serves as a learning lab for teaching and experimenting with Ethereum. The quality and security of smart contracts are crucial in blockchain systems, as even minor issues can result in substantial financial losses. This paper proposes MuSe, a mutation testing plugin for the Remix-IDE. MuSe includes traditional, Solidity-specific, and security-oriented mutation operators. Its integration into the Remix-IDE eliminates the need for additional setup and lowers the entry barrier. As a result, developers and researchers can immediately leverage mutation testing to assess the effectiveness of their test suites and identify potential issues in smart contracts. We provide a demo video showing MuSe: https://www.youtube.com/watch?v=MIFk9exTDu0 and its repository: https://github.com/GerardoIuliano/MuSe-Remix-Plugin.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-03-24T17:13:23Z",
+      "updated": "2026-03-24T17:13:23Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.23441",
+      "html_url": "https://arxiv.org/html/2603.23441",
+      "abs_url": "https://arxiv.org/abs/2603.23441",
+      "citations": 0
+    },
+    {
+      "id": "2203.06910",
+      "title": "Investigating Coverage Guided Fuzzing with Mutation Testing",
+      "authors": [
+        "Ruixiang Qian",
+        "Quanjun Zhang",
+        "Chunrong Fang",
+        "Lihua Guo"
+      ],
+      "abstract": "Coverage guided fuzzing (CGF) is an effective testing technique which has detected hundreds of thousands of bugs from various software applications. It focuses on maximizing code coverage to reveal more bugs during fuzzing. However, a higher coverage does not necessarily imply a better fault detection capability. Triggering a bug involves not only exercising the specific program path but also reaching interesting program states in that path. In this paper, we use mutation testing to improve CGF in detecting bugs. We use mutation scores as feedback to guide fuzzing towards detecting bugs rather than just covering code. To evaluate our approach, we conduct a well-designed experiment on 5 benchmarks. We choose the state-of-the-art fuzzing technique Zest as baseline and construct two modified techniques on it using our approach. The experimental results show that our approach can improve CGF in both code coverage and bug detection.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-03-14T08:01:59Z",
+      "updated": "2022-05-01T04:11:28Z",
+      "pdf_url": "https://arxiv.org/pdf/2203.06910",
+      "html_url": "https://arxiv.org/html/2203.06910",
+      "abs_url": "https://arxiv.org/abs/2203.06910",
+      "citations": 11
+    },
+    {
+      "id": "2601.19088",
+      "title": "Hybrid Fault-Driven Mutation Testing for Python",
+      "authors": [
+        "Saba Alimadadi",
+        "Golnaz Gharachorlu"
+      ],
+      "abstract": "Mutation testing is an effective technique for assessing the effectiveness of test suites by systematically injecting artificial faults into programs. However, existing mutation testing techniques fall short in capturing many types of common faults in dynamically typed languages like Python. In this paper, we introduce a novel set of seven mutation operators that are inspired by prevalent anti-patterns in Python programs, designed to complement the existing general-purpose operators and broaden the spectrum of simulated faults. We propose a mutation testing technique that utilizes a hybrid of static and dynamic analyses to mutate Python programs based on these operators while minimizing equivalent mutants. We implement our approach in a tool called PyTation and evaluate it on 13 open-source Python applications. Our results show that PyTation generates mutants that complement those from general-purpose tools, exhibiting distinct behaviour under test execution and uncovering inadequacies in high-coverage test suites. We further demonstrate that PyTation produces a high proportion of unique mutants, a low cross-kill rate, and a low test overlap ratio relative to baseline tools, highlighting its novel fault model. PyTation also incurs few equivalent mutants, aided by dynamic analysis heuristics.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2026-01-27T01:49:38Z",
+      "updated": "2026-01-27T01:49:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.19088",
+      "html_url": "https://arxiv.org/html/2601.19088",
+      "abs_url": "https://arxiv.org/abs/2601.19088",
+      "citations": 0
+    },
+    {
+      "id": "2104.07441",
+      "title": "On the Use of Mutation in Injecting Test Order-Dependency",
+      "authors": [
+        "Sarra Habchi",
+        "Maxime Cordy",
+        "Mike Papadakis",
+        "Yves Le Traon"
+      ],
+      "abstract": "Background: Test flakiness is identified as a major issue that compromises the regression testing process of complex software systems. Flaky tests manifest non-deterministic behaviour, send confusing signals to developers, and break their trust in test suites. Both industrial reports and research studies highlighted the negative impact of flakiness on software quality and developers' productivity. While researchers strive to devise solutions that could help developers addressing test flakiness, the elaboration and assessment of these solutions are hindered by the lack of datasets large enough to leverage learning techniques. Aim: To address this lack, we conduct an exploratory study that investigates a new mean for producing datasets of flaky tests. Method: We propose an approach that relies on program mutation to inject flakiness in software tests. In particular, we plan to delete helper statements from tests to make their outcomes order-dependent, i.e., pass in certain running orders but fail in other orders. We intend to apply our mutation-based approach to a set of 14 Java projects to assess the effectiveness of test mutation in injecting order-dependency and generate a new dataset that could be used to study flakiness.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-04-15T13:21:12Z",
+      "updated": "2021-04-15T13:21:12Z",
+      "pdf_url": "https://arxiv.org/pdf/2104.07441",
+      "html_url": "https://arxiv.org/html/2104.07441",
+      "abs_url": "https://arxiv.org/abs/2104.07441",
+      "citations": 8
+    },
+    {
+      "id": "2301.05651",
+      "title": "Mutation Testing of Deep Reinforcement Learning Based on Real Faults",
+      "authors": [
+        "Florian Tambon",
+        "Vahid Majdinasab",
+        "Amin Nikanjam",
+        "Foutse Khomh",
+        "Giuliano Antonio"
+      ],
+      "abstract": "Testing Deep Learning (DL) systems is a complex task as they do not behave like traditional systems would, notably because of their stochastic nature. Nonetheless, being able to adapt existing testing techniques such as Mutation Testing (MT) to DL settings would greatly improve their potential verifiability. While some efforts have been made to extend MT to the Supervised Learning paradigm, little work has gone into extending it to Reinforcement Learning (RL) which is also an important component of the DL ecosystem but behaves very differently from SL. This paper builds on the existing approach of MT in order to propose a framework, RLMutation, for MT applied to RL. Notably, we use existing taxonomies of faults to build a set of mutation operators relevant to RL and use a simple heuristic to generate test cases for RL. This allows us to compare different mutation killing definitions based on existing approaches, as well as to analyze the behavior of the obtained mutation operators and their potential combinations called Higher Order Mutation(s) (HOM). We show that the design choice of the mutation killing definition can affect whether or not a mutation is killed as well as the generated test cases. Moreover, we found that even with a relatively small number of test cases and operators we manage to generate HOM with interesting properties which can enhance testing capability in RL systems.",
+      "categories": [
+        "cs.LG",
+        "cs.SE"
+      ],
+      "published": "2023-01-13T16:45:56Z",
+      "updated": "2023-01-13T16:45:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2301.05651",
+      "html_url": "https://arxiv.org/html/2301.05651",
+      "abs_url": "https://arxiv.org/abs/2301.05651",
+      "citations": 12
+    },
+    {
+      "id": "2210.17215",
+      "title": "Mutation Testing Optimisations using the Clang Front-end",
+      "authors": [
+        "Sten Vercammen",
+        "Serge Demeyer",
+        "Markus Borg",
+        "Niklas Pettersson",
+        "Görel Hedin"
+      ],
+      "abstract": "Mutation testing is the state-of-the-art technique for assessing the fault detection capacity of a test suite. Unfortunately, a full mutation analysis is often prohibitively expensive. The CppCheck project for instance, demands a build time of 5.8 minutes and a test execution time of 17 seconds on our desktop computer. An unoptimised mutation analysis, for 55,000 generated mutants took 11.8 days in total, of which 4.3 days is spent on (re)compiling the project. In this paper we present a feasibility study, investigating how a number of optimisation strategies can be implemented based on the Clang front-end. These optimisation strategies allow to eliminate the compilation and execution overhead in order to support efficient mutation testing for the C language family. We provide a proof-of-concept tool that achieves a speedup of between 2x and 30x. We make a detailed analysis of the speedup induced by the optimisations, elaborate on the lessons learned and point out avenues for further improvements.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-10-31T10:53:41Z",
+      "updated": "2022-10-31T10:53:41Z",
+      "pdf_url": "https://arxiv.org/pdf/2210.17215",
+      "html_url": "https://arxiv.org/html/2210.17215",
+      "abs_url": "https://arxiv.org/abs/2210.17215",
+      "citations": 5
+    },
+    {
+      "id": "2105.03626",
+      "title": "SuMo: A Mutation Testing Strategy for Solidity Smart Contracts",
+      "authors": [
+        "Morena Barboni",
+        "Andrea Morichetta",
+        "Andrea Polini"
+      ],
+      "abstract": "Smart Contracts are software programs that are deployed and executed within a blockchain infrastructure. Due to their immutable nature, directly resulting from the specific characteristics of the deploying infrastructure, smart contracts must be thoroughly tested before their release. Testing is one of the main activities that can help to improve the reliability of a smart contract, so as to possibly prevent considerable loss of valuable assets. It is therefore important to provide the testers with tools that permit them to assess the activity they performed. Mutation testing is a powerful approach for assessing the fault-detection capability of a test suite. In this paper, we propose SuMo, a novel mutation testing tool for Ethereum Smart Contracts. SuMo implements a set of 44 mutation operators that were designed starting from the latest Solidity documentation, and from well-known mutation testing tools. These allow to simulate a wide variety of faults that can be made by smart contract developers. The set of operators was designed to limit the generation of stillborn mutants, which slow down the mutation testing process and limit the usability of the tool. We report a first evaluation of SuMo on open-source projects for which test suites were available. The results we got are encouraging, and they suggest that SuMo can effectively help developers to deliver more reliable smart contracts.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-05-08T08:03:00Z",
+      "updated": "2021-05-08T08:03:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2105.03626",
+      "html_url": "https://arxiv.org/html/2105.03626",
+      "abs_url": "https://arxiv.org/abs/2105.03626",
+      "citations": 19
+    },
+    {
+      "id": "2504.05738",
+      "title": "MioHint: LLM-assisted Mutation for Whitebox API Testing",
+      "authors": [
+        "Jia Li",
+        "Jiacheng Shen",
+        "Yuxin Su",
+        "Michael R. Lyu"
+      ],
+      "abstract": "Cloud applications heavily rely on APIs to communicate with each other and exchange data. To ensure the reliability of cloud applications, cloud providers widely adopt API testing techniques. Unfortunately, existing API testing approaches are insufficient to reach strict conditions, a problem known as fitness plateaus, due to the lack of gradient provided by coverage metrics. To address this issue, we propose MioHint, a novel white-box API testing approach that leverages the code comprehension capabilities of Large Language Model (LLM) to boost API testing. The key challenge of LLM-based API testing lies in system-level testing, which emphasizes the dependencies between requests and targets across functions and files, thereby making the entire codebase the object of analysis. However, feeding the entire codebase to an LLM is impractical due to its limited context length and short memory. MioHint addresses this challenge by synergizing static analysis with LLMs. We retrieve relevant code with data-dependency analysis at the statement level, including def-use analysis for variables used in the target and function expansion for subfunctions called by the target.\n  To evaluate the effectiveness of our method, we conducted experiments across 16 real-world REST API services. The findings reveal that MioHint achieves an average increase of 4.95% absolute in line coverage compared to the baseline, EvoMaster, alongside a remarkable factor of 67x improvement in mutation accuracy. Furthermore, our method successfully covers over 57% of hard-to-cover targets while in baseline the coverage is less than 10%.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-04-08T07:14:51Z",
+      "updated": "2026-03-05T11:02:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2504.05738",
+      "html_url": "https://arxiv.org/html/2504.05738",
+      "abs_url": "https://arxiv.org/abs/2504.05738",
+      "citations": 5
+    },
+    {
+      "id": "2003.00791",
+      "title": "Design of Mutation Operators for Testing Geographic Information Systems",
+      "authors": [
+        "Suilen H. Alvarado"
+      ],
+      "abstract": "In this article, we propose the definition of specific mutation operators for testing Geographic Information Systems. We describe the process for applying the operators and generating mutants, and present a case study where these mutation operators are applied to two real-world applications.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-02-28T14:00:34Z",
+      "updated": "2020-02-28T14:00:34Z",
+      "pdf_url": "https://arxiv.org/pdf/2003.00791",
+      "html_url": "https://arxiv.org/html/2003.00791",
+      "abs_url": "https://arxiv.org/abs/2003.00791",
+      "citations": 0
+    },
+    {
+      "id": "2103.08480",
+      "title": "Extreme mutation testing in practice: An industrial case study",
+      "authors": [
+        "Maik Betka",
+        "Stefan Wagner"
+      ],
+      "abstract": "Mutation testing is used to evaluate the effectiveness of test suites. In recent years, a promising variation called extreme mutation testing emerged that is computationally less expensive. It identifies methods where their functionality can be entirely removed, and the test suite would not notice it, despite having coverage. These methods are called pseudo-tested. In this paper, we compare the execution and analysis times for traditional and extreme mutation testing and discuss what they mean in practice. We look at how extreme mutation testing impacts current software development practices and discuss open challenges that need to be addressed to foster industry adoption. For that, we conducted an industrial case study consisting of running traditional and extreme mutation testing in a large software project from the semiconductor industry that is covered by a test suite of more than 11,000 unit tests. In addition to that, we did a qualitative analysis of 25 pseudo-tested methods and interviewed two experienced developers to see how they write unit tests and gathered opinions on how useful the findings of extreme mutation testing are. Our results include execution times, scores, numbers of executed tests and mutators, reasons why methods are pseudo-tested, and an interview summary. We conclude that the shorter execution and analysis times are well noticeable in practice and show that extreme mutation testing supplements writing unit tests in conjunction with code coverage tools. We propose that pseudo-tested code should be highlighted in code coverage reports and that extreme mutation testing should be performed when writing unit tests rather than in a decoupled session. Future research should investigate how to perform extreme mutation testing while writing unit tests such that the results are available fast enough but still meaningful.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-03-15T15:59:18Z",
+      "updated": "2021-03-15T15:59:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2103.08480",
+      "html_url": "https://arxiv.org/html/2103.08480",
+      "abs_url": "https://arxiv.org/abs/2103.08480",
+      "citations": 8
+    },
+    {
+      "id": "2404.09952",
+      "title": "LLMorpheus: Mutation Testing using Large Language Models",
+      "authors": [
+        "Frank Tip",
+        "Jonathan Bell",
+        "Max Schaefer"
+      ],
+      "abstract": "In mutation testing, the quality of a test suite is evaluated by introducing faults into a program and determining whether the program's tests detect them. Most existing approaches for mutation testing involve the application of a fixed set of mutation operators, e.g., replacing a \"+\" with a \"-\", or removing a function's body. However, certain types of real-world bugs cannot easily be simulated by such approaches, limiting their effectiveness. This paper presents a technique for mutation testing where placeholders are introduced at designated locations in a program's source code and where a Large Language Model (LLM) is prompted to ask what they could be replaced with. The technique is implemented in LLMorpheus, a mutation testing tool for JavaScript, and evaluated on 13 subject packages, considering several variations on the prompting strategy, and using several LLMs. We find LLMorpheus to be capable of producing mutants that resemble existing bugs that cannot be produced by StrykerJS, a state-of-the-art mutation testing tool. Moreover, we report on the running time, cost, and number of mutants produced by LLMorpheus, demonstrating its practicality.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-04-15T17:25:14Z",
+      "updated": "2025-03-07T17:48:47Z",
+      "pdf_url": "https://arxiv.org/pdf/2404.09952",
+      "html_url": "https://arxiv.org/html/2404.09952",
+      "abs_url": "https://arxiv.org/abs/2404.09952",
+      "citations": 10
+    },
+    {
+      "id": "2502.16655",
+      "title": "Teaching Loop Testing to Young Learners with the Code Critters Mutation Testing Game",
+      "authors": [
+        "Philipp Straubinger",
+        "Lena Bloch",
+        "Gordon Fraser"
+      ],
+      "abstract": "Serious games can teach essential coding and testing concepts even to younger audiences. In the Code Critter game critters execute short snippets of block-based code while traversing the game map, and players position magical portals (akin to test oracles) at locations (akin to test inputs) to distinguish between critters executing correct code from those who execute faulty code. However, this adaptation of the tower defense genre limits code under test to basic sequences and branches, and excludes the fundamental programming concept of loops. To address this limitation, in this paper we introduce an entirely new game concept integrated into the Code Critters storyline, tasking players to test the behavior of critters collecting ingredients for a healing potion using loop-based recipes at a second-stage level. In a study involving 29 secondary school students, we observed active engagement with these new loop-integrated levels. The results highlight challenges the students face, which can inform future strategies for improving coding and testing education.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-02-23T17:18:39Z",
+      "updated": "2025-02-23T17:18:39Z",
+      "pdf_url": "https://arxiv.org/pdf/2502.16655",
+      "html_url": "https://arxiv.org/html/2502.16655",
+      "abs_url": "https://arxiv.org/abs/2502.16655",
+      "citations": 1
+    },
+    {
+      "id": "2406.09843",
+      "title": "A Comprehensive Study on Large Language Models for Mutation Testing",
+      "authors": [
+        "Bo Wang",
+        "Mingda Chen",
+        "Ming Deng",
+        "Youfang Lin",
+        "Mark Harman",
+        "Mike Papadakis",
+        "Jie M. Zhang"
+      ],
+      "abstract": "Large Language Models (LLMs) have recently been used to generate mutants in both research work and in industrial practice. However, there has been no comprehensive empirical study of their performance for this increasingly important LLM-based Software Engineering application. To address this, we conduct a comprehensive empirical study evaluating BugFarm and LLMorpheus (the two state-of-the-art LLM-based approaches), alongside seven LLMs using our newly designed prompt, including both leading open- and closed-source models, on 851 real bugs from two Java real-world bug benchmarks. Our results reveal that, compared to existing rule-based approaches, LLMs generate more diverse mutants, that are behaviorally closer to real bugs and, most importantly, with 111.29% higher fault detection. That is, 87.98% (for LLMs) vs. 41.64% (for rule-based); an increase of 46.34 percentage points. Nevertheless, our results also reveal that these impressive results for improved effectiveness come at a cost: the LLM-generated mutants have worse non-compilability, duplication, and equivalent mutant rates by 26.60, 10.14, and 3.51 percentage points, respectively. These findings are immediately actionable for both research and practice. They allow practitioners to have greater confidence in deploying LLM-based mutation, while researchers now have a baseline for the state-of-the-art, with which they can research techniques to further improve effectiveness and reduce cost.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-06-14T08:49:41Z",
+      "updated": "2026-01-22T05:39:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2406.09843",
+      "html_url": "https://arxiv.org/html/2406.09843",
+      "abs_url": "https://arxiv.org/abs/2406.09843",
+      "citations": 7
+    },
+    {
+      "id": "2103.01341",
+      "title": "What Are We Really Testing in Mutation Testing for Machine Learning? A Critical Reflection",
+      "authors": [
+        "Annibale Panichella",
+        "Cynthia C. S. Liem"
+      ],
+      "abstract": "Mutation testing is a well-established technique for assessing a test suite's quality by injecting artificial faults into production code. In recent years, mutation testing has been extended to machine learning (ML) systems, and deep learning (DL) in particular; researchers have proposed approaches, tools, and statistically sound heuristics to determine whether mutants in DL systems are killed or not. However, as we will argue in this work, questions can be raised to what extent currently used mutation testing techniques in DL are actually in line with the classical interpretation of mutation testing. We observe that ML model development resembles a test-driven development (TDD) process, in which a training algorithm (`programmer') generates a model (program) that fits the data points (test data) to labels (implicit assertions), up to a certain threshold. However, considering proposed mutation testing techniques for ML systems under this TDD metaphor, in current approaches, the distinction between production and test code is blurry, and the realism of mutation operators can be challenged. We also consider the fundamental hypotheses underlying classical mutation testing: the competent programmer hypothesis and coupling effect hypothesis. As we will illustrate, these hypotheses do not trivially translate to ML system development, and more conscious and explicit scoping and concept mapping will be needed to truly draw parallels. Based on our observations, we propose several action points for better alignment of mutation testing techniques for ML with paradigms and vocabularies of classical mutation testing.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-03-01T22:54:22Z",
+      "updated": "2021-03-01T22:54:22Z",
+      "pdf_url": "https://arxiv.org/pdf/2103.01341",
+      "html_url": "https://arxiv.org/html/2103.01341",
+      "abs_url": "https://arxiv.org/abs/2103.01341",
+      "citations": 25
+    },
+    {
+      "id": "2004.08799",
+      "title": "On the Unusual Effectiveness of Type-Aware Operator Mutations for Testing SMT Solvers",
+      "authors": [
+        "Dominik Winterer",
+        "Chengyu Zhang",
+        "Zhendong Su"
+      ],
+      "abstract": "We propose type-aware operator mutation, a simple, but unusually effective approach for testing SMT solvers. The key idea is to mutate operators of conforming types within the seed formulas to generate well-typed mutant formulas. These mutant formulas are then used as the test cases for SMT solvers. We realized type-aware operator mutation within the OpFuzz tool and used it to stress-test Z3 and CVC4, two state-of-the-art SMT solvers. Type-aware operator mutations are unusually effective: During one year of extensive testing with OpFuzz, we reported 1,092 bugs on Z3's and CVC4's respective GitHub issue trackers, out of which 819 unique bugs were confirmed and 685 of the confirmed bugs were fixed by the developers. The detected bugs are highly diverse -- we found bugs of many different types (soundness bugs, invalid model bugs, crashes, etc.), logics and solver configurations. We have further conducted an in-depth study of the bugs found by OpFuzz. The study results show that the bugs found by OpFuzz are of high quality. Many of them affect core components of the SMT solvers' codebases, and some required major changes for the developers to fix. Among the 819 confirmed bugs found by OpFuzz, 184 were soundness bugs, the most critical bugs in SMT solvers, and 489 were in the default modes of the solvers. Notably, OpFuzz found 27 critical soundness bugs in CVC4, which has proved to be a very stable SMT solver.",
+      "categories": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "published": "2020-04-19T08:47:29Z",
+      "updated": "2020-11-12T12:55:36Z",
+      "pdf_url": "https://arxiv.org/pdf/2004.08799",
+      "html_url": "https://arxiv.org/html/2004.08799",
+      "abs_url": "https://arxiv.org/abs/2004.08799",
+      "citations": 1
+    },
+    {
+      "id": "2401.05940",
+      "title": "Mutation-based Consistency Testing for Evaluating the Code Understanding Capability of LLMs",
+      "authors": [
+        "Ziyu Li",
+        "Donghwan Shin"
+      ],
+      "abstract": "Large Language Models (LLMs) have shown remarkable capabilities in processing both natural and programming languages, which have enabled various applications in software engineering, such as requirement engineering, code generation, and software testing. However, existing code generation benchmarks do not necessarily assess the code understanding performance of LLMs, especially for the subtle inconsistencies that may arise between code and its semantics described in natural language.\n  In this paper, we propose a novel method to systematically assess the code understanding performance of LLMs, particularly focusing on subtle differences between code and its descriptions, by introducing code mutations to existing code generation datasets. Code mutations are small changes that alter the semantics of the original code, creating a mismatch with the natural language description. We apply different types of code mutations, such as operator replacement and statement deletion, to generate inconsistent code-description pairs. We then use these pairs to test the ability of LLMs to correctly detect the inconsistencies.\n  We propose a new LLM testing method, called Mutation-based Consistency Testing (MCT), and conduct a case study on the two popular LLMs, GPT-3.5 and GPT-4, using the state-of-the-art code generation benchmark, HumanEval-X, which consists of six programming languages (Python, C++, Java, Go, JavaScript, and Rust). We compare the performance of the LLMs across different types of code mutations and programming languages and analyze the results. We find that the LLMs show significant variation in their code understanding performance and that they have different strengths and weaknesses depending on the mutation type and language.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2024-01-11T14:27:43Z",
+      "updated": "2024-01-11T14:27:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2401.05940",
+      "html_url": "https://arxiv.org/html/2401.05940",
+      "abs_url": "https://arxiv.org/abs/2401.05940",
+      "citations": 29
+    },
+    {
+      "id": "2508.17713",
+      "title": "Structural Mutation Based Differential Testing for FPGA Logic Synthesis Compilers",
+      "authors": [
+        "Zhihao Xu",
+        "Shikai Guo",
+        "Guilin Zhao",
+        "Siwen Wang",
+        "Qian Ma",
+        "Hui Li",
+        "Furui Zhan"
+      ],
+      "abstract": "Field Programmable Gate Arrays (FPGAs) play a crucial role in Electronic Design Automation (EDA) applications, which have been widely used in safety-critical environments, including aerospace, chip manufacturing, and medical devices. A critical step in FPGA development is logic synthesis, which enables developers to translate their software designs into hardware net lists, which facilitates the physical implementation of the chip, detailed timing and power analysis, gate-level simulation, test vector generation, and optimization and consistency checking. However, bugs or incorrect implementations in FPGA logic synthesis compilers may lead to unexpected behaviors in target wapplications, posing security risks. Therefore, it is crucial to eliminate such bugs in FPGA logic synthesis compilers. The effectiveness of existing works is still limited by its simple, blind mutation strategy. To address this challenge, we propose a guided mutation strategy based on Bayesian optimization called LSC-Fuzz to detect bugs in FPGA logic synthesis compilers. Specifically, LSC-Fuzz consists of three components: the test-program generation component, the Bayesian diversity selection component, and the equivalent check component. By performing test-program generation and Bayesian diversity selection, LSC-Fuzz generates diverse and complex HDL code, thoroughly testing the FPGA logic synthesis compilers using equivalent check to detect bugs. Through three months, LSC-Fuzz has found 16 bugs, 12 of these has been confirmed by official technical support.",
+      "categories": [
+        "cs.SE",
+        "cs.AR"
+      ],
+      "published": "2025-08-25T06:41:36Z",
+      "updated": "2025-09-23T09:39:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2508.17713",
+      "html_url": "https://arxiv.org/html/2508.17713",
+      "abs_url": "https://arxiv.org/abs/2508.17713",
+      "citations": 0
+    },
+    {
+      "id": "2509.01389",
+      "title": "Towards Multi-Platform Mutation Testing of Task-based Chatbots",
+      "authors": [
+        "Diego Clerissi",
+        "Elena Masserini",
+        "Daniela Micucci",
+        "Leonardo Mariani"
+      ],
+      "abstract": "Chatbots, also known as conversational agents, have become ubiquitous, offering services for a multitude of domains. Unlike general-purpose chatbots, task-based chatbots are software designed to prioritize the completion of tasks of the domain they handle (e.g., flight booking). Given the growing popularity of chatbots, testing techniques that can generate full conversations as test cases have emerged. Still, thoroughly testing all the possible conversational scenarios implemented by a task-based chatbot is challenging, resulting in incorrect behaviors that may remain unnoticed. To address this challenge, we proposed MUTABOT, a mutation testing approach for injecting faults in conversations and producing faulty chatbots that emulate defects that may affect the conversational aspects. In this paper, we present our extension of MUTABOT to multiple platforms (Dialogflow and Rasa), and present experiments that show how mutation testing can be used to reveal weaknesses in test suites generated by the Botium state-of-the-art test generator.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-09-01T11:36:06Z",
+      "updated": "2025-09-01T11:36:06Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.01389",
+      "html_url": "https://arxiv.org/html/2509.01389",
+      "abs_url": "https://arxiv.org/abs/2509.01389",
+      "citations": 3
+    },
+    {
+      "id": "2308.16557",
+      "title": "Effective Test Generation Using Pre-trained Large Language Models and Mutation Testing",
+      "authors": [
+        "Arghavan Moradi Dakhel",
+        "Amin Nikanjam",
+        "Vahid Majdinasab",
+        "Foutse Khomh",
+        "Michel C. Desmarais"
+      ],
+      "abstract": "One of the critical phases in software development is software testing. Testing helps with identifying potential bugs and reducing maintenance costs. The goal of automated test generation tools is to ease the development of tests by suggesting efficient bug-revealing tests. Recently, researchers have leveraged Large Language Models (LLMs) of code to generate unit tests. While the code coverage of generated tests was usually assessed, the literature has acknowledged that the coverage is weakly correlated with the efficiency of tests in bug detection. To improve over this limitation, in this paper, we introduce MuTAP for improving the effectiveness of test cases generated by LLMs in terms of revealing bugs by leveraging mutation testing. Our goal is achieved by augmenting prompts with surviving mutants, as those mutants highlight the limitations of test cases in detecting bugs. MuTAP is capable of generating effective test cases in the absence of natural language descriptions of the Program Under Test (PUTs). We employ different LLMs within MuTAP and evaluate their performance on different benchmarks. Our results show that our proposed method is able to detect up to 28% more faulty human-written code snippets. Among these, 17% remained undetected by both the current state-of-the-art fully automated test generation tool (i.e., Pynguin) and zero-shot/few-shot learning approaches on LLMs. Furthermore, MuTAP achieves a Mutation Score (MS) of 93.57% on synthetic buggy code, outperforming all other approaches in our evaluation. Our findings suggest that although LLMs can serve as a useful tool to generate test cases, they require specific post-processing steps to enhance the effectiveness of the generated test cases which may suffer from syntactic or functional errors and may be ineffective in detecting certain types of bugs and testing corner cases PUTs.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-08-31T08:48:31Z",
+      "updated": "2023-08-31T08:48:31Z",
+      "pdf_url": "https://arxiv.org/pdf/2308.16557",
+      "html_url": "https://arxiv.org/html/2308.16557",
+      "abs_url": "https://arxiv.org/abs/2308.16557",
+      "citations": 138
+    },
+    {
+      "id": "2301.03543",
+      "title": "Efficient Mutation Testing via Pre-Trained Language Models",
+      "authors": [
+        "Ahmed Khanfir",
+        "Renzo Degiovanni",
+        "Mike Papadakis",
+        "Yves Le Traon"
+      ],
+      "abstract": "Mutation testing is an established fault-based testing technique. It operates by seeding faults into the programs under test and asking developers to write tests that reveal these faults. These tests have the potential to reveal a large number of faults -- those that couple with the seeded ones -- and thus are deemed important. To this end, mutation testing should seed faults that are both \"natural\" in a sense easily understood by developers and strong (have high chances to reveal faults). To achieve this we propose using pre-trained generative language models (i.e. CodeBERT) that have the ability to produce developer-like code that operates similarly, but not exactly, as the target code. This means that the models have the ability to seed natural faults, thereby offering opportunities to perform mutation testing. We realise this idea by implementing $μ$BERT, a mutation testing technique that performs mutation testing using CodeBert and empirically evaluated it using 689 faulty program versions. Our results show that the fault revelation ability of $μ$BERT is higher than that of a state-of-the-art mutation testing (PiTest), yielding tests that have up to 17% higher fault detection potential than that of PiTest. Moreover, we observe that $μ$BERT can complement PiTest, being able to detect 47 bugs missed by PiTest, while at the same time, PiTest can find 13 bugs missed by $μ$BERT.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-01-09T17:49:59Z",
+      "updated": "2023-01-09T17:49:59Z",
+      "pdf_url": "https://arxiv.org/pdf/2301.03543",
+      "html_url": "https://arxiv.org/html/2301.03543",
+      "abs_url": "https://arxiv.org/abs/2301.03543",
+      "citations": 12
+    },
+    {
+      "id": "2410.21904",
+      "title": "Formal Analysis of Reachability, Infection and Propagation Conditions in Mutation Testing",
+      "authors": [
+        "Seyed-Hassan Mirian-Hosseinabadi"
+      ],
+      "abstract": "Finding test cases to kill the alive mutants in Mutation testing needs to calculate the Reachability, Infection and Propagation(RIP) conditions and full test specification. In this paper, a formal approach to calculate RIP conditions is proposed. The Dijkestra's weakest precondition predicate transformer (wp(_,_)) is used to calculate infection and propagation conditions. The rc(_) function is defined to calculate the reachability conditions generated by each statement. Four programs and their mutants are examined as running examples and as case studies to show the applicability of the method.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-10-29T09:49:20Z",
+      "updated": "2024-10-29T09:49:20Z",
+      "pdf_url": "https://arxiv.org/pdf/2410.21904",
+      "html_url": "https://arxiv.org/html/2410.21904",
+      "abs_url": "https://arxiv.org/abs/2410.21904",
+      "citations": 0
+    },
+    {
+      "id": "2506.02954",
+      "title": "Mutation-Guided Unit Test Generation with a Large Language Model",
+      "authors": [
+        "Guancheng Wang",
+        "Qinghua Xu",
+        "Lionel C. Briand",
+        "Kui Liu"
+      ],
+      "abstract": "Unit tests play a vital role in uncovering potential faults in software. While tools like EvoSuite focus on maximizing code coverage, recent advances in large language models (LLMs) have shifted attention toward LLM-based test generation. However, code coverage metrics -- such as line and branch coverage -- remain overly emphasized in reported research, despite being weak indicators of a test suite's fault-detection capability. In contrast, mutation score offers a more reliable and stringent measure, as demonstrated in our findings where some test suites achieve 100% coverage but only 4% mutation score. Although a few studies consider mutation score, the effectiveness of LLMs in killing mutants remains underexplored. In this paper, we propose MUTGEN, a mutation-guided, LLM-based test generation approach that incorporates mutation feedback directly into the prompt. Evaluated on 204 subjects from two benchmarks, MUTGEN significantly outperforms both EvoSuite and vanilla prompt-based strategies in terms of mutation score. Furthermore, MUTGEN introduces an iterative generation mechanism that pushes the limits of LLMs in killing additional mutants. Our study also provide insights into the limitations of LLM-based generation, analyzing the reasons for live and uncovered mutants, and the impact of different mutation operators on generation effectiveness.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-06-03T14:47:22Z",
+      "updated": "2026-02-17T17:58:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.02954",
+      "html_url": "https://arxiv.org/html/2506.02954",
+      "abs_url": "https://arxiv.org/abs/2506.02954",
+      "citations": 1
+    },
+    {
+      "id": "2109.07514",
+      "title": "DeepMetis: Augmenting a Deep Learning Test Set to Increase its Mutation Score",
+      "authors": [
+        "Vincenzo Riccio",
+        "Nargiz Humbatova",
+        "Gunel Jahangirova",
+        "Paolo Tonella"
+      ],
+      "abstract": "Deep Learning (DL) components are routinely integrated into software systems that need to perform complex tasks such as image or natural language processing. The adequacy of the test data used to test such systems can be assessed by their ability to expose artificially injected faults (mutations) that simulate real DL faults. In this paper, we describe an approach to automatically generate new test inputs that can be used to augment the existing test set so that its capability to detect DL mutations increases. Our tool DeepMetis implements a search based input generation strategy. To account for the non-determinism of the training and the mutation processes, our fitness function involves multiple instances of the DL model under test. Experimental results show that \\tool is effective at augmenting the given test set, increasing its capability to detect mutants by 63% on average. A leave-one-out experiment shows that the augmented test set is capable of exposing unseen mutants, which simulate the occurrence of yet undetected faults.",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "published": "2021-09-15T18:20:50Z",
+      "updated": "2021-09-15T18:20:50Z",
+      "pdf_url": "https://arxiv.org/pdf/2109.07514",
+      "html_url": "https://arxiv.org/html/2109.07514",
+      "abs_url": "https://arxiv.org/abs/2109.07514",
+      "citations": 49
+    },
+    {
+      "id": "2601.07593",
+      "title": "GRPO with State Mutations: Improving LLM-Based Hardware Test Plan Generation",
+      "authors": [
+        "Dimple Vijay Kochar",
+        "Nathaniel Pinckney",
+        "Guan-Ting Liu",
+        "Chia-Tung Ho",
+        "Chenhui Deng",
+        "Haoxing Ren",
+        "Brucek Khailany"
+      ],
+      "abstract": "RTL design often relies heavily on ad-hoc testbench creation early in the design cycle. While large language models (LLMs) show promise for RTL code generation, their ability to reason about hardware specifications and generate targeted test plans remains largely unexplored. We present the first systematic study of LLM reasoning capabilities for RTL verification stimuli generation, establishing a two-stage framework that decomposes test plan generation from testbench execution. Our benchmark reveals that state-of-the-art models, including DeepSeek-R1 and Claude-4.0-Sonnet, achieve only 15.7-21.7% success rates on generating stimuli that pass golden RTL designs. To improve LLM generated stimuli, we develop a comprehensive training methodology combining supervised fine-tuning with a novel reinforcement learning approach, GRPO with State Mutation (GRPO-SMu), which enhances exploration by varying input mutations. Our approach leverages a tree-based branching mutation strategy to construct training data comprising equivalent and mutated trees, moving beyond linear mutation approaches to provide rich learning signals. Training on this curated dataset, our 7B parameter model achieves a 33.3% golden test pass rate and a 13.9% mutation detection rate, representing a 17.6% absolute improvement over baseline and outperforming much larger general-purpose models. These results demonstrate that specialized training methodologies can significantly enhance LLM reasoning capabilities for hardware verification tasks, establishing a foundation for automated sub-unit testing in semiconductor design workflows.",
+      "categories": [
+        "cs.AR",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "published": "2026-01-12T14:42:42Z",
+      "updated": "2026-01-12T14:42:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2601.07593",
+      "html_url": "https://arxiv.org/html/2601.07593",
+      "abs_url": "https://arxiv.org/abs/2601.07593",
+      "citations": 1
+    },
+    {
+      "id": "2005.11532",
+      "title": "The Threat to the Validity of Predictive Mutation Testing: The Impact of Uncovered Mutants",
+      "authors": [
+        "Alireza Aghamohammadi",
+        "Seyed-Hassan Mirian-Hosseinabadi"
+      ],
+      "abstract": "Predictive Mutation Testing (PMT) is a technique to predict whether a mutant will be killed by using machine learning approaches. Researchers have proposed various machine learning methods for PMT under the cross-project setting. However, they did not consider the impact of uncovered mutants. A mutant is uncovered if the statement on which the mutant is generated is not executed by any test cases. We show that uncovered mutants inflate previous PMT results. Moreover, we aim at proposing an alternative approach to improve PMT and suggesting a different interpretation for cross-project PMT. We replicated the previous PMT research. We also proposed an approach based on the combination of Random Forest and Gradient Boosting to improve the PMT results. We empirically evaluated our approach on the same 654 Java projects provided by the previous PMT literature. Our results indicate that the performance of PMT drastically decreases in terms of AUC from 0.83 to 0.51. Furthermore, PMT performs worse than random guesses on 27% of the test projects. The proposed approach improves the PMT results by achieving the average AUC value of 0.61.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-05-23T13:13:05Z",
+      "updated": "2020-05-23T13:13:05Z",
+      "pdf_url": "https://arxiv.org/pdf/2005.11532",
+      "html_url": "https://arxiv.org/html/2005.11532",
+      "abs_url": "https://arxiv.org/abs/2005.11532",
+      "citations": 2
+    },
+    {
+      "id": "2301.10412",
+      "title": "BDMMT: Backdoor Sample Detection for Language Models through Model Mutation Testing",
+      "authors": [
+        "Jiali Wei",
+        "Ming Fan",
+        "Wenjing Jiao",
+        "Wuxia Jin",
+        "Ting Liu"
+      ],
+      "abstract": "Deep neural networks (DNNs) and natural language processing (NLP) systems have developed rapidly and have been widely used in various real-world fields. However, they have been shown to be vulnerable to backdoor attacks. Specifically, the adversary injects a backdoor into the model during the training phase, so that input samples with backdoor triggers are classified as the target class. Some attacks have achieved high attack success rates on the pre-trained language models (LMs), but there have yet to be effective defense methods. In this work, we propose a defense method based on deep model mutation testing. Our main justification is that backdoor samples are much more robust than clean samples if we impose random mutations on the LMs and that backdoors are generalizable. We first confirm the effectiveness of model mutation testing in detecting backdoor samples and select the most appropriate mutation operators. We then systematically defend against three extensively studied backdoor attack levels (i.e., char-level, word-level, and sentence-level) by detecting backdoor samples. We also make the first attempt to defend against the latest style-level backdoor attacks. We evaluate our approach on three benchmark datasets (i.e., IMDB, Yelp, and AG news) and three style transfer datasets (i.e., SST-2, Hate-speech, and AG news). The extensive experimental results demonstrate that our approach can detect backdoor samples more efficiently and accurately than the three state-of-the-art defense approaches.",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.CR"
+      ],
+      "published": "2023-01-25T05:24:46Z",
+      "updated": "2023-01-25T05:24:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2301.10412",
+      "html_url": "https://arxiv.org/html/2301.10412",
+      "abs_url": "https://arxiv.org/abs/2301.10412",
+      "citations": 30
+    },
+    {
+      "id": "2112.01956",
+      "title": "Provably Valid and Diverse Mutations of Real-World Media Data for DNN Testing",
+      "authors": [
+        "Yuanyuan Yuan",
+        "Qi Pang",
+        "Shuai Wang"
+      ],
+      "abstract": "Deep neural networks (DNNs) often accept high-dimensional media data (e.g., photos, text, and audio) and understand their perceptual content (e.g., a cat). To test DNNs, diverse inputs are needed to trigger mis-predictions. Some preliminary works use byte-level mutations or domain-specific filters (e.g., foggy), whose enabled mutations may be limited and likely error-prone. SOTA works employ deep generative models to generate (infinite) inputs. Also, to keep the mutated inputs perceptually valid (e.g., a cat remains a \"cat\" after mutation), existing efforts rely on imprecise and less generalizable heuristics.\n  This study revisits two key objectives in media input mutation - perception diversity (DIV) and validity (VAL) - in a rigorous manner based on manifold, a well-developed theory capturing perceptions of high-dimensional media data in a low-dimensional space. We show important results that DIV and VAL inextricably bound each other, and prove that SOTA generative model-based methods fundamentally fail to mutate real-world media data (either sacrificing DIV or VAL). In contrast, we discuss the feasibility of mutating real-world media data with provably high DIV and VAL based on manifold.\n  We concretize the technical solution of mutating media data of various formats (images, audios, text) via a unified manner based on manifold. Specifically, when media data are projected into a low-dimensional manifold, the data can be mutated by walking on the manifold with certain directions and step sizes. When contrasted with the input data, the mutated data exhibit encouraging DIV in the perceptual traits (e.g., lying vs. standing dog) while retaining reasonably high VAL (i.e., a dog remains a dog). We implement our techniques in DEEPWALK for testing DNNs. DEEPWALK outperforms prior methods in testing comprehensiveness and can find more error-triggering inputs with higher quality.",
+      "categories": [
+        "cs.LG",
+        "cs.CR",
+        "cs.SE"
+      ],
+      "published": "2021-12-03T15:02:22Z",
+      "updated": "2023-10-24T17:28:15Z",
+      "pdf_url": "https://arxiv.org/pdf/2112.01956",
+      "html_url": "https://arxiv.org/html/2112.01956",
+      "abs_url": "https://arxiv.org/abs/2112.01956",
+      "citations": 9
+    },
+    {
+      "id": "2603.01409",
+      "title": "MIST-RL: Mutation-based Incremental Suite Testing via Reinforcement Learning",
+      "authors": [
+        "Sicheng Zhu",
+        "Jiajun Wang",
+        "Jiawei Ai",
+        "Xin Li"
+      ],
+      "abstract": "Large Language Models (LLMs) often fail to generate correct code on the first attempt, which requires using generated unit tests as verifiers to validate the solutions. Despite the success of recent verification methods, they remain constrained by a \"scaling-by-quantity\" paradigm. This brute-force approach suffers from a critical limitation: it yields diminishing returns in fault detection while causing severe test redundancy. To address this, we propose MIST-RL (Mutation-based Incremental Suite Testing via Reinforcement Learning), a framework that shifts the focus to \"scaling-by-utility\". We formulate test generation as a sequential decision process optimized via Group Relative Policy Optimization (GRPO). Specifically, we introduce a novel incremental mutation reward combined with dynamic penalties, which incentivizes the model to discover new faults while it suppresses functionally equivalent assertions. Experiments on HumanEval+ and MBPP+ demonstrate that MIST-RL outperforms state-of-the-art baselines. It achieves a +28.5% higher mutation score while reducing the number of test cases by 19.3%. Furthermore, we show that these compact, high-utility tests serve as superior verifiers, which improves downstream code reranking accuracy on HumanEval+ by 3.05% over the SOTA baseline with 10 candidate samples. The source code and data are provided in the supplementary material.",
+      "categories": [
+        "cs.AI",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "published": "2026-03-02T03:22:44Z",
+      "updated": "2026-03-02T03:22:44Z",
+      "pdf_url": "https://arxiv.org/pdf/2603.01409",
+      "html_url": "https://arxiv.org/html/2603.01409",
+      "abs_url": "https://arxiv.org/abs/2603.01409",
+      "citations": 0
+    },
+    {
+      "id": "2212.11762",
+      "title": "Keeping Mutation Test Suites Consistent and Relevant with Long-Standing Mutants",
+      "authors": [
+        "Milos Ojdanic",
+        "Mike Papadakis",
+        "Mark Harman"
+      ],
+      "abstract": "Mutation testing has been demonstrated to be one of the most powerful fault-revealing tools in the tester's tool kit. Much previous work implicitly assumed it to be sufficient to re-compute mutant suites per release. Sadly, this makes mutation results inconsistent; mutant scores from each release cannot be directly compared, making it harder to measure test improvement. Furthermore, regular code change means that a mutant suite's relevance will naturally degrade over time. We measure this degradation in relevance for 143,500 mutants in 4 non-trivial systems finding that, on overage, 52% degrade. We introduce a mutant brittleness measure and use it to audit software systems and their mutation suites. We also demonstrate how consistent-by-construction long-standing mutant suites can be identified with a 10x improvement in mutant relevance over an arbitrary test suite. Our results indicate that the research community should avoid the re-computation of mutant suites and focus, instead, on long-standing mutants, thereby improving the consistency and relevance of mutation testing.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-12-22T14:53:45Z",
+      "updated": "2022-12-22T14:53:45Z",
+      "pdf_url": "https://arxiv.org/pdf/2212.11762",
+      "html_url": "https://arxiv.org/html/2212.11762",
+      "abs_url": "https://arxiv.org/abs/2212.11762",
+      "citations": 2
+    },
+    {
+      "id": "2404.14097",
+      "title": "MMT: Mutation Testing of Java Bytecode with Model Transformation -- An Illustrative Demonstration",
+      "authors": [
+        "Christoph Bockisch",
+        "Gabriele Taentzer",
+        "Daniel Neufeld"
+      ],
+      "abstract": "Mutation testing is an approach to check the robustness of test suites. The program code is slightly changed by mutations to inject errors. A test suite is robust enough if it finds such errors. Tools for mutation testing usually integrate sets of mutation operators such as, for example, swapping arithmetic operators; modern tools typically work with compiled code such as Java bytecode. In this case, the mutations must be defined in such a way that the mutated program still can be loaded and executed. The results of mutation tests depend directly on the possible mutations. More advanced mutations and even domain-specific mutations can pose another challenge to the test suite. Since extending the classical approaches to more complex mutations is not well supported and is difficult, we propose a model-driven approach where mutations of Java bytecode can be flexibly defined by model transformation. The corresponding tool called MMT has been extended with advanced mutation operators for modifying object-oriented structures, Java-specific properties and method calls of APIs, making it the only mutation testing tool for Java bytecode that supports such mutations.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-04-22T11:33:21Z",
+      "updated": "2024-04-22T11:33:21Z",
+      "pdf_url": "https://arxiv.org/pdf/2404.14097",
+      "html_url": "https://arxiv.org/html/2404.14097",
+      "abs_url": "https://arxiv.org/abs/2404.14097",
+      "citations": 0
+    },
+    {
+      "id": "2010.13464",
+      "title": "What It Would Take to Use Mutation Testing in Industry--A Study at Facebook",
+      "authors": [
+        "Moritz Beller",
+        "Chu-Pan Wong",
+        "Johannes Bader",
+        "Andrew Scott",
+        "Mateusz Machalica",
+        "Satish Chandra",
+        "Erik Meijer"
+      ],
+      "abstract": "Traditionally, mutation testing generates an abundance of small deviations of a program, called mutants. At industrial systems the scale and size of Facebook's, doing this is infeasible. We should not create mutants that the test suite would likely fail on or that give no actionable signal to developers. To tackle this problem, in this paper, we semi-automatically learn error-inducing patterns from a corpus of common Java coding errors and from changes that caused operational anomalies at Facebook specifically. We combine the mutations with instrumentation that measures which tests exactly visited the mutated piece of code. Results on more than 15,000 generated mutants show that more than half of the generated mutants survive Facebook's rigorous test suite of unit, integration, and system tests. Moreover, in a case study with 26 developers, all but two found information of automatically detected test holes interesting in principle. As such, almost half of the 26 would actually act on the mutant presented to them by adapting an existing or creating a new test. The others did not for a variety of reasons often outside the scope of mutation testing. It remains a practical challenge how we can include such external information to increase the true actionability rate on mutants.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2020-10-26T10:03:58Z",
+      "updated": "2021-01-27T16:43:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2010.13464",
+      "html_url": "https://arxiv.org/html/2010.13464",
+      "abs_url": "https://arxiv.org/abs/2010.13464",
+      "citations": 55
+    },
+    {
+      "id": "2510.02718",
+      "title": "Using Fourier Analysis and Mutant Clustering to Accelerate DNN Mutation Testing",
+      "authors": [
+        "Ali Ghanbari",
+        "Sasan Tavakkol"
+      ],
+      "abstract": "Deep neural network (DNN) mutation analysis is a promising approach to evaluating test set adequacy. Due to the large number of generated mutants that must be tested on large datasets, mutation analysis is costly. In this paper, we present a technique, named DM#, for accelerating DNN mutation testing using Fourier analysis. The key insight is that DNN outputs are real-valued functions suitable for Fourier analysis that can be leveraged to quantify mutant behavior using only a few data points. DM# uses the quantified mutant behavior to cluster the mutants so that the ones with similar behavior fall into the same group. A representative from each group is then selected for testing, and the result of the test, e.g., whether the mutant is killed or survived, is reused for all other mutants represented by the selected mutant, obviating the need for testing other mutants. 14 DNN models of sizes ranging from thousands to millions of parameters, trained on different datasets, are used to evaluate DM# and compare it to several baseline techniques. Our results provide empirical evidence on the effectiveness of DM# in accelerating mutation testing by 28.38%, on average, at the average cost of only 0.72% error in mutation score. Moreover, on average, DM# incurs 11.78, 15.16, and 114.36 times less mutation score error compared to random mutant selection, boundary sample selection, and random sample selection techniques, respectively, while generally offering comparable speed-up.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-10-03T04:36:42Z",
+      "updated": "2025-10-03T04:36:42Z",
+      "pdf_url": "https://arxiv.org/pdf/2510.02718",
+      "html_url": "https://arxiv.org/html/2510.02718",
+      "abs_url": "https://arxiv.org/abs/2510.02718",
+      "citations": 1
+    },
+    {
+      "id": "2112.14566",
+      "title": "Mutation Testing in Evolving Systems: Studying the relevance of mutants to code evolution",
+      "authors": [
+        "Milos Ojdanic",
+        "Ezekiel Soremekun",
+        "Renzo Degiovanni",
+        "Mike Papadakis",
+        "Yves Le Traon"
+      ],
+      "abstract": "When software evolves, opportunities for introducing faults appear. Therefore, it is important to test the evolved program behaviors during each evolution cycle. We conduct an exploratory study to investigate the properties of commit-relevant mutants, i.e., the test elements of commit-aware mutation testing, by offering a general definition and an experimental approach to identify them. We thus, aim at investigating the prevalence, location, comparative advantages of commit-aware mutation testing over time (i.e., the program evolution) and the predictive power of several commit-related features to understand the essential properties for its best-effort application case. Our approach utilizes the impact of mutants and the effects of one mutant on another in capturing and analyzing the implicit interactions between the changed and unchanged code parts. The study analyses millions of mutants (over 10 million), 288 commits, five (5) different open-source software projects involving over 68,213 CPU days of computation and sets a ground truth where we perform our analysis. Our analysis shows that commit-relevant mutants are located mainly outside of program commit change (81%), while an effective selection of commit-relevant mutants can reduce the number of mutants by up to 93%. In addition, we demonstrate that commit relevant mutation testing is significantly more effective and efficient than state-of-the-art baselines. Our analysis of the predictive power of mutants and commit-related features in predicting commit-relevant mutants found that most proxy features do not reliably predict commit-relevant mutants. This empirical study highlights the properties of commit-relevant mutants and demonstrates the importance of identifying and selecting commit-relevant mutants when testing evolving software systems.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-12-29T14:19:46Z",
+      "updated": "2021-12-29T14:19:46Z",
+      "pdf_url": "https://arxiv.org/pdf/2112.14566",
+      "html_url": "https://arxiv.org/html/2112.14566",
+      "abs_url": "https://arxiv.org/abs/2112.14566",
+      "citations": 15
+    },
+    {
+      "id": "2404.09246",
+      "title": "Engaging Young Learners with Testing Using the Code Critters Mutation Game",
+      "authors": [
+        "Philipp Straubinger",
+        "Lena Bloch",
+        "Gordon Fraser"
+      ],
+      "abstract": "Everyone learns to code nowadays. Writing code, however, does not go without testing, which unfortunately rarely seems to be taught explicitly. Testing is often not deemed important enough or is just not perceived as sufficiently exciting. Testing can be exciting: In this paper, we introduce Code Critters, a serious game designed to teach testing concepts engagingly. In the style of popular tower defense games, players strategically position magical portals that need to distinguish between creatures exhibiting the behavior described by correct code from those that are mutated, and thus faulty. When placing portals, players are implicitly testing: They choose test inputs (i.e., where to place portals), as well as test oracles (i.e., what behavior to expect), and they observe test executions as the creatures wander across the landscape passing the players' portals. An empirical study involving 40 children demonstrates that they actively engage with Code Critters. Their positive feedback provides evidence that they enjoyed playing the game, and some of the children even continued to play Code Critters at home, outside the educational setting of our study.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-04-14T13:14:17Z",
+      "updated": "2024-04-14T13:14:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2404.09246",
+      "html_url": "https://arxiv.org/html/2404.09246",
+      "abs_url": "https://arxiv.org/abs/2404.09246",
+      "citations": 3
+    },
+    {
+      "id": "2203.03289",
+      "title": "$μ$BERT: Mutation Testing using Pre-Trained Language Models",
+      "authors": [
+        "Renzo Degiovanni",
+        "Mike Papadakis"
+      ],
+      "abstract": "We introduce $μ$BERT, a mutation testing tool that uses a pre-trained language model (CodeBERT) to generate mutants. This is done by masking a token from the expression given as input and using CodeBERT to predict it. Thus, the mutants are generated by replacing the masked tokens with the predicted ones. We evaluate $μ$BERT on 40 real faults from Defects4J and show that it can detect 27 out of the 40 faults, while the baseline (PiTest) detects 26 of them. We also show that $μ$BERT can be 2 times more cost-effective than PiTest, when the same number of mutants are analysed. Additionally, we evaluate the impact of $μ$BERT's mutants when used by program assertion inference techniques, and show that they can help in producing better specifications. Finally, we discuss about the quality and naturalness of some interesting mutants produced by $μ$BERT during our experimental evaluation.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2022-03-07T11:04:26Z",
+      "updated": "2022-03-07T11:04:26Z",
+      "pdf_url": "https://arxiv.org/pdf/2203.03289",
+      "html_url": "https://arxiv.org/html/2203.03289",
+      "abs_url": "https://arxiv.org/abs/2203.03289",
+      "citations": 32
+    },
+    {
+      "id": "2409.02905",
+      "title": "State Machine Mutation-based Testing Framework for Wireless Communication Protocols",
+      "authors": [
+        "Syed Md Mukit Rashid",
+        "Tianwei Wu",
+        "Kai Tu",
+        "Abdullah Al Ishtiaq",
+        "Ridwanul Hasan Tanvir",
+        "Yilu Dong",
+        "Omar Chowdhury",
+        "Syed Rafiul Hussain"
+      ],
+      "abstract": "This paper proposes Proteus, a protocol state machine, property-guided, and budget-aware automated testing approach for discovering logical vulnerabilities in wireless protocol implementations. Proteus maintains its budget awareness by generating test cases (i.e., each being a sequence of protocol messages) that are not only meaningful (i.e., the test case mostly follows the desirable protocol flow except for some controlled deviations) but also have a high probability of violating the desirable properties. To demonstrate its effectiveness, we evaluated Proteus in two different protocol implementations, namely 4G LTE and BLE, across 23 consumer devices (11 for 4G LTE and 12 for BLE). Proteus discovered 25 unique issues, including 112 instances. Affected vendors have positively acknowledged 14 vulnerabilities through 5 CVEs.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2024-09-04T17:47:39Z",
+      "updated": "2024-10-02T23:48:24Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.02905",
+      "html_url": "https://arxiv.org/html/2409.02905",
+      "abs_url": "https://arxiv.org/abs/2409.02905",
+      "citations": 8
+    },
+    {
+      "id": "2409.14968",
+      "title": "Mutation-Based Deep Learning Framework Testing Method in JavaScript Environment",
+      "authors": [
+        "Yinglong Zou",
+        "Juan Zhai",
+        "Chunrong Fang",
+        "Jiawei Liu",
+        "Tao Zheng",
+        "Zhenyu Chen"
+      ],
+      "abstract": "In recent years, Deep Learning (DL) applications in JavaScript environment have become increasingly popular. As the infrastructure for DL applications, JavaScript DL frameworks play a crucial role in the development and deployment. It is essential to ensure the quality of JavaScript DL frameworks. However, the bottleneck of limited computational resources in the JavaScript environment brings new challenges to framework testing. Specifically, JavaScript DL frameworks are equipped with various optimization mechanisms (e.g., cache reuse, inference acceleration) to overcome the bottleneck of limited computational resources. These optimization mechanisms are overlooked by existing methods, resulting in many bugs in JavaScript DL frameworks being missed. To address the above challenges, we propose a mutation-based JavaScript DL framework testing method named DLJSFuzzer. DLJSFuzzer designs 13 tensor mutation rules targeting the cache reuse mechanism to generate test input tensors. Besides, DLJSFuzzer designs eight model mutation rules targeting the inference acceleration mechanism to generate test input models. To evaluate the effectiveness of DLJSFuzzer, we conduct experiments on the most widely-used JavaScript DL framework, TensorFlow.js. The experimental results show that DLJSFuzzer outperforms state-of-the-art methods in both effectiveness and efficiency. DLJSFuzzer successfully detects 21 unique crashes and 126 unique NaN \u0026 Inconsistency bugs. All detected crashes have been reported to the open-source community, with 12 of them already confirmed by developers. Additionally, DLJSFuzzer has improved by over 47% in model generation efficiency and over 91% in bug detection efficiency compared to all baselines.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-09-23T12:37:56Z",
+      "updated": "2024-09-23T12:37:56Z",
+      "pdf_url": "https://arxiv.org/pdf/2409.14968",
+      "html_url": "https://arxiv.org/html/2409.14968",
+      "abs_url": "https://arxiv.org/abs/2409.14968",
+      "citations": 3
+    },
+    {
+      "id": "2501.09846",
+      "title": "MuFF: Stable and Sensitive Post-training Mutation Testing for Deep Learning",
+      "authors": [
+        "Jinhan Kim",
+        "Nargiz Humbatova",
+        "Gunel Jahangirova",
+        "Shin Yoo",
+        "Paolo Tonella"
+      ],
+      "abstract": "Rapid adoptions of Deep Learning (DL) in a broad range of fields led to the development of specialised testing techniques for DL systems, including DL mutation testing. However, existing post-training DL mutation techniques often generate unstable mutants across multiple training repetitions and multiple applications of the same mutation operator. Additionally, while extremely efficient, they generate mutants without taking into account the mutants' sensitivity and killability, resulting in a large number of ineffective mutants compared to pre-training mutants. In this paper, we present a new efficient post-training DL mutation technique, named MuFF, designed to ensure the stability of the mutants and capable of generating killable and sensitive mutants. MuFF implements an automated stability check and introduces two mutation operators, named weight and neuron inhibitors. Our extensive empirical experiments show that MuFF generates mutants with 60%pt and 25%pt higher sensitivity compared to DeepMutation++ and DeepCrime, respectively, while also producing mutants that are more stable than those of DeepMutation++ and different from the mutants of DeepCrime. Moreover, MuFF preserves the benefits of the post-training mutation technique, being 61 times faster than DeepCrime in generating mutants.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-01-16T21:29:34Z",
+      "updated": "2025-01-22T13:04:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.09846",
+      "html_url": "https://arxiv.org/html/2501.09846",
+      "abs_url": "https://arxiv.org/abs/2501.09846",
+      "citations": 2
+    },
+    {
+      "id": "2511.11999",
+      "title": "WITNESS: A lightweight and practical approach to fine-grained predictive mutation testing",
+      "authors": [
+        "Zeyu Lu",
+        "Peng Zhang",
+        "Chun Yong Chong",
+        "Shan Gao",
+        "Yibiao Yang",
+        "Yanhui Li",
+        "Lin Chen",
+        "Yuming Zhou"
+      ],
+      "abstract": "Existing fine-grained predictive mutation testing studies predominantly rely on deep learning, which faces two critical limitations in practice: (1) Exorbitant computational costs. The deep learning models adopted in these studies demand significant computational resources for training and inference acceleration. This introduces high costs and undermines the cost-reduction goal of predictive mutation testing. (2) Constrained applicability. Although modern mutation testing tools generate mutants both inside and outside methods, current fine-grained predictive mutation testing approaches handle only inside-method mutants. As a result, they cannot predict outside-method mutants, limiting their applicability in real-world scenarios. We propose WITNESS, a new fine-grained predictive mutation testing approach. WITNESS adopts a twofold design: (1) With collected features from both inside-method and outside-method mutants, WITNESS is suitable for all generated mutants. (2) Instead of using computationally expensive deep learning, WITNESS employs lightweight classical machine learning models for training and prediction. This makes it more cost-effective and enabling straightforward explanations of the decision-making processes behind the adopted models. Evaluations on Defects4J projects show that WITNESS consistently achieves state-of-the-art predictive performance across different scenarios. Additionally, WITNESS significantly enhances the efficiency of kill matrix prediction. Post-hoc analysis reveals that features incorporating information from before and after the mutation are the most important among those used in WITNESS. Test case prioritization based on the predicted kill matrix shows that WITNESS delivers results much closer to those obtained by using the actual kill matrix, outperforming baseline approaches.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-11-15T02:38:00Z",
+      "updated": "2025-11-15T02:38:00Z",
+      "pdf_url": "https://arxiv.org/pdf/2511.11999",
+      "html_url": "https://arxiv.org/html/2511.11999",
+      "abs_url": "https://arxiv.org/abs/2511.11999",
+      "citations": 0
+    },
+    {
+      "id": "2503.24100",
+      "title": "Fuzzing-based Mutation Testing of C/C++ Software in Cyber-Physical Systems",
+      "authors": [
+        "Jaekwon Lee",
+        "Fabrizio Pastore",
+        "Lionel Briand"
+      ],
+      "abstract": "Mutation testing can help minimize the delivery of faulty software. Therefore, it is a recommended practice for developing embedded software in safety-critical cyber-physical systems (CPS). However, state-of-the-art mutation testing techniques for C and C++ software, which are common languages for CPS, depend on symbolic execution. Unfortunately, symbolic execution's limitations hinder its applicability (e.g., systems with black-box components).\n  We propose relying on fuzz testing, which has demonstrated its effectiveness for C and C++ software. Fuzz testing tools automatically create test inputs that explore program branches in various ways, exercising statements in different program states, and thus enabling the detection of mutants, which is our objective.\n  We empirically evaluated our approach using software components from operational satellite systems. Our assessment shows that our approach can detect between 40% and 90% of the mutants not detected by developers' test suites. Further, we empirically determined that the best results are obtained by integrating the Clang compiler, a memory address sanitizer, and relying on laf-intel instrumentation to collect coverage and guide fuzzing. Our approach detects a significantly higher percentage of live mutants compared to symbolic execution, with an increase of up to 50 percentage points; further, we observed that although the combination of fuzzing and symbolic execution leads to additional mutants being killed, the benefits are minimal (a gain of less than one percentage point).",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-03-31T13:55:27Z",
+      "updated": "2025-07-03T15:23:17Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.24100",
+      "html_url": "https://arxiv.org/html/2503.24100",
+      "abs_url": "https://arxiv.org/abs/2503.24100",
+      "citations": 0
+    },
+    {
+      "id": "2112.14508",
+      "title": "Syntactic Vs. Semantic similarity of Artificial and Real Faults in Mutation Testing Studies",
+      "authors": [
+        "Milos Ojdanic",
+        "Aayush Garg",
+        "Ahmed Khanfir",
+        "Renzo Degiovanni",
+        "Mike Papadakis",
+        "Yves Le Traon"
+      ],
+      "abstract": "Fault seeding is typically used in controlled studies to evaluate and compare test techniques. Central to these techniques lies the hypothesis that artificially seeded faults involve some form of realistic properties and thus provide realistic experimental results. In an attempt to strengthen realism, a recent line of research uses advanced machine learning techniques, such as deep learning and Natural Language Processing (NLP), to seed faults that look like (syntactically) real ones, implying that fault realism is related to syntactic similarity. This raises the question of whether seeding syntactically similar faults indeed results in semantically similar faults and more generally whether syntactically dissimilar faults are far away (semantically) from the real ones. We answer this question by employing 4 fault-seeding techniques (PiTest - a popular mutation testing tool, IBIR - a tool with manually crafted fault patterns, DeepMutation - a learning-based fault seeded framework and CodeBERT - a novel mutation testing tool that use code embeddings) and demonstrate that syntactic similarity does not reflect semantic similarity. We also show that 60%, 47%, 43%, and 7% of the real faults of Defects4J V2 are semantically resembled by CodeBERT, PiTest, IBIR, and DeepMutation faults. We then perform an objective comparison between the techniques and find that CodeBERT and PiTest have similar fault detection capabilities that subsume IBIR and DeepMutation, and that IBIR is the most cost-effective technique. Moreover, the overall fault detection of PiTest, CodeBERT, IBIR, and DeepMutation was, on average, 54%, 53%, 37%, and 7%.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2021-12-29T11:27:08Z",
+      "updated": "2021-12-29T11:27:08Z",
+      "pdf_url": "https://arxiv.org/pdf/2112.14508",
+      "html_url": "https://arxiv.org/html/2112.14508",
+      "abs_url": "https://arxiv.org/abs/2112.14508",
+      "citations": 8
+    },
+    {
+      "id": "2506.17638",
+      "title": "Deep Learning Framework Testing via Model Mutation: How Far Are We?",
+      "authors": [
+        "Yanzhou Mu",
+        "Rong Wang",
+        "Juan Zhai",
+        "Chunrong Fang",
+        "Xiang Chen",
+        "Zhiyuan Peng",
+        "Peiran Yang",
+        "Ruixiang Qian",
+        "Shaoyu Yang",
+        "Zhenyu Chen"
+      ],
+      "abstract": "Deep Learning (DL) frameworks are a fundamental component of DL development. Therefore, the detection of DL framework defects is important and challenging. As one of the most widely adopted DL testing techniques, model mutation has recently gained significant attention. In this study, we revisit the defect detection ability of existing mutation-based testing methods and investigate the factors that influence their effectiveness. To begin with, we reviewed existing methods and observed that many of them mutate DL models (e.g., changing their parameters) without any customization, ignoring the unique challenges in framework testing. Another issue with these methods is their limited effectiveness, characterized by a high rate of false positives caused by illegal mutations arising from the use of generic, non-customized mutation operators. Moreover, we tracked the defects identified by these methods and discovered that most of them were ignored by developers. Motivated by these observations, we investigate the effectiveness of existing mutation-based testing methods in detecting important defects that have been authenticated by framework developers. We begin by collecting defect reports from three popular frameworks and classifying them based on framework developers' ratings to build a comprehensive dataset. We then perform an in-depth analysis to uncover valuable insights. Based on our findings, we propose optimization strategies to address the shortcomings of existing approaches. Following these optimizations, we identified seven new defects, four of which were confirmed by developers as high-priority issues, with three resolved. In summary, we identified 39 unique defects across just 23 models, of which 31 were confirmed by developers, and eight have been fixed.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-06-21T08:44:33Z",
+      "updated": "2025-07-07T16:10:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2506.17638",
+      "html_url": "https://arxiv.org/html/2506.17638",
+      "abs_url": "https://arxiv.org/abs/2506.17638",
+      "citations": 0
+    },
+    {
+      "id": "2408.15150",
+      "title": "muPRL: A Mutation Testing Pipeline for Deep Reinforcement Learning based on Real Faults",
+      "authors": [
+        "Deepak-George Thomas",
+        "Matteo Biagiola",
+        "Nargiz Humbatova",
+        "Mohammad Wardat",
+        "Gunel Jahangirova",
+        "Hridesh Rajan",
+        "Paolo Tonella"
+      ],
+      "abstract": "Reinforcement Learning (RL) is increasingly adopted to train agents that can deal with complex sequential tasks, such as driving an autonomous vehicle or controlling a humanoid robot. Correspondingly, novel approaches are needed to ensure that RL agents have been tested adequately before going to production. Among them, mutation testing is quite promising, especially under the assumption that the injected faults (mutations) mimic the real ones.\n  In this paper, we first describe a taxonomy of real RL faults obtained by repository mining. Then, we present the mutation operators derived from such real faults and implemented in the tool muPRL. Finally, we discuss the experimental results, showing that muPRL is effective at discriminating strong from weak test generators, hence providing useful feedback to developers about the adequacy of the generated test scenarios.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-08-27T15:45:13Z",
+      "updated": "2024-08-27T15:45:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2408.15150",
+      "html_url": "https://arxiv.org/html/2408.15150",
+      "abs_url": "https://arxiv.org/abs/2408.15150",
+      "citations": 7
+    },
+    {
+      "id": "2507.04360",
+      "title": "DevMuT: Testing Deep Learning Framework via Developer Expertise-Based Mutation",
+      "authors": [
+        "Yanzhou Mu",
+        "Juan Zhai",
+        "Chunrong Fang",
+        "Xiang Chen",
+        "Zhixiang Cao",
+        "Peiran Yang",
+        "Yinglong Zou",
+        "Tao Zheng",
+        "Zhenyu Chen"
+      ],
+      "abstract": "Deep learning (DL) frameworks are the fundamental infrastructure for various DL applications. Framework defects can profoundly cause disastrous accidents, thus requiring sufficient detection. In previous studies, researchers adopt DL models as test inputs combined with mutation to generate more diverse models. Though these studies demonstrate promising results, most detected defects are considered trivial (i.e., either treated as edge cases or ignored by the developers). To identify important bugs that matter to developers, we propose a novel DL framework testing method DevMuT, which generates models by adopting mutation operators and constraints derived from developer expertise. DevMuT simulates developers'common operations in development and detects more diverse defects within more stages of the DL model lifecycle (e.g., model training and inference). We evaluate the performance of DevMuT on three widely used DL frameworks (i.e., PyTorch, JAX, and Mind- Spore) with 29 DL models from nine types of industry tasks. The experiment results show that DevMuT outperforms state-of-the-art baselines: it can achieve at least 71.68% improvement on average in the diversity of generated models and 28.20% improvement on average in the legal rates of generated models. Moreover, DevMuT detects 117 defects, 63 of which are confirmed, 24 are fixed, and eight are of high value confirmed by developers. Finally, DevMuT has been deployed in the MindSpore community since December 2023. These demonstrate the effectiveness of DevMuT in detecting defects that are close to the real scenes and are of concern to developers.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-07-06T11:48:04Z",
+      "updated": "2025-07-06T11:48:04Z",
+      "pdf_url": "https://arxiv.org/pdf/2507.04360",
+      "html_url": "https://arxiv.org/html/2507.04360",
+      "abs_url": "https://arxiv.org/abs/2507.04360",
+      "citations": 6
+    },
+    {
+      "id": "2503.08182",
+      "title": "Mutation Testing via Iterative Large Language Model-Driven Scientific Debugging",
+      "authors": [
+        "Philipp Straubinger",
+        "Marvin Kreis",
+        "Stephan Lukasczyk",
+        "Gordon Fraser"
+      ],
+      "abstract": "Large Language Models (LLMs) can generate plausible test code. Intuitively they generate this by imitating tests seen in their training data, rather than reasoning about execution semantics. However, such reasoning is important when applying mutation testing, where individual tests need to demonstrate differences in program behavior between a program and specific artificial defects (mutants). In this paper, we evaluate whether Scientific Debugging, which has been shown to help LLMs when debugging, can also help them to generate tests for mutants. In the resulting approach, LLMs form hypotheses about how to kill specific mutants, and then iteratively generate and refine tests until they succeed, all with detailed explanations for each step. We compare this method to three baselines: (1) directly asking the LLM to generate tests, (2) repeatedly querying the LLM when tests fail, and (3) search-based test generation with Pynguin. Our experiments evaluate these methods based on several factors, including mutation score, code coverage, success rate, and the ability to identify equivalent mutants. The results demonstrate that LLMs, although requiring higher computation cost, consistently outperform Pynguin in generating tests with better fault detection and coverage. Importantly, we observe that the iterative refinement of test cases is important for achieving high-quality test suites.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-03-11T08:47:13Z",
+      "updated": "2025-03-11T08:47:13Z",
+      "pdf_url": "https://arxiv.org/pdf/2503.08182",
+      "html_url": "https://arxiv.org/html/2503.08182",
+      "abs_url": "https://arxiv.org/abs/2503.08182",
+      "citations": 6
+    },
+    {
+      "id": "2309.02395",
+      "title": "Mind the Gap: The Difference Between Coverage and Mutation Score Can Guide Testing Efforts",
+      "authors": [
+        "Kush Jain",
+        "Goutamkumar Tulajappa Kalburgi",
+        "Claire Le Goues",
+        "Alex Groce"
+      ],
+      "abstract": "An \"adequate\" test suite should effectively find all inconsistencies between a system's requirements/specifications and its implementation. Practitioners frequently use code coverage to approximate adequacy, while academics argue that mutation score may better approximate true (oracular) adequacy coverage. High code coverage is increasingly attainable even on large systems via automatic test generation, including fuzzing. In light of all of these options for measuring and improving testing effort, how should a QA engineer spend their time? We propose a new framework for reasoning about the extent, limits, and nature of a given testing effort based on an idea we call the oracle gap, or the difference between source code coverage and mutation score for a given software element. We conduct (1) a large-scale observational study of the oracle gap across popular Maven projects, (2) a study that varies testing and oracle quality across several of those projects and (3) a small-scale observational study of highly critical, well-tested code across comparable blockchain projects. We show that the oracle gap surfaces important information about the extent and quality of a test effort beyond either adequacy metric alone. In particular, it provides a way for practitioners to identify source files where it is likely a weak oracle tests important code.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2023-09-05T17:05:52Z",
+      "updated": "2023-09-05T17:05:52Z",
+      "pdf_url": "https://arxiv.org/pdf/2309.02395",
+      "html_url": "https://arxiv.org/html/2309.02395",
+      "abs_url": "https://arxiv.org/abs/2309.02395",
+      "citations": 0
+    },
+    {
+      "id": "2501.01873",
+      "title": "Latent Mutants: A large-scale study on the Interplay between mutation testing and software evolution",
+      "authors": [
+        "Jeongju Sohn",
+        "Ezekiel Soremekun",
+        "Michail Papadakis"
+      ],
+      "abstract": "In this paper we apply mutation testing in an in-time fashion, i.e., across multiple project releases. Thus, we investigate how the mutants of the current version behave in the future versions of the programs. We study the characteristics of what we call latent mutants, i.e., the mutants that are live in one version and killed in later revisions, and explore whether they are predictable with these properties. We examine 131,308 mutants generated by Pitest on 13 open-source projects. Around 11.2% of these mutants are live, and 3.5% of them are latent, manifesting in 104 days on average. Using the mutation operators and change-related features we successfully demonstrate that these latent mutants are identifiable, predicting them with an accuracy of 86% and a balanced accuracy of 67% using a simple random forest classifier.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2025-01-03T15:44:38Z",
+      "updated": "2025-01-03T15:44:38Z",
+      "pdf_url": "https://arxiv.org/pdf/2501.01873",
+      "html_url": "https://arxiv.org/html/2501.01873",
+      "abs_url": "https://arxiv.org/abs/2501.01873",
+      "citations": 0
+    },
+    {
+      "id": "2509.09158",
+      "title": "IoTFuzzSentry: A Protocol Guided Mutation Based Fuzzer for Automatic Vulnerability Testing in Commercial IoT Devices",
+      "authors": [
+        "Priyanka Rushikesh Chaudhary",
+        "Rajib Ranjan Maiti"
+      ],
+      "abstract": "Protocol fuzzing is a scalable and cost-effective technique for identifying security vulnerabilities in deployed Internet of Things devices. During their operational phase, IoT devices often run lightweight servers to handle user interactions, such as video streaming or image capture in smart cameras. Implementation flaws in transport or application-layer security mechanisms can expose IoT devices to a range of threats, including unauthorized access and data leakage. This paper addresses the challenge of uncovering such vulnerabilities by leveraging protocol fuzzing techniques that inject crafted transport and application-layer packets into IoT communications. We present a mutation-based fuzzing tool, named IoTFuzzSentry, to identify specific non-trivial vulnerabilities in commercial IoT devices. We further demonstrate how these vulnerabilities can be exploited in real-world scenarios. We integrated our fuzzing tool into a well-known testing tool Cotopaxi and evaluated it with commercial-off-the-shelf IoT devices such as IP cameras and Smart Plug. Our evaluation revealed vulnerabilities categorized into 4 types (IoT Access Credential Leakage, Sneak IoT Live Video Stream, Creep IoT Live Image, IoT Command Injection) and we show their exploits using three IoT devices. We have responsibly disclosed all these vulnerabilities to the respective vendors. So far, we have published two CVEs, CVE-2024-41623 and CVE-2024-42531, and one is awaiting. To extend the applicability, we have investigated the traffic of six additional IoT devices and our analysis shows that these devices can have similar vulnerabilities, due to the presence of a similar set of application protocols. We believe that IoTFuzzSentry has the potential to discover unconventional security threats and allow IoT vendors to strengthen the security of their commercialized IoT devices automatically with negligible overhead.",
+      "categories": [
+        "cs.CR"
+      ],
+      "published": "2025-09-11T05:40:18Z",
+      "updated": "2025-09-11T05:40:18Z",
+      "pdf_url": "https://arxiv.org/pdf/2509.09158",
+      "html_url": "https://arxiv.org/html/2509.09158",
+      "abs_url": "https://arxiv.org/abs/2509.09158",
+      "citations": 0
+    },
+    {
+      "id": "2402.05102",
+      "title": "You Can REST Now: Automated REST API Documentation and Testing via LLM-Assisted Request Mutations",
+      "authors": [
+        "Alix Decrop",
+        "Xavier Devroey",
+        "Mike Papadakis",
+        "Pierre-Yves Schobbens",
+        "Gilles Perrouin"
+      ],
+      "abstract": "REST APIs are prevalent among web service implementations, easing interoperability through the HTTP protocol. API testers and users exploit the widely adopted OpenAPI Specification (OAS), a machine-readable standard to document REST APIs. However, documenting APIs is a time-consuming and error-prone task, and existing documentation is not always complete, publicly accessible, or up-to-date. This situation limits the efficiency of testing tools and hinders human comprehension. Large Language Models (LLMs) offer the potential to automatically infer API documentation, using their colossal training data. In this paper, we present RESTSpecIT, the first automated approach that infers documentation and performs black-box testing of REST APIs by leveraging LLMs. Our approach requires minimal user input compared to state-of-the-art tools; Given an API name and an LLM access key, RESTSpecIT generates API request seeds and mutates them with data returned by the LLM. The tool then analyzes API responses for documentation inference and testing purposes. RESTSpecIT utilizes an in-context prompt masking strategy, requiring no prior model fine-tuning. We evaluate the quality of our tool with three state-of-the-art LLMs: DeepSeek V3, GPT-4.1, and GPT-3.5. Our evaluation demonstrates that RESTSpecIT can (1) infer documentation with 88.62% of routes and 89.25% of query parameters found on average, (2) discover undocumented API data, (3) operate efficiently (in terms of model costs, requests sent, runtime), and (4) assist REST API testing by uncovering server errors and generating valid OpenAPI Specification inputs for testing tools.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-02-07T18:55:41Z",
+      "updated": "2025-07-15T19:25:43Z",
+      "pdf_url": "https://arxiv.org/pdf/2402.05102",
+      "html_url": "https://arxiv.org/html/2402.05102",
+      "abs_url": "https://arxiv.org/abs/2402.05102",
+      "citations": 2
+    },
+    {
+      "id": "2404.13945",
+      "title": "How Multi-Modal LLMs Reshape Visual Deep Learning Testing? A Comprehensive Study Through the Lens of Image Mutation",
+      "authors": [
+        "Liwen Wang",
+        "Yuanyuan Yuan",
+        "Ao Sun",
+        "Zongjie Li",
+        "Pingchuan Ma",
+        "Daoyuan Wu",
+        "Shuai Wang"
+      ],
+      "abstract": "Visual deep learning (VDL) systems have shown significant success in real-world applications like image recognition, object detection, and autonomous driving. To evaluate the reliability of VDL, a mainstream approach is software testing, which requires diverse mutations over image semantics. The rapid development of multi-modal large language models (MLLMs) has introduced revolutionary image mutation potentials through instruction-driven methods. Users can now freely describe desired mutations and let MLLMs generate the mutated images. Hence, parallel to large language models' (LLMs) recent success in traditional software fuzzing, one may also expect MLLMs to be promising for VDL testing in terms of offering unified, diverse, and complex image mutations.\n  However, the quality and applicability of MLLM-based mutations in VDL testing remain largely unexplored. We present the first study, aiming to assess MLLMs' adequacy from 1) the semantic validity of MLLM mutated images, 2) the alignment of MLLM mutated images with their text instructions (prompts), and 3) the faithfulness of how different mutations preserve semantics that are ought to remain unchanged. With large-scale human studies and quantitative evaluations, we identify MLLM's promising potentials in expanding the covered semantics of image mutations. Notably, while SoTA MLLMs (e.g., GPT-4V) fail to support or perform worse in editing existing semantics in images (as in traditional mutations like rotation), they generate high-quality test inputs using \"semantic-replacement\" mutations (e.g., \"dress a dog with clothes\"), which bring extra semantics to images; these were infeasible for past approaches. Hence, we view MLLM-based mutations as a vital complement to traditional mutations, and advocate future VDL testing tasks to combine MLLM-based methods and traditional image mutations for comprehensive and reliable testing.",
+      "categories": [
+        "cs.SE"
+      ],
+      "published": "2024-04-22T07:41:41Z",
+      "updated": "2024-12-21T15:21:27Z",
+      "pdf_url": "https://arxiv.org/pdf/2404.13945",
+      "html_url": "https://arxiv.org/html/2404.13945",
+      "abs_url": "https://arxiv.org/abs/2404.13945",
+      "citations": 0
+    }
+  ]
+}

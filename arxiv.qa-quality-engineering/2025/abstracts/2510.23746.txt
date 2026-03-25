@@ -1,0 +1,31 @@
+Title: Test-Time Tuned Language Models Enable End-to-end De Novo Molecular Structure Generation from MS/MS Spectra
+Authors: Laura Mismetti, Marvin Alberts, Andreas Krause, Mara Graziani
+ID: 2510.23746
+URL: https://arxiv.org/abs/2510.23746
+
+Abstract:
+Tandem Mass Spectrometry is a cornerstone technique for identifying unknown
+small molecules in fields such as metabolomics, natural product discovery and
+environmental analysis. However, certain aspects, such as the probabilistic
+fragmentation process and size of the chemical space, make structure elucidation
+from such spectra highly challenging, particularly when there is a shift between
+the deployment and training conditions. Current methods rely on database
+matching of previously observed spectra of known molecules and multi-step
+pipelines that require intermediate fingerprint prediction or expensive fragment
+annotations. We introduce a novel end-to-end framework based on a transformer
+model that directly generates molecular structures from an input tandem mass
+spectrum and its corresponding molecular formula, thereby eliminating the need
+for manual annotations and intermediate steps, while leveraging transfer
+learning from simulated data. To further address the challenge of
+out-of-distribution spectra, we introduce a test-time tuning strategy that
+dynamically adapts the pre-trained model to novel experimental data. Our
+approach achieves a Top-1 accuracy of 3.16% on the MassSpecGym benchmark and
+12.88% on the NPLIB1 datasets, considerably outperforming conventional
+fine-tuning. Baseline approaches are also surpassed by 27% and 67% respectively.
+Even when the exact reference structure is not recovered, the generated
+candidates are chemically informative, exhibiting high structural plausibility
+as reflected by strong Tanimoto similarity to the ground truth. Notably, we
+observe a relative improvement in average Tanimoto similarity of 83% on NPLIB1
+and 64% on MassSpecGym compared to state-of-the-art methods. Our framework
+combines simplicity with adaptability, generating accurate molecular candidates
+that offer valuable guidance for expert interpretation of unseen spectra.

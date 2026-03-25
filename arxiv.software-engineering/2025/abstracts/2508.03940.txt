@@ -1,0 +1,25 @@
+Title: FairPOT: Balancing AUC Performance and Fairness with Proportional Optimal Transport
+Authors: Pengxi Liu, Yi Shen, Matthew M. Engelhard, Benjamin A. Goldstein, Michael J. Pencina et al.
+ID: 2508.03940
+URL: https://arxiv.org/abs/2508.03940
+
+Abstract:
+Fairness metrics utilizing the area under the receiver operator characteristic
+curve (AUC) have gained increasing attention in high-stakes domains such as
+healthcare, finance, and criminal justice. In these domains, fairness is often
+evaluated over risk scores rather than binary outcomes, and a common challenge
+is that enforcing strict fairness can significantly degrade AUC performance. To
+address this challenge, we propose Fair Proportional Optimal Transport
+(FairPOT), a novel, model-agnostic post-processing framework that strategically
+aligns risk score distributions across different groups using optimal transport,
+but does so selectively by transforming a controllable proportion, i.e., the
+top-lambda quantile, of scores within the disadvantaged group. By varying
+lambda, our method allows for a tunable trade-off between reducing AUC
+disparities and maintaining overall AUC performance. Furthermore, we extend
+FairPOT to the partial AUC setting, enabling fairness interventions to
+concentrate on the highest-risk regions. Extensive experiments on synthetic,
+public, and clinical datasets show that FairPOT consistently outperforms
+existing post-processing techniques in both global and partial AUC scenarios,
+often achieving improved fairness with slight AUC degradation or even positive
+gains in utility. The computational efficiency and practical adaptability of
+FairPOT make it a promising solution for real-world deployment.

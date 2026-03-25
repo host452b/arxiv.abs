@@ -1,0 +1,31 @@
+Title: Developer-LLM Conversations: An Empirical Study of Interactions and Generated Code Quality
+Authors: Suzhen Zhong, Ying Zou, Bram Adams
+ID: 2509.10402
+URL: https://arxiv.org/abs/2509.10402
+
+Abstract:
+Large Language Models (LLMs) are becoming integral to modern software
+development workflows, assisting developers with code generation, API
+explanation, and iterative problem-solving through natural language
+conversations. Despite widespread adoption, there is limited understanding of
+how developers interact with LLMs in practice and how these conversational
+dynamics influence task outcomes, code quality, and software engineering
+workflows. To address this, we leverage CodeChat, a large dataset comprising
+82,845 real-world developer-LLM conversations, containing 368,506 code snippets
+generated across over 20 programming languages, derived from the WildChat
+dataset. We find that LLM responses are substantially longer than developer
+prompts, with a median token-length ratio of 14:1. Multi-turn conversations
+account for 68% of the dataset and often evolve due to shifting requirements,
+incomplete prompts, or clarification requests. Topic analysis identifies web
+design (9.6% of conversations) and neural network training (8.7% of
+conversations) as the most frequent LLM-assisted tasks. Evaluation across five
+languages (i.e., Python, JavaScript, C++, Java, and C#) reveals prevalent and
+language-specific issues in LLM-generated code: generated Python and JavaScript
+code often include undefined variables (83.4% and 75.3% of code snippets,
+respectively); Java code lacks required comments (75.9%); C++ code frequently
+omits headers (41.1%) and C# code shows unresolved namespaces (49.2%). During a
+conversation, syntax and import errors persist across turns; however,
+documentation quality in Java improves by up to 14.7%, and import handling in
+Python improves by 3.7% over 5 turns. Prompts that point out mistakes in code
+generated in prior turns and explicitly request a fix are most effective for
+resolving errors.

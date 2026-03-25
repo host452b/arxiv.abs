@@ -1,0 +1,24 @@
+Title: SPIDER: Fuzzing for Stateful Performance Issues in the ONOS Software-Defined Network Controller
+Authors: Ao Li, Rohan Padhye, Vyas Sekar
+ID: 2209.04026
+URL: https://arxiv.org/abs/2209.04026
+
+Abstract:
+Performance issues in software-defined network (SDN) controllers can have
+serious impacts on the performance and availability of networks. In this paper,
+we consider a special class of SDN vulnerabilities called stateful performance
+issues (SPIs), where a sequence of initial input messages drives the controller
+into a state such that its performance degrades pathologically when processing
+subsequent messages. Uncovering SPIs in large complex software such as the
+widely used ONOS SDN controller is challenging because of the large state space
+of input sequences and the complex software architecture of inter-dependent
+network services. We present SPIDER, a practical fuzzing framework for
+identifying SPIs in this setting. The key contribution in our work is to
+leverage the event-driven modular software architecture of the SDN controller to
+(a) separately target each network service for SPIs and (b) use static analysis
+to identify all services whose event handlers can affect the state of the target
+service directly or indirectly. SPIDER implements this novel dependency-aware
+modular performance fuzzing approach for 157 network services in ONOS and
+successfully identifies 10 new performance issues. We present an evaluation of
+SPIDER against prior work, a sensitivity analysis of design decisions, and case
+studies of two uncovered SPIs.

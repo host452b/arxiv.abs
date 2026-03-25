@@ -1,0 +1,31 @@
+Title: Tracing Optimization for Performance Modeling and Regression Detection
+Authors: Kaveh Shahedi, Heng Li, Maxime Lamothe, Foutse Khomh
+ID: 2411.17548
+URL: https://arxiv.org/abs/2411.17548
+
+Abstract:
+Software performance modeling plays a crucial role in developing and maintaining
+software systems. A performance model analytically describes the relationship
+between the performance of a system and its runtime activities. This process
+typically examines various aspects of a system's runtime behavior, such as the
+execution frequency of functions or methods, to forecast performance metrics
+like program execution time. By using performance models, developers can predict
+expected performance and thereby effectively identify and address unexpected
+performance regressions when actual performance deviates from the model's
+predictions. One common and precise method for capturing performance behavior is
+software tracing, which involves instrumenting the execution of a program,
+either at the kernel level (e.g., system calls) or application level (e.g.,
+function calls). However, due to the nature of tracing, it can be highly
+resource-intensive, making it impractical for production environments where
+resources are limited. In this work, we propose statistical approaches to reduce
+tracing overhead by identifying and excluding performance-insensitive code
+regions, particularly application-level functions, from tracing while still
+building accurate performance models that can capture performance degradations.
+By selecting an optimal set of functions to be traced, we can construct
+optimized performance models that achieve an R-2 score of up to 99% and,
+sometimes, outperform full tracing models (models using non-optimized tracing
+data), while significantly reducing the tracing overhead by more than 80% in
+most cases. Our optimized performance models can also capture performance
+regressions in our studied programs effectively, demonstrating their usefulness
+in real-world scenarios. Our approach is fully automated, making it ready to be
+used in production environments with minimal human effort.

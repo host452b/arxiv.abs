@@ -1,0 +1,23 @@
+Title: Quantifying the uncertainty of model-based synthetic image quality metrics
+Authors: Ciaran Bench, Spencer A. Thomas
+ID: 2504.03623
+URL: https://arxiv.org/abs/2504.03623
+
+Abstract:
+The quality of synthetically generated images (e.g. those produced by diffusion
+models) are often evaluated using information about image contents encoded by
+pretrained auxiliary models. For example, the Fréchet Inception Distance (FID)
+uses embeddings from an InceptionV3 model pretrained to classify ImageNet. The
+effectiveness of this feature embedding model has considerable impact on the
+trustworthiness of the calculated metric (affecting its suitability in several
+domains, including medical imaging). Here, uncertainty quantification (UQ) is
+used to provide a heuristic measure of the trustworthiness of the feature
+embedding model and an FID-like metric called the Fréchet Autoencoder Distance
+(FAED). We apply Monte Carlo dropout to a feature embedding model (convolutional
+autoencoder) to model the uncertainty in its embeddings. The distribution of
+embeddings for each input are then used to compute a distribution of FAED
+values. We express uncertainty as the predictive variance of the embeddings as
+well as the standard deviation of the computed FAED values. We find that their
+magnitude correlates with the extent to which the inputs are out-of-distribution
+to the model's training data, providing some validation of its ability to assess
+the trustworthiness of the FAED.

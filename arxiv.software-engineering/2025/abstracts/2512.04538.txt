@@ -1,0 +1,27 @@
+Title: Completion by Comprehension: Guiding Code Generation with Multi-Granularity Understanding
+Authors: Xinkui Zhao, Rongkai Liu, Yifan Zhang, Chen Zhi, Lufei Zhang et al.
+ID: 2512.04538
+URL: https://arxiv.org/abs/2512.04538
+
+Abstract:
+As code completion task from function-level to repository-level, leveraging
+contextual information from large-scale codebases becomes a core challenge.
+However, existing retrieval-augmented generation (RAG) methods typically treat
+code as plain natural language, relying primarily on shallow semantic matching
+while overlooking structural semantics and code-specific dependencies. This
+limits their ability to capture control flow and underlying intent, ultimately
+constraining the quality of generated code. Therefore, we propose CoCo, a novel
+framework that enables code Completion by Comprehension of multi-granularity
+context from large-scale code repositories. CoCo employs static code analysis to
+extract structured context at the function, file, and project levels, capturing
+execution logic and semantic dependencies. It then adopts an graph-based
+multi-granularity context selection mechanism to filter out redundant
+information and remove noise. Consequently, the information is converted into
+natural language in a consistent manner, thereby functioning as explicit
+contextual prompts to guide subsequent code completion. Additionally, a
+structure-aware code re-ranker mechanism ensures alignment at both semantic and
+structural levels. Extensive experiments on CrossCodeEval and RepoEval
+benchmarks demonstrate that CoCo consistently surpasses state-of-the-art
+baselines, achieving up to 20.2% gains in EM. Moreover, the framework is
+model-agnostic and can be seamlessly integrated into existing methods, leading
+to significant performance.

@@ -1,0 +1,25 @@
+Title: MiSeRTrace: Kernel-level Request Tracing for Microservice Visibility
+Authors: Thrivikraman V, Vishnu R. Dixit, Nikhil Ram S, Vikas K. Gowda, Santhosh Kumar Vasudevan et al.
+ID: 2203.14076
+URL: https://arxiv.org/abs/2203.14076
+
+Abstract:
+With the evolution of microservice applications, the underlying architectures
+have become increasingly complex compared to their monolith counterparts. This
+mainly brings in the challenge of observability. By providing a deeper
+understanding into the functioning of distributed applications, observability
+enables improving the performance of the system by obtaining a view of the
+bottlenecks in the implementation. The observability provided by currently
+existing tools that perform dynamic tracing on distributed applications is
+limited to the user-space and requires the application to be instrumented to
+track request flows. In this paper, we present a new open-source framework
+MiSeRTrace that can trace the end-to-end path of requests entering a
+microservice application at the kernel space without requiring instrumentation
+or modification of the application. Observability at the comprehensiveness of
+the kernel space allows breaking down of various steps in activities such as
+network transfers and IO tasks, thus enabling root cause based performance
+analysis and accurate identification of hotspots. MiSeRTrace supports tracing
+user-enabled kernel events provided by frameworks such as bpftrace or ftrace and
+isolates kernel activity associated with each application request with minimal
+overheads. We then demonstrate the working of the solution with results on a
+benchmark microservice application.

@@ -1,0 +1,23 @@
+Title: The Golden Subspace: Where Efficiency Meets Generalization in Continual Test-Time Adaptation
+Authors: Guannan Lai, Da-Wei Zhou, Zhenguo Li, Han-Jia Ye
+ID: 2603.21928
+URL: https://arxiv.org/abs/2603.21928
+
+Abstract:
+Continual Test-Time Adaptation (CTTA) aims to enable models to adapt online to
+unlabeled data streams under distribution shift without accessing source data.
+Existing CTTA methods face an efficiency-generalization trade-off: updating more
+parameters improves adaptation but severely reduces online inference efficiency.
+An ideal solution is to achieve comparable adaptation with minimal feature
+updates; we call this minimal subspace the golden subspace. We prove its
+existence in a single-step adaptation setting and show that it coincides with
+the row space of the pretrained classifier. To enable online maintenance of this
+subspace, we introduce the sample-wise Average Gradient Outer Product (AGOP) as
+an efficient proxy for estimating the classifier weights without retraining.
+Building on these insights, we propose Guided Online Low-rank Directional
+adaptation (GOLD), which uses a lightweight adapter to project features onto the
+golden subspace and learns a compact scaling vector while the subspace is
+dynamically updated via AGOP. Extensive experiments on classification and
+segmentation benchmarks, including autonomous-driving scenarios, demonstrate
+that GOLD attains superior efficiency, stability, and overall performance. Our
+code is available at https://github.com/AIGNLAI/GOLD.

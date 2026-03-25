@@ -1,0 +1,26 @@
+Title: Just-In-Time Software Defect Prediction via Bi-modal Change Representation Learning
+Authors: Yuze Jiang, Beijun Shen, Xiaodong Gu
+ID: 2410.12107
+URL: https://arxiv.org/abs/2410.12107
+
+Abstract:
+For predicting software defects at an early stage, researchers have proposed
+just-in-time defect prediction (JIT-DP) to identify potential defects in code
+commits. The prevailing approaches train models to represent code changes in
+history commits and utilize the learned representations to predict the presence
+of defects in the latest commit. However, existing models merely learn editions
+in source code, without considering the natural language intentions behind the
+changes. This limitation hinders their ability to capture deeper semantics. To
+address this, we introduce a novel bi-modal change pre-training model called
+BiCC-BERT. BiCC-BERT is pre-trained on a code change corpus to learn bi-modal
+semantic representations. To incorporate commit messages from the corpus, we
+design a novel pre-training objective called Replaced Message Identification
+(RMI), which learns the semantic association between commit messages and code
+changes. Subsequently, we integrate BiCC-BERT into JIT-DP and propose a new
+defect prediction approach -- JIT-BiCC. By leveraging the bi-modal
+representations from BiCC-BERT, JIT-BiCC captures more profound change
+semantics. We train JIT-BiCC using 27,391 code changes and compare its
+performance with 8 state-of-the-art JIT-DP approaches. The results demonstrate
+that JIT-BiCC outperforms all baselines, achieving a 10.8% improvement in
+F1-score. This highlights its effectiveness in learning the bi-modal semantics
+for JIT-DP.

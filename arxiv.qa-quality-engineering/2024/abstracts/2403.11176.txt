@@ -1,0 +1,26 @@
+Title: Quality-Aware Image-Text Alignment for Opinion-Unaware Image Quality Assessment
+Authors: Lorenzo Agnolucci, Leonardo Galteri, Marco Bertini
+ID: 2403.11176
+URL: https://arxiv.org/abs/2403.11176
+
+Abstract:
+No-Reference Image Quality Assessment (NR-IQA) focuses on designing methods to
+measure image quality in alignment with human perception when a high-quality
+reference image is unavailable. Most state-of-the-art NR-IQA approaches are
+opinion-aware, i.e. they require human annotations for training. This dependency
+limits their scalability and broad applicability. To overcome this limitation,
+we propose QualiCLIP (Quality-aware CLIP), a CLIP-based self-supervised
+opinion-unaware approach that does not require human opinions. In particular, we
+introduce a quality-aware image-text alignment strategy to make CLIP generate
+quality-aware image representations. Starting from pristine images, we
+synthetically degrade them with increasing levels of intensity. Then, we train
+CLIP to rank these degraded images based on their similarity to quality-related
+antonym text prompts. At the same time, we force CLIP to generate consistent
+representations for images with similar content and the same level of
+degradation. Our experiments show that the proposed method improves over
+existing opinion-unaware approaches across multiple datasets with diverse
+distortion types. Moreover, despite not requiring human annotations, QualiCLIP
+achieves excellent performance against supervised opinion-aware methods in
+cross-dataset experiments, thus demonstrating remarkable generalization
+capabilities. The code and the model are publicly available at
+https://github.com/miccunifi/QualiCLIP.

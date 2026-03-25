@@ -1,0 +1,29 @@
+Title: Option-ID Based Elimination For Multiple Choice Questions
+Authors: Zhenhao Zhu, Bulou Liu, Qingyao Ai, Yiqun Liu
+ID: 2501.15175
+URL: https://arxiv.org/abs/2501.15175
+
+Abstract:
+Multiple choice questions (MCQs) are a popular and important task for evaluating
+large language models (LLMs). Based on common strategies people use when
+answering MCQs, the process of elimination (PoE) has been proposed as an
+effective problem-solving method. Existing PoE methods typically either have
+LLMs directly identify incorrect options or score options and replace
+lower-scoring ones with [MASK]. However, both methods suffer from
+inapplicability or suboptimal performance. To address these issues, this paper
+proposes a novel option-ID based PoE ($\text{PoE}_{\text{ID}}$).
+$\text{PoE}_{\text{ID}}$ critically incorporates a debiasing technique to
+counteract LLMs token bias, enhancing robustness over naive ID-based
+elimination. It features two strategies: $\text{PoE}_{\text{ID}}^{\text{log}}$,
+which eliminates options whose IDs have log probabilities below the average
+threshold, and $\text{PoE}_{\text{ID}}^{\text{seq}}$, which iteratively removes
+the option with the lowest ID probability. We conduct extensive experiments with
+6 different LLMs on 4 diverse datasets. The results demonstrate that
+$\text{PoE}_{\text{ID}}$, especially $\text{PoE}_{\text{ID}}^{\text{log}}$,
+significantly improves zero-shot and few-shot MCQs performance, particularly in
+datasets with more options. Our analyses demonstrate that
+$\text{PoE}_{\text{ID}}^{\text{log}}$ enhances the LLMs' confidence in selecting
+the correct option, and the option elimination strategy outperforms methods
+relying on [MASK] replacement. We further investigate the limitations of LLMs in
+directly identifying incorrect options, which stem from their inherent
+deficiencies.

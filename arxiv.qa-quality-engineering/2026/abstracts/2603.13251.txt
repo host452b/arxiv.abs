@@ -1,0 +1,22 @@
+Title: ManiBench: A Benchmark for Testing Visual-Logic Drift and Syntactic Hallucinations in Manim Code Generation
+Authors: Nabin Oli
+ID: 2603.13251
+URL: https://arxiv.org/abs/2603.13251
+
+Abstract:
+Traditional benchmarks like HumanEval and MBPP test logic and syntax
+effectively, but fail when code must produce dynamic, pedagogical visuals. We
+introduce ManiBench, a specialized benchmark evaluating LLM performance in
+generating Manim CE code, where temporal fidelity and version-aware API
+correctness are critical. ManiBench targets two key failure modes: Syntactic
+Hallucinations (valid Python referencing non-existent or deprecated Manim APIs)
+and Visual-Logic Drift (generated visuals diverging from intended mathematical
+logic through timing errors or missing causal relationships). The benchmark
+comprises 150-200 problems across five difficulty levels spanning calculus,
+linear algebra, probability, topology, and AI, grounded in analysis of
+3Blue1Brown's ManimGL source (53,000 lines, 143 scene classes). Evaluation uses
+a four-tier framework measuring Executability, Version-Conflict Error Rate,
+Alignment Score, and Coverage Score. An open-source framework automates
+evaluation across multiple models and prompting strategies. Code, data and
+benchmark suite are available at https://github.com/nabin2004/ManiBench. and the
+dataset is hosted on https://huggingface.co/datasets/nabin2004/ManiBench.

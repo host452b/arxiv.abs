@@ -1,0 +1,21 @@
+Title: Integral Continual Learning Along the Tangent Vector Field of Tasks
+Authors: Tian Yu Liu, Aditya Golatkar, Stefano Soatto, Alessandro Achille
+ID: 2211.13108
+URL: https://arxiv.org/abs/2211.13108
+
+Abstract:
+We propose a lightweight continual learning method which incorporates
+information from specialized datasets incrementally, by integrating it along the
+vector field of "generalist" models. The tangent plane to the specialist model
+acts as a generalist guide and avoids the kind of over-fitting that leads to
+catastrophic forgetting, while exploiting the convexity of the optimization
+landscape in the tangent plane. It maintains a small fixed-size memory buffer,
+as low as 0.4% of the source datasets, which is updated by simple resampling.
+Our method achieves strong performance across various buffer sizes for different
+datasets. Specifically, in the class-incremental setting we outperform the
+existing methods that do not require distillation by an average of 18.77% and
+28.48%, for Seq-CIFAR-10 and Seq-TinyImageNet respectively. Our method can
+easily be used in conjunction with existing replay-based continual learning
+methods. When memory buffer constraints are relaxed to allow storage of metadata
+such as logits, we attain an error reduction of 17.84% towards the paragon
+performance on Seq-CIFAR-10.

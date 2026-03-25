@@ -1,0 +1,27 @@
+Title: Architecture of Tianyu Software: Relative Photometry as a Case Study
+Authors: Yicheng Rui, Yifan Xuan, Shuyue Zheng, Kexin Li, Kaiming Cui et al.
+ID: 2505.09107
+URL: https://arxiv.org/abs/2505.09107
+
+Abstract:
+Tianyu telescope, an one-meter robotic optical survey instrument to be
+constructed in Lenghu, Qinghai, China, is designed for detecting transiting
+exoplanets, variable stars and transients. It requires a highly automated,
+optimally distributed, easily extendable, and highly flexible software to enable
+the data processing for the raw data at rates exceeding 500MB/s. In this work,
+we introduce the architecture of the Tianyu pipeline and use relative photometry
+as a case to demonstrate its high scalability and efficiency. This pipeline is
+tested on the data collected from Muguang observatory and Xinglong observatory.
+The pipeline demonstrates high scalability, with most processing stages
+increasing in throughput as the number of consumers grows. Compared to a single
+consumer, the median throughput of image calibration, alignment, and flux
+extraction increases by 41%, 257%, and 107% respectively when using 5 consumers,
+while image stacking exhibits limited scalability due to I/O constraints. In our
+tests, the pipeline was able to detect two transiting sources. Besides, the
+pipeline captures variability in the light curves of nine known and two
+previously unknown variable sources in the testing data. Meanwhile, the
+differential photometric precision of the light curves is near the theoretical
+limitation. These results indicate that this pipeline is suitable for detecting
+transiting exoplanets and variable stars. This work builds the fundation for
+further development of Tianyu software. Code of this work is available at
+https://github.com/ruiyicheng/Tianyu_pipeline.

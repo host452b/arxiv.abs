@@ -1,0 +1,26 @@
+Title: Harnessing Consistency for Robust Test-Time LLM Ensemble
+Authors: Zhichen Zeng, Qi Yu, Xiao Lin, Ruizhong Qiu, Xuying Ning et al.
+ID: 2510.13855
+URL: https://arxiv.org/abs/2510.13855
+
+Abstract:
+Different large language models (LLMs) exhibit diverse strengths and weaknesses,
+and LLM ensemble serves as a promising approach to integrate their complementary
+capabilities. Despite substantial progress in improving ensemble quality,
+limited attention has been paid to the robustness of ensembles against potential
+erroneous signals, which often arise from heterogeneous tokenization schemes and
+varying model expertise. Our analysis shows that ensemble failures typically
+arise from both the token level and the model level: the former reflects severe
+disagreement in token predictions, while the latter involves low confidence and
+pronounced disparities among models. In light of this, we propose CoRE, a
+plug-and-play technique that harnesses model consistency for robust LLM
+ensemble, which can be seamlessly integrated with diverse ensemble methods.
+*Token-level consistency* captures fine-grained disagreements by applying a
+low-pass filter to downweight uncertain tokens with high inconsistency, often
+due to token misalignment, thereby improving robustness at a granular level.
+*Model-level consistency* models global agreement by promoting model outputs
+with high self-confidence and minimal divergence from others, enhancing
+robustness at a coarser level. Extensive experiments across diverse benchmarks,
+model combinations, and ensemble strategies demonstrate that CoRE consistently
+improves ensemble performance and robustness. Our code is available at
+https://github.com/zhichenz98/CoRE-EACL26.

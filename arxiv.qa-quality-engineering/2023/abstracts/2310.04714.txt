@@ -1,0 +1,31 @@
+Title: Generalized Robust Test-Time Adaptation in Continuous Dynamic Scenarios
+Authors: Shuang Li, Longhui Yuan, Binhui Xie, Tao Yang
+ID: 2310.04714
+URL: https://arxiv.org/abs/2310.04714
+
+Abstract:
+Test-time adaptation (TTA) adapts the pre-trained models to test distributions
+during the inference phase exclusively employing unlabeled test data streams,
+which holds great value for the deployment of models in real-world applications.
+Numerous studies have achieved promising performance on simplistic test streams,
+characterized by independently and uniformly sampled test data originating from
+a fixed target data distribution. However, these methods frequently prove
+ineffective in practical scenarios, where both continual covariate shift and
+continual label shift occur simultaneously, i.e., data and label distributions
+change concurrently and continually over time. In this study, a more challenging
+Practical Test-Time Adaptation (PTTA) setup is introduced, which takes into
+account the concurrent presence of continual covariate shift and continual label
+shift, and we propose a Generalized Robust Test-Time Adaptation (GRoTTA) method
+to effectively address the difficult problem. We start by steadily adapting the
+model through Robust Parameter Adaptation to make balanced predictions for test
+samples. To be specific, firstly, the effects of continual label shift are
+eliminated by enforcing the model to learn from a uniform label distribution and
+introducing recalibration of batch normalization to ensure stability. Secondly,
+the continual covariate shift is alleviated by employing a source knowledge
+regularization with the teacher-student model to update parameters. Considering
+the potential information in the test stream, we further refine the balanced
+predictions by Bias-Guided Output Adaptation, which exploits latent structure in
+the feature space and is adaptive to the imbalanced label distribution.
+Extensive experiments demonstrate GRoTTA outperforms the existing competitors by
+a large margin under PTTA setting, rendering it highly conducive for adoption in
+real-world applications.

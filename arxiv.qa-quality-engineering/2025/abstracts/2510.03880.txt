@@ -1,0 +1,30 @@
+Title: Exploring Instruction Data Quality for Explainable Image Quality Assessment
+Authors: Yunhao Li, Sijing Wu, Huiyu Duan, Yucheng Zhu, Qi Jia et al.
+ID: 2510.03880
+URL: https://arxiv.org/abs/2510.03880
+
+Abstract:
+In recent years, with the rapid development of powerful multimodal large
+language models (MLLMs), explainable image quality assessment (IQA) has
+gradually become popular, aiming at providing quality-related descriptions and
+answers of images. To achieve this goal, recent methods seek to construct a
+large-scale instruction tuning dataset to empower the MLLM with quality
+perception ability following the well-known scaling law. However, a large amount
+of instruction tuning data may cause substantial computational costs and
+redundant data, which in turn will cause harm to the performance of the model.
+To cope with this problem, in this paper, we challenge the scaling law and
+systematically investigate the role of data quality of the instruction tuning
+dataset for explainable IQA. Using a powerful pre-trained MLLM, we first
+investigate the changes in model performance after fine-tuning with different
+sizes of instruction tuning data. We find that selecting a subset of the data
+set randomly using an appropriate ratio can even lead to better results than
+training with the entire instruction tuning dataset, demonstrating the
+redundancy of current explainable IQA instruction tuning data. Beyond randomly
+sampling a subset, we propose a clustering-based data selection framework with
+three stages: clustering feature extraction, cluster quota allocation, and
+cluster sampling strategy. Then we systematically analyze the choices of each
+stage and propose a simple but efficient data selection method IQA-Select for
+explainable IQA. The experimental results demonstrate that IQA-Select can
+achieve 102.1% and 103.7% performance of full fine-tuning using only 10%
+selected data in Q-Bench and AesBench respectively, significantly reducing
+computational costs while achieving better performance.

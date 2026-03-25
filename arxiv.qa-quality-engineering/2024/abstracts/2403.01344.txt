@@ -1,0 +1,23 @@
+Title: Mitigating the Bias in the Model for Continual Test-Time Adaptation
+Authors: Inseop Chung, Kyomin Hwang, Jayeon Yoo, Nojun Kwak
+ID: 2403.01344
+URL: https://arxiv.org/abs/2403.01344
+
+Abstract:
+Continual Test-Time Adaptation (CTA) is a challenging task that aims to adapt a
+source pre-trained model to continually changing target domains. In the CTA
+setting, a model does not know when the target domain changes, thus facing a
+drastic change in the distribution of streaming inputs during the test-time. The
+key challenge is to keep adapting the model to the continually changing target
+domains in an online manner. We find that a model shows highly biased
+predictions as it constantly adapts to the chaining distribution of the target
+data. It predicts certain classes more often than other classes, making
+inaccurate over-confident predictions. This paper mitigates this issue to
+improve performance in the CTA scenario. To alleviate the bias issue, we make
+class-wise exponential moving average target prototypes with reliable target
+samples and exploit them to cluster the target features class-wisely. Moreover,
+we aim to align the target distributions to the source distribution by anchoring
+the target feature to its corresponding source prototype. With extensive
+experiments, our proposed method achieves noteworthy performance gain when
+applied on top of existing CTA methods without substantial adaptation time
+overhead.

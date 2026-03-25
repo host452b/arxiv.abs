@@ -1,0 +1,28 @@
+Title: Enabling High-Performance and Energy-Efficient Hybrid Transactional/Analytical Databases with Hardware/Software Cooperation
+Authors: Amirali Boroumand, Saugata Ghose, Geraldo F. Oliveira, Onur Mutlu
+ID: 2204.11275
+URL: https://arxiv.org/abs/2204.11275
+
+Abstract:
+A growth in data volume, combined with increasing demand for real-time analysis
+(using the most recent data), has resulted in the emergence of database systems
+that concurrently support transactions and data analytics. These hybrid
+transactional and analytical processing (HTAP) database systems can support
+real-time data analysis without the high costs of synchronizing across separate
+single-purpose databases. Unfortunately, for many applications that perform a
+high rate of data updates, state-of-the-art HTAP systems incur significant
+losses in transactional (up to 74.6%) and/or analytical (up to 49.8%) throughput
+compared to performing only transactional or only analytical queries in
+isolation, due to (1) data movement between the CPU and memory, (2) data update
+propagation from transactional to analytical workloads, and (3) the cost to
+maintain a consistent view of data across the system. We propose Polynesia, a
+hardware-software co-designed system for in-memory HTAP databases that avoids
+the large throughput losses of traditional HTAP systems. Polynesia (1) divides
+the HTAP system into transactional and analytical processing islands, (2)
+implements new custom hardware that unlocks software optimizations to reduce the
+costs of update propagation and consistency, and (3) exploits
+processing-in-memory for the analytical islands to alleviate data movement
+overheads. Our evaluation shows that Polynesia outperforms three
+state-of-the-art HTAP systems, with average transactional/analytical throughput
+improvements of 1.7x/3.7x, and reduces energy consumption by 48% over the prior
+lowest-energy HTAP system.

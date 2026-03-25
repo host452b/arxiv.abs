@@ -1,0 +1,24 @@
+Title: BONSAI: Bayesian Optimization with Natural Simplicity and Interpretability
+Authors: Samuel Daulton, David Eriksson, Maximilian Balandat, Eytan Bakshy
+ID: 2602.07144
+URL: https://arxiv.org/abs/2602.07144
+
+Abstract:
+Bayesian optimization (BO) is a popular technique for sample-efficient
+optimization of black-box functions. In many applications, the parameters being
+tuned come with a carefully engineered default configuration, and practitioners
+only want to deviate from this default when necessary. Standard BO, however,
+does not aim to minimize deviation from the default and, in practice, often
+pushes weakly relevant parameters to the boundary of the search space. This
+makes it difficult to distinguish between important and spurious changes and
+increases the burden of vetting recommendations when the optimization objective
+omits relevant operational considerations. We introduce BONSAI, a default-aware
+BO policy that prunes low-impact deviations from a default configuration while
+explicitly controlling the loss in acquisition value. BONSAI is compatible with
+a variety of acquisition functions, including expected improvement and upper
+confidence bound (GP-UCB). We theoretically bound the regret incurred by BONSAI,
+showing that, under certain conditions, it enjoys the same no-regret property as
+vanilla GP-UCB. Across many real-world applications, we empirically find that
+BONSAI substantially reduces the number of non-default parameters in recommended
+configurations while maintaining competitive optimization performance, with
+little effect on wall time.

@@ -1,0 +1,22 @@
+Title: Distributed Global Structure-from-Motion with a Deep Front-End
+Authors: Ayush Baid, John Lambert, Travis Driver, Akshay Krishnan, Hayk Stepanyan et al.
+ID: 2311.18801
+URL: https://arxiv.org/abs/2311.18801
+
+Abstract:
+While initial approaches to Structure-from-Motion (SfM) revolved around both
+global and incremental methods, most recent applications rely on incremental
+systems to estimate camera poses due to their superior robustness. Though there
+has been tremendous progress in SfM `front-ends' powered by deep models learned
+from data, the state-of-the-art (incremental) SfM pipelines still rely on
+classical SIFT features, developed in 2004. In this work, we investigate whether
+leveraging the developments in feature extraction and matching helps global SfM
+perform on par with the SOTA incremental SfM approach (COLMAP). To do so, we
+design a modular SfM framework that allows us to easily combine developments in
+different stages of the SfM pipeline. Our experiments show that while
+developments in deep-learning based two-view correspondence estimation do
+translate to improvements in point density for scenes reconstructed with global
+SfM, none of them outperform SIFT when comparing with incremental SfM results on
+a range of datasets. Our SfM system is designed from the ground up to leverage
+distributed computation, enabling us to parallelize computation on multiple
+machines and scale to large scenes.

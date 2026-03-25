@@ -1,0 +1,28 @@
+Title: A Fully-Configurable Open-Source Software-Defined Digital Quantized Spiking Neural Core Architecture
+Authors: Shadi Matinizadeh, Noah Pacik-Nelson, Ioannis Polykretis, Krupa Tishbi, Suman Kumar et al.
+ID: 2404.02248
+URL: https://arxiv.org/abs/2404.02248
+
+Abstract:
+We introduce QUANTISENC, a fully configurable open-source software-defined
+digital quantized spiking neural core architecture to advance research in
+neuromorphic computing. QUANTISENC is designed hierarchically using a bottom-up
+methodology with multiple neurons in each layer and multiple layers in each
+core. The number of layers and neurons per layer can be configured via software
+in a top-down methodology to generate the hardware for a target spiking neural
+network (SNN) model. QUANTISENC uses leaky integrate and fire neurons (LIF) and
+current-based excitatory and inhibitory synapses (CUBA). The nonlinear dynamics
+of a neuron can be configured at run-time via programming its internal control
+registers. Each neuron performs signed fixed-point arithmetic with user-defined
+quantization and decimal precision. QUANTISENC supports all-to-all, one-to-one,
+and Gaussian connections between layers. Its hardware-software interface is
+integrated with a PyTorch-based SNN simulator. This integration allows to define
+and train an SNN model in PyTorch and evaluate the hardware performance (e.g.,
+area, power, latency, and throughput) through FPGA prototyping and ASIC design.
+The hardware-software interface also takes advantage of the layer-based
+architecture and distributed memory organization of QUANTISENC to enable
+pipelining by overlapping computations on streaming data. Overall, the proposed
+software-defined hardware design methodology offers flexibility similar to that
+of high-level synthesis (HLS), but provides better hardware performance with
+zero hardware development effort. We evaluate QUANTISENC using three spiking
+datasets and show its superior performance against state-of the-art designs.

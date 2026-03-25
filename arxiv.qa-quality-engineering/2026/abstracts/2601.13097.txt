@@ -1,0 +1,22 @@
+Title: RM -RF: Reward Model for Run-Free Unit Test Evaluation
+Authors: Elena Bruches, Daniil Grebenkin, Mikhail Klementev, Vadim Alperovich, Roman Derunets et al.
+ID: 2601.13097
+URL: https://arxiv.org/abs/2601.13097
+
+Abstract:
+We present RM-RF, a lightweight reward model for run-free evaluation of
+automatically generated unit tests. Instead of repeatedly compiling and
+executing candidate tests, RM-RF predicts - from source and test code alone -
+three execution-derived signals: (1) whether the augmented test suite compiles
+and runs successfully, (2) whether the generated test cases increase code
+coverage, and (3) whether the generated test cases improve the mutation kill
+rate. To train and evaluate RM-RF we assemble a multilingual dataset (Java,
+Python, Go) of focal files, test files, and candidate test additions labeled by
+an execution-based pipeline, and we release an associated dataset and
+methodology for comparative evaluation. We tested multiple model families and
+tuning regimes (zero-shot, full fine-tuning, and PEFT via LoRA), achieving an
+average F1 of 0.69 across the three targets. Compared to conventional
+compile-and-run instruments, RM-RF provides substantially lower latency and
+infrastructure cost while delivering competitive predictive fidelity, enabling
+fast, scalable feedback for large-scale test generation and RL-based code
+optimization.

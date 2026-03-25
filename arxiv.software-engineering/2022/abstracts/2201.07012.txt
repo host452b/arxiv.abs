@@ -1,0 +1,24 @@
+Title: Adversarial vulnerability of powerful near out-of-distribution detection
+Authors: Stanislav Fort
+ID: 2201.07012
+URL: https://arxiv.org/abs/2201.07012
+
+Abstract:
+There has been a significant progress in detecting out-of-distribution (OOD)
+inputs in neural networks recently, primarily due to the use of large models
+pretrained on large datasets, and an emerging use of multi-modality. We show a
+severe adversarial vulnerability of even the strongest current OOD detection
+techniques. With a small, targeted perturbation to the input pixels, we can
+change the image assignment from an in-distribution to an out-distribution, and
+vice versa, easily. In particular, we demonstrate severe adversarial
+vulnerability on the challenging near OOD CIFAR-100 vs CIFAR-10 task, as well as
+on the far OOD CIFAR-100 vs SVHN. We study the adversarial robustness of several
+post-processing techniques, including the simple baseline of Maximum of Softmax
+Probabilities (MSP), the Mahalanobis distance, and the newly proposed
+\textit{Relative} Mahalanobis distance. By comparing the loss of OOD detection
+performance at various perturbation strengths, we demonstrate the beneficial
+effect of using ensembles of OOD detectors, and the use of the \textit{Relative}
+Mahalanobis distance over other post-processing methods. In addition, we show
+that even strong zero-shot OOD detection using CLIP and multi-modality suffers
+from a severe lack of adversarial robustness as well. Our code is available at
+https://github.com/stanislavfort/adversaries_to_OOD_detection

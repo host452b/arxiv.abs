@@ -1,0 +1,26 @@
+Title: Rethinking the Value of Agent-Generated Tests for LLM-Based Software Engineering Agents
+Authors: Zhi Chen, Zhensu Sun, Yuling Shi, Chao Peng, Xiaodong Gu et al.
+ID: 2602.07900
+URL: https://arxiv.org/abs/2602.07900
+
+Abstract:
+Large Language Model (LLM) code agents increasingly resolve repository-level
+issues by iteratively editing code, invoking tools, and validating candidate
+patches. In these workflows, agents often write tests on the fly, a paradigm
+adopted by many high-ranking agents on the SWE-bench leaderboard. However, we
+observe that GPT-5.2, which writes almost no new tests, can even achieve
+performance comparable to top-ranking agents. This raises the critical question:
+whether such tests meaningfully improve issue resolution or merely mimic human
+testing practices while consuming a substantial interaction budget. To reveal
+the impact of agent-written tests, we present an empirical study that analyzes
+agent trajectories across six state-of-the-art LLMs on SWE-bench Verified. Our
+results show that while test writing is commonly adopted, but resolved and
+unresolved tasks within the same model exhibit similar test-writing frequencies
+Furthermore, these tests typically serve as observational feedback channels,
+where agents prefer value-revealing print statements significantly more than
+formal assertion-based checks. Based on these insights, we perform a controlled
+experiment by revising the prompts of four agents to either increase or reduce
+test writing. The results suggest that changes in the volume of agent-written
+tests do not significantly change final outcomes. Taken together, our study
+reveals that current test-writing practices may provide marginal utility in
+autonomous software engineering tasks.

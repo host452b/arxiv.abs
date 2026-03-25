@@ -1,0 +1,29 @@
+Title: Enhancing LLM's Ability to Generate More Repository-Aware Unit Tests Through Precise Contextual Information Injection
+Authors: Xin Yin, Chao Ni, Xinrui Li, Liushan Chen, Guojun Ma et al.
+ID: 2501.07425
+URL: https://arxiv.org/abs/2501.07425
+
+Abstract:
+Though many learning-based approaches have been proposed for unit test
+generation and achieved remarkable performance, they still have limitations in
+relying on task-specific datasets. Recently, Large Language Models (LLMs) guided
+by prompt engineering have gained attention for their ability to handle a broad
+range of tasks, including unit test generation. Despite their success, LLMs may
+exhibit hallucinations when generating unit tests for focal methods or functions
+due to their lack of awareness regarding the project's global context. These
+hallucinations may manifest as calls to non-existent methods, as well as
+incorrect parameters or return values, such as mismatched parameter types or
+numbers. While many studies have explored the role of context, they often
+extract fixed patterns of context for different models and focal methods, which
+may not be suitable for all generation processes (e.g., excessive irrelevant
+context could lead to redundancy, preventing the model from focusing on
+essential information). To overcome this limitation, we propose RATester, which
+enhances the LLM's ability to generate more repository-aware unit tests through
+global contextual information injection. To equip LLMs with global knowledge
+similar to that of human testers, we integrate the language server gopls, which
+provides essential features (e.g., definition lookup) to assist the LLM. When
+RATester encounters an unfamiliar identifier (e.g., an unfamiliar struct name),
+it first leverages gopls to fetch relevant definitions and documentation
+comments, and then uses this global knowledge to guide the LLM. By utilizing
+gopls, RATester enriches the LLM's knowledge of the project's global context,
+thereby reducing hallucinations during unit test generation.

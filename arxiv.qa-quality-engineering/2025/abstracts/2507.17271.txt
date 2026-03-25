@@ -1,0 +1,29 @@
+Title: Seed&Steer: Guiding Large Language Models with Compilable Prefix and Branch Signals for Unit Test Generation
+Authors: Shuaiyu Zhou, Zhengran Zeng, Xiaoling Zhou, Rui Xie, Shikun Zhang et al.
+ID: 2507.17271
+URL: https://arxiv.org/abs/2507.17271
+
+Abstract:
+Unit tests play a vital role in the software development lifecycle. Recent
+advances in Large Language Model (LLM)-based approaches have significantly
+improved automated test generation, garnering attention from both academia and
+industry. We revisit LLM-based unit test generation from a novel perspective by
+decoupling prefix generation and assertion generation. To characterize their
+respective challenges, we define Initialization Complexity and adopt Cyclomatic
+Complexity to measure the difficulty of prefix and assertion generation,
+revealing that the former primarily affects compilation success, while the
+latter influences test coverage. To address these challenges, we propose
+Seed&Steer, a two-step approach that combines traditional unit testing
+techniques with the capabilities of large language models. Seed&Steer leverages
+conventional unit testing tools (e.g., EvoSuite) to generate method invocations
+with high compilation success rates, which serve as seeds to guide LLMs in
+constructing effective test contexts. It then introduces branching cues to help
+LLMs explore diverse execution paths (e.g., normal, boundary, and exception
+cases) and generate assertions with high coverage. We evaluate Seed&Steer on
+five real-world Java projects against state-of-the-art baselines. Results show
+that Seed&Steer improves the compilation pass rate by approximately 7%,
+successfully compiling 792 and 887 previously failing cases on two LLMs. It also
+achieves up to ~73% branch and line coverage across focal methods of varying
+complexity, with coverage improvements ranging from 1.09* to 1.26*. Our code,
+dataset, and experimental scripts will be publicly released to support future
+research and reproducibility.

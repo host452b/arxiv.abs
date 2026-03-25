@@ -1,0 +1,29 @@
+Title: From ID-based to ID-free: Rethinking ID Effectiveness in Multimodal Collaborative Filtering Recommendation
+Authors: Guohao Li, Li Jing, Jia Wu, Xuefei Li, Kai Zhu et al.
+ID: 2507.05715
+URL: https://arxiv.org/abs/2507.05715
+
+Abstract:
+Most existing multimodal collaborative filtering recommendation (MCFRec) methods
+rely heavily on ID features and multimodal content to enhance recommendation
+performance. However, this paper reveals that ID features are effective but have
+limited benefits in multimodal collaborative filtering recommendation.
+Therefore, this paper systematically deconstruct the pros and cons of ID
+features: (i) they provide initial embedding but lack semantic richness, (ii)
+they provide a unique identifier for each user and item but hinder
+generalization to untrained data, and (iii) they assist in aligning and fusing
+multimodal features but may lead to representation shift. Based on these
+insights, this paper proposes IDFREE, an ID-free multimodal collaborative
+Filtering REcommEndation baseline. IDFREE replaces ID features with multimodal
+features and positional encodings to generate semantically meaningful ID-free
+embeddings. For ID-free multimodal collaborative filtering, it further proposes
+an adaptive similarity graph module to construct dynamic user-user and item-item
+graphs based on multimodal features. Then, an augmented user-item graph encoder
+is proposed to construct more effective user and item encoding. Finally, IDFREE
+achieves inter-multimodal alignment based on the contrastive learning and uses
+Softmax loss as recommendation loss. Basic experiments on three public datasets
+demonstrate that IDFREE outperforms existing ID-based MCFRec methods, achieving
+an average performance gain of 72.24% across standard metrics (Recall@5, 10, 20,
+50 and NDCG@5, 10, 20, 50). Exploratory and extended experiments further
+validate our findings on the limitations of ID features in MCFRec. The code is
+released at https://github.com/G-H-Li/IDFREE.

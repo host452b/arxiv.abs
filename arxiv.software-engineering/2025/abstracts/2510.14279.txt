@@ -1,0 +1,26 @@
+Title: Caruca: Effective and Efficient Specification Mining for Opaque Software Components
+Authors: Evangelos Lamprou, Seong-Heon Jung, Mayank Keoliya, Lukas Lazarek, Konstantinos Kallas et al.
+ID: 2510.14279
+URL: https://arxiv.org/abs/2510.14279
+
+Abstract:
+A wealth of state-of-the-art systems demonstrate impressive improvements in
+performance, security, and reliability on programs composed of opaque
+components, such as Unix shell commands. To reason about commands, these systems
+require partial specifications. However, creating such specifications is a
+manual, laborious, and error-prone process, limiting the practicality of these
+systems. This paper presents Caruca, a system for automatic specification mining
+for opaque commands. To overcome the challenge of language diversity across
+commands, Caruca first instruments a large language model to translate a
+command's user-facing documentation into a structured invocation syntax. Using
+this representation, Caruca explores the space of syntactically valid command
+invocations and execution environments. Caruca concretely executes each
+command-environment pair, interposing at the system-call and filesystem level to
+extract key command properties such as parallelizability and filesystem pre- and
+post-conditions. These properties can be exported in multiple specification
+formats and are immediately usable by existing systems. Applying Caruca across
+60 GNU Coreutils, POSIX, and third-party commands across several
+specification-dependent systems shows that Caruca generates correct
+specifications for all but one case, completely eliminating manual effort from
+the process and currently powering the full specifications for a
+state-of-the-art static analysis tool.

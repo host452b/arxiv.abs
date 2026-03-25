@@ -1,0 +1,29 @@
+Title: RESTRuler: Towards Automatically Identifying Violations of RESTful Design Rules in Web APIs
+Authors: Justus Bogner, Sebastian Kotstein, Daniel Abajirov, Timothy Ernst, Manuel Merkel
+ID: 2402.13710
+URL: https://arxiv.org/abs/2402.13710
+
+Abstract:
+RESTful APIs based on HTTP are one of the most important ways to make data and
+functionality available to applications and software services. However, the
+quality of the API design strongly impacts API understandability and usability,
+and many rules have been specified for this. While we have evidence for the
+effectiveness of many design rules, it is still difficult for practitioners to
+identify rule violations in their design. We therefore present RESTRuler, a
+Java-based open-source tool that uses static analysis to detect design rule
+violations in OpenAPI descriptions. The current prototype supports 14 rules that
+go beyond simple syntactic checks and partly rely on natural language
+processing. The modular architecture also makes it easy to implement new rules.
+To evaluate RESTRuler, we conducted a benchmark with over 2,300 public OpenAPI
+descriptions and asked 7 API experts to construct 111 complicated rule
+violations. For robustness, RESTRuler successfully analyzed 99% of the used
+real-world OpenAPI definitions, with some failing due to excessive size. For
+performance efficiency, the tool performed well for the majority of files and
+could analyze 84% in less than 23 seconds with low CPU and RAM usage. Lastly,
+for effectiveness, RESTRuler achieved a precision of 91% (ranging from 60% to
+100% per rule) and recall of 68% (ranging from 46% to 100%). Based on these
+variations between rule implementations, we identified several opportunities for
+improvements. While RESTRuler is still a research prototype, the evaluation
+suggests that the tool is quite robust to errors, resource-efficient for most
+APIs, and shows good precision and decent recall. Practitioners can use it to
+improve the quality of their API design.

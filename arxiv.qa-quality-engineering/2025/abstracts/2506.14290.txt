@@ -1,0 +1,31 @@
+Title: Anticipating Bugs: Ticket-Level Bug Prediction and Temporal Proximity Effects
+Authors: Daniele La Prova, Emanuele Gentili, Davide Falessi
+ID: 2506.14290
+URL: https://arxiv.org/abs/2506.14290
+
+Abstract:
+The primary goal of bug prediction is to optimize testing efforts by focusing on
+software fragments, i.e., classes, methods, commits (JIT), or lines of code,
+most likely to be buggy. However, these predicted fragments already contain
+bugs. Thus, the current bug prediction approaches support fixing rather than
+prevention. The aim of this paper is to introduce and evaluate Ticket-Level
+Prediction (TLP), an approach to identify tickets that will introduce bugs once
+implemented. We analyze TLP at three temporal points, each point represents a
+ticket lifecycle stage: Open, In Progress, or Closed. We conjecture that: (1)
+TLP accuracy increases as tickets progress towards the closed stage due to
+improved feature reliability over time, and (2) the predictive power of features
+changes across these temporal points. Our TLP approach leverages 72 features
+belonging to six different families: code, developer, external temperature,
+internal temperature, intrinsic, ticket to tickets, and JIT. Our TLP evaluation
+uses a sliding-window approach, balancing feature selection and three
+machine-learning bug prediction classifiers on about 10,000 tickets of two
+Apache open-source projects. Our results show that TLP accuracy increases with
+proximity, confirming the expected trade-off between early prediction and
+accuracy. Regarding the prediction power of feature families, no single feature
+family dominates across stages; developer-centric signals are most informative
+early, whereas code and JIT metrics prevail near closure, and temperature-based
+features provide complementary value throughout. Our findings complement and
+extend the literature on bug prediction at the class, method, or commit level by
+showing that defect prediction can be effectively moved upstream, offering
+opportunities for risk-aware ticket triaging and developer assignment before any
+code is written.

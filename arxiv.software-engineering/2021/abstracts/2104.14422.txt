@@ -1,0 +1,28 @@
+Title: Integrating 6LoWPAN Security with RPL Using The Chained Secure Mode Framework
+Authors: Ahmed Raoof, Chung-Horng Lung, Ashraf Matrawy
+ID: 2104.14422
+URL: https://arxiv.org/abs/2104.14422
+
+Abstract:
+The IPv6 over Low-powered Wireless Personal Area Network (6LoWPAN) protocol was
+introduced to allow the transmission of Internet Protocol version 6 (IPv6)
+packets using the smaller-size frames of the IEEE 802.15.4 standard, which is
+used in many Internet of Things (IoT) networks. The primary duty of the 6LoWPAN
+protocol is packet fragmentation and reassembly. However, the protocol standard
+currently does not include any security measures, not even authenticating the
+fragments immediate sender. This lack of immediate-sender authentication opens
+the door for adversaries to launch several attacks on the fragmentation process,
+such as the buffer-reservation attacks that lead to a Denial of Service (DoS)
+attack and resource exhaustion of the victim nodes. This paper proposes a
+security integration between 6LoWPAN and the Routing Protocol for Low Power and
+Lossy Networks (RPL) through the Chained Secure Mode (CSM) framework as a
+possible solution. Since the CSM framework provides a mean of immediate-sender
+trust, through the use of Network Coding (NC), and an integration interface for
+the other protocols (or mechanisms) to use this trust to build security
+decisions, 6LoWPAN can use this integration to build a chain-of-trust along the
+fragments routing path. A proof-of-concept implementation was done in Contiki
+Operating System (OS), and its security and performance were evaluated against
+an external adversary launching a buffer-reservation attack. The results from
+the evaluation showed significant mitigation of the attack with almost no
+increase in power consumption, which presents the great potential for such
+integration to secure the forwarding process at the 6LoWPAN Adaptation Layer

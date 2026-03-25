@@ -1,0 +1,26 @@
+Title: EconProver: Towards More Economical Test-Time Scaling for Automated Theorem Proving
+Authors: Mukai Li, Linfeng Song, Zhenwen Liang, Jiahao Xu, Shansan Gong et al.
+ID: 2509.12603
+URL: https://arxiv.org/abs/2509.12603
+
+Abstract:
+Large Language Models (LLMs) have recently advanced the field of Automated
+Theorem Proving (ATP), attaining substantial performance gains through widely
+adopted test-time scaling strategies, notably reflective Chain-of-Thought (CoT)
+reasoning and increased sampling passes. However, they both introduce
+significant computational overhead for inference. Moreover, existing cost
+analyses typically regulate only the number of sampling passes, while neglecting
+the substantial disparities in sampling costs introduced by different scaling
+strategies. In this paper, we systematically compare the efficiency of different
+test-time scaling strategies for ATP models and demonstrate the inefficiency of
+the current state-of-the-art (SOTA) open-source approaches. We then investigate
+approaches to significantly reduce token usage and sample passes while
+maintaining the original performance. Specifically, we propose two complementary
+methods that can be integrated into a unified EconRL pipeline for amplified
+benefits: (1) a dynamic Chain-of-Thought (CoT) switching mechanism designed to
+mitigate unnecessary token consumption, and (2) Diverse parallel-scaled
+reinforcement learning (RL) with trainable prefixes to enhance pass rates under
+constrained sampling passes. Experiments on miniF2F and ProofNet demonstrate
+that our EconProver achieves comparable performance to baseline methods with
+only 12% of the computational cost. This work provides actionable insights for
+deploying lightweight ATP models without sacrificing performance.

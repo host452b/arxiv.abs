@@ -1,0 +1,31 @@
+Title: When Data Quality Issues Collide: A Large-Scale Empirical Study of Co-Occurring Data Quality Issues in Software Defect Prediction
+Authors: Emmanuel Charleson Dapaah, Jens Grabowski
+ID: 2512.17460
+URL: https://arxiv.org/abs/2512.17460
+
+Abstract:
+Software Defect Prediction (SDP) models are central to proactive software
+quality assurance, yet their effectiveness is often constrained by the quality
+of available datasets. Prior research has typically examined single issues such
+as class imbalance or feature irrelevance in isolation, overlooking that
+real-world data problems frequently co-occur and interact. This study presents,
+to our knowledge, the first large-scale empirical analysis in SDP that
+simultaneously examines five co-occurring data quality issues (class imbalance,
+class overlap, irrelevant features, attribute noise, and outliers) across 374
+datasets and five classifiers. We employ Explainable Boosting Machines together
+with stratified interaction analysis to quantify both direct and conditional
+effects under default hyperparameter settings, reflecting practical baseline
+usage. Our results show that co-occurrence is nearly universal: even the least
+frequent issue (attribute noise) appears alongside others in more than 93% of
+datasets. Irrelevant features and imbalance are nearly ubiquitous, while class
+overlap is the most consistently harmful issue. We identify stable tipping
+points around 0.20 for class overlap, 0.65-0.70 for imbalance, and 0.94 for
+irrelevance, beyond which most models begin to degrade. We also uncover
+counterintuitive patterns, such as outliers improving performance when
+irrelevant features are low, underscoring the importance of context-aware
+evaluation. Finally, we expose a performance-robustness trade-off: no single
+learner dominates under all conditions. By jointly analyzing prevalence,
+co-occurrence, thresholds, and conditional effects, our study directly addresses
+a persistent gap in SDP research. Hence, moving beyond isolated analyses to
+provide a holistic, data-aware understanding of how quality issues shape model
+performance in real-world settings.

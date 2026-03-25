@@ -1,0 +1,27 @@
+Title: A Comparative Study of Software Secrets Reporting by Secret Detection Tools
+Authors: Setu Kumar Basak, Jamison Cox, Bradley Reaves, Laurie Williams
+ID: 2307.00714
+URL: https://arxiv.org/abs/2307.00714
+
+Abstract:
+Background: According to GitGuardian's monitoring of public GitHub repositories,
+secrets sprawl continued accelerating in 2022 by 67% compared to 2021, exposing
+over 10 million secrets (API keys and other credentials). Though many
+open-source and proprietary secret detection tools are available, these tools
+output many false positives, making it difficult for developers to take action
+and teams to choose one tool out of many. To our knowledge, the secret detection
+tools are not yet compared and evaluated. Aims: The goal of our study is to aid
+developers in choosing a secret detection tool to reduce the exposure of secrets
+through an empirical investigation of existing secret detection tools. Method:
+We present an evaluation of five open-source and four proprietary tools against
+a benchmark dataset. Results: The top three tools based on precision are: GitHub
+Secret Scanner (75%), Gitleaks (46%), and Commercial X (25%), and based on
+recall are: Gitleaks (88%), SpectralOps (67%) and TruffleHog (52%). Our manual
+analysis of reported secrets reveals that false positives are due to employing
+generic regular expressions and ineffective entropy calculation. In contrast,
+false negatives are due to faulty regular expressions, skipping specific file
+types, and insufficient rulesets. Conclusions: We recommend developers choose
+tools based on secret types present in their projects to prevent missing
+secrets. In addition, we recommend tool vendors update detection rules
+periodically and correctly employ secret verification mechanisms by
+collaborating with API vendors to improve accuracy.

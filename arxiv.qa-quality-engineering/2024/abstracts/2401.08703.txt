@@ -1,0 +1,28 @@
+Title: Decoupled Prototype Learning for Reliable Test-Time Adaptation
+Authors: Guowei Wang, Changxing Ding, Wentao Tan, Mingkui Tan
+ID: 2401.08703
+URL: https://arxiv.org/abs/2401.08703
+
+Abstract:
+Test-time adaptation (TTA) is a task that continually adapts a pre-trained
+source model to the target domain during inference. One popular approach
+involves fine-tuning model with cross-entropy loss according to estimated
+pseudo-labels. However, its performance is significantly affected by noisy
+pseudo-labels. This study reveals that minimizing the classification error of
+each sample causes the cross-entropy loss's vulnerability to label noise. To
+address this issue, we propose a novel Decoupled Prototype Learning (DPL) method
+that features prototype-centric loss computation. First, we decouple the
+optimization of class prototypes. For each class prototype, we reduce its
+distance with positive samples and enlarge its distance with negative samples in
+a contrastive manner. This strategy prevents the model from overfitting to noisy
+pseudo-labels. Second, we propose a memory-based strategy to enhance DPL's
+robustness for the small batch sizes often encountered in TTA. We update each
+class's pseudo-feature from a memory in a momentum manner and insert an
+additional DPL loss. Finally, we introduce a consistency regularization-based
+approach to leverage samples with unconfident pseudo-labels. This approach
+transfers feature styles of samples with unconfident pseudo-labels to those with
+confident pseudo-labels. Thus, more reliable samples for TTA are created. The
+experimental results demonstrate that our methods achieve state-of-the-art
+performance on domain generalization benchmarks, and reliably improve the
+performance of self-training-based methods on image corruption benchmarks. The
+code will be released.

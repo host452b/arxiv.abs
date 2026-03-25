@@ -1,0 +1,25 @@
+Title: Realistic Evaluation of Test-Time Adaptation Algorithms: Unsupervised Hyperparameter Selection
+Authors: Sebastian Cygert, Damian Sójka, Tomasz Trzciński, Bartłomiej Twardowski
+ID: 2407.14231
+URL: https://arxiv.org/abs/2407.14231
+
+Abstract:
+Test-Time Adaptation (TTA) has recently emerged as a promising strategy for
+tackling the problem of machine learning model robustness under distribution
+shifts by adapting the model during inference without access to any labels.
+Because of task difficulty, hyperparameters strongly influence the effectiveness
+of adaptation. However, the literature has provided little exploration into
+optimal hyperparameter selection. In this work, we tackle this problem by
+evaluating existing TTA methods using surrogate-based hp-selection strategies
+(which do not assume access to the test labels) to obtain a more realistic
+evaluation of their performance. We show that some of the recent
+state-of-the-art methods exhibit inferior performance compared to the previous
+algorithms when using our more realistic evaluation setup. Further, we show that
+forgetting is still a problem in TTA as the only method that is robust to
+hp-selection resets the model to the initial state at every step. We analyze
+different types of unsupervised selection strategies, and while they work
+reasonably well in most scenarios, the only strategies that work consistently
+well use some kind of supervision (either by a limited number of annotated test
+samples or by using pretraining data). Our findings underscore the need for
+further research with more rigorous benchmarking by explicitly stating model
+selection strategies, to facilitate which we open-source our code.

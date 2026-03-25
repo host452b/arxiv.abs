@@ -1,0 +1,23 @@
+Title: Productive Development of Scalable Network Functions with NFork
+Authors: Lei Yan, Yueyang Pan, Diyu Zhou, Sanidhya Kashyap, George Candea
+ID: 2309.01494
+URL: https://arxiv.org/abs/2309.01494
+
+Abstract:
+Despite decades of research, developing correct and scalable concurrent programs
+is still challenging. Network functions (NFs) are not an exception. This paper
+presents NFork, a system that helps NF domain experts to productively develop
+concurrent NFs by abstracting away concurrency from developers. The key scheme
+behind NFork's design is to exploit NF characteristics to overcome the
+limitations of prior work on concurrency programming. Developers write NFs as
+sequential programs, and during runtime, NFork performs transparent
+parallelization by processing packets in different cores. Exploiting NF
+characteristics, NFork leverages transactional memory and develops efficient
+concurrent data structures to achieve scalability and guarantee the absence of
+concurrency bugs. Since NFork manages concurrency, it further provides (i) a
+profiler that reveals the root causes of scalability bottlenecks inherent to the
+NF's semantics and (ii) actionable recipes for developers to mitigate these root
+causes by relaxing the NF's semantics. We show that NFs developed with NFork
+achieve competitive scalability with those in Cisco VPP [16], and NFork's
+profiler and recipes can effectively aid developers in optimizing NF
+scalability.

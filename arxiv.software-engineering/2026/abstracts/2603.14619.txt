@@ -1,0 +1,28 @@
+Title: LLM-Augmented Release Intelligence: Automated Change Summarization and Impact Analysis in Cloud-Native CI/CD Pipelines
+Authors: Happy Bhati
+ID: 2603.14619
+URL: https://arxiv.org/abs/2603.14619
+
+Abstract:
+Cloud-native software delivery platforms orchestrate releases through complex,
+multi-stage pipelines composed of dozens of independently versioned tasks. When
+code is promoted between environments -- development to staging, staging to
+production -- engineering teams need timely, accurate communication about what
+changed and what downstream components are affected. Manual preparation of such
+release communication is slow, inconsistent, and particularly error-prone in
+repositories where a single promotion may bundle contributions from many authors
+across numerous pipeline tasks. We present a framework for AI-augmented release
+intelligence that combines three capabilities: (1) automated commit collection
+with semantic filtering to surface substantive changes while suppressing routine
+maintenance, (2) structured large language model summarization that produces
+categorized, stakeholder-oriented promotion reports, and (3) static
+task-pipeline dependency analysis that maps modified tasks to every pipeline
+they participate in, quantifying the blast radius of each change. The framework
+is integrated directly into the CI/CD promotion workflow and operates as a
+post-promotion step triggered by GitHub Actions. We describe the architecture
+and implementation within a production Kubernetes-native release platform that
+manages over sixty Tekton tasks across more than twenty release pipelines.
+Through concrete walkthrough examples and qualitative comparison with recent
+tools such as SmartNote and VerLog, we discuss the distinctive requirements of
+internal promotion communication versus user-facing release notes and identify
+open challenges for LLM-driven release engineering.

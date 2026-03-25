@@ -1,0 +1,24 @@
+Title: Example-Based Vulnerability Detection and Repair in Java Code
+Authors: Ying Zhang, Ya Xiao, Md Mahir Asef Kabir,  Danfeng,  Yao et al.
+ID: 2203.09009
+URL: https://arxiv.org/abs/2203.09009
+
+Abstract:
+The Java libraries JCA and JSSE offer cryptographic APIs to facilitate secure
+coding. When developers misuse some of the APIs, their code becomes vulnerable
+to cyber-attacks. To eliminate such vulnerabilities, people built tools to
+detect security-API misuses via pattern matching. However, most tools do not (1)
+fix misuses or (2) allow users to extend tools' pattern sets. To overcome both
+limitations, we created Seader-an example-based approach to detect and repair
+security-API misuses. Given an exemplar <insecure, secure>code pair, Seader
+compares the snippets to infer any API-misuse template and corresponding fixing
+edit. Based on the inferred info, given a program, Seader performs
+inter-procedural static analysis to search for security-API misuses and to
+propose customized fixes. For evaluation, we applied Seader to 28 <insecure,
+secure> codepairs; Seader successfully inferred 21 unique API-misuse templates
+and related fixes. With these <vulnerability, fix> patterns, we applied SEADER
+to a program benchmark that has 86 known vulnerabilities. Seader detected
+vulnerabilities with 95% precision, 72% recall, and82% F-score. We also applied
+Seader to 100 open-source projects and manually checked 77 suggested repairs; 76
+of the repairs were correct. Seader can help developers correctly use security
+APIs.

@@ -1,0 +1,23 @@
+Title: Compositional Vulnerability Detection with Insecurity Separation Logic (Extended Version)
+Authors: Toby Murray, Pengbo Yan, Gidon Ernst
+ID: 2107.05225
+URL: https://arxiv.org/abs/2107.05225
+
+Abstract:
+Memory-safety issues and information leakage are known to be depressingly
+common. We consider the compositional static detection of these kinds of
+vulnerabilities in first-order C-like programs. Indeed the latter are relational
+hyper-safety violations, comparing pairs of program executions, making them more
+challenging to detect than the former, which require reasoning only over
+individual executions. Existing symbolic leakage detection methods treat only
+non-interactive programs, avoiding the challenges of nondeterminism. Also, being
+whole-program analyses they cannot be applied one-function-at-a-time, thereby
+ruling out incremental analysis. We remedy these shortcomings by presenting
+Insecurity Separation Logic (InsecSL), an under-approximate relational program
+logic for soundly detecting information leakage and memory-safety issues in
+interactive programs. Importantly, InsecSL reasons about pairs of executions,
+and so is relational, but purposefully resembles the non-relational
+Incorrectness Separation Logic (ISL) that is already automated in the Infer
+tool. We show how InsecSL can be automated by bi-abduction based symbolic
+execution, and we evaluate two implementations of this idea (one based on Infer)
+on various case-studies.

@@ -1,0 +1,29 @@
+Title: APCoTTA: Continual Test-Time Adaptation for Semantic Segmentation of Airborne LiDAR Point Clouds
+Authors: Yuan Gao, Shaobo Xia, Sheng Nie, Cheng Wang, Xiaohuan Xi et al.
+ID: 2505.09971
+URL: https://arxiv.org/abs/2505.09971
+
+Abstract:
+Airborne laser scanning (ALS) point cloud semantic segmentation is a fundamental
+task for large-scale 3D scene understanding. Fixed models deployed in real-world
+scenarios often suffer from performance degradation due to continuous domain
+shifts caused by environmental and sensor changes. Continuous Test-Time
+Adaptation (CTTA) enables adaptation to evolving unlabeled domains, but its
+application to ALS point clouds remains underexplored, hindered by the lack of
+benchmarks and the risks of catastrophic forgetting and error accumulation. To
+address these challenges, we propose APCoTTA (ALS Point cloud Continuous
+Test-Time Adaptation), a novel CTTA framework tailored for ALS point cloud
+semantic segmentation. APCoTTA consists of three key components. First, we adapt
+a gradient-driven layer selection mechanism for ALS point clouds, selectively
+updating low-confidence layers while freezing stable ones to preserve source
+knowledge and mitigate catastrophic forgetting. Second, an entropy-based
+consistency loss discards unreliable samples and enforces consistency
+regularization solely on reliable ones, effectively reducing error accumulation
+and improving adaptation stability. Third, a random parameter interpolation
+mechanism stochastically blends adapted parameters with source model parameters,
+further balancing target adaptation and source knowledge retention. Finally, we
+construct two benchmarks, ISPRSC and H3DC, to address the lack of CTTA
+benchmarks for ALS point cloud segmentation. Extensive experiments demonstrate
+that APCoTTA achieves superior performance on both benchmarks, improving mIoU by
+approximately 9\% and 14\% over direct inference. The new benchmarks and code
+are available at https://github.com/Gaoyuan2/APCoTTA.

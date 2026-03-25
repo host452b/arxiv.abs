@@ -1,0 +1,28 @@
+Title: Modern Software Development for JUNO offline software
+Authors: Tao Lin
+ID: 2309.13780
+URL: https://arxiv.org/abs/2309.13780
+
+Abstract:
+The Jiangmen Underground Neutrino Observatory (JUNO), under construction in
+South China, primarily aims to determine the neutrino mass hierarchy and to
+precise measure the neutrino oscillation parameters. The data-taking is expected
+to start in 2024 and the detector plans to run for more than 20 years. The
+development of the JUNO offline software (JUNOSW) started in 2012, and it is
+quite challenging to maintain the JUNOSW for such a long time. In the last ten
+years, tools such as Subversion, Trac, and CMT had been adopted for software
+development. However, new stringent requirements came out, such as how to reduce
+the building time for the whole project, how to deploy offline algorithms to an
+online environment, and how to improve the code quality with code review and
+continuous integration. To meet the further requirements of software
+development, modern development tools are evaluated for JUNOSW, such as Git,
+GitLab, CMake, Docker, and Kubernetes. This contribution will present the
+software development system based on these modern tools for JUNOSW and the
+functionalities achieved: CMake macros are developed to simplify the build
+instructions for users; CMake generator expressions are used to control the
+build flags for the online and offline environments; a tool named git-junoenv is
+developed to help users partially checkout and build the software; a script is
+used to build and deploy the software on the CVMFS server; a Docker image with
+CVMFS client installed is created for continuous integration; a GitLab agent is
+set up to manage GitLab runners in Kubernetes with all the configurations in a
+GitLab repository.

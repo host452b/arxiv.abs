@@ -1,0 +1,27 @@
+Title: FuSeBMC v4: Improving code coverage with smart seeds via BMC, fuzzing and static analysis
+Authors: Kaled M. Alshmrany, Mohannad Aldughaim, Ahmed Bhayat, Lucas C. Cordeiro
+ID: 2206.14068
+URL: https://arxiv.org/abs/2206.14068
+
+Abstract:
+Bounded model checking (BMC) and fuzzing techniques are among the most effective
+methods for detecting errors and security vulnerabilities in software. However,
+there are still shortcomings in detecting these errors due to the inability of
+existent methods to cover large areas in target code. We propose FuSeBMC v4, a
+test generator that synthesizes seeds with useful properties, that we refer to
+as smart seeds, to improve the performance of its hybrid fuzzer thereby
+achieving high C program coverage. FuSeBMC works by first analyzing and
+incrementally injecting goal labels into the given C program to guide BMC and
+Evolutionary Fuzzing engines. After that, the engines are employed for an
+initial period to produce the so-called smart seeds. Finally, the engines are
+run again, with these smart seeds as starting seeds, in an attempt to achieve
+maximum code coverage / find bugs. During both seed generation and normal
+running, coordination between the engines is aided by the Tracer subsystem. This
+subsystem carries out additional coverage analysis and updates a shared memory
+with information on goals covered so far. Furthermore, the Tracer evaluates test
+cases dynamically to convert cases into seeds for subsequent test fuzzing. Thus,
+the BMC engine can provide the seed that allows the fuzzing engine to bypass
+complex mathematical guards (e.g., input validation). As a result, we received
+three awards for participation in the fourth international competition in
+software testing (Test-Comp 2022), outperforming all state-of-the-art tools in
+every category, including the coverage category.

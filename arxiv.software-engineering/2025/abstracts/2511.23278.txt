@@ -1,0 +1,24 @@
+Title: RetryGuard: Preventing Self-Inflicted Retry Storms in Cloud Microservices Applications
+Authors: Jhonatan Tavori, Anat Bremler-Barr, Hanoch Levy, Ofek Lavi
+ID: 2511.23278
+URL: https://arxiv.org/abs/2511.23278
+
+Abstract:
+Modern cloud applications are built on independent, diverse microservices,
+offering scalability, flexibility, and usage-based billing. However, the
+structural design of these varied services, along with their reliance on
+auto-scalers for dynamic internet traffic, introduces significant coordination
+challenges. As we demonstrate in this paper, common default retry patterns used
+between misaligned services can turn into retry storms which drive up resource
+usage and costs, leading to self-inflicted Denial-of-Wallet (DoW) scenarios. To
+overcome these problems we introduce RetryGuard, a distributed framework for
+productive control of retry patterns across interdependent microservices. By
+managing retry policy on a per-service basis and making parallel decisions,
+RetryGuard prevents retry storms, curbs resource contention, and mitigates
+escalating operational costs. RetryGuard makes its decisions based on an
+analytic model that captures the relationships among retries, throughput
+(rejections), delays, and costs. Experimental results show that RetryGuard
+significantly reduces resource usage and costs compared to AWS standard and
+advanced retry policies. We further demonstrate its scalability and superior
+performance in a more complex Kubernetes deployment with the Istio service mesh,
+where it achieves substantial improvements.

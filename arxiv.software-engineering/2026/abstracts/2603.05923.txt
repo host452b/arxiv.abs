@@ -1,0 +1,31 @@
+Title: Learning Next Action Predictors from Human-Computer Interaction
+Authors: Omar Shaikh, Valentin Teutschbein, Kanishk Gandhi, Yikun Chi, Nick Haber et al.
+ID: 2603.05923
+URL: https://arxiv.org/abs/2603.05923
+
+Abstract:
+Truly proactive AI systems must anticipate what we will do next. This foresight
+demands far richer information than the sparse signals we type into our prompts
+-- it demands reasoning over the entire context of what we see and do. We
+formalize this as next action prediction (NAP): given a sequence of a user's
+multimodal interactions with a computer (screenshots, clicks, sensor data),
+predict that user's next action. Progress on this task requires both new data
+and modeling approaches. To scale data, we annotate longitudinal, naturalistic
+computer use with vision-language models. We release an open-source pipeline for
+performing this labeling on private infrastructure, and label over 360K actions
+across one month of continuous phone usage from 20 users, amounting to 1,800
+hours of screen time. We then introduce LongNAP, a user model that combines
+parametric and in-context learning to reason over long interaction histories.
+LongNAP is trained via policy gradient methods to generate user-specific
+reasoning traces given some context; retrieve relevant traces from a library of
+past traces; and then apply retrieved traces in-context to predict future
+actions. Using an LLM-as-judge evaluation metric (0-1 similarity to ground
+truth), LongNAP significantly outperforms supervised finetuning and prompted
+baselines on held-out data (by 79% and 39% respectively). Additionally, LongNAP
+generalizes to held out users when trained across individuals. The space of next
+actions a user might take at any moment is unbounded, spanning thousands of
+possible outcomes. Despite this, 17.1% of LongNAP's predicted trajectories are
+well-aligned with what a user does next (LLM-judge score $\geq$ 0.5). This rises
+to 26% when we filter to highly confident predictions. In sum, we argue that
+learning from the full context of user behavior to anticipate user needs is now
+a viable task with substantial opportunity.

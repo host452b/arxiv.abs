@@ -1,0 +1,27 @@
+Title: Model Discovery and Graph Simulation: A Lightweight Gateway to Chaos Engineering
+Authors: Anatoly A. Krasnovsky
+ID: 2506.11176
+URL: https://arxiv.org/abs/2506.11176
+
+Abstract:
+Chaos engineering reveals resilience risks but is expensive and operationally
+risky to run broadly and often. Model-based analyses can estimate dependability,
+yet in practice they are tricky to build and keep current because models are
+typically handcrafted. We claim that a simple connectivity-only topological
+model - just the service-dependency graph plus replica counts - can provide
+fast, low-risk availability estimates under fail-stop faults. To make this claim
+practical without hand-built models, we introduce model discovery: an automated
+step that can run in CI/CD or as an observability-platform capability,
+synthesizing an explicit, analyzable model from artifacts teams already have
+(e.g., distributed traces, service-mesh telemetry, configs/manifests) -
+providing an accessible gateway for teams to begin resilience testing. As a
+proof by instance on the DeathStarBench Social Network, we extract the
+dependency graph from Jaeger and estimate availability across two deployment
+modes and five failure rates. The discovered model closely tracks live
+fault-injection results; with replication, median error at mid-range failure
+rates is near zero, while no-replication shows signed biases consistent with
+excluded mechanisms. These results create two opportunities: first, to triage
+and reduce the scope of expensive chaos experiments in advance, and second, to
+generate real-time signals on the system's resilience posture as its topology
+evolves, preserving live validation for the most critical or ambiguous
+scenarios.

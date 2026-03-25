@@ -1,0 +1,31 @@
+Title: On the calibration of Just-in-time Defect Prediction
+Authors: Xhulja Shahini, Jone Bartel, Klaus Pohl
+ID: 2504.12051
+URL: https://arxiv.org/abs/2504.12051
+
+Abstract:
+Just in time defect prediction (JIT DP) leverages ML to identify defect-prone
+code commits, enabling quality assurance (QA) teams to allocate resources more
+efficiently by focusing on commits that are most likely to contain defects.
+Although JIT DP techniques have introduced improvements in terms of predictive
+accuracy, they are still susceptible to misclassification errors such as false
+positives and negatives. This can lead to wasted resources or undetected
+defects, a particularly critical concern when QA resources are limited. To
+mitigate these challenges and preserve the practical utility of JIT DP tools, it
+becomes essential to estimate the reliability of the predictions, i.e.,
+computing confidence scores. Such scores can help practitioners determine the
+trustworthiness of predictions and thus prioritize them efficiently. A simple
+approach to computing confidence scores is to extract, alongside each
+prediction, the corresponding prediction probabilities and use them as
+indicators of confidence. However, for these probabilities to reliably serve as
+confidence scores, the predictive model must be well-calibrated. This means that
+the prediction probabilities must accurately represent the true likelihood of
+each prediction being correct. Miscalibration, common in modern ML models,
+distorts probability scores such that they do not align with the actual
+correctness probability. In this study, we evaluate the calibration of three JIT
+DP techniques to determine whether and to what extent they exhibit poor
+calibration. Furthermore, we assess whether post-calibration methods can improve
+the calibration of existing JIT defect prediction models. Our results reveal
+that all evaluated JIT DP models exhibit some level of miscalibration, with ECE
+ranging from 2-35%. Furthermore, post-calibration methods do not consistently
+improve the calibration.

@@ -1,0 +1,23 @@
+Title: Homo in Machina: Improving Fuzz Testing Coverage via Compartment Analysis
+Authors: Joshua Bundt, Andrew Fasano, Brendan Dolan-Gavitt, William Robertson, Tim Leek
+ID: 2212.11162
+URL: https://arxiv.org/abs/2212.11162
+
+Abstract:
+Fuzz testing is often automated, but also frequently augmented by experts who
+insert themselves into the workflow in a greedy search for bugs. In this paper,
+we propose Homo in Machina, or HM-fuzzing, in which analyses guide the manual
+efforts, maximizing benefit. As one example of this paradigm, we introduce
+compartment analysis. Compartment analysis uses a whole-program dominator
+analysis to estimate the utility of reaching new code, and combines this with a
+dynamic analysis indicating drastically under-covered edges guarding that code.
+This results in a prioritized list of compartments, i.e., large, uncovered parts
+of the program semantically partitioned and largely unreachable given the
+current corpus of inputs under consideration. A human can use this
+categorization and ranking of compartments directly to focus manual effort,
+finding or fashioning inputs that make the compartments available for future
+fuzzing. We evaluate the effect of compartment analysis on seven projects within
+the OSS-Fuzz corpus where we see coverage improvements over AFL++ as high as
+94%, with a median of 13%. We further observe that the determination of
+compartments is highly stable and thus can be done early in a fuzzing campaign,
+maximizing the potential for impact.

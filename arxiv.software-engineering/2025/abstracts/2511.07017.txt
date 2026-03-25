@@ -1,0 +1,31 @@
+Title: Benchmarking LLMs for Fine-Grained Code Review with Enriched Context in Practice
+Authors: Ruida Hu, Xinchen Wang, Xin-Cheng Wen, Zhao Zhang, Bo Jiang et al.
+ID: 2511.07017
+URL: https://arxiv.org/abs/2511.07017
+
+Abstract:
+Code review is a cornerstone of software quality assurance, and recent advances
+in Large Language Models (LLMs) have shown promise in its automation. However,
+existing benchmarks for LLM-based code review face three major limitations. Lack
+of semantic context: most benchmarks provide only code diffs without textual
+information such as issue descriptions, which are crucial for understanding
+developer intent. Data quality issues: without rigorous validation, many samples
+are noisy-e.g., reviews on outdated or irrelevant code-reducing evaluation
+reliability. Coarse granularity: most benchmarks operate at the file or commit
+level, overlooking the fine-grained, line-level reasoning essential for precise
+review. We introduce ContextCRBench, a high-quality, context-rich benchmark for
+fine-grained LLM evaluation in code review. Our construction pipeline comprises:
+Raw Data Crawling, collecting 153.7K issues and pull requests from top-tier
+repositories; Comprehensive Context Extraction, linking issue-PR pairs for
+textual context and extracting the full surrounding function or class for code
+context; and Multi-stage Data Filtering, combining rule-based and LLM-based
+validation to remove outdated, malformed, or low-value samples, resulting in
+67,910 context-enriched entries. ContextCRBench supports three evaluation
+scenarios aligned with the review workflow: hunk-level quality assessment,
+line-level defect localization, and line-level comment generation. Evaluating
+eight leading LLMs (four closed-source and four open-source) reveals that
+textual context yields greater performance gains than code context alone, while
+current LLMs remain far from human-level review ability. Deployed at ByteDance,
+ContextCRBench drives a self-evolving code review system, improving performance
+by 61.98% and demonstrating its robustness and industrial utility.
+https://github.com/kinesiatricssxilm14/ContextCRBench.

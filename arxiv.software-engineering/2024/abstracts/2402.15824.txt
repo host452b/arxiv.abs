@@ -1,0 +1,21 @@
+Title: Secure Scattered Memory: Rethinking Secure Enclave Memory with Secret Sharing
+Authors: Haoran Geng, Yuezhi Che, Dazhao Chen, Michael Niemier, Xiaobo Sharon Hu
+ID: 2402.15824
+URL: https://arxiv.org/abs/2402.15824
+
+Abstract:
+The rise of cloud computing demands secure memory systems that ensure data
+confidentiality, integrity, and freshness against replay attacks. Existing
+schemes such as AES-XTS, AES-GCM, and AES-CTR each trade performance for
+security, with only AES-CTR plus Message Authentication Codes (MAC) and Merkle
+Trees (MT) providing full protection - at the cost of substantial counter and MT
+overhead. This paper introduces Secure Scattered Memory (SSM), a novel scheme
+that replaces counter-based encryption with polynomial-based secret sharing.
+Each data block is encoded into multiple cryptographically independent shares
+distributed across memory, inherently preventing information leakage while
+ensuring integrity and freshness through mathematical reconstruction properties.
+Implemented and synthesized in a 28 nm commercial PDK, SSM occupies 0.27 mm^2
+and consumes 284.53 mW. Experiments show only 10% and 8% performance overhead
+over AES-XTS and AES-GCM, respectively, while outperforming Morphable Counter
+(MICRO 2018) by up to 40%, achieving 12% better performance than EMCC/RMCC
+(MICRO 2022), and exceeding COSMOS (MICRO 2025) by 3%.

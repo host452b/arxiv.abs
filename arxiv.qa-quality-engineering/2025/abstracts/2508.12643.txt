@@ -1,0 +1,27 @@
+Title: Learn Faster and Remember More: Balancing Exploration and Exploitation for Continual Test-time Adaptation
+Authors: Pinci Yang, Peisong Wen, Ke Ma, Qianqian Xu
+ID: 2508.12643
+URL: https://arxiv.org/abs/2508.12643
+
+Abstract:
+Continual Test-Time Adaptation (CTTA) aims to adapt a source pre-trained model
+to continually changing target domains during inference. As a fundamental
+principle, an ideal CTTA method should rapidly adapt to new domains
+(exploration) while retaining and exploiting knowledge from previously
+encountered domains to handle similar domains in the future. Despite significant
+advances, balancing exploration and exploitation in CTTA is still challenging:
+1) Existing methods focus on adjusting predictions based on deep-layer outputs
+of neural networks. However, domain shifts typically affect shallow features,
+which are inefficient to be adjusted from deep predictions, leading to dilatory
+exploration; 2) A single model inevitably forgets knowledge of previous domains
+during the exploration, making it incapable of exploiting historical knowledge
+to handle similar future domains. To address these challenges, this paper
+proposes a mean teacher framework that strikes an appropriate Balance between
+Exploration and Exploitation (BEE) during the CTTA process. For the former
+challenge, we introduce a Multi-level Consistency Regularization (MCR) loss that
+aligns the intermediate features of the student and teacher models, accelerating
+adaptation to the current domain. For the latter challenge, we employ a
+Complementary Anchor Replay (CAR) mechanism to reuse historical checkpoints
+(anchors), recovering complementary knowledge for diverse domains. Experiments
+show that our method significantly outperforms state-of-the-art methods on
+several benchmarks, demonstrating its effectiveness for CTTA tasks.

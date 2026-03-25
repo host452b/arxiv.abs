@@ -1,0 +1,27 @@
+Title: Programmable System Call Security with eBPF
+Authors: Jinghao Jia, YiFei Zhu, Dan Williams, Andrea Arcangeli, Claudio Canella et al.
+ID: 2302.10366
+URL: https://arxiv.org/abs/2302.10366
+
+Abstract:
+System call filtering is a widely used security mechanism for protecting a
+shared OS kernel against untrusted user applications. However, existing system
+call filtering techniques either are too expensive due to the context switch
+overhead imposed by userspace agents, or lack sufficient programmability to
+express advanced policies. Seccomp, Linux's system call filtering module, is
+widely used by modern container technologies, mobile apps, and system management
+services. Despite the adoption of the classic BPF language (cBPF), security
+policies in Seccomp are mostly limited to static allow lists, primarily because
+cBPF does not support stateful policies. Consequently, many essential security
+features cannot be expressed precisely and/or require kernel modifications. In
+this paper, we present a programmable system call filtering mechanism, which
+enables more advanced security policies to be expressed by leveraging the
+extended BPF language (eBPF). More specifically, we create a new Seccomp eBPF
+program type, exposing, modifying or creating new eBPF helper functions to
+safely manage filter state, access kernel and user state, and utilize
+synchronization primitives. Importantly, our system integrates with existing
+kernel privilege and capability mechanisms, enabling unprivileged users to
+install advanced filters safely. Our evaluation shows that our eBPF-based
+filtering can enhance existing policies (e.g., reducing the attack surface of
+early execution phase by up to 55.4% for temporal specialization), mitigate
+real-world vulnerabilities, and accelerate filters.

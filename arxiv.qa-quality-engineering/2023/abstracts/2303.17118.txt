@@ -1,0 +1,26 @@
+Title: RPU: The Ring Processing Unit
+Authors: Deepraj Soni, Negar Neda, Naifeng Zhang, Benedict Reynwar, Homer Gamil et al.
+ID: 2303.17118
+URL: https://arxiv.org/abs/2303.17118
+
+Abstract:
+Ring-Learning-with-Errors (RLWE) has emerged as the foundation of many important
+techniques for improving security and privacy, including homomorphic encryption
+and post-quantum cryptography. While promising, these techniques have received
+limited use due to their extreme overheads of running on general-purpose
+machines. In this paper, we present a novel vector Instruction Set Architecture
+(ISA) and microarchitecture for accelerating the ring-based computations of
+RLWE. The ISA, named B512, is developed to meet the needs of ring processing
+workloads while balancing high-performance and general-purpose programming
+support. Having an ISA rather than fixed hardware facilitates continued software
+improvement post-fabrication and the ability to support the evolving workloads.
+We then propose the ring processing unit (RPU), a high-performance, modular
+implementation of B512. The RPU has native large word modular arithmetic
+support, capabilities for very wide parallel processing, and a large capacity
+high-bandwidth scratchpad to meet the needs of ring processing. We address the
+challenges of programming the RPU using a newly developed SPIRAL backend. A
+configurable simulator is built to characterize design tradeoffs and quantify
+performance. The best performing design was implemented in RTL and used to
+validate simulator performance. In addition to our characterization, we show
+that a RPU using 20.5mm2 of GF 12nm can provide a speedup of 1485x over a CPU
+running a 64k, 128-bit NTT, a core RLWE workload

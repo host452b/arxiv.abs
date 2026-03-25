@@ -1,0 +1,29 @@
+Title: Pushing the Envelope of LLM Inference on AI-PC and Intel GPUs
+Authors: Evangelos Georganas, Dhiraj Kalamkar, Alexander Heinecke
+ID: 2508.06753
+URL: https://arxiv.org/abs/2508.06753
+
+Abstract:
+The advent of ultra-low-bit LLM models (1/1.58/2-bit), which match the
+perplexity and end-task performance of their full-precision counterparts using
+the same model size, is ushering in a new era of LLM inference for
+resource-constrained environments such as edge devices and AI PCs. While these
+quantization advances promise models that are more cost-effective in terms of
+latency, memory, throughput, and energy consumption, the computational
+efficiency of state-of-the-art (SOTA) inference runtimes (e.g., bitnet.cpp) used
+to deploy them remains underexplored. In this work, we take a bottom-up
+approach: we first design and implement 1-bit and 2-bit microkernels optimized
+for modern CPUs, achieving peak computational efficiency across a variety of CPU
+platforms. We integrate these microkernels into a state-of-the-art LLM inference
+framework, namely PyTorch-TPP, and present end-to-end inference results with
+2-bit models that outperform the current SOTA runtime bitnet.cpp by up to 2.2x,
+and deliver up to 7x speedup compared to the 16-bit model inference. We then
+extend this work to Intel GPUs where we design and implement mixed precision,
+2-bit GEMM kernels, and show their performance to be close to optimal. We
+integrated our optimized Xe2 kernels in the vLLM framework as a quantization
+plugin and evaluated end-to-end LLM inference results for a range of LLM models
+and Xe2 GPUs. Depending on the model and platform, we see a 4x - 8x reduction in
+GEMM time compared to the BF16 case, and we get up to 6.3x speedup in end-to-end
+latency compared to the BF16 execution. Our optimized runtime advances the state
+of LLM inference on AI PCs and Intel Xe GPUs, paving the way for efficient
+deployment of ultra-low-bit LLM models.

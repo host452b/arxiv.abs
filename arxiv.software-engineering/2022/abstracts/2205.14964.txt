@@ -1,0 +1,27 @@
+Title: Effectiveness and Scalability of Fuzzing Techniques in CI/CD Pipelines
+Authors: Thijs Klooster, Fatih Turkmen, Gerben Broenink, Ruben ten Hove, Marcel Böhme
+ID: 2205.14964
+URL: https://arxiv.org/abs/2205.14964
+
+Abstract:
+Fuzzing has proven to be a fundamental technique to automated software testing
+but also a costly one. With the increased adoption of CI/CD practices in
+software development, a natural question to ask is `What are the best ways to
+integrate fuzzing into CI/CD pipelines considering the velocity in code changes
+and the automated delivery/deployment practices?'. Indeed, a recent study by
+Böhme and Zhu shows that four in every five bugs have been introduced by recent
+code changes (i.e. regressions). In this paper, we take a close look at the
+integration of fuzzers to CI/CD pipelines from both automated software testing
+and continuous development angles. Firstly, we study an optimization opportunity
+to triage commits that do not require fuzzing and find, through experimental
+analysis, that the average fuzzing effort in CI/CD can be reduced by ~63% in
+three of the nine libraries we analyzed (>40% for six libraries). Secondly, we
+investigate the impact of fuzzing campaign duration on the CI/CD process: A
+shorter fuzzing campaign such as 15 minutes (as opposed to the wisdom of 24
+hours in the field) facilitates a faster pipeline and can still uncover
+important bugs, but may also reduce its capability to detect sophisticated bugs.
+Lastly, we discuss a prioritization strategy that automatically assigns
+resources to fuzzing campaigns based on a set of predefined priority strategies.
+Our findings suggest that continuous fuzzing (as part of the automated testing
+in CI/CD) is indeed beneficial and there are many optimization opportunities to
+improve the effectiveness and scalability of fuzz testing.

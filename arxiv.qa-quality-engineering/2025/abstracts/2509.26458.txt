@@ -1,0 +1,29 @@
+Title: EQ-Robin: Constraint-Resilient Generation of Multiple Minimal Unique-Cause MC/DC Test Suites
+Authors: Robin Lee, Youngho Nam
+ID: 2509.26458
+URL: https://arxiv.org/abs/2509.26458
+
+Abstract:
+Unique-Cause Modified Condition/Decision Coverage (MC/DC) is widely required in
+safety-critical verification. A recent deterministic algorithm, Robin's Rule,
+constructs the theoretical minimum of N+1 test cases for Singular Boolean
+Expressions (SBEs), providing strong guarantees when all generated test vectors
+are executable. However, industrial systems impose feasibility constraints: some
+input combinations are illegal, unachievable, or unsafe to execute. If a single
+illegal vector appears in a minimal suite, it can destroy a required
+independence pair and invalidate 100% Unique-Cause MC/DC, even though the
+underlying decision logic remains unchanged. This paper presents EQ-Robin, a
+lightweight, constraint-resilient pipeline that generates a family of minimal
+(N+1) Unique-Cause MC/DC test suites and selects a feasible suite that satisfies
+domain constraints. EQ-Robin systematically enumerates semantically equivalent
+but structurally distinct SBEs by applying algebraic rearrangements on the
+expression's Abstract Syntax Tree (AST). Because Robin's Rule is sensitive to
+structural order, each variant yields a distinct minimal suite. EQ-Robin then
+filters and ranks candidate suites using practical constraint checks and cost
+heuristics (e.g., setup cost, oracle complexity). To ensure usability at scale,
+we introduce a budgeted exploration mode (early exit, guided rearrangement) and
+a fallback repair strategy when no fully feasible N+1 suite exists under given
+constraints. We demonstrate the core failure mode and recovery mechanism on a
+TCAS-II-derived expression and outline an empirical evaluation of EQ-Robin on
+TCAS-II SBEs under constraint scenarios representative of industrial feasibility
+limitations.

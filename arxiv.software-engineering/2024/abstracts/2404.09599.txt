@@ -1,0 +1,30 @@
+Title: Enhancing Code Vulnerability Detection via Vulnerability-Preserving Data Augmentation
+Authors: Shangqing Liu, Wei Ma, Jian Wang, Xiaofei Xie, Ruitao Feng et al.
+ID: 2404.09599
+URL: https://arxiv.org/abs/2404.09599
+
+Abstract:
+Source code vulnerability detection aims to identify inherent vulnerabilities to
+safeguard software systems from potential attacks. Many prior studies overlook
+diverse vulnerability characteristics, simplifying the problem into a binary
+(0-1) classification task for example determining whether it is vulnerable or
+not. This poses a challenge for a single deep learning-based model to
+effectively learn the wide array of vulnerability characteristics. Furthermore,
+due to the challenges associated with collecting large-scale vulnerability data,
+these detectors often overfit limited training datasets, resulting in lower
+model generalization performance. To address the aforementioned challenges, in
+this work, we introduce a fine-grained vulnerability detector namely FGVulDet.
+Unlike previous approaches, FGVulDet employs multiple classifiers to discern
+characteristics of various vulnerability types and combines their outputs to
+identify the specific type of vulnerability. Each classifier is designed to
+learn type-specific vulnerability semantics. Additionally, to address the
+scarcity of data for some vulnerability types and enhance data diversity for
+learning better vulnerability semantics, we propose a novel
+vulnerability-preserving data augmentation technique to augment the number of
+vulnerabilities. Taking inspiration from recent advancements in graph neural
+networks for learning program semantics, we incorporate a Gated Graph Neural
+Network (GGNN) and extend it to an edge-aware GGNN to capture edge-type
+information. FGVulDet is trained on a large-scale dataset from GitHub,
+encompassing five different types of vulnerabilities. Extensive experiments
+compared with static-analysis-based approaches and learning-based approaches
+have demonstrated the effectiveness of FGVulDet.

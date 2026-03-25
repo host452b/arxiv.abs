@@ -1,0 +1,28 @@
+Title: State Field Coverage: A Metric for Oracle Quality
+Authors: Facundo Molina, Nazareno Aguirre, Alessandra Gorla
+ID: 2510.03071
+URL: https://arxiv.org/abs/2510.03071
+
+Abstract:
+The effectiveness of testing in uncovering software defects depends not only on
+the characteristics of the test inputs and how thoroughly they exercise the
+software, but also on the quality of the oracles used to determine whether the
+software behaves as expected. Therefore, assessing the quality of oracles is
+crucial to improve the overall effectiveness of the testing process. Existing
+metrics have been used for this purpose, but they either fail to provide a
+comprehensive basis for guiding oracle improvement, or they are tailored to
+specific types of oracles, thus limiting their generality. In this paper, we
+introduce state field coverage, a novel metric for assessing oracle quality.
+This metric measures the proportion of an object's state, as statically defined
+by its class fields, that an oracle may access during test execution. The main
+intuition of our metric is that oracles with a higher state field coverage are
+more likely to detect faults in the software under analysis, as they inspect a
+larger portion of the object states to determine whether tests pass or not. We
+implement a mechanism to statically compute the state field coverage metric.
+Being statically computed, the metric is efficient and provides direct guidance
+for improving test oracles by identifying state fields that remain unexamined.
+We evaluate state field coverage through experiments involving 273
+representation invariants and 249,027 test assertions. The results show that
+state field coverage is a well-suited metric for assessing oracle quality, as it
+strongly correlates with the oracles' fault-detection ability, measured by
+mutation score.

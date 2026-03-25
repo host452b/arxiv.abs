@@ -1,0 +1,25 @@
+Title: VerilogLAVD: LLM-Aided Rule Generation for Vulnerability Detection in Verilog
+Authors: Xiang Long, Yingjie Xia, Xiyuan Chen, Li Kuang
+ID: 2508.13092
+URL: https://arxiv.org/abs/2508.13092
+
+Abstract:
+Timely detection of hardware vulnerabilities during the early design stage is
+critical for reducing remediation costs. Existing early detection techniques
+often require specialized security expertise, limiting their usability. Recent
+efforts have explored the use of large language models (LLMs) for Verilog
+vulnerability detection. However, LLMs struggle to capture the structure in
+Verilog code, resulting in inconsistent detection results. To this end, we
+propose VerilogLAVD, the first LLM-aided graph traversal rule generation
+approach for Verilog vulnerability detection. Our approach introduces the
+Verilog Property Graph (VeriPG), a unified representation of Verilog code. It
+combines syntactic features extracted from the abstract syntax tree (AST) with
+semantic information derived from control flow and data dependency graphs. We
+leverage LLMs to generate VeriPG-based detection rules from Common Weakness
+Enumeration (CWE) descriptions. These rules guide the rule executor that
+traversal VeriPG for potential vulnerabilities. To evaluate VerilogLAVD, we
+build a dataset collected from open-source repositories and synthesized data. In
+our empirical evaluation on 77 Verilog designs encompassing 12 CWE types,
+VerilogLAVD achieves an F1-score of 0.54. Compared to the LLM-only and LLM with
+external knowledge baselines, VerilogLAVD improves F1-score by 0.31 and 0.27,
+respectively.

@@ -1,0 +1,28 @@
+Title: Learning Program Behavioral Models from Synthesized Input-Output Pairs
+Authors: Tural Mammadov, Dietrich Klakow, Alexander Koller, Andreas Zeller
+ID: 2407.08597
+URL: https://arxiv.org/abs/2407.08597
+
+Abstract:
+We introduce Modelizer - a novel framework that, given a black-box program,
+learns a model from its input/output behavior using neural machine translation
+algorithms. The resulting model mocks the original program: Given an input, the
+model predicts the output that would have been produced by the program. However,
+the model is also reversible - that is, the model can predict the input that
+would have produced a given output. Finally, the model is differentiable and can
+be efficiently restricted to predict only a certain aspect of the program
+behavior. Modelizer uses grammars to synthesize and inputs and unsupervised
+tokenizers to decompose the resulting outputs, allowing it to learn
+sequence-to-sequence associations between token streams. Other than input
+grammars, Modelizer only requires the ability to execute the program. The
+resulting models are small, requiring fewer than 6.3 million parameters for
+languages such as Markdown or HTML; and they are accurate, achieving up to 95.4%
+accuracy and a BLEU score of 0.98 with standard error 0.04 in mocking real-world
+applications. As it learns from and predicts executions rather than code,
+Modelizer departs from the LLM-centric research trend, opening new opportunities
+for program-specific models that are fully tuned towards individual programs.
+Indeed, we foresee several applications of these models, especially as the
+output of the program can be any aspect of program behavior. Beyond mocking and
+predicting program behavior, the models can also synthesize inputs that are
+likely to produce a particular behavior, such as failures or coverage, thus
+assisting in program understanding and maintenance.

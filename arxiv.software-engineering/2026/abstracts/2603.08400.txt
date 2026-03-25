@@ -1,0 +1,21 @@
+Title: Trust Nothing: RTOS Security without Run-Time Software TCB (Extended Version)
+Authors: Eric Ackermann, Sven Bugiel
+ID: 2603.08400
+URL: https://arxiv.org/abs/2603.08400
+
+Abstract:
+Embedded devices face an ever-expanding threat landscape: vulnerabilities in
+application software, operating system kernels, and peripherals threaten the
+embedded device integrity. Existing computer-architectural defenses fully
+consider at most two of these threat vectors in their security model. This paper
+aims at addressing this gap using a novel capability architecture. To this end,
+we combine a token capability approach suitable for building an untrusted
+operating system with protection against malicious devices without requiring
+hardware changes to peripherals. First, we develop and evaluate a full FPGA
+implementation of our capability architecture around legacy hardware components.
+Further, we present a soft real-time operating system based on Zephyr that has
+no run-time software TCB. To this end, we disaggregate Zephyr's subsystems into
+small, mutually isolated components. All subsystems that exist at run time,
+including scheduler, allocator and DMA drivers, and all peripherals are fully
+untrusted. We believe that our work offers a foundation for more rigorous
+security-by-design in tomorrow's security-critical embedded devices.

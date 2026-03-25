@@ -1,0 +1,27 @@
+Title: Feature Map Testing for Deep Neural Networks
+Authors: Dong Huang, Qingwen Bu, Yahao Qing, Yichao Fu, Heming Cui
+ID: 2307.11563
+URL: https://arxiv.org/abs/2307.11563
+
+Abstract:
+Due to the widespread application of deep neural networks~(DNNs) in
+safety-critical tasks, deep learning testing has drawn increasing attention.
+During the testing process, test cases that have been fuzzed or selected using
+test metrics are fed into the model to find fault-inducing test units (e.g.,
+neurons and feature maps, activating which will almost certainly result in a
+model error) and report them to the DNN developer, who subsequently repair
+them~(e.g., retraining the model with test cases). Current test metrics,
+however, are primarily concerned with the neurons, which means that test cases
+that are discovered either by guided fuzzing or selection with these metrics
+focus on detecting fault-inducing neurons while failing to detect fault-inducing
+feature maps. In this work, we propose DeepFeature, which tests DNNs from the
+feature map level. When testing is conducted, DeepFeature will scrutinize every
+internal feature map in the model and identify vulnerabilities that can be
+enhanced through repairing to increase the model's overall performance.
+Exhaustive experiments are conducted to demonstrate that (1) DeepFeature is a
+strong tool for detecting the model's vulnerable feature maps; (2) DeepFeature's
+test case selection has a high fault detection rate and can detect more types of
+faults~(comparing DeepFeature to coverage-guided selection techniques, the fault
+detection rate is increased by 49.32\%). (3) DeepFeature's fuzzer also
+outperforms current fuzzing techniques and generates valuable test cases more
+efficiently.

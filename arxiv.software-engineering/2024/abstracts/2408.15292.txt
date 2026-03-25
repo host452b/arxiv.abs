@@ -1,0 +1,26 @@
+Title: CrossInspector: A Static Analysis Approach for Cross-Contract Vulnerability Detection
+Authors: Xiao Chen
+ID: 2408.15292
+URL: https://arxiv.org/abs/2408.15292
+
+Abstract:
+With the development of blockchain technology, the detection of smart contract
+vulnerabilities is increasingly emphasized. However, when detecting
+vulnerabilities in inter-contract interactions (i.e., cross-contract
+vulnerabilities) using smart contract bytecode, existing tools often produce
+many false positives and false negatives due to insufficient recovery of
+semantic information and inadequate consideration of contract dependencies. We
+present CrossInspector, a novel framework for detecting cross-contract
+vulnerabilities at the bytecode level through static analysis. CrossInspector
+utilizes a trained Transformer model to recover semantic information and
+considers control flow, data flow, and dependencies related to smart contract
+state variables to construct a state dependency graph for fine-grained
+inter-procedural analysis. Additionally, CrossInspector incorporates a pruning
+method and two parallel optimization mechanisms to accelerate the vulnerability
+detection process. Experiments on our manually constructed dataset demonstrate
+that CrossInspector outperforms the state-of-the-art tools in both precision
+(97\%) and recall (96.75\%), while also significantly reducing the overall time
+from 16.34 seconds to 7.83 seconds, almost on par with the fastest tool that
+utilizes bytecode for detection. Additionally, we ran CrossInspector on a
+randomly selected set of 300 real-world smart contracts and identified 11
+cross-contract vulnerabilities that were missed by prior tools.

@@ -1,0 +1,29 @@
+Title: Learning test generators for cyber-physical systems
+Authors: Jarkko Peltomäki, Ivan Porres
+ID: 2410.03202
+URL: https://arxiv.org/abs/2410.03202
+
+Abstract:
+Black-box runtime verification methods for cyber-physical systems can be used to
+discover errors in systems whose inputs and outputs are expressed as signals
+over time and their correctness requirements are specified in a temporal logic.
+Existing methods, such as requirement falsification, often focus on finding a
+single input that is a counterexample to system correctness. In this paper, we
+study how to create test generators that can produce multiple and diverse
+counterexamples for a single requirement. Several counterexamples expose system
+failures in varying input conditions and support the root cause analysis of the
+faults. We present the WOGAN algorithm to create such test generators
+automatically. The algorithm works by training iteratively a Wasserstein
+generative adversarial network that models the target distribution of the
+uniform distribution on the set of counterexamples. WOGAN is an algorithm that
+trains generative models that act as test generators for runtime verification.
+The training is performed online without the need for a previous model or
+dataset. We also propose criteria to evaluate such test generators. We evaluate
+the trained generators on several well-known problems including the ARCH-COMP
+falsification benchmarks. Our experimental results indicate that generators
+trained by the WOGAN algorithm are as effective as state-of-the-art requirement
+falsification algorithms while producing tests that are as diverse as a sample
+from uniform random sampling. We conclude that WOGAN is a viable method to
+produce test generators automatically and that these test generators can
+generate multiple and diverse counterexamples for the runtime verification of
+cyber-physical systems.

@@ -1,0 +1,29 @@
+Title: On Jailbreaking Quantized Language Models Through Fault Injection Attacks
+Authors: Noureldin Zahran, Ahmad Tahmasivand, Ihsen Alouani, Khaled Khasawneh, Mohammed E. Fouda
+ID: 2507.03236
+URL: https://arxiv.org/abs/2507.03236
+
+Abstract:
+The safety alignment of Language Models (LMs) is a critical concern, yet their
+integrity can be challenged by direct parameter manipulation attacks, such as
+those potentially induced by fault injection. As LMs are increasingly deployed
+using low-precision quantization for efficiency, this paper investigates the
+efficacy of such attacks for jailbreaking aligned LMs across different
+quantization schemes. We propose gradient-guided attacks, including a tailored
+progressive bit-level search algorithm introduced herein and a comparative
+word-level (single weight update) attack. Our evaluation on Llama-3.2-3B,
+Phi-4-mini, and Llama-3-8B across FP16 (baseline), and weight-only quantization
+(FP8, INT8, INT4) reveals that quantization significantly influences attack
+success. While attacks readily achieve high success (>80% Attack Success Rate,
+ASR) on FP16 models, within an attack budget of 25 perturbations, FP8 and INT8
+models exhibit ASRs below 20% and 50%, respectively. Increasing the perturbation
+budget up to 150 bit-flips, FP8 models maintained ASR below 65%, demonstrating
+some resilience compared to INT8 and INT4 models that have high ASR. In
+addition, analysis of perturbation locations revealed differing architectural
+targets across quantization schemes, with (FP16, INT4) and (INT8, FP8) showing
+similar characteristics. Besides, jailbreaks induced in FP16 models were highly
+transferable to subsequent FP8/INT8 quantization (<5% ASR difference), though
+INT4 significantly reduced transferred ASR (avg. 35% drop). These findings
+highlight that while common quantization schemes, particularly FP8, increase the
+difficulty of direct parameter manipulation jailbreaks, vulnerabilities can
+still persist, especially through post-attack quantization.

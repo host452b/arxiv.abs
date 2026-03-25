@@ -1,0 +1,28 @@
+Title: SecV: Secure Code Partitioning via Multi-Language Secure Values
+Authors: Peterson Yuhala, Pascal Felber, Hugo Guiroux, Jean-Pierre Lozi, Alain Tchana et al.
+ID: 2310.15582
+URL: https://arxiv.org/abs/2310.15582
+
+Abstract:
+Trusted execution environments like Intel SGX provide \emph{enclaves}, which
+offer strong security guarantees for applications. Running entire applications
+inside enclaves is possible, but this approach leads to a large trusted
+computing base (TCB). As such, various tools have been developed to partition
+programs written in languages such as C or Java into \emph{trusted} and
+\emph{untrusted} parts, which are run in and out of enclaves respectively.
+However, those tools depend on language-specific taint-analysis and partitioning
+techniques. They cannot be reused for other languages and there is thus a need
+for tools that transcend this language barrier. We address this challenge by
+proposing a multi-language technique to specify sensitive code or data, as well
+as a multi-language tool to analyse and partition the resulting programs for
+trusted execution environments like Intel SGX. We leverage GraalVM's Truffle
+framework, which provides a language-agnostic abstract syntax tree (AST)
+representation for programs, to provide special AST nodes called \emph{secure
+nodes} that encapsulate sensitive program information. Secure nodes can easily
+be embedded into the ASTs of a wide range of languages via Truffle's
+\emph{polyglot API}. Our technique includes a multi-language dynamic taint
+tracking tool to analyse and partition applications based on our generic secure
+nodes. Our extensive evaluation with micro- and macro-benchmarks shows that we
+can use our technique for two languages (Javascript and \python), and that
+partitioned programs can obtain up to $14.5\%$ performance improvement as
+compared to unpartitioned versions.

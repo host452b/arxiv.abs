@@ -1,0 +1,31 @@
+Title: VISION: Robust and Interpretable Code Vulnerability Detection Leveraging Counterfactual Augmentation
+Authors: David Egea, Barproda Halder, Sanghamitra Dutta
+ID: 2508.18933
+URL: https://arxiv.org/abs/2508.18933
+
+Abstract:
+Automated detection of vulnerabilities in source code is an essential
+cybersecurity challenge, underpinning trust in digital systems and services.
+Graph Neural Networks (GNNs) have emerged as a promising approach as they can
+learn structural and logical code relationships in a data-driven manner.
+However, their performance is severely constrained by training data imbalances
+and label noise. GNNs often learn 'spurious' correlations from superficial code
+similarities, producing detectors that fail to generalize well to unseen
+real-world data. In this work, we propose a unified framework for robust and
+interpretable vulnerability detection, called VISION, to mitigate spurious
+correlations by systematically augmenting a counterfactual training dataset.
+Counterfactuals are samples with minimal semantic modifications but opposite
+labels. Our framework includes: (i) generating counterfactuals by prompting a
+Large Language Model (LLM); (ii) targeted GNN training on paired code examples
+with opposite labels; and (iii) graph-based interpretability to identify the
+crucial code statements relevant for vulnerability predictions while ignoring
+spurious ones. We find that VISION reduces spurious learning and enables more
+robust, generalizable detection, improving overall accuracy (from 51.8% to
+97.8%), pairwise contrast accuracy (from 4.5% to 95.8%), and worst-group
+accuracy (from 0.7% to 85.5%) on the Common Weakness Enumeration (CWE)-20
+vulnerability. We further demonstrate gains using proposed metrics: intra-class
+attribution variance, inter-class attribution distance, and node score
+dependency. We also release CWE-20-CFA, a benchmark of 27,556 functions (real
+and counterfactual) from the high-impact CWE-20 category. Finally, VISION
+advances transparent and trustworthy AI-based cybersecurity systems through
+interactive visualization for human-in-the-loop analysis.

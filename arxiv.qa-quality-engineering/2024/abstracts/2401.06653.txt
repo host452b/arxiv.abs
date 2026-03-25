@@ -1,0 +1,26 @@
+Title: Evolutionary Generative Fuzzing for Differential Testing of the Kotlin Compiler
+Authors: Calin Georgescu, Mitchell Olsthoorn, Pouria Derakhshanfar, Marat Akhin, Annibale Panichella
+ID: 2401.06653
+URL: https://arxiv.org/abs/2401.06653
+
+Abstract:
+Compiler correctness is a cornerstone of reliable software development. However,
+systematic testing of compilers is infeasible, given the vast space of possible
+programs and the complexity of modern programming languages. In this context,
+differential testing offers a practical methodology as it addresses the oracle
+problem by comparing the output of alternative compilers given the same set of
+programs as input. In this paper, we investigate the effectiveness of
+differential testing in finding bugs within the Kotlin compilers developed at
+JetBrains. We propose a black-box generative approach that creates input
+programs for the K1 and K2 compilers. First, we build workable models of Kotlin
+semantic (semantic interface) and syntactic (enriched context-free grammar)
+language features, which are subsequently exploited to generate random code
+snippets. Second, we extend random sampling by introducing two genetic
+algorithms (GAs) that aim to generate more diverse input programs. Our case
+study shows that the proposed approach effectively detects bugs in K1 and K2;
+these bugs have been confirmed and (some) fixed by JetBrains developers. While
+we do not observe a significant difference w.r.t. the number of defects
+uncovered by the different search algorithms, random search and GAs are
+complementary as they find different categories of bugs. Finally, we provide
+insights into the relationships between the size, complexity, and fault
+detection capability of the generated input programs.

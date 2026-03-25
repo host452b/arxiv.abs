@@ -1,0 +1,26 @@
+Title: A Match Made in Heaven? AI-driven Matching of Vulnerabilities and Security Unit Tests
+Authors: Emanuele Iannone, Quang-Cuong Bui, Riccardo Scandariato
+ID: 2502.03365
+URL: https://arxiv.org/abs/2502.03365
+
+Abstract:
+Software vulnerabilities are often detected via taint analysis, penetration
+testing, or fuzzing. They are also found via unit tests that exercise
+security-sensitive behavior with specific inputs, called
+vulnerability-witnessing tests. Generative AI models could help developers in
+writing them, but they require many examples to learn from, which are currently
+scarce. This paper introduces VuTeCo, an AI-driven framework for collecting
+examples of vulnerability-witnessing tests from Java repositories. VuTeCo
+carries out two tasks: (1) The "Finding" task to determine whether a unit test
+case is security-related, and (2) the "Matching" task to relate a test case to
+the vulnerability it witnesses. VuTeCo addresses the Finding task with
+UniXcoder, achieving an F0.5 score of 0.73 and a precision of 0.83 on a test set
+of unit tests from Vul4J. The Matching task is addressed using DeepSeek Coder,
+achieving an F0.5 score of 0.65 and a precision of 0.75 on a test set of pairs
+of unit tests and vulnerabilities from Vul4J. VuTeCo has been used in the wild
+on 427 Java projects and 1,238 vulnerabilities, obtaining 224 test cases
+confirmed to be security-related and 35 tests correctly matched to 29
+vulnerabilities. The validated tests were collected in a new dataset called
+Test4Vul. VuTeCo lays the foundation for large-scale retrieval of
+vulnerability-witnessing tests, enabling future AI models to better understand
+and generate security unit tests.

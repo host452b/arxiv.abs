@@ -1,0 +1,26 @@
+Title: An Efficient Algorithm for Generating Minimal Unique-Cause MC/DC Test cases for Singular Boolean Expressions
+Authors: Robin Lee, Youngho Nam
+ID: 2507.14687
+URL: https://arxiv.org/abs/2507.14687
+
+Abstract:
+Modified Condition/Decision Coverage (MC/DC) is a mandatory structural coverage
+criterion for assuring the reliability of safety-critical software. Among its
+variants, Unique-Cause MC/DC provides the strongest assurance, yet efficient and
+scalable test generation for Unique-Cause MC/DC remains underexplored. This gap
+is particularly important because large-scale avionics studies report that 99.7%
+of conditional decisions are Singular Boolean Expressions (SBEs), for which
+Unique-Cause obligations can be precisely characterized. We propose Robin's
+Rule, a deterministic, direct-construction algorithm that generates a provably
+minimal test suite of N+1 test cases to guarantee 100% Unique-Cause MC/DC for
+SBEs with N conditions, without enumerating the 2^N truth table. The algorithm
+runs in O(N^2) time by explicitly constructing an (N+1)xN test table. To
+evaluate the approach, we build a benchmark of 25 SBEs consisting of 15
+TCAS-II-derived conditions and 10 randomly generated SBEs with diverse operators
+and nesting. We validate achieved coverage using VectorCAST as an oracle and
+compare against state-of-the-art baseline paradigms using BDD and SAT. Across
+all benchmarks, Robin's Rule consistently achieves 100% Unique-Cause MC/DC with
+the theoretical minimum number of tests, while providing stable and efficient
+generation time. This work offers a practical and provably optimal solution for
+Unique-Cause MC/DC test generation on SBEs, improving both rigor and scalability
+for safety-critical verification.

@@ -1,0 +1,29 @@
+Title: Optimizing FPGA and Wafer Test Coverage with Spatial Sampling and Machine Learning
+Authors: Wang WeiQuan, Riaz-ul-Haque Mian
+ID: 2506.03556
+URL: https://arxiv.org/abs/2506.03556
+
+Abstract:
+In semiconductor manufacturing, testing costs remain significantly high,
+especially during wafer and FPGA testing. To reduce the number of required tests
+while maintaining predictive accuracy, this study investigates three baseline
+sampling strategies: Random Sampling, Stratified Sampling, and k-means
+Clustering Sampling. To further enhance these methods, this study proposes a
+novel algorithm that improves the sampling quality of each approach. This
+research is conducted using real industrial production data from wafer-level
+tests and silicon measurements from various FPGAs. This study introduces two
+hybrid strategies: Stratified with Short Distance Elimination (S-SDE) and
+k-means with Short Distance Elimination (K-SDE). Their performance is evaluated
+within the framework of Gaussian Process Regression (GPR) for predicting wafer
+and FPGA test data. At the core of our proposed approach is the Short Distance
+Elimination (SDE) algorithm, which excludes spatially proximate candidate points
+during sampling, thereby ensuring a more uniform distribution of training data
+across the physical domain. A parameter sweep was conducted over the (alpha,
+beta) thresholds, where alpha and beta are in the range {0, 1, 2, 3, 4} and not
+both zero, to identify the optimal combination that minimizes RMSD. Experimental
+results on a randomly selected wafer file reveal that (alpha, beta) equal (2, 2)
+yields the lowest RMSD. Accordingly, all subsequent experiments adopt this
+parameter configuration. The results demonstrate that the proposed SDE-based
+strategies enhance predictive accuracy: K-SDE improves upon k-means sampling by
+16.26 percent (wafer) and 13.07 percent (FPGA), while S-SDE improves upon
+stratified sampling by 16.49 percent (wafer) and 8.84 percent (FPGA).

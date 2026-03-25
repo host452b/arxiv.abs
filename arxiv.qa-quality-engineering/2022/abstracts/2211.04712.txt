@@ -1,0 +1,29 @@
+Title: Improve Model Testing by Integrating Bounded Model Checking and Coverage Guided Fuzzing
+Authors: Yixiao Yang
+ID: 2211.04712
+URL: https://arxiv.org/abs/2211.04712
+
+Abstract:
+The control logic models built by Simulink or Ptolemy have been widely used in
+industry scenes. It is an urgent need to ensure the safety and security of the
+control logic models. Test case generation technologies are widely used to
+ensure the safety and security. State-of-the-art model testing tools employ
+model checking techniques or search-based methods to generate test cases.
+Traditional search based techniques based on Simulink simulation are plagued by
+problems such as low speed and high overhead. Traditional model checking
+techniques such as symbolic execution have limited performance when dealing with
+nonlinear elements and complex loops. Recently, coverage guided fuzzing
+technologies are known to be effective for test case generation, due to their
+high efficiency and impressive effects over complex branches of loops. In this
+paper, we apply fuzzing methods to improve model testing and demonstrate the
+effectiveness. The fuzzing methods aim to cover more program branches by
+mutating valuable seeds. Inspired by this feature, we propose a novel
+integration technology SPsCGF, which leverages bounded model checking for
+symbolic execution to generate test cases as initial seeds and then conduct
+fuzzing based upon these worthy seeds. In this manner, our work combines the
+advantages of the model checking methods and fuzzing techniques in a novel way.
+Since the control logic models always receive signal inputs, we specifically
+design novel mutation operators for signals to improve the existing fuzzing
+method in model testing. Over the evaluated benchmarks which consist of
+industrial cases, SPsCGF could achieve 8% to 38% higher model coverage and
+3x-10x time efficiency compared with the state-of-the-art works.

@@ -1,0 +1,27 @@
+Title: Continual Test-Time Adaptation for Single Image Defocus Deblurring via Causal Siamese Networks
+Authors: Shuang Cui, Yi Li, Jiangmeng Li, Xiongxin Tang, Bing Su et al.
+ID: 2501.09052
+URL: https://arxiv.org/abs/2501.09052
+
+Abstract:
+Single image defocus deblurring (SIDD) aims to restore an all-in-focus image
+from a defocused one. Distribution shifts in defocused images generally lead to
+performance degradation of existing methods during out-of-distribution
+inferences. In this work, we gauge the intrinsic reason behind the performance
+degradation, which is identified as the heterogeneity of lens-specific point
+spread functions. Empirical evidence supports this finding, motivating us to
+employ a continual test-time adaptation (CTTA) paradigm for SIDD. However,
+traditional CTTA methods, which primarily rely on entropy minimization, cannot
+sufficiently explore task-dependent information for pixel-level regression tasks
+like SIDD. To address this issue, we propose a novel Siamese networks-based
+continual test-time adaptation framework, which adapts source models to
+continuously changing target domains only requiring unlabeled target data in an
+online manner. To further mitigate semantically erroneous textures introduced by
+source SIDD models under severe degradation, we revisit the learning paradigm
+through a structural causal model and propose Causal Siamese networks (CauSiam).
+Our method leverages large-scale pre-trained vision-language models to derive
+discriminative universal semantic priors and integrates these priors into
+Siamese networks, ensuring causal identifiability between blurry inputs and
+restored images. Extensive experiments demonstrate that CauSiam effectively
+improves the generalization performance of existing SIDD methods in continuously
+changing domains.

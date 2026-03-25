@@ -1,0 +1,30 @@
+Title: STCLocker: Deadlock Avoidance Testing for Autonomous Driving Systems
+Authors: Mingfei Cheng, Renzhi Wang, Xiaofei Xie, Yuan Zhou, Lei Ma
+ID: 2506.23995
+URL: https://arxiv.org/abs/2506.23995
+
+Abstract:
+Autonomous Driving System (ADS) testing is essential to ensure the safety and
+reliability of autonomous vehicles (AVs) before deployment. However, existing
+techniques primarily focus on evaluating ADS functionalities in single-AV
+settings. As ADSs are increasingly deployed in multi-AV traffic, it becomes
+crucial to assess their cooperative performance, particularly regarding
+deadlocks, a fundamental coordination failure in which multiple AVs enter a
+circular waiting state indefinitely, resulting in motion planning failures.
+Despite its importance, the cooperative capability of ADSs to prevent deadlocks
+remains insufficiently underexplored. To address this gap, we propose the first
+dedicated Spatio-Temporal Conflict-Guided Deadlock Avoidance Testing technique,
+STCLocker, for generating DeadLock Scenarios (DLSs), where a group of AVs
+controlled by the ADS under test are in a circular wait state. STCLocker
+consists of three key components: Deadlock Oracle, Conflict Feedback, and
+Conflict-aware Scenario Generation. Deadlock Oracle provides a reliable
+black-box mechanism for detecting deadlock cycles among multiple AVs within a
+given scenario. Conflict Feedback and Conflict-aware Scenario Generation
+collaborate to actively guide AVs into simultaneous competition over spatial
+conflict resources (i.e., shared passing regions) and temporal competitive
+behaviors (i.e., reaching the conflict region at the same time), thereby
+increasing the effectiveness of generating conflict-prone deadlocks. We evaluate
+STCLocker on two types of ADSs: Roach, an end-to-end ADS, and OpenCDA, a
+module-based ADS supporting cooperative communication. Experimental results show
+that, on average, STCLocker generates more DLS than the best-performing
+baseline.

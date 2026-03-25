@@ -1,0 +1,29 @@
+Title: Studying the Impact of Early Test Termination Due to Assertion Failure on Code Coverage and Spectrum-based Fault Localization
+Authors: Md. Ashraf Uddin, Shaowei Wang, An Ran Chen,  Tse-Hsun,  Chen et al.
+ID: 2504.04557
+URL: https://arxiv.org/abs/2504.04557
+
+Abstract:
+An assertion is commonly used to validate the expected programs behavior (e.g.,
+if the returned value of a method equals an expected value) in software testing.
+Although it is a recommended practice to use only one assertion in a single test
+to avoid code smells (e.g., Assertion Roulette), it is common to have multiple
+assertions in a single test. One issue with tests that have multiple assertions
+is that when the test fails at an early assertion (not the last one), the test
+will terminate at that point, and the remaining testing code will not be
+executed. This, in turn, can potentially reduce the code coverage and the
+performance of techniques that rely on code coverage information (e.g.,
+spectrum-based fault localization). We refer to such a scenario as early test
+termination. Understanding the impact of early test termination on test coverage
+is important for software testing and debugging, particularly for the techniques
+that rely on coverage information obtained from the testing. We conducted the
+first empirical study on early test termination due to assertion failure (i.e.,
+early test termination) by investigating 207 versions of 6 open-source projects.
+We found that a nonnegligible portion of the failed tests (19.1%) is early
+terminated due to assertion failure. Our findings indicate that early test
+termination harms both code coverage and the effectiveness of spectrum-based
+fault localization. For instance, after eliminating early test termination, the
+line/branch coverage is improved in 55% of the studied versions, and improves
+the performance of two popular SBFL techniques Ochiai and Tarantula by 15.1% and
+10.7% compared to the original setting (without eliminating early test
+termination) in terms of MFR, respectively.

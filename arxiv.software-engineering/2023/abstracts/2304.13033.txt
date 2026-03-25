@@ -1,0 +1,24 @@
+Title: SmartChoices: Augmenting Software with Learned Implementations
+Authors: Daniel Golovin, Gabor Bartok, Eric Chen, Emily Donahue, Tzu-Kuo Huang et al.
+ID: 2304.13033
+URL: https://arxiv.org/abs/2304.13033
+
+Abstract:
+In many software systems, heuristics are used to make decisions - such as cache
+eviction, task scheduling, and information presentation - that have a
+significant impact on overall system behavior. While machine learning may
+outperform these heuristics, replacing existing heuristics in a production
+system safely and reliably can be prohibitively costly. We present SmartChoices,
+a novel approach that reduces the cost to deploy production-ready ML solutions
+for contextual bandits problems. SmartChoices' interface cleanly separates
+problem formulation from implementation details: engineers describe their use
+case by defining datatypes for the context, arms, and feedback that are passed
+to SmartChoices APIs, while SmartChoices manages encoding & logging data and
+training, evaluating & deploying policies. Our implementation codifies best
+practices, is efficient enough for use in low-level applications, and provides
+valuable production features off the shelf via a shared library. Overall,
+SmartChoices enables non-experts to rapidly deploy production-ready ML solutions
+by eliminating many sources of technical debt common to ML systems. Engineers
+have independently used SmartChoices to improve a wide range of software
+including caches, batch processing workloads, and UI layouts, resulting in
+better latency, throughput, and click-through rates.

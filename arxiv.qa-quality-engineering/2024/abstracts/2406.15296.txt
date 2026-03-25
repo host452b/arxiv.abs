@@ -1,0 +1,24 @@
+Title: Feature-oriented Test Case Selection and Prioritization During the Evolution of Highly-Configurable Systems
+Authors: Willian D. F. Mendonça, Wesley K. G. Assunção, Silvia R. Vergilio
+ID: 2406.15296
+URL: https://arxiv.org/abs/2406.15296
+
+Abstract:
+Testing Highly Configurable Systems (HCSs) is a challenging task, especially in
+an evolution scenario where features are added, changed, or removed, which
+hampers test case selection and prioritization. Existing work is usually based
+on the variability model, which is not always available or updated. Yet, the few
+existing approaches rely on links between test cases and changed files (or lines
+of code), not considering how features are implemented, usually spread over
+several and unchanged files. To overcome these limitations, we introduce
+FeaTestSelPrio, a feature-oriented test case selection and prioritization
+approach for HCSs. The approach links test cases to feature implementations,
+using HCS pre-processor directives, to select test cases based on features
+affected by changes in each commit. After, the test cases are prioritized
+according to the number of features they cover. Our approach selects a greater
+number of tests and takes longer to execute than a changed-file-oriented
+approach, used as baseline, but FeaTestSelPrio performs better regarding
+detected failures. By adding the approach execution time to the execution time
+of the selected test cases, we reached a reduction of $\approx$50%, in
+comparison with retest-all. The prioritization step allows reducing the average
+test budget in 86% of the failed commits.

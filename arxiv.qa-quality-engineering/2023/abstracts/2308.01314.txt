@@ -1,0 +1,25 @@
+Title: Evaluating the Robustness of Test Selection Methods for Deep Neural Networks
+Authors: Qiang Hu, Yuejun Guo, Xiaofei Xie, Maxime Cordy, Wei Ma et al.
+ID: 2308.01314
+URL: https://arxiv.org/abs/2308.01314
+
+Abstract:
+Testing deep learning-based systems is crucial but challenging due to the
+required time and labor for labeling collected raw data. To alleviate the
+labeling effort, multiple test selection methods have been proposed where only a
+subset of test data needs to be labeled while satisfying testing requirements.
+However, we observe that such methods with reported promising results are only
+evaluated under simple scenarios, e.g., testing on original test data. This
+brings a question to us: are they always reliable? In this paper, we explore
+when and to what extent test selection methods fail for testing. Specifically,
+first, we identify potential pitfalls of 11 selection methods from top-tier
+venues based on their construction. Second, we conduct a study on five datasets
+with two model architectures per dataset to empirically confirm the existence of
+these pitfalls. Furthermore, we demonstrate how pitfalls can break the
+reliability of these methods. Concretely, methods for fault detection suffer
+from test data that are: 1) correctly classified but uncertain, or 2)
+misclassified but confident. Remarkably, the test relative coverage achieved by
+such methods drops by up to 86.85%. On the other hand, methods for performance
+estimation are sensitive to the choice of intermediate-layer output. The
+effectiveness of such methods can be even worse than random selection when using
+an inappropriate layer.

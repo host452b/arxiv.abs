@@ -1,0 +1,27 @@
+Title: Efficient Dynamic Test Case Generation for Path-Based Coverage Criteria
+Authors: Jakub Zelek, Jakub Ruszil, Adam Roman, Artur Polański
+ID: 2602.18768
+URL: https://arxiv.org/abs/2602.18768
+
+Abstract:
+We present a novel approach to test-case generation that satisfies four
+white-box, path-based coverage criteria: Prime Path, Simple Cycle, Simple Path,
+and Edge-Acyclic Path. Our method builds on a modified version of Johnson
+algorithm and enables test cases to be generated incrementally and on demand,
+rather than requiring the entire test suite to be computed upfront. This
+streaming capability represents a substantial advancement over existing
+approaches, as it allows testers to begin executing and refining tests
+immediately, thereby significantly improving the efficiency of test design. Our
+solution is inherently memory efficient, as it does not store all discovered
+coverage items; instead, it retains only the minimal set of paths required to
+generate subsequent coverage items on the fly. As a result, the approach scales
+to arbitrarily large graphs. In addition, the algorithm gives testers explicit
+control over the size of the generated test suite by allowing them to restrict
+the number of cycles permitted in a test path. The approach is grounded in new
+theoretical insights, most notably a novel characterization of prime paths in
+terms of the strongly connected components of control-flow graphs. We complement
+these theoretical contributions with a practical implementation and a
+comprehensive empirical evaluation. The results demonstrate that our method not
+only outperforms existing techniques in terms of execution time and memory
+consumption, but also provides testers with a more flexible and efficient tool
+for achieving high coverage while substantially reducing test design overhead.

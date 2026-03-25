@@ -1,0 +1,28 @@
+Title: Unveiling and Vanquishing Goroutine Leaks in Enterprise Microservices: A Dynamic Analysis Approach
+Authors: Georgian-Vlad Saioc, Dmitriy Shirchenko, Milind Chabbi
+ID: 2312.12002
+URL: https://arxiv.org/abs/2312.12002
+
+Abstract:
+Go is a modern programming language gaining popularity in enterprise
+microservice systems. Concurrency is a first-class citizen in Go with
+lightweight ``goroutines'' as the building blocks of concurrent execution. Go
+advocates message-passing to communicate and synchronize among goroutines.
+Improper use of message passing in Go can result in ``partial deadlocks'' , a
+subtle concurrency bug where a blocked sender (receiver) never finds a
+corresponding receiver (sender), causing the blocked goroutine to leak memory,
+via its call stack and objects reachable from the stack. In this paper, we
+systematically study the prevalence of message passing and the resulting partial
+deadlocks in 75 million lines of Uber's Go monorepo hosting over 2500
+microservices. We develop two lightweight, dynamic analysis tools: Goleak and
+LeakProf, designed to identify partial deadlocks. Goleak detects partial
+deadlocks during unit testing and prevents the introduction of new bugs.
+Conversely, LeakProf uses goroutine profiles obtained from services deployed in
+production to pinpoint intricate bugs arising from complex control flow,
+unexplored interleavings, or the absence of test coverage. We share our
+experience and insights deploying these tools in developer workflows in a large
+industrial setting. Using Goleak we unearthed 857 pre-existing goroutine leaks
+in the legacy code and prevented the introduction of around 260 new leaks over
+one year period. Using LeakProf we found 24 and fixed 21 goroutine leaks, which
+resulted in up to 34% speedup and 9.2x memory reduction in some of our
+production services.

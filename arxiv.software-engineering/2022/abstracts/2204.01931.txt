@@ -1,0 +1,27 @@
+Title: High-Quality Pluralistic Image Completion via Code Shared VQGAN
+Authors: Chuanxia Zheng, Guoxian Song, Tat-Jen Cham, Jianfei Cai, Dinh Phung et al.
+ID: 2204.01931
+URL: https://arxiv.org/abs/2204.01931
+
+Abstract:
+PICNet pioneered the generation of multiple and diverse results for image
+completion task, but it required a careful balance between $\mathcal{KL}$ loss
+(diversity) and reconstruction loss (quality), resulting in a limited diversity
+and quality . Separately, iGPT-based architecture has been employed to infer
+distributions in a discrete space derived from a pixel-level pre-clustered
+palette, which however cannot generate high-quality results directly. In this
+work, we present a novel framework for pluralistic image completion that can
+achieve both high quality and diversity at much faster inference speed. The core
+of our design lies in a simple yet effective code sharing mechanism that leads
+to a very compact yet expressive image representation in a discrete latent
+domain. The compactness and the richness of the representation further
+facilitate the subsequent deployment of a transformer to effectively learn how
+to composite and complete a masked image at the discrete code domain. Based on
+the global context well-captured by the transformer and the available visual
+regions, we are able to sample all tokens simultaneously, which is completely
+different from the prevailing autoregressive approach of iGPT-based works, and
+leads to more than 100$\times$ faster inference speed. Experiments show that our
+framework is able to learn semantically-rich discrete codes efficiently and
+robustly, resulting in much better image reconstruction quality. Our diverse
+image completion framework significantly outperforms the state-of-the-art both
+quantitatively and qualitatively on multiple benchmark datasets.

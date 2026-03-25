@@ -1,0 +1,24 @@
+Title: On the Security Blind Spots of Software Composition Analysis
+Authors: Jens Dietrich, Shawn Rasheed, Alexander Jordan, Tim White
+ID: 2306.05534
+URL: https://arxiv.org/abs/2306.05534
+
+Abstract:
+Modern software heavily relies on the use of components. Those components are
+usually published in central repositories, and managed by build systems via
+dependencies. Due to issues around vulnerabilities, licenses and the propagation
+of bugs, the study of those dependencies is of utmost importance, and numerous
+software composition analysis tools have emerged for this purpose. A particular
+challenge are hidden dependencies that are the result of cloning or shading
+where code from a component is "inlined", and, in the case of shading, moved to
+different namespaces. We present a novel approach to detect vulnerable clones in
+the Maven repository. Our approach is lightweight in that it does not require
+the creation and maintenance of a custom index. Starting with 29 vulnerabilities
+with assigned CVEs and proof-of-vulnerability projects, we retrieve over 53k
+potential vulnerable clones from Maven Central. After running our analysis on
+this set, we detect 727 confirmed vulnerable clones (86 if versions are
+aggregated) and synthesize a testable proof-of-vulnerability project for each of
+those. We demonstrate that existing SCA tools often miss those exposures. At the
+time of submission those results have led to changes to the entries for six CVEs
+in the GitHub Security Advisory Database (GHSA) via accepted pull requests, with
+more pending.

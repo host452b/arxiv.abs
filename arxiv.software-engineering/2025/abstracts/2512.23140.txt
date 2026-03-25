@@ -1,0 +1,26 @@
+Title: A New Software Tool for Generating and Visualizing Robot Self-Collision Matrices
+Authors: Roshan Klein-Seetharama, Daniel Rakita
+ID: 2512.23140
+URL: https://arxiv.org/abs/2512.23140
+
+Abstract:
+In robotics, it is common to check whether a given robot state results in
+self-intersection (i.e., a self-collision query) or to assess its distance from
+such an intersection (i.e., a self-proximity query). These checks are typically
+performed between pairs of shapes attached to different robot links. However,
+many of these shape pairs can be excluded in advance, as their configurations
+are known to always or never result in contact. This information is typically
+encoded in a self-collision matrix, where each entry (i, j) indicates whether a
+check should be performed between shape i and shape j. While the MoveIt Setup
+Assistant is widely used to generate such matrices, current tools are limited by
+static visualization, lack of proximity support, rigid single-geometry
+assumptions, and tedious refinement workflows, hindering flexibility and reuse
+in downstream robotics applications. In this work, we introduce an interactive
+tool that overcomes these limitations by generating and visualizing
+self-collision matrices across multiple shape representations, enabling dynamic
+inspection, filtering, and refinement of shape pairs. Outputs are provided in
+both JSON and YAML for easy integration. The system is implemented in Rust and
+uses the Bevy game engine to deliver high-quality visualizations. We demonstrate
+its effectiveness on multiple robot platforms, showing that matrices generated
+using diverse shape types yield faster and more accurate self-collision and
+self-proximity queries.

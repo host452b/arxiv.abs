@@ -1,0 +1,25 @@
+Title: Log(Graph): A Near-Optimal High-Performance Graph Representation
+Authors: Maciej Besta, Dimitri Stanojevic, Tijana Zivic, Jagpreet Singh, Maurice Hoerold et al.
+ID: 2010.15879
+URL: https://arxiv.org/abs/2010.15879
+
+Abstract:
+Today's graphs used in domains such as machine learning or social network
+analysis may contain hundreds of billions of edges. Yet, they are not
+necessarily stored efficiently, and standard graph representations such as
+adjacency lists waste a significant number of bits while graph compression
+schemes such as WebGraph often require time-consuming decompression. To address
+this, we propose Log(Graph): a graph representation that combines high
+compression ratios with very low-overhead decompression to enable cheaper and
+faster graph processing. The key idea is to encode a graph so that the parts of
+the representation approach or match the respective storage lower bounds. We
+call our approach "graph logarithmization" because these bounds are usually
+logarithmic. Our high-performance Log(Graph) implementation based on modern
+bitwise operations and state-of-the-art succinct data structures achieves high
+compression ratios as well as performance. For example, compared to the tuned
+Graph Algorithm Processing Benchmark Suite (GAPBS), it reduces graph sizes by
+20-35% while matching GAPBS' performance or even delivering speedups due to
+reducing amounts of transferred data. It approaches the compression ratio of the
+established WebGraph compression library while enabling speedups of up to more
+than 2x. Log(Graph) can improve the design of various graph processing engines
+or libraries on single NUMA nodes as well as distributed-memory systems.

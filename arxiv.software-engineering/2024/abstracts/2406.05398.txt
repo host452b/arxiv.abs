@@ -1,0 +1,31 @@
+Title: Evaluation of Posits for Spectral Analysis Using a Software-Defined Dataflow Architecture
+Authors: Sameer Deshmukh, Daniel Khankin, William Killian, John Gustafson, Elad Raz
+ID: 2406.05398
+URL: https://arxiv.org/abs/2406.05398
+
+Abstract:
+Spectral analysis plays an important role in detection of damage in structures
+and deep learning. The choice of a floating-point format plays a crucial role in
+determining the accuracy and performance of spectral analysis. The IEEE Std
+754\textsuperscript{TM} floating-point format (IEEE~754 for short) is supported
+by most major hardware vendors for ``normal'' floats. However, it has several
+limitations. Previous work has attempted to evaluate posit format with respect
+to accuracy and performance. The accuracy of the posit has been established over
+IEEE~754 for a variety of applications. For example, our analysis of the Fast
+Fourier Transform shows 2x better accuracy when using a 32-bit posit vs. a
+32-bit IEEE754 format. For spectral analysis, 32-bit posits are substantially
+more accurate than 32-bit IEEE~754 floats. Although posit has shown better
+accuracy than IEEE~754, a fair evaluation of posit with IEEE~754 format using a
+real hardware implementation has been lacking so far. A software simulation of
+posit format on an x86 CPU is about $\mathbf{69.3\times}$ slower than native
+IEEE~754 hardware for normal floats for a Fast Fourier Transform (FFT) of
+$\mathbf{2^{28}}$ points. We propose the use of a software-defined dataflow
+architecture to evaluate performance and accuracy of posits in spectral
+analysis. Our dataflow architecture uses reconfigurable logical elements that
+express algorithms using only integer operations. Our architecture does not have
+an FPU, and we express both IEEE~754 and posit arithmetic using the same integer
+operations within the hardware. On our dataflow architecture, the posit format
+is only $\mathbf{1.8\times}$ slower than IEEE~754 for a Fast Fourier Transform
+(FFT) of $\mathbf{2^{28}\approx 268}$ million points. With this implementation,
+we empirically propose a new lower bound for the performance of posit compared
+to IEEE~754 format.

@@ -1,0 +1,31 @@
+Title: Unit Test Update through LLM-Driven Context Collection and Error-Type-Aware Refinement
+Authors: Yuanhe Zhang, Zhiquan Yang, Shengyi Pan, Zhongxin Liu
+ID: 2509.24419
+URL: https://arxiv.org/abs/2509.24419
+
+Abstract:
+Unit testing is critical for ensuring software quality and software system
+stability. The current practice of manually maintaining unit tests suffers from
+low efficiency and the risk of delayed or overlooked fixes. Therefore, an
+automated approach is required to instantly update unit tests, with the
+capability to both repair and enhance unit tests. However, existing automated
+test maintenance methods primarily focus on repairing broken tests, neglecting
+the scenario of enhancing existing tests to verify new functionality. Meanwhile,
+due to their reliance on rule-based context collection and the lack of
+verification mechanisms, existing approaches struggle to handle complex code
+changes and often produce test cases with low correctness. To address these
+challenges, we propose TESTUPDATER, a novel LLM based approach that enables
+automated just-in-time test updates in response to production code changes.
+TESTUPDATER first leverages the LLM to analyze code changes and identify
+relevant context, which it then extracts and filters. Then, through carefully
+designed prompts, TESTUPDATER guides the LLM step by step to handle various
+types of code changes and introduce new dependencies, enabling both test repair
+and enhancement. Finally, we introduce an error-type-aware iterative refinement
+mechanism that executes the LLM-updated tests and repairs failures, which
+significantly improves the overall correctness of test updates. Since existing
+test repair datasets lack scenarios of test enhancement, we further construct a
+new benchmark, UPDATES4J, with 195 real-world samples from 7 projects.
+Experimental results show that TESTUPDATER achieves a compilation pass rate of
+94.4% and a test pass rate of 86.7%, outperforming the state-of-the-art method
+SYNTER by 15.9% and 20.0%, respectively. Furthermore, TESTUPDATER exhibits 12.9%
+higher branch coverage and 15.2% greater line coverage than SYNTER.

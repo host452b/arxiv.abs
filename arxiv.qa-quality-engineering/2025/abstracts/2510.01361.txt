@@ -1,0 +1,26 @@
+Title: An Efficient Quality Metric for Video Frame Interpolation Based on Motion-Field Divergence
+Authors: Conall Daly, Darren Ramsook, Anil Kokaram
+ID: 2510.01361
+URL: https://arxiv.org/abs/2510.01361
+
+Abstract:
+Video frame interpolation is a fundamental tool for temporal video enhancement,
+but existing quality metrics struggle to evaluate the perceptual impact of
+interpolation artefacts effectively. Metrics like PSNR, SSIM and LPIPS ignore
+temporal coherence. State-of-the-art quality metrics tailored towards video
+frame interpolation, like FloLPIPS, have been developed but suffer from
+computational inefficiency that limits their practical application. We present
+$\text{PSNR}_{\text{DIV}}$, a novel full-reference quality metric that enhances
+PSNR through motion divergence weighting, a technique adapted from archival film
+restoration where it was developed to detect temporal inconsistencies. Our
+approach highlights singularities in motion fields which is then used to weight
+image errors. Evaluation on the BVI-VFI dataset (180 sequences across multiple
+frame rates, resolutions and interpolation methods) shows
+$\text{PSNR}_{\text{DIV}}$ achieves statistically significant improvements:
++0.09 Pearson Linear Correlation Coefficient over FloLPIPS, while being
+2.5$\times$ faster and using 4$\times$ less memory. Performance remains
+consistent across all content categories and are robust to the motion estimator
+used. The efficiency and accuracy of $\text{PSNR}_{\text{DIV}}$ enables fast
+quality evaluation and practical use as a loss function for training neural
+networks for video frame interpolation tasks. An implementation of our metric is
+available at www.github.com/conalld/psnr-div.

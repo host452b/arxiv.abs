@@ -1,0 +1,31 @@
+Title: Code Quality Analysis of Translations from C to Rust
+Authors: Biruk Tadesse, Vikram Nitin, Mazin Salah, Baishakhi Ray, Marcelo d'Amorim et al.
+ID: 2602.00840
+URL: https://arxiv.org/abs/2602.00840
+
+Abstract:
+C/C++ is a prevalent programming language. Yet, it suffers from significant
+memory and thread-safety issues. Recent studies have explored automated
+translation of C/C++ to safer languages, such as Rust. However, these studies
+focused mostly on the correctness and safety of the translated code, which are
+indeed critical, but they left other important quality concerns (e.g.,
+performance, robustness, and maintainability) largely unexplored. This work
+investigates strengths and weaknesses of three C-to-Rust translators, namely
+C2Rust (a transpiler), C2SaferRust (an LLM-guided transpiler), and
+TranslationGym (an LLM-based direct translation). We perform an in-depth
+quantitative and qualitative analysis of several important quality attributes
+for the translated Rust code of the popular GNU coreutils, using human-based
+translation as a baseline. To assess the internal and external quality of the
+Rust code, we: (i) apply Clippy, a rule-based state-of-the-practice Rust static
+analysis tool; (ii) investigate the capability of an LLM (GPT-4o) to identify
+issues potentially overlooked by Clippy; and (iii) perform a manual analysis of
+the issues reported by Clippy and GPT-4o. Our results show that while newer
+techniques reduce some unsafe and non-idiomatic patterns, they frequently
+introduce new issues, revealing systematic trade-offs that are not visible under
+existing evaluation practices. Notably, none of the automated techniques
+consistently match or exceed human-written translations across all quality
+dimensions, yet even human-written Rust code exhibits persistent internal
+quality issues such as readability and non-idiomatic patterns. Together, these
+findings show that translation quality remains a multi-dimensional challenge,
+requiring systematic evaluation and targeted tool support beyond both naive
+automation and manual rewriting.

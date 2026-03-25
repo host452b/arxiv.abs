@@ -1,0 +1,28 @@
+Title: TTS-VAR: A Test-Time Scaling Framework for Visual Auto-Regressive Generation
+Authors: Zhekai Chen, Ruihang Chu, Yukang Chen, Shiwei Zhang, Yujie Wei et al.
+ID: 2507.18537
+URL: https://arxiv.org/abs/2507.18537
+
+Abstract:
+Scaling visual generation models is essential for real-world content creation,
+yet requires substantial training and computational expenses. Alternatively,
+test-time scaling has garnered growing attention due to resource efficiency and
+promising performance. In this work, we present TTS-VAR, the first general
+test-time scaling framework for visual auto-regressive (VAR) models, modeling
+the generation process as a path searching problem. To dynamically balance
+computational efficiency with exploration capacity, we first introduce an
+adaptive descending batch size schedule throughout the causal generation
+process. Besides, inspired by VAR's hierarchical coarse-to-fine multi-scale
+generation, our framework integrates two key components: (i) At coarse scales,
+we observe that generated tokens are hard for evaluation, possibly leading to
+erroneous acceptance of inferior samples or rejection of superior samples.
+Noticing that the coarse scales contain sufficient structural information, we
+propose clustering-based diversity search. It preserves structural variety
+through semantic feature clustering, enabling later selection on samples with
+higher potential. (ii) In fine scales, resampling-based potential selection
+prioritizes promising candidates using potential scores, which are defined as
+reward functions incorporating multi-scale generation history. Experiments on
+the powerful VAR model Infinity show a notable 8.7% GenEval score improvement
+(from 0.69 to 0.75). Key insights reveal that early-stage structural features
+effectively influence final quality, and resampling efficacy varies across
+generation scales. Code is available at https://github.com/ali-vilab/TTS-VAR.

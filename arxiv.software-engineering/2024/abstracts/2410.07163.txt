@@ -1,0 +1,29 @@
+Title: Simplicity Prevails: Rethinking Negative Preference Optimization for LLM Unlearning
+Authors: Chongyu Fan, Jiancheng Liu, Licong Lin, Jinghan Jia, Ruiqi Zhang et al.
+ID: 2410.07163
+URL: https://arxiv.org/abs/2410.07163
+
+Abstract:
+This work studies the problem of large language model (LLM) unlearning, aiming
+to remove unwanted data influences (e.g., copyrighted or harmful content) while
+preserving model utility. Despite the increasing demand for unlearning, a
+technically-grounded optimization framework is lacking. Gradient ascent
+(GA)-type methods, though widely used, are suboptimal as they reverse the
+learning process without controlling optimization divergence (i.e., deviation
+from the pre-trained state), leading to risks of over-forgetting and potential
+model collapse. Negative preference optimization (NPO) has been proposed to
+address this issue and is considered one of the state-of-the-art LLM unlearning
+approaches. In this work, we revisit NPO and identify another critical issue:
+reference model bias. This bias arises from using the reference model (i.e., the
+model prior to unlearning) to evaluate the unlearning success, which can
+compromise NPO's effectiveness. Specifically, it leads to (a) uneven allocation
+of optimization power across forget data with varying difficulty levels and (b)
+ineffective gradient weight smoothing during the early stages of unlearning
+optimization. To overcome these challenges, we propose a simple yet effective
+unlearning optimization framework, called SimNPO, showing that `simplicity' in
+removing the reliance on a reference model (through the lens of simple
+preference optimization) benefits unlearning. We provide deeper insights into
+SimNPO's advantages through an analysis based on mixtures of Markov chains.
+Extensive experiments further validate SimNPO's efficacy on benchmarks like TOFU
+and MUSE, as well as its robustness against relearning attacks. Codes are
+available at https://github.com/OPTML-Group/Unlearn-Simple.

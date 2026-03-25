@@ -1,0 +1,29 @@
+Title: Bilinear Compressive Security
+Authors: Axel Flinth, Hubert Orlicki, Semira Einsele, Gerhard Wunder
+ID: 2510.15380
+URL: https://arxiv.org/abs/2510.15380
+
+Abstract:
+Beyond its widespread application in signal and image processing,
+\emph{compressed sensing} principles have been greatly applied to secure
+information transmission (often termed 'compressive security'). In this
+scenario, the measurement matrix $Q$ acts as a one time pad encryption key (in
+complex number domain) which can achieve perfect information-theoretic security
+together with other benefits such as reduced complexity and energy efficiency
+particularly useful in IoT. However, unless the matrix is changed for every
+message it is vulnerable towards known plain text attacks: only $n$ observations
+suffices to recover a key $Q$ with $n$ columns. In this paper, we invent and
+analyze a new method (termed 'Bilinear Compressive Security (BCS)') addressing
+these shortcomings: In addition to the linear encoding of the message $x$ with a
+matrix $Q$, the sender convolves the resulting vector with a randomly generated
+filter $h$. Assuming that $h$ and $x$ are sparse, the receiver can then recover
+$x$ without knowledge of $h$ from $y=h*Qx$ through blind deconvolution. We study
+a rather idealized known plaintext attack for recovering $Q$ from repeated
+observations of $y$'s for different, known $x_k$, with varying and unknown $h$
+,giving Eve a number of advantages not present in practice. Our main result for
+BCS states that under a weak symmetry condition on the filter $h$, recovering
+$Q$ will require extensive sampling from transmissions of
+$Ω\left(\max\left(n,(n/s)^2\right)\right)$ messages $x_k$ if they are
+$s$-sparse. Remarkably, with $s=1$ it is impossible to recover the key. In this
+way, the scheme is much safer than standard compressed sensing even though our
+assumptions are much in favor towards a potential attacker.

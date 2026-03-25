@@ -1,0 +1,31 @@
+Title: Nail: Not Another Fault-Injection Framework for Chisel-generated RTL
+Authors: Robin Sehm, Christian Ewert, Rainer Buchty, Mladen Berekovic, Saleh Mulhem
+ID: 2508.06344
+URL: https://arxiv.org/abs/2508.06344
+
+Abstract:
+Fault simulation and emulation are essential techniques for evaluating the
+dependability of integrated circuits, enabling early-stage vulnerability
+analysis and supporting the implementation of effective mitigation strategies.
+High-level hardware description languages such as Chisel facilitate the rapid
+development of complex fault scenarios with minimal modification to the design.
+However, existing Chisel-based fault injection (FI) frameworks are limited by
+coarse-grained, instruction-level controllability, restricting the precision of
+fault modeling. This work introduces Nail, a Chisel-based open-source FI
+framework that overcomes these limitations by introducing state-based faults.
+This approach enables fault scenarios that depend on specific system states,
+rather than solely on instruction-level triggers, thereby removing the need for
+precise timing of fault activation. For greater controllability, Nail allows
+users to arbitrarily modify internal trigger states via software at runtime. To
+support this, Nail automatically generates a software interface, offering
+straightforward access to the instrumented design. This enables fine-tuning of
+fault parameters during active FI campaigns - a feature particularly beneficial
+for FPGA emulation, where synthesis is time-consuming. Utilizing these features,
+Nail narrows the gap between the high speed of emulation-based FI frameworks,
+the usability of software-based approaches, and the controllability achieved in
+simulation. We demonstrate Nail's state-based FI and software framework by
+modeling a faulty general-purpose register in a RISC-V processor. Although this
+might appear straightforward, it requires state-dependent FI and was previously
+impossible without fundamental changes to the design. The approach was validated
+in both simulation and FPGA emulation, where the addition of Nail introduced
+less than 1% resource overhead.

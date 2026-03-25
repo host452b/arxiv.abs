@@ -1,0 +1,30 @@
+Title: Is Your Automated Software Engineer Trustworthy?
+Authors: Noble Saji Mathews, Meiyappan Nagappan
+ID: 2506.17812
+URL: https://arxiv.org/abs/2506.17812
+
+Abstract:
+Large Language Models (LLMs) are being increasingly used in software engineering
+tasks, with an increased focus on bug report resolution over the past year.
+However, most proposed systems fail to properly handle uncertain or incorrect
+inputs and outputs. Existing LLM-based tools and coding agents respond to every
+issue and generate a patch for every case, even when the input is vague or their
+own output is incorrect. There are no mechanisms in place to abstain when
+confidence is low. This leads to unreliable behaviour, such as hallucinated code
+changes or responses based on vague issue reports. We introduce BouncerBench, a
+benchmark that evaluates whether LLM-based software agents can refuse to act
+when inputs are ill-defined or refuse to respond when their own outputs are
+likely to be incorrect. Unlike prior benchmarks that implicitly incentivize
+models to generate responses even when uncertain, BouncerBench aims to improve
+precision by targeting two overlooked failure points: (1) vague or
+underspecified issue descriptions in tickets and (2) logically or functionally
+incorrect code patches created by the system. It measures whether proposed
+systems can distinguish actionable issues from vague tickets and valid patches
+from untrustworthy ones. We also implement a basic input and output bouncer,
+evaluating how well current LLMs can abstain when needed. Our results show that
+most models fail to abstain from underspecified inputs or incorrect outputs.
+Hence, we conclude that there is significant room for improvement before LLMs
+can be trusted to make correct decisions and recommendations in real-world
+software engineering workflows. BouncerBench provides a first step toward
+evaluating and building more cautious, trustworthy code agents. The replication
+package, dataset, and leaderboard can be found at bouncerbench.com

@@ -1,0 +1,29 @@
+Title: Use Property-Based Testing to Bridge LLM Code Generation and Validation
+Authors: Lehan He, Zeren Chen, Zhe Zhang, Jing Shao, Xiang Gao et al.
+ID: 2506.18315
+URL: https://arxiv.org/abs/2506.18315
+
+Abstract:
+Large Language Models (LLMs) excel at code generation, but ensuring their
+outputs to be functionally correct, especially in complex programming tasks, is
+a persistent challenge. While traditional Test-Driven Development (TDD) offers a
+path for code refinement, its efficacy with LLMs is often undermined by the
+scarcity of high-quality test cases or the pitfalls of automated test
+generation, including biased tests or inaccurate output predictions that can
+misdirect the correction process. This paper introduces Property-Generated
+Solver, a novel framework that leverages Property-Based Testing (PBT) to
+validate high-level program properties or invariants, instead of relying on
+specific input-output examples. These properties are often simpler to define and
+verify than directly predicting exhaustive test oracles, breaking the "cycle of
+self-deception" where tests might share flaws with the code they are meant to
+validate. Property-Generated Solver employs two collaborative LLM-based agents:
+a Generator dedicated to code generation and iterative refinement, and a Tester
+that manages the PBT life-cycle and formulate semantically rich feedback from
+property violations. The resulting comprehensive and actionable feedback then
+guides the Generator in its refinement efforts. By establishing PBT as the core
+validation engine within this iterative, closed-loop paradigm,
+Property-Generated Solver provides a robust mechanism for steering LLMs towards
+more correct and generalizable code. Extensive experimental results on multiple
+code generation benchmarks demonstrate that Property-Generated Solver achieves
+substantial pass@1 improvements, ranging from 23.1% to 37.3% relative gains over
+established TDD methods.

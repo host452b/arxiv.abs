@@ -1,0 +1,25 @@
+Title: Streaming REST APIs for Large Financial Transaction Exports from Relational Databases
+Authors: Abhiram Kandiraju
+ID: 2603.12566
+URL: https://arxiv.org/abs/2603.12566
+
+Abstract:
+Financial platforms and enterprise systems frequently provide transaction export
+capabilities to support reporting, reconciliation, auditing, and regulatory
+compliance workflows. In many environments, these exports involve very large
+datasets containing hundreds of thousands or even millions of transaction
+records. Traditional REST API implementations often construct the entire export
+payload in application memory before transmitting the response to the client,
+which can lead to high memory consumption and delayed response initiation when
+processing large datasets. This paper presents a streaming-based REST API
+architecture that retrieves transaction records incrementally from relational
+databases and writes them directly to the HTTP response output stream. By
+integrating database cursor retrieval with progressive HTTP transmission, the
+proposed design allows export data to be delivered continuously as records are
+processed rather than after the full dataset has been assembled. The
+architecture is implemented using a Java-based JAX-RS framework with the
+StreamingOutput interface and supports multiple financial export formats
+including CSV, OFX, QFX, and QBO. In practice, the streaming approach
+significantly reduces memory buffering requirements and allows large export
+downloads to begin immediately, improving responsiveness and scalability for
+high-volume export operations.

@@ -1,0 +1,24 @@
+Title: foREST: A Tree-based Approach for Fuzzing RESTful APIs
+Authors: Jiaxian Lin, Tianyu Li, Yang Chen, Guangsheng Wei, Jiadong Lin et al.
+ID: 2203.02906
+URL: https://arxiv.org/abs/2203.02906
+
+Abstract:
+Representational state transfer (REST) is a widely employed architecture by web
+applications and cloud. Users can invoke such services according to the
+specification of their application interfaces, namely RESTful APIs. Existing
+approaches for fuzzing RESTful APIs are generally based on classic
+API-dependency graphs. However, such dependencies are inefficient for REST
+services due to the explosion of dependencies among APIs. In this paper, we
+propose a novel tree-based approach that can better capture the essential
+dependencies and largely improve the efficiency of RESTful API fuzzing. In
+particular, the hierarchical information of the endpoints across multiple APIs
+enables us to construct an API tree, and the relationships of tree nodes can
+indicate the priority of resource dependencies, \textit{e.g.,} it's more likely
+that a node depends on its parent node rather than its offspring or siblings. In
+the evaluation part, we first confirm that such a tree-based approach is more
+efficient than traditional graph-based approaches. We then apply our tool to
+fuzz two real-world RESTful services and compare the performance with two
+state-of-the-art tools, EvoMaster and RESTler. Our results show that foREST can
+improve the code coverage in all experiments, ranging from 11.5\% to 82.5\%.
+Besides, our tool finds 11 new bugs previously unknown.

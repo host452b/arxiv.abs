@@ -1,0 +1,25 @@
+Title: LLMs + Security = Trouble
+Authors: Benjamin Livshits
+ID: 2602.08422
+URL: https://arxiv.org/abs/2602.08422
+
+Abstract:
+We argue that when it comes to producing secure code with AI, the prevailing
+"fighting fire with fire" approach -- using probabilistic AI-based checkers or
+attackers to secure probabilistically generated code -- fails to address the
+long tail of security bugs. As a result, systems may remain exposed to zero-day
+vulnerabilities that can be discovered by better-resourced or more persistent
+adversaries. While neurosymbolic approaches that combine LLMs with formal
+methods are attractive in principle, we argue that they are difficult to
+reconcile with the "vibe coding" workflow common in LLM-assisted development:
+unless the end-to-end verification pipeline is fully automated, developers are
+repeatedly asked to validate specifications, resolve ambiguities, and adjudicate
+failures, making the human-in-the-loop a likely point of weakness, compromising
+secure-by-construction guarantees. In this paper we argue that stronger security
+guarantees can be obtained by enforcing security constraints during code
+generation (e.g., via constrained decoding), rather than relying solely on
+post-hoc detection and repair. This direction is particularly promising for
+diffusion-style code models, whose approach provides a natural elegant
+opportunity for modular, hierarchical security enforcement, allowing us to
+combine lower-latency generation techniques with generating
+secure-by-construction code.

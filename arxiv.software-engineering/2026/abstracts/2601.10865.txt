@@ -1,0 +1,28 @@
+Title: Multi-Agent Taint Specification Extraction for Vulnerability Detection
+Authors: Jonah Ghebremichael, Saastha Vasan, Saad Ullah, Greg Tystahl, David Adei et al.
+ID: 2601.10865
+URL: https://arxiv.org/abs/2601.10865
+
+Abstract:
+Static Application Security Testing (SAST) tools using taint analysis are widely
+viewed as providing higher-quality vulnerability detection results compared to
+traditional pattern-based approaches. However, performing static taint analysis
+for JavaScript poses two major challenges. First, JavaScript's dynamic features
+complicate data flow extraction required for taint tracking. Second, npm's large
+library ecosystem makes it difficult to identify relevant sources/sinks and
+establish taint propagation across dependencies. In this paper, we present
+SemTaint, a multi-agent system that strategically combines the semantic
+understanding of Large Language Models (LLMs) with traditional static program
+analysis to extract taint specifications, including sources, sinks, call edges,
+and library flow summaries tailored to each package. Conceptually, SemTaint uses
+static program analysis to calculate a call graph and defers to an LLM to
+resolve call edges that cannot be resolved statically. Further, it uses the LLM
+to classify sources and sinks for a given CWE. The resulting taint specification
+is then provided to a SAST tool, which performs vulnerability analysis. We
+integrate SemTaint with CodeQL, a state-of-the-art SAST tool, and demonstrate
+its effectiveness by detecting 106 of 162 vulnerabilities previously
+undetectable by CodeQL. Furthermore, we find 4 novel vulnerabilities in 4
+popular npm packages. In doing so, we demonstrate that LLMs can practically
+enhance existing static program analysis algorithms, combining the strengths of
+both symbolic reasoning and semantic understanding for improved vulnerability
+detection.

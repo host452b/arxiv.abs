@@ -1,0 +1,23 @@
+Title: MAFIA: Protecting the Microarchitecture of Embedded Systems Against Fault Injection Attacks
+Authors: Thomas Chamelot, Damien Couroussé, Karine Heydemann
+ID: 2309.02255
+URL: https://arxiv.org/abs/2309.02255
+
+Abstract:
+Fault injection attacks represent an effective threat to embedded systems.
+Recently, Laurent et al. have reported that fault injection attacks can leverage
+faults inside the microarchitecture. However, state-of-the-art counter-measures,
+hardwareonly or with hardware support, do not consider the integrity of
+microarchitecture control signals that are the target of these faults. We
+present MAFIA, a microarchitecture protection against fault injection attacks.
+MAFIA ensures integrity of pipeline control signals through a signature-based
+mechanism, and ensures fine-grained control-flow integrity with a complete
+indirect branch support and code authenticity. We analyse the security
+properties of two different implementations with different security/overhead
+trade-offs: one with a CBC-MAC/Prince signature function, and another one with a
+CRC32. We present our implementation of MAFIA in a RISC-V processor, supported
+by a dedicated compiler toolchain based on LLVM/Clang. We report a hardware area
+overhead of 23.8 % and 6.5 % for the CBC-MAC/Prince and CRC32 respectively. The
+average code size and execution time overheads are 29.4 % and 18.4 %
+respectively for the CRC32 implementation and are 50 % and 39 % for the
+CBC-MAC/Prince.

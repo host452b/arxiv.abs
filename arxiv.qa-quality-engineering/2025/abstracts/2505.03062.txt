@@ -1,0 +1,22 @@
+Title: Testing SSD Firmware with State Data-Aware Fuzzing: Accelerating Coverage in Nondeterministic I/O Environments
+Authors: Gangho Yoon, Eunseok Lee
+ID: 2505.03062
+URL: https://arxiv.org/abs/2505.03062
+
+Abstract:
+Solid-State Drive (SSD) firmware manages complex internal states, including
+flash memory maintenance. Due to nondeterministic I/O operations, traditional
+testing methods struggle to rapidly achieve coverage of firmware code areas that
+require extensive I/O accumulation. To address this challenge, we propose a
+state data-aware fuzzing approach that leverages SSD firmware's internal state
+to guide input generation under nondeterministic I/O conditions and accelerate
+coverage discovery. Our experiments with an open-source SSD firmware emulator
+show that the proposed method achieves the same firmware test coverage as a
+state-of-the-art coverage-based fuzzer (AFL++) while requiring approximately 67%
+fewer commands, without reducing the number of crashes or hangs detected.
+Moreover, we extend our experiments by incorporating various I/O commands beyond
+basic write/read operations to reflect real user scenarios, and we confirm that
+our strategy remains effective even for multiple types of I/O tests. We further
+validate the effectiveness of state data-aware fuzzing for firmware testing
+under I/O environments and suggest that this approach can be extended to other
+storage firmware or threshold-based embedded systems in the future.

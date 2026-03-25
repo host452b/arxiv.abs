@@ -1,0 +1,31 @@
+Title: STaleX: A Spatiotemporal-Aware Adaptive Auto-scaling Framework for Microservices
+Authors: Majid Dashtbani, Ladan Tahvildari
+ID: 2501.18734
+URL: https://arxiv.org/abs/2501.18734
+
+Abstract:
+While cloud environments and auto-scaling solutions have been widely applied to
+traditional monolithic applications, they face significant limitations when it
+comes to microservices-based architectures. Microservices introduce additional
+challenges due to their dynamic and spatiotemporal characteristics, which
+require more efficient and specialized auto-scaling strategies. Centralized
+auto-scaling for the entire microservice application is insufficient, as each
+service within a chain has distinct specifications and performance requirements.
+Therefore, each service requires its own dedicated auto-scaler to address its
+unique scaling needs effectively, while also considering the dependencies with
+other services in the chain and the overall application. This paper presents a
+combination of control theory, machine learning, and heuristics to address these
+challenges. We propose an adaptive auto-scaling framework, STaleX, for
+microservices that integrates spatiotemporal features, enabling real-time
+resource adjustments to minimize SLO violations. STaleX employs a set of
+weighted Proportional-Integral-Derivative (PID) controllers for each service,
+where weights are dynamically adjusted based on a supervisory unit that
+integrates spatiotemporal features. This supervisory unit continuously monitors
+and adjusts both the weights and the resources allocated to each service. Our
+framework accounts for spatial features, including service specifications and
+dependencies among services, as well as temporal variations in workload,
+ensuring that resource allocation is continuously optimized. Through experiments
+on a microservice-based demo application deployed on a Kubernetes cluster, we
+demonstrate the effectiveness of our framework in improving performance and
+reducing costs compared to traditional scaling methods like Kubernetes
+Horizontal Pod Autoscaler (HPA) with a 26.9% reduction in resource usage.

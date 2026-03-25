@@ -1,0 +1,26 @@
+Title: Dual Turing Test: A Framework for Detecting and Mitigating Undetectable AI
+Authors: Alberto Messina
+ID: 2507.15907
+URL: https://arxiv.org/abs/2507.15907
+
+Abstract:
+In this short note, we propose a unified framework that bridges three areas: (1)
+a flipped perspective on the Turing Test, the "dual Turing test", in which a
+human judge's goal is to identify an AI rather than reward a machine for
+deception; (2) a formal adversarial classification game with explicit quality
+constraints and worst-case guarantees; and (3) a reinforcement learning (RL)
+alignment pipeline that uses an undetectability detector and a set of quality
+related components in its reward model. We review historical precedents, from
+inverted and meta-Turing variants to modern supervised reverse-Turing
+classifiers, and highlight the novelty of combining quality thresholds, phased
+difficulty levels, and minimax bounds. We then formalize the dual test: define
+the judge's task over N independent rounds with fresh prompts drawn from a
+prompt space Q, introduce a quality function Q and parameters tau and delta, and
+cast the interaction as a two-player zero-sum game over the adversary's feasible
+strategy set M. Next, we map this minimax game onto an RL-HF style alignment
+loop, in which an undetectability detector D provides negative reward for
+stealthy outputs, balanced by a quality proxy that preserves fluency.
+Throughout, we include detailed explanations of each component notation, the
+meaning of inner minimization over sequences, phased tests, and iterative
+adversarial training and conclude with a suggestion for a couple of immediate
+actions.

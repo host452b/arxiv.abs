@@ -1,0 +1,28 @@
+Title: Handling Open-Vocabulary Constructs in Formalizing Specifications: Retrieval-Augmented Parsing with Expert Knowledge
+Authors: Mohammad Saqib Hasan, Sayontan Ghosh, Dhruv Verma, Geoff Kuenning, Erez Zadok et al.
+ID: 2509.08808
+URL: https://arxiv.org/abs/2509.08808
+
+Abstract:
+We study the problem of Open-Vocabulary Constructs(OVCs) -- ones not known
+beforehand -- in the context of converting natural language (NL) specifications
+into formal languages (e.g., temporal logic or code). Models fare poorly on OVCs
+due to a lack of necessary knowledge a priori. In such situations, a domain
+expert can provide correct constructs at inference time based on their
+preferences or domain knowledge. Our goal is to effectively reuse this
+inference-time, expert-provided knowledge for future parses without retraining
+the model. We present dynamic knowledge-augmented parsing(DKAP), where in
+addition to the input sentence, the model receives (dynamically growing) expert
+knowledge as a key-value lexicon that associates NL phrases with correct OVC
+constructs. We propose ROLex, a retrieval-augmented parsing approach that uses
+this lexicon. A retriever and a generator are trained to find and use the
+key-value store to produce the correct parse. A key challenge lies in curating
+data for this retrieval-augmented parser. We utilize synthetic data generation
+and the data augmentation techniques on annotated (NL sentence, FL statement)
+pairs to train the augmented parser. To improve training effectiveness, we
+propose multiple strategies to teach models to focus on the relevant subset of
+retrieved knowledge. Finally, we introduce a new evaluation paradigm modeled
+after the DKAP problem and simulate the scenario across three formalization
+tasks (NL2LTL, NL2Code, and NL2CMD). Our evaluations show that DKAP is a
+difficult challenge, and ROLex helps improve the performance of baseline models
+by using dynamic expert knowledge effectively.

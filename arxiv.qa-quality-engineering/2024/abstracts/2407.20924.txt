@@ -1,0 +1,25 @@
+Title: Automatically Removing Unnecessary Stubbings from Test Suites
+Authors: Mengzhen Li, Mattia Fazzini
+ID: 2407.20924
+URL: https://arxiv.org/abs/2407.20924
+
+Abstract:
+Most modern software systems are characterized by a high number of components
+whose interactions can affect and complicate testing activities. During testing,
+developers can account for the interactions by isolating the code under test
+using test doubles and stubbings. During the evolution of a test suite,
+stubbings might become unnecessary, and developers should remove unnecessary
+stubbings, as their definitions can introduce unreliable test results in future
+versions of the test suite. Unfortunately, removing unnecessary stubbings is
+still a manual task that can be complex and time-consuming. To help developers
+in this task, we propose ARUS, a technique to automatically remove unnecessary
+stubbings from test suites. Given a software project and its test suite, the
+technique executes the tests to identify unnecessary stubbings and then removes
+them using different approaches based on the characteristics of the stubbings.
+We performed an empirical evaluation based on 128 Java projects that use Mockito
+for stubbing and contain 280 stubbing definitions that lead to 1,529 unnecessary
+stubbings. Overall, our technique provides a solution for 276 of the definitions
+(98.6% resolution rate), ARUS' time cost is negligible, and, on average, the
+technique's changes introduce a limited increase in code complexity. We
+submitted ARUS' changes to the projects through pull requests and 83 resolutions
+are already merged.

@@ -1,0 +1,26 @@
+Title: Fuzzing-based Mutation Testing of C/C++ Software in Cyber-Physical Systems
+Authors: Jaekwon Lee, Fabrizio Pastore, Lionel Briand
+ID: 2503.24100
+URL: https://arxiv.org/abs/2503.24100
+
+Abstract:
+Mutation testing can help minimize the delivery of faulty software. Therefore,
+it is a recommended practice for developing embedded software in safety-critical
+cyber-physical systems (CPS). However, state-of-the-art mutation testing
+techniques for C and C++ software, which are common languages for CPS, depend on
+symbolic execution. Unfortunately, symbolic execution's limitations hinder its
+applicability (e.g., systems with black-box components). We propose relying on
+fuzz testing, which has demonstrated its effectiveness for C and C++ software.
+Fuzz testing tools automatically create test inputs that explore program
+branches in various ways, exercising statements in different program states, and
+thus enabling the detection of mutants, which is our objective. We empirically
+evaluated our approach using software components from operational satellite
+systems. Our assessment shows that our approach can detect between 40% and 90%
+of the mutants not detected by developers' test suites. Further, we empirically
+determined that the best results are obtained by integrating the Clang compiler,
+a memory address sanitizer, and relying on laf-intel instrumentation to collect
+coverage and guide fuzzing. Our approach detects a significantly higher
+percentage of live mutants compared to symbolic execution, with an increase of
+up to 50 percentage points; further, we observed that although the combination
+of fuzzing and symbolic execution leads to additional mutants being killed, the
+benefits are minimal (a gain of less than one percentage point).

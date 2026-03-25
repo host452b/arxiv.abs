@@ -1,0 +1,28 @@
+Title: ARFT-Transformer: Modeling Metric Dependencies for Cross-Project Aging-Related Bug Prediction
+Authors: Shuning Ge, Fangyun Qin, Xiaohui Wan, Yang Liu, Qian Dai et al.
+ID: 2601.14731
+URL: https://arxiv.org/abs/2601.14731
+
+Abstract:
+Software systems that run for long periods often suffer from software aging,
+which is typically caused by Aging-Related Bugs (ARBs). To mitigate the risk of
+ARBs early in the development phase, ARB prediction has been introduced into
+software aging research. However, due to the difficulty of collecting ARBs,
+within-project ARB prediction faces the challenge of data scarcity, leading to
+the proposal of cross-project ARB prediction. This task faces two major
+challenges: 1) domain adaptation issue caused by distribution difference between
+source and target projects; and 2) severe class imbalance between ARB-prone and
+ARB-free samples. Although various methods have been proposed for cross-project
+ARB prediction, existing approaches treat the input metrics independently and
+often neglect the rich inter-metric dependencies, which can lead to overlapping
+information and misjudgment of metric importance, potentially affecting the
+model's performance. Moreover, they typically use cross-entropy as the loss
+function during training, which cannot distinguish the difficulty of sample
+classification. To overcome these limitations, we propose ARFT-Transformer, a
+transformer-based cross-project ARB prediction framework that introduces a
+metric-level multi-head attention mechanism to capture metric interactions and
+incorporates Focal Loss function to effectively handle class imbalance.
+Experiments conducted on three large-scale open-source projects demonstrate that
+ARFT-Transformer on average outperforms state-of-the-art cross-project ARB
+prediction methods in both single-source and multi-source cases, achieving up to
+a 29.54% and 19.92% improvement in Balance metric.

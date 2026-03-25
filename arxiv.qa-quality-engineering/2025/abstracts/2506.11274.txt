@@ -1,0 +1,22 @@
+Title: Learning a Continue-Thinking Token for Enhanced Test-Time Scaling
+Authors: Liran Ringel, Elad Tolochinsky, Yaniv Romano
+ID: 2506.11274
+URL: https://arxiv.org/abs/2506.11274
+
+Abstract:
+Test-time scaling has emerged as an effective approach for improving language
+model performance by utilizing additional compute at inference time. Recent
+studies have shown that overriding end-of-thinking tokens (e.g., replacing
+"</think>" with "Wait") can extend reasoning steps and improve accuracy. In this
+work, we explore whether a dedicated continue-thinking token can be learned to
+trigger extended reasoning. We augment a distilled version of DeepSeek-R1 with a
+single learned "<|continue-thinking|>" token, training only its embedding via
+reinforcement learning while keeping the model weights frozen. Our experiments
+show that this learned token achieves improved accuracy on standard math
+benchmarks compared to both the baseline model and a test-time scaling approach
+that uses a fixed token (e.g., "Wait") for budget forcing. In particular, we
+observe that in cases where the fixed-token approach enhances the base model's
+accuracy, our method achieves a markedly greater improvement. For example, on
+the GSM8K benchmark, the fixed-token approach yields a 1.3% absolute improvement
+in accuracy, whereas our learned-token method achieves a 4.2% improvement over
+the base model that does not use budget forcing.

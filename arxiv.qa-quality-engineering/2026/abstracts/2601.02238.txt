@@ -1,0 +1,20 @@
+Title: NQC2: A Non-Intrusive QEMU Code Coverage Plugin
+Authors: Nils Bosbach, Alwalid Salama, Lukas Jünger, Mark Burton, Niko Zurstraßen et al.
+ID: 2601.02238
+URL: https://arxiv.org/abs/2601.02238
+
+Abstract:
+Code coverage analysis has become a standard approach in software development,
+facilitating the assessment of test suite effectiveness, the identification of
+under-tested code segments, and the discovery of performance bottlenecks. When
+code coverage of software for embedded systems needs to be measured,
+conventional approaches quickly meet their limits. A commonly used approach
+involves instrumenting the source files with added code that collects and dumps
+coverage information during runtime. This inserted code usually relies on the
+existence of an operating and a file system to dump the collected data. These
+features are not available for bare-metal programs that are executed on embedded
+systems. To overcome this issue, we present NQC2, a plugin for QEMU.NQC2
+extracts coverage information from QEMU during runtime and stores them into a
+file on the host machine. This approach is even compatible with modified QEMU
+versions and does not require target-software instrumentation. NQC2 outperforms
+a comparable approach from Xilinx by up to 8.5 x.

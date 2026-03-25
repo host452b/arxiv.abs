@@ -1,0 +1,24 @@
+Title: Resilient Practical Test-Time Adaptation: Soft Batch Normalization Alignment and Entropy-driven Memory Bank
+Authors: Xingzhi Zhou, Zhiliang Tian, Ka Chun Cheung, Simon See, Nevin L. Zhang
+ID: 2401.14619
+URL: https://arxiv.org/abs/2401.14619
+
+Abstract:
+Test-time domain adaptation effectively adjusts the source domain model to
+accommodate unseen domain shifts in a target domain during inference. However,
+the model performance can be significantly impaired by continuous distribution
+changes in the target domain and non-independent and identically distributed
+(non-i.i.d.) test samples often encountered in practical scenarios. While
+existing memory bank methodologies use memory to store samples and mitigate
+non-i.i.d. effects, they do not inherently prevent potential model degradation.
+To address this issue, we propose a resilient practical test-time adaptation
+(ResiTTA) method focused on parameter resilience and data quality. Specifically,
+we develop a resilient batch normalization with estimation on normalization
+statistics and soft alignments to mitigate overfitting and model degradation. We
+use an entropy-driven memory bank that accounts for timeliness, the persistence
+of over-confident samples, and sample uncertainty for high-quality data in
+adaptation. Our framework periodically adapts the source domain model using a
+teacher-student model through a self-training loss on the memory samples,
+incorporating soft alignment losses on batch normalization. We empirically
+validate ResiTTA across various benchmark datasets, demonstrating
+state-of-the-art performance.

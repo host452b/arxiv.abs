@@ -1,0 +1,26 @@
+Title: Enhanced Bug Prediction in JavaScript Programs with Hybrid Call-Graph Based Invocation Metrics
+Authors: Gábor Antal, Zoltán Tóth, Péter Hegedűs, Rudolf Ferenc
+ID: 2405.07244
+URL: https://arxiv.org/abs/2405.07244
+
+Abstract:
+Bug prediction aims at finding source code elements in a software system that
+are likely to contain defects. Being aware of the most error-prone parts of the
+program, one can efficiently allocate the limited amount of testing and code
+review resources. Therefore, bug prediction can support software maintenance and
+evolution to a great extent. In this paper, we propose a function level
+JavaScript bug prediction model based on static source code metrics with the
+addition of a hybrid (static and dynamic) code analysis based metric of the
+number of incoming and outgoing function calls (HNII and HNOI). Our motivation
+for this is that JavaScript is a highly dynamic scripting language for which
+static code analysis might be very imprecise; therefore, using a purely static
+source code features for bug prediction might not be enough. Based on a study
+where we extracted 824 buggy and 1943 non-buggy functions from the publicly
+available BugsJS dataset for the ESLint JavaScript project, we can confirm the
+positive impact of hybrid code metrics on the prediction performance of the ML
+models. Depending on the ML algorithm, applied hyper-parameters, and target
+measures we consider, hybrid invocation metrics bring a 2-10% increase in model
+performances (i.e., precision, recall, F-measure). Interestingly, replacing
+static NOI and NII metrics with their hybrid counterparts HNOI and HNII in
+itself improves model performances; however, using them all together yields the
+best results.

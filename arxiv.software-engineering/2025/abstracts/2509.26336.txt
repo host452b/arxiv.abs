@@ -1,0 +1,27 @@
+Title: UniSage: A Unified and Post-Analysis-Aware Sampling for Microservices
+Authors: Zhouruixing Zhu, Zhihan Jiang, Tianyi Yang, Pinjia He
+ID: 2509.26336
+URL: https://arxiv.org/abs/2509.26336
+
+Abstract:
+Traces and logs serve as the backbone of observability in microservice
+architectures, yet their sheer volume imposes prohibitive storage and
+computational burdens. To reduce overhead, operators rely on sampling; however,
+current frameworks generally employ a sample-before-analysis strategy. This
+approach creates a fundamental trade-off: to save space, systems must discard
+data before knowing its diagnostic value, often losing critical context required
+for troubleshooting anomalies and latency spikes. In this paper, we propose
+UniSage, a unified sampling framework that addresses this trade-off by adopting
+a post-analysis-aware paradigm. Unlike prior works that focus solely on tracing,
+UniSageintegrates both traces and logs, leveraging a lightweight anomaly
+detection and root cause analysis module to scan the full data stream before
+sampling decisions are made. This pre-computation enables a dual-pillar
+strategy: an analysis-guided sampler that retains high-value data associated
+with detected anomalies, and an edge-case sampler that preserves rare but
+critical behaviors to ensure diversity. Evaluation on three datasets confirms
+that UniSage achieves superior data retention. At a 2.5% sampling rate, UniSage
+captures 71% of critical traces and 96.25% of relevant logs, substantially
+exceeding the best existing methods (which achieve 42.9% and 1.95%,
+respectively). Moreover, evaluations on a real-world dataset demonstrate
+UniSage's efficiency; it processes a 20-minute multi-modal data block in an
+average of 10 seconds, making it practical for production environments.

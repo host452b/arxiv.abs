@@ -1,0 +1,31 @@
+Title: MetaRAG: Metamorphic Testing for Hallucination Detection in RAG Systems
+Authors: Channdeth Sok, David Luz, Yacine Haddam
+ID: 2509.09360
+URL: https://arxiv.org/abs/2509.09360
+
+Abstract:
+Large Language Models (LLMs) are increasingly deployed in enterprise
+applications, yet their reliability remains limited by hallucinations, i.e.,
+confident but factually incorrect information. Existing detection approaches,
+such as SelfCheckGPT and MetaQA, primarily target standalone LLMs and do not
+address the unique challenges of Retrieval-Augmented Generation (RAG) systems,
+where responses must be consistent with retrieved evidence. We therefore present
+MetaRAG, a metamorphic testing framework for hallucination detection in
+Retrieval-Augmented Generation (RAG) systems. MetaRAG operates in a real-time,
+unsupervised, black-box setting, requiring neither ground-truth references nor
+access to model internals, making it suitable for proprietary and high-stakes
+domains. The framework proceeds in four stages: (1) decompose answers into
+atomic factoids, (2) generate controlled mutations of each factoid using synonym
+and antonym substitutions, (3) verify each variant against the retrieved context
+(synonyms are expected to be entailed and antonyms contradicted), and (4)
+aggregate penalties for inconsistencies into a response-level hallucination
+score. Crucially for identity-aware AI, MetaRAG localizes unsupported claims at
+the factoid span where they occur (e.g., pregnancy-specific precautions, LGBTQ+
+refugee rights, or labor eligibility), allowing users to see flagged spans and
+enabling system designers to configure thresholds and guardrails for
+identity-sensitive queries. Experiments on a proprietary enterprise dataset
+illustrate the effectiveness of MetaRAG for detecting hallucinations and
+enabling trustworthy deployment of RAG-based conversational agents. We also
+outline a topic-based deployment design that translates MetaRAG's span-level
+scores into identity-aware safeguards; this design is discussed but not
+evaluated in our experiments.

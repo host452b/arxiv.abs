@@ -1,0 +1,31 @@
+Title: Enhancing Code Review through Fuzzing and Likely Invariants
+Authors: Wachiraphan Charoenwet, Patanamon Thongtanunam, Van-Thuan Pham, Christoph Treude
+ID: 2510.15512
+URL: https://arxiv.org/abs/2510.15512
+
+Abstract:
+Many software projects employ manual code review to gatekeep defects and
+vulnerabilities in the code before integration. However, reviewers often work
+under time pressure and rely primarily on static inspection, leaving the dynamic
+aspects of the program unexplored. Dynamic analyses could reveal such behaviors,
+but they are rarely integrated into reviews. Among them, fuzzing is typically
+applied later to uncover crashing bugs. Yet its ability to exercise code with
+diverse inputs makes it promising for exposing non-crashing, but unexpected,
+behaviors earlier. Still, without suitable mechanisms to analyze program
+behaviors, the rich data produced during fuzzing remains inaccessible to
+reviewers, limiting its practical value in this context. We hypothesize that
+unexpected variations in program behaviors could signify potential bugs. The
+impact of code changes can be automatically captured at runtime. Representing
+program behavior as likely invariants, dynamic properties consistently observed
+at specific program points, can provide practical signals of behavioral changes.
+Such signals offer a way to distinguish between intended changes and unexpected
+behavioral shifts from code changes. We present FuzzSight, a framework that
+leverages likely invariants from non-crashing fuzzing inputs to highlight
+behavioral differences across program versions. By surfacing such differences,
+it provides insights into which code blocks may need closer attention. In our
+evaluation, FuzzSight flagged 75% of regression bugs and up to 80% of
+vulnerabilities uncovered by 24-hour fuzzing. It also outperformed SAST in
+identifying buggy code blocks, achieving ten times higher detection rates with
+fewer false alarms. In summary, FuzzSight demonstrates the potential and value
+of leveraging fuzzing and invariant analysis for early-stage code review,
+bridging static inspection with dynamic behavioral insights.

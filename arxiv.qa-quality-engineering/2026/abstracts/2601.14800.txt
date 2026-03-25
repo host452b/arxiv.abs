@@ -1,0 +1,26 @@
+Title: FastFI: Enhancing API Call-Site Robustness in Microservice-Based Systems with Fault Injection
+Authors: Yuzhen Tan, Jian Wang, Shuaiyu Xie, Bing Li, Yunqing Yong et al.
+ID: 2601.14800
+URL: https://arxiv.org/abs/2601.14800
+
+Abstract:
+Fault injection is a key technique for assessing software reliability, enabling
+proactive detection of system defects before they manifest in production.
+However, the increasing complexity of microservice architectures leads to
+exponential growth in the fault-injection space, rendering traditional random
+injection inefficient. Recent lineage-driven approaches mitigate this problem
+through heuristic pruning, but they face two limitations. First,
+combinatorial-fault discovery remains bottlenecked by general-purpose SAT
+solvers, which fail to exploit the monotone and low-overlap structure of derived
+CNF formulas and typically rely on a static upper bound on fault size. Second,
+existing techniques provide limited post-injection guidance beyond reporting
+detected faults. To address these challenges, we propose FastFI, a
+fault-injection-guided framework to enhance the robustness of API call sites in
+microservice-based systems. FastFI features a DFS-based solver with dynamic
+fault injection to discover all valid combinatorial faults, and it leverages
+fault-injection results to identify critical APIs whose call sites should be
+hardened for robustness. Experiments on four representative microservice
+benchmarks show that FastFI reduces end-to-end fault-injection time by an
+average of 76.12\% compared to state-of-the-art baselines while maintaining
+acceptable resource overhead. Moreover, FastFI accurately identifies high-impact
+APIs and provides actionable guidance for call-site hardening.

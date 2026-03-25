@@ -1,0 +1,31 @@
+Title: Neural Bandit Based Optimal LLM Selection for a Pipeline of Tasks
+Authors: Baran Atalar, Eddie Zhang, Carlee Joe-Wong
+ID: 2508.09958
+URL: https://arxiv.org/abs/2508.09958
+
+Abstract:
+With the increasing popularity of large language models (LLMs) for a variety of
+tasks, there has been a growing interest in strategies that can predict which
+out of a set of LLMs will yield a successful answer at low cost. This problem
+promises to become more and more relevant as providers like Microsoft allow
+users to easily create custom LLM "assistants" specialized to particular types
+of queries. However, some tasks (i.e., queries) may be too specialized and
+difficult for a single LLM to handle alone. These applications often benefit
+from breaking down the task into smaller subtasks, each of which can then be
+executed by a LLM expected to perform well on that specific subtask. For
+example, in extracting a diagnosis from medical records, one can first select an
+LLM to summarize the record, select another to validate the summary, and then
+select another, possibly different, LLM to extract the diagnosis from the
+summarized record. Unlike existing LLM selection or routing algorithms, this
+setting requires that we select a sequence of LLMs, with the output of each LLM
+feeding into the next and potentially influencing its success. Thus, unlike
+single LLM selection, the quality of each subtask's output directly affects the
+inputs, and hence the cost and success rate, of downstream LLMs, creating
+complex performance dependencies that must be learned and accounted for during
+selection. We propose a neural contextual bandit-based algorithm that trains
+neural networks that model LLM success on each subtask in an online manner, thus
+learning to guide the LLM selections for the different subtasks, even in the
+absence of historical LLM performance data. Experiments on telecommunications
+question answering and medical diagnosis prediction datasets illustrate the
+effectiveness of our proposed approach compared to other LLM selection
+algorithms.

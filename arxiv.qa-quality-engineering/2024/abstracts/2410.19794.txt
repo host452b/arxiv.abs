@@ -1,0 +1,31 @@
+Title: DiffGAN: A Test Generation Approach for Differential Testing of Deep Neural Networks for Image Analysis
+Authors: Zohreh Aghababaeyan, Manel Abdellatif, Lionel Briand, Ramesh S
+ID: 2410.19794
+URL: https://arxiv.org/abs/2410.19794
+
+Abstract:
+Deep Neural Networks (DNNs) are increasingly deployed across applications.
+However, ensuring their reliability remains a challenge, and in many situations,
+alternative models with similar functionality and accuracy are available.
+Traditional accuracy-based evaluations often fail to capture behavioral
+differences between models, especially with limited test datasets, making it
+difficult to select or combine models effectively. Differential testing
+addresses this by generating test inputs that expose discrepancies in DNN model
+behavior. However, existing approaches face significant limitations: many rely
+on model internals or are constrained by available seed inputs. To address these
+challenges, we propose DiffGAN, a black-box test image generation approach for
+differential testing of DNN models. DiffGAN leverages a Generative Adversarial
+Network (GAN) and the Non-dominated Sorting Genetic Algorithm II to generate
+diverse and valid triggering inputs that reveal behavioral discrepancies between
+models. DiffGAN employs two custom fitness functions, focusing on diversity and
+divergence, to guide the exploration of the GAN input space and identify
+discrepancies between models' outputs. By strategically searching this space,
+DiffGAN generates inputs with specific features that trigger differences in
+model behavior. DiffGAN is black-box, making it applicable in more situations.
+We evaluate DiffGAN on eight DNN model pairs trained on widely used image
+datasets. Our results show DiffGAN significantly outperforms a SOTA baseline,
+generating four times more triggering inputs, with greater diversity and
+validity, within the same budget. Additionally, the generated inputs improve the
+accuracy of a machine learning-based model selection mechanism, which selects
+the best-performing model based on input characteristics and can serve as a
+smart output voting mechanism when using alternative models.

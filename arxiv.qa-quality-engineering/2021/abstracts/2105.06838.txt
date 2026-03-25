@@ -1,0 +1,22 @@
+Title: Automatically Assessing and Extending Code Coverage for NPM Packages
+Authors: Haiyang Sun, Andrea Rosà, Daniele Bonetta, Walter Binder
+ID: 2105.06838
+URL: https://arxiv.org/abs/2105.06838
+
+Abstract:
+Typical Node.js applications extensively rely on packages hosted in the npm
+registry. As such packages may be used by thousands of other packages or
+applications, it is important to assess their code coverage. Moreover,
+increasing code coverage may help detect previously unknown issues. In this
+paper, we introduce TESA, a new tool that automatically assembles a test suite
+for any package in the npm registry. The test suite includes 1) tests written
+for the target package and usually hosted in its development repository, and 2)
+tests selected from dependent packages. The former tests allow assessing the
+code coverage of the target package, while the latter ones can increase code
+coverage by exploiting third-party tests that also exercise code in the target
+package. We use TESA to assess the code coverage of 500 popular npm packages.
+Then, we demonstrate that TESA can significantly increase code coverage by
+including tests from dependent packages. Finally, we show that the test suites
+assembled by TESA increase the effectiveness of existing dynamic program
+analyses to identify performance issues that are not detectable when only
+executing the developer's tests.

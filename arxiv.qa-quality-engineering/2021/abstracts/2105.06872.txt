@@ -1,0 +1,20 @@
+Title: Revizor: Testing Black-box CPUs against Speculation Contracts
+Authors: Oleksii Oleksenko, Christof Fetzer, Boris Köpf, Mark Silberstein
+ID: 2105.06872
+URL: https://arxiv.org/abs/2105.06872
+
+Abstract:
+Speculative vulnerabilities such as Spectre and Meltdown expose speculative
+execution state that can be exploited to leak information across security
+domains via side-channels. Such vulnerabilities often stay undetected for a long
+time as we lack the tools for systematic testing of CPUs to find them. In this
+paper, we propose an approach to automatically detect microarchitectural
+information leakage in commercial black-box CPUs. We build on speculation
+contracts, which we employ to specify the permitted side effects of program
+execution on the CPU's microarchitectural state. We propose a Model-based
+Relational Testing (MRT) technique to empirically assess the CPU compliance with
+these specifications. We implement MRT in a testing framework called Revizor,
+and showcase its effectiveness on real Intel x86 CPUs. Revizor automatically
+detects violations of a rich set of contracts, or indicates their absence. A
+highlight of our findings is that Revizor managed to automatically surface
+Spectre, MDS, and LVI, as well as several previously unknown variants.
