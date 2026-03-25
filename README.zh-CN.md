@@ -18,8 +18,8 @@
 | [`arxiv.game-dev`](arxiv.game-dev/) | 5,197 | 29 类别 | 1996–2026 |
 | [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 1,814 | 12 主题 | 无限制 |
 | [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,125 | 7 主题 | 无限制 |
-| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 348 | 25 类别 | 2005–2026 |
-| **合计** | **29,476** | **139+** | |
+| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 73 | 25 类别 | 2013–2026 |
+| **合计** | **29,201** | **139+** | |
 
 ---
 
@@ -66,7 +66,7 @@
 
 ### 7. `arxiv.game-dev-with-ai` — 人 × AI 协作开发（新时代）
 
-348 篇摘要，来自 25 组定向搜索，聚焦 AI 成为游戏开发**协同开发者和创意伙伴**的新兴领域。涵盖 LLM 辅助设计、多智能体游戏系统、生成式资产、自主游戏设计等。
+73 篇精选摘要（从 542 篇原始结果中过滤），来自 25 组定向搜索，聚焦 AI 成为游戏开发**协同开发者和创意伙伴**的新兴领域。涵盖 LLM 辅助设计、共创系统、生成式资产、自主游戏设计等。
 
 ---
 

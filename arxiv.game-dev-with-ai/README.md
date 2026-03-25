@@ -1,6 +1,6 @@
 # arxiv.game-dev-with-ai — Human × AI Co-Development: The New Game Dev Paradigm
 
-**348 arXiv abstracts** from 25 targeted searches in the CS category, covering the emerging frontier where AI becomes a co-developer, co-designer, and production partner in game development.
+**73 curated arXiv abstracts** (filtered from 542 raw results) from 25 targeted searches, covering the emerging frontier where AI becomes a co-developer, co-designer, and production partner in game development. Filtered to remove game-theory, MARL benchmarks, and AI-playing-games papers — keeping only papers directly relevant to human × AI game creation.
 
 **Core question:** In the new era of AI-augmented development — where LLMs, agents, and generative models join the team — how do humans and AI collaborate to build games faster, better, and more creatively?
 
@@ -36,20 +36,23 @@
 | 24 | AI Developer Productivity | AI developer productivity tool / AI software developer assistant | 20 | [24](search-results/24-solo-dev-ai.json) |
 | 25 | RL for Game Design Tools | RL human in the loop game / RL game design tool | 1 | [25](search-results/25-rl-game-design.json) |
 
-**542 raw results → 348 deduplicated abstracts**
+**542 raw results → 348 deduplicated → 73 curated (relevance-filtered)**
 
+> Filtered out: game theory / Nash equilibria papers, MARL benchmarks, AI-playing-games papers, sports analytics, and unrelated fields. What remains: AI tools for game creation, co-creative systems, generative content, NPC design, and developer productivity.
+>
 > Note: This is an emerging field (peak papers 2024–2026). The academic literature is smaller than the industry practice — many innovations appear first in GDC talks, Unity/Unreal blogs, and tool documentation before reaching arXiv.
 
 ## Abstracts by Year
 
-| Year | Papers | Year | Papers | Year | Papers |
-|------|--------|------|--------|------|--------|
-| 2005–2016 | 7 | 2019 | 21 | 2022 | 26 |
-| 2017 | 5 | 2020 | 23 | [2023](2023/abstracts/) | 41 |
-| 2018 | 9 | 2021 | 21 | [2024](2024/abstracts/) | 59 |
-| [2025](2025/abstracts/) | 107 | [2026](2026/abstracts/) | 26 | | |
+| Year | Papers | Year | Papers |
+|------|--------|------|--------|
+| 2013 | 1 | [2022](2022/abstracts/) | 7 |
+| 2019 | 3 | [2023](2023/abstracts/) | 8 |
+| 2020 | 1 | [2024](2024/abstracts/) | 19 |
+| 2021 | 2 | [2025](2025/abstracts/) | 27 |
+| | | [2026](2026/abstracts/) | 5 |
 
-> 2024–2026 totals **192 papers** (55% of all), reflecting the explosive growth of this field since LLMs became production-capable.
+> 2024–2026 totals **51 papers** (70% of all), confirming the field is concentrated in the LLM era.
 
 ## Search Parameters
 

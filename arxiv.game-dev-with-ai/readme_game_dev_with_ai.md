@@ -1,6 +1,6 @@
 # Human × AI Game Development — Landscape & Practitioner Roadmap
 
-> **Source:** 348 deduplicated arXiv abstracts from 25 keyword searches (2026-03-25).
+> **Source:** 73 curated arXiv abstracts (filtered from 542 raw results, 25 keyword searches, 2026-03-25). Filtered to exclude game theory, MARL benchmarks, and AI-playing-games papers.
 > **Field maturity:** Emerging. Peak academic output 2024–2026. Most innovations appear first in industry (GDC, Unity/Unreal blogs) before reaching arXiv.
 
 ---
