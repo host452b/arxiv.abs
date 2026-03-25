@@ -1,0 +1,23 @@
+Title: Analyzing Communication Predictability in LLM Training
+Authors: Wenxue Li, Xiangzhou Liu, Yuxuan Li, Yilun Jin, Zhenghang Ren et al. (+7)
+ID: 2512.24750
+URL: https://arxiv.org/abs/2512.24750
+
+Effective communication is essential in distributed training, with
+predictability being one of its most significant characteristics. However,
+existing studies primarily focus on exploiting predictability through online
+profiling for runtime optimization, without a systematic understanding of it. In
+this work, we aim to systematically formulate communication predictability in
+distributed training, particularly in Large Language Models (LLMs) that utilize
+hybrid parallelism. Our analysis focuses on both traffic patterns and
+communication overhead. Specifically, we investigate predictable traffic
+patterns in typical LLMs and evaluate how various factors influence GPU
+utilization and effective bandwidth (two critical variables affecting
+communication overhead). Furthermore, we develop an analytical formulation to
+estimate communication overhead in LLM training, which is validated with high
+accuracy against empirical data. Leveraging this formulation, we propose a
+configuration tuning tool, ConfigTuner, to optimize training performance.
+Compared to Megatron-LM, the training configurations optimized by ConfigTuner
+demonstrate up to a 1.36$\times$ increase in throughput. Compared to Alpa,
+ConfigTuner generates the same configuration suggestion while significantly
+reducing the search complexity.

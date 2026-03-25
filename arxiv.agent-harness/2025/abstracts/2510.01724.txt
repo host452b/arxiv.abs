@@ -1,0 +1,51 @@
+Title: MetaboT: AI-based agent for natural language-based interaction with metabolomics knowledge graphs
+Authors: Madina Bekbergenova, Lucas Pradi, Benjamin Navet, Emma Tysinger, Franck Michel et al. (+13)
+ID: 2510.01724
+URL: https://arxiv.org/abs/2510.01724
+
+Mass spectrometry metabolomics generates vast amounts of data requiring advanced
+methods for interpretation. Knowledge graphs address these challenges by
+structuring mass spectrometry data, metabolite information, and their
+relationships into a connected network (Gaudry et al. 2024). However, effective
+use of a knowledge graph demands an in-depth understanding of its ontology and
+its query language syntax. To overcome this, we designed MetaboT, an AI system
+utilizing large language models (LLMs) to translate user questions into SPARQL
+semantic query language for operating on knowledge graphs (Steve Harris 2013).
+We demonstrate its effectiveness using the Experimental Natural Products
+Knowledge Graph (ENPKG), a large-scale public knowledge graph for plant natural
+products (Gaudry et al. 2024).MetaboT employs specialized AI agents for handling
+user queries and interacting with the knowledge graph by breaking down complex
+tasks into discrete components, each managed by a specialised agent (Fig. 1a).
+The multi-agent system is constructed using the LangChain and LangGraph
+libraries, which facilitate the integration of LLMs with external tools and
+information sources (LangChain, n.d.). The query generation process follows a
+structured workflow. First, the Entry Agent determines if the question is new or
+a follow-up to previous interactions. New questions are forwarded to the
+Validator Agent, which verifies if the question is related to the knowledge
+graph. Then, the valid question is sent to the Supervisor Agent, which
+identifies if the question requires chemical conversions or standardized
+identifiers. In this case it delegates the question to the Knowledge Graph
+Agent, which can use tools to extract necessary details, such as URIs or
+taxonomies of chemical names, from the user query. Finally, an agent responsible
+for crafting the SPARQL queries equipped with the ontology of the knowledge
+graph uses the provided identifiers to generate the query. Then, the system
+executes the generated query against the metabolomics knowledge graph and
+returns structured results to the user (Fig. 1b). To assess the performance of
+MetaboT we have curated 50 metabolomics-related questions and their expected
+answers. In addition to submitting these questions to MetaboT, we evaluated a
+baseline by submitting them to a standard LLM (GPT-4o) with a prompt that
+incorporated the knowledge graph ontology but did not provide specific entity
+IDs. This baseline achieved only 8.16% accuracy, compared to MetaboT's 83.67%,
+underscoring the necessity of our multi-agent system for accurately retrieving
+entities and generating correct SPARQL queries. MetaboT demonstrates promising
+performance as a conversational question-answering assistant, enabling
+researchers to retrieve structured metabolomics data through natural language
+queries. By automating the generation and execution of SPARQL queries, it
+removes technical barriers that have traditionally hindered access to knowledge
+graphs. Importantly, MetaboT leverages the capabilities of LLMs while
+maintaining experimentally grounded query generation, ensuring that outputs
+remain aligned with domain-specific standards and data structures. This approach
+facilitates data-driven discoveries by bridging the gap between complex semantic
+technologies and user-friendly interaction. MetaboT is accessible at
+[https://metabot.holobiomicslab.eu/], and its source code is available at
+[https://github.com/HolobiomicsLab/MetaboT].

@@ -1,0 +1,25 @@
+Title: Identifying Helpful Context for LLM-based Vulnerability Repair: A Preliminary Study
+Authors: Gábor Antal, Bence Bogenfürst, Rudolf Ferenc, Péter Hegedűs
+ID: 2506.11561
+URL: https://arxiv.org/abs/2506.11561
+
+Abstract:
+Recent advancements in large language models (LLMs) have shown promise for
+automated vulnerability detection and repair in software systems. This paper
+investigates the performance of GPT-4o in repairing Java vulnerabilities from a
+widely used dataset (Vul4J), exploring how different contextual information
+affects automated vulnerability repair (AVR) capabilities. We compare the latest
+GPT-4o's performance against previous results with GPT-4 using identical
+prompts. We evaluated nine additional prompts crafted by us that contain various
+contextual information such as CWE or CVE information, and manually extracted
+code contexts. Each prompt was executed three times on 42 vulnerabilities, and
+the resulting fix candidates were validated using Vul4J's automated testing
+framework. Our results show that GPT-4o performed 11.9\% worse on average than
+GPT-4 with the same prompt, but was able to fix 10.5\% more distinct
+vulnerabilities in the three runs together. CVE information significantly
+improved repair rates, while the length of the task description had minimal
+impact. Combining CVE guidance with manually extracted code context resulted in
+the best performance. Using our \textsc{Top}-3 prompts together, GPT-4o repaired
+26 (62\%) vulnerabilities at least once, outperforming both the original
+baseline (40\%) and its reproduction (45\%), suggesting that ensemble prompt
+strategies could improve vulnerability repair in zero-shot settings.

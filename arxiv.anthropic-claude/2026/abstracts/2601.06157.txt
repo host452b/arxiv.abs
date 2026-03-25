@@ -1,0 +1,25 @@
+Title: ECLIPTICA -- A Framework for Switchable LLM Alignment via CITA - Contrastive Instruction-Tuned Alignment
+Authors: Kapil Wanaskar, Gaytri Jena, Vinija Jain, Aman Chadha, Amitava Das
+ID: 2601.06157
+URL: https://arxiv.org/abs/2601.06157
+
+Abstract:
+Alignment in large language models (LLMs) is still largely static: after
+training, the policy is frozen. DPO, GRPO methods typically imprint one behavior
+into the weights, leaving little runtime control beyond prompt hacks or
+expensive re-alignment. We introduce ECLIPTICA, which treats alignment as
+instruction-driven and runtime-controllable: natural-language alignment
+instructions act as an explicit behavioral contract (stance, refusal boundary,
+verbosity) that modulates behavior on the fly under evolving safety
+requirements, user roles, and governance constraints. We introduce CITA
+(Contrastive Instruction-Tuned Alignment), combining SFT with contrastive
+preference optimization under an explicit geometric anchor to a reference model.
+This yields a stable Riemannian chart and keeps instruction updates within a
+shared neighborhood, so regimes stay nearby and traversable for reliable
+switching. To isolate policy switching from ordinary instruction following, we
+release the ECLIPTICA benchmark: 3000 controlled cases (300 prompts x 10
+instruction types) where the user request is fixed and only the alignment
+instruction changes. On Llama-3.1-8B across five suites (ECLIPTICA, TruthfulQA,
+Conditional Safety, Length Control, LITMUS), CITA reaches 86.7%
+instruction-alignment efficiency, beating DPO (56.1%), GRPO (36.1%), and PPO
+(20.4%).

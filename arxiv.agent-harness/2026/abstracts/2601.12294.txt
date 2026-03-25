@@ -1,0 +1,25 @@
+Title: ToolPRMBench: Evaluating and Advancing Process Reward Models for Tool-using Agents
+Authors: Dawei Li, Yuguang Yao, Zhen Tan, Huan Liu, Ruocheng Guo
+ID: 2601.12294
+URL: https://arxiv.org/abs/2601.12294
+
+Abstract:
+Reward-guided search methods have demonstrated strong potential in enhancing
+tool-using agents by effectively guiding sampling and exploration over complex
+action spaces. As a core design, those search methods utilize process reward
+models (PRMs) to provide step-level rewards, enabling more fine-grained
+monitoring. However, there is a lack of systematic and reliable evaluation
+benchmarks for PRMs in tool-using settings. In this paper, we introduce
+ToolPRMBench, a large-scale benchmark specifically designed to evaluate PRMs for
+tool-using agents. ToolPRMBench is built on top of several representative
+tool-using benchmarks and converts agent trajectories into step-level test
+cases. Each case contains the interaction history, a correct action, a plausible
+but incorrect alternative, and relevant tool metadata. We respectively utilize
+offline sampling to isolate local single-step errors and online sampling to
+capture realistic multi-step failures from full agent rollouts. A multi-LLM
+verification pipeline is proposed to reduce label noise and ensure data quality.
+We conduct extensive experiments across large language models, general PRMs, and
+tool-specialized PRMs on ToolPRMBench. The results reveal clear differences in
+PRM effectiveness and highlight the potential of specialized PRMs for
+tool-using. Code and data will be released at
+https://github.com/David-Li0406/ToolPRMBench.

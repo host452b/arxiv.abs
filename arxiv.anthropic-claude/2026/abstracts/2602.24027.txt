@@ -1,0 +1,21 @@
+Title: GuardAlign: Test-time Safety Alignment in Multimodal Large Language Models
+Authors: Xingyu Zhu, Beier Zhu, Junfeng Fang, Shuo Wang, Yin Zhang et al.
+ID: 2602.24027
+URL: https://arxiv.org/abs/2602.24027
+
+Abstract:
+Large vision-language models (LVLMs) have achieved remarkable progress in
+vision-language reasoning tasks, yet ensuring their safety remains a critical
+challenge. Recent input-side defenses detect unsafe images with CLIP and prepend
+safety prefixes to prompts, but they still suffer from inaccurate detection in
+complex scenes and unstable safety signals during decoding. To address these
+issues, we propose GuardAlign, a training-free defense framework that integrates
+two strategies. First, OT-enhanced safety detection leverages optimal transport
+to measure distribution distances between image patches and unsafe semantics,
+enabling accurate identification of malicious regions without additional
+computational cost. Second, cross-modal attentive calibration strengthens the
+influence of safety prefixes by adaptively reallocating attention across layers,
+ensuring that safety signals remain consistently activated throughout
+generation. Extensive evaluations on six representative MLLMs demonstrate that
+GuardAlign reduces unsafe response rates by up to 39% on SPA-VL, while
+preserving utility, achieving an improvement on VQAv2 from 78.51% to 79.21%.

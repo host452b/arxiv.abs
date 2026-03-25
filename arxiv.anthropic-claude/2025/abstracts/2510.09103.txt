@@ -1,0 +1,20 @@
+Title: AdaPM: a Partial Momentum Algorithm for LLM Training
+Authors: Yimu Zhang, Yuanshi Liu, Cong Fang
+ID: 2510.09103
+URL: https://arxiv.org/abs/2510.09103
+
+In the training of large language models, momentum is widely used and often
+demonstrated to achieve significant acceleration. However, storing momentum
+typically presents memory challenges. In this paper, we propose AdaPM, an
+adaptive training strategy that leverages partial momentum to implement a
+memory-efficient optimizer. To this end, AdaPM utilizes a non-uniform momentum
+design: for most blocks, full momentum is not necessary to preserve the
+performance of the optimization. In the momentum design of AdaPM, to mitigate
+the bias and performance loss caused by partial momentum, we enhance the partial
+momentum by a bias correction technique. Empirically, we verify that our
+approach reduces memory by over $90\%$ in momentum while maintaining both
+efficiency and performance for pretraining various language models ranging from
+60M to 1.5B, as well as for supervised fine-tuning and RLHF. AdaPM can further
+reduce memory by up to $95\%$ in optimizer states by combining the memory-
+efficient technique on the second-order statistic, saving over $30\%$ GPU hours
+for pretraining GPT-2 1.5B.

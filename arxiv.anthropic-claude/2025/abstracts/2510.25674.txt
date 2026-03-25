@@ -1,0 +1,29 @@
+Title: Mechanistic Interpretability of RNNs emulating Hidden Markov Models
+Authors: Elia Torre, Michele Viscione, Lucas Pompe, Benjamin F Grewe, Valerio Mante
+ID: 2510.25674
+URL: https://arxiv.org/abs/2510.25674
+
+Recurrent neural networks (RNNs) provide a powerful approach in neuroscience to
+infer latent dynamics in neural populations and to generate hypotheses about the
+neural computations underlying behavior. However, past work has focused on
+relatively simple, input-driven, and largely deterministic behaviors - little is
+known about the mechanisms that would allow RNNs to generate the richer,
+spontaneous, and potentially stochastic behaviors observed in natural settings.
+Modeling with Hidden Markov Models (HMMs) has revealed a segmentation of natural
+behaviors into discrete latent states with stochastic transitions between them,
+a type of dynamics that may appear at odds with the continuous state spaces
+implemented by RNNs. Here we first show that RNNs can replicate HMM emission
+statistics and then reverse-engineer the trained networks to uncover the
+mechanisms they implement. In the absence of inputs, the activity of trained
+RNNs collapses towards a single fixed point. When driven by stochastic input,
+trajectories instead exhibit noise-sustained dynamics along closed orbits.
+Rotation along these orbits modulates the emission probabilities and is governed
+by transitions between regions of slow, noise-driven dynamics connected by fast,
+deterministic transitions. The trained RNNs develop highly structured
+connectivity, with a small set of "kick neurons" initiating transitions between
+these regions. This mechanism emerges during training as the network shifts into
+a regime of stochastic resonance, enabling it to perform probabilistic
+computations. Analyses across multiple HMM architectures - fully connected,
+cyclic, and linear-chain - reveal that this solution generalizes through the
+modular reuse of the same dynamical motif, suggesting a compositional principle
+by which RNNs can emulate complex discrete latent dynamics.

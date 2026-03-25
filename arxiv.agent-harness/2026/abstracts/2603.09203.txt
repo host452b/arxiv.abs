@@ -1,0 +1,21 @@
+Title: Evaluate-as-Action: Self-Evaluated Process Rewards for Retrieval-Augmented Agents
+Authors: Jiangming Shu, Yuxiang Zhang, Ye Ma, Xueyuan Lin, Jitao Sang
+ID: 2603.09203
+URL: https://arxiv.org/abs/2603.09203
+
+Retrieval-augmented agents can query external evidence, yet their reliability in
+multi-step reasoning remains limited: noisy retrieval may derail multi-hop
+question answering, while outcome-only reinforcement learning provides credit
+signals that are too coarse to optimize intermediate steps. We propose
+\textsc{EvalAct} (Evaluate-as-Action), which converts implicit retrieval quality
+assessment into an explicit action and enforces a coupled Search-to-Evaluate
+protocol so that each retrieval is immediately followed by a structured
+evaluation score, yielding process signals aligned with the interaction
+trajectory. To leverage these signals, we introduce Process-Calibrated Advantage
+Rescaling (PCAR), a GRPO-based optimization method that rescales advantages at
+the segment level according to evaluation scores, emphasizing reliable segments
+while updating uncertain ones conservatively. Experiments on seven open-domain
+QA benchmarks show that \textsc{EvalAct} achieves the best average accuracy,
+with the largest gains on multi-hop tasks, and ablations verify that the
+explicit evaluation loop drives the primary improvements while PCAR provides
+consistent additional benefits.

@@ -1,0 +1,29 @@
+Title: Brain network science modelling of sparse neural networks enables Transformers and LLMs to perform as fully connected
+Authors: Yingtao Zhang, Diego Cerretti, Jialin Zhao, Wenjing Wu, Ziheng Liao et al. (+2)
+ID: 2501.19107
+URL: https://arxiv.org/abs/2501.19107
+
+Dynamic sparse training (DST) can reduce the computational demands in ANNs, but
+faces difficulties in keeping peak performance at high sparsity levels. The
+Cannistraci-Hebb training (CHT) is a brain-inspired method for growing
+connectivity in DST. CHT leverages a gradient-free, topology-driven link
+regrowth, which has shown ultra-sparse (less than 1% connectivity) advantage
+across various tasks compared to fully connected networks. Yet, CHT suffers two
+main drawbacks: (i) its time complexity is $O(Nd^3)$ - N node network size, d
+node degree - restricting it to ultra-sparse regimes. (ii) it selects top link
+prediction scores, which is inappropriate for the early training epochs, when
+the network presents unreliable connections. Here, we design the first brain-
+inspired network model - termed bipartite receptive field (BRF) - to initialize
+the connectivity of sparse artificial neural networks. We further introduce a
+GPU-friendly matrix-based approximation of CH link prediction, reducing
+complexity to $O(N^3)$. We introduce the Cannistraci-Hebb training soft rule
+(CHTs), which adopts a flexible strategy for sampling connections in both link
+removal and regrowth, balancing the exploration and exploitation of network
+topology. Additionally, we integrate CHTs with a sigmoid gradual density decay
+(CHTss). Empirical results show that BRF offers performance advantages over
+previous network science models. Using 1% of connections, CHTs outperforms fully
+connected networks in MLP architectures on image classification tasks,
+compressing some networks to less than 30% of the nodes. Using 5% of the
+connections, CHTss outperforms fully connected networks in two Transformer-based
+machine translation tasks. Finally, at 30% connectivity, both CHTs and CHTss
+outperform other DST methods in language modeling task.

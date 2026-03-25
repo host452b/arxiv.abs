@@ -1,0 +1,17 @@
+Title: Recipes for Pre-training LLMs with MXFP8
+Authors: Asit Mishra, Dusan Stosic, Simon Layton, Paulius Micikevicius
+ID: 2506.08027
+URL: https://arxiv.org/abs/2506.08027
+
+Using fewer bits to represent model parameters and related tensors during pre-
+training has become a required technique for improving GPU efficiency without
+sacrificing accuracy. Microscaling (MX) formats introduced in NVIDIA Blackwell
+generation of GPUs represent a major advancement of this technique, making it
+practical to combine narrow floating-point data types with finer granularity
+per-block scaling factors. In turn, this enables both quantization of more
+tensors than previous approaches and more efficient execution of operations on
+those tensors.   Effective use of MX-formats requires careful choices of various
+parameters. In this paper we review these choices and show how MXFP8-E4M3
+datatype and a specific number conversion algorithm result in training sessions
+that match those carried out in BF16. We present results using models with up to
+8B parameters, trained on high-quality datasets of up to 15T tokens.

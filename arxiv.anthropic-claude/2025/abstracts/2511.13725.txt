@@ -1,0 +1,26 @@
+Title: AI Kill Switch for malicious web-based LLM agent
+Authors: Sechan Lee, Sangdon Park
+ID: 2511.13725
+URL: https://arxiv.org/abs/2511.13725
+
+Recently, web-based Large Language Model (LLM) agents autonomously perform
+increasingly complex tasks, thereby bringing significant convenience. However,
+they also amplify the risks of malicious misuse cases such as unauthorized
+collection of personally identifiable information (PII), generation of socially
+divisive content, and even automated web hacking. To address these threats, we
+propose an AI Kill Switch technique that can immediately halt the operation of
+malicious web-based LLM agents. To achieve this, we introduce AutoGuard - the
+key idea is generating defensive prompts that trigger the safety mechanisms of
+malicious LLM agents. In particular, generated defense prompts are transparently
+embedded into the website's DOM so that they remain invisible to human users but
+can be detected by the crawling process of malicious agents, triggering its
+internal safety mechanisms to abort malicious actions once read. To evaluate our
+approach, we constructed a dedicated benchmark consisting of three
+representative malicious scenarios. Experimental results show that AutoGuard
+achieves over 80% Defense Success Rate (DSR) across diverse malicious agents,
+including GPT-4o, Claude-4.5-Sonnet and generalizes well to advanced models like
+GPT-5.1, Gemini-2.5-flash, and Gemini-3-pro. Also, our approach demonstrates
+robust defense performance in real-world website environments without
+significant performance degradation for benign agents. Through this research, we
+demonstrate the controllability of web-based LLM agents, thereby contributing to
+the broader effort of AI control and safety.

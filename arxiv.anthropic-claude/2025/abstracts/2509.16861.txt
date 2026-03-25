@@ -1,0 +1,26 @@
+Title: AdaptiveGuard: Towards Adaptive Runtime Safety for LLM-Powered Software
+Authors: Rui Yang, Michael Fu, Chakkrit Tantithamthavorn, Chetan Arora, Gunel Gulmammadova et al. (+1)
+ID: 2509.16861
+URL: https://arxiv.org/abs/2509.16861
+
+Guardrails are critical for the safe deployment of Large Language Models
+(LLMs)-powered software. Unlike traditional rule-based systems with limited,
+predefined input-output spaces that inherently constrain unsafe behavior, LLMs
+enable open-ended, intelligent interactions--opening the door to jailbreak
+attacks through user inputs. Guardrails serve as a protective layer, filtering
+unsafe prompts before they reach the LLM. However, prior research shows that
+jailbreak attacks can still succeed over 70% of the time, even against advanced
+models like GPT-4o. While guardrails such as LlamaGuard report up to 95%
+accuracy, our preliminary analysis shows their performance can drop sharply--to
+as low as 12%--when confronted with unseen attacks. This highlights a growing
+software engineering challenge: how to build a post-deployment guardrail that
+adapts dynamically to emerging threats? To address this, we propose
+AdaptiveGuard, an adaptive guardrail that detects novel jailbreak attacks as
+out-of-distribution (OOD) inputs and learns to defend against them through a
+continual learning framework. Through empirical evaluation, AdaptiveGuard
+achieves 96% OOD detection accuracy, adapts to new attacks in just two update
+steps, and retains over 85% F1-score on in-distribution data post-adaptation,
+outperforming other baselines. These results demonstrate that AdaptiveGuard is a
+guardrail capable of evolving in response to emerging jailbreak strategies post
+deployment. We release our AdaptiveGuard and studied datasets at
+https://github.com/awsm-research/AdaptiveGuard to support further research.

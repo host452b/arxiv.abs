@@ -1,0 +1,27 @@
+Title: Scalable Supervising Software Agents with Patch Reasoner
+Authors: Junjielong Xu, Boyin Tan, Xiaoyuan Liu, Chao Peng, Pengfei Gao et al.
+ID: 2510.22775
+URL: https://arxiv.org/abs/2510.22775
+
+Abstract:
+While large language model agents have advanced software engineering tasks, the
+unscalable nature of existing test-based supervision is limiting the potential
+improvement of data scaling. The reason is twofold: (1) building and running
+test sandbox is rather heavy and fragile, and (2) data with high-coverage tests
+is naturally rare and threatened by test hacking via edge cases. In this paper,
+we propose R4P, a patch verifier model to provide scalable rewards for training
+and testing SWE agents via reasoning. We consider that patch verification is
+fundamentally a reasoning task, mirroring how human repository maintainers
+review patches without writing and running new reproduction tests. To obtain
+sufficient reference and reduce the risk of reward hacking, R4P uses a
+group-wise objective for RL training, enabling it to verify multiple patches
+against each other's modification and gain a dense reward for stable training.
+R4P achieves 72.2% Acc. for verifying patches from SWE-bench-verified,
+surpassing OpenAI o3. To demonstrate R4P's practicality, we design and train a
+lite scaffold, Mini-SE, with pure reinforcement learning where all rewards are
+derived from R4P. As a result, Mini-SE achieves 26.2% Pass@1 on
+SWE-bench-verified, showing a 10.0% improvement over the original Qwen3-32B.
+This can be further improved to 32.8% with R4P for test-time scaling.
+Furthermore, R4P verifies patches within a second, 50x faster than testing on
+average. The stable scaling curves of rewards and accuracy along with high
+efficiency reflect R4P's practicality.

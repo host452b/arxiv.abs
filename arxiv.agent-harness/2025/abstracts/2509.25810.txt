@@ -1,0 +1,29 @@
+Title: Learning to Reason as Action Abstractions with Scalable Mid-Training RL
+Authors: Shenao Zhang, Donghan Yu, Yihao Feng, Bowen Jin, Zhaoran Wang et al.
+ID: 2509.25810
+URL: https://arxiv.org/abs/2509.25810
+
+Abstract:
+Large language models excel with reinforcement learning (RL), but fully
+unlocking this potential requires a mid-training stage. An effective
+mid-training phase should identify a compact set of useful actions and enable
+fast selection among them through online RL. We formalize this intuition by
+presenting the first theoretical result on how mid-training shapes
+post-training: it characterizes an action subspace that minimizes both the value
+approximation error from pruning and the RL error during subsequent planning.
+Our analysis reveals two key determinants of mid-training effectiveness: pruning
+efficiency, which shapes the prior of the initial RL policy, and its impact on
+RL convergence, which governs the extent to which that policy can be improved
+via online interactions. These results suggest that mid-training is most
+effective when the decision space is compact and the effective horizon is short,
+highlighting the importance of operating in the space of action abstractions
+rather than primitive actions. Building on these insights, we propose Reasoning
+as Action Abstractions (RA3), a scalable mid-training algorithm. Specifically,
+we derive a sequential variational lower bound and optimize it by iteratively
+discovering temporally-consistent latent structures via RL, followed by
+fine-tuning on the bootstrapped data. Experiments on code generation tasks
+demonstrate the effectiveness of our approach. Across multiple base models, RA3
+improves the average performance on HumanEval and MBPP by 8 and 4 points over
+the base model and the next-token prediction baseline. Furthermore, RA3 achieves
+faster convergence and higher asymptotic performance in RLVR on HumanEval+,
+MBPP+, LiveCodeBench, and Codeforces.

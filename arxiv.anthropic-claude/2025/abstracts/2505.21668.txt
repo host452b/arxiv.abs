@@ -1,0 +1,24 @@
+Title: R1-Code-Interpreter: LLMs Reason with Code via Supervised and Multi-stage Reinforcement Learning
+Authors: Yongchao Chen, Yueying Liu, Junwei Zhou, Yilun Hao, Jingquan Wang et al. (+3)
+ID: 2505.21668
+URL: https://arxiv.org/abs/2505.21668
+
+Practical guidance on training Large Language Models (LLMs) to leverage Code
+Interpreter across diverse tasks remains lacking. We present R1-Code-
+Interpreter, an extension of a text-only LLM trained via multi-turn supervised
+fine-tuning (SFT) and reinforcement learning (RL) to autonomously generate
+multiple code queries during step-by-step reasoning. Unlike prior RL + tool-use
+efforts focused on narrow domains such as math or retrieval, we curate 144
+diverse reasoning and planning tasks and show that training a general-purpose
+Code Interpreter across them presents significant challenges due to task
+heterogeneity and scarcity of effective samples. To address this, we introduce a
+multi-stage curriculum learning approach that partitions training samples by
+measured improvement potential. The RL training prioritizes samples with higher
+potential and gradually shifts to lower-potential ones, increasing the average
+RL gains from merely +3.4% to +9.3% across Qwen-2.5 models (3/7/14B). Our final
+model, R1-CI-14B, improves average accuracy on the 37 test tasks from 44.1% to
+72.4%, outperforming text-only GPT-4o (58.6%) and GPT-4o with Code Interpreter
+(70.9%). Notably, R1-CI-14B also exhibits emergent self-checking behavior
+through code generation. Datasets, Codes, and Models are available at
+https://github.com/yongchao98/R1-Code-Interpreter and
+https://huggingface.co/yongchao98.

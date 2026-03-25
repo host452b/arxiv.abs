@@ -1,0 +1,19 @@
+Title: Algorithmically Establishing Trust in Evaluators
+Authors: Adrian de Wynter
+ID: 2506.03083
+URL: https://arxiv.org/abs/2506.03083
+
+An evaluator, such as an LLM-as-a-judge, is trustworthy when there exists some
+agreed-upon way to measure its performance as a labeller. Traditional approaches
+either rely on testing the evaluator against references or assume that it
+`knows' somehow the correct labelling. Both approaches fail when references are
+unavailable: the former requires data, and the latter is an assumption, not
+evidence. To address this, we introduce the `No-Data Algorithm', which provably
+establishes trust in an evaluator without requiring any labelled data. Our
+algorithm works by successively posing challenges to said evaluator. We prove
+that after $r$ challenge rounds, it accepts an evaluator which knows the correct
+labels with probability $ \geq 1 - (1/4)^r$, and reliably flags untrustworthy
+ones. We present formal proofs of correctness, empirical tests, and applications
+to assessing trust in LLMs-as-judges for low-resource language labelling. Our
+work enables scientifically-grounded evaluator trust in low-data domains,
+addressing a critical bottleneck for scalable, trustworthy LLM deployment.

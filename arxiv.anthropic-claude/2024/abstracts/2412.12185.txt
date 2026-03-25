@@ -1,0 +1,28 @@
+Title: Graph Similarity Computation via Interpretable Neural Node Alignment
+Authors: Jingjing Wang, Hongjie Zhu, Haoran Xie, Fu Lee Wang, Xiaoliang Xu et al. (+1)
+ID: 2412.12185
+URL: https://arxiv.org/abs/2412.12185
+
+\Graph similarity computation is an essential task in many real-world graph-
+related applications such as retrieving the similar drugs given a query chemical
+compound or finding the user's potential friends from the social network
+database. Graph Edit Distance (GED) and Maximum Common Subgraphs (MCS) are the
+two commonly used domain-agnostic metrics to evaluate graph similarity in
+practice. Unfortunately, computing the exact GED is known to be a NP-hard
+problem. To solve this limitation, neural network based models have been
+proposed to approximate the calculations of GED/MCS. However, deep learning
+models are well-known ``black boxes'', thus the typically characteristic one-to-
+one node/subgraph alignment process in the classical computations of GED and MCS
+cannot be seen. Existing methods have paid attention to approximating the
+node/subgraph alignment (soft alignment), but the one-to-one node alignment
+(hard alignment) has not yet been solved. To fill this gap, in this paper we
+propose a novel interpretable neural node alignment model without relying on
+node alignment ground truth information. Firstly, the quadratic assignment
+problem in classical GED computation is relaxed to a linear alignment via
+embedding the features in the node embedding space. Secondly, a differentiable
+Gumbel-Sinkhorn module is proposed to unsupervised generate the optimal one-to-
+one node alignment matrix. Experimental results in real-world graph datasets
+demonstrate that our method outperforms the state-of-the-art methods in graph
+similarity computation and graph retrieval tasks, achieving up to 16\% reduction
+in the Mean Squared Error and up to 12\% improvement in the retrieval evaluation
+metrics, respectively.

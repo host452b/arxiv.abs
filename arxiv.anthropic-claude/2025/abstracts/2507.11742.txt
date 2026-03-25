@@ -1,0 +1,30 @@
+Title: CRABS: A syntactic-semantic pincer strategy for bounding LLM interpretation of Python notebooks
+Authors: Meng Li, Timothy M. McPhillips, Dingmin Wang, Shin-Rong Tsai, Bertram Ludäscher
+ID: 2507.11742
+URL: https://arxiv.org/abs/2507.11742
+
+Recognizing the information flows and operations comprising data science and
+machine learning Python notebooks is critical for evaluating, reusing, and
+adapting notebooks for new tasks. Investigating a notebook via re-execution
+often is impractical due to the challenges of resolving data and software
+dependencies. While Large Language Models (LLMs) pre-trained on large codebases
+have demonstrated effectiveness in understanding code without running it, we
+observe that they fail to understand some realistic notebooks due to
+hallucinations and long-context challenges. To address these issues, we propose
+a notebook understanding task yielding an information flow graph and
+corresponding cell execution dependency graph for a notebook, and demonstrate
+the effectiveness of a pincer strategy that uses limited syntactic analysis to
+assist full comprehension of the notebook using an LLM. Our Capture and Resolve
+Assisted Bounding Strategy (CRABS) employs shallow syntactic parsing and
+analysis of the abstract syntax tree (AST) to capture the correct interpretation
+of a notebook between lower and upper estimates of the inter-cell I/O
+set$\unicode{x2014}$the flows of information into or out of cells via
+variables$\unicode{x2014}$then uses an LLM to resolve remaining ambiguities via
+cell-by-cell zero-shot learning, thereby identifying the true data inputs and
+outputs of each cell. We evaluate and demonstrate the effectiveness of our
+approach using an annotated dataset of 50 representative, highly up-voted Kaggle
+notebooks that together represent 3454 actual cell inputs and outputs. The LLM
+correctly resolves 1397 of 1425 (98%) ambiguities left by analyzing the
+syntactic structure of these notebooks. Across 50 notebooks, CRABS achieves
+average F1 scores of 98% identifying cell-to-cell information flows and 99%
+identifying transitive cell execution dependencies.

@@ -1,0 +1,27 @@
+Title: Network In Graph Neural Network
+Authors: Xiang Song, Runjie Ma, Jiahang Li, Muhan Zhang, David Paul Wipf
+ID: 2111.11638
+URL: https://arxiv.org/abs/2111.11638
+
+Graph Neural Networks (GNNs) have shown success in learning from graph
+structured data containing node/edge feature information, with application to
+social networks, recommendation, fraud detection and knowledge graph reasoning.
+In this regard, various strategies have been proposed in the past to improve the
+expressiveness of GNNs. For example, one straightforward option is to simply
+increase the parameter size by either expanding the hid-den dimension or
+increasing the number of GNN layers. However, wider hidden layers can easily
+lead to overfitting, and incrementally adding more GNN layers can potentially
+result in over-smoothing.In this paper, we present a model-agnostic methodology,
+namely Network In Graph Neural Network (NGNN ), that allows arbitrary GNN models
+to increase their model capacity by making the model deeper. However, instead of
+adding or widening GNN layers, NGNN deepens a GNN model by inserting non-linear
+feedforward neural network layer(s) within each GNN layer. An analysis of NGNN
+as applied to a GraphSage base GNN on ogbn-products data demonstrate that it can
+keep the model stable against either node feature or graph structure
+perturbations. Furthermore, wide-ranging evaluation results on both node
+classification and link prediction tasks show that NGNN works reliably across
+diverse GNN architectures.For instance, it improves the test accuracy of
+GraphSage on the ogbn-products by 1.6% and improves the hits@100 score of SEAL
+on ogbl-ppa by 7.08% and the hits@20 score of GraphSage+Edge-Attr on ogbl-ppi by
+6.22%. And at the time of this submission, it achieved two first places on the
+OGB link prediction leaderboard.

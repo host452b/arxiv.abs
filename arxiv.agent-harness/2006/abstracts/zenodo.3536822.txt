@@ -1,0 +1,51 @@
+Title: Derivative-Free Optimization Methods for Handling Fixed Costs in Optimal Groundwater Remediation Design
+Authors: Hemker, Thomas, Fowler, Kathleen
+ID: zenodo.3536822
+URL: https://arxiv.org/abs/zenodo.3536822
+
+Groundwater remediation design problems are routine in water resource
+management. The starting point for such a design problem is to formulate an
+objective function that represents a measure of the manager's goal. For example,
+in plume migration control, we need to determine the cost to design a well field
+to alter the direction of groundwater flow and thereby control the destination
+of a contaminant. Constraints must be specified to ensure that the plume is
+captured, the physical domain is protected, and the wells operate under
+realistic conditions. Optimization algorithms must work in conjunction with
+groundwater flow and possibly contaminant transport simulators to determine the
+minimal cost well design subject to the constraints, but typically these
+numerical simulation codes have been developed for many years and have usually
+not been designed to meet the specific needs of optimization methods as, e.g.,
+providing gradient information. Decision variables can be real-valued, in the
+case of pumping rates and well locations, or integer valued in the case of the
+number of wells in the design.  In this work we focus on formulations that
+include a fixed installation cost as well as an operating cost, resulting in a
+simulation-based nonlinear mixed-integer optimization problem. The motivation is
+that our preliminary studies have shown that convergence to an unsatisfactory,
+local minimum with many wells operating at low pumping rates is common when the
+fixed cost is ignored.  The challenge in the fixed cost formulation is the
+integer variable for the number of wells in the design. Removing a well from the
+design space leads to a large decrease in cost meaning optimizers must be
+equipped to either handle a mixed-integer or approximate mixed integer, black-
+box problem and discontinuities in the objective function. Moreover since
+evaluation of the objective function requires numerical results from a
+simulation, derivative information is unavailable. Gradient based optimization
+methods are not appropriate for these applications, hence methods that rely only
+on function values are more appealing.  We compare three methods for handling
+the installation cost on a hydraulic capture benchmarking problem proposed in
+the literature. All the approaches described below do not use the gradient of
+the objective function, only function values for minimization. In one approach,
+we use penalty coefficients proposed in the literature for the installation term
+to transform the discontinuous problem into a continuous one. In another
+approach, we bypass including the number of wells as a decision variable by
+defining an inactive-well threshold. In the course of the optimization, if a
+well rate falls in this threshold, the well is removed from the design space,
+leading to large discontinuities in the objective function. For the two above
+formulations, we use the implicit filtering algorithm, a method which uses a
+sequence of finite difference gradients, for minimization. In the third
+approach, we use sequential stochastic modeling to build surrogate functions to
+approximate the original objective function. With this procedure the use of a
+branch and bound technique becomes possible to solve the mixed integer problem
+in contrast to methods working directly on the simulation results, which impedes
+relaxation of integer variables. We present promising preliminary numerical
+results on the benchmarking problem and point the way towards improvement and
+future work.

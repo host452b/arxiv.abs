@@ -1,0 +1,26 @@
+Title: SetupBench: Assessing Software Engineering Agents' Ability to Bootstrap Development Environments
+Authors: Avi Arora, Jinu Jang, Roshanak Zilouchian Moghaddam
+ID: 2507.09063
+URL: https://arxiv.org/abs/2507.09063
+
+Modern Large Language Model (LLM) agents promise end to end assistance with
+real-world software tasks, yet existing benchmarks evaluate LLM agents almost
+exclusively in pre-baked environments where every dependency is pre-installed.
+To fill this gap, we introduce SetupBench, a 93 instance benchmark that isolates
+the environment-bootstrap skill: starting from a bare Linux sandbox, an agent
+must install packages, resolve dependency conflicts, initialize databases, and
+configure background services. Our tasks span seven language ecosystems, five
+database engines, and multi-service orchestration scenarios, each accompanies by
+a natural language problem statement and a deterministic success command.
+Through evaluation of OpenHands, a state-of-the-art coding agent, we find low
+success rates across task categories, with particular challenges in repository
+setup (38.9-57.4%) and local database configuration (20.0-53.3%). Our analysis
+reveals systematic failure modes including incomplete development tooling
+installation, hallucinated task constraints, and non-persistent environment
+modifications that break agent-human collaboration workflows. We identify
+substantial inefficiencies in agent exploration strategies, with 38-89% of
+actions being unnecessary compared to optimal human behavior. These findings
+highlight gaps in current agents' practical environment-bootstrap capabilities.
+By targeting this critical yet under-evaluated capability, SetupBench provides a
+rigorous yard-stick for the next generation of software developer agents aiming
+to solve end to end real-wold tasks.

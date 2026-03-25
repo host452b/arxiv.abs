@@ -1,0 +1,29 @@
+Title: Implementing and Evaluating E2LSH on Storage
+Authors: Yu Nakanishi, Kazuhiro Hiwada, Yosuke Bando, Tomoya Suzuki, Hirotsugu Kajihara et al. (+3)
+ID: 2403.16404
+URL: https://arxiv.org/abs/2403.16404
+
+Locality sensitive hashing (LSH) is one of the widely-used approaches to
+approximate nearest neighbor search (ANNS) in high-dimensional spaces. The first
+work on LSH for the Euclidean distance, E2LSH, showed how ANNS can be solved
+efficiently at a sublinear query time in the database size with theoretically-
+guaranteed accuracy, although it required a large hash index size. Since then,
+several LSH variants having much smaller index sizes have been proposed. Their
+query time is linear or superlinear, but they have been shown to run effectively
+faster because they require fewer I/Os when the index is stored on hard disk
+drives and because they also permit in-memory execution with modern DRAM
+capacity.   In this paper, we show that E2LSH is regaining the advantage in
+query speed with the advent of modern flash storage devices such as solid-state
+drives (SSDs). We evaluate E2LSH on a modern single-node computing environment
+and analyze its computational cost and I/O cost, from which we derive storage
+performance requirements for its external memory execution. Our analysis
+indicates that E2LSH on a single consumer-grade SSD can run faster than the
+state-of-the-art small-index methods executed in-memory. It also indicates that
+E2LSH with emerging high-performance storage devices and interfaces can approach
+in-memory E2LSH speeds. We implement a simple adaptation of E2LSH to external
+memory, E2LSH-on-Storage (E2LSHoS), and evaluate it for practical large datasets
+of up to one billion objects using different combinations of modern storage
+devices and interfaces. We demonstrate that our E2LSHoS implementation runs much
+faster than small-index methods and can approach in-memory E2LSH speeds, and
+also that its query time scales sublinearly with the database size beyond the
+index size limit of in-memory E2LSH.

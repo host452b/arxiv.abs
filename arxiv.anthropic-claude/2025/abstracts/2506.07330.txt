@@ -1,0 +1,28 @@
+Title: JavelinGuard: Low-Cost Transformer Architectures for LLM Security
+Authors: Yash Datta, Sharath Rajasekar
+ID: 2506.07330
+URL: https://arxiv.org/abs/2506.07330
+
+We present JavelinGuard, a suite of low-cost, high-performance model
+architectures designed for detecting malicious intent in Large Language Model
+(LLM) interactions, optimized specifically for production deployment. Recent
+advances in transformer architectures, including compact BERT(Devlin et al.
+2019) variants (e.g., ModernBERT (Warner et al. 2024)), allow us to build highly
+accurate classifiers with as few as approximately 400M parameters that achieve
+rapid inference speeds even on standard CPU hardware. We systematically explore
+five progressively sophisticated transformer-based architectures: Sharanga
+(baseline transformer classifier), Mahendra (enhanced attention-weighted pooling
+with deeper heads), Vaishnava and Ashwina (hybrid neural ensemble
+architectures), and Raudra (an advanced multi-task framework with specialized
+loss functions). Our models are rigorously benchmarked across nine diverse
+adversarial datasets, including popular sets like the NotInject series, BIPIA,
+Garak, ImprovedLLM, ToxicChat, WildGuard, and our newly introduced JavelinBench,
+specifically crafted to test generalization on challenging borderline and hard-
+negative cases. Additionally, we compare our architectures against leading open-
+source guardrail models as well as large decoder-only LLMs such as gpt-4o,
+demonstrating superior cost-performance trade-offs in terms of accuracy, and
+latency. Our findings reveal that while Raudra's multi-task design offers the
+most robust performance overall, each architecture presents unique trade-offs in
+speed, interpretability, and resource requirements, guiding practitioners in
+selecting the optimal balance of complexity and efficiency for real-world LLM
+security applications.

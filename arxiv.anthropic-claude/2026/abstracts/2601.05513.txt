@@ -1,0 +1,29 @@
+Title: LEAPS: An LLM-Empowered Adaptive Plugin for Taobao AI Search
+Authors: Lei Wang, Jinhang Wu, Zhibin Wang, Biye Li, Haiping Hou
+ID: 2601.05513
+URL: https://arxiv.org/abs/2601.05513
+
+The rapid advancement of large language models has reshaped user search
+cognition, driving a paradigm shift from discrete keyword-based search to high-
+dimensional conversational interaction. However, existing e-commerce search
+architectures face a critical capability deficit in adapting to this change.
+Users are often caught in a dilemma: precise natural language descriptions
+frequently trigger zero-result scenarios, while the forced simplification of
+queries leads to decision overload from noisy, generic results. To tackle this
+challenge, we propose LEAPS (LLM-Empowered Adaptive Plugin for Taobao AI
+Search), which seamlessly upgrades traditional search systems via a "Broaden-
+and-Refine" paradigm. Specifically, it attaches plugins to both ends of the
+search pipeline: (1) Upstream, a Query Expander acts as an intent translator. It
+employs a novel three-stage training strategy--inverse data augmentation,
+posterior-knowledge supervised fine-tuning, and diversity-aware reinforcement
+learning--to generate adaptive and complementary query combinations that
+maximize the candidate product set. (2) Downstream, a Relevance Verifier serves
+as a semantic gatekeeper. By synthesizing multi-source data (e.g., OCR text,
+reviews) and leveraging chain-of-thought reasoning, it precisely filters noise
+to resolve selection overload. Extensive offline experiments and online A/B
+testing demonstrate that LEAPS significantly enhances conversational search
+experiences. Crucially, its non-invasive architecture preserves established
+retrieval performance optimized for short-text queries, while simultaneously
+allowing for low-cost integration into diverse back-ends. Fully deployed on
+Taobao AI Search since August 2025, LEAPS currently serves hundreds of millions
+of users monthly.

@@ -1,0 +1,27 @@
+Title: Understanding New-Knowledge-Induced Factual Hallucinations in LLMs: Analysis and Interpretation
+Authors: Renfei Dang, Peng Hu, Zhejian Lai, Changjiang Gao, Min Zhang et al. (+1)
+ID: 2511.02626
+URL: https://arxiv.org/abs/2511.02626
+
+Prior works have shown that fine-tuning on new knowledge can induce factual
+hallucinations in large language models (LLMs), leading to incorrect outputs
+when evaluated on previously known information. However, the specific
+manifestations of such hallucination and its underlying mechanisms remain
+insufficiently understood. Our work addresses this gap by designing a controlled
+dataset \textit{Biography-Reasoning}, and conducting a fine-grained analysis
+across multiple knowledge types and two task types, including knowledge question
+answering (QA) and knowledge reasoning tasks. We find that hallucinations not
+only severely affect tasks involving newly introduced knowledge, but also
+propagate to other evaluation tasks. Moreover, when fine-tuning on a dataset in
+which a specific knowledge type consists entirely of new knowledge, LLMs exhibit
+elevated hallucination tendencies. This suggests that the degree of
+unfamiliarity within a particular knowledge type, rather than the overall
+proportion of new knowledge, is a stronger driver of hallucinations. Through
+interpretability analysis, we show that learning new knowledge weakens the
+model's attention to key entities in the input question, leading to an over-
+reliance on surrounding context and a higher risk of hallucination. Conversely,
+reintroducing a small amount of known knowledge during the later stages of
+training restores attention to key entities and substantially mitigates
+hallucination behavior. Finally, we demonstrate that disrupted attention
+patterns can propagate across lexically similar contexts, facilitating the
+spread of hallucinations beyond the original task.

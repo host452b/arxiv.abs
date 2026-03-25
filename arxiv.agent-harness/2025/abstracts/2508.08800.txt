@@ -1,0 +1,23 @@
+Title: Fault Tolerant Multi-Agent Learning with Adversarial Budget Constraints
+Authors: David Mguni, Yaqi Sun, Haojun Chen, Wanrong Yang, Amir Darabi et al. (+2)
+ID: 2508.08800
+URL: https://arxiv.org/abs/2508.08800
+
+We study robustness to agent malfunctions in cooperative multi-agent
+reinforcement learning (MARL), a failure mode that is critical in practice yet
+underexplored in existing theory. We introduce MARTA, a plug-and-play robustness
+layer that augments standard MARL algorithms with a Switcher-Adversary mechanism
+which selectively induces malfunctions in performance-critical states. This
+formulation defines a fault-switching $(N+2)$-player Markov game in which the
+Switcher chooses when and which agent fails, and the Adversary controls the
+resulting faulty behaviour via random or worst-case policies. We develop a
+Q-learning-type scheme and show that the associated Bellman operator is a
+contraction, yielding existence and uniqueness of the minimax value, convergence
+to a Markov perfect equilibrium. MARTA integrates seamlessly with MARL
+algorithms without architectural modification and consistently improves
+robustness across Traffic Junction (TJ), Level-Based Foraging (LBF), MPE
+SimpleTag, and SMAC (v2). In these domains, MARTA achieves large gains in final
+performance of up to 116.7\% in SMAC, 21.4\% in MPE SimpleTag, and 44.6\% in
+LBF, while significantly reducing failure rates under train-test mismatched
+fault regimes. These results establish MARTA as a theoretically grounded and
+practically deployable mechanism for fault-tolerant MARL.

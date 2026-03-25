@@ -1,0 +1,24 @@
+Title: AIME: AI System Optimization via Multiple LLM Evaluators
+Authors: Bhrij Patel, Souradip Chakraborty, Wesley A. Suttle, Mengdi Wang, Amrit Singh Bedi et al. (+1)
+ID: 2410.03131
+URL: https://arxiv.org/abs/2410.03131
+
+Text-based AI system optimization typically involves a feedback loop scheme
+where a single LLM generates an evaluation in natural language of the current
+output to improve the next iteration's output. However, in this work, we
+empirically demonstrate that for a practical and complex task (code generation)
+with multiple criteria to evaluate, utilizing only one LLM evaluator tends to
+let errors in generated code go undetected, thus leading to incorrect
+evaluations and ultimately suboptimal test case performance. Motivated by this
+failure case, we assume there exists an optimal evaluation policy that samples
+an evaluation between response and ground truth. We then theoretically prove
+that a linear combination of multiple evaluators can approximate this optimal
+policy. From this insight, we propose AI system optimization via Multiple LLM
+Evaluators (AIME). AIME is an evaluation protocol that utilizes multiple LLMs
+that each independently generate an evaluation on separate criteria and then
+combine them via concatenation. We provide an extensive empirical study showing
+AIME outperforming baseline methods in code generation tasks, with up to $62\%$
+higher error detection rate and up to $16\%$ higher success rate than a single
+LLM evaluation protocol on LeetCodeHard and HumanEval datasets. We also show
+that the selection of the number of evaluators and which criteria to utilize is
+non-trivial as it can impact pact success rate by up to $12\%$.

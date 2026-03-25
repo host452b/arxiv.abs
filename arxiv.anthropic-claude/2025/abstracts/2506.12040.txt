@@ -1,0 +1,22 @@
+Title: BTC-LLM: Efficient Sub-1-Bit LLM Quantization via Learnable Transformation and Binary Codebook
+Authors: Hao Gu, Lujun Li, Zheyu Wang, Bei Liu, Qiyuan Zhu et al. (+2)
+ID: 2506.12040
+URL: https://arxiv.org/abs/2506.12040
+
+Binary quantization represents the most extreme form of large language model
+(LLM) compression, reducing weights to $\pm$1 for maximal memory and
+computational efficiency. While recent sparsity-aware binarization methods
+achieve sub-1-bit compression by pruning redundant binary weights, they suffer
+from three critical challenges: performance deterioration, computational
+complexity from sparse mask management, and limited hardware compatibility. In
+this paper, we present BTC-LLM, a novel sub-1-bit LLM quantization framework
+that leverages adaptive weight transformation and binary pattern clustering to
+overcome these limitations, delivering both superior accuracy and efficiency.
+Our approach incorporates two key innovations: (1) a Learnable Transformation
+that optimizes invertible scaling and rotation matrices to align binarized
+weights with full-precision distributions, enabling incoherence processing to
+enhance layer-wise representation quality; (2) a Flash and Accurate Binary
+Codebook that identifies recurring binary vector clusters, compressing them into
+compact indices with tailored distance metrics and sign-based centroid updates.
+This eliminates the need for sparse masks, enabling efficient inference on
+standard hardware. Our code is available at https://github.com/Chooovy/BTC-LLM.

@@ -1,0 +1,20 @@
+Title: DUET: Disaggregated Hybrid Mamba-Transformer LLMs with Prefill and Decode-Specific Packages
+Authors: Alish Kanani, Sangwan Lee, Han Lyu, Jiahao Lin, Jaehyun Park et al. (+1)
+ID: 2603.15530
+URL: https://arxiv.org/abs/2603.15530
+
+Large language models operate in distinct compute-bound prefill followed by
+memory bandwidth-bound decode phases. Hybrid Mamba-Transformer models inherit
+this asymmetry while adding state space model (SSM) recurrences and element-wise
+operations that map poorly to matmul-centric accelerators. This mismatch causes
+performance bottlenecks, showing that a homogeneous architecture cannot satisfy
+all requirements. We introduce DUET, a disaggregated accelerator that assigns
+prefill and decode phases to specialized packages. The Prefill package utilizes
+systolic array chiplets with off-package memory for efficient large matrix
+multiplications and long-sequence SSMs. The Decode package utilizes vector-unit
+arrays with high-bandwidth in-package memory to accelerate token-by-token SSM
+and vector-matrix multiplications. Both architectures are runtime-configurable
+to support hybrid models with mixed Mamba and attention layers. Evaluations on
+Nemotron-H-56B, Zamba2-7B, and Llama3-8B across four workloads show that DUET
+achieves 4x faster time to first token, 1.4x higher throughput, and 1.5x lower
+time between tokens over the B200 GPU.

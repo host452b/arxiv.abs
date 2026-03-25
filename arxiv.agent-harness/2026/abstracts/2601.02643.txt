@@ -1,0 +1,25 @@
+Title: AWARE-US: Preference-Aware Infeasibility Resolution in Tool-Calling Agents
+Authors: Mehmet Kurmaz
+ID: 2601.02643
+URL: https://arxiv.org/abs/2601.02643
+
+Abstract:
+Tool-calling conversational agents querying structured databases often face two
+linked failures: underspecification (missing constraints needed for a precise
+query) andinfeasibility (a fully specified query returns anemptyset). Prior
+systems often respond with "no results" or apply ad hoc relaxations, which can
+violate user intent by discarding highly valued requirements. Wecast
+infeasibility handling as preference-aware query repair: when a query is
+unsatisfiable, the agent should relax the least important constraints. We
+propose three LLM-based methods to infer relative constraint importance from
+dialogue: (1) local weighting, (2) global one-shot weighting, and (3) pairwise
+ranking. Across extensive experiments in car recommendation, the local-weighting
+method trained with supervised fine-tuning and direct preference optimization
+best aligns with user preferences (48%), while global weighting achieves the
+highest correct-relaxation accuracy (56%); all three outperform prior
+infeasibility-resolution basel. We also introduce AWARE-US, a benchmark of 120+
+persona-grounded queries requiring agents to (i) disambiguate a base request via
+conversa tion and (ii) resolve infeasibility in a way consistent with
+persona-implied preferences. For code refer to Github:
+https://github.com/mhtkrmz/Infeasible-task and the dataset is available on
+Hugging Face

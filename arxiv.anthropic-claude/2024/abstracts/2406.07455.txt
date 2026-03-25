@@ -1,0 +1,27 @@
+Title: Reinforcement Learning from Human Feedback without Reward Inference: Model-Free Algorithm and Instance-Dependent Analysis
+Authors: Qining Zhang, Honghao Wei, Lei Ying
+ID: 2406.07455
+URL: https://arxiv.org/abs/2406.07455
+
+Abstract:
+In this paper, we study reinforcement learning from human feedback (RLHF) under
+an episodic Markov decision process with a general trajectory-wise reward model.
+We developed a model-free RLHF best policy identification algorithm, called
+$\mathsf{BSAD}$, without explicit reward model inference, which is a critical
+intermediate step in the contemporary RLHF paradigms for training large language
+models (LLM). The algorithm identifies the optimal policy directly from human
+preference information in a backward manner, employing a dueling bandit
+sub-routine that constantly duels actions to identify the superior one.
+$\mathsf{BSAD}$ adopts a reward-free exploration and
+best-arm-identification-like adaptive stopping criteria to equalize the
+visitation among all states in the same decision step while moving to the
+previous step as soon as the optimal action is identifiable, leading to a
+provable, instance-dependent sample complexity
+$\tilde{\mathcal{O}}(c_{\mathcal{M}}SA^3H^3M\log\frac{1}δ)$ which resembles the
+result in classic RL, where $c_{\mathcal{M}}$ is the instance-dependent constant
+and $M$ is the batch size. Moreover, $\mathsf{BSAD}$ can be transformed into an
+explore-then-commit algorithm with logarithmic regret and generalized to
+discounted MDPs using a frame-based approach. Our results show: (i)
+sample-complexity-wise, RLHF is not significantly harder than classic RL and
+(ii) end-to-end RLHF may deliver improved performance by avoiding pitfalls in
+reward inferring such as overfit and distribution shift.

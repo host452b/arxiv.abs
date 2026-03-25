@@ -1,0 +1,23 @@
+Title: Beyond Tokens: Concept-Level Training Objectives for LLMs
+Authors: Laya Iyer, Pranav Somani, Alice Guo, Dan Jurafsky, Chen Shani
+ID: 2601.11791
+URL: https://arxiv.org/abs/2601.11791
+
+The next-token prediction (NTP) objective has been foundational in the
+development of modern large language models (LLMs), driving advances in fluency
+and generalization. However, NTP operates at the \textit{token} level, treating
+deviations from a single reference continuation as errors even when alternative
+continuations are equally plausible or semantically equivalent (e.g., ``mom''
+vs. ``mother''). As a result, token-level loss can penalize valid abstractions,
+paraphrases, or conceptually correct reasoning paths, biasing models toward
+surface form rather than underlying meaning. This mismatch between the training
+signal and semantic correctness motivates learning objectives that operate over
+higher-level representations. We propose a shift from token-level to concept-
+level prediction, where concepts group multiple surface forms of the same idea
+(e.g., ``mom,'' ``mommy,'' ``mother'' $\rightarrow$ \textit{MOTHER}). We
+introduce various methods for integrating conceptual supervision into LLM
+training and show that concept-aware models achieve lower perplexity, improved
+robustness under domain shift, and stronger performance than NTP-based models on
+diverse NLP benchmarks. This suggests \textit{concept-level supervision} as an
+improved training signal that better aligns LLMs with human semantic
+abstractions.

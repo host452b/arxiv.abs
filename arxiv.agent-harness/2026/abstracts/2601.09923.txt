@@ -1,0 +1,24 @@
+Title: CaMeLs Can Use Computers Too: System-level Security for Computer Use Agents
+Authors: Hanna Foerster, Tom Blanchard, Kristina Nikolić, Ilia Shumailov, Cheng Zhang et al. (+4)
+ID: 2601.09923
+URL: https://arxiv.org/abs/2601.09923
+
+AI agents are vulnerable to prompt injection attacks, where malicious content
+hijacks agent behavior to steal credentials or cause financial loss. The only
+known robust defense is architectural isolation that strictly separates trusted
+task planning from untrusted environment observations. However, applying this
+design to Computer Use Agents (CUAs) -- systems that automate tasks by viewing
+screens and executing actions -- presents a fundamental challenge: current
+agents require continuous observation of UI state to determine each action,
+conflicting with the isolation required for security. We resolve this tension by
+demonstrating that UI workflows, while dynamic, are structurally predictable. We
+introduce Single-Shot Planning for CUAs, where a trusted planner generates a
+complete execution graph with conditional branches before any observation of
+potentially malicious content, providing provable control flow integrity
+guarantees against arbitrary instruction injections. Although this architectural
+isolation successfully prevents instruction injections, we show that additional
+measures are needed to prevent Branch Steering attacks, which manipulate UI
+elements to trigger unintended valid paths within the plan. We evaluate our
+design on OSWorld, and retain up to 57% of the performance of frontier models
+while improving performance for smaller open-source models by up to 19%,
+demonstrating that rigorous security and utility can coexist in CUAs.

@@ -1,0 +1,22 @@
+Title: Physics-Conditioned Grasping for Stable Tool Use
+Authors: Noah Trupin, Zixing Wang, Ahmed H. Qureshi
+ID: 2505.01399
+URL: https://arxiv.org/abs/2505.01399
+
+Abstract:
+Tool use often fails not because robots misidentify tools, but because grasps
+cannot withstand task-induced wrench. Existing vision-language manipulation
+systems ground tools and contact regions from language yet select grasps under
+quasi-static or geometry-only assumptions. During interaction, inertial impulse
+and lever-arm amplification generate wrist torque and tangential loads that
+trigger slip and rotation. We introduce inverse Tool-use Planning (iTuP), which
+selects grasps by minimizing predicted interaction wrench along a
+task-conditioned trajectory. From rigid-body mechanics, we derive torque, slip,
+and alignment penalties, and train a Stable Dynamic Grasp Network (SDG-Net) to
+approximate these trajectory-conditioned costs for real-time scoring. Across
+hammering, sweeping, knocking, and reaching in simulation and on hardware,
+SDG-Net suppresses induced torque up to 17.6%, shifts grasps below empirically
+observed instability thresholds, and improves real-world success by 17.5% over a
+compositional baseline. Improvements concentrate where wrench amplification
+dominates, showing that robot tool use requires wrench-aware grasp selection,
+not perception alone.

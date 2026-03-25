@@ -1,0 +1,29 @@
+Title: Safety Alignment as Continual Learning: Mitigating the Alignment Tax via Orthogonal Gradient Projection
+Authors: Guanglong Sun, Siyuan Zhang, Liyuan Wang, Jun Zhu, Hang Su et al.
+ID: 2602.07892
+URL: https://arxiv.org/abs/2602.07892
+
+Abstract:
+Large Language Models (LLMs) often incur an alignment tax: safety post-training
+can reduce general utility (e.g., reasoning and coding). We argue that this tax
+primarily arises from continual-learning-style forgetting in sequential
+alignment, where distribution shift and conflicting objectives cause safety
+updates to overwrite pre-trained competencies. Accordingly, we cast safety
+alignment as a continual learning (CL) problem that must balance plasticity
+(acquiring safety constraints) and stability (preserving general abilities). We
+propose Orthogonal Gradient Projection for Safety Alignment (OGPSA), a
+lightweight method that mitigates interference by constraining each safety
+update to be orthogonal (in a first-order sense) to a learned subspace capturing
+general capabilities. Specifically, OGPSA estimates a low-rank capability
+subspace from gradients on a small reference set and projects the safety
+gradient onto its orthogonal complement before updating. This produces
+safety-directed updates that minimally perturb prior knowledge while retaining
+capacity for alignment. OGPSA is plug-and-play and integrates into standard
+post-training pipelines without large-scale replay, auxiliary objectives, or
+retraining. Across Supervised Fine-Tuning (SFT), Direct Preference Optimization
+(DPO), and sequential SFT$\rightarrow$DPO settings, OGPSA consistently improves
+the safety--utility Pareto frontier over standard baselines. For instance, on
+Qwen2.5-7B-Instruct under SFT$\rightarrow$DPO, OGPSA preserves strong safety
+while recovering general capability, improving SimpleQA from 0.53\% to 3.03\%
+and IFEval from 51.94\% to 63.96\%. Our source code is available at
+\href{https://github.com/SunGL001/OGPSA}{OGPSA}

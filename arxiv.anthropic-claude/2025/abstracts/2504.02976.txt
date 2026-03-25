@@ -1,0 +1,27 @@
+Title: Localized Definitions and Distributed Reasoning: A Proof-of-Concept Mechanistic Interpretability Study via Activation Patching
+Authors: Nooshin Bahador
+ID: 2504.02976
+URL: https://arxiv.org/abs/2504.02976
+
+This study investigates the localization of knowledge representation in fine-
+tuned GPT-2 models using Causal Layer Attribution via Activation Patching
+(CLAP), a method that identifies critical neural layers responsible for correct
+answer generation. The model was fine-tuned on 9,958 PubMed abstracts (epilepsy:
+20,595 mentions, EEG: 11,674 mentions, seizure: 13,921 mentions) using two
+configurations with validation loss monitoring for early stopping. CLAP involved
+(1) caching clean (correct answer) and corrupted (incorrect answer) activations,
+(2) computing logit difference to quantify model preference, and (3) patching
+corrupted activations with clean ones to assess recovery. Results revealed three
+findings: First, patching the first feedforward layer recovered 56% of correct
+preference, demonstrating that associative knowledge is distributed across
+multiple layers. Second, patching the final output layer completely restored
+accuracy (100% recovery), indicating that definitional knowledge is localised.
+The stronger clean logit difference for definitional questions further supports
+this localized representation. Third, minimal recovery from convolutional layer
+patching (13.6%) suggests low-level features contribute marginally to high-level
+reasoning. Statistical analysis confirmed significant layer-specific effects
+(p<0.01). These findings demonstrate that factual knowledge is more localized
+and associative knowledge depends on distributed representations. We also showed
+that editing efficacy depends on task type. Our findings not only reconcile
+conflicting observations about localization in model editing but also emphasize
+on using task-adaptive techniques for reliable, interpretable updates.

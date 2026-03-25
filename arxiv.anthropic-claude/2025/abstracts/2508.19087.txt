@@ -1,0 +1,29 @@
+Title: APT-LLM: Exploiting Arbitrary-Precision Tensor Core Computing for LLM Acceleration
+Authors: Shaobo Ma, Chao Fang, Haikuo Shao, Zhongfeng Wang
+ID: 2508.19087
+URL: https://arxiv.org/abs/2508.19087
+
+Large language models (LLMs) have revolutionized AI applications, yet their
+enormous computational demands severely limit deployment and real-time
+performance. Quantization methods can help reduce computational costs, however,
+attaining the extreme efficiency associated with ultra-low-bit quantized LLMs at
+arbitrary precision presents challenges on GPUs. This is primarily due to the
+limited support for GPU Tensor Cores, inefficient memory management, and
+inflexible kernel optimizations. To tackle these challenges, we propose a
+comprehensive acceleration scheme for arbitrary precision LLMs, namely APT-LLM.
+Firstly, we introduce a novel data format, bipolar-INT, which allows for
+efficient and lossless conversion with signed INT, while also being more
+conducive to parallel computation. We also develop a matrix multiplication
+(MatMul) method allowing for arbitrary precision by dismantling and reassembling
+matrices at the bit level. This method provides flexible precision and optimizes
+the utilization of GPU Tensor Cores. In addition, we propose a memory management
+system focused on data recovery, which strategically employs fast shared memory
+to substantially increase kernel execution speed and reduce memory access
+latency. Finally, we develop a kernel mapping method that dynamically selects
+the optimal configurable hyperparameters of kernels for varying matrix sizes,
+enabling optimal performance across different LLM architectures and precision
+settings. In LLM inference, APT-LLM achieves up to a 3.99$\times$ speedup
+compared to FP16 baselines and a 2.16$\times$ speedup over NVIDIA CUTLASS INT4
+acceleration on RTX 3090. On RTX 4090 and H800, APT-LLM achieves up to
+2.44$\times$ speedup over FP16 and 1.65$\times$ speedup over CUTLASS integer
+baselines.

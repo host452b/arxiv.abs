@@ -1,0 +1,19 @@
+Title: Training LLMs to be Better Text Embedders through Bidirectional Reconstruction
+Authors: Chang Su, Dengliang Shi, Siyuan Huang, Jintao Du, Changhua Meng et al. (+3)
+ID: 2509.03020
+URL: https://arxiv.org/abs/2509.03020
+
+Large language models (LLMs) have increasingly been explored as powerful text
+embedders. Existing LLM-based text embedding approaches often leverage the
+embedding of the final token, typically a reserved special token such as [EOS].
+However, these tokens have not been intentionally trained to capture the
+semantics of the whole context, limiting their capacity as text embeddings,
+especially for retrieval and re-ranking tasks. We propose to add a new training
+stage before contrastive learning to enrich the semantics of the final token
+embedding. This stage employs bidirectional generative reconstruction tasks,
+namely EBQ2D (Embedding-Based Query-to-Document) and EBD2Q (Embedding-Based
+Document-to-Query), which interleave to anchor the [EOS] embedding and
+reconstruct either side of Query-Document pairs. Experimental results
+demonstrate that our additional training stage significantly improves LLM
+performance on the Massive Text Embedding Benchmark (MTEB), achieving new state-
+of-the-art results across different LLM base models and scales.

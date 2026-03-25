@@ -1,0 +1,24 @@
+Title: Murakkab: Resource-Efficient Agentic Workflow Orchestration in Cloud Platforms
+Authors: Gohar Irfan Chaudhry, Esha Choukse, Haoran Qiu, Íñigo Goiri, Rodrigo Fonseca et al.
+ID: 2508.18298
+URL: https://arxiv.org/abs/2508.18298
+
+Abstract:
+Agentic workflows commonly coordinate multiple models and tools with complex
+control logic. They are quickly becoming the dominant paradigm for AI
+applications. However, serving them remains inefficient with today's frameworks.
+The key problem is that they expose workflows as opaque sequences of model and
+tool calls that tightly couple agent logic with model and hardware choices.
+Often, these workflow components are fragmented across different entities,
+preventing systems from reasoning about trade-offs across accuracy, latency,
+energy, and cost. This leads to resource waste and degraded service-level
+objectives (SLOs). We present Murakkab, a resource-efficient serving system for
+agentic workflows. Murakkab introduces a declarative abstraction that decouples
+workflow specification from execution configuration. A profile-guided optimizer
+and adaptive runtime jointly manage the full stack: orchestrating workflow
+components, mapping them to models and hardware, and dynamically reconfiguring
+execution to satisfy user-defined SLOs. By exposing the internal structure of
+agentic workflows, Murakkab enables cross-layer optimization that existing
+frameworks and cloud schedulers cannot achieve. Our evaluation on diverse
+workflows shows that Murakkab reduces GPU usage by up to 2.8$\times$, energy
+consumption by 3.7$\times$, and cost by 4.3$\times$ while maintaining SLOs.

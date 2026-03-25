@@ -1,0 +1,22 @@
+Title: Mano: Restriking Manifold Optimization for LLM Training
+Authors: Yufei Gu, Zeke Xie
+ID: 2601.23000
+URL: https://arxiv.org/abs/2601.23000
+
+While large language models (LLMs) have emerged as a significant advancement in
+artificial intelligence, the hardware and computational costs for training LLMs
+are also significantly burdensome. Among the state-of-the-art optimizers, AdamW
+relies on diagonal curvature estimates and ignores structural properties, while
+Muon applies global spectral normalization at the expense of losing curvature
+information. In this study, we restriked manifold optimization methods for
+training LLMs, which may address both optimizers' limitations, while
+conventional manifold optimization methods have been largely overlooked due to
+the poor performance in large-scale model optimization. By innovatively
+projecting the momentum onto the tangent space of model parameters and
+constraining it on a rotational Oblique manifold, we propose a novel, powerful,
+and efficient optimizer **Mano** that is the first to bridge the performance gap
+between manifold optimization and modern optimizers. Extensive experiments on
+the LLaMA and Qwen3 models demonstrate that Mano consistently and significantly
+outperforms AdamW and Muon even with less memory consumption and computational
+complexity, respectively, suggesting an expanded Pareto frontier in terms of
+space and time efficiency.

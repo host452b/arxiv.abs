@@ -1,0 +1,22 @@
+Title: ANCHOR: Branch-Point Data Generation for GUI Agents
+Authors: Jinbiao Wei, Yilun Zhao, Kangqi Ni, Arman Cohan
+ID: 2602.07153
+URL: https://arxiv.org/abs/2602.07153
+
+End-to-end GUI agents for real desktop environments require large amounts of
+high-quality interaction data, yet collecting human demonstrations is expensive
+and existing synthetic pipelines often suffer from limited task diversity or
+noisy, goal-drifting trajectories. We present a trajectory expansion framework
+Anchor that bootstraps scalable desktop supervision from a small set of verified
+seed demonstrations. Starting from each seed, we identify branch points that
+correspond to meaningful state changes and propose new, state-grounded task
+variants conditioned on the current GUI context. An executing agent then follows
+the proposed instructions to generate new trajectories, while a verifier
+enforces task completion via state-aware checks and trajectory-level
+consistency. To improve supervision quality, we further apply task-conditioned
+step-level filtering to remove ungrounded actions and denoise post-branch
+segments to maintain coherent intent. Experiments on standard desktop
+benchmarks, OSWorld and WindowsAgentArena, show that models fine-tuned on our
+expanded corpus achieve consistent improvements over zero-shot agents and
+representative synthesis baselines, and generalize across applications and
+operating systems.

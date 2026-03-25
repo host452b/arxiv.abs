@@ -1,0 +1,26 @@
+Title: Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft
+Authors: Eray Yapağcı, Yavuz Alp Sencer Öztürk, Eray Tüzün
+ID: 2503.20036
+URL: https://arxiv.org/abs/2503.20036
+
+Reproducing game bugs, particularly crash bugs in continuously evolving games
+like Minecraft, is a notoriously manual, time-consuming, and challenging process
+to automate; insights from a key decision maker from Minecraft we interviewed
+confirm this, highlighting that a substantial portion of crash reports
+necessitate manual scenario reconstruction. Despite the success of LLM-driven
+bug reproduction in other software domains, games, with their complex
+interactive environments, remain largely unaddressed. This paper introduces
+BugCraft, a novel end-to-end framework designed to automate the reproduction of
+crash bugs in Minecraft directly from user-submitted bug reports, addressing the
+critical gap in automated game bug reproduction. BugCraft employs a two-stage
+approach: first, a Step Synthesizer leverages LLMs and Minecraft Wiki knowledge
+to transform bug reports into high-quality, structured steps to reproduce (S2R).
+Second, an Action Model, powered by a vision-based LLM agent and a custom macro
+API, executes these S2R steps within Minecraft to trigger the reported crash. To
+facilitate evaluation, we introduce BugCraft-Bench, a curated dataset of
+Minecraft crash bug reports. On BugCraft-Bench, our framework end-to-end
+reproduced 34.9% of crash bugs with GPT-4.1, outperforming baseline computer-use
+models by 37%. BugCraft demonstrates the feasibility of automated reproduction
+of crash bugs in complex game environments using LLMs, opening promising avenues
+for game testing and development. Finally, we make our code open at
+https://bugcraft2025.github.io

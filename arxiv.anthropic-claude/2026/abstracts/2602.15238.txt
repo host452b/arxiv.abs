@@ -1,0 +1,19 @@
+Title: Closing the Distribution Gap in Adversarial Training for LLMs
+Authors: Chengzhi Hu, Jonas Dornbusch, David Lüdke, Stephan Günnemann, Leo Schwinn
+ID: 2602.15238
+URL: https://arxiv.org/abs/2602.15238
+
+Adversarial training for LLMs is one of the most promising methods to reliably
+improve robustness against adversaries. However, despite significant progress,
+models remain vulnerable to simple in-distribution exploits, such as rewriting
+prompts in the past tense or translating them into other languages. We argue
+that this persistent fragility stems from a fundamental limitation in current
+adversarial training algorithms: they minimize adversarial loss on their
+training set but inadequately cover the data distribution, resulting in
+vulnerability to seemingly simple attacks. To bridge this gap, we propose
+Distributional Adversarial Training, DAT. We leverage Diffusion LLMs to
+approximate the true joint distribution of prompts and responses, enabling
+generation of diverse, high-likelihood samples that address generalization
+failures. By combining optimization over the data distribution provided by the
+diffusion model with continuous adversarial training, DAT achieves substantially
+higher adversarial robustness than previous methods.

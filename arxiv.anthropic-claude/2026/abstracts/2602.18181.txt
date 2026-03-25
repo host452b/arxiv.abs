@@ -1,0 +1,21 @@
+Title: SeedFlood: A Step Toward Scalable Decentralized Training of LLMs
+Authors: Jihun Kim, Namhoon Lee
+ID: 2602.18181
+URL: https://arxiv.org/abs/2602.18181
+
+This work presents a new approach to decentralized training-SeedFlood-designed
+to scale for large models across complex network topologies and achieve global
+consensus with minimal communication overhead. Traditional gossip-based methods
+suffer from message communication costs that grow with model size, while
+information decay over network hops renders global consensus inefficient.
+SeedFlood departs from these practices by exploiting the seed-reconstructible
+structure of zeroth-order updates and effectively making the messages near-zero
+in size, allowing them to be flooded to every client in the network. This
+mechanism makes communication overhead negligible and independent of model size,
+removing the primary scalability bottleneck in decentralized training.
+Consequently, SeedFlood enables training in regimes previously considered
+impractical, such as billion-parameter models distributed across hundreds of
+clients. Our experiments on decentralized LLM fine-tuning demonstrate
+thatSeedFlood consistently outperforms gossip-based baselines in both
+generalization performance and communication efficiency, and even achieves
+results comparable to first-order methods in large scale settings.

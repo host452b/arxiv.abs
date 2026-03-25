@@ -1,0 +1,22 @@
+Title: Beyond Pairwise: Empowering LLM Alignment With Ranked Choice Modeling
+Authors: Yuxuan Tang, Yifan Feng
+ID: 2510.23631
+URL: https://arxiv.org/abs/2510.23631
+
+Abstract:
+Alignment of large language models (LLMs) has predominantly relied on pairwise
+preference optimization, where annotators select the better of two responses to
+a prompt. While simple, this approach overlooks the opportunity to learn from
+richer forms of human feedback, such as multiway comparisons and top-$k$
+rankings. We introduce Ranked Choice Preference Optimization (RCPO), a unified
+framework that bridges preference optimization with (ranked) choice modeling via
+maximum likelihood estimation. RCPO supports both utility-based and rank-based
+models, subsumes several pairwise methods (such as DPO and SimPO) as special
+cases, and provides principled training objectives for richer feedback formats.
+We instantiate this framework with two representative models (Multinomial Logit
+and Mallows-RMJ). Experiments on Llama-3-8B-Instruct, Gemma-2-9B-it, and
+Mistral-7B-Instruct across in-distribution and out-of-distribution settings show
+that RCPO consistently outperforms competitive baselines. RCPO shows that
+directly leveraging ranked preference data, combined with the right choice
+models, yields more effective alignment. It offers an extensible foundation for
+incorporating (ranked) choice modeling into LLM training.

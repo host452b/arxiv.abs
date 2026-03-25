@@ -1,0 +1,24 @@
+Title: Interpretable All-Type Audio Deepfake Detection with Audio LLMs via Frequency-Time Reinforcement Learning
+Authors: Yuankun Xie, Xiaoxuan Guo, Jiayi Zhou, Tao Wang, Jian Liu et al. (+4)
+ID: 2601.02983
+URL: https://arxiv.org/abs/2601.02983
+
+Recent advances in audio large language models (ALLMs) have made high-quality
+synthetic audio widely accessible, increasing the risk of malicious audio
+deepfakes across speech, environmental sounds, singing voice, and music. Real-
+world audio deepfake detection (ADD) therefore requires all-type detectors that
+generalize across heterogeneous audio and provide interpretable decisions. Given
+the strong multi-task generalization ability of ALLMs, we first investigate
+their performance on all-type ADD under both supervised fine-tuning (SFT) and
+reinforcement fine-tuning (RFT). However, SFT using only binary real/fake labels
+tends to reduce the model to a black-box classifier, sacrificing
+interpretability. Meanwhile, vanilla RFT under sparse supervision is prone to
+reward hacking and can produce hallucinated, ungrounded rationales. To address
+this, we propose an automatic annotation and polishing pipeline that constructs
+Frequency-Time structured chain-of-thought (CoT) rationales, producing ~340K
+cold-start demonstrations. Building on CoT data, we propose Frequency Time-Group
+Relative Policy Optimization (FT-GRPO), a two-stage training paradigm that cold-
+starts ALLMs with SFT and then applies GRPO under rule-based frequency-time
+constraints. Experiments demonstrate that FT-GRPO achieves state-of-the-art
+performance on all-type ADD while producing interpretable, FT-grounded
+rationales. The data and code are available online.

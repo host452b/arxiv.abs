@@ -1,0 +1,24 @@
+Title: Heterogeneous Low-Bandwidth Pre-Training of LLMs
+Authors: Yazan Obeidi, Amir Sarfi, Joel Lidin, Paul Janson, Eugene Belilovsky
+ID: 2601.02360
+URL: https://arxiv.org/abs/2601.02360
+
+Pre-training large language models (LLMs) increasingly requires distributed
+compute, yet bandwidth constraints make it difficult to scale beyond well-
+provisioned datacenters-especially when model parallelism forces frequent, large
+inter-device communications. We study whether SparseLoCo, a low-communication
+data parallel method based on infrequent synchronization and sparse pseudo-
+gradient exchange, can be combined with low-bandwidth pipeline model parallelism
+via activation and activation-gradient compression. We introduce a heterogeneous
+distributed training framework where some participants host full replicas on
+high-bandwidth interconnects, while resource-limited participants are grouped to
+jointly instantiate a replica using pipeline parallelism with subspace-projected
+inter-stage communication. To make the recently introduced subspace pipeline
+compression compatible with SparseLoCo, we study a number of adaptations. Across
+large-scale language modeling experiments (178M-1B parameters) on standard
+pretraining corpora, we find that activation compression composes with
+SparseLoCo at modest cost, while selective (heterogeneous) compression
+consistently improves the loss-communication tradeoff relative to compressing
+all replicas-especially at aggressive compression ratios. These results suggest
+a practical path to incorporating low-bandwidth model parallelism and
+heterogeneous participants into LLM pre-training.

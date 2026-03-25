@@ -1,0 +1,25 @@
+Title: OptPipe: Memory- and Scheduling-Optimized Pipeline Parallelism for LLM Training
+Authors: Hongpei Li, Han Zhang, Huikang Liu, Dongdong Ge, Yinyu Ye
+ID: 2510.05186
+URL: https://arxiv.org/abs/2510.05186
+
+Pipeline parallelism (PP) has become a standard technique for scaling large
+language model (LLM) training across multiple devices. However, despite recent
+progress in reducing memory consumption through activation offloading, existing
+approaches remain largely heuristic and coarse-grained, often overlooking the
+fine-grained trade-offs between memory, computation, and scheduling latency. In
+this work, we revisit the pipeline scheduling problem from a principled
+optimization perspective. We observe that prevailing strategies either rely on
+static rules or aggressively offload activations without fully leveraging the
+interaction between memory constraints and scheduling efficiency. To address
+this, we formulate scheduling as a constrained optimization problem that jointly
+accounts for memory capacity, activation reuse, and pipeline bubble
+minimization. Solving this model yields fine-grained schedules that reduce
+pipeline bubbles while adhering to strict memory budgets. Our approach
+complements existing offloading techniques: whereas prior approaches trade
+memory for time in a fixed pattern, we dynamically optimize the tradeoff with
+respect to model structure and hardware configuration. Experimental results
+demonstrate that our method consistently improves both throughput and memory
+utilization. In particular, we reduce idle pipeline time by up to 50% under the
+same per-device memory limit, and in some cases, enable the training of larger
+models within limited memory budgets.

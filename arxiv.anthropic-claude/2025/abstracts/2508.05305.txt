@@ -1,0 +1,16 @@
+Title: SONAR-LLM: Autoregressive Transformer that Thinks in Sentence Embeddings and Speaks in Tokens
+Authors: Nikita Dragunov, Temurbek Rahmatullaev, Elizaveta Goncharova, Andrey Kuznetsov, Anton Razzhigaev
+ID: 2508.05305
+URL: https://arxiv.org/abs/2508.05305
+
+The recently proposed Large Concept Model (LCM) generates text by predicting a
+sequence of sentence-level embeddings and training with either mean-squared
+error or diffusion objectives. We present SONAR-LLM, a decoder-only transformer
+that "thinks" in the same continuous SONAR embedding space, yet is supervised
+through token-level cross-entropy propagated via the frozen SONAR decoder. This
+hybrid objective retains the semantic abstraction of LCM while eliminating its
+diffusion sampler and restoring a likelihood-based training signal. Across model
+sizes from 39M to 1.3B parameters, SONAR-LLM attains competitive generation
+quality. We report scaling trends, ablations, benchmark results, and release the
+complete training code and all pretrained checkpoints to foster reproducibility
+and future research.

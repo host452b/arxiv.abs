@@ -1,0 +1,26 @@
+Title: Not All Queries Need Rewriting: When Prompt-Only LLM Refinement Helps and Hurts Dense Retrieval
+Authors: Varun Kotte
+ID: 2603.13301
+URL: https://arxiv.org/abs/2603.13301
+
+Abstract:
+Prompt-only, single-step LLM query rewriting, where a rewrite is generated from
+the query alone without retrieval feedback, is commonly used in production RAG
+pipelines, but its effect on dense retrieval is poorly understood. We present a
+systematic empirical study across three BEIR benchmarks, two dense retrievers,
+and multiple training configurations, and find strongly domain-dependent
+behavior: rewriting degrades nDCG@10 by 9.0 percent on FiQA, improves it by 5.1
+percent on TREC-COVID, and has no significant effect on SciFact. We identify a
+consistent mechanism: degradations co-occur with reduced lexical alignment
+between rewritten queries and relevant documents, as rewriting replaces
+domain-specific terms in already well-matched queries. In contrast, improvements
+arise when rewriting shifts queries toward corpus-preferred terminology and
+resolves inconsistent nomenclature. Lexical substitution occurs in 95 percent of
+rewrites across all outcome groups, showing that effectiveness depends on the
+direction of substitution rather than substitution itself. We also study
+selective rewriting and find that simple feature-based gating can reduce
+worst-case regressions but does not reliably outperform never rewriting, with
+even oracle selection offering only modest gains. Overall, these results show
+that prompt-only rewriting can be harmful in well-optimized verticals and
+suggest that domain-adaptive post-training is a safer strategy when supervision
+or implicit feedback is available.

@@ -1,0 +1,26 @@
+Title: Alignment-Weighted DPO: A principled reasoning approach to improve safety alignment
+Authors: Mengxuan Hu, Vivek V. Datla, Anoop Kumar, Zihan Guan, Sheng Li et al.
+ID: 2602.21346
+URL: https://arxiv.org/abs/2602.21346
+
+Abstract:
+Recent advances in alignment techniques such as Supervised Fine-Tuning (SFT),
+Reinforcement Learning from Human Feedback (RLHF), and Direct Preference
+Optimization (DPO) have improved the safety of large language models (LLMs).
+However, these LLMs remain vulnerable to jailbreak attacks that disguise harmful
+intent through indirect or deceptive phrasing. Using causal intervention, we
+empirically demonstrate that this vulnerability stems from shallow alignment
+mechanisms that lack deep reasoning, often rejecting harmful prompts without
+truly understanding why they are harmful. To mitigate this vulnerability, we
+propose enhancing alignment through reasoning-aware post-training. We construct
+and release a novel Chain-of-Thought (CoT) fine-tuning dataset that includes
+both utility-oriented and safety-critical prompts with step-by-step rationales.
+Fine-tuning on this dataset encourages models to produce principled refusals
+grounded in reasoning, outperforming standard SFT baselines. Furthermore,
+inspired by failure patterns in CoT fine-tuning, we introduce Alignment-Weighted
+DPO, which targets the most problematic parts of an output by assigning
+different preference weights to the reasoning and final-answer segments. This
+produces finer-grained, targeted updates than vanilla DPO and improves
+robustness to diverse jailbreak strategies. Extensive experiments across
+multiple safety and utility benchmarks show that our method consistently
+improves alignment robustness while maintaining overall model utility.

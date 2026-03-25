@@ -1,0 +1,24 @@
+Title: Aragog: Just-in-Time Model Routing for Scalable Serving of Agentic Workflows
+Authors: Yinwei Dai, Zhuofu Chen, Anand Iyer, Ravi Netravali
+ID: 2511.20975
+URL: https://arxiv.org/abs/2511.20975
+
+Abstract:
+Agentic workflows have emerged as a powerful paradigm for solving complex,
+multi-stage tasks, but serving them at scale is computationally expensive given
+the many LLM inferences that each request must pass through. Configuration
+selection, or the cost-aware assignment of workflow agents to specific LLMs, can
+reduce these costs, but existing approaches bind configuration decisions before
+request execution, making them ill-suited for the heterogeneous and lengthy
+execution of workflows. Specifically, system loads can fluctuate rapidly and
+substantially during a request's lifetime, causing fixed configurations to
+quickly become suboptimal. We present Aragog, a system that progressively adapts
+a request's configuration throughout its execution to match runtime dynamics. To
+make this practical despite the massive space of workflow configurations, Aragog
+decouples the problem into two core elements -- a one-time routing step that
+identifies all accuracy-preserving configurations, and a cheap per-stage
+scheduler that selects among them using up-to-date system observations -- and
+introduces novel strategies to accelerate each. Across diverse workflows and
+model families, Aragog increases maximum serving throughput by 50.0--217.0\% and
+reduces median latency by 32.5--78.9\% at peak request rates, while maintaining
+accuracy comparable to the most expensive configurations.

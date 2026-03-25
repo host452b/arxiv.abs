@@ -1,0 +1,22 @@
+Title: An Agentic AI Workflow to Simplify Parameter Estimation of Complex Differential Equation Systems
+Authors: Saakaar Bhatnagar
+ID: 2509.07283
+URL: https://arxiv.org/abs/2509.07283
+
+Abstract:
+Parameter identification for mechanistic Ordinary Differential Equation (ODE)
+models underpins prediction and control in several applications, yet remains a
+manual and labor-intensive process: datasets are noisy and partial, models can
+be stiff and complex, and differentiable implementations demand framework
+expertise. An agentic AI workflow is presented that converts a lightweight,
+human-readable specification into a compiled, parallel, and differentiable model
+calibration pipeline. Users supply an XML description of the problem and fill in
+a Python code skeleton; the agent automatically validates consistency between
+problem definition and code, and auto-corrects pathologies in the input deck. It
+transforms Python callables into pure JAX functions for efficient just-in-time
+compilation and parallelization. The system then orchestrates a two-stage search
+comprising global exploration of the parameter space followed by gradient-based
+refinement. The result is an AD-native, reproducible workflow that lowers the
+barrier to advanced calibration while preserving expert control. An open-source
+implementation with a documented API and examples is released, enabling rapid
+movement from problem statement to interpretable ODE models with minimal effort.

@@ -1,0 +1,24 @@
+Title: Does SWE-Bench-Verified Test Agent Ability or Model Memory?
+Authors: Thanosan Prathifkumar, Noble Saji Mathews, Meiyappan Nagappan
+ID: 2512.10218
+URL: https://arxiv.org/abs/2512.10218
+
+SWE-Bench-Verified, a dataset comprising 500 issues, serves as a de facto
+benchmark for evaluating various large language models (LLMs) on their ability
+to resolve GitHub issues. But this benchmark may overlap with model training
+data. If that is true, scores may reflect training recall, not issue-solving
+skill. To study this, we test two Claude models that frequently appear in top-
+performing agents submitted to the benchmark. We ask them to find relevant files
+using only issue text, and then issue text plus file paths. We then run the same
+setup on BeetleBox and SWE-rebench. Despite both benchmarks involving popular
+open-source Python projects, models performed 3 times better on SWE-Bench-
+Verified. They were also 6 times better at finding edited files, without any
+additional context about the projects themselves. This gap suggests the models
+may have seen many SWE-Bench-Verified tasks during training. As a result, scores
+on this benchmark may not reflect an agent's ability to handle real software
+issues, yet it continues to be used in ways that can misrepresent progress and
+lead to choices that favour agents that use certain models over strong agent
+design. Our setup tests the localization step with minimal context to the extent
+that the task should be logically impossible to solve. Our results show the risk
+of relying on older popular benchmarks and support the shift toward newer
+datasets built with contamination in mind.

@@ -1,0 +1,21 @@
+Title: Frame-Level Internal Tool Use for Temporal Grounding in Audio LMs
+Authors: Joesph An, Phillip Keung, Jiaqi Wang, Orevaoghene Ahia, Noah A. Smith
+ID: 2602.10230
+URL: https://arxiv.org/abs/2602.10230
+
+Abstract:
+Large audio language models are increasingly used for complex audio
+understanding tasks, but they struggle with temporal tasks that require precise
+temporal grounding, such as word alignment and speaker diarization. The standard
+approach, where we generate timestamps as sequences of text tokens, is
+computationally expensive and prone to hallucination, especially when processing
+audio lengths outside the model's training distribution. In this work, we
+propose frame-level internal tool use, a method that trains audio LMs to use
+their own internal audio representations to perform temporal grounding directly.
+We introduce a lightweight prediction mechanism trained via two objectives: a
+binary frame classifier and a novel inhomogeneous Poisson process (IHP) loss
+that models temporal event intensity. Across word localization, speaker
+diarization, and event localization tasks, our approach outperforms token-based
+baselines. Most notably, it achieves a >50x inference speedup and demonstrates
+robust length generalization, maintaining high accuracy on out-of-distribution
+audio durations where standard token-based models collapse completely.

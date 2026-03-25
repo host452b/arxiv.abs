@@ -1,0 +1,24 @@
+Title: Not All Steps are Informative: On the Linearity of LLMs' RLVR Training
+Authors: Tianle Wang, Zhongyuan Wu, Shenghao Jin, Hao Xu, Wei Chen et al. (+1)
+ID: 2601.04537
+URL: https://arxiv.org/abs/2601.04537
+
+Reinforcement learning with verifiable rewards (RLVR) has become a central
+component of large language model (LLM) post-training. Unlike supervised fine-
+tuning (SFT), RLVR lets an LLM generate multiple candidate solutions and
+reinforces those that lead to a verifiably correct final answer. However, in
+practice, RLVR often requires thousands of training steps to reach strong
+performance, incurring substantial computation largely attributed to prolonged
+exploration. In this work, we make a surprising observation: during RLVR, LLMs
+evolve in a strongly linear manner. Specifically, both model weights and model
+output log-probabilities exhibit strong linear correlations with RL training
+steps. This suggests that RLVR predominantly amplifies trends that emerge early
+in training, rather than continuously discovering new behaviors throughout the
+entire optimization trajectory. Motivated by this linearity, we investigate
+whether future model states can be predicted from intermediate checkpoints via
+extrapolation, avoiding continued expensive training. We show that Weight
+Extrapolation produces models with performance comparable to standard RL
+training while requiring significantly less computation. Moreover, Logits
+Extrapolation consistently outperforms continued RL training on mathematics and
+code benchmarks by extrapolating beyond the step range where RL training remains
+stable. Our code is available at https://github.com/Miaow-Lab/RLVR-Linearity

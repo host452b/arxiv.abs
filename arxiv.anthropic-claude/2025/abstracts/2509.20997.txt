@@ -1,0 +1,21 @@
+Title: Binary Autoencoder for Mechanistic Interpretability of Large Language Models
+Authors: Hakaze Cho, Haolin Yang, Yanshu Li, Brian M. Kurkoski, Naoya Inoue
+ID: 2509.20997
+URL: https://arxiv.org/abs/2509.20997
+
+Existing works are dedicated to untangling atomized numerical components
+(features) from the hidden states of Large Language Models (LLMs). However, they
+typically rely on autoencoders constrained by some training-time regularization
+on single training instances, without an explicit guarantee of global sparsity
+among instances, causing a large amount of dense (simultaneously inactive)
+features, harming the feature sparsity and atomization. In this paper, we
+propose a novel autoencoder variant that enforces minimal entropy on minibatches
+of hidden activations, thereby promoting feature independence and sparsity
+across instances. For efficient entropy calculation, we discretize the hidden
+activations to 1-bit via a step function and apply gradient estimation to enable
+backpropagation, so that we term it as Binary Autoencoder (BAE) and empirically
+demonstrate two major applications: (1) Feature set entropy calculation. Entropy
+can be reliably estimated on binary hidden activations, which can be leveraged
+to characterize the inference dynamics of LLMs. (2) Feature untangling. Compared
+to typical methods, due to improved training strategy, BAE avoids dense features
+while producing the largest number of interpretable ones among baselines.

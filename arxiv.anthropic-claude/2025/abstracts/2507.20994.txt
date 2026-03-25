@@ -1,0 +1,24 @@
+Title: Security Tensors as a Cross-Modal Bridge: Extending Text-Aligned Safety to Vision in LVLM
+Authors: Shen Li, Liuyi Yao, Wujia Niu, Lan Zhang, Yaliang Li
+ID: 2507.20994
+URL: https://arxiv.org/abs/2507.20994
+
+Abstract:
+Large visual-language models (LVLMs) integrate aligned large language models
+(LLMs) with visual modules to process multimodal inputs. However, the safety
+mechanisms developed for text-based LLMs do not naturally extend to visual
+modalities, leaving LVLMs vulnerable to harmful image inputs. To address this
+cross-modal safety gap, we introduce security tensors - trainable input vectors
+applied during inference through either the textual or visual modality. These
+tensors transfer textual safety alignment to visual processing without modifying
+the model's parameters. They are optimized using a curated dataset containing
+(i) malicious image-text pairs requiring rejection, (ii) contrastive benign
+pairs with text structurally similar to malicious queries, with the purpose of
+being contrastive examples to guide visual reliance, and (iii) general benign
+samples preserving model functionality. Experimental results demonstrate that
+both textual and visual security tensors significantly enhance LVLMs' ability to
+reject diverse harmful visual inputs while maintaining near-identical
+performance on benign tasks. Further internal analysis towards hidden-layer
+representations reveals that security tensors successfully activate the language
+module's textual "safety layers" in visual inputs, thereby effectively extending
+text-based safety to the visual modality.

@@ -1,0 +1,23 @@
+Title: Spectral Guardrails for Agents in the Wild: Detecting Tool Use Hallucinations via Attention Topology
+Authors: Valentin Noël
+ID: 2602.08082
+URL: https://arxiv.org/abs/2602.08082
+
+Abstract:
+Deploying autonomous agents in the wild requires reliable safeguards against
+tool use failures. We propose a training free guardrail based on spectral
+analysis of attention topology that complements supervised approaches. On Llama
+3.1 8B, our method achieves 97.7\% recall with multi-feature detection and
+86.1\% recall with 81.0\% precision for balanced deployment, without requiring
+any labeled training data. Most remarkably, we discover that single layer
+spectral features act as near-perfect hallucination detectors: Llama L26
+Smoothness achieves 98.2\% recall (213/217 hallucinations caught) with a single
+threshold, and Mistral L3 Entropy achieves 94.7\% recall. This suggests
+hallucination is not merely a wrong token but a thermodynamic state change: the
+model's attention becomes noise when it errs. Through controlled cross-model
+evaluation on matched domains ($N=1000$, $T=0.3$, same General domain,
+hallucination rates 20--22\%), we reveal the ``Loud Liar'' phenomenon: Llama 3.1
+8B's failures are spectrally catastrophic and dramatically easier to detect,
+while Mistral 7B achieves the best discrimination (AUC 0.900). These findings
+establish spectral analysis as a principled, efficient framework for agent
+safety.

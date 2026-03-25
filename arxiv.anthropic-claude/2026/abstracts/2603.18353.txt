@@ -1,0 +1,23 @@
+Title: Interpretability without actionability: mechanistic methods cannot correct language model errors despite near-perfect internal representations
+Authors: Sanjay Basu, Sadiq Y. Patel, Parth Sheth, Bhairavi Muralidharan, Namrata Elamaran et al. (+3)
+ID: 2603.18353
+URL: https://arxiv.org/abs/2603.18353
+
+Language models encode task-relevant knowledge in internal representations that
+far exceeds their output performance, but whether mechanistic interpretability
+methods can bridge this knowledge-action gap has not been systematically tested.
+We compared four mechanistic interpretability methods -- concept bottleneck
+steering (Steerling-8B), sparse autoencoder feature steering, logit lens with
+activation patching, and linear probing with truthfulness separator vector
+steering (Qwen 2.5 7B Instruct) -- for correcting false-negative triage errors
+using 400 physician-adjudicated clinical vignettes (144 hazards, 256 benign).
+Linear probes discriminated hazardous from benign cases with 98.2% AUROC, yet
+the model's output sensitivity was only 45.1%, a 53-percentage-point knowledge-
+action gap. Concept bottleneck steering corrected 20% of missed hazards but
+disrupted 53% of correct detections, indistinguishable from random perturbation
+(p=0.84). SAE feature steering produced zero effect despite 3,695 significant
+features. TSV steering at high strength corrected 24% of missed hazards while
+disrupting 6% of correct detections, but left 76% of errors uncorrected. Current
+mechanistic interpretability methods cannot reliably translate internal
+knowledge into corrected outputs, with implications for AI safety frameworks
+that assume interpretability enables effective error correction.

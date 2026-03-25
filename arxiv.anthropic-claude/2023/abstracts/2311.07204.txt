@@ -1,0 +1,30 @@
+Title: On Elastic Language Models
+Authors: Chen Zhang, Benyou Wang, Dawei Song
+ID: 2311.07204
+URL: https://arxiv.org/abs/2311.07204
+
+Large-scale pretrained language models have achieved compelling performance in a
+wide range of language understanding and information retrieval tasks. Knowledge
+distillation offers an opportunity to compress a large language model to a small
+one, in order to reach a reasonable latency-performance tradeoff. However, for
+scenarios where the number of requests (e.g., queries submitted to a search
+engine) is highly variant, the static tradeoff attained by the compressed
+language model might not always fit. Once a model is assigned with a static
+tradeoff, it could be inadequate in that the latency is too high when the number
+of requests is large or the performance is too low when the number of requests
+is small. To this end, we propose an elastic language model (ElasticLM) that
+elastically adjusts the tradeoff according to the request stream. The basic idea
+is to introduce a compute elasticity to the compressed language model, so that
+the tradeoff could vary on-the-fly along scalable and controllable compute.
+Specifically, we impose an elastic structure to enable ElasticLM with compute
+elasticity and design an elastic optimization to learn ElasticLM under compute
+elasticity. To serve ElasticLM, we apply an elastic schedule. Considering the
+specificity of information retrieval, we adapt ElasticLM to dense retrieval and
+reranking and present ElasticDenser and ElasticRanker respectively. Offline
+evaluation is conducted on a language understanding benchmark GLUE; and several
+information retrieval tasks including Natural Question, Trivia QA, and MS MARCO.
+The results show that ElasticLM along with ElasticDenser and ElasticRanker can
+perform correctly and competitively compared with an array of static baselines.
+Furthermore, online simulation with concurrency is also carried out. The results
+demonstrate that ElasticLM can provide elastic tradeoffs with respect to varying
+request stream.

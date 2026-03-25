@@ -1,0 +1,28 @@
+Title: Sample-Efficient Reinforcement Learning from Human Feedback via Information-Directed Sampling
+Authors: Han Qi, Haochen Yang, Qiaosheng Zhang, Zhuoran Yang
+ID: 2502.05434
+URL: https://arxiv.org/abs/2502.05434
+
+Abstract:
+We study the problem of reinforcement learning from human feedback (RLHF), a
+critical problem in training large language models, from a theoretical
+perspective. Our main contribution is the design of novel sample-efficient RLHF
+algorithms based on information-directed sampling (IDS), an online
+decision-making principle inspired by information theory. Our algorithms
+maximize the sum of the value function and a mutual information term that
+encourages exploration of the unknown environment (which quantifies the
+information gained about the environment through observed human feedback data).
+To tackle the challenge of large state spaces and improve sample efficiency, we
+construct a simplified \emph{surrogate environment} and introduce a novel
+distance measure (named the \emph{$\ell_g$-distance}), enabling our IDS-based
+algorithm to achieve a Bayesian regret upper bound of order
+$O(H^{\frac{3}{2}}\sqrt{\log(K(ε)) T})$, where $H$ is the episode length, $T$ is
+the number of episode and $K(ε)$ is related to the covering number of the
+environment. Specializing to the tabular settings, this regret bound is of order
+$\tilde{O}(H^2\sqrt{SAT})$, where $S$ and $A$ are the numbers of states and
+actions. Finally, we propose an Approximate-IDS algorithm that is
+computationally more efficient while maintaining nearly the same sample
+efficiency. The design principle of this approximate algorithm is not only
+effective in RLHF settings but also applicable to the standard RL framework.
+Moreover, our work showcases the value of information theory in reinforcement
+learning and in the training of large language models.

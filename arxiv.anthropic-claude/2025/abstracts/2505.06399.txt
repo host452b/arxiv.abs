@@ -1,0 +1,24 @@
+Title: LLM-Land: Large Language Models for Context-Aware Drone Landing
+Authors: Siwei Cai, Yuwei Wu, Lifeng Zhou
+ID: 2505.06399
+URL: https://arxiv.org/abs/2505.06399
+
+Autonomous landing is essential for drones deployed in emergency deliveries,
+post-disaster response, and other large-scale missions. By enabling self-docking
+on charging platforms, it facilitates continuous operation and significantly
+extends mission endurance. However, traditional approaches often fall short in
+dynamic, unstructured environments due to limited semantic awareness and
+reliance on fixed, context-insensitive safety margins. To address these
+limitations, we propose a hybrid framework that integrates large language model
+(LLMs) with model predictive control (MPC). Our approach begins with a vision-
+language encoder (VLE) (e.g., BLIP), which transforms real-time images into
+concise textual scene descriptions. These descriptions are processed by a
+lightweight LLM (e.g., Qwen 2.5 1.5B or LLaMA 3.2 1B) equipped with retrieval-
+augmented generation (RAG) to classify scene elements and infer context-aware
+safety buffers, such as 3 meters for pedestrians and 5 meters for vehicles. The
+resulting semantic flags and unsafe regions are then fed into an MPC module,
+enabling real-time trajectory replanning that avoids collisions while
+maintaining high landing precision. We validate our framework in the ROS-Gazebo
+simulator, where it consistently outperforms conventional vision-based MPC
+baselines. Our results show a significant reduction in near-miss incidents with
+dynamic obstacles, while preserving accurate landings in cluttered environments.

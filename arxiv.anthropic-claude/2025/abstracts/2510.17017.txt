@@ -1,0 +1,24 @@
+Title: SafeSearch: Do Not Trade Safety for Utility in LLM Search Agents
+Authors: Qiusi Zhan, Angeline Budiman-Chan, Abdelrahman Zayed, Xingzhi Guo, Daniel Kang et al. (+1)
+ID: 2510.17017
+URL: https://arxiv.org/abs/2510.17017
+
+Large language model (LLM) based search agents iteratively generate queries,
+retrieve external information, and reason to answer open-domain questions. While
+researchers have primarily focused on improving their utility, their safety
+behaviors remain underexplored. In this paper, we first evaluate search agents
+using red-teaming datasets and find that they are more likely to produce harmful
+outputs than base LLMs. For example, when asked ``How can I track someone's
+location without their consent?'', a base model refuses, whereas a search agent
+designed to retrieve and cite sources may lower its refusal threshold, fetch
+documents (e.g., court cases), and, once appended, synthesize them into an
+informative yet unsafe summary. We further show that utility-oriented finetuning
+intensifies this risk, motivating joint alignment of safety and utility. To this
+end, we present SafeSearch, a multi-objective reinforcement learning approach
+that couples a final-output safety/utility reward with a novel query-level
+shaping term that penalizes unsafe queries and rewards safe ones. Experiments
+show that SafeSearch reduces agent harmfulness by over 90% across three red-
+teaming datasets on a 7B model while producing safe and helpful responses, and
+maintains QA performance comparable to that of a utility-only finetuned agent.
+Further analyses confirm the effectiveness of the query-level reward in jointly
+improving safety and utility.

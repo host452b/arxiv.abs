@@ -1,0 +1,762 @@
+{
+  "query": {
+    "terms": {
+      "title": "agent sandboxing or agent isolation"
+    },
+    "subjects": [
+      "cs"
+    ],
+    "op": "and",
+    "from": "2020-01",
+    "to": "",
+    "max": 200,
+    "searched_at": "2026-03-25T22:10:34Z"
+  },
+  "groups": [
+    {
+      "source": "arxiv",
+      "count": 28,
+      "papers": [
+        {
+          "id": "2512.12594",
+          "title": "ceLLMate: Sandboxing Browser AI Agents",
+          "authors": [
+            "Luoxi Meng",
+            "Henry Feng",
+            "Ilia Shumailov",
+            "Earlence Fernandes"
+          ],
+          "abstract": "Browser-using agents (BUAs) are an emerging class of AI agents that interact with web browsers in human-like ways, including clicking, scrolling, filling forms, and navigating across pages. While these agents help automate repetitive online tasks, they are vulnerable to prompt injection attacks that trick an agent into performing undesired actions, such as leaking private information or issuing unintended state-changing requests. We propose ceLLMate, a browser-level sandboxing framework that restricts the agent's ambient authority and reduces the blast radius of prompt injections. We address the semantic gap challenge that is fundamental to BUAs -- writing and enforcing security policies for low-level UI tools like clicks and keystrokes is brittle and error-prone. Our core insight is to perform sandboxing at the HTTP layer because all side-effecting UI operations will result in network communication to the website's backend. We implement ceLLMate as an agent-agnostic browser extension and demonstrate how it enables sandboxing policies that block prompt injection attacks in the WASP benchmark with 7.25--15% latency overhead.",
+          "categories": [
+            "cs.CR",
+            "cs.LG"
+          ],
+          "published": "2025-12-14T08:25:31Z",
+          "updated": "2026-03-04T01:49:57Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.12594",
+          "html_url": "https://arxiv.org/html/2512.12594",
+          "abs_url": "https://arxiv.org/abs/2512.12594",
+          "citations": 5,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.12594"
+        },
+        {
+          "id": "2601.16206",
+          "title": "LLM-in-Sandbox Elicits General Agentic Intelligence",
+          "authors": [
+            "Daixuan Cheng",
+            "Shaohan Huang",
+            "Yuxian Gu",
+            "Huatong Song",
+            "Guoxin Chen",
+            "Li Dong",
+            "Wayne Xin Zhao",
+            "Ji-Rong Wen",
+            "Furu Wei"
+          ],
+          "abstract": "We introduce LLM-in-Sandbox, enabling LLMs to explore within a code sandbox (i.e., a virtual computer), to elicit general intelligence in non-code domains. We first demonstrate that strong LLMs, without additional training, exhibit generalization capabilities to leverage the code sandbox for non-code tasks. For example, LLMs spontaneously access external resources to acquire new knowledge, leverage the file system to handle long contexts, and execute scripts to satisfy formatting requirements. We further show that these agentic capabilities can be enhanced through LLM-in-Sandbox Reinforcement Learning (LLM-in-Sandbox-RL), which uses only non-agentic data to train models for sandbox exploration. Experiments demonstrate that LLM-in-Sandbox, in both training-free and post-trained settings, achieves robust generalization spanning mathematics, physics, chemistry, biomedicine, long-context understanding, and instruction following. Finally, we analyze LLM-in-Sandbox's efficiency from computational and system perspectives, and open-source it as a Python package to facilitate real-world deployment.",
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "published": "2026-01-22T18:57:09Z",
+          "updated": "2026-02-12T12:39:21Z",
+          "pdf_url": "https://arxiv.org/pdf/2601.16206",
+          "html_url": "https://arxiv.org/html/2601.16206",
+          "abs_url": "https://arxiv.org/abs/2601.16206",
+          "citations": 3,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2601.16206"
+        },
+        {
+          "id": "2203.10351",
+          "title": "The Sandbox Environment for Generalizable Agent Research (SEGAR)",
+          "authors": [
+            "R Devon Hjelm",
+            "Bogdan Mazoure",
+            "Florian Golemo",
+            "Samira Ebrahimi Kahou",
+            "Pedro Braga",
+            "Felipe Frujeri",
+            "Mihai Jalobeanu",
+            "Andrey Kolobov"
+          ],
+          "abstract": "A broad challenge of research on generalization for sequential decision-making tasks in interactive environments is designing benchmarks that clearly landmark progress. While there has been notable headway, current benchmarks either do not provide suitable exposure nor intuitive control of the underlying factors, are not easy-to-implement, customizable, or extensible, or are computationally expensive to run. We built the Sandbox Environment for Generalizable Agent Research (SEGAR) with all of these things in mind. SEGAR improves the ease and accountability of generalization research in RL, as generalization objectives can be easy designed by specifying task distributions, which in turns allows the researcher to measure the nature of the generalization objective. We present an overview of SEGAR and how it contributes to these goals, as well as experiments that demonstrate a few types of research questions SEGAR can help answer.",
+          "categories": [
+            "cs.LG"
+          ],
+          "published": "2022-03-19T16:17:35Z",
+          "updated": "2024-09-26T18:19:46Z",
+          "pdf_url": "https://arxiv.org/pdf/2203.10351",
+          "html_url": "https://arxiv.org/html/2203.10351",
+          "abs_url": "https://arxiv.org/abs/2203.10351",
+          "citations": 2,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2203.10351"
+        },
+        {
+          "id": "2504.04072",
+          "title": "Among Us: A Sandbox for Measuring and Detecting Agentic Deception",
+          "authors": [
+            "Satvik Golechha",
+            "Adrià Garriga-Alonso"
+          ],
+          "abstract": "Prior studies on deception in language-based AI agents typically assess whether the agent produces a false statement about a topic, or makes a binary choice prompted by a goal, rather than allowing open-ended deceptive behavior to emerge in pursuit of a longer-term goal. To fix this, we introduce Among Us, a sandbox social deception game where LLM-agents exhibit long-term, open-ended deception as a consequence of the game objectives. While most benchmarks saturate quickly, Among Us can be expected to last much longer, because it is a multi-player game far from equilibrium. Using the sandbox, we evaluate 18 proprietary and open-weight LLMs and uncover a general trend: models trained with RL are comparatively much better at producing deception than detecting it. We evaluate the effectiveness of methods to detect lying and deception: logistic regression on the activations and sparse autoencoders (SAEs). We find that probes trained on a dataset of \"pretend you're a dishonest model:..\" generalize extremely well out-of-distribution, consistently obtaining AUROCs over 95% even when evaluated just on the deceptive statement, without the chain of thought. We also find two SAE features that work well at deception detection but are unable to steer the model to lie less. We hope our open-sourced sandbox, game logs, and probes serve to anticipate and mitigate deceptive behavior and capabilities in language-based agents.",
+          "categories": [
+            "cs.AI",
+            "cs.LG"
+          ],
+          "published": "2025-04-05T06:09:32Z",
+          "updated": "2026-02-10T17:00:02Z",
+          "pdf_url": "https://arxiv.org/pdf/2504.04072",
+          "html_url": "https://arxiv.org/html/2504.04072",
+          "abs_url": "https://arxiv.org/abs/2504.04072",
+          "citations": 10,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2504.04072"
+        },
+        {
+          "id": "2309.15817",
+          "title": "Identifying the Risks of LM Agents with an LM-Emulated Sandbox",
+          "authors": [
+            "Yangjun Ruan",
+            "Honghua Dong",
+            "Andrew Wang",
+            "Silviu Pitis",
+            "Yongchao Zhou",
+            "Jimmy Ba",
+            "Yann Dubois",
+            "Chris J. Maddison",
+            "Tatsunori Hashimoto"
+          ],
+          "abstract": "Recent advances in Language Model (LM) agents and tool use, exemplified by applications like ChatGPT Plugins, enable a rich set of capabilities but also amplify potential risks - such as leaking private data or causing financial losses. Identifying these risks is labor-intensive, necessitating implementing the tools, setting up the environment for each test scenario manually, and finding risky cases. As tools and agents become more complex, the high cost of testing these agents will make it increasingly difficult to find high-stakes, long-tailed risks. To address these challenges, we introduce ToolEmu: a framework that uses an LM to emulate tool execution and enables the testing of LM agents against a diverse range of tools and scenarios, without manual instantiation. Alongside the emulator, we develop an LM-based automatic safety evaluator that examines agent failures and quantifies associated risks. We test both the tool emulator and evaluator through human evaluation and find that 68.8% of failures identified with ToolEmu would be valid real-world agent failures. Using our curated initial benchmark consisting of 36 high-stakes tools and 144 test cases, we provide a quantitative risk analysis of current LM agents and identify numerous failures with potentially severe outcomes. Notably, even the safest LM agent exhibits such failures 23.9% of the time according to our evaluator, underscoring the need to develop safer LM agents for real-world deployment.",
+          "categories": [
+            "cs.AI",
+            "cs.CL",
+            "cs.LG"
+          ],
+          "published": "2023-09-25T17:08:02Z",
+          "updated": "2024-05-17T17:17:45Z",
+          "pdf_url": "https://arxiv.org/pdf/2309.15817",
+          "html_url": "https://arxiv.org/html/2309.15817",
+          "abs_url": "https://arxiv.org/abs/2309.15817",
+          "citations": 245,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2309.15817"
+        },
+        {
+          "id": "2412.05187",
+          "title": "SurgBox: Agent-Driven Operating Room Sandbox with Surgery Copilot",
+          "authors": [
+            "Jinlin Wu",
+            "Xusheng Liang",
+            "Xuexue Bai",
+            "Zhen Chen"
+          ],
+          "abstract": "Surgical interventions, particularly in neurology, represent complex and high-stakes scenarios that impose substantial cognitive burdens on surgical teams. Although deliberate education and practice can enhance cognitive capabilities, surgical training opportunities remain limited due to patient safety concerns. To address these cognitive challenges in surgical training and operation, we propose SurgBox, an agent-driven sandbox framework to systematically enhance the cognitive capabilities of surgeons in immersive surgical simulations. Specifically, our SurgBox leverages large language models (LLMs) with tailored Retrieval-Augmented Generation (RAG) to authentically replicate various surgical roles, enabling realistic training environments for deliberate practice. In particular, we devise Surgery Copilot, an AI-driven assistant to actively coordinate the surgical information stream and support clinical decision-making, thereby diminishing the cognitive workload of surgical teams during surgery. By incorporating a novel Long-Short Memory mechanism, our Surgery Copilot can effectively balance immediate procedural assistance with comprehensive surgical knowledge. Extensive experiments using real neurosurgical procedure records validate our SurgBox framework in both enhancing surgical cognitive capabilities and supporting clinical decision-making. By providing an integrated solution for training and operational support to address cognitive challenges, our SurgBox framework advances surgical education and practice, potentially transforming surgical outcomes and healthcare quality. The code is available at https://github.com/franciszchen/SurgBox.",
+          "categories": [
+            "cs.AI",
+            "cs.CV",
+            "cs.HC",
+            "cs.RO"
+          ],
+          "published": "2024-12-06T17:07:27Z",
+          "updated": "2024-12-06T17:07:27Z",
+          "pdf_url": "https://arxiv.org/pdf/2412.05187",
+          "html_url": "https://arxiv.org/html/2412.05187",
+          "abs_url": "https://arxiv.org/abs/2412.05187",
+          "citations": 11,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2412.05187"
+        },
+        {
+          "id": "2503.20036",
+          "title": "Agents in the Sandbox: End-to-End Crash Bug Reproduction for Minecraft",
+          "authors": [
+            "Eray Yapağcı",
+            "Yavuz Alp Sencer Öztürk",
+            "Eray Tüzün"
+          ],
+          "abstract": "Reproducing game bugs, particularly crash bugs in continuously evolving games like Minecraft, is a notoriously manual, time-consuming, and challenging process to automate; insights from a key decision maker from Minecraft we interviewed confirm this, highlighting that a substantial portion of crash reports necessitate manual scenario reconstruction. Despite the success of LLM-driven bug reproduction in other software domains, games, with their complex interactive environments, remain largely unaddressed. This paper introduces BugCraft, a novel end-to-end framework designed to automate the reproduction of crash bugs in Minecraft directly from user-submitted bug reports, addressing the critical gap in automated game bug reproduction. BugCraft employs a two-stage approach: first, a Step Synthesizer leverages LLMs and Minecraft Wiki knowledge to transform bug reports into high-quality, structured steps to reproduce (S2R). Second, an Action Model, powered by a vision-based LLM agent and a custom macro API, executes these S2R steps within Minecraft to trigger the reported crash. To facilitate evaluation, we introduce BugCraft-Bench, a curated dataset of Minecraft crash bug reports. On BugCraft-Bench, our framework end-to-end reproduced 34.9% of crash bugs with GPT-4.1, outperforming baseline computer-use models by 37%. BugCraft demonstrates the feasibility of automated reproduction of crash bugs in complex game environments using LLMs, opening promising avenues for game testing and development. Finally, we make our code open at https://bugcraft2025.github.io",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2025-03-25T19:34:24Z",
+          "updated": "2025-10-10T18:28:14Z",
+          "pdf_url": "https://arxiv.org/pdf/2503.20036",
+          "html_url": "https://arxiv.org/html/2503.20036",
+          "abs_url": "https://arxiv.org/abs/2503.20036",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2503.20036"
+        },
+        {
+          "id": "2412.11722",
+          "title": "GHIssuemarket: A Sandbox Environment for SWE-Agents Economic Experimentation",
+          "authors": [
+            "Mohamed A. Fouad",
+            "Marcelo de Almeida Maia"
+          ],
+          "abstract": "Software engineering agents (swe-agents), as key innovations in intelligent software engineering, are poised in the industry's end-of-programming debate to transcend from assistance to primary roles. we argue the importance of swe-agents' economic viability to their transcendence -- defined as their capacity to maintain efficient operations in constrained environments -- and propose its exploration via software engineering economics experimentation.we introduce ghissuemarket sandbox, a controlled virtual environment for swe-agents' economic experimentation, simulating the environment of an envisioned peer-to-peer multiagent system for github issues outsourcing auctions. in this controlled setting, autonomous swe-agents auction and bid on github issues, leveraging real-time communication, a built-in retrieval-augmented generation (rag) interface for effective decision-making, and instant cryptocurrency micropayments. we open-source our software artifacts, discuss our sandbox engineering decisions, and advocate towards swe-agents' economic exploration -- an emerging field we intend to pursue under the term intelligent software engineering economics (isee).",
+          "categories": [
+            "cs.SE"
+          ],
+          "published": "2024-12-16T12:44:42Z",
+          "updated": "2024-12-17T17:06:43Z",
+          "pdf_url": "https://arxiv.org/pdf/2412.11722",
+          "html_url": "https://arxiv.org/html/2412.11722",
+          "abs_url": "https://arxiv.org/abs/2412.11722",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2412.11722"
+        },
+        {
+          "id": "2308.01542",
+          "title": "Memory Sandbox: Transparent and Interactive Memory Management for Conversational Agents",
+          "authors": [
+            "Ziheng Huang",
+            "Sebastian Gutierrez",
+            "Hemanth Kamana",
+            "Stephen MacNeil"
+          ],
+          "abstract": "The recent advent of large language models (LLM) has resulted in high-performing conversational agents such as chatGPT. These agents must remember key information from an ongoing conversation to provide responses that are contextually relevant to the user. However, these agents have limited memory and can be distracted by irrelevant parts of the conversation. While many strategies exist to manage conversational memory, users currently lack affordances for viewing and controlling what the agent remembers, resulting in a poor mental model and conversational breakdowns. In this paper, we present Memory Sandbox, an interactive system and design probe that allows users to manage the conversational memory of LLM-powered agents. By treating memories as data objects that can be viewed, manipulated, recorded, summarized, and shared across conversations, Memory Sandbox provides interaction affordances for users to manage how the agent should `see' the conversation.",
+          "categories": [
+            "cs.HC"
+          ],
+          "published": "2023-08-03T05:11:49Z",
+          "updated": "2023-08-03T05:11:49Z",
+          "pdf_url": "https://arxiv.org/pdf/2308.01542",
+          "html_url": "https://arxiv.org/html/2308.01542",
+          "abs_url": "https://arxiv.org/abs/2308.01542",
+          "citations": 55,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2308.01542"
+        },
+        {
+          "id": "2602.01665",
+          "title": "TABX: A High-Throughput Sandbox Battle Simulator for Multi-Agent Reinforcement Learning",
+          "authors": [
+            "Hayeong Lee",
+            "JunHyeok Oh",
+            "Byung-Jun Lee"
+          ],
+          "abstract": "The design of environments plays a critical role in shaping the development and evaluation of cooperative multi-agent reinforcement learning (MARL) algorithms. While existing benchmarks highlight critical challenges, they often lack the modularity required to design custom evaluation scenarios. We introduce the Totally Accelerated Battle Simulator in JAX (TABX), a high-throughput sandbox designed for reconfigurable multi-agent tasks. TABX provides granular control over environmental parameters, permitting a systematic investigation into emergent agent behaviors and algorithmic trade-offs across a diverse spectrum of task complexities. Leveraging JAX for hardware-accelerated execution on GPUs, TABX enables massive parallelization and significantly reduces computational overhead. By providing a fast, extensible, and easily customized framework, TABX facilitates the study of MARL agents in complex structured domains and serves as a scalable foundation for future research. Our code is available at: https://anonymous.4open.science/r/TABX-00CA.",
+          "categories": [
+            "cs.MA",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "published": "2026-02-02T05:34:38Z",
+          "updated": "2026-02-02T05:34:38Z",
+          "pdf_url": "https://arxiv.org/pdf/2602.01665",
+          "html_url": "https://arxiv.org/html/2602.01665",
+          "abs_url": "https://arxiv.org/abs/2602.01665",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2602.01665"
+        },
+        {
+          "id": "2603.19649",
+          "title": "PolicySim: An LLM-Based Agent Social Simulation Sandbox for Proactive Policy Optimization",
+          "authors": [
+            "Renhong Huang",
+            "Ning Tang",
+            "Jiarong Xu",
+            "Yuxuan Cao",
+            "Qingqian Tu",
+            "Sheng Guo",
+            "Bo Zheng",
+            "Huiyuan Liu",
+            "Yang Yang"
+          ],
+          "abstract": "Social platforms serve as central hubs for information exchange, where user behaviors and platform interventions jointly shape opinions. However, intervention policies like recommendation and content filtering, can unintentionally amplify echo chambers and polarization, posing significant societal risks. Proactively evaluating the impact of such policies is therefore crucial. Existing approaches primarily rely on reactive online A/B testing, where risks are identified only after deployment, making risk identification delayed and costly. LLM-based social simulations offer a promising pre-deployment alternative, but current methods fall short in realistically modeling platform interventions and incorporating feedback from the platform. Bridging these gaps is essential for building actionable frameworks to assess and optimize platform policies. To this end, we propose PolicySim, an LLM-based social simulation sandbox for the proactive assessment and optimization of intervention policies. PolicySim models the bidirectional dynamics between user behavior and platform interventions through two key components: (1) a user agent module refined via supervised fine-tuning (SFT) and direct preference optimization (DPO) to achieve platform-specific behavioral realism; and (2) an adaptive intervention module that employs a contextual bandit with message passing to capture dynamic network structures. Experiments show that PolicySim can accurately simulate platform ecosystems at both micro and macro levels and support effective intervention policy.",
+          "categories": [
+            "cs.SI",
+            "cs.AI"
+          ],
+          "published": "2026-03-20T05:20:39Z",
+          "updated": "2026-03-20T05:20:39Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.19649",
+          "html_url": "https://arxiv.org/html/2603.19649",
+          "abs_url": "https://arxiv.org/abs/2603.19649",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.19649"
+        },
+        {
+          "id": "2510.27287",
+          "title": "Can LLMs Help You at Work? A Sandbox for Evaluating LLM Agents in Enterprise Environments",
+          "authors": [
+            "Harsh Vishwakarma",
+            "Ankush Agarwal",
+            "Ojas Patil",
+            "Chaitanya Devaguptapu",
+            "Mahesh Chandran"
+          ],
+          "abstract": "Enterprise systems are crucial for enhancing productivity and decision-making among employees and customers. Integrating LLM based systems into enterprise systems enables intelligent automation, personalized experiences, and efficient information retrieval, driving operational efficiency and strategic growth. However, developing and evaluating such systems is challenging due to the inherent complexity of enterprise environments, where data is fragmented across multiple sources and governed by sophisticated access controls. We present EnterpriseBench, a comprehensive benchmark that simulates enterprise settings, featuring 500 diverse tasks across software engineering, HR, finance, and administrative domains. Our benchmark uniquely captures key enterprise characteristics including data source fragmentation, access control hierarchies, and cross-functional workflows. Additionally, we provide a novel data generation pipeline that creates internally consistent enterprise tasks from organizational metadata. Experiments with state-of-the-art LLM agents demonstrate that even the most capable models achieve only 41.8% task completion, highlighting significant opportunities for improvement in enterprise-focused AI systems.",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "published": "2025-10-31T08:55:13Z",
+          "updated": "2025-10-31T08:55:13Z",
+          "pdf_url": "https://arxiv.org/pdf/2510.27287",
+          "html_url": "https://arxiv.org/html/2510.27287",
+          "abs_url": "https://arxiv.org/abs/2510.27287",
+          "citations": 5,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2510.27287"
+        },
+        {
+          "id": "2508.00400",
+          "title": "Sari Sandbox: A Virtual Retail Store Environment for Embodied AI Agents",
+          "authors": [
+            "Janika Deborah Gajo",
+            "Gerarld Paul Merales",
+            "Jerome Escarcha",
+            "Brenden Ashley Molina",
+            "Gian Nartea",
+            "Emmanuel G. Maminta",
+            "Juan Carlos Roldan",
+            "Rowel O. Atienza"
+          ],
+          "abstract": "We present Sari Sandbox, a high-fidelity, photorealistic 3D retail store simulation for benchmarking embodied agents against human performance in shopping tasks. Addressing a gap in retail-specific sim environments for embodied agent training, Sari Sandbox features over 250 interactive grocery items across three store configurations, controlled via an API. It supports both virtual reality (VR) for human interaction and a vision language model (VLM)-powered embodied agent. We also introduce SariBench, a dataset of annotated human demonstrations across varied task difficulties. Our sandbox enables embodied agents to navigate, inspect, and manipulate retail items, providing baselines against human performance. We conclude with benchmarks, performance analysis, and recommendations for enhancing realism and scalability. The source code can be accessed via https://github.com/upeee/sari-sandbox-env.",
+          "categories": [
+            "cs.CV"
+          ],
+          "published": "2025-08-01T08:01:38Z",
+          "updated": "2025-08-01T08:01:38Z",
+          "pdf_url": "https://arxiv.org/pdf/2508.00400",
+          "html_url": "https://arxiv.org/html/2508.00400",
+          "abs_url": "https://arxiv.org/abs/2508.00400",
+          "citations": 2,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2508.00400"
+        },
+        {
+          "id": "2603.17694",
+          "title": "MALLES: A Multi-agent LLMs-based Economic Sandbox with Consumer Preference Alignment",
+          "authors": [
+            "Yusen Wu",
+            "Yiran Liu",
+            "Xiaotie Deng"
+          ],
+          "abstract": "In the real economy, modern decision-making is fundamentally challenged by high-dimensional, multimodal environments, which are further complicated by agent heterogeneity and combinatorial data sparsity. This paper introduces a Multi-Agent Large Language Model-based Economic Sandbox (MALLES), leveraging the inherent generalization capabilities of large-sacle models to establish a unified simulation framework applicable to cross-domain and cross-category scenarios. Central to our approach is a preference learning paradigm in which LLMs are economically aligned via post-training on extensive, heterogeneous transaction records across diverse product categories. This methodology enables the models to internalize and transfer latent consumer preference patterns, thereby mitigating the data sparsity issues prevalent in individual categories. To enhance simulation stability, we implement a mean-field mechanism designed to model the dynamic interactions between the product environment and customer populations, effectively stabilizing sampling processes within high-dimensional decision spaces. Furthermore, we propose a multi-agent discussion framework wherein specialized agents collaboratively process extensive product information. This architecture distributes cognitive load to alleviate single-agent attention bottlenecks and captures critical decision factors through structured dialogue. Experiments demonstrate that our framework achieves significant improvements in product selection accuracy, purchase quantity prediction, and simulation stability compared to existing economic and financial LLM simulation baselines. Our results substantiate the potential of large language models as a foundational pillar for high-fidelity, scalable decision simulation and latter analysis in the real economy based on foundational database.",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2026-03-18T13:11:09Z",
+          "updated": "2026-03-18T13:11:09Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.17694",
+          "html_url": "https://arxiv.org/html/2603.17694",
+          "abs_url": "https://arxiv.org/abs/2603.17694",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.17694"
+        },
+        {
+          "id": "2504.04608",
+          "title": "AI in a vat: Fundamental limits of efficient world modelling for agent sandboxing and interpretability",
+          "authors": [
+            "Fernando Rosas",
+            "Alexander Boyd",
+            "Manuel Baltieri"
+          ],
+          "abstract": "Recent work proposes using world models to generate controlled virtual environments in which AI agents can be tested before deployment to ensure their reliability and safety. However, accurate world models often have high computational demands that can severely restrict the scope and depth of such assessments. Inspired by the classic `brain in a vat' thought experiment, here we investigate ways of simplifying world models that remain agnostic to the AI agent under evaluation. By following principles from computational mechanics, our approach reveals a fundamental trade-off in world model construction between efficiency and interpretability, demonstrating that no single world model can optimise all desirable characteristics. Building on this trade-off, we identify procedures to build world models that either minimise memory requirements, delineate the boundaries of what is learnable, or allow tracking causes of undesirable outcomes. In doing so, this work establishes fundamental limits in world modelling, leading to actionable guidelines that inform core design choices related to effective agent evaluation.",
+          "categories": [
+            "cs.AI",
+            "eess.SY"
+          ],
+          "published": "2025-04-06T20:35:44Z",
+          "updated": "2025-04-06T20:35:44Z",
+          "pdf_url": "https://arxiv.org/pdf/2504.04608",
+          "html_url": "https://arxiv.org/html/2504.04608",
+          "abs_url": "https://arxiv.org/abs/2504.04608",
+          "citations": 2,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2504.04608"
+        },
+        {
+          "id": "2512.04367",
+          "title": "AgentBay: A Hybrid Interaction Sandbox for Seamless Human-AI Intervention in Agentic Systems",
+          "authors": [
+            "Yun Piao",
+            "Hongbo Min",
+            "Hang Su",
+            "Leilei Zhang",
+            "Lei Wang",
+            "Yue Yin",
+            "Xiao Wu",
+            "Zhejing Xu",
+            "Liwei Qu",
+            "Hang Li",
+            "Xinxin Zeng",
+            "Wei Tian",
+            "Fei Yu",
+            "Xiaowei Li",
+            "Jiayi Jiang",
+            "Tongxu Liu",
+            "Hao Tian",
+            "Yufei Que",
+            "Xiaobing Tu",
+            "Bing Suo",
+            "Yuebing Li",
+            "Xiangting Chen",
+            "Zeen Zhao",
+            "Jiaming Tang",
+            "Wei Huang",
+            "Xuguang Li",
+            "Jing Zhao",
+            "Jin Li",
+            "Jie Shen",
+            "Jinkui Ren",
+            "Xiantao Zhang"
+          ],
+          "abstract": "The rapid advancement of Large Language Models (LLMs) is catalyzing a shift towards autonomous AI Agents capable of executing complex, multi-step tasks. However, these agents remain brittle when faced with real-world exceptions, making Human-in-the-Loop (HITL) supervision essential for mission-critical applications. In this paper, we present AgentBay, a novel sandbox service designed from the ground up for hybrid interaction. AgentBay provides secure, isolated execution environments spanning Windows, Linux, Android, Web Browsers, and Code interpreters. Its core contribution is a unified session accessible via a hybrid control interface: An AI agent can interact programmatically via mainstream interfaces (MCP, Open Source SDK), while a human operator can, at any moment, seamlessly take over full manual control. This seamless intervention is enabled by Adaptive Streaming Protocol (ASP). Unlike traditional VNC/RDP, ASP is specifically engineered for this hybrid use case, delivering an ultra-low-latency, smoother user experience that remains resilient even in weak network environments. It achieves this by dynamically blending command-based and video-based streaming, adapting its encoding strategy based on network conditions and the current controller (AI or human). Our evaluation demonstrates strong results in security, performance, and task completion rates. In a benchmark of complex tasks, the AgentBay (Agent + Human) model achieved more than 48% success rate improvement. Furthermore, our ASP protocol reduces bandwidth consumption by up to 50% compared to standard RDP, and in end-to-end latency with around 5% reduction, especially under poor network conditions. We posit that AgentBay provides a foundational primitive for building the next generation of reliable, human-supervised autonomous systems.",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2025-12-04T01:31:00Z",
+          "updated": "2025-12-04T01:31:00Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.04367",
+          "html_url": "https://arxiv.org/html/2512.04367",
+          "abs_url": "https://arxiv.org/abs/2512.04367",
+          "citations": 1,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.04367"
+        },
+        {
+          "id": "2512.12806",
+          "title": "Fault-Tolerant Sandboxing for AI Coding Agents: A Transactional Approach to Safe Autonomous Execution",
+          "authors": [
+            "Boyang Yan"
+          ],
+          "abstract": "The transition of Large Language Models (LLMs) from passive code generators to autonomous agents introduces significant safety risks, specifically regarding destructive commands and inconsistent system states. Existing commercial solutions often prioritize interactive user safety, enforcing authentication barriers that break the headless loops required for true autonomy. This paper presents a Fault-Tolerant Sandboxing framework designed to mitigate these risks through a policy-based interception layer and a transactional filesystem snapshot mechanism. We hypothesize that wrapping agent actions in atomic transactions can guarantee safety with acceptable latency, outperforming the heavy initialization overhead of containers or the interactive friction of commercial CLIs. We validated this approach by deploying the Minimind-MoE LLM served via nano-vllm on a custom Proxmox-based testbed utilizing EVPN/VXLAN isolation. Experimental results demonstrate a 100\\% interception rate for high-risk commands and a 100\\% success rate in rolling back failed states. Crucially, our prototype incurs only a 14.5\\% performance overhead (approx. 1.8s) per transaction. In contrast, benchmarking against the Gemini CLI sandbox revealed that it requires interactive authentication (\"Sign in\"), rendering it unusable for headless, autonomous agent workflows.",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2025-12-14T19:03:59Z",
+          "updated": "2025-12-14T19:03:59Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.12806",
+          "html_url": "https://arxiv.org/html/2512.12806",
+          "abs_url": "https://arxiv.org/abs/2512.12806",
+          "citations": 1,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.12806"
+        },
+        {
+          "id": "2403.04960",
+          "title": "IsolateGPT: An Execution Isolation Architecture for LLM-Based Agentic Systems",
+          "authors": [
+            "Yuhao Wu",
+            "Franziska Roesner",
+            "Tadayoshi Kohno",
+            "Ning Zhang",
+            "Umar Iqbal"
+          ],
+          "abstract": "Large language models (LLMs) extended as systems, such as ChatGPT, have begun supporting third-party applications. These LLM apps leverage the de facto natural language-based automated execution paradigm of LLMs: that is, apps and their interactions are defined in natural language, provided access to user data, and allowed to freely interact with each other and the system. These LLM app ecosystems resemble the settings of earlier computing platforms, where there was insufficient isolation between apps and the system. Because third-party apps may not be trustworthy, and exacerbated by the imprecision of natural language interfaces, the current designs pose security and privacy risks for users. In this paper, we evaluate whether these issues can be addressed through execution isolation and what that isolation might look like in the context of LLM-based systems, where there are arbitrary natural language-based interactions between system components, between LLM and apps, and between apps. To that end, we propose IsolateGPT, a design architecture that demonstrates the feasibility of execution isolation and provides a blueprint for implementing isolation, in LLM-based systems. We evaluate IsolateGPT against a number of attacks and demonstrate that it protects against many security, privacy, and safety issues that exist in non-isolated LLM-based systems, without any loss of functionality. The performance overhead incurred by IsolateGPT to improve security is under 30% for three-quarters of tested queries.",
+          "categories": [
+            "cs.CR",
+            "cs.AI",
+            "cs.CL",
+            "cs.CY",
+            "cs.LG"
+          ],
+          "published": "2024-03-08T00:02:30Z",
+          "updated": "2025-01-30T22:55:18Z",
+          "pdf_url": "https://arxiv.org/pdf/2403.04960",
+          "html_url": "https://arxiv.org/html/2403.04960",
+          "abs_url": "https://arxiv.org/abs/2403.04960",
+          "citations": 59,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2403.04960"
+        },
+        {
+          "id": "2312.15985",
+          "title": "Discrete Messages Improve Communication Efficiency among Isolated Intelligent Agents",
+          "authors": [
+            "Hang Chen",
+            "Yuchuan Jang",
+            "Weijie Zhou",
+            "Cristian Meo",
+            "Ziwei Chen",
+            "Dianbo Liu"
+          ],
+          "abstract": "Individuals, despite having varied life experiences and learning processes, can communicate effectively through languages. This study aims to explore the efficiency of language as a communication medium. We put forth two specific hypotheses: First, discrete messages are more effective than continuous ones when agents have diverse personal experiences. Second, communications using multiple discrete tokens are more advantageous than those using a single token. To valdate these hypotheses, we designed multi-agent machine learning experiments to assess communication efficiency using various information transmission methods between speakers and listeners. Our empirical findings indicate that, in scenarios where agents are exposed to different data, communicating through sentences composed of discrete tokens offers the best inter-agent communication efficiency. The limitations of our finding include lack of systematic advantages over other more sophisticated encoder-decoder model such as variational autoencoder and lack of evluation on non-image dataset, which we will leave for future studies.",
+          "categories": [
+            "cs.LG",
+            "cs.IT"
+          ],
+          "published": "2023-12-26T10:30:05Z",
+          "updated": "2024-10-18T02:22:19Z",
+          "pdf_url": "https://arxiv.org/pdf/2312.15985",
+          "html_url": "https://arxiv.org/html/2312.15985",
+          "abs_url": "https://arxiv.org/abs/2312.15985",
+          "citations": 1,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2312.15985"
+        },
+        {
+          "id": "2312.03022",
+          "title": "Beyond Isolation: Multi-Agent Synergy for Improving Knowledge Graph Construction",
+          "authors": [
+            "Hongbin Ye",
+            "Honghao Gui",
+            "Aijia Zhang",
+            "Tong Liu",
+            "Weiqiang Jia"
+          ],
+          "abstract": "This paper introduces CooperKGC, a novel framework challenging the conventional solitary approach of large language models (LLMs) in knowledge graph construction (KGC). CooperKGC establishes a collaborative processing network, assembling a team capable of concurrently addressing entity, relation, and event extraction tasks. Experimentation demonstrates that fostering collaboration within CooperKGC enhances knowledge selection, correction, and aggregation capabilities across multiple rounds of interactions.",
+          "categories": [
+            "cs.AI",
+            "cs.CL",
+            "cs.LG"
+          ],
+          "published": "2023-12-05T07:27:08Z",
+          "updated": "2024-11-20T07:07:41Z",
+          "pdf_url": "https://arxiv.org/pdf/2312.03022",
+          "html_url": "https://arxiv.org/html/2312.03022",
+          "abs_url": "https://arxiv.org/abs/2312.03022",
+          "citations": 6,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2312.03022"
+        },
+        {
+          "id": "2510.13982",
+          "title": "Static Sandboxes Are Inadequate: Modeling Societal Complexity Requires Open-Ended Co-Evolution in LLM-Based Multi-Agent Simulations",
+          "authors": [
+            "Jinkun Chen",
+            "Sher Badshah",
+            "Xuemin Yu",
+            "Sijia Han"
+          ],
+          "abstract": "What if artificial agents could not just communicate, but also evolve, adapt, and reshape their worlds in ways we cannot fully predict? With llm now powering multi-agent systems and social simulations, we are witnessing new possibilities for modeling open-ended, ever-changing environments. Yet, most current simulations remain constrained within static sandboxes, characterized by predefined tasks, limited dynamics, and rigid evaluation criteria. These limitations prevent them from capturing the complexity of real-world societies. In this paper, we argue that static, task-specific benchmarks are fundamentally inadequate and must be rethought. We critically review emerging architectures that blend llm with multi-agent dynamics, highlight key hurdles such as balancing stability and diversity, evaluating unexpected behaviors, and scaling to greater complexity, and introduce a fresh taxonomy for this rapidly evolving field. Finally, we present a research roadmap centered on open-endedness, continuous co-evolution, and the development of resilient, socially aligned AI ecosystems. We call on the community to move beyond static paradigms and help shape the next generation of adaptive, socially-aware multi-agent simulations.",
+          "categories": [
+            "cs.MA",
+            "cs.AI"
+          ],
+          "published": "2025-10-15T18:05:06Z",
+          "updated": "2025-10-21T15:32:35Z",
+          "pdf_url": "https://arxiv.org/pdf/2510.13982",
+          "html_url": "https://arxiv.org/html/2510.13982",
+          "abs_url": "https://arxiv.org/abs/2510.13982",
+          "citations": 1,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2510.13982"
+        },
+        {
+          "id": "2506.12104",
+          "title": "DRIFT: Dynamic Rule-Based Defense with Injection Isolation for Securing LLM Agents",
+          "authors": [
+            "Hao Li",
+            "Xiaogeng Liu",
+            "Hung-Chun Chiu",
+            "Dianqi Li",
+            "Ning Zhang",
+            "Chaowei Xiao"
+          ],
+          "abstract": "Large Language Models (LLMs) are increasingly central to agentic systems due to their strong reasoning and planning capabilities. By interacting with external environments through predefined tools, these agents can carry out complex user tasks. Nonetheless, this interaction also introduces the risk of prompt injection attacks, where malicious inputs from external sources can mislead the agent's behavior, potentially resulting in economic loss, privacy leakage, or system compromise. System-level defenses have recently shown promise by enforcing static or predefined policies, but they still face two key challenges: the ability to dynamically update security rules and the need for memory stream isolation. To address these challenges, we propose DRIFT, a Dynamic Rule-based Isolation Framework for Trustworthy agentic systems, which enforces both control- and data-level constraints. A Secure Planner first constructs a minimal function trajectory and a JSON-schema-style parameter checklist for each function node based on the user query. A Dynamic Validator then monitors deviations from the original plan, assessing whether changes comply with privilege limitations and the user's intent. Finally, an Injection Isolator detects and masks any instructions that may conflict with the user query from the memory stream to mitigate long-term risks. We empirically validate the effectiveness of DRIFT on the AgentDojo and ASB benchmark, demonstrating its strong security performance while maintaining high utility across diverse models, showcasing both its robustness and adaptability. The code is released at https://github.com/SaFoLab-WISC/DRIFT.",
+          "categories": [
+            "cs.CR",
+            "cs.AI"
+          ],
+          "published": "2025-06-13T05:01:09Z",
+          "updated": "2025-10-24T01:50:46Z",
+          "pdf_url": "https://arxiv.org/pdf/2506.12104",
+          "html_url": "https://arxiv.org/html/2506.12104",
+          "abs_url": "https://arxiv.org/abs/2506.12104",
+          "citations": 20,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2506.12104"
+        },
+        {
+          "id": "2512.22608",
+          "title": "Beyond Isolated Investor: Predicting Startup Success via Roleplay-Based Collective Agents",
+          "authors": [
+            "Zhongyang Liu",
+            "Haoyu Pei",
+            "Xiangyi Xiao",
+            "Xiaocong Du",
+            "Yihui Li",
+            "Suting Hong",
+            "Kunpeng Zhang",
+            "Haipeng Zhang"
+          ],
+          "abstract": "Due to the high value and high failure rate of startups, predicting their success has become a critical challenge across interdisciplinary research. Existing approaches typically model success prediction from the perspective of a single decision-maker, overlooking the collective dynamics of investor groups that dominate real-world venture capital (VC) decisions. In this paper, we propose SimVC-CAS, a novel collective agent system that simulates VC decision-making as a multi-agent interaction process. By designing role-playing agents and a GNN-based supervised interaction module, we reformulate startup financing prediction as a group decision-making task, capturing both enterprise fundamentals and the behavioral dynamics of potential investor networks. Each agent embodies an investor with unique traits and preferences, enabling heterogeneous evaluation and realistic information exchange through a graph-structured co-investment network. Using real-world data from PitchBook and under strict data leakage controls, we show that SimVC-CAS significantly improves predictive accuracy while providing interpretable, multiperspective reasoning, for example, approximately 25% relative improvement with respect to average precision@10. SimVC-CAS also sheds light on other complex group decision scenarios.",
+          "categories": [
+            "cs.AI",
+            "cs.CE"
+          ],
+          "published": "2025-12-27T14:34:44Z",
+          "updated": "2026-01-16T11:33:23Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.22608",
+          "html_url": "https://arxiv.org/html/2512.22608",
+          "abs_url": "https://arxiv.org/abs/2512.22608",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.22608"
+        },
+        {
+          "id": "2012.12839",
+          "title": "Cohorting to isolate asymptomatic spreaders: An agent-based simulation study on the Mumbai Suburban Railway",
+          "authors": [
+            "Alok Talekar",
+            "Sharad Shriram",
+            "Nidhin Vaidhiyan",
+            "Gaurav Aggarwal",
+            "Jiangzhuo Chen",
+            "Srini Venkatramanan",
+            "Lijing Wang",
+            "Aniruddha Adiga",
+            "Adam Sadilek",
+            "Ashish Tendulkar",
+            "Madhav Marathe",
+            "Rajesh Sundaresan",
+            "Milind Tambe"
+          ],
+          "abstract": "The Mumbai Suburban Railways, \\emph{locals}, are a key transit infrastructure of the city and is crucial for resuming normal economic activity. To reduce disease transmission, policymakers can enforce reduced crowding and mandate wearing of masks. \\emph{Cohorting} -- forming groups of travelers that always travel together, is an additional policy to reduce disease transmission on \\textit{locals} without severe restrictions. Cohorting allows us to: ($i$) form traveler bubbles, thereby decreasing the number of distinct interactions over time; ($ii$) potentially quarantine an entire cohort if a single case is detected, making contact tracing more efficient, and ($iii$) target cohorts for testing and early detection of symptomatic as well as asymptomatic cases. Studying impact of cohorts using compartmental models is challenging because of the ensuing representational complexity. Agent-based models provide a natural way to represent cohorts along with the representation of the cohort members with the larger social network. This paper describes a novel multi-scale agent-based model to study the impact of cohorting strategies on COVID-19 dynamics in Mumbai. We achieve this by modeling the Mumbai urban region using a detailed agent-based model comprising of 12.4 million agents. Individual cohorts and their inter-cohort interactions as they travel on locals are modeled using local mean field approximations. The resulting multi-scale model in conjunction with a detailed disease transmission and intervention simulator is used to assess various cohorting strategies. The results provide a quantitative trade-off between cohort size and its impact on disease dynamics and well being. The results show that cohorts can provide significant benefit in terms of reduced transmission without significantly impacting ridership and or economic \\\u0026 social activity.",
+          "categories": [
+            "cs.MA"
+          ],
+          "published": "2020-12-23T18:06:22Z",
+          "updated": "2020-12-24T08:20:31Z",
+          "pdf_url": "https://arxiv.org/pdf/2012.12839",
+          "html_url": "https://arxiv.org/html/2012.12839",
+          "abs_url": "https://arxiv.org/abs/2012.12839",
+          "citations": 5,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2012.12839"
+        },
+        {
+          "id": "2506.06843",
+          "title": "United Minds or Isolated Agents? Exploring Coordination of LLMs under Cognitive Load Theory",
+          "authors": [
+            "HaoYang Shang",
+            "Xuan Liu",
+            "Zi Liang",
+            "Jie Zhang",
+            "Haibo Hu",
+            "Song Guo"
+          ],
+          "abstract": "Large Language Models (LLMs) exhibit a notable performance ceiling on complex, multi-faceted tasks, as they often fail to integrate diverse information or adhere to multiple constraints. We posit that such limitation arises when the demands of a task exceed the LLM's effective cognitive load capacity. This interpretation draws a strong analogy to Cognitive Load Theory (CLT) in cognitive science, which explains similar performance boundaries in the human mind, and is further supported by emerging evidence that reveals LLMs have bounded working memory characteristics. Building upon this CLT-grounded understanding, we introduce CoThinker, a novel LLM-based multi-agent framework designed to mitigate cognitive overload and enhance collaborative problem-solving abilities. CoThinker operationalizes CLT principles by distributing intrinsic cognitive load through agent specialization and managing transactional load via structured communication and a collective working memory. We empirically validate CoThinker on complex problem-solving tasks and fabricated high cognitive load scenarios, demonstrating improvements over existing multi-agent baselines in solution quality and efficiency. Our analysis reveals characteristic interaction patterns, providing insights into the emergence of collective cognition and effective load management, thus offering a principled approach to overcoming LLM performance ceilings.",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2025-06-07T15:48:04Z",
+          "updated": "2025-09-25T12:49:56Z",
+          "pdf_url": "https://arxiv.org/pdf/2506.06843",
+          "html_url": "https://arxiv.org/html/2506.06843",
+          "abs_url": "https://arxiv.org/abs/2506.06843",
+          "citations": 6,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2506.06843"
+        },
+        {
+          "id": "2602.00948",
+          "title": "FinEvo: From Isolated Backtests to Ecological Market Games for Multi-Agent Financial Strategy Evolution",
+          "authors": [
+            "Mingxi Zou",
+            "Jiaxiang Chen",
+            "Aotian Luo",
+            "Jingyi Dai",
+            "Chi Zhang",
+            "Dongning Sun",
+            "Zenglin Xu"
+          ],
+          "abstract": "Conventional financial strategy evaluation relies on isolated backtests in static environments. Such evaluations assess each policy independently, overlook correlations and interactions, and fail to explain why strategies ultimately persist or vanish in evolving markets. We shift to an ecological perspective, where trading strategies are modeled as adaptive agents that interact and learn within a shared market. Instead of proposing a new strategy, we present FinEvo, an ecological game formalism for studying the evolutionary dynamics of multi-agent financial strategies. At the individual level, heterogeneous ML-based traders-rule-based, deep learning, reinforcement learning, and large language model (LLM) agents-adapt using signals such as historical prices and external news. At the population level, strategy distributions evolve through three designed mechanisms-selection, innovation, and environmental perturbation-capturing the dynamic forces of real markets. Together, these two layers of adaptation link evolutionary game theory with modern learning dynamics, providing a principled environment for studying strategic behavior. Experiments with external shocks and real-world news streams show that FinEvo is both stable for reproducibility and expressive in revealing context-dependent outcomes. Strategies may dominate, collapse, or form coalitions depending on their competitors-patterns invisible to static backtests. By reframing strategy evaluation as an ecological game formalism, FinEvo provides a unified, mechanism-level protocol for analyzing robustness, adaptation, and emergent dynamics in multi-agent financial markets, and may offer a means to explore the potential impact of macroeconomic policies and financial regulations on price evolution and equilibrium.",
+          "categories": [
+            "physics.soc-ph",
+            "cs.AI",
+            "cs.GT",
+            "cs.MA"
+          ],
+          "published": "2026-02-01T00:52:01Z",
+          "updated": "2026-02-01T00:52:01Z",
+          "pdf_url": "https://arxiv.org/pdf/2602.00948",
+          "html_url": "https://arxiv.org/html/2602.00948",
+          "abs_url": "https://arxiv.org/abs/2602.00948",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2602.00948"
+        },
+        {
+          "id": "2508.11553",
+          "title": "SeamlessFlow: A Trainer Agent Isolation RL Framework Achieving Bubble-Free Pipelines via Tag Scheduling",
+          "authors": [
+            "Jinghui Wang",
+            "Shaojie Wang",
+            "Yinghan Cui",
+            "Xuxing Chen",
+            "Chao Wang",
+            "Xiaojiang Zhang",
+            "Minglei Zhang",
+            "Jiarong Zhang",
+            "Wenhao Zhuang",
+            "Yuchen Cao",
+            "Wankang Bao",
+            "Haimo Li",
+            "Zheng Lin",
+            "Huiming Wang",
+            "Haoyang Huang",
+            "Zongxian Feng",
+            "Zizheng Zhan",
+            "Ken Deng",
+            "Wen Xiang",
+            "Huaixi Tang",
+            "Kun Wu",
+            "Mengtong Li",
+            "Mengfei Xie",
+            "Junyi Peng",
+            "Haotian Zhang",
+            "Bin Chen",
+            "Bing Yu"
+          ],
+          "abstract": "We introduce SeamlessFlow, a server based reinforcement learning (RL) framework that addresses two core challenges in industrial scale RL: (1) decoupling RL training from the complex execution flow of agents; (2) maximizing GPU utilization with minimal idle time while preserving the stability and scalability required for large-scale deployments. First, SeamlessFlow introduces a data plane that decouples the RL trainer from diverse, complex agent implementations while sustaining high throughput. A central trajectory manager maintains complete interaction histories and supports partial rollout, allowing rollout to pause for weight updates and resume seamlessly, keeping agents unaware of service interruptions. Second, we propose a tag driven scheduling paradigm that abstracts hardware into capability tagged resources, unifying colocated and disaggregated architectures. Based on this, SeamlessFlow introduces a spatiotemporal multiplexing pipeline that dynamically reassigns idle training nodes to rollout in a train rollout separated setup, eliminating pipeline bubbles and fully exploiting heterogeneous cluster resources. By combining these innovations, SeamlessFlow delivers both stability and high performance, making it well suited for multi agent, long horizon, and other complex RL tasks.",
+          "categories": [
+            "cs.LG"
+          ],
+          "published": "2025-08-15T15:55:37Z",
+          "updated": "2025-08-15T15:55:37Z",
+          "pdf_url": "https://arxiv.org/pdf/2508.11553",
+          "html_url": "https://arxiv.org/html/2508.11553",
+          "abs_url": "https://arxiv.org/abs/2508.11553",
+          "citations": 2,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2508.11553"
+        },
+        {
+          "id": "2410.08050",
+          "title": "Agent-based modeling for realistic reproduction of human mobility and contact behavior to evaluate test and isolation strategies in epidemic infectious disease spread",
+          "authors": [
+            "David Kerkmann",
+            "Sascha Korf",
+            "Khoa Nguyen",
+            "Daniel Abele",
+            "Alain Schengen",
+            "Carlotta Gerstein",
+            "Jens Henrik Göbbert",
+            "Achim Basermann",
+            "Martin J. Kühn",
+            "Michael Meyer-Hermann"
+          ],
+          "abstract": "Agent-based models have proven to be useful tools in supporting decision-making processes in different application domains. The advent of modern computers and supercomputers has enabled these bottom-up approaches to realistically model human mobility and contact behavior. The COVID-19 pandemic showcased the urgent need for detailed and informative models that can answer research questions on transmission dynamics. We present a sophisticated agent-based model to simulate the spread of respiratory diseases. The model is highly modularized and can be used on various scales, from a small collection of buildings up to cities or countries. Although not being the focus of this paper, the model has undergone performance engineering on a single core and provides an efficient intra- and inter-simulation parallelization for time-critical decision-making processes.\n  In order to allow answering research questions on individual level resolution, nonpharmaceutical intervention strategies such as face masks or venue closures can be implemented for particular locations or agents. In particular, we allow for sophisticated testing and isolation strategies to study the effects of minimal-invasive infectious disease mitigation. With realistic human mobility patterns for the region of Brunswick, Germany, we study the effects of different interventions between March 1st and May 30, 2021 in the SARS-CoV-2 pandemic. Our analyses suggest that symptom-independent testing has limited impact on the mitigation of disease dynamics if the dark figure in symptomatic cases is high. Furthermore, we found that quarantine length is more important than quarantine efficiency but that, with sufficient symptomatic control, also short quarantines can have a substantial effect.",
+          "categories": [
+            "cs.MA",
+            "cs.DC",
+            "physics.soc-ph"
+          ],
+          "published": "2024-10-10T15:45:27Z",
+          "updated": "2025-04-03T09:23:05Z",
+          "pdf_url": "https://arxiv.org/pdf/2410.08050",
+          "html_url": "https://arxiv.org/html/2410.08050",
+          "abs_url": "https://arxiv.org/abs/2410.08050",
+          "citations": 17,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2410.08050"
+        }
+      ]
+    }
+  ],
+  "total": 28
+}

@@ -1,0 +1,30 @@
+Title: STEP-LLM: Generating CAD STEP Models from Natural Language with Large Language Models
+Authors: Xiangyu Shi, Junyang Ding, Xu Zhao, Sinong Zhan, Payal Mohapatra et al. (+6)
+ID: 2601.12641
+URL: https://arxiv.org/abs/2601.12641
+
+Computer-aided design (CAD) is vital to modern manufacturing, yet model creation
+remains labor-intensive and expertise-heavy. To enable non-experts to translate
+intuitive design intent into manufacturable artifacts, recent large language
+models-based text-to-CAD efforts focus on command sequences or script-based
+formats like CadQuery. However, these formats are kernel-dependent and lack
+universality for manufacturing. In contrast, the Standard for the Exchange of
+Product Data (STEP, ISO 10303) file is a widely adopted, neutral boundary
+representation (B-rep) format directly compatible with manufacturing, but its
+graph-structured, cross-referenced nature poses unique challenges for auto-
+regressive LLMs. To address this, we curate a dataset of ~40K STEP-caption pairs
+and introduce novel preprocessing tailored for the graph-structured format of
+STEP, including a depth-first search-based reserialization that linearizes
+cross-references while preserving locality and chain-of-thought(CoT)-style
+structural annotations that guide global coherence. We integrate retrieval-
+augmented generation to ground predictions in relevant examples for supervised
+fine-tuning, and refine generation quality through reinforcement learning with a
+specific Chamfer Distance-based geometric reward. Experiments demonstrate
+consistent gains of our STEP-LLM in geometric fidelity over the Text2CAD
+baseline, with improvements arising from multiple stages of our framework: the
+RAG module substantially enhances completeness and renderability, the DFS-based
+reserialization strengthens overall accuracy, and the RL further reduces
+geometric discrepancy. Both metrics and visual comparisons confirm that STEP-LLM
+generates shapes with higher fidelity than Text2CAD. These results show the
+feasibility of LLM-driven STEP model generation from natural language, showing
+its potential to democratize CAD design for manufacturing.

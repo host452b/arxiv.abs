@@ -1,0 +1,23 @@
+Title: Mitigating Goal Misgeneralization via Minimax Regret
+Authors: Karim Abdel Sadek, Matthew Farrugia-Roberts, Usman Anwar, Hannah Erlebach, Christian Schroeder de Witt et al. (+2)
+ID: 2507.03068
+URL: https://arxiv.org/abs/2507.03068
+
+Safe generalization in reinforcement learning requires not only that a learned
+policy acts capably in new situations, but also that it uses its capabilities
+towards the pursuit of the designer's intended goal. The latter requirement may
+fail when a proxy goal incentivizes similar behavior to the intended goal within
+the training environment, but not in novel deployment environments. This creates
+the risk that policies will behave as if in pursuit of the proxy goal, rather
+than the intended goal, in deployment -- a phenomenon known as goal
+misgeneralization. In this paper, we formalize this problem setting in order to
+theoretically study the possibility of goal misgeneralization under different
+training objectives. We show that goal misgeneralization is possible under
+approximate optimization of the maximum expected value (MEV) objective, but not
+the minimax expected regret (MMER) objective. We then empirically show that the
+standard MEV-based training method of domain randomization exhibits goal
+misgeneralization in procedurally-generated grid-world environments, whereas
+current regret-based unsupervised environment design (UED) methods are more
+robust to goal misgeneralization (though they don't find MMER policies in all
+cases). Our findings suggest that minimax expected regret is a promising
+approach to mitigating goal misgeneralization.

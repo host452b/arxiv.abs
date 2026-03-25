@@ -1,0 +1,28 @@
+Title: FedShield-LLM: A Secure and Scalable Federated Fine-Tuned Large Language Model
+Authors: Md Jueal Mia, M. Hadi Amini
+ID: 2506.05640
+URL: https://arxiv.org/abs/2506.05640
+
+Abstract:
+Federated Learning (FL) offers a decentralized framework for training and
+fine-tuning Large Language Models (LLMs) by leveraging computational resources
+across organizations while keeping sensitive data on local devices. It addresses
+privacy and security concerns while navigating challenges associated with the
+substantial computational demands of LLMs, which can be prohibitive for small
+and medium-sized organizations. FL supports the development of task-specific
+LLMs for cross-silo applications through fine-tuning but remains vulnerable to
+inference attacks, such as membership inference and gradient inversion, which
+threaten data privacy. Prior studies have utilized Differential Privacy (DP) in
+LLM fine-tuning, which, despite being effective at preserving privacy, can
+degrade model performance. To overcome these challenges, we propose a novel
+method, FedShield-LLM, that uses pruning with Fully Homomorphic Encryption (FHE)
+for Low-Rank Adaptation (LoRA) parameters, enabling secure computations on
+encrypted model updates while mitigating the attack surface by deactivating less
+important LoRA parameters. Furthermore, optimized federated algorithms for
+cross-silo environments enhance scalability and efficiency. Parameter-efficient
+fine-tuning techniques like LoRA substantially reduce computational and
+communication overhead, making FL feasible for resource-constrained clients.
+Experimental results show that the proposed method outperforms existing methods
+while maintaining robust privacy protection, enabling organizations to
+collaboratively train secure and efficient LLMs. The code and data are available
+at, https://github.com/solidlabnetwork/fedshield-llm

@@ -1,0 +1,26 @@
+Title: LLM-Assisted Model-Based Fuzzing of Protocol Implementations
+Authors: Changze Huang, Di Wang, Zhi Quan Zhou
+ID: 2508.01750
+URL: https://arxiv.org/abs/2508.01750
+
+Testing network protocol implementations is critical for ensuring the
+reliability, security, and interoperability of distributed systems. Faults in
+protocol behavior can lead to vulnerabilities and system failures, especially in
+real-time and mission-critical applications. A common approach to protocol
+testing involves constructing Markovian models that capture the state
+transitions and expected behaviors of the protocol. However, building such
+models typically requires significant domain expertise and manual effort, making
+the process time-consuming and difficult to scale across diverse protocols and
+implementations.   We propose a novel method that leverages large language
+models (LLMs) to automatically generate sequences for testing network protocol
+implementations. Our approach begins by defining the full set of possible
+protocol states, from which the LLM selects a subset to model the target
+implementation. Using this state-based model, we prompt the LLM to generate code
+that produces sequences of states. This program serves as a protocol-specific
+sequences generator. The sequences generator then generates test inputs to call
+the protocol implementation under various conditions. We evaluated our approach
+on three widely used network protocol implementations and successfully
+identified 12 previously unknown vulnerabilities. We have reported them to the
+respective developers for confirmation. This demonstrates the practical
+effectiveness of our LLM-assisted fuzzing framework in uncovering real-world
+security issues.

@@ -1,0 +1,27 @@
+Title: AI-Assisted Fixes to Code Review Comments at Scale
+Authors: Chandra Maddila, Negar Ghorbani, James Saindon, Parth Thakkar, Vijayaraghavan Murali et al.
+ID: 2507.13499
+URL: https://arxiv.org/abs/2507.13499
+
+Abstract:
+Aim. There are 10s of thousands of code review comments each week at Meta. We
+developed Metamate for Code Review (MetaMateCR) that provides AI-assisted fixes
+for reviewer comments in production at scale. Method. We developed an internal
+benchmark of 64k <review comment, patch> data points to fine-tune Llama models.
+Once our models achieve reasonable offline results, we roll them into
+production. To ensure that our AI-assisted fixes do not negatively impact the
+time it takes to do code reviews, we conduct randomized controlled safety trials
+as well as full production experiments. Offline Results. As a baseline, we
+compare GPT-4o to our small and large Llama models. In offline results, our
+LargeLSFT model creates an exact match patch 68% of the time outperforming
+GPT-4o by 9 percentage points (pp). The internal models also use more modern
+Hack functions when compared to the PHP functions suggested by GPT-4o. Safety
+Trial. When we roll MetaMateCR into production in a safety trial that compares
+no AI patches with AI patch suggestions, we see a large regression with
+reviewers taking over 5% longer to conduct reviews. After investigation, we
+modify the UX to only show authors the AI patches, and see no regressions in the
+time for reviews. Production. When we roll LargeLSFT into production, we see an
+ActionableToApplied rate of 19.7%, which is a 9.2pp improvement over GPT-4o. Our
+results illustrate the importance of safety trials in ensuring that AI does not
+inadvertently slow down engineers, and a successful review comment to AI patch
+product running at scale.

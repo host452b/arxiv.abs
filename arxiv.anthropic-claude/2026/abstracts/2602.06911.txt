@@ -1,0 +1,25 @@
+Title: TamperBench: Systematically Stress-Testing LLM Safety Under Fine-Tuning and Tampering
+Authors: Saad Hossain, Tom Tseng, Punya Syon Pandey, Samanvay Vajpayee, Matthew Kowal et al. (+6)
+ID: 2602.06911
+URL: https://arxiv.org/abs/2602.06911
+
+As increasingly capable open-weight large language models (LLMs) are deployed,
+improving their tamper resistance against unsafe modifications, whether
+accidental or intentional, becomes critical to minimize risks. However, there is
+no standard approach to evaluate tamper resistance. Varied data sets, metrics,
+and tampering configurations make it difficult to compare safety, utility, and
+robustness across different models and defenses. To this end, we introduce
+TamperBench, the first unified framework to systematically evaluate the tamper
+resistance of LLMs. TamperBench (i) curates a repository of state-of-the-art
+weight-space fine-tuning attacks and latent-space representation attacks; (ii)
+enables realistic adversarial evaluation through systematic hyperparameter
+sweeps per attack-model pair; and (iii) provides both safety and utility
+evaluations. TamperBench requires minimal additional code to specify any fine-
+tuning configuration, alignment-stage defense method, and metric suite while
+ensuring end-to-end reproducibility. We use TamperBench to evaluate 21 open-
+weight LLMs, including defense-augmented variants, across nine tampering threats
+using standardized safety and capability metrics with hyperparameter sweeps per
+model-attack pair. This yields novel insights, including effects of post-
+training on tamper resistance, that jailbreak-tuning is typically the most
+severe attack, and that Triplet emerges as a leading alignment-stage defense.
+Code is available at: https://github.com/criticalml-uw/TamperBench

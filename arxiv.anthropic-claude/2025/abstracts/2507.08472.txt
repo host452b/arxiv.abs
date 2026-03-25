@@ -1,0 +1,17 @@
+Title: Pre-Training LLMs on a budget: A comparison of three optimizers
+Authors: Joel Schlotthauer, Christian Kroos, Chris Hinze, Viktor Hangya, Luzian Hahn et al. (+1)
+ID: 2507.08472
+URL: https://arxiv.org/abs/2507.08472
+
+Optimizers play a decisive role in reducing pre-training times for LLMs and
+achieving better-performing models. In this study, we compare three major
+variants: the de-facto standard AdamW, the simpler Lion, developed through an
+evolutionary search, and the second-order optimizer Sophia. For better
+generalization, we train with two different base architectures and use a single-
+and a multiple-epoch approach while keeping the number of tokens constant. Using
+the Maximal Update Parametrization and smaller proxy models, we tune relevant
+hyperparameters separately for each combination of base architecture and
+optimizer. We found that while the results from all three optimizers were in
+approximately the same range, Sophia exhibited the lowest training and
+validation loss, Lion was fastest in terms of training GPU hours but AdamW led
+to the best downstream evaluation results.

@@ -1,0 +1,24 @@
+Title: Resurrecting the Salmon: Rethinking Mechanistic Interpretability with Domain-Specific Sparse Autoencoders
+Authors: Charles O'Neill, Mudith Jayasekara, Max Kirkby
+ID: 2508.09363
+URL: https://arxiv.org/abs/2508.09363
+
+Sparse autoencoders (SAEs) decompose large language model (LLM) activations into
+latent features that reveal mechanistic structure. Conventional SAEs train on
+broad data distributions, forcing a fixed latent budget to capture only high-
+frequency, generic patterns. This often results in significant linear ``dark
+matter'' in reconstruction error and produces latents that fragment or absorb
+each other, complicating interpretation. We show that restricting SAE training
+to a well-defined domain (medical text) reallocates capacity to domain-specific
+features, improving both reconstruction fidelity and interpretability. Training
+JumpReLU SAEs on layer-20 activations of Gemma-2 models using 195k clinical QA
+examples, we find that domain-confined SAEs explain up to 20\% more variance,
+achieve higher loss recovery, and reduce linear residual error compared to
+broad-domain SAEs. Automated and human evaluations confirm that learned features
+align with clinically meaningful concepts (e.g., ``taste sensations'' or
+``infectious mononucleosis''), rather than frequent but uninformative tokens.
+These domain-specific SAEs capture relevant linear structure, leaving a smaller,
+more purely nonlinear residual. We conclude that domain-confinement mitigates
+key limitations of broad-domain SAEs, enabling more complete and interpretable
+latent decompositions, and suggesting the field may need to question
+``foundation-model'' scaling for general-purpose SAEs.

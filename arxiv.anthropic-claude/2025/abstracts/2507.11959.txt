@@ -1,0 +1,24 @@
+Title: PoTPTQ: A Two-step Power-of-Two Post-training for LLMs
+Authors: Xinyu Wang, Vahid Partovi Nia, Peng Lu, Jerry Huang, Xiao-Wen Chang et al. (+2)
+ID: 2507.11959
+URL: https://arxiv.org/abs/2507.11959
+
+Large Language Models (LLMs) have demonstrated remarkable performance across
+various natural language processing (NLP) tasks. However, their deployment is
+challenging due to the substantial computational resources required. Power-of-
+two (PoT) quantization is a general tool to counteract this difficulty. Albeit
+previous works on PoT quantization can be efficiently dequantized on CPUs using
+fixed-point addition, it showed less effectiveness on GPUs. The reason is
+entanglement of the sign bit and sequential bit manipulations needed for
+dequantization. We propose a novel POT quantization framework for LLM weights
+that (i) outperforms state-of-the-art accuracy in extremely low-precision number
+formats, and (ii) enables faster inference through more efficient
+dequantization. To maintain the accuracy of the quantized model, we introduce a
+two-step post-training algorithm: (i) initialize the quantization scales with a
+robust starting point, and (ii) refine these scales using a minimal calibration
+set. The performance of our PoT post-training algorithm surpasses the current
+state-of-the-art in integer quantization, particularly at low precisions such as
+2- and 3-bit formats. Our PoT quantization accelerates the dequantization step
+required for the floating point inference and leads to $3.67\times$ speed up on
+a NVIDIA V100, and $1.63\times$ on a NVIDIA RTX 4090, compared to uniform
+integer dequantization.

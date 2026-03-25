@@ -1,0 +1,28 @@
+Title: Throttling Web Agents Using Reasoning Gates
+Authors: Abhinav Kumar, Jaechul Roh, Ali Naseh, Amir Houmansadr, Eugene Bagdasarian
+ID: 2509.01619
+URL: https://arxiv.org/abs/2509.01619
+
+Abstract:
+AI web agents use Internet resources at far greater speed, scale, and complexity
+-- changing how users and services interact. Deployed maliciously or
+erroneously, these agents could overload content providers. At the same time,
+web agents can bypass CAPTCHAs and other defenses by mimicking user behavior or
+flood authentication systems with fake accounts. Yet providers must protect
+their services and content from denial-of-service attacks and scraping by web
+agents. In this paper, we design a framework that imposes tunable costs on
+agents before providing access to resources; we call this Web Agent Throttling.
+We start by formalizing Throttling Gates as challenges issued to an agent that
+are asymmetric, scalable, robust, and compatible with any agent. Focusing on a
+common component -- the language model -- we require the agent to solve
+reasoning puzzles, thereby incurring excessive token-generation costs. However,
+we find that using existing puzzles, e.g., coding or math, as throttling gates
+fails to satisfy our properties. To address this, we introduce rebus-based
+Reasoning Gates, synthetic text puzzles that require multi-hop reasoning over
+world knowledge (thereby throttling an agent's model). We design a scalable
+generation and verification protocol for such reasoning gates. Our framework
+achieves computational asymmetry, i.e., the response-generation cost is 9.2x
+higher than the generation cost for SOTA models. We further deploy reasoning
+gates on a custom website and Model Context Protocol (MCP) servers and evaluate
+with real-world web agents. Finally, we discuss the limitations and
+environmental impact of real-world deployment of our framework.

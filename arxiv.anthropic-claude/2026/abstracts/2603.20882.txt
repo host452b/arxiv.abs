@@ -1,0 +1,29 @@
+Title: RubricRAG: Towards Interpretable and Reliable LLM Evaluation via Domain Knowledge Retrieval for Rubric Generation
+Authors: Kaustubh D. Dhole, Eugene Agichtein
+ID: 2603.20882
+URL: https://arxiv.org/abs/2603.20882
+
+Large language models (LLMs) are increasingly evaluated and sometimes trained
+using automated graders such as LLM-as-judges that output scalar scores or
+preferences. While convenient, these approaches are often opaque: a single score
+rarely explains why an answer is good or bad, which requirements were missed, or
+how a system should be improved. This lack of interpretability limits their
+usefulness for model development, dataset curation, and high-stakes deployment.
+Query-specific rubric-based evaluation offers a more transparent alternative by
+decomposing quality into explicit, checkable criteria. However, manually
+designing high-quality, query-specific rubrics is labor-intensive and
+cognitively demanding and not feasible for deployment. While previous approaches
+have focused on generating intermediate rubrics for automated downstream
+evaluation, it is unclear if these rubrics are both interpretable and effective
+for human users. In this work, we investigate whether LLMs can generate useful,
+instance-specific rubrics as compared to human-authored rubrics, while also
+improving effectiveness for identifying good responses. Through our systematic
+study on two rubric benchmarks, and on multiple few-shot and post-training
+strategies, we find that off-the-shelf LLMs produce rubrics that are poorly
+aligned with human-authored ones. We introduce a simple strategy, RubricRAG,
+which retrieves domain knowledge via rubrics at inference time from related
+queries. We demonstrate that RubricRAG can generate more interpretable rubrics
+both for similarity to human-authored rubrics, and for improved downstream
+evaluation effectiveness. Our results highlight both the challenges and a
+promising approach of scalable, interpretable evaluation through automated
+rubric generation.

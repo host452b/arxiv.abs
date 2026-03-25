@@ -1,0 +1,22 @@
+Title: A Fragile Guardrail: Diffusion LLM's Safety Blessing and Its Failure Mode
+Authors: Zeyuan He, Yupeng Chen, Lang Lin, Yihan Wang, Shenxu Chang et al. (+5)
+ID: 2602.00388
+URL: https://arxiv.org/abs/2602.00388
+
+Diffusion large language models (D-LLMs) offer an alternative to autoregressive
+LLMs (AR-LLMs) and have demonstrated advantages in generation efficiency. Beyond
+the utility benefits, we argue that D-LLMs exhibit a previously underexplored
+safety blessing: their diffusion-style generation confers intrinsic robustness
+against jailbreak attacks originally designed for AR-LLMs. In this work, we
+provide an initial analysis of the underlying mechanism, showing that the
+diffusion trajectory induces a stepwise reduction effect that progressively
+suppresses unsafe generations. This robustness, however, is not absolute. We
+identify a simple yet effective failure mode, termed context nesting, where
+harmful requests are embedded within structured benign contexts, effectively
+bypassing the stepwise reduction mechanism. Empirically, we show that this
+simple strategy is sufficient to bypass D-LLMs' safety blessing, achieving
+state-of-the-art attack success rates across models and benchmarks. Most
+notably, it enables the first successful jailbreak of Gemini Diffusion, to our
+knowledge, exposing a critical vulnerability in commercial D-LLMs. Together, our
+results characterize both the origins and the limits of D-LLMs' safety blessing,
+constituting an early-stage red-teaming of D-LLMs.

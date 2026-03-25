@@ -1,0 +1,24 @@
+Title: Communication Efficient LLM Pre-training with SparseLoCo
+Authors: Amir Sarfi, Benjamin Thérien, Joel Lidin, Eugene Belilovsky
+ID: 2508.15706
+URL: https://arxiv.org/abs/2508.15706
+
+Communication-efficient distributed training algorithms have received
+considerable interest recently due to their benefits for training Large Language
+Models (LLMs) in bandwidth-constrained settings, such as across datacenters and
+over the internet. Despite reducing communication frequency, these methods still
+typically require communicating a full copy of the model's gradients-resulting
+in a communication bottleneck even for cross-datacenter links. Furthermore, they
+can slightly degrade performance compared to a naive AdamW DDP baseline. While
+quantization is often applied to reduce the pseudo-gradient's size, in the
+context of LLM pre-training, existing approaches have been unable to
+additionally leverage sparsification and have obtained limited quantization. In
+this work, we introduce SparseLoCo, a communication-efficient training algorithm
+for LLMs that effectively leverages error feedback with Top-k sparsification and
+2-bit quantization to reach extreme sparsity as low as 1-3% while outperforming
+full-precision DiLoCo. Our key observations are that outer momentum can be
+locally approximated by an error feedback accumulator combined with aggressive
+sparsity, and that sparse aggregation can actually improve model performance. We
+empirically demonstrate in a range of communication-constrained LLM training
+settings that SparseLoCo provides significant benefits in both performance and
+communication cost.

@@ -1,0 +1,25 @@
+Title: RepoForge: Training a SOTA Fast-thinking SWE Agent with an End-to-End Data Curation Pipeline Synergizing SFT and RL at Scale
+Authors: Zhilong Chen, Chengzong Zhao, Boyuan Chen, Dayi Lin, Yihao Chen et al. (+7)
+ID: 2508.01550
+URL: https://arxiv.org/abs/2508.01550
+
+Training software engineering (SWE) LLMs is bottlenecked by expensive
+infrastructure, inefficient evaluation pipelines, scarce training data, and
+costly quality control. We present RepoForge, an autonomous, end-to-end pipeline
+that generates, evaluates, and trains SWE agents at scale. Our key contributions
+include: (1) RepoForge-8B-Agent, achieving 17.4\% on SWE-Bench-
+Verified~\citep{swebench_verified2024}, establishing new state-of-the-art for
+$\leq$8B non-thinking LLMs; (2) 7,304 executable environments auto-generated
+from real GitHub commits with zero manual intervention; (3) 14$\times$ storage
+reduction (1.4GB $\rightarrow$ 102MB per instance) via intelligent dependency
+management and image pruning; (4) $>$70\% faster evaluation using a Ray-
+powered~\citep{ray2018} distributed RepoForge harness; (5) 19,000$\times$
+cheaper labeling through our automated SPICE~\citep{spice2024} difficulty
+assessment technique. By unifying storage-efficient sandboxing, Ray-powered
+evaluation harness, automated data generation, SPICE-based labeling, and bubble-
+free RL scaffold, we demonstrate that even $\leq$8B models can reach new state-
+of-the-art performance on demanding benchmarks like SWE-Bench-Verified. Our
+approach addresses critical bottlenecks in SWE agent training: high storage
+costs of container-based evaluation, inefficient sequential reward pipelines,
+limited availability of high-quality training data, expensive manual labeling,
+and multi-turn RL pipeline bottlenecks.

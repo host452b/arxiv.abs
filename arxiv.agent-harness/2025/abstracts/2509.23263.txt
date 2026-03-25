@@ -1,0 +1,29 @@
+Title: GUI-PRA: Process Reward Agent for GUI Tasks
+Authors: Tao Xiong, Xavier Hu, Yurun Chen, Yuhang Liu, Changqiao Wu et al. (+4)
+ID: 2509.23263
+URL: https://arxiv.org/abs/2509.23263
+
+Graphical User Interface (GUI) Agents powered by Multimodal Large Language
+Models (MLLMs) show significant potential for automating tasks. However, they
+often struggle with long-horizon tasks, leading to frequent failures. Process
+Reward Models (PRMs) are a promising solution, as they can guide these agents
+with crucial process signals during inference. Nevertheless, their application
+to the GUI domain presents unique challenges. When processing dense artificial
+inputs with long history data, PRMs suffer from a "lost in the middle"
+phenomenon, where the overwhelming historical context compromises the evaluation
+of the current step. Furthermore, standard PRMs lacks GUI changing awareness,
+providing static evaluations that are disconnected from the dynamic consequences
+of actions, a critical mismatch with the inherently dynamic nature of GUI tasks.
+In response to these challenges, we introduce GUI-PRA (Process Reward Agent for
+GUI Tasks), a judge agent designed to better provide process reward than
+standard PRM by intelligently processing historical context and actively
+perceiving UI state changes. Specifically, to directly combat the ``lost in the
+middle'' phenomenon, we introduce a dynamic memory mechanism consisting of two
+core components: a Relevance-based Retrieval Module to actively fetch pertinent
+information from long histories and a Progressive Summarization Module to
+dynamically condense growing interaction data, ensuring the model focuses on
+relevant context. Moreover, to address the lack of UI changing awareness, we
+introduce an Aadaptive UI Perception mechanism. This mechanism enables the agent
+to reason about UI state changes and dynamically select the most appropriate
+tool to gather grounded visual evidence, ensuring its evaluation is always
+informed by the current UI context.

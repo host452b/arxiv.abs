@@ -1,0 +1,27 @@
+Title: Optimizing FaaS Platforms for MCP-enabled Agentic Workflows
+Authors: Varad Kulkarni, Vaibhav Jha, Nikhil Reddy, Anand Eswaran, Praveen Jayachandran et al.
+ID: 2601.14735
+URL: https://arxiv.org/abs/2601.14735
+
+Abstract:
+Agentic workflows that use autonomous AI Agents powered by Large Language Models
+(LLMs) and Model Context Protocol (MCP) servers is rapidly rising. This
+introduces challenges in scalable cloud deployment and state management.
+Traditional hosting on Virtual Machines (VMs) is resource-intensive and lacks
+elasticity. Functions-as-a-Service (FaaS) platforms offer modularity,
+autoscaling and cost efficiency but are inherently stateless. In this paper, we
+present the FAME, a FaaS-based architecture for orchestrating MCP-enabled
+agentic workflows. FAME decomposes agentic patterns such as ReAct into
+composable agents: Planner, Actor and Evaluator, that are each a FaaS function
+built using LangGraph and are orchestrated as a FaaS workflow. This enables
+modular composition as AWS Step Functions and avoids function timeouts seen for
+monolithic agentic workflows. To address context persistence across user
+requests in a conversation, FAME automates agent memory persistence and
+injection using DynamoDB. It also optimizes MCP server deployment through AWS
+Lambda wrappers, caches tool outputs in S3 and proposes function fusion
+strategies. We evaluate FAME on two representative applications, on research
+paper summarization and log analytics, under diverse memory and caching
+configurations. Results show up to 13x latency reduction, 88% fewer input tokens
+and 66% in cost savings, along with improved workflow completion rates. This
+demonstrates the viability of serverless platforms for hosting complex,
+multi-agent AI workflows at scale.

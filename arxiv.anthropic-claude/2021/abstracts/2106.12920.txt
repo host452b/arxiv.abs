@@ -1,0 +1,22 @@
+Title: Learnt Sparsification for Interpretable Graph Neural Networks
+Authors: Mandeep Rathee, Zijian Zhang, Thorben Funke, Megha Khosla, Avishek Anand
+ID: 2106.12920
+URL: https://arxiv.org/abs/2106.12920
+
+Graph neural networks (GNNs) have achieved great success on various tasks and
+fields that require relational modeling. GNNs aggregate node features using the
+graph structure as inductive biases resulting in flexible and powerful models.
+However, GNNs remain hard to interpret as the interplay between node features
+and graph structure is only implicitly learned. In this paper, we propose a
+novel method called Kedge for explicitly sparsifying the underlying graph by
+removing unnecessary neighbors. Our key idea is based on a tractable method for
+sparsification using the Hard Kumaraswamy distribution that can be used in
+conjugation with any GNN model. Kedge learns edge masks in a modular fashion
+trained with any GNN allowing for gradient based optimization in an end-to-end
+fashion. We demonstrate through extensive experiments that our model Kedge can
+prune a large proportion of the edges with only a minor effect on the test
+accuracy. Specifically, in the PubMed dataset, Kedge learns to drop more than
+80% of the edges with an accuracy drop of merely 2% showing that graph structure
+has only a small contribution in comparison to node features. Finally, we also
+show that Kedge effectively counters the over-smoothing phenomena in deep GNNs
+by maintaining good task performance with increasing GNN layers.

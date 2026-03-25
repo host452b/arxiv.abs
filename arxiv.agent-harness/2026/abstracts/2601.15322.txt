@@ -1,0 +1,27 @@
+Title: Replayable Financial Agents: A Determinism-Faithfulness Assurance Harness for Tool-Using LLM Agents
+Authors: Raffi Khatchadourian
+ID: 2601.15322
+URL: https://arxiv.org/abs/2601.15322
+
+Abstract:
+LLM agents struggle with regulatory audit replay: when asked to reproduce a
+flagged transaction decision with identical inputs, many deployments fail to
+return consistent results. We introduce the Determinism-Faithfulness Assurance
+Harness (DFAH), a framework for measuring trajectory determinism, decision
+determinism, and evidence-conditioned faithfulness in tool-using agents deployed
+in financial services. Across 4,700+ agentic runs (7 models, 4 providers, 3
+financial benchmarks with 50 cases each at T=0.0), we find that decision
+determinism and task accuracy are not detectably correlated (r = -0.11, 95% CI
+[-0.49, 0.31], p = 0.63, n = 21 configurations): models can be deterministic
+without being accurate, and accurate without being deterministic. Because
+neither metric predicts the other in our sample, both must be measured
+independently, which is precisely what DFAH provides. Small models (7-20B)
+achieve near-perfect determinism through rigid pattern matching at the cost of
+accuracy (20-42%), while frontier models show moderate determinism (50-96%) with
+variable accuracy. No model achieves both perfect determinism and high accuracy,
+supporting DFAH's multi-dimensional measurement approach. We provide three
+financial benchmarks (compliance triage, portfolio constraints, and DataOps
+exceptions; 50 cases each) together with an open-source stress-test harness.
+Across these benchmarks and DFAH evaluation settings, Tier 1 models with
+schema-first architectures achieved determinism levels consistent with audit
+replay requirements.

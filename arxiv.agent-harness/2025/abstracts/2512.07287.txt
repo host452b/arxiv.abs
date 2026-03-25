@@ -1,0 +1,29 @@
+Title: Experience-Evolving Multi-Turn Tool-Use Agent with Hybrid Episodic-Procedural Memory
+Authors: Sijia Li, Yuchen Huang, Zifan Liu, Zijian Li, Jingjing fu et al.
+ID: 2512.07287
+URL: https://arxiv.org/abs/2512.07287
+
+Abstract:
+As intents unfold and environments change, multi-turn agents face continuously
+shifting decision contexts. Although reusing past experience is intuitively
+appealing, existing approaches remain limited: full trajectories are often too
+context-specific to transfer, while tool-level reuse ignores the surrounding
+context and environment. In this paper, we introduce a hybrid
+episodic-procedural memory strategy (H-EPM) that enables experience-induced
+self-evolution of multi-turn tool-use policies by adaptively reusing partially
+overlapping successful experiences during both inference and training. Inspired
+by human episodic-procedural integration, we construct a tool graph from
+accumulated trajectories, where recurring tool-to-tool dependencies capture
+procedural routines and each edge is augmented with compact episodic summaries
+of relevant context. At inference time, the agent dynamically balances episodic
+recall for contextual reasoning with procedural execution for routine steps.
+Beyond inference, H-EPM introduces a memory-guided reinforcement learning
+paradigm that directly addresses a core challenge in multi-turn agent
+reinforcement learning, namely ineffective exploration over long trajectories.
+By biasing exploration toward historically successful tool transitions, H-EPM
+learns a stronger policy that generalizes at inference time without relying on
+domain-specific experience collection. Experiments show that H-EPM consistently
+delivers substantial inference-time gains over strong baselines across
+multi-turn tool-use benchmarks, reaching improvements of up to fifty percent. It
+also improves reinforcement learning policy performance, achieving gains of up
+to forty percent on out-of-distribution tasks.

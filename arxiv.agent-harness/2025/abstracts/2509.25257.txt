@@ -1,0 +1,28 @@
+Title: RANGER -- Repository-Level Agent for Graph-Enhanced Retrieval
+Authors: Pratik Shah, Rajat Ghosh, Aryan Singhal, Debojyoti Dutta
+ID: 2509.25257
+URL: https://arxiv.org/abs/2509.25257
+
+General-purpose automated software engineering (ASE) includes tasks such as code
+completion, retrieval, repair, QA, and summarization. These tasks require a code
+retrieval system that can handle specific queries about code entities, or code
+entity queries (for example, locating a specific class or retrieving the
+dependencies of a function), as well as general queries without explicit code
+entities, or natural language queries (for example, describing a task and
+retrieving the corresponding code). We present RANGER, a repository-level code
+retrieval agent designed to address both query types, filling a gap in recent
+works that have focused primarily on code-entity queries. We first present a
+tool that constructs a comprehensive knowledge graph of the entire repository,
+capturing hierarchical and cross-file dependencies down to the variable level,
+and augments graph nodes with textual descriptions and embeddings to bridge the
+gap between code and natural language. RANGER then operates on this graph
+through a dual-stage retrieval pipeline. Entity-based queries are answered
+through fast Cypher lookups, while natural language queries are handled by MCTS-
+guided graph exploration. We evaluate RANGER across four diverse benchmarks that
+represent core ASE tasks including code search, question answering, cross-file
+dependency retrieval, and repository-level code completion. On CodeSearchNet and
+RepoQA it outperforms retrieval baselines that use embeddings from strong models
+such as Qwen3-8B. On RepoBench, it achieves superior cross-file dependency
+retrieval over baselines, and on CrossCodeEval, pairing RANGER with BM25
+delivers the highest exact match rate in code completion compared to other RAG
+methods.

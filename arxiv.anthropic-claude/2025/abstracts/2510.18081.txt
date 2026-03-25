@@ -1,0 +1,27 @@
+Title: Any-Depth Alignment: Unlocking Innate Safety Alignment of LLMs to Any-Depth
+Authors: Jiawei Zhang, Andrew Estornell, David D. Baek, Bo Li, Xiaojun Xu
+ID: 2510.18081
+URL: https://arxiv.org/abs/2510.18081
+
+Abstract:
+Large Language Models (LLMs) exhibit strong but shallow alignment: they directly
+refuse harmful queries when a refusal is expected at the very start of an
+assistant turn, yet this protection collapses once a harmful continuation is
+underway (either through the adversarial attacks or via harmful
+assistant-prefill attacks). This raises a fundamental question: Can the innate
+shallow alignment in LLMs be unlocked to ensure safety at arbitrary generation
+depths? To achieve this goal, we propose Any-Depth Alignment (ADA), an effective
+inference-time defense with negligible overhead. ADA is built based on our
+observation that alignment is concentrated in the assistant header tokens
+through repeated use in shallow-refusal training, and these tokens possess the
+model's strong alignment priors. By reintroducing these tokens mid-stream, ADA
+induces the model to reassess harmfulness and recover refusals at any point in
+generation. Across diverse open-source model families (Llama, Gemma, Mistral,
+Qwen, DeepSeek, and gpt-oss), ADA achieves robust safety performance without
+requiring any changes to the base model's parameters. It secures a near-100%
+refusal rate against challenging adversarial prefill attacks ranging from dozens
+to thousands of tokens. Furthermore, ADA reduces the average success rate of
+prominent adversarial prompt attacks (such as GCG, AutoDAN, PAIR, and TAP) to
+below 3%. This is all accomplished while preserving utility on benign tasks with
+minimal over-refusal. ADA maintains this resilience even after the base model
+undergoes subsequent instruction tuning (benign or adversarial).

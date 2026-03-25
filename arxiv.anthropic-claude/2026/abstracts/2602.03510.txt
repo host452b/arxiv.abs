@@ -1,0 +1,23 @@
+Title: Semantic Routing: Exploring Multi-Layer LLM Feature Weighting for Diffusion Transformers
+Authors: Bozhou Li, Yushuo Guan, Haolin Li, Bohan Zeng, Yiyan Ji et al. (+5)
+ID: 2602.03510
+URL: https://arxiv.org/abs/2602.03510
+
+Recent DiT-based text-to-image models increasingly adopt LLMs as text encoders,
+yet text conditioning remains largely static and often utilizes only a single
+LLM layer, despite pronounced semantic hierarchy across LLM layers and non-
+stationary denoising dynamics over both diffusion time and network depth. To
+better match the dynamic process of DiT generation and thereby enhance the
+diffusion model's generative capability, we introduce a unified normalized
+convex fusion framework equipped with lightweight gates to systematically
+organize multi-layer LLM hidden states via time-wise, depth-wise, and joint
+fusion. Experiments establish Depth-wise Semantic Routing as the superior
+conditioning strategy, consistently improving text-image alignment and
+compositional generation (e.g., +9.97 on the GenAI-Bench Counting task).
+Conversely, we find that purely time-wise fusion can paradoxically degrade
+visual generation fidelity. We attribute this to a train-inference trajectory
+mismatch: under classifier-free guidance, nominal timesteps fail to track the
+effective SNR, causing semantically mistimed feature injection during inference.
+Overall, our results position depth-wise routing as a strong and effective
+baseline and highlight the critical need for trajectory-aware signals to enable
+robust time-dependent conditioning.

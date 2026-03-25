@@ -1,0 +1,24 @@
+Title: Watermarking Language Models through Language Models
+Authors: Agnibh Dasgupta, Abdullah Tanvir, Xin Zhong
+ID: 2411.05091
+URL: https://arxiv.org/abs/2411.05091
+
+Watermarking the outputs of large language models (LLMs) is critical for
+provenance tracing, content regulation, and model accountability. Existing
+approaches often rely on access to model internals or are constrained by static
+rules and token-level perturbations. Moreover, the idea of steering generative
+behavior via prompt-based instruction control remains largely underexplored. We
+introduce a prompt-guided watermarking framework that operates entirely at the
+input level and requires no access to model parameters or decoding logits. The
+framework comprises three cooperating components: a Prompting LM that
+synthesizes watermarking instructions from user prompts, a Marking LM that
+generates watermarked outputs conditioned on these instructions, and a Detecting
+LM trained to classify whether a response carries an embedded watermark. This
+modular design enables dynamic watermarking that adapts to individual prompts
+while remaining compatible with diverse LLM architectures, including both
+proprietary and open-weight models. We evaluate the framework over 25
+combinations of Prompting and Marking LMs, such as GPT-4o, Mistral, LLaMA3, and
+DeepSeek. Experimental results show that watermark signals generalize across
+architectures and remain robust under fine-tuning, model distillation, and
+prompt-based adversarial attacks, demonstrating the effectiveness and robustness
+of the proposed approach.

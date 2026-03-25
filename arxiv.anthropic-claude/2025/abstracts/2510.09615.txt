@@ -1,0 +1,29 @@
+Title: A Biosecurity Agent for Lifecycle LLM Biosecurity Alignment
+Authors: Meiyin Meng, Zaixi Zhang
+ID: 2510.09615
+URL: https://arxiv.org/abs/2510.09615
+
+Abstract:
+Large language models (LLMs) are increasingly integrated into biomedical
+research workflows--from literature triage and hypothesis generation to
+experimental design--yet this expanded utility also heightens dual-use concerns,
+including the potential misuse for guiding toxic compound synthesis. In
+response, this study shows a Biosecurity Agent that comprises four coordinated
+modes across the model lifecycle: dataset sanitization, preference alignment,
+run-time guardrails, and automated red teaming. For dataset sanitization (Mode
+1), evaluation is conducted on CORD-19, a COVID-19 Open Research Dataset of
+coronavirus-related scholarly articles. We define three sanitization tiers--L1
+(compact, high-precision), L2 (human-curated biosafety terms), and L3
+(comprehensive union)--with removal rates rising from 0.46% to 70.40%,
+illustrating the safety-utility trade-off. For preference alignment (Mode 2),
+DPO with LoRA adapters internalizes refusals and safe completions, reducing
+end-to-end attack success rate (ASR) from 59.7% to 3.0%. At inference (Mode 3),
+run-time guardrails across L1-L3 show the expected security-usability trade-off:
+L2 achieves the best balance (F1 = 0.720, precision = 0.900, recall = 0.600, FPR
+=0.067), while L3 offers stronger jailbreak resistance at the cost of higher
+false positives. Under continuous automated red-teaming (Mode 4), no successful
+jailbreaks are observed under the tested protocol. Taken together, our
+biosecurity agent offers an auditable, lifecycle-aligned framework that reduces
+attack success while preserving benign utility, providing safeguards for the use
+of LLMs in scientific research and setting a precedent for future agent-level
+security protections.

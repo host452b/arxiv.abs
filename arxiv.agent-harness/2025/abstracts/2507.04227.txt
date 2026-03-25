@@ -1,0 +1,30 @@
+Title: Hijacking JARVIS: Benchmarking Mobile GUI Agents against Unprivileged Third Parties
+Authors: Guohong Liu, Jialei Ye, Jiacheng Liu, Yuanchun Li, Wei Liu et al. (+3)
+ID: 2507.04227
+URL: https://arxiv.org/abs/2507.04227
+
+Mobile GUI agents are designed to autonomously execute diverse device-control
+tasks by interpreting and interacting with mobile screens. Despite notable
+advancements, their resilience in real-world scenarios where screen content may
+be partially manipulated by untrustworthy third parties remains largely
+unexplored. Owing to their black-box and autonomous nature, these agents are
+vulnerable to manipulations that could compromise user devices. In this work, we
+present the first systematic investigation into the vulnerabilities of mobile
+GUI agents. We introduce a scalable attack simulation framework AgentHazard,
+which enables flexible and targeted modifications of screen content within
+existing applications. Leveraging this framework, we develop a comprehensive
+benchmark suite comprising both a dynamic task execution environment and a
+static dataset of vision-language-action tuples, totaling over 3,000 attack
+scenarios. The dynamic environment encompasses 58 reproducible tasks in an
+emulator with various types of hazardous UI content, while the static dataset is
+constructed from 210 screenshots collected from 14 popular commercial apps.
+Importantly, our content modifications are designed to be feasible for
+unprivileged third parties. We evaluate 7 widely-used mobile GUI agents and 5
+common backbone models using our benchmark. Our findings reveal that all
+examined agents are significantly influenced by misleading third-party content
+(with an average misleading rate of 28.8% in human-crafted attack scenarios) and
+that their vulnerabilities are closely linked to the employed perception
+modalities and backbone LLMs. Furthermore, we assess training-based mitigation
+strategies, highlighting both the challenges and opportunities for enhancing the
+robustness of mobile GUI agents. Our code and data will be released at
+https://agenthazard.github.io.

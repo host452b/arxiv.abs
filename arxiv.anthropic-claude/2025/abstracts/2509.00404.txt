@@ -1,0 +1,24 @@
+Title: Metis: Training LLMs with FP4 Quantization
+Authors: Hengjie Cao, Mengyi Chen, Yifeng Yang, Ruijun Huang, Fang Dong et al. (+11)
+ID: 2509.00404
+URL: https://arxiv.org/abs/2509.00404
+
+This work identifies anisotropy in the singular value spectra of parameters,
+activations, and gradients as the fundamental barrier to low-bit training of
+large language models (LLMs). These spectra are dominated by a small fraction of
+large singular values, inducing wide numerical ranges that cause quantization
+bias and severe spectral distortion, ultimately degrading training performance.
+This work presents Metis, a spectral-domain quantization framework that
+partitions anisotropic spectra into narrower sub-distributions for independent
+quantization, thereby reducing errors and preserving spectral structure. To
+minimize overhead, Metis leverages two key properties of the dominant spectral
+subspace: preservation via sparsely random sampling and preservation via random
+projection, reducing decomposition cost to a negligible level. On LLaMA-3 8B
+trained with 100B tokens, Metis enables robust W4A4G4 training with FP4
+quantization of weights, activations, and gradients, yielding only a 0.4%
+training loss gap and a 0.1% degradation in downstream accuracy relative to
+BF16. Beyond matching BF16 fidelity, Metis also surpasses our implementation of
+Nvidia's recently announced (yet to be publicly released) FP4 recipe,
+consistently achieving lower loss and higher downstream accuracy while incurring
+significantly lower computational overhead. The code implementation for Metis is
+available at: https://anonymous.4open.science/r/Metis-quantization-644B.

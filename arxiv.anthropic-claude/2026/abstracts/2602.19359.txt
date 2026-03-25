@@ -1,0 +1,25 @@
+Title: Vid2Sid: Videos Can Help Close the Sim2Real Gap
+Authors: Kevin Qiu, Yu Zhang, Marek Cygan, Josie Hughes
+ID: 2602.19359
+URL: https://arxiv.org/abs/2602.19359
+
+Abstract:
+Calibrating a robot simulator's physics parameters (friction, damping, material
+stiffness) to match real hardware is often done by hand or with black-box
+optimizers that reduce error but cannot explain which physical discrepancies
+drive the error. When sensing is limited to external cameras, the problem is
+further compounded by perception noise and the absence of direct force or state
+measurements. We present Vid2Sid, a video-driven system identification pipeline
+that couples foundation-model perception with a VLM-in-the-loop optimizer that
+analyzes paired sim-real videos, diagnoses concrete mismatches, and proposes
+physics parameter updates with natural language rationales. We evaluate our
+approach on a tendon-actuated finger (rigid-body dynamics in MuJoCo) and a
+deformable continuum tentacle (soft-body dynamics in PyElastica). On sim2real
+holdout controls unseen during training, Vid2Sid achieves the best average rank
+across all settings, matching or exceeding black-box optimizers while uniquely
+providing interpretable reasoning at each iteration. Sim2sim validation confirms
+that Vid2Sid recovers ground-truth parameters most accurately (mean relative
+error under 13\% vs. 28--98\%), and ablation analysis reveals three calibration
+regimes. VLM-guided optimization excels when perception is clean and the
+simulator is expressive, while model-class limitations bound performance in more
+challenging settings.

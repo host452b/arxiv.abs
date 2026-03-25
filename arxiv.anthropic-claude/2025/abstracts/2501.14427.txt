@@ -1,0 +1,24 @@
+Title: GraphSOS: Graph Sampling and Order Selection to Help LLMs Understand Graphs Better
+Authors: Xu Chu, Hanlin Xue, Zhijie Tan, Bingce Wang, Tong Mo et al.
+ID: 2501.14427
+URL: https://arxiv.org/abs/2501.14427
+
+Abstract:
+The success of Large Language Models (LLMs) in various domains has led
+researchers to apply them to graph-related problems by converting graph data
+into natural language text. However, unlike graph data, natural language
+inherently has sequential order. We observe a counter-intuitive fact that when
+the order of nodes or edges in the natural language description of a graph is
+shuffled, despite describing the same graph, model performance fluctuates
+between high performance and random guessing. Additionally, due to LLMs' limited
+input context length, current methods typically randomly sample neighbors of
+target nodes as representatives of their neighborhood, which may not always be
+effective for accurate reasoning. To address these gaps, we introduce GraphSOS
+(Graph Sampling and Order Selection). This novel model framework features an
+Order Selector Module to ensure proper serialization order of the graph and a
+Subgraph Sampling Module to sample subgraphs with better structure for better
+reasoning. Furthermore, we propose Graph CoT obtained through distillation, and
+enhance LLM's reasoning and zero-shot learning capabilities for graph tasks
+through instruction tuning. Experiments on multiple datasets for node
+classification and graph question-answering demonstrate that GraphSOS improves
+LLMs' performance and generalization ability on graph tasks.

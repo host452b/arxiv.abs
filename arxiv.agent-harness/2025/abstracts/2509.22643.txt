@@ -1,0 +1,27 @@
+Title: VLA-Reasoner: Empowering Vision-Language-Action Models with Reasoning via Online Monte Carlo Tree Search
+Authors: Wenkai Guo, Guanxing Lu, Haoyuan Deng, Zhenyu Wu, Yansong Tang et al.
+ID: 2509.22643
+URL: https://arxiv.org/abs/2509.22643
+
+Abstract:
+Vision-Language-Action models (VLAs) achieve strong performance in general
+robotic manipulation tasks by scaling imitation learning. However, existing VLAs
+are limited to predicting short-sighted next-action, which struggle with
+long-horizon trajectory tasks due to incremental deviations. To address this
+problem, we propose a plug-in framework named \method that effectively empowers
+off-the-shelf VLAs with the capability of foreseeing future states via test-time
+scaling. Specifically, \method samples and rolls out possible action
+trajectories where involved actions are rationales to generate future states via
+a world model, which enables \method to foresee and reason potential outcomes
+and search for the optimal actions. We further leverage Monte Carlo Tree Search
+(MCTS) to improve search efficiency in large action spaces, where step-wise VLA
+predictions seed the root. Meanwhile, we introduce a confidence sampling
+mechanism based on Kernel Density Estimation (KDE), to enable efficient
+exploration in MCTS without redundant VLA queries. We evaluate intermediate
+states in MCTS via an offline value estimation strategy, to score predicted
+futures and correct deviations with long-term feedback. We conducted extensive
+experiments in both simulators and the real world, demonstrating that our
+proposed VLA-Reasoner achieves significant improvements over the
+state-of-the-art VLAs. Our method highlights a potential pathway toward scalable
+test-time computation of robotic manipulation. The project website is available
+at: https://vla-reasoner.github.io/.

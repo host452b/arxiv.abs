@@ -2,13 +2,13 @@
 
 # arxiv.abs — arXiv 论文摘要库：AI 研究与科幻世界构建
 
-**29,000+ 篇 arXiv 论文摘要精选，横跨七大专题集（1996–2026），涵盖 AI/LLM 提示词工程、跨学科 AGI/科幻研究、AI Agent 技能、AI 与人类未来、健康科学、游戏开发以及人 × AI 协作开发新范式。**
+**41,000+ 篇 arXiv 论文摘要精选，横跨十一大专题集（1996–2026），涵盖 AI/LLM 提示词工程、跨学科 AGI/科幻研究、AI Agent 技能、AI 与人类未来、健康科学、游戏开发、人 × AI 协作开发、软件工程、QA/质量工程、LLM Agent 研究以及 Anthropic/Claude AI 研究。**
 
 ---
 
 ## 专题概览
 
-本仓库包含七大精选论文摘要集：
+本仓库包含十一大精选论文摘要集：
 
 | 专题 | 论文数 | 类别数 | 时间范围 |
 |------|--------|--------|---------|
@@ -19,7 +19,11 @@
 | [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 1,814 | 12 主题 | 无限制 |
 | [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,125 | 7 主题 | 无限制 |
 | [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 73 | 25 类别 | 2013–2026 |
-| **合计** | **29,201** | **139+** | |
+| [`arxiv.software-engineering`](arxiv.software-engineering/) | 4,418 | 35 类别 | 2020–2026 |
+| [`arxiv.qa-quality-engineering`](arxiv.qa-quality-engineering/) | 3,069 | 35 类别 | 2020–2026 |
+| [`arxiv.agent-harness`](arxiv.agent-harness/) | 2,177 | 42 主题 | 2020–2026 |
+| [`arxiv.anthropic-claude`](arxiv.anthropic-claude/) | 2,628 | 35 主题 | 2021–2026 |
+| **合计** | **~41,493** | **284+** | |
 
 ---
 
@@ -67,6 +71,22 @@
 ### 7. `arxiv.game-dev-with-ai` — 人 × AI 协作开发（新时代）
 
 73 篇精选摘要（从 542 篇原始结果中过滤），来自 25 组定向搜索，聚焦 AI 成为游戏开发**协同开发者和创意伙伴**的新兴领域。涵盖 LLM 辅助设计、共创系统、生成式资产、自主游戏设计等。
+
+### 8. `arxiv.software-engineering` — 现代软件工程（2020+）
+
+4,418 篇摘要，来自 42 组关键词搜索，覆盖现代软件工程全栈：桌面/前端开发、UI/UX、架构与设计模式、代码质量、安全、DevOps/CI-CD、AI 辅助开发以及软件品味与哲学。时间范围：2020–2026。
+
+### 9. `arxiv.qa-quality-engineering` — QA 与质量工程（2020+）
+
+3,069 篇摘要，来自 35 组关键词搜索，覆盖 QA 全生命周期：测试基础、自动化框架、混沌工程、AI/ML 测试、性能测试、安全测试、质量度量、SRE 及生产质量。贴合大厂 QE（质量工程师）行业趋势。时间范围：2020–2026。
+
+### 10. `arxiv.agent-harness` — LLM Agent 研究（2020+）
+
+2,177 篇摘要，来自 42 组关键词搜索，覆盖 Agent 全生命周期：框架与编排、规划与推理、工具调用、记忆管理、多 Agent 协调、基准评测、安全护栏、代码 Agent、Web/GUI Agent、RAG、长程任务与可观测性。时间范围：2020–2026。
+
+### 11. `arxiv.anthropic-claude` — Anthropic 与 Claude 研究（2021+）
+
+2,628 篇摘要，来自 35 组关键词搜索，覆盖 Claude 专属与 Anthropic 研究：Constitutional AI、RLHF/RLAIF、机理可解释性、稀疏自编码器、越狱、谄媚性、幻觉、缩放定律、涌现能力与长上下文技术。时间范围：2021–2026。
 
 ---
 

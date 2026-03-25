@@ -1,0 +1,23 @@
+Title: Scaling the Scaling Logic: Agentic Meta-Synthesis of Logic Reasoning
+Authors: Bowen Liu, Zhi Wu, Runquan Xie, Zhanhui Kang, Jia Li
+ID: 2602.13218
+URL: https://arxiv.org/abs/2602.13218
+
+Abstract:
+Scaling verifiable training signals remains a key bottleneck for Reinforcement
+Learning from Verifiable Rewards (RLVR). Logical reasoning is a natural
+substrate: constraints are formal and answers are programmatically checkable.
+However, prior synthesis pipelines either depend on expert-written code or
+operate within fixed templates/skeletons, which limits growth largely to
+instance-level perturbations. We propose SSLogic, an agentic meta-synthesis
+framework that scales at the task-family level by iteratively synthesizing and
+repairing executable Generator--Validator program pairs in a closed
+Generate--Validate--Repair loop, enabling continuous family evolution with
+controllable difficulty. To ensure reliability, we introduce a Multi-Gate
+Validation Protocol that combines multi-strategy consistency checks with
+Adversarial Blind Review, where independent agents must solve instances by
+writing and executing code to filter ambiguous or ill-posed tasks. Starting from
+400 seed families, two evolution rounds expand to 953 families and 21,389
+verifiable instances (from 5,718). Training on SSLogic-evolved data yields
+consistent gains over the seed baseline at matched training steps, improving
+SynLogic by +5.2, BBEH by +1.4, AIME25 by +3.0, and Brumo25 by +3.7.

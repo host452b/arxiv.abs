@@ -1,0 +1,28 @@
+Title: WebGuard: Building a Generalizable Guardrail for Web Agents
+Authors: Boyuan Zheng, Zeyi Liao, Scott Salisbury, Zeyuan Liu, Michael Lin et al. (+6)
+ID: 2507.14293
+URL: https://arxiv.org/abs/2507.14293
+
+The rapid development of autonomous web agents powered by Large Language Models
+(LLMs), while greatly elevating efficiency, exposes the frontier risk of taking
+unintended or harmful actions. This situation underscores an urgent need for
+effective safety measures, akin to access controls for human users. To address
+this critical challenge, we introduce WebGuard, the first comprehensive dataset
+designed to support the assessment of web agent action risks and facilitate the
+development of guardrails for real-world online environments. In doing so,
+WebGuard specifically focuses on predicting the outcome of state-changing
+actions and contains 4,939 human-annotated actions from 193 websites across 22
+diverse domains, including often-overlooked long-tail websites. These actions
+are categorized using a novel three-tier risk schema: SAFE, LOW, and HIGH. The
+dataset includes designated training and test splits to support evaluation under
+diverse generalization settings. Our initial evaluations reveal a concerning
+deficiency: even frontier LLMs achieve less than 60% accuracy in predicting
+action outcomes and less than 60% recall in lagging HIGH-risk actions,
+highlighting the risks of deploying current-generation agents without dedicated
+safeguards. We therefore investigate fine-tuning specialized guardrail models
+using WebGuard. We conduct comprehensive evaluations across multiple
+generalization settings and find that a fine-tuned Qwen2.5VL-7B model yields a
+substantial improvement in performance, boosting accuracy from 37% to 80% and
+HIGH-risk action recall from 20% to 76%. Despite these improvements, the
+performance still falls short of the reliability required for high-stakes
+deployment, where guardrails must approach near-perfect accuracy and recall.

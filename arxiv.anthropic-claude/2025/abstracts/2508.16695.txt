@@ -1,0 +1,25 @@
+Title: Do Cognitively Interpretable Reasoning Traces Improve LLM Performance?
+Authors: Siddhant Bhambri, Upasana Biswas, Subbarao Kambhampati
+ID: 2508.16695
+URL: https://arxiv.org/abs/2508.16695
+
+Recent progress in reasoning-oriented Large Language Models (LLMs) has been
+driven by introducing Chain-of-Thought (CoT) traces, where models generate
+intermediate reasoning traces before producing an answer. These traces, as in
+DeepSeek R1, are not only used to guide inference but also serve as supervision
+signals for distillation into smaller models. A common but often implicit
+assumption is that CoT traces should be semantically meaningful and
+interpretable to the end user. While recent research questions the need for
+semantic nature of these traces, in this paper, we ask: ``\textit{Must CoT
+reasoning traces be interpretable to enhance LLM task performance?}" We
+investigate this question in the Open Book Question-Answering domain by
+supervised fine-tuning LLaMA and Qwen models on four types of reasoning traces:
+(1) DeepSeek R1 traces, (2) LLM-generated summaries of R1 traces, (3) LLM-
+generated post-hoc explanations of R1 traces, and (4) algorithmically generated
+verifiably correct traces. To quantify the trade-off between interpretability
+and performance, we further conduct a human-subject study with 100 participants
+rating the interpretability of each trace type. Our results reveal a striking
+mismatch: while fine-tuning on R1 traces yields the strongest performance,
+participants judged these traces to be the least interpretable. These findings
+suggest that it is useful to decouple intermediate tokens from end user
+interpretability.

@@ -1,0 +1,29 @@
+Title: Implicit Hypergraph Neural Network
+Authors: Akash Choudhuri, Yongjian Zhong, Bijaya Adhikari
+ID: 2508.14101
+URL: https://arxiv.org/abs/2508.14101
+
+Hypergraphs offer a generalized framework for capturing high-order relationships
+between entities and have been widely applied in various domains, including
+healthcare, social networks, and bioinformatics. Hypergraph neural networks,
+which rely on message-passing between nodes over hyperedges to learn latent
+representations, have emerged as the method of choice for predictive tasks in
+many of these domains. These approaches typically perform only a small number of
+message-passing rounds to learn the representations, which they then utilize for
+predictions. The small number of message-passing rounds comes at a cost, as the
+representations only capture local information and forego long-range high-order
+dependencies. However, as we demonstrate, blindly increasing the message-passing
+rounds to capture long-range dependency also degrades the performance of hyper-
+graph neural networks.   Recent works have demonstrated that implicit graph
+neural networks capture long-range dependencies in standard graphs while
+maintaining performance. Despite their popularity, prior work has not studied
+long-range dependency issues on hypergraph neural networks. Here, we first
+demonstrate that existing hypergraph neural networks lose predictive power when
+aggregating more information to capture long-range dependency. We then propose
+Implicit Hypergraph Neural Network (IHNN), a novel framework that jointly learns
+fixed-point representations for both nodes and hyperedges in an end-to-end
+manner to alleviate this issue. Leveraging implicit differentiation, we
+introduce a tractable projected gradient descent approach to train the model
+efficiently. Extensive experiments on real-world hypergraphs for node
+classification demonstrate that IHNN outperforms the closest prior works in most
+settings, establishing a new state-of-the-art in hypergraph learning.

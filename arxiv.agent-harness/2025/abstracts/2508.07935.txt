@@ -1,0 +1,24 @@
+Title: SHIELDA: Structured Handling of Exceptions in LLM-Driven Agentic Workflows
+Authors: Jingwen Zhou, Jieshan Chen, Qinghua Lu, Dehai Zhao, Liming Zhu
+ID: 2508.07935
+URL: https://arxiv.org/abs/2508.07935
+
+Abstract:
+Large Language Model (LLM) agentic systems are software systems powered by LLMs
+that autonomously reason, plan, and execute multi-step workflows to achieve
+human goals, rather than merely executing predefined steps. During execution,
+these workflows frequently encounter exceptions. Existing exception handling
+solutions often treat exceptions superficially, failing to trace execution-phase
+exceptions to their reasoning-phase root causes. Furthermore, their recovery
+logic is brittle, lacking structured escalation pathways when initial attempts
+fail. To tackle these challenges, we first present a comprehensive taxonomy of
+36 exception types across 12 agent artifacts. Building on this, we propose
+SHIELDA (Structured Handling of Exceptions in LLM-Driven Agentic Workflows), a
+modular runtime exception handling framework for LLM agentic workflows. SHIELDA
+uses an exception classifier to select a predefined exception handling pattern
+from a handling pattern registry. These patterns are then executed via a
+structured handling executor, comprising local handling, flow control, and state
+recovery, to enable phase-aware recovery by linking exceptions to their root
+causes and facilitating composable strategies. We validate SHIELDA's
+effectiveness through a case study on the AutoPR agent, demonstrating effective,
+cross-phase recovery from a reasoning-induced exception.

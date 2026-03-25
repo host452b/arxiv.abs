@@ -1,0 +1,31 @@
+Title: LLM Probability Concentration: How Alignment Shrinks the Generative Horizon
+Authors: Chenghao Yang, Sida Li, Ari Holtzman
+ID: 2506.17871
+URL: https://arxiv.org/abs/2506.17871
+
+Abstract:
+Despite their impressive capabilities, aligned large language models (LLMs)
+often generate outputs that lack diversity. What drives this consistency in the
+generation? We investigate this phenomenon through the lens of probability
+concentration in the model's output distribution. To quantify this
+concentration, we introduce the *Branching Factor* (BF) -- a token-invariant
+measure of the effective number of plausible next steps during generation. Our
+empirical analysis reveals two key findings: (1) BF often decreases as
+generation progresses, suggesting that LLMs become more predictable as they
+generate. (2) alignment tuning substantially sharpens the model's output
+distribution from the outset, reducing BF by a factor of 2-5 overall, and up to
+an order of magnitude (e.g., from 12 to 1.2) at the beginning positions. This
+stark reduction helps explain why aligned models often appear less sensitive to
+decoding strategies. Building on this insight, we find this consistency has
+surprising implications for complex reasoning. Aligned Chain-of-Thought (CoT)
+models (e.g., DeepSeek-distilled models), for instance, leverage this effect; by
+generating longer reasoning chains, they push generation into later, more
+deterministic (lower BF) stages, resulting in more stable outputs. We
+hypothesize that alignment tuning does not fundamentally change a model's
+behavior, but instead steers it toward stylistic tokens (e.g., "Sure") that
+unlock low-entropy trajectories already present in the base model. This view is
+supported by nudging experiments, which show prompting base models with such
+tokens can similarly reduce BF. Together, our findings establish BF as a
+powerful diagnostic for understanding and controlling LLM outputs - clarifying
+how alignment reduces variability, how CoT promotes stable generations, and how
+base models can be steered away from diversity.

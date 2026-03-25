@@ -1,0 +1,24 @@
+Title: Safe Transformer: An Explicit Safety Bit For Interpretable And Controllable Alignment
+Authors: Jingyuan Feng, Andrew Gambardella, Gouki Minegishi, Takeshi Kojima, Yusuke Iwasawa et al.
+ID: 2603.06727
+URL: https://arxiv.org/abs/2603.06727
+
+Abstract:
+Current safety alignment methods encode safe behavior implicitly within model
+parameters, creating a fundamental opacity: we cannot easily inspect why a model
+refuses a request, nor intervene when its safety judgments fail. We propose Safe
+Transformer, a modular approach that augments pre-trained language models by
+inserting a discrete information bottleneck containing an explicit safety bit
+between transformer layers. The safety bit serves as both an interpretable
+signal of the model's safety classification and a controllable switch: through
+contrastive training, the model learns disentangled representations where the
+safety bit governs the behavioral mode - producing helpful responses when $s=1$
+and refusals when $s=0$ - while additional unsupervised bits $u$ encode semantic
+content for generation. Additional unsupervised bits in the information
+bottleneck allow semantic information to flow through, preserving the model's
+generation capabilities. This design achieves both interpretability (the safety
+decision is directly readable) and controllability (the safety bit can be
+manually overridden), requiring only lightweight fine-tuning without
+pre-training from scratch. In red-team benchmarks, Safe Transformer achieves
+near-zero Attack Success Rate, substantially outperforming base models and
+safety fine-tuning baselines.

@@ -1,0 +1,30 @@
+Title: Breaking the Data Barrier -- Building GUI Agents Through Task Generalization
+Authors: Junlei Zhang, Zichen Ding, Chang Ma, Zijie Chen, Qiushi Sun et al. (+2)
+ID: 2504.10127
+URL: https://arxiv.org/abs/2504.10127
+
+Graphical User Interface (GUI) agents offer cross-platform solutions for
+automating complex digital tasks, with significant potential to transform
+productivity workflows. However, their performance is often constrained by the
+scarcity of high-quality trajectory data. To address this limitation, we propose
+training Vision Language Models (VLMs) on data-rich, reasoning-intensive tasks
+during a dedicated mid-training stage, and then examine how incorporating these
+tasks facilitates generalization to GUI planning scenarios. Specifically, we
+explore a range of tasks with readily available instruction-tuning data,
+including GUI perception, multimodal reasoning, and textual reasoning. Through
+extensive experiments across 11 mid-training tasks, we demonstrate that: (1)
+Task generalization proves highly effective, yielding substantial improvements
+across most settings. For instance, multimodal mathematical reasoning enhances
+performance on AndroidWorld by an absolute 6.3%. Remarkably, text-only
+mathematical data significantly boosts GUI web agent performance, achieving a
+5.6% improvement on WebArena and 5.4% improvement on AndroidWorld, underscoring
+notable cross-modal generalization from text-based to visual domains; (2)
+Contrary to prior assumptions, GUI perception data - previously considered
+closely aligned with GUI agent tasks and widely utilized for training - has a
+comparatively limited impact on final performance; (3) Building on these
+insights, we identify the most effective mid-training tasks and curate optimized
+mixture datasets, resulting in absolute performance gains of 8.0% on WebArena
+and 12.2% on AndroidWorld. Our work provides valuable insights into cross-domain
+knowledge transfer for GUI agents and offers a practical approach to addressing
+data scarcity challenges in this emerging field. The code, data and models will
+be available at https://github.com/hkust-nlp/GUIMid.

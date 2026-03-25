@@ -1,0 +1,30 @@
+Title: Understanding and Preserving Safety in Fine-Tuned LLMs
+Authors: Jiawen Zhang, Yangfan Hu, Kejia Chen, Lipeng He, Jiachen Ma et al. (+5)
+ID: 2601.10141
+URL: https://arxiv.org/abs/2601.10141
+
+Fine-tuning is an essential and pervasive functionality for applying large
+language models (LLMs) to downstream tasks. However, it has the potential to
+substantially degrade safety alignment, e.g., by greatly increasing
+susceptibility to jailbreak attacks, even when the fine-tuning data is entirely
+harmless. Despite garnering growing attention in defense efforts during the
+fine-tuning stage, existing methods struggle with a persistent safety-utility
+dilemma: emphasizing safety compromises task performance, whereas prioritizing
+utility typically requires deep fine-tuning that inevitably leads to steep
+safety declination.   In this work, we address this dilemma by shedding new
+light on the geometric interaction between safety- and utility-oriented
+gradients in safety-aligned LLMs. Through systematic empirical analysis, we
+uncover three key insights: (I) safety gradients lie in a low-rank subspace,
+while utility gradients span a broader high-dimensional space; (II) these
+subspaces are often negatively correlated, causing directional conflicts during
+fine-tuning; and (III) the dominant safety direction can be efficiently
+estimated from a single sample. Building upon these novel insights, we propose
+safety-preserving fine-tuning (SPF), a lightweight approach that explicitly
+removes gradient components conflicting with the low-rank safety subspace.
+Theoretically, we show that SPF guarantees utility convergence while bounding
+safety drift. Empirically, SPF consistently maintains downstream task
+performance and recovers nearly all pre-trained safety alignment, even under
+adversarial fine-tuning scenarios. Furthermore, SPF exhibits robust resistance
+to both deep fine-tuning and dynamic jailbreak attacks. Together, our findings
+provide new mechanistic understanding and practical guidance toward always-
+aligned LLM fine-tuning.

@@ -1,0 +1,22 @@
+Title: Repairing Tool Calls Using Post-tool Execution Reflection and RAG
+Authors: Jason Tsay, Zidane Wright, Gaodan Fang, Kiran Kate, Saurabh Jha et al.
+ID: 2510.17874
+URL: https://arxiv.org/abs/2510.17874
+
+Abstract:
+Agentic systems interact with external systems by calling tools such as Python
+functions, REST API endpoints, or command line tools such as kubectl in
+Kubernetes. These tool calls often fail for various syntactic and semantic
+reasons. Some less obvious semantic errors can only be identified and resolved
+after analyzing the tool's response. To repair these errors, we develop a
+post-tool execution reflection component that combines large language model
+(LLM)-based reflection with domain-specific retrieval-augmented generation (RAG)
+using documents describing both the specific tool being called and
+troubleshooting documents related to the tool. For this paper, we focus on the
+use case of the kubectl command line tool to manage Kubernetes, a platform for
+orchestrating cluster applications. Through a larger empirical study and a
+smaller manual evaluation, we find that our RAG-based reflection will repair
+kubectl commands such that they are both more likely to successfully execute
+(pass rate) for 55% of our models evaluated and 36% more likely to correctly
+answer the user query on average. We find that troubleshooting documents improve
+pass rate compared to official documentation by an average of 10%.

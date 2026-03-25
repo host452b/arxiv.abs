@@ -1,0 +1,26 @@
+Title: VecTrans: Enhancing Compiler Auto-Vectorization through LLM-Assisted Code Transformations
+Authors: Zhongchun Zheng, Kan Wu, Long Cheng, Lu Li, Rodrigo C. O. Rocha et al. (+5)
+ID: 2503.19449
+URL: https://arxiv.org/abs/2503.19449
+
+Auto-vectorization is a fundamental optimization for modern compilers to exploit
+SIMD parallelism. However, state-of-the-art approaches still struggle to handle
+intricate code patterns, often requiring manual hints or domain-specific
+expertise. Large language models (LLMs), with their ability to capture intricate
+patterns, provide a promising solution, yet their effective application in
+compiler optimizations remains an open challenge due to issues such as
+hallucinations and a lack of domain-specific reasoning. In this paper, we
+present VecTrans, a novel framework that leverages LLMs to enhance compiler-
+based code vectorization. VecTrans first employs compiler analysis to identify
+potentially vectorizable code regions. It then utilizes an LLM to refactor these
+regions into patterns that are more amenable to the compilers auto-
+vectorization. To ensure semantic correctness, VecTrans further integrates a
+hybrid validation mechanism at the intermediate representation (IR) level. With
+the above efforts, VecTrans combines the adaptability of LLMs with the precision
+of compiler vectorization, thereby effectively opening up the vectorization
+opportunities. experimental results show that among all TSVC functions
+unvectorizable by GCC, ICC, Clang, and BiSheng Compiler, VecTrans achieves an
+geomean speedup of 1.77x and successfully vectorizes 24 of 51 test cases. This
+marks a significant advancement over state-of-the-art approaches while
+maintaining a cost efficiency of $0.012 per function optimization for LLM API
+usage.

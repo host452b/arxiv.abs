@@ -1,0 +1,22 @@
+Title: Sentence Curve Language Models
+Authors: DongNyeong Heo, Heeyoul Choi
+ID: 2602.01807
+URL: https://arxiv.org/abs/2602.01807
+
+Language models (LMs) are a central component of modern AI systems, and
+diffusion-based language models (DLMs) have recently emerged as a competitive
+alternative. Both paradigms rely on word embeddings not only to represent the
+input sentence, but also to represent the target sentence that backbone models
+are trained to predict. We argue that such static embedding of the target word
+is insensitive to neighboring words, encouraging locally accurate word
+prediction while neglecting global structure across the target sentence. To
+address this limitation, we propose a continuous sentence representation, termed
+sentence curve, defined as a spline curve whose control points affect multiple
+words in the sentence. Based on this representation, we introduce sentence curve
+language model (SCLM), which extends DLMs to predict sentence curves instead of
+the static word embeddings. We theoretically show that sentence curve prediction
+induces a regularization effect that promotes global structure modeling, and
+characterize how different sentence curve types affect this behavior.
+Empirically, SCLM achieves SOTA performance among DLMs on IWSLT14 and WMT14,
+shows stable training without burdensome knowledge distillation, and
+demonstrates promising potential compared to discrete DLMs on LM1B.

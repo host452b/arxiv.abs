@@ -1,0 +1,25 @@
+Title: OncoReason: Structuring Clinical Reasoning in LLMs for Robust and Interpretable Survival Prediction
+Authors: Raghu Vamshi Hemadri, Geetha Krishna Guruju, Kristi Topollai, Anna Ewa Choromanska
+ID: 2510.17532
+URL: https://arxiv.org/abs/2510.17532
+
+Predicting cancer treatment outcomes requires models that are both accurate and
+interpretable, particularly in the presence of heterogeneous clinical data.
+While large language models (LLMs) have shown strong performance in biomedical
+NLP, they often lack structured reasoning capabilities critical for high-stakes
+decision support. We present a unified, multi-task learning framework that
+aligns autoregressive LLMs with clinical reasoning for outcome prediction on the
+MSK-CHORD dataset. Our models are trained to jointly perform binary survival
+classification, continuous survival time regression, and natural language
+rationale generation. We evaluate three alignment strategies: (1) standard
+supervised fine-tuning (SFT), (2) SFT with Chain-of-Thought (CoT) prompting to
+elicit step-by-step reasoning, and (3) Group Relative Policy Optimization
+(GRPO), a reinforcement learning method that aligns model outputs to expert-
+derived reasoning trajectories. Experiments with LLaMa3-8B and Med42-8B
+backbones demonstrate that CoT prompting improves F1 by +6.0 and reduces MAE by
+12%, while GRPO achieves state-of-the-art interpretability and predictive
+performance across BLEU, ROUGE, and BERTScore. We further show that existing
+biomedical LLMs often fail to produce valid reasoning traces due to
+architectural constraints. Our findings underscore the importance of reasoning-
+aware alignment in multi-task clinical modeling and set a new benchmark for
+interpretable, trustworthy LLMs in precision oncology.

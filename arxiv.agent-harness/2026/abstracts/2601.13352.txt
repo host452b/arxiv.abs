@@ -1,0 +1,21 @@
+Title: LLM-as-RNN: A Recurrent Language Model for Memory Updates and Sequence Prediction
+Authors: Yuxing Lu, J. Ben Tamo, Weichen Zhao, Nan Sun, Yishan Zhong et al.
+ID: 2601.13352
+URL: https://arxiv.org/abs/2601.13352
+
+Abstract:
+Large language models are strong sequence predictors, yet standard inference
+relies on immutable context histories. After making an error at generation step
+t, the model lacks an updatable memory mechanism that improves predictions for
+step t+1. We propose LLM-as-RNN, an inference-only framework that turns a frozen
+LLM into a recurrent predictor by representing its hidden state as
+natural-language memory. This state, implemented as a structured system-prompt
+summary, is updated at each timestep via feedback-driven text rewrites, enabling
+learning without parameter updates. Under a fixed token budget, LLM-as-RNN
+corrects errors and retains task-relevant patterns, effectively performing
+online learning through language. We evaluate the method on three sequential
+benchmarks in healthcare, meteorology, and finance across Llama, Gemma, and GPT
+model families. LLM-as-RNN significantly outperforms zero-shot, full-history,
+and MemPrompt baselines, improving predictive accuracy by 6.5% on average, while
+producing interpretable, human-readable learning traces absent in standard
+context accumulation.

@@ -1,0 +1,28 @@
+Title: AgentOrchestra: Orchestrating Multi-Agent Intelligence with the Tool-Environment-Agent(TEA) Protocol
+Authors: Wentao Zhang, Liang Zeng, Yuzhen Xiao, Yongcong Li, Ce Cui et al.
+ID: 2506.12508
+URL: https://arxiv.org/abs/2506.12508
+
+Abstract:
+Recent advances in LLM-based agent systems have shown promise in tackling
+complex, long-horizon tasks. However, existing LLM-based agentprotocols (e.g.,
+A2A and MCP) under-specify cross-entity lifecycle and context management,
+version tracking, and ad-hoc environment integration, which in turn encourages
+fixed, monolithic agent compositions and brittle glue code. To address these
+limitations, we introduce the Tool-Environment-Agent (TEA) protocol, a unified
+abstraction that models environments, agents, and tools as first-class resources
+with explicit lifecycles and versioned interfaces. TEA provides a principled
+foundation for end-to-end lifecycle and version management, and for associating
+each run with its context and outputs across components, improving traceability
+and reproducibility. Moreover, TEA enables continual self-evolution of
+agent-associated components through a closed feedback loop, producing improved
+versions while supporting version selection and rollback. Building on TEA, we
+present AgentOrchestra, a hierarchical multi-agent framework in which a central
+planner orchestrates specialized sub-agents for web navigation, data analysis,
+and file operations, and supports continual adaptation by dynamically
+instantiating, retrieving, and refining tools online during execution. We
+evaluate AgentOrchestra on three challenging benchmarks, where it consistently
+outperforms strong baselines and achieves 89.04% on GAIA, establishing
+state-of-the-art performance to the best of our knowledge. Overall, our results
+provide evidence that TEA and hierarchical orchestration improve scalability and
+generality in multi-agent systems.

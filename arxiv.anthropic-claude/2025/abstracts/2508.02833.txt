@@ -1,0 +1,25 @@
+Title: TIC-GRPO: Provable and Efficient Optimization for Reinforcement Learning from Human Feedback
+Authors: Lei Pang, Jun Luo, Ruinan Jin
+ID: 2508.02833
+URL: https://arxiv.org/abs/2508.02833
+
+Abstract:
+Group Relative Policy Optimization (GRPO), recently introduced by DeepSeek, is a
+critic-free reinforcement learning algorithm for fine-tuning large language
+models. GRPO replaces the value function in Proximal Policy Optimization (PPO)
+with group-normalized rewards while retaining PPO-style token-level importance
+sampling based on an old policy. Our theoretical analysis reveals that the GRPO
+update rule estimates the policy gradient at the old policy rather than the
+current one; however, since the old policy is refreshed every few steps, the
+resulting discrepancy remains small and the induced bias is negligible in
+practice. To empirically validate this insight, we conduct an ablation study
+that entirely removes importance sampling and performs multiple optimization
+steps using gradients estimated at a fixed old policy. Remarkably, this
+simplified variant attains performance comparable to standard GRPO. Motivated by
+this finding, we propose Trajectory-level Importance-Corrected GRPO (TIC-GRPO),
+a new algorithm that replaces token-level importance ratios with a single
+trajectory-level probability ratio, thereby yielding an estimate of the current
+policy gradient while preserving the critic-free structure. Furthermore, we
+present the first convergence analysis for GRPO-style methods and show that
+TIC-GRPO converges faster than GRPO. Finally, empirical results across math
+reasoning and coding tasks demonstrate the superiority of TIC-GRPO.

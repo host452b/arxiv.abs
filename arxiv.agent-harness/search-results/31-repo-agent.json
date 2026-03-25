@@ -1,0 +1,1039 @@
+{
+  "query": {
+    "terms": {
+      "title": "repository agent or codebase agent"
+    },
+    "subjects": [
+      "cs"
+    ],
+    "op": "and",
+    "from": "2020-01",
+    "to": "",
+    "max": 200,
+    "searched_at": "2026-03-25T22:10:52Z"
+  },
+  "groups": [
+    {
+      "source": "arxiv",
+      "count": 36,
+      "papers": [
+        {
+          "id": "2603.16011",
+          "title": "Evaluating Agentic Optimization on Large Codebases",
+          "authors": [
+            "Atharva Sehgal",
+            "James Hou",
+            "Akanksha Sarkar",
+            "Ishaan Mantripragada",
+            "Swarat Chaudhuri",
+            "Jennifer J. Sun",
+            "Yisong Yue"
+          ],
+          "abstract": "Large language model (LLM) coding agents increasingly operate at the repository level, motivating benchmarks that evaluate their ability to optimize entire codebases under realistic constraints. Existing code benchmarks largely rely on synthetic tasks, binary correctness signals, or single-objective evaluation, limiting their ability to assess holistic optimization behavior. We introduce FormulaCode, a benchmark for evaluating agentic optimization on large, real-world codebases with fine-grained, multi-objective performance metrics. FormulaCode comprises 957 performance bottlenecks mined from scientific Python repositories on GitHub, each paired with expert-authored patches and, on average, 264.6 community-maintained performance workloads per task, enabling the holistic ability of LLM agents to optimize codebases under realistic correctness and performance constraints. Our evaluations reveal that repository-scale, multi-objective optimization remains a major challenge for frontier LLM agents. Project website at: https://formula-code.github.io",
+          "categories": [
+            "cs.SE",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "published": "2026-03-16T23:40:19Z",
+          "updated": "2026-03-16T23:40:19Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.16011",
+          "html_url": "https://arxiv.org/html/2603.16011",
+          "abs_url": "https://arxiv.org/abs/2603.16011",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.16011"
+        },
+        {
+          "id": "2602.20478",
+          "title": "Codified Context: Infrastructure for AI Agents in a Complex Codebase",
+          "authors": [
+            "Aristidis Vasilopoulos"
+          ],
+          "abstract": "LLM-based agentic coding assistants lack persistent memory: they lose coherence across sessions, forget project conventions, and repeat known mistakes. Recent studies characterize how developers configure agents through manifest files, but an open challenge remains how to scale such configurations for large, multi-agent projects. This paper presents a three-component codified context infrastructure developed during construction of a 108,000-line C# distributed system: (1) a hot-memory constitution encoding conventions, retrieval hooks, and orchestration protocols; (2) 19 specialized domain-expert agents; and (3) a cold-memory knowledge base of 34 on-demand specification documents. Quantitative metrics on infrastructure growth and interaction patterns across 283 development sessions are reported alongside four observational case studies illustrating how codified context propagates across sessions to prevent failures and maintain consistency. The framework is published as an open-source companion repository.",
+          "categories": [
+            "cs.SE"
+          ],
+          "published": "2026-02-24T02:11:26Z",
+          "updated": "2026-02-24T02:11:26Z",
+          "pdf_url": "https://arxiv.org/pdf/2602.20478",
+          "html_url": "https://arxiv.org/html/2602.20478",
+          "abs_url": "https://arxiv.org/abs/2602.20478",
+          "citations": 1,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2602.20478"
+        },
+        {
+          "id": "2512.10398",
+          "title": "Confucius Code Agent: Scalable Agent Scaffolding for Real-World Codebases",
+          "authors": [
+            "Sherman Wong",
+            "Zhenting Qi",
+            "Zhaodong Wang",
+            "Nathan Hu",
+            "Samuel Lin",
+            "Jun Ge",
+            "Erwin Gao",
+            "Wenlin Chen",
+            "Yilun Du",
+            "Minlan Yu",
+            "Ying Zhang"
+          ],
+          "abstract": "Real-world software engineering tasks require coding agents that can operate on massive repositories, sustain long-horizon sessions, and reliably coordinate complex toolchains at test time. Existing research-grade coding agents offer transparency but struggle when scaled to heavier, production-level workloads, while production-grade systems achieve strong practical performance but provide limited extensibility, interpretability, and controllability. We introduce the Confucius Code Agent (CCA), a software engineering agent that can operate at large-scale codebases. CCA is built on top of the Confucius SDK, an agent development platform structured around three complementary perspectives: Agent Experience (AX), User Experience (UX), and Developer Experience (DX). The SDK supports a unified orchestrator with advanced context management for long-context reasoning, a persistent note-taking system for cross-session continual learning, and a modular extension system for reliable tool use. In addition, we introduce a meta-agent that automates the construction, evaluation, and refinement of agents through a build-test-improve cycle, enabling rapid agent development on new tasks and tool stacks. Instantiated on the Confucius SDK using the meta-agent, CCA demonstrates strong performance on real-world software engineering tasks. On SWE-Bench-Pro, CCA achieves a Resolve@1 of 59%, exceeding prior research baselines as well as commercial results, under identical repositories, model backends, and tool access.",
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.LG",
+            "cs.SE"
+          ],
+          "published": "2025-12-11T08:05:58Z",
+          "updated": "2026-02-03T05:01:47Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.10398",
+          "html_url": "https://arxiv.org/html/2512.10398",
+          "abs_url": "https://arxiv.org/abs/2512.10398",
+          "citations": 3,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.10398"
+        },
+        {
+          "id": "2601.20789",
+          "title": "SERA: Soft-Verified Efficient Repository Agents",
+          "authors": [
+            "Ethan Shen",
+            "Danny Tormoen",
+            "Saurabh Shah",
+            "Ali Farhadi",
+            "Tim Dettmers"
+          ],
+          "abstract": "Open-weight coding agents should hold a fundamental advantage over closed-source systems: they can be specialized to private codebases, encoding repository-specific information directly in their weights. Yet the cost and complexity of training has kept this advantage theoretical. We show it is now practical. We present Soft-Verified Efficient Repository Agents (SERA), an efficient method for training coding agents that enables the rapid and cheap creation of agents specialized to private codebases. Using only supervised finetuning (SFT), SERA achieves state-of-the-art results among fully open-source (open data, method, code) models while matching the performance of frontier open-weight models like Devstral-Small-2. Creating SERA models is 26x cheaper than reinforcement learning and 57x cheaper than previous synthetic data methods to reach equivalent performance. Our method, Soft Verified Generation (SVG), generates thousands of trajectories from a single code repository. Combined with cost-efficiency, this enables specialization to private codebases. Beyond repository specialization, we apply SVG to a larger corpus of codebases, generating over 200,000 synthetic trajectories. We use this dataset to provide detailed analysis of scaling laws, ablations, and confounding factors for training coding agents. Overall, we believe our work will greatly accelerate research on open coding agents and showcase the advantage of open-source models that can specialize to private codebases. We release SERA as the first model in Ai2's Open Coding Agents series, along with all our code, data, and Claude Code integration to support the research community.",
+          "categories": [
+            "cs.CL",
+            "cs.LG",
+            "cs.SE"
+          ],
+          "published": "2026-01-28T17:27:08Z",
+          "updated": "2026-02-02T19:55:32Z",
+          "pdf_url": "https://arxiv.org/pdf/2601.20789",
+          "html_url": "https://arxiv.org/html/2601.20789",
+          "abs_url": "https://arxiv.org/abs/2601.20789",
+          "citations": 2,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2601.20789"
+        },
+        {
+          "id": "2406.12276",
+          "title": "CodeNav: Beyond tool-use to using real-world codebases with LLM agents",
+          "authors": [
+            "Tanmay Gupta",
+            "Luca Weihs",
+            "Aniruddha Kembhavi"
+          ],
+          "abstract": "We present CodeNav, an LLM agent that navigates and leverages previously unseen code repositories to solve user queries. In contrast to tool-use LLM agents that require ``registration'' of all relevant tools via manual descriptions within the LLM context, CodeNav automatically indexes and searches over code blocks in the target codebase, finds relevant code snippets, imports them, and uses them to iteratively generate a solution with execution feedback. To highlight the core-capabilities of CodeNav, we first showcase three case studies where we use CodeNav for solving complex user queries using three diverse codebases. Next, on three benchmarks, we quantitatively compare the effectiveness of code-use (which only has access to the target codebase) to tool-use (which has privileged access to all tool names and descriptions). Finally, we study the effect of varying kinds of tool and library descriptions on code-use performance, as well as investigate the advantage of the agent seeing source code as opposed to natural descriptions of code. All code will be made open source under a permissive license.",
+          "categories": [
+            "cs.AI",
+            "cs.CL",
+            "cs.SE"
+          ],
+          "published": "2024-06-18T05:10:38Z",
+          "updated": "2024-06-18T05:10:38Z",
+          "pdf_url": "https://arxiv.org/pdf/2406.12276",
+          "html_url": "https://arxiv.org/html/2406.12276",
+          "abs_url": "https://arxiv.org/abs/2406.12276",
+          "citations": 4,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2406.12276"
+        },
+        {
+          "id": "2512.21373",
+          "title": "AInsteinBench: Benchmarking Coding Agents on Scientific Repositories",
+          "authors": [
+            "Titouan Duston",
+            "Shuo Xin",
+            "Yang Sun",
+            "Daoguang Zan",
+            "Aoyan Li",
+            "Shulin Xin",
+            "Kai Shen",
+            "Yixiao Chen",
+            "Qiming Sun",
+            "Ge Zhang",
+            "Jiashuo Liu",
+            "Huan Zhou",
+            "Jingkai Liu",
+            "Zhichen Pu",
+            "Yuanheng Wang",
+            "Bo-Xuan Ge",
+            "Xin Tong",
+            "Fei Ye",
+            "Zhi-Chao Zhao",
+            "Wen-Biao Han",
+            "Zhoujian Cao",
+            "Yueran Zhao",
+            "Weiluo Ren",
+            "Qingshen Long",
+            "Yuxiao Liu",
+            "Anni Huang",
+            "Yidi Du",
+            "Yuanyuan Rong",
+            "Jiahao Peng"
+          ],
+          "abstract": "We introduce AInsteinBench, a large-scale benchmark for evaluating whether large language model (LLM) agents can operate as scientific computing development agents within real research software ecosystems. Unlike existing scientific reasoning benchmarks which focus on conceptual knowledge, or software engineering benchmarks that emphasize generic feature implementation and issue resolving, AInsteinBench evaluates models in end-to-end scientific development settings grounded in production-grade scientific repositories. The benchmark consists of tasks derived from maintainer-authored pull requests across six widely used scientific codebases, spanning quantum chemistry, quantum computing, molecular dynamics, numerical relativity, fluid dynamics, and cheminformatics. All benchmark tasks are carefully curated through multi-stage filtering and expert review to ensure scientific challenge, adequate test coverage, and well-calibrated difficulty. By leveraging evaluation in executable environments, scientifically meaningful failure modes, and test-driven verification, AInsteinBench measures a model's ability to move beyond surface-level code generation toward the core competencies required for computational scientific research.",
+          "categories": [
+            "cs.SE",
+            "cs.AI",
+            "cs.PL"
+          ],
+          "published": "2025-12-24T08:11:11Z",
+          "updated": "2025-12-24T08:11:11Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.21373",
+          "html_url": "https://arxiv.org/html/2512.21373",
+          "abs_url": "https://arxiv.org/abs/2512.21373",
+          "citations": 2,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.21373"
+        },
+        {
+          "id": "2505.16988",
+          "title": "MASLab: A Unified and Comprehensive Codebase for LLM-based Multi-Agent Systems",
+          "authors": [
+            "Rui Ye",
+            "Keduan Huang",
+            "Qimin Wu",
+            "Yuzhu Cai",
+            "Tian Jin",
+            "Xianghe Pang",
+            "Xiangrui Liu",
+            "Jiaqi Su",
+            "Chen Qian",
+            "Bohan Tang",
+            "Kaiqu Liang",
+            "Jiaao Chen",
+            "Yue Hu",
+            "Zhenfei Yin",
+            "Rongye Shi",
+            "Bo An",
+            "Yang Gao",
+            "Wenjun Wu",
+            "Lei Bai",
+            "Siheng Chen"
+          ],
+          "abstract": "LLM-based multi-agent systems (MAS) have demonstrated significant potential in enhancing single LLMs to address complex and diverse tasks in practical applications. Despite considerable advancements, the field lacks a unified codebase that consolidates existing methods, resulting in redundant re-implementation efforts, unfair comparisons, and high entry barriers for researchers. To address these challenges, we introduce MASLab, a unified, comprehensive, and research-friendly codebase for LLM-based MAS. (1) MASLab integrates over 20 established methods across multiple domains, each rigorously validated by comparing step-by-step outputs with its official implementation. (2) MASLab provides a unified environment with various benchmarks for fair comparisons among methods, ensuring consistent inputs and standardized evaluation protocols. (3) MASLab implements methods within a shared streamlined structure, lowering the barriers for understanding and extension. Building on MASLab, we conduct extensive experiments covering 10+ benchmarks and 8 models, offering researchers a clear and comprehensive view of the current landscape of MAS methods. MASLab will continue to evolve, tracking the latest developments in the field, and invite contributions from the broader open-source community.",
+          "categories": [
+            "cs.CL",
+            "cs.AI",
+            "cs.MA"
+          ],
+          "published": "2025-05-22T17:54:38Z",
+          "updated": "2025-05-22T17:54:38Z",
+          "pdf_url": "https://arxiv.org/pdf/2505.16988",
+          "html_url": "https://arxiv.org/html/2505.16988",
+          "abs_url": "https://arxiv.org/abs/2505.16988",
+          "citations": 10,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2505.16988"
+        },
+        {
+          "id": "2603.16572",
+          "title": "Malicious Or Not: Adding Repository Context to Agent Skill Classification",
+          "authors": [
+            "Florian Holzbauer",
+            "David Schmidt",
+            "Gabriel Gegenhuber",
+            "Sebastian Schrittwieser",
+            "Johanna Ullrich"
+          ],
+          "abstract": "Agent skills extend local AI agents, such as Claude Code or Open Claw, with additional functionality, and their popularity has led to the emergence of dedicated skill marketplaces, similar to app stores for mobile applications. Simultaneously, automated skill scanners were introduced, analyzing the skill description available in SKILL.md, to verify their benign behavior. The results for individual market places mark up to 46.8% of skills as malicious. In this paper, we present the largest empirical security analysis of the AI agent skill ecosystem, questioning this high classification of malicious skills. Therefore, we collect 238,180 unique skills from three major distribution platforms and GitHub to systematically analyze their type and behavior. This approach substantially reduces the number of skills flagged as non-benign by security scanners to only 0.52% which remain in malicious flagged repositories. Consequently, out methodology substantially reduces false positives and provides a more robust view of the ecosystem's current risk surface. Beyond that, we extend the security analysis from the mere investigation of the skill description to a comparison of its congruence with the GitHub repository the skill is embedded in, providing additional context. Furthermore, our analysis also uncovers several, by now undocumented real-world attack vectors, namely hijacking skills hosted on abandoned GitHub repositories.",
+          "categories": [
+            "cs.CR",
+            "cs.AI"
+          ],
+          "published": "2026-03-17T14:27:35Z",
+          "updated": "2026-03-17T14:27:35Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.16572",
+          "html_url": "https://arxiv.org/html/2603.16572",
+          "abs_url": "https://arxiv.org/abs/2603.16572",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.16572"
+        },
+        {
+          "id": "2509.25257",
+          "title": "RANGER -- Repository-Level Agent for Graph-Enhanced Retrieval",
+          "authors": [
+            "Pratik Shah",
+            "Rajat Ghosh",
+            "Aryan Singhal",
+            "Debojyoti Dutta"
+          ],
+          "abstract": "General-purpose automated software engineering (ASE) includes tasks such as code completion, retrieval, repair, QA, and summarization. These tasks require a code retrieval system that can handle specific queries about code entities, or code entity queries (for example, locating a specific class or retrieving the dependencies of a function), as well as general queries without explicit code entities, or natural language queries (for example, describing a task and retrieving the corresponding code). We present RANGER, a repository-level code retrieval agent designed to address both query types, filling a gap in recent works that have focused primarily on code-entity queries. We first present a tool that constructs a comprehensive knowledge graph of the entire repository, capturing hierarchical and cross-file dependencies down to the variable level, and augments graph nodes with textual descriptions and embeddings to bridge the gap between code and natural language. RANGER then operates on this graph through a dual-stage retrieval pipeline. Entity-based queries are answered through fast Cypher lookups, while natural language queries are handled by MCTS-guided graph exploration. We evaluate RANGER across four diverse benchmarks that represent core ASE tasks including code search, question answering, cross-file dependency retrieval, and repository-level code completion. On CodeSearchNet and RepoQA it outperforms retrieval baselines that use embeddings from strong models such as Qwen3-8B. On RepoBench, it achieves superior cross-file dependency retrieval over baselines, and on CrossCodeEval, pairing RANGER with BM25 delivers the highest exact match rate in code completion compared to other RAG methods.",
+          "categories": [
+            "cs.SE",
+            "cs.IR",
+            "cs.LG"
+          ],
+          "published": "2025-09-27T18:57:02Z",
+          "updated": "2025-09-27T18:57:02Z",
+          "pdf_url": "https://arxiv.org/pdf/2509.25257",
+          "html_url": "https://arxiv.org/html/2509.25257",
+          "abs_url": "https://arxiv.org/abs/2509.25257",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2509.25257"
+        },
+        {
+          "id": "2603.11356",
+          "title": "Resolving Java Code Repository Issues with iSWE Agent",
+          "authors": [
+            "Jatin Ganhotra",
+            "Sami Serhan",
+            "Antonio Abu Nassar",
+            "Avraham Shinnar",
+            "Ziv Nevo",
+            "Martin Hirzel"
+          ],
+          "abstract": "Resolving issues on code repositories is an important part of software engineering. Various recent systems automatically resolve issues using large language models and agents, often with impressive performance. Unfortunately, most of these models and agents focus primarily on Python, and their performance on other programming languages is lower. In particular, a lot of enterprise software is written in Java, yet automated issue resolution for Java is under-explored. This paper introduces iSWE Agent, an automated issue resolver with an emphasis on Java. It consists of two sub-agents, one for localization and the other for editing. Both have access to novel tools based on rule-based Java static analysis and transformation. Using this approach, iSWE achieves state-of-the-art issue resolution rates across the Java splits of both Multi-SWE-bench and SWE-PolyBench. More generally, we hope that by combining the best of rule-based and model-based techniques, this paper contributes towards improving enterprise software development.",
+          "categories": [
+            "cs.SE",
+            "cs.AI",
+            "cs.MA"
+          ],
+          "published": "2026-03-11T22:43:55Z",
+          "updated": "2026-03-11T22:43:55Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.11356",
+          "html_url": "https://arxiv.org/html/2603.11356",
+          "abs_url": "https://arxiv.org/abs/2603.11356",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.11356"
+        },
+        {
+          "id": "2603.03823",
+          "title": "SWE-CI: Evaluating Agent Capabilities in Maintaining Codebases via Continuous Integration",
+          "authors": [
+            "Jialong Chen",
+            "Xander Xu",
+            "Hu Wei",
+            "Chuan Chen",
+            "Bing Zhao"
+          ],
+          "abstract": "Large language model (LLM)-powered agents have demonstrated strong capabilities in automating software engineering tasks such as static bug fixing, as evidenced by benchmarks like SWE-bench. However, in the real world, the development of mature software is typically predicated on complex requirement changes and long-term feature iterations -- a process that static, one-shot repair paradigms fail to capture. To bridge this gap, we propose \\textbf{SWE-CI}, the first repository-level benchmark built upon the Continuous Integration loop, aiming to shift the evaluation paradigm for code generation from static, short-term \\textit{functional correctness} toward dynamic, long-term \\textit{maintainability}. The benchmark comprises 100 tasks, each corresponding on average to an evolution history spanning 233 days and 71 consecutive commits in a real-world code repository. SWE-CI requires agents to systematically resolve these tasks through dozens of rounds of analysis and coding iterations. SWE-CI provides valuable insights into how well agents can sustain code quality throughout long-term evolution.",
+          "categories": [
+            "cs.SE",
+            "cs.AI",
+            "cs.CL"
+          ],
+          "published": "2026-03-04T08:20:25Z",
+          "updated": "2026-03-18T12:07:41Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.03823",
+          "html_url": "https://arxiv.org/html/2603.03823",
+          "abs_url": "https://arxiv.org/abs/2603.03823",
+          "citations": 1,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.03823"
+        },
+        {
+          "id": "2501.18160",
+          "title": "RepoAudit: An Autonomous LLM-Agent for Repository-Level Code Auditing",
+          "authors": [
+            "Jinyao Guo",
+            "Chengpeng Wang",
+            "Xiangzhe Xu",
+            "Zian Su",
+            "Xiangyu Zhang"
+          ],
+          "abstract": "Code auditing is the process of reviewing code with the aim of identifying bugs. Large Language Models (LLMs) have demonstrated promising capabilities for this task without requiring compilation, while also supporting user-friendly customization. However, auditing a code repository with LLMs poses significant challenges: limited context windows and hallucinations can degrade the quality of bug reports, and analyzing large-scale repositories incurs substantial time and token costs, hindering efficiency and scalability.\n  This work introduces an LLM-based agent, RepoAudit, designed to perform autonomous repository-level code auditing. Equipped with agent memory, RepoAudit explores the codebase on demand by analyzing data-flow facts along feasible program paths within individual functions. It further incorporates a validator module to mitigate hallucinations by verifying data-flow facts and checking the satisfiability of path conditions associated with potential bugs, thereby reducing false positives. RepoAudit detects 40 true bugs across 15 real-world benchmark projects with a precision of 78.43%, requiring on average only 0.44 hours and $2.54 per project. Also, it detects 185 new bugs in high-profile projects, among which 174 have been confirmed or fixed. We have open-sourced RepoAudit at https://github.com/PurCL/RepoAudit.",
+          "categories": [
+            "cs.SE",
+            "cs.PL"
+          ],
+          "published": "2025-01-30T05:56:30Z",
+          "updated": "2025-05-29T22:08:26Z",
+          "pdf_url": "https://arxiv.org/pdf/2501.18160",
+          "html_url": "https://arxiv.org/html/2501.18160",
+          "abs_url": "https://arxiv.org/abs/2501.18160",
+          "citations": 38,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2501.18160"
+        },
+        {
+          "id": "2512.07022",
+          "title": "Reformulate, Retrieve, Localize: Agents for Repository-Level Bug Localization",
+          "authors": [
+            "Genevieve Caumartin",
+            "Glaucia Melo"
+          ],
+          "abstract": "Bug localization remains a critical yet time-consuming challenge in large-scale software repositories. Traditional information retrieval-based bug localization (IRBL) methods rely on unchanged bug descriptions, which often contain noisy information, leading to poor retrieval accuracy. Recent advances in large language models (LLMs) have improved bug localization through query reformulation, yet the effect on agent performance remains unexplored. In this study, we investigate how an LLM-powered agent can improve file-level bug localization via lightweight query reformulation and summarization. We first employ an open-source, non-fine-tuned LLM to extract key information from bug reports, such as identifiers and code snippets, and reformulate queries pre-retrieval. Our agent then orchestrates BM25 retrieval using these preprocessed queries, automating localization workflow at scale. Using the best-performing query reformulation technique, our agent achieves 35% better ranking in first-file retrieval than our BM25 baseline and up to +22% file retrieval performance over SWE-agent.",
+          "categories": [
+            "cs.SE",
+            "cs.AI",
+            "cs.IR"
+          ],
+          "published": "2025-12-07T22:25:11Z",
+          "updated": "2025-12-07T22:25:11Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.07022",
+          "html_url": "https://arxiv.org/html/2512.07022",
+          "abs_url": "https://arxiv.org/abs/2512.07022",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.07022"
+        },
+        {
+          "id": "2512.20957",
+          "title": "One Tool Is Enough: Reinforcement Learning for Repository-Level LLM Agents",
+          "authors": [
+            "Zhaoxi Zhang",
+            "Yitong Duan",
+            "Yanzhi Zhang",
+            "Yiming Xu",
+            "Zhixiang Wang",
+            "Kun Liang",
+            "Yang Li",
+            "Jiahui Liang",
+            "Deguo Xia",
+            "Jizhou Huang",
+            "Jiyan He",
+            "Yunfang Wu"
+          ],
+          "abstract": "Locating files and functions requiring modification in large software repositories is challenging due to their scale and structural complexity. Existing LLM-based methods typically treat this as a repository-level retrieval task and rely on multiple auxiliary tools, which often overlook code execution logic and complicate model control. We propose RepoNavigator, an LLM agent equipped with a single execution-aware tool: jumping to the definition of an invoked symbol. This unified design reflects the actual flow of code execution while simplifying tool manipulation. RepoNavigator is trained end-to-end via Reinforcement Learning (RL) directly from a base pretrained model, without relying on closed-source distillation. Experiments demonstrate that RL-trained RepoNavigator achieves state-of-the-art performance, with the 7B model outperforming 14B baselines, the 14B model surpassing 32B competitors, and the 32B model exceeding closed-source models such as GPT-5 on most metrics. These results confirm that integrating a single, structurally grounded tool with RL training provides an efficient and scalable solution for repository-level issue localization.",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2025-12-24T05:27:53Z",
+          "updated": "2026-01-24T07:02:39Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.20957",
+          "html_url": "https://arxiv.org/html/2512.20957",
+          "abs_url": "https://arxiv.org/abs/2512.20957",
+          "citations": 2,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.20957"
+        },
+        {
+          "id": "2603.13384",
+          "title": "VulnAgent-X: A Layered Agentic Framework for Repository-Level Vulnerability Detection",
+          "authors": [
+            "Renwei Meng",
+            "Haoyi Wu",
+            "Jingming Wang",
+            "Haoyan Bai"
+          ],
+          "abstract": "Software vulnerability detection is critical in software en- gineering as security flaws arise from complex interactions across code structure, repository context, and runtime conditions. Existing meth- ods are limited by local code views, one-shot prediction, and insuffi- cient validation, reducing reliability in realistic repository-level settings. This study proposes VulnAgentX, a layered agentic framework integrat- ing lightweight risk screening, bounded context expansion, specialised analysis agents, selective dynamic verification, and evidence fusion into a unified pipeline. Experiments on function-level and just-in-time vul- nerability benchmarks show VulnAgent-X outperforms static baselines, encoder-based models, and simpler agentic variants, with better local- isation and balanced performance-cost trade-offs. Treating vulnerabil- ity detection as a staged, evidence-driven auditing process improves de- tection quality, reduces false positives, and produces interpretable re- sults for repository-level software security analysis. Code is available at https://github.com/xiaolu-666113/Vlun-Agent-X.",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2026-03-11T04:57:17Z",
+          "updated": "2026-03-11T04:57:17Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.13384",
+          "html_url": "https://arxiv.org/html/2603.13384",
+          "abs_url": "https://arxiv.org/abs/2603.13384",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.13384"
+        },
+        {
+          "id": "2603.01327",
+          "title": "SWE-Adept: An LLM-Based Agentic Framework for Deep Codebase Analysis and Structured Issue Resolution",
+          "authors": [
+            "Kang He",
+            "Kaushik Roy"
+          ],
+          "abstract": "Large language models (LLMs) exhibit strong performance on self-contained programming tasks. However, they still struggle with repository-level software engineering (SWE), which demands (1) deep codebase navigation with effective context management for accurate localization, and (2) systematic approaches for iterative, test-driven code modification to resolve issues. To address these challenges, we propose SWE-Adept, an LLM-based two-agent framework where a localization agent identifies issue-relevant code locations and a resolution agent implements the corresponding fixes. For issue localization, we introduce agent-directed depth-first search that selectively traverses code dependencies. This minimizes issue-irrelevant content in the agent's context window and improves localization accuracy. For issue resolution, we employ adaptive planning and structured problem solving. We equip the agent with specialized tools for progress tracking and Git-based version control. These tools interface with a shared working memory that stores code-state checkpoints indexed by execution steps, facilitating precise checkpoint retrieval. This design enables reliable agent-driven version-control operations for systematic issue resolution, including branching to explore alternative solutions and reverting failed edits. Experiments on SWE-Bench Lite and SWE-Bench Pro demonstrate that SWE-Adept consistently outperforms prior approaches in both issue localization and resolution, improving the end-to-end resolve rate by up to 4.7%.",
+          "categories": [
+            "cs.SE",
+            "cs.CL",
+            "cs.LG"
+          ],
+          "published": "2026-03-01T23:52:30Z",
+          "updated": "2026-03-01T23:52:30Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.01327",
+          "html_url": "https://arxiv.org/html/2603.01327",
+          "abs_url": "https://arxiv.org/abs/2603.01327",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.01327"
+        },
+        {
+          "id": "2602.11988",
+          "title": "Evaluating AGENTS.md: Are Repository-Level Context Files Helpful for Coding Agents?",
+          "authors": [
+            "Thibaud Gloaguen",
+            "Niels Mündler",
+            "Mark Müller",
+            "Veselin Raychev",
+            "Martin Vechev"
+          ],
+          "abstract": "A widespread practice in software development is to tailor coding agents to repositories using context files, such as AGENTS.md, by either manually or automatically generating them. Although this practice is strongly encouraged by agent developers, there is currently no rigorous investigation into whether such context files are actually effective for real-world tasks. In this work, we study this question and evaluate coding agents' task completion performance in two complementary settings: established SWE-bench tasks from popular repositories, with LLM-generated context files following agent-developer recommendations, and a novel collection of issues from repositories containing developer-committed context files.\n  Across multiple coding agents and LLMs, we find that context files tend to reduce task success rates compared to providing no repository context, while also increasing inference cost by over 20%. Behaviorally, both LLM-generated and developer-provided context files encourage broader exploration (e.g., more thorough testing and file traversal), and coding agents tend to respect their instructions. Ultimately, we conclude that unnecessary requirements from context files make tasks harder, and human-written context files should describe only minimal requirements.",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2026-02-12T14:15:22Z",
+          "updated": "2026-02-12T14:15:22Z",
+          "pdf_url": "https://arxiv.org/pdf/2602.11988",
+          "html_url": "https://arxiv.org/html/2602.11988",
+          "abs_url": "https://arxiv.org/abs/2602.11988",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2602.11988"
+        },
+        {
+          "id": "2409.07440",
+          "title": "SUPER: Evaluating Agents on Setting Up and Executing Tasks from Research Repositories",
+          "authors": [
+            "Ben Bogin",
+            "Kejuan Yang",
+            "Shashank Gupta",
+            "Kyle Richardson",
+            "Erin Bransom",
+            "Peter Clark",
+            "Ashish Sabharwal",
+            "Tushar Khot"
+          ],
+          "abstract": "Given that Large Language Models (LLMs) have made significant progress in writing code, can they now be used to autonomously reproduce results from research repositories? Such a capability would be a boon to the research community, helping researchers validate, understand, and extend prior work. To advance towards this goal, we introduce SUPER, the first benchmark designed to evaluate the capability of LLMs in setting up and executing tasks from research repositories. SUPERaims to capture the realistic challenges faced by researchers working with Machine Learning (ML) and Natural Language Processing (NLP) research repositories. Our benchmark comprises three distinct problem sets: 45 end-to-end problems with annotated expert solutions, 152 sub problems derived from the expert set that focus on specific challenges (e.g., configuring a trainer), and 602 automatically generated problems for larger-scale development. We introduce various evaluation measures to assess both task success and progress, utilizing gold solutions when available or approximations otherwise. We show that state-of-the-art approaches struggle to solve these problems with the best model (GPT-4o) solving only 16.3% of the end-to-end set, and 46.1% of the scenarios. This illustrates the challenge of this task, and suggests that SUPER can serve as a valuable resource for the community to make and measure progress.",
+          "categories": [
+            "cs.AI",
+            "cs.CL",
+            "cs.SE"
+          ],
+          "published": "2024-09-11T17:37:48Z",
+          "updated": "2024-09-11T17:37:48Z",
+          "pdf_url": "https://arxiv.org/pdf/2409.07440",
+          "html_url": "https://arxiv.org/html/2409.07440",
+          "abs_url": "https://arxiv.org/abs/2409.07440",
+          "citations": 33,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2409.07440"
+        },
+        {
+          "id": "2502.06111",
+          "title": "CSR-Bench: Benchmarking LLM Agents in Deployment of Computer Science Research Repositories",
+          "authors": [
+            "Yijia Xiao",
+            "Runhui Wang",
+            "Luyang Kong",
+            "Davor Golac",
+            "Wei Wang"
+          ],
+          "abstract": "The increasing complexity of computer science research projects demands more effective tools for deploying code repositories. Large Language Models (LLMs), such as Anthropic Claude and Meta Llama, have demonstrated significant advancements across various fields of computer science research, including the automation of diverse software engineering tasks. To evaluate the effectiveness of LLMs in handling complex code development tasks of research projects, particularly for NLP/CV/AI/ML/DM topics, we introduce CSR-Bench, a benchmark for Computer Science Research projects. This benchmark assesses LLMs from various aspects including accuracy, efficiency, and deployment script quality, aiming to explore their potential in conducting computer science research autonomously. We also introduce a novel framework, CSR-Agents, that utilizes multiple LLM agents to automate the deployment of GitHub code repositories of computer science research projects. Specifically, by checking instructions from markdown files and interpreting repository structures, the model generates and iteratively improves bash commands that set up the experimental environments and deploy the code to conduct research tasks. Preliminary results from CSR-Bench indicate that LLM agents can significantly enhance the workflow of repository deployment, thereby boosting developer productivity and improving the management of developmental workflows.",
+          "categories": [
+            "cs.SE",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "published": "2025-02-10T02:46:29Z",
+          "updated": "2025-02-11T20:25:11Z",
+          "pdf_url": "https://arxiv.org/pdf/2502.06111",
+          "html_url": "https://arxiv.org/html/2502.06111",
+          "abs_url": "https://arxiv.org/abs/2502.06111",
+          "citations": 10,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2502.06111"
+        },
+        {
+          "id": "2504.21205",
+          "title": "SecRepoBench: Benchmarking Code Agents for Secure Code Completion in Real-World Repositories",
+          "authors": [
+            "Chihao Shen",
+            "Connor Dilgren",
+            "Purva Chiniya",
+            "Luke Griffith",
+            "Yu Ding",
+            "Yizheng Chen"
+          ],
+          "abstract": "This paper introduces SecRepoBench, a benchmark to evaluate code agents on secure code completion in real-world repositories. SecRepoBench has 318 code completion tasks in 27 C/C++ repositories, covering 15 CWEs. We evaluate 29 standalone LLMs and 15 code agents across 3 state-of-the-art agent frameworks using our benchmark. We find that state-of-the-art LLMs struggle with generating correct and secure code completions. However, code agents significantly outperform standalone LLMs. We show that SecRepoBench is more difficult than the prior state-of-the-art benchmark. Finally, our comprehensive analysis provides insights into potential directions for enhancing the ability of code agents to write correct and secure code in real-world repositories.",
+          "categories": [
+            "cs.CR",
+            "cs.AI"
+          ],
+          "published": "2025-04-29T22:22:44Z",
+          "updated": "2026-02-14T01:32:04Z",
+          "pdf_url": "https://arxiv.org/pdf/2504.21205",
+          "html_url": "https://arxiv.org/html/2504.21205",
+          "abs_url": "https://arxiv.org/abs/2504.21205",
+          "citations": 1,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2504.21205"
+        },
+        {
+          "id": "2601.10343",
+          "title": "OctoBench: Benchmarking Scaffold-Aware Instruction Following in Repository-Grounded Agentic Coding",
+          "authors": [
+            "Deming Ding",
+            "Shichun Liu",
+            "Enhui Yang",
+            "Jiahang Lin",
+            "Ziying Chen",
+            "Shihan Dou",
+            "Honglin Guo",
+            "Weiyu Cheng",
+            "Pengyu Zhao",
+            "Chengjun Xiao",
+            "Qunhong Zeng",
+            "Qi Zhang",
+            "Xuanjing Huang",
+            "Qidi Xu",
+            "Tao Gui"
+          ],
+          "abstract": "Modern coding scaffolds turn LLMs into capable software agents, but their ability to follow scaffold-specified instructions remains under-examined, especially when constraints are heterogeneous and persist across interactions. To fill this gap, we introduce OctoBench, which benchmarks scaffold-aware instruction following in repository-grounded agentic coding. OctoBench includes 34 environments and 217 tasks instantiated under three scaffold types, and is paired with 7,098 objective checklist items. To disentangle solving the task from following the rules, we provide an automated observation-and-scoring toolkit that captures full trajectories and performs fine-grained checks. Experiments on eight representative models reveal a systematic gap between task-solving and scaffold-aware compliance, underscoring the need for training and evaluation that explicitly targets heterogeneous instruction following. We release the benchmark to support reproducible benchmarking and to accelerate the development of more scaffold-aware coding agents.",
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "published": "2026-01-15T12:36:08Z",
+          "updated": "2026-01-16T02:10:35Z",
+          "pdf_url": "https://arxiv.org/pdf/2601.10343",
+          "html_url": "https://arxiv.org/html/2601.10343",
+          "abs_url": "https://arxiv.org/abs/2601.10343",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2601.10343"
+        },
+        {
+          "id": "2603.16107",
+          "title": "RepoReviewer: A Local-First Multi-Agent Architecture for Repository-Level Code Review",
+          "authors": [
+            "Peng Zhang"
+          ],
+          "abstract": "Repository-level code review requires reasoning over project structure, repository context, and file-level implementation details. Existing automated review workflows often collapse these tasks into a single pass, which can reduce relevance, increase duplication, and weaken prioritization. We present RepoReviewer, a local-first multi-agent system for automated GitHub repository review with a Python CLI, FastAPI API, LangGraph orchestration layer, and Next.js user interface. RepoReviewer decomposes review into repository acquisition, context synthesis, file-level analysis, finding prioritization, and summary generation. We describe the system design, implementation tradeoffs, developer-facing interfaces, and practical failure modes. Rather than claiming benchmark superiority, we frame RepoReviewer as a technical systems contribution: a pragmatic architecture for repository-level automated review, accompanied by reusable evaluation and reporting infrastructure for future empirical study.",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2026-03-17T04:17:51Z",
+          "updated": "2026-03-17T04:17:51Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.16107",
+          "html_url": "https://arxiv.org/html/2603.16107",
+          "abs_url": "https://arxiv.org/abs/2603.16107",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.16107"
+        },
+        {
+          "id": "2508.17720",
+          "title": "RepoTransAgent: Multi-Agent LLM Framework for Repository-Aware Code Translation",
+          "authors": [
+            "Ziqi Guan",
+            "Xin Yin",
+            "Zhiyuan Peng",
+            "Chao Ni"
+          ],
+          "abstract": "Repository-aware code translation is critical for modernizing legacy systems, enhancing maintainability, and enabling interoperability across diverse programming languages. While recent advances in large language models (LLMs) have improved code translation quality, existing approaches face significant challenges in practical scenarios: insufficient contextual understanding, inflexible prompt designs, and inadequate error correction mechanisms. These limitations severely hinder accurate and efficient translation of complex, real-world code repositories. To address these challenges, we propose RepoTransAgent, a novel multi-agent LLM framework for repository-aware code translation. RepoTransAgent systematically decomposes the translation process into specialized subtasks-context retrieval, dynamic prompt construction, and iterative code refinement-each handled by dedicated agents. Our approach leverages retrieval-augmented generation (RAG) for contextual information gathering, employs adaptive prompts tailored to varying repository scenarios, and introduces a reflection-based mechanism for systematic error correction. We evaluate RepoTransAgent on hundreds of Java-C# translation pairs from six popular open-source projects. Experimental results demonstrate that RepoTransAgent significantly outperforms state-of-the-art baselines in both compile and pass rates. Specifically, RepoTransAgent achieves up to 55.34% compile rate and 45.84% pass rate. Comprehensive analysis confirms the robustness and generalizability of RepoTransAgent across different LLMs, establishing its effectiveness for real-world repository-aware code translation.",
+          "categories": [
+            "cs.SE"
+          ],
+          "published": "2025-08-25T06:56:22Z",
+          "updated": "2025-08-25T06:56:22Z",
+          "pdf_url": "https://arxiv.org/pdf/2508.17720",
+          "html_url": "https://arxiv.org/html/2508.17720",
+          "abs_url": "https://arxiv.org/abs/2508.17720",
+          "citations": 3,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2508.17720"
+        },
+        {
+          "id": "2602.03798",
+          "title": "FullStack-Agent: Enhancing Agentic Full-Stack Web Coding via Development-Oriented Testing and Repository Back-Translation",
+          "authors": [
+            "Zimu Lu",
+            "Houxing Ren",
+            "Yunqiao Yang",
+            "Ke Wang",
+            "Zhuofan Zong",
+            "Mingjie Zhan",
+            "Hongsheng Li"
+          ],
+          "abstract": "Assisting non-expert users to develop complex interactive websites has become a popular task for LLM-powered code agents. However, existing code agents tend to only generate frontend web pages, masking the lack of real full-stack data processing and storage with fancy visual effects. Notably, constructing production-level full-stack web applications is far more challenging than only generating frontend web pages, demanding careful control of data flow, comprehensive understanding of constantly updating packages and dependencies, and accurate localization of obscure bugs in the codebase. To address these difficulties, we introduce FullStack-Agent, a unified agent system for full-stack agentic coding that consists of three parts: (1) FullStack-Dev, a multi-agent framework with strong planning, code editing, codebase navigation, and bug localization abilities. (2) FullStack-Learn, an innovative data-scaling and self-improving method that back-translates crawled and synthesized website repositories to improve the backbone LLM of FullStack-Dev. (3) FullStack-Bench, a comprehensive benchmark that systematically tests the frontend, backend and database functionalities of the generated website. Our FullStack-Dev outperforms the previous state-of-the-art method by 8.7%, 38.2%, and 15.9% on the frontend, backend, and database test cases respectively. Additionally, FullStack-Learn raises the performance of a 30B model by 9.7%, 9.5%, and 2.8% on the three sets of test cases through self-improvement, demonstrating the effectiveness of our approach. The code is released at https://github.com/mnluzimu/FullStack-Agent.",
+          "categories": [
+            "cs.SE",
+            "cs.CL",
+            "cs.CV"
+          ],
+          "published": "2026-02-03T18:01:34Z",
+          "updated": "2026-02-03T18:01:34Z",
+          "pdf_url": "https://arxiv.org/pdf/2602.03798",
+          "html_url": "https://arxiv.org/html/2602.03798",
+          "abs_url": "https://arxiv.org/abs/2602.03798",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2602.03798"
+        },
+        {
+          "id": "2601.03731",
+          "title": "From Laboratory to Real-World Applications: Benchmarking Agentic Code Reasoning at the Repository Level",
+          "authors": [
+            "Jia Li",
+            "Yuxin Su",
+            "Michael R. Lyu"
+          ],
+          "abstract": "As large language models (LLMs) evolve into autonomous agents, evaluating repository-level reasoning, the ability to maintain logical consistency across massive, real-world, interdependent file systems, has become critical. Current benchmarks typically fluctuate between isolated code snippets and black-box evaluations. We present RepoReason, a white-box diagnostic benchmark centered on abductive assertion verification. To eliminate memorization while preserving authentic logical depth, we implement an execution-driven mutation framework that utilizes the environment as a semantic oracle to regenerate ground-truth states. Furthermore, we establish a fine-grained diagnostic system using dynamic program slicing, quantifying reasoning via three orthogonal metrics: $ESV$ (reading load), $MCL$ (simulation depth), and $DFI$ (integration width). Comprehensive evaluations of frontier models (e.g., Claude-4.5-Sonnet, DeepSeek-v3.1-Terminus) reveal a prevalent aggregation deficit, where integration width serves as the primary cognitive bottleneck. Our findings provide granular white-box insights for optimizing the next generation of agentic software engineering.",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2026-01-07T09:22:28Z",
+          "updated": "2026-01-09T16:30:25Z",
+          "pdf_url": "https://arxiv.org/pdf/2601.03731",
+          "html_url": "https://arxiv.org/html/2601.03731",
+          "abs_url": "https://arxiv.org/abs/2601.03731",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2601.03731"
+        },
+        {
+          "id": "2504.08703",
+          "title": "SWE-PolyBench: A multi-language benchmark for repository level evaluation of coding agents",
+          "authors": [
+            "Muhammad Shihab Rashid",
+            "Christian Bock",
+            "Yuan Zhuang",
+            "Alexander Buchholz",
+            "Tim Esler",
+            "Simon Valentin",
+            "Luca Franceschi",
+            "Martin Wistuba",
+            "Prabhu Teja Sivaprasad",
+            "Woo Jung Kim",
+            "Anoop Deoras",
+            "Giovanni Zappella",
+            "Laurent Callot"
+          ],
+          "abstract": "Coding agents powered by large language models have shown impressive capabilities in software engineering tasks, but evaluating their performance across diverse programming languages and real-world scenarios remains challenging. We introduce SWE-PolyBench, a new multi-language benchmark for repository-level, execution-based evaluation of coding agents. SWE-PolyBench contains 2110 instances from 21 repositories and includes tasks in Java (165), JavaScript (1017), TypeScript (729) and Python (199), covering bug fixes, feature additions, and code refactoring. We provide a task and repository-stratified subsample (SWE-PolyBench500) and release an evaluation harness allowing for fully automated evaluation. To enable a more comprehensive comparison of coding agents, this work also presents a novel set of metrics rooted in syntax tree analysis. We evaluate leading open source coding agents on SWE-PolyBench, revealing their strengths and limitations across languages, task types, and complexity classes. Our experiments show that current agents exhibit uneven performances across languages and struggle with complex problems while showing higher performance on simpler tasks. SWE-PolyBench aims to drive progress in developing more versatile and robust AI coding assistants for real-world software engineering. Our datasets and code are available at: https://github.com/amazon-science/SWE-PolyBench",
+          "categories": [
+            "cs.SE"
+          ],
+          "published": "2025-04-11T17:08:02Z",
+          "updated": "2025-04-23T20:22:37Z",
+          "pdf_url": "https://arxiv.org/pdf/2504.08703",
+          "html_url": "https://arxiv.org/html/2504.08703",
+          "abs_url": "https://arxiv.org/abs/2504.08703",
+          "citations": 37,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2504.08703"
+        },
+        {
+          "id": "2508.18993",
+          "title": "GitTaskBench: A Benchmark for Code Agents Solving Real-World Tasks Through Code Repository Leveraging",
+          "authors": [
+            "Ziyi Ni",
+            "Huacan Wang",
+            "Shuo Zhang",
+            "Shuo Lu",
+            "Ziyang He",
+            "Wang You",
+            "Zhenheng Tang",
+            "Yuntao Du",
+            "Bill Sun",
+            "Hongzhang Liu",
+            "Sen Hu",
+            "Ronghao Chen",
+            "Bo Li",
+            "Xin Li",
+            "Chen Hu",
+            "Binxing Jiao",
+            "Daxin Jiang",
+            "Pin Lyu"
+          ],
+          "abstract": "Beyond scratch coding, exploiting large-scale code repositories (e.g., GitHub) for practical tasks is vital in real-world software development, yet current benchmarks rarely evaluate code agents in such authentic, workflow-driven scenarios. To bridge this gap, we introduce GitTaskBench, a benchmark designed to systematically assess this capability via 54 realistic tasks across 7 modalities and 7 domains. Each task pairs a relevant repository with an automated, human-curated evaluation harness specifying practical success criteria. Beyond measuring execution and task success, we also propose the alpha-value metric to quantify the economic benefit of agent performance, which integrates task success rates, token cost, and average developer salaries. Experiments across three state-of-the-art agent frameworks with multiple advanced LLMs show that leveraging code repositories for complex task solving remains challenging: even the best-performing system, OpenHands+Claude 3.7, solves only 48.15% of tasks (recent progress has pushed the frontier further, with RepoMaster+Claude 3.5 achieving a new record of 62.96%). Error analysis attributes over half of failures to seemingly mundane yet critical steps like environment setup and dependency resolution, highlighting the need for more robust workflow management and increased timeout preparedness. By releasing GitTaskBench, we aim to drive progress and attention toward repository-aware code reasoning, execution, and deployment -- moving agents closer to solving complex, end-to-end real-world tasks. The benchmark and code are open-sourced at https://github.com/QuantaAlpha/GitTaskBench.",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2025-08-26T12:48:05Z",
+          "updated": "2025-09-14T17:21:03Z",
+          "pdf_url": "https://arxiv.org/pdf/2508.18993",
+          "html_url": "https://arxiv.org/html/2508.18993",
+          "abs_url": "https://arxiv.org/abs/2508.18993",
+          "citations": 9,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2508.18993"
+        },
+        {
+          "id": "2503.03586",
+          "title": "Benchmarking LLMs and LLM-based Agents in Practical Vulnerability Detection for Code Repositories",
+          "authors": [
+            "Alperen Yildiz",
+            "Sin G. Teo",
+            "Yiling Lou",
+            "Yebo Feng",
+            "Chong Wang",
+            "Dinil M. Divakaran"
+          ],
+          "abstract": "Large Language Models (LLMs) have shown promise in software vulnerability detection, particularly on function-level benchmarks like Devign and BigVul. However, real-world detection requires interprocedural analysis, as vulnerabilities often emerge through multi-hop function calls rather than isolated functions. While repository-level benchmarks like ReposVul and VulEval introduce interprocedural context, they remain computationally expensive, lack pairwise evaluation of vulnerability fixes, and explore limited context retrieval, limiting their practicality.\n  We introduce JitVul, a JIT vulnerability detection benchmark linking each function to its vulnerability-introducing and fixing commits. Built from 879 CVEs spanning 91 vulnerability types, JitVul enables comprehensive evaluation of detection capabilities. Our results show that ReAct Agents, leveraging thought-action-observation and interprocedural context, perform better than LLMs in distinguishing vulnerable from benign code. While prompting strategies like Chain-of-Thought help LLMs, ReAct Agents require further refinement. Both methods show inconsistencies, either misidentifying vulnerabilities or over-analyzing security guards, indicating significant room for improvement.",
+          "categories": [
+            "cs.CR"
+          ],
+          "published": "2025-03-05T15:22:24Z",
+          "updated": "2025-03-18T05:30:00Z",
+          "pdf_url": "https://arxiv.org/pdf/2503.03586",
+          "html_url": "https://arxiv.org/html/2503.03586",
+          "abs_url": "https://arxiv.org/abs/2503.03586",
+          "citations": 25,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2503.03586"
+        },
+        {
+          "id": "2512.12730",
+          "title": "NL2Repo-Bench: Towards Long-Horizon Repository Generation Evaluation of Coding Agents",
+          "authors": [
+            "Jingzhe Ding",
+            "Shengda Long",
+            "Changxin Pu",
+            "Huan Zhou",
+            "Hongwan Gao",
+            "Xiang Gao",
+            "Chao He",
+            "Yue Hou",
+            "Fei Hu",
+            "Zhaojian Li",
+            "Weiran Shi",
+            "Zaiyuan Wang",
+            "Daoguang Zan",
+            "Chenchen Zhang",
+            "Xiaoxu Zhang",
+            "Qizhi Chen",
+            "Xianfu Cheng",
+            "Bo Deng",
+            "Qingshui Gu",
+            "Kai Hua",
+            "Juntao Lin",
+            "Pai Liu",
+            "Mingchen Li",
+            "Xuanguang Pan",
+            "Zifan Peng",
+            "Yujia Qin",
+            "Yong Shan",
+            "Zhewen Tan",
+            "Weihao Xie",
+            "Zihan Wang",
+            "Yishuo Yuan",
+            "Jiayu Zhang",
+            "Enduo Zhao",
+            "Yunfei Zhao",
+            "He Zhu",
+            "Liya Zhu",
+            "Chenyang Zou",
+            "Ming Ding",
+            "Jianpeng Jiao",
+            "Jiaheng Liu",
+            "Minghao Liu",
+            "Qian Liu",
+            "Chongyang Tao",
+            "Jian Yang",
+            "Tong Yang",
+            "Zhaoxiang Zhang",
+            "Xinjie Chen",
+            "Wenhao Huang",
+            "Ge Zhang"
+          ],
+          "abstract": "Recent advances in coding agents suggest rapid progress toward autonomous software development, yet existing benchmarks fail to rigorously evaluate the long-horizon capabilities required to build complete software systems. Most prior evaluations focus on localized code generation, scaffolded completion, or short-term repair tasks, leaving open the question of whether agents can sustain coherent reasoning, planning, and execution over the extended horizons demanded by real-world repository construction. To address this gap, we present NL2Repo Bench, a benchmark explicitly designed to evaluate the long-horizon repository generation ability of coding agents. Given only a single natural-language requirements document and an empty workspace, agents must autonomously design the architecture, manage dependencies, implement multi-module logic, and produce a fully installable Python library. Our experiments across state-of-the-art open- and closed-source models reveal that long-horizon repository generation remains largely unsolved: even the strongest agents achieve below 40% average test pass rates and rarely complete an entire repository correctly. Detailed analysis uncovers fundamental long-horizon failure modes, including premature termination, loss of global coherence, fragile cross-file dependencies, and inadequate planning over hundreds of interaction steps. NL2Repo Bench establishes a rigorous, verifiable testbed for measuring sustained agentic competence and highlights long-horizon reasoning as a central bottleneck for the next generation of autonomous coding agents.",
+          "categories": [
+            "cs.CL"
+          ],
+          "published": "2025-12-14T15:12:13Z",
+          "updated": "2026-01-08T02:42:06Z",
+          "pdf_url": "https://arxiv.org/pdf/2512.12730",
+          "html_url": "https://arxiv.org/html/2512.12730",
+          "abs_url": "https://arxiv.org/abs/2512.12730",
+          "citations": 6,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2512.12730"
+        },
+        {
+          "id": "2603.09290",
+          "title": "ToolRosetta: Bridging Open-Source Repositories and Large Language Model Agents through Automated Tool Standardization",
+          "authors": [
+            "Shimin Di",
+            "Xujie Yuan",
+            "Hanghui Guo",
+            "Chaoqian Ouyang",
+            "Zhangze Chen",
+            "Ling Yue",
+            "Libin Zheng",
+            "Jia Zhu",
+            "Shaowu Pan",
+            "Jian Yin",
+            "Min-Ling Zhang",
+            "Yong Rui"
+          ],
+          "abstract": "Reusing and invoking existing code remains costly and unreliable, as most practical tools are embedded in heterogeneous code repositories and lack standardized, executable interfaces. Although large language models (LLMs) and Model Context Protocol (MCP)-based tool invocation frameworks enable natural language task execution, current approaches rely heavily on manual tool curation and standardization, which fundamentally limits scalability. In this paper, we propose ToolRosetta, a unified framework that automatically translates open-source code repositories and APIs into MCP-compatible tools that can be reliably invoked by LLMs. Given a user task, ToolRosetta autonomously plans toolchains, identifies relevant codebases, and converts them into executable MCP services, enabling end-to-end task completion with minimal human intervention. In addition, ToolRosetta incorporates a security inspection layer to mitigate risks inherent in executing arbitrary code. Extensive experiments across diverse scientific domains demonstrate that ToolRosetta can automatically standardize a large number of open-source tools and reduce the human effort required for code reproduction and deployment. Notably, by seamlessly leveraging specialized open-source tools, ToolRosetta-powered agents consistently improve task completion performance compared to commercial LLMs and existing agent systems.",
+          "categories": [
+            "cs.SE",
+            "cs.CE",
+            "cs.MA"
+          ],
+          "published": "2026-03-10T07:19:43Z",
+          "updated": "2026-03-10T07:19:43Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.09290",
+          "html_url": "https://arxiv.org/html/2603.09290",
+          "abs_url": "https://arxiv.org/abs/2603.09290",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.09290"
+        },
+        {
+          "id": "2602.22764",
+          "title": "Evaluating and Improving Automated Repository-Level Rust Issue Resolution with LLM-based Agents",
+          "authors": [
+            "Jiahong Xiang",
+            "Wenxiao He",
+            "Xihua Wang",
+            "Hongliang Tian",
+            "Yuqun Zhang"
+          ],
+          "abstract": "The Rust programming language presents a steep learning curve and significant coding challenges, making the automation of issue resolution essential for its broader adoption. Recently, LLM-powered code agents have shown remarkable success in resolving complex software engineering tasks, yet their application to Rust has been limited by the absence of a large-scale, repository-level benchmark. To bridge this gap, we introduce Rust-SWE-bench, a benchmark comprising 500 real-world, repository-level software engineering tasks from 34 diverse and popular Rust repositories. We then perform a comprehensive study on Rust-SWE-bench with four representative agents and four state-of-the-art LLMs to establish a foundational understanding of their capabilities and limitations in the Rust ecosystem. Our extensive study reveals that while ReAct-style agents are promising, i.e., resolving up to 21.2% of issues, they are limited by two primary challenges: comprehending repository-wide code structure and complying with Rust's strict type and trait semantics. We also find that issue reproduction is rather critical for task resolution. Inspired by these findings, we propose RUSTFORGER, a novel agentic approach that integrates an automated test environment setup with a Rust metaprogramming-driven dynamic tracing strategy to facilitate reliable issue reproduction and dynamic analysis. The evaluation shows that RUSTFORGER using Claude-Sonnet-3.7 significantly outperforms all baselines, resolving 28.6% of tasks on Rust-SWE-bench, i.e., a 34.9% improvement over the strongest baseline, and, in aggregate, uniquely solves 46 tasks that no other agent could solve across all adopted advanced LLMs.",
+          "categories": [
+            "cs.SE"
+          ],
+          "published": "2026-02-26T08:54:09Z",
+          "updated": "2026-02-26T08:54:09Z",
+          "pdf_url": "https://arxiv.org/pdf/2602.22764",
+          "html_url": "https://arxiv.org/html/2602.22764",
+          "abs_url": "https://arxiv.org/abs/2602.22764",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2602.22764"
+        },
+        {
+          "id": "2311.09835",
+          "title": "ML-Bench: Evaluating Large Language Models and Agents for Machine Learning Tasks on Repository-Level Code",
+          "authors": [
+            "Xiangru Tang",
+            "Yuliang Liu",
+            "Zefan Cai",
+            "Yanjun Shao",
+            "Junjie Lu",
+            "Yichi Zhang",
+            "Zexuan Deng",
+            "Helan Hu",
+            "Kaikai An",
+            "Ruijun Huang",
+            "Shuzheng Si",
+            "Sheng Chen",
+            "Haozhe Zhao",
+            "Liang Chen",
+            "Yan Wang",
+            "Tianyu Liu",
+            "Zhiwei Jiang",
+            "Baobao Chang",
+            "Yin Fang",
+            "Yujia Qin",
+            "Wangchunshu Zhou",
+            "Yilun Zhao",
+            "Arman Cohan",
+            "Mark Gerstein"
+          ],
+          "abstract": "Despite Large Language Models (LLMs) like GPT-4 achieving impressive results in function-level code generation, they struggle with repository-scale code understanding (e.g., coming up with the right arguments for calling routines), requiring a deeper comprehension of complex file interactions. Also, recently, people have developed LLM agents that attempt to interact with repository code (e.g., compiling and evaluating its execution), prompting the need to evaluate their performance. These gaps have motivated our development of ML-Bench, a benchmark rooted in real-world programming applications that leverage existing code repositories to perform tasks. Addressing the need for LLMs to interpret long code contexts and translate instructions into precise, executable scripts, ML-Bench encompasses annotated 9,641 examples across 18 GitHub repositories, challenging LLMs to accommodate user-specified arguments and documentation intricacies effectively. To evaluate both LLMs and AI agents, two setups are employed: ML-LLM-Bench for assessing LLMs' text-to-code conversion within a predefined deployment environment, and ML-Agent-Bench for testing autonomous agents in an end-to-end task execution within a Linux sandbox environment. Our findings indicate that while GPT-4o leads with a Pass@5 rate surpassing 50%, there remains significant scope for improvement, highlighted by issues such as hallucinated outputs and difficulties with bash script generation. Notably, in the more demanding ML-Agent-Bench, GPT-4o achieves a 76.47% success rate, reflecting the efficacy of iterative action and feedback in complex task resolution. Our code, dataset, and models are available at https://github.com/gersteinlab/ML-bench.",
+          "categories": [
+            "cs.CL",
+            "cs.AI"
+          ],
+          "published": "2023-11-16T12:03:21Z",
+          "updated": "2024-08-21T13:36:30Z",
+          "pdf_url": "https://arxiv.org/pdf/2311.09835",
+          "html_url": "https://arxiv.org/html/2311.09835",
+          "abs_url": "https://arxiv.org/abs/2311.09835",
+          "citations": 49,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2311.09835"
+        },
+        {
+          "id": "2504.20115",
+          "title": "AutoP2C: An LLM-Based Agent Framework for Code Repository Generation from Multimodal Content in Academic Papers",
+          "authors": [
+            "Zijie Lin",
+            "Yiqing Shen",
+            "Qilin Cai",
+            "He Sun",
+            "Jinrui Zhou",
+            "Mingjun Xiao"
+          ],
+          "abstract": "Machine Learning (ML) research is spread through academic papers featuring rich multimodal content, including text, diagrams, and tabular results. However, translating these multimodal elements into executable code remains a challenging and time-consuming process that requires substantial ML expertise. We introduce ``Paper-to-Code'' (P2C), a novel task that transforms the multimodal content of scientific publications into fully executable code repositories, which extends beyond the existing formulation of code generation that merely converts textual descriptions into isolated code snippets. To automate the P2C process, we propose AutoP2C, a multi-agent framework based on large language models that processes both textual and visual content from research papers to generate complete code repositories. Specifically, AutoP2C contains four stages: (1) repository blueprint extraction from established codebases, (2) multimodal content parsing that integrates information from text, equations, and figures, (3) hierarchical task decomposition for structured code generation, and (4) iterative feedback-driven debugging to ensure functionality and performance. Evaluation on a benchmark of eight research papers demonstrates the effectiveness of AutoP2C, which can successfully generate executable code repositories for all eight papers, while OpenAI-o1 or DeepSeek-R1 can only produce runnable code for one paper. The code is available at https://github.com/shoushouyu/Automated-Paper-to-Code.",
+          "categories": [
+            "cs.SE",
+            "cs.AI"
+          ],
+          "published": "2025-04-28T05:47:37Z",
+          "updated": "2025-05-24T14:36:15Z",
+          "pdf_url": "https://arxiv.org/pdf/2504.20115",
+          "html_url": "https://arxiv.org/html/2504.20115",
+          "abs_url": "https://arxiv.org/abs/2504.20115",
+          "citations": 15,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2504.20115"
+        },
+        {
+          "id": "2602.23647",
+          "title": "SGAgent: Suggestion-Guided LLM-Based Multi-Agent Framework for Repository-Level Software Repair",
+          "authors": [
+            "Quanjun Zhang",
+            "Chengyu Gao",
+            "Yu Han",
+            "Ye Shang",
+            "Chunrong Fang",
+            "Zhenyu Chen",
+            "Liang Xiao"
+          ],
+          "abstract": "The rapid advancement of Large Language Models (LLMs) has led to the emergence of intelligent agents capable of autonomously interacting with environments and invoking external tools. Recently, agent-based software repair approaches have received widespread attention, as repair agents can automatically analyze and localize bugs, generate patches, and achieve state-of-the-art performance on repository-level benchmarks. However, existing approaches usually adopt a localize-then-fix paradigm, jumping directly from \"where the bug is\" to \"how to fix it\", leaving a fundamental reasoning gap. To this end, we propose SGAgent, a Suggestion-Guided multi-Agent framework for repository-level software repair, which follows a localize-suggest-fix paradigm. SGAgent introduces a suggestion phase to strengthen the transition from localization to repair. The suggester starts from the buggy locations and incrementally retrieves relevant context until it fully understands the bug, and then provides actionable repair suggestions. Moreover, we construct a Knowledge Graph from the target repository and develop a KG-based toolkit to enhance SGAgent's global contextual awareness and repository-level reasoning. Three specialized sub-agents (i.e., localizer, suggester, and fixer) collaborate to achieve automated end-to-end software repair. Experimental results on SWE-Bench show that SGAgent with Claude-3.5 achieves 51.3% repair accuracy, 81.2% file-level and 52.4% function-level localization accuracy with an average cost of $1.48 per instance, outperforming all baselines using the same base model. Furthermore, SGAgent attains 48% accuracy on VUL4J and VJBench for vulnerability repair, demonstrating strong generalization across tasks and programming languages.",
+          "categories": [
+            "cs.SE"
+          ],
+          "published": "2026-02-27T03:32:47Z",
+          "updated": "2026-02-27T03:32:47Z",
+          "pdf_url": "https://arxiv.org/pdf/2602.23647",
+          "html_url": "https://arxiv.org/html/2602.23647",
+          "abs_url": "https://arxiv.org/abs/2602.23647",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2602.23647"
+        },
+        {
+          "id": "2603.11808",
+          "title": "Automating Skill Acquisition through Large-Scale Mining of Open-Source Agentic Repositories: A Framework for Multi-Agent Procedural Knowledge Extraction",
+          "authors": [
+            "Shuzhen Bi",
+            "Mengsong Wu",
+            "Hao Hao",
+            "Keqian Li",
+            "Wentao Liu",
+            "Siyu Song",
+            "Hongbo Zhao",
+            "Aimin Zhou"
+          ],
+          "abstract": "The transition from monolithic large language models (LLMs) to modular, skill-equipped agents represents a fundamental architectural shift in artificial intelligence deployment. While general-purpose models demonstrate remarkable breadth in declarative knowledge, their utility in autonomous workflows is frequently constrained by insufficient specialized procedural expertise. This report investigates a systematic framework for automated acquisition of high-quality agent skills through mining of open-source repositories on platforms such as GitHub. We focus on the extraction of visualization and educational capabilities from state-of-the-art systems including TheoremExplainAgent and Code2Video, both utilizing the Manim mathematical animation engine. The framework encompasses repository structural analysis, semantic skill identification through dense retrieval, and translation to the standardized SKILL.md format. We demonstrate that systematic extraction from agentic repositories, combined with rigorous security governance and multi-dimensional evaluation metrics, enables scalable acquisition of procedural knowledge that augments LLM capabilities without requiring model retraining. Our analysis reveals that agent-generated educational content can achieve 40\\% gains in knowledge transfer efficiency while maintaining pedagogical quality comparable to human-crafted tutorials.",
+          "categories": [
+            "cs.AI"
+          ],
+          "published": "2026-03-12T11:10:13Z",
+          "updated": "2026-03-17T12:05:06Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.11808",
+          "html_url": "https://arxiv.org/html/2603.11808",
+          "abs_url": "https://arxiv.org/abs/2603.11808",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.11808"
+        },
+        {
+          "id": "2603.00080",
+          "title": "From Static Repositories to Agentic Knowledge Webs: ResearchTwin and the S-Index for Federated Human-AI Research Discovery",
+          "authors": [
+            "Martin G. Frasch"
+          ],
+          "abstract": "The exponential growth of scientific literature, datasets, and code repositories has created a discovery bottleneck that impedes knowledge synthesis and reproducibility. Traditional dissemination formats -- static PDFs, siloed code hosting, and fragmented data repositories -- fail to represent the interconnected narrative of modern research, while conventional metrics such as the H-index neglect contributions from reusable code and shared datasets. We present ResearchTwin, an open-source federated platform that transforms a researcher's scholarly output into a conversational digital twin, with a preliminary evaluation of its deployed prototype. The system uses a Bimodal Glial-Neural Optimization (BGNO) architecture comprising a Multi-Modal Connector Layer, a Glial Layer for caching and rate management, and a Neural Layer implementing Retrieval-Augmented Generation with a provider-agnostic LLM backend. We formalize the S-index, building on our earlier QIC framework, into a composite metric that extends FAIR principles -- via a binary accessibility/licensing gate, field-normalized impact scoring, and geometric collaboration scaling -- to quantify multimodal research impact. A case study comparing two researchers with similar H-indexes but substantially different S-indexes demonstrates that the metric captures dimensions of impact -- particularly dataset and code contributions -- invisible to citation-based measures alone. ResearchTwin exposes an inter-agentic discovery API using Schema.org typed responses and HATEOAS navigation, enabling AI agents to discover cross-lab synergies. A three-tier federated architecture preserves data sovereignty while enabling global discoverability.",
+          "categories": [
+            "cs.DL"
+          ],
+          "published": "2026-02-13T22:37:40Z",
+          "updated": "2026-02-13T22:37:40Z",
+          "pdf_url": "https://arxiv.org/pdf/2603.00080",
+          "html_url": "https://arxiv.org/html/2603.00080",
+          "abs_url": "https://arxiv.org/abs/2603.00080",
+          "citations": 0,
+          "source": "arxiv",
+          "source_url": "https://arxiv.org/abs/2603.00080"
+        }
+      ]
+    }
+  ],
+  "total": 36
+}

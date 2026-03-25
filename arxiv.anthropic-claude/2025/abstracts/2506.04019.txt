@@ -1,0 +1,29 @@
+Title: CETBench: A Novel Dataset constructed via Transformations over Programs for Benchmarking LLMs for Code-Equivalence Checking
+Authors: Neeva Oza, Ishaan Govil, Parul Gupta, Dinesh Khandelwal, Dinesh Garg et al. (+1)
+ID: 2506.04019
+URL: https://arxiv.org/abs/2506.04019
+
+LLMs have been extensively used for the task of automated code generation. In
+this work, we examine the applicability of LLMs for the related but relatively
+unexplored task of code-equivalence checking, i.e., given two programs, whether
+they are functionally equivalent or not. This is an important problem since
+benchmarking code equivalence can play a critical role in evaluating LLM
+capabilities for tasks such as code re-writing and code translation. Towards
+this end, we present CETBench - Code Equivalence with Transformations Benchmark,
+constructed via a repository of programs, where two programs in the repository
+may be solving the same or different tasks. Each instance in our dataset is
+obtained by taking a pair of programs in the repository and applying a random
+series of pre-defined code transformations, resulting in (non-)equivalent pairs.
+Our analysis on this dataset reveals a surprising finding that very simple code
+transformations in the underlying pair of programs can result in a significant
+drop in performance of SOTA LLMs for the task of code-equivalence checking. To
+remedy this, we present a simple fine-tuning-based approach to boost LLM
+performance on the transformed pairs of programs. Our approach for dataset
+generation is generic, and can be used with repositories with varying program
+difficulty levels and allows for applying varying numbers as well as kinds of
+transformations. In our experiments, we perform ablations over the difficulty
+level of original programs, as well as the kind of transformations used in
+generating pairs for equivalence checking. Our analysis presents deep insights
+into the working of LLMs for the task of code-equivalence, and points to the
+fact that they may still be far from what could be termed as a semantic
+understanding of the underlying code.

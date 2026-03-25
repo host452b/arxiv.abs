@@ -1,0 +1,27 @@
+Title: Batch Query Processing and Optimization for Agentic Workflows
+Authors: Junyi Shen, Noppanat Wadlom, Yao Lu
+ID: 2509.02121
+URL: https://arxiv.org/abs/2509.02121
+
+Abstract:
+Large Language Models (LLMs) in agentic workflows combine multi-step reasoning,
+heterogeneous tool use, and collaboration across multiple specialized agents.
+Existing LLM serving engines optimize individual calls in isolation, while
+multi-agent frameworks focus on orchestration without system-level performance
+planning. As a result, repeated prompts, overlapping contexts, and fragmented
+CPU-GPU execution create substantial redundancy and poor hardware utilization,
+especially in batch analytics scenarios. We introduce Halo, a system that brings
+batch query processing and optimization into agentic LLM workflows. Halo
+represents each workflow as a structured query plan DAG and constructs a
+consolidated graph for batched queries that exposes shared computation. Guided
+by a cost model that jointly considers heterogeneous resource constraints,
+prefill and decode costs, cache reuse, and GPU placement, Halo performs
+plan-level optimization to minimize redundant execution. The Processor
+integrates adaptive batching, KV-cache sharing and migration, along with
+fine-grained CPU-GPU pipelining to maximize holistic hardware efficiency.
+Evaluation across six benchmarks shows that Halo achieves up to 3.6x speedup for
+batch inference and 2.6x throughput improvement under online serving, scaling to
+workloads of thousands of queries and complex graphs. These gains are achieved
+without compromising output quality. By unifying query optimization with
+heterogeneous LLM serving, Halo enables efficient agentic workflows in data
+analytics and decision-making applications.

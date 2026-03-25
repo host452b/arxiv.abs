@@ -1,0 +1,27 @@
+Title: LoRA is All You Need for Safety Alignment of Reasoning LLMs
+Authors: Yihao Xue, Baharan Mirzasoleiman
+ID: 2507.17075
+URL: https://arxiv.org/abs/2507.17075
+
+Abstract:
+Reasoning-capable LLMs have achieved major breakthroughs in solving complex
+problems, but recent work shows that acquiring and deploying strong reasoning
+can introduce significant safety risks. A common mitigation is to apply a
+secondary safety-alignment phase after reasoning is learned; however, safety
+alignment often degrades reasoning performance--a phenomenon known as the
+"Safety Tax". In this work, we show that a simple approach can largely bypass
+this trade-off: applying LoRA during SFT on refusal datasets. Despite its
+simplicity, this recipe achieves safety comparable to full-model alignment while
+preserving reasoning performance close to the original reasoning-tuned model,
+and the result holds across multiple model sizes and architectures, two safety
+benchmarks, and four reasoning benchmarks spanning mathematics, science, and
+code generation. We further ablate LoRA configurations and find that (1) rank-1
+updates are sufficient to achieve the best safety-reasoning trade-off, (2)
+applying LoRA only to the MLP up-projection layers can outperform updating the
+full MLP, and (3) updating middle layers is more effective than updating early
+or late layers. Finally, we provide a theoretical analysis that helps understand
+when and why LoRA works, revealing that overshooting the rank budget (using a
+larger rank than needed for the finetuning task) induces base-task degradation
+at a rate inversely proportional to the intrinsic dimensionality of the base
+task. This suggests LoRA is most effective when the finetuning task is low-rank
+and the base capability is high-rank.

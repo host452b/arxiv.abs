@@ -1,0 +1,25 @@
+Title: A Geometric Taxonomy of Hallucinations in LLMs
+Authors: Javier Marín
+ID: 2602.13224
+URL: https://arxiv.org/abs/2602.13224
+
+Abstract:
+The term "hallucination" converge different failure modes with specific
+geometric signatures in embedding space. We propose a taxonomy identifying three
+types: unfaithfulness (Type I: ignoring provided context), confabulation (Type
+II: inventing semantically foreign content), and factual error (Type III: wrong
+details within correct conceptual frames). We introduce two detection methods
+grounded in this taxonomy: the Semantic Grounding Index (SGI) for Type I, which
+measures whether a response moves toward provided context on the unit
+hypersphere, and the Directional Grounding Index (DGI) for Type II, which
+measures displacement geometry in context-free settings. DGI achieves
+AUROC=0.958 on human-crafted confabulations with 3.8% cross-domain degradation.
+External validation on three independently collected human-annotated benchmarks
+-WikiBio GPT-3, FELM, and ExpertQA- yields domain-specific AUROC 0.581-0.695,
+with DGI outperforming an NLI CrossEncoder baseline on expert-domain data, where
+surface entailment operates at chance. On LLM-generated benchmarks, detection is
+domain-local. We examine the Type III boundary through TruthfulQA, where
+apparent classifier signal (Logistic Regression with AUROC 0.731) is traced to a
+stylistic annotation confound: false answers are geometrically closer to queries
+than truthful ones, a pattern incompatible with factual-error detection. This
+identifies a theoretical constraint from a methodological limitation.

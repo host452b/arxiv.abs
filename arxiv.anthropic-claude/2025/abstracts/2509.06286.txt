@@ -1,0 +1,20 @@
+Title: RecMind: LLM-Enhanced Graph Neural Networks for Personalized Consumer Recommendations
+Authors: Chang Xue, Youwei Lu, Chen Yang, Jinming Xing
+ID: 2509.06286
+URL: https://arxiv.org/abs/2509.06286
+
+Personalization is a core capability across consumer technologies, streaming,
+shopping, wearables, and voice, yet it remains challenged by sparse
+interactions, fast content churn, and heterogeneous textual signals. We present
+RecMind, an LLM-enhanced graph recommender that treats the language model as a
+preference prior rather than a monolithic ranker. A frozen LLM equipped with
+lightweight adapters produces text-conditioned user/item embeddings from titles,
+attributes, and reviews; a LightGCN backbone learns collaborative embeddings
+from the user-item graph. We align the two views with a symmetric contrastive
+objective and fuse them via intra-layer gating, allowing language to dominate in
+cold/long-tail regimes and graph structure to stabilize rankings elsewhere. On
+Yelp and Amazon-Electronics, RecMind attains the best results on all eight
+reported metrics, with relative improvements up to +4.53\% (Recall@40) and
++4.01\% (NDCG@40) over strong baselines. Ablations confirm both the necessity of
+cross-view alignment and the advantage of gating over late fusion and LLM-only
+variants.

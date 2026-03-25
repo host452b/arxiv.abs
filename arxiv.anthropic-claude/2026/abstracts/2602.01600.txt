@@ -1,0 +1,23 @@
+Title: Expected Harm: Rethinking Safety Evaluation of (Mis)Aligned LLMs
+Authors: Yen-Shan Chen, Zhi Rui Tam, Cheng-Kuang Wu, Yun-Nung Chen
+ID: 2602.01600
+URL: https://arxiv.org/abs/2602.01600
+
+Abstract:
+Current evaluations of LLM safety predominantly rely on severity-based
+taxonomies to assess the harmfulness of malicious queries. We argue that this
+formulation requires re-examination as it assumes uniform risk across all
+malicious queries, neglecting Execution Likelihood--the conditional probability
+of a threat being realized given the model's response. In this work, we
+introduce Expected Harm, a metric that weights the severity of a jailbreak by
+its execution likelihood, modeled as a function of execution cost. Through
+empirical analysis of state-of-the-art models, we reveal a systematic Inverse
+Risk Calibration: models disproportionately exhibit stronger refusal behaviors
+for low-likelihood (high-cost) threats while remaining vulnerable to
+high-likelihood (low-cost) queries. We demonstrate that this miscalibration
+creates a structural vulnerability: by exploiting this property, we increase the
+attack success rate of existing jailbreaks by up to $2\times$. Finally, we trace
+the root cause of this failure using linear probing, which reveals that while
+models encode severity in their latent space to drive refusal decisions, they
+possess no distinguishable internal representation of execution cost, making
+them "blind" to this critical dimension of risk.

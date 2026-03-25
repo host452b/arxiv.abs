@@ -1,0 +1,23 @@
+Title: Safety Alignment Should Be Made More Than Just A Few Attention Heads
+Authors: Chao Huang, Zefeng Zhang, Juewei Yue, Quangang Li, Chuang Zhang et al.
+ID: 2508.19697
+URL: https://arxiv.org/abs/2508.19697
+
+Abstract:
+Current safety alignment for large language models(LLMs) continues to present
+vulnerabilities, given that adversarial prompting can effectively bypass their
+safety measures.Our investigation shows that these safety mechanisms
+predominantly depend on a limited subset of attention heads: removing or
+ablating these heads can severely compromise model safety. To identify and
+evaluate these safety-critical components, we introduce RDSHA, a targeted
+ablation method that leverages the model's refusal direction to pinpoint
+attention heads mostly responsible for safety behaviors. Further analysis shows
+that existing jailbreak attacks exploit this concentration by selectively
+bypassing or manipulating these critical attention heads. To address this issue,
+we propose AHD, a novel training strategy designed to promote the distributed
+encoding of safety-related behaviors across numerous attention heads.
+Experimental results demonstrate that AHD successfully distributes
+safety-related capabilities across more attention heads. Moreover, evaluations
+under several mainstream jailbreak attacks show that models trained with AHD
+exhibit considerably stronger safety robustness, while maintaining overall
+functional utility.

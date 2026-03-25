@@ -1,0 +1,19 @@
+Title: Gyges: Dynamic Cross-Instance Parallelism Transformation for Efficient LLM Inference
+Authors: Haoyu Chen, Xue Li, Kun Qian, Yu Guan, Jin Zhao et al. (+1)
+ID: 2509.19729
+URL: https://arxiv.org/abs/2509.19729
+
+Efficiently processing the dynamics of requests, especially the context length
+variance, is important in Large Language Model (LLM) serving scenarios. However,
+there is an intrinsic trade-off: while leveraging parallelism strategies, such
+as Tensor Parallelism (TP), can coordinate multiple GPUs to accommodate larger
+context lengths, it inevitably results in degraded overall throughput. In this
+paper, we propose Cross-Instance Parallelism Transformation (Gyges), which
+adaptively adjusts the parallelism strategies of running instances to align with
+the dynamics of incoming requests. We design (1) a page-friendly, header-centric
+layout to accelerate KV cache transformations; (2) dedicated weight padding to
+accelerate model weight transformations; and (3) a transformation-aware
+scheduler to cooperatively schedule requests and parallelism transformations,
+optimizing the overall performance. Evaluations using real-world traces show
+that Gyges improves throughput by 1.75x-6.57x compared to state-of-the-art
+solutions.

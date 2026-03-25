@@ -1,0 +1,24 @@
+Title: Low-Rank Agent-Specific Adaptation (LoRASA) for Multi-Agent Policy Learning
+Authors: Beining Zhang, Aditya Kapoor, Mingfei Sun
+ID: 2502.05573
+URL: https://arxiv.org/abs/2502.05573
+
+Abstract:
+Multi-agent reinforcement learning (MARL) often relies on \emph{parameter
+sharing (PS)} to scale efficiently. However, purely shared policies can stifle
+each agent's unique specialization, reducing overall performance in
+heterogeneous environments. We propose \textbf{Low-Rank Agent-Specific
+Adaptation (LoRASA)}, a novel approach that treats each agent's policy as a
+specialized ``task'' fine-tuned from a shared backbone. Drawing inspiration from
+parameter-efficient transfer methods, LoRASA appends small, low-rank adaptation
+matrices to each layer of the shared policy, naturally inducing
+\emph{parameter-space sparsity} that promotes both specialization and
+scalability. We evaluate LoRASA on challenging benchmarks including the
+StarCraft Multi-Agent Challenge (SMAC) and Multi-Agent MuJoCo (MAMuJoCo),
+implementing it atop widely used algorithms such as MAPPO and A2PO. Across
+diverse tasks, LoRASA matches or outperforms existing baselines \emph{while
+reducing memory and computational overhead}. Ablation studies on adapter rank,
+placement, and timing validate the method's flexibility and efficiency. Our
+results suggest LoRASA's potential to establish a new norm for MARL policy
+parameterization: combining a shared foundation for coordination with low-rank
+agent-specific refinements for individual specialization.

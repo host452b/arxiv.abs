@@ -1,0 +1,20 @@
+Title: The Rogue Scalpel: Activation Steering Compromises LLM Safety
+Authors: Anton Korznikov, Andrey Galichin, Alexey Dontsov, Oleg Y. Rogov, Ivan Oseledets et al. (+1)
+ID: 2509.22067
+URL: https://arxiv.org/abs/2509.22067
+
+Activation steering is a promising technique for controlling LLM behavior by
+adding semantically meaningful vectors directly into a model's hidden states
+during inference. It is often framed as a precise, interpretable, and
+potentially safer alternative to fine-tuning. We demonstrate the opposite:
+steering systematically breaks model alignment safeguards, making it comply with
+harmful requests. Through extensive experiments on different model families, we
+show that even steering in a random direction can increase the probability of
+harmful compliance from 0% to 1-13%. Alarmingly, steering benign features from a
+sparse autoencoder (SAE), a common source of interpretable directions,
+demonstrates a comparable harmful potential. Finally, we show that combining 20
+randomly sampled vectors that jailbreak a single prompt creates a universal
+attack, significantly increasing harmful compliance on unseen requests. These
+results challenge the paradigm of safety through interpretability, showing that
+precise control over model internals does not guarantee precise control over
+model behavior.

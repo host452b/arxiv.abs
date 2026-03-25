@@ -1,0 +1,17 @@
+Title: Process Reward Models for LLM Agents: Practical Framework and Directions
+Authors: Sanjiban Choudhury
+ID: 2502.10325
+URL: https://arxiv.org/abs/2502.10325
+
+We introduce Agent Process Reward Models (AgentPRM), a simple and scalable
+framework for training LLM agents to continually improve through interactions.
+AgentPRM follows a lightweight actor-critic paradigm, using Monte Carlo rollouts
+to compute reward targets and optimize policies. It requires minimal
+modifications to existing RLHF pipelines, making it easy to integrate at scale.
+Beyond AgentPRM, we propose InversePRM, which learns process rewards directly
+from demonstrations without explicit outcome supervision. We also explore key
+challenges and opportunities, including exploration, process reward shaping, and
+model-predictive reasoning. We evaluate on ALFWorld benchmark, show that small
+3B models trained with AgentPRM and InversePRM outperform strong GPT-4o
+baselines, and analyze test-time scaling, reward hacking, and more. Our code is
+available at: https://github.com/sanjibanc/agent_prm.

@@ -1,0 +1,23 @@
+Title: Agentic Unlearning: When LLM Agent Meets Machine Unlearning
+Authors: Bin Wang, Fan Wang, Pingping Wang, Jinyu Cong, Yang Yu et al.
+ID: 2602.17692
+URL: https://arxiv.org/abs/2602.17692
+
+Abstract:
+In this paper, we introduce \textbf{agentic unlearning} which removes specified
+information from both model parameters and persistent memory in agents with
+closed-loop interaction. Existing unlearning methods target parameters alone,
+leaving two critical gaps: (i) parameter-memory backflow, where retrieval
+reactivates parametric remnants or memory artifacts reintroduce sensitive
+content, and (ii) the absence of a unified strategy that covers both parameter
+and memory pathways. We present Synchronized Backflow Unlearning (SBU), a
+framework that unlearns jointly across parameter and memory pathways. The memory
+pathway performs dependency closure-based unlearning that prunes isolated
+entities while logically invalidating shared artifacts. The parameter pathway
+employs stochastic reference alignment to guide model outputs toward a
+high-entropy prior. These pathways are integrated via a synchronized dual-update
+protocol, forming a closed-loop mechanism where memory unlearning and parametric
+suppression reinforce each other to prevent cross-pathway recontamination.
+Experiments on medical QA benchmarks show that SBU reduces traces of targeted
+private information across both pathways with limited degradation on retained
+data.

@@ -1,0 +1,23 @@
+Title: AutoScale: Scale-Aware Data Mixing for Pre-Training LLMs
+Authors: Feiyang Kang, Yifan Sun, Bingbing Wen, Si Chen, Dawn Song et al. (+2)
+ID: 2407.20177
+URL: https://arxiv.org/abs/2407.20177
+
+Domain reweighting is an emerging research area aimed at adjusting the relative
+weights of different data sources to improve the effectiveness and efficiency of
+LLM pre-training. We show that data mixtures that perform well at smaller scales
+may not retain their advantage at larger scales, challenging the existing
+practice of determining competitive mixtures in small-scale experiments and
+directly applying them at much larger scales. To address this, we propose
+AutoScale, a two-stage, scale-aware data composition framework. First, AutoScale
+fits a parametric model that predicts the model's loss under different data
+compositions, then uses it to find an approximate best allocation at smaller,
+more manageable budgets. Next, leveraging a novel theoretical analysis of how
+optimal compositions evolve with scale, AutoScale extrapolates that composition
+to larger budgets without further retraining. Empirically, AutoScale accelerates
+convergence and improves downstream performance. For instance, when pre-training
+GPT-2 Large, it achieves a 28% faster perplexity reduction than baselines and up
+to a 38% speed-up over unweighted training, while yielding best-average results
+on various downstream tasks. Overall, our findings illustrate how domain
+importance shifts with training scale, underscoring the need for scale-dependent
+data curation in LLM training. Our code is open-sourced.

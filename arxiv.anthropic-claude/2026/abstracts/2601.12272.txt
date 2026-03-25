@@ -1,0 +1,29 @@
+Title: AgenticPruner: MAC-Constrained Neural Network Compression via LLM-Driven Strategy Search
+Authors: Shahrzad Esmat, Mahdi Banisharif, Ali Jannesari
+ID: 2601.12272
+URL: https://arxiv.org/abs/2601.12272
+
+Neural network pruning remains essential for deploying deep learning models on
+resource-constrained devices, yet existing approaches primarily target parameter
+reduction without directly controlling computational cost. This yields
+unpredictable inference latency in deployment scenarios where strict Multiply-
+Accumulate (MAC) operation budgets must be met. We propose AgenticPruner, a
+framework utilizing large language models to achieve MAC-constrained
+optimization through iterative strategy learning. Our approach coordinates three
+specialized agents: a Profiling Agent that analyzes model architecture and MAC
+distributions, a Master Agent that orchestrates the workflow with divergence
+monitoring, and an Analysis Agent powered by Claude 3.5 Sonnet that learns
+optimal strategies from historical attempts. Through in-context learning, the
+Analysis Agent improves convergence success rate from 48% to 71% compared to
+grid search. Building upon isomorphic pruning's graph-based structural grouping,
+our method adds context-aware adaptation by analyzing patterns across pruning
+iterations, enabling automatic convergence to target MAC budgets within user-
+defined tolerance bands.   We validate our framework on ImageNet-1K across
+ResNet, ConvNeXt, and DeiT architectures. On CNNs, our approach achieves MAC
+targeting while maintaining or improving accuracy: ResNet-50 reaches 1.77G MACs
+with 77.04% accuracy (+0.91% vs baseline); ResNet-101 achieves 4.22G MACs with
+78.94% accuracy (+1.56% vs baseline). For ConvNeXt-Small, pruning to 8.17G MACs
+yields 1.41x GPU and 1.07x CPU speedup with 45% parameter reduction. On Vision
+Transformers, we demonstrate MAC-budget compliance within user-defined tolerance
+bands (typically +1% to +5% overshoot, -5% to -15% undershoot), establishing
+feasibility for deployment scenarios requiring strict computational guarantees.

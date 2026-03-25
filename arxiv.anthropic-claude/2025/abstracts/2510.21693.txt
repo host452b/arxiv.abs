@@ -1,0 +1,24 @@
+Title: Mechanistic Interpretability for Neural TSP Solvers
+Authors: Reuben Narad, Leonard Boussioux, Michael Wagner
+ID: 2510.21693
+URL: https://arxiv.org/abs/2510.21693
+
+Neural networks have advanced combinatorial optimization, with Transformer-based
+solvers achieving near-optimal solutions on the Traveling Salesman Problem (TSP)
+in milliseconds. However, these models operate as black boxes, providing no
+insight into the geometric patterns they learn or the heuristics they employ
+during tour construction. We address this opacity by applying sparse
+autoencoders (SAEs), a mechanistic interpretability technique, to a Transformer-
+based TSP solver, representing the first application of activation-based
+interpretability methods to operations research models. We train a pointer
+network with reinforcement learning on 100-node instances, then fit an SAE to
+the encoder's residual stream to discover an overcomplete dictionary of
+interpretable features. Our analysis reveals that the solver naturally develops
+features mirroring fundamental TSP concepts: boundary detectors that activate on
+convex-hull nodes, cluster-sensitive features responding to locally dense
+regions, and separator features encoding geometric partitions. These findings
+provide the first model-internal account of what neural TSP solvers compute
+before node selection, demonstrate that geometric structure emerges without
+explicit supervision, and suggest pathways toward transparent hybrid systems
+that combine neural efficiency with algorithmic interpretability. Interactive
+feature explorer: https://reubennarad.github.io/TSP_interp

@@ -1,0 +1,29 @@
+Title: Measuring LLM Sensitivity in Transformer-based Tabular Data Synthesis
+Authors: Maria F. Davila R, Azizjon Turaev, Wolfram Wingerath
+ID: 2509.20768
+URL: https://arxiv.org/abs/2509.20768
+
+Synthetic tabular data is used for privacy-preserving data sharing and data-
+driven model development. Its effectiveness, however, depends heavily on the
+used Tabular Data Synthesis (TDS) tool. Recent studies have shown that
+Transformer-based models outperform other state-of-the-art models such as
+Generative Adversarial Networks (GANs) and Diffusion models in terms of data
+quality. However, Transformer-based models also come with high computational
+costs, making them sometimes unfeasible for end users with prosumer hardware.
+This study presents a sensitivity assessment on how the choice of
+hyperparameters, such as number of layers or hidden dimension affects the
+quality of the resultant synthetic data and the computational performance. It is
+performed across two tools, GReaT and REaLTabFormer, evaluating 10 model setups
+that vary in architecture type and depth. We assess the sensitivity on three
+dimensions: runtime, machine learning (ML) utility, and similarity to real data
+distributions. Experiments were conducted on four real-world datasets. Our
+findings reveal that runtime is proportional to the number of hyperparameters,
+with shallower configurations completing faster. GReaT consistently achieves
+lower runtimes than REaLTabFormer, and only on the largest dataset they have
+comparable runtime. For small datasets, both tools achieve synthetic data with
+high utility and optimal similarity, but on larger datasets only REaLTabFormer
+sustains strong utility and similarity. As a result, REaLTabFormer with
+lightweight LLMs provides the best balance, since it preserves data quality
+while reducing computational requirements. Nonetheless, its runtime remains
+higher than that of GReaT and other TDS tools, suggesting that efficiency gains
+are possible but only up to a certain level.

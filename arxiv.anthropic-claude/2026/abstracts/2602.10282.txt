@@ -1,0 +1,22 @@
+Title: Linear-LLM-SCM: Benchmarking LLMs for Coefficient Elicitation in Linear-Gaussian Causal Models
+Authors: Kanta Yamaoka, Sumantrak Mukherjee, Thomas Gärtner, David Antony Selby, Stefan Konigorski et al. (+3)
+ID: 2602.10282
+URL: https://arxiv.org/abs/2602.10282
+
+Large language models (LLMs) have shown potential in identifying qualitative
+causal relations, but their ability to perform quantitative causal reasoning --
+estimating effect sizes that parametrize functional relationships -- remains
+underexplored in continuous domains. We introduce Linear-LLM-SCM, a plug-and-
+play benchmarking framework for evaluating LLMs on linear Gaussian structural
+causal model (SCM) parametrization when the DAG is given. The framework
+decomposes a DAG into local parent-child sets and prompts an LLM to produce a
+regression-style structural equation per node, which is aggregated and compared
+against available ground-truth parameters. Our experiments show several
+challenges in such benchmarking tasks, namely, strong stochasticity in the
+results in some of the models and susceptibility to DAG misspecification via
+spurious edges in the continuous domains. Across models, we observe substantial
+variability in coefficient estimates for some settings and sensitivity to
+structural and semantic perturbations, highlighting current limitations of LLMs
+as quantitative causal parameterizers. We also open-sourced the benchmarking
+framework so that researchers can utilize their DAGs and any off-the-shelf LLMs
+plug-and-play for evaluation in their domains effortlessly.

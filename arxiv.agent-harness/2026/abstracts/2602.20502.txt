@@ -1,0 +1,24 @@
+Title: ActionEngine: From Reactive to Programmatic GUI Agents via State Machine Memory
+Authors: Hongbin Zhong, Fazle Faisal, Luis França, Tanakorn Leesatapornwongsa, Adriana Szekeres et al. (+2)
+ID: 2602.20502
+URL: https://arxiv.org/abs/2602.20502
+
+Existing Graphical User Interface (GUI) agents operate through step-by-step
+calls to vision language models--taking a screenshot, reasoning about the next
+action, executing it, then repeating on the new page--resulting in high costs
+and latency that scale with the number of reasoning steps, and limited accuracy
+due to no persistent memory of previously visited pages.   We propose
+ActionEngine, a training-free framework that transitions from reactive execution
+to programmatic planning through a novel two-agent architecture: a Crawling
+Agent that constructs an updatable state-machine memory of the GUIs through
+offline exploration, and an Execution Agent that leverages this memory to
+synthesize complete, executable Python programs for online task execution.   To
+ensure robustness against evolving interfaces, execution failures trigger a
+vision-based re-grounding fallback that repairs the failed action and updates
+the memory.   This design drastically improves both efficiency and accuracy: on
+Reddit tasks from the WebArena benchmark, our agent achieves 95% task success
+with on average a single LLM call, compared to 66% for the strongest vision-only
+baseline, while reducing cost by 11.8x and end-to-end latency by 2x.   Together,
+these components yield scalable and reliable GUI interaction by combining global
+programmatic planning, crawler-validated action templates, and node-level
+execution with localized validation and repair.

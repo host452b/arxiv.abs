@@ -1,0 +1,25 @@
+Title: LLM Unlearning with LLM Beliefs
+Authors: Kemou Li, Qizhou Wang, Yue Wang, Fengpeng Li, Jun Liu et al.
+ID: 2510.19422
+URL: https://arxiv.org/abs/2510.19422
+
+Abstract:
+Large language models trained on vast corpora inherently risk memorizing
+sensitive or harmful content, which may later resurface in their outputs.
+Prevailing unlearning methods generally rely on gradient ascent and its variants
+to lower the probability of specific target responses. However, we find that
+this strategy induces a critical side effect: probability mass is redistributed
+into high-likelihood regions, often corresponding to semantically related
+rephrasings of the targets. We refer to this as the squeezing effect, which
+explains why many methods yield merely spurious unlearning, a problem further
+obscured by automated metrics (e.g., ROUGE, truth ratio) that misreport actual
+success. To address this, we propose a bootstrapping (BS) framework that
+explicitly links the squeezing effect with the model's own high-confidence
+generations, namely its model beliefs. Since model beliefs inherently capture
+the very high-likelihood regions where probability mass is squeezed,
+incorporating them into the unlearning objective directly counters the squeezing
+effect. By jointly suppressing both target responses and model beliefs, BS-T
+(token) attenuates high-probability tokens, whereas BS-S (sequence) removes
+entire high-confidence generations, together achieving more thorough forgetting
+while preserving utility. Extensive experiments across diverse benchmarks with
+various model families confirm the effectiveness of our approach.

@@ -1,0 +1,21 @@
+Title: Scaling with Collapse: Efficient and Predictable Training of LLM Families
+Authors: Shane Bergsma, Bin Claire Zhang, Nolan Dey, Shaheer Muhammad, Gurpreet Gosal et al. (+1)
+ID: 2509.25087
+URL: https://arxiv.org/abs/2509.25087
+
+Effective LLM training depends on predictable scaling of key quantities -- such
+as final loss and optimal hyperparameters -- with model and dataset size. Qiu et
+al. (2025) recently showed that this predictability can extend beyond scalars:
+whole training loss curves can *collapse* onto a universal trajectory after a
+simple normalization. What remains unclear is whether this phenomenon persists
+for LLM families trained under *practical scaling recipes*, where width, depth,
+learning rate, batch size, and weight decay are scaled jointly. We show that it
+does: loss curves collapse across scales precisely when optimization
+hyperparameters are set optimally for the given data budget, in accordance with
+recent empirical scaling laws. Collapse therefore emerges as a signature of
+compute-efficient training. We demonstrate two applications at scale: (1)
+deviation-from-collapse provides a sensitive, early diagnostic of training
+pathologies, and (2) predictability of collapsed curves enables early stopping
+in large-scale hyperparameter tuning. Finally, we train a competitive LLM
+family, *Celerity*, using these insights, establishing collapse as an effective
+tool for developing efficient LLMs.
