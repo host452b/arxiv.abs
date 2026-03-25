@@ -1,0 +1,7 @@
+Title: OpenTable-R1: A Reinforcement Learning Augmented Tool Agent for Open-Domain Table Question Answering
+Authors: Zipeng Qiu
+ID: 2507.03018
+URL: https://arxiv.org/abs/2507.03018
+
+Abstract:
+Open-domain table question answering traditionally relies on a two-stage pipeline: static table retrieval followed by a closed-domain answer. In contrast, we propose an end-to-end agentic framework that embeds multi-turn tool calls-using a BM25+-based search API and a SQLite SQL executor-directly into a large language model. To further adapt a compact 4B-parameter model, we introduce a two-stage fine-tuning process: supervised cold-start on easy questions, then Async GRPO reinforcement learning on harder cases with LoRA adapters and a rollout buffer. This unified approach enables the model to jointly retrieve, reason, and execute queries, yielding a dramatic accuracy improvement from single-digit zero-shot performance to over 0.86 exact match on a held-out test set. Our results underscore the effectiveness of integrating structured tool calls with targeted RL fine-tuning for scalable, accurate table QA. The code is available at https://github.com/TabibitoQZP/OpenTableR1.

@@ -1,0 +1,7 @@
+Title: Generalized Discrete Diffusion with Self-Correction
+Authors: Linxuan Wang, Ziyi Wang, Yikun Bai, Wei Deng, Guang Lin, Qifan Song
+ID: 2603.02230
+URL: https://arxiv.org/abs/2603.02230
+
+Abstract:
+Self-correction is an effective technique for maintaining parallel sampling in discrete diffusion models with minimal performance degradation. Prior work has explored self-correction at inference time or during post-training; however, such approaches often suffer from limited generalization and may impair reasoning performance. GIDD pioneers pretraining-based self-correction via a multi-step BERT-style uniform-absorbing objective. However, GIDD relies on a continuous interpolation-based pipeline with opaque interactions between uniform transitions and absorbing masks, which complicates hyperparameter tuning and hinders practical performance. In this work, we propose a Self-Correcting Discrete Diffusion (SCDD) model to reformulate pretrained self-correction with explicit state transitions and learn directly in discrete time. Our framework also simplifies the training noise schedule, eliminates a redundant remasking step, and relies exclusively on uniform transitions to learn self-correction. Experiments at the GPT-2 scale demonstrate that our method enables more efficient parallel decoding while preserving generation quality.

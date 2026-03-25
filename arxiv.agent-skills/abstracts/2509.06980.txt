@@ -1,0 +1,7 @@
+Title: RLFactory: A Plug-and-Play Reinforcement Learning Post-Training Framework for LLM Multi-Turn Tool-Use
+Authors: Jiajun Chai, Guojun Yin, Zekun Xu, Chuhuai Yue, Yi Jia, Siyu Xia, Xiaohan Wang, Jiwen Jiang, Xiaoguang Li, Chengqi Dong, Hang He, Wei Lin
+ID: 2509.06980
+URL: https://arxiv.org/abs/2509.06980
+
+Abstract:
+Large language models excel at basic reasoning but struggle with tasks that require interaction with external tools. We present RLFactory, a plug-and-play reinforcement learning post-training framework for multi-round tool use. RLFactory tackles (i) tool-call stability and adaptability amid tool heterogeneity and interface issues via an asyncio-based asynchronous caller and a decoupled tool/training architecture, and (ii) diverse evaluation needs via a reward layer supporting rule-based, model-judgment, and tool-verification signals. It reconstructs the MDP by introducing observation markers from tool feedback, closing the loop among model, tools, and environment, and implements a generate-parse-invoke-update workflow for dynamic policy optimization. On Search-R1 with Qwen3-4B, RLFactory achieves a 0.486 test score on the Natural Questions (NQ) dataset, surpassing larger models trained with similar techniques (e.g., Qwen2.5-7B-Instruct-GRPO at 0.473), and increases training throughput by 6.8x. RLFactory provides a low-barrier, highly adaptable framework for strengthening multi-round tool use of LLMs in real-world scenarios. Code: https://github.com/Simple-Efficient/RL-Factory.

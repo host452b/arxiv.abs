@@ -1,0 +1,7 @@
+Title: eBPF-based Working Set Size Estimation in Memory Management
+Authors: Zhilu Lian, Yangzi Li, Zhixiang Chen, Shiwen Shan, Baoxin Han, Yuxin Su
+ID: 2303.05919
+URL: https://arxiv.org/abs/2303.05919
+
+Abstract:
+Working set size estimation (WSS) is of great significance to improve the efficiency of program executing and memory arrangement in modern operating systems. Previous work proposed several methods to estimate WSS, including self-balloning, Zballoning and so on. However, these methods which are based on virtual machine usually cause a large overhead. Thus, using those methods to estimate WSS is impractical. In this paper, we propose a novel framework to efficiently estimate WSS with eBPF (extended Berkeley Packet Filter), a cutting-edge technology which monitors and filters data by being attached to the kernel. With an eBPF program pinned into the kernel, we get the times of page fault and other information of memory allocation. Moreover, we collect WSS via vanilla tool to train a predictive model to complete estimation work with LightGBM, a useful tool which performs well on generating decision trees over continuous value. The experimental results illustrate that our framework can estimate WSS precisely with 98.5\% reduction in overhead compared to traditional methods.
