@@ -34,7 +34,9 @@
 |------|----------|---------|--------|
 | 男 | 睡眠呼吸障碍（OSA） | 1–5% 学龄儿童；男童发生率略高；男孩短睡模式持续性更强 | 减少过敏原（尘螨/霉菌）；保证侧卧睡姿；避免肥胖 |
 | 女 | 维生素 D 缺乏→睡眠与免疫双重受损 | 脐带血 25OHD < 12 ng/ml 显著增加幼儿短睡风险 | 补充维生素 D 400–1000 IU/天；增加户外阳光暴露 |
-> 数据来源：arXiv:[2002.07873](https://arxiv.org/abs/2002.07873)（儿童 OSA 流行病学）；arXiv:[1904.05042](https://arxiv.org/abs/1904.05042)（EDEN 队列：男性与持续性短睡模式相关）
+> **论文引用：**
+> 1. Winn et al. (2020) *"A survey of statistical learning techniques as applied to inexpensive pediatric Obstructive Sleep Apnea data"* [arXiv:2002.07873](https://arxiv.org/abs/2002.07873)
+> 2. Plancoulaine et al. (2019) *"Night sleep duration trajectories and associated factors among preschool children from the EDEN cohort"* [arXiv:1904.05042](https://arxiv.org/abs/1904.05042)
 
 ---
 
@@ -56,7 +58,8 @@
 |------|----------|---------|--------|
 | 男 | 哮喘 | 学龄男童发病率略高于女童；室内微生物多样性低是独立风险因子 | 改善室内微生物多样性；减少室内尘螨和可见霉菌 |
 | 女 | 哮喘；骨密度发育窗口期不足 | 同等哮喘风险；女童若缺乏负重运动，骨密度储备将低于潜力最大值 | 每日跳绳 / 球类冲击性运动 ≥ 60 min；钙摄入充足 |
-> 数据来源：arXiv:[1911.06946](https://arxiv.org/abs/1911.06946)（Rhodomicrobium/Sphingobium 等保护性菌群在哮喘儿童中显著减少）
+> **论文引用：**
+> 1. Fu et al. (2019) *"Indoor microbiome, environmental characteristics and asthma among junior high school students in Johor Bahru, Malaysia"* [arXiv:1911.06946](https://arxiv.org/abs/1911.06946)
 
 ---
 
@@ -78,7 +81,8 @@
 |------|----------|---------|--------|
 | 男 | 慢性睡眠剥夺综合征 | 青春期生物钟后移与学校早起制度冲突；男孩短睡模式比女孩持续性更强，影响神经发育 | 优先保证 8–10 h；学校时间许可时避免强制早起 |
 | 女 | 节食性骨密度损伤；缺铁性贫血 | 青春期女孩节食率远高于男孩；骨量峰值 90% 在 18 岁前积累，此期损伤不可逆；月经初潮后铁需求骤增 | 钙 1200 mg/天 + 蛋白质 1.2 g/kg/天；富含铁食物（红肉/豆类）；拒绝限制热量节食 |
-> 数据来源：arXiv:[1904.05042](https://arxiv.org/abs/1904.05042)（EDEN 队列：男性与持续性短睡轨迹相关）
+> **论文引用：**
+> 1. Plancoulaine et al. (2019) *"Night sleep duration trajectories and associated factors among preschool children from the EDEN cohort"* [arXiv:1904.05042](https://arxiv.org/abs/1904.05042)
 
 ---
 
@@ -100,7 +104,8 @@
 |------|----------|---------|--------|
 | 男 | 吸烟/酗酒性心血管内皮损伤 | 吸烟对血管内皮损伤在此期即可开始且不可逆；15–19 岁男性吸烟率全球显著高于女性 | 戒烟（任何量）；限酒（每周 < 14 单位）；有氧运动建立心肺储备 |
 | 女 | 宫颈癌（HPV 相关）；抑郁焦虑 | HPV 感染风险在性行为开始后迅速上升；20 岁前接种疫苗有效率最高；女性抑郁焦虑发病率约为男性 2 倍 | **HPV 疫苗（20 岁前最佳）**；定期 Pap 涂片；运动干预减少焦虑抑郁 |
-> 数据来源：arXiv:[1504.05383](https://arxiv.org/abs/1504.05383)（HPV 预防宫颈癌：每 QALY 成本 5–10k 欧元，高度经济有效）
+> **论文引用：**
+> 1. Jarynowski (2015) *"HPV and cervical cancer in Moldova, epidemiological model with intervention cost vs benefit and effectiveness analysis"* [arXiv:1504.05383](https://arxiv.org/abs/1504.05383)
 
 ---
 
@@ -122,7 +127,9 @@
 |------|----------|---------|--------|
 | 男 | 代谢综合征早期；心血管风险轨迹确立 | 久坐 + 高糖饮食在此期启动胰岛素抵抗进程；20 多岁建立的有氧能力（VO₂max）是未来心血管健康最强预测因子之一 | 建立每周 3–5 次运动习惯；戒烟；首次代谢血检建立基线 |
 | 女 | 宫颈癌持续窗口期；抑郁焦虑（发病率高峰之一）| HPV 感染→宫颈癌风险持续；女性抑郁焦虑发病率是男性约 2 倍；20 多岁是首次发作高峰 | 每年 HPV/Pap 筛查；规律有氧运动（最有循证依据的抑郁预防）；菌群多样化支持心理健康 |
-> 数据来源：arXiv:[1504.05383](https://arxiv.org/abs/1504.05383)（宫颈癌预防）；arXiv:[2404.08833](https://arxiv.org/abs/2404.08833)（运动减少女性抑郁焦虑）
+> **论文引用：**
+> 1. Jarynowski (2015) *"HPV and cervical cancer in Moldova, epidemiological model with intervention cost vs benefit and effectiveness analysis"* [arXiv:1504.05383](https://arxiv.org/abs/1504.05383)
+> 2. Corson et al. (2024) *"Breaking Boundaries: A Chronology with Future Directions of Women in Exercise Physiology Research, Centred on Pregnancy"* [arXiv:2404.08833](https://arxiv.org/abs/2404.08833)
 
 ---
 
@@ -144,7 +151,8 @@
 |------|----------|---------|--------|
 | 男 | 高血压早期；2 型糖尿病前期 | 25–29 岁男性高血压检出率快速上升；慢性压力→皮质醇持续升高→胰岛素抵抗启动 | **首次年度代谢血检**（血压/空腹血糖/血脂/维生素 D/CRP）；维持力量训练 |
 | 女 | 妊娠相关并发症；产后抑郁 | 高龄初产风险上升；孕期静坐增加妊娠糖尿病 / 抑郁 / 焦虑风险 | 孕期中等强度有氧运动（循证干预，显著降低产后抑郁和妊娠糖尿病风险）；年度 HPV 筛查持续 |
-> 数据来源：arXiv:[2404.08833](https://arxiv.org/abs/2404.08833)（孕期运动干预显著减少抑郁和焦虑）
+> **论文引用：**
+> 1. Corson et al. (2024) *"Breaking Boundaries: A Chronology with Future Directions of Women in Exercise Physiology Research, Centred on Pregnancy"* [arXiv:2404.08833](https://arxiv.org/abs/2404.08833)
 
 ---
 
@@ -166,7 +174,8 @@
 |------|----------|---------|--------|
 | 男 | 冠心病 / 高血压加速进展；2 型糖尿病前期 | 代谢率开始下降；肌肉质量流失→基础代谢↓→脂肪积累→胰岛素抵抗恶性循环；男性30多岁心肌梗死风险已可测量 | 抗阻训练 2–3 次/周；减少精制碳水；空腹血糖 + HbA1c 年检 |
 | 女 | 乳腺癌风险上升窗口；类风湿关节炎（RA，女性发病率是男性 3 倍）| 乳腺癌 30 多岁开始出现增速；RA 多在 30–60 岁首发，女性主导；肠道菌群失调是 RA 骨侵蚀的独立驱动因素 | 每月乳腺自检；肠道菌群多样化（减少 RA 风险）；留意关节对称性疼痛及早就诊 |
-> 数据来源：arXiv:[2307.08848](https://arxiv.org/abs/2307.08848)（肠道菌群-胆汁酸轴与 RA 骨侵蚀的因果关系）
+> **论文引用：**
+> 1. Su et al. (2023) *"Microbiome-derived bile acids contribute to elevated antigenic response and bone erosion in rheumatoid arthritis"* [arXiv:2307.08848](https://arxiv.org/abs/2307.08848)
 
 ---
 
@@ -188,7 +197,8 @@
 |------|----------|---------|--------|
 | 男 | **急性心肌梗死**（男性比女性早发 10–15 年）；2 型糖尿病 | 睾酮开始缓慢下降→心血管保护减弱；男性40多岁心肌梗死风险是同龄女性 2–3 倍；Omega-3 可显著降低 MI 风险（OR 0.17） | Omega-3 补充；**四联代谢筛查**（腰围/血压/空腹血糖/血脂）；戒酒护心 |
 | 女 | 乳腺癌（**40 岁起建议开始钼靶筛查**）；甲状腺疾病（女性发病率 5–10 倍于男性）| 乳腺癌 40 岁后检出率显著上升；甲状腺结节 / 甲减在 35–50 岁女性中极常见，影响代谢和骨骼 | **年度乳腺钼靶**（40 岁起）；甲状腺功能（TSH/FT4）年检；控制血糖（糖尿病显著增加乳腺癌风险） |
-> 数据来源：arXiv:[2510.11756](https://arxiv.org/abs/2510.11756)（Omega-3 与心肌梗死风险，OR 0.17，95% CI [0.048, 0.60]）
+> **论文引用：**
+> 1. Sun S. et al. (2025) *"Optimal Pair Matching Combined with Machine Learning Predicts a Significant Reduction in Myocardial Infarction Risk in African Americans following Omega-3 Fatty Acid Supplementation"* [arXiv:2510.11756](https://arxiv.org/abs/2510.11756)
 
 ---
 
@@ -210,7 +220,9 @@
 |------|----------|---------|--------|
 | 男 | **急性心肌梗死**（高发期）；2 型糖尿病（胰岛素敏感性急剧下降）| 40–49 岁男性心肌梗死死亡率快速攀升；胰岛素敏感性在此期骤降；糖尿病患者脑龄较同龄人老 8+ 年（睡眠 EEG 评估）| **HbA1c + 空腹胰岛素年检**；间歇性禁食 16:8（改善胰岛素敏感性最有效单一干预）；心血管风险评分（Framingham） |
 | 女 | **乳腺癌**（40–70 岁发病率最高段）；代谢综合征 | 乳腺癌 40 多岁进入高发区间；雌激素开始波动→代谢紊乱→内脏脂肪积累→胰岛素抵抗 | 每年钼靶；血糖控制（糖尿病患者乳腺癌风险增加 20–27%）；控制内脏脂肪 |
-> 数据来源：arXiv:[1805.06391](https://arxiv.org/abs/1805.06391)（糖尿病/高血压患者睡眠 EEG 评估脑龄老 8+ 年）；arXiv:[1712.09596](https://arxiv.org/abs/1712.09596)（2 型糖尿病超额死亡率，德国男性数据）
+> **论文引用：**
+> 1. Sun H. et al. (2018) *"Brain Age from the Electroencephalogram of Sleep"* [arXiv:1805.06391](https://arxiv.org/abs/1805.06391)
+> 2. Brinks (2017) *"New ways of estimating excess mortality of chronic diseases: Insights from the illness-death model"* [arXiv:1712.09596](https://arxiv.org/abs/1712.09596)
 
 ---
 
@@ -232,7 +244,9 @@
 |------|----------|---------|--------|
 | 男 | **前列腺癌**（45 岁后风险显著上升）；心血管疾病持续高风险 | 前列腺癌是 50 岁以上男性最常见癌症之一；PSA 筛查获益复杂（需个体化评估治疗相关死亡率） | **PSA 检测**（结合医生个体化风险评估）；Omega-3 继续补充护心；睾酮水平检测 |
 | 女 | **骨质疏松**（雌激素骤降→骨密度年流失 1–2%）；心血管风险迅速向男性看齐 | 更年期后骨质疏松发病率超过男性 4 倍；心血管风险在绝经后 5–10 年内迅速上升至接近男性水平；晚期糖基化终产物（AGEs）积累加速骨脆性 | **DEXA 骨密度扫描**（首次基线检测）；血压目标 < 120/80；负重 + 冲击运动每周 ≥ 3 次 |
-> 数据来源：arXiv:[2001.00492](https://arxiv.org/abs/2001.00492)（前列腺癌年龄依赖性治疗死亡率悖论）；arXiv:[2301.13010](https://arxiv.org/abs/2301.13010)（AGEs 积累加速骨脆性）
+> **论文引用：**
+> 1. Welch et al. (2020) *"The Effect of Treatment-Related Deaths and 'Sticky' Diagnoses on Recorded Prostate Cancer Mortality"* [arXiv:2001.00492](https://arxiv.org/abs/2001.00492)
+> 2. Kamml et al. (2023) *"The influence of AGEs and enzymatic cross-links on the mechanical properties of collagen fibrils"* [arXiv:2301.13010](https://arxiv.org/abs/2301.13010)
 
 ---
 
@@ -254,7 +268,9 @@
 |------|----------|---------|--------|
 | 男 | **前列腺癌**（50 岁以上男性第一大癌症威胁）；**冠心病**（主要死亡原因）| 前列腺癌 50–74 岁检出率最高；糖尿病/高血压患者大脑已较同龄人老 8+ 年；男性50岁后脑功能熵超越女性（神经退行早期信号）| PSA 年检 + 个体化决策；颈动脉超声 / 冠脉钙化评分；维持有氧运动护心护脑 |
 | 女 | **乳腺癌**（50–70 岁发病率峰值）；**骨质疏松性骨折** | 乳腺癌 50 多岁进入最高发区间；骨质疏松骨折后 1 年死亡率达 20–30%；女性骨骼在此期每年净流失超 1% | **年度钼靶**；DEXA 骨密度治疗决策；每餐 30–40 g 蛋白质 + 力量训练维持骨肌 |
-> 数据来源：arXiv:[1805.06391](https://arxiv.org/abs/1805.06391)（脑龄评估：糖尿病/高血压老 8+ 年）；arXiv:[1406.1976](https://arxiv.org/abs/1406.1976)（男性 50 岁后脑功能熵超越女性）
+> **论文引用：**
+> 1. Sun H. et al. (2018) *"Brain Age from the Electroencephalogram of Sleep"* [arXiv:1805.06391](https://arxiv.org/abs/1805.06391)
+> 2. Yao et al. (2014) *"The Increase of the Functional Entropy of the Human Brain with Age"* [arXiv:1406.1976](https://arxiv.org/abs/1406.1976)
 
 ---
 
@@ -276,7 +292,9 @@
 |------|----------|---------|--------|
 | 男 | **冠心病 / 心力衰竭**（男性最主要死因）；认知下降加速 | 55–59 岁男性心血管死亡率持续高于女性；男性大脑功能熵在此期加速上升（神经退行早期指标）；COPD（吸烟史者） | 心肺功能评估；坚持有氧运动（步行 7000–8000 步/天）；戒烟（任何时候戒烟均有益）|
 | 女 | **阿尔茨海默症 / 轻度认知障碍（MCI）**（女性风险在此期开始快速超过男性）；髋部骨折 | 女性大脑后部连接性更强（认知保护优势），但更年期后神经保护因子（雌激素）骤降；轻度认知障碍是 AD 的可干预前期 | **神经反馈 / 认知训练干预 MCI**（循证支持）；跌倒预防（太极/平衡训练）；每天 10–15 min 专项平衡练习 |
-> 数据来源：arXiv:[2301.06076](https://arxiv.org/abs/2301.06076)（MCI 非药物干预，神经反馈显著改善认知）；arXiv:[2107.01699](https://arxiv.org/abs/2107.01699)（女性后脑连接组对认知的保护作用）
+> **论文引用：**
+> 1. Mai (2023) *"Mechanisms in neurodegenerative disorders and role of non-pharmacological interventions in improving neurodegeneration and its clinical correlates: A review"* [arXiv:2301.06076](https://arxiv.org/abs/2301.06076)
+> 2. Keresztes et al. (2021) *"Discovering Sex and Age Implicator Edges in the Human Connectome"* [arXiv:2107.01699](https://arxiv.org/abs/2107.01699)
 
 ---
 
@@ -298,7 +316,9 @@
 |------|----------|---------|--------|
 | 男 | **心肌梗死 / 心血管死亡**（男性 60 岁以上最主要死亡原因）；COPD（吸烟史者高发）| 男性心血管死亡率在 60 岁以上仍显著高于同龄女性；COVID-19 数据显示男性各年龄段死亡率均高于女性 | 步行 7000–8000 步/天（全因死亡率降低 50–70%）；心肺康复项目；必要时心血管药物依从性 |
 | 女 | **阿尔茨海默症**（65 岁以上女性患病率比男性高 50–70%）；髋部骨折 | 女性 65 岁后 AD 风险快速超越男性；肠道菌群与淀粉样蛋白病理存在因果关系（无菌动物模型证据）；髋部骨折后 1 年死亡率 20–30% | **肠道菌群干预**（益生元/益生菌，靶向神经保护）；认知参与（棋牌/志愿者/继续教育）；跌倒预防 |
-> 数据来源：arXiv:[1509.02273](https://arxiv.org/abs/1509.02273)（肠道菌群与阿尔茨海默淀粉样蛋白因果关系）；arXiv:[2302.04569](https://arxiv.org/abs/2302.04569)（COVID-19 数据：男性各年龄段死亡率高于女性）
+> **论文引用：**
+> 1. Harach et al. (2015) *"Reduction of Alzheimer's disease beta-amyloid pathology in the absence of gut microbiota"* [arXiv:1509.02273](https://arxiv.org/abs/1509.02273)
+> 2. Ceballos (2023) *"COVID-19 Susceptibility, Mortality and Length of Hospitalization based on Age-Sex Composition: Insights for Intervention and Stratification"* [arXiv:2302.04569](https://arxiv.org/abs/2302.04569)
 
 ---
 
@@ -320,7 +340,9 @@
 |------|----------|---------|--------|
 | 男 | **心血管死亡**（主导）；**认知退化**（男性大脑熵在 65+ 岁加速增高）| 男性寿命潜力中位约 92.5 岁，比女性短约 17 年；生命后期主要威胁是心血管+认知双重退化 | 功能性力量训练（握力是全身功能状态代理指标）；心血管药物依从性；多药审查防相互作用 |
 | 女 | **阿尔茨海默症**（患病率是同龄男性 2 倍）；骨质疏松骨折 | 女性寿命潜力约 109.4 岁，但痴呆发病率更高；多模式干预（菌群+禁食+运动+认知训练）在此期预防效果显著优于药物 | **间歇性禁食 / 热量限制**（激活 AMPK/mTOR 神经保护通路）；社交参与（社交孤立 = 吸烟等量死亡风险）；骨折后 48 h 内开始康复 |
-> 数据来源：arXiv:[2305.11425](https://arxiv.org/abs/2305.11425)（间歇禁食/热量限制预防 AD/PD/认知下降）；arXiv:[q-bio_0509034]（女性生物寿命潜力 109.4 年，男性 92.5 年）
+> **论文引用：**
+> 1. Mayor (2023) *"Neurotrophic Effects of Intermittent Fasting, Calorie Restriction and Exercise: A Review and Annotated Bibliography"* [arXiv:2305.11425](https://arxiv.org/abs/2305.11425)
+> 2. Keresztes et al. (2021) *"Discovering Sex and Age Implicator Edges in the Human Connectome"* [arXiv:2107.01699](https://arxiv.org/abs/2107.01699)
 
 ---
 
@@ -342,7 +364,9 @@
 |------|----------|---------|--------|
 | 男 | **心血管疾病**（主要死因）；肺炎（免疫功能下降）；帕金森病（此期 RBD 筛查窗口） | 70 岁以上男性心血管死亡率占全因死亡主导地位；肺炎是老年第二大死因；REM 睡眠行为障碍（RBD）可早于帕金森 10–20 年出现 | **肺炎球菌疫苗**接种；RBD 睡眠筛查（帕金森 / AD 早期信号）；维生素 D 800–2000 IU 防跌倒 |
 | 女 | **阿尔茨海默症 / 痴呆**（70 岁以上女性神经退行第一威胁）；髋部骨折（骨折后 1 年死亡率 20–30%）| 女性 70+ AD 患病率是男性 2 倍；睡眠障碍（减少 REM / 梦境）是 AD 可鉴别的早期信号；微生物组靶向疗法显示认知保护前景 | **睡眠质量监测**（REM 减少是 AD 早期信号）；益生菌 / 菌群移植（FMT）等新兴干预；环境改造防跌倒（浴室扶手 / 清除障碍物）|
-> 数据来源：arXiv:[1905.05827](https://arxiv.org/abs/1905.05827)（AD 患者睡眠鉴别特征）；arXiv:[2511.02766](https://arxiv.org/abs/2511.02766)（微生物组靶向疗法支持认知：益生菌/FMT/时间营养）
+> **论文引用：**
+> 1. Kim et al. (2019) *"Discriminative Sleep Patterns of Alzheimer's Disease via Tensor Factorization"* [arXiv:1905.05827](https://arxiv.org/abs/1905.05827)
+> 2. Alegre (2025) *"Microbes in the Moonlight: How the Gut Microbiota Influences Sleep"* [arXiv:2511.02766](https://arxiv.org/abs/2511.02766)
 
 ---
 
@@ -364,7 +388,9 @@
 |------|----------|---------|--------|
 | 男 | **心血管疾病**（主导死因）；**衰弱综合征**；肺炎 | 75+ 男性心血管死亡率占全因死亡约 40%；衰弱综合征导致功能快速下滑；肺炎年死亡率高 | 任何形式日常活动（步行/园艺/家务）；肺炎球菌疫苗；每餐 25–30 g 蛋白质防衰弱 |
 | 女 | **阿尔茨海默症 / 痴呆**（75+ 女性最主要神经退行疾病）；骨折后长期卧床并发症 | 女性 75 岁以上 AD 患病率达同龄男性 2–3 倍；骨折后恐惧跌倒→减少活动→更多跌倒（恶性循环）；独居老人营养不良率是非独居者 3–4 倍 | **社交进食**（提高营养摄入 + 减少抑郁）；认知和社交参与延缓痴呆；骨折后 48 h 内开始康复运动 |
-> 数据来源：arXiv:[2511.02766](https://arxiv.org/abs/2511.02766)（微生物组靶向认知保护疗法）；arXiv:[2305.11425](https://arxiv.org/abs/2305.11425)（多模式干预预防神经退行性疾病）
+> **论文引用：**
+> 1. Alegre (2025) *"Microbes in the Moonlight: How the Gut Microbiota Influences Sleep"* [arXiv:2511.02766](https://arxiv.org/abs/2511.02766)
+> 2. Mayor (2023) *"Neurotrophic Effects of Intermittent Fasting, Calorie Restriction and Exercise: A Review and Annotated Bibliography"* [arXiv:2305.11425](https://arxiv.org/abs/2305.11425)
 
 ---
 
