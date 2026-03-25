@@ -138,6 +138,7 @@ README 中按年份列出论文数与目录链接：
 | `arxiv.ai-human-future` | `ai-future-findings.zh-CN.md` | 未来文明分析 |
 | `arxiv.qbio-health` | `health-findings.zh-CN.md` | 健康干预分析 |
 | `arxiv.game-dev` | `readme_game_roadmap.md` | 游戏开发全景路线图 |
+| `arxiv.game-dev-with-ai` | `readme_game_dev_with_ai.md` | Human × AI 游戏开发全景与路线图 |
 
 ---
 
@@ -162,6 +163,7 @@ README 中按年份列出论文数与目录链接：
 | `arxiv.qbio-health` | 7 个主题 | ✅ 完成 |
 | `arxiv.prompt` | 8 大章节 | ✅ 完成 |
 | `arxiv.agi-scifi` | 10 大集群 | ✅ 完成 |
+| `arxiv.game-dev-with-ai` | 25 个类别 | ✅ 完成 |
 
 ---
 
@@ -175,4 +177,5 @@ README 中按年份列出论文数与目录链接：
 | `arxiv.game-dev` | 5,197 | 29 | 1996–2026 |
 | `arxiv.ai-human-future` | 1,814 | 12 | 无限制 |
 | `arxiv.qbio-health` | 1,125 | 7 | 无限制 |
-| **合计** | **29,128** | **114+** | |
+| `arxiv.game-dev-with-ai` | 348 | 25 | 2005–2026 |
+| **合计** | **29,476** | **139+** | |

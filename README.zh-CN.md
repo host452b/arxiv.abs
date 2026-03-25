@@ -2,39 +2,36 @@
 
 # arxiv.abs — arXiv 论文摘要库：AI 研究与科幻世界构建
 
-**18,000+ 篇 arXiv 论文摘要精选，横跨两大专题集（2023–2026），涵盖 AI/LLM 提示词工程与跨学科 AGI/科幻研究。**
+**29,000+ 篇 arXiv 论文摘要精选，横跨七大专题集（1996–2026），涵盖 AI/LLM 提示词工程、跨学科 AGI/科幻研究、AI Agent 技能、AI 与人类未来、健康科学、游戏开发以及人 × AI 协作开发新范式。**
 
 ---
 
 ## 专题概览
 
-本仓库包含两个精选论文摘要集：
+本仓库包含七大精选论文摘要集：
+
+| 专题 | 论文数 | 类别数 | 时间范围 |
+|------|--------|--------|---------|
+| [`arxiv.prompt`](arxiv.prompt/) | 4,780 | 8 章节 | 2023–2026 |
+| [`arxiv.agi-scifi`](arxiv.agi-scifi/) | 13,606 | 52 主题 | 2023–2026 |
+| [`arxiv.agent-skills`](arxiv.agent-skills/) | 2,606 | 14 技能 | 2000–2026 |
+| [`arxiv.game-dev`](arxiv.game-dev/) | 5,197 | 29 类别 | 1996–2026 |
+| [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 1,814 | 12 主题 | 无限制 |
+| [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,125 | 7 主题 | 无限制 |
+| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 348 | 25 类别 | 2005–2026 |
+| **合计** | **29,476** | **139+** | |
+
+---
 
 ### 1. `arxiv.prompt` — AI/LLM 提示词工程
 
 4,780 篇筛选摘要 + 50 项核心技巧总结。
-
-| 年份 | 论文数 |
-|------|--------|
-| 2023 | 1,085 |
-| 2024 | 1,478 |
-| 2025 | 1,817 |
-| 2026 | 400 |
-| **合计** | **4,780** |
 
 **主题：** 思维链、少样本/上下文学习、提示优化、压缩、越狱/注入、防御、多智能体、角色扮演、自一致性等。
 
 ### 2. `arxiv.agi-scifi` — 跨学科 AGI 与科幻研究
 
 13,606 篇摘要，来自 52 组关键词搜索，横跨 arXiv 全学科 — 物理、数学、计算机、生物、经济等。
-
-| 年份 | 论文数 |
-|------|--------|
-| 2023 | 2,679 |
-| 2024 | 3,761 |
-| 2025 | 5,641 |
-| 2026 | 1,525 |
-| **合计** | **13,606** |
 
 **52 组搜索主题涵盖：**
 
@@ -50,6 +47,26 @@
 | **架构与系统** | 世界模型、AI Agent、具身智能、集体智能、去中心化 AI、开放式进化 |
 | **心智与前沿** | 奇点/脑机接口、意识上传、模拟/虚拟世界、AI 创造力、AI 编程、AI 幻觉、巨构/戴森球 |
 | **生命维持** | 生命维持系统、原位资源利用 (ISRU) |
+
+### 3. `arxiv.agent-skills` — AI Agent 技能与能力
+
+2,606 篇摘要，覆盖 14 项核心 AI Agent 技能：推理、记忆、工具使用、规划、多智能体协作、代码 Agent、RAG、评估、安全、具身 AI、架构、自我改进、角色扮演、长时域任务。
+
+### 4. `arxiv.game-dev` — 游戏开发研究（经典）
+
+5,197 篇摘要，来自 29 个类别，覆盖学术游戏开发研究全史（1996–2026）：PCG、游戏 AI、自动测试、游戏设计、图形、音频等。
+
+### 5. `arxiv.ai-human-future` — AI 与人类未来
+
+1,814 篇摘要，聚焦 12 个人类-AI 协同进化前沿主题：生物进化 × AI、后人类未来、意识上传、脑机接口、社会转型等。
+
+### 6. `arxiv.qbio-health` — 定量生物学与健康科学
+
+1,125 篇摘要，涵盖 7 个循证健康主题：衰老与长寿、饮食与代谢、运动、睡眠与昼夜节律、肠道菌群、死亡率风险因素、补充剂。
+
+### 7. `arxiv.game-dev-with-ai` — 人 × AI 协作开发（新时代）
+
+348 篇摘要，来自 25 组定向搜索，聚焦 AI 成为游戏开发**协同开发者和创意伙伴**的新兴领域。涵盖 LLM 辅助设计、多智能体游戏系统、生成式资产、自主游戏设计等。
 
 ---
 
@@ -67,39 +84,41 @@
 arxiv.abs/
 ├── README.md                              # 英文版
 ├── README.zh-CN.md                        # 中文版
-├── arxiv.prompt/                          # 提示词工程专题
-│   ├── README.md                          # 目录引导
-│   ├── prompt_ai.md                       # 50 项核心技巧（英文）
-│   ├── prompt_ai.zh-CN.md                 # 50 项核心技巧（中文）
-│   ├── 2023/
-│   │   ├── arxiv-results-2023.json        # 元数据
-│   │   └── abstracts/                     # 1,085 个 .txt 文件
-│   ├── 2024/
-│   │   ├── arxiv-results-2024.json
-│   │   └── abstracts/                     # 1,478 个 .txt 文件
-│   ├── 2025/
-│   │   ├── arxiv-results-2025.json
-│   │   └── abstracts/                     # 1,817 个 .txt 文件
-│   └── 2026/
-│       ├── arxiv-results-2026.json
-│       └── abstracts/                     # 400 个 .txt 文件
-└── arxiv.agi-scifi/                       # AGI 与科幻研究专题
-    ├── README.md                          # 目录引导
-    ├── agi-scifi.md                       # 核心发现（英文）
-    ├── agi-scifi.zh-CN.md                 # 核心发现（中文）
-    ├── search-index.json                  # 52 组搜索查询索引
-    ├── 2023/
-    │   ├── arxiv-results-2023.json        # 2,679 篇论文元数据
-    │   └── abstracts/                     # 2,679 个 .txt 文件
-    ├── 2024/
-    │   ├── arxiv-results-2024.json        # 3,761 篇论文元数据
-    │   └── abstracts/                     # 3,761 个 .txt 文件
-    ├── 2025/
-    │   ├── arxiv-results-2025.json        # 5,641 篇论文元数据
-    │   └── abstracts/                     # 5,641 个 .txt 文件
-    └── 2026/
-        ├── arxiv-results-2026.json        # 1,525 篇论文元数据
-        └── abstracts/                     # 1,525 个 .txt 文件
+├── STANDARDS.md                           # 专题集格式规范
+├── arxiv.prompt/                          # 提示词工程（4,780 篇）
+│   ├── README.md / README.zh-CN.md
+│   ├── prompt_ai.md / prompt_ai.zh-CN.md  # 50 项核心技巧
+│   └── 2023–2026/abstracts/
+├── arxiv.agi-scifi/                       # AGI 与科幻研究（13,606 篇）
+│   ├── README.md / README.zh-CN.md
+│   ├── agi-scifi.md / agi-scifi.zh-CN.md  # 核心发现
+│   ├── search-index.json
+│   └── 2023–2026/abstracts/
+├── arxiv.agent-skills/                    # AI Agent 技能（2,606 篇）
+│   ├── README.md / README.zh-CN.md
+│   ├── agent-skills-findings.zh-CN.md
+│   ├── search-index.json
+│   └── 2000–2026/abstracts/
+├── arxiv.game-dev/                        # 游戏开发经典（5,197 篇）
+│   ├── README.md / README.zh-CN.md
+│   ├── readme_game_roadmap.md
+│   ├── search-index.json
+│   └── 1996–2026/abstracts/
+├── arxiv.ai-human-future/                 # AI 与人类未来（1,814 篇）
+│   ├── README.md / README.zh-CN.md
+│   ├── ai-future-findings.zh-CN.md
+│   ├── search-index.json
+│   └── abstracts/
+├── arxiv.qbio-health/                     # 健康科学（1,125 篇）
+│   ├── README.md / README.zh-CN.md
+│   ├── health-findings.zh-CN.md
+│   ├── search-index.json
+│   └── abstracts/
+└── arxiv.game-dev-with-ai/                # 人 × AI 协作开发（348 篇）
+    ├── README.md / README.zh-CN.md
+    ├── readme_game_dev_with_ai.md          # 全景分析与实践路线图
+    ├── search-index.json
+    └── 2005–2026/abstracts/
 ```
 
 ---
