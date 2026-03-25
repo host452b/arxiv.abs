@@ -1,0 +1,7 @@
+Title: BitMar: Low-Bit Multimodal Fusion with Episodic Memory for Edge Devices
+Authors: Euhid Aman, Esteban Carlin, Hsing-Kuo Pao, Giovanni Beltrame, Ghaluh Indah Permata Sari, Yie-Tarng Chen
+ID: 2510.10560
+URL: https://arxiv.org/abs/2510.10560
+
+Abstract:
+Cross-attention transformers and other multimodal vision-language models excel at grounding and generation; however, their extensive, full-precision backbones make it challenging to deploy them on edge devices. Memory-augmented architectures enhance the utilization of past context; however, most works rarely pair them with aggressive edge-oriented quantization. We introduce BitMar, a quantized multimodal transformer that proposes an external human-like episodic memory for effective image-text generation on hardware with limited resources. BitMar utilizes 1.58-bit encoders, one for text (BitNet-style) and one for vision (DiNOv2-based), to create compact embeddings that are combined and used to query a fixed-size key-value episodic memory. During vector retrieval, the BitNet decoder applies per-layer conditioning, which increases the contextual relevance of generated content. The decoder also employs attention sinks with a sliding-window mechanism to process long or streaming inputs under tight memory budgets. The combination of per-layer conditioning and sliding-window attention achieves a strong quality-speed trade-off, delivering competitive captioning and multimodal understanding at low latency with a small model footprint. These characteristics make BitMar well-suited for edge deployment.

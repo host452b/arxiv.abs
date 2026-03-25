@@ -1,0 +1,7 @@
+Title: APIDA-Chat: Structured Synthesis of API Search Dialogues to Bootstrap Conversational Agents
+Authors: Zachary Eberhart, Collin McMillan
+ID: 2510.03743
+URL: https://arxiv.org/abs/2510.03743
+
+Abstract:
+Large-language-model assistants are suitable for explaining popular APIs, yet they falter on niche or proprietary libraries because the multi-turn dialogue data needed for fine-tuning are scarce. We present APIDA-Chat, an open-source pipeline that converts symbolic dialogue-act "scripts" into realistic, domain-grounded API Search conversations using a lightweight model for inexpensive training data generation. Phase I pairs a legacy dialogue planner with a high-capability teacher LLM (o4-mini) to synthesize a "gold set" of realized dialogues; then, a smaller Llama 3.2 3B student model is fine-tuned on this corpus. Phase II drops the teacher and reuses the same planner with the fine-tuned model, allowing rapid, low-cost synthesis of new dialogues without exposing source code to external services. The fine-tuned student improves BLEU from 0.38 to 0.50 and BERTScore from 0.88 to 0.91 versus the base model while running entirely on a single consumer GPU. All components are modular and publicly released to serve as a conservative baseline for future work. APIDA-Chat is open-sourced at https://github.com/Zeberhart/apida-chat and a video demo is available at https://youtu.be/YqmZBHyGbPs .

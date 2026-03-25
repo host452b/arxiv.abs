@@ -1,0 +1,7 @@
+Title: Repairing Language Model Pipelines by Meta Self-Refining Competing Constraints at Runtime
+Authors: Mojtaba Eshghie
+ID: 2507.10590
+URL: https://arxiv.org/abs/2507.10590
+
+Abstract:
+Language Model (LM) pipelines can dynamically refine their outputs against programmatic constraints. However, their effectiveness collapses when faced with competing soft constraints, leading to inefficient backtracking loops where satisfying one constraint violates another. We introduce Meta Self-Refining, a framework that equips LM pipelines with a meta-corrective layer to repair these competitions at runtime/inference-time. Our approach monitors the pipeline's execution history to detect oscillatory failures. Upon detection, it invokes a meta-repairer LM that analyzes the holistic state of the backtracking attempts and synthesizes a strategic instruction to balance the competing requirements. This self-repair instruction guides the original LM out of a failing refining loop towards a successful output. Our results show Meta Self-Refining can successfully repair these loops, leading to more efficient LM programs.

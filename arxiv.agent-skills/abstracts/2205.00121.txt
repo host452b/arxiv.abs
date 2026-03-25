@@ -1,0 +1,9 @@
+Title: Predict; Do not React for Enabling Efficient Fine Grain DVFS in GPUs
+Authors: Srikant Bharadwaj, Shomit Das, Kaushik Mazumdar, Bradford Beckmann, Stephen Kosonocky
+ID: 2205.00121
+URL: https://arxiv.org/abs/2205.00121
+
+Abstract:
+With the continuous improvement of on-chip integrated voltage regulators (IVRs) and fast, adaptive frequency control, dynamic voltage-frequency scaling (DVFS) transition times have shrunk from the microsecond to the nanosecond regime, providing additional opportunities to improve energy efficiency. The key to unlocking the continued improvement in voltage-frequency circuit technology is the creation of new, smarter DVFS mechanisms that better adapt to rapid fluctuations in workload demand.
+  It is particularly important to optimize fine-grain DVFS mechanisms for graphics processing units (GPUs) as the chips become ever more important workhorses in the datacenter. However, massive amount of thread-level parallelism in GPUs makes it uniquely difficult to determine the optimal voltage-frequency state at run-time. Existing solutions-mostly designed for single-threaded CPUs and longer time scales-fail to consider the seemingly chaotic, highly varying nature of GPU workloads at short time scales.
+  This paper proposes a novel prediction mechanism, PCSTALL, that is tailored for emerging DVFS capabilities in GPUs and achieves near-optimal energy efficiency. Using the insights from our fine-grained workload analysis, we propose a wavefront-level program counter (PC) based DVFS mechanism that improves program behavior prediction accuracy by 32% on average for a wide set of GPU applications at 1 microsecond DVFS time epochs. Compared to the current state-of-art, our PC-based technique achieves 19% average improvement when optimized for Energy-Delay-Squared Product at 50 microsecond time epochs, reaching 32% power efficiencies when operated with 1 microsecond DVFS technologies.
