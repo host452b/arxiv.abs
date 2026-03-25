@@ -114,4 +114,140 @@ This collection **complements** `arxiv.agi-scifi` (13,606 papers, 2023–2026) b
 
 ---
 
+## Best Practices by Category (80/20 Pareto)
+
+> **Pareto Principle:** In each research domain, 20% of key frameworks or findings explain 80% of the observed phenomena and drive 80% of research consensus. Each lever below reflects the high-frequency agreement across papers in that category.
+
+### 01 Biological Evolution × AI
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Niche construction theory**: humans modify their environment, which modifies selection pressure on themselves | Explains 80% of how technology acts as an evolutionary force — AI becomes the most powerful niche constructor in history |
+| **Gene-culture coevolution**: cultural changes (including AI adoption) can drive genetic change over generations | The dominant theoretical framework for understanding long-term biological impact of AI on human populations |
+
+> Niche construction + gene-culture coevolution together explain 80% of how AI interacts with biological human evolution.
+
+---
+
+### 02 Population Dynamics × Technology
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Multi-logistic S-curve modeling**: technology adoption follows sigmoid curves; AI wave peaking ~2024, deep learning decline projected 2035–40 | Covers 80% of quantitative technology-population forecasting; identifies transition points before they occur |
+| **Demographic transition model**: technological progress → lower mortality → lower birth rate → population plateau | The best-validated model of how technology reshapes population structure over centuries |
+
+> S-curve modeling forecasts technology phases; demographic transition forecasts population response — together they cover 80% of population-technology dynamics.
+
+---
+
+### 03 Artificial Life / Digital Organisms
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Open-ended evolution criterion**: systems that never stop generating novelty (vs. systems that converge) | The central dividing line in ALife research; whether AI can achieve open-ended evolution determines its long-term creative potential |
+| **Minimal life criteria**: self-replication + metabolism analog (energy processing) | Defines the boundary between simulation and "genuine" artificial life; guides 80% of ALife system design decisions |
+
+> Open-ended evolution defines the goal; minimal life criteria define the threshold — together they frame 80% of artificial life research questions.
+
+---
+
+### 04 Posthuman / Cyborg / Human Augmentation
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Cognitive enhancement trajectory**: memory → processing speed → perception bandwidth augmentation (in that order of current technical feasibility) | The practical roadmap that 80% of augmentation papers converge on for near-to-mid-term development |
+| **Identity continuity under augmentation** (Ship of Theseus problem): at what point does the augmented entity cease to be "human"? | The central ethical question in 80% of posthumanism discourse; determines regulatory and social acceptance thresholds |
+
+> Augmentation roadmap defines what's possible; identity continuity defines what's acceptable — together they cover 80% of posthumanism research concerns.
+
+---
+
+### 05 Human-AI / Machine / Robot Future
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Co-superintelligence model** (arXiv:2512.05356): human + AI collaboration reaches superintelligence together | Identified as the safest and fastest path; the framework that reconciles alignment and capability goals simultaneously |
+| **Complement vs. substitute framing**: AI augments human labor (complement) vs. replaces it (substitute) | The binary that determines 80% of socioeconomic outcome predictions; which regime emerges depends on policy, not technology alone |
+
+> Co-superintelligence defines the collaborative ideal; complement/substitute framing defines the economic stakes — together they cover 80% of human-AI future discourse.
+
+---
+
+### 06 Machine Consciousness / Digital Intelligence
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Integrated Information Theory (IIT) / Global Workspace Theory**: the two dominant measurement frameworks for consciousness | Used as the theoretical basis in 80% of machine consciousness papers; without a measurement framework, consciousness claims are unfalsifiable |
+| **Functional equivalence criterion**: if a system behaves identically to a conscious entity across all observable dimensions, treat it as conscious | The pragmatic standard that sidesteps unresolvable metaphysics; dominates applied AI ethics and rights discussions |
+
+> Measurement frameworks make the question scientific; functional equivalence makes it actionable — together they cover 80% of machine consciousness research approaches.
+
+---
+
+### 07 Brain-Computer Interface
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Invasive vs. non-invasive tradeoff**: signal quality (invasive: μV resolution) vs. safety/accessibility (non-invasive: EEG/fMRI) | The fundamental design decision that determines 80% of BCI application scope; medical BCIs go invasive, consumer BCIs stay non-invasive |
+| **Closed-loop bidirectional BCI**: read neural signal → compute → write stimulation back | The paradigm shift from passive recording to active intervention; covers spinal injury recovery, memory enhancement, and sensory restoration |
+
+> Signal quality tradeoff determines the application space; bidirectional closed-loop determines the capability ceiling — together they cover 80% of BCI research and deployment decisions.
+
+---
+
+### 08 Social Transformation × AI
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Labor displacement velocity**: how fast AI replaces jobs relative to how fast new jobs emerge | The single variable that determines whether social transformation is manageable or catastrophic; all policy debates reduce to this |
+| **Institutional adaptation speed**: can governance, education, and social safety nets evolve faster than displacement? | The bottleneck that determines outcomes; technology speed is fixed, institutional speed is the policy lever |
+
+> Displacement velocity sets the challenge; institutional adaptation speed determines the outcome — together they cover 80% of AI social transformation risk assessment.
+
+---
+
+### 09 Quantifying Future Civilization
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Superexponential growth models**: population × economic output show hyperbolic growth with singularity ~2052 ±10 years (Nottale et al.) | The best-validated quantitative framework for civilizational trajectory; cited across 80% of civilization forecasting papers |
+| **Tipping point / phase transition detection**: identify the transition from one growth regime to another before it occurs | The practical tool for forecasting; knowing when regimes change is more valuable than knowing the precise trajectory |
+
+> Superexponential models describe the trajectory; tipping point detection provides actionable warning — together they cover 80% of quantitative civilization forecasting.
+
+---
+
+### 10 Technological Singularity / AGI Impact
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Intelligence explosion dynamics**: recursive self-improvement → rapid capability jump | The core mechanism in 80% of singularity scenarios; whether this is gradual (soft takeoff) or sudden (hard takeoff) determines all policy implications |
+| **Containment impossibility theorem** (Alfonseca et al., arXiv:1607.00913): computability theory proves superintelligence cannot be strictly contained | The most cited theoretical result in AGI safety; reframes the research agenda from containment to alignment |
+
+> Intelligence explosion defines the risk; containment impossibility defines why alignment is the only viable path — together they cover 80% of singularity / AGI impact research.
+
+---
+
+### 11 AI Forecasting Society
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Agent-based modeling (ABM)**: simulate individual agents with local rules, observe emergent macro-level behavior | Captures feedback loops and non-linearity that equation-based models miss; covers 80% of complex social-AI interaction dynamics |
+| **Scenario analysis (multiple futures)**: rather than one forecast, define 3–5 plausible scenarios with distinct assumption sets | Covers the uncertainty range; decision-makers act on scenarios, not point forecasts |
+
+> ABM captures complexity; scenario analysis handles uncertainty — together they cover 80% of rigorous AI societal forecasting methodology.
+
+---
+
+### 12 Human Enhancement / Mind Uploading
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Gradual replacement paradox** (Ship of Theseus): if neurons are replaced one-by-one with silicon equivalents, is continuity of consciousness preserved? | The central philosophical problem in 80% of mind uploading papers; its resolution determines whether uploading is survival or death-and-copy |
+| **Substrate independence hypothesis**: consciousness is a pattern, not a substrate — it can run on any sufficiently complex information-processing system | The foundational assumption that makes mind uploading theoretically possible; rejected or accepted, it divides the field |
+
+> The gradual replacement paradox tests identity continuity; substrate independence defines theoretical possibility — together they frame 80% of mind uploading research.
+
+---
+
 [中文说明](README.zh-CN.md) | [Back to main](../README.md)

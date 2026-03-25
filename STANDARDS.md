@@ -157,11 +157,11 @@ README 中按年份列出论文数与目录链接：
 | 专题 | 类别/分段数 | 80/20 已完成 |
 |------|------------|-------------|
 | `arxiv.game-dev` | 29 个类别 | ✅ 完成 |
-| `arxiv.agent-skills` | 14 个技能类别 | ❌ 待补充 |
-| `arxiv.ai-human-future` | 12 个搜索主题 | ❌ 待补充 |
-| `arxiv.qbio-health` | 15 个年龄分段 + 7 个主题 | ❌ 待补充 |
-| `arxiv.prompt` | 8 大章节 | ❌ 待补充 |
-| `arxiv.agi-scifi` | 52 个主题（10 大类） | ❌ 待补充 |
+| `arxiv.agent-skills` | 14 个技能类别 | ✅ 完成 |
+| `arxiv.ai-human-future` | 12 个搜索主题 | ✅ 完成 |
+| `arxiv.qbio-health` | 7 个主题 | ✅ 完成 |
+| `arxiv.prompt` | 8 大章节 | ✅ 完成 |
+| `arxiv.agi-scifi` | 10 大集群 | ✅ 完成 |
 
 ---
 

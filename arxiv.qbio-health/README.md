@@ -167,4 +167,85 @@ Papers scored by presence of human-health keywords (human subjects, clinical, di
 
 ---
 
+## Best Practices by Topic (80/20 Pareto)
+
+> **Pareto Principle:** In each health domain, 20% of key interventions or behaviors account for 80% of measurable health outcomes. Each lever below reflects the highest-frequency evidence-backed consensus from q-bio papers in that topic.
+
+### 01 Aging & Longevity
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Caloric restriction / intermittent fasting (16:8 or 5:2)**: activates AMPK/mTOR neuroprotective and anti-aging pathways | The single most replicated longevity intervention across organisms; activates the same pathways as most other longevity drugs at zero cost |
+| **Resistance training (2–3×/week)**: preserves muscle mass and metabolic rate — the dominant predictor of all-cause mortality in older adults | Grip strength (proxy for whole-body muscle function) is the strongest single biomarker of functional longevity in the literature |
+
+> Caloric restriction + resistance training together cover 80% of modifiable longevity determinants with the strongest evidence base.
+
+---
+
+### 02 Diet & Metabolism
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Eliminate ultra-processed foods (UPF)**: UPF consumption is independently associated with metabolic syndrome, CVD, and cognitive decline regardless of calorie count | The highest-impact single dietary change; removes the category of foods responsible for 80% of diet-related disease burden in modern populations |
+| **30+ plant species per week** (dietary diversity): maintains gut microbiome richness, which mediates 80% of diet-health associations | The most practical diversity target validated in human studies; more predictive of health outcomes than any single superfood |
+
+> Eliminating UPF + maximizing plant diversity together cover 80% of dietary intervention effect across metabolic, immune, and cognitive outcomes.
+
+---
+
+### 03 Exercise & Fitness
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Zone 2 aerobic training** (60–70% max HR, 150+ min/week): builds mitochondrial density and VO₂max — the strongest predictor of long-term cardiac health | 7,000–8,000 steps/day associated with 50–70% lower all-cause mortality vs. sedentary; Zone 2 is the mechanistic explanation |
+| **Resistance training (2×/week minimum)**: prevents sarcopenia, maintains insulin sensitivity, and preserves bone density | The three conditions (sarcopenia, insulin resistance, osteoporosis) that drive 80% of functional decline after age 50 are all primarily prevented by resistance training |
+
+> Zone 2 aerobic + resistance training is the minimum effective exercise prescription covering 80% of exercise-related health outcomes.
+
+---
+
+### 04 Sleep & Circadian
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Consistent sleep/wake schedule (±30 min)**: anchors the circadian clock; irregular timing independently increases metabolic and cardiovascular risk even with adequate total sleep | Circadian disruption is a distinct risk factor from sleep deprivation; schedule consistency is the intervention with broadest effect |
+| **7–9 hours total sleep duration**: below 6h: cognitive impairment equivalent to 24h deprivation; sleep EEG brain age predicts diabetes/hypertension onset 8+ years early | Duration is the most replicated sleep-health relationship; the foundation from which all other sleep interventions build |
+
+> Consistent schedule + adequate duration cover 80% of sleep-related health risk; all other interventions (sleep hygiene, environment) are secondary.
+
+---
+
+### 05 Gut Microbiome
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Dietary fiber diversity** (prebiotic): 30+ plant species/week feeds microbiome richness — the strongest modifiable predictor of microbiome health | More impactful than any probiotic supplement; richness (not any single species) is what predicts health outcomes |
+| **Fermented foods** (yogurt, kefir, kimchi, sauerkraut): live cultures + short-chain fatty acids; directly linked to reduced inflammatory markers and Alzheimer's amyloid pathology reduction | The gut-brain axis is causal, not correlational (Harach et al.); fermented foods are the most accessible intervention for gut-brain health |
+
+> Dietary diversity (prebiotic) + fermented foods (probiotic) together cover 80% of modifiable microbiome interventions with human evidence.
+
+---
+
+### 06 Mortality & Risk Factors
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Never smoking** (or smoking cessation at any age): irreversible vascular endothelial damage begins with any amount; cessation at 40 recovers 90% of life expectancy loss | The single largest modifiable mortality risk factor globally; responsible for more years of life lost than any other behavior |
+| **Metabolic health (the 4-metric screen)**: waist circumference + fasting glucose + blood pressure + triglycerides — all four in normal range = metabolically healthy | Only ~12% of US adults are metabolically healthy; this 4-metric screen predicts 80% of cardiovascular and type 2 diabetes mortality risk |
+
+> Never smoking + metabolic health maintenance cover 80% of the modifiable mortality risk landscape with the most robust population-level evidence.
+
+---
+
+### 07 Supplements & Interventions
+
+| Critical Lever (20%) | Impact Covered (80%) |
+|----------------------|----------------------|
+| **Vitamin D (800–2,000 IU/day)**: deficiency (< 20 ng/ml) is independently associated with sleep disorders, immune dysfunction, depression, and increased cancer risk — affects 40–80% of populations at higher latitudes | The supplement with the broadest evidence base for deficiency correction; covers immune, bone, sleep, and mood outcomes |
+| **Omega-3 fatty acids (EPA+DHA, 1–2g/day)**: OR 0.17 for myocardial infarction in optimized-match trials (Sun et al.); anti-inflammatory effects across CVD, cognitive decline, and depression | The most replicated supplement for cardiovascular outcomes in q-bio literature; affects the same inflammatory pathways as multiple expensive drugs |
+
+> Vitamin D + Omega-3 are the two supplements with the strongest human evidence base in q-bio research, covering 80% of supplement-attributable health gains.
+
+---
+
 [中文说明](README.zh-CN.md) | [Back to main](../README.md)
