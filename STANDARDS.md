@@ -164,6 +164,10 @@ README 中按年份列出论文数与目录链接：
 | `arxiv.prompt` | 8 大章节 | ✅ 完成 |
 | `arxiv.agi-scifi` | 10 大集群 | ✅ 完成 |
 | `arxiv.game-dev-with-ai` | 25 个类别 | ✅ 完成 |
+| `arxiv.software-engineering` | 35 个类别（8 大集群） | ✅ 完成 |
+| `arxiv.qa-quality-engineering` | 35 个类别（7 大集群） | ✅ 完成 |
+| `arxiv.agent-harness` | 42 个搜索（12 大集群） | ✅ 完成 |
+| `arxiv.anthropic-claude` | 35 个搜索（12 大集群） | ✅ 完成 |
 
 ---
 
@@ -178,4 +182,8 @@ README 中按年份列出论文数与目录链接：
 | `arxiv.ai-human-future` | 1,814 | 12 | 无限制 |
 | `arxiv.qbio-health` | 1,125 | 7 | 无限制 |
 | `arxiv.game-dev-with-ai` | 73 | 25 | 2013–2026 |
-| **合计** | **29,201** | **139+** | |
+| `arxiv.software-engineering` | 4,418 | 42 | 2020–2026 |
+| `arxiv.qa-quality-engineering` | 3,069 | 35 | 2020–2026 |
+| `arxiv.agent-harness` | 2,177 | 42 | 2020–2026 |
+| `arxiv.anthropic-claude` | 2,628 | 35 | 2021–2026 |
+| **合计** | **~41,493** | **284+** | |
