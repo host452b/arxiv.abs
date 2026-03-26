@@ -1,0 +1,25 @@
+Title: Deep g-Pricing for CSI 300 Index Options with Volatility Trajectories and Market Sentiment
+Authors: Yilun Zhang, Zheng Tang, Hexiang Sun, Yufeng Shi
+ID: 2601.18804
+URL: https://arxiv.org/abs/2601.18804
+
+Option pricing in real markets faces fundamental challenges. The Black--Scholes
+--Merton (BSM) model assumes constant volatility and uses a linear generator
+$g(t,x,y,z)=-ry$, while lacking explicit behavioral factors, resulting in
+systematic departures from observed dynamics. This paper extends the BSM model
+by learning a nonlinear generator within a deep Forward--Backward Stochastic
+Differential Equation (FBSDE) framework. We propose a dual-network architecture
+where the value network $u_θ$ learns option prices and the generator network
+$g_φ$ characterizes the pricing mechanism, with the hedging strategy $Z_t=σ_t
+X_t \nabla_x u_θ$ obtained via automatic differentiation. The framework adopts
+forward recursion from a learnable initial condition $Y_0=u_θ(0,\cdot)$,
+naturally accommodating volatility trajectory and sentiment features. Empirical
+results on CSI 300 index options show that our method reduces Mean Absolute
+Error (MAE) by 32.2\% and Mean Absolute Percentage Error (MAPE) by 35.3\%
+compared with BSM. Interpretability analysis indicates that architectural
+improvements are effective across all option types, while the information
+advantage is asymmetric between calls and puts. Specifically, call option
+improvements are primarily driven by sentiment features, whereas put options
+show more balanced contributions from volatility trajectory and sentiment
+features. This finding aligns with economic intuition regarding option pricing
+mechanisms.
