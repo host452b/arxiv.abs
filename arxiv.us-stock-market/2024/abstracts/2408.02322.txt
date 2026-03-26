@@ -1,0 +1,23 @@
+Title: Consistent time travel for realistic interactions with historical data: reinforcement learning for market making
+Authors: Vincent Ragel, Damien Challet
+ID: 2408.02322
+URL: https://arxiv.org/abs/2408.02322
+
+Reinforcement learning works best when the impact of the agent's actions on its
+environment can be perfectly simulated or fully appraised from available data.
+Some systems are however both hard to simulate and very sensitive to small
+perturbations. An additional difficulty arises when a RL agent is trained
+offline to be part of a multi-agent system using only anonymous data, which
+makes it impossible to infer the state of each agent, thus to use data directly.
+Typical examples are competitive systems without agent-resolved data such as
+financial markets. We introduce consistent data time travel for offline RL as a
+remedy for these problems: instead of using historical data in a sequential way,
+we argue that one needs to perform time travel in historical data, i.e., to
+adjust the time index so that both the past state and the influence of the RL
+agent's action on the system coincide with real data. This both alleviates the
+need to resort to imperfect models and consistently accounts for both the
+immediate and long-term reactions of the system when using anonymous historical
+data. We apply this idea to market making in limit order books, a notoriously
+difficult task for RL; it turns out that the gain of the agent is significantly
+higher with data time travel than with naive sequential data, which suggests
+that the difficulty of this task for RL may have been overestimated.

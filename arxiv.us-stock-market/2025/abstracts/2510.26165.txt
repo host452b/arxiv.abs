@@ -1,0 +1,28 @@
+Title: Learning to Manage Investment Portfolios beyond Simple Utility Functions
+Authors: Maarten P. Scholl, Mahmoud Mahfouz, Anisoara Calinescu, J. Doyne Farmer
+ID: 2510.26165
+URL: https://arxiv.org/abs/2510.26165
+
+While investment funds publicly disclose their objectives in broad terms, their
+managers optimize for complex combinations of competing goals that go beyond
+simple risk-return trade-offs. Traditional approaches attempt to model this
+through multi-objective utility functions, but face fundamental challenges in
+specification and parameterization. We propose a generative framework that
+learns latent representations of fund manager strategies without requiring
+explicit utility specification.   Our approach directly models the conditional
+probability of a fund's portfolio weights, given stock characteristics,
+historical returns, previous weights, and a latent variable representing the
+fund's strategy. Unlike methods based on reinforcement learning or imitation
+learning, which require specified rewards or labeled expert objectives, our GAN-
+based architecture learns directly from the joint distribution of observed
+holdings and market data.   We validate our framework on a dataset of 1436 U.S.
+equity mutual funds. The learned representations successfully capture known
+investment styles, such as "growth" and "value," while also revealing implicit
+manager objectives. For instance, we find that while many funds exhibit
+characteristics of Markowitz-like optimization, they do so with heterogeneous
+realizations for turnover, concentration, and latent factors.   To analyze and
+interpret the end-to-end model, we develop a series of tests that explain the
+model, and we show that the benchmark's expert labeling are contained in our
+model's encoding in a linear interpretable way.   Our framework provides a data-
+driven approach for characterizing investment strategies for applications in
+market simulation, strategy attribution, and regulatory oversight.

@@ -1,0 +1,29 @@
+Title: RAmmStein: Regime Adaptation in Mean-reverting Markets with Stein Thresholds -- Optimal Impulse Control in Concentrated AMMs
+Authors: Pranay Anchuri
+ID: 2602.19419
+URL: https://arxiv.org/abs/2602.19419
+
+Concentrated liquidity provision in decentralized exchanges presents a
+fundamental Impulse Control problem. Liquidity Providers (LPs) face a non-
+trivial trade-off between maximizing fee accrual through tight price-range
+concentration and minimizing the friction costs of rebalancing, including gas
+fees and swap slippage. Existing methods typically employ heuristic or threshold
+strategies that fail to account for market dynamics.   This paper formulates
+liquidity management as an optimal control problem and derives the corresponding
+Hamilton-Jacobi-Bellman quasi-variational inequality (HJB-QVI). We present an
+approximate solution RAmmStein, a Deep Reinforcement Learning method that
+incorporates the mean-reversion speed (theta) of an Ornstein-Uhlenbeck process
+among other features as input to the model. We demonstrate that the agent learns
+to separate the state space into regions of action and inaction. We further
+extend the framework with RAmmStein-Width, which jointly optimizes rebalancing
+timing and position width via a 6-action DDQN.   We evaluate the framework using
+high-frequency 1Hz Coinbase trade data comprising over 6.8M trades on a
+realistic environment (10M TVL, 1% default width). Experimental results show
+that RAmmStein achieves a net ROI of 1.60%, the highest among all realistic
+(non-omniscient) strategies, while greedy strategies lose up to -8.4% to gas
+costs. Notably, the agent reduces rebalancing frequency by 85% compared to
+greedy rebalancing. RAmmStein-Width discovers extreme parsimony on its own,
+executing only 9 rebalances and $40 in gas, and degrades more slowly than all
+active strategies at elevated gas costs. Our results demonstrate that regime-
+aware laziness can significantly improve capital efficiency by preserving the
+returns that would otherwise be eroded by the operational costs.

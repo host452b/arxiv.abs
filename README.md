@@ -2,13 +2,13 @@
 
 # arxiv.abs — arXiv Paper Abstracts for AI Research & Sci-Fi Worldbuilding
 
-**41,000+ curated arXiv paper abstracts across eleven collections (1996–2026), covering AI/LLM Prompt Engineering, cross-disciplinary AGI/Sci-Fi research, AI Agent skills, AI-Human futures, health science, game development, Human × AI co-development, software engineering, QA/quality engineering, LLM agent harness research, and Anthropic/Claude AI research.**
+**48,000+ curated paper abstracts across thirteen collections (1996–2026), covering AI/LLM Prompt Engineering, cross-disciplinary AGI/Sci-Fi research, AI Agent skills, AI-Human futures, health science, game development, Human × AI co-development, software engineering, QA/quality engineering, LLM agent harness research, Anthropic/Claude AI research, child development & education, and US stock market investment analysis.**
 
 ---
 
 ## Collections Overview
 
-This repository contains eleven curated paper abstract collections:
+This repository contains thirteen curated paper abstract collections:
 
 | Collection | Papers | Categories | Years |
 |-----------|--------|------------|-------|
@@ -23,7 +23,9 @@ This repository contains eleven curated paper abstract collections:
 | [`arxiv.qa-quality-engineering`](arxiv.qa-quality-engineering/) | 3,069 | 35 categories | 2020–2026 |
 | [`arxiv.agent-harness`](arxiv.agent-harness/) | 2,177 | 42 topics | 2020–2026 |
 | [`arxiv.anthropic-claude`](arxiv.anthropic-claude/) | 2,628 | 35 topics | 2021–2026 |
-| **Total** | **~41,493** | **284+** | |
+| [`arxiv.child-development`](arxiv.child-development/) | 5,072 | 37 topics | 2010–2026 |
+| [`arxiv.us-stock-market`](arxiv.us-stock-market/) | 1,241 | 24 topics | 2010–2026 |
+| **Total** | **~47,806** | **345+** | |
 
 ---
 
@@ -87,6 +89,14 @@ This repository contains eleven curated paper abstract collections:
 ### 11. `arxiv.anthropic-claude` — Anthropic & Claude Research (2021+)
 
 2,628 abstracts from 35 keyword searches covering Claude-specific and Anthropic research: Constitutional AI, RLHF/RLAIF, mechanistic interpretability, sparse autoencoders, jailbreaking, sycophancy, hallucination, scaling laws, emergent capabilities, and long-context techniques. Time range: 2021–2026.
+
+### 12. `arxiv.child-development` — Child Development & Education (2010+)
+
+5,072 abstracts from 37 keyword searches covering child development and education organized by 3-year age brackets (0–18 years), with 80/20 Pareto analysis across 6 developmental layers: attachment/relationship, brain/cognition, social-emotional development, academic outcomes, physical health, and risk/protective factors. Time range: 2010–2026.
+
+### 13. `arxiv.us-stock-market` — US Stock Market Investment Analysis (2010+)
+
+1,241 abstracts from 24 keyword searches covering US equity market investment organized by 3-year investment cycle stages, with 80/20 analysis of core factors across 6 analytical layers: macro factors, market timing, stock selection, risk management, behavioral finance, and quantitative strategies. Time range: 2010–2026.
 
 ---
 

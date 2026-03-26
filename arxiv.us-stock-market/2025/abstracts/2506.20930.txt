@@ -1,0 +1,26 @@
+Title: Quantum Reinforcement Learning Trading Agent for Sector Rotation in the Taiwan Stock Market
+Authors: Chi-Sheng Chen, Xinyu Zhang, Ya-Chuan Chen
+ID: 2506.20930
+URL: https://arxiv.org/abs/2506.20930
+
+We propose a hybrid quantum-classical reinforcement learning framework for
+sector rotation in the Taiwan stock market. Our system employs Proximal Policy
+Optimization (PPO) as the backbone algorithm and integrates both classical
+architectures (LSTM, Transformer) and quantum-enhanced models (QNN, QRWKV, QASA)
+as policy and value networks. An automated feature engineering pipeline extracts
+financial indicators from capital share data to ensure consistent model input
+across all configurations. Empirical backtesting reveals a key finding: although
+quantum-enhanced models consistently achieve higher training rewards, they
+underperform classical models in real-world investment metrics such as
+cumulative return and Sharpe ratio. This discrepancy highlights a core challenge
+in applying reinforcement learning to financial domains -- namely, the mismatch
+between proxy reward signals and true investment objectives. Our analysis
+suggests that current reward designs may incentivize overfitting to short-term
+volatility rather than optimizing risk-adjusted returns. This issue is
+compounded by the inherent expressiveness and optimization instability of
+quantum circuits under Noisy Intermediate-Scale Quantum (NISQ) constraints. We
+discuss the implications of this reward-performance gap and propose directions
+for future improvement, including reward shaping, model regularization, and
+validation-based early stopping. Our work offers a reproducible benchmark and
+critical insights into the practical challenges of deploying quantum
+reinforcement learning in real-world finance.

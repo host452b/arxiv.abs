@@ -1,0 +1,24 @@
+Title: Deep Learning Option Pricing with Market Implied Volatility Surfaces
+Authors: Lijie Ding, Egang Lu, Kin Cheung
+ID: 2509.05911
+URL: https://arxiv.org/abs/2509.05911
+
+We present a deep learning framework for pricing options based on market-implied
+volatility surfaces. Using end-of-day S\&P 500 index options quotes from
+2018-2023, we construct arbitrage-free volatility surfaces and generate training
+data for American puts and arithmetic Asian options using QuantLib. To address
+the high dimensionality of volatility surfaces, we employ a variational
+autoencoder (VAE) that compresses volatility surfaces across maturities and
+strikes into a 10-dimensional latent representation. We feed these latent
+variables, combined with option-specific inputs such as strike and maturity,
+into a multilayer perceptron to predict option prices. Our model is trained in
+stages: first to train the VAE for volatility surface compression and
+reconstruction, then options pricing mapping, and finally fine-tune the entire
+network end-to-end. The trained pricer achieves high accuracy across American
+and Asian options, with prediction errors concentrated primarily near long
+maturities and at-the-money strikes, where absolute bid-ask price differences
+are known to be large. Our method offers an efficient and scalable approach
+requiring only a single neural network forward pass and naturally improve with
+additional data. By bridging volatility surface modeling and option pricing in a
+unified framework, it provides a fast and flexible alternative to traditional
+numerical approaches for exotic options.

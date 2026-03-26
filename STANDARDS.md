@@ -186,4 +186,6 @@ README 中按年份列出论文数与目录链接：
 | `arxiv.qa-quality-engineering` | 3,069 | 35 | 2020–2026 |
 | `arxiv.agent-harness` | 2,177 | 42 | 2020–2026 |
 | `arxiv.anthropic-claude` | 2,628 | 35 | 2021–2026 |
-| **合计** | **~41,493** | **284+** | |
+| `arxiv.child-development` | 5,072 | 37 | 2010–2026 |
+| `arxiv.us-stock-market` | 1,241 | 24 | 2010–2026 |
+| **合计** | **~47,806** | **345+** | |
