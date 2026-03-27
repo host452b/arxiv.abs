@@ -281,17 +281,12 @@ ChatDev、MetaGPT 等社会级论文被引用最多。
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Single monolithic LLM           GPT-4 + tool calling (2023)   Multi-agent orchestration
-  │ one model for everything        │ function calling API          │ specialist agents + router
-  └──────────────────────────────── ┘                             │
-                                                                   │
-Static prompt → output          ReAct paper (2022)            Thought-Action-Observation loops
-  │ input → response                │ interleaved reasoning/action  │ agents iterate on environment
-  └──────────────────────────────────┘
-```
+| 旧范式 | 触发事件 | 新范式 |
+|---|---|---|
+| **Single monolithic LLM** — one model handles everything | GPT-4 + tool calling (2023): function-calling API | **Multi-agent orchestration** — specialist agents coordinated by a router |
+| **Static prompt → output** — input in, response out | ReAct paper (2022): interleaved reasoning + action | **Thought-Action-Observation loops** — agents iterate on environment feedback |
+| **Human-written test scripts** — humans evaluate every output | Eval harness research (2023+): MT-Bench, HELM, AgentBench | **LLM-as-Judge + automated eval** — trajectory scoring at scale |
+| "Agents are reliable enough" — deploy and hope | SWE-bench, ToolBench (2023): 20–60 % task success rates | **Reliability-first engineering** — retry loops, checkpointing, fallbacks |
 
 **已被推翻的认知误区:**
 - ✗ "更长的ReAct链总能提升推理" → 长链会放大错误；需要工具输出验证

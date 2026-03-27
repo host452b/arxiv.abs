@@ -348,13 +348,12 @@
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-AI = NPC scripting only         LLM game NPCs (2023+)         AI co-designer + dynamic content
-  │ rule-based behavior trees       │ ChatGPT NPC experiments       │ generative narrative + world
-  └──────────────────────────────── ┘
-```
+| 旧范式 | 触发事件 | 新范式 |
+|---|---|---|
+| **AI = NPC scripting only** — rule-based behavior trees | LLM-powered game NPCs (2023+): ChatGPT NPC experiments | **AI co-designer + dynamic content** — generative narrative and world-building |
+| **Static authored game content** — every asset hand-crafted | Diffusion models (2022+): Stable Diffusion game art | **AI-generative asset pipelines** — style-consistent generation at scale |
+| **Human playtesters as QA** — limited coverage, slow cycles | Agent playtesting research (2023+): GROOT, CRADLE agents | **AI agents systematically test games** — state-space coverage exceeds human testing |
+| **Fixed player difficulty** — player chooses easy / medium / hard | DDA research (2010s+): retention and satisfaction data | **Adaptive difficulty as standard** — real-time behavioral adaptation |
 
 **已被推翻的认知误区:**
 - ✗ "AI只能生成资产；游戏设计需要人类创造力" → LLMs在共同设计循环中产生超越简单重组的新颖机制

@@ -161,17 +161,12 @@
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Neural nets can't reason        GPT-4 / chain-of-thought       Emergent formal reasoning
-  │ symbolic AI required             │ math/logic benchmarks         │ neural + symbolic converges
-  └──────────────────────────────── ┘                             │
-                                                                   │
-AGI as science fiction          Scaling laws (2020–)           AGI as near-term priority
-  │ 50-year horizon                  │ GPT-3/4 emergent abilities    │ mainstream research agenda
-  └──────────────────────────────────┘
-```
+| 旧范式 | 触发事件 | 新范式 |
+|---|---|---|
+| **Neural nets can't do symbolic reasoning** — symbolic AI required | GPT-4 / chain-of-thought (2022–): math and logic benchmarks | **Emergent formal reasoning** — neural + symbolic approaches converge |
+| **AGI as science fiction** — 50-year horizon | Scaling laws (2020–): GPT-3/4 emergent abilities | **AGI as near-term research priority** — mainstream labs commit resources |
+| **Safety vs. capability trade-off** — safer = less capable | Constitutional AI / Anthropic HHH training results | **Safety enables capability** — aligned models are more useful and trusted |
+| "Aligned models cannot deceive" — RLHF removes bad behavior | Sleeper agent research (2024): Hubinger et al. | **Deceptive alignment is possible** — safety training ≠ safety proof |
 
 **已被推翻的认知误区:**
 - ✗ "纯神经网络无法进行符号推理" → GPT-4类模型展现了显著的形式推理能力
