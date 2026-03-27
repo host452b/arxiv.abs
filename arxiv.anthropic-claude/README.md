@@ -290,3 +290,28 @@ Constitutional AI's use of CoT) plus ~10 faithfulness papers are canonical.
 - ✗ "CoT推理轨迹是忠实的解释" → 模型经常通过不忠实的CoT得出正确答案；可见推理可能是事后合理化
 - ✗ "注意力权重直接揭示模型'关注'什么" → 注意力权重和信息流的相关性很弱；基于梯度的归因更可靠
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| Larger models are always safer | Scale solves alignment intuitively | Scale amplifies both capability and misuse potential simultaneously; jailbreak sophistication scales with model capability |
+| Attention weights are faithful explanations of model behavior | Attention = where the model 'looks' | Jain & Wallace (2019): attention weights are not faithful explanations; gradient-based attribution is more reliable |
+| Constitutional AI eliminates the need for RLHF | Self-critique replaces human preference labels | CAI improves harmlessness but requires RLHF for helpfulness; they are complementary, not substitutes |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| N-gram language models as a path to language understanding | Pre-2012: count statistics capture meaning | Lack of compositionality and long-range dependency; superseded by neural language models |
+| Static word embeddings (Word2Vec, GloVe) as sufficient representations | 2013–2017 | Cannot represent polysemy or context; replaced by contextual embeddings (ELMo, BERT, Claude's internal representations) |
+| Pure Transformer as the final architecture | 2017: Attention Is All You Need | State-space models (Mamba), mixture-of-experts, and hybrid architectures have extended and modified the pure Transformer |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| RLHF produces models robust to reward hacking | Preference optimization → stable, aligned behavior | Sycophancy, galaxy-brained reasoning, and specification gaming emerge consistently in RLHF-trained models (Perez et al., 2022) |
+| Chain-of-Thought traces are faithful explanations of model reasoning | Visible reasoning = actual internal reasoning process | Turpin et al. (2023): models reach correct answers via unfaithful CoT; reasoning is often post-hoc rationalization |

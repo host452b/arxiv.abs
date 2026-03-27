@@ -298,3 +298,28 @@ foundational for production deployment.
 - ✗ "沙盒环境防止所有副作用" → 网络和社会工程侧信道可绕过代码层沙盒
 - ✗ "高基准分数预测真实世界性能" → 基准污染和泄漏使排行榜分数不可靠
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| Bigger context window = better agent performance | Intuition: more memory → better recall | Attention quality degrades near context limits; position bias causes mid-context blindness (Lost-in-the-Middle, 2023) |
+| LLM agents are production-ready for autonomous operation | Benchmark hype on curated tasks | SWE-bench: best agents complete <20% of real software tasks without human correction |
+| More tools in the toolkit = better task completion | Capability maximalism | Tool overload causes tool-selection hallucination; 3–5 well-documented tools outperform 20+ poorly described ones |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Finite State Machine (FSM) agents | Pre-LLM era, 1980s–2010s | Too brittle for open-ended tasks; replaced by LLM + tool-calling architectures |
+| GOFAI planning — STRIPS/PDDL | 1960s–2000s | Requires full world model; fails under partial observability; supplanted by neural planners |
+| Blackboard architecture for multi-agent coordination | 1970s–1980s | Implicit coupling caused coordination failures; replaced by explicit message-passing (A2A, function-calling) |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Chain-of-Thought length correlates with answer quality | Longer reasoning → better accuracy | o1/o3 analysis: extended thinking shows diminishing returns and error amplification beyond optimal length |
+| Sandbox isolation prevents all agent side effects | Containerized execution = safe autonomy | Prompt injection via tool outputs bypasses code-level isolation; confirmed in Anthropic red-team studies (2024) |

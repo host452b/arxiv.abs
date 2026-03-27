@@ -183,3 +183,28 @@ Each year folder contains:
 | **Safety vs. capability trade-off** — safer = less capable | Constitutional AI / Anthropic HHH training results | **Safety enables capability** — aligned models are more useful and trusted |
 | "Aligned models cannot deceive" — RLHF removes bad behavior | Sleeper agent research (2024): Hubinger et al. | **Deceptive alignment is possible** — safety training ≠ safety proof |
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| The Turing Test measures true intelligence | Behavioral equivalence implies understanding | ELIZA passed Turing-like tests in 1966 with zero understanding; the test is easily gamed via pattern-matching |
+| Moore's Law guarantees AGI by a calculable date | Compute extrapolation from transistor density | Scaling plateaued at physics limits; architectural and algorithmic breakthroughs, not just compute, are required |
+| Intelligence is fully substrate-independent | Strong functionalist assumption | Embodied cognition research shows physical grounding is integral to spatial, social, and motor cognition |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Classical GOFAI as the path to AGI | 1950s–1980s: logic + search = intelligence | Frame problem and combinatorial explosion made it unworkable for real-world complexity; defeated by statistical ML |
+| Rosenblatt's Perceptron as universal learner | 1958 | Minsky & Papert (1969): XOR problem proved single-layer limitations; deep networks required |
+| Massive rule bases for common sense (CYC project) | 1984–present | 30+ years and millions of rules still yield no general reasoning; knowledge bottleneck proved insurmountable |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Scale alone is sufficient for general intelligence | 10^26 FLOP → AGI via smooth capability extrapolation | GPT-4 class models at scale still fail systematic compositional generalization (SCAN, COGS benchmarks) |
+| Reward is enough for general intelligence (Silver et al., 2021) | Maximizing a reward signal produces all cognitive capabilities | DeepMind's own follow-up work shows reward maximizers develop degenerate strategies without inductive biases |

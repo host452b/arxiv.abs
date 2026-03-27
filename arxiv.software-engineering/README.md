@@ -514,3 +514,28 @@ Despite being a top industry concern, Application Security (35 papers), Supply C
 - ✗ "E2E测试是质量的黄金标准" → 测试金字塔：E2E成本最高且最脆弱；单元测试应占大多数
 - ✗ "质量是QA团队的责任" → 持续质量工程将质量所有权嵌入每个团队成员
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| Adding more developers speeds up a late project | Intuition: more hands = faster delivery | Brooks's Law (1975): adding people to a late project makes it later; communication overhead grows O(n²) |
+| Rewriting from scratch fixes architectural problems | Fresh start appeal: clean slate removes all debt | Second-system effect: rewrites reproduce or amplify original design flaws; rarely deliver on time or on scope |
+| Good code doesn't need comments | Clean code aesthetics: self-documenting code ideal | Comments explain WHY, not WHAT; studies show undocumented code has higher defect introduction rates during maintenance |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Jackson Structured Programming (JSP) | 1970s–1980s: data-structure-driven program design | Supplanted by domain modeling and ORM; too rigid for event-driven and distributed systems |
+| COCOMO I cost estimation model | 1981: lines of code as primary cost driver | Invalidated by modern tooling, IDEs, and reusable libraries; COCOMO II and story-point models fit modern delivery better |
+| Waterfall as the standard SDLC | 1970s–1990s: sequential phases with phase-exit criteria | Empirical software engineering showed >60% of requirements change during development; iterative approaches dominate |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Software complexity grows linearly with system size | Predicted: 2× code = 2× maintenance cost | Empirical studies support Lehman's Laws: complexity grows super-linearly; maintenance cost scales faster than size |
+| Formal verification eliminates all bugs | Predicted: mathematically proven code has zero runtime failures | Heartbleed (in verified-reviewed OpenSSL), Therac-25: verification scope misses integration-level and specification-level failures |

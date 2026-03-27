@@ -67,3 +67,28 @@ US stock market cycles historically average 3–7 years peak-to-peak. The 3-year
 - ✗ "均值方差优化可靠地产生最优投资组合" → 预期收益的估计误差使MVO对输入极为敏感；贝叶斯/鲁棒方法更优
 - ✗ "市场收益在时间上同分布" → 机制转换模型表明牛市/熊市阶段的收益均值和方差在统计上不同
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| Diversification eliminates all investment risk | Portfolio theory: spreading = safety | Systematic risk (market beta) cannot be diversified away; correlations spike to ~1 during crises, eliminating diversification benefit exactly when needed |
+| Active fund managers consistently beat the index | Expertise and research add alpha | SPIVA data: 80–90% of active funds underperform their benchmark over 15 years after fees |
+| Past performance predicts future returns | Track record as the primary manager selection criterion | SEC disclaimer is empirically correct; return persistence beyond 3 years is statistically indistinguishable from noise (Carhart, 1997) |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Strict Random Walk Hypothesis (Samuelson, 1965) | Prices follow random walk; no strategy beats buy-and-hold | Factor premia (value, momentum, quality, low-volatility) are robust anomalies; strict random walk falsified, weak-form EMH survives |
+| CAPM as the complete asset pricing model (Sharpe, 1964) | One factor (market beta) explains all return variation | Fama-French (1992): size and value factors independently significant; five-factor model now standard |
+| Naive mean-variance optimization as portfolio management | Markowitz 1952: plug expected returns into MVO → optimal portfolio | Estimation error in expected returns makes naive MVO unstable; Bayesian shrinkage and robust methods are necessary |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Volatility is constant (Black-Scholes assumption) | Predicted: implied volatility surface is flat across strikes and maturities | Volatility smile and skew are empirically ubiquitous; stochastic vol models (Heston, SABR) now standard; constant σ rejected |
+| Efficient markets make all risk-adjusted alpha impossible | Predicted: no strategy earns consistent risk-adjusted excess returns | Fama & French themselves documented value and size premia; carry, momentum, and quality factors are well-documented risk-adjusted anomalies |

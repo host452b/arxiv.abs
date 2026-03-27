@@ -89,3 +89,28 @@ A curated collection of academic papers on **child development, parenting, and e
 - ✗ "讨论自杀会给青少年植入想法" → 零证据支持'传染性讨论'；回避对话反而增加风险
 - ✗ "莫扎特效应：古典音乐永久提升智商" → 原始莫扎特效应是成人短暂的视觉空间启动效应；儿童研究发现无持久智商效益
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| Learning styles (VAK) require matched instruction | Individual learning differences are pedagogically significant | Pashler et al. (2008): 70+ years of research find zero evidence that matching instruction style to learning style improves outcomes |
+| Brain development is complete by age 7 | Partial misreading of Piaget's stage theory | Prefrontal cortex continues developing until ~25; executive function and impulse control mature in early adulthood |
+| Growth mindset interventions reliably boost academic outcomes | Dweck's lab findings generalized to policy | Large-scale replication failures in school settings; near-zero effect size in high-poverty contexts (Sisk et al., 2018) |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Piaget's hard-staged cognitive development model | 1952: universal fixed sequence of stages | Cross-cultural and infant research shows stages are soft and domain-specific; continuous development model is preferred |
+| Freudian psychosexual development stages | Early 20th century | No reproducible predictive validity; superseded by attachment theory and empirical developmental psychology |
+| Strict critical period hypothesis for language | 1960s–1980s: acquisition impossible after puberty | Newport, Mayberry: post-critical-period learners achieve high (not perfect) proficiency; sensitive period is more accurate |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Mozart Effect: classical music permanently raises IQ | Predicted: infant music exposure → lasting cognitive gains | Chabris (1999) meta-analysis: original effect was adult short-term spatial priming only; no IQ effect in children confirmed |
+| Authoritarian 'Tiger Mom' parenting produces superior life outcomes | Predicted: strict control → academic and career achievement | Kim (2013): authoritarian parenting associated with lower GPA and psychological well-being in Western samples; cultural boundary conditions not generalized |

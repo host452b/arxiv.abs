@@ -267,3 +267,28 @@ Papers scored by presence of human-health keywords (human subjects, clinical, di
 - ✗ "BMI准确衡量个体健康风险" → BMI无法区分肌肉和脂肪；腰高比是心脏代谢风险的更好预测指标
 - ✗ "抗氧化补充剂预防细胞老化" → 高剂量抗氧化RCT显示无益甚至有害；自由基理论已被大幅修正
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| We only use 10% of our brains | Vast untapped neural potential narrative | Neuroimaging shows virtually all brain regions activate across daily tasks; no inactive 90% exists |
+| You can sweat out toxins through exercise | Skin as a detox organ belief | Detoxification is performed by liver and kidneys; sweat contains only trace metabolic waste with negligible detox effect |
+| Cold weather directly causes colds | Temperature = immune suppression intuition | Rhinovirus transmission is social (indoor crowding in winter), not temperature-mediated; cold exposure alone does not increase infection risk |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Four humors medicine (Hippocrates, ~400 BCE–1850s) | Balance of blood, phlegm, yellow/black bile = health | Disproved by germ theory (Pasteur, Koch, 1860s–1880s); abandoned in evidence-based medicine |
+| Eugenics as public health policy | Early 20th century: selective reproduction improves population health | Statistically invalidated: complex polygenic traits defy simple selection; ethically condemned and scientifically discredited |
+| Miasma theory of disease | Pre-1860s: bad air from rotting matter causes disease | Snow's cholera map (1854) and germ theory falsified it; sanitation reforms it prompted worked via a different mechanism |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Dietary fat raises LDL and causes heart disease (Diet-Heart Hypothesis, Ancel Keys) | Predicted: saturated fat → elevated LDL → cardiovascular events | PREDIMED, PURE, and Women's Health Initiative RCTs: low-fat diets do not reduce cardiovascular events; fat type matters, not total fat |
+| High-dose antioxidant supplements prevent cancer and extend lifespan | Predicted: ROS scavengers → lower oxidative damage → cancer prevention | CARET, ATBC, HOPE trials: high-dose antioxidants increased lung cancer risk and all-cause mortality in smokers |
