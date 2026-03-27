@@ -14,7 +14,7 @@ evaluation, safety, code agents, browser/GUI agents, and production reliability.
 ## Search Topics (42 Searches)
 
 | ID | Topic | File | Superseded Theory / Established Fallacy |
-|----|-------|---------|
+|---|---|---|---|
 | 01 | Agent Framework & Orchestration | `01-agent-framework.json` | "A single monolithic LLM can handle all agent tasks" → Multi-agent specialization, routing, and orchestration are required for complex tasks. |
 | 02 | AutoGen / LangChain / CrewAI | `02-autogen-langchain.json` | "Framework abstractions always reduce complexity" → LangChain/LangGraph abstractions add debugging difficulty; raw LLM API calls are often more debuggable. |
 | 03 | Agentic Workflow & Pipeline | `03-agentic-workflow.json` | "Agent workflows should maximize autonomy" → Fully autonomous agents fail silently and compound errors; human-in-the-loop checkpoints are essential. |

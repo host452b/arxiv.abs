@@ -7,7 +7,7 @@
 ## Search Topics
 
 | # | Topic | Keywords | Papers | File | Superseded Theory / Established Fallacy |
-|---|-------|----------|--------|---------|
+|---|---|---|---|---|---|
 | 01 | Biological Evolution × AI | human/biological evolution + AI/machine intelligence | 185 | [01-bio-evolution-ai.json](search-results/01-bio-evolution-ai.json) | "Biological evolution has stopped for modern humans" → Gene-culture co-evolution is ongoing; recent selection signals found in lactase persistence, immune function, and cognitive traits. |
 | 02 | Population Dynamics × Technology | population genetics/dynamics/demographics + AI/automation | 143 | [02-population-tech.json](search-results/02-population-tech.json) | "Population growth is the primary resource threat" → Resource consumption per capita (driven by affluence) is a stronger predictor of environmental impact than population size alone. |
 | 03 | Artificial Life / Digital Organisms | artificial life / digital organism / synthetic life / alife | 106 | [03-artificial-life.json](search-results/03-artificial-life.json) | "Life requires carbon-based chemistry" → Artificial life research demonstrates self-replication, evolution, and adaptation in purely computational substrates. |

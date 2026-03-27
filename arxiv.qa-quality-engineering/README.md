@@ -28,7 +28,7 @@
 ## Search Topics (35 Searches)
 
 | # | Topic | Keywords | Papers | File | Superseded Theory / Established Fallacy |
-|---|-------|----------|--------|---------|
+|---|---|---|---|---|---|
 | 01 | Software Testing Fundamentals & Methodology | software testing | 200 | [01-sw-testing-fund.json](search-results/01-sw-testing-fund.json) | "Testing is a phase after coding" → TDD/BDD proved testing is a design activity; shift-left makes testing the first step. |
 | 02 | Unit & Component Testing | unit testing or test-driven development | 179 | [02-unit-testing.json](search-results/02-unit-testing.json) | "Unit tests alone guarantee quality" → Unit tests miss integration failures; contract and integration tests are equally essential. |
 | 03 | Integration & System Testing | integration testing or system testing | 200 | [03-integration-test.json](search-results/03-integration-test.json) | "Integration tests are always slow and flaky" → Hermetic containers (Testcontainers) and mocking at the right level make integration tests fast and reliable. |

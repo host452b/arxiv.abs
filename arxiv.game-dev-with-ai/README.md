@@ -9,7 +9,7 @@
 ## Search Topics (25 Categories)
 
 | # | Topic | Keywords | Papers | File | Superseded Theory / Established Fallacy |
-|---|-------|----------|--------|---------|
+|---|---|---|---|---|---|
 | 01 | AI-Assisted Game Development | LLM game design / GPT game design / ChatGPT game | 10 | [01](search-results/01-ai-assisted-gamedev.json) | "AI can only generate assets; game design requires human creativity" → LLMs used in iterative co-design loops produce novel mechanics and narrative structures beyond simple recombination. |
 | 02 | Mixed-Initiative Creativity | mixed-initiative creativity / mixed initiative co-creative | 4 | [02](search-results/02-mixed-initiative.json) | "LLM NPCs are too unpredictable for games" → Constrained generation (character cards, memory, topic filters) enables reliable, lore-consistent LLM NPCs. |
 | 03 | Human-in-the-Loop / Co-Creative AI | mixed initiative co-creative / co-creative AI design system | 7 | [03](search-results/03-human-in-the-loop.json) | "AI-generated art lacks artistic coherence within a game" → Style-consistent fine-tuned diffusion models produce asset sets with higher visual coherence than stock art. |
@@ -46,10 +46,10 @@
 
 | Year | Papers | Year | Papers |
 |------|--------|------|--------|
-| 2013 | 1 | [2022](2022/abstracts/) | 7 | — |
-| 2019 | 3 | [2023](2023/abstracts/) | 8 | — |
-| 2020 | 1 | [2024](2024/abstracts/) | 19 | — |
-| 2021 | 2 | [2025](2025/abstracts/) | 27 | — |
+| 2013 | 1 | [2022](2022/abstracts/) | 7 |
+| 2019 | 3 | [2023](2023/abstracts/) | 8 |
+| 2020 | 1 | [2024](2024/abstracts/) | 19 |
+| 2021 | 2 | [2025](2025/abstracts/) | 27 |
 | | | [2026](2026/abstracts/) | 5 |
 
 > 2024–2026 totals **51 papers** (70% of all), confirming the field is concentrated in the LLM era.

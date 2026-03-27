@@ -201,7 +201,7 @@ John Hattie's *Visible Learning* meta-analysis (800+ studies): formative assessm
 ## Search Files Index
 
 | File | Topic | Papers | Superseded Theory / Established Fallacy |
-|------|-------|-----------|
+|---|---|---|---|
 | 01-infant-development.json | Infant motor & sensory development | 200 | "Babies are 'blank slates' passively absorbing experience" → Infants are active statistical learners from birth; innate perceptual preferences guide development. |
 | 02-attachment.json | Attachment theory & bonding | 200 | "Day care inevitably damages attachment" → NICHD study: quality of care matters more than setting; secure attachment can form with multiple caregivers. |
 | 03-brain-development.json | Early brain neuroscience | 200 | "Critical periods are absolute windows after which learning is impossible" → Sensitive periods are probabilistic, not absolute; brain plasticity continues throughout life. |

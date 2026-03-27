@@ -397,7 +397,7 @@
 ## 搜索数据来源
 
 | # | 主题 | 关键词 | 论文数 | 文件 | 被推翻的理论 / 既定谬误 |
-|---|------|--------|--------|---------|
+|---|---|---|---|---|---|
 | 01 | 衰老与长寿 | aging / longevity / lifespan | 200 | [01-longevity.json](search-results/01-longevity.json) | "Lifespan is primarily genetically determined" → Twin studies show genetics accounts for ~25% of lifespan variance; environment and epigenetics dominate. |
 | 02 | 饮食与代谢 | diet / nutrition / fasting / metabolism | 200 | [02-diet.json](search-results/02-diet.json) | "Dietary fat is the primary driver of cardiovascular disease" → PREDIMED shows Mediterranean diet (high healthy fat) reduces cardiovascular risk; refined carbs are larger drivers. |
 | 03 | 运动与体能 | exercise / fitness / muscle | 200 | [03-exercise.json](search-results/03-exercise.json) | "More exercise is always better" → Overtraining syndrome: extreme endurance athletes show higher cardiovascular risk; recovery is as important as training. |

@@ -7,7 +7,7 @@
 ## Search Topics
 
 | # | Skill Category | Keywords | Papers | File | Superseded Theory / Established Fallacy |
-|---|---------------|----------|--------|---------|
+|---|---|---|---|---|---|
 | 01 | Reasoning | chain of thought / tree of thought / ReAct / self reflection | 200 | [01-reasoning.json](search-results/01-reasoning.json) | "LLMs cannot do formal reasoning" → Chain-of-thought and scratchpad prompting enable multi-step logical and mathematical reasoning beyond what was thought possible at scale. |
 | 02 | Memory | agent memory / episodic memory / working memory / memory augmented | 200 | [02-memory.json](search-results/02-memory.json) | "Transformers cannot have persistent memory" → External memory stores (RAG, episodic memory modules) give LLM agents indefinite effective memory beyond context window limits. |
 | 03 | Tool Use | tool use / function calling / tool augmented / API agent / tool learning | 200 | [03-tool-use.json](search-results/03-tool-use.json) | "LLMs cannot reliably use external tools" → ReAct and function-calling have made reliable tool use mainstream; the original 'LLMs can only generate text' assumption is obsolete. |
@@ -97,17 +97,17 @@ The same multi-agent technology creates two opposing failure modes:
 
 | Year | Papers | Directory |
 |------|--------|-----------|
-| 2000 | 1 | [2000/abstracts/](2000/abstracts/) | — |
+| 2000 | 1 | [2000/abstracts/](2000/abstracts/) |
 | 2008–2017 | 57 | 2008–2017/abstracts/ |
-| 2018 | 35 | [2018/abstracts/](2018/abstracts/) | — |
-| 2019 | 54 | [2019/abstracts/](2019/abstracts/) | — |
-| 2020 | 79 | [2020/abstracts/](2020/abstracts/) | — |
-| 2021 | 92 | [2021/abstracts/](2021/abstracts/) | — |
-| 2022 | 98 | [2022/abstracts/](2022/abstracts/) | — |
-| 2023 | 179 | [2023/abstracts/](2023/abstracts/) | — |
-| 2024 | 450 | [2024/abstracts/](2024/abstracts/) | — |
-| 2025 | 1117 | [2025/abstracts/](2025/abstracts/) | — |
-| 2026 | 442 | [2026/abstracts/](2026/abstracts/) | — |
+| 2018 | 35 | [2018/abstracts/](2018/abstracts/) |
+| 2019 | 54 | [2019/abstracts/](2019/abstracts/) |
+| 2020 | 79 | [2020/abstracts/](2020/abstracts/) |
+| 2021 | 92 | [2021/abstracts/](2021/abstracts/) |
+| 2022 | 98 | [2022/abstracts/](2022/abstracts/) |
+| 2023 | 179 | [2023/abstracts/](2023/abstracts/) |
+| 2024 | 450 | [2024/abstracts/](2024/abstracts/) |
+| 2025 | 1117 | [2025/abstracts/](2025/abstracts/) |
+| 2026 | 442 | [2026/abstracts/](2026/abstracts/) |
 
 ## Search Parameters
 

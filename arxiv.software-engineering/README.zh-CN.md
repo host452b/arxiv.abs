@@ -27,7 +27,7 @@
 ## 搜索主题（42 组搜索）
 
 | # | 主题 | 关键词 | 论文数 | 结果文件 | 被推翻的理论 / 既定谬误 |
-|---|------|--------|--------|------------|
+|---|---|---|---|---|---|
 | 01 | 前端工程与 Web 开发 | frontend or front-end or web UI | 149 | [01-frontend.json](search-results/01-frontend.json) | "Frontend is just HTML/CSS, not real engineering" → Frontend has become a full engineering discipline with complex state management, performance optimization, and accessibility requirements. |
 | 02 | UI 设计系统与组件库 | user interface design or UI design | 113 | [02-ui-design.json](search-results/02-ui-design.json) | "REST APIs are always the right choice" → GraphQL, gRPC, and event-driven architectures each dominate specific use cases; REST is not universally optimal. |
 | 03 | 用户体验（UX）研究与评估 | user experience or UX design | 94 | [03-ux-design.json](search-results/03-ux-design.json) | "Microservices always improve scalability" → Premature microservice decomposition introduces distributed systems complexity (network failures, eventual consistency) that monoliths avoid. |

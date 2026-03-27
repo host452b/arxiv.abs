@@ -27,7 +27,7 @@
 ## Search Topics (42 Searches)
 
 | # | Topic | Keywords | Papers | File | Superseded Theory / Established Fallacy |
-|---|-------|----------|--------|------|----------------------------------------|
+|---|---|---|---|---|---|
 | 01 | Frontend Engineering & Web Development | frontend or front-end or web UI | 149 | [01-frontend.json](search-results/01-frontend.json) | "Frontend is just HTML/CSS, not real engineering"  →  Frontend has become a full engineering discipline with its own architecture, state management, and performance domains. |
 | 02 | UI Design Systems & Component Libraries | user interface design or UI design | 113 | [02-ui-design.json](search-results/02-ui-design.json) | "Aesthetically beautiful UI = good design"  →  Information architecture and cognitive load govern usability more than visual polish. |
 | 03 | User Experience (UX) Research & Evaluation | user experience or UX design | 94 | [03-ux-design.json](search-results/03-ux-design.json) | "UX research is a nice-to-have"  →  Heuristic evaluation alone misses ~50% of user problems; field studies are irreplaceable. |

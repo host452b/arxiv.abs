@@ -164,7 +164,7 @@ Each year folder contains:
 ### Superseded Theories by Cluster / 各领域被推翻的主流理论
 
 | Cluster | Superseded Theory / Established Fallacy |
-|---------|----------------------------------------|
+|---|---|
 | **AGI & Intelligence** | "Pure neural networks cannot do symbolic reasoning" → GPT-4 class models demonstrate significant formal reasoning; the strict neural/symbolic divide has blurred. |
 | **Safety & Governance** | "Voluntary industry guidelines are sufficient for AI safety" → Race dynamics make voluntary self-regulation structurally insufficient without binding coordination. |
 | **Society & Economy** | "Automation only displaces manual labor" → Cognitive work, creative tasks, and professional services show measurable displacement pressure from LLMs. |

@@ -7,7 +7,7 @@
 ## 搜索主题（29 个类别）
 
 | # | 主题 | 关键词 | 论文数 | 被推翻的理论 / 既定谬误 |
-|---|------|--------|-----------|
+|---|---|---|---|---|
 | 01 | 游戏引擎架构 | game engine / real-time engine / game loop / engine architecture | 185 | "Custom engines are always more efficient than commercial engines" → UE5/Unity optimization has closed the gap; custom engines carry massive maintenance costs. |
 | 02 | 实时渲染 | real-time rendering / shader programming / rendering pipeline / rasterization | 200 | "More polygons = better visual quality" → Ray tracing + global illumination and LOD management contribute more to perceived quality than raw polygon count. |
 | 03 | 光线追踪 & 全局光照 | ray tracing / global illumination / physically based rendering / path tracing | 200 | "Ray tracing requires full-path tracing to look good" → Hybrid rasterization+ray tracing (DXR) delivers visually comparable results at a fraction of the cost. |
