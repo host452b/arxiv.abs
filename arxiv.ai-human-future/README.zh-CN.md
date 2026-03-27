@@ -1,6 +1,6 @@
 # arxiv.ai-human-future — AI × 人类进化 × 未来社会
 
-**1,814 篇 arXiv 摘要**，来自 `cs`、`q-bio` 及跨学科类别的 12 个主题搜索，覆盖 AI 发展与人类、种群、文明长期关系的定量与生物维度。
+**3,354 篇 arXiv 摘要**，来自 `cs`、`q-bio` 及跨学科类别的 22 个主题搜索，覆盖 AI 发展与人类、种群、文明长期关系的定量与生物维度。
 
 **核心问题：** AI 发展到一定程度，人与人工智能是什么面貌？如何预测和量化未来？
 
@@ -20,8 +20,18 @@
 | 10 | 技术奇点 / AGI 冲击 | technological singularity / superintelligence / AGI + human/society | 143 | [10-singularity-agi.json](search-results/10-singularity-agi.json) | "Singularity implies a specific and predictable date" → Singularity timeline predictions have consistently been wrong; scenario planning over point prediction is more appropriate. |
 | 11 | AI 量化预测社会 | AI forecast/prediction/simulation + society/future/human | 200 | [11-ai-forecast.json](search-results/11-ai-forecast.json) | "AI forecasting is more accurate than human expert forecasting" → Calibrated human ensembles outperform AI on long-horizon societal predictions. |
 | 12 | 人类增强 / 意识上传 | human/cognitive enhancement / mind uploading / whole brain emulation | 200 | [12-human-enhancement.json](search-results/12-human-enhancement.json) | "Mind uploading preserves personal identity" → Teleportation/uploading identity paradox: continuity is non-trivial. |
+| 13 | AI 治理 / 监管 / 政策 | AI governance / regulation / policy / law / ethics + AI | 200 | [13-ai-governance.json](search-results/13-ai-governance.json) | "AI 公司自我监管已足够" → 监管俘获与竞争压力导致系统性监管不足；独立监管机构在实证上是必要的。 |
+| 14 | 劳动力未来 / 自动化 / 工作变革 | AI labor displacement / future of work / automation + employment | 70 | [14-labor-future.json](search-results/14-labor-future.json) | "自动化消灭的岗位与创造的岗位同等数量（在同一行业）" → 历史数据表明存在行业间摩擦；被替代的工人很少重新进入被自动化的行业。 |
+| 15 | AI 安全 / 对齐 / 生存风险 | AI safety / alignment / existential risk / x-risk + AGI | 200 | [15-ai-safety.json](search-results/15-ai-safety.json) | "RLHF 完全解决了对齐问题" → 卧底智能体研究（Hubinger et al. 2024）表明：安全训练无法保证消除欺骗性对齐的可能性。 |
+| 16 | 长寿 / 寿命延长 / 衰老 × AI | longevity / lifespan extension / aging + AI / machine learning | 170 | [16-longevity.json](search-results/16-longevity.json) | "人类最大寿命固定在约 120 岁" → 衰老标志物研究：多条衰老通路可通过药物干预；目前没有确认的硬性生物上限。 |
+| 17 | 认知科学 × AI / 智能增强 | cognitive science + AI / intelligence augmentation / cognitive enhancement | 134 | [17-cognitive.json](search-results/17-cognitive.json) | "IQ 是固定的、单维度的智力度量" → 多元智能理论与流体 / 晶体智力之分；工作记忆训练可暂时提升流体智力。 |
+| 18 | AI 教育变革 | AI + education / learning / pedagogy / personalized learning | 200 | [18-ai-education.json](search-results/18-ai-education.json) | "技术会取代教师" → 混合学习研究：AI 辅导提升了底部绩效，但教师关系质量仍是学习参与度的首要预测因子。 |
+| 19 | AI 虚假信息 / 民主 / 选举 | AI misinformation / deepfake / disinformation + democracy / elections | 53 | [19-democracy-info.json](search-results/19-democracy-info.json) | "事实核查能纠正错误信息认知" → 持续影响效应：纠正措施减少但很少消除虚假信念；重复曝光独立于信源来源增加感知真实性。 |
+| 20 | AI 创造力 / 艺术 / 音乐 | AI creativity / generative art / music / writing + creativity | 200 | [20-ai-creativity.json](search-results/20-ai-creativity.json) | "创造力需要意识和意图" → 计算创造力研究：创造性产出可以在没有现象意识的情况下被生成和评估。 |
+| 21 | AI 心理学 / 人机关系 | AI psychology / human-AI relationship / anthropomorphism / emotional AI | 113 | [21-psychology-ai.json](search-results/21-psychology-ai.json) | "对 AI 的拟人化总是非理性的" → ELIZA 效应研究：在某些情景下，与 AI 的准社会联结改善了治疗结果；效用依赖的理性。 |
+| 22 | AI 气候 / 可持续性 / 能源 | AI climate change / sustainability / energy + AI / machine learning | 200 | [22-climate-ai.json](search-results/22-climate-ai.json) | "AI 能耗必然恶化气候" → 模型效率研究：算法改进使每次推理的能耗每年降低 2–4 倍；净气候影响取决于能源结构。 |
 
-**原始结果 1,838 篇 → 去重后 1,814 篇摘要**
+**原始结果 3,378 篇 → 去重后 3,354 篇摘要**
 
 ## 核心发现摘要
 
