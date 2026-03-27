@@ -78,10 +78,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Tabula rasa (blank slate)** — babies passively absorb input | Statistical learning studies: Spelke, Baillargeon (1990s) | **Active statistical learner** — innate perceptual preferences from birth |
-| **Academic drilling = head start** — academic preschool wins | Perry / Abecedarian long-term follow-up data | **Play-based early learning** — play develops executive function better than drilling |
-| **IQ as primary predictor** — IQ test determines destiny | Executive function research: Diamond (2013), inhibitory control studies | **Executive function at age 5** — EF predicts life outcomes better than IQ |
-| **Authoritarian = disciplined** — strict control leads to success | Baumrind's decades of longitudinal outcome data | **Authoritative parenting wins** — warmth + structure outperforms pure control |
+| **白板论 (Tabula rasa)** — 婴儿被动吸收外界输入 | 统计学习研究: Spelke, Baillargeon (1990s) | **主动统计学习者** — 婴儿出生即具备先天感知偏好 |
+| **学术训练 = 领先优势** — 学术型学前教育效果最好 | Perry / Abecedarian 长期追踪数据 | **游戏型早期学习** — 游戏对执行功能发展的作用优于学术灌输 |
+| **IQ 是主要预测指标** — 智商测试决定命运 | 执行功能研究: Diamond (2013), 抑制控制研究 | **5 岁时的执行功能** — EF 对人生结果的预测优于 IQ |
+| **威权 = 有纪律** — 严格管控通向成功 | Baumrind 数十年纵向结果数据 | **权威型养育胜出** — 温暖 + 结构优于纯粹的管控 |
 
 **已被推翻的认知误区:**
 - ✗ "婴儿是白板" → 婴儿是天生的统计学习者

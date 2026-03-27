@@ -492,10 +492,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Waterfall testing** — test only after code is done | Agile / XP (2001): TDD, fast iteration | **Shift-left, continuous testing** — quality is built-in, not bolted on |
-| **Manual regression suites** — run before each release | CI/CD pipelines (2010s): every commit triggers tests | **Automated test-in-pipeline** — testing is infrastructure, not a gate |
-| "100 % coverage = safe" — code coverage as quality proxy | Mutation testing research: mutation score + DORA | **Outcome-based quality metrics** — MTTR and change failure rate replace coverage |
-| **Scripted test cases** — humans write every assertion | LLM test generation (2023+): AI generates test suites | **AI-augmented exploratory testing** — human guides strategy, AI executes |
+| **瀑布式测试** — 代码完成后才开始测试 | 敏捷 / XP (2001): TDD, 快速迭代 | **左移、持续测试** — 质量内建，而非后补 |
+| **手工回归测试套件** — 每次发布前运行 | CI/CD 流水线 (2010s): 每次提交触发测试 | **流水线内自动化测试** — 测试是基础设施，而非关卡 |
+| "100 % 覆盖率 = 安全" — 代码覆盖率作为质量代理指标 | 变异测试研究: 变异分数 + DORA | **基于结果的质量指标** — MTTR 和变更失败率取代覆盖率 |
+| **脚本化测试用例** — 人工编写每一条断言 | LLM 测试生成 (2023+): AI 生成测试套件 | **AI 增强探索性测试** — 人类指导策略，AI 负责执行 |
 
 **已被推翻的认知误区:**
 - ✗ "测试是编码完成后的阶段" → TDD/BDD证明测试是设计活动

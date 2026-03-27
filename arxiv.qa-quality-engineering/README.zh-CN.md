@@ -372,10 +372,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Testing is a phase** — test only after code is complete | TDD / Agile (2001–2010): Red-Green-Refactor cycle | **Testing is a design activity** — tests define behavior before coding begins |
-| **Test-after QA gatekeeping** — release gates and defect triage | DevOps / shift-left movement: CI pipelines and pre-commit hooks | **Continuous quality feedback** — quality measured at every commit |
-| "80 % coverage = done" — coverage metrics as quality proxy | Mutation testing (2010s+): PITest, Stryker results | **Mutation score / DORA metrics** — change failure rate and MTTR replace line coverage |
-| **Manual test scripts** — humans write every assertion | AI-powered test generation (2023+): Codium, GitHub Copilot | **LLM-augmented testing** — AI generates test suites, humans review and approve |
+| **测试是一个阶段** — 代码完成后才开始测试 | TDD / 敏捷 (2001–2010): 红-绿-重构循环 | **测试是设计活动** — 测试在编码前定义行为 |
+| **测试后置的 QA 把关** — 发布前的质量门控与缺陷分级 | DevOps / 左移运动: CI 流水线与预提交钩子 | **持续质量反馈** — 每次提交都衡量质量 |
+| "80 % 覆盖率 = 完成" — 代码覆盖率作为质量代理指标 | 变异测试 (2010s+): PITest, Stryker 结果 | **变异分数 / DORA 指标** — 变更失败率和 MTTR 取代行覆盖率 |
+| **手工测试脚本** — 人工编写每一条断言 | AI 驱动测试生成 (2023+): Codium, GitHub Copilot | **LLM 增强测试** — AI 生成测试套件，人类审查和审批 |
 
 **已被推翻的认知误区:**
 - ✗ "E2E测试是黄金标准" → 测试金字塔证明单元测试为主的底层结构更优

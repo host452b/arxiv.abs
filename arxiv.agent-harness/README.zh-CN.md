@@ -283,10 +283,10 @@ ChatDev、MetaGPT 等社会级论文被引用最多。
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Single monolithic LLM** — one model handles everything | GPT-4 + tool calling (2023): function-calling API | **Multi-agent orchestration** — specialist agents coordinated by a router |
-| **Static prompt → output** — input in, response out | ReAct paper (2022): interleaved reasoning + action | **Thought-Action-Observation loops** — agents iterate on environment feedback |
-| **Human-written test scripts** — humans evaluate every output | Eval harness research (2023+): MT-Bench, HELM, AgentBench | **LLM-as-Judge + automated eval** — trajectory scoring at scale |
-| "Agents are reliable enough" — deploy and hope | SWE-bench, ToolBench (2023): 20–60 % task success rates | **Reliability-first engineering** — retry loops, checkpointing, fallbacks |
+| **单体 LLM** — 一个模型承担所有任务 | GPT-4 + 工具调用 (2023): function-calling API | **多 Agent 编排** — 专属 Agent 由路由器协调调度 |
+| **静态提示词 → 输出** — 输入进，回复出 | ReAct 论文 (2022): 推理与行动交替执行 | **思考-行动-观察循环** — Agent 根据环境反馈持续迭代 |
+| **人工编写测试脚本** — 人类逐一评估每个输出 | 评估框架研究 (2023+): MT-Bench, HELM, AgentBench | **LLM 裁判 + 自动化评估** — 大规模轨迹自动评分 |
+| "Agent 已足够可靠" — 部署后听天由命 | SWE-bench, ToolBench (2023): 任务成功率仅 20–60 % | **可靠性优先工程** — 重试循环、检查点、回退策略 |
 
 **已被推翻的认知误区:**
 - ✗ "更长的ReAct链总能提升推理" → 长链会放大错误；需要工具输出验证

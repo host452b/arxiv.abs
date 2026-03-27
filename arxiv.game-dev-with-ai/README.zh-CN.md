@@ -350,10 +350,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **AI = NPC scripting only** — rule-based behavior trees | LLM-powered game NPCs (2023+): ChatGPT NPC experiments | **AI co-designer + dynamic content** — generative narrative and world-building |
-| **Static authored game content** — every asset hand-crafted | Diffusion models (2022+): Stable Diffusion game art | **AI-generative asset pipelines** — style-consistent generation at scale |
-| **Human playtesters as QA** — limited coverage, slow cycles | Agent playtesting research (2023+): GROOT, CRADLE agents | **AI agents systematically test games** — state-space coverage exceeds human testing |
-| **Fixed player difficulty** — player chooses easy / medium / hard | DDA research (2010s+): retention and satisfaction data | **Adaptive difficulty as standard** — real-time behavioral adaptation |
+| **AI 仅限 NPC 脚本** — 基于规则的行为树 | LLM 驱动游戏 NPC (2023+): ChatGPT NPC 实验 | **AI 联合设计师 + 动态内容** — 生成式叙事与世界构建 |
+| **静态手工游戏内容** — 每个资产均由人工制作 | 扩散模型 (2022+): Stable Diffusion 游戏美术 | **AI 生成式资产流水线** — 风格一致的大规模自动生成 |
+| **人工测试员承担 QA** — 覆盖范围有限，迭代周期缓慢 | Agent 游戏测试研究 (2023+): GROOT, CRADLE | **AI Agent 系统化测试游戏** — 状态空间覆盖率超越人工测试 |
+| **固定游戏难度** — 玩家选择简单 / 普通 / 困难 | DDA 研究 (2010s+): 留存率与满意度数据 | **自适应难度成为标准** — 基于行为的实时难度调整 |
 
 **已被推翻的认知误区:**
 - ✗ "AI只能生成资产；游戏设计需要人类创造力" → LLMs在共同设计循环中产生超越简单重组的新颖机制

@@ -62,9 +62,9 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **LLMs are text generators only** — text in, text out | ReAct / tool calling (2022): thought-action-observation | **Tool-using reasoning agents** — agents act in live environments |
-| **Specialized per-task training** — fine-tune a separate model per skill | GPT-4 generalization (2023): in-context skill learning | **General agents with skill transfer** — one agent, many domains |
-| **Human-in-the-loop as bottleneck** — humans slow everything down | HITL research (2023+): approval gates improve quality | **Human-in-the-loop as quality multiplier** — oversight leads to better outcomes |
+| **LLM 只是文本生成器** — 文本进，文本出 | ReAct / 工具调用 (2022): 思考-行动-观察 | **工具型推理 Agent** — Agent 在真实环境中执行操作 |
+| **每个任务单独微调** — 每项技能训练一个专用模型 | GPT-4 泛化能力 (2023): 上下文内技能学习 | **具备技能迁移的通用 Agent** — 一个 Agent，覆盖多个领域 |
+| **人类介入是瓶颈** — 人类拖慢了所有流程 | HITL 研究 (2023+): 审批门控显著提升输出质量 | **人类介入是质量倍增器** — 有效监督带来更好结果 |
 
 **已被推翻的认知误区:**
 - ✗ "LLM无法进行形式推理" → CoT和草稿本提示使多步逻辑推理成为可能

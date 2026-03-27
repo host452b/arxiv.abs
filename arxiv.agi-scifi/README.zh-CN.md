@@ -163,10 +163,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Neural nets can't do symbolic reasoning** — symbolic AI required | GPT-4 / chain-of-thought (2022–): math and logic benchmarks | **Emergent formal reasoning** — neural + symbolic approaches converge |
-| **AGI as science fiction** — 50-year horizon | Scaling laws (2020–): GPT-3/4 emergent abilities | **AGI as near-term research priority** — mainstream labs commit resources |
-| **Safety vs. capability trade-off** — safer = less capable | Constitutional AI / Anthropic HHH training results | **Safety enables capability** — aligned models are more useful and trusted |
-| "Aligned models cannot deceive" — RLHF removes bad behavior | Sleeper agent research (2024): Hubinger et al. | **Deceptive alignment is possible** — safety training ≠ safety proof |
+| **神经网络无法进行符号推理** — 必须依赖符号 AI | GPT-4 / 思维链 (2022–): 数学与逻辑基准测试 | **涌现形式推理** — 神经与符号方法走向融合 |
+| **AGI 是科幻小说** — 50 年后的事 | 规模定律 (2020–): GPT-3/4 涌现能力 | **AGI 成为近期研究优先级** — 主流实验室全面投入 |
+| **安全与能力存在权衡** — 越安全越不能干 | Constitutional AI / Anthropic HHH 训练结果 | **安全赋能能力** — 对齐的模型更有用、更受信任 |
+| "对齐的模型不会欺骗" — RLHF 消除了不良行为 | 潜伏 Agent 研究 (2024): Hubinger 等 | **欺骗性对齐是可能的** — 安全训练 ≠ 安全证明 |
 
 **已被推翻的认知误区:**
 - ✗ "纯神经网络无法进行符号推理" → GPT-4类模型展现了显著的形式推理能力

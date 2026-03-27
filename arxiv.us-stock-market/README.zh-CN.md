@@ -56,10 +56,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **CAPM single-factor model** — beta explains all returns | Fama-French (1992): size and value anomalies | **Multi-factor risk models** — 5-factor + momentum premia |
-| **Efficient Market Hypothesis** — prices fully reflect all information | Shiller / behavioral finance: excess volatility puzzle | **Factor premia + behavioral biases** — PEAD, momentum, and value persist |
-| **Constant volatility (Black-Scholes)** — σ is a fixed parameter | GARCH / stochastic vol models (1986+): Engle, Heston | **Regime-switching volatility** — vol clusters and mean-reverts over time |
-| **Fundamental analysis only** — DCF, P/E, analyst calls | Quant revolution (1980s–): Simons, Asness, Fama | **Systematic / factor investing** — risk premia harvested with discipline |
+| **CAPM 单因子模型** — Beta 解释所有收益 | Fama-French (1992): 规模与价值异象 | **多因子风险模型** — 五因子 + 动量溢价 |
+| **有效市场假说 (EMH)** — 价格充分反映所有信息 | Shiller / 行为金融学: 超额波动率之谜 | **因子溢价 + 行为偏差** — PEAD、动量和价值效应持续存在 |
+| **恒定波动率 (Black-Scholes)** — σ 是固定参数 | GARCH / 随机波动率模型 (1986+): Engle, Heston | **机制转换波动率** — 波动率聚集并均值回归 |
+| **仅凭基本面分析** — DCF, P/E, 分析师推荐 | 量化革命 (1980s–): Simons, Asness, Fama | **系统化 / 因子投资** — 有纪律地收割风险溢价 |
 
 **已被推翻的认知误区:**
 - ✗ "技术分析是金融占星术" → 移动平均策略在特定机制下有正期望值
