@@ -403,3 +403,28 @@
 - ✗ "加班是发布优秀游戏的必要条件" → 事后分析一致表明加班降低代码质量、增加缺陷率、摧毁团队留存
 - ✗ "玩家保留需要频繁奖励" → 自我决定理论：内在动机（自主性、掌握感）比外在奖励更持久
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| More polygons = better visual quality | Visual fidelity scales with geometry count | Ray tracing, global illumination, and LOD management contribute more to perceived quality than raw polygon count |
+| Crunch is necessary to ship quality games | Deadline pressure improves team output | Post-mortems consistently show crunch reduces code quality, increases defect density, and destroys team retention |
+| Players prefer realistic physics over gamefeel | Realism = immersion | Game-feel research: deliberately unrealistic physics (exaggerated momentum, coyote time) measurably increase perceived responsiveness and satisfaction |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Deep OOP inheritance hierarchies for game entities | Pre-2010s: OOP as universal game architecture | Data-oriented design and ECS proved OOP cache-inefficient at game scale; Bungie, Unity, and Epic adopted component systems |
+| Fixed-function GPU pipeline optimization | Pre-2006: optimize within fixed rendering stages | Programmable shaders made fixed-function pipelines obsolete; modern GPU programming is fully shader-driven |
+| Deterministic simulation as a networking requirement | Pre-rollback era: all clients must run identical logic | Rollback netcode decoupled gameplay from networking determinism; determinism is now optional per game design choice |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Alpha-beta pruning can beat expert Go players with sufficient depth | Predicted: deeper tree search → superhuman Go performance | 30 years of attempts failed; AlphaGo's MCTS + deep RL, not deeper alpha-beta, achieved superhuman performance (Silver et al., 2016) |
+| Violent video games cause real-world aggression | Predicted: exposure to in-game violence → increased aggressive behavior | Markey et al. (2015), Ferguson (2015) meta-analyses: no causal link; longitudinal data shows inverse correlation in several countries |

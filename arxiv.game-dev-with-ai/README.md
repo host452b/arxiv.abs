@@ -361,3 +361,28 @@
 - ✗ "玩家更喜欢手动设置难度" → DDA研究表明玩家在自适应难度下获得更高的满意度和留存率
 - ✗ "AI生成的游戏资产总是低质量" → 针对游戏美术风格微调的Stable Diffusion现在可以生产符合流水线质量的概念和纹理资产
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| AI-generated game content lacks cross-world coherence | Early generative AI produced inconsistent outputs | Structured generation with world bibles, style guides, and memory modules produces world-consistent content at scale (2023+ pipelines) |
+| Players can always detect AI-generated content | Human artistry is uniquely distinguishable | Blind player studies: AI-generated NPC dialogue and concept art rated comparably to human-created at state-of-the-art quality |
+| Procedural generation reduces player emotional attachment | Hand-crafted = emotionally resonant by definition | No Man's Sky, Minecraft, Hades studies show high attachment to procedurally generated environments when systemic rules are consistent |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Rule-based behavior trees as sufficient for complex NPCs | Pre-LLM era | Brittle under creative player inputs; LLM-driven NPCs adapt to unpredicted situations naturally |
+| Hand-authored branching dialogue trees for narrative | Pre-2022 | Exponential authoring cost; replaced by LLM contextual dialogue generation with author-defined character guidelines |
+| Static difficulty curves from designer intuition | Pre-DDA research | Designer intuition systematically underestimates player skill variance; DDA shows measurable satisfaction improvement |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Frequent reward schedules maximize long-term player engagement | Predicted: more rewards → higher retention | Self-determination theory studies: extrinsic reward inflation kills intrinsic motivation; loot box fatigue confirmed in mobile game churn data |
+| Longer games produce higher player satisfaction | Predicted: content volume → satisfaction score | Research: session length and completion rate, not total hours, predict satisfaction; 15-hour focused experiences outscore 60-hour padded titles |

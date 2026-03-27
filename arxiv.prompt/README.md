@@ -134,3 +134,28 @@ Each year folder contains:
 - ✗ "系统提示绝对有效" → 越狱和提示注入可绕过系统提示
 - ✗ "CoT总能提升性能" → 简单任务上CoT引入冗余推理，反而降低准确率
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| Longer prompts produce better results | More instructions = more guidance | Quality and specificity beat length; redundant instructions degrade coherence and increase token cost without accuracy gain |
+| The same prompt works across all models | Instructions are model-agnostic | Tokenization, instruction fine-tuning, and RLHF differ per model; prompts require per-model optimization |
+| Few-shot examples always improve accuracy | More examples = better in-context learning | Poorly chosen examples hurt; 3 well-selected examples often outperform 10 random ones (Min et al., 2022) |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Template-based Natural Language Generation (NLG) | 1990s–2010s: hand-written slot-fill templates | Brittle and low-variation; replaced by neural generation with controllable attributes |
+| Prompt chaining as the primary agentic pattern | 2022 early LLM agents | Sequential prompt-parse-prompt replaced by parallel tool use and native function-calling APIs |
+| Zero-shot prompting as sufficient for complex tasks | 2020–2022: instruction → answer | Complex multi-step tasks require CoT, decomposition, or few-shot; zero-shot insufficient for planning-heavy tasks |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| System prompts are fully robust to user manipulation | Predicted: system prompt boundary is reliably enforced | Jailbreaks, prompt injection, and roleplay attacks routinely bypass system prompts; no architecture is yet provably robust |
+| Scaling in-context examples monotonically improves performance | Predicted: N+1 examples always better than N examples | Beyond 10–20 examples, diminishing returns and context pollution cause accuracy regression on several task types (Zhao et al., 2021) |

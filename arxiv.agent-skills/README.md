@@ -72,3 +72,28 @@
 - ✗ "多智能体系统总是优于单智能体" → 没有共识机制时，多智能体辩论会放大而非纠正初始错误
 - ✗ "RAG消除LLM幻觉" → RAG将问题转移到检索质量；劣质检索产生错误的增强输出
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| LLMs perform formal mathematics reliably | High benchmark scores on GSM8K and MATH | Models fail equivalent problems with surface rephrasing; pattern matching ≠ mathematical reasoning (Mirzadeh et al., 2024) |
+| More in-context examples always improve performance | Intuition: show more → learn more | Random examples can hurt by 15%+; retrieval-selected examples outperform random selection (Liu et al., 2022) |
+| Skill emergence is predictable from scale | Smooth scaling laws extrapolation | Emergent skill onset is discontinuous and model-family-specific; cannot be predicted from loss curves alone |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Expert systems for skill encoding (MYCIN, XCON) | 1980s–1990s | Brittle at edge cases; maintenance cost prohibitive; replaced by fine-tuned and prompted LLMs |
+| Case-Based Reasoning (CBR) as skill substrate | 1990s–2000s | Poor generalization beyond case library; superseded by neural retrieval + LLM adaptation |
+| Symbolic theorem provers for code generation | 1970s–2000s | Too slow for interactive use; LLM-based code generation now dominates (Codex, Claude, Copilot) |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Multi-agent debate always improves accuracy | Disagreement between agents corrects individual errors | Du et al. (2023) and follow-ups: majority-wrong cases are amplified by debate; external verifier required |
+| RAG eliminates knowledge cutoff limitations | Retrieval = always-current knowledge | RAG retrieves confidently wrong chunks when query-document semantic match is high; hallucination shifts, not eliminated |

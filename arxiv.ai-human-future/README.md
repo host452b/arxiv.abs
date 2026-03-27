@@ -54,3 +54,28 @@
 - ✗ "心智上传保留个人身份" → 传送/上传身份悖论：渐进替换（忒修斯之船）与复制-销毁在连续性上有本质差异
 - ✗ "奇点意味着一个特定且可预测的日期" → 奇点时间线预测一再落空；情景规划优于单点预测
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| Technology creates more jobs than it destroys, always | Historical analogy: Industrial Revolution net positive | Cognitive automation is categorically different; displacement rates for knowledge work are empirically higher without the same reabsorption mechanism |
+| Digital natives are inherently tech-literate | Grew up with technology = understands technology | Studies show digital natives are expert consumers but poor evaluators of algorithmic credibility and misinformation |
+| Social media democratizes information access equally | Low publishing barrier = level playing field | Algorithmic amplification creates filter bubbles; misinformation spreads 6× faster than corrections (MIT Media Lab, 2018) |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| Linear technology adoption (Rogers' S-curve, strict form) | 1962: adoption follows predictable sigmoid | Platform network effects create winner-take-all discontinuities; S-curve breaks at tipping points |
+| Hard technological determinism | 1960s–1980s: tech autonomously determines social outcomes | STS research (Bijker, Winner): social choices shape which technologies dominate; co-construction is the empirical model |
+| Information deficit model of science communication | 1970s–1990s: more facts → public changes beliefs | Backfire effect and motivated reasoning: information alone rarely changes deeply held beliefs; trust and narrative matter more |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Universal Basic Income destroys work incentive | Predicted: guaranteed income → labor supply collapse | Finland UBI experiment, Kenya GiveDirectly: recipients maintained or increased productive work; well-being improved |
+| Job polarization hypothesis predicts permanent middle-skill hollowing | Predicted: only high/low skill jobs remain long-term | Autor et al. updates: new middle-skill jobs in digital-physical integration emerge alongside losses; net effect is sector-dependent |

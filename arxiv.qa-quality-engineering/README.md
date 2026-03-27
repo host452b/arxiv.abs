@@ -422,3 +422,28 @@ The full-spectrum coverage of this collection — from static analysis to produc
 - ✗ "质量是QA团队的责任" → DORA研究：质量文化是全团队属性，非专属角色
 - ✗ "生产监控与测试无关" → A/B测试、金丝雀发布、特性标志是现代测试策略的一部分
 
+
+---
+
+## Established Fallacies / 公认谬误
+
+| Misconception | Why It Persisted | What Evidence Shows |
+|---|---|---|
+| More testers = better quality | Headcount feels like coverage | Quality is a process property, not a headcount metric; IBM/NIST studies show 85% of defects are introduced, not detected, in later testing |
+| Manual testing always catches edge cases automation misses | Human intuition appeal | Automation excels at regression consistency; humans introduce recall bias and miss ~60% of known defect patterns on repeated runs |
+| A passing test suite means the system is correct | Green CI = ship confidence | Tests verify behavior against their own assumptions; incorrect assumptions produce green tests for broken systems (Goodhart's Law) |
+
+## Obsolete Scientific Theories / 过时科学理论
+
+| Theory | Era | Why Superseded |
+|---|---|---|
+| V-Model sequential testing | 1982: each phase must complete before the next | Eliminated by CI/CD and iterative delivery; verification now continuous, not phase-gated |
+| Big-Bang Integration Testing | Pre-CI era: test only when all units are ready | Delayed defect discovery and expensive debugging; replaced by continuous integration with unit/integration tests at every commit |
+| Fault seeding for MTTF estimation | 1980s–1990s: inject known bugs, measure find rate | Statistical assumptions violated in practice; superseded by DORA metrics and A/B deployment for reliability measurement |
+
+## Falsified Theories / 被证伪的理论
+
+| Theory | Prediction | Falsifying Evidence |
+|---|---|---|
+| Defect clustering always follows the 80/20 Pareto rule | Predicted: 80% of defects in 20% of modules universally | Ostrand et al. (2004) large-scale study: distribution varies from 50/5 to 90/40 by project type; no universal ratio |
+| High branch coverage implies low post-release defect density | Predicted: coverage % → quality proxy | Google-scale studies: no statistically significant correlation between branch coverage and post-release defect density |
