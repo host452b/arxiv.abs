@@ -221,12 +221,6 @@ Portfolio Risk Hierarchy:
 | 14-inflation.json | Inflation & investing | 127 | C03 | **Bitcoin does NOT hedge inflation** (paper confirms negative correlation with inflation news). Inflation is increasingly driven by international conditions, not just domestic demand. Financial shocks transmit via firm balance sheets (debt-inflation channel). Public attention threshold creates nonlinear inflation dynamics — expectations matter. Recommend: use energy/commodities and TIPS for inflation hedging; avoid crypto as an inflation hedge. |
 | 15-prediction.json | Market prediction models | 131 | All | Stock markets have **multifractal, time-varying predictability** — not purely random walk. Agentic LLMs (real-time web access) show early evidence of nowcasting ability. Predictability alone doesn't guarantee profit — transaction costs and capacity constraints erode edge. Deep learning (LSTM, Transformers) outperform classical stat models but overfit easily. Recommend: ensemble ML with strict OOS validation; treat predictability as a decaying signal requiring continuous refresh. |
 | 23-risk-management.json | Risk management | 2 | C04 | **Meta Portfolio Method** (adaptive ML strategy selection) outperforms fixed-weight strategies by selecting regime-appropriate sub-strategies. Fractal/long-memory model of risk better captures realistic correlation structure than standard MPT. Recommend: use adaptive strategy switching based on realized regime; do not use static correlation matrices for risk parity. |
-| 13-interest-rate.json | Interest rates & monetary policy | 199 | C03, C05 |
-| 14-inflation.json | Inflation & investing | 127 | C03 |
-| 15-prediction.json | Market prediction models | 131 | All cycles |
-| 16-long-run-return.json | Long-run return | 0 | C01 |
-| 17-demographics.json | Demographic trends | 0 | Long-term |
-| 23-risk-management.json | Risk management | 2 | C04 |
 
 ---
 
