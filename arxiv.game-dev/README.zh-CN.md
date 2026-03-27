@@ -6,37 +6,37 @@
 
 ## 搜索主题（29 个类别）
 
-| # | 主题 | 关键词 | 论文数 |
-|---|------|--------|--------|
-| 01 | 游戏引擎架构 | game engine / real-time engine / game loop / engine architecture | 185 |
-| 02 | 实时渲染 | real-time rendering / shader programming / rendering pipeline / rasterization | 200 |
-| 03 | 光线追踪 & 全局光照 | ray tracing / global illumination / physically based rendering / path tracing | 200 |
-| 04 | 程序化内容生成 (PCG) | terrain generation / noise terrain / map generation / world generation | 200 |
-| 05 | 游戏 AI | game AI / behavior tree / game pathfinding / NPC decision making | 200 |
-| 06 | 游戏物理 | collision detection / rigid body dynamics / physics simulation / physics engine | 200 |
-| 07 | ECS & 游戏架构模式 | component based architecture / game object / game framework / engine design | 200 |
-| 08 | 多人网络 & Netcode | multiplayer game / game networking / lag compensation / netcode | 200 |
-| 09 | 游戏设计 & 关卡设计 | game design / level design / MDA framework / game mechanics | 200 |
-| 10 | Roguelike & 随机生成 | procedural generation / noise function terrain / perlin noise / random map | 200 |
-| 11 | 游戏 UI/UX | user interface design / interaction design / usability game / HUD | 200 |
-| 12 | 游戏动画 & IK | game animation / motion matching / inverse kinematics / character animation | 200 |
-| 13 | 游戏性能优化 | game optimization / level of detail / occlusion culling / GPU performance | 200 |
-| 14 | LLM & 对话 NPC | language model game / LLM NPC / generative AI game / conversational NPC | 185 |
-| 15 | 游戏测试 & QA | software testing automation / test generation / fuzzing / regression testing | 200 |
-| 16 | 游戏音频 | audio synthesis / music generation / sound generation / speech synthesis | 200 |
-| 17 | 强化学习游戏 | reinforcement learning game / deep RL game / game playing agent | 200 |
-| 18 | 艺术风格 & 渲染 | neural style transfer / image stylization / artistic rendering / style generation | 200 |
-| 19 | 游戏经济 & 难度设计 | dynamic difficulty adjustment / player skill assessment / adaptive game | 152 |
-| 20 | 游戏开发流程 | agile development / software engineering process / CI/CD / devops | 200 |
-| 21 | 玩家体验 & 游戏手感 | user experience / usability study / player satisfaction / game engagement | 200 |
-| 22 | MMO & 大型在线游戏 | MMORPG / online game server / virtual world / massively multiplayer | 124 |
-| 23 | AI 内容生成 | generative model game / AI game design / game content generation | 91 |
-| 24 | 视频游戏研究 | video game / computer game / game player / game experience | 200 |
-| 25 | VR / AR 游戏 | virtual reality game / augmented reality / mixed reality / XR | 200 |
-| 26 | 路径规划 & A* | pathfinding algorithm / A star search / navigation mesh / motion planning | 200 |
-| 27 | 移动游戏 | mobile game / mobile application / touch interface / smartphone game | 200 |
-| 28 | 资产管线 & 纹理 | texture compression / texture synthesis / material generation / PBR material | 200 |
-| 29 | 游戏叙事 | game narrative / interactive story / narrative generation / story game | 143 |
+| # | 主题 | 关键词 | 论文数 | 被推翻的理论 / 既定谬误 |
+|---|------|--------|-----------|
+| 01 | 游戏引擎架构 | game engine / real-time engine / game loop / engine architecture | 185 | "Custom engines are always more efficient than commercial engines" → UE5/Unity optimization has closed the gap; custom engines carry massive maintenance costs. |
+| 02 | 实时渲染 | real-time rendering / shader programming / rendering pipeline / rasterization | 200 | "More polygons = better visual quality" → Ray tracing + global illumination and LOD management contribute more to perceived quality than raw polygon count. |
+| 03 | 光线追踪 & 全局光照 | ray tracing / global illumination / physically based rendering / path tracing | 200 | "Ray tracing requires full-path tracing to look good" → Hybrid rasterization+ray tracing (DXR) delivers visually comparable results at a fraction of the cost. |
+| 04 | 程序化内容生成 (PCG) | terrain generation / noise terrain / map generation / world generation | 200 | "RNG alone creates interesting procedural content" → Unconstrained randomness produces incoherent content; grammar-based, constraint-satisfaction, and ML PCG produce playable variety. |
+| 05 | 游戏 AI | game AI / behavior tree / game pathfinding / NPC decision making | 200 | "NPCs with large behavior trees feel lifelike" → Tree-based AI becomes brittle at scale; LLM-powered and RL-trained NPCs adapt dynamically. |
+| 06 | 游戏物理 | collision detection / rigid body dynamics / physics simulation / physics engine | 200 | "Realistic physics always improves game feel" → Game feel research shows intentionally unrealistic physics (exaggerated momentum) improves perceived quality. |
+| 07 | ECS & 游戏架构模式 | component based architecture / game object / game framework / engine design | 200 | "OOP inheritance hierarchies are the right architecture for games" → ECS significantly outperforms deep OOP hierarchies for cache performance and composition. |
+| 08 | 多人网络 & Netcode | multiplayer game / game networking / lag compensation / netcode | 200 | "Deterministic lockstep is the only reliable multiplayer architecture" → Rollback netcode (GGPO) provides significantly better experience for fighting and action games. |
+| 09 | 游戏设计 & 关卡设计 | game design / level design / MDA framework / game mechanics | 200 | "Difficulty should be determined by player-defined settings" → Dynamic Difficulty Adjustment driven by player behavior produces better retention than static settings. |
+| 10 | Roguelike & 随机生成 | procedural generation / noise function terrain / perlin noise / random map | 200 | "Procedural generation makes games infinitely replayable" → Player fatigue with PCG content shows engagement requires authored 'anchor' moments. |
+| 11 | 游戏 UI/UX | user interface design / interaction design / usability game / HUD | 200 | "Game UI should follow web/app design conventions" → Diegetic and meta UI designs consistently outperform HUD-heavy conventional UI in immersion. |
+| 12 | 游戏动画 & IK | game animation / motion matching / inverse kinematics / character animation | 200 | "Keyframe animation is sufficient for high-quality character motion" → Motion capture + IK + procedural blend trees are required for responsive, natural-feeling motion. |
+| 13 | 游戏性能优化 | game optimization / level of detail / occlusion culling / GPU performance | 200 | "GPU is always the rendering bottleneck" → Draw call overhead, CPU-GPU synchronization, and memory bandwidth are frequently the actual bottlenecks. |
+| 14 | LLM & 对话 NPC | language model game / LLM NPC / generative AI game / conversational NPC | 185 | "LLM-powered NPCs will always say something coherent and on-topic" → Without constrained output schemas and memory management, LLM NPCs produce off-topic responses. |
+| 15 | 游戏测试 & QA | software testing automation / test generation / fuzzing / regression testing | 200 | "Human playtesting is required to find most gameplay bugs" → AI playtesting agents systematically explore state spaces human testers never cover. |
+| 16 | 游戏音频 | audio synthesis / music generation / sound generation / speech synthesis | 200 | "Silence is always a mistake in games" → Dynamic audio design and strategic silence create emotional contrast; over-saturated soundscapes cause audio fatigue. |
+| 17 | 强化学习游戏 | reinforcement learning game / deep RL game / game playing agent | 200 | "Minimax with alpha-beta pruning is optimal for game AI" → MCTS + deep RL (AlphaGo/AlphaZero) made alpha-beta pruning obsolete for complex games. |
+| 18 | 艺术风格 & 渲染 | neural style transfer / image stylization / artistic rendering / style generation | 200 | "Photorealism is the goal of all game graphics" → Stylized art directions (cel-shading, pixel art) show equal or higher player engagement and age better. |
+| 19 | 游戏经济 & 难度设计 | dynamic difficulty adjustment / player skill assessment / adaptive game | 152 | "Monetization via random loot boxes is ethically neutral" → Behavioral economics and gambling addiction research have led to regulatory action in multiple countries. |
+| 20 | 游戏开发流程 | agile development / software engineering process / CI/CD / devops | 200 | "Crunch time is necessary to ship good games" → Post-mortems consistently show crunch reduces code quality, increases bug rates, and destroys team retention. |
+| 21 | 玩家体验 & 游戏手感 | user experience / usability study / player satisfaction / game engagement | 200 | "Player retention requires frequent rewards" → Self-determination theory: intrinsic motivation sustains engagement better than extrinsic reward schedules. |
+| 22 | MMO & 大型在线游戏 | MMORPG / online game server / virtual world / massively multiplayer | 124 | "MMOs require monthly subscriptions to be sustainable" → Free-to-play with ethical monetization consistently generates higher total revenue than subscription models. |
+| 23 | AI 内容生成 | generative model game / AI game design / game content generation | 91 | "AI-generated game assets will always look low quality" → Stable Diffusion fine-tuned on game art styles now produces pipeline-quality assets. |
+| 24 | 视频游戏研究 | video game / computer game / game player / game experience | 200 | "Video games are a cultural harm" → 40+ years of media effects research shows no consistent link between game violence and real-world violence. |
+| 25 | VR / AR 游戏 | virtual reality game / augmented reality / mixed reality / XR | 200 | "VR is niche because of motion sickness" → Locomotion research shows teleportation and comfort modes reduce sickness to non-problem levels for 90%+ of users. |
+| 26 | 路径规划 & A* | pathfinding algorithm / A star search / navigation mesh / motion planning | 200 | "A* is the optimal pathfinding algorithm for all games" → Hierarchical pathfinding, flow fields, and navigation meshes outperform A* for large crowds. |
+| 27 | 移动游戏 | mobile game / mobile application / touch interface / smartphone game | 200 | "Mobile games must have simple mechanics to succeed" → Deep strategy and RPG mechanics dominate mobile top-grossing charts. |
+| 28 | 资产管线 & 纹理 | texture compression / texture synthesis / material generation / PBR material | 200 | "Uncompressed textures provide the best visual quality" → Texture compression (ASTC, BC7) is perceptually lossless with massive memory savings. |
+| 29 | 游戏叙事 | game narrative / interactive story / narrative generation / story game | 143 | "Narrative and gameplay are in fundamental tension" → Environmental storytelling and ludonarrative consonance research show narrative can reinforce gameplay. |
 
 **原始结果 5480 篇 → 去重后 5197 篇摘要**
 
@@ -387,3 +387,25 @@
 ---
 
 [English README](README.md) | [游戏开发路线图](readme_game_roadmap.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Custom engines for performance  Unreal/Unity optimization      Commercial engines dominate
+  │ proprietary tech = edge          │ UE5 Nanite, DLSS               │ ROI favors off-the-shelf
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Alpha-beta pruning game AI      AlphaGo / deep RL (2016+)     MCTS + neural evaluation
+  │ minimax search                   │ self-play learning             │ learned value functions
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区:**
+- ✗ "更多多边形 = 更好的视觉质量" → 光线追踪+全局照明贡献更多于感知质量
+- ✗ "真实物理总是改善游戏感受" → 故意不真实的物理（夸张的动量）提升感知质量
+- ✗ "加班是发布优秀游戏的必要条件" → 加班降低代码质量、增加缺陷率、摧毁团队留存
+

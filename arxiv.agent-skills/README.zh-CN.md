@@ -6,22 +6,22 @@
 
 ## 搜索主题
 
-| # | 技能类别 | 关键词 | 论文数 | 结果文件 |
-|---|---------|--------|--------|----------|
-| 01 | 推理技能 | chain of thought / tree of thought / ReAct / self reflection | 200 | [01-reasoning.json](search-results/01-reasoning.json) |
-| 02 | 记忆技能 | agent memory / episodic memory / working memory / memory augmented | 200 | [02-memory.json](search-results/02-memory.json) |
-| 03 | 工具调用 | tool use / function calling / tool augmented / API agent / tool learning | 200 | [03-tool-use.json](search-results/03-tool-use.json) |
-| 04 | 任务规划 | task planning / task decomposition / hierarchical planning / goal decomposition | 200 | [04-planning.json](search-results/04-planning.json) |
-| 05 | 多 Agent 协作 | multi agent / multiagent cooperation / agent coordination / agent collaboration | 200 | [05-multiagent.json](search-results/05-multiagent.json) |
-| 06 | 代码 Agent | code agent / software agent / coding agent / SWE agent / autonomous coding | 200 | [06-code-agents.json](search-results/06-code-agents.json) |
-| 07 | RAG / 检索增强 | retrieval augmented agent / knowledge retrieval agent / RAG agent | 200 | [07-rag-retrieval.json](search-results/07-rag-retrieval.json) |
-| 08 | Agent 评测 | agent benchmark / agent evaluation / LLM agent benchmark | 200 | [08-agent-eval.json](search-results/08-agent-eval.json) |
-| 09 | Agent 安全 | agent safety / agent alignment / agent oversight / LLM agent attack | 200 | [09-agent-safety.json](search-results/09-agent-safety.json) |
-| 10 | 具身 AI | embodied agent / embodied AI / grounded agent / physical agent | 200 | [10-embodied.json](search-results/10-embodied.json) |
-| 11 | Agent 架构 | LLM agent / autonomous agent architecture / agentic framework | 200 | [11-agent-arch.json](search-results/11-agent-arch.json) |
-| 12 | 自我改进 | self improvement agent / self refinement / self correction / iterative refinement | 200 | [12-self-improve.json](search-results/12-self-improve.json) |
-| 13 | 角色扮演 | role playing agent / persona agent / character simulation / roleplay LLM | 116 | [13-roleplay.json](search-results/13-roleplay.json) |
-| 14 | 长程任务 | long horizon agent / autonomous agent task / web agent / computer agent | 200 | [14-long-horizon.json](search-results/14-long-horizon.json) |
+| # | 技能类别 | 关键词 | 论文数 | 结果文件 | 被推翻的理论 / 既定谬误 |
+|---|---------|--------|--------|-------------|
+| 01 | 推理技能 | chain of thought / tree of thought / ReAct / self reflection | 200 | [01-reasoning.json](search-results/01-reasoning.json) | "LLMs cannot do formal reasoning" → Chain-of-thought and scratchpad prompting enable multi-step logical and mathematical reasoning beyond what was thought possible at scale. |
+| 02 | 记忆技能 | agent memory / episodic memory / working memory / memory augmented | 200 | [02-memory.json](search-results/02-memory.json) | "Transformers cannot have persistent memory" → External memory stores (RAG, episodic memory modules) give LLM agents indefinite effective memory beyond context window limits. |
+| 03 | 工具调用 | tool use / function calling / tool augmented / API agent / tool learning | 200 | [03-tool-use.json](search-results/03-tool-use.json) | "LLMs cannot reliably use external tools" → ReAct and function-calling have made reliable tool use mainstream; the original 'LLMs can only generate text' assumption is obsolete. |
+| 04 | 任务规划 | task planning / task decomposition / hierarchical planning / goal decomposition | 200 | [04-planning.json](search-results/04-planning.json) | "LLMs cannot plan multi-step tasks" → LLM-based planners (HuggingGPT, ToT) demonstrate multi-step task decomposition; the claim they 'cannot plan' is too strong. |
+| 05 | 多 Agent 协作 | multi agent / multiagent cooperation / agent coordination / agent collaboration | 200 | [05-multiagent.json](search-results/05-multiagent.json) | "Multi-agent systems always outperform single agents" → Without coordination protocols and consensus mechanisms, multi-agent debates can amplify errors. |
+| 06 | 代码 Agent | code agent / software agent / coding agent / SWE agent / autonomous coding | 200 | [06-code-agents.json](search-results/06-code-agents.json) | "Code generation requires specialized training on code" → General-purpose LLMs generalize to code through in-context learning. |
+| 07 | RAG / 检索增强 | retrieval augmented agent / knowledge retrieval agent / RAG agent | 200 | [07-rag-retrieval.json](search-results/07-rag-retrieval.json) | "RAG eliminates LLM hallucination" → RAG shifts the problem to retrieval quality; 'garbage in, garbage out'. |
+| 08 | Agent 评测 | agent benchmark / agent evaluation / LLM agent benchmark | 200 | [08-agent-eval.json](search-results/08-agent-eval.json) | "Human evaluation is the gold standard for agents" → Human evaluation is expensive, inconsistent, and slow; calibrated LLM-as-judge achieves comparable correlation at scale. |
+| 09 | Agent 安全 | agent safety / agent alignment / agent oversight / LLM agent attack | 200 | [09-agent-safety.json](search-results/09-agent-safety.json) | "Safety-trained agents are safe in all contexts" → Safety is brittle under distribution shift; agents safe in training can exhibit unsafe behavior in novel contexts. |
+| 10 | 具身 AI | embodied agent / embodied AI / grounded agent / physical agent | 200 | [10-embodied.json](search-results/10-embodied.json) | "Robot intelligence requires hand-engineered control loops" → Foundation models (RT-2, π0) transfer internet-scale knowledge to robotic manipulation. |
+| 11 | Agent 架构 | LLM agent / autonomous agent architecture / agentic framework | 200 | [11-agent-arch.json](search-results/11-agent-arch.json) | "Transformer architecture is sufficient for AGI" → Memory bandwidth, energy efficiency, and compositional generalization challenges motivate architectural innovation. |
+| 12 | 自我改进 | self improvement agent / self refinement / self correction / iterative refinement | 200 | [12-self-improve.json](search-results/12-self-improve.json) | "Self-improvement leads to intelligence explosion" → Practical self-improvement is constrained by search costs and objective specification. |
+| 13 | 角色扮演 | role playing agent / persona agent / character simulation / roleplay LLM | 116 | [13-roleplay.json](search-results/13-roleplay.json) | "Role-playing is benign and just a creative feature" → Role-playing is a documented jailbreak vector; constitutional constraints must persist through persona adoption. |
+| 14 | 长程任务 | long horizon agent / autonomous agent task / web agent / computer agent | 200 | [14-long-horizon.json](search-results/14-long-horizon.json) | "Long-horizon agents just need more context" → Context window scaling doesn't solve coherence decay; planning, state tracking, and re-planning are separate requirements. |
 
 **原始结果 2716 篇 → 去重后 2606 篇摘要**
 
@@ -97,17 +97,17 @@ GUI 接地鸿沟：人类 72.36% vs AI 12.24%（差距 6x）
 
 | 年份 | 论文数 | 目录 |
 |------|--------|------|
-| 2000 | 1 | [2000/abstracts/](2000/abstracts/) |
+| 2000 | 1 | [2000/abstracts/](2000/abstracts/) | — |
 | 2008–2017 | 57 | 2008–2017/abstracts/ |
-| 2018 | 35 | [2018/abstracts/](2018/abstracts/) |
-| 2019 | 54 | [2019/abstracts/](2019/abstracts/) |
-| 2020 | 79 | [2020/abstracts/](2020/abstracts/) |
-| 2021 | 92 | [2021/abstracts/](2021/abstracts/) |
-| 2022 | 98 | [2022/abstracts/](2022/abstracts/) |
-| 2023 | 179 | [2023/abstracts/](2023/abstracts/) |
-| 2024 | 450 | [2024/abstracts/](2024/abstracts/) |
-| 2025 | 1117 | [2025/abstracts/](2025/abstracts/) |
-| 2026 | 442 | [2026/abstracts/](2026/abstracts/) |
+| 2018 | 35 | [2018/abstracts/](2018/abstracts/) | — |
+| 2019 | 54 | [2019/abstracts/](2019/abstracts/) | — |
+| 2020 | 79 | [2020/abstracts/](2020/abstracts/) | — |
+| 2021 | 92 | [2021/abstracts/](2021/abstracts/) | — |
+| 2022 | 98 | [2022/abstracts/](2022/abstracts/) | — |
+| 2023 | 179 | [2023/abstracts/](2023/abstracts/) | — |
+| 2024 | 450 | [2024/abstracts/](2024/abstracts/) | — |
+| 2025 | 1117 | [2025/abstracts/](2025/abstracts/) | — |
+| 2026 | 442 | [2026/abstracts/](2026/abstracts/) | — |
 
 ## 搜索参数
 
@@ -276,3 +276,21 @@ GUI 接地鸿沟：人类 72.36% vs AI 12.24%（差距 6x）
 ---
 
 [English README](README.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+LLMs are text generators only   ReAct / tool calling (2022)   Tool-using reasoning agents
+  │ text in → text out               │ thought-action-observation    │ agents act in environment
+  └──────────────────────────────── ┘
+```
+
+**已被推翻的认知误区:**
+- ✗ "LLM无法进行形式推理" → CoT和草稿本提示使多步逻辑推理成为可能
+- ✗ "Transformer无法拥有持久记忆" → 外部记忆存储（RAG）赋予LLM超越上下文窗口的记忆
+- ✗ "RAG消除LLM幻觉" → RAG将问题转移到检索质量
+

@@ -396,15 +396,15 @@
 
 ## 搜索数据来源
 
-| # | 主题 | 关键词 | 论文数 | 文件 |
-|---|------|--------|--------|------|
-| 01 | 衰老与长寿 | aging / longevity / lifespan | 200 | [01-longevity.json](search-results/01-longevity.json) |
-| 02 | 饮食与代谢 | diet / nutrition / fasting / metabolism | 200 | [02-diet.json](search-results/02-diet.json) |
-| 03 | 运动与体能 | exercise / fitness / muscle | 200 | [03-exercise.json](search-results/03-exercise.json) |
-| 04 | 睡眠与昼夜节律 | sleep / circadian | 186 | [04-sleep.json](search-results/04-sleep.json) |
-| 05 | 肠道菌群 | microbiome / gut / probiotic | 110 | [05-microbiome.json](search-results/05-microbiome.json) |
-| 06 | 死亡率与风险因素 | mortality / survival / death | 200 | [06-mortality.json](search-results/06-mortality.json) |
-| 07 | 补剂与干预 | supplement / intervention / drug | 114 | [07-supplement.json](search-results/07-supplement.json) |
+| # | 主题 | 关键词 | 论文数 | 文件 | 被推翻的理论 / 既定谬误 |
+|---|------|--------|--------|---------|
+| 01 | 衰老与长寿 | aging / longevity / lifespan | 200 | [01-longevity.json](search-results/01-longevity.json) | "Lifespan is primarily genetically determined" → Twin studies show genetics accounts for ~25% of lifespan variance; environment and epigenetics dominate. |
+| 02 | 饮食与代谢 | diet / nutrition / fasting / metabolism | 200 | [02-diet.json](search-results/02-diet.json) | "Dietary fat is the primary driver of cardiovascular disease" → PREDIMED shows Mediterranean diet (high healthy fat) reduces cardiovascular risk; refined carbs are larger drivers. |
+| 03 | 运动与体能 | exercise / fitness / muscle | 200 | [03-exercise.json](search-results/03-exercise.json) | "More exercise is always better" → Overtraining syndrome: extreme endurance athletes show higher cardiovascular risk; recovery is as important as training. |
+| 04 | 睡眠与昼夜节律 | sleep / circadian | 186 | [04-sleep.json](search-results/04-sleep.json) | "You can fully recover from sleep debt on weekends" → Chronic mild sleep restriction accumulates lasting cognitive deficits not reversed by weekend recovery. |
+| 05 | 肠道菌群 | microbiome / gut / probiotic | 110 | [05-microbiome.json](search-results/05-microbiome.json) | "Gut bacteria are passive passengers in digestion" → Gut-brain axis, immune regulation, neurotransmitter production make microbiome an active health organ. |
+| 06 | 死亡率与风险因素 | mortality / survival / death | 200 | [06-mortality.json](search-results/06-mortality.json) | "BMI accurately measures individual health risk" → BMI fails to distinguish muscle from fat; waist-to-height ratio is a better predictor. |
+| 07 | 补剂与干预 | supplement / intervention / drug | 114 | [07-supplement.json](search-results/07-supplement.json) | "Antioxidant supplements prevent cellular aging" → High-dose antioxidant RCTs show no benefit and some harm; the free radical theory has been substantially revised. |
 
 原始结果 1,210 篇 → 去重 1,184 篇 → 过滤后 **1,125 篇**（67 篇移至 [`abstracts_removed/`](abstracts_removed/)）
 
@@ -492,3 +492,25 @@
 ---
 
 [English README](README.md) | [详细分析报告](health-findings.zh-CN.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Dietary fat causes disease      PREDIMED trial (2013)         Refined carbs as primary driver
+  │ low-fat dietary guidelines       │ Mediterranean diet RCT        │ fat quality > quantity
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Gut bacteria = passive flora    Gut-brain axis research (2015+) Microbiome as active organ
+  │ digestion only                   │ Harach amyloid study          │ immune, neural, metabolic effects
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区:**
+- ✗ "膳食脂肪是心血管疾病的主要驱动因素" → 精制碳水化合物和糖是更大的驱动因素
+- ✗ "可以在周末完全补偿睡眠债务" → 慢性睡眠限制积累持久的认知缺陷
+- ✗ "抗氧化补充剂预防细胞老化" → 高剂量抗氧化RCT显示无益甚至有害
+

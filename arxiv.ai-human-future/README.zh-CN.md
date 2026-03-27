@@ -6,20 +6,20 @@
 
 ## 搜索主题
 
-| # | 主题 | 关键词 | 论文数 | 结果文件 |
-|---|------|--------|--------|----------|
-| 01 | 生物进化 × AI | 人类/生物进化 + AI/机器智能 | 185 | [01-bio-evolution-ai.json](search-results/01-bio-evolution-ai.json) |
-| 02 | 种群动态 × 技术 | 种群遗传/动态/人口学 + AI/自动化 | 143 | [02-population-tech.json](search-results/02-population-tech.json) |
-| 03 | 人工生命 / 数字生命体 | artificial life / digital organism / synthetic life / alife | 106 | [03-artificial-life.json](search-results/03-artificial-life.json) |
-| 04 | 后人类 / 半机械人 / 人类增强 | posthuman / transhumanist / cyborg / post-biological / human augmentation | 200 | [04-posthuman.json](search-results/04-posthuman.json) |
-| 05 | 人机/人-AI 未来关系 | human-AI/machine/robot + future/evolution/civilization/coexistence | 200 | [05-human-ai-future.json](search-results/05-human-ai-future.json) |
-| 06 | 机器意识 / 数字智能 | machine/artificial consciousness / digital/silicon intelligence | 186 | [06-machine-consciousness.json](search-results/06-machine-consciousness.json) |
-| 07 | 脑机接口 | BCI / neural interface / brain implant / neuralink | 200 | [07-bci.json](search-results/07-bci.json) |
-| 08 | 社会变革 × AI | social change/transformation/societal impact + AI | 20 | [08-social-ai.json](search-results/08-social-ai.json) |
-| 09 | 量化文明/未来预测 | future civilization/society/humanity + model/predict/quantify | 55 | [09-future-quant.json](search-results/09-future-quant.json) |
-| 10 | 技术奇点 / AGI 冲击 | technological singularity / superintelligence / AGI + human/society | 143 | [10-singularity-agi.json](search-results/10-singularity-agi.json) |
-| 11 | AI 量化预测社会 | AI forecast/prediction/simulation + society/future/human | 200 | [11-ai-forecast.json](search-results/11-ai-forecast.json) |
-| 12 | 人类增强 / 意识上传 | human/cognitive enhancement / mind uploading / whole brain emulation | 200 | [12-human-enhancement.json](search-results/12-human-enhancement.json) |
+| # | 主题 | 关键词 | 论文数 | 结果文件 | 被推翻的理论 / 既定谬误 |
+|---|------|--------|--------|-------------|
+| 01 | 生物进化 × AI | 人类/生物进化 + AI/机器智能 | 185 | [01-bio-evolution-ai.json](search-results/01-bio-evolution-ai.json) | "Biological evolution has stopped for modern humans" → Gene-culture co-evolution is ongoing; recent selection signals found in lactase persistence and cognitive traits. |
+| 02 | 种群动态 × 技术 | 种群遗传/动态/人口学 + AI/自动化 | 143 | [02-population-tech.json](search-results/02-population-tech.json) | "Population growth is the primary resource threat" → Resource consumption per capita is a stronger predictor of environmental impact than population size. |
+| 03 | 人工生命 / 数字生命体 | artificial life / digital organism / synthetic life / alife | 106 | [03-artificial-life.json](search-results/03-artificial-life.json) | "Life requires carbon-based chemistry" → Artificial life research demonstrates self-replication and adaptation in purely computational substrates. |
+| 04 | 后人类 / 半机械人 / 人类增强 | posthuman / transhumanist / cyborg / post-biological / human augmentation | 200 | [04-posthuman.json](search-results/04-posthuman.json) | "Human enhancement creates an unfair advantage" → Cochlear implants, pacemakers, and glasses are accepted enhancement; the boundary shifts continuously. |
+| 05 | 人机/人-AI 未来关系 | human-AI/machine/robot + future/evolution/civilization/coexistence | 200 | [05-human-ai-future.json](search-results/05-human-ai-future.json) | "Automation replaces workers linearly" → Task-based displacement is non-linear; some tasks are fully automated while adjacent tasks expand. |
+| 06 | 机器意识 / 数字智能 | machine/artificial consciousness / digital/silicon intelligence | 186 | [06-machine-consciousness.json](search-results/06-machine-consciousness.json) | "The Turing Test determines machine consciousness" → Turing Test is easily gamed; behavioral equivalence ≠ consciousness. |
+| 07 | 脑机接口 | BCI / neural interface / brain implant / neuralink | 200 | [07-bci.json](search-results/07-bci.json) | "BCI requires invasive surgery to achieve high bandwidth" → High-density non-invasive BCIs are approaching competitive bandwidth. |
+| 08 | 社会变革 × AI | social change/transformation/societal impact + AI | 20 | [08-social-ai.json](search-results/08-social-ai.json) | "Technology determinism: technology shapes society unidirectionally" → STS shows society and technology co-shape each other bidirectionally. |
+| 09 | 量化文明/未来预测 | future civilization/society/humanity + model/predict/quantify | 55 | [09-future-quant.json](search-results/09-future-quant.json) | "Kardashev scale captures all relevant civilizational dimensions" → Information processing capacity (Landauer limit) may be a more fundamental metric. |
+| 10 | 技术奇点 / AGI 冲击 | technological singularity / superintelligence / AGI + human/society | 143 | [10-singularity-agi.json](search-results/10-singularity-agi.json) | "Singularity implies a specific and predictable date" → Singularity timeline predictions have consistently been wrong; scenario planning over point prediction is more appropriate. |
+| 11 | AI 量化预测社会 | AI forecast/prediction/simulation + society/future/human | 200 | [11-ai-forecast.json](search-results/11-ai-forecast.json) | "AI forecasting is more accurate than human expert forecasting" → Calibrated human ensembles outperform AI on long-horizon societal predictions. |
+| 12 | 人类增强 / 意识上传 | human/cognitive enhancement / mind uploading / whole brain emulation | 200 | [12-human-enhancement.json](search-results/12-human-enhancement.json) | "Mind uploading preserves personal identity" → Teleportation/uploading identity paradox: continuity is non-trivial. |
 
 **原始结果 1,838 篇 → 去重后 1,814 篇摘要**
 
@@ -243,3 +243,21 @@
 ---
 
 [English README](README.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Technology determinism          STS research (1980s–)         Sociotechnical co-evolution
+  │ tech shapes society one-way      │ SCOT, Actor-Network Theory    │ society shapes tech too
+  └──────────────────────────────── ┘
+```
+
+**已被推翻的认知误区:**
+- ✗ "图灵测试判断机器意识" → 行为等价性 ≠ 意识
+- ✗ "生物进化已在现代人类中停止" → 基因-文化协同进化仍在进行
+- ✗ "奇点意味着一个特定且可预测的日期" → 奇点时间线预测一再落空
+

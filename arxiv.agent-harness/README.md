@@ -13,50 +13,50 @@ evaluation, safety, code agents, browser/GUI agents, and production reliability.
 
 ## Search Topics (42 Searches)
 
-| ID | Topic | File |
-|----|-------|------|
-| 01 | Agent Framework & Orchestration | `01-agent-framework.json` |
-| 02 | AutoGen / LangChain / CrewAI | `02-autogen-langchain.json` |
-| 03 | Agentic Workflow & Pipeline | `03-agentic-workflow.json` |
-| 04 | LLM Agent (general) | `04-llm-agent.json` |
-| 05 | ReAct: Reasoning + Action | `05-react-agent.json` |
-| 06 | Chain-of-Thought + Tool Use | `06-chain-of-thought-act.json` |
-| 07 | Tree / Graph of Thought | `07-tree-of-thought.json` |
-| 08 | Agent Planning & Task Planning | `08-agent-planning.json` |
-| 09 | Self-Reflection & Self-Critique | `09-self-reflection.json` |
-| 10 | Agent Reasoning & Decision | `10-agent-reasoning.json` |
-| 11 | Tool Use with LLM | `11-tool-use-llm.json` |
-| 12 | Function Calling / API Calling | `12-function-calling.json` |
-| 13 | Tool Selection & Learning | `13-tool-selection.json` |
-| 14 | Agent Memory & Episodic Memory | `14-agent-memory.json` |
-| 15 | Long Context for Agents | `15-long-context.json` |
-| 16 | Memory Module & Agent State | `16-memory-module.json` |
-| 17 | Multi-Agent with LLM | `17-multi-agent-llm.json` |
-| 18 | Agent Communication & Coordination | `18-agent-communication.json` |
-| 19 | Role-Playing Agent & Persona | `19-role-playing-agent.json` |
-| 20 | Society of Agents | `20-society-agents.json` |
-| 21 | Agent Benchmark & Evaluation | `21-agent-benchmark.json` |
-| 22 | Agent Capability & Performance | `22-agent-capability.json` |
-| 23 | Agentic Evaluation (autonomous) | `23-agentic-eval.json` |
-| 24 | Agent Safety & Alignment | `24-agent-safety.json` |
-| 25 | Agent Guardrails & Constraints | `25-agent-guardrail.json` |
-| 26 | Red-Teaming Agents | `26-red-teaming-agent.json` |
-| 27 | Agent Sandboxing & Isolation | `27-agent-sandbox.json` |
-| 28 | Code Agent & Coding Agent | `28-code-agent.json` |
-| 29 | SWE-Agent & Software Eng. Agent | `29-swe-agent.json` |
-| 30 | Autonomous Coding & AI Programmer | `30-autonomous-coding.json` |
-| 31 | Repository / Codebase Agent | `31-repo-agent.json` |
-| 32 | Web Agent & Browser Agent | `32-web-agent.json` |
-| 33 | Computer Use & GUI Agent | `33-computer-use.json` |
-| 34 | Web Navigation & Browsing | `34-web-navigation.json` |
-| 35 | RAG + Agent | `35-rag-agent.json` |
-| 36 | Knowledge Retrieval Agent | `36-knowledge-agent.json` |
-| 37 | Long-Horizon Agent & Tasks | `37-long-horizon.json` |
-| 38 | Agent Reliability & Robustness | `38-agent-reliability.json` |
-| 39 | Agent Testing & Debugging | `39-agent-testing.json` |
-| 40 | Human-in-the-Loop Agent | `40-human-loop-agent.json` |
-| 41 | Agent Monitoring & Observability | `41-agent-monitoring.json` |
-| 42 | Evaluation Harness & Agent Harness | `42-agent-eval-harness.json` |
+| ID | Topic | File | Superseded Theory / Established Fallacy |
+|----|-------|---------|
+| 01 | Agent Framework & Orchestration | `01-agent-framework.json` | "A single monolithic LLM can handle all agent tasks" → Multi-agent specialization, routing, and orchestration are required for complex tasks. |
+| 02 | AutoGen / LangChain / CrewAI | `02-autogen-langchain.json` | "Framework abstractions always reduce complexity" → LangChain/LangGraph abstractions add debugging difficulty; raw LLM API calls are often more debuggable. |
+| 03 | Agentic Workflow & Pipeline | `03-agentic-workflow.json` | "Agent workflows should maximize autonomy" → Fully autonomous agents fail silently and compound errors; human-in-the-loop checkpoints are essential. |
+| 04 | LLM Agent (general) | `04-llm-agent.json` | "LLM agents are reliable for production use out of the box" → Agents fail at rates of 20–60% on real-world tasks; evaluation harnesses and retry loops are mandatory. |
+| 05 | ReAct: Reasoning + Action | `05-react-agent.json` | "Longer ReAct chains always improve reasoning" → Long chains compound errors; self-verification loops and tool output validation are required. |
+| 06 | Chain-of-Thought + Tool Use | `06-chain-of-thought-act.json` | "Chain-of-thought always improves agent decisions" → CoT can introduce verbose irrelevant reasoning; step-level verification is needed. |
+| 07 | Tree / Graph of Thought | `07-tree-of-thought.json` | "Tree of Thought is always better than linear CoT" → ToT's computational cost is prohibitive for most tasks; linear CoT with backtracking is usually sufficient. |
+| 08 | Agent Planning & Task Planning | `08-agent-planning.json` | "Agents can plan effectively without world model grounding" → Ungrounded plans hallucinate feasibility; execution feedback must update the plan iteratively. |
+| 09 | Self-Reflection & Self-Critique | `09-self-reflection.json` | "Agents can self-diagnose all errors through reflection" → Self-reflection has systematic blind spots; external verification agents are more reliable for certain failure types. |
+| 10 | Agent Reasoning & Decision | `10-agent-reasoning.json` | "Larger models are always better reasoners" → Reasoning quality depends on problem framing, not just scale; structured output constraints matter more at task level. |
+| 11 | Tool Use with LLM | `11-tool-use-llm.json` | "LLMs reliably use tools without explicit examples" → Without few-shot tool use examples, error rates in parameter formatting and tool selection are high. |
+| 12 | Function Calling / API Calling | `12-function-calling.json` | "Function calling eliminates hallucinated API calls" → Hallucinated parameter values and wrong function selection remain common failure modes. |
+| 13 | Tool Selection & Learning | `13-tool-selection.json` | "More tools = better agent performance" → Tool overload degrades selection accuracy; tool pruning and dynamic tool retrieval improve performance. |
+| 14 | Agent Memory & Episodic Memory | `14-agent-memory.json` | "Longer context windows solve agent memory" → Long contexts suffer recall degradation at middle positions; explicit memory management outperforms relying on context length. |
+| 15 | Long Context for Agents | `15-long-context.json` | "LLMs reliably attend to all parts of long contexts" → 'Lost in the middle' effect: retrieval accuracy drops sharply for information in the middle of long contexts. |
+| 16 | Memory Module & Agent State | `16-memory-module.json` | "Vector-store RAG is always the right memory architecture" → Episodic, semantic, and working memory require different storage strategies; one-size-fits-all RAG underperforms. |
+| 17 | Multi-Agent with LLM | `17-multi-agent-llm.json` | "Multi-agent systems converge to correct answers" → Without consensus mechanisms, multi-agent debates can amplify initial errors rather than correct them. |
+| 18 | Agent Communication & Coordination | `18-agent-communication.json` | "Agents communicate reliably via natural language" → Structured message formats (JSON schemas) significantly reduce miscommunication between agents. |
+| 19 | Role-Playing Agent & Persona | `19-role-playing-agent.json` | "Role-playing eliminates model behavioral constraints" → Role-playing is a recognized jailbreak vector; system-level constitutional constraints are required. |
+| 20 | Society of Agents | `20-society-agents.json` | "Larger agent societies produce better outcomes" → Society of Mind experiments show diminishing returns and coordination overhead beyond ~5 agents. |
+| 21 | Agent Benchmark & Evaluation | `21-agent-benchmark.json` | "High benchmark scores predict real-world agent performance" → Benchmark leakage and task familiarity inflate scores; novel task generalization is still poor. |
+| 22 | Agent Capability & Performance | `22-agent-capability.json` | "Agent capabilities transfer across domains" → Domain-specific tool knowledge does not generalize; agents need domain-specific grounding. |
+| 23 | Agentic Evaluation (autonomous) | `23-agentic-eval.json` | "Agent evaluation can rely on LLM-as-judge alone" → LLM judges have systematic biases (position, verbosity, self-preference); ensemble judging is needed. |
+| 24 | Agent Safety & Alignment | `24-agent-safety.json` | "Safety guardrails make agents safe" → Guardrails are bypassable; safety must be embedded in training, architecture, and human oversight. |
+| 25 | Agent Guardrails & Constraints | `25-agent-guardrail.json` | "Keyword-based guardrails prevent harmful outputs" → Semantic equivalence and paraphrasing easily bypass lexical guardrails; semantic safety classifiers are needed. |
+| 26 | Red-Teaming Agents | `26-red-teaming-agent.json` | "Red-teaming with a fixed prompt set is comprehensive" → Automated red-teaming (e.g., PAIR, tree-based attacks) explores adversarial space far more thoroughly. |
+| 27 | Agent Sandboxing & Isolation | `27-agent-sandbox.json` | "Sandboxing agents prevents all side effects" → Network-based and social engineering side channels can escape code-level sandboxes. |
+| 28 | Code Agent & Coding Agent | `28-code-agent.json` | "Code agents can autonomously maintain large codebases" → Agents lose coherence beyond ~1000 lines of relevant context; repo-level agents require explicit chunking. |
+| 29 | SWE-Agent & Software Eng. Agent | `29-swe-agent.json` | "SWE-bench performance predicts production software engineering ability" → SWE-bench has distribution leakage and limited task diversity; real-world SE is far more open-ended. |
+| 30 | Autonomous Coding & AI Programmer | `30-autonomous-coding.json` | "Autonomous coding agents reduce bugs" → Agents introduce new bug patterns (hallucinated APIs, subtle logic errors) while eliminating others. |
+| 31 | Repository / Codebase Agent | `31-repo-agent.json` | "Repo-level agents understand the full codebase" → Context window limits force chunking strategies that lose cross-file dependencies. |
+| 32 | Web Agent & Browser Agent | `32-web-agent.json` | "Web agents work reliably on dynamic pages" → JavaScript-heavy SPAs and anti-bot CAPTCHAs remain major practical barriers. |
+| 33 | Computer Use & GUI Agent | `33-computer-use.json` | "Computer-use agents can replace desktop automation scripts" → Reliability and latency of vision-based computer use are still far below scripted RPA for deterministic tasks. |
+| 34 | Web Navigation & Browsing | `34-web-navigation.json` | "DOM-based navigation is more reliable than vision-based" → DOM injection changes frequently; a hybrid vision + accessibility tree approach is most robust. |
+| 35 | RAG + Agent | `35-rag-agent.json` | "RAG eliminates hallucination" → RAG reduces but does not eliminate hallucination; retrieval quality determines output quality. |
+| 36 | Knowledge Retrieval Agent | `36-knowledge-agent.json` | "Knowledge graphs + LLMs = factual accuracy" → Knowledge graph coverage is incomplete; LLMs still hallucinate facts not covered by the KG. |
+| 37 | Long-Horizon Agent & Tasks | `37-long-horizon.json` | "LLMs can maintain coherent plans over 100+ steps" → Long-horizon task success rates drop dramatically; checkpointing and replanning are required. |
+| 38 | Agent Reliability & Robustness | `38-agent-reliability.json` | "Retry loops solve agent reliability" → Retries on the same failed strategy often repeat the same error; retry-with-strategy-switch is needed. |
+| 39 | Agent Testing & Debugging | `39-agent-testing.json` | "Traditional software testing applies to agents" → Agent testing requires non-determinism handling, trajectory evaluation, and emergent behavior testing. |
+| 40 | Human-in-the-Loop Agent | `40-human-loop-agent.json` | "Human review is only needed for high-stakes decisions" → Human oversight of intermediate agent steps dramatically improves final outcome quality. |
+| 41 | Agent Monitoring & Observability | `41-agent-monitoring.json` | "Logging agent outputs is sufficient observability" → Agent observability requires full execution trace (tool calls, intermediate states, branching decisions). |
+| 42 | Evaluation Harness & Agent Harness | `42-agent-eval-harness.json` | "Leaderboard rankings are stable proxies for agent quality" → Leaderboard gaming and benchmark contamination make rankings unreliable; domain-specific eval is needed. |
 
 ---
 
@@ -280,3 +280,34 @@ foundational for production deployment.
 ---
 
 [中文说明](README.zh-CN.md) | [知识文档](agent-harness.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Single monolithic LLM           GPT-4 + tool calling (2023)   Multi-agent orchestration
+  │ one model for everything        │ function calling API          │ specialist agents + router
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Static prompt → output          ReAct paper (2022)            Thought-Action-Observation loops
+  │ input → response                │ interleaved reasoning/action  │ agents iterate on environment
+  └──────────────────────────────────┘                             │
+                                                                   │
+Human-written test scripts      Eval harness research (2023+) LLM-as-Judge + auto eval
+  │ humans evaluate outputs         │ MT-Bench, HELM, AgentBench    │ automated trajectory evaluation
+  └──────────────────────────────────┘                             │
+                                                                   │
+"Agents are reliable enough"    SWE-bench, ToolBench (2023)   Reliability-first engineering
+  │ deploy and hope                  │ 20–60% task success rates     │ retry loops, checkpointing
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区 / Overturned Beliefs:**
+- ✗ "更长的ReAct链总能提升推理" → 长链会放大错误；需要工具输出验证和回退策略
+- ✗ "RAG消除幻觉" → RAG将问题转移到检索质量；检索差则输出差
+- ✗ "沙盒环境防止所有副作用" → 网络和社会工程侧信道可绕过代码层沙盒
+- ✗ "高基准分数预测真实世界性能" → 基准污染和泄漏使排行榜分数不可靠
+

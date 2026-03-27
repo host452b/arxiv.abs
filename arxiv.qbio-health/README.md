@@ -137,15 +137,15 @@
 
 ## Search Topics
 
-| # | Topic | Keywords | Papers | Results File |
-|---|-------|----------|--------|--------------|
-| 01 | Aging & Longevity | aging / longevity / lifespan | 200 | [01-longevity.json](search-results/01-longevity.json) |
-| 02 | Diet & Metabolism | diet / nutrition / fasting / metabolism | 200 | [02-diet.json](search-results/02-diet.json) |
-| 03 | Exercise & Fitness | exercise / fitness / muscle | 200 | [03-exercise.json](search-results/03-exercise.json) |
-| 04 | Sleep & Circadian | sleep / circadian | 186 | [04-sleep.json](search-results/04-sleep.json) |
-| 05 | Gut Microbiome | microbiome / gut / probiotic | 110 | [05-microbiome.json](search-results/05-microbiome.json) |
-| 06 | Mortality & Risk Factors | mortality / survival / death | 200 | [06-mortality.json](search-results/06-mortality.json) |
-| 07 | Supplements & Interventions | supplement / intervention / drug | 114 | [07-supplement.json](search-results/07-supplement.json) |
+| # | Topic | Keywords | Papers | Results File | Superseded Theory / Established Fallacy |
+|---|-------|----------|--------|-----------------|
+| 01 | Aging & Longevity | aging / longevity / lifespan | 200 | [01-longevity.json](search-results/01-longevity.json) | "Lifespan is primarily genetically determined" → Twin studies show genetics accounts for ~25% of lifespan variance; environment, behavior, and epigenetics dominate. |
+| 02 | Diet & Metabolism | diet / nutrition / fasting / metabolism | 200 | [02-diet.json](search-results/02-diet.json) | "Dietary fat is the primary driver of cardiovascular disease" → PREDIMED and other RCTs show Mediterranean diet (high healthy fat) reduces cardiovascular risk; refined carbohydrates and sugar are larger drivers. |
+| 03 | Exercise & Fitness | exercise / fitness / muscle | 200 | [03-exercise.json](search-results/03-exercise.json) | "More exercise is always better" → Overtraining syndrome and J-curve relationship: extreme endurance athletes show higher cardiovascular risk; recovery is as important as training. |
+| 04 | Sleep & Circadian | sleep / circadian | 186 | [04-sleep.json](search-results/04-sleep.json) | "You can fully recover from sleep debt on weekends" → Chronic mild sleep restriction accumulates lasting cognitive deficits not reversed by weekend recovery sleep. |
+| 05 | Gut Microbiome | microbiome / gut / probiotic | 110 | [05-microbiome.json](search-results/05-microbiome.json) | "Gut bacteria are passive passengers in digestion" → Gut-brain axis, immune regulation, neurotransmitter production, and metabolic effects make microbiome an active health organ. |
+| 06 | Mortality & Risk Factors | mortality / survival / death | 200 | [06-mortality.json](search-results/06-mortality.json) | "BMI accurately measures individual health risk" → BMI fails to distinguish muscle from fat; waist-to-height ratio is a better predictor of cardiometabolic risk. |
+| 07 | Supplements & Interventions | supplement / intervention / drug | 114 | [07-supplement.json](search-results/07-supplement.json) | "Antioxidant supplements prevent cellular aging" → High-dose antioxidant RCTs show no benefit and some harm; the free radical theory of aging has been substantially revised. |
 
 **1,210 raw results → 1,184 deduplicated → 1,125 after relevance filtering**
 
@@ -249,3 +249,34 @@ Papers scored by presence of human-health keywords (human subjects, clinical, di
 ---
 
 [中文说明](README.zh-CN.md) | [Back to main](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Dietary fat causes disease      PREDIMED trial (2013)         Refined carbs as primary driver
+  │ low-fat dietary guidelines       │ Mediterranean diet RCT        │ fat quality > quantity
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Genetics determines lifespan    Twin studies / epigenetics     Lifestyle dominates lifespan
+  │ "it's in your genes"             │ Kaati, Waterland studies      │ genetics = ~25% of variance
+  └──────────────────────────────────┘                             │
+                                                                   │
+Gut bacteria = passive flora    Gut-brain axis research (2015+) Microbiome as active organ
+  │ digestion only                   │ Harach amyloid study          │ immune, neural, metabolic effects
+  └──────────────────────────────────┘                             │
+                                                                   │
+Antioxidants prevent aging      Antioxidant RCT meta-analysis  Free radical theory revised
+  │ Vitamin E/C supplements          │ HOPE, GISSI-P null results    │ endogenous ROS signaling needed
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区 / Overturned Beliefs:**
+- ✗ "膳食脂肪是心血管疾病的主要驱动因素" → PREDIMED等RCT表明地中海饮食（高健康脂肪）降低心血管风险
+- ✗ "可以在周末完全补偿睡眠债务" → 慢性轻度睡眠限制积累持久的认知缺陷，周末恢复睡眠无法逆转
+- ✗ "BMI准确衡量个体健康风险" → BMI无法区分肌肉和脂肪；腰高比是心脏代谢风险的更好预测指标
+- ✗ "抗氧化补充剂预防细胞老化" → 高剂量抗氧化RCT显示无益甚至有害；自由基理论已被大幅修正
+

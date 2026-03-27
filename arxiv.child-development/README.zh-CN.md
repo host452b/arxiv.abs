@@ -200,46 +200,68 @@ John Hattie 的《可见的学习》元分析（800+ 项研究）：形成性评
 
 ## 检索文件索引
 
-| 文件 | 主题 | 论文数 |
-|------|------|--------|
-| 01-infant-development.json | 婴儿运动与感知发展 | 200 |
-| 02-attachment.json | 依恋理论与亲子联结 | 200 |
-| 03-brain-development.json | 早期大脑神经科学 | 200 |
-| 04-language-acquisition.json | 语言涌现（0–3岁） | 200 |
-| 05-infant-nutrition.json | 母乳喂养、营养、微量元素 | 199 |
-| 06-toddler.json | 幼儿行为与发展 | 200 |
-| 07-preschool.json | 学前学习环境 | 200 |
-| 08-early-childhood-edu.json | 早期儿童教育项目 | 200 |
-| 09-play-learning.json | 游戏式学习与发展 | 200 |
-| 10-self-regulation-preschool.json | 学前自我调控 | 200 |
-| 11-school-readiness.json | 幼儿园准备度预测因子 | 200 |
-| 12-reading-phonics.json | 拼读法与早期阅读 | 200 |
-| 13-math-numeracy.json | 数感与数学发展 | 199 |
-| 14-social-skills.json | 同伴关系与社会发展 | 200 |
-| 15-executive-function.json | 执行功能发展 | 199 |
-| 16-motivation.json | 内在动机与参与度 | 200 |
-| 17-middle-childhood.json | 童年中期（6–12岁）概述 | 156 |
-| 18-bullying.json | 欺凌、受害与预防 | 200 |
-| 19-critical-thinking.json | 批判性思维教学 | 200 |
-| 20-parenting-style.json | 育儿风格（权威型等） | 199 |
-| 21-early-adolescence.json | 早期青春期发展 | 200 |
-| 22-identity.json | 身份形成与自我概念 | 200 |
-| 23-social-media.json | 社交媒体与青少年健康 | 200 |
-| 24-mental-health-adolescent.json | 青少年心理健康 | 200 |
-| 25-academic-achievement.json | 学业成绩预测因子 | 200 |
-| 26-late-adolescence.json | 后青春期与成年初现期 | 200 |
-| 27-college-prep.json | 大学准备与过渡 | 200 |
-| 28-risk-behavior.json | 青少年风险行为 | 200 |
-| 29-career-development.json | 职业探索与身份认同 | 200 |
-| 30-autonomy.json | 自主性发展 | 200 |
-| 31-positive-parenting.json | 正向育儿干预 | 200 |
-| 32-child-nutrition.json | 儿童营养与饮食质量 | 200 |
-| 33-sleep.json | 睡眠与发展 | 200 |
-| 34-physical-activity.json | 体力活动与儿童发展结果 | 200 |
-| 35-screen-time.json | 屏幕时间与数字媒体 | 200 |
-| 36-parent-involvement.json | 家长参与教育 | 200 |
-| 37-cognitive-development.json | 认知发展（综合） | 200 |
+| 文件 | 主题 | 论文数 | 被推翻的理论 / 既定谬误 |
+|------|------|-----------|
+| 01-infant-development.json | 婴儿运动与感知发展 | 200 | "Babies are 'blank slates' passively absorbing experience" → Infants are active statistical learners from birth; innate perceptual preferences guide development. |
+| 02-attachment.json | 依恋理论与亲子联结 | 200 | "Day care inevitably damages attachment" → NICHD study: quality of care matters more than setting; secure attachment can form with multiple caregivers. |
+| 03-brain-development.json | 早期大脑神经科学 | 200 | "Critical periods are absolute windows after which learning is impossible" → Sensitive periods are probabilistic, not absolute; brain plasticity continues throughout life. |
+| 04-language-acquisition.json | 语言涌现（0–3岁） | 200 | "Children learn language purely through imitation" → Chomsky's poverty-of-stimulus argument: children generate sentences they've never heard, implying innate grammar structures. |
+| 05-infant-nutrition.json | 母乳喂养、营养、微量元素 | 199 | "Introducing solids early prevents allergies" → LEAP trial (2015) reversed this: early controlled introduction of peanuts significantly REDUCES allergy risk. |
+| 06-toddler.json | 幼儿行为与发展 | 200 | "Toddler tantrums mean bad parenting" → Tantrums are neurologically normal; the prefrontal cortex is anatomically incomplete until age 25. |
+| 07-preschool.json | 学前学习环境 | 200 | "Academic preschool gives children a lasting head start" → Perry Preschool studies: academic drilling shows short-term gains that fade; play-based preschool shows lasting benefits. |
+| 08-early-childhood-edu.json | 早期儿童教育项目 | 200 | "Screen time before age 2 is always harmful" → Context matters: interactive video calling is beneficial; passive background TV is harmful. AAP revised absolute bans. |
+| 09-play-learning.json | 游戏式学习与发展 | 200 | "Play is fun but not educational" → Vygotsky and decades of research establish play as the primary vehicle for executive function development. |
+| 10-self-regulation-preschool.json | 学前自我调控 | 200 | "Self-control is a fixed trait" → Mischel's marshmallow follow-up studies show self-regulation is context-dependent and highly trainable. |
+| 11-school-readiness.json | 幼儿园准备度预测因子 | 200 | "Starting school earlier produces better outcomes" → PISA data: late-start countries (Finland: age 7) outperform early-start countries in long-term outcomes. |
+| 12-reading-phonics.json | 拼读法与早期阅读 | 200 | "Whole language immersion is the best reading method" → Converging neuroscience: systematic phonics instruction is superior, especially for struggling readers. |
+| 13-math-numeracy.json | 数感与数学发展 | 199 | "Math ability is innate — you either have it or you don't" → Math achievement is strongly predicted by effort and instructional quality, not innate talent. |
+| 14-social-skills.json | 同伴关系与社会发展 | 200 | "Social skills develop naturally without instruction" → Explicit SEL programs show effect sizes >0.6 on academic outcomes as well as social skills. |
+| 15-executive-function.json | 执行功能发展 | 199 | "IQ is the best predictor of academic success" → Executive function at age 5 predicts academic outcomes better than IQ at school entry. |
+| 16-motivation.json | 内在动机与参与度 | 200 | "Rewarding children for good work always increases motivation" → Overjustification effect: external rewards undermine intrinsic motivation. |
+| 17-middle-childhood.json | 童年中期（6–12岁）概述 | 156 | "Children should be kept safe from all failure" → Failure and productive struggle are essential for developing resilience and problem-solving ability. |
+| 18-bullying.json | 欺凌、受害与预防 | 200 | "Bullying builds character ('kids are just being kids')" → Bullying victimization has lasting neurological and psychological effects; it is a public health issue. |
+| 19-critical-thinking.json | 批判性思维教学 | 200 | "Critical thinking is a general skill taught separately from content" → Critical thinking is domain-specific; it requires deep content knowledge as a foundation. |
+| 20-parenting-style.json | 育儿风格（权威型等） | 199 | "Strict/authoritarian parenting produces successful children" → Baumrind's research: authoritative (warm + structure) consistently outperforms authoritarian (strict + cold). |
+| 21-early-adolescence.json | 早期青春期发展 | 200 | "Adolescent risk-taking is irrational and purely impulsive" → Dual systems model: adolescents are rational in calm settings; peer salience drives risk in social contexts. |
+| 22-identity.json | 身份形成与自我概念 | 200 | "Identity is fixed by adolescence" → Identity is revisited across the lifespan (Erikson); 'emerging adulthood' (Arnett) is a distinct developmental stage. |
+| 23-social-media.json | 社交媒体与青少年健康 | 200 | "Social media is neutral — it's how you use it that matters" → Haidt/Twenge data: passive consumption dose-dependently predicts depression, especially in girls. |
+| 24-mental-health-adolescent.json | 青少年心理健康 | 200 | "Talking about suicide with adolescents plants the idea" → Zero evidence for 'contagion by discussion'; withholding conversation is associated with higher risk. |
+| 25-academic-achievement.json | 学业成绩预测因子 | 200 | "High-stakes testing accurately measures academic achievement" → High-stakes testing measures test-taking skill and anxiety management as much as academic knowledge. |
+| 26-late-adolescence.json | 后青春期与成年初现期 | 200 | "Teenagers need less sleep than children" → Adolescents need MORE sleep (8-10h); biological circadian delay makes early school start times physiologically harmful. |
+| 27-college-prep.json | 大学准备与过渡 | 200 | "College is the only path to a successful life" → Vocational pathways show comparable life outcomes for many careers; the 'college premium' is declining. |
+| 28-risk-behavior.json | 青少年风险行为 | 200 | "Zero-tolerance abstinence education prevents adolescent risk behaviors" → Comprehensive sex education outperforms abstinence-only on all measured outcomes. |
+| 29-career-development.json | 职业探索与身份认同 | 200 | "Career interests are fixed by late adolescence" → Career identity continues to develop through the 30s. |
+| 30-autonomy.json | 自主性发展 | 200 | "Teenagers need strict parental control to stay safe" → Autonomy-supportive parenting produces better safety outcomes than controlling parenting. |
+| 31-positive-parenting.json | 正向育儿干预 | 200 | "Praise and positive reinforcement are always beneficial" → Indiscriminate praise (e.g., 'you're so smart') produces fixed mindset; process praise is effective. |
+| 32-child-nutrition.json | 儿童营养与饮食质量 | 200 | "Fat is the primary enemy of child health" → Refined carbohydrates and sugar drive metabolic syndrome; dietary fat quality matters more than quantity. |
+| 33-sleep.json | 睡眠与发展 | 200 | "You can catch up on lost sleep on weekends" → Sleep debt is not fully repayable; chronic restriction accumulates lasting cognitive deficits. |
+| 34-physical-activity.json | 体力活动与儿童发展结果 | 200 | "Structured sports are the best form of physical activity for children" → Unstructured free play produces equivalent fitness with greater intrinsic motivation. |
+| 35-screen-time.json | 屏幕时间与数字媒体 | 200 | "All screen time is equally harmful" → Educational interactive content has positive effects; context, not total time, is the primary variable. |
+| 36-parent-involvement.json | 家长参与教育 | 200 | "More parental homework help improves academic achievement" → Excessive parental involvement can reduce self-efficacy and intrinsic motivation. |
+| 37-cognitive-development.json | 认知发展（综合） | 200 | "The Mozart Effect: classical music permanently boosts IQ" → Original Mozart Effect was a brief adult priming effect; no lasting IQ benefit found in children. |
 
 ---
 
 [英文 README](README.md) | [知识文档](child-development.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Tabula rasa (blank slate)       Statistical learning studies   Active statistical learner
+  │ babies passively absorb          │ Spelke, Baillargeon (1990s)   │ innate perceptual preferences
+  └──────────────────────────────── ┘                             │
+                                                                   │
+IQ as primary predictor         EF research (Diamond, 2013)   Executive function at age 5
+  │ IQ test determines destiny       │ inhibitory control studies    │ EF predicts better than IQ
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区:**
+- ✗ "婴儿是白板" → 婴儿是天生的统计学习者
+- ✗ "学术型学前教育带来持久优势" → 游戏型学前教育带来持久效益
+- ✗ "莫扎特效应永久提升智商" → 无法在儿童中复现持久效益
+

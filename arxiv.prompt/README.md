@@ -115,3 +115,35 @@ Each year folder contains:
 ---
 
 [Back to main README](../README.md) | [中文说明](README.zh-CN.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Rule-based NLP                  GPT-3 / few-shot (2020)       Prompt-based generalization
+  │ hand-coded templates             │ in-context learning           │ no fine-tuning needed
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Fine-tune per task              InstructGPT / RLHF (2022)     Instruction-following base models
+  │ per-task labeled datasets        │ alignment training            │ general prompt → any task
+  └──────────────────────────────────┘                             │
+                                                                   │
+Human-written fixed prompts     APO / OPRO (2023)             Automated prompt optimization
+  │ artisanal prompt engineering     │ LLM-evaluates-LLM             │ "compile your prompt"
+  └──────────────────────────────────┘                             │
+                                                                   │
+Static prompt templates         RAG + tool use (2023+)        Dynamic retrieval-augmented prompts
+  │ frozen context window            │ external knowledge access     │ grounded, current context
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区 / Overturned Beliefs:**
+- ✗ "更长的提示词 = 更好的结果" → 质量 > 数量；聚焦明确的提示胜过冗长堆砌
+- ✗ "同一个提示适用于所有模型" → 不同模型需要模型专属优化
+- ✗ "少样本 = 多给例子" → 3个精心挑选的例子胜过10个随机例子
+- ✗ "系统提示绝对有效" → 越狱和提示注入可绕过系统提示
+- ✗ "CoT总能提升性能" → 简单任务上CoT引入冗余推理，反而降低准确率
+

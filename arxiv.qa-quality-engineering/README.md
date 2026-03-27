@@ -27,43 +27,43 @@
 
 ## Search Topics (35 Searches)
 
-| # | Topic | Keywords | Papers | File |
-|---|-------|----------|--------|------|
-| 01 | Software Testing Fundamentals & Methodology | software testing | 200 | [01-sw-testing-fund.json](search-results/01-sw-testing-fund.json) |
-| 02 | Unit & Component Testing | unit testing or test-driven development | 179 | [02-unit-testing.json](search-results/02-unit-testing.json) |
-| 03 | Integration & System Testing | integration testing or system testing | 200 | [03-integration-test.json](search-results/03-integration-test.json) |
-| 04 | End-to-End & Acceptance Testing | end-to-end testing or acceptance testing | 52 | [04-e2e-testing.json](search-results/04-e2e-testing.json) |
-| 05 | Regression Testing & Test Maintenance | regression testing | 134 | [05-regression-test.json](search-results/05-regression-test.json) |
-| 06 | Exploratory & Manual Testing | exploratory testing or manual testing | 72 | [06-exploratory-test.json](search-results/06-exploratory-test.json) |
-| 07 | Test Automation Engineering & Frameworks | test automation or automated testing | 200 | [07-test-automation.json](search-results/07-test-automation.json) |
-| 08 | Test Case Generation & Synthesis | test case generation | 200 | [08-test-case-gen.json](search-results/08-test-case-gen.json) |
-| 09 | Test Prioritization, Selection & Optimization | test case prioritization or test selection or test suite | 200 | [09-test-prioritize.json](search-results/09-test-prioritize.json) |
-| 10 | Mutation Testing | mutation testing | 136 | [10-mutation-testing.json](search-results/10-mutation-testing.json) |
-| 11 | Property-Based & Fuzz Testing | property-based testing or fuzz testing | 200 | [11-property-fuzzing.json](search-results/11-property-fuzzing.json) |
-| 12 | Contract & Consumer-Driven Testing | contract testing or consumer-driven contract | 38 | [12-contract-testing.json](search-results/12-contract-testing.json) |
-| 13 | API & Service Testing | API testing or service testing | 200 | [13-api-testing.json](search-results/13-api-testing.json) |
-| 14 | Mobile & Cross-Platform Testing | mobile testing or mobile app testing | 55 | [14-mobile-testing.json](search-results/14-mobile-testing.json) |
-| 15 | Performance & Load Testing | performance testing or load testing | 200 | [15-perf-testing.json](search-results/15-perf-testing.json) |
-| 16 | Security Testing & Penetration Testing | security testing or penetration testing | 200 | [16-security-testing.json](search-results/16-security-testing.json) |
-| 17 | Fuzzing & Vulnerability Discovery | fuzzing or fuzzer software | 200 | [17-fuzzing.json](search-results/17-fuzzing.json) |
-| 18 | Accessibility Testing & Compliance | accessibility testing | 32 | [18-accessibility-test.json](search-results/18-accessibility-test.json) |
-| 19 | Visual & UI Regression Testing | visual testing or UI regression or screenshot testing | 24 | [19-visual-testing.json](search-results/19-visual-testing.json) |
-| 20 | Chaos Engineering & Resilience Testing | chaos engineering or fault injection | 200 | [20-chaos-engineering.json](search-results/20-chaos-engineering.json) |
-| 21 | Reliability & Resilience Testing | reliability testing or resilience testing | 200 | [21-resilience-test.json](search-results/21-resilience-test.json) |
-| 22 | AI/ML Model Testing & Validation | machine learning testing or ML testing | 200 | [22-ml-testing.json](search-results/22-ml-testing.json) |
-| 23 | LLM & Generative AI Testing | AI testing or LLM testing or neural network testing | 200 | [23-ai-testing.json](search-results/23-ai-testing.json) |
-| 24 | Fairness, Bias & Ethical Testing | model evaluation quality testing | 200 | [24-model-evaluation.json](search-results/24-model-evaluation.json) |
-| 25 | Test Coverage & Code Coverage Analysis | test coverage or code coverage | 133 | [25-test-coverage.json](search-results/25-test-coverage.json) |
-| 26 | Software Quality Metrics & Measurement | software metrics or quality metrics | 200 | [26-sw-metrics.json](search-results/26-sw-metrics.json) |
-| 27 | Defect Prediction & Bug Analysis | defect prediction or bug prediction | 200 | [27-defect-prediction.json](search-results/27-defect-prediction.json) |
-| 28 | Root Cause Analysis & Debugging | root cause analysis software | 92 | [28-root-cause.json](search-results/28-root-cause.json) |
-| 29 | Test Data Management & Generation | test data generation or test data management | 130 | [29-test-data-mgmt.json](search-results/29-test-data-mgmt.json) |
-| 30 | Continuous Testing & CI Integration | continuous testing | 38 | [30-continuous-test.json](search-results/30-continuous-test.json) |
-| 31 | Quality Engineering Process & Standards | quality engineering or quality assurance process | 200 | [31-quality-eng.json](search-results/31-quality-eng.json) |
-| 32 | Shift-Left & Shift-Right Quality Practices | shift-left or shift-right testing quality | 12 | [32-shift-left-right.json](search-results/32-shift-left-right.json) |
-| 33 | Site Reliability Engineering (SRE) | site reliability engineering or SRE | 36 | [33-sre.json](search-results/33-sre.json) |
-| 34 | Quality Process Models & Standards | software quality model or ISO 25010 | 56 | [34-quality-model.json](search-results/34-quality-model.json) |
-| 35 | Production Monitoring & Quality Observability | production monitoring quality | 36 | [35-prod-monitoring.json](search-results/35-prod-monitoring.json) |
+| # | Topic | Keywords | Papers | File | Superseded Theory / Established Fallacy |
+|---|-------|----------|--------|---------|
+| 01 | Software Testing Fundamentals & Methodology | software testing | 200 | [01-sw-testing-fund.json](search-results/01-sw-testing-fund.json) | "Testing is a phase after coding" → TDD/BDD proved testing is a design activity; shift-left makes testing the first step. |
+| 02 | Unit & Component Testing | unit testing or test-driven development | 179 | [02-unit-testing.json](search-results/02-unit-testing.json) | "Unit tests alone guarantee quality" → Unit tests miss integration failures; contract and integration tests are equally essential. |
+| 03 | Integration & System Testing | integration testing or system testing | 200 | [03-integration-test.json](search-results/03-integration-test.json) | "Integration tests are always slow and flaky" → Hermetic containers (Testcontainers) and mocking at the right level make integration tests fast and reliable. |
+| 04 | End-to-End & Acceptance Testing | end-to-end testing or acceptance testing | 52 | [04-e2e-testing.json](search-results/04-e2e-testing.json) | "E2E tests are the gold standard" → E2E tests are the most expensive and brittle; the test pyramid (unit-heavy base) is the validated architecture. |
+| 05 | Regression Testing & Test Maintenance | regression testing | 134 | [05-regression-test.json](search-results/05-regression-test.json) | "Regression testing requires running all tests always" → Risk-based test selection and AI-powered impact analysis reduce regression time >70% with equivalent coverage. |
+| 06 | Exploratory & Manual Testing | exploratory testing or manual testing | 72 | [06-exploratory-test.json](search-results/06-exploratory-test.json) | "Manual exploratory testing can be replaced by automation" → Exploratory testing finds a different class of bugs than scripted tests; both are necessary. |
+| 07 | Test Automation Engineering & Frameworks | test automation or automated testing | 200 | [07-test-automation.json](search-results/07-test-automation.json) | "More test automation = better quality" → Poorly maintained automation creates a maintenance debt that can consume the entire QE budget. |
+| 08 | Test Case Generation & Synthesis | test case generation | 200 | [08-test-case-gen.json](search-results/08-test-case-gen.json) | "AI-generated tests cover the same cases as human-written tests" → AI test generation misses business logic edge cases and domain-specific invariants. |
+| 09 | Test Prioritization, Selection & Optimization | test case prioritization or test selection or test suite | 200 | [09-test-prioritize.json](search-results/09-test-prioritize.json) | "Test execution order doesn't matter" → Flaky tests often reveal hidden state dependencies; isolation is a quality property, not just a convenience. |
+| 10 | Mutation Testing | mutation testing | 136 | [10-mutation-testing.json](search-results/10-mutation-testing.json) | "Mutation testing is too expensive for production use" → Lightweight mutation testing (PITest, Stryker) is now fast enough for CI integration. |
+| 11 | Property-Based & Fuzz Testing | property-based testing or fuzz testing | 200 | [11-property-fuzzing.json](search-results/11-property-fuzzing.json) | "Property-based testing is only for functional languages" → Hypothesis (Python), fast-check (JS), QuickCheck ports show property testing works across paradigms. |
+| 12 | Contract & Consumer-Driven Testing | contract testing or consumer-driven contract | 38 | [12-contract-testing.json](search-results/12-contract-testing.json) | "API contract testing only matters for microservices" → Consumer-driven contracts prevent breaking changes in any service integration, regardless of architecture. |
+| 13 | API & Service Testing | API testing or service testing | 200 | [13-api-testing.json](search-results/13-api-testing.json) | "API testing is just E2E testing without UI" → API testing is its own practice: schema validation, contract testing, and fuzzing are distinct techniques. |
+| 14 | Mobile & Cross-Platform Testing | mobile testing or mobile app testing | 55 | [14-mobile-testing.json](search-results/14-mobile-testing.json) | "Mobile testing can be done on simulators alone" → Real device testing catches hardware-specific failures that simulators consistently miss. |
+| 15 | Performance & Load Testing | performance testing or load testing | 200 | [15-perf-testing.json](search-results/15-perf-testing.json) | "Performance testing is only needed before a big release" → Continuous performance benchmarking in CI prevents gradual regressions that accumulate invisibly. |
+| 16 | Security Testing & Penetration Testing | security testing or penetration testing | 200 | [16-security-testing.json](search-results/16-security-testing.json) | "Security testing is a pen-tester's job" → SAST/DAST integrated into CI shifts security left; developers must own the first line of security testing. |
+| 17 | Fuzzing & Vulnerability Discovery | fuzzing or fuzzer software | 200 | [17-fuzzing.json](search-results/17-fuzzing.json) | "Fuzzing only applies to C/C++ programs" → Modern fuzzers (OSS-Fuzz, LibAFL) are language-agnostic; API fuzzing targets any protocol. |
+| 18 | Accessibility Testing & Compliance | accessibility testing | 32 | [18-accessibility-test.json](search-results/18-accessibility-test.json) | "Accessibility testing is a compliance checkbox" → Accessibility failures are also UX failures; automated a11y testing in CI catches regressions before they ship. |
+| 19 | Visual & UI Regression Testing | visual testing or UI regression or screenshot testing | 24 | [19-visual-testing.json](search-results/19-visual-testing.json) | "Visual regression testing is unreliable due to rendering differences" → Pixel-diff with perceptual hashing (Percy, Chromatic) now reliably detects intentional vs. accidental visual changes. |
+| 20 | Chaos Engineering & Resilience Testing | chaos engineering or fault injection | 200 | [20-chaos-engineering.json](search-results/20-chaos-engineering.json) | "Chaos engineering will break production" → Chaos engineering with proper blast radius limits reveals unknown failure modes without causing incidents. |
+| 21 | Reliability & Resilience Testing | reliability testing or resilience testing | 200 | [21-resilience-test.json](search-results/21-resilience-test.json) | "SLO violations are dev failures" → SLO/error budget frameworks make reliability a shared, measurable team objective rather than blame. |
+| 22 | AI/ML Model Testing & Validation | machine learning testing or ML testing | 200 | [22-ml-testing.json](search-results/22-ml-testing.json) | "You can't test ML models like regular software" → ML testing requires data validation, distribution shift detection, and behavioral slices — all automatable. |
+| 23 | LLM & Generative AI Testing | AI testing or LLM testing or neural network testing | 200 | [23-ai-testing.json](search-results/23-ai-testing.json) | "LLM outputs can be tested with traditional assertions" → LLM evaluation requires semantic similarity, rubric-based judging (LLM-as-judge), and adversarial probing. |
+| 24 | Fairness, Bias & Ethical Testing | model evaluation quality testing | 200 | [24-model-evaluation.json](search-results/24-model-evaluation.json) | "Bias testing is only needed for high-stakes AI systems" → Fairness and bias evaluation should be continuous; subtle biases compound silently in production. |
+| 25 | Test Coverage & Code Coverage Analysis | test coverage or code coverage | 133 | [25-test-coverage.json](search-results/25-test-coverage.json) | "100% code coverage guarantees correctness" → Coverage measures execution paths, not correctness; mutation testing reveals the gaps that coverage metrics hide. |
+| 26 | Software Quality Metrics & Measurement | software metrics or quality metrics | 200 | [26-sw-metrics.json](search-results/26-sw-metrics.json) | "Quality is the QA team's responsibility" → Continuous quality engineering embeds quality ownership in every team member; QE = coaching, tooling, and standards. |
+| 27 | Defect Prediction & Bug Analysis | defect prediction or bug prediction | 200 | [27-defect-prediction.json](search-results/27-defect-prediction.json) | "Defect count is the primary quality metric" → DORA metrics (deploy frequency, MTTR, change failure rate) predict quality outcomes better than defect counts. |
+| 28 | Root Cause Analysis & Debugging | root cause analysis software | 92 | [28-root-cause.json](search-results/28-root-cause.json) | "Root cause analysis always identifies a single cause" → Most production incidents have multiple contributing causes; blameless post-mortems reveal systemic issues. |
+| 29 | Test Data Management & Generation | test data generation or test data management | 130 | [29-test-data-mgmt.json](search-results/29-test-data-mgmt.json) | "Test data can be generated randomly" → Production-realistic test data (synthetic or anonymized production data) exposes edge cases random generation cannot. |
+| 30 | Continuous Testing & CI Integration | continuous testing | 38 | [30-continuous-test.json](search-results/30-continuous-test.json) | "Continuous testing means running tests continuously" → Continuous testing means quality feedback at every stage of the pipeline, not just continuous execution. |
+| 31 | Quality Engineering Process & Standards | quality engineering or quality assurance process | 200 | [31-quality-eng.json](search-results/31-quality-eng.json) | "Quality metrics should only be collected at release" → Real-time quality dashboards enable proactive intervention before defects reach production. |
+| 32 | Shift-Left & Shift-Right Quality Practices | shift-left or shift-right testing quality | 12 | [32-shift-left-right.json](search-results/32-shift-left-right.json) | "Shift-left testing means moving testing earlier" → Shift-left means embedding quality at design time; it's a culture change, not just a scheduling change. |
+| 33 | Site Reliability Engineering (SRE) | site reliability engineering or SRE | 36 | [33-sre.json](search-results/33-sre.json) | "SRE is just on-call operations" → SRE applies software engineering principles to operations; it's a methodology, not a role. |
+| 34 | Quality Process Models & Standards | software quality model or ISO 25010 | 56 | [34-quality-model.json](search-results/34-quality-model.json) | "ISO 9001 / CMMI certification ensures software quality" → Process maturity models don't guarantee product quality; outcome-based metrics (DORA) are more predictive. |
+| 35 | Production Monitoring & Quality Observability | production monitoring quality | 36 | [35-prod-monitoring.json](search-results/35-prod-monitoring.json) | "Production monitoring is a separate concern from testing" → Production feedback loops (feature flags, A/B testing, canary releases) are part of the modern testing strategy. |
 
 ---
 
@@ -404,3 +404,34 @@ The full-spectrum coverage of this collection — from static analysis to produc
 ---
 
 [中文说明](README.zh-CN.md) | [知识文档](qa-quality.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Testing is a phase              TDD / Agile (2001–2010)       Testing is a design activity
+  │ test after code complete         │ Red-Green-Refactor            │ tests define behavior first
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Test-after QA gatekeeping       DevOps / shift-left             Continuous quality feedback
+  │ release gates, defect triage    │ CI pipelines, pre-commit      │ quality measured every commit
+  └──────────────────────────────────┘                             │
+                                                                   │
+Coverage metrics as quality     Mutation testing (2010s+)      Mutation score / DORA metrics
+  │ "80% coverage = done"            │ PITest, Stryker results        │ change failure rate, MTTR
+  └──────────────────────────────────┘                             │
+                                                                   │
+Manual test scripts             AI-powered test gen (2023+)   LLM-augmented testing
+  │ human writes every case          │ Codium, GitHub Copilot tests  │ AI generates, human reviews
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区 / Overturned Beliefs:**
+- ✗ "E2E测试是黄金标准" → 测试金字塔证明单元测试为主的底层结构更优
+- ✗ "100%覆盖率 = 零缺陷" → 变异测试显示高覆盖率代码仍有大量未检测缺陷
+- ✗ "质量是QA团队的责任" → DORA研究：质量文化是全团队属性，非专属角色
+- ✗ "生产监控与测试无关" → A/B测试、金丝雀发布、特性标志是现代测试策略的一部分
+
