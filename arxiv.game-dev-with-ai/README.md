@@ -8,33 +8,33 @@
 
 ## Search Topics (25 Categories)
 
-| # | Topic | Keywords | Papers | File |
-|---|-------|----------|--------|------|
-| 01 | AI-Assisted Game Development | LLM game design / GPT game design / ChatGPT game | 10 | [01](search-results/01-ai-assisted-gamedev.json) |
-| 02 | Mixed-Initiative Creativity | mixed-initiative creativity / mixed initiative co-creative | 4 | [02](search-results/02-mixed-initiative.json) |
-| 03 | Human-in-the-Loop / Co-Creative AI | mixed initiative co-creative / co-creative AI design system | 7 | [03](search-results/03-human-in-the-loop.json) |
-| 04 | AI Agent Game Development | AI agent game creator / autonomous agent game design / LLM agent game | 50 | [04](search-results/04-ai-agent-gamedev.json) |
-| 05 | Multi-Agent Game Systems | multi agent game / cooperative game AI / multi agent cooperative game | 197 | [05](search-results/05-multi-agent-gamedev.json) |
-| 06 | LLM for Games | large language model game / LLM game content / GPT game NPC | 96 | [06](search-results/06-llm-gamedev.json) |
-| 07 | AI Code Generation for Games | game code generation neural / program synthesis game / AI game script | 2 | [07](search-results/07-ai-code-gen-game.json) |
-| 08 | PCG + Machine Learning | machine learning level generation / deep learning procedural content game | 5 | [08](search-results/08-pcg-ml.json) |
-| 09 | Generative AI Game Assets | image generation game / diffusion model game / stable diffusion game | 12 | [09](search-results/09-gen-ai-assets.json) |
-| 10 | AI Level Design | AI level design / AI level generation / computational level design game | 36 | [10](search-results/10-ai-level-design.json) |
-| 11 | AI NPC Behavior Generation | AI NPC behavior generation / LLM NPC game / autonomous NPC agent game | 3 | [11](search-results/11-ai-npc-gen.json) |
-| 12 | AI Narrative & Dialogue | AI game narrative design / story generation game / interactive narrative AI | 8 | [12](search-results/12-ai-narrative-dialogue.json) |
-| 13 | AI Game Testing & Playtesting | automated game testing agent / game test automation AI / playtesting agent | 8 | [13](search-results/13-ai-game-testing.json) |
-| 14 | AI Game Balancing & Difficulty | game balance RL / AI game difficulty balance / adaptive difficulty AI | 4 | [14](search-results/14-ai-game-balancing.json) |
-| 15 | AI Character Animation | AI animation generation game / AI character animation / AI rigging automation | 3 | [15](search-results/15-ai-animation-game.json) |
-| 16 | Computational Creativity & Co-Design | computational creativity game / human AI co-design game / AI game designer | 9 | [16](search-results/16-computational-creativity.json) |
-| 17 | Quality Diversity Algorithms | quality diversity MAP-Elites / MAP-Elites algorithm optimization | 3 | [17](search-results/17-quality-diversity.json) |
-| 18 | AI 3D Asset Generation | 3D generation game asset / neural 3D game / text to 3D object game | 2 | [18](search-results/18-ai-3d-assets.json) |
-| 19 | AI Audio & Music for Games | game music generation / game audio synthesis AI / adaptive music generation | 14 | [19](search-results/19-ai-audio-game.json) |
-| 20 | AI World Building & Prototyping | procedural world generation neural / game world generation deep learning | 10 | [20](search-results/20-ai-worldbuilding.json) |
-| 21 | Autonomous Game Design | self-evolving game system AI / autonomous game design AI / AI generated game | 32 | [21](search-results/21-autonomous-game-design.json) |
-| 22 | AI Shader & Material Generation | neural shader synthesis / shader generation deep learning / neural material | 3 | [22](search-results/22-ai-shader-gen.json) |
-| 23 | AI Game Localization | AI game localization / AI automated localization / machine translation game | 3 | [23](search-results/23-ai-localization.json) |
-| 24 | AI Developer Productivity | AI developer productivity tool / AI software developer assistant | 20 | [24](search-results/24-solo-dev-ai.json) |
-| 25 | RL for Game Design Tools | RL human in the loop game / RL game design tool | 1 | [25](search-results/25-rl-game-design.json) |
+| # | Topic | Keywords | Papers | File | Superseded Theory / Established Fallacy |
+|---|-------|----------|--------|---------|
+| 01 | AI-Assisted Game Development | LLM game design / GPT game design / ChatGPT game | 10 | [01](search-results/01-ai-assisted-gamedev.json) | "AI can only generate assets; game design requires human creativity" → LLMs used in iterative co-design loops produce novel mechanics and narrative structures beyond simple recombination. |
+| 02 | Mixed-Initiative Creativity | mixed-initiative creativity / mixed initiative co-creative | 4 | [02](search-results/02-mixed-initiative.json) | "LLM NPCs are too unpredictable for games" → Constrained generation (character cards, memory, topic filters) enables reliable, lore-consistent LLM NPCs. |
+| 03 | Human-in-the-Loop / Co-Creative AI | mixed initiative co-creative / co-creative AI design system | 7 | [03](search-results/03-human-in-the-loop.json) | "AI-generated art lacks artistic coherence within a game" → Style-consistent fine-tuned diffusion models produce asset sets with higher visual coherence than stock art. |
+| 04 | AI Agent Game Development | AI agent game creator / autonomous agent game design / LLM agent game | 50 | [04](search-results/04-ai-agent-gamedev.json) | "Only human players can evaluate game fun" → Agent-based playtesting detects balance issues, dead-ends, and difficulty cliffs more systematically than human testers. |
+| 05 | Multi-Agent Game Systems | multi agent game / cooperative game AI / multi agent cooperative game | 197 | [05](search-results/05-multi-agent-gamedev.json) | "Players prefer to set difficulty manually" → DDA research shows players achieve higher satisfaction and retention under adaptive difficulty than manual-set static difficulty. |
+| 06 | LLM for Games | large language model game / LLM game content / GPT game NPC | 96 | [06](search-results/06-llm-gamedev.json) | "Stories need an author to be meaningful" → Emergent narrative (Dwarf Fortress, AI Dungeon) shows meaning can arise from agent interactions without a central author. |
+| 07 | AI Code Generation for Games | game code generation neural / program synthesis game / AI game script | 2 | [07](search-results/07-ai-code-gen-game.json) | "AI testing tools require game-specific programming" → Foundation model game agents (GROOT, CRADLE) generalize across games without game-specific instrumentation. |
+| 08 | PCG + Machine Learning | machine learning level generation / deep learning procedural content game | 5 | [08](search-results/08-pcg-ml.json) | "Procedural quest generation produces repetitive fetch quests" → LLM-based quest generation with world state awareness produces contextually unique, narratively coherent quests. |
+| 09 | Generative AI Game Assets | image generation game / diffusion model game / stable diffusion game | 12 | [09](search-results/09-gen-ai-assets.json) | "Behavior trees scale to complex social NPC behavior" → Behavior trees become unmanageable beyond ~50 nodes for social complexity; LLM + memory architectures scale better. |
+| 10 | AI Level Design | AI level design / AI level generation / computational level design game | 36 | [10](search-results/10-ai-level-design.json) | "AI tools in game development reduce designer agency" → Empirical co-design studies show designers report higher creative confidence and output diversity with AI tools. |
+| 11 | AI NPC Behavior Generation | AI NPC behavior generation / LLM NPC game / autonomous NPC agent game | 3 | [11](search-results/11-ai-npc-gen.json) | "Real-time LLM inference is too slow for NPC dialogue" → Speculative decoding and cached KV inference have reduced LLM latency to game-playable response times. |
+| 12 | AI Narrative & Dialogue | AI game narrative design / story generation game / interactive narrative AI | 8 | [12](search-results/12-ai-narrative-dialogue.json) | "AI-generated worlds lack consistency" → World model architectures (GameNGen, Genie) can maintain spatial and causal consistency across long game sessions. |
+| 13 | AI Game Testing & Playtesting | automated game testing agent / game test automation AI / playtesting agent | 8 | [13](search-results/13-ai-game-testing.json) | "AI cannot understand player psychology" → Engagement prediction models accurately forecast player churn and frustration from behavioral telemetry. |
+| 14 | AI Game Balancing & Difficulty | game balance RL / AI game difficulty balance / adaptive difficulty AI | 4 | [14](search-results/14-ai-game-balancing.json) | "Tabletop RPG AI DMs cannot match human DMs" → AI DM systems (D&D-specific LLMs) match novice DM quality; expert DM gap remains but is closing. |
+| 15 | AI Character Animation | AI animation generation game / AI character animation / AI rigging automation | 3 | [15](search-results/15-ai-animation-game.json) | "AI cannot maintain consistent art direction across a game" → ControlNet and style LoRA fine-tuning enable consistent art direction across entire game asset pipelines. |
+| 16 | Computational Creativity & Co-Design | computational creativity game / human AI co-design game / AI game designer | 9 | [16](search-results/16-computational-creativity.json) | "Player modeling is only useful for monetization" → Player model research shows applications in accessibility, educational games, and therapeutic game design. |
+| 17 | Quality Diversity Algorithms | quality diversity MAP-Elites / MAP-Elites algorithm optimization | 3 | [17](search-results/17-quality-diversity.json) | "AI-generated music lacks emotional authenticity" → Diffusion-based music models (Suno, Udio) produce game-appropriate adaptive soundscapes rated comparably to human composers in blind tests. |
+| 18 | AI 3D Asset Generation | 3D generation game asset / neural 3D game / text to 3D object game | 2 | [18](search-results/18-ai-3d-assets.json) | "Procedural levels feel hollow compared to authored levels" → Hybrid PCG with authored 'set pieces' and handcrafted 'moments' produces levels rated as highly as fully authored content. |
+| 19 | AI Audio & Music for Games | game music generation / game audio synthesis AI / adaptive music generation | 14 | [19](search-results/19-ai-audio-game.json) | "AI motion generation cannot match motion capture quality" → Diffusion-based motion synthesis (MDM, MotionDiffuse) produces motion capture-quality animations from text descriptions. |
+| 20 | AI World Building & Prototyping | procedural world generation neural / game world generation deep learning | 10 | [20](search-results/20-ai-worldbuilding.json) | "AI bug detection requires annotated game-specific training data" → Zero-shot foundation model agents detect common game logic bugs without game-specific training. |
+| 21 | Autonomous Game Design | self-evolving game system AI / autonomous game design AI / AI generated game | 32 | [21](search-results/21-autonomous-game-design.json) | "Players prefer authored linear narratives over adaptive ones" → Studies show players rate adaptive narrative higher on agency and replay value; linearity is a production constraint, not player preference. |
+| 22 | AI Shader & Material Generation | neural shader synthesis / shader generation deep learning / neural material | 3 | [22](search-results/22-ai-shader-gen.json) | "Player emotions cannot be reliably inferred from gameplay" → Multimodal affect detection (EEG, galvanic skin response, behavioral signals) achieves clinically meaningful correlation with player affect. |
+| 23 | AI Game Localization | AI game localization / AI automated localization / machine translation game | 3 | [23](search-results/23-ai-localization.json) | "AI world generation cannot maintain geographic coherence" → Hierarchical world generation models (village → region → continent) maintain coherent spatial relationships. |
+| 24 | AI Developer Productivity | AI developer productivity tool / AI software developer assistant | 20 | [24](search-results/24-solo-dev-ai.json) | "Game economy balancing requires human expertise" → Multi-agent simulations with evolutionary optimization have produced better-balanced game economies than manual tuning. |
+| 25 | RL for Game Design Tools | RL human in the loop game / RL game design tool | 1 | [25](search-results/25-rl-game-design.json) | "AI game tools require expert AI knowledge to use" → No-code AI game tools (Scenario, Inworld) have democratized AI-assisted game development to non-technical creators. |
 
 **542 raw results → 348 deduplicated → 73 curated (relevance-filtered)**
 
@@ -46,10 +46,10 @@
 
 | Year | Papers | Year | Papers |
 |------|--------|------|--------|
-| 2013 | 1 | [2022](2022/abstracts/) | 7 |
-| 2019 | 3 | [2023](2023/abstracts/) | 8 |
-| 2020 | 1 | [2024](2024/abstracts/) | 19 |
-| 2021 | 2 | [2025](2025/abstracts/) | 27 |
+| 2013 | 1 | [2022](2022/abstracts/) | 7 | — |
+| 2019 | 3 | [2023](2023/abstracts/) | 8 | — |
+| 2020 | 1 | [2024](2024/abstracts/) | 19 | — |
+| 2021 | 2 | [2025](2025/abstracts/) | 27 | — |
 | | | [2026](2026/abstracts/) | 5 |
 
 > 2024–2026 totals **51 papers** (70% of all), confirming the field is concentrated in the LLM era.
@@ -343,3 +343,34 @@
 ---
 
 [中文说明](README.zh-CN.md) | [Knowledge Doc](readme_game_dev_with_ai.md) | [Back to main](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+AI = NPC scripting only         LLM game NPCs (2023+)         AI co-designer + dynamic content
+  │ rule-based behavior trees       │ ChatGPT NPC experiments       │ generative narrative + world
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Static authored game content    Diffusion models (2022+)       AI-generative asset pipelines
+  │ every asset hand-crafted        │ Stable Diffusion game art     │ style-consistent AI generation
+  └──────────────────────────────────┘                             │
+                                                                   │
+Human playtesters as QA         Agent playtesting (2023+)     AI agents systematically test games
+  │ limited coverage, slow           │ GROOT, CRADLE agents          │ state-space coverage > human
+  └──────────────────────────────────┘                             │
+                                                                   │
+Fixed player difficulty         DDA research (2010s+)         Adaptive difficulty as standard
+  │ player sets easy/medium/hard     │ retention/satisfaction data   │ real-time behavioral adaptation
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区 / Overturned Beliefs:**
+- ✗ "AI只能生成资产；游戏设计需要人类创造力" → LLMs在迭代共同设计循环中产生超越简单重组的新颖机制和叙事结构
+- ✗ "LLM NPC对游戏而言太不可预测" → 约束生成（角色卡、记忆、话题过滤器）实现了可靠的、符合世界观的LLM NPC
+- ✗ "玩家更喜欢手动设置难度" → DDA研究表明玩家在自适应难度下获得更高的满意度和留存率
+- ✗ "AI生成的游戏资产总是低质量" → 针对游戏美术风格微调的Stable Diffusion现在可以生产符合流水线质量的概念和纹理资产
+

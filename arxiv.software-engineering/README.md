@@ -26,50 +26,50 @@
 
 ## Search Topics (42 Searches)
 
-| # | Topic | Keywords | Papers | File |
-|---|-------|----------|--------|------|
-| 01 | Frontend Engineering & Web Development | frontend or front-end or web UI | 149 | [01-frontend.json](search-results/01-frontend.json) |
-| 02 | UI Design Systems & Component Libraries | user interface design or UI design | 113 | [02-ui-design.json](search-results/02-ui-design.json) |
-| 03 | User Experience (UX) Research & Evaluation | user experience or UX design | 94 | [03-ux-design.json](search-results/03-ux-design.json) |
-| 04 | Usability Testing & Heuristic Evaluation | usability testing or usability evaluation | 157 | [04-usability.json](search-results/04-usability.json) |
-| 05 | Human-Computer Interaction (HCI) | human computer interaction | 146 | [05-hci.json](search-results/05-hci.json) |
-| 06 | Accessibility & Inclusive Design | accessibility software or application | 87 | [06-accessibility.json](search-results/06-accessibility.json) |
-| 07 | Desktop & Native Application Development | desktop application or desktop app | 76 | [07-desktop-app.json](search-results/07-desktop-app.json) |
-| 08 | Mobile Application Development | mobile app or mobile application | 200 | [08-mobile-app.json](search-results/08-mobile-app.json) |
-| 09 | Software Architecture & Design Patterns | software architecture | 200 | [09-sw-architecture.json](search-results/09-sw-architecture.json) |
-| 10 | Microservices & Service-Oriented Architecture | microservices or service mesh | 191 | [10-microservices.json](search-results/10-microservices.json) |
-| 11 | Distributed Systems & Cloud Engineering | cloud native or cloud computing software | 200 | [11-cloud-native.json](search-results/11-cloud-native.json) |
-| 12 | API Design & Integration Patterns | API design or REST API or GraphQL | 138 | [12-api-design.json](search-results/12-api-design.json) |
-| 13 | Database Design & Data Access Patterns | database design or data access | 200 | [13-distributed-sys.json](search-results/13-distributed-sys.json) |
-| 14 | Code Quality & Static Analysis | code quality or software quality | 200 | [15-code-quality.json](search-results/15-code-quality.json) |
-| 15 | Technical Debt & Code Smells | technical debt | 200 | [14-technical-debt.json](search-results/14-technical-debt.json) |
-| 16 | Refactoring & Software Evolution | refactoring software | 200 | [16-refactoring.json](search-results/16-refactoring.json) |
-| 17 | Program Comprehension & Code Reading | program comprehension or code comprehension | 200 | [19-prog-comprehension.json](search-results/19-prog-comprehension.json) |
-| 18 | Code Review & Collaborative Development | code review | 200 | [17-code-review.json](search-results/17-code-review.json) |
-| 19 | Requirements Engineering & Elicitation | requirements engineering or requirements elicitation | 200 | [20-requirements.json](search-results/20-requirements.json) |
-| 20 | Agile, Scrum & Lean Development | agile or scrum software development | 200 | [22-agile-scrum.json](search-results/22-agile-scrum.json) |
-| 21 | CI/CD & Release Engineering | CI/CD or continuous integration or continuous delivery | 200 | [23-cicd.json](search-results/23-cicd.json) |
-| 22 | DevOps & Platform Engineering | DevOps | 200 | [24-devops.json](search-results/24-devops.json) |
-| 23 | Software Documentation & Knowledge Management | software documentation or API documentation | 63 | [25-documentation.json](search-results/25-documentation.json) |
-| 24 | Developer Productivity & Experience | developer productivity or developer experience | 76 | [26-dev-productivity.json](search-results/26-dev-productivity.json) |
-| 25 | AI-Assisted Software Development | large language model software engineering | 200 | [39-llm-sw-eng.json](search-results/39-llm-sw-eng.json) |
-| 26 | Open Source & Community Development | open source software development | 200 | [28-open-source.json](search-results/28-open-source.json) |
-| 27 | Application Security Engineering | application security or secure software | 200 | [30-app-security.json](search-results/30-app-security.json) |
-| 28 | Vulnerability Detection & Analysis | vulnerability detection or vulnerability analysis | 200 | [31-vuln-detection.json](search-results/31-vuln-detection.json) |
-| 29 | Privacy Engineering & Compliance | privacy engineering or data privacy software | 136 | [33-privacy-eng.json](search-results/33-privacy-eng.json) |
-| 30 | Authentication, Authorization & Identity | authentication or authorization software | 200 | [34-auth-systems.json](search-results/34-auth-systems.json) |
-| 31 | Software Supply Chain Security | software supply chain security | 42 | [35-supply-chain-sec.json](search-results/35-supply-chain-sec.json) |
-| 32 | Performance Engineering & Profiling | software performance or performance optimization | 200 | [36-sw-performance.json](search-results/36-sw-performance.json) |
-| 33 | Observability, Monitoring & Logging | observability or distributed tracing software | 144 | [37-observability.json](search-results/37-observability.json) |
-| 34 | LLM for Software Engineering | AI code generation or LLM | 200 | [40-ai-code-gen.json](search-results/40-ai-code-gen.json) |
-| 35 | Software Philosophy & Design Taste | software design philosophy or simplicity | 20 | [42-sw-philosophy.json](search-results/42-sw-philosophy.json) |
-| 36 | Design Patterns (supplemental) | design pattern software | 200 | [09-design-pattern.json](search-results/09-design-pattern.json) |
-| 37 | Distributed Systems (supplemental) | distributed systems software | 200 | [12-distributed-sys.json](search-results/12-distributed-sys.json) |
-| 38 | Software Specification (supplemental) | software specification or formal specification | 200 | [21-sw-specification.json](search-results/21-sw-specification.json) |
-| 39 | Pair Programming & Collaboration (supplemental) | pair programming or collaborative coding | 29 | [29-pair-programming.json](search-results/29-pair-programming.json) |
-| 40 | Static Analysis Security (supplemental) | static analysis security | 200 | [32-static-analysis.json](search-results/32-static-analysis.json) |
-| 41 | AI Software Development (supplemental) | AI software development or software engineer | 200 | [41-ai-sw-dev.json](search-results/41-ai-sw-dev.json) |
-| 42 | Profiling (supplemental) | profiling or performance profiling software | 200 | [38-profiling.json](search-results/38-profiling.json) |
+| # | Topic | Keywords | Papers | File | Superseded Theory / Established Fallacy |
+|---|-------|----------|--------|------|----------------------------------------|
+| 01 | Frontend Engineering & Web Development | frontend or front-end or web UI | 149 | [01-frontend.json](search-results/01-frontend.json) | "Frontend is just HTML/CSS, not real engineering"  →  Frontend has become a full engineering discipline with its own architecture, state management, and performance domains. |
+| 02 | UI Design Systems & Component Libraries | user interface design or UI design | 113 | [02-ui-design.json](search-results/02-ui-design.json) | "Aesthetically beautiful UI = good design"  →  Information architecture and cognitive load govern usability more than visual polish. |
+| 03 | User Experience (UX) Research & Evaluation | user experience or UX design | 94 | [03-ux-design.json](search-results/03-ux-design.json) | "UX research is a nice-to-have"  →  Heuristic evaluation alone misses ~50% of user problems; field studies are irreplaceable. |
+| 04 | Usability Testing & Heuristic Evaluation | usability testing or usability evaluation | 157 | [04-usability.json](search-results/04-usability.json) | "Experts can reliably predict user behavior"  →  Usability testing consistently shows expert assumptions fail at least 1/3 of the time. |
+| 05 | Human-Computer Interaction (HCI) | human computer interaction | 146 | [05-hci.json](search-results/05-hci.json) | "Technical ability drives adoption"  →  TAM model: Perceived usefulness and ease-of-use predict adoption better than feature richness. |
+| 06 | Accessibility & Inclusive Design | accessibility software or application | 87 | [06-accessibility.json](search-results/06-accessibility.json) | "Accessibility only helps disabled users"  →  Curb-cut effect: accessible design improves experience for all (aging, mobile, low-bandwidth users). |
+| 07 | Desktop & Native Application Development | desktop application or desktop app | 76 | [07-desktop-app.json](search-results/07-desktop-app.json) | "Desktop apps will be completely replaced by web"  →  Native performance requirements (CAD, video editing, IDE) keep desktop critical; Electron hybrid is dominant. |
+| 08 | Mobile Application Development | mobile app or mobile application | 200 | [08-mobile-app.json](search-results/08-mobile-app.json) | "Mobile-first means desktop is secondary"  →  Multi-device, multi-form-factor coexistence; responsive design ≠ mobile-only. |
+| 09 | Software Architecture & Design Patterns | software architecture | 200 | [09-sw-architecture.json](search-results/09-sw-architecture.json) | "Large monoliths don't scale"  →  Distributed monolith is optimal for many scales; microservices have well-documented hidden costs. |
+| 10 | Microservices & Service-Oriented Architecture | microservices or service mesh | 191 | [10-microservices.json](search-results/10-microservices.json) | "Microservices are always better than monoliths"  →  Network latency, distributed transactions, and operational complexity are non-trivial costs; monolith-first is sound advice. |
+| 11 | Distributed Systems & Cloud Engineering | cloud native or cloud computing software | 200 | [11-cloud-native.json](search-results/11-cloud-native.json) | "CAP theorem is an absolute constraint"  →  PACELC extends CAP; CRDTs and causal consistency models partially bypass it. |
+| 12 | API Design & Integration Patterns | API design or REST API or GraphQL | 138 | [12-api-design.json](search-results/12-api-design.json) | "REST is the only rational API style"  →  GraphQL, gRPC, tRPC, and event-driven APIs each dominate in their appropriate context. |
+| 13 | Database Design & Data Access Patterns | database design or data access | 200 | [13-distributed-sys.json](search-results/13-distributed-sys.json) | "Relational databases are always the best choice"  →  Multi-model, document, graph, and time-series databases outperform relational in specific access patterns. |
+| 14 | Code Quality & Static Analysis | code quality or software quality | 200 | [15-code-quality.json](search-results/15-code-quality.json) | "More code = more features = more value"  →  Complexity is the primary enemy of quality; deleting code is also a contribution. |
+| 15 | Technical Debt & Code Smells | technical debt | 200 | [14-technical-debt.json](search-results/14-technical-debt.json) | "Technical debt can always be paid down later"  →  Interest compounds exponentially; unaddressed debt becomes legacy burden that blocks all future work. |
+| 16 | Refactoring & Software Evolution | refactoring software | 200 | [16-refactoring.json](search-results/16-refactoring.json) | "Full rewrites are faster than incremental refactoring"  →  Rewrites consistently underestimate hidden complexity and introduce new bugs; incremental refactoring is safer. |
+| 17 | Program Comprehension & Code Reading | program comprehension or code comprehension | 200 | [19-prog-comprehension.json](search-results/19-prog-comprehension.json) | "More comments = more readable code"  →  Self-explaining names + small functions outperform heavy commenting; stale comments actively mislead. |
+| 18 | Code Review & Collaborative Development | code review | 200 | [17-code-review.json](search-results/17-code-review.json) | "Code review is a quality gate"  →  Code review is primarily a knowledge transfer and shared understanding tool, not a bug filter. |
+| 19 | Requirements Engineering & Elicitation | requirements engineering or requirements elicitation | 200 | [20-requirements.json](search-results/20-requirements.json) | "Detailed specifications prevent misunderstandings"  →  Natural language requirements are inherently ambiguous; continuous dialogue outperforms upfront documentation. |
+| 20 | Agile, Scrum & Lean Development | agile or scrum software development | 200 | [22-agile-scrum.json](search-results/22-agile-scrum.json) | "Waterfall is appropriate for large projects"  →  40 years of empirical research shows iterative methods outperform waterfall in nearly all project types. |
+| 21 | CI/CD & Release Engineering | CI/CD or continuous integration or continuous delivery | 200 | [23-cicd.json](search-results/23-cicd.json) | "Frequent releases increase risk"  →  DORA research: high-frequency deployers have higher stability and lower failure rates than low-frequency deployers. |
+| 22 | DevOps & Platform Engineering | DevOps | 200 | [24-devops.json](search-results/24-devops.json) | "Dev and Ops must be separate for control"  →  Siloed organizations are root cause of most production incidents; shared ownership reduces MTTR. |
+| 23 | Software Documentation & Knowledge Management | software documentation or API documentation | 63 | [25-documentation.json](search-results/25-documentation.json) | "More documentation is always better"  →  Stale docs are more dangerous than no docs; living documentation (executable specs) is the new standard. |
+| 24 | Developer Productivity & Experience | developer productivity or developer experience | 76 | [26-dev-productivity.json](search-results/26-dev-productivity.json) | "Lines of code and commit count measure developer productivity"  →  SPACE/DORA frameworks: delivery throughput, stability, and developer satisfaction predict outcomes better. |
+| 25 | AI-Assisted Software Development | large language model software engineering | 200 | [39-llm-sw-eng.json](search-results/39-llm-sw-eng.json) | "AI coding assistants will soon replace programmers"  →  Human-AI Centaur model dominates; verification, architecture, and context judgment remain human-critical. |
+| 26 | Open Source & Community Development | open source software development | 200 | [28-open-source.json](search-results/28-open-source.json) | "Open source software is insecure and low quality"  →  OpenSSF research: open source patches vulnerabilities comparably to commercial software; transparency aids auditing. |
+| 27 | Application Security Engineering | application security or secure software | 200 | [30-app-security.json](search-results/30-app-security.json) | "Security is a layer added after functionality"  →  NIST SSDF: cost to fix a security bug increases ~100× from coding phase to production. |
+| 28 | Vulnerability Detection & Analysis | vulnerability detection or vulnerability analysis | 200 | [31-vuln-detection.json](search-results/31-vuln-detection.json) | "Known vulnerabilities will be patched immediately"  →  Mean time to remediate known CVEs exceeds 200 days on average; prioritization is the core challenge. |
+| 29 | Privacy Engineering & Compliance | privacy engineering or data privacy software | 136 | [33-privacy-eng.json](search-results/33-privacy-eng.json) | "Anonymized data is safe to share"  →  Re-identification attacks on k-anonymized datasets are routine; differential privacy is the new standard. |
+| 30 | Authentication, Authorization & Identity | authentication or authorization software | 200 | [34-auth-systems.json](search-results/34-auth-systems.json) | "Password complexity rules improve security"  →  Password reuse and phishing are primary attack vectors; MFA reduces account compromise by >99%. |
+| 31 | Software Supply Chain Security | software supply chain security | 42 | [35-supply-chain-sec.json](search-results/35-supply-chain-sec.json) | "Auditing your own code is sufficient for supply chain security"  →  Log4Shell proved the entire dependency graph is the attack surface. |
+| 32 | Performance Engineering & Profiling | software performance or performance optimization | 200 | [36-sw-performance.json](search-results/36-sw-performance.json) | "Premature optimization is always the root of all evil"  →  Misquote of Knuth; architectural-level performance decisions must be made early — the quote targets micro-optimizations only. |
+| 33 | Observability, Monitoring & Logging | observability or distributed tracing software | 144 | [37-observability.json](search-results/37-observability.json) | "Logs + metrics = observability"  →  Observability requires logs + metrics + distributed traces + high-cardinality query support. |
+| 34 | LLM for Software Engineering | AI code generation or LLM | 200 | [40-ai-code-gen.json](search-results/40-ai-code-gen.json) | "LLM code generation can end-to-end replace developers"  →  LLM-generated code requires human verification, security review, and architectural judgment; failure modes are subtle. |
+| 35 | Software Philosophy & Design Taste | software design philosophy or simplicity | 20 | [42-sw-philosophy.json](search-results/42-sw-philosophy.json) | "Pragmatism always beats design aesthetics"  →  Technical debt research proves 'fast-but-ugly' code is ultimately slower; design quality is an investment, not a luxury. |
+| 36 | Design Patterns (supplemental) | design pattern software | 200 | [09-design-pattern.json](search-results/09-design-pattern.json) | "Design patterns provide universal solutions"  →  Pattern overuse (enterprise Java era) led to 'gang of four anti-pattern' — patterns have narrow applicability. |
+| 37 | Distributed Systems (supplemental) | distributed systems software | 200 | [12-distributed-sys.json](search-results/12-distributed-sys.json) | "Distributed systems are more reliable than single machines"  →  Fallacies of distributed computing: network partitions and consistency problems make distributed inherently more fragile. |
+| 38 | Software Specification (supplemental) | software specification or formal specification | 200 | [21-sw-specification.json](search-results/21-sw-specification.json) | "Formal specifications ensure correct implementations"  →  Practical cost of formal verification far exceeds benefit for most commercial code; model-based testing is a pragmatic middle ground. |
+| 39 | Pair Programming & Collaboration (supplemental) | pair programming or collaborative coding | 29 | [29-pair-programming.json](search-results/29-pair-programming.json) | "Solo coding is more efficient than pair programming"  →  Pair programming reduces defect rate ~15% and significantly reduces knowledge silos; efficiency is higher long-term. |
+| 40 | Static Analysis Security (supplemental) | static analysis security | 200 | [32-static-analysis.json](search-results/32-static-analysis.json) | "Static analysis catches all security issues"  →  High false-positive rates and inability to catch runtime-dependent vulnerabilities limit static analysis to one layer of a defense-in-depth strategy. |
+| 41 | AI Software Development (supplemental) | AI software development or software engineer | 200 | [41-ai-sw-dev.json](search-results/41-ai-sw-dev.json) | "AI tools uniformly improve all coding scenarios"  →  LLM performance degrades significantly on unfamiliar codebases and long-context tasks; gains are uneven. |
+| 42 | Profiling (supplemental) | profiling or performance profiling software | 200 | [38-profiling.json](search-results/38-profiling.json) | "Optimizing CPU hotspots solves performance problems"  →  Memory pressure, I/O blocking, thread contention, and syscall overhead are often the real bottlenecks. |
 
 ---
 
@@ -496,3 +496,34 @@ Despite being a top industry concern, Application Security (35 papers), Supply C
 ---
 
 [中文说明](README.zh-CN.md) | [知识文档](sw-engineering.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Waterfall testing               Agile / XP (2001)             Shift-left, continuous testing
+  │ test after code is done         │ TDD, fast iteration          │ quality is built-in, not bolted-on
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Manual regression suites        CI/CD pipelines (2010s)       Automated test-in-pipeline
+  │ run before release                │ every commit triggers tests  │ testing is infrastructure
+  └──────────────────────────────────┘                             │
+                                                                   │
+Code coverage as quality proxy  Mutation testing research      Outcome-based quality metrics
+  │ 100% coverage = safe              │ mutation score / DORA         │ MTTR, change failure rate
+  └──────────────────────────────────┘                             │
+                                                                   │
+Scripted test cases             LLM test generation (2023+)   AI-augmented exploratory testing
+  │ human writes every assertion      │ AI generates test suites      │ human guides, AI executes
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区 / Overturned Beliefs:**
+- ✗ "测试是编码完成后的阶段" → TDD/BDD证明测试是设计活动，应在编码前进行
+- ✗ "100%代码覆盖率保证正确性" → 覆盖率衡量执行路径，非正确性；变异测试揭示漏洞
+- ✗ "E2E测试是质量的黄金标准" → 测试金字塔：E2E成本最高且最脆弱；单元测试应占大多数
+- ✗ "质量是QA团队的责任" → 持续质量工程将质量所有权嵌入每个团队成员
+

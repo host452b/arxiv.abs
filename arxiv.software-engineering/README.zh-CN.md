@@ -26,50 +26,50 @@
 
 ## 搜索主题（42 组搜索）
 
-| # | 主题 | 关键词 | 论文数 | 结果文件 |
-|---|------|--------|--------|---------|
-| 01 | 前端工程与 Web 开发 | frontend or front-end or web UI | 149 | [01-frontend.json](search-results/01-frontend.json) |
-| 02 | UI 设计系统与组件库 | user interface design or UI design | 113 | [02-ui-design.json](search-results/02-ui-design.json) |
-| 03 | 用户体验（UX）研究与评估 | user experience or UX design | 94 | [03-ux-design.json](search-results/03-ux-design.json) |
-| 04 | 可用性测试与启发式评估 | usability testing or usability evaluation | 157 | [04-usability.json](search-results/04-usability.json) |
-| 05 | 人机交互（HCI） | human computer interaction | 146 | [05-hci.json](search-results/05-hci.json) |
-| 06 | 无障碍与包容性设计 | accessibility software or application | 87 | [06-accessibility.json](search-results/06-accessibility.json) |
-| 07 | 桌面与原生应用开发 | desktop application or desktop app | 76 | [07-desktop-app.json](search-results/07-desktop-app.json) |
-| 08 | 移动应用开发 | mobile app or mobile application | 200 | [08-mobile-app.json](search-results/08-mobile-app.json) |
-| 09 | 软件架构与设计模式 | software architecture | 200 | [09-sw-architecture.json](search-results/09-sw-architecture.json) |
-| 10 | 微服务与面向服务架构 | microservices or service mesh | 191 | [10-microservices.json](search-results/10-microservices.json) |
-| 11 | 分布式系统与云原生工程 | cloud native or cloud computing software | 200 | [11-cloud-native.json](search-results/11-cloud-native.json) |
-| 12 | API 设计与集成模式 | API design or REST API or GraphQL | 138 | [12-api-design.json](search-results/12-api-design.json) |
-| 13 | 数据库设计与数据访问模式 | database design or data access | 200 | [13-distributed-sys.json](search-results/13-distributed-sys.json) |
-| 14 | 代码质量与静态分析 | code quality or software quality | 200 | [15-code-quality.json](search-results/15-code-quality.json) |
-| 15 | 技术债与代码坏味道 | technical debt | 200 | [14-technical-debt.json](search-results/14-technical-debt.json) |
-| 16 | 重构与软件演进 | refactoring software | 200 | [16-refactoring.json](search-results/16-refactoring.json) |
-| 17 | 程序理解与代码阅读 | program comprehension or code comprehension | 200 | [19-prog-comprehension.json](search-results/19-prog-comprehension.json) |
-| 18 | 代码评审与协作开发 | code review | 200 | [17-code-review.json](search-results/17-code-review.json) |
-| 19 | 需求工程与需求获取 | requirements engineering or elicitation | 200 | [20-requirements.json](search-results/20-requirements.json) |
-| 20 | 敏捷、Scrum 与精益开发 | agile or scrum software development | 200 | [22-agile-scrum.json](search-results/22-agile-scrum.json) |
-| 21 | CI/CD 与发布工程 | CI/CD or continuous integration or delivery | 200 | [23-cicd.json](search-results/23-cicd.json) |
-| 22 | DevOps 与平台工程 | DevOps | 200 | [24-devops.json](search-results/24-devops.json) |
-| 23 | 软件文档与知识管理 | software documentation or API documentation | 63 | [25-documentation.json](search-results/25-documentation.json) |
-| 24 | 开发者生产力与体验 | developer productivity or developer experience | 76 | [26-dev-productivity.json](search-results/26-dev-productivity.json) |
-| 25 | AI 辅助软件开发 | large language model software engineering | 200 | [39-llm-sw-eng.json](search-results/39-llm-sw-eng.json) |
-| 26 | 开源与社区开发 | open source software development | 200 | [28-open-source.json](search-results/28-open-source.json) |
-| 27 | 应用安全工程 | application security or secure software | 200 | [30-app-security.json](search-results/30-app-security.json) |
-| 28 | 漏洞检测与分析 | vulnerability detection or vulnerability analysis | 200 | [31-vuln-detection.json](search-results/31-vuln-detection.json) |
-| 29 | 隐私工程与合规 | privacy engineering or data privacy software | 136 | [33-privacy-eng.json](search-results/33-privacy-eng.json) |
-| 30 | 认证、授权与身份管理 | authentication or authorization software | 200 | [34-auth-systems.json](search-results/34-auth-systems.json) |
-| 31 | 软件供应链安全 | software supply chain security | 42 | [35-supply-chain-sec.json](search-results/35-supply-chain-sec.json) |
-| 32 | 性能工程与性能分析 | software performance or performance optimization | 200 | [36-sw-performance.json](search-results/36-sw-performance.json) |
-| 33 | 可观测性、监控与日志 | observability or distributed tracing software | 144 | [37-observability.json](search-results/37-observability.json) |
-| 34 | LLM 与软件工程 | AI code generation or LLM | 200 | [40-ai-code-gen.json](search-results/40-ai-code-gen.json) |
-| 35 | 软件哲学与设计品味 | software design philosophy or simplicity | 20 | [42-sw-philosophy.json](search-results/42-sw-philosophy.json) |
-| 36 | 设计模式（补充） | design pattern software | 200 | [09-design-pattern.json](search-results/09-design-pattern.json) |
-| 37 | 分布式系统（补充） | distributed systems software | 200 | [12-distributed-sys.json](search-results/12-distributed-sys.json) |
-| 38 | 软件规格说明（补充） | software specification or formal specification | 200 | [21-sw-specification.json](search-results/21-sw-specification.json) |
-| 39 | 结对编程与协作（补充） | pair programming or collaborative coding | 29 | [29-pair-programming.json](search-results/29-pair-programming.json) |
-| 40 | 静态分析安全（补充） | static analysis security | 200 | [32-static-analysis.json](search-results/32-static-analysis.json) |
-| 41 | AI 软件开发（补充） | AI software development or software engineer | 200 | [41-ai-sw-dev.json](search-results/41-ai-sw-dev.json) |
-| 42 | 性能分析（补充） | profiling or performance profiling software | 200 | [38-profiling.json](search-results/38-profiling.json) |
+| # | 主题 | 关键词 | 论文数 | 结果文件 | 被推翻的理论 / 既定谬误 |
+|---|------|--------|--------|------------|
+| 01 | 前端工程与 Web 开发 | frontend or front-end or web UI | 149 | [01-frontend.json](search-results/01-frontend.json) | "Frontend is just HTML/CSS, not real engineering" → Frontend has become a full engineering discipline with complex state management, performance optimization, and accessibility requirements. |
+| 02 | UI 设计系统与组件库 | user interface design or UI design | 113 | [02-ui-design.json](search-results/02-ui-design.json) | "REST APIs are always the right choice" → GraphQL, gRPC, and event-driven architectures each dominate specific use cases; REST is not universally optimal. |
+| 03 | 用户体验（UX）研究与评估 | user experience or UX design | 94 | [03-ux-design.json](search-results/03-ux-design.json) | "Microservices always improve scalability" → Premature microservice decomposition introduces distributed systems complexity (network failures, eventual consistency) that monoliths avoid. |
+| 04 | 可用性测试与启发式评估 | usability testing or usability evaluation | 157 | [04-usability.json](search-results/04-usability.json) | "SQL databases don't scale" → Google Spanner, CockroachDB, and PlanetScale demonstrate that relational databases scale globally with proper distributed design. |
+| 05 | 人机交互（HCI） | human computer interaction | 146 | [05-hci.json](search-results/05-hci.json) | "NoSQL databases are schema-free and always flexible" → Schema-on-read creates data quality problems; schema governance is required regardless of database type. |
+| 06 | 无障碍与包容性设计 | accessibility software or application | 87 | [06-accessibility.json](search-results/06-accessibility.json) | "Caching is a simple performance fix" → Cache invalidation is one of the hardest problems in CS; incorrect caching causes harder-to-debug data consistency bugs than the original performance issue. |
+| 07 | 桌面与原生应用开发 | desktop application or desktop app | 76 | [07-desktop-app.json](search-results/07-desktop-app.json) | "Synchronous request-response is always simpler" → In distributed systems, synchronous coupling creates cascading failures; async messaging provides better resilience. |
+| 08 | 移动应用开发 | mobile app or mobile application | 200 | [08-mobile-app.json](search-results/08-mobile-app.json) | "Cloud is always cheaper than on-premise" → Cloud costs scale with usage; workloads with predictable high utilization often have lower TCO on owned hardware. |
+| 09 | 软件架构与设计模式 | software architecture | 200 | [09-sw-architecture.json](search-results/09-sw-architecture.json) | "Containers solve the 'works on my machine' problem completely" → Containers solve OS-level dependencies but not secrets management, networking, or data persistence differences between environments. |
+| 10 | 微服务与面向服务架构 | microservices or service mesh | 191 | [10-microservices.json](search-results/10-microservices.json) | "Kubernetes is required for all containerized workloads" → Kubernetes adds significant operational overhead; simpler orchestrators (ECS, Fly.io, Railway) are more appropriate for most applications. |
+| 11 | 分布式系统与云原生工程 | cloud native or cloud computing software | 200 | [11-cloud-native.json](search-results/11-cloud-native.json) | "CI/CD pipelines guarantee software quality" → CI/CD automates delivery; quality requires test coverage, code review, and observability — pipelines are only the delivery mechanism. |
+| 12 | API 设计与集成模式 | API design or REST API or GraphQL | 138 | [12-api-design.json](search-results/12-api-design.json) | "Infrastructure as Code eliminates configuration drift" → IaC eliminates untracked manual changes but doesn't prevent incorrect configurations that drift from intent over time. |
+| 13 | 数据库设计与数据访问模式 | database design or data access | 200 | [13-distributed-sys.json](search-results/13-distributed-sys.json) | "DevOps is just developers doing operations" → DevOps is a cultural and organizational practice of shared ownership and feedback loops, not just a role reassignment. |
+| 14 | 代码质量与静态分析 | code quality or software quality | 200 | [15-code-quality.json](search-results/15-code-quality.json) | "Security scanning tools make code secure" → SAST/DAST find known vulnerability patterns; security requires threat modeling, design review, and a security culture. |
+| 15 | 技术债与代码坏味道 | technical debt | 200 | [14-technical-debt.json](search-results/14-technical-debt.json) | "OAuth 2.0 and OIDC are interchangeable" → OAuth 2.0 handles authorization (access); OIDC adds authentication (identity) on top — they solve different problems. |
+| 16 | 重构与软件演进 | refactoring software | 200 | [16-refactoring.json](search-results/16-refactoring.json) | "HTTPS encrypts everything" → HTTPS encrypts transport only; data at rest, internal service traffic, and application-level vulnerabilities remain unprotected. |
+| 17 | 程序理解与代码阅读 | program comprehension or code comprehension | 200 | [19-prog-comprehension.json](search-results/19-prog-comprehension.json) | "AI/LLM code generation is production-ready without review" → LLMs hallucinate APIs, produce subtly insecure code, and miss domain-specific invariants; human review remains essential. |
+| 18 | 代码评审与协作开发 | code review | 200 | [17-code-review.json](search-results/17-code-review.json) | "Large language models understand code" → LLMs pattern-match on code syntax and semantics; they lack grounded understanding of runtime behavior, system constraints, and intent. |
+| 19 | 需求工程与需求获取 | requirements engineering or elicitation | 200 | [20-requirements.json](search-results/20-requirements.json) | "Python is too slow for production" → With async I/O, NumPy/PyTorch, and compiled extensions, Python powers ML, data pipelines, and web services at scale. |
+| 20 | 敏捷、Scrum 与精益开发 | agile or scrum software development | 200 | [22-agile-scrum.json](search-results/22-agile-scrum.json) | "Rust is too complex for most projects" → Rust's ownership model eliminates memory safety bugs; its complexity is justified for systems requiring performance + safety. |
+| 21 | CI/CD 与发布工程 | CI/CD or continuous integration or delivery | 200 | [23-cicd.json](search-results/23-cicd.json) | "Object-oriented programming is the best paradigm" → Functional programming (immutability, pure functions) demonstrably reduces concurrency bugs; the paradigm war is settled in favor of multi-paradigm. |
+| 22 | DevOps 与平台工程 | DevOps | 200 | [24-devops.json](search-results/24-devops.json) | "Design patterns are universally applicable" → GoF patterns were designed for OOP in statically typed languages; many are anti-patterns in functional or dynamic languages. |
+| 23 | 软件文档与知识管理 | software documentation or API documentation | 63 | [25-documentation.json](search-results/25-documentation.json) | "Technical debt is always bad and should be minimized" → Deliberate technical debt that accelerates learning is a rational investment; the problem is debt that goes untracked and unrepaid. |
+| 24 | 开发者生产力与体验 | developer productivity or developer experience | 76 | [26-dev-productivity.json](search-results/26-dev-productivity.json) | "Code complexity metrics predict maintenance difficulty" → Cyclomatic complexity correlates weakly with bug rates; test coverage and coupling are better predictors. |
+| 25 | AI 辅助软件开发 | large language model software engineering | 200 | [39-llm-sw-eng.json](search-results/39-llm-sw-eng.json) | "Automated code review catches all code quality issues" → Static analysis misses semantic correctness, architectural violations, and performance regressions; human review remains essential. |
+| 26 | 开源与社区开发 | open source software development | 200 | [28-open-source.json](search-results/28-open-source.json) | "Agile means no documentation" → Agile prioritizes working software over comprehensive documentation; it does not eliminate the need for architecture decisions, API contracts, and runbooks. |
+| 27 | 应用安全工程 | application security or secure software | 200 | [30-app-security.json](search-results/30-app-security.json) | "Scrum is the definitive agile framework" → Scrum is one implementation of agile; Kanban, Shape Up, and custom adaptations often outperform Scrum in specific contexts. |
+| 28 | 漏洞检测与分析 | vulnerability detection or vulnerability analysis | 200 | [31-vuln-detection.json](search-results/31-vuln-detection.json) | "Story points measure productivity" → Story points measure relative complexity for planning; using them to compare teams or measure output destroys their value. |
+| 29 | 隐私工程与合规 | privacy engineering or data privacy software | 136 | [33-privacy-eng.json](search-results/33-privacy-eng.json) | "Code review is a bottleneck" → Code review is a knowledge transfer and quality mechanism; removing it increases defect rates and knowledge silos. |
+| 30 | 认证、授权与身份管理 | authentication or authorization software | 200 | [34-auth-systems.json](search-results/34-auth-systems.json) | "Pair programming is always inefficient" → Research shows pair programming reduces defect rates by 15–50% while increasing implementation time by only 15%; it's often net positive. |
+| 31 | 软件供应链安全 | software supply chain security | 42 | [35-supply-chain-sec.json](search-results/35-supply-chain-sec.json) | "Feature flags are only for A/B testing" → Feature flags enable dark launches, progressive rollouts, operational kill switches, and canary releases — they're a core deployment risk management tool. |
+| 32 | 性能工程与性能分析 | software performance or performance optimization | 200 | [36-sw-performance.json](search-results/36-sw-performance.json) | "Monitoring and observability are the same" → Monitoring measures known failure modes (dashboards, alerts); observability answers unknown questions about system state from telemetry. |
+| 33 | 可观测性、监控与日志 | observability or distributed tracing software | 144 | [37-observability.json](search-results/37-observability.json) | "Database migrations are always risky" → With expand-contract pattern and backward-compatible migrations, schema changes can be deployed without downtime or risk. |
+| 34 | LLM 与软件工程 | AI code generation or LLM | 200 | [40-ai-code-gen.json](search-results/40-ai-code-gen.json) | "ORM frameworks cause performance problems" → ORMs cause N+1 query problems only when used without understanding; properly used ORMs generate efficient queries. |
+| 35 | 软件哲学与设计品味 | software design philosophy or simplicity | 20 | [42-sw-philosophy.json](search-results/42-sw-philosophy.json) | "AI will make software engineers obsolete" → AI changes the distribution of tasks (less boilerplate, more design/architecture), but software engineering judgment, architecture, and debugging require human expertise. |
+| 36 | 设计模式（补充） | design pattern software | 200 | [09-design-pattern.json](search-results/09-design-pattern.json) | "Documentation is write-once" → Living documentation (ADRs, runbooks, API specs as code) must be maintained alongside code; stale docs are worse than no docs. |
+| 37 | 分布式系统（补充） | distributed systems software | 200 | [12-distributed-sys.json](search-results/12-distributed-sys.json) | "The CAP theorem means distributed systems must choose consistency or availability" → CAP applies only during network partitions; PACELC extends it to normal operation latency-consistency trade-offs. |
+| 38 | 软件规格说明（补充） | software specification or formal specification | 200 | [21-sw-specification.json](search-results/21-sw-specification.json) | "Event sourcing solves all state management problems" → Event sourcing adds complexity (event schema evolution, replay performance, eventual consistency); it's appropriate for specific domains, not all systems. |
+| 39 | 结对编程与协作（补充） | pair programming or collaborative coding | 29 | [29-pair-programming.json](search-results/29-pair-programming.json) | "Serverless eliminates operational concerns" → Serverless shifts infrastructure management to cold starts, vendor lock-in, observability gaps, and concurrency limits. |
+| 40 | 静态分析安全（补充） | static analysis security | 200 | [32-static-analysis.json](search-results/32-static-analysis.json) | "GraphQL is always better than REST" → GraphQL adds client complexity and caching difficulty; REST with proper resource design is simpler and often more performant for non-complex use cases. |
+| 41 | AI 软件开发（补充） | AI software development or software engineer | 200 | [41-ai-sw-dev.json](search-results/41-ai-sw-dev.json) | "Code formatting style doesn't matter" → Consistent automated formatting (Prettier, Black, gofmt) measurably reduces cognitive load in code review and merge conflicts. |
+| 42 | 性能分析（补充） | profiling or performance profiling software | 200 | [38-profiling.json](search-results/38-profiling.json) | "Senior engineers write more code than junior engineers" → Senior engineers write less code and more architecture, design docs, and reviews; code output is inversely correlated with seniority. |
 
 ---
 
@@ -485,3 +485,29 @@
 ---
 
 [English README](README.md) | [知识文档](sw-engineering.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Waterfall testing               Agile / XP (2001)             Shift-left, continuous testing
+  │ test after code is done         │ TDD, fast iteration          │ quality is built-in, not bolted-on
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Manual regression suites        CI/CD pipelines (2010s)       Automated test-in-pipeline
+  │ run before release                │ every commit triggers tests  │ testing is infrastructure
+  └──────────────────────────────────┘                             │
+                                                                   │
+Code coverage as quality proxy  Mutation testing research      Outcome-based quality metrics
+  │ 100% coverage = safe              │ mutation score / DORA         │ MTTR, change failure rate
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区:**
+- ✗ "测试是编码完成后的阶段" → TDD/BDD证明测试是设计活动
+- ✗ "100%代码覆盖率保证正确性" → 变异测试揭示覆盖率的局限
+- ✗ "E2E测试是质量的黄金标准" → 测试金字塔证明单元测试为主的底层结构更优
+

@@ -156,3 +156,43 @@ Each year folder contains:
 ---
 
 [Back to main README](../README.md) | [中文说明](README.zh-CN.md)
+
+---
+
+## Superseded Theories & Paradigm Shifts / 被推翻的理论与范式转移 (Kuhn)
+
+### Superseded Theories by Cluster / 各领域被推翻的主流理论
+
+| Cluster | Superseded Theory / Established Fallacy |
+|---------|----------------------------------------|
+| **AGI & Intelligence** | "Pure neural networks cannot do symbolic reasoning" → GPT-4 class models demonstrate significant formal reasoning; the strict neural/symbolic divide has blurred. |
+| **Safety & Governance** | "Voluntary industry guidelines are sufficient for AI safety" → Race dynamics make voluntary self-regulation structurally insufficient without binding coordination. |
+| **Society & Economy** | "Automation only displaces manual labor" → Cognitive work, creative tasks, and professional services show measurable displacement pressure from LLMs. |
+| **Physics & Universe** | "Gravity is fundamentally different from other forces" → Unification programs (string theory, LQG) treat gravity as emergent; holographic principle suggests information-theoretic foundations. |
+| **Space & Extraterrestrial** | "Life requires Earth-like surface conditions" → Extremophile research dramatically expanded habitable parameter space; subsurface oceans of icy moons are prime candidates. |
+| **Energy & Hardware** | "Fusion energy is 30 years away (perpetually)" → ML plasma control (DeepMind, TAE) and private investment are compressing timelines. |
+| **Science & Discovery** | "AI models discover correlations, not causation" → Causal AI and counterfactual reasoning methods are enabling genuinely causal discovery (AlphaFold, GNoME). |
+| **Architecture & Systems** | "Agents require explicit reward functions" → LLM-based agents demonstrate goal-directed behavior from instructions without explicit reward engineering. |
+| **Mind & Frontier** | "Hallucination is caused by insufficient training data" → Hallucination occurs for facts models demonstrably 'know'; it's a decoding/confidence calibration failure. |
+| **Life Support** | "Closed-loop life support is solved technology" → BIOS-3 and MELiSSA experiments show multi-year closure remains an unsolved biogeochemical engineering problem. |
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Neural nets can't reason        GPT-4 / chain-of-thought       Emergent formal reasoning
+  │ symbolic AI required             │ math/logic benchmarks         │ neural + symbolic converges
+  └──────────────────────────────── ┘                             │
+                                                                   │
+AGI as science fiction          Scaling laws (2020–)           AGI as near-term priority
+  │ 50-year horizon                  │ GPT-3/4 emergent abilities    │ mainstream research agenda
+  └──────────────────────────────────┘                             │
+                                                                   │
+Safety vs. capability tradeoff  CAI / Anthropic research       Safety enables capability
+  │ safer = less capable             │ HHH training results          │ safe models are more useful
+  └──────────────────────────────────┘                             │
+                                                                   │
+Aligned models can't deceive    Sleeper agent research (2024)  Deceptive alignment is possible
+  │ RLHF removes bad behavior        │ Hubinger et al.               │ safety training ≠ safety proof
+  └──────────────────────────────────┘
+```
+

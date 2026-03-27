@@ -13,50 +13,50 @@
 
 ## 搜索主题（42 个检索）
 
-| 编号 | 主题 | 文件 |
-|------|------|------|
-| 01 | Agent 框架与编排 | `01-agent-framework.json` |
-| 02 | AutoGen / LangChain / CrewAI | `02-autogen-langchain.json` |
-| 03 | Agentic 工作流与流水线 | `03-agentic-workflow.json` |
-| 04 | LLM Agent（通用） | `04-llm-agent.json` |
-| 05 | ReAct：推理+行动 | `05-react-agent.json` |
-| 06 | 思维链+工具调用 | `06-chain-of-thought-act.json` |
-| 07 | 思维树/思维图 | `07-tree-of-thought.json` |
-| 08 | Agent 规划与任务规划 | `08-agent-planning.json` |
-| 09 | 自我反思与自我批评 | `09-self-reflection.json` |
-| 10 | Agent 推理与决策 | `10-agent-reasoning.json` |
-| 11 | LLM 工具使用 | `11-tool-use-llm.json` |
-| 12 | 函数调用 / API 调用 | `12-function-calling.json` |
-| 13 | 工具选择与学习 | `13-tool-selection.json` |
-| 14 | Agent 记忆与情节记忆 | `14-agent-memory.json` |
-| 15 | 长上下文 Agent | `15-long-context.json` |
-| 16 | 记忆模块与 Agent 状态 | `16-memory-module.json` |
-| 17 | 多 Agent + LLM | `17-multi-agent-llm.json` |
-| 18 | Agent 通信与协调 | `18-agent-communication.json` |
-| 19 | 角色扮演 Agent 与人设 | `19-role-playing-agent.json` |
-| 20 | Agent 社会 | `20-society-agents.json` |
-| 21 | Agent 基准测试与评测 | `21-agent-benchmark.json` |
-| 22 | Agent 能力与性能 | `22-agent-capability.json` |
-| 23 | 自主 Agent 评测 | `23-agentic-eval.json` |
-| 24 | Agent 安全与对齐 | `24-agent-safety.json` |
-| 25 | Agent 护栏与约束 | `25-agent-guardrail.json` |
-| 26 | Agent 红队测试 | `26-red-teaming-agent.json` |
-| 27 | Agent 沙箱与隔离 | `27-agent-sandbox.json` |
-| 28 | 代码 Agent / 编程 Agent | `28-code-agent.json` |
-| 29 | SWE-Agent / 软件工程 Agent | `29-swe-agent.json` |
-| 30 | 自主编程与 AI 程序员 | `30-autonomous-coding.json` |
-| 31 | 仓库 / 代码库 Agent | `31-repo-agent.json` |
-| 32 | Web Agent / 浏览器 Agent | `32-web-agent.json` |
-| 33 | 计算机使用 & GUI Agent | `33-computer-use.json` |
-| 34 | Web 导航与浏览 | `34-web-navigation.json` |
-| 35 | RAG + Agent | `35-rag-agent.json` |
-| 36 | 知识检索 Agent | `36-knowledge-agent.json` |
-| 37 | 长程任务 Agent | `37-long-horizon.json` |
-| 38 | Agent 可靠性与鲁棒性 | `38-agent-reliability.json` |
-| 39 | Agent 测试与调试 | `39-agent-testing.json` |
-| 40 | 人机协同 Agent | `40-human-loop-agent.json` |
-| 41 | Agent 监控与可观测性 | `41-agent-monitoring.json` |
-| 42 | 评测框架与 Agent Harness | `42-agent-eval-harness.json` |
+| 编号 | 主题 | 文件 | 被推翻的理论 / 既定谬误 |
+|------|------|---------|
+| 01 | Agent 框架与编排 | `01-agent-framework.json` | "A single monolithic LLM can handle all agent tasks" → Multi-agent specialization, routing, and orchestration are required for complex tasks. |
+| 02 | AutoGen / LangChain / CrewAI | `02-autogen-langchain.json` | "Framework abstractions always reduce complexity" → LangChain/LangGraph abstractions add debugging difficulty; raw LLM API calls are often more debuggable. |
+| 03 | Agentic 工作流与流水线 | `03-agentic-workflow.json` | "Agent workflows should maximize autonomy" → Fully autonomous agents fail silently and compound errors; human-in-the-loop checkpoints are essential. |
+| 04 | LLM Agent（通用） | `04-llm-agent.json` | "LLM agents are reliable for production use out of the box" → Agents fail at rates of 20–60% on real-world tasks; evaluation harnesses and retry loops are mandatory. |
+| 05 | ReAct：推理+行动 | `05-react-agent.json` | "Longer ReAct chains always improve reasoning" → Long chains compound errors; self-verification loops and tool output validation are required. |
+| 06 | 思维链+工具调用 | `06-chain-of-thought-act.json` | "Chain-of-thought always improves agent decisions" → CoT can introduce verbose irrelevant reasoning; step-level verification is needed. |
+| 07 | 思维树/思维图 | `07-tree-of-thought.json` | "Tree of Thought is always better than linear CoT" → ToT's computational cost is prohibitive for most tasks; linear CoT with backtracking is usually sufficient. |
+| 08 | Agent 规划与任务规划 | `08-agent-planning.json` | "Agents can plan effectively without world model grounding" → Ungrounded plans hallucinate feasibility; execution feedback must update the plan iteratively. |
+| 09 | 自我反思与自我批评 | `09-self-reflection.json` | "Agents can self-diagnose all errors through reflection" → Self-reflection has systematic blind spots; external verification agents are more reliable. |
+| 10 | Agent 推理与决策 | `10-agent-reasoning.json` | "Larger models are always better reasoners" → Reasoning quality depends on problem framing; structured output constraints matter more at task level. |
+| 11 | LLM 工具使用 | `11-tool-use-llm.json` | "LLMs reliably use tools without explicit examples" → Without few-shot tool use examples, error rates in parameter formatting and tool selection are high. |
+| 12 | 函数调用 / API 调用 | `12-function-calling.json` | "Function calling eliminates hallucinated API calls" → Hallucinated parameter values and wrong function selection remain common failure modes. |
+| 13 | 工具选择与学习 | `13-tool-selection.json` | "More tools = better agent performance" → Tool overload degrades selection accuracy; tool pruning and dynamic tool retrieval improve performance. |
+| 14 | Agent 记忆与情节记忆 | `14-agent-memory.json` | "Longer context windows solve agent memory" → Long contexts suffer recall degradation at middle positions; explicit memory management outperforms relying on context length. |
+| 15 | 长上下文 Agent | `15-long-context.json` | "LLMs reliably attend to all parts of long contexts" → 'Lost in the middle' effect: retrieval accuracy drops sharply for middle-position information. |
+| 16 | 记忆模块与 Agent 状态 | `16-memory-module.json` | "Vector-store RAG is always the right memory architecture" → Episodic, semantic, and working memory require different storage strategies. |
+| 17 | 多 Agent + LLM | `17-multi-agent-llm.json` | "Multi-agent systems converge to correct answers" → Without consensus mechanisms, multi-agent debates can amplify initial errors. |
+| 18 | Agent 通信与协调 | `18-agent-communication.json` | "Agents communicate reliably via natural language" → Structured message formats (JSON schemas) significantly reduce miscommunication between agents. |
+| 19 | 角色扮演 Agent 与人设 | `19-role-playing-agent.json` | "Role-playing eliminates model behavioral constraints" → Role-playing is a recognized jailbreak vector; system-level constitutional constraints are required. |
+| 20 | Agent 社会 | `20-society-agents.json` | "Larger agent societies produce better outcomes" → Diminishing returns and coordination overhead beyond ~5 agents. |
+| 21 | Agent 基准测试与评测 | `21-agent-benchmark.json` | "High benchmark scores predict real-world agent performance" → Benchmark leakage and task familiarity inflate scores; novel task generalization is still poor. |
+| 22 | Agent 能力与性能 | `22-agent-capability.json` | "Agent capabilities transfer across domains" → Domain-specific tool knowledge does not generalize; agents need domain-specific grounding. |
+| 23 | 自主 Agent 评测 | `23-agentic-eval.json` | "Agent evaluation can rely on LLM-as-judge alone" → LLM judges have systematic biases (position, verbosity, self-preference); ensemble judging is needed. |
+| 24 | Agent 安全与对齐 | `24-agent-safety.json` | "Safety guardrails make agents safe" → Guardrails are bypassable; safety must be embedded in training, architecture, and human oversight. |
+| 25 | Agent 护栏与约束 | `25-agent-guardrail.json` | "Keyword-based guardrails prevent harmful outputs" → Semantic equivalence and paraphrasing easily bypass lexical guardrails. |
+| 26 | Agent 红队测试 | `26-red-teaming-agent.json` | "Red-teaming with a fixed prompt set is comprehensive" → Automated red-teaming explores adversarial space far more thoroughly. |
+| 27 | Agent 沙箱与隔离 | `27-agent-sandbox.json` | "Sandboxing agents prevents all side effects" → Network-based and social engineering side channels can escape code-level sandboxes. |
+| 28 | 代码 Agent / 编程 Agent | `28-code-agent.json` | "Code agents can autonomously maintain large codebases" → Agents lose coherence beyond ~1000 lines; repo-level agents require explicit chunking. |
+| 29 | SWE-Agent / 软件工程 Agent | `29-swe-agent.json` | "SWE-bench performance predicts production software engineering ability" → SWE-bench has distribution leakage; real-world SE is far more open-ended. |
+| 30 | 自主编程与 AI 程序员 | `30-autonomous-coding.json` | "Autonomous coding agents reduce bugs" → Agents introduce new bug patterns while eliminating others. |
+| 31 | 仓库 / 代码库 Agent | `31-repo-agent.json` | "Repo-level agents understand the full codebase" → Context window limits force chunking strategies that lose cross-file dependencies. |
+| 32 | Web Agent / 浏览器 Agent | `32-web-agent.json` | "Web agents work reliably on dynamic pages" → JavaScript-heavy SPAs and anti-bot CAPTCHAs remain major practical barriers. |
+| 33 | 计算机使用 & GUI Agent | `33-computer-use.json` | "Computer-use agents can replace desktop automation scripts" → Reliability and latency of vision-based computer use are still far below scripted RPA. |
+| 34 | Web 导航与浏览 | `34-web-navigation.json` | "DOM-based navigation is more reliable than vision-based" → DOM injection changes frequently; hybrid vision + accessibility tree is most robust. |
+| 35 | RAG + Agent | `35-rag-agent.json` | "RAG eliminates hallucination" → RAG reduces but does not eliminate hallucination; retrieval quality determines output quality. |
+| 36 | 知识检索 Agent | `36-knowledge-agent.json` | "Knowledge graphs + LLMs = factual accuracy" → Knowledge graph coverage is incomplete; LLMs still hallucinate facts not covered by the KG. |
+| 37 | 长程任务 Agent | `37-long-horizon.json` | "LLMs can maintain coherent plans over 100+ steps" → Long-horizon task success rates drop dramatically; checkpointing and replanning are required. |
+| 38 | Agent 可靠性与鲁棒性 | `38-agent-reliability.json` | "Retry loops solve agent reliability" → Retries on the same failed strategy often repeat the same error; retry-with-strategy-switch is needed. |
+| 39 | Agent 测试与调试 | `39-agent-testing.json` | "Traditional software testing applies to agents" → Agent testing requires non-determinism handling, trajectory evaluation, and emergent behavior testing. |
+| 40 | 人机协同 Agent | `40-human-loop-agent.json` | "Human review is only needed for high-stakes decisions" → Human oversight of intermediate agent steps dramatically improves final outcome quality. |
+| 41 | Agent 监控与可观测性 | `41-agent-monitoring.json` | "Logging agent outputs is sufficient observability" → Agent observability requires full execution trace (tool calls, intermediate states, branching decisions). |
+| 42 | 评测框架与 Agent Harness | `42-agent-eval-harness.json` | "Leaderboard rankings are stable proxies for agent quality" → Leaderboard gaming and benchmark contamination make rankings unreliable. |
 
 ---
 
@@ -276,3 +276,25 @@ ChatDev、MetaGPT 等社会级论文被引用最多。
 ---
 
 [English README](README.md) | [知识文档](agent-harness.md) | [返回主目录](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Single monolithic LLM           GPT-4 + tool calling (2023)   Multi-agent orchestration
+  │ one model for everything        │ function calling API          │ specialist agents + router
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Static prompt → output          ReAct paper (2022)            Thought-Action-Observation loops
+  │ input → response                │ interleaved reasoning/action  │ agents iterate on environment
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区:**
+- ✗ "更长的ReAct链总能提升推理" → 长链会放大错误；需要工具输出验证
+- ✗ "RAG消除幻觉" → RAG将问题转移到检索质量
+- ✗ "高基准分数预测真实世界性能" → 基准污染使排行榜分数不可靠
+

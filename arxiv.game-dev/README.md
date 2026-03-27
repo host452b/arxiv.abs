@@ -6,37 +6,37 @@
 
 ## Search Topics (29 Categories)
 
-| # | Topic | Keywords | Papers |
-|---|-------|----------|--------|
-| 01 | Game Engine Architecture | game engine / real-time engine / game loop / engine architecture | 185 |
-| 02 | Real-Time Rendering | real-time rendering / shader programming / rendering pipeline / rasterization | 200 |
-| 03 | Ray Tracing & Global Illumination | ray tracing / global illumination / physically based rendering / path tracing | 200 |
-| 04 | Procedural Content Generation | terrain generation / noise terrain / map generation / world generation | 200 |
-| 05 | Game AI | game AI / behavior tree / game pathfinding / NPC decision making | 200 |
-| 06 | Game Physics | collision detection / rigid body dynamics / physics simulation / physics engine | 200 |
-| 07 | ECS & Architecture Patterns | component based architecture / game object / game framework / engine design | 200 |
-| 08 | Multiplayer & Netcode | multiplayer game / game networking / lag compensation / netcode | 200 |
-| 09 | Game Design & Level Design | game design / level design / MDA framework / game mechanics | 200 |
-| 10 | Roguelike & Procedural Generation | procedural generation / noise function / perlin noise / random map | 200 |
-| 11 | Game UI/UX | user interface design / interaction design / usability / HUD | 200 |
-| 12 | Game Animation & IK | game animation / motion matching / inverse kinematics / character animation | 200 |
-| 13 | Game Performance Optimization | game optimization / level of detail / occlusion culling / GPU performance | 200 |
-| 14 | LLM & Conversational NPC | language model game / LLM NPC / generative AI game / conversational NPC | 185 |
-| 15 | Game Testing & QA | software testing automation / test generation / fuzzing / regression testing | 200 |
-| 16 | Game Audio | audio synthesis / music generation / sound generation / speech synthesis | 200 |
-| 17 | Reinforcement Learning in Games | reinforcement learning game / deep RL game / game playing agent | 200 |
-| 18 | Art Styles & Rendering | neural style transfer / image stylization / artistic rendering / style generation | 200 |
-| 19 | Game Economy & Difficulty | dynamic difficulty adjustment / player skill / adaptive game / reward shaping | 152 |
-| 20 | Game Development Process | agile development / software engineering process / CI/CD / devops | 200 |
-| 21 | Player Experience & Game Feel | user experience / usability study / player satisfaction / game engagement | 200 |
-| 22 | MMO & Online Games | MMORPG / online game server / virtual world / massively multiplayer | 124 |
-| 23 | AI Content Generation | generative model game / AI game design / game content generation | 91 |
-| 24 | Video Game Research | video game / computer game / game player / game experience | 200 |
-| 25 | VR / AR Games | virtual reality game / augmented reality / mixed reality / XR | 200 |
-| 26 | Pathfinding & A* | pathfinding algorithm / A* search / navigation mesh / motion planning | 200 |
-| 27 | Mobile Games | mobile game / mobile application / touch interface / smartphone game | 200 |
-| 28 | Asset Pipeline & Textures | texture compression / texture synthesis / material generation / PBR material | 200 |
-| 29 | Game Narrative | game narrative / interactive story / narrative generation / story game | 143 |
+| # | Topic | Keywords | Papers | Superseded Theory / Established Fallacy |
+|---|-------|----------|-----------|
+| 01 | Game Engine Architecture | game engine / real-time engine / game loop / engine architecture | 185 | "Custom engines are always more efficient than commercial engines" → UE5/Unity optimization has closed the gap; custom engines carry massive maintenance costs that rarely justify the tradeoff. |
+| 02 | Real-Time Rendering | real-time rendering / shader programming / rendering pipeline / rasterization | 200 | "More polygons = better visual quality" → Ray tracing + global illumination, screen-space effects, and LOD management contribute more to perceived quality than raw polygon count. |
+| 03 | Ray Tracing & Global Illumination | ray tracing / global illumination / physically based rendering / path tracing | 200 | "Ray tracing requires full-path tracing to look good" → Hybrid rasterization+ray tracing (DXR) delivers visually comparable results at a fraction of the computational cost. |
+| 04 | Procedural Content Generation | terrain generation / noise terrain / map generation / world generation | 200 | "RNG alone creates interesting procedural content" → Unconstrained randomness produces incoherent content; grammar-based, constraint-satisfaction, and ML PCG produce playable variety. |
+| 05 | Game AI | game AI / behavior tree / game pathfinding / NPC decision making | 200 | "NPCs with large behavior trees feel lifelike" → Tree-based AI becomes brittle and obviously scripted at scale; LLM-powered and RL-trained NPCs adapt dynamically. |
+| 06 | Game Physics | collision detection / rigid body dynamics / physics simulation / physics engine | 200 | "Realistic physics always improves game feel" → Game feel research (Swink) shows intentionally unrealistic physics (exaggerated momentum, forgiving hitboxes) improves perceived quality. |
+| 07 | ECS & Architecture Patterns | component based architecture / game object / game framework / engine design | 200 | "Object-oriented inheritance hierarchies are the right architecture for games" → ECS (Entity Component System) significantly outperforms deep OOP hierarchies for cache performance and composition. |
+| 08 | Multiplayer & Netcode | multiplayer game / game networking / lag compensation / netcode | 200 | "Deterministic lockstep is the only reliable multiplayer architecture" → Rollback netcode (GGPO) provides significantly better experience for fighting and action games than lockstep. |
+| 09 | Game Design & Level Design | game design / level design / MDA framework / game mechanics | 200 | "Difficulty should be determined by player-defined settings" → Dynamic Difficulty Adjustment (DDA) driven by player behavior metrics produces better retention than static settings. |
+| 10 | Roguelike & Procedural Generation | procedural generation / noise function / perlin noise / random map | 200 | "Procedural generation makes games infinitely replayable" → Player fatigue with PCG content shows engagement requires authored 'anchor' moments; pure PCG rarely sustains long-term play. |
+| 11 | Game UI/UX | user interface design / interaction design / usability / HUD | 200 | "Game UI should follow web/app design conventions" → Diegetic and meta UI designs (health bars integrated into environment) consistently outperform HUD-heavy conventional UI in immersion. |
+| 12 | Game Animation & IK | game animation / motion matching / inverse kinematics / character animation | 200 | "Keyframe animation is sufficient for high-quality character motion" → Motion capture + inverse kinematics + procedural blend trees are required for responsive, natural-feeling character motion. |
+| 13 | Game Performance Optimization | game optimization / level of detail / occlusion culling / GPU performance | 200 | "GPU is always the rendering bottleneck" → Draw call overhead, CPU-GPU synchronization, and memory bandwidth are frequently the actual bottlenecks, not raw GPU FLOPS. |
+| 14 | LLM & Conversational NPC | language model game / LLM NPC / generative AI game / conversational NPC | 185 | "LLM-powered NPCs will always say something coherent and on-topic" → Without constrained output schemas and memory management, LLM NPCs produce off-topic or lore-breaking responses. |
+| 15 | Game Testing & QA | software testing automation / test generation / fuzzing / regression testing | 200 | "Human playtesting is required to find most gameplay bugs" → AI playtesting agents systematically explore state spaces that human testers never cover, especially edge cases. |
+| 16 | Game Audio | audio synthesis / music generation / sound generation / speech synthesis | 200 | "Silence is always a mistake in games" → Dynamic audio design and strategic silence create emotional contrast; over-saturated soundscapes cause audio fatigue. |
+| 17 | Reinforcement Learning in Games | reinforcement learning game / deep RL game / game playing agent | 200 | "Minimax with alpha-beta pruning is optimal for game AI" → MCTS + deep RL (AlphaGo/AlphaZero) made alpha-beta pruning obsolete for complex games by learning evaluation functions. |
+| 18 | Art Styles & Rendering | neural style transfer / image stylization / artistic rendering / style generation | 200 | "Photorealism is the goal of all game graphics" → Stylized art directions (cel-shading, pixel art, painterly) show equal or higher player engagement and age significantly better. |
+| 19 | Game Economy & Difficulty | dynamic difficulty adjustment / player skill / adaptive game / reward shaping | 152 | "Monetization via random loot boxes is ethically neutral" → Behavioral economics and gambling addiction research have led to regulatory action in multiple countries. |
+| 20 | Game Development Process | agile development / software engineering process / CI/CD / devops | 200 | "Crunch time is necessary to ship good games" → Post-mortems consistently show crunch reduces code quality, increases bug rates, and destroys team retention. |
+| 21 | Player Experience & Game Feel | user experience / usability study / player satisfaction / game engagement | 200 | "Player retention requires frequent rewards" → Self-determination theory: intrinsic motivation (autonomy, mastery, purpose) sustains engagement better than extrinsic reward schedules. |
+| 22 | MMO & Online Games | MMORPG / online game server / virtual world / massively multiplayer | 124 | "MMOs require monthly subscriptions to be sustainable" → Free-to-play with ethical monetization consistently generates higher total revenue than subscription models. |
+| 23 | AI Content Generation | generative model game / AI game design / game content generation | 91 | "AI-generated game assets will always look low quality" → Stable Diffusion fine-tuned on game art styles now produces pipeline-quality assets for concept and texture work. |
+| 24 | Video Game Research | video game / computer game / game player / game experience | 200 | "Video games are a cultural harm" → 40+ years of media effects research shows no consistent link between game violence and real-world violence; benefits in cognition and social play are documented. |
+| 25 | VR / AR Games | virtual reality game / augmented reality / mixed reality / XR | 200 | "VR is niche because of motion sickness" → Locomotion research shows teleportation and comfort modes reduce sickness to non-problem levels for 90%+ of users. |
+| 26 | Pathfinding & A* | pathfinding algorithm / A* search / navigation mesh / motion planning | 200 | "A* is the optimal pathfinding algorithm for all games" → Hierarchical pathfinding, flow fields, and navigation meshes outperform A* for large crowds and open-world navigation. |
+| 27 | Mobile Games | mobile game / mobile application / touch interface / smartphone game | 200 | "Mobile games must have simple mechanics to succeed" → Deep strategy and RPG mechanics dominate mobile top-grossing charts; complexity + accessibility is the winning formula. |
+| 28 | Asset Pipeline & Textures | texture compression / texture synthesis / material generation / PBR material | 200 | "Uncompressed textures provide the best visual quality" → Texture compression (ASTC, BC7) is perceptually lossless with massive memory and bandwidth savings. |
+| 29 | Game Narrative | game narrative / interactive story / narrative generation / story game | 143 | "Narrative and gameplay are in fundamental tension" → Environmental storytelling, procedural narrative, and ludonarrative consonance research show narrative can reinforce gameplay. |
 
 **5,480 raw results → 5,197 deduplicated abstracts**
 
@@ -385,3 +385,34 @@
 ---
 
 [中文说明](README.zh-CN.md) | [Game Dev Roadmap](readme_game_roadmap.md) | [Back to main](../README.md)
+
+---
+
+## Paradigm Shifts / 范式转移 (Kuhn)
+
+```
+OLD PARADIGM                    Trigger Event                   NEW PARADIGM
+─────────────────────          ─────────────────────          ─────────────────────
+Custom engines for performance  Unreal/Unity optimization      Commercial engines dominate
+  │ proprietary tech = edge          │ UE5 Nanite, DLSS               │ ROI favors off-the-shelf
+  └──────────────────────────────── ┘                             │
+                                                                   │
+Deterministic lockstep netcode  GGPO / rollback research       Rollback netcode standard
+  │ all clients in sync              │ fighting game community       │ predict+rollback feels better
+  └──────────────────────────────────┘                             │
+                                                                   │
+OOP inheritance for game logic  Data-oriented design (2018+)  ECS (Entity Component System)
+  │ deep class hierarchies           │ cache miss profiling           │ composition > inheritance
+  └──────────────────────────────────┘                             │
+                                                                   │
+Alpha-beta pruning game AI      AlphaGo / deep RL (2016+)     MCTS + neural evaluation
+  │ minimax search                   │ self-play learning             │ learned value functions
+  └──────────────────────────────────┘
+```
+
+**已被推翻的认知误区 / Overturned Beliefs:**
+- ✗ "更多多边形 = 更好的视觉质量" → 光线追踪+全局照明和LOD管理对感知质量的贡献远超多边形数量
+- ✗ "真实物理总是改善游戏感受" → 游戏感研究表明，故意不真实的物理（夸张的动量）提升感知质量
+- ✗ "加班是发布优秀游戏的必要条件" → 事后分析一致表明加班降低代码质量、增加缺陷率、摧毁团队留存
+- ✗ "玩家保留需要频繁奖励" → 自我决定理论：内在动机（自主性、掌握感）比外在奖励更持久
+
