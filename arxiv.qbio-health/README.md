@@ -254,25 +254,12 @@ Papers scored by presence of human-health keywords (human subjects, clinical, di
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Dietary fat causes disease      PREDIMED trial (2013)         Refined carbs as primary driver
-  │ low-fat dietary guidelines       │ Mediterranean diet RCT        │ fat quality > quantity
-  └──────────────────────────────── ┘                             │
-                                                                   │
-Genetics determines lifespan    Twin studies / epigenetics     Lifestyle dominates lifespan
-  │ "it's in your genes"             │ Kaati, Waterland studies      │ genetics = ~25% of variance
-  └──────────────────────────────────┘                             │
-                                                                   │
-Gut bacteria = passive flora    Gut-brain axis research (2015+) Microbiome as active organ
-  │ digestion only                   │ Harach amyloid study          │ immune, neural, metabolic effects
-  └──────────────────────────────────┘                             │
-                                                                   │
-Antioxidants prevent aging      Antioxidant RCT meta-analysis  Free radical theory revised
-  │ Vitamin E/C supplements          │ HOPE, GISSI-P null results    │ endogenous ROS signaling needed
-  └──────────────────────────────────┘
-```
+| Old Paradigm | Trigger Event | New Paradigm |
+|---|---|---|
+| **Dietary fat causes disease** — low-fat guidelines as public health gospel | PREDIMED trial (2013): Mediterranean diet RCT | **Refined carbs as primary driver** — fat quality matters more than fat quantity |
+| "It's in your genes" — genetics determines lifespan | Twin studies + epigenetics: Kaati, Waterland studies | **Lifestyle dominates lifespan** — genetics accounts for only ~25 % of variance |
+| **Gut bacteria = passive flora** — digestion only | Gut-brain axis research (2015+): Harach amyloid study | **Microbiome as active organ** — immune, neural, and metabolic effects |
+| **Antioxidant supplements prevent aging** — Vitamin E/C as anti-aging | Antioxidant RCT meta-analyses: HOPE, GISSI-P null results | **Free radical theory revised** — endogenous ROS signaling is necessary, not harmful |
 
 **已被推翻的认知误区 / Overturned Beliefs:**
 - ✗ "膳食脂肪是心血管疾病的主要驱动因素" → PREDIMED等RCT表明地中海饮食（高健康脂肪）降低心血管风险

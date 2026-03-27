@@ -490,21 +490,12 @@
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Waterfall testing               Agile / XP (2001)             Shift-left, continuous testing
-  │ test after code is done         │ TDD, fast iteration          │ quality is built-in, not bolted-on
-  └──────────────────────────────── ┘                             │
-                                                                   │
-Manual regression suites        CI/CD pipelines (2010s)       Automated test-in-pipeline
-  │ run before release                │ every commit triggers tests  │ testing is infrastructure
-  └──────────────────────────────────┘                             │
-                                                                   │
-Code coverage as quality proxy  Mutation testing research      Outcome-based quality metrics
-  │ 100% coverage = safe              │ mutation score / DORA         │ MTTR, change failure rate
-  └──────────────────────────────────┘
-```
+| 旧范式 | 触发事件 | 新范式 |
+|---|---|---|
+| **Waterfall testing** — test only after code is done | Agile / XP (2001): TDD, fast iteration | **Shift-left, continuous testing** — quality is built-in, not bolted on |
+| **Manual regression suites** — run before each release | CI/CD pipelines (2010s): every commit triggers tests | **Automated test-in-pipeline** — testing is infrastructure, not a gate |
+| "100 % coverage = safe" — code coverage as quality proxy | Mutation testing research: mutation score + DORA | **Outcome-based quality metrics** — MTTR and change failure rate replace coverage |
+| **Scripted test cases** — humans write every assertion | LLM test generation (2023+): AI generates test suites | **AI-augmented exploratory testing** — human guides strategy, AI executes |
 
 **已被推翻的认知误区:**
 - ✗ "测试是编码完成后的阶段" → TDD/BDD证明测试是设计活动

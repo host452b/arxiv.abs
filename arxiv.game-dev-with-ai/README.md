@@ -348,25 +348,12 @@
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-AI = NPC scripting only         LLM game NPCs (2023+)         AI co-designer + dynamic content
-  │ rule-based behavior trees       │ ChatGPT NPC experiments       │ generative narrative + world
-  └──────────────────────────────── ┘                             │
-                                                                   │
-Static authored game content    Diffusion models (2022+)       AI-generative asset pipelines
-  │ every asset hand-crafted        │ Stable Diffusion game art     │ style-consistent AI generation
-  └──────────────────────────────────┘                             │
-                                                                   │
-Human playtesters as QA         Agent playtesting (2023+)     AI agents systematically test games
-  │ limited coverage, slow           │ GROOT, CRADLE agents          │ state-space coverage > human
-  └──────────────────────────────────┘                             │
-                                                                   │
-Fixed player difficulty         DDA research (2010s+)         Adaptive difficulty as standard
-  │ player sets easy/medium/hard     │ retention/satisfaction data   │ real-time behavioral adaptation
-  └──────────────────────────────────┘
-```
+| Old Paradigm | Trigger Event | New Paradigm |
+|---|---|---|
+| **AI = NPC scripting only** — rule-based behavior trees | LLM-powered game NPCs (2023+): ChatGPT NPC experiments | **AI co-designer + dynamic content** — generative narrative and world-building |
+| **Static authored game content** — every asset hand-crafted | Diffusion models (2022+): Stable Diffusion game art | **AI-generative asset pipelines** — style-consistent generation at scale |
+| **Human playtesters as QA** — limited coverage, slow cycles | Agent playtesting research (2023+): GROOT, CRADLE agents | **AI agents systematically test games** — state-space coverage exceeds human testing |
+| **Fixed player difficulty** — player chooses easy / medium / hard | DDA research (2010s+): retention and satisfaction data | **Adaptive difficulty as standard** — real-time behavioral adaptation |
 
 **已被推翻的认知误区 / Overturned Beliefs:**
 - ✗ "AI只能生成资产；游戏设计需要人类创造力" → LLMs在迭代共同设计循环中产生超越简单重组的新颖机制和叙事结构

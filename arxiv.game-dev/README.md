@@ -390,25 +390,12 @@
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Custom engines for performance  Unreal/Unity optimization      Commercial engines dominate
-  │ proprietary tech = edge          │ UE5 Nanite, DLSS               │ ROI favors off-the-shelf
-  └──────────────────────────────── ┘                             │
-                                                                   │
-Deterministic lockstep netcode  GGPO / rollback research       Rollback netcode standard
-  │ all clients in sync              │ fighting game community       │ predict+rollback feels better
-  └──────────────────────────────────┘                             │
-                                                                   │
-OOP inheritance for game logic  Data-oriented design (2018+)  ECS (Entity Component System)
-  │ deep class hierarchies           │ cache miss profiling           │ composition > inheritance
-  └──────────────────────────────────┘                             │
-                                                                   │
-Alpha-beta pruning game AI      AlphaGo / deep RL (2016+)     MCTS + neural evaluation
-  │ minimax search                   │ self-play learning             │ learned value functions
-  └──────────────────────────────────┘
-```
+| Old Paradigm | Trigger Event | New Paradigm |
+|---|---|---|
+| **Custom engines for performance** — proprietary tech = competitive edge | Unreal / Unity optimization: UE5 Nanite, DLSS | **Commercial engines dominate** — ROI favors off-the-shelf solutions |
+| **Deterministic lockstep netcode** — all clients must stay in sync | GGPO / rollback research: fighting-game community validation | **Rollback netcode standard** — predict + rollback feels better than lockstep |
+| **OOP inheritance for game logic** — deep class hierarchies | Data-oriented design (2018+): cache-miss profiling results | **Entity Component System (ECS)** — composition over inheritance |
+| **Alpha-beta pruning game AI** — minimax search | AlphaGo / deep RL (2016+): self-play learning | **MCTS + neural evaluation** — learned value functions replace hand-coded heuristics |
 
 **已被推翻的认知误区 / Overturned Beliefs:**
 - ✗ "更多多边形 = 更好的视觉质量" → 光线追踪+全局照明和LOD管理对感知质量的贡献远超多边形数量

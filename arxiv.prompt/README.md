@@ -120,25 +120,12 @@ Each year folder contains:
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Rule-based NLP                  GPT-3 / few-shot (2020)       Prompt-based generalization
-  │ hand-coded templates             │ in-context learning           │ no fine-tuning needed
-  └──────────────────────────────── ┘                             │
-                                                                   │
-Fine-tune per task              InstructGPT / RLHF (2022)     Instruction-following base models
-  │ per-task labeled datasets        │ alignment training            │ general prompt → any task
-  └──────────────────────────────────┘                             │
-                                                                   │
-Human-written fixed prompts     APO / OPRO (2023)             Automated prompt optimization
-  │ artisanal prompt engineering     │ LLM-evaluates-LLM             │ "compile your prompt"
-  └──────────────────────────────────┘                             │
-                                                                   │
-Static prompt templates         RAG + tool use (2023+)        Dynamic retrieval-augmented prompts
-  │ frozen context window            │ external knowledge access     │ grounded, current context
-  └──────────────────────────────────┘
-```
+| Old Paradigm | Trigger Event | New Paradigm |
+|---|---|---|
+| **Rule-based NLP** — hand-coded templates and grammars | GPT-3 / few-shot learning (2020): in-context learning | **Prompt-based generalization** — no fine-tuning needed for new tasks |
+| **Fine-tune per task** — labeled datasets required for every task | InstructGPT / RLHF (2022): alignment training | **Instruction-following base models** — one model handles any task via prompting |
+| **Human-written fixed prompts** — artisanal prompt engineering | APO / OPRO (2023): LLM-evaluates-LLM optimization | **Automated prompt optimization** — treat prompt-writing as a compile step |
+| **Static prompt templates** — frozen context window | RAG + tool use (2023+): external knowledge access | **Dynamic retrieval-augmented prompts** — grounded, always-current context |
 
 **已被推翻的认知误区 / Overturned Beliefs:**
 - ✗ "更长的提示词 = 更好的结果" → 质量 > 数量；聚焦明确的提示胜过冗长堆砌

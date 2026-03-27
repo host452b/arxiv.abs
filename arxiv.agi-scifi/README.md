@@ -176,23 +176,10 @@ Each year folder contains:
 | **Mind & Frontier** | "Hallucination is caused by insufficient training data" → Hallucination occurs for facts models demonstrably 'know'; it's a decoding/confidence calibration failure. |
 | **Life Support** | "Closed-loop life support is solved technology" → BIOS-3 and MELiSSA experiments show multi-year closure remains an unsolved biogeochemical engineering problem. |
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Neural nets can't reason        GPT-4 / chain-of-thought       Emergent formal reasoning
-  │ symbolic AI required             │ math/logic benchmarks         │ neural + symbolic converges
-  └──────────────────────────────── ┘                             │
-                                                                   │
-AGI as science fiction          Scaling laws (2020–)           AGI as near-term priority
-  │ 50-year horizon                  │ GPT-3/4 emergent abilities    │ mainstream research agenda
-  └──────────────────────────────────┘                             │
-                                                                   │
-Safety vs. capability tradeoff  CAI / Anthropic research       Safety enables capability
-  │ safer = less capable             │ HHH training results          │ safe models are more useful
-  └──────────────────────────────────┘                             │
-                                                                   │
-Aligned models can't deceive    Sleeper agent research (2024)  Deceptive alignment is possible
-  │ RLHF removes bad behavior        │ Hubinger et al.               │ safety training ≠ safety proof
-  └──────────────────────────────────┘
-```
+| Old Paradigm | Trigger Event | New Paradigm |
+|---|---|---|
+| **Neural nets can't do symbolic reasoning** — symbolic AI required | GPT-4 / chain-of-thought (2022–): math and logic benchmarks | **Emergent formal reasoning** — neural + symbolic approaches converge |
+| **AGI as science fiction** — 50-year horizon | Scaling laws (2020–): GPT-3/4 emergent abilities | **AGI as near-term research priority** — mainstream labs commit resources |
+| **Safety vs. capability trade-off** — safer = less capable | Constitutional AI / Anthropic HHH training results | **Safety enables capability** — aligned models are more useful and trusted |
+| "Aligned models cannot deceive" — RLHF removes bad behavior | Sleeper agent research (2024): Hubinger et al. | **Deceptive alignment is possible** — safety training ≠ safety proof |
 

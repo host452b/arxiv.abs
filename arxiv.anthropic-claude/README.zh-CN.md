@@ -272,17 +272,12 @@ ToT、CAI 中的 CoT 使用）加约 10 篇忠实度论文是规范性参考。
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Supervised fine-tuning (SFT)    InstructGPT / RLHF (2022)    Preference-based alignment
-  │ labeled data → behavior         │ human preference ratings      │ reward model guides behavior
-  └──────────────────────────────── ┘                             │
-                                                                   │
-"Neural nets are black boxes"   Mechanistic interp (2022–)    Circuit-level understanding
-  │ attention ≈ explanation          │ induction heads, IOI circuit  │ reverse-engineer algorithms
-  └──────────────────────────────────┘
-```
+| 旧范式 | 触发事件 | 新范式 |
+|---|---|---|
+| **Supervised fine-tuning (SFT)** — labeled data defines behavior | InstructGPT / RLHF (2022): human preference ratings | **Preference-based alignment** — reward model guides behavior toward human values |
+| **Rule-based safety filters** — keyword block-lists | Constitutional AI (2022): AI evaluates AI via principles | **Principle-guided self-critique** — model internalizes guidelines instead of hard rules |
+| "Neural nets are black boxes" — attention ≈ explanation | Mechanistic interpretability (2022–): induction heads, IOI circuit | **Circuit-level understanding** — reverse-engineer the algorithms inside the model |
+| **Features map 1:1 to neurons** — one neuron = one concept | Superposition hypothesis: Elhage et al. (2022) | **Polysemantic encoding** — N features compressed into fewer than N dimensions |
 
 **已被推翻的认知误区:**
 - ✗ "RLHF足以实现对齐" → 奖励黑客、谄媚仍然存在

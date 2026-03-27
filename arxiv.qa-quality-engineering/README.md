@@ -409,25 +409,12 @@ The full-spectrum coverage of this collection — from static analysis to produc
 
 ## Paradigm Shifts / 范式转移 (Kuhn)
 
-```
-OLD PARADIGM                    Trigger Event                   NEW PARADIGM
-─────────────────────          ─────────────────────          ─────────────────────
-Testing is a phase              TDD / Agile (2001–2010)       Testing is a design activity
-  │ test after code complete         │ Red-Green-Refactor            │ tests define behavior first
-  └──────────────────────────────── ┘                             │
-                                                                   │
-Test-after QA gatekeeping       DevOps / shift-left             Continuous quality feedback
-  │ release gates, defect triage    │ CI pipelines, pre-commit      │ quality measured every commit
-  └──────────────────────────────────┘                             │
-                                                                   │
-Coverage metrics as quality     Mutation testing (2010s+)      Mutation score / DORA metrics
-  │ "80% coverage = done"            │ PITest, Stryker results        │ change failure rate, MTTR
-  └──────────────────────────────────┘                             │
-                                                                   │
-Manual test scripts             AI-powered test gen (2023+)   LLM-augmented testing
-  │ human writes every case          │ Codium, GitHub Copilot tests  │ AI generates, human reviews
-  └──────────────────────────────────┘
-```
+| Old Paradigm | Trigger Event | New Paradigm |
+|---|---|---|
+| **Testing is a phase** — test only after code is complete | TDD / Agile (2001–2010): Red-Green-Refactor cycle | **Testing is a design activity** — tests define behavior before coding begins |
+| **Test-after QA gatekeeping** — release gates and defect triage | DevOps / shift-left movement: CI pipelines and pre-commit hooks | **Continuous quality feedback** — quality measured at every commit |
+| "80 % coverage = done" — coverage metrics as quality proxy | Mutation testing (2010s+): PITest, Stryker results | **Mutation score / DORA metrics** — change failure rate and MTTR replace line coverage |
+| **Manual test scripts** — humans write every assertion | AI-powered test generation (2023+): Codium, GitHub Copilot | **LLM-augmented testing** — AI generates test suites, humans review and approve |
 
 **已被推翻的认知误区 / Overturned Beliefs:**
 - ✗ "E2E测试是黄金标准" → 测试金字塔证明单元测试为主的底层结构更优
