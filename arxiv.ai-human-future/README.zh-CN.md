@@ -43,10 +43,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Technology determinism** — tech shapes society one-way | STS research (1980s–): SCOT, Actor-Network Theory | **Sociotechnical co-evolution** — society and technology shape each other |
-| **Human enhancement taboo** — hard boundary between natural and artificial | CRISPR / neural interfaces (2020s): cochlear implants normalized | **Enhancement on a spectrum** — progressive normalization of augmentation |
-| **Automation = linear job loss** — robots take jobs wholesale | Task-based displacement research: Acemoglu & Restrepo studies | **Non-linear task substitution** — some tasks automated, complementary tasks grow |
-| **Singularity as science fiction** — a distant, fixed date | GPT-4 capabilities (2023): superforecasting studies | **Scenario planning replaces date predictions** — mainstream risk-management priority |
+| **技术决定论** — 技术单向塑造社会 | STS 研究 (1980s–): SCOT、行动者网络理论 | **社会技术协同演化** — 社会与技术相互塑造 |
+| **人类增强是禁区** — 自然与人工之间有硬性边界 | CRISPR / 神经接口 (2020s): 人工耳蜗已被广泛接受 | **增强是一个连续谱** — 增强技术逐步走向正常化 |
+| **自动化 = 线性失业** — 机器人整批取代岗位 | 基于任务的替代研究: Acemoglu & Restrepo | **非线性任务替代** — 部分任务被自动化，互补任务增长 |
+| **奇点是科幻** — 遥远且固定的日期 | GPT-4 能力 (2023): 超级预测研究 | **场景规划取代日期预测** — 成为主流风险管理优先项 |
 
 **已被推翻的认知误区:**
 - ✗ "图灵测试判断机器意识" → 行为等价性 ≠ 意识

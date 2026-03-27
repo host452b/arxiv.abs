@@ -394,10 +394,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Custom engines for performance** — proprietary tech = competitive edge | Unreal / Unity optimization: UE5 Nanite, DLSS | **Commercial engines dominate** — ROI favors off-the-shelf solutions |
-| **Deterministic lockstep netcode** — all clients must stay in sync | GGPO / rollback research: fighting-game community validation | **Rollback netcode standard** — predict + rollback feels better than lockstep |
-| **OOP inheritance for game logic** — deep class hierarchies | Data-oriented design (2018+): cache-miss profiling results | **Entity Component System (ECS)** — composition over inheritance |
-| **Alpha-beta pruning game AI** — minimax search | AlphaGo / deep RL (2016+): self-play learning | **MCTS + neural evaluation** — learned value functions replace hand-coded heuristics |
+| **自研引擎追求性能** — 专有技术 = 竞争优势 | Unreal / Unity 优化: UE5 Nanite, DLSS | **商业引擎占主导** — ROI 更倾向于现成方案 |
+| **确定性锁步网络代码** — 所有客户端必须保持同步 | GGPO / 回滚研究: 格斗游戏社区验证 | **回滚网络代码成为标准** — 预测 + 回滚比锁步手感更好 |
+| **OOP 继承实现游戏逻辑** — 深层类继承体系 | 面向数据设计 (2018+): 缓存未命中性能分析 | **Entity Component System (ECS)** — 组合优于继承 |
+| **Alpha-beta 剪枝游戏 AI** — 极小极大搜索 | AlphaGo / 深度强化学习 (2016+): 自我博弈学习 | **MCTS + 神经网络评估** — 学习到的价值函数替代手工启发式 |
 
 **已被推翻的认知误区:**
 - ✗ "更多多边形 = 更好的视觉质量" → 光线追踪+全局照明贡献更多于感知质量

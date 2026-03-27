@@ -274,10 +274,10 @@ ToT、CAI 中的 CoT 使用）加约 10 篇忠实度论文是规范性参考。
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Supervised fine-tuning (SFT)** — labeled data defines behavior | InstructGPT / RLHF (2022): human preference ratings | **Preference-based alignment** — reward model guides behavior toward human values |
-| **Rule-based safety filters** — keyword block-lists | Constitutional AI (2022): AI evaluates AI via principles | **Principle-guided self-critique** — model internalizes guidelines instead of hard rules |
-| "Neural nets are black boxes" — attention ≈ explanation | Mechanistic interpretability (2022–): induction heads, IOI circuit | **Circuit-level understanding** — reverse-engineer the algorithms inside the model |
-| **Features map 1:1 to neurons** — one neuron = one concept | Superposition hypothesis: Elhage et al. (2022) | **Polysemantic encoding** — N features compressed into fewer than N dimensions |
+| **监督微调 (SFT)** — 标注数据定义模型行为 | InstructGPT / RLHF (2022): 人类偏好评分 | **基于偏好的对齐** — 奖励模型引导行为朝向人类价值观 |
+| **基于规则的安全过滤** — 关键词黑名单 | Constitutional AI (2022): AI 用原则评估 AI | **原则引导的自我批判** — 模型内化指导方针，而非依赖硬规则 |
+| "神经网络是黑盒" — 注意力权重 ≈ 解释 | 机制可解释性 (2022–): 感应头、IOI 电路 | **电路级理解** — 对模型内部算法进行逆向工程 |
+| **特征与神经元一一对应** — 一个神经元 = 一个概念 | 叠加假说: Elhage 等 (2022) | **多义编码** — N 个特征被压缩进少于 N 个维度 |
 
 **已被推翻的认知误区:**
 - ✗ "RLHF足以实现对齐" → 奖励黑客、谄媚仍然存在

@@ -499,10 +499,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Dietary fat causes disease** — low-fat guidelines as public health gospel | PREDIMED trial (2013): Mediterranean diet RCT | **Refined carbs as primary driver** — fat quality matters more than fat quantity |
-| "It's in your genes" — genetics determines lifespan | Twin studies + epigenetics: Kaati, Waterland studies | **Lifestyle dominates lifespan** — genetics accounts for only ~25 % of variance |
-| **Gut bacteria = passive flora** — digestion only | Gut-brain axis research (2015+): Harach amyloid study | **Microbiome as active organ** — immune, neural, and metabolic effects |
-| **Antioxidant supplements prevent aging** — Vitamin E/C as anti-aging | Antioxidant RCT meta-analyses: HOPE, GISSI-P null results | **Free radical theory revised** — endogenous ROS signaling is necessary, not harmful |
+| **膳食脂肪致病** — 低脂膳食指南被奉为公共卫生圣经 | PREDIMED 试验 (2013): 地中海饮食 RCT | **精制碳水是主要驱动因素** — 脂肪质量比脂肪数量更重要 |
+| "基因决定寿命" — 遗传决定人的寿命长度 | 双胞胎研究 + 表观遗传学: Kaati, Waterland 研究 | **生活方式主导寿命** — 遗传因素仅占约 25 % 的差异 |
+| **肠道细菌 = 被动菌群** — 仅参与消化 | 肠脑轴研究 (2015+): Harach 淀粉样蛋白研究 | **微生物组是主动器官** — 具有免疫、神经和代谢效应 |
+| **抗氧化补充剂预防衰老** — 维生素 E/C 作为抗衰老药 | 抗氧化 RCT 荟萃分析: HOPE, GISSI-P 阴性结果 | **自由基理论被修正** — 内源性 ROS 信号传导是必要的，而非有害 |
 
 **已被推翻的认知误区:**
 - ✗ "膳食脂肪是心血管疾病的主要驱动因素" → 精制碳水化合物和糖是更大的驱动因素

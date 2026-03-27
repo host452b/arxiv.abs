@@ -122,10 +122,10 @@
 
 | 旧范式 | 触发事件 | 新范式 |
 |---|---|---|
-| **Rule-based NLP** — hand-coded templates and grammars | GPT-3 / few-shot learning (2020): in-context learning | **Prompt-based generalization** — no fine-tuning needed for new tasks |
-| **Fine-tune per task** — labeled datasets required for every task | InstructGPT / RLHF (2022): alignment training | **Instruction-following base models** — one model handles any task via prompting |
-| **Human-written fixed prompts** — artisanal prompt engineering | APO / OPRO (2023): LLM-evaluates-LLM optimization | **Automated prompt optimization** — treat prompt-writing as a compile step |
-| **Static prompt templates** — frozen context window | RAG + tool use (2023+): external knowledge access | **Dynamic retrieval-augmented prompts** — grounded, always-current context |
+| **基于规则的 NLP** — 手工编码模板和语法 | GPT-3 / 少样本学习 (2020): 上下文内学习 | **基于提示词的泛化** — 新任务无需微调 |
+| **按任务微调** — 每个任务需要独立标注数据集 | InstructGPT / RLHF (2022): 对齐训练 | **指令跟随基础模型** — 一个模型通过提示处理任意任务 |
+| **人工编写固定提示词** — 手工艺式提示工程 | APO / OPRO (2023): LLM 评估 LLM 优化 | **自动化提示优化** — 将提示词编写视为编译步骤 |
+| **静态提示词模板** — 固定的上下文窗口 | RAG + 工具调用 (2023+): 外部知识访问 | **动态检索增强提示词** — 有依据、始终最新的上下文 |
 
 **已被推翻的认知误区:**
 - ✗ "更长的提示词 = 更好的结果" → 质量 > 数量
