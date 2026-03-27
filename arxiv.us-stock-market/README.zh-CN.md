@@ -203,7 +203,7 @@
 ## 检索文件索引
 
 | 文件 | 主题 | 论文数 | 周期 | 论文观点 / 结论 / 推荐做法 | 被推翻的理论 / 既定谬误 |
-|------|------|--------|------|-----------------------------|
+|---|---|---|---|---|---|
 | 01-momentum.json | 价格动量 | 2 | C02 | 动量效应真实存在，但**因市场子域而异**——在不同市值分层或指数子集中表现不均匀，不可盲目套用。可用物理学"速度×质量"框架量化动量强度。**推荐**：做动量筛选前先过滤流动性，小市值低流动性股票的动量易失真。 | "Momentum investing is speculation with no theoretical basis" → Three-factor and five-factor models now include momentum as a systematic risk premium. |
 | 02-technical-analysis.json | 技术分析 | 23 | 全周期 | 移动平均等技术指标可在特定动态假设下用**对数效用最优化**证明其合理性，与半强有效市场并不矛盾。价格"速度+加速度"比滞后型指标更稳健。支撑/阻力位可建模为最优停止问题。**推荐**：技术分析用于择时而非选股；单独使用无超额收益，结合基本面或机制判断才有效。 | "Technical analysis is financial astrology" → Mathematical analysis shows moving-average strategies have positive expected returns in specific regime conditions. |
 | 03-short-term-trading.json | 短线交易策略 | 200 | C04, C02 | 交易冲击（Price Impact）在各市场具有**普适规律**，与资产类别无关。LSTM/深度学习显著优于经典统计模型预测短期价格。Twitter/Reddit情绪信号可预测短期反转。高波动环境下的交易暂停后，买卖价差异常扩大，存在可利用的微观结构效应。**推荐**：将LSTM与情绪信号融合；高频环境下必须将市场冲击纳入策略成本。 | "Markets always process information instantly (weak-form EMH)" → Microstructure research shows predictable short-term price impact patterns universal across assets. |

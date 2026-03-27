@@ -15,7 +15,7 @@ sycophancy, hallucination, scaling laws, and long-context capabilities.
 ## Search Topics (35 Searches)
 
 | ID | Topic | File | Superseded Theory / Established Fallacy |
-|----|-------|---------|
+|---|---|---|---|
 | 01 | Claude Model Research | `01-claude-model.json` | "Larger Claude models are always safer" → Scale amplifies capability and risk simultaneously; safety properties don't scale automatically with size. |
 | 02 | Anthropic Research | `02-anthropic-research.json` | "AI safety and AI capability are fundamentally in tension" → Anthropic's research demonstrates that safety techniques (CAI, RLHF) often improve helpfulness simultaneously. |
 | 03 | Claude Evaluation & Benchmarks | `03-claude-eval.json` | "Benchmark performance reliably predicts deployment behavior" → Benchmark leakage and dataset contamination make benchmark scores unreliable signals of real-world performance. |

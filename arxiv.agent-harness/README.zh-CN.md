@@ -14,7 +14,7 @@
 ## 搜索主题（42 个检索）
 
 | 编号 | 主题 | 文件 | 被推翻的理论 / 既定谬误 |
-|------|------|---------|
+|---|---|---|---|
 | 01 | Agent 框架与编排 | `01-agent-framework.json` | "A single monolithic LLM can handle all agent tasks" → Multi-agent specialization, routing, and orchestration are required for complex tasks. |
 | 02 | AutoGen / LangChain / CrewAI | `02-autogen-langchain.json` | "Framework abstractions always reduce complexity" → LangChain/LangGraph abstractions add debugging difficulty; raw LLM API calls are often more debuggable. |
 | 03 | Agentic 工作流与流水线 | `03-agentic-workflow.json` | "Agent workflows should maximize autonomy" → Fully autonomous agents fail silently and compound errors; human-in-the-loop checkpoints are essential. |

@@ -28,7 +28,7 @@
 ## 搜索主题（35 组搜索）
 
 | # | 主题 | 关键词 | 论文数 | 结果文件 | 被推翻的理论 / 既定谬误 |
-|---|------|--------|--------|------------|
+|---|---|---|---|---|---|
 | 01 | 软件测试基础与方法论 | software testing | 200 | [01-sw-testing-fund.json](search-results/01-sw-testing-fund.json) | "Testing is a phase after coding" → TDD/BDD proved testing is a design activity; shift-left makes testing the first step. |
 | 02 | 单元测试与组件测试 | unit testing or test-driven development | 179 | [02-unit-testing.json](search-results/02-unit-testing.json) | "Unit tests alone guarantee quality" → Unit tests miss integration failures; contract and integration tests are equally essential. |
 | 03 | 集成测试与系统测试 | integration testing or system testing | 200 | [03-integration-test.json](search-results/03-integration-test.json) | "Integration tests are always slow and flaky" → Hermetic containers (Testcontainers) and mocking at the right level make integration tests fast and reliable. |

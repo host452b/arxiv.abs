@@ -9,7 +9,7 @@
 ## 搜索主题（25 个类别）
 
 | # | 主题 | 关键词 | 论文数 | 文件 | 被推翻的理论 / 既定谬误 |
-|---|------|--------|--------|---------|
+|---|---|---|---|---|---|
 | 01 | AI 辅助游戏开发 | LLM game design / GPT game design / ChatGPT game | 10 | [01](search-results/01-ai-assisted-gamedev.json) | "AI can only generate assets; game design requires human creativity" → LLMs in iterative co-design loops produce novel mechanics beyond simple recombination. |
 | 02 | 混合主动性创意 | mixed-initiative creativity / mixed initiative co-creative | 4 | [02](search-results/02-mixed-initiative.json) | "LLM NPCs are too unpredictable for games" → Constrained generation (character cards, memory, topic filters) enables reliable, lore-consistent LLM NPCs. |
 | 03 | 人机闭环 / 共创 AI | mixed initiative co-creative / co-creative AI design system | 7 | [03](search-results/03-human-in-the-loop.json) | "AI-generated art lacks artistic coherence within a game" → Style-consistent fine-tuned diffusion models produce asset sets with higher visual coherence than stock art. |
@@ -46,10 +46,10 @@
 
 | 年份 | 论文数 | 年份 | 论文数 |
 |------|--------|------|--------|
-| 2013 | 1 | [2022](2022/abstracts/) | 7 | — |
-| 2019 | 3 | [2023](2023/abstracts/) | 8 | — |
-| 2020 | 1 | [2024](2024/abstracts/) | 19 | — |
-| 2021 | 2 | [2025](2025/abstracts/) | 27 | — |
+| 2013 | 1 | [2022](2022/abstracts/) | 7 |
+| 2019 | 3 | [2023](2023/abstracts/) | 8 |
+| 2020 | 1 | [2024](2024/abstracts/) | 19 |
+| 2021 | 2 | [2025](2025/abstracts/) | 27 |
 | | | [2026](2026/abstracts/) | 5 |
 
 > 2024–2026 合计 **51 篇**（占总量 70%），确认该领域集中于 LLM 时代。

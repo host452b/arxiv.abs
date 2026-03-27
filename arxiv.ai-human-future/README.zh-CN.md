@@ -7,7 +7,7 @@
 ## 搜索主题
 
 | # | 主题 | 关键词 | 论文数 | 结果文件 | 被推翻的理论 / 既定谬误 |
-|---|------|--------|--------|-------------|
+|---|---|---|---|---|---|
 | 01 | 生物进化 × AI | 人类/生物进化 + AI/机器智能 | 185 | [01-bio-evolution-ai.json](search-results/01-bio-evolution-ai.json) | "Biological evolution has stopped for modern humans" → Gene-culture co-evolution is ongoing; recent selection signals found in lactase persistence and cognitive traits. |
 | 02 | 种群动态 × 技术 | 种群遗传/动态/人口学 + AI/自动化 | 143 | [02-population-tech.json](search-results/02-population-tech.json) | "Population growth is the primary resource threat" → Resource consumption per capita is a stronger predictor of environmental impact than population size. |
 | 03 | 人工生命 / 数字生命体 | artificial life / digital organism / synthetic life / alife | 106 | [03-artificial-life.json](search-results/03-artificial-life.json) | "Life requires carbon-based chemistry" → Artificial life research demonstrates self-replication and adaptation in purely computational substrates. |

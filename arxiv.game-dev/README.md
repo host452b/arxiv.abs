@@ -7,7 +7,7 @@
 ## Search Topics (29 Categories)
 
 | # | Topic | Keywords | Papers | Superseded Theory / Established Fallacy |
-|---|-------|----------|-----------|
+|---|---|---|---|---|
 | 01 | Game Engine Architecture | game engine / real-time engine / game loop / engine architecture | 185 | "Custom engines are always more efficient than commercial engines" → UE5/Unity optimization has closed the gap; custom engines carry massive maintenance costs that rarely justify the tradeoff. |
 | 02 | Real-Time Rendering | real-time rendering / shader programming / rendering pipeline / rasterization | 200 | "More polygons = better visual quality" → Ray tracing + global illumination, screen-space effects, and LOD management contribute more to perceived quality than raw polygon count. |
 | 03 | Ray Tracing & Global Illumination | ray tracing / global illumination / physically based rendering / path tracing | 200 | "Ray tracing requires full-path tracing to look good" → Hybrid rasterization+ray tracing (DXR) delivers visually comparable results at a fraction of the computational cost. |

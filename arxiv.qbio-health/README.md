@@ -138,7 +138,7 @@
 ## Search Topics
 
 | # | Topic | Keywords | Papers | Results File | Superseded Theory / Established Fallacy |
-|---|-------|----------|--------|-----------------|
+|---|---|---|---|---|---|
 | 01 | Aging & Longevity | aging / longevity / lifespan | 200 | [01-longevity.json](search-results/01-longevity.json) | "Lifespan is primarily genetically determined" → Twin studies show genetics accounts for ~25% of lifespan variance; environment, behavior, and epigenetics dominate. |
 | 02 | Diet & Metabolism | diet / nutrition / fasting / metabolism | 200 | [02-diet.json](search-results/02-diet.json) | "Dietary fat is the primary driver of cardiovascular disease" → PREDIMED and other RCTs show Mediterranean diet (high healthy fat) reduces cardiovascular risk; refined carbohydrates and sugar are larger drivers. |
 | 03 | Exercise & Fitness | exercise / fitness / muscle | 200 | [03-exercise.json](search-results/03-exercise.json) | "More exercise is always better" → Overtraining syndrome and J-curve relationship: extreme endurance athletes show higher cardiovascular risk; recovery is as important as training. |
