@@ -1,0 +1,26 @@
+Title: ARC: Adaptive Rollout Control for Efficient Synchronous LLM Reinforcement Learning
+Authors: Yihui Zhang, Tianyu Wo, Jinghao Wang, Xiao Zhou, Huitian Xue, Xiaoyang Sun, Zeying Wang, Chunming Hu, Renyu Yang
+ID: 2611.29156
+URL: https://arxiv.org/abs/2611.29156
+
+Abstract:
+Synchronous reinforcement learning (RL) for large language models proceeds
+through a repeated rollout--barrier--update loop. Each update must wait for a
+fixed number of complete, group-relative training samples, yet individual
+response lengths and reward outcomes vary widely and only emerge as generation
+progresses. Static admission and unconditional completion therefore leave
+accelerators idle in some steps, and waste computation generating samples that
+will never contribute to the current update. We present ARC, a closed-loop
+rollout architecture that governs synchronous RL rollout at group granularity.
+ARC uses \textit{Calibrated Streaming Backfill} to judge from partial
+observations whether a group is still worth completing, backfilling a fresh
+candidate immediately when it is not; \textit{Deferred Group Completion} to park
+an uncertain early stop and resume it later instead of discarding it outright,
+bounded by a resume-cycle limit that guarantees termination; and
+\textit{Adaptive Admission} and \textit{Pipelining} to order admitted samples by
+early-measured duration and to admit further candidates only while expected
+supply still falls short of the target number of accepted groups. Under online
+evaluation, ARC reduces rollout time by $37.4\%$, a $1.60\times$ speedup, and
+improves effective GRPO throughput by $50.1\%$ over existing baselines, while
+directly recovering 98.9\% of the training groups that would ultimately have
+been kept.

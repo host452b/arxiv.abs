@@ -1,0 +1,19 @@
+Title: SilentWAM: Planning in the Masked State of a Diffusion World Model
+Authors: Ziyu Zhao, Casey Sun, Zeyu Wang, Shicong Ma, Emily T Zhang, Cheng Lu
+ID: 2611.29125
+URL: https://arxiv.org/abs/2611.29125
+
+Abstract:
+World-action models learn from future prediction, but accessing their future
+representations directly at test time can require costly frame generation.
+Methods that generate future frames before planning incur additional forward
+passes, while future co-training methods omit explicit future predictions at
+inference. We introduce \method, a planner that reads the hidden states of
+masked future tokens without decoding future frames. We pretrain MMaDA-
+Parallel-M on driving video using frame-level masked world modeling, which
+predicts a masked suffix of future frames and explicitly includes inputs with
+all future frames masked. Learned planning queries attend to these masked
+positions and the observed context, and a continuous head predicts the
+trajectory in the same forward pass. With a single front camera, \method reaches
+92.0 PDMS on NAVSIM v1 and 89.3 EPDMS on NAVSIM v2, with an end-to-end latency
+of 60.3\,ms.

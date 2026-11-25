@@ -1,0 +1,31 @@
+Title: CHERI under Fault Injection: An Emulation-Based Security Evaluation of Capability Hardware Enhanced RISC Instructions
+Authors: Eva Sophia Schreyer
+ID: 2611.19915
+URL: https://arxiv.org/abs/2611.19915
+
+Abstract:
+Memory-safety vulnerabilities continue to dominate real-world exploit chains
+despite decades of research into software mitigations. CHERI is a hardware
+architecture that enforces spatial and temporal memory safety by augmenting
+pointers with hardware-checked metadata, thus preventing software-based
+exploitation, but its threat model explicitly excludes fault injection. This
+thesis investigates whether targeted fault injection can undermine CHERI's
+memory-safety guarantees in a pure-capability CHERI-RISC-V environment. Two
+fault classes are considered: bit flips corrupting capability metadata, and
+fault-induced check skipping on capability store instructions. We implement
+fault injection primitives in a QEMU-based emulation environment, which enables
+deterministic, repeatable experiments without specialised hardware. With them,
+we demonstrate four attack scenarios: buffer overflows, control-flow hijacking,
+data-only attacks, and use-after-free. Each succeeds with one or two targeted
+faults (lower bounds under the emulation-based setting). Check skipping offers
+an alternative route to control-flow hijacking and data-only attacks, with a
+minimum of one fault. These results show that CHERI's guarantees depend on the
+physical integrity of capability metadata, the uninterrupted execution of
+metadata checks, and the integrity of the revocation bitmap: a single targeted
+fault can circumvent spatial safety, temporal safety, or control-flow integrity.
+CHERI still raises the cost of exploitation, since fault injection is a
+prerequisite for every attack and the sentry mechanism forces an attacker to
+supply a valid tagged capability or spend a second fault restoring the tag.
+Based on these findings, we propose mitigations: ECC-protected capability
+memory, capability field authentication codes, redundant execution of security-
+critical checks, and revocation bitmap integrity verification.

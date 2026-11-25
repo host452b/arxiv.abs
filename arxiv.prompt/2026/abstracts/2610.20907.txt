@@ -1,0 +1,27 @@
+Title: From Detection to Decision: Calibration and Deferral for Prompt-Injection Detection
+Authors: Qianlong Lan, Anuj Kaul, Vinothini Pandurangan, Indranil Sanyal
+ID: 2610.20907
+URL: https://arxiv.org/abs/2610.20907
+
+Abstract:
+Prompt-injection defenses are commonly evaluated as binary detectors, although
+deployed LLM applications must make operational decisions about whether to
+allow, block, or escalate potentially malicious inputs. Recent probabilistic
+decision models aim to support such decisions through calibrated confidence
+estimates, but their reliability under distribution shift remains uncertain. We
+evaluate a native probabilistic decision model (Jev), two Llama Prompt Guard 2
+classifiers (22M and 86M), and an LLM-based judge on 47,611 held-out examples
+spanning direct and indirect prompt injections, hard-benign inputs, obfuscation,
+and distribution shift. Using separate development and calibration splits, we
+assess detection performance, probability calibration, and allow-block-defer
+policies under a frozen evaluation protocol. The LLM judge achieves the highest
+overall discrimination (AUROC 0.897), followed by Jev (0.871), Prompt Guard 2
+86M (0.757), and Prompt Guard 2 22M (0.714). However, Jev's native probabilities
+do not consistently outperform post-hoc calibrated classifier scores, and
+temperature scaling improves calibration without improving discrimination. At an
+empirical false-negative-rate target of 1%, all evaluated gate-reviewer systems
+require more than 91.8% escalation and incur substantial false-positive rates.
+These findings demonstrate that probabilistic outputs alone do not establish
+reliable security decisions under distribution shift. Effective LLM security
+systems must jointly evaluate detection, calibration, reviewer behavior, and
+operational decision policies.

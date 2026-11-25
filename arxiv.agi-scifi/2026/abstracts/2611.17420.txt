@@ -1,0 +1,31 @@
+Title: Euclid Data Release 1 (DR1). Enhancing deep-learning models: the impact of image processing and training data selection for strong-lens detection
+Authors: Euclid Collaboration, M. Fogliardi, P. Holloway, S. Schuldt, P. Rosati, S. H. Vincken, T. Li, N. E. P. Lines, M. Meneghetti, J. W. Nightingale et al.
+ID: 2611.17420
+URL: https://arxiv.org/abs/2611.17420
+
+Abstract:
+Euclid is expected to discover ~$10^5$ galaxy-galaxy strong gravitational lenses
+across ~14,000deg$^2$, requiring automated searches with high completeness and
+low false-positive rates. Despite advances in deep learning, the effects of
+training-set composition, image representation, and preprocessing on survey-
+scale detection remain poorly understood. We present an ablation study of the
+convolutional neural network used in the ECLIPSE strong-lens detection pipeline,
+evaluating different training configurations on a fixed test set. Using
+simulated and real Euclid data, we compare VIS-only and pseudo-RGB
+representations, FITS and JPEG formats, training-set composition, hard-negative
+selection, and multi-stage training. We also assess ensembling on ~67 million
+DR1 cutouts. Training-set composition and strategy strongly affect high-Recall
+performance. Omitting simulation based pre-training reduces high-Recall weighted
+average Precision by 83.7% for VIS-only and 74.5% for pseudo-RGB models.
+Negative-sample selection also substantially affects performance, while FITS
+yields modest gains over JPEG at high Recall (~2-5%). On DR1, the logit-mean
+ensemble improves average Precision by 28.0% and 39.9% over the individual VIS-
+only and pseudo-RGB models. Among ~70,000 candidates selected for visual
+inspection, it recovers 11,256 unique grade A (secure) and B (probable) lenses,
+compared with 9650 and 10,395 for the individual models. The branches show
+complementary ranking preferences, particularly for lenses benefiting from near-
+infrared information. Careful training-set design, realistic negatives, and
+multi-band ensembling improve survey-scale searches. Our final ensemble achieves
+~80% Recall at the operational selection threshold, outperforming ablation
+models with higher global classification metrics and highlighting the need to
+optimise performance for realistic survey conditions.[Abridged]

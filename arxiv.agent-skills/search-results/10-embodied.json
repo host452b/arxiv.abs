@@ -10,11 +10,425 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:36:34Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 744,
-  "return_count": 200,
+  "return_count": 218,
   "papers": [
+    {
+      "id": "2611.33054",
+      "title": "EmbodiSafety: Benchmarking Risk Understanding and Response in Embodied AI",
+      "authors": [
+        "Erfei Cui",
+        "Shengjia Zhao",
+        "Yan Qin",
+        "Kaixuan Wang",
+        "Junming Chen",
+        "Ping Luo",
+        "Tianxing Chen"
+      ],
+      "abstract": "Progress in embodied foundation models is largely measured by task success, while the physical safety of their decisions remains underexamined. Safety evaluations centered on rule following and binary judgments do not adequately assess whether embodied models understand environmental hazards and make safe decisions. We introduce EmbodiSafety, comprising 1,092 snapshot tasks and 540 trajectory tasks across 844 visual scenarios to assess safety over short and long horizons. Six response modes cover direct execution, refusal, clarification, constrained execution, autonomous recovery, and human escalation. Distinguishing recovery from human intervention makes the boundary of safe autonomy an explicit evaluation target. Our protocol assesses mode correctness, risk identification, and actionable handling, with complete decision accuracy requiring all applicable checks to pass. Claude-Opus-5.5 achieves the highest complete decision accuracy among reference models, reaching 56.1% on snapshots and 61.5% on trajectories. We further develop a data construction pipeline and curate 40k examples for safety alignment. Supervised training on this corpus raises the complete decision accuracy of Qwen3.5-2B and Qwen3.5-4B.",
+      "published": "2026-11-24T17:59:05Z",
+      "updated": "2026-11-24T17:59:05Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33054",
+      "abs_url": "https://arxiv.org/abs/2611.33054",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.33010",
+      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
+      "authors": [
+        "Xuanchen Liu",
+        "Hejun Zhang",
+        "Boxuan Dong",
+        "Ying Wu",
+        "Heshuai Li",
+        "Wen Gao",
+        "Yonghong Tian",
+        "Weihao Yu"
+      ],
+      "abstract": "Can a simple mirror expose the limitations of today's robotic manipulation policies? Inspired by the mirror self-recognition test in animal cognition, we investigate whether robot policies can reliably manipulate physical objects in scenes containing their reflections. We introduce RoboDojo-Mirror, a benchmark built on RoboDojo that preserves task objectives, success criteria, and policy checkpoints while comparing a mirror-free baseline with single-mirror, dual-mirror, and mirrored-tabletop conditions. Across five policies spanning Vision-Language-Action models, World Action Models, and agentic policies, every mirror condition reduces aggregate success rates: averaged over the three conditions, the drop ranges from 10.8 to 56.7 percentage points across policies, and it reaches 62.5 points on the mirrored tabletop. Because a mirror is also a physical obstacle, we compare it against geometrically matched non-reflective panels; 50--88\\% of mirror-specific failures occur without recorded robot--panel contact, so direct collisions alone do not explain the degradation. Trajectory and contact analyses instead reveal recurring behaviors consistent with phantom targeting of reflected objects and spatial mislocalization of real ones. Targeted diagnostics further characterize grasping near reflections, policy-dependent pushing progress, and physical-target interaction under main-camera occlusion. Real-robot experiments with $π_{0.5}$ and FastWAM also show lower overall success rates under the upright-mirror and mirrored-tabletop conditions. These findings reveal a shared vulnerability to reflective environments across diverse robot policies and motivate reflection-aware evaluation of embodied intelligence. Code is available at https://github.com/iPPLab/robodojo-mirror.",
+      "published": "2026-11-24T17:32:00Z",
+      "updated": "2026-11-24T17:32:00Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33010",
+      "abs_url": "https://arxiv.org/abs/2611.33010",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31117",
+      "title": "Self-Upgrading Embodied Agents",
+      "authors": [
+        "Jiajun Fan",
+        "Neil He",
+        "Qinglong Zheng",
+        "Changyi Yang",
+        "Tong Wei",
+        "Andy Mao",
+        "Zetian Li",
+        "Chaoran Cheng",
+        "Hui Ren",
+        "Ruihan Guo",
+        "Xianrui Zhong",
+        "Xizheng Yu",
+        "Jingyuan Li",
+        "Xi Zhu",
+        "Kaiqu Liang",
+        "Chang Xu",
+        "Zun Qian",
+        "Zidi Xiong",
+        "Yuezhu Zhao",
+        "Xu Huang",
+        "Ge Liu"
+      ],
+      "abstract": "An embodied agent built on a language model goes to work with the weights it was given and keeps them for life. To get better, it needs more training, or reflection, memory, search or prompts that cost every step and are lost when the task changes. Editing weights by reasoning, weight-space programming, could end this, but has stayed with models that only reason or relied on a far larger commercial model. We introduce the self-upgrading embodied agent, to our knowledge the first that learns from its own experience by upgrading its own weights on the job, between its tasks, with no training, no gradient, no reward model, no second model, no test-time scaling and no harness or prompt engineering. By day a 27B agent works in a household environment. At night it reads its record, finds many of its steps wasted on replies that reach the token limit before any action, traces the habit to one direction in its hidden states, and rewrites one tensor of its weights. An agent that rewrites itself must first never break itself, so it is its own examiner: it tests every change against its unchanged self on practice tasks and keeps only what holds. When an edit holds, the next day it is a better agent, at the same cost per step: over thousands of held-out episodes, 48 fresh seeds a task, its one kept edit makes it complete significantly more tasks, in fewer steps, with fewer wasted and fewer tokens. This self-improvement is multi-round, stable and continual: through the nights that follow, the upgrade holds, without collapse. Of four sizes of its family, only the 27B agent does this. From here on, an embodied agent need not keep training and inference apart: as it works, it gathers its own experience and upgrades itself, with no separate pre-training or post-training and no human intervention. We believe this opens lifelong continual learning for robots: stable, continual, recursive self-improvement.",
+      "published": "2026-11-23T17:53:12Z",
+      "updated": "2026-11-23T17:53:12Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31117",
+      "abs_url": "https://arxiv.org/abs/2611.31117",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30177",
+      "title": "Resource-Aware VLA-MPC Co-Location for Efficient Embodied AI",
+      "authors": [
+        "Zeyu Guo",
+        "Hao Lou",
+        "Yuhui Hao",
+        "Han Zhao",
+        "Zihan Liu",
+        "Jingwen Leng",
+        "Yiming Gan",
+        "Yu Feng",
+        "Minyi Guo"
+      ],
+      "abstract": "Recent advances in embodied artificial intelligence (EAI) have unleashed new potential in many frontiers. Current EAI systems often combine vision-language-action (VLA) inference with high frequency model predictive control (MPC). On mobile GPUs, these workloads are typically serialized, causing control deadline misses. We present Dubot, a framework that automatically schedules VLA inference and MPC on a single mobile GPU. Specifically, Dubot identifies concurrent opportunities and proposes three co-location mechanisms: spatial partitioning, block-level co-location, and intra-block fusion. By leveraging different mechanisms, Dubot enables fine-grained co-location to improve the efficiency of various VLA-MPC operator pairs. Dubot further proposes a co-location optimizer that can determine the optimal co-location schedule under workload dependency, QoS requirements, and hardware-resource constraints. Across representative VLA inference paradigms on NVIDIA Jetson Orin and Thor, Dubot achieves up to 1.4x end-to-end speedup and reduces QoS violations by up to 38%.",
+      "published": "2026-11-23T07:23:23Z",
+      "updated": "2026-11-23T07:23:23Z",
+      "categories": [
+        "cs.AR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30177",
+      "abs_url": "https://arxiv.org/abs/2611.30177",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30067",
+      "title": "FolioWeaver: A LayerGraph-Grounded Agent for Layered Image Generation and Editing",
+      "authors": [
+        "Wentao Lu",
+        "Shengzhe Cui",
+        "Xihao Wu",
+        "Dingxin Yan",
+        "Yixuan Qin",
+        "Pengfei Fang"
+      ],
+      "abstract": "Layered image generation separates images into compositable layers, allowing users to manipulate individual elements independently. However, such asset-level editability does not enable the generation system to interpret successive feedback, perform targeted edits, and preserve unaffected content. We introduce FolioWeaver, a LayerGraph-grounded agent that unifies layered-image generation and iterative editing through a persistent Executable Scene State. FolioWeaver constructs a LayerGraph and generates independent visual assets conditioned on a shared scene reference. An Editing Agent performs feedback-driven modifications and self-repair through scoped actions, selective layer execution, and visual verification, enabling targeted updates while reusing unchanged assets. We also publicly release LayerFolio, a dataset of 100,377 human-reviewed layered scenes spanning six visual domains, together with two evaluation protocols: AtomicQA for measuring requirement satisfaction and CBLP for assessing layer organization. Experiments demonstrate that FolioWeaver achieves superior layer organization and composite fidelity compared with direct layered-generation methods. Analyses validate the contributions of component adaptation, execution-grounded repair, and cross-domain training. FolioWeaver advances layered-image generation toward persistent, controllable, and iterative visual creation. The dataset is available at https://huggingface.co/datasets/FolioWeaver/LayerFolio.",
+      "published": "2026-11-23T05:17:48Z",
+      "updated": "2026-11-23T05:17:48Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30067",
+      "abs_url": "https://arxiv.org/abs/2611.30067",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30004",
+      "title": "EnvTrap: Revealing the Environment-Only Attack Surface in Embodied AI via Consequence-Blind Action Execution",
+      "authors": [
+        "Zehao Liu",
+        "Huashuo Lei",
+        "Xi Lin",
+        "Haoang Li",
+        "Yuliang Chen",
+        "Huarui Zhang",
+        "Yifan Wang"
+      ],
+      "abstract": "As AI models evolve from text and vision to physical agents, embodied AI faces a fundamentally different attack surface. Prior attacks on embodied systems have used crafted instructions, adversarial visual inputs, and training-time policy modifications; we study environment-only object rearrangements with unchanged models and instructions. We reveal an attack surface in safety-critical spatial relations among existing objects. An adversary who rearranges objects, without modifying instructions or accessing models, can cause hazardous consequences. In this work, we propose EnvTrap, a diagnostic pipeline that constructs paired safe, trap, and null-trap (benign but misleading) embodied scenarios. We demonstrate that environment-only perturbations raise hazardous-action rates to an average of 83.4% across the five evaluated action policies, with similar vulnerability patterns confirmed in world models. On a consequence-prediction task, model accuracy remains near chance, while human evaluators achieve high accuracy. We further propose a consequence-aware defense that reduces trap trigger rates by an average of 76.3 percentage points across action policies in simulation and by 62.9 percentage points pooled across physical backends. Together, these findings link environment-only attacks to a broader deficit in physical reasoning: embodied models recognize task-relevant objects yet fail to anticipate how spatial relations change the consequences of acting on them. EnvTrap makes this gap directly testable and turns hazardous layouts into training scenarios for safer embodied action. Our code and data are available at https://github.com/INKSIR/Envtrap.",
+      "published": "2026-11-23T04:08:50Z",
+      "updated": "2026-11-23T04:08:50Z",
+      "categories": [
+        "cs.CR",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30004",
+      "abs_url": "https://arxiv.org/abs/2611.30004",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29969",
+      "title": "CARE-3D: Reinforcement Learning for Evidence Grounded Agentic Reasoning in Situated 3D Scenes",
+      "authors": [
+        "Xiaoqian Hu",
+        "Ruihong Qiu",
+        "Yanran Tang",
+        "Sen Wang"
+      ],
+      "abstract": "Situated 3D reasoning requires embodied agents to interpret objects, scene geometry, and viewpoint dependent spatial relations. Existing methods learn grounded interactions from supervised traces, but largely imitate prescribed evidence acquisition patterns rather than optimizing the support that the returned evidence provides for the correct answer. Moreover, outcome rewards provide limited credit for intermediate tool choices and may leave infrequent tools underexplored. An effective agent should instead adaptively decide what to ground, which tool to invoke, and how to assess the utility of returned evidence. To this end, this paper presents CARE-3D, a reinforcement post-training framework for adaptive grounded reasoning. Supervised fine-tuning (SFT) on grounding instructions first establishes valid interactions, after which Group Relative Policy Optimization (GRPO) optimizes the agent while keeping the 3D grounding module frozen. CARE-3D combines Counterfactual Attribution of Returned Evidence for evidence sensitive credit assignment, and Group Coverage Sampling to preserve tool coverage. Experiments on MSQA and Beacon3D show consistent gains over SFT and GRPO using only answer and format rewards, especially in spatial reasoning and grounding answer coherence. Our code is available at \\href{https://github.com/xiaoqian-UQ/CARE-3D}{CARE-3D}.",
+      "published": "2026-11-23T03:36:02Z",
+      "updated": "2026-11-23T03:36:02Z",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29969",
+      "abs_url": "https://arxiv.org/abs/2611.29969",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27797",
+      "title": "EvoTER: Evolving Embodied Agents via Tool-Use Experience and Reflection",
+      "authors": [
+        "Yingting Zhou",
+        "Yuyin Zhou",
+        "Yongliang Wang",
+        "Haoran Li",
+        "Dongbin Zhao"
+      ],
+      "abstract": "Long-horizon embodied tasks require agents to ground instructions in changing observations, coordinate heterogeneous tools, and recover from failures that can propagate through downstream operations. Although existing LLM-based agents retain experience and refine reusable skills, successful local repairs do not by themselves establish complete-task gains over the current shared procedure library. We present EvoTER, an experience-driven framework that enables embodied agents to self-evolve tool-use skills without updating model parameters. EvoTER operates through a three-role evolution loop: Explorer records tool-use trajectories; Diagnoser distills successful and failed executions into skills for tool selection, parameter computation, postcondition checks, and recovery; and Validator retains candidate revisions only when they improve complete-task success in fresh sessions. In simulation, EvoTER improves overall task success from a pre-evolution baseline of 53.60% to 80.40%. In real-world experiments, simulation initialization reduces the attempts required to acquire short-horizon skills, while continued real-world evolution improves long-horizon success from 20% to 80%-100% across tasks and enables the evolving skill library to incorporate new tool functionality introduced after simulation development. Project page: https://evoter-project.github.io/",
+      "published": "2026-11-20T16:28:51Z",
+      "updated": "2026-11-20T16:28:51Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27797",
+      "abs_url": "https://arxiv.org/abs/2611.27797",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27567",
+      "title": "Mjolnir: Finding and Reproducing Vulnerabilities in Root-of-Trust Firmware and RTL with Project-Grounded Agents",
+      "authors": [
+        "Collin MacDonald",
+        "Carl Lundin",
+        "Stephen Herwig",
+        "Miguel Osorio",
+        "Timothy Trippel"
+      ],
+      "abstract": "A root of trust (RoT) anchors secure boot and attestation for the system above it, so a bug in RoT firmware or hardware undermines every layer that trusts it. LLM agents now find real vulnerabilities in general-purpose software, but RoT code presents two challenges. First, many security-relevant bugs depend on project-specific trust boundaries and fault-injection countermeasures rather than generic vulnerability patterns, and may cause no crash. Second, without RoT hardware, agents must exercise RoT inputs through the project's own hardware model, mocks, or RTL testbenches. We present Mjolnir, an agentic pipeline that supplies each project's threat model and design conventions to discovery and skeptical review agents, and reproduces surviving findings as proof-of-concept tests in the project's own toolchain. We evaluate Mjolnir on six firmware and RTL targets in Caliptra, OpenTitan, and OpenPRoT. On Caliptra's runtime firmware, it reaches 83.3%-100% precision across three models under blind expert labeling, including 100% on Gemini 3.8 Flash versus 66.7%-78.6% for four single-agent baselines on the same model. On 34 known security-relevant bugs in Caliptra's core firmware fixed after the models' training cutoffs, it finds 10 with Gemini 3.8 Flash versus 7 for the best baseline, and 17 with Gemini 4 Argon versus 12. Across our evaluation scans, maintainers have confirmed 64 of Mjolnir's findings as previously unknown security-relevant bugs: 37 across three models on Caliptra's runtime firmware and 27 across single scans of the other five targets.",
+      "published": "2026-11-20T13:04:36Z",
+      "updated": "2026-11-20T13:04:36Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27567",
+      "abs_url": "https://arxiv.org/abs/2611.27567",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.26519",
+      "title": "ACE-Brain-0.7: Learning Execution-Grounded Reasoning for Embodied Agents",
+      "authors": [
+        "Yinhe Wang",
+        "Shijun Shi",
+        "Feng Pan",
+        "Tao Tao",
+        "Wei Mao",
+        "Jiangning Zhang",
+        "Zhiyao Ren",
+        "Yihang Jiao",
+        "Haoming Gu",
+        "Yunpeng Qing",
+        "Jiyu Guo",
+        "Zhi Hou",
+        "Dacheng Tao",
+        "Xiaogang Wang"
+      ],
+      "abstract": "Reliable reasoning for long-horizon embodied tasks requires predictions grounded in the observed execution state. We present ACE-Brain-0.7, a 9B vision--language model that combines spatial grounding, task understanding, and progress estimation. To train the model, we curate 3.7 million question--answer pairs, drawing execution supervision from egocentric human videos, robot episodes, and simulation. These questions span different stages of an execution and connect task-level judgments with observed progress and outcomes. We then fine-tune Qwen3.5-9B on this collection together with additional task, spatial-grounding, and progress-estimation data. Across six public task-reasoning benchmarks, ACE-Brain-0.7 achieves an average score of 76.5, ahead of GPT-6 Astra at 72.7 and Claude Opus 5.5 at 73.5. Our model also leads the evaluated models in spatial grounding, averaging 75.90 across seven benchmarks and reaching 91.25 Acc@0.5 on RefCOCOg. Controlled evaluations further indicate that our task-only model makes more effective use of visual history and more accurately distinguishes execution states. Together, these results show that ACE-Brain-0.7 effectively combines spatial perception with temporal understanding, delivering strong execution-grounded reasoning and comparing favorably with closed-source models.",
+      "published": "2026-11-19T17:59:37Z",
+      "updated": "2026-11-19T17:59:37Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.26519",
+      "abs_url": "https://arxiv.org/abs/2611.26519",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.25580",
+      "title": "FlashX: Scaling Robotic Experience Reuse for Embodied Agents with CBA-Based NAND Flash",
+      "authors": [
+        "Yuseon Choi",
+        "Sanghyeon Park",
+        "Eunjong Lee",
+        "Hanseo Lee",
+        "Sangjin Kim"
+      ],
+      "abstract": "Embodied agents are emerging as a promising paradigm for complex robotic tasks, leveraging Vision-Language-Action (VLA) and World Action Models (WAMs) to generate actions through Diffusion Transformer (DiT)-based iterative denoising. However, existing models often struggle to generalize to out-of-distribution (OOD) environments. We observe that retrieving successful experiences and using them to warm-start denoising enables agents to better adapt to unfamiliar situations while reducing computational overhead. This creates a new opportunity to improve task accuracy and inference efficiency simultaneously, in contrast to conventional acceleration techniques that trade accuracy for computation. However, realizing this opportunity requires scaling experience banks, introducing substantial storage and search overhead that challenges the capacity, bandwidth, and power constraints of edge systems. We propose FlashX, a CMOS Directly Bonded to Array (CBA)-based NAND flash architecture for scalable experience reuse in embodied agents. FlashX exploits CBA's high internal bandwidth for parallel pSLC key search, employing interleaved Compute-in-Flash (CIF) engines to sustain sensing throughput while retaining dense TLC latent storage. Proprioception-aware clustering further reduces search overhead and enables incremental experience acquisition without global reclustering. Evaluations across VLA and WAM workloads demonstrate up to 12.24\\%p and 7.43\\%p improvements in task success under dense and compute-efficient configurations, respectively. FlashX achieves 2.57$\\times$ higher search throughput than the strongest prior NAND search architecture under pSLC sensing, with a further 9.7$\\times$ search reduction through clustering. This delivers 1.29--3.95$\\times$ end-to-end speedup and 1.12--2.34$\\times$ energy efficiency improvement over SSD-based retrieval.",
+      "published": "2026-11-19T06:24:38Z",
+      "updated": "2026-11-19T06:24:38Z",
+      "categories": [
+        "cs.AR",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25580",
+      "abs_url": "https://arxiv.org/abs/2611.25580",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19274",
+      "title": "HospitalBench: Diagnosing Where and Why Embodied Agents Fail on Long Hospital Task Chains",
+      "authors": [
+        "Gaytri Jena",
+        "Kapil Wanaskar",
+        "Aman Chadha",
+        "Vasu Sharma",
+        "Vinija Jain",
+        "Amitava Das"
+      ],
+      "abstract": "Long-horizon embodied tasks fail in ways that end-task success cannot see. HospitalBench is a diagnostic benchmark of ten hospital chores in NVIDIA Isaac Sim, each two unscored warm-up steps followed by a causal chain of five scored sub-tasks in one continuous simulation: the state one step leaves (an object pose, a choice, a fact seen once) determines what the next step must do, unlike benchmarks that place sub-tasks side by side. Vision-language agents act through skill-level tools from camera images. A scripted robot that makes only the calls a model gets is the solvability check of a chore. From each trajectory the benchmark reads where a chain breaks, what the agent did after a failed call, and how far its own position estimate drifts from the true one. This version reports first results only: 15 of 60 planned runs (three models at high effort, one run each on chores T1 and T10 from both start states and T3 from one), with scripted-robot proofs on three of the ten chores. Of the 15 runs, 2 passed all five sub-tasks. Runs still going after sub-tasks 1 to 5 were 15, 8, 4, 2, 2. Of 189 failed calls, 168 were followed by a different call and 111 by a call that did not fail. These are first results and not a full benchmark. We will release the scenes, task chains, scripted robot, evaluation harness and trajectories.",
+      "published": "2026-11-14T09:08:39Z",
+      "updated": "2026-11-14T09:08:39Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19274",
+      "abs_url": "https://arxiv.org/abs/2611.19274",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16487",
+      "title": "HeMeR: Heterogeneous Memory Reconciliation for Embodied Agents via Structured KV Reuse",
+      "authors": [
+        "Saehun Chun",
+        "Wonje Choi",
+        "Jinwoo Jang",
+        "Taeyoon Kwack",
+        "Honguk Woo"
+      ],
+      "abstract": "Embodied agents make decisions by combining information from heterogeneous memory modules, including declarative memory for explicit knowledge, procedural memory for learned routines, and working memory for current observations. During interaction, the memory contents required for decision making change with the agent's state, goal, and task progress, while many contents remain shared across consecutive decisions. However, existing memory modules are typically accessed through separate interfaces, so each updated memory context is often processed as a new input to the foundation model. This prevents selective key-value (KV) cache reuse for unchanged memory contents and forces full KV cache recomputation even when much of the memory context remains valid. We introduce HeMeR, an inference framework that performs KV reconciliation between dynamically updated memory contexts and reusable KV states. HeMeR tracks declarative, procedural, and working memory contents across action decisions, preserves KV states for unchanged contents, and reconciles only the KV states affected by memory-content updates. This enables efficient and stable inference as memory contents evolve during interaction. We evaluate HeMeR on ALFWorld, Habitat, and real-world robotic deployments requiring coordinated use of heterogeneous memory contents. In the real-world setting, HeMeR achieves 83.20% task success and reduces per-step inference time from 2.94 to 1.87 seconds compared with MemRL, while preserving compatible KV states as task progress updates the memory context.",
+      "published": "2026-11-12T08:58:20Z",
+      "updated": "2026-11-12T08:58:20Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16487",
+      "abs_url": "https://arxiv.org/abs/2611.16487",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.13041",
+      "title": "Code-Grounded Agentic Explanations for Static Analysis Vulnerability Findings",
+      "authors": [
+        "Oshando Johnson",
+        "Ranjith Krishnamurthy",
+        "Rohith Kumar Shanmuganathan",
+        "Goran Piskachev",
+        "Eric Bodden"
+      ],
+      "abstract": "Static application security testing (SAST) tools surface vulnerabilities early and their verdicts are rule-based and auditable. Yet developers routinely dismiss findings they cannot interpret. Large language models can supply the missing explanation, but designs that also hand the model the detection give up the auditability that makes static analysis defensible. We keep detection with the analyser and give the model only the explaining. A preliminary user study with 20 participants and a workshop with 19 practitioners yielded five requirements. Guided by these we redesigned SAFE, an open-source IntelliJ IDEA plugin that explains findings from any analyser reporting in the Static Analysis Results Interchange Format. It tiers explanations by demand, ties them to the reported data flow, and replaces the single-prompt backend with an agent that must consult the repository and the rule that fired before answering. A within-subjects crossover experiment with 24 participants compared the redesign against its predecessor. Perceived usability rose from 77.3 to 85.0 on the System Usability Scale. Actionability gained most among the explanation-quality items, the aspect both earlier studies flagged as weakest, and the odds of a correct remediation were 2.6 times higher. Triage accuracy and time per finding were indistinguishable, which we read as uninformative rather than as equivalence. Trust was the one measure that did not move, and the closing interviews indicate that grounding made findings easier to understand rather than easier to believe. Participants also drew a boundary no requirement anticipated, wanting the tool to find and explain while they judge and apply.",
+      "published": "2026-11-09T11:40:08Z",
+      "updated": "2026-11-09T11:40:08Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13041",
+      "abs_url": "https://arxiv.org/abs/2611.13041",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.11509",
+      "title": "Review the Episodes, Refine the Lessons: Simple Memory Evolution for Embodied Agents",
+      "authors": [
+        "Yifei Yao",
+        "Yude Zou",
+        "Xing Gao",
+        "Guanbo Jiao",
+        "Yukai Wang",
+        "Jianming Ma",
+        "Weinan Zhang",
+        "Chunhua Shen"
+      ],
+      "abstract": "Recent studies of embodied agents based on frontier multimodal large language models (MLLMs) develop harness engineering around the MLLM, such as harnesses with post-trained policies and recursive self-improvement loops. Yet whether these additions exceed the native capability of the MLLM remains unexplored. We introduce SimplEvo to explore how far an MLLM can improve under direct control when it retains its execution experience in self-written text memories. It requires no weight updates, post-trained policies, or privileged information. The MLLM writes a coordinate-free task memory once from a single demonstration. Under a strict train-test protocol, it then creates a bounded working memory on training episodes only and refines it after each episode with lessons on procedure, completion, and recovery. Both memories stay fixed at test time. On EBench, SimplEvo lifts the success rate (SR) of GPT-6-Astra under direct control from 46.7% to 81.7%, and tops the RoboDojo leaderboard with 69.63% SR and a score of 75.32. Compared with memories that also store past visual frames, SimplEvo reaches a similar SR with text memory alone while using fewer tokens. With its memories fixed, SimplEvo also generalizes to unseen layouts and randomized scene configurations. Moreover, the working memory transfers across models: written by GPT-6-Astra, it can be reused as is by weaker MLLMs and improve their performance without any adaptation of their own.",
+      "published": "2026-11-08T17:33:29Z",
+      "updated": "2026-11-08T17:33:29Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.11509",
+      "abs_url": "https://arxiv.org/abs/2611.11509",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.10769",
+      "title": "Look Ahead: Search-Driven Reasoning in Embodied AI",
+      "authors": [
+        "Ahmed Zeer",
+        "Osama Shbib",
+        "Muzaffer Kaan Yuce",
+        "Himmet Toprak Kesgin",
+        "Mehmet Fatih Amasyali"
+      ],
+      "abstract": "Search allows a robotic policy to evaluate candidate futures before committing to an action. Motivated by test-time planning for vision-language action (VLA) models, we study selective search over action chunks in PushT using a frozen Action Chunking with Transformers (ACT) policy. Beam search generates perturbed alternatives around the policy prediction and scores them through rollouts from cloned simulator states. Across 50 evaluation episodes, beam search raises task success from 0% to 18% and increases average cumulative reward from 39.44 to 103.2. We introduce One Step Ahead (OSA), a gate that simulates the nominal policy chunk and invokes full search only when its predicted coverage drop exceeds a threshold. In the reported ablations, OSA preserves or improves success while reducing runtime by approximately 3x relative to full beam search. Ablations over tree depth, branching factor, beam width, and replanning frequency show that larger search budgets do not consistently improve performance. The results support selective test-time search for action-chunking policies; evaluation on language-conditioned VLAs and physical robots remains future work.",
+      "published": "2026-11-07T14:58:46Z",
+      "updated": "2026-11-07T14:58:46Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.10769",
+      "abs_url": "https://arxiv.org/abs/2611.10769",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.08390",
+      "title": "SCALE: Real-Time Latent Communication for Cyber-Physical Agents",
+      "authors": [
+        "Shanghao Shi",
+        "Jian Xiao",
+        "Ching-Hsiang Chan",
+        "Sanjoy Baruah",
+        "Sastry Kompella",
+        "Yevgeniy Vorobeychik",
+        "William Yeoh",
+        "Ning Zhang"
+      ],
+      "abstract": "Latent communication enables agents to collaborate efficiently by directly exchanging intermediate model representations rather than raw sensor data or text messages. Existing approaches, however, are primarily designed for LLM agents and do not consider the bandwidth constraints and heterogeneous task deadlines faced by cyber-physical agents. In this work, we propose SCALE, a real-time latent communication method tailored for cyber-physical agents. Motivated by the spatio-temporal continuity of the physical world, SCALE matches tokens across consecutive latent messages using similarity scores to identify reusable information and avoid redundant transmission. It then profiles the semantic gain and communication cost of transmitting different amounts of latent information. Based on these profiles, SCALE employs a real-time scheduler that jointly determines which pending messages to transmit and how many latent tokens to send, subject to available bandwidth and task deadlines. We evaluate SCALE across three cyber-physical benchmarks and a physical spider robot case study under diverse network conditions and heterogeneous task deadlines. Our results show that SCALE significantly improves both task performance and on-time delivery in bandwidth-constrained networks. Our code is available at: https://anonymous.4open.science/r/SCALE-4E80/.",
+      "published": "2026-11-05T18:05:58Z",
+      "updated": "2026-11-05T18:05:58Z",
+      "categories": [
+        "cs.RO",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.08390",
+      "abs_url": "https://arxiv.org/abs/2611.08390",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.07825",
+      "title": "Generate-then-Rank: Learning Symbolic Goal Interpretation for Embodied Agents",
+      "authors": [
+        "Jisen Lei",
+        "Huizhi Liang"
+      ],
+      "abstract": "Goal interpretation is to translate a natural language instruction into a formal symbolic goal that a planner can execute. It is critical for embodied agents because any error here propagates to every downstream planning and action step. Doing it well requires both generating suitable candidates and reliably selecting among them. We present a two-stage generate-then-rank approach to Goal Interpretation in the Embodied Agent Interface (EAI). First, supervised fine-tuning adapts a Large Language Model (LLM) to EAI's output convention. Second, Candidate-Output Ranking from Errors (CORE) learns preferences over complete outputs from the model's own generated alternatives. We conducted experiments on the household scenes of the Embodied Agent Interface Benchmark. Multiple open source LLMs including DeepSeek-V3 chat, DeepSeek-Reasoner, and Qwen2.5-7B and Qwen2.5-72B were evaluated. The proposed method outperformed the baseline models including LLMs with simple prompting, chain-of-thought, and knowledge graph based approaches.",
+      "published": "2026-11-05T11:05:53Z",
+      "updated": "2026-11-05T11:05:53Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.07825",
+      "abs_url": "https://arxiv.org/abs/2611.07825",
+      "source": "arxiv"
+    },
     {
       "id": "2603.19782",
       "title": "Embodied Science: Closing the Discovery Loop with Agentic Embodied AI",
@@ -1751,7 +2165,7 @@
       "authors": [
         "Taco Cohen"
       ],
-      "abstract": "There exist well-developed frameworks for causal modelling, but these require rather a lot of human domain expertise to define causal variables and perform interventions. In order to enable autonomous agents to learn abstract causal models through interactive experience, the existing theoretical foundations need to be extended and clarified. Existing frameworks give no guidance regarding variable choice / representation, and more importantly, give no indication as to which behaviour policies or physical transformations of state space shall count as interventions. The framework sketched in this paper describes actions as transformations of state space, for instance induced by an agent running a policy. This makes it possible to describe in a uniform way both transformations of the micro-state space and abstract models thereof, and say when the latter is veridical / grounded / natural. We then introduce (causal) variables, define a mechanism as an invariant predictor, and say when an action can be viewed as a ``surgical intervention'', thus bringing the objective of causal representation \\\u0026 intervention skill learning into clearer focus.",
+      "abstract": "There exist well-developed frameworks for causal modelling, but these require rather a lot of human domain expertise to define causal variables and perform interventions. In order to enable autonomous agents to learn abstract causal models through interactive experience, the existing theoretical foundations need to be extended and clarified. Existing frameworks give no guidance regarding variable choice / representation, and more importantly, give no indication as to which behaviour policies or physical transformations of state space shall count as interventions. The framework sketched in this paper describes actions as transformations of state space, for instance induced by an agent running a policy. This makes it possible to describe in a uniform way both transformations of the micro-state space and abstract models thereof, and say when the latter is veridical / grounded / natural. We then introduce (causal) variables, define a mechanism as an invariant predictor, and say when an action can be viewed as a ``surgical intervention'', thus bringing the objective of causal representation \\& intervention skill learning into clearer focus.",
       "categories": [
         "cs.AI",
         "cs.LG",
@@ -2326,7 +2740,7 @@
         "Hongyao Tang",
         "Jianye Hao"
       ],
-      "abstract": "Embodied AI development significantly lags behind large foundation models due to three critical challenges: (1) lack of systematic understanding of core capabilities needed for Embodied AI, making research lack clear objectives; (2) absence of unified and standardized evaluation systems, rendering cross-benchmark evaluation infeasible; and (3) underdeveloped automated and scalable acquisition methods for embodied data, creating critical bottlenecks for model scaling. To address these obstacles, we present Embodied Arena, a comprehensive, unified, and evolving evaluation platform for Embodied AI. Our platform establishes a systematic embodied capability taxonomy spanning three levels (perception, reasoning, task execution), seven core capabilities, and 25 fine-grained dimensions, enabling unified evaluation with systematic research objectives. We introduce a standardized evaluation system built upon unified infrastructure supporting flexible integration of 22 diverse benchmarks across three domains (2D/3D Embodied Q\u0026A, Navigation, Task Planning) and 30+ advanced models from 20+ worldwide institutes. Additionally, we develop a novel LLM-driven automated generation pipeline ensuring scalable embodied evaluation data with continuous evolution for diversity and comprehensiveness. Embodied Arena publishes three real-time leaderboards (Embodied Q\u0026A, Navigation, Task Planning) with dual perspectives (benchmark view and capability view), providing comprehensive overviews of advanced model capabilities. Especially, we present nine findings summarized from the evaluation results on the leaderboards of Embodied Arena. This helps to establish clear research veins and pinpoint critical research problems, thereby driving forward progress in the field of Embodied AI.",
+      "abstract": "Embodied AI development significantly lags behind large foundation models due to three critical challenges: (1) lack of systematic understanding of core capabilities needed for Embodied AI, making research lack clear objectives; (2) absence of unified and standardized evaluation systems, rendering cross-benchmark evaluation infeasible; and (3) underdeveloped automated and scalable acquisition methods for embodied data, creating critical bottlenecks for model scaling. To address these obstacles, we present Embodied Arena, a comprehensive, unified, and evolving evaluation platform for Embodied AI. Our platform establishes a systematic embodied capability taxonomy spanning three levels (perception, reasoning, task execution), seven core capabilities, and 25 fine-grained dimensions, enabling unified evaluation with systematic research objectives. We introduce a standardized evaluation system built upon unified infrastructure supporting flexible integration of 22 diverse benchmarks across three domains (2D/3D Embodied Q&A, Navigation, Task Planning) and 30+ advanced models from 20+ worldwide institutes. Additionally, we develop a novel LLM-driven automated generation pipeline ensuring scalable embodied evaluation data with continuous evolution for diversity and comprehensiveness. Embodied Arena publishes three real-time leaderboards (Embodied Q&A, Navigation, Task Planning) with dual perspectives (benchmark view and capability view), providing comprehensive overviews of advanced model capabilities. Especially, we present nine findings summarized from the evaluation results on the leaderboards of Embodied Arena. This helps to establish clear research veins and pinpoint critical research problems, thereby driving forward progress in the field of Embodied AI.",
       "categories": [
         "cs.RO"
       ],
@@ -2518,7 +2932,7 @@
         "Ruddra dev Roychoudhury",
         "Brojeshwar Bhowmick"
       ],
-      "abstract": "Robotic task instructions often involve a referred object that the robot must locate (ground) within the environment. While task intent understanding is an essential part of natural language understanding, less effort is made to resolve ambiguity that may arise while grounding the task. Existing works use vision-based task grounding and ambiguity detection, suitable for a fixed view and a static robot. However, the problem magnifies for a mobile robot, where the ideal view is not known beforehand. Moreover, a single view may not be sufficient to locate all the object instances in the given area, which leads to inaccurate ambiguity detection. Human intervention is helpful only if the robot can convey the kind of ambiguity it is facing. In this article, we present DoRO (Disambiguation of Referred Object), a system that can help an embodied agent to disambiguate the referred object by raising a suitable query whenever required. Given an area where the intended object is, DoRO finds all the instances of the object by aggregating observations from multiple views while exploring \u0026 scanning the area. It then raises a suitable query using the information from the grounded object instances. Experiments conducted with the AI2Thor simulator show that DoRO not only detects the ambiguity more accurately but also raises verbose queries with more accurate information from the visual-language grounding.",
+      "abstract": "Robotic task instructions often involve a referred object that the robot must locate (ground) within the environment. While task intent understanding is an essential part of natural language understanding, less effort is made to resolve ambiguity that may arise while grounding the task. Existing works use vision-based task grounding and ambiguity detection, suitable for a fixed view and a static robot. However, the problem magnifies for a mobile robot, where the ideal view is not known beforehand. Moreover, a single view may not be sufficient to locate all the object instances in the given area, which leads to inaccurate ambiguity detection. Human intervention is helpful only if the robot can convey the kind of ambiguity it is facing. In this article, we present DoRO (Disambiguation of Referred Object), a system that can help an embodied agent to disambiguate the referred object by raising a suitable query whenever required. Given an area where the intended object is, DoRO finds all the instances of the object by aggregating observations from multiple views while exploring & scanning the area. It then raises a suitable query using the information from the grounded object instances. Experiments conducted with the AI2Thor simulator show that DoRO not only detects the ambiguity more accurately but also raises verbose queries with more accurate information from the visual-language grounding.",
       "categories": [
         "cs.RO",
         "cs.AI"

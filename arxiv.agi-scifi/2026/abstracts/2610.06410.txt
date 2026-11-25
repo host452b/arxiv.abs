@@ -1,0 +1,31 @@
+Title: Towards a GPU-Accelerated Real-Time Imaging Pipeline for SETI at the Allen Telescope Array
+Authors: Karen I. Perez, Joe S. Bright, Vishal Gajjar, Luigi F. Cruz
+ID: 2610.06410
+URL: https://arxiv.org/abs/2610.06410
+
+Abstract:
+Traditional technosignature and transient searches commonly operate on
+beamformed time--frequency products. Interferometric imaging adds spatial
+context and allows time-domain searches to be performed across many image pixels
+simultaneously. We report the development and testing of a GPU-accelerated
+interferometric imaging and image-domain dispersion-measure (DM) search pipeline
+for Allen Telescope Array (ATA) post-correlation UVH5 visibility data,
+integrated with the CyberEther streaming framework to replay recorded visibility
+data and work toward real-time operation. The pipeline forms Stokes-I dirty
+images from correlated visibilities, incorporates Inter-Quartile Range
+Mitigation (IQRM) flags into the imaging weights, images 48 frequency subbands
+spanning 287.5\,MHz, subtracts a temporal mean over the full observation from
+each subband and pixel, applies IQRM-informed subband masking, and performs a
+blind trial-DM search using a short-history image ring buffer. On a controlled
+10-minute three-spectral-window test observation containing a periodic dispersed
+pulsed injection (DM\,$\approx$\,150\,pc\,cm$^{-3}$), the pipeline recovers the
+injected source at the phase centre with a best-fit DM\,$=$\,150\,pc\,cm$^{-3}$,
+with individual dispersed pulses reaching a median image-plane S/N of
+$\approx$52. When integrated into CyberEther, the core processing requires
+approximately 63\,ms per integration compared with a native integration time of
+approximately 98\,ms, demonstrating that the core science-processing operations
+can be completed within the available integration time. The present
+implementation operates on recorded visibility data and relies on a temporal
+mean and MAD noise estimate precomputed over the full observation. For live
+operation, these quantities will instead need to be estimated from data
+available up to the current integration.

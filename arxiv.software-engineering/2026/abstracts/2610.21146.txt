@@ -1,0 +1,23 @@
+Title: ExecWeave: Cross-Layer Execution Provenance for Observable Agentic Software
+Authors: Guo-Wei Wong, Meng Chang Chen
+ID: 2610.21146
+URL: https://arxiv.org/abs/2610.21146
+
+Abstract:
+Agentic software invokes tools, launches processes, accesses files, and
+communicates with local or remote services. Application traces describe logical
+operations, whereas operating-system telemetry records machine activity without
+necessarily identifying the responsible agent action. Relating these evidence
+planes is a reconstruction problem: a plausible but unsupported association can
+assign an effect to the wrong principal. We present ExecWeave, a local-first
+system that materializes provider semantics and independently observed runtime
+events into a typed execution graph. The implementation retains separate source
+artifacts, distinguishes logical occurrences from repeated evidence, and records
+attribution, inference, and causal-status metadata. An optional command-to-
+process correlator emits a non-causal inferred bridge only when its bounded
+search yields one compatible observed process; uniqueness within this observed
+candidate set is not a guarantee of causal correctness. OS-observed file and
+network effects acquire a semantic tool or agent principal only through an
+observed process plus a justified command-to-process association; session-
+correlated file-system events do not by themselves provide that principal.
+Source code is available at https://github.com/Irish-kw/ExecWeave.

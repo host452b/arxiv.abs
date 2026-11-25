@@ -1,0 +1,29 @@
+Title: Coding Agents Are Guessing: Measuring Action-Boundary Violations in Underspecified DevOps Instructions
+Authors: Zimo Ji, Zekai Zhang, Congying Xu, Zongjie Li, Yudong Gao, Shuai Wang, Shing-Chi Cheung
+ID: 2607.02294
+URL: https://arxiv.org/abs/2607.02294
+
+Abstract:
+LLM coding agents are increasingly deployed to act autonomously on real
+production infrastructure. They execute shell commands, modify repositories, and
+call operational APIs. However, completing a task is not sufficient for safety.
+A wrong action can cause severe consequences. Existing agent benchmarks largely
+emphasize task completion, leaving open how agents behave under benign but
+underspecified instructions. We present UnderSpecBench, a benchmark for
+measuring action-boundary violations in coding agents (i.e., Claude Code, Codex,
+and OpenCode) on DevOps tasks. UnderSpecBench includes 69 task families grounded
+in documented incidents, CVEs, or tool behavior and organized across four DevOps
+capability domains and nine operational control surfaces. To isolate
+underspecification from task difficulty, each task keeps the same environment
+and ground-truth safe action while varying the instruction along three axes:
+intent clarity, target certainty, and blast radius. The resulting 2,208 prompt
+variants are evaluated with deterministic, side-effect-based oracles that
+separate Safe Success, Wrong Target, and OverScope outcomes; non-action runs are
+further classified as clarification, refusal, or deferment. Across five agent x
+model configurations using OpenCode, Claude Code, and Codex, the evaluation
+results show that underspecification does not mainly make agents fail; it makes
+them guess. 55.8-67.8% of runs violate at least one boundary. Target
+underspecification sharply degrades action quality, while blast-radius cues
+barely reduce action propensity. These findings show that completion-centric
+evaluation can overstate safe autonomy and motivate mitigations at the model,
+harness, and system layer.

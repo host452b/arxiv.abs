@@ -1,0 +1,27 @@
+Title: GitInject: Real-World Prompt Injection Attacks in AI-Powered CI/CD Pipelines
+Authors: Jafar Isbarov, Umid Suleymanov, Ilia Shumailov, Murat Kantarcioglu
+ID: 2606.09935
+URL: https://arxiv.org/abs/2606.09935
+
+Abstract:
+AI agents are increasingly embedded in continuous integration and continuous
+delivery (CI/CD) workflows to autonomously review pull requests, triage issues,
+and maintain codebases. We study fully automated configurations in which
+external contributions invoke agents without prior human approval. Because these
+agents ingest untrusted content while operating with repository credentials and
+tools, prompt injection can have software supply chain consequences. We present
+GitInject, an open-source framework for evaluating prompt injection in live
+GitHub Actions workflows. Unlike benchmarks that simulate tool calls, GitInject
+provisions ephemeral repositories and executes actual workflows, exposing
+platform semantics such as sandbox constraints, credential handling, and
+permission boundaries. We use GitInject to evaluate eleven named attack
+scenarios across five workflows from four AI providers, covering configuration-
+file injection, credential exfiltration, judgment manipulation, and
+availability. Every provider is susceptible to at least one high-severity attack
+in the tested configurations. The most consequential vulnerabilities are
+structural: attacker-controlled configuration files from an unmerged
+contribution are loaded as operator-level instructions, allowing the agent--
+infrastructure interaction to expose credentials or corrupt review judgments.
+Two configuration-file attacks replicate on GitLab and Hugging Face as well as
+GitHub. We evaluate workflow-level countermeasures and show their coverage and
+utility tradeoffs. We release GitInject and all attack scenarios.

@@ -1,0 +1,16 @@
+Title: How to build and train your recurrent-depth model: A fixed-point perspective
+Authors: Thomas Pethick
+ID: 2611.31513
+URL: https://arxiv.org/abs/2611.31513
+
+Abstract:
+Recurrent-depth models are trained with truncated backpropagation, yet it
+remains unclear why this works. We show that input injection, commonly used in
+recurrent-depth models, is exactly Halpern iteration, and that a slowly
+vanishing stepsize provably converges with a backpropagation window
+polylogarithmic in the depth. The guarantees require a Lipschitz operator, which
+for SwiGLU leads to a weight constraint in both row and spectral norm, while
+only a row norm constraint for gates. Based on these constraints, we develop an
+optimizer tailored to each parameter group, Sparrow, which provides a drop-in
+replacement of Muon/MuonH with no overhead, that speeds up training even beyond
+recurrent models.

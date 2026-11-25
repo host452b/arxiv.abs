@@ -1,0 +1,30 @@
+Title: A Rowhammer attack on Fil-C's software capabilities
+Authors: Amir Naseredini, Suhas Viswanath, Martin Berger
+ID: 2610.33748
+URL: https://arxiv.org/abs/2610.33748
+
+Abstract:
+Fil-C retrofits spatial and temporal memory safety onto C/C++ using software
+capabilities (bounds that are checked at every pointer dereference). Fil-C's
+guarantee rests on an unstated hardware assumption: that DRAM preserves the
+capabilities. We show that Rowhammer breaks it. In Fil-C 0.679 a part of each
+heap pointer's capability lives in a 16-byte header stored inline in ordinary
+DRAM immediately before the object pointed to, with no mechanism to prevent
+capabilities from corruption. A single 0 &rarr; 1 bit flip in the capability's
+upper-bound expands the pointer's permitted range by 2<sup>k</sup> bytes and is
+invisible to the runtime, raising no panic or signal. We demonstrate this by
+using Fil-C to <i>convert</i> existing Rowhammer attacks into concrete attacks
+against a heterogeneous collection of victim software. To aid reproducibility
+(not everybody has DRAM vulnerable to Rowhammer) we split our demonstration into
+two paths. First, along a <i>deterministic path</i>, we isolate Fil-C as a novel
+attack vector using a deterministic, Rowhammer-like fault-injection model.
+Across four case studies, this model corrupts the upper-bound word of a pointer,
+permitting previously out-of-bounds reads and writes. We use this to achieve a
+bounded read/write window, secret disclosure, privilege escalation by flipping
+an adjacent <code>is_admin</code> field, and the leakage of a tenant API key in
+a multi-tenant credential service backed by SQLite (compiled under Fil-C).
+Second, along a <i>physical end-to-end path</i>, we demonstrate all four attacks
+on real hardware equipped with DDR3 memory, and with Target Row Refresh (TRR)
+equipped DDR4, proving the exploits are physically realisable. The latter attack
+shows that the TRR defence does not close the Fil-C delivery channel. We close
+with a discussion of Fil-C-specific mitigations.

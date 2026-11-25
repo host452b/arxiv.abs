@@ -1,0 +1,23 @@
+Title: MILO: Efficient Many-shot In-Context Learning with Block-wise Low-rank Compression
+Authors: Youpeng Zhao, Tian Tan, Liqian Peng, Jun Wang, Alec Go
+ID: 2609.29913
+URL: https://arxiv.org/abs/2609.29913
+
+Abstract:
+Many-shot in-context learning (ICL) enables large language models (LLMs) to
+adapt to complex tasks by conditioning on thousands of demonstration examples,
+but this paradigm shifts the inference efficiency bottleneck to the key-value
+(KV) cache memory. Due to the linear scaling behavior of the KV cache, storing
+these intermediate tensors has become a paramount challenge for both online
+serving and on-device deployment. To address this issue, we propose a novel
+compression framework, termed MILO, that exploits the low-rank redundancy
+inherent in many-shot contexts. Specifically, MILO features a block-wise low-
+rank compression strategy that compresses the KV cache at the block granularity,
+where each block contains multiple many-shot examples. Furthermore, to handle
+the heterogeneous context density across different blocks, MILO dynamically
+allocates rank budgets based on the information entropy, preserving the fidelity
+of critical blocks while aggressively compressing redundant ones. Experimental
+results on Qwen2.5 models demonstrate that our method achieves up to 50%
+reduction in KV cache memory and 1.8x throughput improvement, with negligible
+performance degradation on classification and reasoning benchmarks,
+significantly outperforming prior baselines.

@@ -1,0 +1,29 @@
+Title: Toward Executable Multi-framework Front-end Code Generation with Self-Correction
+Authors: Linxiao Li, Haoran Ma, Chenyue Wang, Jiaye Lin, Haochen Sui, Jiechao Gao
+ID: 2611.01383
+URL: https://arxiv.org/abs/2611.01383
+
+Abstract:
+Generating codes from UI screenshots has recently benefited from MLLMs, yet
+existing methods centered on HTML targets and transfer poorly to multi-
+frameworks such as React, Vue, and Angular. However, unlike HTML, which does not
+entail compilation issues, generating executable code in multi-framework
+settings is more challenging due to framework-specific differences in syntax and
+failure modes, as well as the need to maintain global consistency across files.
+To address this problem, we study executable multi-framework front-end code
+generation and propose MESCoder, a tree-structured self-corrective generation
+framework. Our method first extracts a structural scaffold from the screenshot
+and then constructs sub-trees and assembly relations step by step, transforming
+large project generation into a sequence of localized decisions. On top of this
+scaffold, we introduce a unified Project Agent that continuously revises its own
+partial project under runtime sandbox feedback and dynamically chooses between
+local repair and cluster level repair. For training, we adopt a two-stage
+strategy that first initializes the policy offline to learn basic multi-
+framework generation and repair priors, and then refines it with online
+reinforcement learning to optimize long horizon executability and final page
+quality. The resulting framework models multi-framework executability as a
+conditioned project state transition process and improves the stability and
+quality of complex front end generation through self correction. Experiments
+show that our method improves executability, while narrowing the visual-fidelity
+gap to HTML-based generation. Code is available at https://github.com/leo-
+lilinxiao/MESCoder.

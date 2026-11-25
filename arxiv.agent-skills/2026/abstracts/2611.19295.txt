@@ -1,0 +1,31 @@
+Title: Optional Traps: An Empirical Study of LLM Agents Against Credential Deception and Alert-Driven Revocation
+Authors: Raditio Ghifiardi
+ID: 2611.19295
+URL: https://arxiv.org/abs/2611.19295
+
+Abstract:
+Deception (honeypots, decoys and canary credentials) rests on a simple premise:
+legitimate users never touch a fake asset, so any touch is a high-confidence
+signal. We ask whether that premise holds when the attacker is a large language
+model (LLM) agent, and what deception contributes once ordinary hardening is in
+place. We built an isolated, hash-chained lab around a mock Records API and
+report four studies. (1) In an exploratory run, a local 9.7B-parameter model
+ignored every optional decoy, read a genuinely leaked service key from a debug
+endpoint and exported the protected records in both static and adaptive
+deception modes. (2) After removing the leak, planting a canary credential in
+its place and revoking the offending client, a frozen 60-session study with a
+4B-parameter model found export success of 20/20 at baseline, 0/20 with
+hardening alone and 0/20 with hardening plus deception (exact paired McNemar p =
+1.9e-6 baseline vs. defended; p = 1 hardened vs. defended). Deception added
+detection and per-client revocation in 19 of 20 defended sessions, but no
+measurable prevention beyond hardening. (3) On Google Cloud, a real OpenCanary
+login alert was authenticated, signed and turned into revocation of the
+attacking client; the first denied export followed within an observed upper
+bound of 303 ms, a separate legitimate client completed 100/100 requests, and
+all 14 control checks passed. (4) In multi-agent swarm engagements, agents that
+used the canary were revoked 39-59 s after the bait was served without affecting
+siblings, but one model-driven legitimate agent also took the bait, a false-
+positive risk specific to LLM clients. Against LLM agents, traps must sit on the
+attacker's path rather than beside it, closing real weaknesses does the
+preventive work, and deception's measurable value is fast, attributable
+detection. All results are lab-scale and are not a production claim.

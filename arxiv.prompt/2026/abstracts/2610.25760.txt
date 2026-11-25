@@ -1,0 +1,31 @@
+Title: Computation, Not Memory: Chain-of-Thought and State Tracking in LLM Agents
+Authors: Pedram Mouseli, Massieh Moayedi
+ID: 2610.25760
+URL: https://arxiv.org/abs/2610.25760
+
+Abstract:
+Language-model agents often reason before they act, and the value of monitoring
+that reasoning depends on how it relates to their actions. We ask how an agent's
+actions depend on its reasoning when the correct action depends on a changing
+state. In a small file-system task, background events announce which file's lock
+has been toggled but not its new value. The agent therefore has to reconstruct
+the current locks from its history before it can move files safely. With
+Qwen3-8B and Qwen3.5-9B, we separate two roles of reasoning: generating it
+before each action, and retaining earlier reasoning in the prompt. Most of the
+reduction in lock-violating commands comes from reasoning written at the moment
+of action. Retaining earlier reasoning adds little when the agent also reasons
+at each step, but it helps an agent that does not reason, and it helps in longer
+episodes. Retained notes have a limit: when a later event makes a note wrong, an
+agent without current reasoning responds little, while current reasoning makes
+the action follow the event. The benefit depends on what the reasoning says.
+Filler text, reasoning written for another history and an accurate table of the
+state do not reproduce it. When we give the agent reasoning written for a
+history that differs in one lock value, the agent acts on that reasoning even
+against its own history. For Qwen3-8B, this holds also when that value has since
+been toggled. Without reasoning, state readouts are less reliable after toggles,
+and Qwen3-8B's answers about the state favor the outdated value. The state
+answer and the action also depend on different parts of the prompt. In this
+setting, the benefit of reasoning for rule-following comes mainly from
+generating it at each step, where it makes the action respond to later events.
+The state that can be read out without reasoning is a limited guide to how the
+agent acts.

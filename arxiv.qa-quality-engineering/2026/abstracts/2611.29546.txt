@@ -1,0 +1,29 @@
+Title: ParseGap: Testing What Coding Agents Authorize and What Shells Execute
+Authors: Jieyu Li
+ID: 2611.29546
+URL: https://arxiv.org/abs/2611.29546
+
+Abstract:
+LLM coding agents authorize shell commands by parsing a command string against a
+policy and passing the raw string to a system shell, so the gate adjudicates one
+reading while the shell executes another. We present ParseGap, a differential
+testing framework that runs each command through an unmodified vendor checker
+and GNU Bash 5.2 in an isolated container, flagging a violation whenever an
+approved command produces policy-violating runtime effects. Across eight
+production coding agents, ParseGap identifies 17 root causes across three
+divergence boundaries: at the parse, where an upstream tree-sitter-bash defect
+hides a second command from Mistral Vibe and Gemini CLI; at the utility, where
+every checker permits read-only binaries whose arguments write files or launch
+programs (9-47 of 55 cases); and at confinement, where an allow rule in OpenAI
+Codex CLI disables its read-only OS sandbox. Live trials across two frontier
+models triggered policy violations in all 16 agent-model pairs (14 under
+configured restrictions). To eliminate the second reading, we design ShellPlan,
+which compiles a strict Bash subset once into a typed execution plan, validates
+utility arguments against positive capability specifications, and dispatches
+approved plans directly via execve without a shell. Over a formal operational
+model, we prove single-interpretation dispatch and bound touched programs and
+files under audited assumptions. ShellPlan admitted 0/4,174 active attacks
+across six static suites and 0/90 hits in a ten-model agent benchmark (62/90
+unguarded) at 1.28 ms median gate latency, preserving 36/36 (100%) frontier
+standard-dev completion (74/100 overall) and 0/348 external over-allows outside
+modeled exceptions.

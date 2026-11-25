@@ -1,0 +1,26 @@
+Title: Extracting Next Generation Access Control Policies from Natural Language Using LLMs: An Intermediate-Representation Approach with Back-Translation Verification
+Authors: Ayesha Habib, Huixiang Zhang, Waiz Haider
+ID: 2611.26941
+URL: https://arxiv.org/abs/2611.26941
+
+Abstract:
+Organizations write access-control rules in natural language, but NIST's Next
+Generation Access Control (NGAC) needs them as a formal policy graph. Large
+language models (LLMs) can automate this translation, but their output can break
+the format, add rules the text does not state, or drop conditions. We present
+NGAC-IR, which follows model-driven engineering (MDE). First, the LLM fills in
+an intermediate representation (IR), a JSON template that records who may, must
+or must not do what, on which resource and under which condition; a grammar
+keeps the output within this template. Second, a compiler that uses no LLM
+converts the IR into an NGAC policy graph and links each rule to its source
+sentence. Third, a back-translation check writes each rule in English and asks
+an LLM whether the source sentence states it. On four public datasets, all
+outputs could be compiled, compared with 95.5% without the grammar, and 95.7%
+were faithful to their sentence. NGAC-IR outperforms two published methods on
+all four datasets: the LLM-based Code4Policy in exact match and faithfulness,
+and the rule-based extractor of Abdelgawad et al. in rule type. The back-
+translation check sent 10.5% of sentences to human review and found 26 of the 31
+errors. To test enforcement, we deployed the compiled policies in NIST's Policy
+Machine: they gave the expected decision for all 390 access requests, and the
+tested obligations were carried out. On one local server with open-weight
+models, all 714 sentences take about 20 minutes and 0.35 kWh, at zero API cost.

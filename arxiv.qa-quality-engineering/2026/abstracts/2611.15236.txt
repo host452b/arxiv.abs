@@ -1,0 +1,20 @@
+Title: Sub-100KB On-Device CNN Training via Dynamic Sparse Updates and Hardware--Software Co-Design
+Authors: I-Hsuan Li, Tian-Sheuan Chang
+ID: 2611.15236
+URL: https://arxiv.org/abs/2611.15236
+
+Abstract:
+The increasing demand for real-time processing and personalized deep learning
+has made edge-device training essential but challenging due to high memory and
+computational costs. To address this, we propose a Convolutional Neural Network
+(CNN) training accelerator with a dynamic sparse update mechanism that
+selectively updates important parameters using a random channel strategy,
+avoiding costly evaluations. Combined with activation pruning, our approach
+reduces activation storage to just 3.4\% of the original. Our hardware features
+a fused forward dataflow that concurrently processes group normalization and
+convolution, reducing training time by 45\% through computation reordering and
+efficient zero-skipping. Implemented in TSMC 28nm at FP8 precision, the design
+operates at 800 MHz, achieving 8 TOPS peak throughput, 31.13 TOPS/W energy
+efficiency, and 14.8 TOPS/mm$^2$ area efficiency, with power consumption ranging
+from 257 to 272 mW. The design enables on-device training within a sub-100KB on-
+chip SRAM budget (95KB in silicon).

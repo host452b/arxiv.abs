@@ -1,0 +1,25 @@
+Title: Unifying von-Neumann HPC and Neuromorphic Acceleration via the EBRAINS Research Infrastructure: A Framework for High-Performance Workflows
+Authors: Krishna Kant Singh, Charl Linssen, Eric Müller, Eleni Mathioulaki, Wouter Klijn, Lena Oden
+ID: 2606.08515
+URL: https://arxiv.org/abs/2606.08515
+
+Abstract:
+Modern scientific workflows increasingly span diverse computing architectures,
+yet executing a single computational model across disparate systems often forces
+researchers to maintain fragmented, site-specific pipelines. In this paper, we
+address this challenge within the domain of computational neuroscience by
+presenting a unified, cloud-based workflow orchestrated via EBRAINS JupyterLab.
+This workflow enables users to transparently execute spiking neural networks on
+both von-Neumann supercomputers and neuromorphic hardware. Using a single
+federated identity, the system dispatches jobs to HPC sites (JUSUF, Galileo100)
+via PyUNICORE and to the SpiNNaker-1 neuromorphic system via the Neuromorphic
+Computing Platform Interface. To guarantee cross-site reproducibility and
+mitigate software version drift, we utilize a zero-installation execution mode
+that dynamically pulls PMIx-aware Apptainer containers to HPC compute nodes.
+Furthermore, we demonstrate genuine model-level portability using the NESTML
+domain-specific language, allowing custom neuron models to be written once and
+automatically compiled for either the NEST (C++) or sPyNNaker backends.
+Validated with a balanced random network case study, this work illustrates a
+practical, end-to-end path for hardware-agnostic workflows while highlighting
+the critical role of containerization and domain-specific languages in achieving
+true cross-platform reproducibility.

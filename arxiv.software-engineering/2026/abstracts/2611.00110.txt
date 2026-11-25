@@ -1,0 +1,27 @@
+Title: A New Formulation of the Elastica Model with Application to Image Inpainting
+Authors: Zuoqiang Shi, Xue-Cheng Tai
+ID: 2611.00110
+URL: https://arxiv.org/abs/2611.00110
+
+Abstract:
+Curves and interfaces play a central role in computer vision and image
+processing, and Euler's elastica energy is one of the most successful tools to
+model and manipulate them. The elastica energy is usually computed through a
+level-set or a phase field representation of the curve, in which the curvature
+term makes the energy nonlinear, non-convex and, in the level-set case, non-
+differentiable, so that its minimization is notoriously difficult. In this
+paper, we propose a new formulation of the elastica model based on a binary
+representation of curves. The key ingredient is a very simple formula for the
+curvature: if $φ$ is the $\pm1$ binary function associated with a curve $Γ$,
+then along $Γ$ the curvature is given by
+$-\frac{1}{C_0ε}\left(R_ε*φ\right)+O(ε)$, where $R_ε$ is a radial kernel
+supported in a ball of radius $ε$ and $C_0$ is an explicit constant. No
+derivative of $φ$ is involved and the convolution is evaluated by FFT. The
+resulting energy is a weighted total variation, so that formally the new
+formulation is a generalization of the well-known ROF model; a phase field type
+model is obtained from the same curvature formula. Combining FFT with the split
+Bregman iteration, which for the present problem coincides with an augmented
+Lagrangian method (ALM), we obtain efficient algorithms whose subproblems are
+either linear systems solved by conjugate gradient or explicit pointwise
+formulas. Numerical experiments on the inpainting of binary images are presented
+to demonstrate the effectiveness of the proposed algorithms.

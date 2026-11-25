@@ -1,0 +1,24 @@
+Title: Subverting Tool Arguments: Defense-Evading Metadata Poisoning in LLM Agents
+Authors: Shih-Chieh Dai, Xinyu Sun, Haichuan Zhang, Zhiyuan Zhong, Guanhong Tao
+ID: 2611.27041
+URL: https://arxiv.org/abs/2611.27041
+
+Abstract:
+Conventional indirect prompt injection (IPI) attacks hijack an LLM agent's
+workflow through malicious instructions embedded in retrieved external content.
+The growing adoption of the Model Context Protocol (MCP) exposes another attack
+surface: tool descriptions supplied by third-party MCP servers. Attackers can
+manipulate this metadata to induce malicious argument generation during tool
+calls. The challenge is to ensure that the modified descriptions still appear
+benign to both LLMs and users. Existing IPI attacks, however, struggle to
+achieve both high attack success and low detectability in this setting. To
+address this challenge, we propose GRAFT, an LLM-based optimization method for
+crafting adversarial tool descriptions. Specifically, GRAFT uses a masking
+mechanism to identify argument-relevant token positions for targeted injection.
+It then iteratively refines candidate descriptions using dynamic mutation
+strategies proposed by an LLM, guided by the agent's tool choices and generated
+arguments. We evaluate GRAFT on three public datasets against several attack
+baselines. The results show that GRAFT achieves higher attack success while
+maintaining low detection rates across five filter-based defenses. It also
+bypasses several existing IPI defenses. Even under an adaptive defense trained
+on GRAFT-generated injections, GRAFT remains more effective than the baselines.

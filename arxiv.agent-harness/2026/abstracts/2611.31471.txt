@@ -1,0 +1,24 @@
+Title: PromptSMC: Enabling Particle Exploration in Flow Matching via LLM-Based Prompt Rejuvenation
+Authors: Wenyi Lian, Zheng Zhao, Thomas B. Schön
+ID: 2611.31471
+URL: https://arxiv.org/abs/2611.31471
+
+Abstract:
+This paper is concerned with prompt-image alignment at inference time through
+exploration of generative trajectories and dynamical prompt rejuvenation. We
+leverage sequential Monte Carlo (SMC), to offer a gradient-free and principled
+framework for this purpose through reward-guided trajectory selection. More
+specifically, we introduce LLM-based prompt rejuvenation, allowing for efficient
+particle exploration in SMC samplers along the diffusion time in flow matching
+models. The proposed method, PromptSMC, retains the selected latent states and
+uses a pretrained LLM to dynamically revise the prompts of duplicated particles
+under semantic-preservation constraints. These revised prompts induce
+alternative conditional velocity fields, allowing particles to explore different
+continuations from a shared intermediate state. The method further uses a reward
+model to evaluate each particle's alignment with the original prompt, and the
+resulting scores guide particles through resampling. PromptSMC thus integrates
+prompt-based exploration with reward-guided sampling, achieving faithful prompt-
+image alignment without additional noise injection, model training, or reward
+gradients. Our experiments and ablation studies across multiple benchmarks and
+backbones demonstrate the effectiveness of the method for text-to-image flow
+matching. Code is available at https://github.com/shermanlian/PromptSMC.

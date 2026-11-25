@@ -1,0 +1,29 @@
+Title: CrossCheck II: A Compiler Plugin for Certified Cost Bounds of Real-Time C and C++ Code, and its Evaluation
+Authors: Luca Dall'Olio
+ID: 2611.31449
+URL: https://arxiv.org/abs/2611.31449
+
+Abstract:
+We describe a plugin for the Clang compiler that bounds the cost of C and C++
+functions intended for real-time use, and rejects at compile time the functions
+that allocate, throw, call through pointers, or contain a loop or a recursion
+for which no bound is found. Loops are bounded by affine ranking potentials
+synthesized with an SMT solver through Farkas' Lemma, or by logarithmic ones,
+recursion by depth and size potentials, and callees are analyzed in the calling
+context in which they are used. For functions in a linear fragment, the plugin
+emits a cost certificate that a checker, compiled from a Lean~4 definition
+proved sound in a companion paper, validates with integer arithmetic only; the
+bound then depends neither on the analyzer nor on the solver. On the 29 kernels
+of the TACLeBench collection, without annotations, the plugin bounds 142 of 220
+loops in the calling contexts of the programs, 131 of them exactly as the
+benchmarks' flow facts, and 161 of the 165 bounded functions receive a
+certificate that the checker accepts, 152 of them also validated against an
+independent description of the source. On the CMSIS-DSP library for Cortex-M
+(786 functions), with assumed input ranges, it bounds 616 functions. We compare
+the loop bounds with loop counts observed by running the kernels and with five
+existing analyzers (LLVM's ScalarEvolution, KoAT2, CoFloCo, Infer and oRange),
+and the plugin with KoAT2 and CoFloCo on the C programs of the Termination and
+Complexity Competition: without annotations, 147 of 553 programs receive a
+certified bound that holds for all inputs, where the two tools bound 288 and
+264. Loop bounds, exported annotations and the checker program are also tested
+on random programs and on mutated certificates.

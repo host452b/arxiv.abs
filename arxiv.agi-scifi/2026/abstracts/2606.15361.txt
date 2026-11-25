@@ -1,0 +1,23 @@
+Title: Spiking Neural Dedispersion: A Neuromorphic Fast Radio Burst Detection Pipeline
+Authors: Alessio Magro
+ID: 2606.15361
+URL: https://arxiv.org/abs/2606.15361
+
+Abstract:
+Real-time FRB detection at next-generation radio telescopes is increasingly
+dominated in cost and footprint by the real-time dedispersion backend. We
+present a complete neuromorphic FRB detection pipeline built on the Spiking
+Neural Dedispersion (SND) algorithm, a hierarchical delay-and-add tree that
+performs incoherent dedispersion on spike-encoded filterbank data, supporting
+arbitrary trial-DM grids and configurable branching factors. Three operating
+modes are evaluated, spanning a resource-sensitivity trade-off from binary
+thresholded accumulation to full float32 precision. Validated against Heimdall
+on synthetic Northern Cross filterbanks, float SND matches Heimdall at 99.3%
+detection completeness (244 mW per beam), graded mode achieves 89.3% at 61 mW,
+and binary mode reaches 59.4% overall (1.75 mW), retaining 91% sensitivity for
+bright, narrow events. The full pipeline fits on a single SpiNNaker 2 chip
+across all three modes; binary mode fits entirely within on-chip SRAM, while
+graded and float require external DRAM for the history buffer. On a deployed
+48-chip system, total power projects to approximately 100-112 W, a reduction of
+order 10-40x over an equivalent GPU deployment, with 48 simultaneous beams per
+board.

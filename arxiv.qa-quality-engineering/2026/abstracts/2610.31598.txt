@@ -1,0 +1,25 @@
+Title: Controlled Radio Fault Injection and Telemetry Evaluation for Open 5G RANs
+Authors: Babak Azkaei, Maxim Bîtiu, Georgios Exarchakos, Kishor Chandra Joshi
+ID: 2610.31598
+URL: https://arxiv.org/abs/2610.31598
+
+Abstract:
+Radio access network (RAN) telemetry reveals radio conditions, protocol
+behavior, and their consequences for applications. Evaluating its usefulness
+requires controlled impairments and observations of the same execution. We
+present C and Python channel brokers and a fault injection workflow for software
+5G testbeds connecting an OCUDU base station and a software UE through ZeroMQ.
+The brokers apply scheduled, directional transformations to I/Q samples and
+restore the link, while the workflow jointly records applied faults, native and
+programmable (codelet) telemetry, and application delay. We demonstrate this
+capability through 45 comparative trials of brief uplink interruptions and
+stepped additive noise. These use cases distinguish recognizing a radio change
+from measuring its service consequence: native missing-feedback events
+retrospectively identify interruptions, whereas noise changes decoding-error
+measurements without producing those events. Median on-time round-trip times
+remain near 30 ms, but the prespecified comparisons show mean increases in on-
+time 95th-percentile delay of 354 and 604 ms for one and five interruptions, and
+113 ms for noise. Adding receive-side radio link control (RLC) codelet summaries
+did not improve interruption classification on held-out trials. The framework
+provides a reusable way to evaluate measurement choices under known radio
+faults, before using them in monitoring or learning systems.

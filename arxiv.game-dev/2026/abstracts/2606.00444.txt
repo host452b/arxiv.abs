@@ -1,0 +1,23 @@
+Title: Real-Time Physics Simulation with Dynamic Mesh-Gaussian Reconstructions
+Authors: Adrian Ramlal, John S. Zelek
+ID: 2606.00444
+URL: https://arxiv.org/abs/2606.00444
+
+Abstract:
+Integrating dynamic 3D reconstructions into physics simulation requires fixed
+mesh topology for efficient collision detection, but state-of-the-art methods
+like DG-Mesh produce varying topology optimized for geometric quality. We
+investigate whether topology conversion can enable physics integration while
+preserving reconstruction fidelity. We propose a dual-representation framework
+combining fixed-topology meshes for physics with Gaussian splatting for
+rendering, achieving 4.65$\times$ speedup over varying-topology baselines
+through runtime vertex buffer updates. We evaluate two conversion strategies,
+temporal correspondence tracking and template-based projection, against native
+fixed-topology methods (MaGS) on the DG-Mesh dataset. Our evaluation reveals
+that both conversion approaches incur 65-80% geometric degradation, producing
+results inferior to MaGS despite DG-Mesh's superior initial quality. This
+demonstrates that high-quality reconstruction and physics-compatible topology
+represent fundamentally distinct objectives that cannot be reconciled through
+post-processing. Our findings inform future development of physics-aware
+reconstruction methods and our framework enables real-time simulation with any
+fixed-topology approach.

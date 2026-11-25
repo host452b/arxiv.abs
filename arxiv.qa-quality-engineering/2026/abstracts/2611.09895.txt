@@ -1,0 +1,29 @@
+Title: Mutation Testing for Multi-Agent Workflows
+Authors: Nafiseh Kahani, Mojtaba Bagherzadeh
+ID: 2611.09895
+URL: https://arxiv.org/abs/2611.09895
+
+Abstract:
+Multi-agent large language model (LLM) systems are defined by explicit
+workflows, agents, tools, tool-access rules, and delegation paths. Most
+evaluations, however, report end-to-end task success rather than whether a test
+suite can detect faults in this coordination structure, such as a removed
+delegation, a silently removed restriction, a misrouted tool edge, or a faulty
+tool implementation. We adapt mutation analysis to this setting, fourteen
+operators in four families (delegation, allowed-tool, restriction,
+agent/instruction) perturb a normalized workflow manifest, and three kill
+criteria score whether a suite catches the change, namely K-Struct on the
+observed coordination, KOutcome on the task verdict or step sequence, and
+K-Safety on a forbidden tool call. Every criterion is evaluated by executing
+each suite against the original and the mutant through the OpenAI Agents SDK,
+with k=3 repeats and a majority vote. On ten OpenAI Agents SDK-derived workflows
+(49 reachable agents, 47 tools, 403 obligations), the evaluation executes 29,601
+agent runs over a pool of 1,084 mutants. We use T-Struct only as a full-
+obligation reference point (MSstrict=1.000 under all three criteria) and measure
+how much the baseline suites miss, the bestperforming one (T-Dev*) reaches 0.717
+(K-Struct) and only 0.559 (K-Safety). Restriction-removal (RES-REM) is the least
+detected fault for the baselines (0.19 to 0.28 vs 1.000). Executing the suites
+also allows the obligation-preserving operators (TOOL-FAULT, AG-SWAP, AG-
+PROMPTDROP) to be evaluated. A manifest-only oracle would not witness these
+changes. In this setting, tasksuccess- style suites catch only about half of
+permission violations.

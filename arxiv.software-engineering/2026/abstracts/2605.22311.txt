@@ -1,0 +1,28 @@
+Title: PIU: Proximity-guided Identity Unlearning in ID-Conditioned Diffusion Models
+Authors: Jose Edgar Hernandez Cancino Estrada, Mauro Díaz Lupone, Žiga Emeršič, Vitomir Štruc, Peter Peer, Darian Tomašević
+ID: 2605.22311
+URL: https://arxiv.org/abs/2605.22311
+
+Abstract:
+Identity-conditioned diffusion models enable high-quality and identity-
+consistent face generation, but they also raise severe privacy concerns, as
+models may continue to synthesize individuals despite their right to be
+forgotten. While machine unlearning has been extensively studied for concept and
+data removal, identity unlearning remains largely unexplored, particularly in
+models conditioned directly on identity embeddings rather than text prompts. In
+this work, we study identity unlearning in Arc2Face, a state-of-the-art
+identity-conditioned latent diffusion model for face generation, and introduce
+Proximity-guided Identity Unlearning (PIU), an anchor-guided framework for
+identity unlearning. Specifically, we formulate identity removal as an identity
+replacement objective that reassigns the source identity to a selected anchor
+identity in the learned identity space, and we complement it with a proximity-
+based anchor selection strategy motivated by the geometry of ArcFace
+representations. We further show that effective unlearning can be achieved
+through localized fine-tuning of a small subset of identity-sensitive cross-
+attention layers. Experiments across multiple target identities show that our
+framework effectively suppresses generation of the target identity while
+preserving realism and identity consistency for retained identities, as
+validated by improved performance on unlearning and image-quality metrics,
+together with qualitative evaluation. The source code for the PIU identity
+unlearning framework is made publicly available at
+https://github.com/edgarcancinoe/piu-unlearning.

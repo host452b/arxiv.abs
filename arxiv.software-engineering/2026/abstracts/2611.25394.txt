@@ -1,0 +1,28 @@
+Title: Behavioral Containment: Source-to-Binary Function Matching for 1-Day Vulnerability Detection
+Authors: Yifei Yang, Xuejiao Luo, Penghui Li
+ID: 2611.25394
+URL: https://arxiv.org/abs/2611.25394
+
+Abstract:
+Vulnerabilities in reused open-source code often propagate into deployed
+binaries. Detecting them requires source-to-binary function matching, which
+locates the affected source function in a binary. Applying prior binary-to-
+binary approaches to this task would require compiling the source code with the
+same build configuration as the target binary, which is usually unavailable.
+Decompiling the binary does not make prior source-to-source approaches work
+either, because decompiled code differs substantially from the original source
+code. We observe that compilation transforms the code of a function but largely
+preserves its behavior. A binary function that implements a source function
+therefore contains its behavior, a property we call behavioral containment.
+Building on this, we present SBIND, which decompiles the binary and checks
+behavioral containment instead of comparing code. SBIND represents each function
+by behavioral paths, sequences of normalized operations from its entry to its
+exits, and aligns source paths with binary paths in order. To detect 1-day
+vulnerabilities, SBIND compares the binary with the vulnerable and the patched
+source only on the paths through the changed lines. On stripped binaries built
+with two compilers, two optimization levels, and four architectures, SBIND ranks
+the correct function first in 77.87% of 32,008 searches, against 45.69% for the
+state-of-the-art approach SBridge. On 26 1-day CVEs, SBIND reaches an F1 score
+of 0.70 on stripped binaries, against 0.51 for SBridge. Our replication of
+SBridge also revealed several issues in its implementation and evaluation, and
+its authors have acknowledged them.

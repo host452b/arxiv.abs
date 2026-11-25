@@ -1,0 +1,24 @@
+Title: On the Relative Security of Prompt Injection: Mechanised Definitions, Defences and Verdicts for LLM Agents
+Authors: Brijesh Dongol
+ID: 2611.11506
+URL: https://arxiv.org/abs/2611.11506
+
+Abstract:
+An LLM agent that reads untrusted content, such as an email or a web page, may
+follow instructions hidden in it. Noninterference is too strong for such agents,
+since a useful agent lets untrusted content influence what it does and may
+disclose the user's data by design, and declassification needs a release policy
+written for each task. We instead state security relative to a reference agent,
+which runs the same plan under the same runtime monitor with a model that never
+obeys untrusted content. An agent is relatively secure if every leak it has is a
+leak the reference already has. Our framework, PlanTERS, instantiates relative
+security, a notion from speculative execution, with a small agent language in
+which the attacker chooses how the model follows instructions, a composition
+with runtime monitors, and attacker models that differ in what they observe. A
+fence theorem shows that revoking injectable tools at the first untrusted read,
+and never granting them back, makes every plan relatively secure at the event
+level on finite runs, for every model behaviour in which each injection is a
+single call and the model obeys on a schedule fixed in advance; with a fairness
+condition, this extends to possibly infinite runs. We prove or refute relative
+security for agents with fences, budgets, approvals, loops and dual LLMs, in
+Isabelle/HOL.

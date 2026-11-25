@@ -1,0 +1,27 @@
+Title: Scene-Level Heterogeneous Physics Simulation with 3D Gaussian Splats
+Authors: Xiaoyang Liu, Shangzhe Wu, Kai Han
+ID: 2606.21753
+URL: https://arxiv.org/abs/2606.21753
+
+Abstract:
+3D Gaussian Splatting (3DGS) has achieved state-of-the-art photorealistic
+rendering, but the representation gap prevents these assets from being
+physically interactive. Production-grade physics engines do not understand the
+3DGS representation, while prior physics-for-3DGS methods are monolithic silos.
+These prior works are fundamentally limited, demonstrating only object-centric
+physics in isolated environments, such as on an ideal plane. They are incapable
+of interacting with complex static collision geometry or heterogeneous assets.
+We propose a novel framework that, for the first time, bridges this gap by
+enabling 3DGS assets to participate in scene-level, heterogeneous, multi-solver
+physical simulations. Our core contribution is a Representation Abstraction
+Framework that translates all diverse assets, including 3DGS, virtual meshes,
+and fluids, into a unified physical particle set. This abstraction is key to
+enabling complex behaviors, such as the non-rigid deformation of 3DGS assets,
+within a unified physics pipeline. This particle set, along with the static
+scene collision boundaries derived from scene capture, is processed within a
+solver-agnostic physics kernel. The physical results are then mapped back to
+drive each asset's specific visual reconstruction. This architecture unlocks
+capabilities impossible with prior art. We demonstrate complex, two-way
+interactions between deformable 3DGS assets, standard CG assets such as fluids
+and meshes, and large-scale captured static environments, showcasing realistic
+coupled phenomena that were previously unattainable.

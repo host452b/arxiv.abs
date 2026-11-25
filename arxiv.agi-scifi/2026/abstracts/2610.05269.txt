@@ -1,0 +1,27 @@
+Title: A Unified Scaling Law for Time Series Foundation Models
+Authors: Xilin Dai, Yiding Liu, Zewei Dong, Jiang-Ming Yang, Qiang Xu
+ID: 2610.05269
+URL: https://arxiv.org/abs/2610.05269
+
+Abstract:
+We develop a Unified Scaling Law and a Unified Theory of Time Series Learning to
+understand how model capacity and historical information support forecasting.
+Across different lookback lengths and forecast horizons, we analyze 18,768
+experimental cells from 21 checkpoints on 23 dataset-frequency tasks spanning
+six domains. Our empirical methodology integrates local resource relations into
+a parsimonious, fitted five-parameter law: capacity gains increase with history,
+context gains diminish toward saturation, and horizon effects enter as a common
+shift. Fitted without Toto 2.0, the law predicts its horizon-averaged capacity-
+scaling curves with mean absolute percentage errors of 1.09% and 1.50% at input
+lengths 2048 and 4096. To understand how history supports prediction, our
+learning theory uses Gaussian regression to analyze rule identification and
+predictive capability. We hypothesize that full-shot models learn by
+accumulating information in weights, while frozen time series foundation models
+(TSFMs) use history by extracting information through activations. Matched-
+history comparisons establish the predictive value of additional history.
+Controlled parameter exchanges and activation interventions provide evidence
+that history-derived rule information can be retained, reused across queries,
+and used to recover a contribution to long-context prediction. Together, these
+findings inform capacity scaling, context allocation, and the development of
+models that retain and apply historical rules. Code and main results are
+available at https://github.com/Fifthky/UniScale.

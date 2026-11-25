@@ -1,0 +1,29 @@
+Title: StateGate: A Behavioral-Fidelity Prompt Optimization Method for Long-Chain LLM Agents
+Authors: Shicheng Huang, Cai Fu, Jianqiang Lyu, Yifan Zhang, Xianmao Ji
+ID: 2611.01585
+URL: https://arxiv.org/abs/2611.01585
+
+Abstract:
+Currently, long-chain LLM agents commonly suffer from behavioral degradation in
+complex tasks, where prompts are written in full but steps are not executed in
+full. To address this issue, existing approaches face three major challenges.
+First, constraints are strongly bound to their textual carriers; once natural-
+language constraint sentences are removed, their binding force vanishes. Second,
+the execution process lacks independent verification, as the evidence for
+judgment is often supplied by the executing party itself, leading to the failure
+of self-referential validation. Third, existing remediation schemes are
+difficult to generalize, and hard-coded mechanisms cannot be transferred across
+tasks. In this paper, we propose StateGate, a novel prompt-optimization scheme
+that transforms semantic constraints into symbolic gates enforced by an external
+deterministic runtime. By decoupling the content of a constraint from its
+carrier of efficacy, StateGate achieves behavioral fidelity in long-chain tasks
+without losing the binding force of the prompt. Specifically, we first propose
+four independent compression strategies (deduplication, generalization,
+externalization, and text-to-gating) together with their corresponding decision
+chains, enabling principled prompt symbolization. Second, we design a three-
+component architecture consisting of a state file, a validator, and an
+orchestrator, which thoroughly separates judgment authority from execution
+authority. Third, we formally prove that the compliance of symbolic constraints
+is independent of context size. Finally, we validate the framework on a
+vulnerability-discovery task in the security domain; the results show that
+StateGate achieves 100% execution closure and accurate vulnerability detection.

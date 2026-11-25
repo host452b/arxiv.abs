@@ -1,0 +1,30 @@
+Title: Acting by Intent, Reacting by Sight: Visual Conditioned Reflexes for Real-Time VLM Agents
+Authors: Qiancheng Zhou, Wenhua Zhang
+ID: 2611.18723
+URL: https://arxiv.org/abs/2611.18723
+
+Abstract:
+Vision-Language Models (VLMs) have shown strong capabilities as generalist
+agents that perceive, reason, and act in interactive environments. Yet real-time
+environments such as video games demand both deliberate control for exploration
+and split-second reactions to fast-moving hazards. Existing agents struggle to
+handle both: relying solely on direct VLM actions is too slow for sudden events,
+whereas delegating execution to fixed scripts leaves the agent blind at the
+moment of action, leading to frequent misfires whenever the scene shifts. Humans
+overcome this by pairing normal conscious control with conditioned reflexes-
+while the mind handles deliberate actions and shapes reflex rules, the reflex
+itself still relies on live vision to make the final instant decision. Emulating
+this mechanism, we propose ViCoR (Visual Conditioned Reflex). Alongside normal
+gameplay actions, the main VLM defines and updates lightweight situational
+guidance for recurring events, while a fast visual reflex branch (invoking the
+VLM in no-thinking mode) inspects live local views with motion cues to make the
+final sub-second action decisions. By offloading 67.8% of high-frequency
+reactions to the reflex branch (680 ms per check), ViCoR reduces average per-
+action decision latency by 2.6x (from 14.0 s to 5.4 s) and cuts token
+consumption by 36.9%. Across 17 diverse 2D and 3D games in the GameWorld
+benchmark, ViCoR achieves state-of-the-art performance, improving task success
+rate by +11.8% (from 52.9% to 64.7%) and average normalized progress by +13.9%
+(from 66.5% to 80.4%) over the strongest deliberative VLM and script baselines.
+In fast-paced real-time games, ViCoR refines its reflexes across episodes to
+boost progress by 1.67x, and even with a low-effort main planner, surpasses
+high-effort deliberative baselines by +8.1% at one-third of the token cost.

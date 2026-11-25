@@ -1,0 +1,25 @@
+Title: FuzzAgent: Multi-Agent System for End-to-End Evolutionary Library Fuzzing
+Authors: Yunlong Lyu, Peng Chen, Fengyi Wu, Junzhe Yu, Hao Chen
+ID: 2605.14431
+URL: https://arxiv.org/abs/2605.14431
+
+Abstract:
+Library fuzzing synthesizes harnesses that expose new API interactions, but
+deploying it end to end still requires extensive project-specific integration.
+Existing LLM-based systems automate individual steps, yet they treat execution
+outcomes as coarse signals: a stalled campaign does not reveal which state
+blocks progress, and a crash trace does not reveal whether the library or the
+harness is at fault. We present FuzzAgent, a multi-agent system that builds and
+evolves a complete fuzzing campaign from a source tree alone. Specialized agents
+acquire project knowledge and repair campaign artifacts automatically.
+Hierarchical coverage diagnosis localizes blockers from modules down to
+branches, and dependency-aware generation converts them into harnesses with the
+required API lifecycle. Crash validation recovers runtime object states to
+distinguish harness misuse from library bugs. We evaluate FuzzAgent on 20 real-
+world C/C++ libraries against five state-of-the-art baselines (OSS-Fuzz, OSS-
+Fuzz-Gen, PromptFuzz, PromeFuzz, and ProteusFuzz). FuzzAgent completes the full
+fuzzing lifecycle for all 20 libraries without human intervention at $3.17 per
+library. On the 20 libraries, it reaches 179619 branches, exceeding OSS-Fuzz,
+PromptFuzz, ProteusFuzz, PromeFuzz, and OSS-Fuzz-Gen by 45.1%, 73.2%, 87.7%,
+92.1%, and 191.2%, respectively. FuzzAgent also identifies 102 new library bugs,
+90 of which have already been acknowledged or fixed by upstream maintainers.

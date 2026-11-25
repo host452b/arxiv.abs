@@ -1,0 +1,25 @@
+Title: DPIAgent: Divide, Protocol, Isolate for Agentic Reproduction Test Generation
+Authors: Hao Liu, Steven Liu, Xin Zhang, Jane Luo, Yu Kang, Jie Wu, Fangkai Yang, Yangyu Huang, Pengfei Gao, Scarlett Li et al.
+ID: 2608.23341
+URL: https://arxiv.org/abs/2608.23341
+
+Abstract:
+Reproduction test generation, producing a failing-then-passing test that
+captures a reported bug, is a critical step in automated software engineering.
+Existing agentic methods treat this as a monolithic loop, despite the task
+inherently comprising two subtasks of distinct nature: diagnosing the root cause
+and writing a fail-to-pass test. Without explicit separation, the agent faces a
+compound objective with underspecified intermediate goals, leading to goal
+drift. We propose DPIAgent, a structured agentic framework built on three
+principles, Divide, Protocol, Isolate (DPI), that mitigates compound-objective
+ambiguity and goal drift: it Divides the task into single-objective phases of
+defect exploration and test generation; enforces a handoff Protocol that records
+the diagnosis and test plan, preventing context loss; and Isolates each phase's
+action space by tailoring the toolset to its task, preventing irrelevant tools
+from misleading execution. On SWT-Bench Verified, DPIAgent outperforms seven
+baselines across three backbone LLMs. With DPI alone it reaches 81.76% success
+rate on GPT-5, the highest reported among open-source methods, gaining up to
+11.88 points over the strongest baseline on GPT-5-Mini; adding test selection
+further raises it to 86.17%. Our analysis shows that architectural structure and
+backbone capability are complementary axes rather than substitutes,
+demonstrating DPI's generalizability across model classes.

@@ -1,0 +1,28 @@
+Title: Quality Determines Direction, Length Shapes Magnitude: Length Control for Open-Ended Reinforcement Learning
+Authors: Zijun Weng, Zhongan Bi, Xuanang Gao, Xiaohui Hu, Shuangyong Song, Yongxiang Li, Kaidong Yu, Xuanjing Huang
+ID: 2609.34718
+URL: https://arxiv.org/abs/2609.34718
+
+Abstract:
+Reinforcement learning (RL) changes not only what language models say, but also
+how much they say, often increasing response length at the cost of token
+efficiency. Controlling this length growth is particularly challenging in open-
+ended RL because (i) response length is entangled with quality, (ii) open-ended
+tasks lack a natural success boundary for deciding when efficiency should be
+prioritized, and (iii) dense, graded rewards often yield small within-group
+quality margins, making quality-induced advantages especially sensitive to
+reward-level length shaping, which can perturb their magnitudes and even reverse
+their signs. We therefore adopt an asymmetric principle: quality should
+determine the direction of reinforcement, while length should only shape its
+magnitude. We instantiate this principle with Quality-Gated Length Advantage
+Shaping (QGLAS), which first computes advantages from quality rewards alone,
+then adds bounded bonuses only to shorter positive-advantage responses, leaving
+all other advantages unchanged. The bonus strength is further adapted to within-
+group quality separation, allowing conciseness to matter more when quality-
+favored responses are similar and less when their quality differences are clear.
+Across different model families, open-ended benchmarks, and reward sources,
+QGLAS consistently achieves a stronger quality--length trade-off than
+representative baselines. At approximately 30% compression, QGLAS retains 98.4--
+102.0% of the macro-average quality gains achieved by quality-only RL over the
+base model, compared with 68.3--75.5% for these baselines at comparable
+compression.

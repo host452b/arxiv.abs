@@ -1,0 +1,26 @@
+Title: Beyond Unit Tests: Path-Aware Rubric-Guided LLM Autograding of Notebooks
+Authors: Salman Hajizada, Mohammed Yusuf Ansari, Gianni Di Caro
+ID: 2611.28565
+URL: https://arxiv.org/abs/2611.28565
+
+Abstract:
+Jupyter notebooks support open-ended, multi-step assessments in which students
+build one logical flow across interdependent steps, combining code, written
+analysis, and generated outputs such as plots. These reflect authentic
+scientific practice but are hard to grade consistently, since students may make
+different yet equally valid choices at each step, so a later answer can only be
+judged in light of the choices a student made earlier. We present an LLM-based
+autograder for such flow-structured notebook questions. It generates a rubric
+from a reference solution, then applies a softening pass that relaxes criteria
+tied to the reference so legitimate alternative paths are not penalized. Each
+question group is graded in a single model call, so later answers are judged
+against the student's own earlier choices, using question-type tags and schema-
+constrained, low-temperature outputs. Evidence is scored multimodally: code,
+text, numerical outputs, and figures from code cells. We deployed the tool in a
+machine-learning course, integrated with Gradescope, with a pre-submission
+format check and prompt-injection defenses, and evaluate it both in that live
+course and against archived submissions graded by staff in earlier terms. We
+report agreement, cross-model variance, cost, student perceptions, and injection
+resilience. With low-temperature models, agreement with human scores is often
+strong, including on the open-ended items the design specifically targets, while
+run-to-run stability depends sharply on the model's temperature support.

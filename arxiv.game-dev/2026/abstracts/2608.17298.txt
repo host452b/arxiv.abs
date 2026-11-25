@@ -1,0 +1,28 @@
+Title: 3D Gaussian Accelerated Ray Tracing: Fast training through particle-based backward propagation
+Authors: Laurent Vit, Oliver Batchelor, Richard Green
+ID: 2608.17298
+URL: https://arxiv.org/abs/2608.17298
+
+Abstract:
+3D Gaussian Splatting has made Gaussian primitives a highly efficient
+representation for real-time novel view synthesis, but its rasterisation-based
+formulation relies on screen-space approximations that limit accurate view-
+dependent ordering and the integration of secondary ray effects such as
+reflections, refractions, and shadows. Gaussian ray tracing addresses these
+limitations by evaluating explicit ray-primitive intersections, yet it remains
+costly to train. We observe that the main bottleneck is not ray traversal alone,
+but the pixel-centric backward propagation, where many threads concurrently
+accumulate gradients into the same primitive parameters, causing severe atomic
+contention and thread serialisation. We present 3DGART, a practical training
+framework for ray-traced Gaussian rendering. Our key idea is to reorganise
+backward propagation around primitives rather than pixels. Using conservative
+perspective-correct screen-space bounds, we build a compact intermediate buffer
+and a tile-primitive mapping that allows each thread to accumulate the
+contribution of one primitive over its covered pixels within a tile. This
+transforms gradient computation from a contention-heavy scatter operation into a
+structured gather-like process. On Mip-NeRF 360, 3DGART achieves an $\approx
+3-3.5\times$ raw training speedup over per-pixel baseline and $\approx4 \times$
+over 3DGRT on Mip-NeRF 360 while improving quality. More importantly, 3DGART
+makes fully ray-traced Gaussian training practical, reaching runtimes
+competitive with rasterisation-based pipelines while preserving benefits of ray
+tracing.

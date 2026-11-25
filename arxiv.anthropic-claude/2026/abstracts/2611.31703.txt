@@ -1,0 +1,26 @@
+Title: E-Waste-Bench: A Large-Scale Benchmark for Visual Triage of Data-Center Hardware
+Authors: Nader Lobandi, Mohammad Mehdi Hosseini, Lombe Chileshe, Mohammad Mahoor
+ID: 2611.31703
+URL: https://arxiv.org/abs/2611.31703
+
+Abstract:
+Retired data-center hardware can often be refurbished or resold, but triage
+demands more than object categories. A model must tell visually similar parts
+apart, judge condition under damage and occlusion, and read the printed part
+number. We audit nine public e-waste collections. They cover mostly consumer
+devices (only 10% of images are labeled as a data-center part), label neither
+condition nor printed text, and contain 42% exact or augmented duplicates. We
+introduce E-Waste-Bench, 328K photographs drawn from 762K deduplicated images
+and labeled for class (24 classes), granularity, condition and printed text.
+Images come from those collections and the web, where a recipe-based crawler
+works beside an agent built on an open-weight vision-language model. The agent
+vets new sources and reads sites the crawler cannot parse, and both are steered
+toward under-represented classes. Training labels are model-made, splits follow
+near-duplicate groups, and human annotators label a test set of nearly 10,000
+images. We benchmark classification, condition, detection, text perception and
+cross-dataset transfer. On this test set, a ConvNeXt-T trained on E-Waste-Bench
+reaches 64.3% top-1, against 31.5% with the public collections alone. Near-
+duplicate leakage inflates top-1 by 3.0 points under model-made test labels but
+by less than 0.1 under human labels, so model-labeled benchmarks need group
+splits. Accuracy falls to 42.1% on marketplace and auction photographs, the
+closest proxy for hardware leaving service. Data and code will be released.

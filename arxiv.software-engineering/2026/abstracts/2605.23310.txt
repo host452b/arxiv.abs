@@ -1,0 +1,30 @@
+Title: From Head to Tail: Asymmetric Knowledge Transfer in Long-tail Recommendation with Generative Semantic IDs
+Authors: Chenyi Yan, Ruocong Tang, Xing Fang, Yang Huang, He Guo, Jing Wang
+ID: 2605.23310
+URL: https://arxiv.org/abs/2605.23310
+
+Abstract:
+Long-tail recommendation in real-world e-commerce platforms remains challenging
+due to severe data imbalance. Existing methods often struggle to combine
+content-based multimodal features with collaborative signals. Many of these
+methods also ignore an important asymmetry in knowledge transfer between head
+and tail IDs: noisy signals from tail IDs can hurt representation learning for
+head IDs. This paper presents AKT-Rec, a framework for Asymmetric Knowledge
+Transfer in long-tail Recommendation that uses LLM-generated semantic IDs. AKT-
+Rec uses Multimodal LLMs (MLLMs) with supervised fine-tuning to align content
+representations with collaborative information for both items and users,
+producing semantic representations. It then discretizes these representations
+into semantic IDs with a Residual-Quantized VAE (RQ-VAE), which yields semantic
+clusters of similar entities. AKT-Rec has two main components: (1) Cluster-
+Guided Adaptive Embedding, which decomposes each ID representation into a
+cluster-level embedding that captures shared semantics and an individual
+embedding. Through an asymmetric contrastive objective and an activity-aware
+gating mechanism, this module directs knowledge transfer from head to tail IDs.
+(2) Hierarchical Feature Aggregation, which builds parallel feature views and
+adaptively fuses them to optimize predictions for samples with varying activity
+levels. Extensive experiments on a large-scale industrial dataset and online A/B
+testing on the Alibaba Tmall platform demonstrate the effectiveness of AKT-Rec.
+AKT-Rec improves offline performance by 0.35% in AUC and 1.53% in GAUC,
+outperforming several competitive baselines. In online A/B testing, AKT-Rec
+achieves a 2.76% increase in CTR and a 3.47% increase in GMV, validating its
+utility in real-world production environments.

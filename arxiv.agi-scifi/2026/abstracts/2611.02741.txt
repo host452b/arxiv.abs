@@ -1,0 +1,28 @@
+Title: ATrust: Adaptive Trust Boundary Expansion for Securing LLM Agents
+Authors: Xu Zhang, Zhichao Lu
+ID: 2611.02741
+URL: https://arxiv.org/abs/2611.02741
+
+Abstract:
+As large language model (LLM) agents take on more complex tasks with greater
+autonomy, security has become a major obstacle to their broader deployment.
+Unlike in attacks that require complex exploitation of operating system
+vulnerabilities, attackers can easily hijack agents through indirect prompt
+injection (IPI), leading to privacy leakage, financial loss, and destructive
+operations. However, existing defenses often make security decisions based on
+limited static trusted evidence or assess observations in isolation. Such rigid
+trust assumptions can cause task-essential information to be unnecessarily
+discarded, resulting in over-defense and degraded agent functionality. To
+address this problem, we propose ATrust, a defense mechanism that adaptively
+expands the trust boundary during agent runtime. Starting from the user query as
+the root trust anchor, ATrust evaluates external observations against the
+current trust boundary and execution state, progressively admitting task-
+essential information as new trust anchors. This preserves necessary
+environmental feedback while excluding irrelevant content, whether benign or
+malicious, from subsequent decision-making, thereby limiting unnecessary
+exposure to external environment. We evaluate ATrust on AgentDojo and AgentDyn,
+where it achieves the strongest overall security--utility trade-off among
+existing defenses. With GPT-4o as the engine model, ATrust reduces the attack
+success rate on AgentDyn from 37.80% to 4.37% while enhancing utility by 10.00%,
+outperforming AuthGraph, the state-of-the-art defense, by 12.33%. These results
+demonstrate the effectiveness and practicality of ATrust.

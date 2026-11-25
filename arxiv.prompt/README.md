@@ -1,6 +1,6 @@
 # arxiv.prompt — AI/LLM Prompt Engineering
 
-4,780 curated arXiv paper abstracts on AI/LLM Prompt Engineering (2023–2026), with a structured summary of 50 core techniques.
+5,080 curated arXiv paper abstracts on AI/LLM Prompt Engineering (2023–2026), with a structured summary of 50 core techniques.
 
 ## Core Techniques Summary
 
@@ -14,7 +14,7 @@
 | 2023 | 1,085 | [2023/](2023/) |
 | 2024 | 1,478 | [2024/](2024/) |
 | 2025 | 1,817 | [2025/](2025/) |
-| 2026 | 400 | [2026/](2026/) |
+| 2026 | 700 | [2026/](2026/) |
 
 Each year folder contains:
 - `arxiv-results-YYYY.json` — full metadata (title, authors, abstract, categories, citations)
@@ -24,7 +24,7 @@ Each year folder contains:
 
 ## Best Practices by Section (80/20 Pareto)
 
-> **Pareto Principle:** In each prompting domain, 20% of key techniques account for 80% of measurable LLM performance gains. Each lever below reflects the highest-frequency consensus from the 4,780 prompt engineering papers.
+> **Pareto Principle:** In each prompting domain, 20% of key techniques account for 80% of measurable LLM performance gains. Each lever below reflects the highest-frequency consensus from the 5,080 prompt engineering papers.
 
 ### I. Reasoning & CoT (#1–6)
 

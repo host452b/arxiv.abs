@@ -1,0 +1,26 @@
+Title: Auriga: Harness-Governed LLM Agents for Effective Throughput Optimization in Execute-Order-Validate Permissioned Blockchains
+Authors: Xiao Zhang, Tianyang Wang, Fangtao Gu, Haoxiang Sun, Puwei Wang, Jinchuan Chen
+ID: 2611.14945
+URL: https://arxiv.org/abs/2611.14945
+
+Abstract:
+Effective throughput, the product of raw throughput and transaction success
+rate, determines the useful capacity of Execute-Order-Validate blockchains such
+as Hyperledger Fabric. Most prior work either tunes configurations to raise raw
+throughput, requiring many costly redeployments, or controls conflicts to raise
+the success rate, repairing them only after execution with kernel modifications.
+The few joint approaches tune only a small set of parameters and still rely on
+kernel changes to resolve conflicts. To address these challenges, we present
+Auriga, a non-invasive framework that jointly optimizes both factors through
+sample-efficient LLM-guided configuration search and pre-execution conflict
+prevention. A harness-governed multi-agent architecture coordinates LLM agents
+for parameter exploration, saturation-aware evaluation, and experience
+consolidation, with the harness controlling tool and memory access and retaining
+termination authority. For transaction scheduling, an LLM extracts symbolic AST
+templates from smart contracts offline. At runtime, the scheduler predicts read-
+write sets without executing them and partitions transactions into conflict-free
+groups. Across three benchmarks and conflict rates up to 70%, Auriga improves
+effective throughput by up to 6.0 times over default Fabric and 2.0 times over
+the strongest baseline. The tuning agent also discovers undocumented parameter
+dependencies, and ablation studies show the independent contributions of both
+subsystems.

@@ -1,0 +1,27 @@
+Title: Where Does MCP Security End? A Three-Tier Mitigation Mapping Framework for the OWASP MCP Top 10
+Authors: Christopher Krakauer, Andreas Schaad
+ID: 2611.02611
+URL: https://arxiv.org/abs/2611.02611
+
+Abstract:
+The Model Context Protocol (MCP) has become a leading standard for connecting
+Large Language Models (LLMs) to external tools, software, and data sources. MCP
+architecture favors ease of integration over security, blending the data and
+control planes into a single natural language channel. This introduces confused
+deputy and prompt injection vulnerabilities that cannot be completely mitigated
+in the software development lifecycle (SDLC) of an MCP server. Structured
+security guidance for server developers has been outpaced by this adoption
+trend, leaving them without a clear way to identify where vulnerabilities can be
+addressed at the server layer and where architectural constraints create hard
+limits. This paper presents a framework based on OWASP MCP Top 10 mapped to
+three architectural tiers, developed using Design Science Research (DSR).
+Vulnerabilities are classified as server-primary, gateway-primary, or protocol-
+primary applying a cascading decision tree following four questions, resulting
+in reproducible tier assignments and confidence levels independent of who
+applies it. The framework was validated against an enterprise-grade Managed File
+Transfer (MFT) MCP server built in Go. Validation results showed that high-
+confidence server-tier controls worked as predicted, and low-confidence
+protocol-tier controls failed for architectural reasons beyond server
+implementation. The architectural ceiling encountered during practical
+validation is the main contribution and shows how secure-by-design development
+can reduce the MCP attack surface but not completely mitigate it.

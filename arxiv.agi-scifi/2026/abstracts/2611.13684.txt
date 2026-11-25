@@ -1,0 +1,27 @@
+Title: BypassGym: A Benchmark for Evaluating AI Agents' Endpoint Defense Evasion Capabilities
+Authors: Weifeng Yuan, Zifan Chen, Yucheng Zhang, Feng Dong, Peng Gao, Haoyu Wang
+ID: 2611.13684
+URL: https://arxiv.org/abs/2611.13684
+
+Abstract:
+Artificial intelligence agents increasingly automate cybersecurity tasks,
+including offensive operations. Frequent attacks across the web make endpoint
+detection and response (EDR) a critical defense, but whether AI agents can evade
+it remains unclear. Benchmarks evaluate the offensive capabilities of large
+language model (LLM) agents in areas such as penetration testing and
+vulnerability discovery. One important capability that these benchmarks do not
+address is defense evasion, specifically whether an agent can develop a program
+that executes a payload without being blocked or terminated by a deployed EDR.
+We introduce BypassGym, to our knowledge the first benchmark to systematically
+evaluate this capability on real endpoints. Given command-and-control (C2)
+shellcode, an agent must generate and compile a loader that executes the payload
+without being blocked or terminated. A supplementary evasion knowledge skill
+provides domain knowledge and supports comparisons with and without this input.
+BypassGym is built on Proxmox VE(PVE), so the evaluation environment runs real
+Windows systems and EDR products inside virtual machines and returns structured
+detection feedback to the agent. We evaluate 5 lightweight model backends
+against 6 EDR products and 3 payloads, and find that even these simple models
+generate successful submissions, with DeepSeek-V4.1 Flash reaching 17/18
+successful runs and Bitdefender allowing only 5 of 15 runs to pass. These
+results provide a systematic measurement of current AI agents' endpoint defense
+evasion capabilities and identify areas for defenders to investigate.

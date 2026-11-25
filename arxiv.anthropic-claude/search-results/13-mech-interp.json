@@ -10,13 +10,49 @@
     "from": "2021-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T22:09:19Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "groups": [
     {
       "source": "arxiv",
-      "count": 131,
+      "count": 133,
       "papers": [
+        {
+          "id": "2611.32685",
+          "title": "Social Bias Neurons in Multilingual Language Models: A Mechanistic Interpretability Analysis",
+          "authors": [
+            "Lance Calvin Lim Gamboa",
+            "Yue Feng",
+            "Mark Lee"
+          ],
+          "abstract": "Multilingual models exhibit social bias when processing inputs pertaining to societal stereotypes. We adapt emerging mechanistic interpretability methods to pinpoint and characterize model components that encode this bias. We conduct our analysis across three instruction-tuned models, four languages, and seven bias dimensions. Specifically, we leverage multilingual bias benchmarks in implementing two methods for identifying social bias neurons: activation probability entropy and integrated gap gradients. We find the latter method to be more effective, as the neurons it isolates (which are largely concentrated at the model's deepest layers) lead to sharper decreases in model bias when suppressed. Further analysis reveals neuron distribution patterns differ between high- and low-resourced languages, suggesting that a language's representation in pretraining data influences how its biases are represented within model internals. Our results also indicate that neurons linked to gender, nationality, and social class biases overlap the most with neurons related to other bias dimensions, pointing to the pivotal role these three dimensions play in how models learn and handle bias.",
+          "published": "2026-11-24T14:25:15Z",
+          "updated": "2026-11-24T14:25:15Z",
+          "categories": [
+            "cs.CL"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32685",
+          "abs_url": "https://arxiv.org/abs/2611.32685",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31795",
+          "title": "Constructive Causal Abstraction and a Case Study in Mechanistic Interpretability",
+          "authors": [
+            "Yuchen Zhu",
+            "Sergio Hernan Garrido Mejia",
+            "Dominik Janzing"
+          ],
+          "abstract": "Existing frameworks in causal abstraction first propose a high-level causal model, and then verify whether its interventional effects agree with those of a given micro-level model - the two models are declared causally consistent when the discrepancy is zero. However, proposing a consistent macro causal model is difficult, because macro causal relations are almost never well-defined, since distinct micro-level interventions associated with the same apparent macro intervention can produce different effects. Our central insight is that causally consistent macro-level models can be obtained constructively: ill-defined macro interventions can be interpreted as missing variables on the macro level, and can be accounted for by introducing a complementary variable q that retains omitted causally relevant state. In the linear case, q has a unique form and we provide sufficient conditions for valid implementations to exist; in the nonlinear case, we provide an ODE-based algorithm for constructing implementations. We call this framework Constructive Causal Abstraction (CCA), and use CCA to formulate the difference between machine-learning model auditing and editing. With the Bias-in-Bios biographies dataset, we demonstrate that CCA allows practitioners to articulate assumptions when detecting the model's gender bias. Finally, CCA resolves a well-known paradox known as \"interpretability illusion\" which points to a mismatch between the subspace for editing and the one where the model implements a signal-to-output pathway.",
+          "published": "2026-11-24T01:47:14Z",
+          "updated": "2026-11-24T01:47:14Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31795",
+          "abs_url": "https://arxiv.org/abs/2611.31795",
+          "source": "arxiv"
+        },
         {
           "id": "2506.18852",
           "title": "Mechanistic Interpretability Needs Philosophy",
@@ -1097,7 +1133,7 @@
             "Marco Valentino",
             "André Freitas"
           ],
-          "abstract": "Recent studies on reasoning in language models (LMs) have sparked a debate on whether they can learn systematic inferential principles or merely exploit superficial patterns in the training data. To understand and uncover the mechanisms adopted for formal reasoning in LMs, this paper presents a mechanistic interpretation of syllogistic inference. Specifically, we present a methodology for circuit discovery aimed at interpreting content-independent and formal reasoning mechanisms. Through two distinct intervention methods, we uncover a sufficient and necessary circuit involving middle-term suppression that elucidates how LMs transfer information to derive valid conclusions from premises. Furthermore, we investigate how belief biases manifest in syllogistic inference, finding evidence of partial contamination from additional attention heads responsible for encoding commonsense and contextualized knowledge. Finally, we explore the generalization of the discovered mechanisms across various syllogistic schemes, model sizes and architectures. The identified circuit is sufficient and necessary for syllogistic schemes on which the models achieve high accuracy (\u003e60%), with compatible activation patterns across models of different families. Overall, our findings suggest that LMs learn transferable content-independent reasoning mechanisms, but that, at the same time, such mechanisms do not involve generalizable and abstract logical primitives, being susceptible to contamination by the same world knowledge acquired during pre-training.",
+          "abstract": "Recent studies on reasoning in language models (LMs) have sparked a debate on whether they can learn systematic inferential principles or merely exploit superficial patterns in the training data. To understand and uncover the mechanisms adopted for formal reasoning in LMs, this paper presents a mechanistic interpretation of syllogistic inference. Specifically, we present a methodology for circuit discovery aimed at interpreting content-independent and formal reasoning mechanisms. Through two distinct intervention methods, we uncover a sufficient and necessary circuit involving middle-term suppression that elucidates how LMs transfer information to derive valid conclusions from premises. Furthermore, we investigate how belief biases manifest in syllogistic inference, finding evidence of partial contamination from additional attention heads responsible for encoding commonsense and contextualized knowledge. Finally, we explore the generalization of the discovered mechanisms across various syllogistic schemes, model sizes and architectures. The identified circuit is sufficient and necessary for syllogistic schemes on which the models achieve high accuracy (>60%), with compatible activation patterns across models of different families. Overall, our findings suggest that LMs learn transferable content-independent reasoning mechanisms, but that, at the same time, such mechanisms do not involve generalizable and abstract logical primitives, being susceptible to contamination by the same world knowledge acquired during pre-training.",
           "categories": [
             "cs.CL",
             "cs.AI",
@@ -2107,7 +2143,7 @@
           "authors": [
             "Dip Roy"
           ],
-          "abstract": "We present a quantitative circuit-level analysis of diffusion models, establishing computational pathways and mechanistic principles underlying image generation processes. Through systematic intervention experiments across 2,000 synthetic and 2,000 CelebA facial images, we discover fundamental algorithmic differences in how diffusion architectures process synthetic versus naturalistic data distributions. Our investigation reveals that real-world face processing requires circuits with measurably higher computational complexity (complexity ratio = 1.084 plus/minus 0.008, p \u003c 0.001), exhibiting distinct attention specialization patterns with entropy divergence ranging from 0.015 to 0.166 across denoising timesteps. We identify eight functionally distinct attention mechanisms showing specialized computational roles: edge detection (entropy = 3.18 plus/minus 0.12), texture analysis (entropy = 4.16 plus/minus 0.08), and semantic understanding (entropy = 2.67 plus/minus 0.15). Intervention analysis demonstrates critical computational bottlenecks where targeted ablations produce 25.6% to 128.3% performance degradation, providing causal evidence for identified circuit functions. These findings establish quantitative foundations for algorithmic understanding and control of generative model behavior through mechanistic intervention strategies.",
+          "abstract": "We present a quantitative circuit-level analysis of diffusion models, establishing computational pathways and mechanistic principles underlying image generation processes. Through systematic intervention experiments across 2,000 synthetic and 2,000 CelebA facial images, we discover fundamental algorithmic differences in how diffusion architectures process synthetic versus naturalistic data distributions. Our investigation reveals that real-world face processing requires circuits with measurably higher computational complexity (complexity ratio = 1.084 plus/minus 0.008, p < 0.001), exhibiting distinct attention specialization patterns with entropy divergence ranging from 0.015 to 0.166 across denoising timesteps. We identify eight functionally distinct attention mechanisms showing specialized computational roles: edge detection (entropy = 3.18 plus/minus 0.12), texture analysis (entropy = 4.16 plus/minus 0.08), and semantic understanding (entropy = 2.67 plus/minus 0.15). Intervention analysis demonstrates critical computational bottlenecks where targeted ablations produce 25.6% to 128.3% performance degradation, providing causal evidence for identified circuit functions. These findings establish quantitative foundations for algorithmic understanding and control of generative model behavior through mechanistic intervention strategies.",
           "categories": [
             "cs.CV"
           ],
@@ -2339,7 +2375,7 @@
             "Antoine Bosselut",
             "Mrinmaya Sachan"
           ],
-          "abstract": "Recent work has shown that language models (LMs) have strong multi-step (i.e., procedural) reasoning capabilities. However, it is unclear whether LMs perform these tasks by cheating with answers memorized from pretraining corpus, or, via a multi-step reasoning mechanism. In this paper, we try to answer this question by exploring a mechanistic interpretation of LMs for multi-step reasoning tasks. Concretely, we hypothesize that the LM implicitly embeds a reasoning tree resembling the correct reasoning process within it. We test this hypothesis by introducing a new probing approach (called MechanisticProbe) that recovers the reasoning tree from the model's attention patterns. We use our probe to analyze two LMs: GPT-2 on a synthetic task (k-th smallest element), and LLaMA on two simple language-based reasoning tasks (ProofWriter \u0026 AI2 Reasoning Challenge). We show that MechanisticProbe is able to detect the information of the reasoning tree from the model's attentions for most examples, suggesting that the LM indeed is going through a process of multi-step reasoning within its architecture in many cases.",
+          "abstract": "Recent work has shown that language models (LMs) have strong multi-step (i.e., procedural) reasoning capabilities. However, it is unclear whether LMs perform these tasks by cheating with answers memorized from pretraining corpus, or, via a multi-step reasoning mechanism. In this paper, we try to answer this question by exploring a mechanistic interpretation of LMs for multi-step reasoning tasks. Concretely, we hypothesize that the LM implicitly embeds a reasoning tree resembling the correct reasoning process within it. We test this hypothesis by introducing a new probing approach (called MechanisticProbe) that recovers the reasoning tree from the model's attention patterns. We use our probe to analyze two LMs: GPT-2 on a synthetic task (k-th smallest element), and LLaMA on two simple language-based reasoning tasks (ProofWriter & AI2 Reasoning Challenge). We show that MechanisticProbe is able to detect the information of the reasoning tree from the model's attentions for most examples, suggesting that the LM indeed is going through a process of multi-step reasoning within its architecture in many cases.",
           "categories": [
             "cs.CL"
           ],
@@ -2693,7 +2729,7 @@
           "authors": [
             "Nooshin Bahador"
           ],
-          "abstract": "This study investigates the localization of knowledge representation in fine-tuned GPT-2 models using Causal Layer Attribution via Activation Patching (CLAP), a method that identifies critical neural layers responsible for correct answer generation. The model was fine-tuned on 9,958 PubMed abstracts (epilepsy: 20,595 mentions, EEG: 11,674 mentions, seizure: 13,921 mentions) using two configurations with validation loss monitoring for early stopping. CLAP involved (1) caching clean (correct answer) and corrupted (incorrect answer) activations, (2) computing logit difference to quantify model preference, and (3) patching corrupted activations with clean ones to assess recovery. Results revealed three findings: First, patching the first feedforward layer recovered 56% of correct preference, demonstrating that associative knowledge is distributed across multiple layers. Second, patching the final output layer completely restored accuracy (100% recovery), indicating that definitional knowledge is localised. The stronger clean logit difference for definitional questions further supports this localized representation. Third, minimal recovery from convolutional layer patching (13.6%) suggests low-level features contribute marginally to high-level reasoning. Statistical analysis confirmed significant layer-specific effects (p\u003c0.01). These findings demonstrate that factual knowledge is more localized and associative knowledge depends on distributed representations. We also showed that editing efficacy depends on task type. Our findings not only reconcile conflicting observations about localization in model editing but also emphasize on using task-adaptive techniques for reliable, interpretable updates.",
+          "abstract": "This study investigates the localization of knowledge representation in fine-tuned GPT-2 models using Causal Layer Attribution via Activation Patching (CLAP), a method that identifies critical neural layers responsible for correct answer generation. The model was fine-tuned on 9,958 PubMed abstracts (epilepsy: 20,595 mentions, EEG: 11,674 mentions, seizure: 13,921 mentions) using two configurations with validation loss monitoring for early stopping. CLAP involved (1) caching clean (correct answer) and corrupted (incorrect answer) activations, (2) computing logit difference to quantify model preference, and (3) patching corrupted activations with clean ones to assess recovery. Results revealed three findings: First, patching the first feedforward layer recovered 56% of correct preference, demonstrating that associative knowledge is distributed across multiple layers. Second, patching the final output layer completely restored accuracy (100% recovery), indicating that definitional knowledge is localised. The stronger clean logit difference for definitional questions further supports this localized representation. Third, minimal recovery from convolutional layer patching (13.6%) suggests low-level features contribute marginally to high-level reasoning. Statistical analysis confirmed significant layer-specific effects (p<0.01). These findings demonstrate that factual knowledge is more localized and associative knowledge depends on distributed representations. We also showed that editing efficacy depends on task type. Our findings not only reconcile conflicting observations about localization in model editing but also emphasize on using task-adaptive techniques for reliable, interpretable updates.",
           "categories": [
             "cs.LG",
             "cs.AI"
@@ -3050,7 +3086,7 @@
             "Sanjay Kumar Singh",
             "Anisha Roy"
           ],
-          "abstract": "Although mechanism-based interpretability has generated an abundance of insight for discriminative network analysis, generative models are less understood -- particularly outside of image-related applications. We investigate how much of the causal circuitry found within image-related variational autoencoders (VAEs) will generalize to tabular data, as VAEs are increasingly used for imputation, anomaly detection, and synthetic data generation. In addition to extending a four-level causal intervention framework to four tabular and one image benchmark across five different VAE architectures (with 75 individual training runs per architecture and three random seed values for each run), this paper introduces three new techniques: posterior-calibration of Causal Effect Strength (CES), path-specific activation patching, and Feature-Group Disentanglement (FGD). The results from our experiments demonstrate that: (i) Tabular VAEs have circuits with modularity that is approximately 50% lower than their image counterparts. (ii) $β$-VAE experiences nearly complete collapse in CES scores when applied to heterogeneous tabular features (0.043 CES score for tabular data compared to 0.133 CES score for images), which can be directly attributed to reconstruction quality degradation (r = -0.886 correlation coefficient between CES and MSE). (iii) CES successfully captures nine of eleven statistically significant architecture differences using Holm--Šidák corrections. (iv) Interventions with high specificity predict the highest downstream AUC values (r = 0.460, p \u003c .001). This study challenges the common assumption that architectural guidance from image-related studies can be transferred to tabular datasets.",
+          "abstract": "Although mechanism-based interpretability has generated an abundance of insight for discriminative network analysis, generative models are less understood -- particularly outside of image-related applications. We investigate how much of the causal circuitry found within image-related variational autoencoders (VAEs) will generalize to tabular data, as VAEs are increasingly used for imputation, anomaly detection, and synthetic data generation. In addition to extending a four-level causal intervention framework to four tabular and one image benchmark across five different VAE architectures (with 75 individual training runs per architecture and three random seed values for each run), this paper introduces three new techniques: posterior-calibration of Causal Effect Strength (CES), path-specific activation patching, and Feature-Group Disentanglement (FGD). The results from our experiments demonstrate that: (i) Tabular VAEs have circuits with modularity that is approximately 50% lower than their image counterparts. (ii) $β$-VAE experiences nearly complete collapse in CES scores when applied to heterogeneous tabular features (0.043 CES score for tabular data compared to 0.133 CES score for images), which can be directly attributed to reconstruction quality degradation (r = -0.886 correlation coefficient between CES and MSE). (iii) CES successfully captures nine of eleven statistically significant architecture differences using Holm--Šidák corrections. (iv) Interventions with high specificity predict the highest downstream AUC values (r = 0.460, p < .001). This study challenges the common assumption that architectural guidance from image-related studies can be transferred to tabular datasets.",
           "categories": [
             "cs.LG"
           ],
@@ -3135,5 +3171,5 @@
       ]
     }
   ],
-  "total": 131
+  "total": 133
 }

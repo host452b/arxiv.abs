@@ -10,11 +10,536 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:44:02Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 278,
-  "return_count": 200,
+  "return_count": 226,
   "papers": [
+    {
+      "id": "2611.20978",
+      "title": "Inverse Kinematics in Endoscopic Scenarios using MoveIt",
+      "authors": [
+        "Marc Bestmann",
+        "Timon Engelke",
+        "Rebecca Rodeck",
+        "Gerko Wende"
+      ],
+      "abstract": "Inverse kinematics are critical in many robotic applications, yet standard MoveIt-based solvers struggle in confined scenarios. This paper provides a benchmark of the available solvers and compares multiple practical modifications for improving the performance of the solvers. Splitting the IK problem into two parts results in the best performance, leading to a 100% success rate under 100 ms in an endoscopic tank scenario.",
+      "published": "2026-11-16T12:14:03Z",
+      "updated": "2026-11-16T12:14:03Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20978",
+      "abs_url": "https://arxiv.org/abs/2611.20978",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.15565",
+      "title": "Generalized Inverse Kinematics via Conditional Flow",
+      "authors": [
+        "Kaitlyn Zhang",
+        "Tomás Lozano-Pérez",
+        "Leslie Pack Kaelbling"
+      ],
+      "abstract": "Inverse kinematics (IK) is a foundational primitive in robotics, mapping the task-space objectives expressed by higher-level planners to robot configurations that realize them. Traditional IK methods generally treat each query as an isolated pose-to-configuration problem, but planners often need a distribution over valid realizations that accounts for future reachability and preferences such as collision avoidance and stability. We introduce GenGenIK, a generative modeling approach that supports mobile bases, multiple end-effectors and targets, scene awareness, and preferences over robot behavior within a common interface. Experiments show that GenGenIK outperforms existing methods in both solve rate and runtime across tasks such as bimanual lift and flip-up, while allowing flexible control over the sampled distribution and remaining effective under partial scene observations. Website: https://icra-2027-gengenik.github.io/.",
+      "published": "2026-11-11T14:48:20Z",
+      "updated": "2026-11-11T14:48:20Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.15565",
+      "abs_url": "https://arxiv.org/abs/2611.15565",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.05372",
+      "title": "PolicyIK: High-Precision Inverse Kinematics for Robot Arms with Reinforcement Learning",
+      "authors": [
+        "Yuhan Liu",
+        "Xinqi Liu",
+        "Zixuan Dong",
+        "Keith W. Ross",
+        "Shenji Wan"
+      ],
+      "abstract": "Inverse kinematics (IK) converts end-effector pose commands into joint motion, and many vision-language-action (VLA) policies rely on it to act on a given arm and to transfer across embodiments. Precise IK remains laborious: redundancy and singularities complicate the inverse mapping, execution depends on hand-tuned controllers, and training data on physical robots are costly to collect. We present PolicyIK, a goal-conditioned reinforcement learning policy for high-precision IK. It updates joint-position references from pose feedback and observes its accumulated reference relative to the measured joints, so it can retain the offset that the position controller needs at rest. Two-scale pose errors with an error-dependent action gain resolve millimeter residuals while preserving large motions. Progress and dwell rewards teach it to both reach the tolerance and stay within it. In simulation, a single attempt by the trained PPO policy keeps the mean errors over the final second within 1 mm and 0.2° on 93.5% of held-out tasks, and a deployment protocol raises success to 98.9%. When trained directly on a physical arm with an off-policy RL learner, PolicyIK achieves higher reaching and holding success than all four classical IK controllers under the same time budgets. In simulated pick-and-place, PolicyIK executes the end-effector commands of the $π_{0.5}$ VLA policy with 95.7% success. These results show that reinforcement learning can provide high-precision inverse kinematics for robot arms. Code is available at https://github.com/Tinaliu0123/PolicyIK.",
+      "published": "2026-11-03T18:59:14Z",
+      "updated": "2026-11-03T18:59:14Z",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.05372",
+      "abs_url": "https://arxiv.org/abs/2611.05372",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.41752",
+      "title": "Higher-Order Kinematic Derivatives for Aspect-Preserving Real-Time Numerical Inverse Kinematics",
+      "authors": [
+        "Steffan Lloyd"
+      ],
+      "abstract": "This paper leverages the higher-order kinematic derivatives of serial robots to achieve efficient, aspect-preserving real-time inverse kinematics. First, a family of higher-order solvers is derived, with a necessary orientation-error correction map, yielding the QuIK4 and QuIK5 methods with fourth- and fifth-order convergence. Second, an aspect-preserving step limiter extrapolates the Jacobian determinant along the step to predict and avoid singularities, shortening steps only when they head toward a singularity rather than when the current iterate is ill-conditioned. Third, a Hermite-interpolation certifier verifies the aspect of each answer, and a certified restart algorithm recovers failures from proven same-aspect seeds. The proposed methods are shown to outperform prior methods, reducing failures by up to four orders of magnitude and nearly eliminating aspect switching at tracking-level errors. A C++ library is released with ROS 2 integration.",
+      "published": "2026-10-30T13:55:16Z",
+      "updated": "2026-10-30T13:55:16Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41752",
+      "abs_url": "https://arxiv.org/abs/2610.41752",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.33715",
+      "title": "Quantum Closed Loop Inverse Kinematics Through Hilbert-Space Encoding of Robot Kinematics",
+      "authors": [
+        "Andrea Morghen",
+        "Pierluigi Arpenti",
+        "Roberto Schiattarella",
+        "Giovanni Acampora",
+        "Bruno Siciliano"
+      ],
+      "abstract": "The integration of quantum computing into robotics requires mathematical representations that preserve the geometric structure and configuration dependence of robot motion. This paper introduces a structure-preserving quantum representation of rigid-body transformations and serial-manipulator kinematics, establishing a correspondence between classical kinematic models and parameterized quantum circuits. Building on the Bloch-sphere representation, spatial directions are encoded into single-qubit states, while quantum rotations reproduce the ordered composition of reference-frame transformations. Translational contributions are combined through quantum-state aggregation, with their metric scales retained classically, enabling the reconstruction of end-effector position and orientation from Pauli expectation values. The formulation preserves the original joint variables and accommodates different kinematic conventions and joint types. Beyond forward kinematics, we establish that the manipulator geometric Jacobian can be reconstructed from quantum-observable derivatives using the parameter-shift rule, with analytical equivalence to its classical counterpart under ideal readout. To demonstrate the applicability of this representation to robot-level algorithms, we introduce Quantum Closed Loop Inverse Kinematics, a hybrid closed-loop method that exploits quantum-derived pose and Jacobian information. The proposed framework provides a geometrically interpretable foundation for developing and investigating quantum and hybrid computational methods for robotic kinematics and motion.",
+      "published": "2026-10-24T15:02:09Z",
+      "updated": "2026-10-24T15:02:09Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.33715",
+      "abs_url": "https://arxiv.org/abs/2610.33715",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.30033",
+      "title": "RLMuscle: Muscle-Driven Character Animation via Reinforcement Learning",
+      "authors": [
+        "Chunlei Li",
+        "Siyuan Yu",
+        "Yang Gao",
+        "Shuai Li",
+        "Peng Yu",
+        "Aimin Hao",
+        "He Wang"
+      ],
+      "abstract": "Body deformation caused by muscle contraction plays a vital role in the visual realism of character animation, yet in most 3D animation pipelines artists have to manually specify muscle activations, which is time-consuming and gives no guarantee of physical realism. To address this, we propose a new method in which a reinforcement learning (RL) controller discovers per-muscle activations that track reference motions without manual tuning. Existing RL muscle controllers stop at 1D muscles; we go one step further, keeping the 1D model inside the RL control loop as a fast surrogate, and using a 3D volumetric simulation to produce the final deformation. Because both stages share the very same constitutive law, the muscle deformation is produced by the same activations that generated the motion. We further add a measured electromyography (EMG) prior that steers the redundant activation solution toward real human muscle recruitment. To achieve stable, efficient, and realistic simulation, we propose a novel geometric multigrid for Extended Position-Based Dynamics (XPBD) that is built on a coarse tetrahedral cage with barycentric-coordinate prolongation and closes a V-cycle on tetrahedral meshes. Within this GPU-parallelized solver, we inject the same Hill-type force-length law as an energy-based fiber constraint that turns per-fiber activation into realistic muscle contraction and bulging. We demonstrate volumetric muscle simulation on a 194-muscle human body with a diverse set of motions (walk, kick, swim, overhead-squat, etc.), simulating the full-body model at 18 ms per frame on a single RTX 4090. Our work takes a step toward character animation that is not only visually convincing but also biomechanically grounded. The website with code and videos is at https://chunleili.github.io/project-page-rlmuscle/.",
+      "published": "2026-10-21T16:57:34Z",
+      "updated": "2026-10-21T16:57:34Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30033",
+      "abs_url": "https://arxiv.org/abs/2610.30033",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.13572",
+      "title": "ATHLETE: Learning Reactive Humanoid Tennis via Trajectory-Guided Motion Matching",
+      "authors": [
+        "Zhihao Tian",
+        "Zifan Wang",
+        "Enzheng Zhu",
+        "Xun Yang",
+        "Jialong Qin",
+        "Mengbo Wang",
+        "Junwei Liang"
+      ],
+      "abstract": "Humanoid tennis requires reactive whole-body coordination under rapidly changing ball dynamics, yet collecting task-specific motion-capture demonstrations that cover diverse approach states, contact locations, and timing conditions is costly. Inspired by how humans acquire new skills by combining reusable motor experience with task-specific demonstrations, we present ATHLETE, a framework for learning reactive humanoid tennis from generic locomotion data and ordinary tennis videos. ATHLETE combines LAFAN1 locomotion with video-derived striking motions and uses Trajectory-Guided Motion Matching (TGMM) to construct diverse task-conditioned whole-body references. These references are transformed into a reactive policy through physics-based teacher--student learning with online DAgger distillation, followed by PPO fine-tuning for the tennis task. The resulting policy responds directly to robot and ball observations without requiring reference-motion inputs at deployment. On a real humanoid robot, ATHLETE achieves forehand and backhand hit rates of $90.00\\%$ and $86.67\\%$, respectively, and enables multi-shot rallies with human players. These results demonstrate that ATHLETE can learn dynamic humanoid tennis skills from reusable locomotion data and video demonstrations. Result videos and code can be found at https://anonymous.4open.science/w/ATHLETE2027/.",
+      "published": "2026-10-09T13:25:56Z",
+      "updated": "2026-10-09T13:25:56Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.13572",
+      "abs_url": "https://arxiv.org/abs/2610.13572",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.04266",
+      "title": "Real-Time Conformal-Seeded Hybrid Inverse Kinematics for Offset Redundant Manipulators",
+      "authors": [
+        "Duc Cuong Vu",
+        "Van Tung Nguyen",
+        "Duc Hai Nguyen",
+        "Manh Cuong Nguyen",
+        "Vu Trung Tran",
+        "Minh Nhat Vu"
+      ],
+      "abstract": "This paper presents a conformal-seeded hybrid strategy for solving inverse kinematics of offset, redundant 7-DoF robot arms of the humanoid class. Analytical inverse kinematics (AIK) provides closed-form solutions with very low computational cost. However, for offset kinematic structures, the exact closed-form solution is generally unavailable, and practical AIK must rely on an approximate or simplified kinematic model. In contrast, numerical inverse kinematics (NIK) can achieve high-precision solutions on the full kinematic model. However, its convergence is highly sensitive to initialization. To overcome these limitations, we propose a two-stage hybrid inverse kinematics framework with conformal-calibrated seed selection. First, an approximate analytical model efficiently enumerates a finite set of candidate joint solutions. Second, we rank these candidates using a lightweight learned predictor of post-refinement difficulty, wrapped by split-conformal prediction into a calibrated upper bound that serves as the selection score. The best-ranked seed is then refined using a Levenberg-Marquardt solver on the full kinematic model. The proposed method combines fast candidate generation, learned seed ranking with a calibrated difficulty bound, and accurate numerical refinement, achieving real-time performance of less than 40us and a success rate of 100% in our evaluation on reachable targets. We validate the approach through large-scale stochastic simulation across the workspace and experimental demonstrations with motion planning on a humanoid robot arm. Demonstration videos are available at https://youtu.be/aeiBmw1XRbw.",
+      "published": "2026-10-03T03:45:09Z",
+      "updated": "2026-10-03T03:45:09Z",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.04266",
+      "abs_url": "https://arxiv.org/abs/2610.04266",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.29908",
+      "title": "MorphIK: Morphology-Conditioned Neural Inverse Kinematics for Unknown Robots",
+      "authors": [
+        "Lennart Clasmeier",
+        "Jan Gerrit Habekost",
+        "Cornelius Weber",
+        "Stefan Wermter"
+      ],
+      "abstract": "Neural models can learn to generate various solutions to the inverse kinematics problem from data, but are usually limited to a single robot. We present MorphIK, a flow-matching model that solves inverse kinematics for revolute-joint-based kinematic chains it has never seen during training. The model uses a transformer architecture to encode the robot's morphology along with the target pose. This encoding then conditions a flow-matching head that generates poses from noise. Trained on purely synthetic data from procedurally generated robots, the model reaches a precision of about 5 cm on unseen real-world robots with 6 to 9 Degrees of Freedom. For higher precision, the model serves as an excellent Prior for further optimization algorithms, reducing error to less than 1 cm after a single step of Damped Least Squares optimization and to sub-1 mm error after 3 steps in most cases. Building on flow matching's generative capabilities to produce highly diverse outputs, our model can efficiently sample the robot's null space, providing a wide variety of configurations for the same pose. Thus, overall, MorphIK allows learning and generalizing neural inverse kinematics for a multitude of known and unknown robots.",
+      "published": "2026-09-24T14:48:33Z",
+      "updated": "2026-09-24T14:48:33Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.29908",
+      "abs_url": "https://arxiv.org/abs/2609.29908",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.21275",
+      "title": "LOInK: Learned Optimal Inverse Kinematics via Structured Neural Surrogate Models",
+      "authors": [
+        "Michael Somerfield",
+        "Damian Abood",
+        "Ruigang Wang",
+        "Ian R. Manchester"
+      ],
+      "abstract": "We introduce Learned Optimal Inverse Kinematics (LOInK), a method to generate approximately optimal solutions to an inverse kinematics problem. When trained on data consisting of sampled configurations and associated task variables and a given cost function, LOInK learns a bi-Lipschitz invertible mapping from configuration space to a decoupled task/latent space, and moreover, the latent space is structured so as to place cost-minimizing solutions at the origin. This enables efficient sampling of cost-minimizing solutions via a network-inversion algorithm based on operator splitting. We demonstrate the proposed approach on three problems: an illustrative three degree-of-freedom manipulator problem; a quadrupedal climbing robot for which LOInK can generate near-optimal solutions on average 31 times faster and up to 100 times faster than a constrained optimization approach; and a simulated soft actuator as a purely data-driven example, in which LOInK can explicitly generate high-quality solutions, unlike existing generative approaches that require diverse sampling and evaluation of candidate solutions.",
+      "published": "2026-09-18T03:41:25Z",
+      "updated": "2026-09-18T03:41:25Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21275",
+      "abs_url": "https://arxiv.org/abs/2609.21275",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.28219",
+      "title": "RASA: Disentangled Spatial-Motional Priors for Cross-Identity Character Animation",
+      "authors": [
+        "Zhen Xiao",
+        "Zhen Shen",
+        "Zhaofan Qiu",
+        "Ting Yao",
+        "Xueliang Liu",
+        "Tao Mei"
+      ],
+      "abstract": "Cross-identity character animation aims to drive a target identity from a reference image to follow the motion of a source character from a driving video. The core challenge lies in the inherent entanglement of two capabilities: cross-identity spatial mapping (aligning position, scale, and skeletal proportions) and motion control (refining joint articulation, volumetric consistency, and view coherence). We introduce Reference-Aware Structural Alignment (RASA), a framework that disentangles spatial mapping from motion control by injecting structured priors into a Diffusion Transformer (DiT). Our approach has two stages. First, a Spatial Prior Calibrator (SPC) fuses reference identity with driving pose to generate a spatially grounded initial noise latent, ensuring correct positioning, scaling, and alignment with the driving skeleton. Second, an Inherent Motional Guider (IMG) encodes shape-agnostic SMPL articulation parameters into a semantic motion vector beyond appearance-biased 2D keypoints. Injected into intermediate DiT layers, this vector complements the base pose condition for anatomically consistent articulation and view-aware volumetric refinement. We curate CIM-Bench, a high-quality benchmark with rigorous curation, for evaluation. Extensive experiments show RASA significantly outperforms state-of-the-art methods in motion fidelity and visual quality. Our work establishes a new paradigm showing disentangled spatial and motional priors are key to robust character animation. Project page: https://hidream.ai.github.io/RASA/",
+      "published": "2026-08-28T11:36:44Z",
+      "updated": "2026-08-28T11:36:44Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.28219",
+      "abs_url": "https://arxiv.org/abs/2608.28219",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.06009",
+      "title": "Wan-Animate-2: Pushing the Application Boundaries of Character Animation",
+      "authors": [
+        "Guangyuan Wang",
+        "Li Hu",
+        "Dechao Meng",
+        "Zhongyi Zhang",
+        "Peng Zhang",
+        "Xindi Zhang",
+        "Mingyang Huang",
+        "Ruoshi Zhang",
+        "Ke Sun",
+        "Zhe Zhang",
+        "Xingjun Wang",
+        "Gang Cheng",
+        "Hai Xu",
+        "Bang Zhang"
+      ],
+      "abstract": "Character image animation remains a foundational yet challenging task in computer vision. Existing approaches can be broadly categorized into three paradigms: methods based on explicit motion representations suffer from extraction errors and identity drift; methods based on implicit motion features lose fine-grained dynamics through compression; and in-context learning approaches avoid intermediate representations but incur prohibitive computational costs. Furthermore, all current systems are designed for offline synthesis, unable to meet the real-time requirements of interactive applications such as digital avatars and live-streaming hosts. To address these limitations, we present Wan-Animate-2, an end-to-end character animation framework that directly consumes the driving video within a redesigned Diffusion Transformer. Our architecture achieves superior motion fidelity and identity preservation by eliminating intermediate motion extractors entirely. We further introduce text driven viewpoint control that decouples the output camera perspective from the driving video--a capability rarely supported by prior character animation methods that rely on explicit motion representations. Beyond generation quality, we present Wan-Animate-2-Lite, an efficient variant that reduces inference latency to real-time thresholds through a three-stage training paradigm: teacher forcing pretraining with error buffer mechanism, and Self-Forcing distillation with chunk-wise backpropagation. This enables streaming character animation for interactive applications, opening new deployment scenarios that were previously infeasible. Qualitative evaluations and user studies demonstrate that Wan-Animate-2 achieves high-fidelity animation results across diverse characters and motion patterns. To foster further research and community development, we will release the Wan-Animate-2-Base model weights to the public.",
+      "published": "2026-08-06T13:13:10Z",
+      "updated": "2026-08-08T11:15:00Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.06009",
+      "abs_url": "https://arxiv.org/abs/2608.06009",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.13415",
+      "title": "MultiAnimate: A Unified Framework for Controllable Multi-Character Animation",
+      "authors": [
+        "Zhongyi Zhang",
+        "Guangyuan Wang",
+        "Li Hu",
+        "Wenbo Zhou",
+        "Peng Zhang",
+        "Tianyi Wei",
+        "Weiming Zhang",
+        "Bang Zhang",
+        "Nenghai Yu"
+      ],
+      "abstract": "Recent advances in generative models and technological innovations have significantly addressed the fundamental challenges of character image animation. However, existing approaches predominantly focus on character animation from a single reference image, substantially limiting their applicability in scenarios such as multiple character interaction animation. To fill this gap, this paper introduces MultiAnimate, a comprehensive framework that enables concurrent animation of multiple characters within a shared environment while preserving both identity consistency and spatial relationships. The framework achieves these objectives through multiple well-designed mechanisms. First, we incorporate an identity-specific reference net that enables appearance extraction from multiple reference images, distinguishing MultiAnimate from existing approaches constrained to single reference inputs. Second, we implement an identity-aware pose encoder to address the character-pose binding challenge, wherein an attention mechanism enables the network to accurately differentiate and process multiple pose sequences during generation. Third, we introduce an interaction guider module that enhances the framework's capability to handle complex inter-character interactions by leveraging character-specific mask information, serving as an optional component that refines the pose sequences. Extensive experiments and ablation analyses demonstrate our framework's superiority in multiple character animation, particularly in scenarios involving complex motion sequences.",
+      "published": "2026-07-15T03:33:52Z",
+      "updated": "2026-07-15T03:33:52Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.13415",
+      "abs_url": "https://arxiv.org/abs/2607.13415",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.26408",
+      "title": "Exploring the Intrinsic Geometry of Diffusion Models with Constrained Inverse Kinematics",
+      "authors": [
+        "Miguel Angel Rogel Garcia",
+        "Phone Thiha Kyaw",
+        "Jonathan Kelly"
+      ],
+      "abstract": "Recent studies suggest that diffusion models can recover geometric structure in the data they are trained on, yet the supporting evidence has so far come mostly from natural-image data, where the underlying geometry itself is unknown. We study this question in a setting where the geometry is analytically tractable: constrained inverse kinematics (IK). Each task-space constraint defines a configuration-space manifold with known intrinsic dimension, giving direct ground truth for evaluating the geometry learned by the model. For each of the 6-DoF UR5 and 7-DoF Franka, we train a single conditional diffusion model across seven constraint families, spanning solution manifolds from discrete IK branches to self-motion manifolds. Our empirical results reveal that the intrinsic dimension recovered from the model's score function matches the analytical degrees of freedom of the corresponding constraint manifold across both robots. Moreover, linear interpolation in the latent space leads to generated solutions that remain close to the appropriate constraint manifold, indicating that the learned representation further captures geometric structure of the constraint family beyond intrinsic dimension alone. Constrained IK therefore offers a controlled setting for studying the intrinsic geometry learned by diffusion models.",
+      "published": "2026-06-24T22:00:13Z",
+      "updated": "2026-10-14T20:26:03Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.26408",
+      "abs_url": "https://arxiv.org/abs/2606.26408",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.15148",
+      "title": "MimicIK: Real-Time Generative Inverse Kinematics from Teleoperation with FK Consistency",
+      "authors": [
+        "Jiahao Yang",
+        "Shenhao Yan",
+        "Fan Feng",
+        "Chengsi Yao",
+        "Ge Wang",
+        "Zhixin Mai",
+        "Yiming Zhao",
+        "Yatong Han"
+      ],
+      "abstract": "Inverse kinematics (IK) remains a critical bottleneck for real-time robot manipulation. Classical numerical solvers achieve high geometric precision but often suffer from discontinuous branch switching and unstable behavior near kinematic singularities during closed-loop deployment. Meanwhile, learned IK approaches frequently struggle to balance spatial accuracy, motion smoothness, and real-time efficiency, particularly when trained on noisy human teleoperation data. We present \\textbf{MimicIK}, a real-time generative inverse kinematics framework that learns smooth and robust joint-space motion priors from teleoperation demonstrations through conditional flow matching. Given the current joint configuration and a target end-effector pose, MimicIK predicts continuous delta-joint commands using an efficient two-step iterative refinement process based on a Minimal Iterative Policy (MIP) backbone. To enforce physical consistency, we further introduce an FK consistency loss, a differentiable forward-kinematics regularization that penalizes task-space deviations from the target pose during training. We evaluate MimicIK on a real-world 6-DOF robot dataset containing 8,848 teleoperation demonstrations. MimicIK achieves a mean position error of 4.65 mm, a 10 mm success rate of 92.01\\%, and a trajectory spike rate of only 7.99\\%. Compared with a UNet diffusion baseline, our method improves both spatial accuracy and motion smoothness while reducing inference latency from 21.66 ms to 6.74 ms. Furthermore, unlike deterministic MLP baselines that catastrophically diverge under out-of-distribution deployment, MimicIK remains stable near singular configurations and enables robust 20 Hz real-time control on deployment hardware.",
+      "published": "2026-06-13T06:32:08Z",
+      "updated": "2026-06-16T04:15:49Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.15148",
+      "abs_url": "https://arxiv.org/abs/2606.15148",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.10804",
+      "title": "SCAIL-2: Unifying Controlled Character Animation with End-to-End In-Context Conditioning",
+      "authors": [
+        "Wenhao Yan",
+        "Fengjia Guo",
+        "Zhuoyi Yang",
+        "Jie Tang"
+      ],
+      "abstract": "Controlled character animation aims to transfer motion from a driving sequence to a reference character. Prior works heavily rely on intermediate representations, such as pose skeletons for motion and masked backgrounds for environment, inevitably resulting in information loss. In this work, we present SCAIL-2, a framework that adopts an end-to-end driving paradigm by directly concatenating latent visual information to the model's input sequence. We enable end-to-end training through a data synthesis pipeline that produces MotionPair-60K, a curated dataset for several character animation subtasks. We unify the subtasks using decoupled conditions to accommodate different driving patterns, facilitated by In-Context Mask Conditioning and Mode-Specific RoPE, which provide soft guidance beyond textual instructions and visual information. To address synthetic discrepancy in detailed regions, we propose Bias-Aware DPO to construct preference items to mitigate the errors. Extensive experiments demonstrate that our method achieves state-of-the-art performance across various character animation tasks. Code, model weights, and a large subset of the dataset are available at: https://teal024.github.io/SCAIL-2/.",
+      "published": "2026-06-09T12:49:34Z",
+      "updated": "2026-08-05T01:57:13Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.10804",
+      "abs_url": "https://arxiv.org/abs/2606.10804",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.00086",
+      "title": "Whole-Body Inverse Kinematics with Graph Diffusion",
+      "authors": [
+        "Helong Huang",
+        "Kai Tan",
+        "Feng Wen",
+        "Guowei Huang",
+        "Xingyue Quan"
+      ],
+      "abstract": "Inverse kinematics (IK) is a fundamental problem in robotics, requiring the generation of joint configurations that satisfy target end-effector poses. Existing approaches often struggle to generalize across diverse robot morphologies and to effectively model the multi-modal nature of IK, particularly in articulated systems with multiple kinematic branches. In this work, we propose GraphDiff-IK, a structure-aware graph diffusion framework for inverse kinematics. Specifically, we represent the robot as a kinematic graph constructed from the robot URDF, where nodes correspond to actuated joints and edges encode kinematic dependencies. Building upon this representation, we formulate IK as a conditional graph diffusion process that directly generates joint configurations on the robot graph. To better capture structural dependencies in articulated systems, we further introduce a structure-aware graph reasoning framework with hierarchical stage-wise message passing and torso-aware conditioning for multi-branch robots. In addition, we incorporate noisy forward kinematics feedback and task-space supervision to improve geometric consistency during denoising. The proposed framework provides a unified formulation that naturally supports single-arm robots, dual-arm systems, and articulated robots with torso or waist structures. Extensive experiments on diverse robotic platforms demonstrate that the proposed method achieves accurate and stable IK performance while preserving the ability to generate multiple feasible solutions for redundant robotic systems.",
+      "published": "2026-05-23T00:40:57Z",
+      "updated": "2026-05-23T00:40:57Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.00086",
+      "abs_url": "https://arxiv.org/abs/2606.00086",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.31436",
+      "title": "Actuator-Aware Inverse Kinematics with Joint-Limit Admissibility for Torque-Controlled Redundant Robots",
+      "authors": [
+        "Mohammad Dastranj",
+        "Mahdi Hejrati",
+        "Jouni Mattila"
+      ],
+      "abstract": "This paper proposes actuator-aware inverse kinematics for torque-controlled redundant robots under joint-limit constraints. In the considered architecture, the inverse-kinematic output is not merely a purely kinematic joint-velocity command; it is the required joint velocity supplied to a downstream torque-level controller. Therefore, a small commanded task residual may not necessarily improve realized motion. The proposed method formulates a convex quadratic programming problem whose decision variable is the joint-level required velocity. Control barrier function style bounds impose reference-level joint-limit admissibility, while the task equation is handled through a penalized slack variable. Redundancy is resolved using a controller-compatibility objective that accounts for previous-command consistency and actuator torque-capacity weighting. The method is independent of the particular torque-level controller and can serve as an intermediate IK layer between an endpoint trajectory and a redundant robot controller. Experiments on a virtual-decomposition-controlled seven-degree-of-freedom upper-limb exoskeleton compare the method with standard inverse-kinematic baselines and a constrained task-preserving quadratic programming baseline. The results indicate lower limit-pushing commands, bounded admissible required velocities, and improved realized task behavior in the tested trajectory, without modifying the downstream controller.",
+      "published": "2026-05-29T15:33:10Z",
+      "updated": "2026-05-29T15:33:10Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.31436",
+      "abs_url": "https://arxiv.org/abs/2605.31436",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.27055",
+      "title": "Semantic-Aware Motion Encoding for Topology-Agnostic Character Animation",
+      "authors": [
+        "Zongye Zhang",
+        "Yuzhuo Cui",
+        "Qingjie Liu",
+        "Yunhong Wang"
+      ],
+      "abstract": "Generalizing motion representation across diverse characters remains challenging due to significant topological variations in skeletal structures across datasets and species, which hinder the development of scalable generative models. To bridge this gap, we propose a Semantic-Aware Topology-Agnostic framework that learns a unified latent manifold shared by disparate species. Unlike methods relying on fixed hierarchies or rigid padding strategies, our approach leverages a semantic modulation mechanism to align functional joint correspondences, thereby decoupling motion from topology. This design enables the construction of a continuous, generative-friendly motion space from large-scale, unaligned raw BVH data. Experiments on human and animal datasets demonstrate that our framework achieves high-fidelity reconstruction and supports downstream text-to-motion tasks. Notably, the model enables zero-shot cross-species retargeting without paired data. Code and demos are available at: https://github.com/zzysteve/SATA",
+      "published": "2026-05-26T14:10:12Z",
+      "updated": "2026-05-26T14:10:12Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.27055",
+      "abs_url": "https://arxiv.org/abs/2605.27055",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.23583",
+      "title": "How Many Training Samples Are Needed for the Inverse Kinematics Solutions by Artificial Neural Networks",
+      "authors": [
+        "Dong-Won Lim"
+      ],
+      "abstract": "Inverse Kinematics (IK) plays a critical role in robotic motion planning and control. The IK solutions of a robot manipulator could be done by conventional ways such as geometric, algebraic, or Jacobian methods, which have drawbacks. The Artificial Neural Networks (ANNs) have become a promising alternative for approximating IK solutions due to their generalization ability and computational efficiency. This approach basically trains only a few samples of the end effector that are recorded for the solution of the IK problem. However, a fundamental question remains: how many training samples are sufficient to achieve reliable and accurate IK predictions? This study investigates the mathematical framework of relating the size of training datasets and the accuracy of ANN-based IK solvers. Using an articulated robotic manipulator, we generate varying amounts of joint-position pairs to train feedforward neural networks and assess their accuracy, convergence, and generalization capability. The results reveal more training samples than 125 did not contribute to the improvement of the model efficiency that the comparable measure dealing with the approximation accuracy over the sampling size, offering valuable insight into data efficiency. This work provides practical guidance for optimizing the data sizing of ANN solutions, balancing computational cost and model accuracy for real-world robotic applications.",
+      "published": "2026-05-22T12:54:08Z",
+      "updated": "2026-05-22T12:54:08Z",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.23583",
+      "abs_url": "https://arxiv.org/abs/2605.23583",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.21061",
+      "title": "Grounding Driving VLA via Inverse Kinematics",
+      "authors": [
+        "Junsung Park",
+        "Hyunjung Shim"
+      ],
+      "abstract": "Counterfactual obstacle insertion exposes blind planning in representative Driving VLAs: their trajectories remain largely unchanged despite a vehicle appearing directly ahead. An empirically calibrated bias-variance analysis identifies how ego-predictable training examples admit a shortcut through ego status and commands. We address this failure with an inverse-kinematics-inspired architecture that anchors trajectory decoding on current and predicted future visual states. First, a next visual state prediction objective that requires the LLM to predict the future visual scene provides dense visual supervision and suppresses shortcut paths. Second, a separate Inverse Kinematics Network (a cross-attention-based conditional diffusion model) that takes only the current and future visual states as input is designed to suppress reliance on ego status and textual shortcuts during trajectory decoding. Our 0.5B model achieves state-of-the-art trajectory planning performance on NAVSIM-v1, NAVSIM-v2, and nuScenes using cameras alone, without LiDAR or a BEV encoder. Against the matched OpenDriveVLA* baseline, it improves NAVSIM PDMS and EPDMS by 19.0 and 20.4 points, respectively. Controlled ablations and intervention analyses support improved use of visual features, with future-state prediction sharpening hazard-specific responses.",
+      "published": "2026-05-20T11:45:32Z",
+      "updated": "2026-11-16T06:51:39Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.21061",
+      "abs_url": "https://arxiv.org/abs/2605.21061",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.09258",
+      "title": "Monocular Biomechanical Tracking of Fingers with Inverse Kinematics to Foundation Models",
+      "authors": [
+        "R. James Cotton",
+        "Pouyan Firouzabadi",
+        "Wendy Murray"
+      ],
+      "abstract": "Accurate hand and finger tracking from video has significant clinical applications for monitoring activities of daily living and measuring range of motion, yet monocular video approaches for obtaining hand biomechanics remain under-developed. We present a method that combines the SAM 3D Body foundation model with inverse kinematics optimization in a full-body biomechanical model to extract anatomically-constrained finger joint angles from single-view video. We port SAM 3D Body from PyTorch to JAX for integration with MuJoCo-MJX, enabling GPU-accelerated optimization, and develop a novel mapping between the Momentum Human Rig (MHR) outputs and biomechanical model markers. Validation against 8-camera multiview reconstruction on 4,590 frames from 7 participants performing a variety of hand poses and object manipulation tasks shows finger joint angle errors of approximately 10 degrees and hand position errors of approximately 6 mm, after Procrustes alignment. Results were consistent across camera viewpoints and robust to different methods for producing reference values from multiview video. This work extends monocular biomechanical analysis to detailed finger tracking, expanding access to quantitative characterization of hand movement from readily available video.",
+      "published": "2026-05-10T02:06:43Z",
+      "updated": "2026-05-10T02:06:43Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.09258",
+      "abs_url": "https://arxiv.org/abs/2605.09258",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.01001",
+      "title": "AnimationDiff: A Visual Comparison Tool for Generated 3D Character Animations",
+      "authors": [
+        "Ludwig Sidenmark",
+        "Qian Zhou",
+        "George Fitzmaurice",
+        "Fraser Anderson"
+      ],
+      "abstract": "Creating 3D character animations traditionally requires significant time and effort from the animator. Advancements in generative methods now enable easy creation of multiple character animation variations for use or further editing. However, this capability introduces a new challenge in comparing character animations to select the best animation, which is challenging due to temporal misalignment and the large amount of spatial data. We present AnimationDiff, a visual comparison tool for generated character animations. AnimationDiff enables contextual comparisons in the intended scene and camera angle, and embedding of spatial information by combining established animation visualization techniques and easy switching between overlaid and side-by-side comparisons. AnimationDiff also supports filtering to handle information overload, and Temporal Lenses that visualize entire animations over time for overview, alignment, and comparison. We evaluated AnimationDiff in a user study, showcasing its efficacy in animation comparison and providing design insights for comparing motion.",
+      "published": "2026-05-01T18:06:44Z",
+      "updated": "2026-05-01T18:06:44Z",
+      "categories": [
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.01001",
+      "abs_url": "https://arxiv.org/abs/2605.01001",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.16629",
+      "title": "Amortized Inverse Kinematics via Graph Attention for Real-Time Human Avatar Animation",
+      "authors": [
+        "Muhammad Saif Ullah Khan",
+        "Chen-Yu Wang",
+        "Tim Prokosch",
+        "Michael Lorenz",
+        "Bertram Taetz",
+        "Didier Stricker"
+      ],
+      "abstract": "Inverse kinematics (IK) is a core operation in animation, robotics, and biomechanics: given Cartesian constraints, recover joint rotations under a known kinematic tree. In many real-time human avatar pipelines, the available signal per frame is a sparse set of tracked 3D joint positions, whereas animation systems require joint orientations to drive skinning. Recovering full orientations from positions is underconstrained, most notably because twist about bone axes is ambiguous, and classical IK solvers typically rely on iterative optimization that can be slow and sensitive to noisy inputs. We introduce IK-GAT, a lightweight graph-attention network that reconstructs full-body joint orientations from 3D joint positions in a single forward pass. The model performs message passing over the skeletal parent-child graph to exploit kinematic structure during rotation inference. To simplify learning, IK-GAT predicts rotations in a bone-aligned world-frame representation anchored to rest-pose bone frames. This parameterization makes the twist axis explicit and is exactly invertible to standard parent-relative local rotations given the kinematic tree and rest pose. The network uses a continuous 6D rotation representation and is trained with a geodesic loss on SO(3) together with an optional forward-kinematics consistency regularizer. IK-GAT produces animation-ready local rotations that can directly drive a rigged avatar or be converted to pose parameters of SMPL-like body models for real-time and online applications. With 374K parameters and over 650 FPS on CPU, IK-GAT outperforms VPoser-based per-frame iterative optimization without warm-start at significantly lower cost, and is robust to initial pose and input noise",
+      "published": "2026-04-17T18:30:20Z",
+      "updated": "2026-04-17T18:30:20Z",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.16629",
+      "abs_url": "https://arxiv.org/abs/2604.16629",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.13405",
+      "title": "Singularity Avoidance in Inverse Kinematics: A Unified Treatment of Classical and Learning-based Methods",
+      "authors": [
+        "Vishnu Rudrasamudram",
+        "Hariharasudan Malaichamee"
+      ],
+      "abstract": "Singular configurations cause loss of task-space mobility, unbounded joint velocities, and solver divergence in inverse kinematics (IK) for serial manipulators. No existing survey bridges classical singularity-robust IK with rapidly growing learning-based approaches. We provide a unified treatment spanning Jacobian regularization, Riemannian manipulability tracking, constrained optimization, and modern data-driven paradigms. A systematic taxonomy classifies methods by retained geometric structure and robustness guarantees (formal vs. empirical). We address a critical evaluation gap by proposing a benchmarking protocol and presenting experimental results: 12 IK solvers are evaluated on the Franka Panda under position-only IK across four complementary panels measuring error degradation by condition number, velocity amplification, out-of-distribution robustness, and computational cost. Results show that pure learning methods fail even on well-conditioned targets (MLP: 0% success, approx. 10 mm mean error), while hybrid warm-start architectures - IKFlow (59% to 100%), CycleIK(0% to 98.6%), GGIK (0% to 100%) - rescue learned solvers via classical refinement, with DLS converging from initial errors up to 207 mm. Deeper singularity-regime evaluation is identified as immediate future work.",
+      "published": "2026-04-15T02:14:01Z",
+      "updated": "2026-04-15T02:14:01Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.13405",
+      "abs_url": "https://arxiv.org/abs/2604.13405",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.02256",
+      "title": "A virtual-variable-length method for robust inverse kinematics of multi-segment continuum robots",
+      "authors": [
+        "Weiting Feng",
+        "Federico Renda",
+        "Yunjie Yang",
+        "Francesco Giorgio-Serchi"
+      ],
+      "abstract": "This paper proposes a new, robust method to solve the inverse kinematics (IK) of multi-segment continuum manipulators. Conventional Jacobian-based solvers, especially when initialized from neutral/rest configurations, often exhibit slow convergence and, in certain conditions, may fail to converge (deadlock). The Virtual-Variable-Length (VVL) method proposed here introduces fictitious variations of segments' length during the solution iteration, conferring virtual axial degrees of freedom that alleviate adverse behaviors and constraints, thus enabling or accelerating convergence. Comprehensive numerical experiments were conducted to compare the VVL method against benchmark Jacobian-based and Damped Least Square IK solvers. Across more than $1.8\\times 10^6$ randomized trials covering manipulators with two to seven segments, the proposed approach achieved up to a 20$\\%$ increase in convergence success rate over the benchmark and a 40-80$\\%$ reduction in average iteration count under equivalent accuracy thresholds ($10^{-4}-10^{-8}$). While deadlocks are not restricted to workspace boundaries and may occur at arbitrary poses, our empirical study identifies boundary-proximal configurations as a frequent cause of failed convergence and the VVL method mitigates such occurrences over a statistical sample of test cases.",
+      "published": "2026-04-02T16:50:57Z",
+      "updated": "2026-04-02T16:50:57Z",
+      "categories": [
+        "cs.RO",
+        "eess.SY",
+        "math.NA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.02256",
+      "abs_url": "https://arxiv.org/abs/2604.02256",
+      "source": "arxiv"
+    },
     {
       "id": "2412.03685",
       "title": "Sprite Sheet Diffusion: Generate Game Character for Animation",
@@ -317,7 +842,7 @@
         "Tom Shenkar",
         "Lior Wolf"
       ],
-      "abstract": "Inverse kinematic (IK) methods recover the parameters of the joints, given the desired position of selected elements in the kinematic chain. While the problem is well-defined and low-dimensional, it has to be solved rapidly, accounting for multiple possible solutions. In this work, we propose a neural IK method that employs the hierarchical structure of the problem to sequentially sample valid joint angles conditioned on the desired position and on the preceding joints along the chain. In our solution, a hypernetwork $f$ recovers the parameters of multiple primary networks {$g_1,g_2,\\dots,g_N$, where $N$ is the number of joints}, such that each $g_i$ outputs a distribution of possible joint angles, and is conditioned on the sampled values obtained from the previous primary networks $g_j, j\u003ci$. The hypernetwork can be trained on readily available pairs of matching joint angles and positions, without observing multiple solutions. At test time, a high-variance joint distribution is presented, by sampling sequentially from the primary networks. We demonstrate the advantage of the proposed method both in comparison to other IK methods for isolated instances of IK and with regard to following the path of the end effector in Cartesian space.",
+      "abstract": "Inverse kinematic (IK) methods recover the parameters of the joints, given the desired position of selected elements in the kinematic chain. While the problem is well-defined and low-dimensional, it has to be solved rapidly, accounting for multiple possible solutions. In this work, we propose a neural IK method that employs the hierarchical structure of the problem to sequentially sample valid joint angles conditioned on the desired position and on the preceding joints along the chain. In our solution, a hypernetwork $f$ recovers the parameters of multiple primary networks {$g_1,g_2,\\dots,g_N$, where $N$ is the number of joints}, such that each $g_i$ outputs a distribution of possible joint angles, and is conditioned on the sampled values obtained from the previous primary networks $g_j, j<i$. The hypernetwork can be trained on readily available pairs of matching joint angles and positions, without observing multiple solutions. At test time, a high-variance joint distribution is presented, by sampling sequentially from the primary networks. We demonstrate the advantage of the proposed method both in comparison to other IK methods for isolated instances of IK and with regard to following the path of the end effector in Cartesian space.",
       "categories": [
         "cs.LG",
         "cs.RO"
@@ -2732,7 +3257,7 @@
         "Jonathan Kelly",
         "Jessica Burgner-Kahrs"
       ],
-      "abstract": "The small size, high dexterity, and intrinsic compliance of continuum robots (CRs) make them well suited for constrained environments. Solving the inverse kinematics (IK), that is finding robot joint configurations that satisfy desired position or pose queries, is a fundamental challenge in motion planning, control, and calibration for any robot structure. For CRs, the need to avoid obstacles in tightly confined workspaces greatly complicates the search for feasible IK solutions. Without an accurate initialization or multiple re-starts, existing algorithms often fail to find a solution. We present CIDGIKc (Convex Iteration for Distance-Geometric Inverse Kinematics for Continuum Robots), an algorithm that solves these nonconvex feasibility problems with a sequence of semidefinite programs whose objectives are designed to encourage low-rank minimizers. CIDGIKc is enabled by a novel distance-geometric parameterization of constant curvature segment geometry for CRs with extensible segments. The resulting IK formulation involves only quadratic expressions and can efficiently incorporate a large number of collision avoidance constraints. Our experimental results demonstrate \u003e98% solve success rates within complex, highly cluttered environments which existing algorithms cannot account for.",
+      "abstract": "The small size, high dexterity, and intrinsic compliance of continuum robots (CRs) make them well suited for constrained environments. Solving the inverse kinematics (IK), that is finding robot joint configurations that satisfy desired position or pose queries, is a fundamental challenge in motion planning, control, and calibration for any robot structure. For CRs, the need to avoid obstacles in tightly confined workspaces greatly complicates the search for feasible IK solutions. Without an accurate initialization or multiple re-starts, existing algorithms often fail to find a solution. We present CIDGIKc (Convex Iteration for Distance-Geometric Inverse Kinematics for Continuum Robots), an algorithm that solves these nonconvex feasibility problems with a sequence of semidefinite programs whose objectives are designed to encourage low-rank minimizers. CIDGIKc is enabled by a novel distance-geometric parameterization of constant curvature segment geometry for CRs with extensible segments. The resulting IK formulation involves only quadratic expressions and can efficiently incorporate a large number of collision avoidance constraints. Our experimental results demonstrate >98% solve success rates within complex, highly cluttered environments which existing algorithms cannot account for.",
       "categories": [
         "cs.RO"
       ],
@@ -2893,7 +3418,7 @@
         "Alyson K. Fletcher",
         "Sundeep Rangan"
       ],
-      "abstract": "A well-known analysis of Tropp and Gilbert shows that orthogonal matching pursuit (OMP) can recover a k-sparse n-dimensional real vector from 4 k log(n) noise-free linear measurements obtained through a random Gaussian measurement matrix with a probability that approaches one as n approaches infinity. This work strengthens this result by showing that a lower number of measurements, 2 k log(n - k), is in fact sufficient for asymptotic recovery. More generally, when the sparsity level satisfies kmin \u003c= k \u003c= kmax but is unknown, 2 kmax log(n - kmin) measurements is sufficient. Furthermore, this number of measurements is also sufficient for detection of the sparsity pattern (support) of the vector with measurement errors provided the signal-to-noise ratio (SNR) scales to infinity. The scaling 2 k log(n - k) exactly matches the number of measurements required by the more complex lasso method for signal recovery with a similar SNR scaling.",
+      "abstract": "A well-known analysis of Tropp and Gilbert shows that orthogonal matching pursuit (OMP) can recover a k-sparse n-dimensional real vector from 4 k log(n) noise-free linear measurements obtained through a random Gaussian measurement matrix with a probability that approaches one as n approaches infinity. This work strengthens this result by showing that a lower number of measurements, 2 k log(n - k), is in fact sufficient for asymptotic recovery. More generally, when the sparsity level satisfies kmin <= k <= kmax but is unknown, 2 kmax log(n - kmin) measurements is sufficient. Furthermore, this number of measurements is also sufficient for detection of the sparsity pattern (support) of the vector with measurement errors provided the signal-to-noise ratio (SNR) scales to infinity. The scaling 2 k log(n - k) exactly matches the number of measurements required by the more complex lasso method for signal recovery with a similar SNR scaling.",
       "categories": [
         "cs.IT"
       ],

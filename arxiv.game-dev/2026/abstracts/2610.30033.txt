@@ -1,0 +1,30 @@
+Title: RLMuscle: Muscle-Driven Character Animation via Reinforcement Learning
+Authors: Chunlei Li, Siyuan Yu, Yang Gao, Shuai Li, Peng Yu, Aimin Hao, He Wang
+ID: 2610.30033
+URL: https://arxiv.org/abs/2610.30033
+
+Abstract:
+Body deformation caused by muscle contraction plays a vital role in the visual
+realism of character animation, yet in most 3D animation pipelines artists have
+to manually specify muscle activations, which is time-consuming and gives no
+guarantee of physical realism. To address this, we propose a new method in which
+a reinforcement learning (RL) controller discovers per-muscle activations that
+track reference motions without manual tuning. Existing RL muscle controllers
+stop at 1D muscles; we go one step further, keeping the 1D model inside the RL
+control loop as a fast surrogate, and using a 3D volumetric simulation to
+produce the final deformation. Because both stages share the very same
+constitutive law, the muscle deformation is produced by the same activations
+that generated the motion. We further add a measured electromyography (EMG)
+prior that steers the redundant activation solution toward real human muscle
+recruitment. To achieve stable, efficient, and realistic simulation, we propose
+a novel geometric multigrid for Extended Position-Based Dynamics (XPBD) that is
+built on a coarse tetrahedral cage with barycentric-coordinate prolongation and
+closes a V-cycle on tetrahedral meshes. Within this GPU-parallelized solver, we
+inject the same Hill-type force-length law as an energy-based fiber constraint
+that turns per-fiber activation into realistic muscle contraction and bulging.
+We demonstrate volumetric muscle simulation on a 194-muscle human body with a
+diverse set of motions (walk, kick, swim, overhead-squat, etc.), simulating the
+full-body model at 18 ms per frame on a single RTX 4090. Our work takes a step
+toward character animation that is not only visually convincing but also
+biomechanically grounded. The website with code and videos is at
+https://chunleili.github.io/project-page-rlmuscle/.

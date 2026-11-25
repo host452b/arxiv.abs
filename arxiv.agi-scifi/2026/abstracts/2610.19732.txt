@@ -1,0 +1,33 @@
+Title: Controlling the latency in temporal coded spiking models for neuromorphic datasets
+Authors: Alban Gattepaille, Alexandre Muzy
+ID: 2610.19732
+URL: https://arxiv.org/abs/2610.19732
+
+Abstract:
+Spiking neural networks (SNNs) promise energy-efficient, event-driven
+computation on neuromorphic hardware, where response time, or latency, matters
+as much as energy for real-time applications. Time-to-first-spike (TTFS) coding
+with learnable synaptic delays is a natural way to exploit the timing of events.
+However, in state-of-the-art spiking neuron models, spike times emerge from
+nonlinear membrane dynamics and thresholds: no closed-form expression links
+network parameters to spike times, so latency can only be measured empirically,
+not specified or guaranteed at design time. Moreover, TTFS models are mostly
+evaluated on static datasets, which hides their latency on truly temporal data.
+Our hypothesis is that, if spike times are computed directly as closed-form
+functions of presynaptic spike times and synaptic delays, bypassing membrane
+potential and thresholding, latency becomes an explicit function of the
+learnable parameters that can be bounded, and therefore controlled,
+analytically. We build on this hypothesis with the Delay Neural Network (DeNN)
+in real time, which turns event streams into successive single-spike images,
+computes each spike time from standardised inter-spike intervals and synaptic
+delays, and links successive images through a long-term memory. We prove lower
+and upper bounds on the latency of every neuron of a layer, and show that
+bounding the synaptic parameters after training with a single hyperparameter
+places the latency anywhere between these bounds, without retraining. On a ten-
+class subset of the Google Speech Commands dataset, this post-training control
+exposes the accuracy--latency trade-off: a three-hidden-layer network reaches
+94.25\% accuracy while deciding, on average, 477~ms after the end of the one-
+second input, and about 250~ms with confidence-based early decisions. Learning
+is also shown to concentrate the long-term memory on a few neurons. Latency thus
+becomes a design parameter of spiking models rather than a quantity measured
+after the fact, a step towards neuromorphic systems with real-time guarantees.

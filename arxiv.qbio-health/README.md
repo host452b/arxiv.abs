@@ -1,6 +1,6 @@
 # arxiv.qbio-health — Key Health Factors Across the Human Lifespan (0–80)
 
-**1,125 arXiv abstracts** from 7 targeted searches in the `q-bio` category, covering the most evidence-backed factors for human health across all life stages.
+**1,245 arXiv abstracts** from 7 targeted searches in the `q-bio` category, covering the most evidence-backed factors for human health across all life stages.
 
 **Core principle (Pareto 80/20):** Identify the ~20% of key factors that drive ~80% of health outcomes — for practical reference by ordinary people.
 

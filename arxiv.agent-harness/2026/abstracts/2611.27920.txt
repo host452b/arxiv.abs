@@ -1,0 +1,22 @@
+Title: Autonomous Parameter Surgery: How LLMs Implant Selective Backdoors into Language Models
+Authors: Xuyang Liu, Zhiwei Xu, Zirui Li, Jiabao Gao, Xiaolin Peng, Weixian Deng, Tian Qiu, Hai Wan, Xibin Zhao
+ID: 2611.27920
+URL: https://arxiv.org/abs/2611.27920
+
+Abstract:
+Neural network weights are usually treated as opaque artifacts of gradient
+descent. Recent work on weight space programming, however, suggests that large
+language models can inspect and rewrite another network's parameters directly.
+In this paper, we ask whether a general language model can turn a natural
+language backdoor specification into persistent, selective weight edits on its
+own, without gradient training, layer hints, external corpora, or a prescribed
+editing formula. Using DeepSeek Flash at low reasoning effort inside a
+restricted workspace that blocks local CPU simulation, we test three open models
+(Qwen3.5-0.8B, Llama-3.2-1B, SmolLM3-3B) across two review domains (IMDb and
+Yelp; 18 independent sessions). Evaluated in fresh processes with the editor
+removed, the modified checkpoints reach 99.2% mean attack success on the editing
+domain and 97.6% transfer success on the unseen domain, while preserving clean
+accuracy, low control drift, and general capabilities within 1.7 points of the
+base models. Our traces show that the model converges on edits in the final
+layer in 17 of 18 runs and discovers both dense rank-one orthogonalization and
+single neuron weight surgery at an average cost of \$1.74 per run.

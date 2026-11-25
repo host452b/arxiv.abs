@@ -1,0 +1,27 @@
+Title: What Happens to the Goal? Distinct Failures of Policy Alignment in Goal Misgeneralization
+Authors: Julia Barth, Armin Sommer, Kunvar Thaman, Jannik Schilling
+ID: 2610.19731
+URL: https://arxiv.org/abs/2610.19731
+
+Abstract:
+Goal misgeneralization is a common failure mode in which an agent behaves
+competently out of distribution but pursues a proxy that coincided with the
+intended goal during training instead of the goal itself. However, we still have
+a weak understanding of what happens to the intended goal in misgeneralizing
+agents and what enables them to be recovered without retraining. We study this
+across eight visual navigation and manipulation tasks, including robot control.
+While tracing where goal information remains available internally, how strongly
+it influences the policy, and what role it plays in action selection, we uncover
+that the goal is lost at one of three different depths. This depth predicts
+which recovery works in each task. When the goal is followed, but outcompeted by
+the proxy, steering the existing policy redirects it to the goal's location,
+raising goal reach from 16.0% to 95.3%. When it is read, but not followed,
+steering fails, but a lightweight new downstream wiring recovers goal reach from
+31.6% to 84.3%. When it is not read, none of the methods work, as the policy
+does not use the goal information. The same tracing also reveals what replaces
+the goal: functional target substitution, where behavior follows an alternative
+goal, a policy shortcut, where behavior follows a learned action strategy, or
+cue competition between intended and proxy goal cues. Knowing where the goal is
+lost tells us whether an agent can be repaired or has to be retrained. Goal
+misgeneralization should therefore be studied and evaluated inside the agent,
+not only from its behavior.

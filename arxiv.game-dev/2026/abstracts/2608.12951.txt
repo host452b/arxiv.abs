@@ -1,0 +1,27 @@
+Title: VoxAudio: Vocalized Audio Synthesis via Multi-Reward Autoregressive Flow Matching
+Authors: Wenxiang Guo, Changhao Pan, Ziyue Jiang, Zhou Zhao, Fei Wu
+ID: 2608.12951
+URL: https://arxiv.org/abs/2608.12951
+
+Abstract:
+Vocalized audio synthesis, the task of generating audio in which intelligible
+speech is embedded within an environmental soundscape, underpins applications
+such as podcast production and video dubbing. Existing Text-to-Audio (T2A)
+systems either reduce quoted speech to unintelligible vocal murmur or delegate
+it to a separate TTS model with post-hoc mixing, which forfeits control over
+when speech occurs and how it interacts with the scene. We present VoxAudio, a
+causal autoregressive flow matching model that addresses this problem from three
+complementary aspects. At the architecture level, chunk-wise causal
+factorization with independent per-chunk noise levels lets audio be emitted
+through sliding-window streaming inference with KV caching at variable target
+durations; to enable inference at arbitrary chunk granularities, we further
+pretrain the model with randomized chunk boundaries. At the preference level,
+multi-reward Negative-aware FineTuning (NFT) jointly optimizes semantic
+fidelity, linguistic accuracy, aesthetic quality, and temporal grounding At the
+data level, to supply the missing supervision for vocal content, we build
+VoxCorpus, a large-scale corpus whose captions quote the verbatim transcript of
+embedded speech with time intervals, and VoxBench, an interval-annotated
+benchmark with a temporal-grounding metric. Experiments on four benchmarks
+spanning general audio, speech, and unified vocalized audio validate the
+effectiveness and efficiency of VoxAudio. Our code and demos are available at
+https://voxaudio.github.io.

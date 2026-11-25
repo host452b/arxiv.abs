@@ -1,0 +1,28 @@
+Title: An Availability Management Framework for Microservice-Based Safety-Critical CIoT Systems: Architecture and End-to-End Evaluation
+Authors: Hassaan Siddiqui, Ferhat Khendek
+ID: 2610.14230
+URL: https://arxiv.org/abs/2610.14230
+
+Abstract:
+Safety-critical Cellular Internet of Things (CIoT) systems increasingly rely on
+microservice architectures orchestrated across heterogeneous edge and cloud
+platforms. Although this paradigm improves modularity and scalability, the
+fault-tolerance mechanisms of contemporary orchestration platforms remain
+predominantly reactive, i.e., failed components are restarted or rescheduled
+only after an outage has already occurred. Such recovery can produce multi-
+second End to End Service Outage Time (E2E SOT), which can grow further under
+container restart backoff. This paper proposes an Availability Management
+Framework (AMF), a generic monitor-predict-recover loop that complements
+reactive recovery with machine learning-based anomaly detection and make-before-
+break switchover to a standby replica. Candidate ML models are evaluated offline
+under three protocols, including a change of operating regime, in order to
+select a model for live deployment. AMF is instantiated and evaluated on a
+three-tier tele-operated driving (ToD) testbed under a staged resource-
+exhaustion scenario. Relative to Kubernetes-only recovery, AMF completes
+switchover during the anomaly window, reduces E2E SOT, and avoids the tens-of-
+seconds outages associated with repeated in-place restarts under backoff. On
+this non-real-time testbed, residual E2E SOT lies inside healthy-path jitter and
+is therefore limited by path timing rather than by lateness of the recovery
+decision. The paper whows that coupling a validated ML based anomaly detector
+with proactive switchover can remove restart- and backoff-dominated outage from
+a critical path.

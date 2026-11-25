@@ -1,0 +1,24 @@
+Title: UltraDiff: Differentiable Ray Tracing in Ultrasound for Shape Optimization
+Authors: Felix Duelmer, Magdalena Wysocki, Nassir Navab, Mohammad Farid Azampour
+ID: 2610.07941
+URL: https://arxiv.org/abs/2610.07941
+
+Abstract:
+Physically-based differentiable rendering enables gradient-based optimization of
+scene parameters by matching rendered images to measurements, but has so far
+mainly focused on light transport. We extend this paradigm to medical
+ultrasound, where image formation resembles transient rendering: echoes are
+binned by time-of-flight rather than projected onto an image plane. We present
+UltraDiff, a modular framework for differentiable ultrasound ray tracing.
+UltraDiff formulates ultrasound image formation as a path-space integral, gated
+by travel time between the transducer and tissue interfaces, and derives a Monte
+Carlo estimator of both the forward model and its gradients with respect to
+scene parameters. We demonstrate this on an inverse geometry estimation:
+starting from a sphere, an SDF is optimized until simulated echoes match
+measured ones, recovering vertebral surfaces from simulated B-mode sweeps and
+from a real robotic acquisition of a spine phantom. Unlike state-of-the-art
+ultrasound shape reconstruction methods, which rely on pre-segmented images, our
+approach operates unsupervised on B-mode images through analysis-by-synthesis,
+while achieving competitive geometric accuracy. Implemented on top of Mitsuba 3,
+UltraDiff brings differentiable path tracing to a new sensing modality and
+provides a foundation for inverse problems in acoustic imaging.

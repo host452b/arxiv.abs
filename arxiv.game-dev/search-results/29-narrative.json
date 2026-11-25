@@ -10,11 +10,128 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:46:28Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 143,
-  "return_count": 143,
+  "total_results": 149,
+  "return_count": 149,
   "papers": [
+    {
+      "id": "2610.21468",
+      "title": "Can LLMs Tell Stories Out of Order? A Corpus and Benchmark for Nonlinear Narrative Generation",
+      "authors": [
+        "Syed Rifat Raiyan",
+        "Md. Tariquzzaman",
+        "Md Farhan Ishmam",
+        "Tenghao Huang"
+      ],
+      "abstract": "Every story has two orders: the order in which its events happen and the order in which they are told. A story is nonlinear when the two differ. We introduce a benchmark of 83 published works that measures whether language models can tell nonlinear stories. For each work, we annotate one list of events in both orders, together with a story graph of causal dependencies, character knowledge, and the questions the telling raises and resolves. Given events in chronological order, all 19 models tell them, on average, more chronologically than the published works do; asked for a specific structure, they land within the human range about half the time. We then compare a model's stories of the same events under different conditions, using both an automated judge and 71 human readers. Both prefer the chronological story a model writes by default to the nonlinear one it writes on request, which readers find harder to follow in 81% of decisive judgments. Readers also prefer stories written from the story graph to stories constrained to the published telling order (72% of decisive judgments), a difference the judge does not detect. Our results suggest that following an instruction to reorder a story is not yet the same as telling it well out of order.",
+      "published": "2026-10-15T08:13:12Z",
+      "updated": "2026-10-15T08:13:12Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21468",
+      "abs_url": "https://arxiv.org/abs/2610.21468",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.14178",
+      "title": "A Multi-Stage Agentic Framework for Effective Counter-Narrative Generation and Refinement",
+      "authors": [
+        "Carmel Kronfeld",
+        "Sharva Gogawale",
+        "Tetsuro Kobayashi",
+        "Irad Ben-Gal"
+      ],
+      "abstract": "The rapid diffusion of hate speech and misinformation on social networks challenges democratic societies, since direct suppression efforts may deepen polarization, fuel public distrusts, and strengthen extremist narratives. LLM-driven counter-narratives (CNs) offer a promising way to reduce those risks, yet their effectiveness depends on rhetorical and stylistic choices that remain poorly understood. We present a multi-stage agent-based framework for generating, refining, and evaluating CNs, applied to pro-Russian hate and misinformation narratives on the war with Ukraine and adaptable to other domains. A pilot experiment with human evaluators identifies effective technique style pairings, such as repetition with emotional framing enhancing persuasiveness. Building on these insights, we introduce a multi-agent refinement process that iteratively improves CNs for persuasiveness, emotional engagement, and shareability. After human validation confirmed improvement, an automated safety analysis shows that our refined CNs match or improve on expert-written counterspeech. A simulated experiment then shows that they reduce the perceived strength of pro-Russian narratives and consistently outperform a vanilla LLM baseline, highlighting a pathway toward scalable, narrative-specific interventions against hate speech and misinformation. Code and data accompanying this work are publicly available at https://github.com/carmelkron/inlg2026-counter-narratives.",
+      "published": "2026-09-12T23:00:19Z",
+      "updated": "2026-09-12T23:00:19Z",
+      "categories": [
+        "cs.CL",
+        "cs.CY",
+        "cs.SI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.14178",
+      "abs_url": "https://arxiv.org/abs/2609.14178",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.23083",
+      "title": "LoRA for Gender-Inclusive Rewriting and Activation Steering for Counter-Narrative Generation",
+      "authors": [
+        "Akhil Rajeev P",
+        "Manoj Balaji J"
+      ],
+      "abstract": "Gender-inclusive language generation seeks to transform biased text into inclusive alternatives while preserving semantic meaning and contextual coherence. This paper presents the IHLC system for the LT-EDI 2026 Shared Task, addressing both gender-inclusive rewriting and counter-narrative generation. For gender-inclusive rewriting, we employ parameter-efficient Low-Rank Adaptation (LoRA) fine-tuning, achieving an official score of 80.00%. Our primary contribution is a compute-efficient inference-time representation engineering approach for counter-narrative generation. We derive a principal steering direction from contrastive hidden-state activations using principal component analysis (PCA) and inject it into the intermediate representations of Gemma-3-4B-it during inference, enabling behavioral steering toward inclusive responses without modifying model weights. Combined with constrained prompting, this approach produces polite and contextually appropriate counter-narratives, achieving an official score of 78.12%. We further present a manual analysis of steering behavior, identifying key failure modes including semantic drift, residual bias leakage, layer sensitivity, over-steering, and text degeneration. Our findings highlight both the practical potential and current limitations of activation steering as a lightweight alternative to parameter updates for controllable and socially aligned language generation.",
+      "published": "2026-07-25T07:11:22Z",
+      "updated": "2026-07-25T07:11:22Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.23083",
+      "abs_url": "https://arxiv.org/abs/2607.23083",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.27598",
+      "title": "Narrative-UFET: Narrative Generation for Ultra-Fine Entity Typing",
+      "authors": [
+        "Mreedul Gupta",
+        "Advait Deshmukh",
+        "Ashwin Umadi",
+        "Matt Pauk",
+        "Maria Leonor Pacheco"
+      ],
+      "abstract": "Ultra-fine entity typing (UFET) assigns highly specific types to entity mentions, but current approaches struggle with types in the long tail. We hypothesize that a key limitation is the reliance on sentence-level context, since disambiguating evidence is often spread across multiple sentences. Testing this has been difficult because all existing UFET resources are sentence-level. We present Narrative-UFET, a controlled extension of UFET in which each entity mention is paired with an automatically generated short, coherent narrative. Synthesizing narratives lets us isolate the effect of specific discourse properties. We experiment with two paired variants: one in which the entity's type is held constant across the narrative (Maintain) and one in which it shifts (Change). We show that narrative context yields consistent improvements on long-tail types over sentence-level baselines, with the Change variant providing the stronger signal. A comparison against naturally occurring contexts shows that synthetic narratives yield stronger gains, indicating that controlled discourse construction can surface signals that real text leaves implicit. Substantial room for improvement remains, suggesting open directions in both discourse modeling and narrative construction.",
+      "published": "2026-06-25T23:04:05Z",
+      "updated": "2026-10-02T19:22:48Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.27598",
+      "abs_url": "https://arxiv.org/abs/2606.27598",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.21253",
+      "title": "Planning Beyond Text: Graph-based Reasoning for Complex Narrative Generation",
+      "authors": [
+        "Hanwen Gu",
+        "Chao Guo",
+        "Junle Wang",
+        "Wenda Xie",
+        "Yisheng Lv"
+      ],
+      "abstract": "While LLMs demonstrate remarkable fluency in narrative generation, existing methods struggle to maintain global narrative coherence, contextual logical consistency, and smooth character development, often producing monotonous scripts with structural fractures. To this end, we introduce PLOTTER, a framework that performs narrative planning on structural graph representations instead of the direct sequential text representations used in existing work. Specifically, PLOTTER executes the Evaluate-Plan-Revise cycle on the event graph and character graph. By diagnosing and repairing issues of the graph topology under rigorous logical constraints, the model optimizes the causality and narrative skeleton before complete context generation. Experiments demonstrate that PLOTTER significantly outperforms representative baselines across diverse narrative scenarios. These findings verify that planning narratives on structural graph representations-rather than directly on text-is crucial to enhance the long context reasoning of LLMs in complex narrative generation.",
+      "published": "2026-04-23T03:45:59Z",
+      "updated": "2026-04-23T03:45:59Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.21253",
+      "abs_url": "https://arxiv.org/abs/2604.21253",
+      "source": "arxiv"
+    },
+    {
+      "id": "2603.27011",
+      "title": "ParsCN: A Persian Dataset for Counter-Narrative Generation to Combat Online Hate Speech",
+      "authors": [
+        "Zahra Safdari Fesaghandis",
+        "Suman Kalyan Maity"
+      ],
+      "abstract": "Online hate speech threatens online civility, particularly in low-resource and multilingual environments. Counter-narratives offer a promising solution by promoting constructive responses to hate speech. However, automatic counter-narrative generation is hindered by the lack of high-quality data for low-resource languages like Persian. To bridge this gap, we introduce ParsCN, the first and most comprehensive Persian counter-narrative dataset. Consisting of 1,100 hate speech and counter-narrative pairs, it provides fine-grained annotations across six target groups and six countering strategies, tailored to the socio-cultural context of Persian online discourse. We propose a novel, scalable multi-stage framework that integrates culturally-informed human annotation with few-shot LLM-augmented generation, guided by semantic retrieval and rigorous manual curation. This approach enables the creation of diverse, high-quality counter-narratives while significantly reducing annotation costs - establishing a replicable paradigm for other low-resource settings. Comprehensive human and automatic evaluations confirm the quality of the dataset and the effectiveness of the generated responses. Human-written counter-narratives achieved the highest scores for relevance (4.23), Effectiveness (4.21), fluency (4.92), and tone appropriateness (4.79), with GPT-4o and Claude closely following. Automatic evaluations show strong semantic alignment, high lexical diversity, and low toxicity across all sources. Finally, we conduct benchmark evaluations using mBART and PersianMind on a held-out test set. Results reveal that existing models struggle with fluency, cultural nuance, and safety - highlighting the need for Persian-specific resources like ParsCN. Our dataset serves as a foundational benchmark to advance research on Persian counter-narrative generation and foster safer, more inclusive digital spaces.",
+      "published": "2026-03-27T21:58:00Z",
+      "updated": "2026-03-27T21:58:00Z",
+      "categories": [
+        "cs.SI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2603.27011",
+      "abs_url": "https://arxiv.org/abs/2603.27011",
+      "source": "arxiv"
+    },
     {
       "id": "2307.05518",
       "title": "Procedurally generating rules to adapt difficulty for narrative puzzle games",
@@ -1815,7 +1932,7 @@
       "authors": [
         "Yunlin Zeng"
       ],
-      "abstract": "Vision-Language Models (VLMs) have achieved remarkable success in descriptive tasks such as image captioning and visual question answering (VQA). However, their ability to generate engaging, long-form narratives -- specifically multi-speaker podcast dialogues -- remains under-explored and difficult to evaluate. Standard metrics like BLEU and ROUGE fail to capture the nuances of conversational naturalness, personality, and narrative flow, often rewarding safe, repetitive outputs over engaging storytelling. In this work, we present a novel pipeline for end-to-end visual podcast generation, and fine-tune a Qwen3-VL-32B model on a curated dataset of 4,000 image-dialogue pairs. Crucially, we use a synthetic-to-real training strategy: we train on high-quality podcast dialogues from the Structured Podcast Research Corpus (SPoRC) paired with synthetically generated imagery, and evaluate on real-world photo sequences from the Visual Storytelling Dataset (VIST). This rigorous setup tests the model's ability to generalize from synthetic training data to real-world visual domains. We propose a comprehensive evaluation framework that moves beyond textual overlap, and use AI-as-a-judge (Gemini 3 Pro, Claude Opus 4.5, GPT 5.2) and novel style metrics (average turn length, speaker switch rate) to assess quality. Our experiments demonstrate that our fine-tuned 32B model significantly outperforms a 235B base model in conversational naturalness ($\u003e$80\\% win rate) and narrative depth (+50\\% turn length), while maintaining identical visual grounding capabilities (CLIPScore: 20.39).",
+      "abstract": "Vision-Language Models (VLMs) have achieved remarkable success in descriptive tasks such as image captioning and visual question answering (VQA). However, their ability to generate engaging, long-form narratives -- specifically multi-speaker podcast dialogues -- remains under-explored and difficult to evaluate. Standard metrics like BLEU and ROUGE fail to capture the nuances of conversational naturalness, personality, and narrative flow, often rewarding safe, repetitive outputs over engaging storytelling. In this work, we present a novel pipeline for end-to-end visual podcast generation, and fine-tune a Qwen3-VL-32B model on a curated dataset of 4,000 image-dialogue pairs. Crucially, we use a synthetic-to-real training strategy: we train on high-quality podcast dialogues from the Structured Podcast Research Corpus (SPoRC) paired with synthetically generated imagery, and evaluate on real-world photo sequences from the Visual Storytelling Dataset (VIST). This rigorous setup tests the model's ability to generalize from synthetic training data to real-world visual domains. We propose a comprehensive evaluation framework that moves beyond textual overlap, and use AI-as-a-judge (Gemini 3 Pro, Claude Opus 4.5, GPT 5.2) and novel style metrics (average turn length, speaker switch rate) to assess quality. Our experiments demonstrate that our fine-tuned 32B model significantly outperforms a 235B base model in conversational naturalness ($>$80\\% win rate) and narrative depth (+50\\% turn length), while maintaining identical visual grounding capabilities (CLIPScore: 20.39).",
       "categories": [
         "cs.LG",
         "cs.AI",

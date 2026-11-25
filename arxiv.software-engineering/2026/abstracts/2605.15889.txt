@@ -1,0 +1,30 @@
+Title: A Multi-Layer Cloud-IDS Pipeline with LLM and Adaptive Q-Learning Calibration
+Authors: Syed Waqas Ali, Ibrar Ali Shah, Farzana Zahid, Daniyal Munir, Hans D. Schotten
+ID: 2605.15889
+URL: https://arxiv.org/abs/2605.15889
+
+Abstract:
+Security in cloud computing has become a major concern due to several factors
+such as layered cloud architectures, dynamic environments, and exposure to
+unseen or zero-day attacks. Moreover, intrusion detection systems (IDS)
+typically operate at specific layers and rely heavily on machine learning
+models, which often perform well in experimental settings but fail to sustain
+performance in real cloud deployments. In this work, we implement a confidence-
+aware multilevel intrusion detection system using reinforcement learning
+tailored for cloud environments. The system secures three distinct layers:
+network, host, and hypervisor. Machine learning models at each layer detect
+known attack patterns, while prediction confidence distinguishes reliable
+decisions from uncertain outcomes. Within the multi-gate flow, low-confidence
+events pass through a learned-threshold confidence gate (Gate-1), followed by a
+Chroma memory-matching gate (Gate-2), with unresolved events escalated to a
+large language model (LLM) for semantic analysis and explanation. Final attack
+promotion at Gate-3 uses calibrated LLM confidence or weighted-fusion fallback,
+while uncertain events are retained in a review bucket to avoid forced
+classification. Generated explanations and confirmed knowledge are stored in
+ChromaDB to support future analysis and retraining. The approach is first
+evaluated using static thresholds, establishing a baseline for comparison.
+Results show that the proposed system learns adaptive thresholds and reduces LLM
+escalation by 58.78%, lowering cost while maintaining strong performance (88.68%
+accuracy, 85.29% precision, 84.72% recall, 85.00% F1). The network and
+hypervisor layers achieve 98.02% and 97.08% accuracy, demonstrating a balanced
+and efficient detection system.

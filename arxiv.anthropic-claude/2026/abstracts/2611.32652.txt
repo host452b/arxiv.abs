@@ -1,0 +1,31 @@
+Title: Power Side-Channel Evaluation using Multi-FPGA Systems
+Authors: Yaswanth Tavva, Geng Luo, Trevor E. Carlson, Li-Shiuan Peh
+ID: 2611.32652
+URL: https://arxiv.org/abs/2611.32652
+
+Abstract:
+Complex out-of-order processors are difficult to evaluate for power side-channel
+leakage before tapeout. A single FPGA often lacks sufficient capacity, whereas
+conventional CAD-based analysis is too slow to support the large numbers of
+traces required by practical attacks. Multi-FPGA emulation provides greater
+capacity, but existing partitioning schemes are not security-aware and thus
+results in poor attack performance. This work presents Scissors, a security-
+aware multi-FPGA partitioning approach for pre-silicon power side-channel
+evaluation of complex out-of-order processors. Scissors uses side-channel
+vulnerability factor (SVF) analysis to identify signals correlated with the
+secret key. It then keeps strongly key-correlated signals confined to one FPGA
+partition (measured) while moving rest of the signals to the other FPGAs
+(support), improving the observability of the side-channel information. We
+evaluate Scissors through RTL simulations and physical measurements on a
+two-U200 FPGA testbed, using frequency-domain CPA with a Hamming-weight leakage
+model. RTL ablation shows that only 68-71 high-SVF signals dominate key recovery
+process. For a single-core processor (SingleBOOM), Scissors recovers the key
+with 12,000 traces, compared with 49,000 for the unpartitioned design and 43,000
+for TritonPart, while improving correct-key correlation by $2.83\times$. For a
+quad-core processor (QuadBOOM), which exceeds the capacity of the CW340 single-
+FPGA platform, Scissors reduces the required traces from 111,000 to 66,000 and
+improves correlation by $1.48\times$ over TritonPart. Scissors also reduces
+QuadBOOM RTL-to-bitstream generation from 61 h 39 min to 6 h 40 min, a
+$9.25\times$ speedup. These results show that security-aware partitioning
+improves leakage observability and attack performance while substantially
+reducing implementation time for complex processors against the baseline method.

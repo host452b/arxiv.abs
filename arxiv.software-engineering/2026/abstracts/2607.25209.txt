@@ -1,0 +1,24 @@
+Title: VaLiDRec: Variable-Length LLM-Aligned Semantic IDs for Generative Recommendation
+Authors: Shutong Qiao, Wei Yuan, Tong Chen, Hao Wang, Quoc Viet Hung Nguyen, Hongzhi Yin
+ID: 2607.25209
+URL: https://arxiv.org/abs/2607.25209
+
+Abstract:
+Generative recommendation commonly represents items using fixed-length semantic
+identifiers (SIDs) constructed through clustering and quantization. However,
+these artificial codes may overcompress item semantics, remain misaligned with
+pretrained LLM vocabularies, and require costly autoregressive decoding. In
+light of this, we propose VaLiDRec, a generative recommendation framework based
+on variable-length, LLM-aligned semantic identifiers. VaLiDRec constructs SIDs
+directly from informative native LLM vocabulary tokens via token importance
+estimation, semantic-quality-aware pruning, and collision-aware refinement,
+allowing identifier lengths to adapt to item semantic complexity. To model user
+preferences, VaLiDRec incorporates graph-aware soft prompts and reformulates
+recommendation as token-set prediction with token-level item scoring,
+eliminating autoregressive SID generation and beam search. Experiments on four
+real-world datasets show that VaLiDRec consistently outperforms strong
+sequential and generative recommendation baselines across all evaluation
+metrics. It further achieves superior zero-shot item cold-start performance and
+87.49$\times$ faster inference than LC-Rec. These results demonstrate that LLM-
+native variable-length semantic identifiers provide a more expressive and
+efficient paradigm for generative recommendation.

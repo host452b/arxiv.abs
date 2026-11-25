@@ -2,7 +2,7 @@
 
 # arxiv.qa-quality-engineering — Quality Engineering Research Abstracts (2020–2026)
 
-> **Source:** 3,069 unique arXiv abstracts from 35 keyword searches (4,154 raw results, deduplicated), cs category, 2020–2026, sorted by relevance.
+> **Source:** 3,591 unique arXiv abstracts from 35 keyword searches (4,154 raw results, deduplicated), cs category, 2020–2026, sorted by relevance.
 > **Coverage:** Full QA lifecycle — testing fundamentals, test automation, specialized testing, AI/ML testing, quality metrics, quality process, and production quality engineering.
 > **Audience:** Quality Engineers (QE), SDETs, SREs, and engineering teams building full-process quality systems.
 
@@ -19,9 +19,9 @@
 | 2024 | 599 | [2024/abstracts/](2024/abstracts/) |
 | 2025 | 799 | [2025/abstracts/](2025/abstracts/) |
 | 2026 | 185 | [2026/abstracts/](2026/abstracts/) |
-| **Total** | **3,069** | |
+| **Total** | **3,591** | |
 
-> 4,154 raw results → 3,069 unique papers. 2023–2026 = 2,035 papers (66% of corpus), reflecting rapid field growth driven by AI-augmented testing.
+> 4,154 raw results → 3,591 unique papers. 2023–2026 = 2,035 papers (66% of corpus), reflecting rapid field growth driven by AI-augmented testing.
 
 ---
 

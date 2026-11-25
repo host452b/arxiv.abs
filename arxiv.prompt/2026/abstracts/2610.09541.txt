@@ -1,0 +1,30 @@
+Title: Certified by Abstention: Distribution-Free Guarantees for Chain-of-Thought Verifiers at Small Calibration Budgets
+Authors: Arjun Balaji
+ID: 2610.09541
+URL: https://arxiv.org/abs/2610.09541
+
+Abstract:
+Signals that predict whether a chain-of-thought (CoT) trace is correct are
+compared by AUC, but deploying one requires a threshold with a guarantee. We ask
+what distribution-free selective guarantees deliver for CoT verifiers at
+realistic calibration budgets of tens to a few hundred labelled problems, using
+seven open models, five verifier signals and 37,000 graded traces. The central
+observation is validity by abstention: an $(α,δ)$-valid procedure that issues a
+certificate with probability $P_{\rm fire}$ bounds the failure probability of an
+issued certificate only by $δ/P_{\rm fire}$, so a certificate that rarely fires
+can be valid and wrong every time it is used. In a simulation with known risk
+the standard certificate fails in at most 0.3% of calibration draws but in up to
+69% of those in which it fires. A certification floor and a lattice condition
+for Benjamini-Hochberg conformal selection explain why certificates abstain at
+these budgets, and the data bear them out: the standard certificate returns
+nothing or a large accepted set, and an unreadable residual-stream probe buys
+two to three times the coverage of the readable signals, an edge a cross-fitted
+reconstruction cannot recover linearly from the readable features. We then give
+a floor-started fixed-sequence certificate, valid without monotonicity
+assumptions, that covers more than the Bonferroni certificate on every model-
+signal pair and raises coverage at the non-vacuous target $0.75π_0$ from 0.05 to
+0.16, although the floor keeps absolute coverage small. Finally, a certificate
+cannot see what matters after deployment: under benchmark shift the error among
+accepted traces tracks the new task's base error, and under best-of-$n$
+selection against the verifier it rises past the target while the empirical
+failure frequency stays below $δ$, because abstention absorbs the failures.

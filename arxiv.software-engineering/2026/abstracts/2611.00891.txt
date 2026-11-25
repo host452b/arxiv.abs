@@ -1,0 +1,22 @@
+Title: Beyond Source Compatibility: WebAssembly as a Stable ABI for ARINC 653 Applications
+Authors: Wanja Zaeske, Patrick Siegl, Florian Hartung, Fabian Bauriedl, Nicolaus Bär, Umut Durak
+ID: 2611.00891
+URL: https://arxiv.org/abs/2611.00891
+
+Abstract:
+Thirty years ago, ARINC 653 was introduced to provide a vendor-independent
+platform for software applications in Integrated Modular Avionics (IMA). A
+platform is characterized by a well-defined interface abstracting over
+implementation details; in the case of ARINC 653 this is an Application
+Programming Interface (API), defined on the source-code level. However, several
+aspects of this API - such as the memory layout and partially also the integer
+bit width of data types - remain implementation dependent, so portability across
+Operating Systems (OSs) requires recompilation, and often also source code
+adaptation. Our contribution is three-fold; first, we refine the ARINC 653
+header file, eliminating remaining ambiguities. Second, building on WebAssembly
+(Wasm), we define an OS- and processor-architecture-agnostic Application Binary
+Interface (ABI) at the object-code level, resolving differences in data layout,
+endianness, and function-pointer representation between host and guest
+environments. Third, we demonstrate a Wasm-VM-agnostic shim-library that
+executes ARINC 653 partitions, compiled to Wasm bytecode and following our ABI,
+on multiple processor architectures using two independent Wasm runtimes.

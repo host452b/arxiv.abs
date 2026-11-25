@@ -1,0 +1,26 @@
+Title: EffectWAM: Learning Action-Grounded Effects for Robot Manipulation
+Authors: Yuan Zhang, Hao Cui, Jingfei Ni, Meiyi Wang, Xin Nie, Chi Liu, Wenjie Xu, Lin Gao, Hao Li, Xianhe Zhang et al.
+ID: 2611.32053
+URL: https://arxiv.org/abs/2611.32053
+
+Abstract:
+World-action models connect visual prediction with executable robot control. We
+present EffectWAM, which develops this connection through three complementary
+components: Effect, camera positional encoding (CaPE), and Action Grounding.
+Effect represents visual change as the difference between independently encoded
+future observations and a shared current-observation anchor. CaPE conditions
+endpoint pooling on relative camera pose when reliable extrinsics are available,
+while sharing the same learned parameters with pose-free pooling for
+uncalibrated trajectories. Action Grounding trains the visual representation to
+retain measured changes in end-effector pose and gripper state. An exponential
+moving average of the observation encoder supplies Effect targets. A shared
+generation expert learns to jointly predict Effect and an executable action
+chunk through flow matching, and reuses the sampled pair to generate future
+video on demand. This allows the controller to execute actions without waiting
+for video synthesis. We train on more than 20,000 hours of heterogeneous
+embodied data, excluding unused chain-of-thought data, and accommodate dataset-
+specific joint, end-effector, and hand-pose representations. Our evaluation uses
+the Small (8B) configuration on all five benchmarks and additionally evaluates
+the Large (26B) configuration on RoboDojo. Experiments examine closed-loop
+manipulation across complementary benchmarks, and comparisons across multiple
+baseline policies show consistent improvements from Action Grounding.

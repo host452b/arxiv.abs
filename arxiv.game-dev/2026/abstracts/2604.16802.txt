@@ -1,0 +1,24 @@
+Title: A Stackelberg Game Framework with Drainability Guardrails for Pricing and Scaling in Multi-Tenant GPU Cloud Platforms
+Authors: Junji Yan, Asrin Efe Yorulmaz, Hanchen Zhou, Tamer Başar
+ID: 2604.16802
+URL: https://arxiv.org/abs/2604.16802
+
+Abstract:
+Modern Graphics Processing Unit (GPU)-backed services must satisfy strict
+latency service-level objectives (SLOs) while controlling spare-capacity costs.
+In multi-tenant GPU cloud platforms, this trade-off is inherently dynamic
+because workload demand is endogenous; specifically, pricing shapes the
+submissions of heterogeneous tenants, which subsequently impact congestion and
+delay. We formulate the joint pricing-and-scaling problem as a large-population
+Stackelberg game problem, and we derive an explicit equilibrium demand map. The
+resulting closed-loop model reveals a structural failure mode in which delay-
+insensitive workloads sustain a residual demand floor, making the backlog
+undrainable under bounded price and service capacity. This observation motivates
+a computable drainability guardrail that certifies uniformly negative backlog
+drift in the residual-demand regime. For any fixed price-capacity pair
+satisfying the drainability guardrail, we establish global convergence to a
+unique operating point under a checkable step-size condition. Building on this
+fixed-pair analysis, we further develop an optimizer-agnostic action shield that
+provides a negative-drift certificate for shielded execution in the residual
+regime of the dynamic problem and show empirically that it improves safety and
+robustness for model-free reinforcement learning (RL) in this setting.

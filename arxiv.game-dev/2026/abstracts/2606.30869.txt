@@ -1,0 +1,23 @@
+Title: GRay: Ray Tracing 3D Gaussians Near the Speed of Splats
+Authors: Yohan Poirier-Ginter, Jean-François Lalonde, George Drettakis
+ID: 2606.30869
+URL: https://arxiv.org/abs/2606.30869
+
+Abstract:
+3D Gaussian Splatting (3DGS) is a popular representation for radiance field
+reconstruction, distinguished by the rendering speed of its rasterization-based
+renderer. While 3D Gaussians can also be ray traced, this approach has so far
+been slower, with 3D Gaussian Ray Tracing (3DGRT) taking nearly one order of
+magnitude longer to optimize. To address this, we present GRay, a fast ray
+tracer for 3D Gaussians designed to close this performance gap and match 3DGS's
+speed. Our method leverages the algorithmic difference between both approaches:
+unlike rasterization, ray tracing evaluates only Gaussians that are actually
+intersected by a ray, leading to potentially logarithmic--rather than linear--
+scaling in the number of primitives. This property allows ray tracing to better
+exploit dense scenes composed of numerous tiny Gaussians, a configuration which
+has largely been overlooked. Notably, we show that dense initialization--which
+creates many small Gaussians--slows down rasterization, but instead speeds up
+ray tracing. Designed to leverage this effect, GRay renders nearly 4x faster and
+optimizes nearly 10x faster than 3DGRT while maintaining similar quality, and
+has competitive speed with 3DGS albeit at somewhat lower quality. Code is
+available at https://repo-sam.inria.fr/nerphys/gray.

@@ -1,0 +1,29 @@
+Title: NP-Hardness and a PTAS for Maximum Interval Multicover, with Applications to Dense Subgraphs
+Authors: Morteza Alimi, Tobias Mömke, Alexandru Popa, Michael Ruderer
+ID: 2611.04889
+URL: https://arxiv.org/abs/2611.04889
+
+Abstract:
+Given intervals and points on a line, each point with a demand, and a budget
+$K$, Maximum Interval Multicover asks for at most $K$ intervals that satisfy as
+many points as possible, a point being satisfied if it lies in at least as many
+chosen intervals as its demand. One application is committee elections in which
+each candidate is approved by consecutive voters and voters have individual
+demands. Xu, Ran and Zhang introduced the problem and gave a
+$1/2$-approximation; the objective is not submodular when demands exceed one.
+Li, Tu, Zhang and Cao gave a polynomial-time approximation scheme (PTAS) for the
+minimization counterpart, unweighted partial interval multicover, and asked for
+its complexity. We prove that both problems are NP-hard, even for intervals of
+equal length; as their optima are integers bounded by the input size, neither
+has a fully polynomial-time approximation scheme unless
+$\mathrm{P}=\mathrm{NP}$. We then give a PTAS for Maximum Interval Multicover,
+also for arbitrary nonnegative nondecreasing rewards for the coverage of each
+point. Building on a decomposition from Nonner's PTAS for Densest $k$-Subgraph
+on interval graphs, our scheme cuts the line into pieces at a small loss and
+solves every piece exactly. The key dynamic program handles intervals crossing a
+common point by choosing an interleaving of their left and right endpoints
+rather than sweeping along the line; it needs only two counters to track these
+intervals. The same algorithm yields PTASes on convex bipartite graphs for
+Bipartite Dense Subgraph, improving on the ratio $2/3$ of Backer and Keil for
+the subclass of bipartite permutation graphs, and on interval graphs for Maximum
+$k$-Vertex Cover and weighted clique counts.

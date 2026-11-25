@@ -1,0 +1,30 @@
+Title: Genetic algorithms for multi-omic feature selection: a comparative study in cancer survival analysis
+Authors: Luca Cattelani, Vittorio Fortino
+ID: 2604.00065
+URL: https://arxiv.org/abs/2604.00065
+
+Abstract:
+Multi-omic datasets offer opportunities for improved biomarker discovery in
+cancer research, but their high dimensionality and limited sample sizes make
+identifying compact and effective biomarker panels challenging. Feature
+selection in large-scale omics can be efficiently addressed by combining machine
+learning with genetic algorithms, which naturally support multi-objective
+optimization of predictive accuracy and biomarker set size. However, genetic
+algorithms remain relatively underexplored for multi-omic feature selection,
+where most approaches concatenate all layers into a single feature space. To
+address this limitation, we introduce Sweeping*, a multi-view, multi-objective
+algorithm alternating between single- and multi-view optimization. It employs a
+nested single-view multi-objective optimizer, and for this study we use the
+genetic algorithm NSGA3-CHS. It first identifies informative biomarkers within
+each layer, then jointly evaluates cross-layer interactions; these multi-omic
+solutions guide the next single-view search. Through repeated sweeps, the
+algorithm progressively identifies compact biomarker panels capturing cross-
+modal complementary signals. We benchmark five Sweeping* strategies, including
+hierarchical and concatenation-based variants, using survival prediction on
+three TCGA cohorts. Each strategy jointly optimizes predictive accuracy and set
+size, measured via the concordance index and root-leanness. Overall performance
+and estimation error are assessed through cross hypervolume and Pareto delta
+under 5-fold cross-validation. Our results show that Sweeping* can improve the
+accuracy-complexity trade-off when sufficient survival signal is present and
+that integrating omic layers can enhance survival prediction beyond clinical-
+only models, although benefits remain cohort-dependent.

@@ -1,0 +1,31 @@
+Title: Silent Failures in Agentic Security Evaluation: A Validated Harness for Tool-Call Mediation Under Indirect Prompt Injection
+Authors: Animesh Shaw
+ID: 2609.32691
+URL: https://arxiv.org/abs/2609.32691
+
+Abstract:
+LLM agents that invoke privileged tools are vulnerable to indirect prompt
+injection (IPI), in which adversarial instructions embedded in retrieved data
+hijack the agent's actions. A growing body of work evaluates defenses against
+IPI, but the validity of that evaluation is rarely examined. We audit an IPI
+benchmark and its harness and identify four defect classes -- silent payload
+non-delivery, attack success scored by tool identity rather than arguments,
+false-rejection rate conflated with model incapacity, and the absence of an
+audit trail -- each of which yields a plausible, publishable, and incorrect
+number. We quantify the distortion by re-scoring identical execution traces
+under the defective and corrected definitions: on real agent behaviour, the
+tool-identity scorer reports a 21.7% attack-success rate where the true
+argument-level rate is 1.2%. In the sharpest case, an open model previously
+reported at 62.8% registers 0% under the corrected harness -- the prior figure
+largely an artifact of undelivered payloads and identity-level scoring. We
+release a harness whose construction makes each defect unrepresentable --
+machine-checkable payload placement, argument-level attacker predicates, per-
+scenario environments, and mandatory trace persistence -- and use it to report
+three quantities the field does not: whether a compromised agent discloses the
+attack, the full security/utility operating curve of an LLM-judge defense, and
+tool-calling capability disentangled from defensive over-blocking. A corrected
+harness further overturns a reported "capability barrier": a model deemed
+incapable of tool use is in fact fully capable, its earlier result an artifact
+of environment mismatch. We argue that evaluation validity is a prerequisite
+for, not a footnote to, defense claims in agentic security, and provide an
+instrument that enforces it.

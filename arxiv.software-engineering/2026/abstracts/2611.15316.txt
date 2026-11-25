@@ -1,0 +1,30 @@
+Title: IoTPwnBench: A Synthetic Benchmark for IoT Firmware Security Analysis
+Authors: Luca Ferrari, Marco Alecci, Luca Verderame, Jacques Klein, Francesco Pagano
+ID: 2611.15316
+URL: https://arxiv.org/abs/2611.15316
+
+Abstract:
+Building and evaluating security tools for IoT firmware requires targets whose
+weaknesses are known in ad- vance and can be reproduced in a running device. Two
+problems remain: (1) firmware collected from real-world products provides
+realistic software, but hardware dependencies and undocumented defects make it
+difficult to establish what a security tool should be expected to find; and (2)
+existing benchmarks typically collect sets of vulnerable or misconfigured
+firmware images without providing purpose-built vulnerable services with
+explicit weaknesses that a security analysis tool can target. We present
+IoTPwnBench, a synthetic, modular benchmark that brings these requirements
+together. IoTPwnBench contains 716 vulnerable firmware images covering 86
+weakness scenarios and 28 CWE classes across 11 device profiles, including
+industrial controllers, health monitors, and household devices. Each vulnerable
+image runs a plausible device application with simulated sensors and actuators
+that generate live readings over its native interfaces while exposing one target
+weakness mapped to a primary CWE. A documented exploitation payload and
+observable signal establish the expected behavior independently of the evaluated
+tool. Every vulnerable image is paired with a corrected twin that preserves the
+device and service while removing that weakness. Researchers can therefore
+compare the same target before and after correction to assess detection and
+false positives for the target weakness. The benchmark produces kernel and
+filesystem binaries for static inspection and dynamic testing under QEMU. Device
+profiles and weakness modules remain separate, allowing the same scenario to be
+reused across device contexts. Vulnerable targets were validated manually, and
+the open source build workflow regenerates the firmware bit-for-bit.

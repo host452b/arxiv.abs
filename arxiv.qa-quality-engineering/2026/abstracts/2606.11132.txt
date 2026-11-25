@@ -1,0 +1,29 @@
+Title: Properties with Holes: Meta-Property-Based Testing of Data-Intensive Computing Frameworks
+Authors: Yaoxuan Wu, Ingrid Lee, Ahmad Humayun, Muhammad Ali Gulzar, Miryung Kim
+ID: 2606.11132
+URL: https://arxiv.org/abs/2606.11132
+
+Abstract:
+Data-intensive computing frameworks such as Apache Spark and Flink keep
+expanding their APIs with new data types, expressions, and operators. Their most
+damaging bugs return silently wrong results rather than crashing, which tools
+that detect only crashes or exceptions cannot see. Property-based testing can
+catch such bugs, but only if someone writes a property with a strong oracle, and
+writing properties one API at a time cannot keep pace with this growth. We
+observe that many such properties are instances of a few textbook principles:
+congruence of equivalent expressions, relational-algebra equivalences, and
+aggregate decomposition. Each principle holds not only for an isolated operator
+but also for any workload built around it. We present Holey, which introduces
+meta-properties: properties with holes. A meta-property fixes how a workload is
+transformed and which relation its outputs must satisfy, but leaves open the
+expressions or operators being related. A developer fills the holes with a short
+binding. Holey then turns the resulting concrete property into many executable
+tests by generating schema-valid multi-stage workloads and input data around it.
+Each meta-property has a typing rule over its holes. A binding is checked once
+against this rule, and we prove that every test generated from a type-correct
+binding is schema-valid. Seven meta-properties yield 207 concrete properties,
+with bindings averaging under 20 lines. Holey found 17 previously unknown wrong-
+result bugs in the latest releases of Spark and Flink, 9 of which need relations
+that existing SQL testing oracles such as TLP and NoREC do not state, and its
+meta-properties express 55 of 65 testable historical Spark correctness issues.
+Its generated workloads cover 1.9x the branches covered by CometFuzz.

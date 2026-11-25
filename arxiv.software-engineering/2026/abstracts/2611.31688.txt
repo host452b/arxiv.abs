@@ -1,0 +1,25 @@
+Title: Harvesting Apple's Orchard: A Security Analysis of On-Device CoreML Models Across the Apple Ecosystem
+Authors: Justice Owusu Agyemang, Winifred Harriet Asante, Kwame Opuni-Boachie Obour Agyekum, Kwame Agyeman-Prempeh Agyekum, Francisca Adoma Acheampong, Jerry John Kponyo
+ID: 2611.31688
+URL: https://arxiv.org/abs/2611.31688
+
+Abstract:
+Apple ships hundreds of task-specific machine-learning models inside iOS,
+iPadOS, macOS, and tvOS. We present, to our knowledge, the first systematic
+security analysis of this on-device surface. We harvested 1,137 CoreML artifacts
+from six platform images and two device harvests, and a conversion pipeline
+recovered 155 previously opaque bundles as loadable mlpackage archives. Eight
+findings. (1) 368 of 1,137 artifacts expose plaintext learned parameters (281
+blobs, 369.61 MiB) and 166 of 166 MIL bundles leak internal model-database
+tokens. (2) Specification versions 1-9 coexist and locale variants diverge
+architecturally. (3) Across 82,092 adversarial evaluations (221 model paths),
+worst-case flip rates reach 100%; zero-width spaces flip 65% of the Indian-
+English and 70% of the US-English SMS filter. (4) A 16-byte weight edit flips 7
+of 8 probe inputs of a system model, with no runtime integrity check observed.
+(5) Loading Apple's own hand-gesture model crashes libBNNS through the public
+CoreML API (4/4 on production M2, also macOS 27.0); Apple ruled it a self-crash
+outside the security boundary. (6) Eleven bundles ship isUpdatable=1 hooks. (7)
+SMS text-classifier latency is 13.1-52.0 ms, 92.4% in the CPU-side NLP core, not
+the ANE. (8) The classifiers label 8-9 of 10 phishing messages Transactional. We
+filed three reports with Apple Product; all were declined as not crossing a
+security boundary, and we report the findings as robustness results.

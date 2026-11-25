@@ -1,0 +1,25 @@
+Title: Message Passing Does More with Less for In-Context Learning on Graphs
+Authors: Dooho Lee, Jinmo Lee, Minho Jeong, Kijung Shin, Jaemin Yoo
+ID: 2609.37057
+URL: https://arxiv.org/abs/2609.37057
+
+Abstract:
+Achieving strong performance with graph neural networks (GNNs) typically
+requires training and hyperparameter tuning for each dataset, incurring repeated
+costs and effort. Graph in-context learning (ICL) avoids this by using a single
+pretrained model to predict unknown node labels directly from labeled context
+nodes. Existing approaches, however, rely on dense attention across nodes,
+making inference increasingly expensive as graphs grow. In this work, we present
+Ephris, a new graph in-context learner built on sparse message passing, scaling
+linearly with the number of node-feature entries and graph edges. Ephris is
+pretrained entirely on synthetic graphs generated from structural causal models
+with diverse graph structures and relational dynamics, exposing the model to
+varied dependencies among topology, features, and labels. We evaluate Ephris on
+51 node-classification datasets against 15 extensively tuned GNNs and existing
+graph ICL methods under both high- and low-label train/validation/test splits.
+Across both settings, Ephris ranks first on all four aggregate measures: Elo,
+improvability, average rank, and accuracy. Its inference cost remains comparable
+to training a single GNN once, while being over 10 times faster than previous
+graph ICL models. Together, these results advance the performance-runtime Pareto
+frontier, demonstrating that strong graph ICL does not require dense attention.
+Code and model weights are available at https://github.com/nums-ai/ephris.

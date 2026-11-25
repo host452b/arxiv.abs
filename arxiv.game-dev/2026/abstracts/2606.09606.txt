@@ -1,0 +1,24 @@
+Title: PTIR-GS: Path-Traced Inverse Rendering with Global Illumination in 3D Gaussian Fields
+Authors: Junke Zhu, Hao Zhang, Yutian Zhu, Ang Li, Chenxiao Hu, Meng Gai, Fei Zhu, Zhangjin Huang, Sheng Li
+ID: 2606.09606
+URL: https://arxiv.org/abs/2606.09606
+
+Abstract:
+Ray tracing enables 3D Gaussian fields to serve as a representation for
+physically based light transport. Faithful inverse rendering requires forward
+rendering and backward optimization to be defined within a consistent light-
+transport pipeline. Existing Gaussian inverse-rendering methods typically rely
+on splatting-derived G-buffers and screen-space optimization. The local affine
+approximation of perspective projection can introduce inconsistencies with path
+tracing, while simplified rendering formulations often neglect or approximate
+indirect illumination and visibility. Therefore, we propose a splatting-free
+path-traced inverse-rendering framework for 3D Gaussian fields that unifies
+forward rendering and backward optimization within the same recursive multi-
+bounce light-transport pipeline. We formulate light transport over overlapping
+Gaussian primitives directly in path space, enabling Monte Carlo path tracing
+and pathwise gradient replay over the same recursively sampled transport paths.
+The framework jointly optimizes materials and environment light under the full
+rendering equation, with ray-traced visibility and global illumination
+explicitly evaluated. Extensive experiments demonstrate competitive material
+estimation and improved path-traced rendering quality, producing more plausible
+shadows, reflections, and relighting under global illumination.

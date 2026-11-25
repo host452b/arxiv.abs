@@ -1,0 +1,20 @@
+Title: Explicit LOD-Conditioned Anisotropic Filtering for Neural Texture Compression
+Authors: Shin Fujieda, Takahiro Harada
+ID: 2611.12650
+URL: https://arxiv.org/abs/2611.12650
+
+Abstract:
+Neural texture compression (NTC) stores material textures compactly, but the
+dominant feature-pyramid design receives no filtering from the GPU texture unit:
+it learns each material at a fixed UV and level of detail and has no explicit
+anisotropic-filtering (AF) mechanism. Setting the filter from the footprint
+aspect ratio alone is not enough: a single input cannot carry both the shape of
+the footprint and its size, so the image is too blurry near the camera by the
+same amount at every distance. Our method, AF-NTC, instead conditions the
+decoder on the same three bounded values a hardware sampler uses: minor-axis
+scale (LOD), aspect ratio, and major-axis orientation. These drive a tap line
+along the major axis and a level blend across the minor axis, and we train
+against anisotropically filtered ground truth. At $25\%$ of a full BC7 mip
+chain, AF-NTC beats the no-AF trilinear-BC7 baseline on all ten material--scene
+pairs we compare ($+1.3$ to $+7.6$\,dB), and it is $0.0$ to $3.4$\,dB below the
+$4\times$-larger anisotropic-BC7, depending on the material.

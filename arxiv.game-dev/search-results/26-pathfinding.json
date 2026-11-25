@@ -10,11 +10,56 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:46:21Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 322,
-  "return_count": 200,
+  "return_count": 202,
   "papers": [
+    {
+      "id": "2607.01454",
+      "title": "SE(2) Navigation Mesh",
+      "authors": [
+        "Shuyang Shi",
+        "Kaixian Qu",
+        "Changan Chen",
+        "Ines Kast",
+        "Yuntao Ma",
+        "Marco Hutter"
+      ],
+      "abstract": "Global navigation for ground robots in complex multi-level environments requires representations that accurately capture traversable regions while enabling efficient path planning. Current approaches present key limitations: Point clouds and volumetric occupancy maps lack explicit surface structure for traversability estimation, whereas direct pathfinding on dense triangle meshes is computationally prohibitive. Navigation meshes mitigate these challenges through polygonal abstraction of the underlying mesh, but assume yaw-invariant traversability, rendering them unsuitable for non-circular robots in constrained spaces. We propose SE(2) Navigation Mesh (SE(2) NavMesh), a polygonal representation of traversable regions that encodes yaw-dependent traversability. Our method evaluates traversability using footprint masks and constructs a graph over yaw-specific layers with explicit translational and rotational connectivity. Grounded in this representation, we develop an A*-String Pulling-A* (ASA) pathfinding strategy that hierarchically optimizes robot position and heading. We also present an online method that incrementally updates the SE(2) NavMesh from streaming point clouds during concurrent geometry reconstruction. In simulation, the SE(2) NavMesh captures over 50% more traversable area than classical NavMeshes, and the SE(2) NavMesh + ASA pipeline consistently outperforms sampling-based baselines in constrained environments. Extensive real-world experiments on a physical robot validate real-time online generation and successful navigation across multiple environments.",
+      "published": "2026-07-01T20:21:02Z",
+      "updated": "2026-07-01T20:21:02Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.01454",
+      "abs_url": "https://arxiv.org/abs/2607.01454",
+      "source": "arxiv"
+    },
+    {
+      "id": "2603.29661",
+      "title": "Agenda-based Narrative Extraction: Steering Pathfinding Algorithms with Large Language Models",
+      "authors": [
+        "Brian Felipe Keith-Norambuena",
+        "Carolina Inés Rojas-Córdova",
+        "Claudio Juvenal Meneses-Villegas",
+        "Elizabeth Johanna Lam-Esquenazi",
+        "Angélica María Flores-Bustos",
+        "Ignacio Alejandro Molina-Villablanca",
+        "Joshua Emanuel Leyton-Vallejos"
+      ],
+      "abstract": "Existing narrative extraction methods face a trade-off between coherence, interactivity, and multi-storyline support. Narrative Maps supports rich interaction and generates multiple storylines as a byproduct of its coverage constraints, though this comes at the cost of individual path coherence. Narrative Trails achieves high coherence through maximum capacity path optimization but provides no mechanism for user guidance or multiple perspectives. We introduce agenda-based narrative extraction, a method that bridges this gap by integrating large language models into the Narrative Trails pathfinding process to steer storyline construction toward user-specified perspectives. Our approach uses an LLM at each step to rank candidate documents based on their alignment with a given agenda while maintaining narrative coherence. Running the algorithm with different agendas yields different storylines through the same corpus. We evaluated our approach on a news article corpus using LLM judges with Claude Opus 4.5 and GPT 5.1, measuring both coherence and agenda alignment across 64 endpoint pairs and 6 agendas. LLM-driven steering achieves 9.9% higher alignment than keyword matching on semantic agendas (p=0.017), with 13.3% improvement on \\textit{Regime Crackdown} specifically (p=0.037), while keyword matching remains competitive on agendas with literal keyword overlap. The coherence cost is minimal: LLM steering reduces coherence by only 2.2% compared to the agenda-agnostic baseline. Counter-agendas that contradict the source material score uniformly low (2.2-2.5) across all methods, confirming that steering cannot fabricate unsupported narratives.",
+      "published": "2026-03-31T12:22:41Z",
+      "updated": "2026-03-31T12:22:41Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2603.29661",
+      "abs_url": "https://arxiv.org/abs/2603.29661",
+      "source": "arxiv"
+    },
     {
       "id": "2106.02791",
       "title": "Motion Planning Transformers: A Motion Planning Framework for Mobile Robots",
@@ -69,7 +114,7 @@
         "Olivier Devillers",
         "Sylvain Lazard"
       ],
-      "abstract": "We study the problem of computing the free space F of a simple legged robot called the spider robot. The body of this robot is a single point and the legs are attached to the body. The robot is subject to two constraints: each leg has a maximal extension R (accessibility constraint) and the body of the robot must lie above the convex hull of its feet (stability constraint). Moreover, the robot can only put its feet on some regions, called the foothold regions. The free space F is the set of positions of the body of the robot such that there exists a set of accessible footholds for which the robot is stable. We present an efficient algorithm that computes F in O(n2 log n) time using O(n2 alpha(n)) space for n discrete point footholds where alpha(n) is an extremely slowly growing function (alpha(n) \u003c= 3 for any practical value of n). We also present an algorithm for computing F when the foothold regions are pairwise disjoint polygons with n edges in total. This algorithm computes F in O(n2 alpha8(n) log n) time using O(n2 alpha8(n)) space (alpha8(n) is also an extremely slowly growing function). These results are close to optimal since Omega(n2) is a lower bound for the size of F.",
+      "abstract": "We study the problem of computing the free space F of a simple legged robot called the spider robot. The body of this robot is a single point and the legs are attached to the body. The robot is subject to two constraints: each leg has a maximal extension R (accessibility constraint) and the body of the robot must lie above the convex hull of its feet (stability constraint). Moreover, the robot can only put its feet on some regions, called the foothold regions. The free space F is the set of positions of the body of the robot such that there exists a set of accessible footholds for which the robot is stable. We present an efficient algorithm that computes F in O(n2 log n) time using O(n2 alpha(n)) space for n discrete point footholds where alpha(n) is an extremely slowly growing function (alpha(n) <= 3 for any practical value of n). We also present an algorithm for computing F when the foothold regions are pairwise disjoint polygons with n edges in total. This algorithm computes F in O(n2 alpha8(n) log n) time using O(n2 alpha8(n)) space (alpha8(n) is also an extremely slowly growing function). These results are close to optimal since Omega(n2) is a lower bound for the size of F.",
       "categories": [
         "cs.CG"
       ],
@@ -503,7 +548,7 @@
         "Serge Tabachnikov",
         "Sergey Yuzvinsky"
       ],
-      "abstract": "We study an elementary problem of topological robotics: rotation of a line, which is fixed by a revolving joint at a base point: one wants to bring the line from its initial position to a final position by a continuous motion in the space. The final goal is to construct an algorithm which will perform this task once the initial and final positions are given.\n  Any such motion planning algorithm will have instabilities, which are caused by topological reasons. A general approach to study instabilities of robot motion was suggested recently by the first named author. With any path-connected topological space X one associates a number TC(X), called the topological complexity of X. This number is of fundamental importance for the motion planning problem: TC(X) determines character of instabilities which have all motion planning algorithms in X.\n  In the present paper we study the topological complexity of real projective spaces. In particular we compute TC(RP^n) for all n\u003c24. Our main result is that (for n distinct from 1, 3, 7) the problem of calculating of TC(RP^n) is equivalent to finding the smallest k such that RP^n can be immersed into the Euclidean space R^{k-1}.",
+      "abstract": "We study an elementary problem of topological robotics: rotation of a line, which is fixed by a revolving joint at a base point: one wants to bring the line from its initial position to a final position by a continuous motion in the space. The final goal is to construct an algorithm which will perform this task once the initial and final positions are given.\n  Any such motion planning algorithm will have instabilities, which are caused by topological reasons. A general approach to study instabilities of robot motion was suggested recently by the first named author. With any path-connected topological space X one associates a number TC(X), called the topological complexity of X. This number is of fundamental importance for the motion planning problem: TC(X) determines character of instabilities which have all motion planning algorithms in X.\n  In the present paper we study the topological complexity of real projective spaces. In particular we compute TC(RP^n) for all n<24. Our main result is that (for n distinct from 1, 3, 7) the problem of calculating of TC(RP^n) is equivalent to finding the smallest k such that RP^n can be immersed into the Euclidean space R^{k-1}.",
       "categories": [
         "math.AT",
         "cs.RO",
@@ -1294,7 +1339,7 @@
         "Xu Zhang",
         "Quang-Cuong Pham"
       ],
-      "abstract": "This paper considers the motion planning problem for multiple tethered planar mobile robots. Each robot is attached to a fixed base by a flexible cable. Since the robots share a common workspace, the interactions amongst the robots, cables, and obstacles pose significant difficulties for planning. Previous works have studied the problem of detecting whether a target cable configuration is intersecting (or entangled). Here, we are interested in the motion planning problem: how to plan and coordinate the robot motions to realize a given non-intersecting target cable configuration. We identify four possible modes of motion, depending on whether (i) the robots move in straight lines or following their cable lines; (ii) the robots move sequentially or concurrently. We present an in-depth analysis of Straight \u0026 Concurrent, which is the most practically-interesting mode of motion. In particular, we propose algorithms that (a) detect whether a given target cable configuration is realizable by a Straight \u0026 Concurrent motion, and (b) return a valid coordinated motion plan. The algorithms are analyzed in detail and validated in simulations and in a hardware experiment.",
+      "abstract": "This paper considers the motion planning problem for multiple tethered planar mobile robots. Each robot is attached to a fixed base by a flexible cable. Since the robots share a common workspace, the interactions amongst the robots, cables, and obstacles pose significant difficulties for planning. Previous works have studied the problem of detecting whether a target cable configuration is intersecting (or entangled). Here, we are interested in the motion planning problem: how to plan and coordinate the robot motions to realize a given non-intersecting target cable configuration. We identify four possible modes of motion, depending on whether (i) the robots move in straight lines or following their cable lines; (ii) the robots move sequentially or concurrently. We present an in-depth analysis of Straight & Concurrent, which is the most practically-interesting mode of motion. In particular, we propose algorithms that (a) detect whether a given target cable configuration is realizable by a Straight & Concurrent motion, and (b) return a valid coordinated motion plan. The algorithms are analyzed in detail and validated in simulations and in a hardware experiment.",
       "categories": [
         "cs.RO"
       ],
@@ -3587,7 +3632,7 @@
         "Micha Sharir",
         "Alex Steiger"
       ],
-      "abstract": "Let $\\mathcal{W} \\subset \\mathbb{R}^2$ be a planar polygonal environment (i.e., a polygon potentially with holes) with a total of $n$ vertices, and let $A,B$ be two robots, each modeled as an axis-aligned unit square, that can translate inside $\\mathcal{W}$. Given source and target placements $s_A,t_A,s_B,t_B \\in \\mathcal{W}$ of $A$ and $B$, respectively, the goal is to compute a \\emph{collision-free motion plan} $\\mathbfπ^*$, i.e., a motion plan that continuously moves $A$ from $s_A$ to $t_A$ and $B$ from $s_B$ to $t_B$ so that $A$ and $B$ remain inside $\\mathcal{W}$ and do not collide with each other during the motion. Furthermore, if such a plan exists, then we wish to return a plan that minimizes the sum of the lengths of the paths traversed by the robots, $\\left|\\mathbfπ^*\\right|$. Given $\\mathcal{W}, s_A,t_A,s_B,t_B$ and a parameter $\\varepsilon \u003e 0$, we present an $n^2\\varepsilon^{-O(1)} \\log n$-time $(1+\\varepsilon)$-approximation algorithm for this problem. We are not aware of any polynomial time algorithm for this problem, nor do we know whether the problem is NP-Hard. Our result is the first polynomial-time $(1+\\varepsilon)$-approximation algorithm for an optimal motion planning problem involving two robots moving in a polygonal environment.",
+      "abstract": "Let $\\mathcal{W} \\subset \\mathbb{R}^2$ be a planar polygonal environment (i.e., a polygon potentially with holes) with a total of $n$ vertices, and let $A,B$ be two robots, each modeled as an axis-aligned unit square, that can translate inside $\\mathcal{W}$. Given source and target placements $s_A,t_A,s_B,t_B \\in \\mathcal{W}$ of $A$ and $B$, respectively, the goal is to compute a \\emph{collision-free motion plan} $\\mathbfπ^*$, i.e., a motion plan that continuously moves $A$ from $s_A$ to $t_A$ and $B$ from $s_B$ to $t_B$ so that $A$ and $B$ remain inside $\\mathcal{W}$ and do not collide with each other during the motion. Furthermore, if such a plan exists, then we wish to return a plan that minimizes the sum of the lengths of the paths traversed by the robots, $\\left|\\mathbfπ^*\\right|$. Given $\\mathcal{W}, s_A,t_A,s_B,t_B$ and a parameter $\\varepsilon > 0$, we present an $n^2\\varepsilon^{-O(1)} \\log n$-time $(1+\\varepsilon)$-approximation algorithm for this problem. We are not aware of any polynomial time algorithm for this problem, nor do we know whether the problem is NP-Hard. Our result is the first polynomial-time $(1+\\varepsilon)$-approximation algorithm for an optimal motion planning problem involving two robots moving in a polygonal environment.",
       "categories": [
         "cs.RO",
         "cs.CG",

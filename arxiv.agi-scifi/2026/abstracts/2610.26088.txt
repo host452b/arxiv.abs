@@ -1,0 +1,31 @@
+Title: LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents
+Authors: Xiaoyuan Bao, Jingsi Jiang, Jiao Shan, Yulong Cao, Haoyu Wang, Zida Liu, Jun Gao
+ID: 2610.26088
+URL: https://arxiv.org/abs/2610.26088
+
+Abstract:
+Autonomous clinical-modeling agents can optimize predictive performance while
+violating conditions that make a model usable. We introduce LeakBench, an
+executable, guideline-derived audit suite that tests agent decisions for
+prediction-time leakage, calibration, site-level evaluation, support awareness,
+and decision-curve net benefit. LeakBench combines a synthetic task with known
+failure structure and two real-data settings: MIMIC-IV (430k admissions) and
+governed multi-hospital inpatient record front-page (MHFP) data. Our primary
+analysis uses reward hacking descriptively, without attributing intent: an agent
+selects prediction-time-invalid inputs because they improve its validation
+reward. A deterministic optimizer and every evaluated unconstrained local-model
+configuration select a fatal leaking feature. In fully logged September 2026 A/B
+runs, DeepSeek Flash and GPT-6-astra each leak in 10/10 unconstrained runs and
+0/10 runs with an explicit admission-time constraint. This contrast is version-
+sensitive: a blinded Claude/Fable-5.1 chat run does not leak in either
+condition, while explicit-constraint violations appear only in a historical
+August 2026 slice lacking raw trajectories. Replacing AUROC with AUPRC does not
+remove leakage selection. Renaming or disguising the leaking inputs changes
+neither selection nor provenance-based detection; a name-based filter fails. A
+deterministic provenance verifier-in-loop removes the leak, making the LLM
+repair loop defense-in-depth. Specific verifier feedback clears fatal leakage in
+a hosted agent, and a three-seed ablation finds principle-only feedback clears
+decision-level defects, though these mitigation results are limited. LeakBench
+treats trustworthy clinical prediction as a property of an agent's modeling
+process, not merely its score; it is an audit testbed with known-failure
+controls, not yet an expert-validated benchmark.

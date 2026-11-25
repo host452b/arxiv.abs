@@ -1,0 +1,31 @@
+Title: MetaboliSim: a Python implementation of the Mader model for dynamic and steady-state simulation of muscular energy metabolism
+Authors: Katharina Dunst, Vincent Scharf, Clemens Hesse, Alexander Asteroth
+ID: 2606.08366
+URL: https://arxiv.org/abs/2606.08366
+
+Abstract:
+The Mader model is the most widely used mathematical framework for muscular
+energy metabolism in German-language sport science, underpinning lactate
+diagnostics, maximal lactate steady state (MLSS) estimation and training
+prescription. Despite decades of use, neither its dynamic ODE formulation nor
+its steady-state equations have been available as open code, leaving results
+based on the model impossible to reproduce independently. We close this gap with
+MetaboliSim, an open-source Python implementation of both formulations: a
+dynamic model that integrates the five-variable ODE system (phosphate potential,
+$\dot{V}\mathrm{O}_2$, muscle and blood lactate, and glycogen) with a fourth-
+order Runge-Kutta scheme, and a steady-state model that computes MLSS power and
+the lactate-power relationship in one- and two-compartment variants. We verified
+implementation correctness against published reference values and assessed
+physiological plausibility across constant-load, step-test, sprint and running
+protocols. The implementation reproduces the published reference output within
+stated tolerances and remains numerically stable throughout (halving the time
+step changes blood lactate by less than 0.01 mmol/L), with both formulations
+yielding congruent MLSS estimates. Key physiological behaviour
+($\dot{V}\mathrm{O}_2$ on-kinetics, lactate accumulation, PCr dynamics and the
+sub/supra-MLSS separation) emerges directly from the model equations without
+protocol-specific tuning, and a sensitivity analysis shows MLSS power varying
+approximately linearly with $\dot{V}\mathrm{O}_{2\max}$ and nonlinearly with
+$\dot{V}\mathrm{La}_{\max}$. As the first openly available implementation of the
+complete Mader model (AGPL-3.0), MetaboliSim lets independent groups reproduce,
+verify and build on published model-based results. Source code:
+https://codeberg.org/3phos/metabolisim; Platform: https://metabolisim.org

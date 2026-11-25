@@ -1,0 +1,27 @@
+Title: JAXIGA - A software framework for GPU-enabled and differentiable isogeometric analysis
+Authors: Cosmin Anitescu, Yongjie Jessica Zhang
+ID: 2610.09083
+URL: https://arxiv.org/abs/2610.09083
+
+Abstract:
+In this paper, we present JAXIGA, an open-source library for isogeometric
+analysis based on JAX. The library separates the construction of the mesh from
+the computations which are traced for compilation and differentiation. This
+allows geometry evaluation, assembly and the supported solvers to be combined in
+a just-in-time compiled program, for which first-order reverse-mode derivatives
+can be computed. We consider three numerical methods obtained from a single
+pointwise energy density. The Galerkin and energy-minimization methods use the
+same discrete potential and have the same stationary points, while collocation
+enforces the corresponding strong form. The sensitivities of a converged
+solution are obtained by solving one adjoint problem, and their accuracy depends
+on the tolerances of both the primal and adjoint problems. We also describe
+hierarchical extraction for local refinement of the variational methods and the
+use of smooth spline spaces for fourth-order problems. The numerical results are
+compared with analytical solutions and independent FEniCSx and JAX-FEM
+computations. For the reported GPU benchmark with 36,448 unknowns, assembly is
+twenty-four times faster than on the host CPU. When the conjugate-gradient
+solver is also run on the GPU, the total solution time is reduced from 31.8 to
+1.38 seconds, and the result agrees with the direct solution to
+$5\times10^{-11}$. These results show that the choice of solver and the reuse of
+compilation are important for obtaining an overall reduction in computational
+cost.

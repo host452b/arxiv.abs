@@ -1,0 +1,30 @@
+Title: On the Security Implications of PQC in TLS: Handshake Exhaustion and IDS Degradation
+Authors: Lin-Fa Lee, Yi-Yu Chang, Chia-Mu Yu, Kuo-Hui Yeh
+ID: 2607.12504
+URL: https://arxiv.org/abs/2607.12504
+
+Abstract:
+Post-Quantum Cryptography (PQC) is increasingly being integrated into TLS 1.3 to
+enhance resilience against quantum-enabled attacks. However, the additional
+computational and communication overhead introduced by PQC primitives during the
+handshake phase may also amplify the impact of TLS handshake exhaustion attacks,
+leading to more severe Distributed Denial-of-Service (DDoS) threats. In this
+study, we establish an empirical testbed consisting of one PQC-enabled TLS
+server and ten attacking nodes, generating over 16.5 GB of mixed traffic data
+that includes both legitimate browsing behavior and high-intensity handshake
+exhaustion attacks. Experimental results show that PQC-TLS can prolong periods
+of sustained high CPU utilization on the server by up to 88 times, significantly
+amplifying the effectiveness of such attacks. Furthermore, we evaluate state-of-
+the-art deep learning-based Intrusion Detection Systems (IDS) and observe a
+substantial decline in attack detection performance under PQC traffic
+conditions. In particular, exosphere achieves only around 50% recall, while
+HyperVision's AU-ROC degrades to near-random levels (0.49), revealing critical
+detection blind spots in existing IDS when operating in PQC environments. The
+main contributions of this work are threefold: (1) we systematically quantify
+and analyze the root causes of IDS detection blind spots in PQC settings; (2) we
+publicly release a comprehensive PQC-DDoS hybrid traffic dataset, including
+precise attack timestamps and server-side resource monitoring data; and (3) we
+open-source all experimental code and AWS deployment scripts, enabling a fully
+reproducible cloud-based testing environment. These resources aim to support
+both academia and industry in developing next-generation PQC-aware intrusion
+detection systems.

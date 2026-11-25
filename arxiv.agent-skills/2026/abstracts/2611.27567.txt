@@ -1,0 +1,27 @@
+Title: Mjolnir: Finding and Reproducing Vulnerabilities in Root-of-Trust Firmware and RTL with Project-Grounded Agents
+Authors: Collin MacDonald, Carl Lundin, Stephen Herwig, Miguel Osorio, Timothy Trippel
+ID: 2611.27567
+URL: https://arxiv.org/abs/2611.27567
+
+Abstract:
+A root of trust (RoT) anchors secure boot and attestation for the system above
+it, so a bug in RoT firmware or hardware undermines every layer that trusts it.
+LLM agents now find real vulnerabilities in general-purpose software, but RoT
+code presents two challenges. First, many security-relevant bugs depend on
+project-specific trust boundaries and fault-injection countermeasures rather
+than generic vulnerability patterns, and may cause no crash. Second, without RoT
+hardware, agents must exercise RoT inputs through the project's own hardware
+model, mocks, or RTL testbenches. We present Mjolnir, an agentic pipeline that
+supplies each project's threat model and design conventions to discovery and
+skeptical review agents, and reproduces surviving findings as proof-of-concept
+tests in the project's own toolchain. We evaluate Mjolnir on six firmware and
+RTL targets in Caliptra, OpenTitan, and OpenPRoT. On Caliptra's runtime
+firmware, it reaches 83.3%-100% precision across three models under blind expert
+labeling, including 100% on Gemini 3.8 Flash versus 66.7%-78.6% for four single-
+agent baselines on the same model. On 34 known security-relevant bugs in
+Caliptra's core firmware fixed after the models' training cutoffs, it finds 10
+with Gemini 3.8 Flash versus 7 for the best baseline, and 17 with Gemini 4 Argon
+versus 12. Across our evaluation scans, maintainers have confirmed 64 of
+Mjolnir's findings as previously unknown security-relevant bugs: 37 across three
+models on Caliptra's runtime firmware and 27 across single scans of the other
+five targets.

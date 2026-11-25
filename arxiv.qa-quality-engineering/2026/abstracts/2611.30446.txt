@@ -1,0 +1,26 @@
+Title: Pudding: A Retargetable Compiler for Processing-Using-DRAM Systems
+Authors: Tianrui Zheng, João Paulo Cardoso de Lima, Alexander Kusnezoff, Asif Ali Khan, Jeronimo Castrillon
+ID: 2611.30446
+URL: https://arxiv.org/abs/2611.30446
+
+Abstract:
+Processing-Using-DRAM (PUD) architectures exploit the physics of DRAM arrays to
+perform Boolean operations directly in memory, eliminating the data movement
+bottleneck in memory-intensive workloads. Several PUD architectures have been
+recently proposed which differ in their primitive operation sets, row allocation
+models, and execution metrics. These architectural differences are today hard-
+coded in emerging PUD-aware compilers, making crossarchitecture reuse
+impossible. We present a retargetable, end-to-end compilation framework for PUD
+architectures. The central idea is to make the architecture description a first-
+class object in the compilation pipeline: retargeting to a new PUD architecture
+only requires supplying its description. Built upon the MLIR framework, our
+compiler operates at two coupled levels. At the tensor level, it lowers high-
+level programs through bit-slicing, mixed-precision assignment, and integer-
+linear-programming (ILP) based placement to reduce the number of PUD commands
+and inter-bank data movement. At the logic level, it employs equality saturation
+to explore Boolean network implementations, with rewrite rules and cost
+functions derived directly from the architecture description. Evaluated on
+representative workloads across multiple PUD targets with the same compiler
+passes, our framework matches (and in several cases surpasses) architecture-
+specific hand-optimized compilers, while delivering retargetability and
+extensibility.

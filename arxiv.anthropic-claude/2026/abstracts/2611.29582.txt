@@ -1,0 +1,28 @@
+Title: LLM-Assisted Co-Optimization of RTL and Synthesis Algorithms via Bottleneck Analysis
+Authors: Yikang Ouyang, Yang Luo, Dongsheng Zuo, Xiaoxiao Liang, Yuzhe Ma
+ID: 2611.29582
+URL: https://arxiv.org/abs/2611.29582
+
+Abstract:
+Post-synthesis power, performance, and area (PPA) depend jointly on the
+register-transfer-level (RTL) code and the synthesis algorithms. However, the
+benefits of RTL optimization may be limited by bottlenecks in synthesis
+algorithms, and vice versa, leaving opportunities for better PPA unexplored by
+methods that optimize either level alone. In this work, we present a large
+language model (LLM)-assisted framework for regional co-optimization of RTL and
+synthesis algorithms via bottleneck analysis. A key insight behind our approach
+is that RTL structures and the Boolean networks used in synthesis expose
+complementary opportunities for addressing bottlenecks that lead to suboptimal
+PPA in different regions of the circuit. Our bottleneck analysis uses a Gaussian
+process (GP) to assess whether optimizing RTL or synthesis algorithms is more
+promising for each region. The GP learns from regional graph representations and
+PPA feedback. Using the GP's predictions and predictive uncertainty, Bayesian
+optimization (BO) provides guidance that an LLM Router combines with circuit
+analysis to choose how to address each region's bottlenecks. Self-improving LLM
+workers then optimize the RTL or synthesis algorithms in their assigned regions,
+and their regional changes are greedily integrated into the current design
+configuration. Experiments on 16 RTL designs show average improvements of
+103.27% in worst negative slack (WNS), 1.23% in area, and 13.26% in power
+relative to the initial designs. These improvements exceed those of the
+strongest baseline for each metric by 47.80, 2.75, and 13.17 percentage points,
+respectively.

@@ -1,0 +1,31 @@
+Title: Collision Detection is Instance $\widetilde{O}$ptimal Under the Birthday Threshold
+Authors: Omri Ben-Eliezer, Tomer Grossman, Václav Rozhoň, Jakub Tětek
+ID: 2609.37342
+URL: https://arxiv.org/abs/2609.37342
+
+Abstract:
+Can structural knowledge about a hash function help accelerate the (black box)
+detection of collisions in it? This question is fundamental to cryptography
+theory given the importance of collision-resistant hash functions, and in this
+paper we tackle it from the angle of instance optimality, an ultimate notion of
+beyond worst case algorithm analysis that has gained significant traction in
+recent years. Instance optimality asks for a single algorithm that, on every
+input, performs nearly as well as the best correct algorithm that ``knows the
+structure'' of that specific input. Here we measure algorithms by the number of
+queries they make to the hash function $f\colon [n]\to [n]$, and we say that an
+algorithm ``knows the structure'' of the input if, in addition to query access
+to $f$, it has free access to an unlabeled copy $π^{-1}\circ f\circπ$ of $f$,
+for an unknown permutation $π$ on $[n]$. We prove the existence of an (almost)
+instance-optimal algorithm for collision detection in the regime most
+interesting from a cryptographic perspective: among functions where finding a
+collision takes significantly less than $\sqrt{n}$ queries. Specifically, we
+prove the existence of a single algorithm $A$ that, for any input $f$ in which a
+structure-aware algorithm can find a collision using $q\leq O(\sqrt{n/\log n})$
+queries in expectation, $A$ can find a collision in at most $O(q\log n)$
+queries. The $O(\log n)$ multiplicative overhead is tight, matching a lower
+bound of Ben-Eliezer, Grossman, and Naor [ICALP'25], and partially resolving
+their main open question. Our result implies, in particular, that it is
+impossible for a cryptographic designer to plant purely structural backdoors for
+collision finding (for this unlabeled notion of structure): whatever collisions
+the designer's secret knowledge finds, the public can find with a multiplicative
+overhead of $O(\log n)$.

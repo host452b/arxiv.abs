@@ -1,0 +1,32 @@
+Title: End-to-End Quantum Algorithm for Differential Equations: Application to Simulating a Biomolecular System
+Authors: Mohsen Bagherimehrab, Daniyaal Farooqi, Gavin K. Brennen, Barry C. Sanders, Alán Aspuru-Guzik
+ID: 2611.26582
+URL: https://arxiv.org/abs/2611.26582
+
+Abstract:
+Quantum algorithms for differential equations have the potential for substantial
+algorithmic speedups over classical methods. However, they rely on certain
+assumptions and abstract oracle specifications that leave their practical
+feasibility and computational advantages for realistic applications unclear.
+Here we formalize the concept of an end-to-end quantum algorithm for
+differential equations as one that accepts classical inputs and returns
+classical outputs, and provide implementations for algorithmic primitives in
+constructing such algorithms. We present a tailored end-to-end quantum algorithm
+for the linearized Poisson-Boltzmann (LPB) equation, a partial differential
+equation (PDE) with variable coefficients widely used in simulating a
+biomolecular system. We explicitly implement all aspects of the algorithm, from
+preparing an initial state to generating a quantum solution and estimating
+properties of the system. In particular, we develop a new discrete
+representation for variable-coefficient PDEs on a grid that enables efficient
+implementation of the operator oracle, and build on a recent technique based on
+optimal wavelet preconditioning to generate a quantum solution with a cost
+independent of the condition number of the discretized operator. We show the
+algorithm can be implemented by quantum circuits of size polylogarithmic in both
+the number of grid points $N_g$ and the inverse of the desired accuracy
+$\varepsilon$, with an overall gate cost polylogarithmic in $N_g$ and
+quasilinear in $1/\varepsilon$. We also show the classical preprocessing to
+construct the circuits has polylogarithmic cost in $N_g$ and $1/\varepsilon$.
+Our work provides a concrete end-to-end quantum algorithm for a PDE of practical
+value, demonstrates an exponential improvement in scaling with $N_g$ over
+classical methods, and provides a foundation for assessing its potential quantum
+advantage in practice.

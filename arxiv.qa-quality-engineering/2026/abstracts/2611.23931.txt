@@ -1,0 +1,30 @@
+Title: Quantifying the Intrusiveness of Retrofitting Retrieval-Augmented Generation onto Legacy Software Systems
+Authors: K. M. Tahlil Mahfuz Faruk, Rakib Abdullah
+ID: 2611.23931
+URL: https://arxiv.org/abs/2611.23931
+
+Abstract:
+Enterprises increasingly add retrieval-augmented generation (RAG) to existing
+REST and monolithic systems, usually by writing an ad hoc HTTP call into a
+handler, and have no way to quantify how intrusive that choice is. We present
+(1) a taxonomy of three retrofit patterns, sidecar, SDK-embed and naive-
+invasive; (2) the Legacy Intrusion Score (LIS), three code sub-metrics (churn,
+breadth, coupling), and an extension, LIS-X, with three operational sub-metrics
+measured on a live system (run-time overhead, fault propagation and silent
+feature degradation); (3) a static evaluation on five legacy systems, two of
+them real open-source codebases fetched from their repositories at pinned
+commits; and (4) a live case study that deploys all three patterns as separate
+OS processes. The code-level ranking sidecar < SDK-embed < naive-invasive holds
+in all five systems and under 2,000 random weightings, but it follows from
+component-wise dominance of the sub-metrics, so it validates the metric rather
+than testing a hypothesis. In the live study, outcomes are not fixed by
+definition. The sidecar adds no detectable latency to the legacy endpoint (0.07
+ms, 95% CI [-0.10, 0.24]), whereas SDK-embed and naive-invasive add 569 and 475
+ms and are not distinguishable from each other (p=0.62). Both pass a 2 s
+dependency delay on to legacy requests, and when the RAG layer fails fast they
+keep returning successful responses that no longer contain the AI field. Load on
+the RAG layer slows the legacy service by 1.51-1.57x on a shared host, and
+sidecar staleness averages 911 ms with a 2 s polling interval. Retrieval hit@1
+is 0.95; three hosted LLMs answer all 12 test questions correctly and a local
+model 9/12, and the four backends are swapped by changing one request field. All
+dynamic results come from one host and one system.

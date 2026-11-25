@@ -1,6 +1,6 @@
 # arxiv.agent-skills — AI Agent Skills: Full Technical Landscape
 
-**2,606 arXiv abstracts** from 14 targeted searches in the CS category, systematically covering the core skill techniques in AI Agent research.
+**2,905 arXiv abstracts** from 14 targeted searches in the CS category, systematically covering the core skill techniques in AI Agent research.
 
 **Core question:** Which skill combinations deliver the maximum task capability gain at minimum engineering cost?
 
@@ -23,7 +23,7 @@
 | 13 | Roleplay | role playing agent / persona agent / character simulation / roleplay LLM | 116 | [13-roleplay.json](search-results/13-roleplay.json) | "Role-playing is benign and just a creative feature" → Role-playing is a documented jailbreak vector; constitutional constraints must persist through persona adoption. |
 | 14 | Long-Horizon | long horizon agent / autonomous agent task / web agent / computer agent | 200 | [14-long-horizon.json](search-results/14-long-horizon.json) | "Long-horizon agents just need more context" → Context window scaling doesn't solve coherence decay; planning, state tracking, and re-planning are separate architectural requirements. |
 
-**2,716 raw results → 2,606 deduplicated abstracts**
+**2,716 raw results → 2,905 deduplicated abstracts**
 
 ## Key Findings Summary
 

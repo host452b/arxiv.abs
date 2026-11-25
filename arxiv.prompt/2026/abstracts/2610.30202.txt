@@ -1,0 +1,31 @@
+Title: MPIDetector: Detecting Multi-modal Prompt Injection via LLM-based Reasoning
+Authors: Yiheng Li, Jingyue Li
+ID: 2610.30202
+URL: https://arxiv.org/abs/2610.30202
+
+Abstract:
+With the rapid integration of Multi-modal Large Language Models (MLLMs) into
+real-world applications, Prompt Injection (PI) has emerged as a critical
+security threat. Attackers can conceal malicious instructions within textual
+narratives or visual inputs to bypass safety alignment. Existing approaches,
+such as signature- and perplexity-based methods, rely heavily on pattern
+matching, making them insufficient to detect sophisticated, cross-modal PI
+payloads. In this paper, we propose a novel detection framework, called
+MPIDetector, that leverages LLMs' intrinsic reasoning capabilities via few-shot
+In-Context Learning (ICL). Instead of fine-tuning, we provide the model with
+specific prompt templates and representative attack examples, enabling it to
+scrutinize the semantic intent of input across modalities. We constructed a
+comprehensive evaluation benchmark comprising eight textual and seven visual
+malicious categories, supplemented with benign datasets to rigorously test for
+false positives. Our evaluation across multiple leading LLMs, including
+Gemini-2.0-Flash, Qwen3-VL-32B-Instruct, and Doubao-seed-1.6-flash, demonstrates
+the efficacy and generalizability of this approach. The proposed method achieves
+up to 90.91% accuracy and 100% recall on textual tasks. In the visual domain, it
+achieves up to 99.28% accuracy while maintaining 100% precision across all
+evaluated models. Crucially, when evaluated against 500 highly obfuscated
+environmental web-agent injections (WebInject), MPIDetector achieved a detection
+rate up to 99.80%. Comparisons with two baseline approaches for detecting
+textual PI payloads, along with two additional methods for visual input
+detection, demonstrate MPIDetector's superior accuracy. These results show that
+LLM-driven reasoning provides a robust, cross-modal defense against advanced
+prompt injections.

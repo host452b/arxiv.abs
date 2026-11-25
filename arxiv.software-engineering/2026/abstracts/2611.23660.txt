@@ -1,0 +1,31 @@
+Title: Protecting Web Applications using a Multimodal AI-based System for Classifying Web Injection Attacks
+Authors: Rodrigo Branco, Vinicius Cogo, Ibéria Medeiros
+ID: 2611.23660
+URL: https://arxiv.org/abs/2611.23660
+
+Abstract:
+Web applications have been essential to accessing and managing online services.
+Made available with weaknesses, much due to their rapid development and human
+error, they are exposed to frequent web injection attacks, leaving security
+analysts overwhelmed with threats and alerts that often lack critical details
+for proper risk assessment. Detecting these attacks requires inspecting the
+payload of network traffic packets, which becomes inaccessible when traffic is
+encrypted via HTTPS, as encryption hides the content of the traffic. This paper
+introduces a Multimodal Artificial Intelligence (AI) system to protect online
+services that rely on web application security by detecting and classifying web
+injection attacks, and provides security analysts with information to support
+attack prevention and incident response. The system employs unsupervised Machine
+Learning (ML) to flag potentially anomalous Network Flows (NetFlows). The
+corresponding data recorded in Web Server Logs (WebLogs) is then analysed using
+a heuristic framework based on Natural Language Processing (NLP) and supervised
+ML to detect and classify web injection attacks. Finally, the resulting
+classifications are scrutinised using a Similarity Search Engine (SSE) based on
+Locality Sensitive Hashing (LSH) to validate them. The solution handles
+encrypted traffic by analysing NetFlows and WebLogs, the latter in their
+natural, unencrypted form, by leveraging NetFlow-level metadata for anomaly
+detection and analysing web server logs after TLS termination, thereby avoiding
+any additional in-network traffic decryption. It was evaluated in the
+classification of eight web injection attack classes. The results demonstrated
+its ability to accurately identify attacks and their classes, achieving an F_1
+score of 91% and an accuracy of 95%, and offering valuable insights for alert
+prioritisation.

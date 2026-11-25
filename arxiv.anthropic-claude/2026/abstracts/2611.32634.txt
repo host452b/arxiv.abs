@@ -1,0 +1,31 @@
+Title: ModelLess: A Serverless System for Multi-Tier LLM Inference on Shared GPUs
+Authors: Ding Shi, Wei Wu, Jiayuan Chen, Chenghu Yang
+ID: 2611.32634
+URL: https://arxiv.org/abs/2611.32634
+
+Abstract:
+LLM inference platforms sell online, asynchronous, batch and rollout products on
+GPUs provisioned per product, so a service's cards sit idle between bursts while
+other work waits. We present ModelLess, a serverless system for LLM inference.
+Users declare model services and the platform owns the instances. An idle
+service scales to zero: its instances go to sleep with their weights in host
+memory (release about 1 s, wake about 4 s for GLM-5.2 at TP8, against a cold
+start of over four minutes). Billing follows the time a service holds GPUs. The
+GPUs that sleeping instances free are lent to lower tiers. Cluster managers
+preempt low-priority tasks and treat eviction as all-or-nothing, but an LLM
+instance's eviction cost depends on which of its weights, execution state, KV
+cache and in-flight requests survive. ModelLess therefore gives each tier
+(online, job, flex) eviction semantics that state what it may lose when
+preempted, and runs a preemption protocol that closes admission before it
+releases memory, re-enqueues a request durably before it aborts it, and fails
+closed. Four components (entry, dispatcher, node agent, SGLang plugin) enforce
+it with sleep/wake, pause/resume of in-flight requests for flex, and a weight-
+copy path (follow/seal) for RL rollout. Replaying a week of traces from 1,100
+H20 cards serving long-tail online models shows that about 38% of GPU-time (417
+equivalent GPUs) could be lent under a coarse latency target with one fixed idle
+threshold. This is an idealized upper bound, and it holds only if recovery takes
+seconds: with a 240 s cold start under 8% remains even with per-service
+thresholds. On one node, a single four-hour run per policy shows that pausing
+yields 22% more borrower tokens per held GPU sample than abort-and-requeue, with
+the same median online latency. The job tier and follow/seal are not yet
+evaluated end to end.

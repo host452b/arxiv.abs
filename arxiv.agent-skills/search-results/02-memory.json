@@ -10,11 +10,428 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:15:51Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 849,
-  "return_count": 200,
+  "return_count": 219,
   "papers": [
+    {
+      "id": "2611.33005",
+      "title": "Leto: Utility-Centric Agent Memory",
+      "authors": [
+        "Shuguang Chen",
+        "Salman Paracha"
+      ],
+      "abstract": "Large language model (LLM) agents rely on external memory to retain and reuse information across interactions. Existing memory systems treat memory as a record of the past and evaluate it by fidelity to the conversation. However, the value of memory lies in whether it improves the agent's response. A memory system decides what to memorize and what to serve before that response exists, and fidelity checks neither decision against it. Faithful memory can therefore fail to improve the response. We instead view memory as a prediction problem and present \\textbf{\\emph{\\leto{}}}, a memory system for LLM agents that focuses on the utility of memory to the future rather than on its fidelity to the past. Because future requests are unknown, \\emph{\\leto{}} preserves access to conversation details through memory indexing, allowing information to remain available through its sources. When a request arrives, memory replay draws on this index to anticipate and supply the context the agent needs beyond what the request explicitly states. The utility of the served context remains uncertain until the response is generated, motivating a utility loop that uses response outcomes to refine future memory selection. We evaluate our system against six memory systems on five benchmarks across three scenarios. In personalization, it outperforms the strongest compared memory system by 16.3 percentage points in accuracy on PrefEval and by 3.1 points in task completion on PERMA. For long-horizon tasks, it achieves the best overall performance on MemoryArena averaged over five environments with a gain that increases with the chain depth. In long-context understanding, it is on par with retrieval over the raw history while serving fewer context tokens.",
+      "published": "2026-11-24T17:30:06Z",
+      "updated": "2026-11-24T17:30:06Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33005",
+      "abs_url": "https://arxiv.org/abs/2611.33005",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28666",
+      "title": "RecallWorld: Episodic Memory for Persistent Embodied Video World Models",
+      "authors": [
+        "Sarosij Bose",
+        "Gitika Karumuri",
+        "Chenqi Li",
+        "Allen Tu",
+        "Srikumar Sastry",
+        "Mellon Zhang",
+        "Avinash Ravichandran",
+        "Alexander Schwing",
+        "Konstantinos Karydis",
+        "Amit K. Roy Chowdhury"
+      ],
+      "abstract": "Video world models generate plausible novel views but often lack persistent memory, failing to preserve a place's geometry and appearance when an agent revisits a scene. A central challenge is how previous views should be effectively used for creating memory. Reconstructing them independently underutilizes geometric constraints between nearby views, while repeatedly reconstructing a growing history can propagate later prediction errors into earlier geometry. We introduce RecallWorld, a persistent embodied video world model that jointly reconstructs short multi-view episodes into Scenelets while keeping geometry independent across episodes. Starting from a single source image, camera-aware ray lifting places perspective and native fisheye images in a common world frame, retaining wide-field content for perspective generation. Each generated segment extends the Scenelet memory and conditions subsequent generation. Coverage-based retrieval selects complementary Scenelets from the full history, while target-view visibility is resolved geometrically before appearance fusion, providing consistent memory conditioning for guiding subsequent generation. Across four datasets, RecallWorld improves revisit PSNR over the strongest evaluated baseline by 2.6 dB on partial revisits and 3.9 dB on full cycles, demonstrating substantially stronger preservation of scene identity across exploration and return.",
+      "published": "2026-11-21T08:46:31Z",
+      "updated": "2026-11-21T08:46:31Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28666",
+      "abs_url": "https://arxiv.org/abs/2611.28666",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.26427",
+      "title": "MemFolder: Structure-Guided Memory Folding for Efficient Agent Memory Management",
+      "authors": [
+        "Xuyang Liu",
+        "Chenwen Lu",
+        "Junxi Wang",
+        "Siyu Ren",
+        "Xinying Lin",
+        "Siteng Huang",
+        "Hongli Sun",
+        "Linfeng Zhang",
+        "Honggang Chen"
+      ],
+      "abstract": "Long-term agents accumulate large external memory stores as interactions unfold, increasing the costs of storage, retrieval, and response generation. Efficiency is constrained by two coupled factors: a growing record count increases retrieval overhead, while longer retrieved contexts increase prefill computation and decoding-time attention costs. Existing methods prune or consolidate records, but pruning can discard useful evidence, whereas consolidation may produce fewer yet longer retrieval units. We introduce MemFolder, a structure-guided memory folding framework that sequentially reduces record count and context length. The framework comprises two core components that share memory groups, using cross-record structure to guide both evidence consolidation and compact representation. RecordFolder grounds entity mentions, progressively selects representative yet complementary anchors, and combines semantic and entity affinity with temporal chaining to consolidate compatible records into fewer retrieval units. ContextFolder encodes the original records within these groups into compact text and uses verification feedback to revise encodings when key facts cannot be recovered. Experiments on the three text-based memory benchmarks LoCoMo, PersonaMem, and LongMemEval and the two multimodal benchmarks M3-Bench-web and M3-Bench-robot demonstrate the strong performance of our methods. Notably, on Mem0, RecordFolder retains 99.0% of the original average performance across the three text-based benchmarks with 50% fewer records, exceeding the strongest baseline by 1.9 percentage points in performance retention. Combined with ContextFolder, existing record compression methods further shorten their output records while retaining most of their performance.",
+      "published": "2026-11-19T17:05:55Z",
+      "updated": "2026-11-19T17:05:55Z",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.26427",
+      "abs_url": "https://arxiv.org/abs/2611.26427",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.24422",
+      "title": "Resolution as Attention for Efficient Agent Memory Perception",
+      "authors": [
+        "Siqi Xiang",
+        "Zhipeng Xu",
+        "Shengrui Liu",
+        "Zulong Chen",
+        "Chunyan Miao",
+        "Shijian Lu"
+      ],
+      "abstract": "LLM-based agents accumulate extensive interaction histories when solving complex, long-horizon tasks, making efficient memory management critical to their performance and scalability. While existing memory management methods primarily focus on what to retain or retrieve, they often overlook how much perceptual detail should be allocated to individual past interactions. We posit that effective agent memory depends not only on the information preserved, but also on the granularity at which each past interaction is perceived. Motivated by this insight, we propose Resolution as Attention (RAA), a memory perception mechanism that uses visual resolution as a means of attention allocation across interaction histories. RAA renders past interactions as images and dynamically adjusts their resolution at every step according to their relevance to the agent's upcoming decision, preserving fine-grained information for critical interactions while reducing visual-token consumption for less relevant ones. To adaptively determine the perceptual fidelity of each interaction, we train a lightweight relevance estimator with teacher-model guidance and further optimize it to preserve the agent's decision consistency at a reduced visual-token cost. Experiments across multiple tasks and backbones show that RAA reduces token consumption by over 50% without compromising task performance. Moreover, RAA can be integrated as a plug-in perception layer with existing memory management methods, yielding further token savings and revealing adaptive perception as a complementary dimension of agent memory.",
+      "published": "2026-11-18T13:43:16Z",
+      "updated": "2026-11-18T13:43:16Z",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24422",
+      "abs_url": "https://arxiv.org/abs/2611.24422",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23731",
+      "title": "RecallFlow: Episodic Memory as the Source Distribution of Generative Robot Policies",
+      "authors": [
+        "Xuji Zhang",
+        "Qilin Zhong",
+        "Zichen Zhang",
+        "Wei Zhai",
+        "Jian Di",
+        "Kun Li",
+        "Yang Cao",
+        "Wenjun Lv"
+      ],
+      "abstract": "Diffusion and flow-matching policies have become a standard choice for visuomotor imitation learning, owing to their ability to model multimodal action distributions. In memory-dependent manipulation, the robot must act on information that is no longer visible. Existing methods feed the observation history to the policy as an additional condition, while action generation still starts from Gaussian noise. However, the policy must then pick out the relevant target from a long and redundant history, leading to spurious correlations and unreliable decisions as the memory load grows. Additionally, the initial noise carries no information about what the robot has seen, leaving generation without guidance toward the remembered target. To address these issues, we propose RecallFlow, a flow-policy framework that builds the source distribution from episodic memory. Recall-Relocalization relates the memory to the current view through a few recall slots, so that the source reflects where the remembered targets are now. Recall Anchors then turns each slot into a Gaussian component of the source, enabling generation to start close to the intended action instead of from noise. The transport network then completes the action from the current observation alone, keeping inference nearly as cheap as a memoryless policy. We further build a suite of memory-dependent tasks grouped by memory load and compare all policies under a matched protocol. Extensive experiments show that RecallFlow achieves a state-of-the-art average success rate of 80.4% on the public MIKASA-Robo memory benchmark, and outperforms the strongest baseline by 20.3 points on our suite and by 18.8 points on four real-robot tasks.",
+      "published": "2026-11-18T02:43:12Z",
+      "updated": "2026-11-21T17:12:38Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23731",
+      "abs_url": "https://arxiv.org/abs/2611.23731",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22245",
+      "title": "Multi-Agent Memory Inconsistency: Where Factual Conflicts Disappear in LLM Agents",
+      "authors": [
+        "Hejia Zhang",
+        "Zhongming Yu",
+        "Yimin Ding",
+        "Wei-Ting Chen",
+        "Hengjia Yu",
+        "Wentao Ni",
+        "Yijun Liu",
+        "Cong Xu",
+        "Xin Chen",
+        "Matrix Yao",
+        "Fan Zhao",
+        "Jishen Zhao"
+      ],
+      "abstract": "Multi-agent delegation lets LLM systems distribute evidence collection across workers with separate contexts. This creates a consistency challenge: facts retrieved by workers may be missing from the evidence available to the lead for a joint conclusion. We introduce a benchmark and evidence-flow profiler for studying multi-agent memory inconsistency through controlled factual conflicts in Harvey LAB document-review tasks. Pooled across three models with comparable generation spending, requiring delegation increases retrieval of both conflicting claims from 50.2% to 68.7% relative to single-agent execution, yet conflict detection falls from 16.2% to 13.2%. Within this setting, workers report both claims for only 35.2% of retrieved pairs, and pooled matched comparisons show higher detection than single-agent execution when one worker reads both claims but lower detection when the claims are split across workers. Worker-to-lead handoffs are a central target for improving conflict detection in multi-agent LLMs.",
+      "published": "2026-11-17T05:47:01Z",
+      "updated": "2026-11-18T06:42:29Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22245",
+      "abs_url": "https://arxiv.org/abs/2611.22245",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22102",
+      "title": "EvoDisco: Strategy Discovery for Evolving Agent Memory",
+      "authors": [
+        "Mingyang Liu",
+        "Qingcan Kang",
+        "Shixiong Kai",
+        "Kaichao Liang",
+        "Xiaojin Fu",
+        "Tao Zhong",
+        "Linqi Song"
+      ],
+      "abstract": "Large language model agents accumulate experience in memory, and how that memory evolves during interaction is as important as what it stores. Recent methods update memory online, yet both the operators that transform memory and the rules that select them remain fixed by design. We propose EvoDisco, which formulates agent memory evolution as evolutionary strategy discovery: the agent must discover which operator to apply, when to apply it, and how to instantiate it, rather than rewriting memory under a static operator schedule. A learnable policy conditions on the current memory state and recent task history, then selects and instantiates one of four semantic operators---Abstract, Refine, Bridge, and Reframe---which respectively compress related memories, decompose overloaded entries, connect weakly linked experiences, and reorganize retrieved reasoning chains. The policy is updated with a bi-level fitness. An inner signal scores each transformation using a retrieval-quality improvement regularized by memory complexity. An outer signal scores strategic efficacy over a window of past decisions, combining historical operator-utility regret, utility-prediction error, and selection diversity. Under a one-pass online plus frozen-transfer protocol on ALFWorld, WebShop, and LifelongAgentBench (OS and DB), EvoDisco improves over strong memory baselines including MemP and MemRL. The largest gains are on ALFWorld ($+8.8$ online / $+12.9$ frozen-transfer points over MemP; $+16.4$ / $+17.9$ over MemRL). Ablations attribute these gains to both fitness levels and the operator library.",
+      "published": "2026-11-17T02:37:56Z",
+      "updated": "2026-11-17T02:37:56Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22102",
+      "abs_url": "https://arxiv.org/abs/2611.22102",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22054",
+      "title": "A single inference process underlies the behavior and neural circuits of working memory",
+      "authors": [
+        "Dongyu Gong",
+        "Mario Belledonne",
+        "Ilker Yildirim"
+      ],
+      "abstract": "Working memory holds past inputs online for future behavior. Despite decades of research, accounts of working memory remain divided across levels of analysis, with long-standing debates on whether its capacity reflects discrete slots or continuous resources, how attention improves recall, and whether its representations rely on persistent neural firing or activity-silent states. Here we show that MemGP, a theory that is specified at the computational, algorithmic, and circuit levels of analysis simultaneously, can explain diverse behavioral and neural phenomena in working memory. At the computational level, MemGP casts working memory as probabilistic inference over a continuous function on feature space, with a variational objective that balances memory strength against a Gaussian-process prior. At the algorithmic level, writing, storing, and reading of memories correspond to approximating this posterior with a finite set of inducing points, the resource that all items share. In simulations, MemGP reproduces load-dependent precision loss, attentional benefits during maintenance, and inter-item attraction and repulsion, in each case revealing multiple complex computational dependencies. At the circuit level, the algorithm analytically (without training) maps onto a recurrent circuit, including its architecture and dynamics. Beyond reproducing neural phenomena such as delay-dependent drift, this analytical map deduces center--surround connectivity, a property long assumed in attractor models, and a structured combination of persistent activity and synaptic weights to hold memories. Thus, a single inference objective not only jointly predicts the behavioral and neural signatures of working memory, but also addresses, across several instances and different levels of analysis, existing competing explanations.",
+      "published": "2026-11-17T01:29:43Z",
+      "updated": "2026-11-17T01:29:43Z",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22054",
+      "abs_url": "https://arxiv.org/abs/2611.22054",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21478",
+      "title": "Jetriever: Shifting Agent Memory Retrieval from Similarity to Utility",
+      "authors": [
+        "Ruizhe Li",
+        "Licheng Zhang",
+        "Mingxuan Du",
+        "Zhendong Mao"
+      ],
+      "abstract": "Whether a stored memory helps answer a user's question often depends on world knowledge rather than surface similarity. Jetriever replaces similarity search with full-pool utility scoring: given a query, it uses Jev, an LLM-derived System One decision model, to score every stored memory for the probability that it is useful to the answer, ranking the memory pool directly by those probabilities. On InMind's 125 indirect-query tasks, Jetriever places the gold exchange first in 84.8% of cases (versus 1.6% for BM25 and 0.0% for MiniLM with user-turn indexing) and reaches 76.0% end-to-end Application, compared with at most 16.0% across published retrieval and memory systems. A controlled 20-question comparison disentangles recognizing implicit evidence from ranking it properly: Jev and Qwen3.5-9B both recover 90% of gold exchanges within the top 50 (versus 30% for the BERT-based decision model Laya), yet at rank 1 Jev reaches 85% while Qwen3.5-9B drops to 40%. On a dimension-proportional random sample of 60 MemoryAgentBench questions, Jetriever raises the four-dimension average from 44.3% (ReFind) to 55.4%, at a mean retrieval cost of USD 0.00834 per InMind query and USD 0.03103 per MAB query. Together, these results show that effective utility retrieval hinges on combining broad world knowledge, calibrated ranking probabilities, and affordable full-pool evaluation.",
+      "published": "2026-11-16T17:50:53Z",
+      "updated": "2026-11-18T05:49:30Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21478",
+      "abs_url": "https://arxiv.org/abs/2611.21478",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21019",
+      "title": "MemDoctor: Stage-wise Error Attribution and Repair for MLLM Agent Memory",
+      "authors": [
+        "Ruiyang Jiang",
+        "Xinyang Liao",
+        "Weikai Huang",
+        "Yuqi Niu",
+        "Junjie Zhou",
+        "Yubin Zheng"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) now assist users across sessions of images and text, carried by an external memory of what was said and shown. When such an assistant answers wrongly, the failure usually began earlier, in how a record was written, updated or retrieved, and the answer alone does not say where. We formalize multimodal memory as four stages, Write, Update, Retrieve and Answer, and define nine error types across them. A stage-resolved analysis on Mem-Gallery traces most failures to a source stage, and most of those lie before the answer. Injecting known errors against fact-preserving control edits, we then follow each tainted record downstream. Early errors survive to the answer as apparent evidence, and hurt most when no other record holds the fact. A diagnosis that trusts the quoted evidence therefore blames the stage where the error surfaces, not the one where it began. We propose MemDoctor, in which the MLLM that built the memory diagnoses its own failures. It traces each needed fact backward through the four stages, accepts a diagnosis only when the cited evidence is found in memory, and repairs that stage before answering again. On a 4B backbone, MemDoctor improves accuracy on both Mem-Gallery and MemLens, outperforming all evaluated 8B baselines, and the same loop also improves MuRAG and A-Mem.",
+      "published": "2026-11-16T12:38:53Z",
+      "updated": "2026-11-16T12:38:53Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21019",
+      "abs_url": "https://arxiv.org/abs/2611.21019",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20927",
+      "title": "LEDGER: Auditable Agent Memory Under Change",
+      "authors": [
+        "Md Aidul Islam",
+        "Md Nasir Uddin Shuvo",
+        "Muhammad Waseem",
+        "Pekka Abrahamsson"
+      ],
+      "abstract": "Agent memory systems are mostly evaluated on fixed histories, and only their final answers are scored. In real use, facts change, sources differ in reliability, and users ask the agent to forget things. We present LEDGER, a memory layer in which a language model proposes facts and explicit rules decide which value is current, which source to trust, and what to delete. Each fact keeps its source and the period in which it held. LEDGER+EP adds a search over raw conversation turns for questions the ledger does not cover, and scrubs these turns on deletion. We compare both against no memory, full-history replay, retrieval over raw transcripts, and Mem0, with the same answering model and prompt, on a synthetic multi-session coding-agent workload and a 210-question subset of LongMemEval, and we score both the evidence each memory sends to the model and the answer. On the coding workload, LEDGER+EP in fallback mode answers 94.3% of questions correctly on five development seeds and 91.1% on five held-out seeds, against 82.1% and 83.3% for full replay, the strongest baseline. When a deletion request only describes the fact, no deleted value reached our systems' evidence in any evaluated probe. On LongMemEval, LEDGER+EP in augment mode has the same observed accuracy as full replay (74.8%) with 1% of its context. The main limitation is that the coding workload is synthetic and built by us; on LongMemEval, the differences between the strongest systems are within the confidence intervals.",
+      "published": "2026-11-16T11:37:23Z",
+      "updated": "2026-11-16T11:37:23Z",
+      "categories": [
+        "cs.MA",
+        "cs.PF",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20927",
+      "abs_url": "https://arxiv.org/abs/2611.20927",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20144",
+      "title": "HEAMS: Holistic Evaluation of Agent Memory Systems",
+      "authors": [
+        "Chirag Goel",
+        "Jacob Lavoie",
+        "Amirhossein Naghshzan",
+        "Jordan Bannister",
+        "Marzia Nouri",
+        "Mehar Bhatia",
+        "Matt Harris",
+        "Siva Reddy",
+        "Arsène Fansi Tchango",
+        "Gaétan Marceau Caron"
+      ],
+      "abstract": "Memory systems allow AI agents to persist information across interactions, making them more personalized and more capable on long-horizon tasks. This persistence introduces new risks: stored information can be disclosed in inappropriate contexts, resist correction or deletion, be retained beyond what users desire, or be poisoned to influence later agent behaviour. Yet memory systems are typically evaluated on task performance and efficiency alone. We argue that a memory system should instead be understood as the custodian of its user's persistent information, with responsibilities that extend beyond helping an agent complete its tasks, and that it should be evaluated holistically against all such responsibilities. We present Holistic Evaluation of Agent Memory Systems (HEAMS), an open-source framework for evaluating agent memory systems in this way. First, we state the responsibilities of agent memory systems as explicit behavioural desiderata spanning performance, efficiency, security, privacy, and user sovereignty. Second, we assemble a benchmark suite that covers these desiderata and acknowledge the gaps that remain. Third, we develop MilaMem, a prototype memory system, and a governance layer that can wrap any memory system, enabling controlled study of memory system design choices. Fourth, we compare memory systems across the full HEAMS benchmark suite. We find that no memory system leads every performance benchmark, and strong performance scores may coexist with poor privacy, user-sovereignty, and security scores. Governance strongly influences results: recall policies can reduce inappropriate disclosure at a cost in helpfulness, while both recall and retention policies improve poisoning resistance. Performance and efficiency benchmarks alone therefore cannot reveal how well a memory system meets its responsibilities. Code: https://github.com/milatechtransfer/heams",
+      "published": "2026-11-15T17:26:34Z",
+      "updated": "2026-11-15T17:26:34Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20144",
+      "abs_url": "https://arxiv.org/abs/2611.20144",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19752",
+      "title": "StaleBench: Isolating Stale Retrieval in Agent Memory, and Pricing the Fix",
+      "authors": [
+        "S M Mahbub Murshed"
+      ],
+      "abstract": "An agent that stores facts over time eventually stores several versions of the same fact. Asked a value-agnostic question - \"which team does X play for now?\" - a similarity retriever cannot prefer the current version, because every version matches the entity the query names. StaleBench isolates this stale-retrieval failure on 892 real updating facts, with currency labels from the source (Wikidata validity years via TempLAMA), never from a retrieval score. Our central result is that retrieval metrics can rank memory policies backwards: a retention policy and its retain-everything control return the identical statement at rank 1 for every test query, yet differ by 29.5 and 65.6 points in reader accuracy on two readers when no date is shown. Contamination@5, the metric we add, ranks them correctly where current@1 and current@5 do not. Withdrawing the lexical anchor that statements carry costs deployed keying mechanisms tens of points of freshness; entity resolution on both the write path and the query recovers most of the loss. Three deployed systems (Mem0, Graphiti, LangMem) and a reimplemented ERASE each handle supersession differently, and no single scoring convention describes all four. We release the data, a frozen evaluator, and reference baselines.",
+      "published": "2026-11-15T03:29:02Z",
+      "updated": "2026-11-15T03:29:02Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19752",
+      "abs_url": "https://arxiv.org/abs/2611.19752",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19264",
+      "title": "Read Boundaries in Agent Memory: Consistency, Completeness, and Repair",
+      "authors": [
+        "Haoting Qiu",
+        "Qibai Chen"
+      ],
+      "abstract": "Agent-memory services assemble evidence through several reads across connections or stores. An update between those reads can pair an assertion with source content from another revision. We protect the complete recall, including enrichment and materialization, and evaluate the resulting evidence and service behavior in Hindsight and Cognee. A 600-run Cognee study compares unprotected recall, a repeated recall, a read/write lock, and optimistic epoch validation under default incremental updates and full rebuilds. At approximately 20 recalls/s, unprotected default updates yield 199 conflicting responses among 12,010 scheduled recalls with spaced writes and 284 among 12,010 with bursts. The lock and epoch validation each deliver complete, compatible evidence for all 24,020 default-update recalls. With default bursts, epoch validation reduces update p95 by 109 ms while adding 290 ms to recall p95 relative to the lock. A separate 160-run incremental-failure study distinguishes mixed revisions from complete new derived content whose canonical source record remains old. Both protected policies refuse service after failure; the first default retry restores all 80 fault runs through native full-rebuild fallback. In Hindsight, a shared PostgreSQL snapshot removes the mismatch in ten controlled pairs, with recall p95 rising from 19 ms to 29 ms. These results identify the read boundary needed for coherent evidence and the publication and recovery conditions governing service after an update fails.",
+      "published": "2026-11-14T08:42:42Z",
+      "updated": "2026-11-14T08:42:42Z",
+      "categories": [
+        "cs.DB"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19264",
+      "abs_url": "https://arxiv.org/abs/2611.19264",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18133",
+      "title": "Forget the Lineage: Forward-Secure, Lineage-Complete Cryptographic Erasure for LLM-Agent Memory",
+      "authors": [
+        "Yulliwas Ameur",
+        "Billal Mokhtari",
+        "Samia Bouzefrane"
+      ],
+      "abstract": "Large language model (LLM) agents keep a long-term memory that the model itself writes: summaries, extracted facts and embeddings derived from what users said. Deleting a message is therefore not enough: its derivatives, storage residue and backups survive. We define lineage-complete forward-secure erasure: after a forget request, an adversary that later obtains all storage and the agent's current keys learns nothing about the forgotten input or any memory derived from it. We present LinEra, which encrypts each memory under a key derived from its parents' keys along the derivation graph; source keys come from a puncturable pseudorandom function, so forgetting is a single puncture and every descendant becomes unreadable without being located. A sound lineage rule records as parents everything the writer saw, which confines all influence of a source to its descendants. We prove security and lineage integrity and integrate LinEra with mem0. With real LLMs from two families (1.5B to 7B parameters) writing the memory of LoCoMo conversations, an attacker holding every file and the current keys recovers, on all ten conversations written by the largest model, 70 of 71 forgotten secrets after logical deletion, 67 with per-object or epoch keys, and none with LinEra; the same holds for every writer tested. The price is a larger forgetting radius, which follows a simple law in the writer's fan-in: forgetting 1% of turns erases 73.0% of derived memories with session-level summaries but only 3.8% with four-turn windows, which also answer better; re-deriving restores what is lost.",
+      "published": "2026-11-13T13:01:47Z",
+      "updated": "2026-11-13T13:01:47Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18133",
+      "abs_url": "https://arxiv.org/abs/2611.18133",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.17068",
+      "title": "Discovering Effective Agent Memory Designs through Program Evolution",
+      "authors": [
+        "Xinheng Ding",
+        "Seyyed Saeid Cheshmi",
+        "Ziyang Zhang",
+        "Tairan Chen",
+        "Wenya Xie",
+        "Yu Hou",
+        "Rui Zhang",
+        "Zirui Liu"
+      ],
+      "abstract": "Program evolution provides a promising approach to discover agent memory designs and study the choices underlying their effectiveness. We introduce MAPE, a framework that evolves whole memory programs from minimal seeds through a standardized lifecycle interface and an iterative diagnosis-proposal loop. Experiments on LoCoMo and LongMemEval yield an absolute accuracy gain of up to 12% over manually designed baselines at 35% of the serving cost, with further evaluations supporting transfer across serving backbones and benchmarks. Empirical analyses and ablations identify and validate two recurring design patterns: retaining raw conversations as retrievable evidence preserves details omitted from extracted memories, while composing retrieved evidence according to query intent helps the answering model use it effectively. Transplanting the composition module into five existing memory systems improves accuracy across all five. Beyond these patterns, the search objective shapes where computation goes: optimizing serving cost alongside accuracy shifts computation from LLM-based memory construction to selective processing at query time while retaining competitive accuracy. Together, these findings offer empirical lessons for agent memory design. Code is available at https://github.com/ash-ding/MAPE.",
+      "published": "2026-11-12T16:42:04Z",
+      "updated": "2026-11-12T16:42:04Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.17068",
+      "abs_url": "https://arxiv.org/abs/2611.17068",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.15729",
+      "title": "DISCERN: Preserve at Write, Resolve at Read for Persistent LLM-Agent Memory",
+      "authors": [
+        "Chirag Ahuja",
+        "Vladislav Tanov",
+        "Ramcharan Kakarla",
+        "Jonathan Taws"
+      ],
+      "abstract": "Enterprise agents accumulate memory across dozens of sessions in which facts contradict, get superseded, and blur as similarly named entities collide in embedding space. The field treats this as a retrieval problem; we show it is not. On ENT-310, a synthetic enterprise sales-agent memory benchmark of 310 queries (210 answerable, 100 unanswerable), a vanilla Retrieval-Augmented Generation (RAG) reader over a memory store already matches strong memory systems on the recall pillars. Retention and currency are near-saturated, roughly 0.93 to 0.98 for every competent system, so recall is essentially solved. What remains unsolved is resolution: which entity a query refers to, which time-state is current, and whether to commit an answer at all or decline when evidence is insufficient. We propose DISCERN (DISambiguation and Cross-session Episodic memoRy Navigation), an agent-memory framework built on a single rule: preserve at write, resolve at read. At write time DISCERN builds a strictly additive bi-temporal provenance graph that never merges confusable entities and never drops superseded values. At read time a zero-LLM tool surface drives an agentic loop that navigates this graph and commits exactly one of four gated terminal actions. A four-judge LLM-as-a-Judge council scores two axes: answer correctness on answerable questions, and the answer-versus-abstain decision as a classification problem. On ENT-310, DISCERN is the best-calibrated system on abstention (F1 0.924 versus at most 0.802 across eight baselines) and leads macro answer correctness under equal pillar weighting (0.861 versus 0.806 for the strongest baseline), a lead driven by entity resolution (0.800, where no baseline exceeds 0.40). Applied with zero tuning to the full LoCoMo corpus, the same pipeline again leads macro answer correctness (0.663 versus 0.638) and stays among the best-calibrated on false-premise abstention.",
+      "published": "2026-11-11T17:06:07Z",
+      "updated": "2026-11-11T17:06:07Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.15729",
+      "abs_url": "https://arxiv.org/abs/2611.15729",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.14009",
+      "title": "Coding Agent Memory Post-Training II: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via On-Policy Distillation",
+      "authors": [
+        "Lirui Luo",
+        "Kelong Mao",
+        "Xinwei Yang",
+        "Rongqing Li",
+        "Luyu Chen",
+        "Kieran Wong",
+        "Yudong Guo",
+        "Xinrui Wang",
+        "Jiayin Zhu",
+        "Pu Yao",
+        "Gu Simiu",
+        "Sulong Xu",
+        "Cong Fang"
+      ],
+      "abstract": "Language-model agents increasingly tackle long-horizon tasks whose interaction histories exceed the model's active context. They must therefore decide what to write down and what to read back, and when to do either. Recent work has begun to use on-policy distillation (OPD) to make memory control part of the policy, relying on memory tools and compaction protocols that lie outside either model's pre-training. However, this weakens the distillation on both sides: the teacher cannot give useful guidance on an interface it has never used, and the student samples too few meaningful memory actions for that guidance to take effect. To study this problem, we introduce Coding Agent Memory Gym II (CAMG-II), a suite of long-horizon agentic-RL environments spanning Shop, Coding, AutoResearch, General, and Visual. Alongside each environment's native task interface, CAMG-II provides ordinary Bash access and an episode-persistent workspace, enabling the policy to create, revise, search, and reuse files as memory across context replacements. We also introduce Coding Agent Memory Post-Training II (CAMP-II), which trains a single policy jointly across all five environments with fully asynchronous OPD to learn this file-based memory behavior directly from a frozen teacher with a prior for file operations. On CAMG-II, CAMP-II obtains 2.97 times the gain of the strongest OPD baseline. The memory behavior CAMP-II learns generalizes to two external benchmarks, Terminal-Bench 2.1 and SWE-Bench Pro V2, with improved success rates.",
+      "published": "2026-11-10T12:49:24Z",
+      "updated": "2026-11-12T07:08:00Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14009",
+      "abs_url": "https://arxiv.org/abs/2611.14009",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.09721",
+      "title": "MemoryDojo: Benchmarking Poisoning Through LLM Agent Memory",
+      "authors": [
+        "David H. Yang",
+        "Blake Bullwinkel",
+        "Amanda Minnich",
+        "Mohammad Mohammadi Amiri",
+        "Giorgio Severi"
+      ],
+      "abstract": "LLM agents benefit from using memory systems to improve performance on long-horizon, multi-session tasks. However, memory introduces a critical attack surface. Malicious instructions encountered in one session may be stored and propagated through memory before being retrieved and acted upon in later sessions. Because memory systems differ in how they process and retrieve information, the downstream effects of poisoning can vary significantly across systems. To quantify the effects of poisoning across different memory architectures, we introduce MemoryDojo, a benchmark for tracing the lifecycle of poisoned information through agent memory and measuring its influence on subsequent agent behavior. MemoryDojo is easily extensible, consists of 155 multi-session long-horizon trajectories covering four domains, and supports five different memory systems. Through our evaluation, we find that all memory systems are susceptible to memory poisoning, with substantial variation in downstream effects. We further propose a memory-aware poison optimization process that increases the poisoning efficacy, highlighting differences between memory architectures. We hope that MemoryDojo will support research on understanding and mitigating agentic memory risks.",
+      "published": "2026-11-06T17:00:09Z",
+      "updated": "2026-11-06T17:00:09Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.09721",
+      "abs_url": "https://arxiv.org/abs/2611.09721",
+      "source": "arxiv"
+    },
     {
       "id": "1910.13406",
       "title": "Generalization of Reinforcement Learners with Working and Episodic Memory",
@@ -1821,7 +2238,7 @@
     },
     {
       "id": "1610.06402",
-      "title": "A Growing Long-term Episodic \u0026 Semantic Memory",
+      "title": "A Growing Long-term Episodic & Semantic Memory",
       "authors": [
         "Marc Pickett",
         "Rami Al-Rfou",
@@ -4322,7 +4739,7 @@
         "Jan Moritz Joseph",
         "Rainer Leupers"
       ],
-      "abstract": "Emerging non-volatile memories (NVMs) represent a disruptive technology that allows a paradigm shift from the conventional von Neumann architecture towards more efficient computing-in-memory (CIM) architectures. Several instrumentation platforms have been proposed to interface NVMs allowing the characterization of single cells and crossbar structures. However, these platforms suffer from low flexibility and are not capable of performing CIM operations on NVMs. Therefore, we recently designed and built the NeuroBreakoutBoard, a highly versatile instrumentation platform capable of executing CIM on NVMs. We present our preliminary results demonstrating a relative error \u003c 5% in the range of 1 k$Ω$ to 1 M$Ω$ and showcase the switching behavior of a HfO$_2$/Ti-based memristive cell.",
+      "abstract": "Emerging non-volatile memories (NVMs) represent a disruptive technology that allows a paradigm shift from the conventional von Neumann architecture towards more efficient computing-in-memory (CIM) architectures. Several instrumentation platforms have been proposed to interface NVMs allowing the characterization of single cells and crossbar structures. However, these platforms suffer from low flexibility and are not capable of performing CIM operations on NVMs. Therefore, we recently designed and built the NeuroBreakoutBoard, a highly versatile instrumentation platform capable of executing CIM on NVMs. We present our preliminary results demonstrating a relative error < 5% in the range of 1 k$Ω$ to 1 M$Ω$ and showcase the switching behavior of a HfO$_2$/Ti-based memristive cell.",
       "categories": [
         "cs.AR",
         "cs.CY"

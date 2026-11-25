@@ -1,0 +1,25 @@
+Title: Agar: What-If Analysis for Microservice Applications
+Authors: Saarth Deshpande, Neeraja J. Yadwadkar, Venkat Arun
+ID: 2610.36636
+URL: https://arxiv.org/abs/2610.36636
+
+Abstract:
+Microservice operators must reason about how applications would behave under
+changes that have not yet occurred: different workloads, resource allocations,
+or SLO targets. Evaluating every alternative experimentally is expensive, but
+predicting such counterfactuals is difficult because microservices contain many
+interacting components. End-to-end models must learn behavior over a
+combinatorial space of conditions, but composing per-component predictors causes
+prediction errors to accumulate. We address this challenge by changing what each
+component model must predict. Rather than predicting exact values, we learn
+simple, interpretable bounds that contain every observed behavior while
+remaining tight enough to support useful end-to-end conclusions. We build AGAR,
+a counterfactual performance analysis tool that composes these models to answer
+end-to-end SLO-feasibility questions. This allows us to formulate autoscaling as
+a counterfactual query: what is the smallest resource allocation under which an
+SLO is met? Our evaluation demonstrates that across three microservice
+applications, AGAR's bounds are actionable: its derived autoscaler reduces CPU
+allocation by up to 36.8% over state-of-the-art horizontal autoscalers while
+satisfying application SLOs. Further, AGAR is able to predict operational cost
+given workload traces, provide guidance on which service's startup time to
+optimize and localize performance bugs within each application.

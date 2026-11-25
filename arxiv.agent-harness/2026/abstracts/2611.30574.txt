@@ -1,0 +1,22 @@
+Title: Improving Repair Agents with Cause-Chain Diagnoses
+Authors: Marius Smytzek, Martin Eberlein, Lars Grunske, Andreas Zeller
+ID: 2611.30574
+URL: https://arxiv.org/abs/2611.30574
+
+Abstract:
+Repair agents resolve a growing share of real-world issues. Starting with the
+same information as a developer reading a bug report, they have to find out how
+the program fails before actually fixing it. We present FORECAST, which provides
+repair agents with a diagnosis of the failure. From the executions of passing
+and failing tests, FORECAST infers a cause chain, a short sequence of execution
+features, such as conditions or data flow, that explains how the failing runs
+diverge. FORECAST appends this cause chain to the issue an agent receives. It
+thus works with any agent that builds its prompts from the issue, without
+modifying the agent. We evaluate FORECAST on all 300 issues of SWE-bench Lite
+with five repair agents and two models, the commercial Claude Haiku 4.5 and the
+open-weight Qwen3.5. With the cause-chain diagnosis, every agent resolves
+significantly more issues. Over all agents, the share of resolved issues rises
+from 48.5% to 70.9% for Haiku 4.5 and from 31.2% to 56.1% for Qwen3.5. The open-
+weight model with the diagnosis thus surpasses the commercial model without it.
+The gains persist across repeated runs and for agents that already run the tests
+the diagnosis is derived from.

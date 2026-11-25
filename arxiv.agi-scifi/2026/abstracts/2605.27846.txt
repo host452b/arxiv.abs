@@ -1,0 +1,24 @@
+Title: EAPO: Entropy-Driven Adaptive Positive-Negative Sample Weighting for Policy Optimization in Open-Ended QA
+Authors: Yunsheng Zeng, Gen Li, Yuwei Miao, Xiandong Li, Yujin Wang, Siyu Chen, Luning Wang, Yunhao Qiao, Junfeng Wang, Jianwei Lv et al.
+ID: 2605.27846
+URL: https://arxiv.org/abs/2605.27846
+
+Abstract:
+Large Reasoning Models are typically trained via reinforcement learning from
+verifiable rewards (RLVR). However, existing approaches adopt fixed weights for
+positive and negative samples, and the conclusions hardly generalize to open-
+ended question answering (QA). In this paper, we systematically investigate the
+roles of positive and negative samples in reinforcement learning for open-ended
+QA. We propose a reward-mean-based strategy for distinguishing positive from
+negative samples, and observe that negative samples predominantly govern
+response diversity and the performance upper bound, whereas positive samples
+primarily determine response quality and convergence stability. Building on
+these observations, we propose EAPO, an Entropy-driven Adaptive Policy
+Optimization method that adaptively computes the weighting coefficients of
+positive samples based on the ratio of the current policy entropy to the initial
+entropy. During the entropy-decreasing phase, the weight assigned to positive
+samples is reduced to preserve exploration, whereas during the entropy-
+increasing phase it is amplified to reinforce stability, thereby mitigating
+entropy collapse. Experiments on two publicly available open-ended medical QA
+datasets demonstrate that EAPO consistently and substantially outperforms fixed-
+weight baselines in both response diversity and stability.

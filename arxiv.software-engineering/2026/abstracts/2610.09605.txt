@@ -1,0 +1,29 @@
+Title: GRAML: Graph-Grounded Reasoning and Multi-Task Learning for LLM-Based Software Vulnerability Detection
+Authors: Ruohan Li, Miaoqing Tian, Haipeng Qu, Ruobing Jiang
+ID: 2610.09605
+URL: https://arxiv.org/abs/2610.09605
+
+Abstract:
+Large language models (LLMs) have shown promise in software vulnerability
+detection. Existing approaches leverage program graphs to provide structural
+evidence for vulnerability analysis and description generation. However,
+redundant or weakly relevant graph relations make it difficult to identify
+vulnerability-related code lines and their connections to vulnerable statements.
+Meanwhile, generated descriptions may omit key information or contain claims
+unsupported by the source code. To address these challenges, we propose GRAML, a
+graph-grounded multi-task framework for LLM-based vulnerability detection.
+Specifically, GRAML uses structural propagation, relation diversity, and
+redundancy control to identify vulnerability-relevant code lines and their
+associated program relations. To improve description reliability, we further
+develop Tree-of-Thought-based Vulnerability Reasoning (ToT-VR), which explores
+multiple candidate explanations and evaluates their consistency with source
+code. The resulting descriptions are organized as Description samples and
+combined with Detection, Localization, and Assessment samples for four-task
+fine-tuning. We evaluated four code LLMs on seven vulnerability detection
+datasets. In particular, GRAML achieves average F1 scores of 67.08% to 69.32%,
+outperforming the evaluated baselines by 2.02 to 31.54 percentage points.
+Furthermore, ToT-VR improves average F1 by 4.43 to 6.99 percentage points over
+Chain-of-Thought (CoT)-based description generation, while multi-task training
+improves it by 8.03 to 18.26 percentage points over Detection-only training.
+These results demonstrate the effectiveness of graph-grounded multi-task
+supervision for software vulnerability detection.

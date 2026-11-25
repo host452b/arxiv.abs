@@ -1,0 +1,25 @@
+Title: A First Exploration of Neuromorphic OT-CFM for Multi-Speaker VSR
+Authors: Lin Chen, Jingping Fang, Hairui Liu, Chenyang Xu, Junhao Chen, Xiaorui Li, Weidong Cai, Xiaoming Chen
+ID: 2606.31225
+URL: https://arxiv.org/abs/2606.31225
+
+Abstract:
+Visual Speech Recognition (VSR) tasks in complex multi-speaker scenarios are
+severely hindered by rapid head motions, occlusions, and subtle lip
+articulations. Traditional RGB-based methods struggle here due to low rates and
+motion blur of frames. To overcome these, we propose LipsFlow, a neuromorphic-
+inspired VSR framework that converts RGB videos into high-temporal-resolution
+event streams. For multi-speaker, we employ ByteTrack tracking and TalkNet
+active speaker detection to temporally segment scenes into single-speaker clips,
+enabling focused per-speaker analysis. By explicitly capturing microsecond-level
+articulatory dynamics via learnable event-based representations, LipsFlow
+achieves inherent robustness against visual degradation. To efficiently model
+these dense event-based features and adapt to speaker-specific articulatory
+patterns, we introduce Optimal Transport Conditional Flow Matching (OT-CFM). It
+enforces deterministic, straight-line trajectory generation in a semantic latent
+space, slashing inference latency to just two Ordinary Differential Equation
+(ODE) steps. Furthermore, we design a Dual-Level Semantic Supervision mechanism
+combining token-level BERT weight tying and sentence-level priors to resolve
+homophene ambiguities. Validated on competitive benchmarks, LipsFlow achieves a
+state-of-the-art WER of 22.3\% at 240 ms latency, establishing a highly robust
+and efficient paradigm for event-based VSR.

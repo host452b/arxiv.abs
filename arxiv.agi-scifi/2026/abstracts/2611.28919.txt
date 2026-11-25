@@ -1,0 +1,20 @@
+Title: When Do Better Visual World Models Make Better Plans? Decision-Aligned Selection for Latent Planning
+Authors: Chan Aristella Lu, Arya Fayyazi, Junil Yeo, Jin Lu, Kyu Hyung Lee, Mehdi Kamal, Massoud Pedram
+ID: 2611.28919
+URL: https://arxiv.org/abs/2611.28919
+
+Abstract:
+Visual world models enable goal-conditioned planning by predicting the outcomes
+of candidate actions in latent space. However, planning depends on how well a
+model ranks candidates, whereas training optimizes how accurately it predicts
+each one. We identify the Decision-Relevant Residual (DRR), the part of the cost
+error that can reorder candidates, and show that the more training reduces the
+DRR, the more it improves selection (Spearman $ρ= 0.82$, vs. $0.61$ for
+prediction error). Building on this insight, we introduce Decision-Aligned
+Selection (DAS), a plug-in selection rule that scores candidates by the
+standardized consensus of several independently trained checkpoints, which
+averages out their checkpoint-specific residuals. Across two model families
+(LeWorldModel and DINO-WM) and five tasks, DAS selects better actions than
+single checkpoints in 12 of 18 configurations and outperforms training one model
+three times longer in 14 of 18. In closed loop, DAS improves success over single
+checkpoints in 6 of 9 pre-registered LeWM comparisons.

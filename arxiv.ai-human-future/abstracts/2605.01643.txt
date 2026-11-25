@@ -1,0 +1,26 @@
+Title: AI Alignment via Incentives and Correction
+Authors: Rohit Agarwal, Joshua Lin, Mark Braverman, Elad Hazan
+ID: 2605.01643
+URL: https://arxiv.org/abs/2605.01643
+
+Abstract:
+We study AI alignment through the lens of law-and-economics models of deterrence
+and enforcement, which treats misconduct as a rational response to incentivizes,
+where actors weigh the expected gain from aligning against the expected loss
+from being caught. We argue that the same logic arises naturally in foundational
+language models: an agent trained by RLHF can be modeled as deriving intrinsic
+reward from producing a persuasive yet incorrect response, while an auditor can
+be viewed as balancing monitoring (which incurs some cost) against identifying
+solver misalignment. Therefore, alignment can be viewed as a mechanism design
+problem, where stronger penalties can deter solver misbehavior but also reduce
+auditing pressure. Under this framework, we can characterize misalignment as an
+adversarial post-training problem. While standard post-training optimizes
+against a stationary reward signal, our mechanism constantly adapts to mitigate
+reward hacking against a fixed monitor. We formalize this interaction as
+follows: a principal (e.g., a human) defines a value function over joint
+alignment outcomes, and a meta-optimizer adaptively chooses granular rewards for
+the solver and auditor to optimize the principal's value. In particular, we
+propose a bandit-based meta-optimizer for searching over a discrete set of
+reward profiles using noisy interaction feedback, and we show from experimental
+results on Qwen2.5-7B that this mechanism can reduce hallucinations on
+programming benchmarks by as much as 52\%.

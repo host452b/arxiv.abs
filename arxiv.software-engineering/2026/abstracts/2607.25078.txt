@@ -1,0 +1,29 @@
+Title: Diff-ID: Identity Consistent Facial Image Generation and Morphing via Diffusion Models
+Authors: Taimoor Rizwan, Sara Atito, Muhammad Awais, Zhenhua Feng, Josef Kittler
+ID: 2607.25078
+URL: https://arxiv.org/abs/2607.25078
+
+Abstract:
+Generative diffusion models have revolutionized facial image synthesis, yet
+robust identity preservation in high resolution outputs remains a critical
+challenge. This issue is especially vital for security systems, biometric
+authentication, and privacy sensitive applications, where any drift in identity
+integrity can undermine trust and functionality. We introduce Diff-ID, a
+diffusion based framework that enforces identity consistency while delivering
+photorealistic quality. Central to our approach is a custom 210K image dataset
+synthesized from CelebA-HQ, FFHQ, and LAION-Face and captioned via a fine tuned
+BLIP model to bolster identity awareness during training. Diff-ID integrates
+ArcFace and CLIP embeddings through a dual cross attention adapter within a fine
+tuned Stable Diffusion UNet. To further reinforce identity fidelity, we propose
+a pseudo discriminator loss based on ArcFace cosine similarity with exponential
+timestep weighting. Experiments on held out and unseen faces show that Diff-ID
+does not exceed InstantID in raw ArcFace Face Similarity, but achieves
+substantially lower FID and the strongest FIQ based identity--realism trade off
+among the evaluated methods. We also present a unified DDIM based morphing
+pipeline that enables qualitative facial interpolation without per identity fine
+tuning. We further argue that identity preservation and photorealism should be
+evaluated jointly rather than in isolation, as high identity similarity alone
+does not guarantee realistic outputs. To make this trade off explicit, we report
+Face Image Quality (FIQ) as a complementary ratio based score that combines
+identity similarity and perceptual realism while keeping FS and FID as the
+primary metrics.

@@ -6,7 +6,7 @@ interpretability, alignment techniques, jailbreaking/adversarial attacks,
 sycophancy, hallucination, scaling laws, and long-context capabilities.
 
 - **Time range**: 2021–2026 (Claude-era focus)
-- **Total unique papers**: 2,628
+- **Total unique papers**: 4,079
 - **Search files**: 35 topic-based searches
 - **Year distribution**: 2021(136) · 2022(123) · 2023(321) · 2024(718) · 2025(1058) · 2026(267)
 

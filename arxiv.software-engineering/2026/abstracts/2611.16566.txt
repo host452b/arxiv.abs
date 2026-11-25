@@ -1,0 +1,31 @@
+Title: Towards Automated Recommendation of Steady-State Detection Algorithms for Software Performance Benchmarks
+Authors: Martin Beseda, Vittorio Cortellessa, Federico Di Menna, Daniele Di Pompeo, Luca Traini
+ID: 2611.16566
+URL: https://arxiv.org/abs/2611.16566
+
+Abstract:
+Steady-state detection is a central step in software performance benchmarking,
+yet different detection methods rely on different assumptions and may perform
+best on different execution profiles. This paper formulates steady-state
+detection as an algorithm-recommendation problem: given a benchmark time series,
+predict which of two complementary detectors is more appropriate. The first, CP-
+SSD, identifies steady state through changepoint-based segmentation of the
+execution trace, whereas the second, KB-KSSD, uses a kernel-based approach to
+identify stable behaviour. We propose a data-driven recommender that
+characterises benchmark time series using automatically extracted features and
+combines supervised prediction with information derived from groups of time
+series exhibiting similar behaviour. The approach is evaluated on 407 labelled
+benchmark time series for which one of the two detectors can be identified as
+preferable with respect to a reference steady-state index. The proposed
+recommender selects the better detector correctly for 72.97% of the series,
+compared with 62.65% when always selecting the detector that performs best most
+often, corresponding to an absolute improvement of 10.32 percentage points.
+Paired statistical testing and bootstrap confidence intervals support this
+improvement. A comparison with a recommender using time-series features alone
+shows that the cluster-derived information mainly improves interpretability
+rather than predictive accuracy. Recommendations also remain highly stable when
+the unsupervised representation is learned from either the labelled subset or
+the full collection of 5,860 time series. These results demonstrate the
+feasibility of per-series steady-state detector recommendation while
+highlighting the need for broader labelled data, particularly for execution
+profiles favouring the changepoint-based detector.

@@ -1,0 +1,27 @@
+Title: Correct Tests Are Not Enough: Measuring and Training Oracle Conversion in Specification-Based Test Generation
+Authors: Yunhao Liang, Chengguang Gan, Ruixuan Ying, Hanjun Wei, Zhe Cui, Shiwen Ni
+ID: 2609.05879
+URL: https://arxiv.org/abs/2609.05879
+
+Abstract:
+Generating tests from a natural-language specification requires both an input
+that exposes faulty behavior and a correct expected output. These requirements
+need not improve together: a model can increase test correctness by choosing
+easier inputs, or discover useful inputs whose expected outputs it cannot
+predict. We study this interaction through executable reward decomposition and
+suite-level oracle-conversion measurement. Our generator jointly emits five
+input--output tests in one response. During training, audited reference programs
+provide correctness feedback, while a fixed bank of faulty programs provides two
+utility signals: potential input kill and effective kill after checking the
+generated output. An additive GRPO objective preserves both signals without
+requiring execution at inference time. On an audited TC-Bench split with 506
+training and 142 evaluation tasks, three independently trained Qwen3.5-9B runs
+at step 75 increase full-test correctness from 28.59\% to 42.54\%, input kill
+from 24.06\% to 25.27\%, and effective full kill from 12.23\% to 14.15\%.
+Matched 50-step ablations reveal a trade-off: removing kill rewards yields
+higher correctness and slightly higher full kill, but lowers input kill to
+21.60\%. A fixed-input source--oracle crossover on 64 training-pool tasks
+attributes the principal NoKill-to-FullKill difference to harder input selection
+rather than worse output prediction on identical inputs. These results identify
+oracle conversion as a measurable bottleneck and show the benefits and limits of
+preserving input-utility feedback in joint test generation.

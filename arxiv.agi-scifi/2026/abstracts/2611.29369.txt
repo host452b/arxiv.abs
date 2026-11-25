@@ -1,0 +1,30 @@
+Title: ClothCast: Generative Cloth World Modeling under Partial Observability
+Authors: Yushen Hu, Yilong Song, Zhen Zhou, Apurv Kushwaha, Harshvardhan Chandirasekar, Zhu-Tian Chen
+ID: 2611.29369
+URL: https://arxiv.org/abs/2611.29369
+
+Abstract:
+World models support robotic manipulation by predicting how the scene evolves
+under a planned action. For garments this prediction is notoriously difficult:
+deformations are complex, and self-occlusion leaves much of the cloth
+unobserved. Planned gripper trajectories provide a useful motion prior because
+cloth held by a gripper moves with it, while the remaining deformation must be
+predicted. We introduce ClothCast, a world model that applies this prior to the
+cloth's points and learns the residual motion. ClothCast takes one RGB-D
+observation, the camera pose, the robot's own model and the planned gripper
+trajectories, with no cloth mesh or material parameters. It lifts the
+observation to a layered point set that includes hypothesized occluded layers,
+carries the points with a blended rigid prior derived from the gripper poses,
+and predicts the residual motion with a video-diffusion point-flow model. Over
+entire 4- to 11-second episodes at 10 Hz, the moved points are rendered into
+depth, from which a geometry-conditioned completion model synthesizes RGB; after
+release, a hand-designed settling step replaces the learned motion. We further
+release ClothCastBench, 10,000 simulated dual-arm cloth-manipulation episodes
+with the ground-truth cloth mesh, including occluded layers, at every frame. On
+492 held-out episodes, ClothCast achieves 2.5x lower sequence-averaged visible-
+surface Chamfer distance than Flex-π, the strongest baseline in geometry (14.0
+mm vs. 35.6 mm), and 3.7 dB higher cloth-region PSNR than Cosmos-Predict2.5, the
+strongest baseline in cloth PSNR. On a 50-episode ablation subset, the rigid
+prior alone, applied to ClothCast's learned initial geometry with the same post-
+processing, already outperforms both geometry-capable baselines, and the learned
+residual lowers its error by about a third.

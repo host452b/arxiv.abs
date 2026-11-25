@@ -5,7 +5,7 @@ frameworks, orchestration, planning, tool use, memory, multi-agent coordination,
 evaluation, safety, code agents, browser/GUI agents, and production reliability.
 
 - **Time range**: 2020–2026 (AI-agent era focus)
-- **Total unique papers**: 2,177
+- **Total unique papers**: 3,654
 - **Search files**: 42 topic-based searches
 - **Year distribution**: 2020(49) · 2021(55) · 2022(80) · 2023(198) · 2024(482) · 2025(949) · 2026(339)
 

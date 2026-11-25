@@ -1,0 +1,28 @@
+Title: Detecting Chain-of-Thought Hijacking in Backdoored Multimodal Large Reasoning Models
+Authors: Zhifang Zhang, Qi Wei, Weitong Chen, Olaf Maennel, Wei Emma Zhang, zuomin ren, Lei Feng, Miao Xu
+ID: 2610.16598
+URL: https://arxiv.org/abs/2610.16598
+
+Abstract:
+Chain-of-thought (CoT) reasoning enables multimodal large reasoning models
+(MLRMs) to solve complex visual problems, but also exposes them to CoT
+hijacking: an adversary implants a backdoor through poisoned fine-tuning so that
+a visual trigger induces a hijacking turn, redirecting an otherwise faithful
+reasoning chain to an attacker-chosen answer. However, since the hijack acts
+within the reasoning chain, existing multimodal backdoor defenses designed for
+MLLMs that answer directly struggle to detect it. Moreover, inspecting the chain
+itself does not reliably expose the hijack, since the hijacking turn can
+resemble honest self-correction in form. In this paper, we find that honest
+reasoning tends to revise its answer at high-entropy "aha moments", whereas a
+hijack can overturn a confident answer through a near-deterministic turn. To
+quantify this contrast, we formalize this phenomenon as belief inertia, the
+cumulative next-token entropy of a reasoning span minus the answer-belief
+revision it induces, with markedly lower values for hijacked spans than for
+honest reasoning spans. Since hijacking tokens are also image-dependent, we
+further improve detection by restricting the measure to image-dependent spans,
+yielding visual belief inertia (VBI). Building on this, we propose InertiaGuard,
+a training-free, test-time detector that flags a trace when its VBI falls below
+a threshold calibrated on a small set of clean traces. Across various attacks
+and benchmarks, InertiaGuard achieves higher detection performance than existing
+baselines, while generalizing to different model architectures and trigger
+types.

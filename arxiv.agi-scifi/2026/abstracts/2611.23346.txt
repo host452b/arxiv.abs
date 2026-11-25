@@ -1,0 +1,30 @@
+Title: Securing and Auditing Long-Horizon LLM Agents: State-Transfer Auditing and Controls in the Agent Harness
+Authors: Deep Shah, Nehal Kathrotia
+ID: 2611.23346
+URL: https://arxiv.org/abs/2611.23346
+
+Abstract:
+Long-horizon LLM agents across codebases, web browsers, and enterprise
+infrastructure rely on an execution harness to move state between the working
+context, session history, persistent memory, and external environment. While
+conventional execution traces log model prompts and tool calls, critical
+security and reliability failures occur during state transfers: a transfer can
+admit unchecked content (indirect prompt injections, unverified memory writes),
+rewrite state lossily (context compaction dropping user constraints, memory
+consolidation stripping source authority), or restore state incompletely
+(workspace rollbacks leaving aborted KV state active on the inference server).
+Because current traces omit what crosses these boundaries, failure attribution
+and runtime monitors fail on multi-step trajectories. We present a state-
+transfer audit architecture for the agent harness. At each transfer boundary, we
+define an audit point specifying the minimal hash-chained record the harness
+emits, separating low-overhead deterministic checks from model-based semantic
+checks and binding internal context, memory, and inference-server cache state to
+external actions. We show that the same transfer records required for causal
+failure attribution supply the durable state needed by runtime security
+controls, including least-privilege capabilities, replay-resistant authorization
+outside the prompt, information flow control, obligation monitors, and
+transactional recovery across multi-agent and infrastructure pipelines. Finally,
+we analyze multimodal GUI adaptations and implement and evaluate a reference
+harness middleware across 240 multi-step fault-injection trajectories, showing
+that transfer records localize root causes and catch cross-transfer violations
+missed by lifecycle and tool-only logs at microsecond deterministic overhead.

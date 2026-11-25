@@ -1,0 +1,26 @@
+Title: Dendrite: A Real-Time Python Application for Online Brain-Computer Interface Research and Development
+Authors: Niko Kroflic, Jan Babič
+ID: 2607.14655
+URL: https://arxiv.org/abs/2607.14655
+
+Abstract:
+Online brain-computer interface research requires software that can acquire
+multimodal physiological data, train and update decoders, run live inference,
+and preserve the full experimental provenance in a reproducible workflow. We
+present Dendrite, a real-time brain-computer interface application in Python
+that brings signal acquisition, decoder training, and live inference together in
+a single, ready-to-run application that stays modifiable. Dendrite records
+several signal streams at once, each at its native rate, and executes multiple
+processing modes concurrently against them. A decoder can start from a
+previously trained model or be fit mid-session while the pipeline keeps running,
+and the same recordings feed offline training in the same application. Each
+recording, decoder, and training run is tracked in a database, and every decoder
+records the configuration and the source recordings it was trained from, so a
+deployed decoder traces back to what produced it. The experimental paradigm
+stays external, an independent program in any language that reaches Dendrite
+over the network, rather than a module built inside the runtime. We validate the
+full system end-to-end on in-house and public BCI datasets, training and
+updating decoders online while the pipeline runs in real time. Dendrite is open-
+source under the GPL-3.0 license at https://github.com/dendrite-bci/dendrite.
+The result is a reproducible, open-source biomedical-computing system for
+developing and evaluating online BCI paradigms.

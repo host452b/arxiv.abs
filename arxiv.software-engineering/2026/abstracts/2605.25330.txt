@@ -1,0 +1,23 @@
+Title: Faithful Evaluation of Semantic-ID Tokenizers for Generative Recommendation
+Authors: Qian Zhang, Lech Szymanski, Haibo Zhang, Jeremiah D. Deng
+ID: 2605.25330
+URL: https://arxiv.org/abs/2605.25330
+
+Abstract:
+Generative recommendation based on Semantic IDs (SIDs) represents each item as a
+discrete sequence of SIDs and is conventionally evaluated by matching the
+generated SID sequence against the target item's SID sequence. This evaluation
+is faithful only when each SID sequence uniquely identifies one item. In
+practice, SID collisions violate this condition: across the evaluated SID
+tokenizers and datasets, collision rates reach 30.52%, and SID-level Hit@10 is
+inflated by up to 103.36% relative to item-level Hit@10. To address this
+evaluation gap, we introduce Collision-Corrected Evaluation (CCE), which defines
+collision-aware item-level metrics (ItemHit@K, ItemNDCG@K) computed from
+generated SID sequences, and Zero-Collision Reassignment (ZCR), which constructs
+zero-collision SID assignments for existing tokenizers via minimum-cost
+reassignment. Applying these methods to four datasets and five representative
+SID tokenizers, we find that metric inflation scales with collision rate and is
+large enough to flip pairwise tokenizer comparisons under item-level re-
+evaluation. This finding calls into question the reliability of SID-level
+rankings reported in prior work and indicates that faithful tokenizer evaluation
+requires item-level correction or zero-collision SID assignments.

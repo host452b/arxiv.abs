@@ -1,0 +1,25 @@
+Title: Exploring Early Vulnerability Analysis via Automatic Identification of Vulnerability-Introducing Commits
+Authors: Weiliang Qi, Shu Wang, Youpeng Li, Ela Guo, Xinda Wang
+ID: 2611.26739
+URL: https://arxiv.org/abs/2611.26739
+
+Abstract:
+Developing effective vulnerability analysis techniques requires high-quality
+datasets that capture how vulnerabilities appear and evolve in real software
+codebase. Existing datasets, however, typically label as vulnerable only the
+code immediately preceding vulnerability-fixing commits (VFCs), overlooking the
+earlier versions in which vulnerabilities were first introduced and subsequently
+evolved. This practice limits both dataset coverage and our understanding of
+whether current detectors can identify vulnerabilities during their early,
+latent stages. In this paper, we present three manually annotated datasets of
+vulnerability-introducing commits (VICs) based on recent CVEs and widely used
+open-source projects. We further propose D-SZZ, a data state-aware VIC
+identification framework that analyzes security-fixing patterns and performs
+vulnerability scope slicing to recover the semantics implied by a fix.
+Experimental results demonstrate that D-SZZ outperforms existing SZZ and LLM-
+based baselines in identifying VICs. In addition, we evaluate six representative
+vulnerability detectors and find that models trained only on pre-VFC code
+struggle with original vulnerabilities, while incorporating early-stage samples
+improves detection performance. We also show that D-SZZ improves downstream
+vulnerable-version identification, and use it to uncover 16 inaccurate affected-
+version records in the NVD, all of which were officially confirmed and updated.

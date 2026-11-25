@@ -1,0 +1,31 @@
+Title: BODYBENCH: Evaluating Adversarial Image Defenses Against AI Nudification Inpainting
+Authors: Li Qiwei, Salma Abdel Magid, Olga Russakovsky, Eric Gilbert, Sarita Schoenebeck
+ID: 2611.31774
+URL: https://arxiv.org/abs/2611.31774
+
+Abstract:
+Adversarial perturbation defenses protect images from unauthorized edits by
+adding imperceptible noise. Yet none of these methods have been evaluated
+against nudification, despite AI-generated non-consensual intimate imagery (AIG-
+NCII) being among the most documented harms of generative AI. Moreover,
+nudification edits are readily carried out through inpainting, the primary
+setting these protection methods are designed to defend against. We argue this
+is a problem-formulation failure since prior threat models do not correspond to
+nudification edits (also called attacks). The misalignment of existing
+approaches is structural, spanning mask shape, training and testing prompt
+distributions, and success criterion which causes existing evaluations to
+systematically overestimate protection effectiveness. We reformulate image
+protection against unauthorized editing around this documented harm. We
+introduce BODYBENCH, a benchmark of 648 fully synthetic clothed adult subjects,
+each paired with 11 mask variants spanning body, face, and context regions. We
+propose three harm-aligned metrics: sexualization, naturalness, and
+recognizability that jointly determine whether an inpainted output constitutes a
+successful nudification attack. Auditing four recent protection methods
+(PhotoGuard, DiffusionGuard, AdvPaint, DiffVax) on BODYBENCH, we find that
+protection succeeds in only one configuration of one method, and only under
+exact mask alignment between defender and attacker---a condition no real
+defender can guarantee and one that we show is easily always bypassed. We also
+show that standard evaluation metrics such as peak signal-to-noise ratio (PSNR)
+are essentially uncorrelated with nudification protection. BODYBENCH makes this
+misalignment measurable and provides a foundation for defenses grounded in
+documented harm.

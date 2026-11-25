@@ -10,13 +10,632 @@
     "from": "2021-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T22:09:44Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "groups": [
     {
       "source": "arxiv",
-      "count": 200,
+      "count": 232,
       "papers": [
+        {
+          "id": "2611.33118",
+          "title": "Neural Implicit Representation for Bathymetry Estimation using Sidescan Sonar Imagery",
+          "authors": [
+            "Tianxiang Lin",
+            "Sacchin Sundar",
+            "Fenghao Liu",
+            "Onur Bagoren",
+            "Katherine A. Skinner"
+          ],
+          "abstract": "Bathymetry measurement and estimation is critical for understanding the structure of underwater environments. While multibeam echosounders (MBES) provide accurate depth measurements, their deployment on surface vessels limits spatial resolution in deep water. Sidescan sonar (SSS), in contrast, can be deployed on autonomous underwater vehicles (AUVs) to operate closer to the seafloor, enabling high-resolution acoustic imaging. However, the inherent ambiguity in measurements and the limited observation coverage of sonar datasets degrade the performance of state-of-the-art methods for underwater bathymetry estimation from SSS. In this paper, we propose a differentiable neural rendering framework for SSS that enables effective estimation of bathymetry from SSS measurements. Our approach incorporates a measurement model based on SSS geometry, explicitly accounting for its wide elevation aperture and associated ambiguities. We evaluate our method on both synthetic and real-world datasets, demonstrating improved robustness and accuracy compared to alternative approaches.",
+          "published": "2026-11-24T18:49:18Z",
+          "updated": "2026-11-24T18:49:18Z",
+          "categories": [
+            "cs.RO"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.33118",
+          "abs_url": "https://arxiv.org/abs/2611.33118",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.33059",
+          "title": "ClusterVAD: Threshold-Free Unsupervised Voice Activity Detection with Pre-Trained Neural Representations",
+          "authors": [
+            "Karl El Hajal",
+            "Mathew Magimai. -Doss"
+          ],
+          "abstract": "Voice activity detection (VAD) is one of the first steps in speech processing pipelines, from transcription and diarization to speech language models. Supervised detectors need labelled data and inherit the domain and annotation conventions of their training corpora. Existing unsupervised detectors rely on hand-crafted acoustic features which cannot benefit from data and degrade in far-field, noisy or atypical speech. We propose ClusterVAD, an unsupervised VAD built on frozen speech foundation model representations. Fitted once on a small set of untranscribed speech, it clusters the representations and labels each cluster as speech or non-speech with sonority, an acoustic measure. At inference, a frame-level speech probability is computed from the cluster assignments, and a two-state hidden Markov model fitted to each recording enables threshold-free detection. Across benchmarks covering meetings, far-field and noisy recordings, Mandarin and dysarthric speech, ClusterVAD obtains the lowest detection error on pause-level references and is competitive on speaker turn-level references. These results indicate that speech foundation models inherently capture the distinction between speech and non-speech, which can be leveraged without training a detector.",
+          "published": "2026-11-24T18:03:21Z",
+          "updated": "2026-11-24T18:03:21Z",
+          "categories": [
+            "eess.AS",
+            "cs.AI",
+            "cs.SD",
+            "eess.SP"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.33059",
+          "abs_url": "https://arxiv.org/abs/2611.33059",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32998",
+          "title": "First-Hit Photoconsistency for Neural Surface Reconstruction",
+          "authors": [
+            "Gabriel Lenain",
+            "Edmond Boyer",
+            "Jean Ponce"
+          ],
+          "abstract": "Recent neural implicit and Gaussian splatting approaches have achieved impressive results in multi-view surface reconstruction. However, jointly optimizing geometry and appearance introduces ambiguities. A parametric appearance model can compensate for geometric errors, reproducing the input images accurately without an accurate surface. We demonstrate accurate neural implicit surface reconstruction using only multi-view patch photoconsistency with geometry-based visibility, without volumetric rendering or parametric appearance models. For each reference ray, sphere tracing computes the first surface intersection. Its position and normal define a local patch whose photoconsistency is evaluated across visible neighboring views using colors sampled directly from the input images. For efficient sphere tracing, we use a 1-Lipschitz multi-layer perceptron. We use a single photoconsistency loss, without foreground masks or auxiliary geometric regularization. Experiments show that our method achieves the lowest mean Chamfer distance on BlendedMVS (BMVS) among compared methods and matches the geometric accuracy of leading reconstruction methods on DTU.",
+          "published": "2026-11-24T17:25:53Z",
+          "updated": "2026-11-24T17:25:53Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32998",
+          "abs_url": "https://arxiv.org/abs/2611.32998",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32923",
+          "title": "Theory-Informed Quantum Error Mitigation for Shor Order Finding with Fourier Neural Operators",
+          "authors": [
+            "Stefano Markidis",
+            "Qingxin Yang",
+            "Erik Åsgrim",
+            "Ivy Peng"
+          ],
+          "abstract": "Quantum noise distorts the distribution of circuit measurement outcomes, often leaving enough information to infer the algorithm's correct result. To recover this latent information from the noisy distribution in Shor order finding, we introduce a theory-informed quantum error mitigation method. We model how circuit errors shift, broaden, or weaken peaks in the output distribution. These models guide both the generation of synthetic training data and the design of a Fourier neural operator with a learned gain that attenuates or amplifies higher retained Fourier modes. We score each candidate order by averaging the correlations between its ideal distribution and the distributions measured in three circuit executions. The network adjusts these scores to guide the order estimate and determine the weights of a normalized mixture of the ideal distributions. On 1,351 simulated test cases for general modular exponentiation, held out by circuit configuration, exact order recovery rises from 19% to 34%, and the median Jensen-Shannon divergence from the ideal distribution falls by 50%, from 0.64 to 0.32. On 101 Mersenne rotation circuits executed across five IBM quantum processors, a separate model trained and calibrated in simulation increases the number of correct order estimates from 35 to 53. Algorithmic structure can remain recoverable even when noise makes it barely visible.",
+          "published": "2026-11-24T16:35:25Z",
+          "updated": "2026-11-24T16:35:25Z",
+          "categories": [
+            "quant-ph",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32923",
+          "abs_url": "https://arxiv.org/abs/2611.32923",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32829",
+          "title": "Normative and neural network models of multisensory integration",
+          "authors": [
+            "Marcus Ghosh",
+            "John S. Butler"
+          ],
+          "abstract": "Animals continuously detect scents, sights and sounds, which their brains combine into diverse multisensory streams. Multisensory integration accelerates learning, increases reaction speeds and helps to resolve sensory ambiguities. In studying this process, the field has developed a continuum of models; from concise mathematical equations, with a handful of variables, to artificial neural networks, with billions of parameters. In this review, we divide this spectrum into two classes: normative models start from a hypothesis about how multisensory signals should be integrated, while neural network models aim to emulate how circuits could integrate them. Together, these models demonstrate that observers can integrate cues in a statistically optimal fashion, and help to explain experimental findings, including the diversity of multisensory neuron response profiles and network architectures. In this review, we provide a didactic overview of multisensory models, complete with accessible equations and Python code, and compare their assumptions and explanatory power. We detail what has been learned from these models. Finally, we discuss how the ideas and insights from classical theoretical models can be reconciled with those from artificial neural networks, and how this convergence should shape future research.",
+          "published": "2026-11-24T15:45:52Z",
+          "updated": "2026-11-24T15:45:52Z",
+          "categories": [
+            "q-bio.NC",
+            "cs.NE"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32829",
+          "abs_url": "https://arxiv.org/abs/2611.32829",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32811",
+          "title": "Interactive Neural Computers",
+          "authors": [
+            "Ross Murphy",
+            "Marcel Hedman",
+            "Gabriel Brostow"
+          ],
+          "abstract": "Computers and their interfaces are usually treated as fixed, so a person, or increasingly an AI agent, must adapt to whatever the operating system presents. This is limiting when someone needs a different workflow, or an interface suited to hands-free use or a disability. We explore an overlooked alternative. Rather than training an agent to operate an existing computer, we train a generative model to be the computer, predicting each next screen from past screens and the user's mouse and keyboard actions. Treating a desktop as an interactive world model raises problems that natural-video world models largely avoid. Without a camera pose to index memory, the model must remember content that has left the screen without any geometric cues. Arithmetic in a terminal has to be exactly right, not merely plausible. Small interface text must also stay legible at interactive frame rates. Our Interactive Neural Computer is structured like a Neural Turing Machine and starts to address these problems with three modules trained end to end from pixels and actions. A surprise-gated slot memory, supervised by latent next-frame prediction (MEMORY-JEPA), stores what is off screen. An exploratory query bridge brings in the reasoning of a pretrained VLM, and a residual renderer predicts only the latent changes between frames. In long closed-loop rollouts, our model recalls occluded files in 64.2% of trials (chance is 33.3%), compared with at most 56.0% for recurrent and sliding-window baselines. It also raises terminal-text OCR accuracy from 1.3% to 50.1%. Finally, because the memory is explicit, it can be transplanted at test time to causally change what the model renders.",
+          "published": "2026-11-24T15:30:05Z",
+          "updated": "2026-11-24T15:30:05Z",
+          "categories": [
+            "cs.AI",
+            "cs.NE",
+            "cs.SC"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32811",
+          "abs_url": "https://arxiv.org/abs/2611.32811",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32795",
+          "title": "Is Prosody Encoded in the Neural Audio Codec Mimi?",
+          "authors": [
+            "Nicolas Ballier",
+            "Artem Saloev",
+            "Erin Pacquetet",
+            "Taylor Arnold"
+          ],
+          "abstract": "Neural audio codecs (NACs) have become a fundamental infrastructure for modern speech-language models, discretizing continuous speech signals into token sequences that enable large language models to process and generate audio. Most research evaluates codec quality at the decoding phase, assessing the naturalness of reconstructed speech. However, little research investigates what phonetic information is captured during encoding. In this paper, we investigated the potential correlates of prosody in the NAC Mimi, a codec used by conversational speech agents such as Moshi and Sesame and used in downstream tasks such as speech-to-speech translation (Hibiki).",
+          "published": "2026-11-24T15:21:18Z",
+          "updated": "2026-11-24T15:21:18Z",
+          "categories": [
+            "cs.CL"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32795",
+          "abs_url": "https://arxiv.org/abs/2611.32795",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32758",
+          "title": "Low-Power Spiking Neural Network Acceleration with Differential Time Representation: A Modular Hardware Framework",
+          "authors": [
+            "Daniel Windhager",
+            "Lothar Ratschbacher",
+            "Bernhard A. Moser",
+            "Michael Lunglmayr"
+          ],
+          "abstract": "Spiking Neural Networks (SNNs) offer promising energy efficiency, making them well suited for energy-constrained applications. Much of their energy savings stems from the sparse encoding of spike trains. We show that spike trains can be represented more efficiently using Differential Time Representation (DTR), which requires fewer bits than Address-Event Representation (AER) or equidistantly sampled 1-bit spike trains. To support multiple input spike trains, we provide a rigorous proof that DTR sequences can be merged with low complexity. We also provide a set of modular hardware streaming components using this representation that can be flexibly connected to construct custom accelerator architectures for specific SNNs. Tailoring the hardware architecture to the selected SNN is streamlined by a Python framework combining the modular hardware components into a full SNN implementation. We use the framework to generate three accelerators for the Spiking Heidelberg Digits (SHD), Spiking Speech Commands (SSC), and PSMNIST benchmarks, each in a throughput-optimized parallel variant and a resource-reduced time-multiplexed variant. We report results for FPGA and ASIC implementations, the latter synthesized with a fully open-source flow targeting the predictive ASAP7 PDK. On the SHD dataset, the ASIC implementation reaches 92.46% classification accuracy, while sustaining $\\approx{}$12,027 inferences per second at 20.37$μ$J per inference, exceeding the neuromorphic Loihi processor by 109$\\times$ in throughput and 1.8$\\times$ in energy efficiency. The corresponding FPGA implementation achieves $\\approx{}$6,023 inferences per second without using DSP blocks. Across all three datasets, the synthesized ASICs reduce energy per inference by 27-37$\\times$ relative to their FPGA counterparts, demonstrating that competitive SNN accelerators can be realized entirely within an open-source design flow.",
+          "published": "2026-11-24T15:00:56Z",
+          "updated": "2026-11-24T15:00:56Z",
+          "categories": [
+            "cs.NE",
+            "eess.SP"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32758",
+          "abs_url": "https://arxiv.org/abs/2611.32758",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32698",
+          "title": "A Hybrid Analytical-Neural Residual Surrogate for Fast Radio Propagation Prediction over Irregular Terrain",
+          "authors": [
+            "Yongyuan Hu",
+            "Jiahao Li",
+            "Keqi Ni",
+            "Yuqi Ouyang",
+            "Hao Qin"
+          ],
+          "abstract": "Fast prediction of radio-wave propagation over irregular terrain is important for coverage analysis in mountainous environments, where many terrain and antenna configurations must be evaluated repeatedly. High-fidelity split-step parabolic equation (SSPE) solvers can capture terrain-induced shadowing and interference, but their computational cost is high for repeated planning studies. Learning-based surrogates reduce this cost, but direct field regression asks the network to learn both analytically tractable propagation trends and terrain-dependent residual structure. This paper proposes a hybrid analytical-neural residual surrogate that separates these two parts. A deterministic analytical baseline represents free-space spreading, antenna directivity, modified knife-edge diffraction, and terrain-aware specular reflection, while a compact coarse-to-fine neural network predicts the residual field. The network uses baseline-derived guidance channels, anisotropic convolutions, and feature-wise antenna conditioning to match the directional structure of terrain propagation fields. On synthetic SSPE data at 1.0 GHz, the proposed model achieves an MAE of 2.1061 dB, compared with 3.3955 dB for a standard U-Net and 3.2560 dB for a reproduced physics-guided CNN, while reducing the average inference time to 11.30 ms per sample. A zero-shot test at 1.8 GHz gives an MAE of 2.8692 dB without retraining, and a case study on the measured Hjorringvej terrain profile shows that the prediction remains consistent with the SSPE reference and follows the measured path-loss trend.",
+          "published": "2026-11-24T14:29:05Z",
+          "updated": "2026-11-24T14:29:05Z",
+          "categories": [
+            "eess.SP",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32698",
+          "abs_url": "https://arxiv.org/abs/2611.32698",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32685",
+          "title": "Social Bias Neurons in Multilingual Language Models: A Mechanistic Interpretability Analysis",
+          "authors": [
+            "Lance Calvin Lim Gamboa",
+            "Yue Feng",
+            "Mark Lee"
+          ],
+          "abstract": "Multilingual models exhibit social bias when processing inputs pertaining to societal stereotypes. We adapt emerging mechanistic interpretability methods to pinpoint and characterize model components that encode this bias. We conduct our analysis across three instruction-tuned models, four languages, and seven bias dimensions. Specifically, we leverage multilingual bias benchmarks in implementing two methods for identifying social bias neurons: activation probability entropy and integrated gap gradients. We find the latter method to be more effective, as the neurons it isolates (which are largely concentrated at the model's deepest layers) lead to sharper decreases in model bias when suppressed. Further analysis reveals neuron distribution patterns differ between high- and low-resourced languages, suggesting that a language's representation in pretraining data influences how its biases are represented within model internals. Our results also indicate that neurons linked to gender, nationality, and social class biases overlap the most with neurons related to other bias dimensions, pointing to the pivotal role these three dimensions play in how models learn and handle bias.",
+          "published": "2026-11-24T14:25:15Z",
+          "updated": "2026-11-24T14:25:15Z",
+          "categories": [
+            "cs.CL"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32685",
+          "abs_url": "https://arxiv.org/abs/2611.32685",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32602",
+          "title": "ST-GNN-AAAS: Spatio-Temporal Graph Neural Networks for Anytime Automatic Algorithm Selection in the Traveling Salesman Problem",
+          "authors": [
+            "Zeyu Zhang",
+            "Mustafa Misir"
+          ],
+          "abstract": "Anytime Automatic Algorithm Selection (AAAS) aims to make solver choices under varying time budgets. The existing AAAS approaches largely rely on static instance characteristics and make limited use of temporal information revealed during solver execution. We propose ST-GNN-AAAS, a Spatio-Temporal Graph Neural Network framework for AAAS in the Traveling Salesman Problem (TSP). The framework represents evolving incumbent tours using time-varying node features, including distances from each node to its neighbors in the current tour, and combines these features with solver performance observations over a short history window. Given this short history, ST-GNN-AAAS predicts solver selections over a longer future horizon. We evaluate the method on a subset of diverse TSP benchmarks from NATIONAL, TNM, TSPLIB, and VLSI, releasing the corresponding solver execution data to support reproducibility. Our model achieves a selection accuracy of 76.59% and closes 46.05% of the average rank gap between the single best solver (SBS) and the virtual best solver (VBS).",
+          "published": "2026-11-24T13:37:07Z",
+          "updated": "2026-11-24T13:37:07Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32602",
+          "abs_url": "https://arxiv.org/abs/2611.32602",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32509",
+          "title": "Analysis of Federated Graph Neural Networks for Predicting Nuclear Core Properties",
+          "authors": [
+            "Oliver Kožul",
+            "Mihailo Ilić",
+            "Julia Bartos",
+            "Tuan Tran",
+            "Miloš Savić",
+            "Vladimir Kurbalija",
+            "Edo Frederix",
+            "Dušan Jakovetić"
+          ],
+          "abstract": "Federated learning has grown in popularity owing to the increasing data privacy and safety concerns. It allows multiple parties to collaboratively train a model without exchanging their raw data. As an example of highly sensitive infrastructure of national importance, nuclear reactors benefit from this approach, where---while pooling multiple large datasets from different institutions could improve machine learning solutions---the confidentiality of the datasets is paramount. In this paper, we demonstrate that a graph neural network (GNN) outperforms the convolutional neural network (CNN) baseline in a federated setting for a use case concerning nuclear reactor core optimization. The GNN architecture is better suited for the nuclear reactor geometry as, unlike the CNN, it does not require padding the cylindrical core and does not assume translation invariance. The key finding of this work is that input representation is more important than model size and complexity. More sophisticated federated algorithms were employed, but the improvements derived were of lower magnitude. Experimenting with training corpus volume led to the discovery that greater fuel inventory variance is more beneficial than arrangements of existing cases, which is a direct consequence of data heterogeneity. Going forward, focus will remain on enhancing the input and readout representation.",
+          "published": "2026-11-24T12:40:40Z",
+          "updated": "2026-11-24T12:40:40Z",
+          "categories": [
+            "cs.DC",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32509",
+          "abs_url": "https://arxiv.org/abs/2611.32509",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32393",
+          "title": "Fractal Neural Synthesis: Constant-Storage Procedural Weight Derivation via Complex Quadratic Boundary Dynamics",
+          "authors": [
+            "Volkan Dagli",
+            "Zerrin Dagli",
+            "Daghan Dagli"
+          ],
+          "abstract": "Conventional neural networks store synaptic parameters as explicit tensors whose persistent Flash footprint scales linearly (O(W)) with parameter count, constraining resource-limited edge microcontrollers. We formulate and systematically evaluate Fractal Neural Synthesis (FNS), a procedural weight derivation architecture that replaces hidden-layer matrices with a constant 24-byte coordinate seed Theta = (c_x, c_y, ell) in F_64^3 anchored near the complex quadratic bifurcation boundary dM of f_c(z) = z^2 + c. We introduce a large-bailout (R = 256) smooth escape kernel, four zero-overhead geometric sampling apertures--Cartesian Grid, coprime 3x3 Rule-of-Thirds (Z/9Z), phi-Vogel spiral, and multi-scale Harmonic Tripod--and prove conditional Kolmogorov (K_Kolm <= 192 + c_0 bits) and Shannon entropy bounds. Across magnifications zeta in [10^0, 10^8], C^1 Fourier and lattice-noise bases collapse to post-standardization rank ~2.25 and SHA-256 PRNG exhibits avalanche discontinuity (rho ~ 0.019, 50.6% micro-step retention), whereas dM uniquely sustains both rank (~10.0) and local continuity (rho in [0.81, 0.97], 89.2% retention). Under leak-free 10-fold CV across four zero-scaler-byte non-linear benchmarks, FNS with an INT8 readout surpasses 0-hidden Linear-INT8 by +3.6 to +10.8 pp while delivering 10.7x-129x total Flash reduction (725x-2,773x hidden reduction) relative to converged Float32 MLPs (90.30% Ionosphere in 285 B; 97.22% Optical Digits in 2,598 B; 97.90% PenDigits in 2,598 B; 87.00% Satimage in 1,570 B).",
+          "published": "2026-11-24T10:59:36Z",
+          "updated": "2026-11-24T10:59:36Z",
+          "categories": [
+            "cs.LG",
+            "cs.NE"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32393",
+          "abs_url": "https://arxiv.org/abs/2611.32393",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32317",
+          "title": "SPRUNN: Structural Proximity for Pruning in Deep Neural Networks",
+          "authors": [
+            "Babak Rokha",
+            "Ali Azarpeyvanda",
+            "Alireza Khanteymoori",
+            "Tara Ghasempouri"
+          ],
+          "abstract": "Deep Neural Networks (DNNs) have demonstrated significant accuracy across various machine learning tasks. However, these networks suffer from a huge number of parameters and computations, which leads to time-consuming processes. Consequently, parameter pruning approaches have been proposed to compress DNNs and efficiently implement them. The main challenge in pruning is selecting the appropriate parameters for pruning without significantly damaging the accuracy. In this paper, we propose SPRUNN, an algorithmic pruning approach based on the structural proximity criterion for filter pruning in convolutional layers of deep neural networks. Structural Proximity (SP) calculates filter similarity by considering all filters and comparing each one with the others, effectively identifying less important filters for pruning in the convolutional layers. Furthermore, we integrate this approach with fine-grained pruning in Fully Connected(FC)layerstocompresstheDNNsthatinclude both convolutional and FC layers.Toenhancetheaccuracyoftheprunedmodel,weproposealearning rate refinement strategy during the retraining phase. Experimental results demonstrate that SPRUNN achieves significant compression with high accuracy across diverse architectures and datasets.",
+          "published": "2026-11-24T10:12:53Z",
+          "updated": "2026-11-24T10:12:53Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32317",
+          "abs_url": "https://arxiv.org/abs/2611.32317",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32288",
+          "title": "Trading BRAM for LUTs: Hybrid Bit-Level Weight Storage for FPGA-Based Spiking Neural Networks",
+          "authors": [
+            "Dimitrios Sekertzis",
+            "Giorgos Dimitrakopoulos"
+          ],
+          "abstract": "Spiking Neural Networks (SNNs) offer an attractive paradigm for energy-efficient AI inference, while their deployment on reconfigurable hardware enables application-specific acceleration without sacrificing model reprogrammability. However, realizing this potential on FPGAs is often severely constrained by the immense on-chip memory needed to store synaptic weights. Existing compression techniques reduce this storage requirement at the cost of weight precision or accuracy. This work presents a hybrid bit-level weight-storage scheme that trades BRAM capacity for FPGA logic resources while preserving the original weights unmodified. Selected weight bits are implemented using Look-Up Tables (LUTs), while the remaining bits are stored in BRAM and jointly reconstructed during inference. We integrate this approach into a spatial dataflow SNN architecture and introduce a practical bit-mapping heuristic that efficiently partitions weight bits between BRAM and LUT-based logic without modifying the weights. Experimental evaluation demonstrates more than 26% reduction in BRAM utilization with a modest increase in LUT and register usage, resulting in significant overall power savings.",
+          "published": "2026-11-24T09:50:02Z",
+          "updated": "2026-11-24T09:50:02Z",
+          "categories": [
+            "cs.AR",
+            "cs.NE"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32288",
+          "abs_url": "https://arxiv.org/abs/2611.32288",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32274",
+          "title": "CoMNO: Commutator Memory Neural Operators for Long-Horizon PDE Prediction",
+          "authors": [
+            "Han Xiao",
+            "Xin Zhang",
+            "Yuhan Zou",
+            "Zhenzhong Wang",
+            "Donglin Cao",
+            "Dazhen Lin",
+            "Min Jiang"
+          ],
+          "abstract": "Solving nonlinear partial differential equations (PDEs) over long time horizons is computationally expensive using traditional numerical methods. While neural operators provide an efficient alternative, they suffer from the accumulation of approximation errors along the predicted trajectory, typically caused by the failure to capture fine-scale details. In this work, we design a Commutator Memory Neural Operator that identifies fine-scale dynamical details by commuting two operations and leverages these details to enhance the neural operator's capability in capturing fine-scale features over long time horizons. Specifically, we identify a performance gap between two operations: downsampling the high-resolution field before rollout prediction versus performing rollout prediction before downsampling. We observe that fine-scale dynamical details are often encoded in this gap. By commuting these two operations, the fine-scale details removed during downsampling can be captured. Furthermore, we employ a memory module to store these fine-scale features along the trajectory and retrieve them during rollout, generating spatially adaptive corrections that enhance long-horizon fidelity. Empirical results across five systems demonstrate that CoMNO improves prediction accuracy and long-horizon rollout stability.",
+          "published": "2026-11-24T09:41:37Z",
+          "updated": "2026-11-24T09:41:37Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32274",
+          "abs_url": "https://arxiv.org/abs/2611.32274",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32128",
+          "title": "Bit-Flip Attacks on Quantized Neural Networks without Knowledge of Model Parameters",
+          "authors": [
+            "Mahmoud Abumandour",
+            "Srinija Ramichetty",
+            "Guru Venkataramani",
+            "Alaa R. Alameldeen"
+          ],
+          "abstract": "We show that quantization asymmetry concentrates bit-flip vulnerability in small tensors retained at high precision. CoarseHammer targets these tensors and accepts flips at any bit, without parameter values, gradients, or data. It remains effective under continued fine-tuning. Under ideal placement, CoarseHammer reaches chance accuracy in at least 81.5% of runs on each of ten evaluated models, including four large language models, with median successful runs requiring at most 24 flips. On simulated DRAM with 0.01 flippable bits per million, it outperforms three prior attacks on every evaluated convolutional network, succeeding in up to 83.6% of runs while they never succeed. On a real system, CoarseHammer steers heap-allocated tensors onto vulnerable frames despite address space layout randomization, without accessing the model file. With 16 templated frames, median accuracy reaches chance for all four language models and approximately chance for four convolutional networks.",
+          "published": "2026-11-24T07:43:22Z",
+          "updated": "2026-11-24T07:43:22Z",
+          "categories": [
+            "cs.CR",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32128",
+          "abs_url": "https://arxiv.org/abs/2611.32128",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31986",
+          "title": "Network-Guided Automated Synthesis of MAC Units for Neural Network Inference",
+          "authors": [
+            "Zhouyang Wu",
+            "Hongyang Pan",
+            "Chuyu Wang",
+            "Ji Zhuang",
+            "Keren Zhu",
+            "Xin Zhao",
+            "Xuan Zeng"
+          ],
+          "abstract": "In neural inference accelerators, multiply-accumulate (MAC) datapaths account for the majority of circuit area and critical-path delay, where operator-level numerical formats simultaneously dictate hardware overhead and quantization error. Yet no straightforward mapping exists between hardware cost and end-to-end network accuracy: logic synthesis transforms datapaths in a highly nonlinear manner, while numerical errors propagate and couple across layers. To address this disconnect, we present NAMSI, an automated network-aware MAC synthesis framework tailored for neural inference. NAMSI characterizes heterogeneous data formats using a format-distribution representation (FD) and leverages topology-aware accuracy and hardware-cost modeling (TaH), calibrated with actual post-synthesis Area-Delay Product (ADP) measurements, to jointly estimate coupled full-network accuracy and circuit cost. Furthermore, reversible lattice search (RLS) is introduced to tractably navigate the exponentially scaling design space. Evaluations across five neural networks on ImageNet-1K demonstrate that under post-training quantization (PTQ), NAMSI achieves 54.2%-60.4% reductions in post-synthesis MAC ADP compared with FP32 while retaining at least 99% of full-precision Top-1 accuracy, surpassing baseline approaches in both hardware efficiency and accuracy preservation.",
+          "published": "2026-11-24T05:41:41Z",
+          "updated": "2026-11-24T05:41:41Z",
+          "categories": [
+            "cs.AR"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31986",
+          "abs_url": "https://arxiv.org/abs/2611.31986",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31964",
+          "title": "Sounding the Black Box: Online Training of Embedded Neural Networks in Forward-Only Physical Simulators",
+          "authors": [
+            "Ruiqi Shu",
+            "Tianrun Gao",
+            "Haomin Wen",
+            "Xiaomeng Huang"
+          ],
+          "abstract": "Hybrid physics-neural simulators embed neural networks in partial differential equation (PDE) solvers to model unresolved subgrid dynamics while preserving resolved physics and conservation laws. Because closure outputs feed back across time steps, single-step offline regression does not directly minimize multi-step rollout error, motivating online trajectory optimization. Solver backpropagation through time (BPTT) is the standard online solution when solver derivatives are available, yet many operational Fortran and C/C++ simulators expose only non-differentiable, forward-only interfaces. We introduce FORGE (Forward-Only Response and Gauss-Newton Estimation), an online framework that trains embedded networks from forward runs alone by decoupling exact network derivatives from black-box simulator dynamics. Stage I warms up the rollout via a low-dimensional Gauss-Newton step along output-orthonormal weight directions, canceling multi-layer feature drift via a final-layer correction. Stage II perturbs spatial output fields to fit a gain-bounded causal linear response operator across rollout steps, solves for regularized target outputs, and updates all weights via network backpropagation. Across five 2D and 3D benchmarks spanning phase separation, reaction-diffusion, fluid and MHD turbulence, and ocean circulation, FORGE outperforms gradient-free, reinforcement-learning, and emulator-based baselines, cutting coarse-solver test mean squared error (MSE) by 50%-96% in 2D and 70% in 3D, outperforming the strongest forward-only baseline by 16%-69%, and recovering 88%-98% of Solver BPTT's gains. Code is available at https://github.com/ChiyodaMomo01/FORGE.",
+          "published": "2026-11-24T05:12:44Z",
+          "updated": "2026-11-24T05:12:44Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31964",
+          "abs_url": "https://arxiv.org/abs/2611.31964",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31908",
+          "title": "TQ-HQNet: A Trainability-Aware and Qubit-Efficient Hybrid Quantum Neural Network for Cross-Domain Learning on Heterogeneous Data",
+          "authors": [
+            "Abdur Rasool",
+            "Saba Aslam",
+            "Hui Chen",
+            "Chayut Bunterngchit"
+          ],
+          "abstract": "Hybrid quantum neural networks are a promising direction for noisy intermediate-scale quantum computing, but their practical effectiveness is often limited by poor trainability, rigid circuit design, and weak robustness across heterogeneous real-world tasks. This paper proposes TQ-HQNet, a Trainability-Aware and Qubit-Efficient Hybrid Quantum Neural Network for cross-domain learning on heterogeneous data. The proposed framework combines three mechanisms: 1) adaptive latent compression to map domain-specific features into qubit-compatible representations, 2) trainability-aware search over compact variational circuit candidates, and 3) hybrid fusion of multiple shallow quantum experts to improve robustness without increasing qubit cost excessively. TQ-HQNet is evaluated on four public datasets spanning neurological screening, phishing detection, financial direction prediction, and DNA sequence classification. Across all domains, the proposed model consistently improves over a fixed hybrid quantum baseline, with balanced-accuracy gains of +0.280, +0.170, +0.071, and +0.060, respectively. Ablation and sensitivity studies confirm that gains arise from trainability-aware compact circuit selection and expert fusion, not circuit scaling. Although classical baselines outperform on some tasks, fixed-split results show consistent improvements over the fixed hybrid reference. These analyses support the practical role of compact selection and fusion, with repeated-split and hardware-aware studies left for future work.",
+          "published": "2026-11-24T04:10:37Z",
+          "updated": "2026-11-24T04:10:37Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31908",
+          "abs_url": "https://arxiv.org/abs/2611.31908",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31884",
+          "title": "HEAR, SEE, SPIKE ONCE: Highly Efficient NeuroAI Temporal Neural Networks for Low-Precision Multimodal Audio-Visual Classification and Online Learning",
+          "authors": [
+            "Shanmuga Venkatachalam",
+            "Quinn Jacobson",
+            "John Paul Shen"
+          ],
+          "abstract": "Spiking neural networks for multimodal audio-visual classification reach high accuracy by adopting deep-learning machinery: multi-stage convolutional or transformer encoders trained end-to-end with surrogate-gradient backpropagation through time. These prior works typically rely on full-precision (32-bit) parameters and do not treat hardware efficiency as a primary design objective. In this paper, we propose NeuTNN-AV, a much simpler hardware-amenable multimodal substrate built on the recently proposed NeuroAI Temporal Neural Network (NeuTNN) and demonstrate that it can match or outperform state-of-the-art SNN baselines with a fraction of their synapse counts. NeuTNN neurons carry multiple active dendritic segments. Each input line spikes at most once (temporal coding) and every weight is learned via a local reward-modulated spike-timing dependent plasticity (STDP) rule. All weights are 4-bit integers and inference uses only comparisons and additions. On CREMA-D, it reaches 78.6% with 2.34M synapses establishing a new state-of-the-art SNN accuracy, against 77.14% for MISNet-XL (31M parameters). On UrbanSound8K-AV, NeuTNN reaches 98.82% with 1.38M synapses, against 96.85% for SMMT (9.99M parameters) and 98.96% for MISNet-XL (31M parameters). Weight memory is 23-106x smaller than the spiking baselines, and the measured synaptic energy per inference is two to three orders of magnitude lower. Furthermore, the proposed NeuTNN learns CREMA-D in a single pass with 73.8% accuracy and demonstrates rapid online continual learning by adapting to unseen actors from a few dozen clips.",
+          "published": "2026-11-24T03:43:51Z",
+          "updated": "2026-11-24T03:43:51Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31884",
+          "abs_url": "https://arxiv.org/abs/2611.31884",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31833",
+          "title": "Not All Interpretation Methods Are Created Equal: Tiered Evaluation of AI Interpretability",
+          "authors": [
+            "Nicolas Sanchez",
+            "Bin Yu"
+          ],
+          "abstract": "As AI transitions to sociotechnical deployments, uninterpretable models pose serious threats to reliability, public trust and contestability. However, not all interpretation methods are created equal: for interpretability to enhance deployment safety and effectiveness, interpretation methods must be evaluated in a tiered system to differentiate evidence levels of trustworthiness, rather than validated through isolated interpretation instances. Our core vision is that elevating the evaluation of interpretation methods to a core AI assessment metric will drive robust knowledge discovery from data (KDD) and ensure safe, contestable sociotechnical deployments of AI. To this end, we propose TRUST, a tiered evaluation framework that builds upon the Predictability-Computability-Stability (PCS) principles for Veridical Data Science (VDS) and the Predictive, Descriptive and Relevant (PDR) foundations. To differentiate interpretation methods effectively and systematically, TRUST grades interpretation across five tiers: Task-Aligned PDR Foundations, Rigorous Epistemic Grounding, Unifying Semantic Understanding, Scope Transferability, and Targeted Prospective Validation. We present a start-to-finish case study of the iterative Random Forest (iRF) family under TRUST and contrast it with other LLM interpretation methods that struggle to clear specific tiers. Finally, we conclude with brief initial thoughts on how TRUST principles can extend in autonomous agentic frameworks. Ultimately, the TRUST framework fosters contestability and epistemic grounding as foundational evaluation principles for human-machine workflows and, eventually, autonomous agentic workflows.",
+          "published": "2026-11-24T02:31:21Z",
+          "updated": "2026-11-24T02:31:21Z",
+          "categories": [
+            "cs.AI",
+            "cs.HC"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31833",
+          "abs_url": "https://arxiv.org/abs/2611.31833",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31817",
+          "title": "Compressible Representations: Functional Spines in Deep Neural Networks",
+          "authors": [
+            "Niranjan Rajesh",
+            "Meenakshi Khosla"
+          ],
+          "abstract": "Deep networks embed inputs in high-dimensional representations, but how much of this capacity actually drives behavior? We introduce a framework for identifying, at each layer, the subspace of the representation that is functionally sensitive to the task. Using a matrix analogous to the Fisher information but defined over the hidden representation, we rank directions by their influence on downstream computation and project onto the most task-sensitive subspace. Across pretrained vision networks, representations are remarkably compressible: a small fraction of the task-sensitive subspace preserves most performance, often requiring far fewer dimensions than geometric alternatives. We find that this compressed representation is also more robust to adversarial attacks generated on the full network. We additionally show that this decomposition recovers functionally distinct subspaces within the same representation: on cue-conflict stimuli, shape-sensitive and texture-sensitive directions are largely non-overlapping, and ablating one selectively impairs the corresponding task while leaving the other intact. Task-sensitive subspaces also provide a principled foundation for continual learning: constraining gradient updates to lie orthogonal to the task-sensitive subspaces of prior tasks outperforms standard variance-based gradient projection methods. Finally, restricting representational comparisons to task-sensitive subspaces reveals that inter-model alignment is higher in task-sensitive directions than in task-insensitive directions at later layers, and that conditioning on different tasks over the same stimuli uncovers asymmetries that full-space similarity measures cannot detect. Together, these results establish that deep networks compute through a low-dimensional functional spine embedded within a much larger representational space.",
+          "published": "2026-11-24T02:11:08Z",
+          "updated": "2026-11-24T02:11:08Z",
+          "categories": [
+            "cs.AI",
+            "cs.CV"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31817",
+          "abs_url": "https://arxiv.org/abs/2611.31817",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31795",
+          "title": "Constructive Causal Abstraction and a Case Study in Mechanistic Interpretability",
+          "authors": [
+            "Yuchen Zhu",
+            "Sergio Hernan Garrido Mejia",
+            "Dominik Janzing"
+          ],
+          "abstract": "Existing frameworks in causal abstraction first propose a high-level causal model, and then verify whether its interventional effects agree with those of a given micro-level model - the two models are declared causally consistent when the discrepancy is zero. However, proposing a consistent macro causal model is difficult, because macro causal relations are almost never well-defined, since distinct micro-level interventions associated with the same apparent macro intervention can produce different effects. Our central insight is that causally consistent macro-level models can be obtained constructively: ill-defined macro interventions can be interpreted as missing variables on the macro level, and can be accounted for by introducing a complementary variable q that retains omitted causally relevant state. In the linear case, q has a unique form and we provide sufficient conditions for valid implementations to exist; in the nonlinear case, we provide an ODE-based algorithm for constructing implementations. We call this framework Constructive Causal Abstraction (CCA), and use CCA to formulate the difference between machine-learning model auditing and editing. With the Bias-in-Bios biographies dataset, we demonstrate that CCA allows practitioners to articulate assumptions when detecting the model's gender bias. Finally, CCA resolves a well-known paradox known as \"interpretability illusion\" which points to a mismatch between the subspace for editing and the one where the model implements a signal-to-output pathway.",
+          "published": "2026-11-24T01:47:14Z",
+          "updated": "2026-11-24T01:47:14Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31795",
+          "abs_url": "https://arxiv.org/abs/2611.31795",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31789",
+          "title": "Three-Dimensional Wake Reconstruction and Cross-Scale Transfer for Floating Offshore Wind Turbines via Physics-Informed Fourier Neural Operators",
+          "authors": [
+            "Guodan Dong",
+            "Qi Qian",
+            "Feifei Xue",
+            "Jianhua Qin",
+            "Chang Xu",
+            "Wenzhong Shen"
+          ],
+          "abstract": "Coupled surge-pitch motions drive unsteady vortex interactions and dynamic wake meandering behind floating offshore wind turbines, complicating three-dimensional wake reconstruction from limited measurements and transfer across turbine scales. Large-eddy simulations coupled with an actuator line model generate fixed and surge-pitch wakes at motion-based Strouhal numbers $St=fD/U_\\infty$ of 0.2-0.6 (where $f$, $D$, and $U_\\infty$ are the motion frequency, rotor diameter, and inflow velocity) for the National Renewable Energy Laboratory 5 MW ($D=126$ m) and International Energy Agency 22 MW ($D=284$ m) turbines. A physics-informed Fourier neural operator framework combines four-dimensional spectral convolutions with incompressible continuity and rotor-forced momentum-residual regularization to reconstruct three-dimensional unsteady wakes from two observation planes. Trained on the 5 MW fixed and $St=0.2$-$0.5$ cases, the framework recovers near-wake double-peak deficits, motion-driven wake expansion, and coherent vortices through $St=0.6$ (mean wake-center and half-width errors within 1.3% and 1.0% of $D$), while 10% planar sampling preserves near-dense accuracy (relative $L_2$ error 0.0689 versus 0.0684). Applying transfer learning from the 5 MW to the 22 MW turbine lowers the three-dimensional streamwise-velocity error at $St=0.6$ by 36% relative to zero-shot inference (0.1066 to 0.0682), halves scratch-training error with one fixed case (0.0835 versus 0.1693), and restores wake-center tracking and motion-locked harmonics ($St$-$3St$). Large-scale motion-induced dynamics transfer cleanly across turbine scales, whereas fine-scale vortex breakdown remains damped. The framework shows potential for three-dimensional wake reconstruction and downstream-inflow assessment in floating wind farms.",
+          "published": "2026-11-24T01:42:37Z",
+          "updated": "2026-11-24T01:42:37Z",
+          "categories": [
+            "physics.flu-dyn",
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31789",
+          "abs_url": "https://arxiv.org/abs/2611.31789",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31731",
+          "title": "Geo-SMILE: Statistical Model-Agnostic Interpretability with Local Explanations for Geospatial Machine Learning",
+          "authors": [
+            "Shadieh Mohammadi",
+            "Koorosh Aslansefat"
+          ],
+          "abstract": "Conventional post-hoc explanation methods were developed largely for non-spatial inputs and often provide limited explicit treatment of geographic context. We introduce Geo-SMILE, a model-agnostic framework that distinguishes substantive Feature explanation from geographic-position response through complementary perturbation branches. The Feature branch masks substantive predictors while retaining observed coordinates; the Geo branch relocates geographic units while holding substantive predictors fixed. Following the statistical-distance-weighted surrogate principle of SMILE, input-distribution Wasserstein distances determine coalition locality weights and weighted Ridge surrogates approximate expected black-box predictions. GeoSensitivity, signed in the keep orientation, quantifies fitted-model responses to geographic-player relocation under the specified design. Across crime prediction in Hull, housing-price prediction in Seattle and ride-hailing demand in Chicago, held-out weighted surrogate fidelity ranges from $R_w^2=0.910$ to $0.989$ in the Feature branch and from $0.842$ to $0.906$ in the Geo branch. The framework makes geographic position an explicit object of post-hoc explanation while requiring separate assessment of interpretation, stability and reference dependence.",
+          "published": "2026-11-24T00:36:49Z",
+          "updated": "2026-11-24T00:36:49Z",
+          "categories": [
+            "cs.LG",
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31731",
+          "abs_url": "https://arxiv.org/abs/2611.31731",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31670",
+          "title": "Neural Interoperability Protocols: Specifying Compatibility Before Training",
+          "authors": [
+            "Alireza Bagheri"
+          ],
+          "abstract": "Neural networks are increasingly developed as reusable components, yet their intermediate representations remain difficult to exchange across independently trained models. Existing approaches can align representations or encourage compatible features, but successful transfer between particular models does not by itself define what future implementations must satisfy to interoperate. We introduce Neural Interoperability Protocols (NIPs), a specification-first framework that treats neural compatibility as a set of public interface obligations rather than a property inferred solely from model-pair performance. A NIP specifies an exchange boundary, the semantics and admissibility conditions of exchanged packets, and the downstream computations that recipients must support, independently of the architectures and training procedures implementing it. We investigate this distinction through controlled retrieval, vision, and continuous-memory experiments involving independently trained models, differing architectures and objectives, and later training cohorts. Matched-competence controls demonstrate that native task success does not ensure interoperability, while shared semantic supervision enables substantial direct transfer in the evaluated settings. Withheld-information experiments show that recipient models can continue computations requiring information unavailable to donors at exchange time. Partial-contract experiments and packet interventions further establish that observed compatibility is conditional on the semantics, packet populations, and recipient continuations being evaluated. Together, these results support public neural interface specifications as a framework for designing prospective component exchange and distinguishing demonstrated interoperability from stronger conformance claims.",
+          "published": "2026-11-23T23:01:58Z",
+          "updated": "2026-11-23T23:01:58Z",
+          "categories": [
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31670",
+          "abs_url": "https://arxiv.org/abs/2611.31670",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31666",
+          "title": "A Piecewise-Linear Activation Function for Implicit Neural Representations",
+          "authors": [
+            "Shahd Hekal",
+            "Joram Kim",
+            "Jeova Farias Sales Rocha Neto"
+          ],
+          "abstract": "Coordinate networks with ReLU activations perform poorly on implicit neural representation tasks, and the activations that address this, such as sinusoids and Gabor wavelets, all leave the piecewise-linear function class, so it remains unclear which property of ReLU is at fault. We introduce JaSIN, a family of bounded piecewise-linear activations that interpolates between ReLU and a piecewise-linear sinusoid without any the use of transcendental operation. Our results show that a bounded range improves image reconstruction PSNR on average by 0.06 dB, a single bump 3.29 dB, and centering that bump a further 3.64 dB. The oscillation count improves 6.30 dB more, raising ReLU from 24.0 to 37.3 dB on Kodak images, placing third over eleven activations, within 1.3 dB of the state-of-the-art, though beyond four oscillations the reconstruction collapses. Because an INR is fit on the grid on which it is evaluated, a unit whose pre-activations never reach the support of its activation is certifiably inactive over the entire domain; deleting such units is lossless without fine-tuning, removing up to 84% of parameters at zero loss in performance (dB) and decoding 3.2 times faster. Reference code and demos are available at https://github.com/jeovafarias/jasin.",
+          "published": "2026-11-23T22:56:08Z",
+          "updated": "2026-11-23T22:56:08Z",
+          "categories": [
+            "cs.CV",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31666",
+          "abs_url": "https://arxiv.org/abs/2611.31666",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31542",
+          "title": "Neural-operator acceleration of bidirectional phonon Boltzmann-Fourier coupling for multiscale heat transport in silicon fin arrays",
+          "authors": [
+            "Ruthwik Chivukula",
+            "Khemraj Shukla",
+            "George Em Karniadakis"
+          ],
+          "abstract": "Localized heating in semiconductor devices can produce non-diffusive phonon transport near heat-generating regions, while heat spreading through the surrounding substrate remains well described by Fourier conduction. We present a hybrid framework that couples a pretrained neural operator for the phonon Boltzmann transport equation (BTE) within individual fins to a Fourier model of a shared substrate. To reduce the cost of repeated BTE solves across fin positions and coupling iterations, a DeepONet maps each fin's substrate-interface temperature and heating state to its temperature and heat-flux fields. The operator is trained on interface temperatures generated by a linearized proxy of the coupled problem, which avoids explicit training data collection from full coupled runs. An energy-balance penalty regularizes the learned operator, and a mixed finite-element formulation represents substrate heat flux in an H(div)-conforming space. The two models exchange temperature and normal heat flux through a non-overlapping Schwarz iteration with adaptive Aitken relaxation. We evaluate the framework on an idealized three-dimensional array of 100 silicon fins. For a held-out switching configuration, the neural-operator-Fourier solution differs from the direct BTE-Fourier reference by a maximum of 0.3 K in temperature and 0.6% in relative flux across all fins. Excluding the one-time substrate factorization, the coupled surrogate run takes about 50 s, compared with 2 h 28 min for direct coupling, a speedup of approximately 180x. Additional held-out switching patterns converge with the same trained operator. These results demonstrate neural-operator acceleration of bidirectional kinetic-continuum coupling for the tested geometry and material. This bidirectional strategy may extend to other multiscale materials problems coupling learned local neural models with continuum solvers.",
+          "published": "2026-11-23T20:50:56Z",
+          "updated": "2026-11-23T20:50:56Z",
+          "categories": [
+            "cs.CE",
+            "physics.comp-ph"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31542",
+          "abs_url": "https://arxiv.org/abs/2611.31542",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31540",
+          "title": "ExitLUT: Boolean Early Exits for Efficient FPGA-Based Neural Network Inference",
+          "authors": [
+            "Oliver Cassidy",
+            "Marta Andronic",
+            "George A. Constantinides"
+          ],
+          "abstract": "Early exit neural networks reduce average inference cost by terminating once sufficient confidence is reached. On FPGAs, conventional confidence-based exits add arithmetic control paths poorly matched to LUT fabrics, consuming resources that could otherwise support the main datapath. We present ExitLUT, which replaces softmax-style exit decisions with learned Boolean functions mapped directly into FPGA LUTs. In our CNN evaluation, fpgaConvNet is the static spatial-dataflow baseline, while ATHEENA is its softmax-based early exit extension. ExitLUT reduces ATHEENA's exit-decision LUT usage by 2.58$\\times$ over the softmax path and eliminates decision-path DSP usage, while preserving accuracy and exit behavior. Rerunning design-space exploration reinvests these savings into the datapath, improving throughput by up to 4.08$\\times$ over fpgaConvNet and 1.82$\\times$ over ATHEENA. For LUT-based NNs, embedded ExitLUT exits achieve 1.41-1.89$\\times$ average time-to-decision speedup over static NeuraLUT-Assemble designs with under 1% LUT overhead.",
+          "published": "2026-11-23T20:49:33Z",
+          "updated": "2026-11-23T20:49:33Z",
+          "categories": [
+            "cs.AR",
+            "cs.LG",
+            "stat.ML"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31540",
+          "abs_url": "https://arxiv.org/abs/2611.31540",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31526",
+          "title": "Diagnosing Epistemic Uncertainty in Neural Operators: Effects of Initialization, Discretization, and Function Sampling",
+          "authors": [
+            "Tian Yu Yen",
+            "Yucheng Fu",
+            "Pratanu Roy",
+            "Guang Lin",
+            "Michael Penwarden"
+          ],
+          "abstract": "Neural operators provide efficient surrogates for mappings between function spaces, but their reliability cannot be characterized by the performance of a single trained model. Existing neural operator uncertainty quantification approaches often characterize predictive uncertainty without separately identifying the contributions of individual sources of epistemic uncertainty. Finite sampling of the training function space, output discretization, and model initialization can produce substantial variation among learned operators even when the underlying physical problem is deterministic. We systematically investigate these sources of epistemic uncertainty across a diverse set of operator learning architectures. Across our experiments, we train approximately 46,000 neural operator models and construct ensembles over training datasets, model initializations, and output discretizations to characterize distributions of relative $L_2$ error rather than individual trained realizations. We find substantial architecture-dependent differences in epistemic uncertainty, with model initialization often accounting for the largest proportion of variance in relative $L_2$ error. The ranked performance of neural operator architectures can invert as the number and spatial distribution of output samples change, with the best architectures under sparse or randomly sampled observations differing from those at higher-resolution or structured discretizations. Furthermore, ensembles that reliably characterize aggregate operator error can provide unreliable estimates of error quantiles for individual test functions. These results highlight the importance of distinguishing the sources of epistemic uncertainty when evaluating neural operator reliability and establishing robust benchmarking practices.",
+          "published": "2026-11-23T20:33:43Z",
+          "updated": "2026-11-23T20:33:43Z",
+          "categories": [
+            "cs.LG",
+            "stat.ML"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31526",
+          "abs_url": "https://arxiv.org/abs/2611.31526",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.30934",
+          "title": "LimeTree: Linear-Memory Graph Neural Networks over Tree-Graphs for Resource-Efficient Language Modeling and Context Extrapolation",
+          "authors": [
+            "Elisabeth Fink"
+          ],
+          "abstract": "The search for computationally efficient alternatives to the Transformer has yielded numerous architectures in recent years; however, most exhibit severe weaknesses in associative recall-such as key-value (KV) retrieval-and length extrapolation, where even standard Transformers struggle. This paper introduces LimeTree, a linear-complexity architecture in both memory and compute for sequence modeling. By integrating synthetic KV retrieval tasks directly into standard language modeling training, LimeTree achieves strong perplexity alongside reliable recall. Two variants were evaluated on WikiText-103 and PG-19 under strict compute constraints. On WikiText-103, LimeTree reaches a token-level perplexity of 19 in just 6 hours on four Quadro RTX 8000 GPUs, while maintaining 100\\% KV retrieval accuracy even when extrapolating from a training context length of 512 to an evaluation length of 16,384. On PG-19, the model achieves a token-level perplexity of 10.84 in 35.5 hours on a single RTX PRO 6000 Blackwell GPU with minimal hyperparameter tuning. These results position LimeTree as a competitive linear-complexity alternative to Transformers, combining superior perplexity and training throughput with robust in-context retrieval and length extrapolation.",
+          "published": "2026-11-23T16:20:50Z",
+          "updated": "2026-11-24T14:11:20Z",
+          "categories": [
+            "cs.CL",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.30934",
+          "abs_url": "https://arxiv.org/abs/2611.30934",
+          "source": "arxiv"
+        },
         {
           "id": "2502.11639",
           "title": "Neural Interpretable Reasoning",
@@ -3260,7 +3879,7 @@
             "Krishan Soni",
             "Geoffrey H. Tison"
           ],
-          "abstract": "Coronary heart disease (CHD) is the leading cause of adult death in the United States and worldwide, and for which the coronary angiography procedure is the primary gateway for diagnosis and clinical management decisions. The standard-of-care for interpretation of coronary angiograms depends upon ad-hoc visual assessment by the physician operator. However, ad-hoc visual interpretation of angiograms is poorly reproducible, highly variable and bias prone. Here we show for the first time that fully-automated angiogram interpretation to estimate coronary artery stenosis is possible using a sequence of deep neural network algorithms. The algorithmic pipeline we developed--called CathAI--achieves state-of-the art performance across the sequence of tasks required to accomplish automated interpretation of unselected, real-world angiograms. CathAI (Algorithms 1-2) demonstrated positive predictive value, sensitivity and F1 score of \u003e=90% to identify the projection angle overall and \u003e=93% for left or right coronary artery angiogram detection, the primary anatomic structures of interest. To predict obstructive coronary artery stenosis (\u003e=70% stenosis), CathAI (Algorithm 4) exhibited an area under the receiver operating characteristic curve (AUC) of 0.862 (95% CI: 0.843-0.880). When externally validated in a healthcare system in another country, CathAI AUC was 0.869 (95% CI: 0.830-0.907) to predict obstructive coronary artery stenosis. Our results demonstrate that multiple purpose-built neural networks can function in sequence to accomplish the complex series of tasks required for automated analysis of real-world angiograms. Deployment of CathAI may serve to increase standardization and reproducibility in coronary stenosis assessment, while providing a robust foundation to accomplish future tasks for algorithmic angiographic interpretation.",
+          "abstract": "Coronary heart disease (CHD) is the leading cause of adult death in the United States and worldwide, and for which the coronary angiography procedure is the primary gateway for diagnosis and clinical management decisions. The standard-of-care for interpretation of coronary angiograms depends upon ad-hoc visual assessment by the physician operator. However, ad-hoc visual interpretation of angiograms is poorly reproducible, highly variable and bias prone. Here we show for the first time that fully-automated angiogram interpretation to estimate coronary artery stenosis is possible using a sequence of deep neural network algorithms. The algorithmic pipeline we developed--called CathAI--achieves state-of-the art performance across the sequence of tasks required to accomplish automated interpretation of unselected, real-world angiograms. CathAI (Algorithms 1-2) demonstrated positive predictive value, sensitivity and F1 score of >=90% to identify the projection angle overall and >=93% for left or right coronary artery angiogram detection, the primary anatomic structures of interest. To predict obstructive coronary artery stenosis (>=70% stenosis), CathAI (Algorithm 4) exhibited an area under the receiver operating characteristic curve (AUC) of 0.862 (95% CI: 0.843-0.880). When externally validated in a healthcare system in another country, CathAI AUC was 0.869 (95% CI: 0.830-0.907) to predict obstructive coronary artery stenosis. Our results demonstrate that multiple purpose-built neural networks can function in sequence to accomplish the complex series of tasks required for automated analysis of real-world angiograms. Deployment of CathAI may serve to increase standardization and reproducibility in coronary stenosis assessment, while providing a robust foundation to accomplish future tasks for algorithmic angiographic interpretation.",
           "categories": [
             "cs.LG",
             "cs.AI",
@@ -4149,7 +4768,7 @@
             "Max Wasserman",
             "Gonzalo Mateos"
           ],
-          "abstract": "Graphs serve as generic tools to encode the underlying relational structure of data. Often this graph is not given, and so the task of inferring it from nodal observations becomes important. Traditional approaches formulate a convex inverse problem with a smoothness promoting objective and rely on iterative methods to obtain a solution. In supervised settings where graph labels are available, one can unroll and truncate these iterations into a deep network that is trained end-to-end. Such a network is parameter efficient and inherits inductive bias from the optimization formulation, an appealing aspect for data constrained settings in, e.g., medicine, finance, and the natural sciences. But typically such settings care equally about uncertainty over edge predictions, not just point estimates. Here we introduce novel iterations with independently interpretable parameters, i.e., parameters whose values - independent of other parameters' settings - proportionally influence characteristics of the estimated graph, such as edge sparsity. After unrolling these iterations, prior knowledge over such graph characteristics shape prior distributions over these independently interpretable network parameters to yield a Bayesian neural network (BNN) capable of graph structure learning (GSL) from smooth signal observations. Fast execution and parameter efficiency allow for high-fidelity posterior approximation via Markov Chain Monte Carlo (MCMC) and thus uncertainty quantification on edge predictions. Synthetic and real data experiments corroborate this model's ability to provide well-calibrated estimates of uncertainty, in test cases that include unveiling economic sector modular structure from S$\\\u0026$P$500$ data and recovering pairwise digit similarities from MNIST images. Overall, this framework enables GSL in modest-scale applications where uncertainty on the data structure is paramount.",
+          "abstract": "Graphs serve as generic tools to encode the underlying relational structure of data. Often this graph is not given, and so the task of inferring it from nodal observations becomes important. Traditional approaches formulate a convex inverse problem with a smoothness promoting objective and rely on iterative methods to obtain a solution. In supervised settings where graph labels are available, one can unroll and truncate these iterations into a deep network that is trained end-to-end. Such a network is parameter efficient and inherits inductive bias from the optimization formulation, an appealing aspect for data constrained settings in, e.g., medicine, finance, and the natural sciences. But typically such settings care equally about uncertainty over edge predictions, not just point estimates. Here we introduce novel iterations with independently interpretable parameters, i.e., parameters whose values - independent of other parameters' settings - proportionally influence characteristics of the estimated graph, such as edge sparsity. After unrolling these iterations, prior knowledge over such graph characteristics shape prior distributions over these independently interpretable network parameters to yield a Bayesian neural network (BNN) capable of graph structure learning (GSL) from smooth signal observations. Fast execution and parameter efficiency allow for high-fidelity posterior approximation via Markov Chain Monte Carlo (MCMC) and thus uncertainty quantification on edge predictions. Synthetic and real data experiments corroborate this model's ability to provide well-calibrated estimates of uncertainty, in test cases that include unveiling economic sector modular structure from S$\\&$P$500$ data and recovering pairwise digit similarities from MNIST images. Overall, this framework enables GSL in modest-scale applications where uncertainty on the data structure is paramount.",
           "categories": [
             "cs.LG",
             "stat.ML"
@@ -4190,7 +4809,7 @@
             "Sandy Fraser",
             "Patryk Wielopolski"
           ],
-          "abstract": "We introduce Sparse Concept Anchoring, a method that biases latent space to position a targeted subset of concepts while allowing others to self-organize, using only minimal supervision (labels for \u003c0.1% of examples per anchored concept). Training combines activation normalization, a separation regularizer, and anchor or subspace regularizers that attract rare labeled examples to predefined directions or axis-aligned subspaces. The anchored geometry enables two practical interventions: reversible behavioral steering that projects out a concept's latent component at inference, and permanent removal via targeted weight ablation of anchored dimensions. Experiments on structured autoencoders show selective attenuation of targeted concepts with negligible impact on orthogonal features, and complete elimination with reconstruction error approaching theoretical bounds. Sparse Concept Anchoring therefore provides a practical pathway to interpretable, steerable behavior in learned representations.",
+          "abstract": "We introduce Sparse Concept Anchoring, a method that biases latent space to position a targeted subset of concepts while allowing others to self-organize, using only minimal supervision (labels for <0.1% of examples per anchored concept). Training combines activation normalization, a separation regularizer, and anchor or subspace regularizers that attract rare labeled examples to predefined directions or axis-aligned subspaces. The anchored geometry enables two practical interventions: reversible behavioral steering that projects out a concept's latent component at inference, and permanent removal via targeted weight ablation of anchored dimensions. Experiments on structured autoencoders show selective attenuation of targeted concepts with negligible impact on orthogonal features, and complete elimination with reconstruction error approaching theoretical bounds. Sparse Concept Anchoring therefore provides a practical pathway to interpretable, steerable behavior in learned representations.",
           "categories": [
             "cs.LG"
           ],
@@ -4410,7 +5029,7 @@
             "Armando J. Pinho",
             "Sónia Gouveia"
           ],
-          "abstract": "Autoregressive (AR) models remain widely used in time series analysis due to their interpretability, but convencional parameter estimation methods can be computationally expensive and prone to convergence issues. This paper proposes a Neural Network (NN) formulation of AR estimation by embedding the autoregressive structure directly into a feedforward NN, enabling coefficient estimation through backpropagation while preserving interpretability. Simulation experiments on 125,000 synthetic AR(p) time series with short-term dependence (1 \u003c= p \u003c= 5) show that the proposed NN-based method consistently recovers model coefficients for all series, while Conditional Maximum Likelihood (CML) fails to converge in approximately 55% of cases. When both methods converge, estimation accuracy is comparable with negligible differences in relative error, R2 and, perplexity/likelihood. However, when CML fails, the NN-based approach still provides reliable estimates. In all cases, the NN estimator achieves substantial computational gains, reaching a median speedup of 12.6x and up to 34.2x for higher model orders. Overall, results demonstrate that gradient-descent NN optimization can provide a fast and efficient alternative for interpretable AR parameter estimation.",
+          "abstract": "Autoregressive (AR) models remain widely used in time series analysis due to their interpretability, but convencional parameter estimation methods can be computationally expensive and prone to convergence issues. This paper proposes a Neural Network (NN) formulation of AR estimation by embedding the autoregressive structure directly into a feedforward NN, enabling coefficient estimation through backpropagation while preserving interpretability. Simulation experiments on 125,000 synthetic AR(p) time series with short-term dependence (1 <= p <= 5) show that the proposed NN-based method consistently recovers model coefficients for all series, while Conditional Maximum Likelihood (CML) fails to converge in approximately 55% of cases. When both methods converge, estimation accuracy is comparable with negligible differences in relative error, R2 and, perplexity/likelihood. However, when CML fails, the NN-based approach still provides reliable estimates. In all cases, the NN estimator achieves substantial computational gains, reaching a median speedup of 12.6x and up to 34.2x for higher model orders. Overall, results demonstrate that gradient-descent NN optimization can provide a fast and efficient alternative for interpretable AR parameter estimation.",
           "categories": [
             "stat.ML",
             "cs.LG"
@@ -4623,5 +5242,5 @@
       ]
     }
   ],
-  "total": 200
+  "total": 232
 }

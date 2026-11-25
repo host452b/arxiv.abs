@@ -1,11 +1,11 @@
 # arxiv.agi-scifi — Cross-Disciplinary AGI & Sci-Fi Research
 
-13,606 arXiv paper abstracts from 52 keyword searches across all categories (2023–2026), covering AGI, physics, cosmology, space, biology, economics, and more.
+14,741 arXiv paper abstracts from 52 keyword searches across all categories (2023–2026), covering AGI, physics, cosmology, space, biology, economics, and more.
 
 ## Key Findings Summary
 
-- [**English** — Key Findings from 13,606 Papers](agi-scifi.md)
-- [**中文** — 13,606 篇论文核心发现总结](agi-scifi.zh-CN.md)
+- [**English** — Key Findings from 14,741 Papers](agi-scifi.md)
+- [**中文** — 14,741 篇论文核心发现总结](agi-scifi.zh-CN.md)
 
 ## Search Index
 

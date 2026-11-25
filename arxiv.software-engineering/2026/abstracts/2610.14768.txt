@@ -1,0 +1,28 @@
+Title: Do Modifications Made by Coding Agents Make Subsequent Software Maintenance Harder?
+Authors: Ruwei Pan, John Zhang, Linhao Wu, Yakun Zhang, Hongyu Zhang, Lu Zhang
+ID: 2610.14768
+URL: https://arxiv.org/abs/2610.14768
+
+Abstract:
+Coding agents increasingly maintain repositories over time, where each change
+becomes the starting point for subsequent tasks. Yet existing benchmarks either
+start tasks from developer-written code or cannot separate later-task difficulty
+from the effects of an agent's earlier changes. We ask whether agent-written
+code makes subsequent maintenance harder and whether the cost stems from
+inherited test failures or the code itself. We introduce SWE-Maintain,
+comprising 100 three-event maintenance episodes from 50 real-world Python
+repositories, with hidden tests certified across each sequence. Each later task
+is evaluated twice with the same agent and tests: from the developers' preceding
+patches (Developer-History) and from the agent's own changes (Agent-History).
+Across five coding systems, two backbone models, and 1,996 paired later events,
+Agent-History reduces later-task resolution by 5.6 percentage points on average.
+When success additionally requires all earlier tests to pass, the gap reaches
+14.0 points. Two-thirds of Agent-History starting repositories already fail
+earlier tests, and only 1.9% of events starting from those states end with all
+accumulated tests passing. When the inherited code passes earlier tests and the
+next task is not already solved, the disadvantage disappears (+2.7 points; 95%
+CI [-0.5, +6.1]). These findings suggest that the main downstream cost of agent-
+written changes lies in inherited test failures rather than a measurable
+maintenance disadvantage in code that preserves earlier tested behavior.
+Evaluations should therefore include agent-produced history, and coding agents
+should preserve earlier behavior across changes.

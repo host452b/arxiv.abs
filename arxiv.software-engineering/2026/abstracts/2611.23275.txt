@@ -1,0 +1,29 @@
+Title: AI Code Review Requires Revision-Aware Evidence of Concern Resolution
+Authors: Mamdouh Alenezi
+ID: 2611.23275
+URL: https://arxiv.org/abs/2611.23275
+
+Abstract:
+AI-assisted code review increasingly judges whether reported concerns have been
+resolved. Yet closing a thread or modifying a commented line does not establish
+repair, and later revisions can invalidate earlier fixes. This position paper
+argues that resolution requires inspectable, revision-specific evidence that is
+revalidated when its dependencies change. We model review concerns as persistent
+verification obligations, derive a sufficient condition under which dependency-
+gated revalidation matches exhaustive reassessment, and introduce REVAL, a
+lightweight procedure adapting principles from regression-test selection and
+build systems. We evaluate REVAL against oracle ground truth in synthetic
+revision histories covering 441 concerns, 1,284 assessments, and 12 defect
+families. A sticky outdated-line proxy falsely marked 72.9% of unresolved states
+as resolved, while stopping checks after initial success missed every
+recurrence. With three oracle-sampled witnesses, REVAL achieved a false-
+resolution rate of 0.11 (95% CI: 0.06-0.16) and detected 80.4% of recurrences.
+With witnesses derived solely from review comments and assessed using
+independent held-out checks, the corresponding results were 0.13 and 88.3%.
+Across 6,420 paired comparisons, REVAL matched exhaustive reassessment while
+reducing post-comment test executions by 34%. Maintenance overhead increased
+runtime for microsecond-scale tests; the estimated break-even test cost was 0.42
+ms. These findings support revision-aware evidence maintenance in a controlled
+setting, while distinguishing revalidation correctness from witness adequacy. A
+prespecified evaluation protocol outlines how to assess generalisability in real
+review histories.

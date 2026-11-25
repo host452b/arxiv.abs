@@ -1,0 +1,23 @@
+Title: What Should the Reflector See? An Empirical Study of Evidence in Reflective Prompt Optimization
+Authors: Xiaofan Zhou, Lu Cheng
+ID: 2609.32452
+URL: https://arxiv.org/abs/2609.32452
+
+Abstract:
+Reflective prompt optimization revises instructions using examples of a model's
+behavior, but which evidence the reflector should receive remains unclear. We
+study evidence composition, visibility of examples, candidate selection and
+domain-knowledge policy within a single-parent Pareto-guided search. Using
+Qwen3.5-9B as both task model and reflector, we evaluate nine reflection
+strategies on five datasets. From these experiments, we find three distinct
+patterns. For performance improvement, Failures-only produces the largest mean
+test gain (+8.0 percentage points), while Balanced-mix and No-examples+Val share
+the best mean performance rank. For reflection effectiveness, No-examples
+achieves the best rank for improving sampled parents, yet yields only a
+1.4-point mean test gain: local reflection success does not necessarily produce
+a stronger final prompt. For overfitting assessment, Failures-only and Balanced-
+mix share the lowest mean calibration-gap rank, while larger gaps on GPQA and
+IFBench show that calibration gains can overstate held-out improvement. This gap
+is a descriptive indicator, not a direct measure of overfitting. Together, these
+results show why reflection strategies should be assessed separately on final
+performance, parent improvement and calibration-to-test transfer.

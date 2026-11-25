@@ -1,0 +1,31 @@
+Title: AgriManager: A Framework and Benchmark for LLM-RL Generalization in Agricultural Management
+Authors: Chi Gui, Junwen Zheng, Ritwik Nigam, Qianlan Yang, Meagan Lang, Vardhan Dongre, Jeremiah Barr, Yu-Xiong Wang, Vikram S. Adve
+ID: 2611.28844
+URL: https://arxiv.org/abs/2611.28844
+
+Abstract:
+Agricultural management is heterogeneous along two axes. The first is
+distributional shift within a fixed task interface: weather, crops, and prices
+vary across years and locations while sensors, actions, and objective stay
+fixed. The second is structural shift across interfaces: different farms expose
+different observed variables, available actions, and management objectives. We
+formalize the second axis as schema shift: variation in the policy-facing schema
+$Σ= (Σ_O, Σ_A, Σ_R)$ between training and deployment. We test whether LLM-RL
+generalizes across both axes with AgriManager, to our knowledge the first
+framework that trains LLM policies with RL across multiple process-based crop
+simulators, unifying DSSAT, WOFOST, and Cycles. We design a three-tier
+generalization ladder: Tier 1 within-schema distributional shift, Tier 2 single-
+axis schema shift along $Σ_O / Σ_A / Σ_R$, Tier 3 compositional schema shift
+across simulators, all scored on a frozen held-out test suite with three
+training seeds per method. Within fixed schemas, Qwen3-4B trained by RL with
+explicit reasoning exceeds neural-network PPO trained with the same interaction
+budget; without reasoning, training stalls near no-action where the reward
+penalizes input use. Under single-axis schema shift, $Σ_O$ transfer needs
+decision-critical state, $Σ_A$ results are consistent with joint action-menu
+coverage, and with reasoning a policy trained on yield alone transfers to unseen
+objectives. Under compositional schema shift, single-source training mostly
+hurts zero-shot transfer across simulators, and a unified policy trained only on
+other combinations of the same components recovers about 86% of the gain of a
+specialist trained on the target combination on DSSAT and stays below the
+specialists on the WOFOST and Cycles profit targets. Project page:
+https://agrimanager-framework.github.io

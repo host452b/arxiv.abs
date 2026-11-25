@@ -10,11 +10,75 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:49:59Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 40,
-  "return_count": 40,
+  "total_results": 43,
+  "return_count": 43,
   "papers": [
+    {
+      "id": "2608.12970",
+      "title": "Requirements-Augmented Generation for Trustworthy Acceptance Testing of LLM-Based Software",
+      "authors": [
+        "Fanyu Wang",
+        "Chetan Arora",
+        "Zhenping Xie",
+        "Yonghui Liu",
+        "Kla Tantithamthavorn",
+        "Aldeida Aleti",
+        "Siwei Jiang"
+      ],
+      "abstract": "LLM-based software (LBS) integrates large language models as core components to deliver flexible, personalised responses. Unlike traditional software with deterministic outputs, LBSs exhibit context-dependent, stochastic behaviour that renders classical acceptance testing and test oracles insufficient: the same query may require fundamentally different responses depending on user personas and software context. This gap creates an urgent need for automated acceptance testing frameworks that autonomously interpret user instructions, while reliably inferring user intentions in a changing environment. In this paper, we present an automated acceptance testing framework for LBS with calibrated verdict reliability via two technical contributions. First, we introduce Requirements-Augmented Generation (REAG), which interprets user intentions by retrieving relevant software requirements, domain knowledge, and personas via adaptive RAG and self-reasoning to generate context-aware test oracles. Second, recognising that oracle generation may retrieve irrelevant constraints, misinterpret intent, or hallucinate requirements, we introduce a confidence-calibrated cascade judgment. This method quantifies verdict reliability via simulated expert agreement -- accepting high-confidence verdicts, escalating ambiguous cases, or abstaining when uncertain -- with empirical reliability guarantees backed by conformal risk control. An industrial case study on a production nutrition advisory application demonstrates that REAG achieves a 3.91/5 oracle quality score, reaching qualified or marginal oracle quality in 82% of cases. The confidence-calibrated cascade achieves 98.8% accuracy, improves oracle quality from 3.91 to 4.30 by filtering unqualified outputs, and delivers a 31.7% cost-efficiency improvement over single-judge baselines, validating industrial viability",
+      "published": "2026-08-13T08:49:59Z",
+      "updated": "2026-08-13T08:49:59Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.12970",
+      "abs_url": "https://arxiv.org/abs/2608.12970",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.00054",
+      "title": "RAG-TESTER: Automated End-to-End Testing of Retrieval-Augmented Large Language Models",
+      "authors": [
+        "Ange Maiztegi",
+        "Jon Ayerdi",
+        "Miren Illarramendi",
+        "Aitor Arrieta"
+      ],
+      "abstract": "Retrieval-Augmented Generation (RAG) enables Large Language Models (LLMs) to use external and domain-specific knowledge, but its reliability depends on the interaction between the generative model, embedding model, retrieval mechanism, and prompt construction strategy. We present RagTester, an automated end-to-end testing approach for RAG systems. RagTester generates retrieval documents, test inputs, and expected outputs; executes the tests; and evaluates the resulting answers using an LLM as a judge. Its test-generation strategy targets complex passages, unsupported queries, and document-coverage criteria. We evaluate RagTester using eight LLMs and six embedding models, yielding 24 compatible configurations, and compare it with a baseline test-input generator. Across 72,000 test executions, RagTester detected 21,633 failures, 6.6% more than the baseline, and outperformed it in 20 of the 24 configurations. The detected failures include inaccurate retrieval, unsupported answers, incomplete use of retrieved context, and difficulties interpreting complex passages. These results show that coverage-oriented test generation can effectively expose failures caused by the interaction between retrieval and generation components and support the assessment of RAG configurations before deployment.",
+      "published": "2026-07-26T21:29:19Z",
+      "updated": "2026-07-26T21:29:19Z",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.00054",
+      "abs_url": "https://arxiv.org/abs/2608.00054",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.28750",
+      "title": "DragonCrawl: A Generative, Intent-Based Framework for Scalable Mobile End-to-End Testing",
+      "authors": [
+        "Sowjanya Puligadda",
+        "Mengdie Zhang",
+        "Ali Zamani",
+        "Dhruva Dixith Kurra",
+        "Eric Chen",
+        "Juan Marcano"
+      ],
+      "abstract": "As mobile applications grow in complexity, traditional End-to-End (E2E) testing frameworks struggle with UI volatility, maintenance overhead, and cross-platform scalability. This paper presents DragonCrawl, an AI-driven mobile testing system for continuous regression testing that has evolved from embedding-based similarity matching to generative intent-based reasoning using large language models. Unlike prior LLM-based testing research focused on exploratory testing and crash detection, DragonCrawl validates specific user flows on every code change, blocking commits that break critical functionality. By leveraging GPT-4o's multimodal capabilities, DragonCrawl achieves 91.6% pass rate on iOS and 92.2% on Android across 1,013 automated tests running continuously in CI/CD pipelines. The system reduces test onboarding time from 96-120 hours to under 4 hours and has saved an estimated 27 developer years in test maintenance effort. We present the architectural evolution from V1 (semantic embedding matching) to V2 (generative intent-based reasoning), discuss implementation challenges including token explosion and memory constraints, and report operational experience from production deployment. The integration of multimodal vision for end-state detection and tool calling for backend state transitions enables comprehensive regression testing that bridges UI interactions with system state. Our results demonstrate that AI-driven testing can maintain stability while eliminating the brittleness of traditional automated tests, enabling continuous quality assurance at scale.",
+      "published": "2026-07-30T18:17:31Z",
+      "updated": "2026-08-05T17:13:25Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.28750",
+      "abs_url": "https://arxiv.org/abs/2607.28750",
+      "source": "arxiv"
+    },
     {
       "id": "2306.05895",
       "title": "Benchmarks for End-to-End Microservices Testing",
@@ -672,7 +736,7 @@
         "Irit Dinur",
         "Alexander Lubotzky"
       ],
-      "abstract": "We solve the derandomized direct product testing question in the low acceptance regime, by constructing new high dimensional expanders that have no small connected covers. We show that our complexes have swap cocycle expansion, which allows us to deduce the agreement theorem by relying on previous work.\n  Derandomized direct product testing, also known as agreement testing, is the following problem. Let X be a family of k-element subsets of [n] and let $\\{f_s:s\\toΣ\\}_{s\\in X}$ be an ensemble of local functions, each defined over a subset $s\\subset [n]$. Suppose that we run the following so-called agreement test: choose a random pair of sets $s_1,s_2\\in X$ that intersect on $\\sqrt k$ elements, and accept if $f_{s_1},f_{s_2}$ agree on the elements in $s_1\\cap s_2$. We denote the success probability of this test by $Agr(\\{f_s\\})$. Given that $Agr(\\{f_s\\})=ε\u003e0$, is there a global function $G:[n]\\toΣ$ such that $f_s = G|_s$ for a non-negligible fraction of $s\\in X$ ?\n  We construct a family X of k-subsets of $[n]$ such that $|X| = O(n)$ and such that it satisfies the low acceptance agreement theorem. Namely,\n  $Agr (\\{f_s\\}) \u003e ε\\; \\; \\longrightarrow$ there is a function $G:[n]\\toΣ$ such that $\\Pr_s[f_s\\overset{0.99}{\\approx} G|_s]\\geq poly(ε)$.\n  A key idea is to replace the well-studied LSV complexes by symplectic high dimensional expanders (HDXs). The family X is just the k-faces of the new symplectic HDXs. The later serve our needs better since their fundamental group satisfies the congruence subgroup property, which implies that they lack small covers. We also give a polynomial-time algorithm to construct this family of symplectic HDXs.",
+      "abstract": "We solve the derandomized direct product testing question in the low acceptance regime, by constructing new high dimensional expanders that have no small connected covers. We show that our complexes have swap cocycle expansion, which allows us to deduce the agreement theorem by relying on previous work.\n  Derandomized direct product testing, also known as agreement testing, is the following problem. Let X be a family of k-element subsets of [n] and let $\\{f_s:s\\toΣ\\}_{s\\in X}$ be an ensemble of local functions, each defined over a subset $s\\subset [n]$. Suppose that we run the following so-called agreement test: choose a random pair of sets $s_1,s_2\\in X$ that intersect on $\\sqrt k$ elements, and accept if $f_{s_1},f_{s_2}$ agree on the elements in $s_1\\cap s_2$. We denote the success probability of this test by $Agr(\\{f_s\\})$. Given that $Agr(\\{f_s\\})=ε>0$, is there a global function $G:[n]\\toΣ$ such that $f_s = G|_s$ for a non-negligible fraction of $s\\in X$ ?\n  We construct a family X of k-subsets of $[n]$ such that $|X| = O(n)$ and such that it satisfies the low acceptance agreement theorem. Namely,\n  $Agr (\\{f_s\\}) > ε\\; \\; \\longrightarrow$ there is a function $G:[n]\\toΣ$ such that $\\Pr_s[f_s\\overset{0.99}{\\approx} G|_s]\\geq poly(ε)$.\n  A key idea is to replace the well-studied LSV complexes by symplectic high dimensional expanders (HDXs). The family X is just the k-faces of the new symplectic HDXs. The later serve our needs better since their fundamental group satisfies the congruence subgroup property, which implies that they lack small covers. We also give a polynomial-time algorithm to construct this family of symplectic HDXs.",
       "categories": [
         "cs.CC",
         "math.CO",

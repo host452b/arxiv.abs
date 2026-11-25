@@ -1,0 +1,31 @@
+Title: Breaking the Coupling: Efficient Concurrency Fuzzing for Linux Kernel Data Race Detection
+Authors: Cen Zhang, Jia-Ju Bai, Zi-Yu Zhang, Zuming Jiang
+ID: 2610.30813
+URL: https://arxiv.org/abs/2610.30813
+
+Abstract:
+Detecting data races in the Linux kernel requires exploring both the input space
+and the thread-interleaving space. Existing kernel concurrency fuzzers couple
+these two searches by exploring interleavings during fuzzing, often spending
+substantial scheduling effort on inputs with little potential to trigger real
+races. In this paper, we present a new concurrency fuzzing paradigm that
+decouples concurrent-input generation from thread-interleaving exploration,
+enabling expensive scheduling to focus on promising inputs. To identify inputs
+that warrant targeted scheduling, we introduce May Race Pairs (MRPs), which
+represent conflicting memory-access pairs observed within a dynamically
+determined time threshold. Our framework first generates and executes concurrent
+syscall groups without controlled scheduling, collecting MRPs to guide further
+input mutation and identify schedule-worthy inputs. It then uses a separate
+scheduling instance to explore targeted interleavings and confirm real data
+races. To improve the effectiveness of both stages, we incorporate LLM-assisted
+semantic mutation for generating diverse syscall groups, backpressure-guided
+dynamic threshold control for balancing candidate production and scheduling
+consumption, and history-aware context recovery, context-aware interleaving
+scheduling, and candidate MRP prioritization for efficient race confirmation. We
+implement our framework for the Linux kernel and evaluate it on eight common
+kernel modules in Linux 6.17. It discovers 187 unique real-world data races,
+including 59 harmful races. Under the same testing budget, our approach detects
+substantially more data races than existing kernel concurrency fuzzers,
+including SegFuzz and CONZZER. These results demonstrate the effectiveness of
+decoupling concurrent-input generation from interleaving exploration and
+concentrating scheduling effort on promising candidates.

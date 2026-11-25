@@ -1,0 +1,30 @@
+Title: Model Discovery for Virtual Chaos Engineering with Incomplete Tracing: An eBPF Study
+Authors: Anatoly A. Krasnovsky
+ID: 2611.23313
+URL: https://arxiv.org/abs/2611.23313
+
+Abstract:
+Model-based fault experiments can assess the consequences of component failures
+before intervening in a running application. Recent work on model discovery and
+graph simulation acquired operation models from application telemetry and used
+them for availability prediction. Applying this approach to operational legacy
+systems raises an acquisition problem: the required traces may be absent or
+incomplete, while introducing them can require changes across heterogeneous
+components. These systems continue to serve business operations during extended
+maintenance and modernization. External observation offers a possible route to
+model-based fault analysis before a tracing retrofit, but collecting telemetry
+does not by itself establish that an executable operation model can be obtained.
+We investigate this route using extended Berkeley Packet Filter (eBPF)
+observations and the existing graph-based modelling approach. A 108-case study
+varied application software development kit (SDK) tracing across absent, partial
+and full conditions in three public applications. Discovered dependencies were
+combined with declared operation requirements, deployment facts and scenario
+assumptions; model forecasts preceded independent execution checks. With SDK
+tracing disabled, the tested OpenTelemetry eBPF Instrumentation path supported
+all seven operations in two applications across three repetitions. Forecasts
+agreed exactly in 17 of 21 operation-repetition groups; the maximum state-
+weighted discrepancy was 4.22 percentage points. Combining observed context
+links supported nine additional groups under partial tracing. The results
+establish an acquisition path for virtual fault experiments under the tested
+observation constraints and identify limits imposed by protocols, evidence
+association and operation semantics.

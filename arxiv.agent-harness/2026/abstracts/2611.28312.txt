@@ -1,0 +1,30 @@
+Title: An LLM-Assisted Multi-Objective AutoML Framework for Efficient Network Intrusion Detection
+Authors: Ailin Barzegar, Khalil El-Khatib, Li Yang
+ID: 2611.28312
+URL: https://arxiv.org/abs/2611.28312
+
+Abstract:
+Conventional Machine Learning (ML)-based Intrusion Detection Systems (IDSs)
+require manual design, optimize only detection performance, and neglect
+inference latency and model size, which are critical for resource-constrained
+Internet of Things (IoT) and Electric Vehicle Charging System (EVCS)
+deployments. Automated ML (AutoML) reduces manual effort but explores broad
+search spaces inefficiently. Meanwhile, Multi-Objective Optimization (MOO)
+methods lack guided search initialization, leading to long search times. This
+paper proposes a Large Language Model-Assisted Multi-Objective Automated ML
+(LLM-MOO-AutoML) framework for efficient intrusion detection. A local Llama 3.1
+8B model analyzes a compact dataset profile and generates a bounded, validated
+policy for automated data balancing (AutoDP) and feature engineering (AutoFE).
+This policy narrows the search space for Non-dominated Sorting Genetic Algorithm
+III (NSGA-III), which jointly optimizes the LightGBM feature-selection threshold
+and key hyperparameters across three objectives: maximizing weighted F1-score,
+minimizing 99th-percentile (P99) inference latency ratio, and minimizing model
+size ratio. Experiments on CICIDS2017, IoTID20, and CICEVSE2024 demonstrate that
+the proposed framework achieves the highest weighted F1-scores on CICIDS2017
+(99.788%), IoTID20 (99.778%), and CICEVSE2024 (99.989%), with feature sets
+reduced to as few as 10 features, P99 latency as low as 0.00038 ms, and model
+size as small as 0.1073 MB. The LLM-guided configuration reduced NSGA-III search
+time relative to unconstrained multi-objective search on all datasets at the
+largest trial budget and in most comparisons at smaller budgets, indicating that
+dataset-aware search-space reduction supports efficient, deployment-aware
+intrusion detection.

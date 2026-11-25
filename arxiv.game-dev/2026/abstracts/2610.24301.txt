@@ -1,0 +1,30 @@
+Title: Torch-DPhys: A Torch-Native, MOOSE-Compatible Framework for Differentiable Physics Simulation and Hybrid Machine Learning Integration
+Authors: Akzhol Almukhametov, Yang Liu
+ID: 2610.24301
+URL: https://arxiv.org/abs/2610.24301
+
+Abstract:
+We present Torch-DPhys, a Torch-native framework implemented in PyTorch for
+differentiable physics simulation and hybrid physics-machine learning. It
+implements selected thermal-hydraulic modeling concepts and discretizations from
+MOOSE's Thermal Hydraulics Module and the System Analysis Module (SAM), with a
+preliminary extension to continuum mechanics. Native tensor residuals support
+CPU and GPU execution, compilation of selected numerical kernels, and sparse
+direct linear solves. Sensitivities are obtained by differentiating executed
+numerical operations or through discrete adjoints of converged residual
+equations. Verification combines analytical solutions, reference-code
+comparisons, and derivative checks. Demonstrations cover plane-strain
+elasticity, one- and two-loop thermal-hydraulic transients, and an axisymmetric
+molten-salt fast reactor. For the reactor, comparison with SAM-Lite gives a
+maximum normalized field discrepancy of 1.13 x 10^-5 over 200 adaptive time
+steps, demonstrating agreement between the tested discrete implementations.
+Selected transient sensitivities are assessed using tangent-linear calculations
+and finite differences on fixed time schedules. Two applications illustrate the
+framework's connection between simulation and optimization. A residual-adjoint
+parameter-identification calculation recovers nominal pump head and heating
+power with relative errors below 0.06% from noiseless synthetic MOOSE
+observations. A separate three-loop plant demonstration uses solver-in-the-loop
+training of a predictive controller by differentiating trajectory-level
+objectives through the thermal-hydraulic simulation. These examples illustrate a
+foundation for gradient-based inference, control, and coupled physics-machine
+learning models in nuclear engineering.

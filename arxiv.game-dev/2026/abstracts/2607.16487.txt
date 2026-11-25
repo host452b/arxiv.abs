@@ -1,0 +1,23 @@
+Title: Fuzz'EMup: Leveraging EM Side-Channel Emanation to Guide Black-Box Embedded Firmware Fuzzing
+Authors: Fatemeh Moradihaghighi, Zihao Zhan, Yanan Guo, Ziming Zhao, Mashrur Chowdhury, Zhenkai Zhang
+ID: 2607.16487
+URL: https://arxiv.org/abs/2607.16487
+
+Abstract:
+As IoT and embedded devices proliferate across various domains, securing their
+firmware has become critical. Fuzzing offers a systematic approach to uncovering
+vulnerabilities in firmware, and coverage feedback can improve its effectiveness
+by guiding exploration. However, many devices make coverage information
+impossible to obtain by preventing firmware extraction, instrumentation, or
+accurate emulation; in such cases, testers are left with only inefficient black-
+box fuzzing. In this paper, we present an approach that leverages
+electromagnetic (EM) side-channel emanations to guide firmware fuzzing in purely
+black-box settings. However, turning raw EM measurements into reliable guidance
+is challenging: EM traces are noisy, and timing jitter causes corresponding
+features in different traces to shift in time. We address these challenges by
+combining frequency band selection based on the activity-to-idle signal contrast
+with dynamic time warping to align per-input traces and detect sustained
+divergence, while maintaining scalability by organizing executions in a tree
+structure based on their divergence times. We evaluate our approach on four real
+firmware targets and demonstrate that EM-derived feedback enhances path
+exploration, yielding higher code coverage than unguided fuzzing.

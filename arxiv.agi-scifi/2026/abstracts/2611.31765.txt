@@ -1,0 +1,28 @@
+Title: Dreamcatcher: Remembering What Surprises a World Model in Video Streams
+Authors: Jinxi He, Ce Zhang, Wenhe Liu, Jianshu Zhang, Katia P. Sycara, Yaqi Xie
+ID: 2611.31765
+URL: https://arxiv.org/abs/2611.31765
+
+Abstract:
+As live video streams grow longer, repeatedly encoding and processing their full
+histories becomes increasingly costly. Answering questions as they arrive
+therefore calls for visual memory built in one pass before future questions are
+known. Existing methods mainly keep tokens that differ from earlier ones or
+match surrogate queries fixed in advance. Without modeling world dynamics, these
+criteria struggle to tell subtle surprising details from expected change. We
+introduce Dreamcatcher, a training-free framework and, to our knowledge, the
+first to use predictive signals from an independently pretrained, frozen video
+world model for online memory formation in streaming video question answering.
+Conditioned on recent history, the world model predicts incoming features using
+learned world priors. Its normalized prediction errors yield temporal and
+spatial surprisal signals that guide online segmentation and the retention of a
+frozen Video-LLM's native visual tokens, balancing surprising details with broad
+visual coverage under budgets that decay with segment age. At query time, an
+evidence gate admits a segment from a similarity-based shortlist only when the
+Video-LLM judges that it adds evidence for the question beyond the current view.
+We evaluate Dreamcatcher on three streaming and three offline long-video
+benchmarks. On OVO-Bench, Dreamcatcher achieves the highest overall accuracy
+among the compared training-free methods for each of four frozen Video-LLMs,
+reaching 78.9% with Qwen3.8-27B. With the three Qwen Video-LLMs, it also reduces
+average input tokens for answer generation by more than 80% relative to their
+base models at 1 fps.

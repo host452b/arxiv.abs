@@ -10,11 +10,703 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:45:17Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 1007,
-  "return_count": 200,
+  "return_count": 230,
   "papers": [
+    {
+      "id": "2611.26615",
+      "title": "ScaleWorld: High-Resolution World Generation through Shared Prediction and Refinement",
+      "authors": [
+        "Yansong Qu",
+        "Wesker Zheng",
+        "Quanjian Song",
+        "Zhiyuan Zhang",
+        "Xiao Cao",
+        "Shengchuan Zhang",
+        "Liujuan Cao"
+      ],
+      "abstract": "High-resolution generation enables video world models to render fine-grained scene structures and textures, but directly generating high-resolution video incurs substantial computational and memory costs. We present ScaleWorld, a causal video model that unifies low-resolution world prediction and high-resolution refinement within a single shared backbone. By refining its own predictions, ScaleWorld produces high-resolution world videos without requiring a separate refinement model. For each video chunk, the shared backbone first completes a low-resolution prediction and then performs one-step high-resolution refinement conditioned on that prediction. To support efficient streaming generation, we maintain separate causal states with a long low-resolution history for prediction and a short high-resolution history for refinement. To address task interference during distillation, we separate specialist optimization from capability consolidation and introduce task-asymmetric on-policy distillation (TA-OPD). This procedure transfers prediction and refinement behaviors from specialized teachers into a shared student through local velocity matching under their respective sampling and history policies. {Extensive experiments demonstrate that ScaleWorld achieves high-quality world generation with improved computational and memory efficiency.",
+      "published": "2026-11-19T18:58:04Z",
+      "updated": "2026-11-19T18:58:04Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.26615",
+      "abs_url": "https://arxiv.org/abs/2611.26615",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19576",
+      "title": "Consistency-Aware Map Generation at Multiple Zoom Levels Using Aerial Image",
+      "authors": [
+        "Linwei Chen",
+        "Zheng Fang",
+        "Ying Fu"
+      ],
+      "abstract": "The multi-level tiled map service is widely used and serves as a kind of digital infrastructure. These map tiles are usually rendered from vector data, whose update needs to walk or drive with professional equipment to check every points of interest. This leads to inconvenience and expensive cost in timely updating maps. Compared with vector data, aerial images are much easier and cheaper to obtain. In this paper, we propose a novel multi-level map generation framework that can automatically generate accurate and consistent maps with multiple zoom levels from aerial images. It consists of a level-aware map generator and a consistency-aware map generator. The level-aware map generator is able to generate accurate initial maps with realistic details for each zoom level. The consistency-aware map generator regards initial maps at each zoom level as a sequence and builds the connection between them, so as to guarantee content consistency between maps at different zoom levels. Furthermore, we collect a large-scale high-quality dataset called Multi-Level Map (MLM) for map generation at multiple zoom levels. Experiments on our MLM dataset show that our method outperforms previous state-of-the-art map generation methods on both comprehensive quantitative metrics and perceptual quality.",
+      "published": "2026-11-14T19:10:16Z",
+      "updated": "2026-11-14T19:10:16Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19576",
+      "abs_url": "https://arxiv.org/abs/2611.19576",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.01543",
+      "title": "GSExplorer: Interactive World Generation with a Persistent 3DGS World State",
+      "authors": [
+        "Sicheng Yu",
+        "Liu Liu",
+        "Xinjie Wang",
+        "Xinjiang Wang",
+        "Taojun Ding",
+        "Wenhao Hu",
+        "Beizhen Zhao",
+        "Puxin Yan",
+        "Zhizhong Su",
+        "Hao Wang"
+      ],
+      "abstract": "Interactive world generation requires both accurate local control and stable scene consistency over long rollouts. Existing methods improve local generation through camera or geometry conditioning and extend historical context with memory mechanisms. However, long-horizon exploration remains challenging due to incomplete target-view guidance and inconsistencies accumulated during scene updates. We present \\textbf{GSExplorer}, a generation--reconstruction framework built around a persistent 3D Gaussian world state. At each step, the current 3DGS scene provides multimodal rendering conditions for a video generator, while camera geometry is injected through a separate Relative Ray Encoding branch. Generated videos are then fed back to a SLAM-based reconstruction backend, where appearance and geometric consistency checks produce a shared support mask for selective scene updates and cross-chunk pose refinement. We further design a data-construction pipeline that reproduces realistic 3DGS degradation during scene extrapolation, yielding 293K training pairs of degraded multimodal renderings and real target videos. GSExplorer achieves the best overall performance among the compared methods on both single-step and three-step WorldScore evaluation, including a Camera Control score of 99.07 in single-step extrapolation. On 481-frame leave-and-return rollouts, it also shows strong revisit consistency.",
+      "published": "2026-11-01T04:14:50Z",
+      "updated": "2026-11-18T06:38:01Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.01543",
+      "abs_url": "https://arxiv.org/abs/2611.01543",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.40614",
+      "title": "L3G-World: Real-Time Infinite World Generation with Latent 3D Gaussian Memory",
+      "authors": [
+        "Jinhyeok Choi",
+        "JoungBin Lee",
+        "Jongmin Lee",
+        "Minkyeong Jeon",
+        "Jiyoung Kim",
+        "Kaeun Han",
+        "Yoonjin Yoon",
+        "Seungryong Kim"
+      ],
+      "abstract": "Interactive world models generate visual content conditioned on user actions, yet maintaining spatial consistency over long-horizon exploration in real time remains challenging. Existing approaches rely on either temporal context or explicit 3D memory, both of which scale poorly because memory grows with the length of the generated stream. Moreover, explicit 3D memories condition latent video generators by re-encoding RGB renderings, which precludes real-time generation. In this paper, we introduce a Latent 3D Gaussian Memory (L3G) that combines the efficiency of feed-forward reconstruction with a compact, rapidly renderable scene representation. Building on this memory, we propose L3G-World, in which a memory updater and a video diffusion transformer (DiT) alternate autoregressively to generate spatially consistent worlds. The memory updater spawns Gaussians in newly observed regions and refines existing ones, so that the memory grows with scene extent rather than stream length. Each Gaussian further stores a VAE latent feature, allowing the memory to be rendered directly into the DiT's latent space without VAE re-encoding. Experiments show that L3G-World achieves state-of-the-art generation quality and long-horizon spatial consistency, with up to $38.6\\times$ fewer 3D primitives, $3.2\\times$ faster memory updates, and $359\\times$ faster memory rendering relative to the most efficient prior 3D-memory baseline for each metric, enabling real-time world generation at 9 FPS.",
+      "published": "2026-10-29T17:54:42Z",
+      "updated": "2026-10-29T17:54:42Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.40614",
+      "abs_url": "https://arxiv.org/abs/2610.40614",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.36729",
+      "title": "Hy-Nomas: Towards Free-form Interactive World Generation",
+      "authors": [
+        "Qiaoling Chen",
+        "Jiaxiang Cheng",
+        "Xueqing Deng",
+        "Tiankai Hang",
+        "Ji Hou",
+        "Jiaqi Li",
+        "Yifan Liu",
+        "Tao Lu",
+        "Junshu Tang",
+        "Yu Tang",
+        "Yao Teng",
+        "Yu Tian",
+        "Heng Wang",
+        "Weizhi Wang",
+        "Xiyao Wang",
+        "Xilun Wu",
+        "Mingyu Yang",
+        "Yangbin Yu",
+        "Rui Zhao",
+        "Longjun Cao",
+        "Linghao Chen",
+        "Haoyi Duan",
+        "Jiaming Han",
+        "Mingji Han",
+        "Enhua Jiang",
+        "Shunkai Li",
+        "Yanzhe Liang",
+        "Qinwei Ma",
+        "Cong Wang",
+        "Lei Wang",
+        "Bing Wu",
+        "Ke Xing",
+        "Ray Ying",
+        "Zhentao Yu",
+        "Key Zhang",
+        "Yuan Zhou",
+        "Zhengguang Zhou",
+        "Kai Zou"
+      ],
+      "abstract": "Interactive world generation requires models to follow successive commands while preserving relevant history and action consequences. We present Hy-Nomas, a video world model with an 8B diffusion backbone that supports free-form text instructions and continuous camera control across multiple interaction turns. It generates variable-length segments conditioned on current inputs and cached history. Our central design aligns structured video captions with action-aware causal attention: descriptive context remains accessible across segments, while action instructions are restricted to their intended temporal windows. A vision-language Prompt Enhancer (PE) translates user requests and multimodal interaction histories into structured conditions for the next segment. A multi-stage curriculum progressively introduces causal generation, text interaction, camera control, and training on model-generated histories, followed by diffusion distillation. In human evaluation, Hy-Nomas shows superior performance over existing world models. We release model weights, code and benchmarks, together with a lightweight adaptation workflow, to support reproducible research on interactive world generation.",
+      "published": "2026-10-27T06:48:59Z",
+      "updated": "2026-10-27T06:48:59Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.36729",
+      "abs_url": "https://arxiv.org/abs/2610.36729",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.10622",
+      "title": "WorldBench: Evaluating LLMs on Three.js Voxel World Generation",
+      "authors": [
+        "Krish Bakshi"
+      ],
+      "abstract": "Large language models can now write complete, interactive 3D worlds as code, but grading those worlds automatically is unreliable. Existing judges take one view of the output: a vision-language model scores a few rendered snapshots, or a language model reads the source. On worlds written by five frontier models we find that the two views disagree on 32% of required items, mostly code that no frame shows, and that fixed views miss small close-up contents. We present WorldBench, a benchmark and judge for open-ended, LLM-generated Three.js worlds. From one prompt describing a floating voxel island with ten biomes, physics, and day/night and seasonal cycles, the judge explores the running world, controlling its clock, orbiting it, and sending a navigator agent to frame each biome, and reads the code for what it sees. Neither channel is trusted on its own: a code quote counts only if it is text the source contains, and visual claims are checked against measured pixels where the property is measurable. A mutation test, in which we remove features by construction, shows that code-only judging gives full credit to four of five removed features, because their code remains in the file. Our judge cuts the points kept on removed features by a third (5.44 to 3.55 of 7.11), and what it still credits is mostly code that exists but never runs. We evaluate five frontier models: Claude Fable 5.1, GPT-6 Astra, Kimi K3, Grok 4.7 and Gemini 3.1 Pro. Code, prompt, tests and judge configuration are available at https://github.com/KrishBakshi/worldbench",
+      "published": "2026-10-07T08:52:08Z",
+      "updated": "2026-10-07T08:52:08Z",
+      "categories": [
+        "cs.GR",
+        "cs.AI",
+        "cs.CL",
+        "cs.CV",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10622",
+      "abs_url": "https://arxiv.org/abs/2610.10622",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.06687",
+      "title": "ChronoWorld: Camera-Controlled Consistent 4D World Generation via Spatiotemporal Cues and Geometric Reflections",
+      "authors": [
+        "Xiaoyu Zhou",
+        "Dingwei Xian",
+        "Zhenyu Wang",
+        "Yajiao Xiong",
+        "Yongtao Wang",
+        "Ming-Hsuan Yang"
+      ],
+      "abstract": "While existing camera-controllable video generation models can produce visually compelling sequences, preserving intrinsic 4D spatiotemporal coherence remains challenging. To address this limitation, we propose ChronoWorld, an \"Observation--State--Reflection\" framework that leverages spatiotemporal causal cues and reconstruction priors to generate globally consistent, free-view 4D scenes. Given a context video, we introduce a Spatiotemporal Epipolar Causal Attention mechanism that enforces multi-view epipolar constraints and temporal causality throughout the generation process. In addition, we develop a reconstruction-driven geometric reflection pipeline with a 4D retrieval strategy to enable dynamic self-assessment and correction of generated outputs, improving consistency and accuracy. Extensive experiments show that ChronoWorld achieves state-of-the-art performance in spatiotemporally consistent, cinematic-quality 4D scene generation, with strong generalization and high-fidelity geometry across diverse scenarios.",
+      "published": "2026-10-05T16:51:30Z",
+      "updated": "2026-10-06T09:12:34Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.06687",
+      "abs_url": "https://arxiv.org/abs/2610.06687",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.05033",
+      "title": "Code2Games: Enabling Coding Agents for Gaming World Generation",
+      "authors": [
+        "Wei Wu",
+        "Ziyang Xu",
+        "Zeyu Zhang",
+        "Yang Zhao",
+        "Hao Tang"
+      ],
+      "abstract": "Generating a high-quality gaming world from a natural-language game intent requires joint reasoning about scene structure, spatial layout, gameplay objectives, interactive entities, and executable gameplay logic. Existing coding agents can generate individual assets, scenes, or scripts, but often struggle to maintain consistency across these components. We propose Code2Games, an agentic framework that builds a structured gaming world upon a base Blender world generated from the same game intent. Code2Games coordinates scene analysis, gameplay planning, constrained gaming-world generation, and gaming-engine customization through a shared scene-gameplay representation with persistent element correspondence. After world generation, Code2Games adapts the generated world to Unreal Engine 5 and employs an execution-guided reconstruction process that uses compilation diagnostics, runtime feedback, and gameplay test results to resolve inconsistencies arising during engine adaptation. To systematically evaluate gaming-world generation, we introduce the GameCode4D benchmark, which comprises ten fixed game prompts spanning different levels of scene and gameplay complexity. We evaluate the generated results across four dimensions: visual quality, interactive fidelity, multimodal artifact quality, and playable-game quality. Experiments demonstrate that, compared with direct gaming-world generation by coding agents and existing baseline methods, Code2Games consistently improves the visual quality and interactive fidelity of generated gaming worlds, as well as the quality of the resulting games after engine adaptation.",
+      "published": "2026-10-04T07:54:45Z",
+      "updated": "2026-10-04T07:54:45Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.05033",
+      "abs_url": "https://arxiv.org/abs/2610.05033",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.24981",
+      "title": "GAE: Learning a Geometry-Native Latent Space for 3D-Consistent World Generation",
+      "authors": [
+        "Jiahao Lu",
+        "Minghao Yin",
+        "Wenbo Hu",
+        "Hengyu Liu",
+        "Wang Zhao",
+        "Sai-Kit Yeung",
+        "Ying Shan",
+        "Yuan Liu"
+      ],
+      "abstract": "We present a compact geometry-native latent space as a shared foundation for perception and generation. Visual generators can produce photorealistic frames without preserving a consistent 3D scene. We argue that this is not only a modeling problem but also a representation problem: generators typically evolve appearance-centric latents, while perception models recover geometry in a semantically rich space that encodes cross-view structure. Rather than adding geometry as another output, we reparameterize a geometry foundation model's features into a compact latent space for generation. We realize this shift with the geometry-native autoencoder (GAE), whose latent is jointly decodable to appearance, depth, cameras, and point maps. With this state, a standard conditional flow supports diverse generation tasks. In controlled comparisons that hold the generator and training protocol fixed, replacing the latent with GAE improves both visual quality and independently measured 3D coherence: FVD falls by $12.7\\%$ and $23.1\\%$ on RealEstate10K and DL3DV, and camera-trajectory error is halved on RealEstate10K. Together, these results show that the latent space is central to geometry-consistent generation and can serve as a shared interface between perception and generation.",
+      "published": "2026-09-21T17:56:25Z",
+      "updated": "2026-10-14T09:21:07Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.24981",
+      "abs_url": "https://arxiv.org/abs/2609.24981",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.22670",
+      "title": "AquaWorld: Structure-Consistent Underwater World Generation for Robot Simulation",
+      "authors": [
+        "Bin Peng",
+        "Tiandong Zhang",
+        "Ruidong Wang",
+        "Min Luo",
+        "Shuo Wang"
+      ],
+      "abstract": "Underwater robot simulation requires diverse environments in which terrain, scene composition, tasks, and currents remain mutually consistent. We present AquaWorld, a world-generation framework that preserves these relationships through shared terrain structure. A language-conditioned plan generates 3D terrain and shared structural references that guide asset placement, task definition, and inflow specification under stochastic variation. The framework incorporates over 10,000 underwater-compatible assets, predicts reusable terrain-conditioned mean-flow fields through a CFD-supervised residual model, and supports conventional underwater vehicles and bio-inspired robotic fish. On 24 paired terrains, structure-consistent randomization produces substantially better cross-factor consistency than independent randomization. In a matched-budget policy-training comparison, structurally coherent randomization achieves a validation success rate 21% higher than independent randomization. In separate physical experiments, a simulation-trained visual navigation policy succeeds in 95% of physical tank trials without updating its perception or control modules. Overall, AquaWorld provides a practical way to generate varied underwater environments while retaining the structural relationships needed for flow simulation and robot learning.",
+      "published": "2026-09-19T00:58:05Z",
+      "updated": "2026-09-19T00:58:05Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.22670",
+      "abs_url": "https://arxiv.org/abs/2609.22670",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.22187",
+      "title": "BehaviorWorldGen: Closing the Loop between Action Models and World Simulators via Controllable Behavior-Aware Structured World Generation",
+      "authors": [
+        "Jiaqi Wang",
+        "Zhuo Zhang",
+        "Haining Guan",
+        "Tingguang Zhou",
+        "Haowen Cui",
+        "ChuanYe Wang",
+        "Zhongyang Zhu",
+        "Yulong Zheng",
+        "Xuefeng Chen",
+        "Zhen Yang",
+        "Tianchen Deng",
+        "Feiyang Tan",
+        "Hangning Zhou",
+        "Bo Dai",
+        "Lixia Shen",
+        "Xiwu Chen",
+        "Xiyang Wang",
+        "Jiajun Zhu"
+      ],
+      "abstract": "Modern driving action models are increasingly improved in a self-improvement loop, where a learned world simulator imagines future observations and the resulting data is fed back to refine the action model. However, the bottleneck of this loop lies in the simulators' inability to generate behaviorally plausible responses by surrounding agents, making generated data both unrealistic in interaction and imbalanced in distribution. We introduce BehaviorWorldGen, a framework that closes the loop between action models and world simulators through controllable behavior-aware structured world generation. Its core component is BehaviorFlow, a meta-action-conditioned traffic-flow model that injects interpretable behavior controls and jointly generates multi-agent rollouts. BehaviorFlow realizes the specified agent behaviors while allowing surrounding vehicles to respond to the ego and to one another. The resulting rollouts are rendered by a world simulator into realistic multi-view observations, which are paired with corrected interaction-aware trajectories for action-model refinement. Since BehaviorWorldGen uses structured trajectories as the interface between its modules, it is compatible with diverse action models and world simulators. Experiments on world generation, scene extrapolation, and policy refinement demonstrate consistent improvements, with the largest benefits concentrated on difficult interactive scenarios.",
+      "published": "2026-08-23T02:53:09Z",
+      "updated": "2026-09-22T10:26:15Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.22187",
+      "abs_url": "https://arxiv.org/abs/2608.22187",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.11876",
+      "title": "D3D-GEN: Robot-Aware Domain-Grounded Interactive 3D World Generation for Social Robotics",
+      "authors": [
+        "Anh Duc Do",
+        "Volodymyr Shcherbyna",
+        "Tai Duc Nguyen",
+        "Spaarsh Thakkar",
+        "Zhengcheng Shen",
+        "Teham Buiyan",
+        "Archan Misra",
+        "Linh Kästner"
+      ],
+      "abstract": "Training and validation of Embodied AI for social navigation critically depends on realistic simulation environments, yet many current approaches fail to find a balance between realism and simulability. We propose D3D-GEN, a novel world generation system that combines a domain agent with a retrieval-augmented generation (RAG) pipeline grounded in that domain. Our system enables users to rapidly generate domain-grounded, fully interactive 3D worlds by automating both the collection of domain knowledge and the synthesis of realistic floorplans and object placements, without dependence on any fixed 3D model database. Given a domain description prompt, the research agent collects publicly accessible domain-specific data and constructs a persistent domain database. Using this database, our RAG pipeline generates plausible floorplans and object placements by dynamically querying a user-provided semantic database, which can be easily extended or modified. The output is a fully interactive 3D world loadable by the popular simulators Isaac Sim and Gazebo. With our approach, we have built databases for several common domains (indoor residential, hospital, office) and generated dozens of distinct, plausible simulation environments for each domain. We present D3D-GEN with a local web frontend that facilitates rapid, interactive world generation for robot simulation.",
+      "published": "2026-08-12T10:03:01Z",
+      "updated": "2026-08-12T10:03:01Z",
+      "categories": [
+        "cs.RO",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.11876",
+      "abs_url": "https://arxiv.org/abs/2608.11876",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.11580",
+      "title": "RoadWeaver: Large-Scale Lane-Level HD Map Generation from Scratch for Autonomous Driving Simulation",
+      "authors": [
+        "Yueyuan Li",
+        "Zexi Chen",
+        "Weijie Xi",
+        "Mingyang Jiang",
+        "Songan Zhang",
+        "Hanyang Zhuang",
+        "Ming Yang"
+      ],
+      "abstract": "Autonomous driving simulation requires diverse and scalable lane-level HD maps to support long-horizon evaluation across complex road networks. Existing approaches either rely on handcrafted or reconstructed real-world maps, which limits scalability, or generate only local road structures rather than complete HD maps. We present RoadWeaver, a coarse-to-fine framework for from-scratch generation of diverse, large-scale HD maps. RoadWeaver first synthesizes a global road layout, expands it into a connected road network, and then constructs lane-level geometry with topologically consistent lane connectivity. Experimental results show that RoadWeaver achieves a 99.8\\% reachability, a 10.7\\% dead-end ratio, and an endpoint alignment error of 0.24 m. Compared with SOTA generation methods, it reduces endpoint alignment error by 94.4\\% while generating complete HD maps in 1.39--3.50 s. The generated maps can be directly deployed in driving simulators, providing scalable simulation environments for future closed-loop evaluation of autonomous driving systems. The training code and an out-of-the-box implementation of RoadWeaver will be released upon acceptance.",
+      "published": "2026-08-12T02:39:14Z",
+      "updated": "2026-08-12T02:39:14Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.11580",
+      "abs_url": "https://arxiv.org/abs/2608.11580",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.09357",
+      "title": "ControlRadio: Prompt-Driven Controllable Diffusion for Cross-Modal Radio Map Generation",
+      "authors": [
+        "Kangjun Liu",
+        "Xiying Pan",
+        "Shuhang Zhang",
+        "Xiang Xiang",
+        "Ke Chen",
+        "Yaowei Wang"
+      ],
+      "abstract": "Radio maps describe how wireless signals propagate across space and are essential for wireless communication, sensing, and network planning. However, constructing accurate radio maps traditionally requires either dense measurements or computationally expensive physical simulations, which limits scalability and real-time deployment. Recent advances in generative artificial intelligence offer a promising alternative, but existing approaches lack fine-grained control and physical consistency when applied to real-world wireless environments. Here we present \\textbf{ControlRadio}, a controllable generative framework that produces radio maps from natural-language descriptions and environmental layouts, including building structures and transmitter locations. Joint semantic and spatial conditioning enables interpretable, propagation-plausible generation, while a controlled latent prior and layout-aware conditioning improve stability and structural consistency. Extensive experiments demonstrate that ControlRadio achieves state-of-the-art accuracy and strong generalization across diverse urban scenarios, while reducing computation time by more than four orders of magnitude compared with conventional simulation-based methods. Such results suggest a new paradigm for scalable and controllable wireless environment modeling, with broad implications for next-generation communication systems and data-driven radio sensing.",
+      "published": "2026-08-10T09:36:02Z",
+      "updated": "2026-08-10T09:36:02Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.09357",
+      "abs_url": "https://arxiv.org/abs/2608.09357",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.05879",
+      "title": "To See a World in a Living Context: Unified Indoor-Outdoor Urban World Generation",
+      "authors": [
+        "Xiaobin Huang",
+        "Zilong Huang",
+        "Yang Luo",
+        "Hongchao Fan",
+        "Yiping Chen",
+        "Ting Han"
+      ],
+      "abstract": "Text-driven 3D generation has advanced rapidly in creating large-scale outdoor environments and detailed indoor scenes, but these domains are usually synthesized independently, lacking the correspondence required for a coherent urban world. We present HoloWorld, a unified indoor-outdoor urban world generation framework built on a continuously updated cross-scale world context. Initializing from a user description, HoloWorld progressively represents and updates the diverse world information, from city-scale planning to individual buildings, allowing generated interiors to maintain explicit correspondence with their associated exterior buildings. Conditioned on the evolving context and previously generated neighboring blocks, HoloWorld autoregressively generates urban exteriors with consistent spatial organization and visual identity across blocks. The generated exterior representations are further grounded in 3D building instances and footprints, enabling building-specific indoor generation with geometry-constrained layouts and inherited appearance characteristics. To our knowledge, HoloWorld is the first framework to unify indoor and outdoor generation within a coherent 3D urban world. Extensive experiments demonstrate that HoloWorld achieves superior urban exterior generation performance, improving the average AQS score over the SOTA by 7.68\\% and obtaining the highest average RDR score, while maintaining strong building-level indoor-outdoor correspondence and cross-block continuity within a unified 3D urban world. Our project page: https://huangxb326.github.io/HoloWorld/.",
+      "published": "2026-08-06T11:00:38Z",
+      "updated": "2026-08-29T04:47:08Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.05879",
+      "abs_url": "https://arxiv.org/abs/2608.05879",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.05248",
+      "title": "WorldClaw: Agentic 3D Open-World Generation at Scale",
+      "authors": [
+        "Chunchao Guo",
+        "Jinpeng Li",
+        "Yang Li",
+        "Zilong Huang"
+      ],
+      "abstract": "Generating large-scale, freely explorable 3D worlds from open-ended text remains challenging because a system must jointly maintain global spatial coherence, rich local content, and explicit assets suitable for downstream editing and reuse. We present WorldClaw, a fully agentic, coarse-to-fine framework for open-world 3D scene generation. Planning agents translate a text prompt into a structured specification of regions, terrain, assets, materials, and spatial relations. WorldClaw then builds a globally coherent terrain foundation from semantic layouts, reusable assets, generative or procedural materials, and a region-aware height field. For detail-demanding regions, it generates terrain-conditioned compositions, reconstructs editable textured meshes, and recovers their placement on the terrain; render-based agents further refine terrain, objects, appearance, and contacts. Across diverse open-world prompts, WorldClaw produces large-scale scenes with coherent spatial organization, visually compelling local content, and editable instance-level assets while preserving a consistent global terrain structure.",
+      "published": "2026-08-05T15:46:38Z",
+      "updated": "2026-08-05T15:46:38Z",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.05248",
+      "abs_url": "https://arxiv.org/abs/2608.05248",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.26646",
+      "title": "Genie Sim PanoWorld: An Infinite Indoor 3D World Generation Pipeline via Panoramic Scene Modeling and Simulation",
+      "authors": [
+        "Yongxin Su",
+        "Linjie Hou",
+        "Feng Wang",
+        "Jialin Tang",
+        "Zhijun Li",
+        "Qian Wang",
+        "Maoqing Yao"
+      ],
+      "abstract": "We address the problem of reconstructing a high-fidelity, freely navigable 3D scene from a single $360^\\circ$ panorama, without per-scene optimization or multi-view capture. Existing methods either lack metric trajectory control, which hinders reliable downstream 3D reconstruction, or struggle with large disocclusions under long-range camera motion while requiring high-end multi-GPU servers.We present Genie Sim PanoWorld, a two-stage feed-forward pipeline that bridges generation and reconstruction via an explicit, trajectory-controllable panoramic video. A NavMesh-planned $\\mathrm{SE}(3)$ roaming trajectory is injected into a latent video diffusion model through dense geometry-warped conditioning; long--short trajectory mixed training and a self-consistency objective based on shortcut models together yield high-fidelity video in four CFG-free denoising steps. A feed-forward panoramic reconstructor then lifts the generated video into a high-fidelity 3D Gaussian scene that supports real-time, free-viewpoint roaming and can be directly used as a simulation-ready asset for embodied AI applications. Experiments show that Genie Sim PanoWorld outperforms geometry-conditioned baselines in both panoramic video generation and downstream 3D reconstruction, while generalizing zero-shot to unseen indoor scenes.",
+      "published": "2026-07-29T09:08:16Z",
+      "updated": "2026-07-29T09:08:16Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.26646",
+      "abs_url": "https://arxiv.org/abs/2607.26646",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.20176",
+      "title": "ISAC-Assisted Channel Knowledge Map Generation for Physical Layer Authentication",
+      "authors": [
+        "Luca Bonaventura",
+        "Edoardo Gardin",
+        "Alessia Barison",
+        "Francesco Ardizzon",
+        "Stefano Tomasin"
+      ],
+      "abstract": "Integrated sensing and communication (ISAC) enables the acquisition of environmental information by leveraging wireless signals transmitted for communication purposes. In this paper, we utilize this capability to reconstruct the layout of objects surrounding multiple receivers. Ray tracing is then applied to the reconstructed environment to infer the propagation channels for various transmitter positions, thereby constructing a channel knowledge map (CKM). The CKM is then used to verify the position of a legitimate transmitter, authenticating it against an adversarial device attempting to impersonate it from a different location. This physical layer authentication (PLA) mechanism utilizes the approximate known position of the legitimate transmitter, obtained, for instance, from the network as in cross-layer authentication, to compare the channel estimated from the received signal with the corresponding CKM data. We evaluate the impact on the PLA performance of both ISAC-induced CKM reconstruction errors and receiver-side channel estimation noise, in terms of false alarm and missed detection probabilities. Finally, the proposed approach is validated using an ISAC dataset from the literature.",
+      "published": "2026-07-22T14:09:37Z",
+      "updated": "2026-07-22T14:09:37Z",
+      "categories": [
+        "eess.SP",
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.20176",
+      "abs_url": "https://arxiv.org/abs/2607.20176",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.16674",
+      "title": "CLDRoute: Conditional Latent Diffusion for Routability Map Generation in Physical Design",
+      "authors": [
+        "Kiran Thorat",
+        "Nicole Meng",
+        "Caiwen Ding",
+        "Yingjie Lao",
+        "Zhijie Jerry Shi"
+      ],
+      "abstract": "Accurate routability estimation during physical design is important for reducing costly post-routing iterations. Prior learning-based methods treat this task as deterministic prediction, mapping placement-stage features to a single congestion or DRC outcome. We instead formulate routability estimation as a conditional generation problem, where both routing congestion and DRC violations are modeled as spatially structured routability fields. Our framework, Conditional Latent Diffusion for Routeability estimation (CLDRoute), uses physics-aware conditioning and task-specific latent modeling to handle the different characteristics of congestion and DRC maps. This allows our method to supports sample-based inference, producing both a mean prediction and a spatial uncertainty estimate for the same input design. On CircuitNet 2.0 (N28), our method achieves, for DRC violation generation, an SSIM of 0.9678, an MAE of 0.0028, and a TopK@1% of 0.3494; for congestion generation, it achieves an SSIM of 0.9031, an MAE of 0.0286, and an NZ-Pearson of 0.3692. Overall, our framework provides a more practical view of routability at placement by generating both the expected outcome and its uncertainty.",
+      "published": "2026-07-18T07:10:42Z",
+      "updated": "2026-07-18T07:10:42Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.16674",
+      "abs_url": "https://arxiv.org/abs/2607.16674",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.06291",
+      "title": "AlayaWorld: Long-Horizon and Playable Video World Generation",
+      "authors": [
+        "AlayaWorld Team",
+        "Kaipeng Zhang",
+        "Chuanhao Li",
+        "Yifan Zhan",
+        "Yongtao Ge",
+        "Yuanyang Yin",
+        "Jiaming Tan",
+        "Kang He",
+        "Liaoyuan Fan",
+        "Ruicong Liu",
+        "Xiaojie Xu",
+        "Xuangeng Chu",
+        "Zhen Li",
+        "Zhengyuan Lin",
+        "Zhixiang Wang",
+        "Zian Meng",
+        "Zihui Gao"
+      ],
+      "abstract": "Game worlds have traditionally been built through labor-intensive production pipelines, making them costly to develop, difficult to customization, and expensive to modify after deployment. Recent advances in video world models offer a fundamentally different paradigm. Rather than explicitly authoring every component of a virtual environment, these models autoregressively synthesize future observations conditioned on the current world state and user interactions, enabling playable worlds to be generated online. Trained on both gameplay recordings and real-world videos, they can capture diverse visual appearances and physical dynamics, opening new opportunities for interactive applications beyond gaming, including embodied intelligence. In this paper, we present \\textbf{AlayaWorld}, a full-stack open-source framework for building interactive generative worlds. AlayaWorld enables open-ended real-time interaction, allowing users to freely navigate and perform diverse actions such as combat, spell casting, and monster summoning. The framework unifies the complete development-from data preparation model architecture, model training, inference acceleration, and deployment-within a modular and extensible architecture. Alongside the framework, we release reproducible pipelines, reference implementations, evaluation tools, and comprehensive documentation, establishing a practical foundation for future research and real-time applications of generative world models.",
+      "published": "2026-07-07T13:59:57Z",
+      "updated": "2026-07-07T13:59:57Z",
+      "categories": [
+        "cs.CV",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.06291",
+      "abs_url": "https://arxiv.org/abs/2607.06291",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.01370",
+      "title": "MapDreamer: Aerial Imagery Conditioned Latent Diffusion for Lane-Level Map Generation",
+      "authors": [
+        "Julian Brandes",
+        "Philipp Crocoll",
+        "Wolfram Burgard"
+      ],
+      "abstract": "High definition map generation is essential for autonomous driving, yet remains a labor-intensive process at scale. We present MapDreamer, a generative diffusion model that synthesizes lane-level vector maps with explicit topology directly from a single aerial image. MapDreamer learns a compact latent representation of lane centerlines and their topological relations using a variational autoencoder and predicts graphs with a transformer-based latent diffusion model. To align generated maps with the observed scene, we condition each denoising step on dense aerial features injected through cross-attention. To handle the varying number of lanes across scenes, we propose a lane cardinality module paired with background ghost lane latents, a learned buffer that prevents slot collapse during diffusion. Furthermore, we introduce a sliding-window global graph aggregation strategy that stitches local tiles into city-scale maps while preserving connectivity through encoded lane boundaries. Experiments on UrbanLaneGraph derived from Argoverse 2 show improved geometric and topological fidelity over non-generative baselines.",
+      "published": "2026-07-01T18:33:38Z",
+      "updated": "2026-07-01T18:33:38Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.01370",
+      "abs_url": "https://arxiv.org/abs/2607.01370",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.15930",
+      "title": "ControlMap: Controllable High-Definition Map Generation for Traffic Scenario Simulation",
+      "authors": [
+        "Marwan Farag",
+        "Steffen Wäldele",
+        "Yu Yao"
+      ],
+      "abstract": "Simulation is central to validating autonomous driving systems, yet current pipelines are limited by insufficient scenario diversity due to costly High Definition (HD) map creation. Scaling HD maps requires expensive data collection and manual processing. Moreover, existing generative models lack the fine-grained control necessary to target specific road topologies during generation. This paper presents a data-driven pipeline for controllable HD map generation using latent diffusion and ControlNet for spatial conditioning. To our knowledge, we are the first to inject spatial guidance signals into a diffusion model for HD map synthesis. Furthermore, our model supports adjustable conditioning strength through classifier-free guidance and city-level style transfer via city label conditioning. To complement existing metrics, we introduce two novel metrics to evaluate adherence to the control signal and similarity to ground-truth maps. Experiments demonstrate that our model generates realistic HD maps that faithfully follow input road topologies while accurately preserving city-specific details.",
+      "published": "2026-06-14T17:12:56Z",
+      "updated": "2026-06-14T17:12:56Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.15930",
+      "abs_url": "https://arxiv.org/abs/2606.15930",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.04513",
+      "title": "MapAgent: An Industrial-Grade Agentic Framework for City-scale Lane-level Map Generation",
+      "authors": [
+        "Deguo Xia",
+        "Zihan Li",
+        "Haochen Zhao",
+        "Dong Xie",
+        "Yuyao Kong",
+        "Xiyan Liu",
+        "Jizhou Huang",
+        "Mengmeng Yang",
+        "Diange Yang"
+      ],
+      "abstract": "Lane-level maps are critical infrastructure for autonomous driving and lane-level navigation, yet constructing and maintaining standardized lane networks for hundreds of cities remains highly labor-intensive. Recent end-to-end vectorized mapping methods can predict lane geometry and topology directly from sensor data, but they typically treat mapping specifications and traffic regulations as implicit, dataset-dependent supervision. Moreover, in complex scenes (e.g., worn or missing markings and occlusions), correct lane configurations are often under-determined by visual evidence alone, making specification violations a major source of human post-editing. We propose MapAgent, an industrial-grade agentic architecture that augments a vectorization backbone for specification-compliant lane-map production. Rather than merely adding an agent loop to map prediction, MapAgent couples backbone perception with explicit specification verification, constraint-aware reasoning, and deterministic map editing under a bounded, verification-driven Judge-Planner-Worker loop. A vision-language Judge diagnoses errors by jointly inspecting visual evidence and draft vectors, while a tool-calling Planner generates minimal corrective edits with post-edit re-validation. To remain scalable for city-scale production, MapAgent is selectively triggered only on tiles with low backbone confidence, adding modest overhead while preserving throughput. Experiments on real-world datasets show consistent gains over strong production baselines, especially in complex and long-tail scenarios. Additionally, MapAgent has been integrated into Baidu Maps, supporting lane-level map generation for over 360 cities nationwide and elevating the overall production automation to over 95%, demonstrating MapAgent's practicality and effectiveness for large-scale lane-level map generation.",
+      "published": "2026-06-03T06:44:42Z",
+      "updated": "2026-06-16T11:40:12Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.04513",
+      "abs_url": "https://arxiv.org/abs/2606.04513",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.00499",
+      "title": "OptiWorld: Optimal Control for Video World Generation under Physical Constraints",
+      "authors": [
+        "Yu Yuan",
+        "Jianhao Yuan",
+        "Xijun Wang",
+        "Daiqing Li",
+        "Liu He",
+        "Lu Ling",
+        "Stanley H. Chan"
+      ],
+      "abstract": "Video generation models are becoming a scalable form of world models, but they mainly generate plausible motion rather than proactively control or optimize the underlying dynamics. As a result, an object in the generated video may follow trajectories that are unsafe, not smooth, inefficient, or physically inconsistent. In this work, we propose \\textbf{OptiWorld}, a framework that brings classical optimal control into video generation at inference time. OptiWorld first extracts a compact, task-relevant world state, then plans an optimal trajectory under physical constraints, and finally renders the video conditioned on this trajectory. We formulate planning as a geometric problem on a continuous manifold, which converts 3D geometry and task-dependent physical constraints into a unified planning geometry. By adding this optimal-control layer, OptiWorld generates videos with preferable dynamics, demonstrating strong potential in multiple tasks including goal-conditioned image-to-video generation, video dynamics editing, and counterfactual generation.",
+      "published": "2026-05-30T03:13:00Z",
+      "updated": "2026-05-30T03:13:00Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.00499",
+      "abs_url": "https://arxiv.org/abs/2606.00499",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.31336",
+      "title": "DecMem: Towards Minute-Long Consistent World Generation with Decoupled Memory",
+      "authors": [
+        "Zhenhao Yang",
+        "Xiaoshi Wu",
+        "Zhengyao Lv",
+        "Xiaoyu Shi",
+        "Xintao Wang",
+        "Pengfei Wan",
+        "Kun Gai",
+        "Kwan-Yee K. Wong"
+      ],
+      "abstract": "Recent advances in video generative models have promoted rapid progress in controllable world models. However, maintaining fine-grained spatio-temporal consistency under long-horizon reasoning remains a key challenge. In this work, we move beyond explicit 3D memory and coarse frame-level implicit modeling, and propose a fine-grained, learnable, and scalable memory for consistent world generation. We first identify two fundamental limitations of naïve learnable memory architectures in long-horizon extrapolation, namely computational inefficiency and attention dispersion. Through a systematic analysis of attention dispersion, we propose DecMem, a decoupled memory architecture that employs Sparse Global Memory for efficient fine-grained access to global history and Anchored Local Memory for stable and high-quality extrapolation. Extensive experiments demonstrate that DecMem significantly outperforms current state-of-the-art methods. By ensuring precise and efficient long-term memory and achieving superior extrapolation capabilities, DecMem enables minute-level controllable long video generation with high fidelity and consistency.",
+      "published": "2026-05-29T14:17:59Z",
+      "updated": "2026-05-29T14:17:59Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.31336",
+      "abs_url": "https://arxiv.org/abs/2605.31336",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.18921",
+      "title": "Geo-Data-Driven HD Map Generation Workflow with Integrated Reference-Free Constraint-Based Verification",
+      "authors": [
+        "Ruidi He",
+        "Vaibhav Tiwari",
+        "Mohanad Al-Ghobari",
+        "Meng Zhang",
+        "Andreas Rausch"
+      ],
+      "abstract": "High-definition (HD) maps are core artifacts for automated driving systems, but their generation commonly relies on sensor-intensive mobile mapping campaigns, while quality assessment often depends on high-precision reference data. These dependencies make HD map engineering costly and difficult to apply in settings where specialised measurement data or independently measured reference maps are unavailable. This paper presents an engineering-oriented geo-data-driven workflow for HD map generation with integrated representation-level verification. The workflow uses openly available geo-engineering datasets as the primary input source and transforms them into lane-level HD map representations of existing road environments through explicit intermediate representations and processing stages. To assess the generated representations without external reference maps, the workflow integrates executable constraint-based verification into the engineering process. Selected constraints are derived from specifications relevant to automated driving and road-design guidelines. They are evaluated directly on the generated lanelet-based representation to detect geometric, topological, and elevation-related inconsistencies. The workflow is evaluated using real-world shapefile-based road-network data from four cities in Lower Saxony, Germany, and controlled defect-injection scenarios. The real-world evaluation shows that the generated map representations satisfy the selected constraints in the evaluated scenarios, while the defect-injection study demonstrates complete detection of the considered defect types without observed false positives. The results indicate that geo-data-driven HD map generation with integrated executable verification can provide a modular and inspectable complement to sensor-intensive mapping workflows under reduced sensing and reference-data availability.",
+      "published": "2026-05-18T09:08:56Z",
+      "updated": "2026-05-18T09:08:56Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.18921",
+      "abs_url": "https://arxiv.org/abs/2605.18921",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.12957",
+      "title": "GTA: Advancing Image-to-3D World Generation via Geometry Then Appearance Video Diffusion",
+      "authors": [
+        "Hanxin Zhu",
+        "Cong Wang",
+        "Peiyan Tu",
+        "Jiayi Luo",
+        "Tianyu He",
+        "Xin Jin",
+        "Zhibo Chen"
+      ],
+      "abstract": "Recent developments in generative models and large-scale datasets have substantially advanced 3D world generation, facilitating a broad range of domains including spatial intelligence, embodied intelligence, and autonomous driving. While achieving remarkable progress, existing approaches to 3D world generation typically prioritize appearance prediction with limited modeling of the underlying geometry, leading to issues such as unreliable scene structure estimation and degraded cross-view consistency. To address these limitations, motivated by the coarse-to-fine nature of human visual perception, we propose GTA, a novel image-to-3D world generation method following a Geometry-Then-Appearance paradigm. Specifically, given a single input image, to improve the structural fidelity of synthesized 3D scenes, GTA adopts a two-stage framework with two dedicated video diffusion models, which first generate coarse geometric structure from novel viewpoints and then synthesize fine-grained appearance conditioned on the predicted geometry. To further enhance cross-view appearance consistency, we introduce a random latent shuffle strategy during the training process, along with a test-time scaling scheme that improves perceptual quality without compromising quantitative performance. Extensive experiments have demonstrated that our proposed method consistently outperforms existing approaches in terms of fidelity, visual quality, and geometric accuracy. Moreover, GTA is shown to be effective as a general enhancement module that further improves the generation quality of existing image-to-3D world pipelines, as well as supporting multiple downstream applications and exhibiting favorable data efficiency during model training, highlighting its versatility and broad applicability. Project page: https://hanxinzhu-lab.github.io/GTA/.",
+      "published": "2026-05-13T03:43:02Z",
+      "updated": "2026-09-09T01:14:34Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.12957",
+      "abs_url": "https://arxiv.org/abs/2605.12957",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.00781",
+      "title": "Map2World: Segment Map Conditioned Text to 3D World Generation",
+      "authors": [
+        "Jaeyoung Chung",
+        "Suyoung Lee",
+        "Jianfeng Xiang",
+        "Jiaolong Yang",
+        "Kyoung Mu Lee"
+      ],
+      "abstract": "3D world generation is essential for applications such as immersive content creation or autonomous driving simulation. Recent advances in 3D world generation have shown promising results; however, these methods are constrained by grid layouts and suffer from inconsistencies in object scale throughout the entire world. In this work, we introduce a novel framework, Map2World, that first enables 3D world generation conditioned on user-defined segment maps of arbitrary shapes and scales, ensuring global-scale consistency and flexibility across expansive environments. To further enhance the quality, we propose a detail enhancer network that generates fine details of the world. The detail enhancer enables the addition of fine-grained details without compromising overall scene coherence by incorporating global structure information. We design the entire pipeline to leverage strong priors from asset generators, achieving robust generalization across diverse domains, even under limited training data for scene generation. Extensive experiments demonstrate that our method significantly outperforms existing approaches in user-controllability, scale consistency, and content coherence, enabling users to generate 3D worlds under more complex conditions.",
+      "published": "2026-05-01T16:56:49Z",
+      "updated": "2026-05-01T16:56:49Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.00781",
+      "abs_url": "https://arxiv.org/abs/2605.00781",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.01641",
+      "title": "LivingWorld: Interactive 4D World Generation with Environmental Dynamics",
+      "authors": [
+        "Hyeongju Mun",
+        "In-Hwan Jin",
+        "Sohyeong Kim",
+        "Kyeongbo Kong"
+      ],
+      "abstract": "We introduce LivingWorld, an interactive framework for generating 4D worlds with environmental dynamics from a single image. While recent advances in 3D scene generation enable large-scale environment creation, most approaches focus primarily on reconstructing static geometry, leaving scene-scale environmental dynamics such as clouds, water, or smoke largely unexplored. Modeling such dynamics is challenging because motion must remain coherent across an expanding scene while supporting low-latency user feedback. LivingWorld addresses this challenge by progressively constructing a globally coherent motion field as the scene expands. To maintain global consistency during expansion, we introduce a geometry-aware alignment module that resolves directional and scale ambiguities across views. We further represent motion using a compact hash-based motion field, enabling efficient querying and stable propagation of dynamics throughout the scene. This representation also supports bidirectional motion propagation during rendering, producing long and temporally coherent 4D sequences without relying on expensive video-based refinement. On a single RTX 5090 GPU, generating each new scene expansion step requires 9 seconds, followed by 3 seconds for motion alignment and motion field updates, enabling interactive 4D world generation with globally coherent environmental dynamics. Video demonstrations are available at paper.pnu-cvsp.com/LivingWorld.",
+      "published": "2026-04-02T05:38:48Z",
+      "updated": "2026-07-03T05:51:13Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.01641",
+      "abs_url": "https://arxiv.org/abs/2604.01641",
+      "source": "arxiv"
+    },
+    {
+      "id": "2603.29089",
+      "title": "WorldFlow3D: Flowing Through 3D Distributions for Unbounded World Generation",
+      "authors": [
+        "Amogh Joshi",
+        "Julian Ost",
+        "Felix Heide"
+      ],
+      "abstract": "Unbounded 3D world generation is emerging as a foundational task for scene modeling in computer vision, graphics, and robotics. In this work, we present WorldFlow3D, a novel method capable of generating unbounded 3D worlds. Building upon a foundational property of flow matching - namely, defining a path of transport between two data distributions - we model 3D generation more generally as a problem of flowing through 3D data distributions, not limited to conditional denoising. We find that our latent-free flow approach generates causal and accurate 3D structure, and can use this as an intermediate distribution to guide the generation of more complex structure and high-quality texture - all while converging more rapidly than existing methods. We enable controllability over generated scenes with vectorized scene layout conditions for geometric structure control and visual texture control through scene attributes. We confirm the effectiveness of WorldFlow3D on both real outdoor driving scenes and synthetic indoor scenes, validating cross-domain generalizability and high-quality generation on real data distributions. We confirm favorable scene generation fidelity over approaches in all tested settings for unbounded scene generation. For more, see https://light.princeton.edu/worldflow3d.",
+      "published": "2026-03-31T00:08:17Z",
+      "updated": "2026-03-31T00:08:17Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2603.29089",
+      "abs_url": "https://arxiv.org/abs/2603.29089",
+      "source": "arxiv"
+    },
     {
       "id": "2512.08309",
       "title": "Terrain Diffusion: A Diffusion-Based Successor to Perlin Noise in Infinite, Real-Time Terrain Generation",
@@ -3912,7 +4604,7 @@
     },
     {
       "id": "2512.01816",
-      "title": "Envision: Benchmarking Unified Understanding \u0026 Generation for Causal World Process Insights",
+      "title": "Envision: Benchmarking Unified Understanding & Generation for Causal World Process Insights",
       "authors": [
         "Juanxi Tian",
         "Siyuan Li",

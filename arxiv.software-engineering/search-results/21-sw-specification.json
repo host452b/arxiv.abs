@@ -10,11 +10,132 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:47:41Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 96,
-  "return_count": 96,
+  "total_results": 102,
+  "return_count": 102,
   "papers": [
+    {
+      "id": "2611.26313",
+      "title": "Actor-Predictor Architecture for Reinforcement Learning with Formal Specification Objectives",
+      "authors": [
+        "Josef Brozovich",
+        "Qining Zhang",
+        "Lei Ying"
+      ],
+      "abstract": "One fundamental challenge in reinforcement learning (RL) is enforcing temporal safety constraints, such as satisfying formal specifications. Existing methods often transform logic formulas into automata for state augmentation and reward shaping. However, this approach assumes that automaton construction is both feasible and tractable, which limits its applicability to small specifications and linear temporal logic (LTL). This paper proposes Actor-Predictor, a framework that learns a surrogate representation of logic progress without explicitly constructing an automaton. The predictor continuously estimates whether a partial trajectory will satisfy the formal specification in a later step, and its learned features are provided as auxiliary inputs to the actor, which is then optimized using GRPO and RWR. We show theoretically that, under sufficient predictive accuracy, the learned representation is equivalent to the automaton state. Experiments on grid world and robotic tasks in Isaac Lab demonstrate that Actor-Predictor outperforms automaton-based baselines on LTL-constrained tasks. It also performs well on non-regular formal specifications, such as $(a^n b^n)$, for which finite-automaton-based approaches are not applicable.",
+      "published": "2026-11-19T16:03:02Z",
+      "updated": "2026-11-19T16:03:02Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.26313",
+      "abs_url": "https://arxiv.org/abs/2611.26313",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21148",
+      "title": "SAFE: Formal Specification and Implementation of a Scalable Analysis Framework for ECMAScript",
+      "authors": [
+        "Hongki Lee",
+        "Sooncheol Won",
+        "Joonho Jin",
+        "Junhee Cho",
+        "Sukyoung Ryu"
+      ],
+      "abstract": "The prevalent uses of JavaScript in web programming have revealed security vulnerability issues of JavaScript applications, which emphasizes the need for JavaScript analyzers to detect such issues. Recently, researchers have proposed several analyzers of JavaScript programs and some web service companies have developed various JavaScript engines. However, unfortunately, most of the tools are not documented well, thus it is very hard to understand and modify them. Or, such tools are often not open to the public. In this paper, we present formal specification and implementation of SAFE, a scalable analysis framework for ECMAScript, developed for the JavaScript research community. This is the very first attempt to provide both formal specification and its opensource implementation for JavaScript, compared to the existing approaches focused on only one of them. To make it more amenable for other researchers to use our framework, we formally define three kinds of intermediate representations for JavaScript used in the framework, and we provide formal specifications of translations between them. To be adaptable for adventurous future research including modifications in the original JavaScript syntax, we actively use open-source tools to automatically generate parsers and some intermediate representations. To support a variety of program analyses in various compilation phases, we design the framework to be as flexible, scalable, and pluggable as possible. Finally, our framework is publicly available, and some collaborative research using the framework are in progress.",
+      "published": "2026-11-16T14:19:00Z",
+      "updated": "2026-11-16T14:19:00Z",
+      "categories": [
+        "cs.PL",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21148",
+      "abs_url": "https://arxiv.org/abs/2611.21148",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.39007",
+      "title": "Formal Specifications with Data-Driven Signal Analysis",
+      "authors": [
+        "Roderick Bloem",
+        "Benedikt Maderbacher",
+        "Cristinel Mateis",
+        "Dejan Ničković",
+        "Sergii Tkachov",
+        "Björn Ziegler"
+      ],
+      "abstract": "Developing analog and hybrid systems requires substantial domain knowledge that is hard to articulate in a formal specification; without additional effort, this domain knowledge is also inaccessible to machine learning methods. We propose a hybrid approach for analyzing and monitoring real-valued signals that integrates specification-based and data-driven techniques. We use regular expressions with interval operations to identify regions of interest in a signal, classical signal processing methods to extract semantically meaningful features, and semi-supervised machine learning to infer complex relationships that distinguish correct from faulty behaviors. The relationships learned from normal behavior data can automatically detect incorrect behavior in the same system or variants thereof. We evaluate the method on a voltage regulator, demonstrating its effectiveness in detecting undesired system behaviors.",
+      "published": "2026-10-28T22:34:17Z",
+      "updated": "2026-10-28T22:34:17Z",
+      "categories": [
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.39007",
+      "abs_url": "https://arxiv.org/abs/2610.39007",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.32053",
+      "title": "Are LLM-Generated Formal Specifications Faithful to Their Requirements? A Study on Bimodal Formal Specification Generation",
+      "authors": [
+        "Wenhan Wang",
+        "Shiming Chen",
+        "Zeyu Sun",
+        "Shenghua Feng"
+      ],
+      "abstract": "Formal specification generation is a critical step towards formal verification and correctness assurance of software. Recently, large language models have been widely adopted in automatic generation of formal specifications. However, existing LLM-based specification generation approaches often assume that the input program is correct, which deviates from the real purpose of formal verification---to figure out whether the program meets its requirements when its correctness is unknown. Therefore, we conduct an empirical study of LLM-based specification generation under the bimodal setting: given both the natural language requirement and its corresponding code implementation, whose correctness is unknown. We construct a benchmark of 1,403 C programs and evaluate ACSL specification generation with Frama-C verification. Our study reaches several interesting findings: first, when the code implementation is correct, providing the natural language requirement does not further improve the pass rate of generated specifications. Second, when the code implementation is incorrect, LLM-based specification generation may erroneously pass verification by producing weak or implementation-misled specifications, and this cannot be fully alleviated by advanced prompting approaches. Compared with the non-formal HoarePrompt approach, LLM-generated formal specifications are less effective in predicting requirement-code consistency. Our study takes a first look at applying LLM-based formal specification generation to verifying program correctness against requirements, and points to requirement-faithful specification generation as a new direction for future LLM-based formal specification research.",
+      "published": "2026-10-23T01:48:36Z",
+      "updated": "2026-10-23T01:48:36Z",
+      "categories": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32053",
+      "abs_url": "https://arxiv.org/abs/2610.32053",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.19735",
+      "title": "MakSafe: A Spatiotemporal Semantic Framework for Formal Specification and Compliance Checking of Road Vehicle Safety Rules",
+      "authors": [
+        "Maksym Labzhaniia",
+        "Julien Deantoni",
+        "Marie-Agn{è}s Peraldi-Frati",
+        "Fr{é}d{é}ric Mallet"
+      ],
+      "abstract": "Scenario-based validation is essential for automated road vehicles but cannot cover the full variability of openworld traffic. We present MakSafe, a formal spatiotemporal framework for specifying and checking road vehicle safety rules through semantic zones, action-based forecasting, and trace-tree reasoning, avoiding uniform time discretization. We formalize the road network, vehicle states, and occupancy zones, then build executable rules for front-vehicle identification and timeto-collision (TTC) verification. The evaluation combines a tracedependent case study with a scalability benchmark over traffic density (N ), horizon (H), and branch factor (B). MakSafe yields branch-specific verdicts, deriving safe and unsafe outcomes from the same initial scene, and re-evaluates a scenario after a control update. A single rule check stays well below a millisecond across the reported sweep, and longer horizons slow the TTC check.",
+      "published": "2026-10-14T07:56:21Z",
+      "updated": "2026-10-14T07:56:21Z",
+      "categories": [
+        "cs.CL",
+        "cs.SC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19735",
+      "abs_url": "https://arxiv.org/abs/2610.19735",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.10604",
+      "title": "Beyond Type-checking: Towards Holistic Evaluation of Formal Specification Generation",
+      "authors": [
+        "Srijith Nair",
+        "Aditya Vempaty",
+        "Jia Liu",
+        "Ashish Jagmohan"
+      ],
+      "abstract": "When generating verifiable code, natural language requirements are mapped to machine checked code using LLMs and agentic workflows. A crucial component of this pipeline is specification generation (SpecGen), which produces a formal contract against which an agent can prove implementation correctness. Proof generation can obtain deterministic feedback from a theorem prover, but SpecGen lacks a definitive check that a generated specification captures the user's intent. A checked proof can therefore establish correctness against a specification that misrepresents the intended behaviour. We take a step towards holistic SpecGen evaluation with a unified dataset assembled from $350$ existing Lean tasks, including $189$ from VERINA and $161$ from CLEVER, and a framework covering formal validity, reference similarity and equivalence, and behavioural adequacy. We distinguish acceptance of required inputs from acceptance of valid outputs and rejection of invalid outputs, while making each metric's evidence scope explicit. Across four SpecGen configurations, restricting the generalized tree edit distance (GTED) comparison, a reference similarity measure, to $32$ jointly measurable VERINA tasks changes the VERINA configuration's position from second to fourth in mean similarity, showing the importance of measurement coverage. In an authored control, a specification achieves $100\\%$ positive test recall and negative test rejection while accepting $0\\%$ of required inputs. This demonstrates that perfect postcondition scores can miss an unusable input contract, motivating separate feedback on input coverage and output constraints.",
+      "published": "2026-10-07T02:11:30Z",
+      "updated": "2026-10-07T02:11:30Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10604",
+      "abs_url": "https://arxiv.org/abs/2610.10604",
+      "source": "arxiv"
+    },
     {
       "id": "2601.09745",
       "title": "Enhancing Formal Software Specification with Artificial Intelligence",
@@ -1325,7 +1446,7 @@
     },
     {
       "id": "2305.10437",
-      "title": "Bringing AI to the edge: A formal M\u0026S specification to deploy effective IoT architectures",
+      "title": "Bringing AI to the edge: A formal M&S specification to deploy effective IoT architectures",
       "authors": [
         "Román Cárdenas",
         "Patricia Arroba",
@@ -1349,7 +1470,7 @@
       "authors": [
         "Varun Pratap Bhardwaj"
       ],
-      "abstract": "Traditional software relies on contracts -- APIs, type systems, assertions -- to specify and enforce correct behavior. AI agents, by contrast, operate on prompts and natural language instructions with no formal behavioral specification. This gap is the root cause of drift, governance failures, and frequent project failures in agentic AI deployments. We introduce Agent Behavioral Contracts (ABC), a formal framework that brings Design-by-Contract principles to autonomous AI agents. An ABC contract C = (P, I, G, R) specifies Preconditions, Invariants, Governance policies, and Recovery mechanisms as first-class, runtime-enforceable components. We define (p, delta, k)-satisfaction -- a probabilistic notion of contract compliance that accounts for LLM non-determinism and recovery -- and prove a Drift Bounds Theorem showing that contracts with recovery rate gamma \u003e alpha (the natural drift rate) bound behavioral drift to D* = alpha/gamma in expectation, with Gaussian concentration in the stochastic setting. We establish sufficient conditions for safe contract composition in multi-agent chains and derive probabilistic degradation bounds. We implement ABC in AgentAssert, a runtime enforcement library, and evaluate on AgentContract-Bench, a benchmark of 200 scenarios across 7 models from 6 vendors. Results across 1,980 sessions show that contracted agents detect 5.2-6.8 soft violations per session that uncontracted baselines miss entirely (p \u003c 0.0001, Cohen's d = 6.7-33.8), achieve 88-100% hard constraint compliance, and bound behavioral drift to D* \u003c 0.27 across extended sessions, with 100% recovery for frontier models and 17-100% across all models, at overhead \u003c 10 ms per action.",
+      "abstract": "Traditional software relies on contracts -- APIs, type systems, assertions -- to specify and enforce correct behavior. AI agents, by contrast, operate on prompts and natural language instructions with no formal behavioral specification. This gap is the root cause of drift, governance failures, and frequent project failures in agentic AI deployments. We introduce Agent Behavioral Contracts (ABC), a formal framework that brings Design-by-Contract principles to autonomous AI agents. An ABC contract C = (P, I, G, R) specifies Preconditions, Invariants, Governance policies, and Recovery mechanisms as first-class, runtime-enforceable components. We define (p, delta, k)-satisfaction -- a probabilistic notion of contract compliance that accounts for LLM non-determinism and recovery -- and prove a Drift Bounds Theorem showing that contracts with recovery rate gamma > alpha (the natural drift rate) bound behavioral drift to D* = alpha/gamma in expectation, with Gaussian concentration in the stochastic setting. We establish sufficient conditions for safe contract composition in multi-agent chains and derive probabilistic degradation bounds. We implement ABC in AgentAssert, a runtime enforcement library, and evaluate on AgentContract-Bench, a benchmark of 200 scenarios across 7 models from 6 vendors. Results across 1,980 sessions show that contracted agents detect 5.2-6.8 soft violations per session that uncontracted baselines miss entirely (p < 0.0001, Cohen's d = 6.7-33.8), achieve 88-100% hard constraint compliance, and bound behavioral drift to D* < 0.27 across extended sessions, with 100% recovery for frontier models and 17-100% across all models, at overhead < 10 ms per action.",
       "categories": [
         "cs.AI",
         "cs.MA",
@@ -1652,7 +1773,7 @@
     },
     {
       "id": "2302.05530",
-      "title": "Machine Learning Based Approach to Recommend MITRE ATT\u0026CK Framework for Software Requirements and Design Specifications",
+      "title": "Machine Learning Based Approach to Recommend MITRE ATT&CK Framework for Software Requirements and Design Specifications",
       "authors": [
         "Nicholas Lasky",
         "Benjamin Hallis",
@@ -1660,7 +1781,7 @@
         "Rushit Dave",
         "Jim Seliya"
       ],
-      "abstract": "Engineering more secure software has become a critical challenge in the cyber world. It is very important to develop methodologies, techniques, and tools for developing secure software. To develop secure software, software developers need to think like an attacker through mining software repositories. These aim to analyze and understand the data repositories related to software development. The main goal is to use these software repositories to support the decision-making process of software development. There are different vulnerability databases like Common Weakness Enumeration (CWE), Common Vulnerabilities and Exposures database (CVE), and CAPEC. We utilized a database called MITRE. MITRE ATT\u0026CK tactics and techniques have been used in various ways and methods, but tools for utilizing these tactics and techniques in the early stages of the software development life cycle (SDLC) are lacking. In this paper, we use machine learning algorithms to map requirements to the MITRE ATT\u0026CK database and determine the accuracy of each mapping depending on the data split.",
+      "abstract": "Engineering more secure software has become a critical challenge in the cyber world. It is very important to develop methodologies, techniques, and tools for developing secure software. To develop secure software, software developers need to think like an attacker through mining software repositories. These aim to analyze and understand the data repositories related to software development. The main goal is to use these software repositories to support the decision-making process of software development. There are different vulnerability databases like Common Weakness Enumeration (CWE), Common Vulnerabilities and Exposures database (CVE), and CAPEC. We utilized a database called MITRE. MITRE ATT&CK tactics and techniques have been used in various ways and methods, but tools for utilizing these tactics and techniques in the early stages of the software development life cycle (SDLC) are lacking. In this paper, we use machine learning algorithms to map requirements to the MITRE ATT&CK database and determine the accuracy of each mapping depending on the data split.",
       "categories": [
         "cs.SE",
         "cs.CR",

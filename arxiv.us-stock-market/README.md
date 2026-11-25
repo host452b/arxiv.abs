@@ -3,7 +3,7 @@
 A curated collection of academic papers on **US stock market investment analysis**, organized by 3-year investment cycle stages. Applies 80/20 Pareto analysis to identify the 20% of core factors that drive 80% of returns and win-rate, classified across different analytical layers.
 
 - **Time span**: 2010–2026
-- **Total unique papers**: 1,241
+- **Total unique papers**: 1,336
 - **Search files**: 24 topic searches
 - **Cycle stages**: 5 investment cycle stages × 3-year intervals
 - **Primary source**: arXiv Quantitative Finance (q-fin)

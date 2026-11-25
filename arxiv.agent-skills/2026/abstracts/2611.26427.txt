@@ -1,0 +1,29 @@
+Title: MemFolder: Structure-Guided Memory Folding for Efficient Agent Memory Management
+Authors: Xuyang Liu, Chenwen Lu, Junxi Wang, Siyu Ren, Xinying Lin, Siteng Huang, Hongli Sun, Linfeng Zhang, Honggang Chen
+ID: 2611.26427
+URL: https://arxiv.org/abs/2611.26427
+
+Abstract:
+Long-term agents accumulate large external memory stores as interactions unfold,
+increasing the costs of storage, retrieval, and response generation. Efficiency
+is constrained by two coupled factors: a growing record count increases
+retrieval overhead, while longer retrieved contexts increase prefill computation
+and decoding-time attention costs. Existing methods prune or consolidate
+records, but pruning can discard useful evidence, whereas consolidation may
+produce fewer yet longer retrieval units. We introduce MemFolder, a structure-
+guided memory folding framework that sequentially reduces record count and
+context length. The framework comprises two core components that share memory
+groups, using cross-record structure to guide both evidence consolidation and
+compact representation. RecordFolder grounds entity mentions, progressively
+selects representative yet complementary anchors, and combines semantic and
+entity affinity with temporal chaining to consolidate compatible records into
+fewer retrieval units. ContextFolder encodes the original records within these
+groups into compact text and uses verification feedback to revise encodings when
+key facts cannot be recovered. Experiments on the three text-based memory
+benchmarks LoCoMo, PersonaMem, and LongMemEval and the two multimodal benchmarks
+M3-Bench-web and M3-Bench-robot demonstrate the strong performance of our
+methods. Notably, on Mem0, RecordFolder retains 99.0% of the original average
+performance across the three text-based benchmarks with 50% fewer records,
+exceeding the strongest baseline by 1.9 percentage points in performance
+retention. Combined with ContextFolder, existing record compression methods
+further shorten their output records while retaining most of their performance.

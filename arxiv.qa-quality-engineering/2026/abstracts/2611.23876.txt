@@ -1,0 +1,24 @@
+Title: SWE-growth: Teacher-Guided Adaptive Self-Play for Software Engineering Agents
+Authors: Songshi Liang, Zixuan Huang, Mingxuan Song, Haoyu Tang, Shusheng Xu, Tongkai Yang, Zihe Wang, Rui Yan
+ID: 2611.23876
+URL: https://arxiv.org/abs/2611.23876
+
+Abstract:
+Self-play offers a scalable way to train software engineering agents by
+generating repository-level repair tasks. However, with binary repair rewards
+and finite rollout budgets, all-fail groups provide no reward-based group-
+relative advantage. Such tasks may still offer learning opportunities when a
+Teacher can provide verified repairs absent from the Student's own attempts. We
+introduce SWE-Growth, a teacher-guided adaptive self-play framework that uses
+verified Teacher outcomes to identify learning opportunities for the current
+Student. Tasks with all students failure but reliable Teacher success provide
+demonstrations for supervised fine-tuning (SFT), and post-SFT Student rollouts
+identify mixed-outcome tasks with a positive Teacher--Student gap for
+reinforcement learning. Task eligibility also guides Injector updates,
+connecting Student training with subsequent task generation. Starting from 101
+seed issues, \textsc{SWE-Growth} improves Qwen3-Coder-30B-A3B-Instruct from
+27.7% to 31.7% on SWE-bench Pro and from 11.0% to 17.2% on held-out
+TerminalBench 2.1 by Round~2. It exceeds Student-only self-play by 2.6 and 4.1
+percentage points, respectively, and Teacher-augmented self-play by 1.8 and 2.5
+points under approximately matched budgets. These results support adapting both
+supervision and task selection to the Student's evolving repair capability.

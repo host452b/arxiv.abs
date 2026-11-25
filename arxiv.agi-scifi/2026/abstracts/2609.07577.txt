@@ -1,0 +1,21 @@
+Title: GPU-Accelerated Hypergraph Partitioning and Placement to Map SNNs on Neuromorphic Hardware
+Authors: Marco Ronzani, Cristina Silvano
+ID: 2609.07577
+URL: https://arxiv.org/abs/2609.07577
+
+Abstract:
+SNNs running on neuromorphic hardware use spikes to achieve sparse and energy-
+efficient communication over a mesh of cores. In turn, system performance
+heavily depends on the assignment of neurons to cores: the mapping. Since
+hardware features inter-core multicast and intra-core replication of spikes, we
+model SNNs as hypergraphs to exploit both opportunities for reducing
+communication traffic. Mapping thus comprises two NP-hard problems: hypergraph
+partitioning and placement on the lattice of cores. High-quality solutions to
+both are critical, yet increasingly difficult as networks scale to millions of
+neurons. Therefore, we propose a GPU-accelerated pipeline for SNN mapping: a
+multi-level partitioning scheme is devised around hardware constraints, while
+placement is initialized through recursive bisection, followed by refinement
+pulling together strongly connected cores through repeated swaps. Model-based
+experiments show upwards of 16% lower latency and 42% lower energy for spike
+movements over existing sequential tools, while our parallel mapper is on
+average 18-280x faster.

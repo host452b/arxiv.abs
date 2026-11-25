@@ -1,0 +1,20 @@
+Title: YUL: Bringing Software Supply Chain Security to Coding Agents
+Authors: Aman Sharma, Frank Reyes, Martin Monperrus
+ID: 2611.23314
+URL: https://arxiv.org/abs/2611.23314
+
+Abstract:
+Coding agents choose and declare third-party dependencies on their own. They
+often declare a stale version that they recall from their training data. A stale
+dependency exposes the project to known vulnerabilities that the latest release
+already fixes. We present YUL, a design for coding agent harnesses that ensures
+that no stale dependencies are ever used. It does so by checking every
+dependency declaration against the package registry. If a dependency is stale or
+does not exist, YUL blocks the usage and tells the coding agent which version to
+use, so the coding agent retries with the fix. We evaluate YUL on 60 tasks
+across six ecosystems with Claude Code running Claude Opus 5.5 and OpenCode
+running DeepSeek V4.1 Flash. Without YUL, Opus declares a stale version in 29%
+of runs and DeepSeek in 39%, and both declare a stale version in every GitHub
+Actions run. With YUL, the coding agents end on the latest release in 93% of
+stale Opus runs and in 96% of stale DeepSeek runs. YUL thus brings the best
+practices of software supply chain security to coding agents.

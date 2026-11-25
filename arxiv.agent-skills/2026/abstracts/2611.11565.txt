@@ -1,0 +1,24 @@
+Title: Actions Should EARN Their Credit: Test-Time Adaptation and Route Consolidation for Frozen LLM Agents
+Authors: Bian Sun, Kevin Zhai, Mubarak Shah, Song Wang
+ID: 2611.11565
+URL: https://arxiv.org/abs/2611.11565
+
+Abstract:
+LLM agents can use feedback from repeated attempts to improve their decisions
+without updating model parameters. However, positive action credits can continue
+to favor actions that repeatedly achieve the same score, even when higher scores
+are achievable. Under a fixed interaction budget, trying new actions in the
+final attempts can also lower performance. We introduce EARN, a method that uses
+past experience to guide further progress and retain earlier performance through
+conditional reuse of effective action sequences. EARN reduces action credits for
+reaching scores repeatedly attained in earlier episodes and assigns larger
+credits to action segments that reach higher scores. These credits adjust the
+probabilities of LLM-proposed actions. During the final episodes, EARN directly
+replays stored actions when the current context matches the recorded context and
+the actions remain available, bypassing LLM candidate generation. We evaluate
+performance at the end of the interaction budget using the average score over
+the final four episodes. Across Jericho, ScienceWorld, and Crafter, EARN
+achieves the best score on this metric in 31 of 33 task--budget settings among
+the evaluated methods, including ties. Across the evaluated Jericho budgets,
+replay bypasses 78.9--86.3\% of candidate-generation calls in the final four
+episodes, averaged across games.

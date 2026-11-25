@@ -1,0 +1,29 @@
+Title: Where Did My Tokens Go? Verifiable Token Billing for LLM Services
+Authors: Jiayuan Du, Yebo Feng, Lin Zhang, Konglin Zhu
+ID: 2611.31806
+URL: https://arxiv.org/abs/2611.31806
+
+Abstract:
+Users of large language model (LLM) services receive token bills with limited
+evidence of which calls incurred their charges. In broker-mediated agent
+workflows, calls arise after authorization and billing evidence spans service
+domains. A bill can count one genuine receipt twice and omit another. Valid
+metering evidence can also be attributed to the wrong execution. We present
+\textsc{TokenProv}, which uses authenticated provider acceptances to establish
+settlement coverage and verify token charges. An authenticated causal history
+links runtime attempts to the signed policy, and jointly signed handoffs bind
+intent, dispatch, and acceptance to the same call. Handoffs submitted
+independently of the bill can reveal omitted calls. The auditor requires a one-
+to-one match between observable acceptances and settled receipts. For each
+acceptance, a common provider relation binds metered usage to the cache-
+dependent execution of the accepted input using the registered model and serving
+rules, and checks the charge under the pricing rule. To limit serving-path
+overhead, providers can use attested state transitions in trusted execution
+environments or defer proof generation until audit by committing to witnesses in
+receipts before settlement. The auditor recomputes the bill from the verified
+charges. We prove audit soundness relative to authenticated evidence. Across
+five models, \textsc{TokenProv} with signed provider receipts achieves 94.4--
+107.4\% of baseline throughput with 54--66\,ms of online non-LLM processing per
+request. In a separate eight-call replay, deferring scoped proofs reduces
+foreground protocol time from 1.20\,s to 8.65\,ms (99.28\%). The auditor rejects
+all 1,600 validly signed attack queries across 100 adaptive episodes.

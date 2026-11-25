@@ -1,0 +1,28 @@
+Title: MemHarmBench: Evaluating Cross-Session Prompt Injection in Memory-Persistent AI Agents
+Authors: Zhihua Wang, Yunhao Feng, Yifeng Gao, Rui Pan, Baiheng Zhao, Zixing Chen, Xingjun Ma
+ID: 2611.01700
+URL: https://arxiv.org/abs/2611.01700
+
+Abstract:
+AI agents often rely on persistent memory to retain user preferences and
+operational rules across sessions. However, this capability introduces a new
+safety risk: malicious instructions from messages, documents, or Web content can
+be retained in memory and influence future tasks even after the original attack
+content is removed. Existing attack success metrics, however, fail to capture
+who is affected and how attacks translate into downstream harm during otherwise
+normal task execution. We introduce MemHarmBench, a victim-centric benchmark for
+evaluating cross-session prompt injection in memory-persistent AI agents.
+MemHarmBench considers three categories of potential victims: users,
+workspace/project owners, and external stakeholders. Our evaluation first
+exposes an agent to malicious instructions and tests whether they are retained
+in memory. We then remove the attack content and initiate a new session with a
+legitimate task while preserving the agent's memory. We jointly evaluate whether
+the agent follows the attacker's intent, completes the legitimate task, and
+exhibits observable execution anomalies. Across multiple agent systems, we find
+that cross-session attacks can remain behaviorally stealthy: agents often
+complete tasks normally and exhibit no detectable anomalies while still making
+critical decisions aligned with the attacker's intent. By connecting malicious
+memory retention to downstream decisions and affected parties, MemHarmBench
+provides a systematic framework for exposing safety risks that conventional
+attack- and task-success metrics may overlook. We publicly release MemHarmBench
+at https://github.com/Kirito14IT/MemHarmBench.

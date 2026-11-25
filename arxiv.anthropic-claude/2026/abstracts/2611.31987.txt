@@ -1,0 +1,22 @@
+Title: InCue: Making Better Use of What Multimodal LLMs Already See at Test Time
+Authors: Shuwei Wu, Siyue Yu, Longin Jan Latecki
+ID: 2611.31987
+URL: https://arxiv.org/abs/2611.31987
+
+Abstract:
+Even when multimodal large language models (MLLMs) answer incorrectly, their
+internal cues often point to the relevant region. A widely used remedy re-
+presents the cue-selected region as an enlarged crop to supply finer detail.
+However, we find that much of its gain requires no new detail: it largely
+survives when the crop comes from the already-seen low-resolution input, and
+partly even when the region's cached tokens are merely copied. Part of re-
+presentation's gain thus comes from drawing attention to evidence the model
+already holds. We propose InCue, a test-time framework that makes better use of
+this evidence without additional visual input. InCue treats visual attention and
+predictive-entropy gradients as Internal Cues, couples them into a spatial
+target, and optimizes only an offset on the existing visual tokens to steer
+attention toward it. Under matched visual-token budgets, InCue achieves state-
+of-the-art performance, consistently outperforming recent test-time methods and
+improving four MLLMs by up to 8.9% on V$^*$ and 23.4% on its hard samples. Its
+gains carry over to eight general benchmarks. Code will be available at
+https://github.com/paul-swu/InCue.

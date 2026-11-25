@@ -1,0 +1,31 @@
+Title: Evaluating LLM Security Review Agents with Operationally Sourced Ground Truth
+Authors: Mudita Khurana, Karim Liman-Tinguiri
+ID: 2611.31606
+URL: https://arxiv.org/abs/2611.31606
+
+Abstract:
+LLM-based security review agents can reason about vulnerabilities that
+deterministic tools miss, but deploying them responsibly requires knowing
+whether they actually work. Existing benchmarks construct ground truth
+synthetically or from public CVE databases and are blind to the vulnerability
+patterns specific to a given production codebase. We present an evaluation
+framework grounded in an organisation's own vulnerabilities, with three
+contributions. First, a dataset construction methodology that derives ground
+truth from operational security data (bug bounty reports, penetration test
+findings and internally reported vulnerabilities), exploiting the property that
+a confirmed vulnerability must exist immediately before its fix is merged and be
+absent immediately after. Second, two complementary evaluation strategies: one
+reviewing the pull request that introduced a vulnerability and one searching a
+repository where it already exists. Both run through a two-agent pipeline
+pairing a Security Engineer agent, which reviews code without knowledge of the
+vulnerability, with a Judge agent that decides whether its findings would have
+mitigated the known issue. Third, a trace-level behavioural characterisation of
+how frontier models reason about these vulnerabilities. Across GPT-5.5, Sonnet
+4.6 and Opus 4.7, GPT-5.5 shows higher discovery rates on the pull-request
+strategy (57%, 95% CI [42%, 72%]) after a round of OPRO-style improvements, and
+Sonnet 4.6 on the repository strategy (69%, 95% CI [56%, 81%]). Trace analysis
+shows the models have complementary strengths that explain these differences,
+and that outcome-only scoring can mischaracterise their production behaviour.
+The methodology relies only on artefacts that vulnerability management workflows
+commonly produce, though all results come from a single organisation's codebase
+and we have not tested how well they generalise.

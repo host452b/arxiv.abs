@@ -1,0 +1,31 @@
+Title: Scaling Laws for Parameter Setting in Digitized Counterdiabatic QAOA
+Authors: Yaocheng Chen, Jiapei Zhuang
+ID: 2611.00573
+URL: https://arxiv.org/abs/2611.00573
+
+Abstract:
+Optimizing parameters separately for each problem instance limits the reuse of
+variational quantum algorithms. We develop empirical scaling laws for parameter
+setting in the digitized counterdiabatic quantum approximate optimization
+algorithm (DC-QAOA) for weighted MaxCut. The prescription combines exact
+covariance under uniform edge-weight rescaling with power laws in mean degree
+fitted separately to offline-optimized cost and counterdiabatic angles. After
+the weight and degree scales are removed, the optimized angles of different
+training graphs cluster around common amplitudes, so a small coefficient table
+suffices. Frozen coefficients assign angles from a target graph's mean degree
+and root-mean-square edge weight without target-instance variational
+optimization. In ideal-circuit simulations across 1050 test graphs spanning ten
+graph families and five positive edge-weight distributions, mean optimal-
+solution probability is higher than that of the fixed-angle quantum approximate
+optimization algorithm (QAOA) at each depth from one to four layers, reaching
+19.36% versus 13.11% at four layers. A six-layer extension on 600 graphs also
+shows a mean probability advantage. Hardware execution on the IBM Quantum
+processor ibm_fez for 21 unit-weight 3-regular graphs shows a mean probability
+advantage at one layer, while the ordering reverses at two layers. In separate
+energy-based experiments, direct assignment gives a higher mean approximation
+ratio than random-start optimization reaches within 500 evaluations, and
+refinement started from the formula angles improves it further. These results
+show how a scaling-based representation of optimized angles can guide parameter
+reuse across graph instances, enabling direct parameter assignment without
+target-instance variational optimization and providing initial angles for local
+refinement.

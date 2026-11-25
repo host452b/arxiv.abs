@@ -10,11 +10,598 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:43:07Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 270,
-  "return_count": 200,
+  "return_count": 229,
   "papers": [
+    {
+      "id": "2611.20851",
+      "title": "artist: A Python package for differentiable ray tracing and gradient-based optimization of solar tower power plant operation",
+      "authors": [
+        "Marlene Busch",
+        "Marie Weiel",
+        "Kaleb Phipps",
+        "Daniel Maldonado Quinto",
+        "Max Pargmann",
+        "Robert Pitz-Paal",
+        "Markus Götz"
+      ],
+      "abstract": "Solar tower power plants provide dispatchable, renewable energy by concentrating sunlight with thousands of mirrors, called heliostats, onto a central receiver. Efficient operation requires accurate modeling of the optical path from each heliostat to the receiver and compensation for manufacturing imperfections, kinematic misalignment, and material degradation that distort the flux distribution. Conventional ray tracers predict the flux from an assumed plant model but are limited to forward simulation. They cannot recover unknown plant parameters from measured flux nor directly optimize plant operation. We present artist, an open-source, FAIR4RS-compliant Python package implementing a fully differentiable digital twin of solar tower power plants. By making the optical pipeline, comprising heliostat surface representation, kinematics, blocking, and ray tracing, end to end differentiable, artist turns the digital twin from a passive forward model into an active physics-based tool for inverse modeling and data-driven optimization. The resulting gradient-based framework unifies tasks usually handled by separate solutions, such as reconstructing heliostat surfaces and kinematics from operational flux images without costly deflectometry, predicting irradiance at the receiver, and optimizing aim points to realize a desired receiver flux density distribution. Built on PyTorch, artist scales to real plants through GPU acceleration, a structure-of-arrays memory layout, and nested data parallelism. It interfaces with open data sources such as the PAINT database. We describe the software architecture, physical models, and optimization framework, and demonstrate the workflow on representative tasks. By integrating modeling, prediction, and optimization into a single open, interpretable package, artist provides a principled foundation for data-driven research toward autonomous solar tower operation.",
+      "published": "2026-11-16T10:25:21Z",
+      "updated": "2026-11-16T10:25:21Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20851",
+      "abs_url": "https://arxiv.org/abs/2611.20851",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.11586",
+      "title": "FastGRT: Accelerating Training of 3D Gaussian Ray Tracing",
+      "authors": [
+        "Meet Banthia",
+        "Xiaoteng Liu",
+        "Hexu Zhao",
+        "Aurojit Panda",
+        "Jinyang Li"
+      ],
+      "abstract": "Ray Tracing enables rendering capabilities that are difficult to achieve with rasterization-based approaches such as 3D Gaussian Splatting (3DGS). However, the training cost of Gaussian-based ray tracing (GRT) is much higher than that of 3DGS. In this paper, we study how ray tracing using Gaussians executes on GPUs and show that a considerable fraction of the training cost arises from how the computation is organized. We develop FastGRT, which decouples ray traversal from blending and reuses work done in the forward pass for the backward pass. FastGRT further incorporates optimizations such as fast gradient accumulation and a hybrid BVH update strategy to tackle other major bottlenecks in the training pipeline. We implement FastGRT in Vulkan. To the best of our knowledge, it is the first Vulkan-based GRT implementation that supports both training and rendering. Compared to 3DGRT, FastGRT improves training time by 1.9$\\times$ to 4.97$\\times$, while preserving the original rendering formulation. Our code is open source.",
+      "published": "2026-11-08T20:00:11Z",
+      "updated": "2026-11-08T20:00:11Z",
+      "categories": [
+        "cs.CV",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.11586",
+      "abs_url": "https://arxiv.org/abs/2611.11586",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.37036",
+      "title": "GraftRay: Physically Based Mesh Insertion into Gaussian Splatting Scenes via Path Tracing",
+      "authors": [
+        "Jinxin Ai",
+        "Matthias Nießner"
+      ],
+      "abstract": "We present GraftRay, a unified method for physically consistent insertion of mesh objects into 2D and 3D Gaussian Splatting (2DGS/3DGS) indoor scenes, accounting for lighting interactions between objects and their surroundings. We lift albedo, roughness, metallic and normals from diffusion-based 2D priors onto the Gaussians by back-projection, model windows and lamps as analytic area emitters, and recover their absolute radiance from ordinary LDR captures with a low-dimensional fit over unit-radiance bases. A path tracer over Gaussians and meshes then produces view-consistent shading, interreflections and soft shadows, which are composited onto the original reconstruction by differential rendering, preserving the untouched background. On synthetic, real and generated scenes, GraftRay outperforms recent insertion and inverse-rendering baselines in image fidelity and shadow accuracy at competitive cost, and users prefer its lighting and shadows over those of the baselines.",
+      "published": "2026-10-27T11:11:48Z",
+      "updated": "2026-11-22T13:25:26Z",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.37036",
+      "abs_url": "https://arxiv.org/abs/2610.37036",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.32075",
+      "title": "RADIANT: Object-Centric Feed-Forward Global Illumination",
+      "authors": [
+        "Sarah Zhang",
+        "Zhiyang Dou",
+        "Minghao Guo",
+        "Benjamin Tod Jones",
+        "Wojciech Matusik"
+      ],
+      "abstract": "Feed-forward neural renderers synthesize global illumination across novel 3D scenes without per-scene optimization or runtime ray tracing. Existing transformer-based renderers tokenize individual triangles, so self-attention scales quadratically with mesh resolution. Yet macroscopic radiative transport is governed by the underlying surface geometry and object arrangements rather than a particular mesh discretization; finer tessellation can thus inflate token counts without changing the underlying transport physics, motivating a discretization-agnostic and object-centric representation. We introduce RADIANT (RADiance-based Inter-Actor Neural Transformer), an object-centric architecture for feed-forward global illumination from point inputs. By representing each object with a compact budget of 32 surface-patch tokens, RADIANT decouples attention sequence length from polygon counts. In a single network, an inter-object scene transformer models 3D radiative exchange and a view decoder renders images at target camera poses. To capture light transport without materializing O(N^2) bias matrices, invariant form-factor attention embeds geometric distances and surface orientations directly into query-key dot products as SE(3)-invariant inner products weighted by learned area and material gains. For primary visibility without mesh connectivity, camera rays cross-attend scene tokens guided by depth-tested point splats in a shared spherical frame. Across a 1.03M-scene benchmark under matched model capacity, RADIANT reaches 25 dB tone-mapped PSNR in 5x fewer training steps than RenderFormer, and achieves 32.2 dB at 600k steps (+3.3 dB over RenderFormer and +7.6 dB over RenderFormer-V2). We further demonstrate the scalability of RADIANT, which completes a 512x512 forward pass of a 500-object scene in 0.83 s, with computational cost scaling with the number of objects rather than polygons.",
+      "published": "2026-10-23T02:22:31Z",
+      "updated": "2026-10-23T02:22:31Z",
+      "categories": [
+        "cs.CV",
+        "cs.GR",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32075",
+      "abs_url": "https://arxiv.org/abs/2610.32075",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.31630",
+      "title": "Ray-by-Ray: Fine-Grained Resource Management for GPU Ray Tracing Units",
+      "authors": [
+        "Junrui Pan",
+        "Cesar Avalos Baddouh",
+        "Kai Ze Ee",
+        "Timothy G. Rogers"
+      ],
+      "abstract": "Ray tracing (RT) generates photorealistic images by simulating the physical behavior of light as it interacts with surfaces in a virtual scene. In film production and high-end rendering pipelines, this technique computes global illumination, reflections, refractions, and soft shadows by tracing millions of light rays per frame and accurately modeling their bounces and attenuation. Contemporary GPUs incorporate specialized ray tracing hardware to accelerate key operations in the traversal pipeline. By accelerating these stages in hardware, the unit enables real-time ray tracing for complex scenes that previously required offline computation. However, ray tracing introduces substantial control and data divergence. Each ray may traverse a different set of nodes in the acceleration structure, encounter distinct materials, or terminate at varying depths. This irregularity reduces thread coherence and exposes a fundamental disparity between the GPU SIMT and per-thread execution model of dedicated RT units, where each ray progresses independently. In this work, we seek to validate assumptions made in open-source infrastructure and identify potential inefficiencies in resource management within the ray tracing pipeline. To address inefficiency caused by mismatches between SIMT and RT granularities, we propose Ray-by-Ray, which decomposes on-chip buffers into the granularity of individual rays and introduces lightweight management structures that enable more warps to run in parallel without increasing buffer capacity. This approach improves ray tracing unit utilization and increases memory-level parallelism. Experimental results show that Ray-by-Ray achieves an average performance improvement of 1.91x over the baseline, with an area overhead of 0.19\\%.",
+      "published": "2026-10-22T17:48:11Z",
+      "updated": "2026-10-22T17:48:11Z",
+      "categories": [
+        "cs.AR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.31630",
+      "abs_url": "https://arxiv.org/abs/2610.31630",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.13498",
+      "title": "A Hybrid and Hierarchical Ray Tracing Method for Efficient 3D Gaussian Rendering",
+      "authors": [
+        "Tiancheng Zhao",
+        "Sixu Li",
+        "Yuzhou Chen",
+        "Hengyu Ding",
+        "Zhiming Pan",
+        "Chaojian Li"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) is a powerful representation for real-time neural reconstruction and rendering. While existing 3DGS systems rely on rasterization for efficiency, recent work explores ray tracing to enable secondary lighting, highly distorted cameras, and depth-of-field effects. However, compared with rasterization, ray-traced 3DGS introduces three major challenges: (1) the highly non-uniform spatial distribution of massive numbers of Gaussian primitives creates severe load imbalance; (2) neighboring pixels often generate rays with highly similar traversal paths, leading to substantial redundant traversal overhead; and (3) supporting both Gaussian and triangle primitives yields heterogeneous intersection workloads that are not well matched to existing GPU architectures. We present H2-Ray, a hybrid and hierarchical ray tracing architecture for efficient 3D Gaussian rendering. H2-Ray introduces three techniques. Load-Balanced Spatial BVH (LB-SBVH) partitions the scene into uniform grids and uses density-aware representations to convert an imbalanced global workload into balanced local traversal units. Ray-Cluster Path Reuse (RCPR) lets a proxy ray share traversal state with neighboring rays to amortize redundant traversal. The Unified Intersection Engine (UIE) supports mixed Gaussian and triangle intersections through a mode-multiplexed datapath that shares 40% of its floating-point units across both primitive types. Across 8 scenes, H2-Ray achieves a geometric-mean speedup of 3.77x and a maximum speedup of 9.26x over RaySplats on the NVIDIA RTX A5000, combining a cycle-accurate model of the modified RT Core with measured CUDA timings.",
+      "published": "2026-10-09T12:28:16Z",
+      "updated": "2026-10-09T12:28:16Z",
+      "categories": [
+        "cs.AR",
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.13498",
+      "abs_url": "https://arxiv.org/abs/2610.13498",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.07941",
+      "title": "UltraDiff: Differentiable Ray Tracing in Ultrasound for Shape Optimization",
+      "authors": [
+        "Felix Duelmer",
+        "Magdalena Wysocki",
+        "Nassir Navab",
+        "Mohammad Farid Azampour"
+      ],
+      "abstract": "Physically-based differentiable rendering enables gradient-based optimization of scene parameters by matching rendered images to measurements, but has so far mainly focused on light transport. We extend this paradigm to medical ultrasound, where image formation resembles transient rendering: echoes are binned by time-of-flight rather than projected onto an image plane. We present UltraDiff, a modular framework for differentiable ultrasound ray tracing. UltraDiff formulates ultrasound image formation as a path-space integral, gated by travel time between the transducer and tissue interfaces, and derives a Monte Carlo estimator of both the forward model and its gradients with respect to scene parameters. We demonstrate this on an inverse geometry estimation: starting from a sphere, an SDF is optimized until simulated echoes match measured ones, recovering vertebral surfaces from simulated B-mode sweeps and from a real robotic acquisition of a spine phantom. Unlike state-of-the-art ultrasound shape reconstruction methods, which rely on pre-segmented images, our approach operates unsupervised on B-mode images through analysis-by-synthesis, while achieving competitive geometric accuracy. Implemented on top of Mitsuba 3, UltraDiff brings differentiable path tracing to a new sensing modality and provides a foundation for inverse problems in acoustic imaging.",
+      "published": "2026-10-06T08:16:56Z",
+      "updated": "2026-10-06T08:16:56Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.07941",
+      "abs_url": "https://arxiv.org/abs/2610.07941",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.00752",
+      "title": "ARCTAN: Arbitrary RF Containment Using Tactical Aerial Networks and Differentiable Ray Tracing",
+      "authors": [
+        "Samuel Rivera",
+        "Zhihui Gao",
+        "Yiming Li",
+        "Tingjun Chen"
+      ],
+      "abstract": "Aerial base stations (ABSs) can rapidly establish connectivity in ad hoc, infrastructure-deprived environments, but their broadcast, line-of-sight transmissions leak far beyond the intended service area, exposing communications to passive eavesdropping and interference. Prior physical layer defenses based on cooperative jamming typically assume known eavesdropper locations, simplified statistical channels, or continuously repositioned jammers. We instead pose the problem as a radio frequency (RF) containment: confining usable signal to a user-defined, arbitrarily-shaped target zone while denying it elsewhere independent of eavesdropper location. We present ARCTAN, a gradient-based optimization framework that jointly optimizes the position, orientation, and transmit power of stationary ABSs and cooperative jammers (CJs) by backpropagating through site-specific, differentiable 3D ray traced channels. Evaluated in a high-fidelity digital twin across three target zone geometries, ARCTAN achieves a mean in-zone SINR of approximately 10 dB while reducing mean out-of-zone SINR from 13-16 dB to -3-5 dB, and suppressing signal-leakage ratios from over 93% to below 46% requiring at most 10 of 12 candidate CJs.",
+      "published": "2026-09-30T21:46:58Z",
+      "updated": "2026-09-30T21:46:58Z",
+      "categories": [
+        "eess.SP",
+        "cs.NI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.00752",
+      "abs_url": "https://arxiv.org/abs/2610.00752",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.24513",
+      "title": "Pierce: GPU Ray Tracing for Spatial Joins over Complex 3D Data",
+      "authors": [
+        "Anton Hackl",
+        "Eleni Tzirita Zacharatou"
+      ],
+      "abstract": "Many emerging applications, from computational biology to digital twins and urban planning, rely heavily on three-dimensional spatial joins over polyhedral meshes. These joins comprise computationally-intensive triangle--triangle intersection tests that pairwise compare the faces of polyhedral meshes. Since each mesh may contain thousands of faces, the resulting cost challenges the responsiveness of spatial data management techniques. Existing techniques follow the filter-and-refine paradigm, accelerating either the filtering step through indexing or the refinement step through progressive mesh compression combined with GPU parallelization of triangle--triangle tests. However, the former neglects the high cost of intra-geometry refinements, whereas the latter lowers this cost but still relies on the same pairwise triangle--triangle tests. In this paper, we introduce Pierce, an approach that reformulates three-dimensional spatial joins over complex polyhedral meshes as ray-tracing operations and leverages the hardware ray-tracing units (RT cores) of modern GPUs to accelerate query execution. Our approach casts rays along the edges of one mesh against a spatial hierarchy built over the other, performing ray--node tests at the internal levels to prune distant geometries and ray--triangle tests at the leaves to identify intersecting meshes, both of which RT cores accelerate in hardware. We evaluated Pierce on real and synthetic data against multiple baselines, demonstrating more than two orders of magnitude speedup on digital pathology data compared to the state-of-the-art approach.",
+      "published": "2026-09-21T12:52:10Z",
+      "updated": "2026-09-21T12:52:10Z",
+      "categories": [
+        "cs.DB"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.24513",
+      "abs_url": "https://arxiv.org/abs/2609.24513",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.21054",
+      "title": "Physically Based Rendering in the Latent Space",
+      "authors": [
+        "Vuk Radovanovic",
+        "Vishesh Gupta",
+        "Adrien Gruson",
+        "Binh-Son Hua"
+      ],
+      "abstract": "Image diffusion models have shown impressive image generation capabilities but are often hard to control, in contrast to classical computer graphics pipelines such as physically based rendering. However, we observe that there is a bridge between light transport phenomena and the distribution of latent space values produced by such models. Thus, we introduce physically based rendering in the feature space learned by the variational autoencoders in generative models, enabling light transport simulation in the latent space. This allows us to leverage physically based rendering techniques to output latent maps for physically guided content generation. We propose modifications to the rendering equation, which, when paired with a differentiable renderer, can yield an optimal set of scene parameters that require only minimal refinement to accurately render into the pretrained latent space. We train our method on a single rendered image, and then demonstrate the generalization of the method to scene geometry changes, lighting changes, and camera view changes.",
+      "published": "2026-09-17T20:14:41Z",
+      "updated": "2026-09-17T20:14:41Z",
+      "categories": [
+        "cs.GR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21054",
+      "abs_url": "https://arxiv.org/abs/2609.21054",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.01975",
+      "title": "RT-HiSS: Ray Tracing Accelerated High Dimensional Vector Similarity Searches",
+      "authors": [
+        "Revanth Reddy Munugala",
+        "Michael Gowanlock"
+      ],
+      "abstract": "Recent GPU generations include special-purpose ray tracing (RT) cores for graphics applications. While RT cores are primarily used for rendering, recent works show they can be leveraged for general-purpose tasks, including similarity searches. However, existing approaches do not support datasets exceeding three dimensions. In this work, we propose RT-HiSS, the first exact GPU RT-core-based similarity search algorithm for high-dimensional datasets. GPU similarity search often scales poorly for large datasets with substantial search distances. To address this, RT-HiSS uses RT cores for fast index construction and searches, followed by candidate refinement on CUDA cores. We introduce a two-pass approach to estimate an upper bound on result size, enabling efficient batching under GPU memory constraints with near-perfect load balancing. Additionally, we examine shared memory tiling and compressed result masks to improve GPU resource utilization. RT-HiSS yields speedups up to 8.37$\\times$ over competitive state-of-the-art GPU algorithms across six real-world datasets.",
+      "published": "2026-09-02T01:17:22Z",
+      "updated": "2026-10-25T21:59:01Z",
+      "categories": [
+        "cs.DC",
+        "cs.DB"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.01975",
+      "abs_url": "https://arxiv.org/abs/2609.01975",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.30890",
+      "title": "Ray Tracing-Based LoRaWAN Gateway Placement for Reliable Connectivity in Amazonian Regions",
+      "authors": [
+        "Cláudio Modesto",
+        "Lucas Mozart",
+        "Cleverson Nahum",
+        "Bruno Castro",
+        "Aldebaro Klautau"
+      ],
+      "abstract": "Network planning is an important task in wireless communications, as it helps network operators avoid unnecessary costs. In the context of the internet of things, using long-range wide-area network technologies in the Amazon rainforest, a key challenge is ensuring reliable communication between end-devices and gateways (GWs). In this sense, this reliability is strongly affected by channel conditions. Thus, during the planning phase, choosing the appropriate channel model is an important decision for accurate simulations. Given this motivation, in this work, we propose an optimization model to evaluate the impact of different types of channels on coverage and packet delivery ratio in a forest scenario. We used channels from ray tracing, empirical, and stochastic approaches to assess how decisions made during the network planning phase, in terms of the channel used, affect GW placement and, specifically, the percentage of end-devices covered and the reliability of the communication system. Our results show that GW placement based on site-independent channels can overestimate the number of GWs required to meet the network requirements, whereas using site-specific channels allows us to satisfy the same requirements with fewer GWs.",
+      "published": "2026-08-31T14:44:23Z",
+      "updated": "2026-08-31T14:44:23Z",
+      "categories": [
+        "cs.NI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.30890",
+      "abs_url": "https://arxiv.org/abs/2608.30890",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.29269",
+      "title": "LightFuse: Relightable Interactive Gaussian Scene Reconstruction via Multi-Scan Fusion and 2D Gaussian Ray Tracing",
+      "authors": [
+        "Haonan Zhou",
+        "Gaoxiang Linghu",
+        "Youlin Jia",
+        "Hongyu Cui",
+        "Kewei Wei",
+        "Kaiyue Zhou",
+        "Bruce X. B. Yu",
+        "Gaoang Wang"
+      ],
+      "abstract": "Relightable interactive scene reconstruction aims to build an editable 3D model from scans of different object arrangements and render new layouts under novel illumination. Existing methods either bake lighting into appearance or recover material and illumination only for fixed scenes, leaving edited layouts with inconsistent shadows and indirect lighting. We present LightFuse, a 2D Gaussian framework that extends interactive scene reconstruction with explicit material-illumination decomposition and physically based relighting. LightFuse first fuses observations across states to reconstruct a shared background and movable objects. It then conducts ray-tracing-oriented geometry refinement to produce more complete and consistent surfaces. On the refined geometry, staged training with differentiable one-bounce ray tracing separates shared metallic--roughness material from state-specific environment lighting. The resulting scene supports object rearrangement, material editing, and relighting, while ray tracing recomputes appearance after each interaction. Experiments across synthetic scenes demonstrate state-of-the-art relighting quality, outperforming the strongest baseline by +9.74\\,dB PSNR and +0.121 SSIM on average. Project page: https://zhn202.github.io/LightFuse/",
+      "published": "2026-08-29T13:49:13Z",
+      "updated": "2026-08-29T13:49:13Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.29269",
+      "abs_url": "https://arxiv.org/abs/2608.29269",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.18495",
+      "title": "Physics-Unrolled Neural Operator for Accelerating High-Fidelity Wireless Ray Tracing",
+      "authors": [
+        "Rafid Umayer Murshed",
+        "Saif Ur Rahman",
+        "Mingyue Tang",
+        "Elahe Soltanaghai"
+      ],
+      "abstract": "Site-specific wireless design relies on ray tracing to predict how signal strength varies across a floorplan, but a converged indoor radio map takes tens of seconds to simulate and planning a single building requires thousands of them. A learned surrogate can remove most of that cost, yet training one runs into a second problem: high-fidelity labels are exactly what is too expensive to produce at scale, so the affordable labels come from finite-ray simulations that carry residual Monte Carlo noise. We address this with RayNO, a physics-unrolled neural operator that reconstructs the converged output of a ray tracer from one cheap low-fidelity run and scene priors. Rather than treating a radio map as a generic image, RayNO refines the field through three stages matched to reflection, diffraction, and scattering, each supervised by a label of matching physical complexity. We prove that when the label error is conditionally unbiased the learned operator can end up closer to the high-fidelity reference than the labels it was trained on, and we verify that condition directly in the simulator using repeated independent ray seeds. Across diverse floorplans, RayNO outperforms image-to-image baselines, wireless learning models, monolithic neural operators, and classical multi-fidelity regression on both image-quality and wireless deployment metrics, while reducing the cost of a high-fidelity map from roughly 28 s to 0.11 s.",
+      "published": "2026-08-19T03:39:55Z",
+      "updated": "2026-11-07T12:22:15Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.18495",
+      "abs_url": "https://arxiv.org/abs/2608.18495",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.17682",
+      "title": "Differentiable Voronoi Ray Tracing Beyond Rasterization Speeds",
+      "authors": [
+        "Bernardo Taveira",
+        "Carl Lindström",
+        "Joakim Johnander",
+        "Fredrik Kahl"
+      ],
+      "abstract": "Real-time novel view synthesis is dominated by rasterized explicit primitives. These projection-based pipelines provide high throughput but require specialized extensions for non-pinhole effects such as distortion, rolling shutter, and depth of field. Ray-based rendering expresses these effects naturally but is generally assumed too slow for competitive real-time rendering. We analyze the factors governing throughput in differentiable Voronoi ray tracing and identify traversal length, per-cell work, and memory locality as principal determinants. Guided by this, we introduce VoroTracing, which co-designs the scene representation, optimization, and GPU execution to reduce these costs. Compact octahedral appearance textures reduce memory traffic, while surface-concentrated opacity promotes early termination. The fixed-budget representation is optimized without pruning or densification and rendered with a GPU implementation designed for coherent traversal. On Mip-NeRF 360, VoroTracing renders at 623 FPS on an RTX 5090, providing $3.2\\times$ the throughput of the fastest prior ray-based method and $2.8\\times$ that of 3D Gaussian Splatting, while maintaining competitive reconstruction quality. Our renderer supports fisheye, rolling-shutter, motion-blur, and depth-of-field effects through ray generation and sampling, requiring no specialized rasterization. These results show that real-time throughput can be achieved with the flexibility of ray-based rendering. We release our source code, see https://research.zenseact.com/publications/vorotracing",
+      "published": "2026-08-18T11:55:58Z",
+      "updated": "2026-08-18T11:55:58Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.17682",
+      "abs_url": "https://arxiv.org/abs/2608.17682",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.17298",
+      "title": "3D Gaussian Accelerated Ray Tracing: Fast training through particle-based backward propagation",
+      "authors": [
+        "Laurent Vit",
+        "Oliver Batchelor",
+        "Richard Green"
+      ],
+      "abstract": "3D Gaussian Splatting has made Gaussian primitives a highly efficient representation for real-time novel view synthesis, but its rasterisation-based formulation relies on screen-space approximations that limit accurate view-dependent ordering and the integration of secondary ray effects such as reflections, refractions, and shadows. Gaussian ray tracing addresses these limitations by evaluating explicit ray-primitive intersections, yet it remains costly to train. We observe that the main bottleneck is not ray traversal alone, but the pixel-centric backward propagation, where many threads concurrently accumulate gradients into the same primitive parameters, causing severe atomic contention and thread serialisation. We present 3DGART, a practical training framework for ray-traced Gaussian rendering. Our key idea is to reorganise backward propagation around primitives rather than pixels. Using conservative perspective-correct screen-space bounds, we build a compact intermediate buffer and a tile-primitive mapping that allows each thread to accumulate the contribution of one primitive over its covered pixels within a tile. This transforms gradient computation from a contention-heavy scatter operation into a structured gather-like process. On Mip-NeRF 360, 3DGART achieves an $\\approx 3-3.5\\times$ raw training speedup over per-pixel baseline and $\\approx4 \\times$ over 3DGRT on Mip-NeRF 360 while improving quality. More importantly, 3DGART makes fully ray-traced Gaussian training practical, reaching runtimes competitive with rasterisation-based pipelines while preserving benefits of ray tracing.",
+      "published": "2026-08-18T02:50:46Z",
+      "updated": "2026-08-18T02:50:46Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.17298",
+      "abs_url": "https://arxiv.org/abs/2608.17298",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.20384",
+      "title": "Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes",
+      "authors": [
+        "Rouli Freeman",
+        "Alexander Sannikov",
+        "Joe Pitt-Francis"
+      ],
+      "abstract": "Radiance probe methods are a popular and well-tested approach for approximating diffuse global illumination for real-time graphics, but they commonly suffer from a lack of detail due to the large spacing between probes. Radiance Cascade (RC) fixes this by increasing spatial resolution and reducing angular resolution for light and occlusion from closer objects, which allows it to provide details at all scales without noise or aliasing. However, leading implementations of RC either run in 2D or screenspace, due to the prohibitive costs of storing high-detail volumetric radiance information. In this work, we adapt Radiance Cascades for accurate real-time 3D diffuse global illumination using a sparse hashmap to store world-space probes. We introduce ray splitting, a method for calculating radiance intervals used in RC by tracing rays from visible surfaces and calculating their contribution to cascades based on their hit distance. We evaluate our algorithm, Split Radiance Cascades, on a variety of scenes, and demonstrate that it can provide high-quality indirect illumination in both single-frame and temporally accumulated contexts.",
+      "published": "2026-07-22T17:13:18Z",
+      "updated": "2026-10-11T14:50:48Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.20384",
+      "abs_url": "https://arxiv.org/abs/2607.20384",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.13265",
+      "title": "Differentiable Polarized Path Tracing",
+      "authors": [
+        "Pramod Rao",
+        "Jérémy Riviere",
+        "Xilong Zhou",
+        "Abhijeet Ghosh",
+        "Abhimitra Meka",
+        "Thabo Beeler",
+        "Marc Habermann",
+        "Christian Theobalt",
+        "Delio Vicini"
+      ],
+      "abstract": "Physically based differentiable rendering has proven to be a powerful tool for inverse rendering problems (e.g., 3D reconstruction, reflectance estimation, lighting estimation). However, most existing methods operate solely on radiometric intensity, discarding valuable polarization cues that constrain scene geometry and material properties. While forward simulation of polarized light is well-defined via Mueller-Stokes calculus, extending reverse-mode differentiation to this domain presents significant challenges. The rank-deficient nature of common polarimetric operators, such as linear polarizers and diffuse reflections, violates the invertibility assumptions of standard gradient estimators like path replay backpropagation and results in numerical instability. We address this by proposing a robust, polarization-aware differentiable path tracing method. Our approach estimates unbiased gradients through a combination of path replay and local caching. This formulation enables efficient and stable optimization of material and lighting parameters in complex scenes, broadening the applicability of physically based inverse rendering. Project page: https://vcai.mpi-inf.mpg.de/projects/DPPT/",
+      "published": "2026-07-14T20:58:08Z",
+      "updated": "2026-07-14T20:58:08Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.13265",
+      "abs_url": "https://arxiv.org/abs/2607.13265",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.30869",
+      "title": "GRay: Ray Tracing 3D Gaussians Near the Speed of Splats",
+      "authors": [
+        "Yohan Poirier-Ginter",
+        "Jean-François Lalonde",
+        "George Drettakis"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) is a popular representation for radiance field reconstruction, distinguished by the rendering speed of its rasterization-based renderer. While 3D Gaussians can also be ray traced, this approach has so far been slower, with 3D Gaussian Ray Tracing (3DGRT) taking nearly one order of magnitude longer to optimize. To address this, we present GRay, a fast ray tracer for 3D Gaussians designed to close this performance gap and match 3DGS's speed. Our method leverages the algorithmic difference between both approaches: unlike rasterization, ray tracing evaluates only Gaussians that are actually intersected by a ray, leading to potentially logarithmic--rather than linear--scaling in the number of primitives. This property allows ray tracing to better exploit dense scenes composed of numerous tiny Gaussians, a configuration which has largely been overlooked. Notably, we show that dense initialization--which creates many small Gaussians--slows down rasterization, but instead speeds up ray tracing. Designed to leverage this effect, GRay renders nearly 4x faster and optimizes nearly 10x faster than 3DGRT while maintaining similar quality, and has competitive speed with 3DGS albeit at somewhat lower quality. Code is available at https://repo-sam.inria.fr/nerphys/gray.",
+      "published": "2026-06-29T20:01:25Z",
+      "updated": "2026-06-29T20:01:25Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.30869",
+      "abs_url": "https://arxiv.org/abs/2606.30869",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.24218",
+      "title": "The 2D Ray Tracing Problem using ABCD Lenses and Mirrors is Turing Complete",
+      "authors": [
+        "Rosemary U. Adejoh",
+        "Andreas Jakoby",
+        "Sneha Mohanty",
+        "Christian Schindelhauer"
+      ],
+      "abstract": "We establish that the two-dimensional ray tracing problem with thin lenses and plane mirrors is Turing-complete, thereby resolving an open question posed by Reif et al. in 1994 as to whether three-dimensional space is necessary for computational universality in optical systems. To this end, we consider the standard approximation of reflection and refraction, namely the ABCD model for paraxial optics, which describes ray propagation through lenses (refraction) via a 2 x 2 matrix, combined with the geometric reflection model for plane mirrors. In the absence of mirrors, two-dimensional ray tracing using any combination of lenses in this ABCD matrix model can be described by a single 2 x 2 matrix-vector product, where the matrix has real entries and determinant 1. Conversely, we show that any such matrix with determinant 1 can be represented as a composition of exactly three appropriately spaced thin lenses. When mirrors are combined with lenses, the ray tracing problem can be described by a flowchart using only two variables, which establishes Turing computability for rational-valued inputs, spaces and matrix entries. Building on this observation, we present a construction of ray tracing that simulates a reversible Turing machine. We begin with a restricted version of the reversible flowchart problem, in which only two variables and certain linear functions are permitted. We prove that this restricted variant is Turing-complete. We then show that such a flowchart admits a geometric realization using lenses and mirrors in our model, thereby establishing the main result: Turing-completeness of the two-dimensional ray tracing problem with ABCD-model lenses and mirrors.",
+      "published": "2026-06-23T07:06:02Z",
+      "updated": "2026-06-23T07:06:02Z",
+      "categories": [
+        "cs.CC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.24218",
+      "abs_url": "https://arxiv.org/abs/2606.24218",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.14173",
+      "title": "HoloPathTracer: Fast and Accurate Wave Path Tracing for Holography",
+      "authors": [
+        "Wenbin Zhou",
+        "Xiangyu Meng",
+        "Jiankai Xing",
+        "Xin Liu",
+        "Suyeon Choi",
+        "Yifan Peng"
+      ],
+      "abstract": "Holography offers unique advantages for delivering perceptual realism while preserving compact form factors in VR/AR. Its perceptual quality, however, hinges on encoding rich wavefronts of photorealistic scenes into interference patterns and then incoherently multiplexing the resulting wave fields for perception. Existing CGH paradigms decouple radiance estimation from wave propagation by pre-rendering radiance on discretized scene sectors. This separation between radiometric and wave-optical computation inherently limits the range of focus cues and visual effects that can be faithfully reproduced, including depth- and view-continuity, and physically based material behaviors such as glossy or mirror-like reflection and refraction. We present a physically accurate yet computationally efficient wave optics rendering framework leveraging path tracing to encode full 3D visual cues into phase holograms. Specifically, we employ a Monte Carlo method to solve both the rendering equation and the Rayleigh--Sommerfeld integral simultaneously. Our algorithm is fully compatible with modern graphics techniques and can generate multiple time-multiplexed random holograms with minimal additional time cost via Path Reuse. By employing a fast approximation with an ambient radiance cache, we realize an order of magnitude convergence speed improvement. The resulting coherent wave fields that inherently encode comprehensive visual effects are converted into phase-only holograms under complex-amplitude supervision. Through extensive simulations and experimental validations on a spatial light modulator-based display prototype, we demonstrate faithful holographic reconstructions of natural 3D cues and complex materials, including realistic defocus blur, view-dependent effects, as well as appearance highlights and reflections.",
+      "published": "2026-06-12T06:54:35Z",
+      "updated": "2026-06-16T06:49:06Z",
+      "categories": [
+        "cs.GR",
+        "physics.optics"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.14173",
+      "abs_url": "https://arxiv.org/abs/2606.14173",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.09606",
+      "title": "PTIR-GS: Path-Traced Inverse Rendering with Global Illumination in 3D Gaussian Fields",
+      "authors": [
+        "Junke Zhu",
+        "Hao Zhang",
+        "Yutian Zhu",
+        "Ang Li",
+        "Chenxiao Hu",
+        "Meng Gai",
+        "Fei Zhu",
+        "Zhangjin Huang",
+        "Sheng Li"
+      ],
+      "abstract": "Ray tracing enables 3D Gaussian fields to serve as a representation for physically based light transport. Faithful inverse rendering requires forward rendering and backward optimization to be defined within a consistent light-transport pipeline. Existing Gaussian inverse-rendering methods typically rely on splatting-derived G-buffers and screen-space optimization. The local affine approximation of perspective projection can introduce inconsistencies with path tracing, while simplified rendering formulations often neglect or approximate indirect illumination and visibility. Therefore, we propose a splatting-free path-traced inverse-rendering framework for 3D Gaussian fields that unifies forward rendering and backward optimization within the same recursive multi-bounce light-transport pipeline. We formulate light transport over overlapping Gaussian primitives directly in path space, enabling Monte Carlo path tracing and pathwise gradient replay over the same recursively sampled transport paths. The framework jointly optimizes materials and environment light under the full rendering equation, with ray-traced visibility and global illumination explicitly evaluated. Extensive experiments demonstrate competitive material estimation and improved path-traced rendering quality, producing more plausible shadows, reflections, and relighting under global illumination.",
+      "published": "2026-06-08T15:15:07Z",
+      "updated": "2026-09-05T15:53:35Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.09606",
+      "abs_url": "https://arxiv.org/abs/2606.09606",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.27323",
+      "title": "Megakernel vs Wavefront GPU Path Tracing",
+      "authors": [
+        "Rafael Padilla",
+        "Kyle Webster",
+        "Austin Kim"
+      ],
+      "abstract": "Over the last decade, advances in GPU hardware have been driven in large part by the demands of real-time graphics, culminating in dedicated hardware ray tracing cores (RT cores). These units accelerate ray scene intersection queries directly in hardware, making physically based ray tracing algorithms increasingly practical for interactive applications. This paper compares and analyzes the performance of two ray-based rendering algorithms: forward path tracing (PT) and wavefront path tracing (WPT). GPU-based PT computes the color of each pixel by having each thread trace a single path to completion, naturally leading to a megakernel approach - while WPT maintains state buffers between specialized kernel invocations to trace path stages simultaneously. We find that WPT affords a ~16% speedup over PT in our implementation. By analyzing traces from NVIDIA Nsight Graphics, we attributed this speedup to WPT's improved cache locality compared to PT. We also find that our implementation does not achieve maximum GPU throughput across any of its units, suggesting that communication and memory latency, as well as synchronization, are the limiting factors. Finally, we address potential algorithmic improvements and future work for real-time path tracing implementation for practical applications.",
+      "published": "2026-05-26T17:34:04Z",
+      "updated": "2026-05-26T17:34:04Z",
+      "categories": [
+        "cs.GR",
+        "cs.AR",
+        "cs.PF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.27323",
+      "abs_url": "https://arxiv.org/abs/2605.27323",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.16253",
+      "title": "TTP: A Hardware-Efficient Design for Precise Prefetching in Ray Tracing",
+      "authors": [
+        "Yavuz Selim Tozlu",
+        "Anshul Naithani",
+        "Huiyang Zhou"
+      ],
+      "abstract": "Ray tracing (RT) is a 3D graphics technique that offers highly realistic visuals. It is becoming prominent and accessible as GPU vendors have integrated dedicated ray tracing acceleration hardware. However, tracing millions of rays through 3D scenes consisting of high numbers of triangles in real time is challenging and requires expensive hardware. The main bottleneck in RT workloads is the expensive Bounding Volume Hierarchy (BVH) traversal task, which is a large tree structure that encodes the 3D scene. BVH traversal is a memory-bound problem, as the GPU threads spend most of their time reading tree node data from memory. In this work, we attack the memory latency bottleneck of ray tracing through prefetching. We propose a novel hardware prefetcher, named Tree Traversal Prefetcher (TTP), for ray tracing. The main idea is to leverage the existing tree traversal stack in the RT units for highly accurate prefetching. In particular, TTP prefetches nodes using the addresses already available on the hardware traversal stacks of each thread. For DFS (Depth-first search) based traversal, prefetches are generated when nodes are being popped consecutively from the traversal stack, potentially corresponding to upward traversal through the tree. We evaluate TTP on a cycle-level simulator, Vulkan-sim 2.0, and show that it achieves 1.48x speedup on average (up to 1.89x) compared to the baseline, with nearly negligible hardware overhead. TTP achieves 98.92% average L1 accuracy, which is the ratio of the prefetched blocks being actually referenced by demand loads. The coverage, computed as the ratio of L1 miss reduction over baseline L1 misses, is 31.54%, correlating well with the achieved speedup.",
+      "published": "2026-05-15T17:57:31Z",
+      "updated": "2026-05-15T17:57:31Z",
+      "categories": [
+        "cs.AR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.16253",
+      "abs_url": "https://arxiv.org/abs/2605.16253",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.07781",
+      "title": "Differentiable Ray Tracing with Gaussians for Unified Radio Propagation Simulation and View Synthesis",
+      "authors": [
+        "Niklas Vaara",
+        "Lam Huynh",
+        "Pekka Sangi",
+        "Miguel Bordallo López",
+        "Janne Heikkilä"
+      ],
+      "abstract": "Explicit neural representations such as 3D Gaussian Splatting (3DGS) enable high-fidelity and real-time novel view synthesis, yet optimize for alpha-composited optical appearance rather than ray-intersectable geometry. In contrast, radio-frequency (RF) digital twins require deterministic multi-bounce paths, where the geometry dictates trajectories and their associated attenuation and delay. We introduce a framework enabling differentiable RF propagation simulation directly within visually reconstructed neural scenes, allowing point-to-point path computation between arbitrary 3D locations while preserving high-quality visual rendering. Unlike conventional RF simulation pipelines that rely on manually constructed meshes, we embed Gaussian primitives into a hardware-accelerated ray tracing structure as the underlying spatial representation. By extracting physically meaningful channel impulse responses from visual-only reconstructions, we provide cross-modal evidence that neural reconstructions can serve as unified spatial representations for both electromagnetic propagation simulation and photorealistic view synthesis.",
+      "published": "2026-05-08T14:19:28Z",
+      "updated": "2026-05-08T14:19:28Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.07781",
+      "abs_url": "https://arxiv.org/abs/2605.07781",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.24994",
+      "title": "Power Foam: Unifying Real-Time Differentiable Ray Tracing and Rasterization",
+      "authors": [
+        "Shrisudhan Govindarajan",
+        "Daniel Rebain",
+        "Dor Verbin",
+        "Kwang Moo Yi",
+        "Anish Prabhu",
+        "Andrea Tagliasacchi"
+      ],
+      "abstract": "We introduce a differentiable 3D representation that unifies the ray tracing capabilities of foam-based ray tracing with the efficiency of modern rasterization pipelines. While prior foam representations enable constant-time ray traversal through an explicit volumetric partition of space, their potentially unbounded cells hinder efficient tile-based rasterization. We address this limitation by generalizing Voronoi foams to bounded power diagrams with controllable cell extents, enabling spatially bounded primitives without requiring expensive Delaunay triangulations during training. We further introduce an oriented surface formulation that explicitly models interfaces between interior and exterior regions, and decouple geometry from appearance by embedding differentiable texture directly on these surfaces. Together, these contributions yield a representation that preserves state-of-the-art ray tracing efficiency while achieving rasterization performance competitive with current generation 3DGS, providing a practical path toward unified real-time differentiable rendering.",
+      "published": "2026-04-27T20:58:36Z",
+      "updated": "2026-04-27T20:58:36Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.24994",
+      "abs_url": "https://arxiv.org/abs/2604.24994",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.23520",
+      "title": "Rethinking Collision Detection on GPU Ray Tracing Architecture",
+      "authors": [
+        "Durga Keerthi Mandarapu",
+        "Isaac Fuksman",
+        "Artem Pelenitsyn",
+        "Gilbert Bernstein",
+        "Milind Kulkarni"
+      ],
+      "abstract": "Discrete Collision Detection (DCD) is a fundamental task in several domains including particle-based physics simulations. Efficient DCD uses indexing structures such as Bounding Volume Hierarchy (BVH), but accelerating irregular BVH traversals demands meticulous efforts to achieve performance. Modern GPUs feature Ray Tracing (RT) architecture that provides hardware acceleration for BVH traversal and optimized drivers for BVH construction. Recent work has attempted to exploit RT architecture to accelerate DCD on spherical particles by reducing DCD to fixed-radius neighbor search. However, this reduction breaks down for particles with different radii, necessitating the use of large bounding boxes that result in a higher number of duplicate collisions and poor performance. To address these limitations, we present Mochi, a new reduction that reformulates DCD on RT architecture by exploiting the symmetry of collision relations to support both uniform and non-uniform spherical particles efficiently. Mochi introduces per-object proxy spheres that decouple BVH bounding volumes from the collision search radius, enabling significantly tighter bounding boxes without sacrificing correctness. Mochi is provably sound and guarantees that all true collisions are detected. We integrate Mochi into an end-to-end particle simulation pipeline and evaluate it across large-scale particle workloads, showing consistent speedups over state-of-the-art BVH-based and RT-based DCD implementations. Mochi generalizes prior RT-based neighbor search formulations while avoiding their fundamental limitations for non-uniform spheres.",
+      "published": "2026-04-26T03:56:53Z",
+      "updated": "2026-04-26T03:56:53Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.23520",
+      "abs_url": "https://arxiv.org/abs/2604.23520",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.09243",
+      "title": "BVH-Accelerated Ray Tracing for High-Frequency Electromagnetic Backscattering",
+      "authors": [
+        "Marco Pasquale",
+        "Andong Hu",
+        "Luca Pennati",
+        "Ivy Peng",
+        "Stefano Markidis"
+      ],
+      "abstract": "As computational complexity in electromagnetics increases with frequency, full-wave solvers become computationally infeasible for electrically large problems. To address this limitation, we present a shooting and bouncing rays (SBR) method for efficiently modeling electromagnetic backscattering of metallic objects in the high-frequency regime. The method couples multi-reflection geometrical-optics ray transport with a physical optics surface integral discretized over ray tubes. To reduce the massive ray-surface intersection search space, we use a bounding volume hierarchy (BVH) and organize the computation as a trace-integrate pipeline. The ray tracing generates hit data, and the physical optics integral is evaluated over valid intersections only. Numerical accuracy is controlled through an incident-ray sampling rule that mitigates phase aliasing in the discretized physical optics integration. The method is accelerated on NVIDIA and AMD GPUs and parallelized with MPI. We validate against analytical Mie solutions for a perfectly electrically conducting (PEC) sphere and demonstrate applicability to a complex aircraft geometry for monostatic radar cross-section prediction.",
+      "published": "2026-04-10T11:57:00Z",
+      "updated": "2026-04-10T11:57:00Z",
+      "categories": [
+        "cs.CE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.09243",
+      "abs_url": "https://arxiv.org/abs/2604.09243",
+      "source": "arxiv"
+    },
+    {
+      "id": "2603.29105",
+      "title": "LoRaWAN Gateway Placement for Network Planning Using Ray Tracing-Based Channel Models",
+      "authors": [
+        "Cláudio Modesto",
+        "Lucas Mozart",
+        "Glauco Gonçalves",
+        "Cleverson Nahum",
+        "Bruno Castro",
+        "Aldebaro Klautau"
+      ],
+      "abstract": "Network planning for long range wide area networks (LoRaWAN) relies heavily on the channel models used to estimate wireless coverage and connectivity. Consequently, the quality of gateway (GW) deployment decisions may be strongly affected by the propagation assumptions adopted during the planning process. Given this motivation, this work investigates how different channel models influence the placement of LoRaWAN GWs,formulating an optimization problem that contrasts stochastic and empirical models with ray-tracing-based models. To this end, we developed a framework that integrates ray tracing (RT) simulators with a discrete-event network simulator. Using this framework to generate LoRaWAN data metrics, we employ an optimization model that determines the optimal GW placement under different channel models, received power constraints, and network scenarios. Our results show that the optimized solution is highly sensitive to the chosen channel model, even when considering the same scenarios with different RT simulators, revealing a clear trade-off between computational cost and the fidelity of the solution to real-world conditions.",
+      "published": "2026-03-31T00:52:21Z",
+      "updated": "2026-06-14T20:46:50Z",
+      "categories": [
+        "cs.NI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2603.29105",
+      "abs_url": "https://arxiv.org/abs/2603.29105",
+      "source": "arxiv"
+    },
     {
       "id": "2410.11625",
       "title": "Fast Local Neural Regression for Low-Cost, Path Traced Lambertian Global Illumination",

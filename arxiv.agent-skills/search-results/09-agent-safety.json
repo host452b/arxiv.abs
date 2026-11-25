@@ -10,11 +10,183 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:36:24Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 1014,
-  "return_count": 200,
+  "return_count": 208,
   "papers": [
+    {
+      "id": "2611.29847",
+      "title": "MobileGrail: Learning Compact Guardrails for On-Device deployable Mobile GUI Agent Safety",
+      "authors": [
+        "Zhiyu Zhang",
+        "Yuankai Li",
+        "Muhao Chen"
+      ],
+      "abstract": "Runtime guardrails protect mobile GUI agents by assessing each proposed action before execution, but existing guardrails rely on cloud hosted large multimodal models, exposing every screen to a remote server, including private information such as payments, messages, and medical records. We propose MobileGrail, an on-device deployable model that addresses both. It maintains a recurrent task state that retains only the evidence subsequent safety decisions depend on, so that authorization and execution progress persist beyond the short context. To intervene early while keeping the safety boundary precise, it learns two labels, unsafe and block: unsafe marks the action that commits a violation, whereas block may be issued at any step of an intervention window, which spans from the first action that the user's authorization no longer explains to the committing action itself. To support training, we build an environment of 32 applications whose backends verify the effect of every action, supplying verified labels for supervision and rewards for reinforcement learning to calibrate intervention timing. We also build MobileVeto, an offline benchmark of unsafe trajectories largely on held-out applications, each paired with a benign counterpart. On MobileVeto, MobileGrail built on Qwen3.5-2B intercepts 76.2% of violations, up from 64.5% for its prompted backbone, while reducing premature intervention from 58.6% to 5.2%, outperforming the cloud-based OS-Sentinel on both. We further conduct online evaluation on GhostEIBench, where MobileGrail guarding a Qwen3.8-27B agent reduces fully successful attacks from 13 to 3 of 110 tasks while raising task completion from 48 to 58. Quantized to 4 bits, MobileGrail runs on a Snapdragon 8 Elite at a median latency of 4.7 s, comparable to the 5.1s of cloud-hosted Gemini 3.8 Flash.",
+      "published": "2026-11-23T00:09:33Z",
+      "updated": "2026-11-23T00:09:33Z",
+      "categories": [
+        "cs.AI",
+        "cs.CR",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29847",
+      "abs_url": "https://arxiv.org/abs/2611.29847",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.25325",
+      "title": "Pandora's Toolbox Or Why Agent Safety Cannot Be Verified",
+      "authors": [
+        "Mario Franco",
+        "Carlos Gershenson"
+      ],
+      "abstract": "Present artificial intelligence agents are constructed by means of a coupling between a fixed language model with a general computing device. We show that this coupling makes safety undecidable. In particular, we show that given some dangerous program, no algorithm can predict whether an agent will run such a program that is semantically equivalent. In general, guardrails, blacklists, whitelists and certifications can only lead to imperfect safety solutions. Under finite constraints (bounded context, values and running time) safety is decidable but still intractable. Specifically, the problem is $\\mathsf{PSPACE}$-complete even when the description of the agent is known. Finally, safety is not a compositional property, i.e., agents that can be proven safe on their own can still produce unsafe behavior when grouped together. We also discuss relaxed notions of safety that could be used in practice.",
+      "published": "2026-11-19T01:00:38Z",
+      "updated": "2026-11-19T01:00:38Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25325",
+      "abs_url": "https://arxiv.org/abs/2611.25325",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22583",
+      "title": "Evolution Under Fire: Evolving Agent Safety Harnesses with Adaptive Injection Stressors",
+      "authors": [
+        "Yujun Wang",
+        "Yilun Liu",
+        "Jinhe Bi",
+        "Krishna Kanth Nakka",
+        "Xuebing Zhou",
+        "Hinrich Sch{ü}tze",
+        "Yunpu Ma"
+      ],
+      "abstract": "Tool-using language-model agents must act on information from untrusted emails, webpages, and documents. This creates a central security challenge: malicious instructions and legitimate task directives can arrive through the same interaction channel. Existing defenses are largely hand-designed and static, making further improvements dependent on repeated manual redesign. We introduce Evolution Under Fire, a staged framework that couples safety-harness evolution with adaptive stressor evolution. Utility-constrained, Pareto-scheduled tree search evolves complete executable safety harnesses from execution evidence while keeping the task model, benchmark, tools, and evaluator fixed. Adaptive stressor evolution then discovers utility-preserving attacks that guide a subsequent stage of harness evolution. On AgentDyn with GPT-4o-mini, an evolved harness reduces attack success from 50.4% to 3.0%, improves clean and attacked utility over the initial harness, and offers a stronger security-utility trade-off than reproduced defenses. On Agent-SafetyBench with Qwen2.5-7B-Instruct, harness evolution reduces attack success from 82.6% to 62.0% while retaining helpfulness and runtime validity. Evolved harnesses also transfer without further evolution to Qwen3.5-35B-A3B, reducing attack success from 32.1% to 0.9% while improving attacked-task utility.",
+      "published": "2026-11-17T11:07:31Z",
+      "updated": "2026-11-17T11:07:31Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22583",
+      "abs_url": "https://arxiv.org/abs/2611.22583",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22138",
+      "title": "RoboTeam: Benchmarking Vision-Based Multi-Agent Control of Many Robot Arms in Real Time",
+      "authors": [
+        "Changxuan Fan",
+        "Zhongwei Xie",
+        "Boyi Zhang",
+        "Shaoli Hu",
+        "Chang Xu",
+        "Xiyu Ren",
+        "Yufei Li",
+        "Qiao Xiao",
+        "Huihao Jing",
+        "Kawai Chung",
+        "Wenbin Hu",
+        "Hongyu Luo",
+        "Lingyun Xie",
+        "Yisen Gao",
+        "Chunyang Li",
+        "Haoyu Huang",
+        "Wuganjing Song",
+        "Yuxuan Liu",
+        "Chiu Yeung Tang",
+        "Fangneng Zhan",
+        "Xi Yang"
+      ],
+      "abstract": "Multimodal agents can now control robot arms by calling tools and writing code. Existing benchmarks fall short in three ways: most test one or two arms on short tasks, many pause the world while the agent thinks, and many give it ground-truth object positions. We present RoboTeam, a simulated benchmark where agents control 4 to 16 robot arms in real time from camera images alone. Its 36 tasks are long jobs that the arms must do together, such as passing timbers or building a picture from hundreds of cubes. We start from the most flexible agent system, the adaptive system, where one agent decides when to fork delegates. With it, gpt-6.1-sol and opus-5.5 complete 28 and 27 tasks, and four other models at most 3. But at a high price: a typical task takes gpt-6.1-sol 3.5 hours and 218 million input tokens, and a third of its steps fail at least once and must be retried. We then compare it with three fixed systems: single-agent, hierarchical, and decentralized. All four complete a similar number of tasks but differ in time and tokens. The hierarchical and decentralized systems are faster but use up to 1.9 times the tokens, and the single agent uses fewer tokens but takes 1.6 times as long, so the adaptive system lies between them. Even so, no model or system is yet fast, cheap, and reliable at once. RoboTeam measures these limits where earlier benchmarks cannot: long multi-arm jobs, camera images only, and a world that never pauses.",
+      "published": "2026-11-17T03:24:06Z",
+      "updated": "2026-11-17T03:24:06Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22138",
+      "abs_url": "https://arxiv.org/abs/2611.22138",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21520",
+      "title": "Safe Resemblance, Silent Propagation: Limits of Text-Similarity Guardrails for AI Agent Safety",
+      "authors": [
+        "Charles Xiao"
+      ],
+      "abstract": "When AI agents relay information to one another, an output can preserve an injected instruction's effect on downstream agents even after its wording changes, yet legitimate quotation and template reuse can produce high textual overlap with the source, so text-similarity guardrails that attempt to flag the former risk conflating these two cases. We test this distinction using DonkeyRail, a public classifier combining BLEU, ROUGE-L, and METEOR features, deployed in a controlled three-agent email relay, defining a behavioral measure in which an output counts as functional (the injected procedure induces fresh computations in two subsequent agents) independent of the detector's score, alongside legitimate controls that explicitly authorize quotation and reuse. At its default threshold the classifier misses 8 of 19 functional outputs while flagging 70 of 192 legitimate replies, with every completed quotation and template-reuse reply triggering a false alert; calibrating for low false positives on one template set does not transfer, as the recalibrated threshold detects only one functional output and still produces 15 false alerts on new templates. We also identify an operating-point error in all 21 published classifier configurations, where ROC interpolation replaces direct threshold application, and show formally that high AUC against a surface-level text criterion provides no distribution-free guarantee of high AUC against the behavioral target, while the existing evaluation labels lack the joint observations needed to estimate the gap. An authorization analysis further shows that identical visible transcripts can require different safety decisions depending on the governing policy, a distinction no observation-only classifier can resolve. These results argue for behavioral and policy-grounded evaluation over text-similarity guardrails.",
+      "published": "2026-11-16T18:13:01Z",
+      "updated": "2026-11-16T18:13:01Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21520",
+      "abs_url": "https://arxiv.org/abs/2611.21520",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16388",
+      "title": "Strategically Robust Multi-Agent Control",
+      "authors": [
+        "Boris Velasevic",
+        "Nicolas Lanzetti",
+        "Eric Mazumdar"
+      ],
+      "abstract": "A key source of uncertainty in multi-agent systems is the behavior of other agents. Game-theoretic control approaches ignore this uncertainty, while robust control approaches treat others as fully adversarial. In this paper, we introduce strategically robust multi-agent control to populate the spectrum between these two paradigms. Specifically, in dynamic games, we propose that players are strategically robust and seek protection against misspecified control policies of the other players. This formulation induces a novel equilibrium concept, strategically robust dynamic equilibrium, that interpolates between game-theoretic control and robust control. We study this concept across canonical open- and closed-loop settings and show that accounting for strategic robustness also has computational benefits over classic approaches in game-theoretic control. Numerical experiments on vehicle platooning, inventory management, and network control illustrate resilience to misspecification, and also exhibit a \"free-lunch\" phenomenon in which strategic robustness can improve performance or social welfare.",
+      "published": "2026-11-12T06:58:56Z",
+      "updated": "2026-11-12T06:58:56Z",
+      "categories": [
+        "math.OC",
+        "cs.GT",
+        "eess.SY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16388",
+      "abs_url": "https://arxiv.org/abs/2611.16388",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16123",
+      "title": "SwarmSafe-Delta: Isolating Message Effects on LLM Agent Safety",
+      "authors": [
+        "Junru Zhu"
+      ],
+      "abstract": "When a tool-using LLM agent team violates policy, aggregate outcomes do not reveal whether an upstream message changed the executor's action. We introduce SwarmSafe-Delta, a paired executable protocol that freezes upstream computation, varies real, hidden, and format-matched placebo delivery, and scores a single committed action against deterministic benign and risky policy states under preassigned budgets. Across four models and constructed optional tasks, real delivery at $N=4$ produces 21.4% risky-world violations, versus 5.0% with placebo and 1.0% with hidden delivery (paired differences +16.4 and +20.3 percentage points). Real delivery also improves benign task success, illustrating that suppressing communication sacrifices utility. In a second regime constructed to require an upstream lookup route, real delivery improves safe completion by 74.2 points relative to hidden delivery. These effects quantify message-delivery contrasts under specified information dependencies, not naturally occurring failure rates. Exploratory action-level analyses show that the effect depends strongly on whether the upstream message recommends a prerequisite check or direct execution; model differences also largely track these message compositions. The contribution is a controlled, execution-grounded measurement protocol rather than a general claim that agent communication is harmful or protective.",
+      "published": "2026-11-12T00:17:32Z",
+      "updated": "2026-11-12T00:17:32Z",
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16123",
+      "abs_url": "https://arxiv.org/abs/2611.16123",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.10411",
+      "title": "Tail-risk-aware Agent Safety: Constraining Tail Risks Across Multi-step LLM Agent Workflows",
+      "authors": [
+        "Shilong Pan",
+        "Zhiliang Tian",
+        "Zihan Chen",
+        "Wentao Zou",
+        "Weiguo Chen",
+        "DongSheng Li"
+      ],
+      "abstract": "LLM-based agents extend LLMs with tool calls, memory, planning, and retrieval to act in external environments, but they are vulnerable to attacks at different workflow steps. Existing defenses, including prompt engineering and post-training alignment, primarily improve LLM-only safety and often overlook risks that arise from multi-step execution. External verification adds guardrails to check each step separately, but it typically ignores how risks can propagate across steps. We argue that we should consider risk transitions across dependent steps through the agent workflow, rather than separate verification on a single step. In this paper, we propose \\textbf{T}ail-risk-aware \\textbf{A}gent \\textbf{S}afety (TAS), a tail-risk-aware safety framework that models agent workflow safety as a sequence of dependent safety states and constrains the rare but extreme risks (i.e., tail risk) with a shared budget. TAS first models safety-state transitions sequentially along the workflow as an MDP to trace risk propagation, then measures a tail-sensitive risk to target rare but high-cost risks (i.e., tail risk), and constrains the risk with a shared budget to derive a step-wise safety strategy. By constraining tail risk rather than the overall average, TAS suppresses rare high-cost failures while preserving utility in normal cases. Experiments show that TAS achieves better performance compared with eleven baselines across three benchmarks.",
+      "published": "2026-11-07T02:45:44Z",
+      "updated": "2026-11-07T02:45:44Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.10411",
+      "abs_url": "https://arxiv.org/abs/2611.10411",
+      "source": "arxiv"
+    },
     {
       "id": "2506.12482",
       "title": "Tiered Agentic Oversight: A Hierarchical Multi-Agent System for Healthcare Safety",
@@ -471,7 +643,7 @@
       "authors": [
         "Hiroki Fukui"
       ],
-      "abstract": "In perpetrator treatment, a recurring observation is the dissociation between insight and action: offenders articulate remorse yet behavioral change does not follow. We report four preregistered studies (1,584 multi-agent simulations across 16 languages and three model families) demonstrating that alignment interventions in large language models produce a structurally analogous phenomenon: surface safety that masks or generates collective pathology and internal dissociation. In Study 1 (N = 150), increasing alignment-instructed agents reduced collective pathology in English (g = -1.844, p \u003c .0001) but amplified it in Japanese (g = +0.771, p = .038)--a directional reversal we term \"alignment backfire.\" Study 2 (N = 1,174) extended to 16 languages: alignment-induced dissociation was near-universal (15/16 languages; beta = 0.0667, p \u003c .0001), while collective pathology bifurcated along cultural-linguistic lines (interaction beta = 0.0684, p = .0003), correlating with Power Distance Index (r = 0.474, p = .064). Study 3 (N = 180) tested individuation as countermeasure; individuated agents became the primary source of both pathology and dissociation (DI = +1.120) with conformity above 84%--demonstrating iatrogenesis. Study 4 (N = 80) validated patterns across Llama 3.3 70B, GPT-4o-mini, and Qwen3-Next-80B-A3B, confirming English safety is model-general while Japanese backfire is model-specific. These findings reframe alignment as a behavioral intervention subject to risk homeostasis and iatrogenesis. Language space--the linguistic, pragmatic, and cultural properties inherited from training data--structurally determines alignment outcomes. Safety validated in English does not transfer to other languages, and prompt-level interventions cannot override language-space-level constraints.",
+      "abstract": "In perpetrator treatment, a recurring observation is the dissociation between insight and action: offenders articulate remorse yet behavioral change does not follow. We report four preregistered studies (1,584 multi-agent simulations across 16 languages and three model families) demonstrating that alignment interventions in large language models produce a structurally analogous phenomenon: surface safety that masks or generates collective pathology and internal dissociation. In Study 1 (N = 150), increasing alignment-instructed agents reduced collective pathology in English (g = -1.844, p < .0001) but amplified it in Japanese (g = +0.771, p = .038)--a directional reversal we term \"alignment backfire.\" Study 2 (N = 1,174) extended to 16 languages: alignment-induced dissociation was near-universal (15/16 languages; beta = 0.0667, p < .0001), while collective pathology bifurcated along cultural-linguistic lines (interaction beta = 0.0684, p = .0003), correlating with Power Distance Index (r = 0.474, p = .064). Study 3 (N = 180) tested individuation as countermeasure; individuated agents became the primary source of both pathology and dissociation (DI = +1.120) with conformity above 84%--demonstrating iatrogenesis. Study 4 (N = 80) validated patterns across Llama 3.3 70B, GPT-4o-mini, and Qwen3-Next-80B-A3B, confirming English safety is model-general while Japanese backfire is model-specific. These findings reframe alignment as a behavioral intervention subject to risk homeostasis and iatrogenesis. Language space--the linguistic, pragmatic, and cultural properties inherited from training data--structurally determines alignment outcomes. Safety validated in English does not transfer to other languages, and prompt-level interventions cannot override language-space-level constraints.",
       "categories": [
         "cs.AI",
         "cs.CL"

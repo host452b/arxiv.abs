@@ -1,0 +1,16 @@
+Title: Which Way Is Up? Rotated Photos Silently Hurt Multi-View 3D Foundation Models
+Authors: Yukun Shi, Minglun Gong
+ID: 2611.31478
+URL: https://arxiv.org/abs/2611.31478
+
+Abstract:
+Multi-view 3D foundation models estimate camera poses and 3D points from a set
+of photos in one forward pass. Many cameras store a portrait shot sideways, with
+an orientation tag telling viewers how to turn it, and this tag can be ignored,
+lost or wrong. We measure how rotated photos affect five such models on three
+datasets. A few rotated photos lower camera pose accuracy for every model, and
+the sideways photos already in a standard benchmark do the same. Even the most
+robust model still loses accuracy. The failure is also silent: the models'
+confidence does not reliably flag it, and most official image loaders ignore the
+tag. The fixes we test each correct only part of the problem. These findings
+call for orientation checks in reconstruction pipelines and benchmarks.

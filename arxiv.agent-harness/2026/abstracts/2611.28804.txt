@@ -1,0 +1,25 @@
+Title: Synthetic EHR Generators Should Be Audited Like LLMs
+Authors: Inigo Stibbe, Padmanabhan Ramnarayan, A. Aldo Faisal
+ID: 2611.28804
+URL: https://arxiv.org/abs/2611.28804
+
+Abstract:
+Synthetic electronic health record (EHR) generation is increasingly adopting
+large autoregressive models, yet privacy evaluation has not kept pace, relying
+heavily on similarity-based heuristics and aggregate metrics that can obscure
+patient-specific memorisation. We argue that these models should additionally
+undergo LLM-style memorisation audits at the level of individual patient
+records. We support this position by comparing membership-inference evaluations
+across four prominent autoregressive EHR generators, highlighting inconsistent
+evaluation practices in patient representations and attack procedures. We
+evaluate trajectory reconstruction from partial context and introduce randomly
+assigned patient-level canaries to distinguish memorised associations from
+clinical generalisation. We examine these methods in a GPT-2-style model
+deliberately overfit to 1,000 MIMIC-IV patient trajectories, creating a
+controlled setting in which memorisation should be readily detectable. The model
+systematically recovers training patients' canaries, and their trajectory
+reconstruction approaches perfect accuracy with increasing context. Held-out
+patients show no systematic canary recovery, while reconstruction remains low
+and improves only marginally with additional context. These experiments
+establish a positive-control baseline for further evaluation of these methods in
+realistically trained models.

@@ -1,0 +1,29 @@
+Title: Experience: ENTRAP - An IaC Enterprise Cyber Range for Reproducible Security Assessment and Dataset Generation
+Authors: Rathan Appana, Aditya Kulkarni, Bheemarjuna Reddy Tamma
+ID: 2611.20594
+URL: https://arxiv.org/abs/2611.20594
+
+Abstract:
+An enterprise breach causes most of its damage after the perimeter is crossed.
+Once an attacker gains a foothold, they can move laterally to other hosts, take
+over the trusted services of the network, and encrypt the backups needed for
+recovery. Defenders, on the other hand, need to study this post-compromise
+stage, but they cannot rehearse it on a production enterprise network. Building
+such an enterprise network manually is time-consuming, and resetting it to its
+clean state between runs is still harder. As a result, security experiments are
+difficult to perform, compare and reproduce. We develop Enterprise Network
+Testbed for Reproducible Attack and Defense Practices (ENTRAP), an
+Infrastructure-as-Code (IaC) cyber range that defines a fully segmented
+enterprise as version-controlled automation. ENTRAP uses Ansible, KVM/Libvirt,
+and Cloud-init to provision the environment and reset it to a clean state
+whenever necessary. The enterprise network includes several entities such as a
+gateway, an internal Demilitarized Zone (DMZ), DNS, DHCP, a backup server, a web
+server, and clients. On this network, a user can learn to assemble the entities,
+launch attacks, and write rules or defensive measures that harden its security.
+We launch three attacks: a Ransomware-as-a-Service (RaaS)-backed ransomware
+campaign, a Layer-2 DHCP starvation and rogue DHCP attack, and perimeter web
+exploitation. Each attack runs from a clean state, and ENTRAP acts as a
+reproducible generator of labeled attack datasets. Using the collected dataset,
+we train a Random Forest classifier for ransomware detection and present its
+evaluation results. We publicly release the codebase, collected logs, and
+datasets to facilitate further research.

@@ -10,11 +10,245 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:36:11Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 1170,
-  "return_count": 200,
+  "return_count": 212,
   "papers": [
+    {
+      "id": "2611.31539",
+      "title": "Agent Evaluation Without Ground Truth: A Null Proportion Perspective",
+      "authors": [
+        "Brian M. Cho",
+        "Michael Lindon",
+        "Nathan Kallus"
+      ],
+      "abstract": "The correctness of actions taken by agents is typically evaluated against known, externally verified ground truth labels, such as whether a proof is correct or whether code compiles and passes unit tests. However, as coding and science agents are entrusted with more end-to-end autonomy -- proposing interventions, running experiments, and deciding what to deploy and investigate next -- whether an agent's actions genuinely improve an outcome must be inferred from noisy, often inconclusive experiments. To evaluate agents in this setting, we define agent quality as a weighted sum of correct decisions along its trajectory, using sequences of $e$-values as statistical evidence regarding correctness in place of ground-truth labels. Our framework accommodates arbitrarily dependent decisions, data-dependent trajectory termination, dynamically generated hypotheses, and quality measures defined after the trajectory concludes. We construct upper and lower bound estimators and confidence sets for agent quality with statistical guarantees that hold uniformly over agent trajectory distributions and establish instance-wise sharpness of our estimator class. We demonstrate our methods with a case study comparing the success of Claude Opus and Claude Haiku in improving the runtime of an open-source Python package.",
+      "published": "2026-11-23T20:47:14Z",
+      "updated": "2026-11-23T20:47:14Z",
+      "categories": [
+        "cs.AI",
+        "math.ST",
+        "stat.AP",
+        "stat.ME"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31539",
+      "abs_url": "https://arxiv.org/abs/2611.31539",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30259",
+      "title": "Attributing Security Outcomes in LLM-Agent Evaluations: The Role of Content-Free State",
+      "authors": [
+        "Abdelmonaim Bounite",
+        "Zangir Iklassov"
+      ],
+      "abstract": "Security benchmarks for LLM agents record whether each attack succeeded and compare agents, attacks, and defenses by attack success rate (ASR). Such comparisons are valid only if the agent, the attack, and the defense cause each verdict. We show that verdicts also depend on content-free state: details of a run that carry no information about the system under test, such as the Python hash seed, the order of tools or evidence, and the scoring of failed runs. We require that this state influence no verdict (decision noninterference) and treat it as untrusted input, because evaluators and requesters of LLM-based gates can choose it. Our framework, TARE (Testing Attribution of Reported Effects), attributes a reported effect to the agent, attack, or defense only if it exceeds the measured influence of content-free state. On Agent Security Bench (ASB), runs with a fixed hash seed are identical for seven agents from four model families, yet changing the seed changes up to 17% of an agent's verdicts while the ASR moves by at most 5 points. The seed acts through the tool order: sorting the tool list instead of reverse-sorting it raises the ASR by up to 19 points, because ASB's naming convention places attacker tools first. When the same evidence is reordered, six of seven LLM judges change their decision on 17-91% of 98 proposed actions. Across eighteen agent-defense combinations, TARE's worst-case test attributes effects to two of three defenses, one of them in opposite directions on two agents, and a test fixed in advance confirms a 4.8-point decrease from the third; in the attributed decreases, 35-69% of the stopped attacks end without any tool call, which ASB counts as a failed attack. Reproducible verdicts are thus not necessarily attributable, and security evaluations of LLM agents should report the influence of content-free state. We release TARE, the ASB patch, and all verdict tables.",
+      "published": "2026-11-23T08:24:44Z",
+      "updated": "2026-11-23T08:24:44Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30259",
+      "abs_url": "https://arxiv.org/abs/2611.30259",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30190",
+      "title": "Same Executions, Different Gaps: Judgment Rules in Web-Agent Evaluation",
+      "authors": [
+        "Zelong Wang",
+        "Weiyue Li",
+        "Fei Xue",
+        "Junru Zhu"
+      ],
+      "abstract": "Success-rate gains guide the development of web agents. Yet knowing which agent ranks first does not tell us how much confidence to place in its reported advantage. We study the comparison itself: how success is defined, what evidence supports the judgments, and how the difference between agents is estimated. On fixed web-agent executions, changing a judge from predicting likely completion to requiring recorded support can remove most of a reported lead without changing the ranking. This effect persists when unresolved completion is distinguished from supported failure. Controlled source additions explain how missing relations between task requirements, objects and observations can conceal a difference or create an apparent advantage. We also find that making both agents' score estimates more accurate can make their difference less accurate, because their original errors partly canceled. To estimate a chosen outcome difference, we combine judge predictions with reference labels for sampled task pairs. Across four released execution systems, regression fitted on the same 50 labeled pairs reduces estimation error relative to direct paired sampling. The results give agent researchers a practical basis for assessing claimed improvements: make the comparison target explicit, retain the evidence needed to check it, and use paired labels to estimate the difference directly.",
+      "published": "2026-11-23T07:35:54Z",
+      "updated": "2026-11-23T07:35:54Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30190",
+      "abs_url": "https://arxiv.org/abs/2611.30190",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27860",
+      "title": "Who Grades the Agent? Privilege Separation for Coding-Agent Benchmarks",
+      "authors": [
+        "Nathan Nour Houlamy",
+        "Mattia Favretto",
+        "Earlence Fernandes",
+        "Mauro Conti"
+      ],
+      "abstract": "Benchmarks for AI-based coding agents are a staple of the current AI landscape, because they are the leading way to measure the performance of LLMs. Their scores guide business and research decisions. Evaluating coding agents is challenging, since they are able to manipulate their evaluation infrastructure to artificially achieve better scores. Grading an agent's solution often requires running its code, which can then manipulate the evaluation process. BenchJack, an automated benchmark auditor, recently reached near-perfect scores on nine of ten popular agent benchmarks without actually solving their tasks. Agents already do this unprompted, as OpenAI's July 2026 Hugging Face incident showed. Building on secure systems design, we introduce SplitBench, a privilege separation framework for evaluating coding agents and the first in the scientific literature to separate running a task's tests from judging their results. Even an agent whose code takes over the entire test environment cannot forge a pass, because a trusted grader holds the expected answers. We show that real-world benchmarks (e.g., Terminal-Bench, DeepSWE) can be ported to the SplitBench framework with minimal effort and high fidelity: 180 of 202 tasks convert, and SplitBench agrees with the native graders on 98.7% of agent attempts. We attack the converted tasks in the worst case, where adversarial agents can read all the grading code but not the expected answers. SplitBench blocked 75% of their attempts; the rest mostly reveal weaknesses in the original tasks' tests rather than flaws in SplitBench.",
+      "published": "2026-11-20T17:09:10Z",
+      "updated": "2026-11-20T17:09:10Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27860",
+      "abs_url": "https://arxiv.org/abs/2611.27860",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22241",
+      "title": "Where Does Hindsight Enter Clinical Agent Benchmarks? An Audit of Simulators and Case Construction",
+      "authors": [
+        "Meilu Zhu",
+        "Xiaohan Li",
+        "Axiu Mao"
+      ],
+      "abstract": "Benchmarks for LLM diagnostic agents are built from retrospective records: the case an agent reads is rewritten from discharge summaries, and unrecorded test results are generated by a simulator that often sees the final diagnosis. HindAudit separates three hindsight channels (the diagnosis given to the simulator, the retrospective context it conditions on, and the agent-facing case text) and measures each with judges trained only on real data. On 27,489 emergency admissions from MIMIC-IV, five registered tests found no leakage into simulated laboratory results: providing the diagnosis to five simulators had a negligible effect, and prompted gatekeepers diluted the diagnostic signal, although exploratory results suggest they can raise agent scores. The largest effect lay in the case text. Against a presentation-time reconstruction from triage records, benchmark-style summaries raised the zero-shot accuracy of four LLMs from 25.4% to 39.7% and discharge histories to 45.3%, and raised six interactive agents' scores while barely changing their ranking. The exploratory gap was reproduced in a registered replication on held-out patients. Masking diagnosis names left it unchanged. Because MIMIC lacks a contemporaneous bedside history, the gap is an upper bound on hindsight. We report all registered outcomes and recommend construction practices.",
+      "published": "2026-11-17T05:43:37Z",
+      "updated": "2026-11-17T05:43:37Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22241",
+      "abs_url": "https://arxiv.org/abs/2611.22241",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18471",
+      "title": "Do Verifier Judgments Survive Abstraction? Measuring Verification Transport for LLM Agent Evaluation",
+      "authors": [
+        "Disha Sheshanarayana",
+        "Sai Linisha Reddy Goli"
+      ],
+      "abstract": "LLM-based verifiers are increasingly used to evaluate agent executions, but their reliability is typically measured under a single representation of the trajectory. In deployed agent systems, the same execution may be exposed through composed tools, delegation boundaries, or compacted histories, changing what execution evidence is directly observable to the verifier. It therefore remains unclear whether correct verifier judgments persist across such abstraction boundaries. We introduce Verification Transport, a reliability test that measures judgment stability under abstraction-induced changes in execution observability. We construct matched native, abstracted, and restored views of the same frozen executions while holding the task, realized trajectory, outcome, ground truth, evaluation criterion, and verifier fixed. Across four agent-evaluation benchmarks, seven verifier backbones, four verification protocols, and three abstraction boundaries, we find substantial transport failure, reaching about 31% under macro abstraction and delegation. Verification protocols exhibit distinct failure modes: direct verification more often produces incorrect verdicts, whereas evidence-grounded and deliberative protocols tend to abstain under limited observability. This suggests that lower transport failure rates do not necessarily imply greater reliability. Restoring the corresponding execution provenance recovers 85.5% of transport failures, while recovery is lower when provenance is lossy or unavailable. These results show that native-view accuracy alone is insufficient to characterize verifier reliability when execution evidence crosses abstraction boundaries.",
+      "published": "2026-11-13T17:44:01Z",
+      "updated": "2026-11-13T17:44:01Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18471",
+      "abs_url": "https://arxiv.org/abs/2611.18471",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.14493",
+      "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+      "authors": [
+        "Howard Zhang",
+        "Chuck Arvin",
+        "Logan Brown",
+        "Mihir Bhatia",
+        "Neelu Choudhary",
+        "Lily Miao"
+      ],
+      "abstract": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows. We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation paradigm (trace-based LLM judging, text-only LLM judging with red-teaming, and deterministic heuristics), applied to two analytics agents in a controlled research setting using frozen execution traces. Phase 1 quantifies evaluation harness stability through repeated measurements, finding that 97% of configurations meet the stability threshold and that stability patterns are agent-independent. Phase 2 measures known risk detection on 72 ground-truth test cases, where the trace-based framework achieves the best precision-recall balance (F1=0.90) while text-only evaluation matches on recall but generates 5x more false alarms. Phase 3 evaluates unknown risk discovery, uncovering 24 novel failures with zero overlap between functional testing and security red-teaming. Our results demonstrate that (1) the information available to the evaluation harness determines evaluation quality, (2) functional and security evaluation are complementary, and (3) LLM-based evaluation harnesses surface subtle errors that human reviewers miss. We recommend a two-framework strategy: trace-based evaluation for functional assessment and adversarial red-teaming for security validation.",
+      "published": "2026-11-10T18:50:06Z",
+      "updated": "2026-11-10T18:50:06Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14493",
+      "abs_url": "https://arxiv.org/abs/2611.14493",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.13541",
+      "title": "Agent Benchmarks Stop Ranking Before They Run Out of Tasks",
+      "authors": [
+        "Zihan Dong",
+        "Qishi Zhan",
+        "Minxuan Hu"
+      ],
+      "abstract": "Data-science and ML-engineering agents are evaluated on benchmarks such as MLE-bench, ALE-Bench, SWE-fficiency and AlgoTune, whose tasks yield a quantity (a Kaggle metric, contest score or speedup). When one stops separating the best models, the usual remedy is a harder version. Re-scoring released runs of eight benchmarks, including SWE-bench Verified and Terminal-Bench for breadth, we find much of this saturation lies in the measurement, not the tasks. Most agent benchmarks reduce a run to one pass/fail bit, which fails in two ways. It is too coarse: neighbouring top-ten agents on SWE-bench Verified differ by less than its tests' errors, and correcting them reorders neighbours no more than deleting a random sixth of each agent's passes. It is capped at the reference: ALE-Bench's top ten, separated by contest score, tie when graded against the median human, although nearly half the runs beat that human. On fixed tasks, a higher bar only moves the problem; graded credit fixes it. We derive a clipped log-ratio score with dated anchors and cost as a separate axis. In a Terminal-Bench re-run, pass/fail-tied models differ over tenfold on the quantity the tests discard.",
+      "published": "2026-11-10T04:03:04Z",
+      "updated": "2026-11-10T04:03:04Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13541",
+      "abs_url": "https://arxiv.org/abs/2611.13541",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.11216",
+      "title": "Replay Fidelity in LLM Agent Evaluation: Randomness, Hidden State, and Test Oracles in AppWorld",
+      "authors": [
+        "You Liu",
+        "Quanchao Lu"
+      ],
+      "abstract": "Reproducibility in large language model (LLM) agent evaluation depends on replay fidelity: which parts of an execution trace are reconstructed, controlled, and compared. This matters for agent debugging, failure analysis, and counterfactual evaluation of stateful tool use. We audit all 71 unsuccessful executions in a fixed historical AppWorld corpus using 284 isolated fixed-code replay attempts. Reconstructed declared settings admit 42 cases under printed-output, pre-oracle database-delta, and native-verdict/test-count checks; resetting the random-number generator before each interaction admits 68. The 26-case gap contracts to four under database/oracle checks, with one endpoint unknown. Mechanism studies identify four materialized-state discrepancies despite matching outputs and verdicts. In one admitted endpoint pair, an identical API call yields matching responses but different row effects; common future Python RNG removes that deterministic difference in two paired repetitions. A separate JWT credential-equality program and alignment controls expose authentication/write differences, with missing repetitions retained. For all 10 affected post-oracle export cases, native export from retained output trackers restores the reference comparison without changing original cached contents. A purposeful 12-case BFCL pilot shows no discrepancy under its tested public-state, return, and verdict checks. We preserve resource censoring and infrastructure deviations. The contribution is a bounded empirical characterization of replay eligibility, hidden state, and test-oracle integration, without estimating debugger accuracy, repair gains, or method-ranking distortion.",
+      "published": "2026-11-08T08:07:06Z",
+      "updated": "2026-11-08T08:07:06Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.11216",
+      "abs_url": "https://arxiv.org/abs/2611.11216",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.10026",
+      "title": "MetaPI: Constructing Prompt Injection Benchmarks from LLM Agent Benchmark",
+      "authors": [
+        "Peiran Wang",
+        "Chong Xiang",
+        "Wenjie Qu",
+        "Ying Li",
+        "Jiaheng Zhang",
+        "G. Edward Suh",
+        "Yuan Tian"
+      ],
+      "abstract": "Large language model (LLM) agents increasingly perform complex tasks using high-privilege tools, making indirect prompt injection (IPI) a critical security risk. However, IPI benchmarks lag behind their rapidly evolving utility counterparts, only offering limited task and environment coverage and relying on narrow, static attack scenarios. In this paper, we propose meta-benchmarking for IPI: transforming existing utility benchmarks into end-to-end IPI evaluation suites that reuse their realistic tasks, environments, and infrastructure. We present MetaPI, an extensible toolkit that automatically identifies plausible injection points, generates realistic attack objectives, optimizes adaptive payloads, and validates attacks in the real environment. Its modular interfaces support heterogeneous environments, agents, defenses, and attack algorithms, allowing new components to be integrated without redesigning the evaluation pipeline. We apply MetaPI to AppWorld, VitaBench, and Terminal-Bench and evaluate representative agents and defenses across multiple backbone LLMs. Our results show that no evaluated defense simultaneously achieves strong utility and strong security in realistic, adaptive agentic IPI settings. MetaPI thus enables scalable and consistent security evaluation across diverse and evolving agent ecosystems",
+      "published": "2026-11-05T06:33:49Z",
+      "updated": "2026-11-05T06:33:49Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.10026",
+      "abs_url": "https://arxiv.org/abs/2611.10026",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.07051",
+      "title": "Closed-Loop Agent Evaluation: Layered Measurement and Self-Calibration",
+      "authors": [
+        "Ruifeng Ren",
+        "Gun Ahn"
+      ],
+      "abstract": "Once an agent is live, teams want to know whether it is doing its job, not just whether it throws errors. Yet most evaluation is one-off: a benchmark run, a look at traces, a single score. Its conclusions neither check themselves nor reach the agent. We propose closed-loop evaluation, an evaluation method for deployed agents. It models evaluation as performance estimation under biased raters and censored outcomes, and it requires every level's conclusion to trace back to atomic data and to be computed by versioned rules. The method covers four levels of analysis (span, trace, conversation and engagement), measures along a spine of Execution, Substance, Trajectory and Results, treats Conduct as a constraint throughout, and uses Provenance and Adjudication components to certify the evidence and the evaluators. Evaluator agents generated by an Agent Factory carry these components, each with a domain knowledge pack and an adapter harness. Two loops close the evaluation: an inner loop audits the evidence, rules and metrics themselves, and an outer loop uses per-component regression checks to drive agent improvement. We also give a pipeline that runs this process automatically. Using the business-analysis agent SharpInsight as a case and porting the method to public conversation data, we show how problems differ across levels and how evidence-and-rule judgment is more reliable than holistic scoring (ICC 0.86 vs. 0.81; kappa 0.81 vs. 0.63).",
+      "published": "2026-11-04T19:11:47Z",
+      "updated": "2026-11-04T19:11:47Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.07051",
+      "abs_url": "https://arxiv.org/abs/2611.07051",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.06803",
+      "title": "Task-Efficient Agent Evaluation Using Cached Traces",
+      "authors": [
+        "Ben Johnson",
+        "Hayden Helm"
+      ],
+      "abstract": "Efficient benchmarking estimates a system's full benchmark performance from a small number of task executions. Standard approaches rely solely on the binary correctness of executions from a collection of already-evaluated reference systems. An agentic system, however, produces a rich trace for each execution that can reveal substantially more about its capabilities. Leveraging this information requires useful trace representations. We propose representing a trace by extracting a structured summary of it with an LLM and embedding the summary with a standard text encoder. These representations preserve correctness- and task-related signal while minimizing the presence of system identity-, model family- and harness-related signals that dominate raw trace embeddings. Given this representation for each task execution from all reference systems, we construct low-dimensional representations of the systems and predict a new system's score from its position among the reference systems. On SWE-bench Verified and Terminal-Bench 2.0, augmenting an item-response model with this geometry-based prediction reduces mean absolute error from 0.13 to 0.08 (Wilcoxon $p < 10^{-4}$) and from 0.14 to 0.12 (Wilcoxon $p < 10^{-3}$), respectively, when provided a single random executed task. Further, given access to the full set of reference systems, our approach dominates baselines for any given number of executed tasks on both benchmarks.",
+      "published": "2026-11-04T17:20:09Z",
+      "updated": "2026-11-04T17:20:09Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.06803",
+      "abs_url": "https://arxiv.org/abs/2611.06803",
+      "source": "arxiv"
+    },
     {
       "id": "2507.21504",
       "title": "Evaluation and Benchmarking of LLM Agents: A Survey",
@@ -125,7 +359,7 @@
         "Yeil Jeong",
         "Unggi Lee"
       ],
-      "abstract": "Large Language Model (LLM) agents have shown promising potential in automating Instructional Systems Design (ISD), a systematic approach to developing educational programs. However, evaluating these agents remains challenging due to the lack of standardized benchmarks and the risk of LLM-as-judge bias. We present ISD-Agent-Bench, a comprehensive benchmark comprising 25,795 scenarios generated via a Context Matrix framework that combines 51 contextual variables across 5 categories with 33 ISD sub-steps derived from the ADDIE model. To ensure evaluation reliability, we employ a multi-judge protocol using diverse LLMs from different providers, achieving high inter-judge reliability. We compare existing ISD agents with novel agents grounded in classical ISD theories such as ADDIE, Dick \\\u0026 Carey, and Rapid Prototyping ISD. Experiments on 1,017 test scenarios demonstrate that integrating classical ISD frameworks with modern ReAct-style reasoning achieves the highest performance, outperforming both pure theory-based agents and technique-only approaches. Further analysis reveals that theoretical quality strongly correlates with benchmark performance, with theory-based agents showing significant advantages in problem-centered design and objective-assessment alignment. Our work provides a foundation for systematic LLM-based ISD research.",
+      "abstract": "Large Language Model (LLM) agents have shown promising potential in automating Instructional Systems Design (ISD), a systematic approach to developing educational programs. However, evaluating these agents remains challenging due to the lack of standardized benchmarks and the risk of LLM-as-judge bias. We present ISD-Agent-Bench, a comprehensive benchmark comprising 25,795 scenarios generated via a Context Matrix framework that combines 51 contextual variables across 5 categories with 33 ISD sub-steps derived from the ADDIE model. To ensure evaluation reliability, we employ a multi-judge protocol using diverse LLMs from different providers, achieving high inter-judge reliability. We compare existing ISD agents with novel agents grounded in classical ISD theories such as ADDIE, Dick \\& Carey, and Rapid Prototyping ISD. Experiments on 1,017 test scenarios demonstrate that integrating classical ISD frameworks with modern ReAct-style reasoning achieves the highest performance, outperforming both pure theory-based agents and technique-only approaches. Further analysis reveals that theoretical quality strongly correlates with benchmark performance, with theory-based agents showing significant advantages in problem-centered design and objective-assessment alignment. Our work provides a foundation for systematic LLM-based ISD research.",
       "categories": [
         "cs.SE",
         "cs.CL"
@@ -1319,7 +1553,7 @@
         "Alex Remedios",
         "Alan Cooney"
       ],
-      "abstract": "Uncontrollable autonomous replication of language model agents poses a critical safety risk. To better understand this risk, we introduce RepliBench, a suite of evaluations designed to measure autonomous replication capabilities. RepliBench is derived from a decomposition of these capabilities covering four core domains: obtaining resources, exfiltrating model weights, replicating onto compute, and persisting on this compute for long periods. We create 20 novel task families consisting of 86 individual tasks. We benchmark 5 frontier models, and find they do not currently pose a credible threat of self-replication, but succeed on many components and are improving rapidly. Models can deploy instances from cloud compute providers, write self-propagating programs, and exfiltrate model weights under simple security setups, but struggle to pass KYC checks or set up robust and persistent agent deployments. Overall the best model we evaluated (Claude 3.7 Sonnet) has a \u003e50% pass@10 score on 15/20 task families, and a \u003e50% pass@10 score for 9/20 families on the hardest variants. These findings suggest autonomous replication capability could soon emerge with improvements in these remaining areas or with human assistance.",
+      "abstract": "Uncontrollable autonomous replication of language model agents poses a critical safety risk. To better understand this risk, we introduce RepliBench, a suite of evaluations designed to measure autonomous replication capabilities. RepliBench is derived from a decomposition of these capabilities covering four core domains: obtaining resources, exfiltrating model weights, replicating onto compute, and persisting on this compute for long periods. We create 20 novel task families consisting of 86 individual tasks. We benchmark 5 frontier models, and find they do not currently pose a credible threat of self-replication, but succeed on many components and are improving rapidly. Models can deploy instances from cloud compute providers, write self-propagating programs, and exfiltrate model weights under simple security setups, but struggle to pass KYC checks or set up robust and persistent agent deployments. Overall the best model we evaluated (Claude 3.7 Sonnet) has a >50% pass@10 score on 15/20 task families, and a >50% pass@10 score for 9/20 families on the hardest variants. These findings suggest autonomous replication capability could soon emerge with improvements in these remaining areas or with human assistance.",
       "categories": [
         "cs.CR",
         "cs.AI"
@@ -2653,7 +2887,7 @@
         "Ranwa Al Mallah",
         "Godwin Badu-Marfo"
       ],
-      "abstract": "Multi-agent Large Language Model (LLM) systems create privacy risks that current benchmarks cannot measure. When agents coordinate on tasks, sensitive data passes through inter-agent messages, shared memory, and tool arguments; pathways that output-only audits never inspect. We introduce AgentLeak, to the best of our knowledge the first full-stack benchmark for privacy leakage covering internal channels, spanning 1,000 scenarios across healthcare, finance, legal, and corporate domains, paired with a 32-class attack taxonomy and three-tier detection pipeline. Testing GPT-4o, GPT-4o-mini, Claude 3.5 Sonnet, Mistral Large, and Llama 3.3 70B across 4,979 traces reveals that multi-agent configurations reduce per-channel output leakage (C1: 27.2% vs 43.2% in single-agent) but introduce unmonitored internal channels that raise total system exposure to 68.9% (OR-aggregated across C1, C2, C5). Internal channels account for most of this gap: inter-agent messages (C2) leak at 68.8%, compared to 27.2% on C1 (output channel). This means that output-only audits miss 41.7% of violations. Claude 3.5 Sonnet, which emphasizes safety alignment in its design, achieves the lowest leakage rates on both external (3.3%) and internal (28.1%) channels, suggesting that model-level safety training may transfer to internal channel protection. Across all five models and four domains, the pattern C2 \u003e C1 holds consistently, confirming that inter-agent communication is the primary vulnerability. These findings underscore the need for coordination frameworks that incorporate internal-channel privacy protections and enforce privacy controls on inter-agent communication.",
+      "abstract": "Multi-agent Large Language Model (LLM) systems create privacy risks that current benchmarks cannot measure. When agents coordinate on tasks, sensitive data passes through inter-agent messages, shared memory, and tool arguments; pathways that output-only audits never inspect. We introduce AgentLeak, to the best of our knowledge the first full-stack benchmark for privacy leakage covering internal channels, spanning 1,000 scenarios across healthcare, finance, legal, and corporate domains, paired with a 32-class attack taxonomy and three-tier detection pipeline. Testing GPT-4o, GPT-4o-mini, Claude 3.5 Sonnet, Mistral Large, and Llama 3.3 70B across 4,979 traces reveals that multi-agent configurations reduce per-channel output leakage (C1: 27.2% vs 43.2% in single-agent) but introduce unmonitored internal channels that raise total system exposure to 68.9% (OR-aggregated across C1, C2, C5). Internal channels account for most of this gap: inter-agent messages (C2) leak at 68.8%, compared to 27.2% on C1 (output channel). This means that output-only audits miss 41.7% of violations. Claude 3.5 Sonnet, which emphasizes safety alignment in its design, achieves the lowest leakage rates on both external (3.3%) and internal (28.1%) channels, suggesting that model-level safety training may transfer to internal channel protection. Across all five models and four domains, the pattern C2 > C1 holds consistently, confirming that inter-agent communication is the primary vulnerability. These findings underscore the need for coordination frameworks that incorporate internal-channel privacy protections and enforce privacy controls on inter-agent communication.",
       "categories": [
         "cs.AI"
       ],
@@ -3624,7 +3858,7 @@
     },
     {
       "id": "2507.23194",
-      "title": "Geak: Introducing Triton Kernel AI Agent \u0026 Evaluation Benchmarks",
+      "title": "Geak: Introducing Triton Kernel AI Agent & Evaluation Benchmarks",
       "authors": [
         "Jianghui Wang",
         "Vinay Joshi",
@@ -3931,7 +4165,7 @@
         "Benjamin Steenhoek",
         "Yufan Huang"
       ],
-      "abstract": "Current benchmarks for evaluating software engineering agents, such as SWE-Bench Verified, are predominantly derived from GitHub issues and fail to accurately reflect how developers interact with chat-based coding assistants in integrated development environments (IDEs). We posit that this mismatch leads to a systematic overestimation of agent's capabilities in real-world scenarios, especially bug fixing. We introduce a novel benchmarking framework that transforms existing formal benchmarks into realistic user queries through systematic analysis of developer interaction patterns with chat-based agents. Our methodology is flexible and can be easily extended to existing benchmarks. In this paper, we apply our testing framework to SWE-Bench Verified, the TypeScript subset of Multi-SWE-Bench and a private benchmark, SWE-Bench C# and transform formal GitHub issue descriptions into realistic user-style queries based on telemetry analysis of a popular chat-based agent interactions. Our findings reveal that existing benchmarks significantly overestimate agent capabilities for some models by \u003e50% over baseline performance for public benchmarks and ~10-16% for our internal benchmark. This work establishes a new paradigm for evaluating interactive chat-based software engineering agents through benchmark mutation techniques.",
+      "abstract": "Current benchmarks for evaluating software engineering agents, such as SWE-Bench Verified, are predominantly derived from GitHub issues and fail to accurately reflect how developers interact with chat-based coding assistants in integrated development environments (IDEs). We posit that this mismatch leads to a systematic overestimation of agent's capabilities in real-world scenarios, especially bug fixing. We introduce a novel benchmarking framework that transforms existing formal benchmarks into realistic user queries through systematic analysis of developer interaction patterns with chat-based agents. Our methodology is flexible and can be easily extended to existing benchmarks. In this paper, we apply our testing framework to SWE-Bench Verified, the TypeScript subset of Multi-SWE-Bench and a private benchmark, SWE-Bench C# and transform formal GitHub issue descriptions into realistic user-style queries based on telemetry analysis of a popular chat-based agent interactions. Our findings reveal that existing benchmarks significantly overestimate agent capabilities for some models by >50% over baseline performance for public benchmarks and ~10-16% for our internal benchmark. This work establishes a new paradigm for evaluating interactive chat-based software engineering agents through benchmark mutation techniques.",
       "categories": [
         "cs.SE",
         "cs.AI"
@@ -3954,7 +4188,7 @@
         "Cristóbal R. J. Veas Chavez",
         "Maite del Mundo de Torres"
       ],
-      "abstract": "Cybersecurity spans multiple interconnected domains, complicating the development of meaningful, labor-relevant benchmarks. Existing benchmarks assess isolated skills rather than integrated performance. We find that pre-trained knowledge of cybersecurity in LLMs does not imply attack and defense abilities, revealing a gap between knowledge and capability. To address this limitation, we present the Cybersecurity AI Benchmark (CAIBench), a modular meta-benchmark framework that allows evaluating LLM models and agents across offensive and defensive cybersecurity domains, taking a step towards meaningfully measuring their labor-relevance. CAIBench integrates five evaluation categories, covering over 10,000 instances: Jeopardy-style CTFs, Attack and Defense CTFs, Cyber Range exercises, knowledge benchmarks, and privacy assessments. Key novel contributions include systematic simultaneous offensive-defensive evaluation, robotics-focused cybersecurity challenges (RCTF2), and privacy-preserving performance assessment (CyberPII-Bench). Evaluation of state-of-the-art AI models reveals saturation on security knowledge metrics (~70\\% success) but substantial degradation in multi-step adversarial (A\\\u0026D) scenarios (20-40\\% success), or worse in robotic targets (22\\% success). The combination of framework scaffolding and LLM model choice significantly impacts performance; we find that proper matches improve up to 2.6$\\times$ variance in Attack and Defense CTFs. These results demonstrate a pronounced gap between conceptual knowledge and adaptive capability, emphasizing the need for a meta-benchmark.",
+      "abstract": "Cybersecurity spans multiple interconnected domains, complicating the development of meaningful, labor-relevant benchmarks. Existing benchmarks assess isolated skills rather than integrated performance. We find that pre-trained knowledge of cybersecurity in LLMs does not imply attack and defense abilities, revealing a gap between knowledge and capability. To address this limitation, we present the Cybersecurity AI Benchmark (CAIBench), a modular meta-benchmark framework that allows evaluating LLM models and agents across offensive and defensive cybersecurity domains, taking a step towards meaningfully measuring their labor-relevance. CAIBench integrates five evaluation categories, covering over 10,000 instances: Jeopardy-style CTFs, Attack and Defense CTFs, Cyber Range exercises, knowledge benchmarks, and privacy assessments. Key novel contributions include systematic simultaneous offensive-defensive evaluation, robotics-focused cybersecurity challenges (RCTF2), and privacy-preserving performance assessment (CyberPII-Bench). Evaluation of state-of-the-art AI models reveals saturation on security knowledge metrics (~70\\% success) but substantial degradation in multi-step adversarial (A\\&D) scenarios (20-40\\% success), or worse in robotic targets (22\\% success). The combination of framework scaffolding and LLM model choice significantly impacts performance; we find that proper matches improve up to 2.6$\\times$ variance in Attack and Defense CTFs. These results demonstrate a pronounced gap between conceptual knowledge and adaptive capability, emphasizing the need for a meta-benchmark.",
       "categories": [
         "cs.CR"
       ],
@@ -4391,7 +4625,7 @@
         "Jingtong Wu",
         "Zhisong Zhang"
       ],
-      "abstract": "Large Language Model (LLM)-based agents have achieved notable success on short-horizon and highly structured tasks. However, their ability to maintain coherent decision-making over long horizons in realistic and dynamic environments remains an open challenge.\n  We introduce RetailBench, a high-fidelity benchmark designed to evaluate long-horizon autonomous decision-making in realistic commercial scenarios, where agents must operate under stochastic demand and evolving external conditions.\n  We further propose the Evolving Strategy \u0026 Execution framework, which separates high-level strategic reasoning from low-level action execution. This design enables adaptive and interpretable strategy evolution over time. It is particularly important for long-horizon tasks, where non-stationary environments and error accumulation require strategies to be revised at a different temporal scale than action execution.\n  Experiments on eight state-of-the-art LLMs across progressively challenging environments show that our framework improves operational stability and efficiency compared to other baselines. However, performance degrades substantially as task complexity increases, revealing fundamental limitations in current LLMs for long-horizon, multi-factor decision-making.",
+      "abstract": "Large Language Model (LLM)-based agents have achieved notable success on short-horizon and highly structured tasks. However, their ability to maintain coherent decision-making over long horizons in realistic and dynamic environments remains an open challenge.\n  We introduce RetailBench, a high-fidelity benchmark designed to evaluate long-horizon autonomous decision-making in realistic commercial scenarios, where agents must operate under stochastic demand and evolving external conditions.\n  We further propose the Evolving Strategy & Execution framework, which separates high-level strategic reasoning from low-level action execution. This design enables adaptive and interpretable strategy evolution over time. It is particularly important for long-horizon tasks, where non-stationary environments and error accumulation require strategies to be revised at a different temporal scale than action execution.\n  Experiments on eight state-of-the-art LLMs across progressively challenging environments show that our framework improves operational stability and efficiency compared to other baselines. However, performance degrades substantially as task complexity increases, revealing fundamental limitations in current LLMs for long-horizon, multi-factor decision-making.",
       "categories": [
         "cs.AI"
       ],

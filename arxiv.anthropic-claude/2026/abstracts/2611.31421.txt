@@ -1,0 +1,30 @@
+Title: Decision Models for Definition-Driven GitHub Actions Workflow Smell Detection
+Authors: Rohit Gheyi, Anderson Uchôa, Wesley Assunção, Francisco Sousa, Baldoino Fonseca, Márcio Ribeiro
+ID: 2611.31421
+URL: https://arxiv.org/abs/2611.31421
+
+Abstract:
+GitHub Actions workflows automate continuous integration and delivery (CI/CD),
+and workflow smells are recurring configuration patterns that may weaken
+security, hinder maintenance, or waste resources. Extending static analyzers to
+new smells requires encoding constructs, applicability conditions, and
+exceptions in detection rules. We investigate definition-driven detection, in
+which models assess workflows against reusable natural-language smell
+definitions, focusing on decision-oriented models that return scores for bounded
+questions. We compare them with generative models and a static analyzer, and
+examine their score reliability, repeatability, and robustness. We evaluate
+three decision-oriented and two generative configurations on 1,710 manually
+validated workflow-smell pairs covering 19 smells, 903 workflows, and 559
+repositories. Effectiveness depends strongly on the decision policy: JEV 1.13
+achieves 79.69% micro-F1 at threshold 0.5 and 85.43% with thresholds selected on
+separate repository folds, but global thresholds selected on the benchmark lower
+micro-F1 on a historical comparison set. Generative GPT-6 LUNA achieves
+comparable effectiveness on the pairs it classifies but leaves 247 unresolved.
+Repeatability does not ensure robustness: two decision models agree across three
+identical-input runs yet change more than 3% of their predictions after label-
+preserving transformations, despite nearly unchanged aggregate F1. On 46
+reconstructed workflows, a static analyzer outperforms JEV 1.13 (87.8% versus
+76.4% micro-F1). With a median latency of 0.675 seconds per workflow and about
+US$0.22 in API charges for the benchmark, JEV 1.13 makes frequent model-assisted
+checks operationally plausible, but deployment requires validated decision
+policies, and effectiveness on new criteria remains to be evaluated.

@@ -1,0 +1,26 @@
+Title: Elastic Precision: Software-Hardware Co-Design of a Mixed-Precision Architecture for Long-Context LLM Inference
+Authors: Boyang Chen, Xiao Wu, Haoran Wu, Yiren Zhao
+ID: 2611.00915
+URL: https://arxiv.org/abs/2611.00915
+
+Abstract:
+Low-bit quantization reduces the data movement and computation costs of large
+language model (LLM) inference, but uniform widths can waste precision and
+degrade model quality. Existing mixed-precision methods do not fully account for
+how the other input of the current GEMM tile affects output error when selecting
+one input's width. Using both inputs to guide precision introduces additional
+estimation and selection overheads on conventional hardware. We propose Coffee,
+a runtime precision allocation architecture for long-context LLM inference.
+Under a fixed average bit-width budget, Coffee combines statistics from both
+current input matrices to estimate output errors at candidate widths and select
+each subarray's two input widths, allocating more bits where they yield greater
+estimated error reductions. Its mixed-precision hardware supports the selected
+widths in data access and computation, while overlapping error estimation and
+width selection with transfers and computation to limit stalls. The same read
+path supports attention-guided KV reads during decoding, reducing memory
+traffic. Coffee achieves lower perplexity and higher average zero-shot accuracy
+than the evaluated quantization baselines, and higher long-context retrieval
+recall than PLENA. For long-context decoding, system modeling projects up to
+$2.55\times$ the throughput and $2.61\times$ the energy efficiency of the
+reconfigured PLENA baseline, and up to $4.96\times$ and $12.56\times$,
+respectively, compared with the B200 GPU baseline.

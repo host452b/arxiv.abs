@@ -1,0 +1,26 @@
+Title: SPROUT: Scaling Agentic Reinforcement Learning for Long-Horizon Software Engineering
+Authors: Mengyang Liu, Weiming Wang, Haixin Nan, Yu Wu, Peize Li, Shihong Huang, Xuning He, Xue Jiang, Yihong Dong
+ID: 2610.14405
+URL: https://arxiv.org/abs/2610.14405
+
+Abstract:
+Reinforcement learning (RL) has driven substantial progress in coding agents by
+relying on verified successful trajectories as learning signals. However, such
+trajectories are scarce in long-horizon software engineering tasks, where a
+minor error can invalidate the entire rollout. Repeatedly restarting from the
+initial state is commonly used yet inefficient, and resetting only the context
+with working directory misses state changes such as installed dependencies.
+Therefore, branching from intermediate steps to preserve earlier progress
+requires restoring both the agent context and execution environments. In this
+paper, we present SPROUT (SnaPshot-based RollOUT), an agentic RL rollout
+framework that scales long-horizon coding tasks by resuming and branching from
+intermediate states. Specifically, SPROUT was built on top of a lightweight
+infrastructure that checkpoints both the filesystem and the agent context after
+each assistant turn. A verifier-guided backtracking policy then selects where to
+resume a failed attempt and how to proceed. Extensive experiments on long-
+horizon coding tasks show that SPROUT achieves up to 23.6% improvement over
+pass@k across various LLMs, while using $32$--$52%$ of their tokens. For RL
+training of Qwen3.8-27B, SPROUT stably outperforms standard GRPO by $13.9$
+points on three long-horizon coding benchmarks while cutting the time per
+training step by $39.5%$. SPROUT thus makes RL on long-horizon coding tasks both
+more effective and cheaper to scale.

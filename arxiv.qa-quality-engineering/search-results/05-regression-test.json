@@ -10,11 +10,246 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:50:04Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 69,
-  "return_count": 69,
+  "total_results": 81,
+  "return_count": 81,
   "papers": [
+    {
+      "id": "2610.41130",
+      "title": "One Verdict Is Not Enough: Regression Testing Learned World Models and Their Test Harnesses",
+      "authors": [
+        "Junyu Huo",
+        "Zihao Wan",
+        "Ziqi Mao",
+        "Gouri Ginde"
+      ],
+      "abstract": "Learned world models ship as software components whose model versions, preprocessing, and test harnesses change between releases. Work on model updates already counts per-sample regressions, or negative flips, that an accuracy check hides. Two problems remain: a test can pass under one configuration and fail under another, and a harness fault can produce erroneous scores and wrong verdicts without a crash. We present TetraState, a regression-testing protocol for paired possible/impossible video tests. Each test runs under four fixed model-native configurations; its number of correct verdicts assigns one of four outcome classes. Inconclusive tests and failed executions are reported separately alongside the verdict rate. Revisions are compared by per-test outcome transitions, and the harness is versioned as part of the system under test. On all 506 IntPhys 2 Main tests and two heterogeneous systems, Cosmos 3 Nano and V-JEPA 2, two V-JEPA 2 harness revisions move modal accuracy by only 0.2 and 2.6 points yet change 11 and 214 test labels; in the second, accuracy rises although fewer tests are judged correctly, and 43 regressions keep the modal verdict, so a modal-verdict flip check misses them. These results outline a research agenda on configuration-level regression oracles for learned components.",
+      "published": "2026-10-30T01:36:37Z",
+      "updated": "2026-10-30T01:36:37Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.41130",
+      "abs_url": "https://arxiv.org/abs/2610.41130",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.11835",
+      "title": "On the Risks of using LLM-Generated Tests for Regression Testing",
+      "authors": [
+        "Mohammadali Charoosaei",
+        "Cedric Richter",
+        "Mike Papadakis"
+      ],
+      "abstract": "Software is under constant evolution: developers continuously add features, fix bugs, and refactor code, and any of these changes may break existing functionality. Regression testing guards against such effects by capturing expected behavior in test cases. LLM-based test generation aims to automate this process by generating regression tests directly from the code under test. This is beneficial when the implementation is correct, but problematic when the code contains faults: the generated tests may then encode and preserve incorrect behavior. To investigate this risk, we apply LLM-based regression test generation to pull requests merged into the main branch of software projects and study the impact of the generated tests on subsequent project evolution. We distinguish between fault-revealing tests, which assert correctly implemented behavior, and fault-enforcing tests, which assert faulty behavior. Across 145 pull requests from SciPy, Qiskit, and pandas, 8%-17% of the generated tests are fault-enforcing, while only 2.4%-4.8% reveal faults. Fault-enforcing tests persist over time: after several subsequent commits, 83%-91% of them are still relevant and pass. They also accumulate: when the faults of all pull requests are combined in one codebase, 83%-92% remain enforced at the end of the commit history, and the developer-written test suite detects only 14%-30% of them. Our results reveal a fundamental risk of LLM-generated regression tests: without manual validation, they may encode faulty behavior as expected behavior, allowing bugs to persist across software revisions and largely evade developer-maintained test suites. LLM-based regression testing can thus give rise to a new form of technical debt.",
+      "published": "2026-10-08T12:27:58Z",
+      "updated": "2026-10-08T12:27:58Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.11835",
+      "abs_url": "https://arxiv.org/abs/2610.11835",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.09778",
+      "title": "Reproducible LLM Inference Benchmarking: A Sequential Isolation Protocol for Regression Testing",
+      "authors": [
+        "Arnold Olympio",
+        "Juan Manuel Servera Bondroit",
+        "Wael Abdelmalek",
+        "Guang Lu",
+        "João Carvalho"
+      ],
+      "abstract": "Reproducible benchmarking of Large Language Model (LLM) inference is challenging because repeated measurements can vary with execution and system state. We present the Sequential Isolation Methodology, a controlled benchmarking and regression-testing protocol designed to reduce between-run measurement variance while deliberately varying workload concurrency. We evaluate three representative open-source LLMs on an NVIDIA A100 80GB GPU using vLLM 0.9.1 across six context sizes and eight concurrency levels, with five repetitions per configuration. The final protocol reduces average coefficient of variation (CV) from 15.2% in the least controlled methodology stage to 2.2% under the final protocol; using CV computed across the five repetition-level median (P50) TTFT values per configuration, 113 of 144 configurations (78.5%) achieve CV below 3%. The measurements also show a marked latency transition between 200 and 500 concurrent users on the tested stack and descriptive differences in P99 latency across the three models. We additionally provide an explicit cost break-even model with sensitivity to API pricing. The protocol is intended to provide a stable reference for reproducible comparison and regression testing rather than to predict absolute behavior under uncontrolled production traffic. Infrastructure-as-Code and benchmark scripts support replication of the experimental environment.",
+      "published": "2026-10-07T09:58:30Z",
+      "updated": "2026-10-07T09:58:30Z",
+      "categories": [
+        "cs.PF",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09778",
+      "abs_url": "https://arxiv.org/abs/2610.09778",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.35834",
+      "title": "A Leakage-Safe, Cost-Aware Regression Testing Methodology for the Quantum Transpiler",
+      "authors": [
+        "Furqan Nasir",
+        "Muhammad Arif Shah",
+        "Ifitkhar Alam"
+      ],
+      "abstract": "Quantum SDKs such as Qiskit are revised continually, and a single transpiler-pass change can introduce a software regression, so continuous integration (CI) must select and prioritize tests from a large, cost-heterogeneous suite under a fixed budget. We present a leakage-safe, cost-aware regression-test-selection methodology for the Qiskit quantum transpiler, with a pre-registered, budget binding evaluation that avoids data leakage. The evaluation uses a cost-heterogeneous corpus (116 units, per-unit cost spread 9,945X, T_full = 69.17 s) whose budgets were fixed from measured cost before any test-oracle label was read. A transparent risk_score selector does not beat simple test case-prioritization baselines: mean detection-vs-budget AUC is 0.721 [95% CI 0.44, 0.94] versus 0.874 [0.65, 1.00] for diversity-only (Cliff's δ = -0.64, large), with cost/history/change-stage baselines at 0.840 and random at 0.821. A component ablation shows the composite underperforms its own best signal: diversity and novelty, not severity or cost, are the effective signal. A second, independently pre-registered evaluation (19 mutation-testing events: nine original plus ten new, verified operators) tests the decomposed, diversity-first selector this mechanism implies: it closes the gap to the strongest baseline to a negligible effect size (0.880 vs 0.880, δ = -0.08) while decisively beating the original composite (0.880 vs 0.768, δ = +0.57). Two verified forward-regression events from real Qiskit CI history corroborate it, reported per event, not pooled, under a pre-declared claim-scope rule. We report the negative result as an honest, pre-registered finding with its mechanism. All code, data, and artifacts from this empirical software engineering study are released for reproducibility.",
+      "published": "2026-09-24T01:32:28Z",
+      "updated": "2026-09-24T01:32:28Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.35834",
+      "abs_url": "https://arxiv.org/abs/2609.35834",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.24928",
+      "title": "Trajectory-Aware Benchmark Subset Selection for Cost-Efficient Software Engineering Agent Regression Testing",
+      "authors": [
+        "Mahmoud Ayyad",
+        "Zehao Wang",
+        "Jiho Shin",
+        "Ying Zou",
+        "Bram Adams"
+      ],
+      "abstract": "Autonomous software engineering agents (SWE-agents) automate coding tasks. Each agent update may require re-running the full benchmark to detect regressions and improvements, at a cost of hundreds of millions of LLM tokens per run, which makes evaluation a bottleneck. One solution is to evaluate only a subset of benchmark instances. Yet, simple approaches, such as random sampling or stratified random sampling based on past pass/fail outcomes, risk producing high variance and unrepresentative subsets. We turn to agent trajectories, the step-by-step record of the actions an agent took. We propose a trajectory-aware subset selection approach that replaces random sampling with deterministic selection based on trajectory embeddings. We first group test set instances by their test outcome in a recent full test run to preserve the historical pass/fail rate, then select the subset using the trajectory's embedding space. We evaluate 76 subset selection configurations, including random sampling, embedding-based selection, clustering-based selection, and hybrid shortlist-then-subsample strategies, across three regression scenarios: same-configuration reruns, model and configuration changes, and agent framework changes. Our best trajectory-aware method is the one selecting benchmark instances closest to the centroid of each outcome group in the embedding space. It achieves the lowest estimation error among all methods we evaluate. For instance, when evaluating a given agent version on a selected subset of 5% or 10% of the test instances, our approach reduces the average estimation error by 3--11% and the worst-case error by 4--11% relative to the typical draw and 38--46% relative to the 95th-percentile draw of the strongest baseline. Our results show that a 10% trajectory-aware subset keeps the median estimation error below 5% while cutting token cost by roughly 90%.",
+      "published": "2026-09-21T17:23:28Z",
+      "updated": "2026-09-28T15:48:38Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.24928",
+      "abs_url": "https://arxiv.org/abs/2609.24928",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.20625",
+      "title": "Chronicle: Cut-Point Replay for Regression Testing of LLM Agents",
+      "authors": [
+        "Tisha Chawla",
+        "Susheem Koul"
+      ],
+      "abstract": "Large language model responses are non-deterministic, so failures in LLM agents are hard to reproduce: a failure depends on inference that is not bitwise reproducible, on tools that read changing state, and on a multi-step trajectory that a re-run rarely repeats. Record-and-replay makes a run reproducible, but existing agent tooling records runs only to trace or score them, not to test a code change against them. We present Chronicle, which records an agent run at its non-deterministic boundaries as immutable envelopes and replays it from the record. Its central operation, cut-point replay, serves a chosen subset of boundaries from the record and executes the complementary subset live with new code, turning a recorded incident into a regression test that runs in continuous integration. On a benchmark of 6 recorded failures with simulated model boundaries, recording adds 23 μs per crossing (0.008% of an assumed 300 ms model call), full replay issues zero model calls and is bit-stable across 20 repetitions, and cut-point tests fail on faulty code and pass on guarded and benign changes for all 6 incidents. In a mutation study of the guarded tools, cut-point tests catch every mutant that lets the recorded unsafe action through, while a baseline that stubs every boundary, using the same assertion, catches none. Chronicle and the benchmark are publicly available at https://github.com/theagentplane/chronicle.",
+      "published": "2026-09-17T16:09:57Z",
+      "updated": "2026-09-17T16:09:57Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.20625",
+      "abs_url": "https://arxiv.org/abs/2609.20625",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.27704",
+      "title": "RiskBlend: A Multi-Signal Framework for Test Input Prioritization in Machine Learning Regression Testing",
+      "authors": [
+        "Madhusudan Srinivasan",
+        "Namith Nishal Raphae"
+      ],
+      "abstract": "When machine learning classifiers are retrained, inputs correctly classified by the previous model version may be misclassified by the updated version, creating regression faults that are costly to detect because verifying predictions against ground truth may require human annotation, expert review, or expensive simulation rather than inexpensive model inference. Test input prioritization addresses this problem by ranking inputs so that a limited verification budget reveals as many regression faults as possible. Existing approaches rely predominantly on single-model confidence scores and do not exploit how predictions, decision boundaries, and local neighborhoods change between model versions. We propose RiskBlend, a classifier-agnostic prioritization framework that combines four complementary risk signals: historical failure patterns, prediction shift, decision-boundary shift, and neighborhood change. These signals are combined using validation-learned APFD-squared weighting. Across four datasets, five classifiers, four regression-update scenarios, and 15 random seeds, totaling 1,200 experimental configurations, RiskBlend achieves the highest average APFD in all 80 dataset-classifier-scenario combinations, with improvements of up to 0.32 APFD over the strongest baseline. Confidence-based methods remain competitive primarily for linear classifiers on sparse categorical features, which we attribute to feature-space geometry. The results show that cross-version behavioral signals provide important complementary information for prioritizing regression faults in machine learning systems.",
+      "published": "2026-08-27T20:40:35Z",
+      "updated": "2026-08-27T20:40:35Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.27704",
+      "abs_url": "https://arxiv.org/abs/2608.27704",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.21628",
+      "title": "ExploreAI: Agentic Exploration Knowledge Bases for Reproducible Observable-Regression Testing of Black-Box VR and 3D Applications",
+      "authors": [
+        "Jiajie Wang",
+        "Kebin Peng",
+        "Wei Wang",
+        "Xiaoyin Wang",
+        "Sen He",
+        "Xue Qin"
+      ],
+      "abstract": "Black-box VR and 3D applications are difficult to regression test because observable failures depend on where a tester moves, what objects are visible, and which views are captured. Manual exploratory testing can find such failures, but its evidence is time-consuming to reproduce; systematic sweeps are reproducible, but they lack semantic guidance and spend exploration budget on low-value viewpoints. We observe that an LLM can make the high-level decisions a human tester makes during exploration: interpreting a task, choosing which objects to inspect, grouping related objects, recording what it saw, and deciding when missing evidence should trigger another attempt. Based on this observation, we present ExploreAI, an LLM-driven agentic framework that offloads repeated perception, navigation, multi-view capture execution, and logging to specialized modules while using the LLM for planning, evidence recording, capture-policy decisions, and verification decisions. ExploreAI constructs an Exploration Knowledge Base (EKB): a structured, per-object record of one exploration run. For each object the agent finds, the EKB stores the scan evidence that exposed it, the selected target, the navigation path, the multi-view capture, and the self-verification result. The EKB is a reusable testing artifact that supports reproducible observable-regression checking across versions of a VR or 3D application. Across six indoor and outdoor scenes in Unity, AI2-THOR, and BeamNG, ExploreAI constructs high-completeness EKBs under both complete and target exploration, and an LLM-module ablation shows where semantic planning, capture policy, evidence recording, and self-verification contribute. Reproduction pilots further show that EKB-guided traces help both humans and LLM-based reproducers reproduce exact object-view evidence more effectively than conditions without EKB context.",
+      "published": "2026-08-21T20:54:49Z",
+      "updated": "2026-08-21T20:54:49Z",
+      "categories": [
+        "cs.SE",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.21628",
+      "abs_url": "https://arxiv.org/abs/2608.21628",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.10956",
+      "title": "ClusterBench: A Framework for Cluster-Wide Continuous Benchmarking and Regression Testing",
+      "authors": [
+        "Aditya Ujeniya",
+        "Jan Eitzinger",
+        "Thomas Gruber",
+        "Georg Hager",
+        "Gerhard Wellein"
+      ],
+      "abstract": "Data centers need tooling that validates an entire installation rather than individual nodes, at acceptance and at regular intervals thereafter. This requires dispatching identical benchmarks to every node in a single submission, and therefore cluster-aware scheduling. This paper presents ClusterBench, a framework for cluster-wide continuous benchmarking. It ships with a benchmark collection targeting each component: CPU, GPU, memory, interconnect, and I/O. Because measurements are repeated throughout the cluster's lifetime, ClusterBench collects data across space and time. Comparison against earlier runs detects performance regressions introduced by software changes, such as kernel updates or new library versions. The measurements also form a dataset for research on hardware variability. On the NHR@FAU clusters Helma, Alex, and Fritz, variation within a single component stays within 1%. Variation across specimens reaches 5%, despite nodes identical by specification. Correlating performance with power draw, frequency, and temperature shows that this relationship differs between air- and liquid-cooled nodes.",
+      "published": "2026-08-11T14:23:43Z",
+      "updated": "2026-08-11T14:23:43Z",
+      "categories": [
+        "cs.DC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.10956",
+      "abs_url": "https://arxiv.org/abs/2608.10956",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.00378",
+      "title": "CASPER-Change-Aware Slice Prioritization for Efficient Regression Testing of LLM-based systems",
+      "authors": [
+        "Biruk Asmare Muse",
+        "Lionel Briand",
+        "Yiwei Lu",
+        "Keheliya Gallaba"
+      ],
+      "abstract": "Regression testing for LLM-based systems poses unique challenges because individual regression instances provide limited information about system-level regressions. A failure in a single instance does not necessarily indicate a meaningful regression or provide sufficient information to diagnose affected behaviors. Conversely, detecting regressions based only on overall system performance changes is too coarse-grained, as it does not identify which behaviors are affected. This motivates analyzing regression instances at an intermediate level through test suite slices. To address this challenge, we propose CASPER, a change-aware slice prioritization framework for efficient regression testing of prompt-level and model-level changes in LLM-based systems. CASPER first identifies regression slices containing semantically related instances with consistent performance characteristics using an evolutionary slice identification approach. Given a change to an LLM-based application, CASPER prioritizes slices according to their likelihood of regression using behavioral information extracted from execution logs. We instantiate CASPER in the software issue resolution domain and evaluate slice identification against clustering-based baselines and regressed slice prioritization against a random ranking baseline. Results show that CASPER generates more consistent slices while maintaining comparable or better semantic coherence and improves regressed slice prioritization across different LLM-based system changes and testing budgets.",
+      "published": "2026-08-01T01:21:39Z",
+      "updated": "2026-08-01T01:21:39Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.00378",
+      "abs_url": "https://arxiv.org/abs/2608.00378",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.29557",
+      "title": "Alteron: A Tool for Behavioral Regression Testing Across NLP Classifier Versions",
+      "authors": [
+        "Shazzad Hossain",
+        "Proma Chowdhury",
+        "Mridha Md. Nafis Fuad"
+      ],
+      "abstract": "Evaluating evolving Natural Language Processing (NLP) models is important for ensuring reliable behavior across updates, but standard benchmark metrics do not fully capture how model behavior changes across versions. Existing work has focused mainly on testing models in isolation rather than comparing successive versions in continuous integration workflows. We present Alteron, a tool for detecting behavioral regressions across NLP model versions with metamorphic testing. Alteron constructs a test corpus from labeled source examples and compares model versions on metamorphically transformed inputs. In an evaluation spanning 10 metamorphic relations (MRs), 4 model versions, and 3 model-update transitions, Alteron identified 16 behavioral regressions, 11 of which were release-blocking. The results show that common model updates can preserve overall task performance while still introducing undesirable behavior changes, and that behavioral checks across model versions can reveal failures that aggregate benchmark metrics alone do not capture. The tool is open-source and available at https://github.com/shazzad5709/alteron. A screencast demonstration is available at https://youtu.be/szwiWW5O4do.",
+      "published": "2026-07-31T15:48:31Z",
+      "updated": "2026-07-31T15:48:31Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.29557",
+      "abs_url": "https://arxiv.org/abs/2607.29557",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.01728",
+      "title": "Beyond Pixel Diffs: Benchmarking Image Change Captioning for Web UI Visual Regression Testing",
+      "authors": [
+        "Licheng Zhang",
+        "Bach Le",
+        "Pengtao Zhao",
+        "Naveed Akhtar"
+      ],
+      "abstract": "Visual regression testing (VRT) is a standard quality assurance step in modern software release pipelines. On every change, it re-renders user interface (UI) screenshots, compares each one against an approved baseline image, and routes any detected difference to a human reviewer who decides whether it is an intended update or an unintended regression. A widely used approach, especially in open-source and continuous-integration pipelines, is pixel-level comparison, which is semantically blind and treats rendering noise and genuine defects identically, producing large volumes of false positives that force developers and testers to spend substantial time and effort manually reviewing flagged differences at every release cycle. Industry tools apply machine learning to VRT, but lack public evaluation. More critically, no dataset or benchmark exists to support natural language descriptions of UI changes, a capability that tells testers what changed in words instead of leaving them to interpret a binary flag or a highlighted region. To address the gap, we propose a new task, Web UI Image Change Captioning (WUICC), which sits at the intersection of VRT and image difference captioning (IDC), and release WUICC-bench, its first dataset and benchmark for the task. We evaluate eleven representative IDC methods, together with two zero-shot general-purpose LLMs. We find that: (1) these methods tend to struggle in the Web UI domain due to its layout diversity, dense text, and fine-grained changes, and (2) yet the trained methods already suppress non-meaningful visual noise far more selectively than the pixel-level comparison VRT relies on, providing a solid foundation for future domain-specific research.",
+      "published": "2026-07-02T05:33:57Z",
+      "updated": "2026-07-02T05:33:57Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.01728",
+      "abs_url": "https://arxiv.org/abs/2607.01728",
+      "source": "arxiv"
+    },
     {
       "id": "2205.12423",
       "title": "Deletion and Insertion Tests in Regression Models",
@@ -1161,7 +1396,7 @@
         "Masumi Morishige",
         "Ryo Koshihara"
       ],
-      "abstract": "Reproducibility and reliability remain pressing challenges for generative AI systems whose behavior can drift with each model update or prompt revision. We introduce GPR-bench, a lightweight, extensible benchmark that operationalizes regression testing for general purpose use cases. GPR-bench couples an open, bilingual (English and Japanese) dataset covering eight task categories (e.g., text generation, code generation, and information retrieval) and 10 scenarios in each task categories (80 total test cases for each language) with an automated evaluation pipeline that employs \"LLM-as-a-Judge\" scoring of correctness and conciseness. Experiments across three recent model versions - gpt-4o-mini, o3-mini, and o4-mini - and two prompt configurations (default versus concise-writing instruction) reveal heterogeneous quality. Our results show that newer models generally improve correctness, but the differences are modest and not statistically significant, suggesting that GPR-bench may not be sufficiently challenging to differentiate between recent model versions. In contrast, the concise-writing instruction significantly enhances conciseness (+12.37 pp, Mann-Whitney U test: p \u003c 0.001, effect size r = 0.2995) with minimal degradations on accuracy (-1.7 pp), demonstrating the effectiveness of prompt engineering. Released under the MIT License, GPR- bench lowers the barrier to initiating reproducibility monitoring and provides a foundation for community-driven extensions, while also raising important considerations about benchmark design for rapidly evolving language models.",
+      "abstract": "Reproducibility and reliability remain pressing challenges for generative AI systems whose behavior can drift with each model update or prompt revision. We introduce GPR-bench, a lightweight, extensible benchmark that operationalizes regression testing for general purpose use cases. GPR-bench couples an open, bilingual (English and Japanese) dataset covering eight task categories (e.g., text generation, code generation, and information retrieval) and 10 scenarios in each task categories (80 total test cases for each language) with an automated evaluation pipeline that employs \"LLM-as-a-Judge\" scoring of correctness and conciseness. Experiments across three recent model versions - gpt-4o-mini, o3-mini, and o4-mini - and two prompt configurations (default versus concise-writing instruction) reveal heterogeneous quality. Our results show that newer models generally improve correctness, but the differences are modest and not statistically significant, suggesting that GPR-bench may not be sufficiently challenging to differentiate between recent model versions. In contrast, the concise-writing instruction significantly enhances conciseness (+12.37 pp, Mann-Whitney U test: p < 0.001, effect size r = 0.2995) with minimal degradations on accuracy (-1.7 pp), demonstrating the effectiveness of prompt engineering. Released under the MIT License, GPR- bench lowers the barrier to initiating reproducibility monitoring and provides a foundation for community-driven extensions, while also raising important considerations about benchmark design for rapidly evolving language models.",
       "categories": [
         "cs.CL",
         "cs.AI"

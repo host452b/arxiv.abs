@@ -1,0 +1,30 @@
+Title: Quality-Control Policies Shape Model Behaviour in Computational Pathology
+Authors: Mario Parreño Centeno, Yu Guan, Pedro Montero Pavón, Sanna Palosaari, Juha Väyrynen
+ID: 2611.28179
+URL: https://arxiv.org/abs/2611.28179
+
+Abstract:
+Quality-control policies determine which image regions are used by computational
+pathology models, but their effects are difficult to isolate when quality
+estimation and input selection are coupled. We make these policies explicit,
+configurable and testable. We introduce PathQC-3C, comprising 1,661 densely
+annotated regions from 1,194 haematoxylin and eosin whole-slide images across 32
+cancer/tissue categories, and TileNet, a framework that separates dense
+tissue/background/artefact estimation from task-specific input-selection
+policies. We evaluated the default predictor across three held-out cohorts and
+against harmonised quality-control comparators, assessed policy decisions in a
+blinded single-pathologist audit, and tested alternative policies in three
+downstream settings. In retrospective CAMELYON16 multiple-instance learning,
+background-aware selection improved the pooled out-of-fold area under the
+receiver operating characteristic curve from 0.758 to 0.839 compared with random
+sampling from the same exhaustive candidate pool under a fixed tile budget. In
+weak-label lung classification, strict artefact exclusion reduced the pre-
+matching candidate pool by approximately 43%, with small metric-dependent
+differences after matching training-set size and patient contribution.
+PathQCAug, which composites real artefact components during tumour-stroma model
+adaptation, improved macro Dice on high-artefact tiles under severe held-out
+composited artefacts across three training seeds and outperformed random-erasing
+and clean-tissue controls. Separating quality estimation from policy execution
+provides an auditable way to control which image content enters computational
+pathology models; the appropriate policy is task specific, and clinical utility
+remains to be established.

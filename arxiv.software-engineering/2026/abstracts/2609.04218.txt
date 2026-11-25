@@ -1,0 +1,31 @@
+Title: A Governance Methodology Layer for AI-Assisted Software Development: Defect Taxonomy, Controlled Ablation, and a Test of Process-Over-Capability
+Authors: Sungjin Kwon
+ID: 2609.04218
+URL: https://arxiv.org/abs/2609.04218
+
+Abstract:
+Autonomous coding agents produce output that passes syntactic checks --
+compilation, type safety, CI -- at high velocity. Yet syntactic correctness does
+not imply semantic correctness: design boundaries, security invariants, and
+maintainability contracts remain structurally invisible to automated pipelines.
+This paper makes four contributions. First, we present a defect-class taxonomy
+grounded in five AI agent permission and governance modules, separating defects
+structurally detectable by static analysis from those requiring semantic review.
+Second, we describe a runtime-decoupled governance gate -- a file-based protocol
+that reads generator output and emits a structured verdict without API coupling,
+hence portable across generators. Third, we formalize methodology-as-code:
+expressing a verification protocol as a version-controlled, executable artifact
+whose two layers separate portable methodology from host automation. Fourth, we
+report a controlled ablation experiment (E-ablation, N=5 artifacts, 8-item
+independent ground truth) comparing harness-structured review against a token-
+matched unstructured prompt. The structured condition records 62% lenient recall
+against 50%, with 25% strict against 0%. A severity-grade differential reported
+earlier does not survive blind re-grading and is withdrawn (Sec. 6.6). An
+independent-session re-test with blind scoring does not replicate that contrast:
+the conditions differ by one strict hit in 24 (6/24 against 5/24), the
+structured aggregate again 25% and the unstructured 0% not recurring (Sec. 6.7).
+Both conditions miss document-quality defects identified by a human QA reviewer,
+indicating complementarity between structured AI review and human process
+inspection. A later pre-registered test varying model tier (184 runs) did not
+support process design as the dominant factor: under strict scoring the tier
+effect was larger (Sec. 6.8).

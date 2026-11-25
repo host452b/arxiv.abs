@@ -1,0 +1,24 @@
+Title: SpikWM: Efficient End-to-End Spiking World Modeling for Visual Planning
+Authors: Shuhan Ye, Hongbin Yu, Chong Wang, Hui Lu, Jiaming He, Yi Yu, Jiangbo Qian, Xudong Jiang
+ID: 2611.22981
+URL: https://arxiv.org/abs/2611.22981
+
+Abstract:
+Goal-conditioned planning with image observations and goals requires predictions
+that distinguish visual states and action consequences. Spiking neural networks
+offer sparse computation, but single-step spikes can obscure motion cues and
+merge actions with different physical outcomes. We propose the Spiking Latent
+World Model (SpikWM), an end-to-end joint-embedding predictive architecture
+(JEPA) with one simulation step per image and one neural update per latent
+position. Spiking Regional Encoding retains spatial cues through regional
+pooling. Bi-Spike Action Encoding combines positive and negative binary
+responses, while Causal Membrane Prediction carries subthreshold evidence across
+the latent history with learned group-wise time constants. The encoder and
+predictor are trained jointly on reward-free image--action trajectories using
+next-embedding prediction and SIGReg. With a common planner, SpikWM achieves
+mean success rates of $88.67\%$, $97.33\%$, $99.33\%$, and $86.67\%$ on Push-T,
+Two-Room, Reacher, and OGBench-Cube, respectively, outperforming two spiking
+baselines. Push-T ablations support each module, and controlled replays examine
+responses to appearance and physical state changes. Under a matched planning
+budget, SpikWM reduces estimated arithmetic energy by $75.6\%$ relative to LeWM.
+Code will be released at https://github.com/ShawnYE618/SpikWM.

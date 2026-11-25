@@ -1,0 +1,25 @@
+Title: Agentic Root Cause Reasoning and Localization of Unsoundness in Static Call Graph Analysis
+Authors: Mohammad Rafieian, Michael Hicks, Shiyi Wei
+ID: 2611.29745
+URL: https://arxiv.org/abs/2611.29745
+
+Abstract:
+Static call graph tools cannot soundly model every dynamic language feature, yet
+rarely reveal when, where, or why their results are unsound. We present CGRizz,
+an agentic framework that diagnoses unsoundness for developers and warns users
+about it. During training, CGRizz compares static and dynamic call graphs to
+identify boundary edges: calls observed at runtime but missing from the static
+graph. For each edge, an LLM agent proposes a root cause, including the
+unmodeled program pattern and responsible tool location. CGRizz validates each
+proposal using three independent forms of evidence: runtime instrumentation
+detecting the pattern, a test case reproducing the missing edge, and a warning
+inserted at the implicated tool location. Validated reports help developers
+diagnose limitations, while the warnings form an instrumented build that flags
+potential unsoundness in new programs without dynamic analysis. We evaluate
+CGRizz on three benchmark suites using WALA, OPAL, and Soot. Of 1,459 boundary
+edges, CGRizz reasons about 10.3% directly, all confirmed by manual audit, and
+resolves another 84.1% by grouping edges with validated root causes. Tool
+maintainers confirmed several limitations, some of which have been fixed. The
+warnings flag 74%-92% of unsoundness in held-out programs. Guided by CGRizz
+reports, a coding agent refactored programs to remove 64% of targeted root-cause
+patterns while preserving functionality.

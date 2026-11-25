@@ -1,0 +1,26 @@
+Title: Seeing Is Not Planning: Spatiotemporal Planning and Plan Repair in Multimodal LLMs
+Authors: Siyuan Li, Ethan Lin, Xiang Li, Tianming Liu
+ID: 2611.28726
+URL: https://arxiv.org/abs/2611.28726
+
+Abstract:
+Planning in a visual world means reading the layout, foreseeing how the state
+will change, and following the task rules all at once. When a plan fails, a
+model should also use what went wrong to fix it. We call these two abilities
+spatiotemporal planning and plan repair, and test them with Railbound-Bench. A
+model sees a railway puzzle, adds tracks under a budget, and submits one
+complete layout; a simulator then moves all cars at once and decides whether the
+layout works. After a failure, the model sees what happened and may submit a new
+layout, up to five attempts in total. On the 200-puzzle main set, the best of
+nine models solves 59.5% within five attempts, the next 39.5%, and the other
+seven at most 10.0%; a 1,000-puzzle extended set with a wider range of
+difficulty is far easier, at 90.9% for the best model. Controlled studies on 180
+fixed puzzles show that knowing the task is not the same as using it. GPT-6.1
+Terra copies 97.2% of boards exactly and, given a correct layout as text,
+predicts all four requested future states in 91.3% of cases, yet only 22.8% of
+its first layouts work. Planning fails more often as the cars' routes interact,
+even among puzzles that a search solver finds equally easy. Visual feedback
+removes the reported fault in 175 of 417 first revisions, but only 43 of these
+revisions solve the puzzle, and at an equal budget of 40k tokens it does no
+better than fresh retries. The code and data are open-sourced on GitHub at
+https://github.com/liaoyanqing666/Railbound_Bench.

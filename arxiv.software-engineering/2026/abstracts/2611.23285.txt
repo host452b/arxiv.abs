@@ -1,0 +1,30 @@
+Title: Beyond Stars: MTTX Brings Developer Responsiveness to Dependency Decisions, from Dashboard to IDE to GitHub Actions
+Authors: Imranur Rahman, Ranindya Paramitha, Mahzabin Tamanna, Laurie Williams
+ID: 2611.23285
+URL: https://arxiv.org/abs/2611.23285
+
+Abstract:
+Modern software reuses open-source packages as dependencies, and developers
+often choose among candidate packages with cheap signals, such as GitHub stars
+and download counts. However, such signals are easy to fake, so developers need
+signals that represent "observed behavior," such as how quickly the developers
+of a package respond to new dependency releases and to security fixes. Prior
+work computed these responsiveness metrics, MTTU (Mean Time To Update)
+dependencies and MTTR (Mean Time To Remediate) vulnerable dependencies, but only
+with a research prototype for a fixed set of packages. Therefore, developers
+cannot easily benefit from them or integrate them into their workflow. We
+present MTTX, an open-source tool that computes MTTU and MTTR with accurate
+historical dependency resolution for any package and given time window, and
+brings them into different phases of developer workflow. MTTX resolves each
+version constraint of npm, PyPI, and Cargo packages as of a past date, with data
+from the native registries or deps.dev and vulnerability data from OSV. We
+validated MTTX with 328 automated tests, and for 90 packages from prior work, we
+manually verified its dependency resolution at each historical release point and
+its MTTU and MTTR computation. Developers can use MTTX in an interactive web
+dashboard, an IDE extension, and a GitHub Action, which are all available from
+the project homepage at https://imranur-rahman.github.io/dependency-update-
+metrics/. We envision that package registries (e.g., npm) and metadata
+aggregators and intelligence platforms (e.g., deps.dev) will display these
+values on the package page, alongside download counts and stars, to make them
+easier for developers to access. A demo video is at
+https://youtu.be/MZqjDnJ8bEQ.

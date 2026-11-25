@@ -1,0 +1,21 @@
+Title: When the Persona Contradicts the Line: Diagnosing Plan-to-Synthesis Failures in Chain-of-Thought TTS
+Authors: Joonyong Park, Jerry Li
+ID: 2610.35008
+URL: https://arxiv.org/abs/2610.35008
+
+Abstract:
+Chain-of-thought TTS systems rely on language-model planners to translate
+persona and context into vocal delivery, but it is unclear where this intent is
+lost when the requested affect conflicts with lexical sentiment. We introduce a
+bilingual Japanese--English persona--line conflict benchmark in which each item
+pairs one line with congruent and conflicting personas and pre-declares the
+expected acoustic direction. We probe this direction in the planner-generated
+delivery phrase, the planner-written emotion vector, the QwenEmotion-generated
+vector, and the rendered waveform. Planner outputs are usually direction-
+correct, while downstream agreement can be substantially lower. Bypassing
+QwenEmotion provides only modest gains over the full planner-controlled Base.
+Supervising QwenEmotion raises the direction rate to 75% in Japanese and 84% in
+English. A learned text-to-latent interface reaches the highest English rate of
+89% and the highest Japanese arousal rate of 88%. These results show that
+learned repair of the plan-to-synthesis interface can recover counter-textual
+delivery, although its effect differs across languages and acoustic axes.

@@ -1,0 +1,30 @@
+Title: 5uGUE: Agentic Hardware-in-the-Loop Fuzzing for 5G Devices and beyond
+Authors: Guoqiang Hua, Sakshi Udeshi, Matheus Eduardo Garbelini, Daisuke Mashima, Sudipta Chattopadhyay
+ID: 2610.29155
+URL: https://arxiv.org/abs/2610.29155
+
+Abstract:
+In this paper, we present 5uGUE, a large language model (LLM)-driven hardware-
+in-the-loop agent, which enables the wireless fuzzing of 5G-enabled devices
+(such as mobile phones). 5uGUE combines multi-step reasoning with tool-assisted
+interaction and integrates into the fuzzing pipeline by leveraging specialized
+tools for internet search, 5G protocol analysis, memory management, and test-
+case execution. The agent iteratively generates test cases, executes them on
+targets, collects runtime feedback, and adaptively refines the fuzzing strategy.
+We evaluate 5uGUE on five commercial off-the-shelf (COTS) 5G devices across six
+LLMs. The best performing runs for 5uGUE trigger 167 crashes in total (141 novel
+and 31 unique) within 60 interaction turns (49 to 133 minutes total runtime). In
+contrast, the best runs for the state-of-the-art baseline (5GHOUL) discovers
+only 13 crashes in total (10 novel and 6 unique) within 150 minutes. Overall, by
+integrating LLM-driven agents, 5uGUE demonstrates significantly better crash
+discovery performance (12.8x total, 5.2x unique improvement). Notably, our
+experiments identified 46 unique crashes, 44 of which were confirmed by the
+vendors but had been previously reported. More importantly, MediaTek confirmed
+two previously unknown, high-severity vulnerabilities, one of which was assigned
+CVE-2026-20525. Finally, to demonstrate that 5uGUE is agnostic to wireless
+protocols, we also extend it to Bluetooth Classic with only minimal code
+changes. In our evaluations, 5uGUE finds an average of 6.4 novel crashes and 1.6
+unique crashes. In a nutshell, 5uGUE highlights that LLM agents are capable to
+operate effectively beyond software-in-the-loop settings, extending autonomous
+vulnerability discovery to the proprietary, hardware-bound systems that affect
+billions of end-user devices across multiple wireless protocols.

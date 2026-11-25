@@ -1,0 +1,22 @@
+Title: CRAFT: Analog Circuit Design by Reasoning LLM Agents from Pre-Computed Lookup Tables
+Authors: Hyunjun Park, Seungyub Han, Jason Jaesung Lee, Kahyun Kim, Soohyun Kim, Inwoo Nam, Sunmin Kim, Wooyoung Choi, Junhyung Kim
+ID: 2611.25908
+URL: https://arxiv.org/abs/2611.25908
+
+Abstract:
+Automated analog circuit sizing methods, from black-box optimizers to recent
+large language model (LLM) agents, typically search the design space with a
+SPICE simulator in the loop, whereas an experienced designer works out a design
+by hand analysis. This paper presents CRAFT, a flow in which an LLM agent
+designs a given topology by calculation, as a designer does, and without an
+initial sizing. The agent works only through DeX, a service that uses pre-
+computed lookup tables to provide device characteristics and to solve the whole
+netlist for its operating point and small-signal response. It thus designs
+without SPICE, and every final design is verified independently in HSPICE. We
+test CRAFT on four circuits in a commercial 28 nm process; the largest is a
+37-transistor three-stage amplifier with 53 design variables, 20 specifications
+and 74 saturation constraints. With Claude Opus 5.5, CRAFT meets every
+specification and constraint in all 20 runs, five per circuit. On that
+amplifier, with DeX in place of HSPICE and an identical request for both, the
+same agent passes in 10 of 10 runs instead of 6 of 10 within an hour and is 2.0x
+faster at the median.

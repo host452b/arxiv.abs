@@ -10,13 +10,153 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T22:11:01Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "groups": [
     {
       "source": "arxiv",
-      "count": 200,
+      "count": 207,
       "papers": [
+        {
+          "id": "2611.32332",
+          "title": "GUI-WEdit and GUI-SkillEvo: Gradient-Free Adaptation of Small GUI Agents",
+          "authors": [
+            "Haixia Bi",
+            "Yingtian Chen",
+            "Sihan Yang",
+            "Zuzheng Kuang",
+            "Yuzhen Tong",
+            "Kai Fu",
+            "Zhengyong Wan"
+          ],
+          "abstract": "Small graphical user interface (GUI) agents can execute desktop workflows, but repeated local errors and fragile procedural decisions limit their reliability. We present GUI-WEdit-4B and GUI-SkillEvo-2B, two gradient-free adaptations of GUI-Owl-1.5 backbones. For the 4B model, we use trajectory feedback to construct guarded, closed-form updates to a late multilayer perceptron (MLP), retaining successful states as protection constraints. The final checkpoint changes 23,739,095 parameter values, or 0.535\\% of the 4,437,815,808-parameter backbone, within one weight tensor. For the 2B model, an assistant iteratively proposes and refines procedural skills while the model weights remain fixed. On the 361-task OSWorld subset excluding Google Drive tasks, the frozen systems obtain final aggregate scores of 48.02\\% and 45.47\\%, respectively.",
+          "published": "2026-11-24T10:18:59Z",
+          "updated": "2026-11-24T10:18:59Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32332",
+          "abs_url": "https://arxiv.org/abs/2611.32332",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32102",
+          "title": "RISE: Reasoning with Implicit State Embeddings for GUI Agents",
+          "authors": [
+            "Enqi Liu",
+            "Zhi Gao",
+            "Liu Liu",
+            "Lifeng Fan",
+            "Liyuan Pan"
+          ],
+          "abstract": "Graphical user interface (GUI) agents translate user instructions and screenshots into executable actions. To learn executable actions, existing approaches often rely on explicit reasoning during training, which encourage over-reliance on specific reasoning patterns rather than generalizable action-relevant information. In this paper, we propose an implicit framework, RISE, which integrates action-relevant reasoning into implicit state representations to guide GUI action prediction. To this end, action-relevant reasoning is captured through three complementary supervision objectives: full-CoT state alignment preserves information across the reasoning process, action-distribution alignment encodes action preferences, and reasoning-to-action boundary alignment captures the representation immediately before action generation. In this case, our RISE effectively learns informative implicit representations, thereby improving the accuracy of next-action token prediction. RISE achieves 70.6\\% accuracy on OSWorld-G, establishing state-of-the-art performance among compared 8B models with a 4.3-point gain over its backbone. Results across two distinct backbones and six diverse benchmarks further demonstrate its effectiveness in GUI grounding and action prediction. Our code is available on our project page.",
+          "published": "2026-11-24T07:21:47Z",
+          "updated": "2026-11-24T07:21:47Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32102",
+          "abs_url": "https://arxiv.org/abs/2611.32102",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.32097",
+          "title": "GUI-PRISM: Efficient Action Decoding for GUI Agents",
+          "authors": [
+            "Enqi Liu",
+            "Zhi Gao",
+            "Liu Liu",
+            "Lifeng Fan",
+            "Liyuan Pan"
+          ],
+          "abstract": "Graphical user interface (GUI) agents translate screenshots and user instructions into executable actions. Most existing approaches rely on vision-language models to generate actions as text, often leading to substantial inference latency due to autoregressive decoding. To address this inefficiency, we propose GUI-PRISM, a hybrid action decoder that directly predicts action types and structured arguments while retaining language generation for open-ended text. Unlike existing spatial decoding methods that primarily focus on target localization, GUI-PRISM extends direct prediction to action types and their associated arguments, enabling complete GUI action prediction. Specifically, GUI-PRISM employs field-specific queries to extract action-relevant semantic and spatial information from a shared multimodal feature bank. It further models dependencies among action components through conditional queries. Gated residual cross-attention refines these predictions using fine-grained multimodal information. GUI-PRISM achieves 95.1\\% accuracy on ScreenSpot-v2, outperforming the strongest head-based spatial decoding method by 2.0 percentage points while delivering a 3.8$\\times$ inference speedup over the baseline. On AndroidControl-v2 and MM-Mind2Web-v2, it improves complete-action accuracy by 4.8 and 0.7 percentage points while achieving 2.7$\\times$ and 3.9$\\times$ inference speedups over the baseline, respectively. Our code is available on our project page.",
+          "published": "2026-11-24T07:16:44Z",
+          "updated": "2026-11-24T07:16:44Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.32097",
+          "abs_url": "https://arxiv.org/abs/2611.32097",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.31522",
+          "title": "One Step, Four Clocks: How GUI Agents Fall Out of Step",
+          "authors": [
+            "Zhanwen Chen",
+            "Tianchun Wang"
+          ],
+          "abstract": "GUI agents can choose correct actions yet fail as interfaces change during deliberation. Latency alone cannot explain these failures because actions may become invalid at different interaction stages. We model four events: environment change, observation availability, decision commitment, and action receipt (EODA). We introduce ChronotopeGym to study these failures under Paused, Replay, and Live execution. Across five tasks, agents can fail in Live despite succeeding when responses remain valid, even when actions meet deadlines. On Moving Balloon, updating a pending click raises success from 0% to 100% without changing response time. Our accelerator-resident GUI controller, Chronotope, maintains compact interaction history and selectively keeps, updates, or redecides pending actions. Compared with Agent S3, Chronotope reduces median end-to-end latency by 85.5% for a 27B model, expanding its performance envelope to 100% Live success at an 8-second deadline versus 0%. Chronotope enables real-time GUI control through compact interaction history, knowing when to preserve, revise, or replace actions, and an overall efficient architectural design that obviates verbose reflection, reasoning, and grounding calls.",
+          "published": "2026-11-23T20:28:04Z",
+          "updated": "2026-11-23T20:28:04Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31522",
+          "abs_url": "https://arxiv.org/abs/2611.31522",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.30983",
+          "title": "MedUIGym: Evaluating and Training GUI Agents for Clinical Workflows",
+          "authors": [
+            "Yitong Qiao",
+            "Lei Liu",
+            "Yue Shen",
+            "Jian Wang",
+            "Jinjie Gu",
+            "Zhixuan Chu"
+          ],
+          "abstract": "Automating clinical workflows requires vision-language agents that can navigate dense graphical user interfaces (GUIs) in electronic health records (EHRs) and execute precise actions, yet many medical agents still rely on text or structured tool calls. In this work, we introduce MedUIGym, a scalable interactive environment comprising 15,739 tasks from 17 benchmark sources across six clinical task families for training and evaluating clinical GUI agents. In MedUIGym, agents perceive EHR states from screenshots and execute mouse-and-keyboard actions, as well as a paired native-tool interface over identical clinical data. The environment verifies both final answers and required clinical actions, and supports parallel trajectory collection for training. Benchmarking twelve vision-language models shows that current agents struggle across diverse clinical workflows, and simply increasing reasoning effort fails to yield consistent gains. Furthermore, MedUIGym supports offline learning from GUI trajectories and online reinforcement learning from task rewards. After training, both Qwen3.5 models perform better on in-domain clinical tasks and generalize to tasks from external sources. By unifying tasks from existing benchmarks, dual-interface evaluation, and GUI trajectory collection, MedUIGym provides a testbed for studying how vision-language agents complete clinical tasks through the EHR's graphical interface. Our project page is available at https://github.com/yitong-qiao/MedUIGym.",
+          "published": "2026-11-23T16:41:20Z",
+          "updated": "2026-11-23T16:41:20Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.30983",
+          "abs_url": "https://arxiv.org/abs/2611.30983",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.30170",
+          "title": "GUI-Q: Task-Sensitive Granularity and Relation-Preserving Quantization for GUI Agents",
+          "authors": [
+            "Tianqi Li",
+            "Yang Wang",
+            "Xin He",
+            "Le Zhang",
+            "Yun Liu"
+          ],
+          "abstract": "Graphical user interface (GUI) agents enable automated interactions with mobile, web, and desktop interfaces. However, their large memory footprint and repeated model calls hinder deployment on resource-constrained devices, motivating post-training quantization (PTQ) without full retraining. Quantization can degrade GUI response accuracy and distort the instruction-vision affinities and local spatial relations needed for GUI target selection. Small coordinate errors can cause missed clicks, while early action errors can alter subsequent interface states and disrupt task execution. Local reconstruction error alone does not directly assess whether these responses and relations are preserved. We propose GUI-Q, a PTQ framework that targets response and relation preservation with 4-bit weights and 16-bit activations (W4A16). Task-Sensitive Granularity Allocation (TSGA) allocates finer groups under a scale-byte budget by combining response sensitivity with the measured reduction in activation-weighted distortion. Relation-Preserving Symmetry Selection (RPSS) then selects symmetric or asymmetric grids to preserve instruction-vision affinities and local spatial relations in GUIs. Across three GUI-capable models, GUI-Q improves mean grounding TargetHit by 8.04 to 12.55 points over the strongest evaluated 4-bit configurations, while reducing static peak graphics processing unit (GPU) memory by 49.9% to 56.2% relative to bfloat16 (BF16). Fixed-output replay with packed 4-bit execution provides 1.7 to 2.8 times model-call speedups. The code will be released.",
+          "published": "2026-11-23T07:15:53Z",
+          "updated": "2026-11-23T07:15:53Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.30170",
+          "abs_url": "https://arxiv.org/abs/2611.30170",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.29847",
+          "title": "MobileGrail: Learning Compact Guardrails for On-Device deployable Mobile GUI Agent Safety",
+          "authors": [
+            "Zhiyu Zhang",
+            "Yuankai Li",
+            "Muhao Chen"
+          ],
+          "abstract": "Runtime guardrails protect mobile GUI agents by assessing each proposed action before execution, but existing guardrails rely on cloud hosted large multimodal models, exposing every screen to a remote server, including private information such as payments, messages, and medical records. We propose MobileGrail, an on-device deployable model that addresses both. It maintains a recurrent task state that retains only the evidence subsequent safety decisions depend on, so that authorization and execution progress persist beyond the short context. To intervene early while keeping the safety boundary precise, it learns two labels, unsafe and block: unsafe marks the action that commits a violation, whereas block may be issued at any step of an intervention window, which spans from the first action that the user's authorization no longer explains to the committing action itself. To support training, we build an environment of 32 applications whose backends verify the effect of every action, supplying verified labels for supervision and rewards for reinforcement learning to calibrate intervention timing. We also build MobileVeto, an offline benchmark of unsafe trajectories largely on held-out applications, each paired with a benign counterpart. On MobileVeto, MobileGrail built on Qwen3.5-2B intercepts 76.2% of violations, up from 64.5% for its prompted backbone, while reducing premature intervention from 58.6% to 5.2%, outperforming the cloud-based OS-Sentinel on both. We further conduct online evaluation on GhostEIBench, where MobileGrail guarding a Qwen3.8-27B agent reduces fully successful attacks from 13 to 3 of 110 tasks while raising task completion from 48 to 58. Quantized to 4 bits, MobileGrail runs on a Snapdragon 8 Elite at a median latency of 4.7 s, comparable to the 5.1s of cloud-hosted Gemini 3.8 Flash.",
+          "published": "2026-11-23T00:09:33Z",
+          "updated": "2026-11-23T00:09:33Z",
+          "categories": [
+            "cs.AI",
+            "cs.CR",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.29847",
+          "abs_url": "https://arxiv.org/abs/2611.29847",
+          "source": "arxiv"
+        },
         {
           "id": "2411.10323",
           "title": "The Dawn of GUI Agent: A Preliminary Case Study with Claude 3.5 Computer Use",
@@ -421,7 +561,7 @@
             "Dongmei Zhang",
             "Jianfeng Gao"
           ],
-          "abstract": "One of the principal challenges in building VLM-powered GUI agents is visual grounding, i.e., localizing the appropriate screen region for action execution based on both the visual content and the textual plans. Most existing work formulates this as a text-based coordinate generation task. However, these approaches suffer from several limitations: weak spatial-semantic alignment, inability to handle ambiguous supervision targets, and a mismatch between the dense nature of screen coordinates and the coarse, patch-level granularity of visual features extracted by models like Vision Transformers. In this paper, we propose GUI-Actor, a VLM-based method for coordinate-free GUI grounding. At its core, GUI-Actor introduces an attention-based action head that learns to align a dedicated \u003cACTOR\u003e token with all relevant visual patch tokens, enabling the model to propose one or more action regions in a single forward pass. In line with this, we further design a grounding verifier to evaluate and select the most plausible action region from the candidates proposed for action execution. Extensive experiments show that GUI-Actor outperforms prior state-of-the-art methods on multiple GUI action grounding benchmarks, with improved generalization to unseen screen resolutions and layouts. Notably, GUI-Actor-7B even surpasses UI-TARS-72B (38.1) on ScreenSpot-Pro, achieving scores of 40.7 with Qwen2-VL and 44.6 with Qwen2.5-VL as backbones. Furthermore, by incorporating the verifier, we find that fine-tuning only the newly introduced action head (~100M parameters for 7B model) while keeping the VLM backbone frozen is sufficient to achieve performance comparable to previous state-of-the-art models, highlighting that GUI-Actor can endow the underlying VLM with effective grounding capabilities without compromising its general-purpose strengths.",
+          "abstract": "One of the principal challenges in building VLM-powered GUI agents is visual grounding, i.e., localizing the appropriate screen region for action execution based on both the visual content and the textual plans. Most existing work formulates this as a text-based coordinate generation task. However, these approaches suffer from several limitations: weak spatial-semantic alignment, inability to handle ambiguous supervision targets, and a mismatch between the dense nature of screen coordinates and the coarse, patch-level granularity of visual features extracted by models like Vision Transformers. In this paper, we propose GUI-Actor, a VLM-based method for coordinate-free GUI grounding. At its core, GUI-Actor introduces an attention-based action head that learns to align a dedicated <ACTOR> token with all relevant visual patch tokens, enabling the model to propose one or more action regions in a single forward pass. In line with this, we further design a grounding verifier to evaluate and select the most plausible action region from the candidates proposed for action execution. Extensive experiments show that GUI-Actor outperforms prior state-of-the-art methods on multiple GUI action grounding benchmarks, with improved generalization to unseen screen resolutions and layouts. Notably, GUI-Actor-7B even surpasses UI-TARS-72B (38.1) on ScreenSpot-Pro, achieving scores of 40.7 with Qwen2-VL and 44.6 with Qwen2.5-VL as backbones. Furthermore, by incorporating the verifier, we find that fine-tuning only the newly introduced action head (~100M parameters for 7B model) while keeping the VLM backbone frozen is sufficient to achieve performance comparable to previous state-of-the-art models, highlighting that GUI-Actor can endow the underlying VLM with effective grounding capabilities without compromising its general-purpose strengths.",
           "categories": [
             "cs.CL",
             "cs.AI",
@@ -1102,7 +1242,7 @@
             "Zekun Zhou",
             "Bing Qin"
           ],
-          "abstract": "With the advancement of computational resources, Large Vision-Language Models (LVLMs) exhibit impressive Perception and Reasoning (P\u0026R) performance on Graphical User Interface (GUI) tasks. However, although they demonstrate strong P\u0026R capabilities in English GUI scenarios, their performance in multilingual settings has received little attention, which limits their global applications. Moreover, existing studies on GUI tasks lack fine-grained analyses, including widget functions and elements' spatial relationships, which are fundamental for more targeted improvements. To tackle these issues, we propose MPR-GUI-Bench, a Multilingual fine-grained Perception and Reasoning GUI Benchmark to evaluate GUI agents' P\u0026R capabilities. Evaluation results demonstrate that LVLMs exhibit significantly worse P\u0026R performance in non-English languages than in English. To address these gaps, we propose GUI-XLI, a GUI Cross-Lingual Intervention method that applies interventions to the hidden states at P\u0026R capability-related layers to mitigate the gaps between English and other languages, building on previous research showing that the hidden states of different language inputs exhibit significant differences in the latent space. Experimental results indicate that our method improves GUI agents' multilingual P\u0026R capability by 6.5% on average.",
+          "abstract": "With the advancement of computational resources, Large Vision-Language Models (LVLMs) exhibit impressive Perception and Reasoning (P&R) performance on Graphical User Interface (GUI) tasks. However, although they demonstrate strong P&R capabilities in English GUI scenarios, their performance in multilingual settings has received little attention, which limits their global applications. Moreover, existing studies on GUI tasks lack fine-grained analyses, including widget functions and elements' spatial relationships, which are fundamental for more targeted improvements. To tackle these issues, we propose MPR-GUI-Bench, a Multilingual fine-grained Perception and Reasoning GUI Benchmark to evaluate GUI agents' P&R capabilities. Evaluation results demonstrate that LVLMs exhibit significantly worse P&R performance in non-English languages than in English. To address these gaps, we propose GUI-XLI, a GUI Cross-Lingual Intervention method that applies interventions to the hidden states at P&R capability-related layers to mitigate the gaps between English and other languages, building on previous research showing that the hidden states of different language inputs exhibit significant differences in the latent space. Experimental results indicate that our method improves GUI agents' multilingual P&R capability by 6.5% on average.",
           "categories": [
             "cs.AI"
           ],
@@ -1280,7 +1420,7 @@
             "Chun Li",
             "Ming Li"
           ],
-          "abstract": "Existing GUI agent models relying on coordinate-based one-step visual grounding struggle with generalizing to varying input resolutions and aspect ratios. Alternatives introduce coordinate-free strategies yet suffer from learning under severe data scarcity. To address the limitations, we propose ToolTok, a novel paradigm of multi-step pathfinding for GUI agents, where operations are modeled as a sequence of progressive tool usage. Specifically, we devise tools aligned with human interaction habits and represent each tool using learnable token embeddings. To enable efficient embedding learning under limited supervision, ToolTok introduces a semantic anchoring mechanism that grounds each tool with semantically related concepts as natural inductive bias. To further enable a pre-trained large language model to progressively acquire tool semantics, we construct an easy-to-hard curriculum consisting of three tasks: token definition question-answering, pure text-guided tool selection, and simplified visual pathfinding. Extensive experiments on multiple benchmarks show that ToolTok achieves superior performance among models of comparable scale (4B) and remains competitive with a substantially larger model (235B). Notably, these results are obtained using less than 1% of the training data required by other post-training approaches. In addition, ToolTok demonstrates strong generalization across unseen scenarios. Our training \u0026 inference code is open-source at https://github.com/ZephinueCode/ToolTok.",
+          "abstract": "Existing GUI agent models relying on coordinate-based one-step visual grounding struggle with generalizing to varying input resolutions and aspect ratios. Alternatives introduce coordinate-free strategies yet suffer from learning under severe data scarcity. To address the limitations, we propose ToolTok, a novel paradigm of multi-step pathfinding for GUI agents, where operations are modeled as a sequence of progressive tool usage. Specifically, we devise tools aligned with human interaction habits and represent each tool using learnable token embeddings. To enable efficient embedding learning under limited supervision, ToolTok introduces a semantic anchoring mechanism that grounds each tool with semantically related concepts as natural inductive bias. To further enable a pre-trained large language model to progressively acquire tool semantics, we construct an easy-to-hard curriculum consisting of three tasks: token definition question-answering, pure text-guided tool selection, and simplified visual pathfinding. Extensive experiments on multiple benchmarks show that ToolTok achieves superior performance among models of comparable scale (4B) and remains competitive with a substantially larger model (235B). Notably, these results are obtained using less than 1% of the training data required by other post-training approaches. In addition, ToolTok demonstrates strong generalization across unseen scenarios. Our training & inference code is open-source at https://github.com/ZephinueCode/ToolTok.",
           "categories": [
             "cs.LG",
             "cs.AI",
@@ -3354,7 +3494,7 @@
         },
         {
           "id": "2509.02322",
-          "title": "OmniActor: A Generalist GUI and Embodied Agent for 2D\u00263D Worlds",
+          "title": "OmniActor: A Generalist GUI and Embodied Agent for 2D&3D Worlds",
           "authors": [
             "Longrong Yang",
             "Zhixiong Zeng",
@@ -4639,7 +4779,7 @@
             "Avery Lim",
             "Jesse Parent"
           ],
-          "abstract": "There is much to learn through synthesis of Developmental Biology, Cognitive Science and Computational Modeling. Our path forward involves a design for developmentally-inspired learning agents based on Braitenberg Vehicles. Continual developmental neurosimulation allows us to consider the role of developmental trajectories in bridging the related phenomena of nervous system morphogenesis, developmental learning, and plasticity. Being closely tied to continual learning, our approach is tightly integrated with developmental embodiment, and can be implemented using a type of agent called developmental Braitenberg Vehicles (dBVs). dBVs begin their lives as a set of undefined structures that transform into agent-based systems including a body, sensors, effectors, and nervous system. This phenotype is characterized in terms of developmental timing: with distinct morphogenetic, critical, and acquisition (developmental learning) periods. We further propose that network morphogenesis can be accomplished using a genetic algorithmic approach, while developmental learning can be implemented using a number of computational methodologies. This approach provides a framework for adaptive agent behavior that might result from a developmental approach: namely by exploiting critical periods or growth and acquisition, an explicitly embodied network architecture, and a distinction between the assembly of neuronal networks and active learning on these networks. In conclusion, we will consider agent learning and development at different timescales, from very short (\u003c100ms) intervals to long-term evolution. The development, evolution, and learning in an embodied agent-based approach is key to an integrative view of biologically-inspired intelligence.",
+          "abstract": "There is much to learn through synthesis of Developmental Biology, Cognitive Science and Computational Modeling. Our path forward involves a design for developmentally-inspired learning agents based on Braitenberg Vehicles. Continual developmental neurosimulation allows us to consider the role of developmental trajectories in bridging the related phenomena of nervous system morphogenesis, developmental learning, and plasticity. Being closely tied to continual learning, our approach is tightly integrated with developmental embodiment, and can be implemented using a type of agent called developmental Braitenberg Vehicles (dBVs). dBVs begin their lives as a set of undefined structures that transform into agent-based systems including a body, sensors, effectors, and nervous system. This phenotype is characterized in terms of developmental timing: with distinct morphogenetic, critical, and acquisition (developmental learning) periods. We further propose that network morphogenesis can be accomplished using a genetic algorithmic approach, while developmental learning can be implemented using a number of computational methodologies. This approach provides a framework for adaptive agent behavior that might result from a developmental approach: namely by exploiting critical periods or growth and acquisition, an explicitly embodied network architecture, and a distinction between the assembly of neuronal networks and active learning on these networks. In conclusion, we will consider agent learning and development at different timescales, from very short (<100ms) intervals to long-term evolution. The development, evolution, and learning in an embodied agent-based approach is key to an integrative view of biologically-inspired intelligence.",
           "categories": [
             "q-bio.NC",
             "cs.AI",
@@ -5651,5 +5791,5 @@
       ]
     }
   ],
-  "total": 200
+  "total": 207
 }

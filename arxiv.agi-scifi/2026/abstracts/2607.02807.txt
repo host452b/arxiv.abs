@@ -1,0 +1,20 @@
+Title: SwarmResearch: Orchestrating Coding Agents for Open-Ended Discovery
+Authors: Yuvraj Virk, Zack Edds, Chunqiu Steven Xia, Lingming Zhang
+ID: 2607.02807
+URL: https://arxiv.org/abs/2607.02807
+
+Abstract:
+Long-running coding agents such as autoresearch can persistently discover
+optimizations for open-ended problems. However, they tend to converge onto a
+single high-level approach, then proceed with low-level edits while missing
+other superior approaches to the problem. We hypothesize two harness-level
+design choices contribute to this behavior: accumulating context in a single
+long-running agent and only exposing a single program state to edit. We
+introduce SwarmResearch, an orchestrator-subagent harness in which a Shepherd
+Agent uses global context to steer a population of Search Agents, each operating
+with local context in their respective git branch. On open-ended optimization
+tasks, SwarmResearch discovers better or comparable solutions to state-of-the-
+art LLM-guided evolution and multi-agent techniques on 13/15 tasks, driven by
+higher-level exploration. Compared with fixed scaling of serial and parallel
+agents, SwarmResearch's orchestrator-guided scaling discovers better-performing
+solutions by adapting parallelism at different search depths.

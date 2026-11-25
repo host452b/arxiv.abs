@@ -1,0 +1,22 @@
+Title: Compute-Constrained Safety Filters with Neuromorphic Event Triggering
+Authors: Tochukwu E. Ogri, Opeyemi Owolabi, Luke Fina, Christopher Petersen, Rushikesh Kamalapurkar
+ID: 2610.10797
+URL: https://arxiv.org/abs/2610.10797
+
+Abstract:
+Safety filters that rely on control barrier function (CBF) quadratic programs
+(QPs) are typically analyzed under the assumption that the QP is solved
+instantaneously, although nonzero computation time can render a computed input
+unsafe by the time it is applied. This paper develops a dual leaky integrate-
+and-fire (LIF) event-triggered safety filter for linear systems that accounts
+for this delay. Two LIF states monitor a shifted CBF residual and the deviation
+of the held input from the nominal feedback law. A computation is initiated when
+either LIF state reaches its threshold; the previous input remains applied until
+the prescribed application time, and any solution returned earlier is stored
+until then. A closed-form charging profile relates the safety-LIF threshold to
+residual-growth bounds, ensuring sufficient residual margin over the application
+delay. Under the stated assumptions, the resulting hybrid system guarantees
+forward invariance, completeness, and non-Zeno execution, with positive lower
+bounds on computation-initiation and input-application times. A spacecraft
+terminal-approach simulation demonstrates safety with fewer optimizer calls than
+a delay-tightened periodic filter.

@@ -1,0 +1,30 @@
+Title: TIGER: Time-Series Classification with In-Context-Learning Gated Ensemble of Representations
+Authors: Johann Faouzi
+ID: 2610.06156
+URL: https://arxiv.org/abs/2610.06156
+
+Abstract:
+A representation family is a distinct way of extracting features from time
+series. Ensemble algorithms that combine several representation families remain
+the most accurate approach to time series classification. Current state-of-the-
+art ensembles, most notably HIVE-COTE~2.0, pair a bespoke classification
+algorithm with each representation family and combine their predictions using a
+fixed, non-adaptive rule. We present TIGER (Time-series classification with In-
+context-learning Gated Ensemble of Representations), which instead applies the
+same small portfolio of three general-purpose classifiers (Ridge, Extra Trees,
+and Naive Bayes) to four representations from four distinct families, stacking
+the resulting twelve base learners' predictions into a meta-feature matrix. The
+final prediction is produced by an adaptive meta-classification rule that
+chooses, independently for each data set, between a weighted hard majority vote
+and TabICLv2, a pretrained tabular foundation model used in-context as a meta-
+classifier, based on the mean number of training samples available per class. On
+a 142-data-set benchmark drawn from the UCR time series classification archive,
+TIGER obtains the best mean accuracy, balanced accuracy, and F1-score among six
+compared algorithms, including HIVE-COTE~2.0, and significantly outperforms each
+of the other five individually. TIGER's adaptive rule also meaningfully
+outperforms either of its two constituent meta-classification methods used
+alone, and its single hyperparameter, tuned using only a twenty-data-set
+development subset, is shown to generalize to the full evaluation benchmark. We
+further characterize TIGER's design through an extensive set of ablation
+experiments and report the design alternatives that we investigated and
+ultimately discarded.

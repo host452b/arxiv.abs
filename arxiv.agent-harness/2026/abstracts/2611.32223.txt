@@ -1,0 +1,22 @@
+Title: Beyond Autoregression: Diffusion Language Model is All Analog In-Memory Computing Need
+Authors: Yuanuo Feng, Yubing Ye, Yizhe Chen, Wenshuai Yao, Ngai Wong, Wenyong Zhou, Wang Kang
+ID: 2611.32223
+URL: https://arxiv.org/abs/2611.32223
+
+Abstract:
+Analog in-memory computing (AIMC) enables energy-efficient language-model
+inference, but hardware non-idealities perturb matrix--vector multiplications
+and degrade generation quality. Autoregressive (AR) models are especially
+vulnerable: each token is committed to the causal context at birth, so
+perturbation-induced errors cascade. We study diffusion language models (DLMs),
+which iteratively refine a masked sequence, as an alternative paradigm. Across
+scale-matched model pairs and open checkpoints, DLMs degrade more gracefully
+than AR counterparts under persistent weight perturbations. Controlled analyses
+rule out cross-round noise averaging and support delayed token commitment and
+progressive context resolution as the mechanism. A larger denoising-step budget
+further shrinks the clean--noisy gap, a DLM-specific latency--robustness knob.
+We perform large-scale simulation tests across diverse datasets and models using
+a noise model calibrated from real silicon measurements. Furthermore, on a
+16-chip 28nm eFlash AIMC cluster, hybrid on-board measurements show DLMs
+tolerate $1.4$--$3\times$ larger weight noise, making diffusion-based generation
+a promising paradigm for noise-resilient AIMC inference.

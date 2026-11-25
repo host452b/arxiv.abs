@@ -1,0 +1,27 @@
+Title: Estimating GPU Roofline Arithmetic Intensity with Off-the-Shelf LLMs and Compiler Artifacts
+Authors: Gregory Bolet, Giorgis Georgakoudis, Konstantinos Parasyris, Harshitha Menon, Niranjan Hasabnis, Kirk W. Cameron, Gal Oren
+ID: 2611.32975
+URL: https://arxiv.org/abs/2611.32975
+
+Abstract:
+GPU developers use profiling to understand computation and data movement, but
+access to target hardware can delay optimization. We investigate whether off-
+the-shelf large language models (LLMs) can estimate Roofline arithmetic
+intensity (the ratio of floating-point operations (FLOPs) to device-memory
+bytes) without executing the target GPU workload. We evaluate three models
+(deepseek-v4-flash, gemini-3.7-flash, and gpt-5.6-sol) across 179 combinations
+of five kernel families, four NVIDIA and AMD GPUs, four parallel runtimes (CUDA,
+HIP, OpenMP, and OpenCL), and modified code variants, comparing source-only
+queries, queries with compiler artifacts, and sandboxed agentic analysis.
+Compiler artifacts raise the share of arithmetic-intensity estimates within a
+factor of 1.20 of profiled values from 8-14% to 26-32%, while the resulting
+bandwidth-bound or compute-bound classifications are correct in 78-92% of runs.
+With compiler artifacts, FLOP estimates meet the 1.20x tolerance in 59-88% of
+runs, compared with 36-40% for device-memory traffic. Agentic analysis increases
+the share of arithmetic-intensity estimates within the 1.20x tolerance by 6.5
+percentage points for gpt-5.6-sol, at 3.6x the median cost and 2.5x the median
+latency of compiler-assisted queries; the other models incur higher costs
+without a statistically clear improvement. These findings suggest LLM estimates
+could help prioritize optimization when GPU access is constrained, while
+identifying cache-dependent device-memory traffic as the main obstacle to
+precise arithmetic-intensity prediction.

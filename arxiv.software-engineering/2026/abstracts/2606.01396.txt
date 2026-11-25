@@ -1,0 +1,26 @@
+Title: Quantizing Intent: Cross-Domain Semantic IDs from Organic Activity for Industrial Ranking
+Authors: Julie Choi, Haoran Ye, Zhiwei Ding, Bo Long, Benjamin Zelditch, Arpita Vats
+ID: 2606.01396
+URL: https://arxiv.org/abs/2606.01396
+
+Abstract:
+Ads click-through rate (CTR) prediction is constrained by sparse user
+supervision: most users engage with ads infrequently while generating dense
+behavioral evidence in organic surfaces such as feed. Transferring these cross-
+domain signals into ads ranking is difficult due to domain mismatch, serving
+cost, and production complexity. We introduce cross-domain user Semantic IDs
+(SIDs) derived from organic feed activity and show that behavioral activity
+richness governs cross-domain transfer quality: SIDs from user profile text
+yield +0.036% AUC, SIDs from an activity-tuned LLaMA-based user embedding model
+yield +0.107%, and SIDs from direct feed activity behavioral embeddings yield
++0.213%. We further propose RQ-FSQ, a residual finite scalar quantization method
+that discretizes pre-trained embeddings while matching dense-embedding AUC at
+substantially smaller storage. Across two heterogeneous sources, RQ-FSQ matches
+or slightly exceeds dense source embeddings, achieving +0.351% AUC for Feed
+Activity at about 30x smaller storage and +0.265% AUC for Activity-Tuned LLaMA
+at about 280x smaller storage. We also introduce a Hierarchical Discrete
+Embedding module that encodes multi-level SIDs through prefix n-gram sparse
+embedding tables trained end-to-end under the CTR objective. In a large-scale
+industrial ads ranking system, cold-start segment analysis shows gains up to
++1.522% for users with near-zero ad interaction history, validating cross-domain
+behavioral transfer as an effective bridge for sparse-history ranking.

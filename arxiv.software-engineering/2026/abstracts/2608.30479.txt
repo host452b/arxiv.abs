@@ -1,0 +1,26 @@
+Title: HF-SID: High-Fidelity Semantic IDs for Generative Retrieval in Location-Based Services
+Authors: Haowen Lin, Jing Li, Zhibin Hao, Fangye Wang, Lihui Su, Song Yang, Xiaojiang Zhou, Pengjie Wang
+ID: 2608.30479
+URL: https://arxiv.org/abs/2608.30479
+
+Abstract:
+Generative retrieval has attracted increasing attention in Location-Based
+Services (LBS), where each Point-of-Interest (POI) is represented as a Semantic
+ID (SID). As the SID is the only channel through which POI information reaches
+the generative model, whatever it fails to preserve is irrecoverable at decoding
+time, and LBS retrieval is especially sensitive to the fine-grained differences
+that existing SIDs blur. Specifically, (1) LLMs embed continuous coordinates
+discontinuously, so their numeric differences do not reflect true geographic
+distance; (2) dynamic numerical attributes differ vastly in scale, so an
+identical gap may be decisive for one attribute yet negligible for another; and
+(3) short text cannot convey hierarchical affiliation, as text-similar POIs may
+belong to different hierarchies. We therefore propose HF-SID, which restores
+geographic, numerical, and structural fidelity at the representation stage,
+before any information is committed to a discrete code. It transforms
+coordinates into a continuous 3D Cartesian form and encodes each numerical value
+as a single unit, consolidated inside the LLM by Geo-CPT and Num-CPT with type-
+aware embeddings; a Structure-based Contrastive Learning objective, applied only
+to the last-layer residual, then separates co-located POIs that share a coarse
+tag but differ at the fine level. Because these mechanisms enrich the
+representation rather than lengthen the identifier, HF-SID uses a 3-token SID at
+no extra decoding cost. On a large-scale industrial

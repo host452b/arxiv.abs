@@ -10,11 +10,294 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:42:33Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 185,
-  "return_count": 185,
+  "total_results": 198,
+  "return_count": 198,
   "papers": [
+    {
+      "id": "2611.11064",
+      "title": "GARP: Real-Time Generative Agents on Local Hardware in a Game Engine",
+      "authors": [
+        "Piero Molino",
+        "Patrick John Chia",
+        "Federico Bianchi",
+        "Jonathan P. Chen",
+        "Paul Szerlip"
+      ],
+      "abstract": "Generative agents are game characters whose plans, conversations, and memories are written on the fly by a large language model (LLM). The original Generative Agents demonstration used cloud inference in a custom simulation. We present GARP, a platform for real-time generative agents inside Godot, and describe the Character Behavior System used in GARP 2. The complete loop runs on local hardware using a 3B-parameter open-weight model and no cloud service. Alongside the original planning, memory, and reflection, GARP gives each agent an emotion system driven by LLM appraisal, four graded personality axes drawn from the Big Five that set simulation parameters as well as prompt text, six needs whose urgency grows over time, and pairwise relationships updated after every conversation. The system narrows 50+ candidate actions to typically 3-8, constrains model responses with JSON schemas, and surfaces important memories in decision prompts. A layered optimization strategy (an adjustable game clock, decisions taken ahead of need, multi-tier caching, prompt compression, and fully asynchronous execution) keeps the game responsive while the model thinks. In a nine-scenario evaluation, 25 of 27 runs passed log-based checks. Both failures occurred in the birthday party scenario, where one guest omitted the event from their daily plan.",
+      "published": "2026-11-08T01:43:58Z",
+      "updated": "2026-11-08T01:43:58Z",
+      "categories": [
+        "cs.AI",
+        "cs.HC",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.11064",
+      "abs_url": "https://arxiv.org/abs/2611.11064",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.39230",
+      "title": "Beyond LLM Wrappers: Context Engineering and the Three-Engine Architecture for Reliable Financial AI",
+      "authors": [
+        "Pradeep Kumar GS",
+        "Ravi Tanniru"
+      ],
+      "abstract": "Financial AI systems must support decision-bearing questions involving payments, collections, cash flow, and compliance while ensuring numerical accuracy, traceability, and auditability. Large language models (LLMs) enable natural language interaction but cannot independently guarantee reproducible calculations or evidence-grounded recommendations. We present a production-grounded architecture integrating three components: a financial knowledge graph for enterprise relationships, temporal context, and provenance; a deterministic optimization engine for financial calculations and decisions; and a multi-agent LLM layer for intent interpretation, task orchestration, explanation, and claim validation. A coordination layer, termed context engineering, selects, ranks, composes, and validates query-specific context across ERP systems, tools, and tenants. Based on observations from 15 deployments over approximately 11 months, single-agent pipelines exhibited hallucination rates of about 7-9% (5-10% across query types), including invented invoices and unsupported financial claims. Graph-backed multi-agent validation reduced observed rates to below 1%, although these findings are observational rather than causal. ERP data quality and tenant-specific schemas remained major implementation challenges. Reusable mappings, graph templates, and validation policies coincided with a reduction in deployment time from roughly six to two weeks. We argue that financial context engineering extends beyond text-centric retrieval-augmented generation by requiring structured relationships, temporal validity, exact numerical evidence, access controls, and validation against source records and solver outputs. We outline research challenges in evaluation, reproducibility, privacy, context quality, and cross-tenant generalization.",
+      "published": "2026-10-29T02:50:00Z",
+      "updated": "2026-10-29T02:50:00Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.39230",
+      "abs_url": "https://arxiv.org/abs/2610.39230",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.26247",
+      "title": "Bridging In-Situ Visualization to Game Engines: From ParaView Catalyst via ANARI to Unreal Engine",
+      "authors": [
+        "Thomas George",
+        "Severin A. T. Klapproth",
+        "Jens Henrik Göbbert",
+        "Jonathan Windgassen",
+        "Andreas Adelmann",
+        "Sriramkrishnan Muralikrishnan"
+      ],
+      "abstract": "In-situ high-performance computing (HPC) simulations produce massive datasets that remain difficult to stream into game engines for interactive visualization. We present an in-situ, disk-free pipeline that couples simulation data to Unreal Engine 5 through ParaView's ANARI rendering API. A modified ANARI-USD device captures Universal Scene Description (USD) scene graphs in memory at the ANARI layer and streams the engine-agnostic USD format through an embedded ZeroMQ broker to visualization clients, where JuSync, middleware with a companion Unreal Engine 5 plugin, parses the geometry as it arrives and routes it to engine rendering components at runtime, producing scenes that are camera-navigable once received. The decoupled design keeps simulation execution independent of visualization load, and clients may connect or disconnect at any time. The pipeline is demonstrated on the JURECA-DC supercomputer at Forschungszentrum Jülich, streaming Free Electron Laser (FEL) simulation data with point clouds of tens of millions of particles.",
+      "published": "2026-10-19T12:08:29Z",
+      "updated": "2026-10-19T12:08:29Z",
+      "categories": [
+        "cs.DC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.26247",
+      "abs_url": "https://arxiv.org/abs/2610.26247",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.02563",
+      "title": "OpenGameEval: Benchmarking Agentic Programming and Exploration in a Stateful Game Engine",
+      "authors": [
+        "Eray Turkel",
+        "Mengsha Sun",
+        "Kartik Ayyar",
+        "Sean Dunigan",
+        "Jack Lu",
+        "Vlad Shcherban",
+        "Hsiang-Shun Shih",
+        "Xin Wang",
+        "Tiantian Zhang"
+      ],
+      "abstract": "We present OpenGameEval, a benchmark and evaluation framework for agentic game development inside Roblox Studio. It runs language models as agents in reproducible, stateful game-engine sessions and scores each run with executable checks, both on the edited scene and in a simulated play session. Most agentic coding benchmarks require exploration but score only final task success. OpenGameEval separates observation tools from editing tools in its eight-tool action space, so exploration can be measured directly. We measure the pass rates and exploration behavior of 13 frontier models on 84 human-curated core tasks, with 16 attempts per task. The tasks are hard for current models. The best model solves 51.7% of tasks on a single attempt and 39.4% five times out of five, and no tested model solves six of the tasks. Models at the frontier reach similar pass rates by solving different tasks: splitting tasks by the kind of work they require spreads the top five by 5.0pp on script-authoring tasks and 12.5pp on scene-change tasks. Exploration behavior predicts whether a run succeeds. Holding task and model fixed, a run that inspects every object a reference solution touches before acting on it passes 13.4pp more often than a run that inspects none of them on scene-only tasks, and 9.8pp more often on script-only tasks. We release the task suite, its place files, the per-task annotations, a plugin that runs the tasks inside Roblox Studio, and an updated leaderboard under the MIT license at https://github.com/Roblox/open-game-eval.",
+      "published": "2026-10-01T22:56:10Z",
+      "updated": "2026-10-01T22:56:10Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.02563",
+      "abs_url": "https://arxiv.org/abs/2610.02563",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.03666",
+      "title": "WebXR and Commercial Game Engines for the Metaverse: A Socio-Technical Analysis of Openness, Interoperability, and Sustainability",
+      "authors": [
+        "Luca Turchet",
+        "Michel Buffa"
+      ],
+      "abstract": "The Metaverse is often framed as a persistent, interoperable, and embodied network of virtual and augmented environments. Yet, most contemporary XR applications are developed through commercial game engines and distributed through proprietary app stores, creating tensions between openness and platform dependency. This paper critically examines open WebXR technologies with conventional commercial game-engine pipelines, with particular attention to XR hardware, software architectures, developer workflows, governance, ethics, interoperability, and sustainability. We argue that WebXR may provide a viable route toward a more accessible, device-independent, and institutionally sustainable Metaverse, especially for education, research, cultural heritage, prototyping, and public-interest applications. At the same time, commercial engines remain advantageous for graphically intensive, low-latency, deeply integrated, and large-scale XR products. The paper concludes that the choice should not be framed as WebXR versus engines, but as a continuum: WebXR is preferable when accessibility, interoperability, low-friction deployment, and long-term maintainability are primary goals, whereas native engines remain preferable when performance, platform-specific hardware access, and production-grade tooling dominate.",
+      "published": "2026-09-03T11:02:17Z",
+      "updated": "2026-09-08T21:24:35Z",
+      "categories": [
+        "cs.CY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.03666",
+      "abs_url": "https://arxiv.org/abs/2609.03666",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.29300",
+      "title": "Hypergamigication Through Integrating Game Engines and Learning Management Systems: Ender's Game",
+      "authors": [
+        "Araz Yusubov",
+        "Michael Bechtel",
+        "Tangiz Alizada"
+      ],
+      "abstract": "This paper discusses games, their use in education, and previous work on integrating game engines and learning management systems (LMS). It proposes a bidirectional integration where game environments are generated using LMS content, introducing the concept of hypergamification as the use of a comprehensive game environment rather than isolated game design elements. A working pilot implementation of an importable Unity package for Blackboard integration is demonstrated, along with a demo game that uses the developed package. The paper also discusses the limitations of the proposed approach and outlines avenues for future work.",
+      "published": "2026-07-31T11:17:06Z",
+      "updated": "2026-07-31T11:17:06Z",
+      "categories": [
+        "cs.CY",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.29300",
+      "abs_url": "https://arxiv.org/abs/2607.29300",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.14076",
+      "title": "From Pixels to States: Rethinking Interactive World Models as Game Engines",
+      "authors": [
+        "Zhen Li",
+        "Zian Meng",
+        "Shuwei Shi",
+        "Mingliang Zhai",
+        "Jiaming Tan",
+        "Chuanhao Li",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Building interactive worlds that respond coherently to player actions has long been a shared goal of computer graphics, games, and artificial intelligence. Recent video generative models provide a data-driven route toward this goal by predicting future observations conditioned on user actions, and are increasingly regarded as potential next-generation game engines. Realizing a genuinely interactive game world, however, requires interaction outcomes that follow rules over evolving game conditions, consequences that persist over long horizons, and a generation loop that operates in real time. Conventional game engines realize these properties through a recurrent action-state-observation loop, in which player actions update an explicit game state according to predefined rules and observations are rendered from the resulting state. Taking this loop as an organizing lens, this paper examines interactive game world modeling along four dimensions: player action control, game state dynamics, state-observation persistence, and real-time interactive generation. For each dimension, we start from the capabilities required by an interactive game world, group existing approaches into representative families, and discuss the strengths and trade-offs of each family. Complementing this analysis, we present a scalable data engine for Black Myth: Wukong that collects over 90 hours of gameplay with frame-aligned player actions, ground-truth game states, and visual observations, together with structured and semantic annotations, as a resource for state-aware game world modeling. We hope this paper offers a clear picture of where the field stands and fosters progress toward interactive game worlds.",
+      "published": "2026-07-15T17:48:48Z",
+      "updated": "2026-07-15T17:48:48Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.14076",
+      "abs_url": "https://arxiv.org/abs/2607.14076",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.12592",
+      "title": "WanToFight: Real-Time Generative Game Engine for Multi-Player Combat Interaction",
+      "authors": [
+        "Li Hu",
+        "Guangyuan Wang",
+        "Peng Zhang",
+        "Bang Zhang"
+      ],
+      "abstract": "We present WanToFight, a generative game engine that simulates real-time, two-player The King of Fighters '97 (KOF~'97) gameplay from keyboard input. Prior generative game engines target either single-player first-person settings or non-real-time cooperative scenarios; multi-player control, real-time inference, complex physical interaction, and adversarial gameplay have not been jointly addressed. WanToFight closes this gap with three components built on the Wan-1.3B video diffusion transformer: a streaming autoregressive generator with block-causal attention and a rolling KV cache; a visually grounded Player Association module that binds each player's keyboard signal to a character identity; and a gated, locally causal keyboard injection module trained with a single-player-to-full-gameplay curriculum. A four-step DMD-distilled student paired with a pruned VAE decoder sustains 30FPS at 512x384 on a single NVIDIA RTX 5090 over the duration of a complete match. To our knowledge, WanToFight is the first generative game engine to combine multi-player control, real-time inference, complex physical interaction, and adversarial gameplay in one system.",
+      "published": "2026-07-14T10:10:03Z",
+      "updated": "2026-07-14T10:10:03Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.12592",
+      "abs_url": "https://arxiv.org/abs/2607.12592",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.03525",
+      "title": "GameEngineBench: Full-Session Verification of Coding Agents in a Networked Game Engine",
+      "authors": [
+        "Brian La",
+        "Sungbin Jo",
+        "Sejoon Chang",
+        "Ben Kim",
+        "Junyoung Bae",
+        "Aamish Ahmad Beg",
+        "Sei Chang",
+        "Gonzalo Gonzalez-Pumariega"
+      ],
+      "abstract": "Coding agents face new challenges in game development, where they must produce code that is not only syntactically correct but also consistent with engine-managed lifecycle, state, and networking behavior. Existing game-development benchmarks, however, do not combine assertions over engine-based runtime states with cross-client consistency, failing to evaluate how well generated code adheres to the desired behavioral specifications. To address these limitations, we present GameEngineBench, a benchmark of 110 C++ implementation tasks derived from 9 existing Unreal Engine 5 projects. Each task requires an agent to implement missing behavior within an established gameplay architecture. We also introduce Full-Session Verification, a testing framework that injects hidden tests after the agent finishes and evaluates the resulting implementation inside Play-in-Editor (PIE) sessions, with networked client worlds in 71 tasks. The tests evaluate Unreal's game loop, actor lifecycle, subsystems, and replication stack while directly inspecting runtime state. In 53 tasks, 119 tests additionally inspect a distinct client world to determine whether the authoritative server state is correctly replicated. To our knowledge, this is the first coding benchmark to evaluate cross-client replication. Across 11 model-harness configurations, the best-scoring configuration achieves 46.4% pass@1, while 43 tasks remain unsolved by every evaluated configuration. These results demonstrate that compilation and shallow verification overestimate agents' ability to implement behavior that remains correct during full engine execution.",
+      "published": "2026-07-03T17:56:26Z",
+      "updated": "2026-11-21T19:37:41Z",
+      "categories": [
+        "cs.SE",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.03525",
+      "abs_url": "https://arxiv.org/abs/2607.03525",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.19830",
+      "title": "JAMER: Project-Level Code Framework Dataset and Benchmark on Professional Game Engines",
+      "authors": [
+        "Jianwen Sun",
+        "Chuanhao Li",
+        "Zizhen Li",
+        "Yukang Feng",
+        "Fanrui Zhang",
+        "Yifei Huang",
+        "Yu Dai",
+        "Kaipeng Zhang"
+      ],
+      "abstract": "Current AI-driven game development has made substantial progress in asset generation, gameplay design, and web-based game coding, yet project-level code engineering on professional game engines remains largely unexplored due to the absence of large-scale datasets and deterministic evaluation methods. We present JamSet and JamBench, the first project-level game code framework dataset and benchmark built on a professional game engine. Our key insight is that Game Jam competitions, community events where developers build complete games under tight time constraints, yield thousands of open-source projects suitable for this purpose. Building on the Godot engine's text-based format and headless execution mode, we design a deterministic verification pipeline from file integrity to runtime behavior collection, distilling 8,133 verified projects from over 240,000 repositories. Of these, 300 manually verified projects form JamBench; the rest constitute JamSet. JamBench defines theme-driven generation and code completion tasks, evaluated through a pipeline combining compilation pass rates, Structural Completeness Score (SCS), and Behavioral Alignment Score (BAS). Evaluation of 9 frontier models reveals a capability cliff as project scale increases, with runtime pass rates dropping from 80.4% on small projects to 5.7% on large ones (Task2a). Code Agents improve compilation rates yet yield no gains in runtime behavioral quality, indicating that the bottleneck lies in architectural design rather than syntactic correctness. Experiments validate JamSet as effective training data. All data and code are publicly available.",
+      "published": "2026-06-18T06:17:46Z",
+      "updated": "2026-06-21T05:48:00Z",
+      "categories": [
+        "cs.SE",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.19830",
+      "abs_url": "https://arxiv.org/abs/2606.19830",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.17861",
+      "title": "GameCraft-Bench: Can Agents Build Playable Games End-to-End in a Real Game Engine?",
+      "authors": [
+        "Tongxu Luo",
+        "Rongsheng Wang",
+        "Jiaxi Bi",
+        "Chenming Xu",
+        "Zhengyang Tang",
+        "Jianlong Chen",
+        "Juhao Liang",
+        "Ke Ji",
+        "Shuqi Guo",
+        "Yuhao Du",
+        "Fan Bu",
+        "Wenyu Du",
+        "Xiaotong Zhang",
+        "Kyle Li",
+        "Shaobo Wang",
+        "Linfeng Zhang",
+        "Yuxuan Liu",
+        "Xin Lai",
+        "Chenxin Li",
+        "Yiduo Guo",
+        "Zhexin Zhang",
+        "Xinyuan Wang",
+        "Tianyi Bai",
+        "Ziniu Li",
+        "Benyou Wang"
+      ],
+      "abstract": "Game generation is an emerging application of coding agents, requiring models to transform natural-language specifications into playable interactive systems. Unlike traditional coding tasks, game generation takes place within a game engine, where scripts, scenes, assets, rendering, and runtime interactions must jointly produce coherent gameplay. We formalize end-to-end game generation as the problem of producing a complete game artifact that realizes a specification through observable player-game interaction in a target environment. We argue that evaluating this setting requires three desiderata: Engine Grounding, Artifact Completeness, and Interactive Verification. We propose an interaction-grounded evaluation framework that assesses executable gameplay through replayed demonstrations and rubric-guided multimodal judging. We instantiate this framework as GameCraft-Bench, a benchmark comprising 140 Godot tasks across 15 game families. Evaluations of frontier coding agents show that end-to-end game generation remains highly challenging: the strongest agent achieves only 41.46%, and most agents score below 40%. Further analysis reveals that while agents often implement recognizable mechanics, they struggle to deliver complete games with sufficient content, functional visual feedback, and coherent presentation. See https://tongxuluo.github.io/gamecraft-bench-website for demos, code, and data.",
+      "published": "2026-06-16T12:34:39Z",
+      "updated": "2026-06-16T12:34:39Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.17861",
+      "abs_url": "https://arxiv.org/abs/2606.17861",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.02291",
+      "title": "A Hybrid Approach for Closing the Sim2real Appearance Gap in Game Engine Synthetic Datasets",
+      "authors": [
+        "Stefanos Pasios"
+      ],
+      "abstract": "Video game engines have been an important source for generating large volumes of visual synthetic datasets for training and evaluating computer vision algorithms that are to be deployed in the real world. While the visual fidelity of modern game engines has been significantly improved with technologies such as ray-tracing, a notable sim2real appearance gap between the synthetic and the real-world images still remains, which limits the utilization of synthetic datasets in real-world applications. In this letter, we investigate the ability of a state-of-the-art image generation and editing diffusion model (FLUX.2-4B Klein) to enhance the photorealism of synthetic datasets and compare its performance against a traditional image-to-image translation model (REGEN). Furthermore, we propose a hybrid approach that combines the strong geometry and material transformations of diffusion-based methods with the distribution-matching capabilities of image-to-image translation techniques. Through experiments, it is demonstrated that REGEN outperforms FLUX.2-4B Klein and that by combining both FLUX.2-4B Klein and REGEN models, better visual realism can be achieved compared to using each model individually, while maintaining semantic consistency. The code is available at: https://github.com/stefanos50/Hybrid-Sim2Real",
+      "published": "2026-05-04T07:28:01Z",
+      "updated": "2026-05-04T07:28:01Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.02291",
+      "abs_url": "https://arxiv.org/abs/2605.02291",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.10263",
+      "title": "Infernux: A Python-Native Game Engine with JIT-Accelerated Scripting",
+      "authors": [
+        "Lizhe Chen"
+      ],
+      "abstract": "This report describes Infernux, an open-source game engine that pairs a C++17/Vulkan real-time core with a Python production layer connected through a single pybind11 boundary. To close the throughput gap between Python scripting and native-code engines, Infernux combines two established techniques - batch-oriented data transfer and JIT compilation - into a cohesive engine-level integration: (i) a batch data bridge that transfers per-frame state into contiguous NumPy arrays in one boundary crossing, and (ii) an optional JIT path via Numba that compiles annotated update functions to LLVM machine code with automatic loop parallelization. We compare against Unity 6 as a reference on three workloads; readers should note differences in shading complexity, draw-call batching, and editor tooling maturity between the two engines. Infernux is MIT-licensed and available at https://chenlizheme.github.io/Infernux/.",
+      "published": "2026-04-11T16:01:38Z",
+      "updated": "2026-04-11T16:01:38Z",
+      "categories": [
+        "cs.GR",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.10263",
+      "abs_url": "https://arxiv.org/abs/2604.10263",
+      "source": "arxiv"
+    },
     {
       "id": "2408.14837",
       "title": "Diffusion Models Are Real-Time Game Engines",
@@ -81,13 +364,13 @@
     },
     {
       "id": "2201.09954",
-      "title": "BIM LOD + Virtual Reality -- Using Game Engine for Visualization in Architectural \u0026 Construction Education",
+      "title": "BIM LOD + Virtual Reality -- Using Game Engine for Visualization in Architectural & Construction Education",
       "authors": [
         "Hassan Anifowose",
         "Wei Yan",
         "Manish Dixit"
       ],
-      "abstract": "Architectural Education faces limitations due to its tactile approach to learning in classrooms with only 2-D and 3-D tools. At a higher level, virtual reality provides a potential for delivering more information to individuals undergoing design learning. This paper investigates a hypothesis establishing grounds towards a new research in Building Information Modeling (BIM) and Virtual Reality (VR). The hypothesis is projected to determine best practices for content creation and tactile object virtual interaction, which potentially can improve learning in architectural \u0026 construction education with a less costly approach and ease of access to well-known buildings. We explored this hypothesis in a step-by-step game design demonstration in VR, by showcasing the exploration of the Farnsworth House and reproducing assemblage of the same with different game levels of difficulty which correspond with varying BIM levels of development (LODs). The game design prototype equally provides an entry way and learning style for users with or without a formal architectural or construction education seeking to understand design tectonics within diverse or cross-disciplinary study cases. This paper shows that developing geometric abstract concepts of design pedagogy, using varying LODs for game content and levels, while utilizing newly developed features such as snap-to-grid, snap-to-position and snap-to-angle to improve user engagement during assemblage may provide deeper learning objectives for architectural precedent study.",
+      "abstract": "Architectural Education faces limitations due to its tactile approach to learning in classrooms with only 2-D and 3-D tools. At a higher level, virtual reality provides a potential for delivering more information to individuals undergoing design learning. This paper investigates a hypothesis establishing grounds towards a new research in Building Information Modeling (BIM) and Virtual Reality (VR). The hypothesis is projected to determine best practices for content creation and tactile object virtual interaction, which potentially can improve learning in architectural & construction education with a less costly approach and ease of access to well-known buildings. We explored this hypothesis in a step-by-step game design demonstration in VR, by showcasing the exploration of the Farnsworth House and reproducing assemblage of the same with different game levels of difficulty which correspond with varying BIM levels of development (LODs). The game design prototype equally provides an entry way and learning style for users with or without a formal architectural or construction education seeking to understand design tectonics within diverse or cross-disciplinary study cases. This paper shows that developing geometric abstract concepts of design pedagogy, using varying LODs for game content and levels, while utilizing newly developed features such as snap-to-grid, snap-to-position and snap-to-angle to improve user engagement during assemblage may provide deeper learning objectives for architectural precedent study.",
       "categories": [
         "cs.HC",
         "cs.GT"
@@ -910,7 +1193,7 @@
     },
     {
       "id": "cmp-lg/9601009",
-      "title": "A General Architecture for Language Engineering (GATE) - a new approach to Language Engineering R\u0026D",
+      "title": "A General Architecture for Language Engineering (GATE) - a new approach to Language Engineering R&D",
       "authors": [
         "Hamish Cunningham",
         "Robert J. Gaizauskas",
@@ -1212,7 +1495,7 @@
       "authors": [
         "Yuxu Ge"
       ],
-      "abstract": "Autonomous agents powered by large language models introduce a class of execution-layer vulnerabilities -- prompt injection, retrieval poisoning, and uncontrolled tool invocation -- that existing guardrails fail to address systematically. In this work, we propose the Layered Governance Architecture (LGA), a four-layer framework comprising execution sandboxing (L1), intent verification (L2), zero-trust inter-agent authorization (L3), and immutable audit logging (L4). To evaluate LGA, we construct a bilingual benchmark (Chinese original, English via machine translation) of 1,081 tool-call samples -- covering prompt injection, RAG poisoning, and malicious skill plugins -- and apply it to OpenClaw, a representative open-source agent framework. Experimental results on Layer 2 intent verification with four local LLM judges (Qwen3.5-4B, Llama-3.1-8B, Qwen3.5-9B, Qwen2.5-14B) and one cloud judge (GPT-4o-mini) show that all five LLM judges intercept 93.0-98.5% of TC1/TC2 malicious tool calls, while lightweight NLI baselines remain below 10%. TC3 (malicious skill plugins) proves harder at 75-94% IR among judges with meaningful precision-recall balance, motivating complementary enforcement at Layers 1 and 3. Qwen2.5-14B achieves the best local balance (98% IR, approximately 10-20% FPR); a two-stage cascade (Qwen3.5-9B-\u003eGPT-4o-mini) achieves 91.9-92.6% IR with 1.9-6.7% FPR; a fully local cascade (Qwen3.5-9B-\u003eQwen2.5-14B) achieves 94.7-95.6% IR with 6.0-9.7% FPR for data-sovereign deployments. An end-to-end pipeline evaluation (n=100) demonstrates that all four layers operate in concert with 96% IR and a total P50 latency of approximately 980 ms, of which the non-judge layers contribute only approximately 18 ms. Generalization to the external InjecAgent benchmark yields 99-100% interception, confirming robustness beyond our synthetic data.",
+      "abstract": "Autonomous agents powered by large language models introduce a class of execution-layer vulnerabilities -- prompt injection, retrieval poisoning, and uncontrolled tool invocation -- that existing guardrails fail to address systematically. In this work, we propose the Layered Governance Architecture (LGA), a four-layer framework comprising execution sandboxing (L1), intent verification (L2), zero-trust inter-agent authorization (L3), and immutable audit logging (L4). To evaluate LGA, we construct a bilingual benchmark (Chinese original, English via machine translation) of 1,081 tool-call samples -- covering prompt injection, RAG poisoning, and malicious skill plugins -- and apply it to OpenClaw, a representative open-source agent framework. Experimental results on Layer 2 intent verification with four local LLM judges (Qwen3.5-4B, Llama-3.1-8B, Qwen3.5-9B, Qwen2.5-14B) and one cloud judge (GPT-4o-mini) show that all five LLM judges intercept 93.0-98.5% of TC1/TC2 malicious tool calls, while lightweight NLI baselines remain below 10%. TC3 (malicious skill plugins) proves harder at 75-94% IR among judges with meaningful precision-recall balance, motivating complementary enforcement at Layers 1 and 3. Qwen2.5-14B achieves the best local balance (98% IR, approximately 10-20% FPR); a two-stage cascade (Qwen3.5-9B->GPT-4o-mini) achieves 91.9-92.6% IR with 1.9-6.7% FPR; a fully local cascade (Qwen3.5-9B->Qwen2.5-14B) achieves 94.7-95.6% IR with 6.0-9.7% FPR for data-sovereign deployments. An end-to-end pipeline evaluation (n=100) demonstrates that all four layers operate in concert with 96% IR and a total P50 latency of approximately 980 ms, of which the non-judge layers contribute only approximately 18 ms. Generalization to the external InjecAgent benchmark yields 99-100% interception, confirming robustness beyond our synthetic data.",
       "categories": [
         "cs.CR",
         "cs.AI"
@@ -2033,7 +2316,7 @@
         "Daniela Pöhn",
         "Wolfgang Hommel"
       ],
-      "abstract": "Data breaches resulting from targeted attacks against organizations, e.g., by advanced persistent threat groups, often involve social engineering (SE) as the initial attack vector before malicious software is used, e.g., for persistence, lateral movement, and data exfiltration. While technical security controls, such as the automated detection of phishing emails, can contribute to mitigating SE risks, raising awareness for SE attacks through education and motivation of personnel is an important building block to increasing an organization's resilience. To facilitate hands-on SE awareness training as one component of broader SE awareness campaigns, we created a SE tabletop game called Tabletop As Social Engineering Prevention (TASEP) in two editions for (a) small and medium enterprises and (b) large corporations, respectively. Its game design is inspired by Dungeons \u0026 Dragons role-playing games and facilitates LEGO models of the in-game target organizations. Participants switch roles by playing a group of SE penetration testers and conducting a security audit guided by the game master. We evaluated the created game with different student groups, achieving highly immersive and flexible training, resulting in an entertaining way of learning about SE and raising awareness.",
+      "abstract": "Data breaches resulting from targeted attacks against organizations, e.g., by advanced persistent threat groups, often involve social engineering (SE) as the initial attack vector before malicious software is used, e.g., for persistence, lateral movement, and data exfiltration. While technical security controls, such as the automated detection of phishing emails, can contribute to mitigating SE risks, raising awareness for SE attacks through education and motivation of personnel is an important building block to increasing an organization's resilience. To facilitate hands-on SE awareness training as one component of broader SE awareness campaigns, we created a SE tabletop game called Tabletop As Social Engineering Prevention (TASEP) in two editions for (a) small and medium enterprises and (b) large corporations, respectively. Its game design is inspired by Dungeons & Dragons role-playing games and facilitates LEGO models of the in-game target organizations. Participants switch roles by playing a group of SE penetration testers and conducting a security audit guided by the game master. We evaluated the created game with different student groups, achieving highly immersive and flexible training, resulting in an entertaining way of learning about SE and raising awareness.",
       "categories": [
         "cs.CR"
       ],
@@ -2108,7 +2391,7 @@
         "Adamantios Ntakaris",
         "Gbenga Ibikunle"
       ],
-      "abstract": "High-frequency trading (HFT) has transformed modern financial markets, making reliable short-term price forecasting models essential. In this study, we present a novel approach to mid-price forecasting using Level 1 limit order book (LOB) data from NASDAQ, focusing on 100 U.S. stocks from the S\u0026P 500 index during the period from September to November 2022. Expanding on our previous work with Radial Basis Function Neural Networks (RBFNN), which leveraged automated feature importance techniques based on mean decrease impurity (MDI) and gradient descent (GD), we introduce the Adaptive Learning Policy Engine (ALPE) - a reinforcement learning (RL)-based agent designed for batch-free, immediate mid-price forecasting. ALPE incorporates adaptive epsilon decay to dynamically balance exploration and exploitation, outperforming a diverse range of highly effective machine learning (ML) and deep learning (DL) models in forecasting performance.",
+      "abstract": "High-frequency trading (HFT) has transformed modern financial markets, making reliable short-term price forecasting models essential. In this study, we present a novel approach to mid-price forecasting using Level 1 limit order book (LOB) data from NASDAQ, focusing on 100 U.S. stocks from the S&P 500 index during the period from September to November 2022. Expanding on our previous work with Radial Basis Function Neural Networks (RBFNN), which leveraged automated feature importance techniques based on mean decrease impurity (MDI) and gradient descent (GD), we introduce the Adaptive Learning Policy Engine (ALPE) - a reinforcement learning (RL)-based agent designed for batch-free, immediate mid-price forecasting. ALPE incorporates adaptive epsilon decay to dynamically balance exploration and exploitation, outperforming a diverse range of highly effective machine learning (ML) and deep learning (DL) models in forecasting performance.",
       "categories": [
         "q-fin.ST",
         "cs.LG"
@@ -3685,7 +3968,7 @@
         "Jianan Zhang",
         "Hongyi Duan"
       ],
-      "abstract": "This study presents a groundbreaking model for forecasting long-term financial time series, termed the Enhanced LFTSformer. The model distinguishes itself through several significant innovations:\n  (1) VMD-MIC+FE Feature Engineering: The incorporation of sophisticated feature engineering techniques, specifically through the integration of Variational Mode Decomposition (VMD), Maximal Information Coefficient (MIC), and feature engineering (FE) methods, enables comprehensive perception and extraction of deep-level features from complex and variable financial datasets. (2) DS Encoder Informer: The architecture of the original Informer has been modified by adopting a Stacked Informer structure in the encoder, and an innovative introduction of a multi-head decentralized sparse attention mechanism, referred to as the Distributed Informer. This modification has led to a reduction in the number of attention blocks, thereby enhancing both the training accuracy and speed. (3) GC Enhanced Adam \\\u0026 Dynamic Loss Function: The deployment of a Gradient Clipping-enhanced Adam optimization algorithm and a dynamic loss function represents a pioneering approach within the domain of financial time series prediction. This novel methodology optimizes model performance and adapts more dynamically to evolving data patterns.\n  Systematic experimentation on a range of benchmark stock market datasets demonstrates that the Enhanced LFTSformer outperforms traditional machine learning models and other Informer-based architectures in terms of prediction accuracy, adaptability, and generality. Furthermore, the paper identifies potential avenues for future enhancements, with a particular focus on the identification and quantification of pivotal impacting events and news. This is aimed at further refining the predictive efficacy of the model.",
+      "abstract": "This study presents a groundbreaking model for forecasting long-term financial time series, termed the Enhanced LFTSformer. The model distinguishes itself through several significant innovations:\n  (1) VMD-MIC+FE Feature Engineering: The incorporation of sophisticated feature engineering techniques, specifically through the integration of Variational Mode Decomposition (VMD), Maximal Information Coefficient (MIC), and feature engineering (FE) methods, enables comprehensive perception and extraction of deep-level features from complex and variable financial datasets. (2) DS Encoder Informer: The architecture of the original Informer has been modified by adopting a Stacked Informer structure in the encoder, and an innovative introduction of a multi-head decentralized sparse attention mechanism, referred to as the Distributed Informer. This modification has led to a reduction in the number of attention blocks, thereby enhancing both the training accuracy and speed. (3) GC Enhanced Adam \\& Dynamic Loss Function: The deployment of a Gradient Clipping-enhanced Adam optimization algorithm and a dynamic loss function represents a pioneering approach within the domain of financial time series prediction. This novel methodology optimizes model performance and adapts more dynamically to evolving data patterns.\n  Systematic experimentation on a range of benchmark stock market datasets demonstrates that the Enhanced LFTSformer outperforms traditional machine learning models and other Informer-based architectures in terms of prediction accuracy, adaptability, and generality. Furthermore, the paper identifies potential avenues for future enhancements, with a particular focus on the identification and quantification of pivotal impacting events and news. This is aimed at further refining the predictive efficacy of the model.",
       "categories": [
         "cs.LG",
         "cs.AI"

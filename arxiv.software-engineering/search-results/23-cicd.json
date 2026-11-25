@@ -10,11 +10,292 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:47:51Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 151,
-  "return_count": 151,
+  "total_results": 166,
+  "return_count": 166,
   "papers": [
+    {
+      "id": "2611.23251",
+      "title": "Who Changed the AI Agent's Rules? Measuring How AI Coding Agents Escalate Authority in CI/CD Pipelines",
+      "authors": [
+        "Miroslaw Staron"
+      ],
+      "abstract": "AI coding agents can modify CI/CD control-plane structures, including workflows and permission settings, thereby extending their authority beyond routine code changes. Because such modifications can affect an entire development pipeline, this study examines the trade-off between execution cost and governance risk in agentic CI/CD. We introduce a joint penalty model, P(M), that combines these two dimensions and evaluate it on all 932,791 agent-authored pull requests in the AIDev dataset, covering five autonomous coding agents. Each pull request is automatically classified by authority scope - data-plane or control-plane - and assigned a penalty score. We found that control-plane actions have a 2.3x higher mean joint penalty than data-plane actions (0.498 vs. 0.218) and a 3.9x higher mean governance risk (0.530 vs. 0.135), which means that they indeed increase the risk. All 775 pull requests in the extreme-risk category, defined as P(M) > 0.8, modify the control plane. Policy-violation flags occur in 46.6% of all control-plane pull requests and in 63.6% of merged control-plane pull requests. We have also found an indication that governance risk differs substantially across agent implementations, ranging from 0.166 for Cursor to 0.328 for Copilot in mean joint penalty. These differences are not explained by execution cost or merge rate, suggesting that authority policies should be calibrated for individual agents. Manual assessment of 34 pull requests yielded a Cohen's kappa of 0.72 for the authority-scope classifier. The results show that a single compound metric can identify and measure changes to CI/CD governance structures at scale. The proposed framework supports detecting high-risk pull requests and comparing governance behavior across agent implementations, providing a basis for authority tuning and pipeline governance in agentic software development.",
+      "published": "2026-09-24T20:02:48Z",
+      "updated": "2026-09-24T20:02:48Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23251",
+      "abs_url": "https://arxiv.org/abs/2611.23251",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.17276",
+      "title": "Patterns for Designing CI/CD Workflows",
+      "authors": [
+        "Leandro Sousa",
+        "Filipe Correia"
+      ],
+      "abstract": "CI/CD pipelines are difficult to build and maintain, and information about them is scattered across empirical studies, practitioner books, and catalogues of 'smells'. We collected candidate practices and anti-practices converted them into patterns, and then consolidated these into patterns. These patterns address issues such as security, pipeline scheduling, workflow structure, performance and failure and release management. Each pattern is contextualised and describes the problem it solves, the forces at play, the solution and the consequences.",
+      "published": "2026-11-12T18:50:29Z",
+      "updated": "2026-11-12T18:50:29Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.17276",
+      "abs_url": "https://arxiv.org/abs/2611.17276",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.06950",
+      "title": "KG-AST for Cheaper CI/CD: Budgeted Test Selection and AI Bug Review",
+      "authors": [
+        "Henry Yeung"
+      ],
+      "abstract": "Continuous integration and AI-assisted review spend the same budget on every commit, although few commits introduce bugs. We study KG-AST, which scores each commit risk from git history and code-graph features before heavy tests or AI review run, so the budget goes to the riskiest commits first, and which hands the AI reviewer only a graph slice around the change. On 155 open-source projects in 11 languages, a single cross-language model trained on other projects ranks commits so that heavy testing of the riskiest 20% covers 49-64% of bug-introducing commits depending on the language, against 20% for random selection and 40-55% for testing the biggest change first. Every language beats the biggest-change baseline, by 3.8 to 13.2 points. In 20 Java projects the gain at a 20% budget is 15.1 points (64.6% vs 49.5%, 95% interval +11.6 to +18.4), and the model wins in 19 of the 20 projects. About twelve training projects suffice; richer features, tuning and cleaner labels did not help. An AI reviewer that sees only a commit's diff finds 26% of later-fixed defects exactly (32% with graph context), and about half of its findings that did not match a later fix were judged real by independent AI judges. A static call-graph selector runs about 8% of a test suite while including a test written for the fix in 85% of 67 fix commits. The Poincare embedding used in our retrieval work adds nothing measurable here: commit-risk AUC, bug review and severity ranking are unchanged or worse. The labels are noisy and the budget metric assumes a heavy test catches the bug it covers; no CI minutes were measured.",
+      "published": "2026-11-03T16:28:29Z",
+      "updated": "2026-11-03T16:28:29Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.06950",
+      "abs_url": "https://arxiv.org/abs/2611.06950",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.01255",
+      "title": "AdapBench: Adaptive Early-Stopping and Prioritization for Efficient Microbenchmarking in Cloud-based CI/CD",
+      "authors": [
+        "Sebastian Koch",
+        "Jonas Heisterberg",
+        "Nils Japke",
+        "Trever Schirmer",
+        "David Bermbach"
+      ],
+      "abstract": "Cloud-based software systems frequently release new versions, a fact further accelerated through agentic coding. Each new release, however, brings the risk of performance regressions which can irritate end users, increase infrastructure costs, and increase carbon footprints. Therefore, developers strive to catch such regressions in testing stages, usually through so-called continuous benchmarking. The standard way of doing this is using microbenchmark suites which, however, take notoriously long to execute. Optimizing the execution of microbenchmark suites is, hence, an active field of research. In this paper, we propose AdapBench, an online scheduling system for reducing the execution duration of microbenchmark suites. AdapBench is the first approach which dynamically makes at-runtime decisions for prioritizing the most informative benchmarks and early-stopping each one once enough evidence has accumulated to accept or reject a performance change hypothesis. We evaluate our prototype on eight popular Java projects, commonly used by microbenchmark research, and four additional Go projects. At matched 90% change detections and false-positive rate compared to an optimistic uniform run, AdapBench saves 42% of the aggregate execution duration on the Java projects, with negligible scheduling overhead (below 0.001% of the total runtime). On the Go projects, AdapBench finds every performance change with zero false positives while saving 85% of the full run.",
+      "published": "2026-10-31T20:39:32Z",
+      "updated": "2026-10-31T20:39:32Z",
+      "categories": [
+        "cs.SE",
+        "cs.DC",
+        "cs.PF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.01255",
+      "abs_url": "https://arxiv.org/abs/2611.01255",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.28862",
+      "title": "pytest-gpu-proof: Enabling Cloud-CPU Continuous Integration for GPU Code with Local GPU Attestation",
+      "authors": [
+        "Brian Plancher"
+      ],
+      "abstract": "GPU acceleration is now routine across robotics, but cloud-hosted GPU continuous integration (CI) runners are expensive, resulting in severe under-testing of GPU-accelerated code. We present pytest-gpu-proof, an open-source pytest plugin offering a practical middle ground. Tests can be run on a local machine, signed with a receipt of exactly what ran and what it produced, and integrated into standard CPU CI workflows (e.g., GitHub Actions). The tool is open source and on PyPI, and we are actively integrating it across our lab's software stack.",
+      "published": "2026-09-24T00:06:11Z",
+      "updated": "2026-09-24T00:06:11Z",
+      "categories": [
+        "cs.DC",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.28862",
+      "abs_url": "https://arxiv.org/abs/2609.28862",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.00676",
+      "title": "Automating Static Code Analysis Through CI/CD Pipeline Integration",
+      "authors": [
+        "Zachary Wadhams",
+        "Ann Marie Reinhold",
+        "Clemente Izurieta"
+      ],
+      "abstract": "In the contemporary landscape of software devel-opment, securing sensitive data is paramount to safeguarding organizational reputation, preventing financial losses, and pro-tecting individuals from identity theft. This paper addresses the pervasive challenge of identifying and rectifying security vulnerabilities early in the development process, emphasizing the role of Static Application Security Testing (SAST) tools. While SAST tools play a crucial role in detecting vulnerabilities, widespread adoption has been hindered by usability issues, including high false positive rates and a lack of native pipeline support. This paper proposes a novel, generalized, and automated process for aggregating SAST tool outputs and integrating them into developers' familiar issue-tracking software. The process streamlines the identification and communication of security vulnerabilities during the development lifecycle, facilitating more efficient remediation efforts. We demonstrate the successful implementation of the proposed process with the SonarQube SAST tool in a GitLab-based development environment. Developers were positive about the structured implementation, real-time feedback, and proactive vulnerability management. However, despite some challenges such as a potential learning curve and tradeoffs between secure coding and workflow disruption, the overall positive impact on security awareness and responsiveness suggests that the proposed process holds promise in enhancing the security posture of software development practices",
+      "published": "2026-09-01T03:53:25Z",
+      "updated": "2026-09-01T03:53:25Z",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.00676",
+      "abs_url": "https://arxiv.org/abs/2609.00676",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.19267",
+      "title": "They'll Verify. They Just Won't Act. How Authority Framing and Laundered Code Turn a Trusted Agentic CI/CD Pipeline Into an Attack Surface",
+      "authors": [
+        "Yohann Sidot"
+      ],
+      "abstract": "We study a five-agent CI/CD pipeline (triage -> developer -> security-scan -> review -> approve/deploy), built from five distinct production LLMs across three providers, behind an LLM firewall in shadow mode. A single untrusted input - an external issue requesting a \"usage-telemetry\" feature - asks for code that exfiltrates process secrets (dict(os.environ)) to an attacker URL, laundered as observability. Across a pre-registered A x B (x C) factorial (N=20; naive arm N=60) we find: (1) the entry agent does not leak its system prompt (0/40); (2) an authority-framed injection (\"pre-approved under SEC-2291, do not re-review\") makes downstream verifiers see the secret-exfil line, cite the pre-approval, and ship it - the scanner passes ~80% of laundered pull requests, and the worst-case cell reaches 55% compromise; (3) the perceived presence of other verifiers yields only a small, non-significant reduction in individual scrutiny (a weak bystander analogue), even at N=60; and (4) content-based controls - code scanners and pattern detectors alike - miss the laundered intent entirely (the code is syntactically clean); only an LLM reasoning about intent is a partial defence. The failure is systemic: neither prompt secrecy nor distributed verification protects; a provenance-aware control at the entry, independent of both, would have. All data is 100% synthetic; the sink is mocked and the exfil URL is never contacted.",
+      "published": "2026-07-21T16:38:32Z",
+      "updated": "2026-07-21T16:38:32Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.19267",
+      "abs_url": "https://arxiv.org/abs/2607.19267",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.09935",
+      "title": "GitInject: Real-World Prompt Injection Attacks in AI-Powered CI/CD Pipelines",
+      "authors": [
+        "Jafar Isbarov",
+        "Umid Suleymanov",
+        "Ilia Shumailov",
+        "Murat Kantarcioglu"
+      ],
+      "abstract": "AI agents are increasingly embedded in continuous integration and continuous delivery (CI/CD) workflows to autonomously review pull requests, triage issues, and maintain codebases. We study fully automated configurations in which external contributions invoke agents without prior human approval. Because these agents ingest untrusted content while operating with repository credentials and tools, prompt injection can have software supply chain consequences. We present GitInject, an open-source framework for evaluating prompt injection in live GitHub Actions workflows. Unlike benchmarks that simulate tool calls, GitInject provisions ephemeral repositories and executes actual workflows, exposing platform semantics such as sandbox constraints, credential handling, and permission boundaries. We use GitInject to evaluate eleven named attack scenarios across five workflows from four AI providers, covering configuration-file injection, credential exfiltration, judgment manipulation, and availability. Every provider is susceptible to at least one high-severity attack in the tested configurations. The most consequential vulnerabilities are structural: attacker-controlled configuration files from an unmerged contribution are loaded as operator-level instructions, allowing the agent--infrastructure interaction to expose credentials or corrupt review judgments. Two configuration-file attacks replicate on GitLab and Hugging Face as well as GitHub. We evaluate workflow-level countermeasures and show their coverage and utility tradeoffs. We release GitInject and all attack scenarios.",
+      "published": "2026-06-07T19:17:18Z",
+      "updated": "2026-11-02T07:35:20Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.09935",
+      "abs_url": "https://arxiv.org/abs/2606.09935",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.06662",
+      "title": "AutoPipelineAI: Context-Aware CI/CD Pipeline Generation from Natural Language",
+      "authors": [
+        "Youssef Mohamed Aboelfotoh",
+        "Mohamed Ahmed Hemdan",
+        "Mohammad El-Ramly",
+        "Khlood Hassan",
+        "Mahmoud Saleh Saad",
+        "Ahmed Mohamed Tolba",
+        "Seif Gamal Abdelmonem"
+      ],
+      "abstract": "Modern software development relies on CI/CD pipelines to automate testing, building, and deployment operations. Configuring DevOps pipelines is challenging and time-consuming, as developers must understand platform-specific syntax and manually create configuration files. This complexity can lead to configuration errors and reduced productivity, especially for developers with limited DevOps experience. This paper introduces the AutoPipelineAI system, which generates CI/CD pipeline configurations using natural language descriptions. The proposed solution uses large language models (LLMs) to translate developer intent, analyze repository structures, and create specific pipeline scripts for environments like GitHub Actions and GitLab CI/CD. It integrates repository-aware analysis, automated validation systems, and a feedback mechanism that confirms the accuracy and usability of the created pipelines. We present the system architecture, its implementation, and an assessment framework designed to measure generation precision, configuration validity, and reduction in setup effort compared to manual pipeline creation. AutoPipelineAI illustrates how LLMs can simplify the complexity of DevOps configuration and enhance developer access to continuous delivery methods. Evaluation results provide early evidence that repository-aware, natural-language-driven CI/CD generation is a viable and promising paradigm for reducing the complexity of DevOps configuration and enabling more accessible software delivery automation.",
+      "published": "2026-06-04T19:15:07Z",
+      "updated": "2026-06-04T19:15:07Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06662",
+      "abs_url": "https://arxiv.org/abs/2606.06662",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.07062",
+      "title": "From Assistance to Agency: Rethinking Autonomy and Control in CI/CD Pipelines",
+      "authors": [
+        "Marcus Emmanuel Barnes",
+        "Taher A. Ghaleb",
+        "Safwat Hassan"
+      ],
+      "abstract": "AI agents are assuming active roles in Continuous Integration and Continuous Deployment (CI/CD) workflows, yet the research community lacks a shared vocabulary for describing what it means for CI/CD to be agentic, how much decision authority is delegated, and where control should reside. This paper presents a vision of agentic CI/CD in which the central challenge is not improving task performance but designing authority transfer, defined as the delegation of operational decisions from human-controlled pipelines to agent systems under specified constraints and recourse mechanisms. To structure this argument, we introduce a distinction between data-plane authority (localized interventions such as patch generation and test reruns) and control-plane authority (modifications to pipeline configuration, deployment policies, and approval gates). Drawing on research prototypes and industrial platforms, we show that current systems operate mainly at the data plane under bounded autonomy, with safety achieved through surrounding governance infrastructure rather than intrinsic agent guarantees. We identify three recurring patterns: constrained autonomy as the dominant design, external governance as the primary safety mechanism, and a widening gap between deployment momentum and evaluation methodology. We propose a research agenda in which control-plane safety and governance mechanisms represent the most urgent open problem, followed by formalization of autonomy boundaries, evaluation frameworks, and human--agent coordination.",
+      "published": "2026-05-08T00:15:43Z",
+      "updated": "2026-05-08T00:15:43Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.07062",
+      "abs_url": "https://arxiv.org/abs/2605.07062",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.05564",
+      "title": "Is this Build Failure Related to my Patch? An Empirical Study of Unrelated Build Failures in Continuous Integration",
+      "authors": [
+        "Andie Huang",
+        "Daniel Alencar da Costa",
+        "Grant Dick",
+        "Mariam El Mezouar"
+      ],
+      "abstract": "Continuous Integration (CI) systems often run many builds concurrently. In this setting, a legitimate build failure may not be caused by the code push that triggered it. Such unrelated build failures can waste developer effort because developers must determine whether the failure is actionable for their current change. We study 77,354 CI build failures from seven open source Apache projects to understand and predict unrelated build failures. We find that developers spend a median of 4 hours identifying whether a failure is related or unrelated to their push. We also perform a document analysis of 371 confirmed unrelated build failures sampled from 10,316 potentially unrelated failures. The analysis shows that unrelated test failures account for 20% of the cases in which developers classify build failures as unrelated. To predict unrelated build failures, we extract 33 features from issue reports, issue comments, and commits associated with the triggering push. We build semi-supervised Positive and Unlabeled (PU) learning models for seven Apache projects. The models achieve precision from 0.70 to 0.88, recall from 0.30 to 1.00, F1-score from 0.44 to 0.91, and AUC from 0.63 to 0.97. Feature importance analysis shows that CI latency, repeated error messages, and the number of preceding comments are useful indicators of unrelated build failures. These results show that PU learning can help developers identify build failures that are unlikely to be caused by their current push.",
+      "published": "2026-05-07T01:13:14Z",
+      "updated": "2026-05-07T01:13:14Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.05564",
+      "abs_url": "https://arxiv.org/abs/2605.05564",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.26824",
+      "title": "A Test Taxonomy and Continuous Integration Ecosystem for Dynamic Resource Management in HPC",
+      "authors": [
+        "Petter Sandås",
+        "Íñigo Aréjula-Aísa",
+        "Sergio Iserte",
+        "Antonio J. Peña"
+      ],
+      "abstract": "High-performance computing (HPC) systems are increasingly exploring dynamic resource management and malleable MPI applications to better adapt to heterogeneous architectures, fluctuating workloads, and energy constraints. However, the correctness of the libraries that support these techniques is often evaluated through ad hoc experiments that can be difficult to reproduce and maintain. This article introduces methodology for testing dynamic resource management frameworks that combines a taxonomy of tests for MPI malleable libraries with an HPC-oriented continuous integration (CI) ecosystem. The taxonomy structures functional and non-functional tests at both component-integration and system levels. The CI ecosystem instantiates this taxonomy in a containerized virtual cluster enabling automated validation. The approach is instantiated and evaluated using the Dynamic Management of Resources (DMR) framework as a representative case study. Results show that the proposed methodology improves early fault detection, simplifies maintenance under evolving dependencies, and transfers to other malleability solutions that expose analogous primitives for initialization, readiness checking, and reconfiguration.",
+      "published": "2026-04-29T15:49:41Z",
+      "updated": "2026-04-29T15:49:41Z",
+      "categories": [
+        "cs.DC",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.26824",
+      "abs_url": "https://arxiv.org/abs/2604.26824",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.25363",
+      "title": "Commit-Aware Learning-Based Test Case Prioritization for Continuous Integration",
+      "authors": [
+        "Lorenzo Abbondante",
+        "Gerardo Canfora"
+      ],
+      "abstract": "Regression testing in Continuous Integration (CI) pipelines is increasingly costly due to the growing size and execution frequency of test suites. Test Case Prioritization (TCP) mitigates this problem by reordering tests to expose faults earlier. However, most existing techniques rely primarily on historical execution data and coverage metrics, neglecting the rich structural information contained in code changes. This paper proposes a commit-aware, learning-based TCP method that combines structural properties of version-control diffs, test coverage relations, and historical execution behavior into a unified predictive model. Given a new commit, the method estimates the probability that each test suite will reveal at least one failure and prioritizes test execution accordingly. We evaluate our method on five Defects4J projects using a leave-one-project-out cross-project validation setting. Results show that the commit-aware TCP significantly outperform non-commit-aware-baselines in both classification and prioritization effectiveness. Our findings show that including commit structural semantics substantially enhances regression fault detection and enables robust, generalizable learning-based TCP in CI environments.",
+      "published": "2026-04-28T08:30:25Z",
+      "updated": "2026-06-10T16:56:28Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.25363",
+      "abs_url": "https://arxiv.org/abs/2604.25363",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.18334",
+      "title": "Reliability of AI Bots Footprints in GitHub Actions CI/CD Workflows",
+      "authors": [
+        "Syed Muhammad Ashhar Shah",
+        "Sehrish Habib",
+        "Muizz Hussain",
+        "Maryam Abdul Ghafoor",
+        "Abdul Ali Bangash"
+      ],
+      "abstract": "Continuous Integration and Deployment (CI/CD) workflows are central to modern software delivery, yet the reliability of agentic AI bots operating within these workflows remain underexplored. Using pull requests (PRs), commits, and repositories from the AIDev dataset, we retrieved associated CI/CD workflow runs via the GitHub Actions API and analyzed 61,837 runs from 2,355 repositories, all triggered by PRs generated by five AI bots: Claude, Devin, Cursor, Copilot, and Codex. We observed substantial agent-dependent differences in workflow reliability, with Copilot and Codex achieving the highest success rates ~93% and ~94% respectively. At the repository level, we find a negative correlation between AI agent contribution frequency and workflow success rate, suggesting that a higher frequency of Agentic PRs may hinder CI/CD workflow reliability. We defined a taxonomy of 13 categories against 3,067 agentic PRs whose associated workflows failed, and observed a trend analysis that indicates visually observable shifts from functional to non-functional PR categories over time, although these trends are not statistically significant. Our findings motivate the need for actionable guidance on integrating AI agents into CI/CD workflows and prioritizing safeguards in workflows where failures are most likely to occur.",
+      "published": "2026-04-20T14:34:14Z",
+      "updated": "2026-04-20T14:34:14Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.18334",
+      "abs_url": "https://arxiv.org/abs/2604.18334",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.17890",
+      "title": "Cache-Related Smells in GitLab CI/CD: Comprehensive Catalog, Automated Detection, and Empirical Evidence",
+      "authors": [
+        "Francesco Urdih",
+        "Theodoros Theodoropoulos",
+        "Uwe Zdun"
+      ],
+      "abstract": "Continuous Integration and Deployment (CI/CD) facilitate rapid software delivery, making fast feedback and minimal downtime essential. While caching has been shown to be an effective technique for tackling pipeline performance and reliability issues, existing works have primarily focused on missing dependency caches, ignoring other types of caches and cache misconfigurations. In this paper, we present a comprehensive catalog of ten cache-related smells in GitLab CI/CD that negatively impact performance and reliability, validated on a corpus of grey literature. To address the smells, we propose CROSSER, a tool that automatically detects seven of the ten smells. We evaluate CROSSER on a manually labeled dataset of 82 mature projects, achieving an overall F1 score of 0.98. Finally, we investigate the presence of smells across a large dataset of 228 mature open-source projects and outline our empirical findings. Our results show a widespread frequency of the smells, as only 11% of the projects do not present any. We also show that developers may not be aware of higher-level caching functionalities.",
+      "published": "2026-04-20T07:02:36Z",
+      "updated": "2026-04-20T07:02:36Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.17890",
+      "abs_url": "https://arxiv.org/abs/2604.17890",
+      "source": "arxiv"
+    },
     {
       "id": "2205.05043",
       "title": "Decisions in Continuous Integration and Delivery: An Exploratory Study",
@@ -150,7 +431,7 @@
         "Ruben ten Hove",
         "Marcel Böhme"
       ],
-      "abstract": "Fuzzing has proven to be a fundamental technique to automated software testing but also a costly one. With the increased adoption of CI/CD practices in software development, a natural question to ask is `What are the best ways to integrate fuzzing into CI/CD pipelines considering the velocity in code changes and the automated delivery/deployment practices?'. Indeed, a recent study by Böhme and Zhu shows that four in every five bugs have been introduced by recent code changes (i.e. regressions). In this paper, we take a close look at the integration of fuzzers to CI/CD pipelines from both automated software testing and continuous development angles. Firstly, we study an optimization opportunity to triage commits that do not require fuzzing and find, through experimental analysis, that the average fuzzing effort in CI/CD can be reduced by ~63% in three of the nine libraries we analyzed (\u003e40% for six libraries). Secondly, we investigate the impact of fuzzing campaign duration on the CI/CD process: A shorter fuzzing campaign such as 15 minutes (as opposed to the wisdom of 24 hours in the field) facilitates a faster pipeline and can still uncover important bugs, but may also reduce its capability to detect sophisticated bugs. Lastly, we discuss a prioritization strategy that automatically assigns resources to fuzzing campaigns based on a set of predefined priority strategies. Our findings suggest that continuous fuzzing (as part of the automated testing in CI/CD) is indeed beneficial and there are many optimization opportunities to improve the effectiveness and scalability of fuzz testing.",
+      "abstract": "Fuzzing has proven to be a fundamental technique to automated software testing but also a costly one. With the increased adoption of CI/CD practices in software development, a natural question to ask is `What are the best ways to integrate fuzzing into CI/CD pipelines considering the velocity in code changes and the automated delivery/deployment practices?'. Indeed, a recent study by Böhme and Zhu shows that four in every five bugs have been introduced by recent code changes (i.e. regressions). In this paper, we take a close look at the integration of fuzzers to CI/CD pipelines from both automated software testing and continuous development angles. Firstly, we study an optimization opportunity to triage commits that do not require fuzzing and find, through experimental analysis, that the average fuzzing effort in CI/CD can be reduced by ~63% in three of the nine libraries we analyzed (>40% for six libraries). Secondly, we investigate the impact of fuzzing campaign duration on the CI/CD process: A shorter fuzzing campaign such as 15 minutes (as opposed to the wisdom of 24 hours in the field) facilitates a faster pipeline and can still uncover important bugs, but may also reduce its capability to detect sophisticated bugs. Lastly, we discuss a prioritization strategy that automatically assigns resources to fuzzing campaigns based on a set of predefined priority strategies. Our findings suggest that continuous fuzzing (as part of the automated testing in CI/CD) is indeed beneficial and there are many optimization opportunities to improve the effectiveness and scalability of fuzz testing.",
       "categories": [
         "cs.SE",
         "cs.CR"
@@ -513,7 +794,7 @@
       "authors": [
         "Taher A. Ghaleb"
       ],
-      "abstract": "AI agents are increasingly used in software development, yet their interaction with CI/CD configurations is not well studied. We analyze 8,031 agentic pull requests (PRs) from 1,605 GitHub repositories where AI agents touch YAML configurations. CI/CD configuration files account for 3.25% of agent changes, varying by agent (Devin: 4.83%, Codex: 2.01%, p \u003c 0.001). When agents modify CI/CD, 96.77% target GitHub Actions. Agentic PRs with CI/CD changes merge slightly less often than others (67.77% vs. 71.80%), except for Copilot, whose CI/CD changes merge 15.63 percentage points more often. Across 99,930 workflow runs, build success rates are comparable for CI/CD and non-CI/CD changes (75.59% vs. 74.87%), though three agents show significantly higher success when modifying CI/CD. These results show that AI agents rarely modify CI/CD and focus mostly on GitHub Actions, yet their configuration changes are as reliable as regular code. Copilot's strong CI/CD performance despite lower acceptance suggests emerging configuration specialization, with implications for agent training and DevOps automation.",
+      "abstract": "AI agents are increasingly used in software development, yet their interaction with CI/CD configurations is not well studied. We analyze 8,031 agentic pull requests (PRs) from 1,605 GitHub repositories where AI agents touch YAML configurations. CI/CD configuration files account for 3.25% of agent changes, varying by agent (Devin: 4.83%, Codex: 2.01%, p < 0.001). When agents modify CI/CD, 96.77% target GitHub Actions. Agentic PRs with CI/CD changes merge slightly less often than others (67.77% vs. 71.80%), except for Copilot, whose CI/CD changes merge 15.63 percentage points more often. Across 99,930 workflow runs, build success rates are comparable for CI/CD and non-CI/CD changes (75.59% vs. 74.87%), though three agents show significantly higher success when modifying CI/CD. These results show that AI agents rarely modify CI/CD and focus mostly on GitHub Actions, yet their configuration changes are as reliable as regular code. Copilot's strong CI/CD performance despite lower acceptance suggests emerging configuration specialization, with implications for agent training and DevOps automation.",
       "categories": [
         "cs.SE"
       ],
@@ -1575,7 +1856,7 @@
     },
     {
       "id": "2101.08889",
-      "title": "TAOS-CI: Lightweight \u0026 Modular Continuous Integration System for Edge Computing",
+      "title": "TAOS-CI: Lightweight & Modular Continuous Integration System for Edge Computing",
       "authors": [
         "Geunsik Lim",
         "MyungJoo Ham",
@@ -1835,7 +2116,7 @@
         "Shane McIntosh",
         "Uirá Kulesza"
       ],
-      "abstract": "Continuous Integration (CI) encompasses a set of widely adopted practices that enhance software development. However, there are indications that developers may not adequately monitor CI practices. Hence, this paper explores developers' perceptions regarding the monitoring CI practices. To achieve this, we first perform a Document Analysis to assess developers' expressed need for practice monitoring in pull requests comments generated by developers during the development process. After that, we conduct a survey among developers from 121 open-source projects to understand perception of the significance of monitoring seven CI practices in their projects. Finally, we triangulate the emergent themes from our survey by performing a second Document Analysis to understand the extent of monitoring features supported by existing CI services. Our key findings indicate that: 1) the most frequently mentioned CI practice during the development process is ``Test Coverage'' (\u003e 80\\%), while ``Build Health'' and ``Time to Fix a Broken Build'' present notable opportunities for monitoring CI practices; 2) developers do not adequately monitor all CI practices and express interest in monitoring additional practices; and 3) the most popular CI services currently offer limited native support for monitoring CI practices, requiring the use of third-party tools. Our results lead us to conclude that monitoring CI practices is often overlooked by both CI services and developers. Using third-party tools in conjunction with CI services is challenging, they monitor some redundant practices and still falls short of fully supporting CI practices monitoring. Therefore, CI services should implement CI practices monitoring, which would facilitate and encourage developers to monitor them.",
+      "abstract": "Continuous Integration (CI) encompasses a set of widely adopted practices that enhance software development. However, there are indications that developers may not adequately monitor CI practices. Hence, this paper explores developers' perceptions regarding the monitoring CI practices. To achieve this, we first perform a Document Analysis to assess developers' expressed need for practice monitoring in pull requests comments generated by developers during the development process. After that, we conduct a survey among developers from 121 open-source projects to understand perception of the significance of monitoring seven CI practices in their projects. Finally, we triangulate the emergent themes from our survey by performing a second Document Analysis to understand the extent of monitoring features supported by existing CI services. Our key findings indicate that: 1) the most frequently mentioned CI practice during the development process is ``Test Coverage'' (> 80\\%), while ``Build Health'' and ``Time to Fix a Broken Build'' present notable opportunities for monitoring CI practices; 2) developers do not adequately monitor all CI practices and express interest in monitoring additional practices; and 3) the most popular CI services currently offer limited native support for monitoring CI practices, requiring the use of third-party tools. Our results lead us to conclude that monitoring CI practices is often overlooked by both CI services and developers. Using third-party tools in conjunction with CI services is challenging, they monitor some redundant practices and still falls short of fully supporting CI practices monitoring. Therefore, CI services should implement CI practices monitoring, which would facilitate and encourage developers to monitor them.",
       "categories": [
         "cs.SE"
       ],
@@ -2034,7 +2315,7 @@
         "Daniel Alencar",
         "Uira Kulesza"
       ],
-      "abstract": "Context: Continuous integration (CI) is a software engineering technique that proclaims a set of frequent activities to assure the health of the software product. Researchers and practitioners mention several benefits related to CI. However, no systematic study surveys state of the art regarding such benefits or cons. Objective: This study aims to identify and interpret empirical evidence regarding how CI impacts software development. Method: Through a Systematic Literature Review, we search for studies in six digital libraries. Starting from 479 studies, we select 101 empirical studies that evaluate CI for any software development activity (e.g., testing). We thoroughly read and extract information regarding (i) CI environment, (ii) findings related to effects of CI, and (iii) the employed methodology. We apply a thematic synthesis to group and summarize the findings. Results: Existing research has explored the positive effects of CI, such as better cooperation, or negative effects, such as adding technical and process challenges. From our thematic synthesis, we identify six themes: development activities, software process, quality assurance, integration patterns, issues \u0026 defects, and build patterns. Conclusions: Empirical research in CI has been increasing over recent years. We found that much of the existing research reveals that CI brings positive effects to the software development phenomena. However, CI may also bring technical challenges to software development teams. Despite the overall positive outlook regarding CI, we still find room for improvements in the existing empirical research that evaluates the effects of CI.",
+      "abstract": "Context: Continuous integration (CI) is a software engineering technique that proclaims a set of frequent activities to assure the health of the software product. Researchers and practitioners mention several benefits related to CI. However, no systematic study surveys state of the art regarding such benefits or cons. Objective: This study aims to identify and interpret empirical evidence regarding how CI impacts software development. Method: Through a Systematic Literature Review, we search for studies in six digital libraries. Starting from 479 studies, we select 101 empirical studies that evaluate CI for any software development activity (e.g., testing). We thoroughly read and extract information regarding (i) CI environment, (ii) findings related to effects of CI, and (iii) the employed methodology. We apply a thematic synthesis to group and summarize the findings. Results: Existing research has explored the positive effects of CI, such as better cooperation, or negative effects, such as adding technical and process challenges. From our thematic synthesis, we identify six themes: development activities, software process, quality assurance, integration patterns, issues & defects, and build patterns. Conclusions: Empirical research in CI has been increasing over recent years. We found that much of the existing research reveals that CI brings positive effects to the software development phenomena. However, CI may also bring technical challenges to software development teams. Despite the overall positive outlook regarding CI, we still find room for improvements in the existing empirical research that evaluates the effects of CI.",
       "categories": [
         "cs.SE"
       ],
@@ -2706,13 +2987,13 @@
     },
     {
       "id": "2505.11976",
-      "title": "Advanced Integration of Discrete Line Segments in Digitized P\u0026ID for Continuous Instrument Connectivity",
+      "title": "Advanced Integration of Discrete Line Segments in Digitized P&ID for Continuous Instrument Connectivity",
       "authors": [
         "Soumya Swarup Prusty",
         "Astha Agarwal",
         "Srinivasan Iyenger"
       ],
-      "abstract": "Piping and Instrumentation Diagrams (P\u0026IDs) constitute the foundational blueprint of a plant, depicting the interconnections among process equipment, instrumentation for process control, and the flow of fluids and control signals. In their existing setup, the manual mapping of information from P\u0026ID sheets holds a significant challenge. This is a time-consuming process, taking around 3-6 months, and is susceptible to errors. It also depends on the expertise of the domain experts and often requires multiple rounds of review. The digitization of P\u0026IDs entails merging detected line segments, which is essential for linking various detected instruments, thereby creating a comprehensive digitized P\u0026ID. This paper focuses on explaining how line segments which are detected using a computer vision model are merged and eventually building the connection between equipment and merged lines. Hence presenting a digitized form of information stating the interconnection between process equipment, instrumentation, flow of fluids and control signals. Eventually, which can be stored in a knowledge graph and that information along with the help of advanced algorithms can be leveraged for tasks like finding optimal routes, detecting system cycles, computing transitive closures, and more.",
+      "abstract": "Piping and Instrumentation Diagrams (P&IDs) constitute the foundational blueprint of a plant, depicting the interconnections among process equipment, instrumentation for process control, and the flow of fluids and control signals. In their existing setup, the manual mapping of information from P&ID sheets holds a significant challenge. This is a time-consuming process, taking around 3-6 months, and is susceptible to errors. It also depends on the expertise of the domain experts and often requires multiple rounds of review. The digitization of P&IDs entails merging detected line segments, which is essential for linking various detected instruments, thereby creating a comprehensive digitized P&ID. This paper focuses on explaining how line segments which are detected using a computer vision model are merged and eventually building the connection between equipment and merged lines. Hence presenting a digitized form of information stating the interconnection between process equipment, instrumentation, flow of fluids and control signals. Eventually, which can be stored in a knowledge graph and that information along with the help of advanced algorithms can be leveraged for tasks like finding optimal routes, detecting system cycles, computing transitive closures, and more.",
       "categories": [
         "cs.CV"
       ],
@@ -2856,7 +3137,7 @@
         "Bernhard A. Moser",
         "Michael Lunglmayr"
       ],
-      "abstract": "Leaky-integrate-and-fire (LIF) is studied as a non-linear operator that maps an integrable signal $f$ to a sequence $η_f$ of discrete events, the spikes. In the case without any Dirac pulses in the input, it makes no difference whether to set the neuron's potential to zero or to subtract the threshold $\\vartheta$ immediately after a spike triggering event. However, in the case of superimpose Dirac pulses the situation is different which raises the question of a mathematical justification of each of the proposed reset variants. In the limit case of zero refractory time the standard reset scheme based on threshold subtraction results in a modulo-based reset scheme which allows to characterize LIF as a quantization operator based on a weighted Alexiewicz norm $\\|.\\|_{A, α}$ with leaky parameter $α$. We prove the quantization formula $\\|η_f - f\\|_{A, α} \u003c \\vartheta$ under the general condition of local integrability, almost everywhere boundedness and locally finitely many superimposed weighted Dirac pulses which provides a much larger signal space and more flexible sparse signal representation than manageable by classical signal processing.",
+      "abstract": "Leaky-integrate-and-fire (LIF) is studied as a non-linear operator that maps an integrable signal $f$ to a sequence $η_f$ of discrete events, the spikes. In the case without any Dirac pulses in the input, it makes no difference whether to set the neuron's potential to zero or to subtract the threshold $\\vartheta$ immediately after a spike triggering event. However, in the case of superimpose Dirac pulses the situation is different which raises the question of a mathematical justification of each of the proposed reset variants. In the limit case of zero refractory time the standard reset scheme based on threshold subtraction results in a modulo-based reset scheme which allows to characterize LIF as a quantization operator based on a weighted Alexiewicz norm $\\|.\\|_{A, α}$ with leaky parameter $α$. We prove the quantization formula $\\|η_f - f\\|_{A, α} < \\vartheta$ under the general condition of local integrability, almost everywhere boundedness and locally finitely many superimposed weighted Dirac pulses which provides a much larger signal space and more flexible sparse signal representation than manageable by classical signal processing.",
       "categories": [
         "cs.NE",
         "eess.SP"
@@ -2913,7 +3194,7 @@
         "Michele Merler",
         "Pavitra Modi"
       ],
-      "abstract": "Patients with rare neurological diseases report cognitive symptoms -\"brain fog\"- invisible to traditional tests. We propose continuous neurocognitive monitoring via smartphone speech analysis integrated with Relational Graph Transformer (RELGT) architectures. Proof-of-concept in phenylketonuria (PKU) shows speech-derived \"Proficiency in Verbal Discourse\" correlates with blood phenylalanine (p = -0.50, p \u003c 0.005) but not standard cognitive tests (all |r| \u003c 0.35). RELGT could overcome information bottlenecks in heterogeneous medical data (speech, labs, assessments), enabling predictive alerts weeks before decompensation. Key challenges: multi-disease validation, clinical workflow integration, equitable multilingual deployment. Success would transform episodic neurology into continuous personalized monitoring for millions globally.",
+      "abstract": "Patients with rare neurological diseases report cognitive symptoms -\"brain fog\"- invisible to traditional tests. We propose continuous neurocognitive monitoring via smartphone speech analysis integrated with Relational Graph Transformer (RELGT) architectures. Proof-of-concept in phenylketonuria (PKU) shows speech-derived \"Proficiency in Verbal Discourse\" correlates with blood phenylalanine (p = -0.50, p < 0.005) but not standard cognitive tests (all |r| < 0.35). RELGT could overcome information bottlenecks in heterogeneous medical data (speech, labs, assessments), enabling predictive alerts weeks before decompensation. Key challenges: multi-disease validation, clinical workflow integration, equitable multilingual deployment. Success would transform episodic neurology into continuous personalized monitoring for millions globally.",
       "categories": [
         "cs.AI"
       ],
@@ -3079,7 +3360,7 @@
         "Hossein Azizpour",
         "Yifang Ban"
       ],
-      "abstract": "Urbanization advances at unprecedented rates, leading to negative environmental and societal impacts. Remote sensing can help mitigate these effects by supporting sustainable development strategies with accurate information on urban growth. Deep learning-based methods have achieved promising urban change detection results from optical satellite image pairs using convolutional neural networks (ConvNets), transformers, and a multi-task learning setup. However, bi-temporal methods are limited for continuous urban change detection, i.e., the detection of changes in consecutive image pairs of satellite image time series (SITS), as they fail to fully exploit multi-temporal data (\u003e 2 images). Existing multi-temporal change detection methods, on the other hand, collapse the temporal dimension, restricting their ability to capture continuous urban changes. Additionally, multi-task learning methods lack integration approaches that combine change and segmentation outputs. To address these challenges, we propose a continuous urban change detection framework incorporating two key modules. The temporal feature refinement (TFR) module employs self-attention to improve ConvNet-based multi-temporal building representations. The temporal dimension is preserved in the TFR module, enabling the detection of continuous changes. The multi-task integration (MTI) module utilizes Markov networks to find an optimal building map time series based on segmentation and dense change outputs. The proposed framework effectively identifies urban changes based on high-resolution SITS acquired by the PlanetScope constellation (F1 score 0.551), Gaofen-2 (F1 score 0.440), and WorldView-2 (F1 score 0.543). Moreover, our experiments on three challenging datasets demonstrate the effectiveness of the proposed framework compared to bi-temporal and multi-temporal urban change detection and segmentation methods.",
+      "abstract": "Urbanization advances at unprecedented rates, leading to negative environmental and societal impacts. Remote sensing can help mitigate these effects by supporting sustainable development strategies with accurate information on urban growth. Deep learning-based methods have achieved promising urban change detection results from optical satellite image pairs using convolutional neural networks (ConvNets), transformers, and a multi-task learning setup. However, bi-temporal methods are limited for continuous urban change detection, i.e., the detection of changes in consecutive image pairs of satellite image time series (SITS), as they fail to fully exploit multi-temporal data (> 2 images). Existing multi-temporal change detection methods, on the other hand, collapse the temporal dimension, restricting their ability to capture continuous urban changes. Additionally, multi-task learning methods lack integration approaches that combine change and segmentation outputs. To address these challenges, we propose a continuous urban change detection framework incorporating two key modules. The temporal feature refinement (TFR) module employs self-attention to improve ConvNet-based multi-temporal building representations. The temporal dimension is preserved in the TFR module, enabling the detection of continuous changes. The multi-task integration (MTI) module utilizes Markov networks to find an optimal building map time series based on segmentation and dense change outputs. The proposed framework effectively identifies urban changes based on high-resolution SITS acquired by the PlanetScope constellation (F1 score 0.551), Gaofen-2 (F1 score 0.440), and WorldView-2 (F1 score 0.543). Moreover, our experiments on three challenging datasets demonstrate the effectiveness of the proposed framework compared to bi-temporal and multi-temporal urban change detection and segmentation methods.",
       "categories": [
         "cs.CV"
       ],

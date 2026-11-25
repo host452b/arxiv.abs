@@ -1,0 +1,25 @@
+Title: PROSPER: LLMs as Sparse Retrievers for First-Stage Product Search
+Authors: Hongru Song, Yu-An Liu, Ruqing Zhang, Jiafeng Guo, Maarten de Rijke, Sen Li, Wenjun Peng, Fuyu Lv, Xueqi Cheng
+ID: 2611.28645
+URL: https://arxiv.org/abs/2611.28645
+
+Abstract:
+Product search is a crucial component of large-scale e-commerce platforms, where
+first-stage retrieval should achieve high recall while ensuring efficient online
+deployment. Sparse retrieval remains attractive for this setting due to its
+interpretability and deployability, yet it suffers from severe vocabulary
+mismatch challenges, especially for short queries and product titles. Large
+language models (LLMs) offer strong semantic capabilities, but directly applying
+them to sparse retrieval in product search introduces new challenges: (i)
+semantic expansion may distort critical literal signals such as brand names and
+model identifiers; and (ii) learning meaningful sparse representations is
+difficult in the high-dimensional vocabulary space induced by LLMs.To address
+these challenges, we propose PROSPER, a framework that uses LLMs as sparse
+retrievers for product search while explicitly preserving lexical fidelity.
+PROSPER combines (i) a literal residual network that alleviates lexical
+expansion hallucination by reinforcing underweighted literal terms through a
+residual compensation mechanism; and (ii) a lexical focusing window that uses
+top-k selection for rapid early sparsification and effective training
+initialization. Extensive offline evaluations and large-scale online A/B tests
+demonstrate that PROSPER consistently improves over existing sparse retrievers,
+and provides revenue gains for industrial hybrid retrieval systems.

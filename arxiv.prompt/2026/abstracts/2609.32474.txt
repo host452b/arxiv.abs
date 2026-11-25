@@ -1,0 +1,29 @@
+Title: PC-SubMax: Efficient Prompt Compression via Regularized Submodular Maximization
+Authors: Ziyi Zhang, Shuang Cui, Haotian Zhang, Xiaoyu Wang
+ID: 2609.32474
+URL: https://arxiv.org/abs/2609.32474
+
+Abstract:
+While large language models (LLMs) are increasingly deployed in long-context
+scenarios, lengthy prompts can increase inference costs and latency and
+exacerbate the ``lost-in-the-middle'' phenomenon. Selective prompt compression
+offers a model-agnostic approach to alleviating these issues. However, methods
+based on fixed token- or sentence-level importance scores may overlook how
+content contributions change with the selected subset, limiting their ability to
+account for inter-sentence redundancy. Compression procedures that rely on
+autoregressive LLM scoring can also introduce substantial overhead. We propose
+PC-SubMax, a theoretically grounded framework that formulates selective prompt
+compression as regularized monotone submodular maximization under a knapsack
+constraint. The objective is $U(S)-\ell(S)$, where the monotone submodular
+utility $U$ combines information coverage, query relevance, and log-determinant
+diversity, and the non-negative modular penalty $\ell$ captures token cost.
+Through diminishing marginal returns, the objective evaluates each sentence's
+contribution relative to the selected content. To optimize this objective, we
+develop the Regularized Greedy+Max (RGM) algorithm, which deterministically
+returns a feasible set $Q$ satisfying $U(Q)-\ell(Q)\geq
+\frac{1}{2}U(O)-\ell(O)$, where $O$ is an optimal feasible solution to the
+regularized problem. RGM uses $O(nκ)$ value-oracle queries, where $n$ is the
+number of candidate sentences and $κ$ is the maximum feasible subset size. PC-
+SubMax uses encoder representations and avoids autoregressive LLM scoring during
+compression. Experiments across seven diverse benchmarks demonstrate competitive
+downstream performance with low compression overhead.

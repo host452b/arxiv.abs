@@ -1,0 +1,27 @@
+Title: Source-Free Detection and Impact Analysis of Compiler Optimization Problems in Mobile Applications
+Authors: Han Hu, Xiaoheng Xie, Bo Sun, Jian Gu, Gang Fan, Li Li
+ID: 2606.23512
+URL: https://arxiv.org/abs/2606.23512
+
+Abstract:
+Mobile apps frequently suffer from frame drops, overheating, and excessive power
+consumption. While developers optimize algorithms and debug code, a critical
+bottleneck often goes unnoticed: native libraries compiled with low optimization
+levels (O0/O1 instead of O2/O3). Because these libraries execute without
+functional errors, the resulting performance degradation remains hidden in
+production apps. We present \textsc{OptDetect}, a source-free framework that
+detects compiler optimization problems directly from app binaries.
+\textsc{OptDetect} handles mixed optimization levels through binary disassembly,
+chunk-level classification, and weighted score aggregation, achieving 93.0\%
+accuracy on controlled datasets and 81.9\% on real-world datasets. Applying
+\textsc{OptDetect} to 21,972 native libraries from 830 top-ranked Google Play
+apps, we find that 30.5\% of libraries use low optimization levels, affecting
+91.7\% of apps. Through case studies on 12 production apps, fixing detected
+issues reduces CPU instructions by 10-63\% (median: 20.5\%) for commercial apps
+and 15-58\% (median: 32\%) for open-source apps. Performance complaints decrease
+in 5 of 6 commercial apps, and ratings increase in 5 of 6. Further investigation
+reveals that widely-used third-party libraries are themselves distributed at low
+optimization levels, with 49.7\% of 1,073 libraries in a major repository
+exhibiting this problem. These findings show that compiler optimization problems
+are common, source-free detectable, and practically consequential in mobile app
+ecosystems.

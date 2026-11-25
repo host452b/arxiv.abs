@@ -2,7 +2,7 @@
 
 # arxiv.abs — arXiv 论文摘要库：AI 研究与科幻世界构建
 
-**48,000+ 篇论文摘要精选，横跨十三大专题集（1996–2026），涵盖 AI/LLM 提示词工程、跨学科 AGI/科幻研究、AI Agent 技能、AI 与人类未来、健康科学、游戏开发、人 × AI 协作开发、软件工程、QA/质量工程、LLM Agent 研究、Anthropic/Claude AI 研究、儿童发展与教育，以及美股市场投资分析。**
+**55,000+ 篇论文摘要精选，横跨十三大专题集（1996–2026），涵盖 AI/LLM 提示词工程、跨学科 AGI/科幻研究、AI Agent 技能、AI 与人类未来、健康科学、游戏开发、人 × AI 协作开发、软件工程、QA/质量工程、LLM Agent 研究、Anthropic/Claude AI 研究、儿童发展与教育，以及美股市场投资分析。**
 
 ---
 
@@ -12,20 +12,20 @@
 
 | 专题 | 论文数 | 类别数 | 时间范围 |
 |------|--------|--------|---------|
-| [`arxiv.prompt`](arxiv.prompt/) | 4,780 | 8 章节 | 2023–2026 |
-| [`arxiv.agi-scifi`](arxiv.agi-scifi/) | 13,606 | 52 主题 | 2023–2026 |
-| [`arxiv.agent-skills`](arxiv.agent-skills/) | 2,606 | 14 技能 | 2000–2026 |
-| [`arxiv.game-dev`](arxiv.game-dev/) | 5,197 | 29 类别 | 1996–2026 |
-| [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 1,814 | 12 主题 | 无限制 |
-| [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,125 | 7 主题 | 无限制 |
-| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 73 | 25 类别 | 2013–2026 |
-| [`arxiv.software-engineering`](arxiv.software-engineering/) | 4,418 | 35 类别 | 2020–2026 |
-| [`arxiv.qa-quality-engineering`](arxiv.qa-quality-engineering/) | 3,069 | 35 类别 | 2020–2026 |
-| [`arxiv.agent-harness`](arxiv.agent-harness/) | 2,177 | 42 主题 | 2020–2026 |
-| [`arxiv.anthropic-claude`](arxiv.anthropic-claude/) | 2,628 | 35 主题 | 2021–2026 |
-| [`arxiv.child-development`](arxiv.child-development/) | 5,072 | 37 主题 | 2010–2026 |
-| [`arxiv.us-stock-market`](arxiv.us-stock-market/) | 1,241 | 24 主题 | 2010–2026 |
-| **合计** | **~47,806** | **345+** | |
+| [`arxiv.prompt`](arxiv.prompt/) | 5,080 | 8 章节 | 2023–2026 |
+| [`arxiv.agi-scifi`](arxiv.agi-scifi/) | 14,741 | 52 主题 | 2023–2026 |
+| [`arxiv.agent-skills`](arxiv.agent-skills/) | 2,905 | 14 技能 | 2000–2026 |
+| [`arxiv.game-dev`](arxiv.game-dev/) | 5,730 | 29 类别 | 1996–2026 |
+| [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 2,221 | 12 主题 | 无限制 |
+| [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,245 | 7 主题 | 无限制 |
+| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 74 | 25 类别 | 2013–2026 |
+| [`arxiv.software-engineering`](arxiv.software-engineering/) | 5,304 | 35 类别 | 2020–2026 |
+| [`arxiv.qa-quality-engineering`](arxiv.qa-quality-engineering/) | 3,591 | 35 类别 | 2020–2026 |
+| [`arxiv.agent-harness`](arxiv.agent-harness/) | 3,654 | 42 主题 | 2020–2026 |
+| [`arxiv.anthropic-claude`](arxiv.anthropic-claude/) | 4,079 | 35 主题 | 2021–2026 |
+| [`arxiv.child-development`](arxiv.child-development/) | 5,156 | 37 主题 | 2010–2026 |
+| [`arxiv.us-stock-market`](arxiv.us-stock-market/) | 1,336 | 24 主题 | 2010–2026 |
+| **合计** | **~55,116** | **345+** | |
 
 ---
 
@@ -115,31 +115,31 @@ arxiv.abs/
 ├── README.md                              # 英文版
 ├── README.zh-CN.md                        # 中文版
 ├── STANDARDS.md                           # 专题集格式规范
-├── arxiv.prompt/                          # 提示词工程（4,780 篇）
+├── arxiv.prompt/                          # 提示词工程（5,080 篇）
 │   ├── README.md / README.zh-CN.md
 │   ├── prompt_ai.md / prompt_ai.zh-CN.md  # 50 项核心技巧
 │   └── 2023–2026/abstracts/
-├── arxiv.agi-scifi/                       # AGI 与科幻研究（13,606 篇）
+├── arxiv.agi-scifi/                       # AGI 与科幻研究（14,741 篇）
 │   ├── README.md / README.zh-CN.md
 │   ├── agi-scifi.md / agi-scifi.zh-CN.md  # 核心发现
 │   ├── search-index.json
 │   └── 2023–2026/abstracts/
-├── arxiv.agent-skills/                    # AI Agent 技能（2,606 篇）
+├── arxiv.agent-skills/                    # AI Agent 技能（2,905 篇）
 │   ├── README.md / README.zh-CN.md
 │   ├── agent-skills-findings.zh-CN.md
 │   ├── search-index.json
 │   └── 2000–2026/abstracts/
-├── arxiv.game-dev/                        # 游戏开发经典（5,197 篇）
+├── arxiv.game-dev/                        # 游戏开发经典（5,730 篇）
 │   ├── README.md / README.zh-CN.md
 │   ├── readme_game_roadmap.md
 │   ├── search-index.json
 │   └── 1996–2026/abstracts/
-├── arxiv.ai-human-future/                 # AI 与人类未来（1,814 篇）
+├── arxiv.ai-human-future/                 # AI 与人类未来（2,221 篇）
 │   ├── README.md / README.zh-CN.md
 │   ├── ai-future-findings.zh-CN.md
 │   ├── search-index.json
 │   └── abstracts/
-├── arxiv.qbio-health/                     # 健康科学（1,125 篇）
+├── arxiv.qbio-health/                     # 健康科学（1,245 篇）
 │   ├── README.md / README.zh-CN.md
 │   ├── health-findings.zh-CN.md
 │   ├── search-index.json

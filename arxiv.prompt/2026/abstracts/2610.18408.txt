@@ -1,0 +1,22 @@
+Title: Prompt-Injection Probes Learn the Conversation, Not Just the Injection
+Authors: Kaan Kale, Sriram Vishwanath
+ID: 2610.18408
+URL: https://arxiv.org/abs/2610.18408
+
+Abstract:
+Linear probes on a model's hidden states are used as cheap monitors for indirect
+prompt injection: they screen the tool outputs an agent reads and send
+suspicious ones to a slower second check, so every false alarm has a cost. But a
+probe learns whatever separates its training examples. The standard evaluation
+of injection probes can be passed without the model: conversation position and
+text lengths alone reach 0.91-0.98 AUROC. When each attack is compared with the
+same conversation without the injection, or with harmless text formatted like an
+injection, standard probes flag most of these harmless cases. We add such cases
+to the training data as matched negatives. Across six open models, in
+applications seen during training and at the default threshold, changing only
+the training data cuts false alarms on injection-free conversations from 41-80%
+to 4-27%, and on harmless look-alikes from 92-98% to 3-16%. With a threshold set
+on normal traffic, our probe still catches a median 95% of the attacks that
+fooled the agent (91% without our data). In new applications, false alarms stay
+low, but detection depends on the model and on how the threshold is set. The
+same data also helps a text-only filter.

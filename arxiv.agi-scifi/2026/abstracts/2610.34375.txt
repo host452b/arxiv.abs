@@ -1,0 +1,24 @@
+Title: Whether or Where? Tail Calibration Signals Finite-Budget Reward Hacking in Best-of-N Selection
+Authors: Cheng Gui, Yihua Shao, Lei Li, Jingcai Guo, Maolin Wang
+ID: 2610.34375
+URL: https://arxiv.org/abs/2610.34375
+
+Abstract:
+Best-of-N (BoN) inference returns the candidate with the highest proxy reward,
+so a larger $N$ tests the proxy's extreme tail more than its average ranking
+quality. We show that the exact BoN value is a Beta-weighted integral of
+conditional true reward over within-prompt score quantiles. It follows that BoN
+depends on scores only through their ranks. It also follows that BoN can decline
+only if the calibration curve in the tail turns downward, and the budget where
+the decline appears depends on where that turn lies. Under a bounded additive
+model, the error tail sets the limit: Gaussian errors keep improving, Laplace
+errors reach a plateau, and heavy-tailed errors return to the prior mean. When
+error variance is largest at low true reward, even Gaussian noise can push BoN
+below random selection. Synthetic phase maps agree with this taxonomy. On real
+candidate pools spanning several verifiable domains, base policies, and learned
+reward models, tail failures are rare and all occur in code generation. A held-
+out tail calibration statistic reliably predicts where a cross-fitted budget cap
+helps. It does about as well as rank accuracy, and the cap is competitive with a
+Soft-BoN baseline. Tail calibration therefore does not replace ranking metrics.
+It is an audit that is unchanged by any monotone rescaling of the reward scores
+and shows which budgets are at risk.

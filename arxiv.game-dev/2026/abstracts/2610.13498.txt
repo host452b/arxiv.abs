@@ -1,0 +1,28 @@
+Title: A Hybrid and Hierarchical Ray Tracing Method for Efficient 3D Gaussian Rendering
+Authors: Tiancheng Zhao, Sixu Li, Yuzhou Chen, Hengyu Ding, Zhiming Pan, Chaojian Li
+ID: 2610.13498
+URL: https://arxiv.org/abs/2610.13498
+
+Abstract:
+3D Gaussian Splatting (3DGS) is a powerful representation for real-time neural
+reconstruction and rendering. While existing 3DGS systems rely on rasterization
+for efficiency, recent work explores ray tracing to enable secondary lighting,
+highly distorted cameras, and depth-of-field effects. However, compared with
+rasterization, ray-traced 3DGS introduces three major challenges: (1) the highly
+non-uniform spatial distribution of massive numbers of Gaussian primitives
+creates severe load imbalance; (2) neighboring pixels often generate rays with
+highly similar traversal paths, leading to substantial redundant traversal
+overhead; and (3) supporting both Gaussian and triangle primitives yields
+heterogeneous intersection workloads that are not well matched to existing GPU
+architectures. We present H2-Ray, a hybrid and hierarchical ray tracing
+architecture for efficient 3D Gaussian rendering. H2-Ray introduces three
+techniques. Load-Balanced Spatial BVH (LB-SBVH) partitions the scene into
+uniform grids and uses density-aware representations to convert an imbalanced
+global workload into balanced local traversal units. Ray-Cluster Path Reuse
+(RCPR) lets a proxy ray share traversal state with neighboring rays to amortize
+redundant traversal. The Unified Intersection Engine (UIE) supports mixed
+Gaussian and triangle intersections through a mode-multiplexed datapath that
+shares 40% of its floating-point units across both primitive types. Across 8
+scenes, H2-Ray achieves a geometric-mean speedup of 3.77x and a maximum speedup
+of 9.26x over RaySplats on the NVIDIA RTX A5000, combining a cycle-accurate
+model of the modified RT Core with measured CUDA timings.

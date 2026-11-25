@@ -1,0 +1,28 @@
+Title: GameEngineBench: Full-Session Verification of Coding Agents in a Networked Game Engine
+Authors: Brian La, Sungbin Jo, Sejoon Chang, Ben Kim, Junyoung Bae, Aamish Ahmad Beg, Sei Chang, Gonzalo Gonzalez-Pumariega
+ID: 2607.03525
+URL: https://arxiv.org/abs/2607.03525
+
+Abstract:
+Coding agents face new challenges in game development, where they must produce
+code that is not only syntactically correct but also consistent with engine-
+managed lifecycle, state, and networking behavior. Existing game-development
+benchmarks, however, do not combine assertions over engine-based runtime states
+with cross-client consistency, failing to evaluate how well generated code
+adheres to the desired behavioral specifications. To address these limitations,
+we present GameEngineBench, a benchmark of 110 C++ implementation tasks derived
+from 9 existing Unreal Engine 5 projects. Each task requires an agent to
+implement missing behavior within an established gameplay architecture. We also
+introduce Full-Session Verification, a testing framework that injects hidden
+tests after the agent finishes and evaluates the resulting implementation inside
+Play-in-Editor (PIE) sessions, with networked client worlds in 71 tasks. The
+tests evaluate Unreal's game loop, actor lifecycle, subsystems, and replication
+stack while directly inspecting runtime state. In 53 tasks, 119 tests
+additionally inspect a distinct client world to determine whether the
+authoritative server state is correctly replicated. To our knowledge, this is
+the first coding benchmark to evaluate cross-client replication. Across 11
+model-harness configurations, the best-scoring configuration achieves 46.4%
+pass@1, while 43 tasks remain unsolved by every evaluated configuration. These
+results demonstrate that compilation and shallow verification overestimate
+agents' ability to implement behavior that remains correct during full engine
+execution.

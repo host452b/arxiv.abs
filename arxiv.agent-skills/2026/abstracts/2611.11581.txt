@@ -1,0 +1,24 @@
+Title: Same Error, Different Recovery: How Delivery Changes LLM Agent Behavior
+Authors: Sunghyeun Woo, Javier Conde, Pedro Reviriego
+ID: 2611.11581
+URL: https://arxiv.org/abs/2611.11581
+
+Abstract:
+A tool-using language model must decide whether to retry a failed call, correct
+it, or stop and tell the user. The error text alone may not be enough: the same
+feedback can lead to different actions depending on where it appears in the
+conversation. We isolate this delivery problem by varying placement, guidance,
+retained history and turn structure. Two studies with plans fixed before data
+collection, across 13 open models from 3B to 70B parameters, compare the next
+action and subsequent task completion, with exact deterministic reruns. A new
+user turn that retains the failed exchange avoids the severe stopping failure
+observed in Llama models when that exchange is removed. It is non-inferior to
+history rewriting in pooled synthetic comparisons, but is not best for every
+model. We implement this form as an opt-in recovery layer within a deterministic
+inference engine and evaluate it on public benchmarks and a coding agent. On
+ToolMaze, it raises success on explicit errors by 14.2 points with 7-8B models
+and 10.5 points with 32-70B models; Loud/Quiet, 24 multi-turn tasks with visible
+failures and silent corruption, scored by final-state agreement, shows no
+measurable gain. A client given the exact fault kind performs better still. The
+findings support delivery as a distinct factor in recovery, not an engine-
+exclusive solution or a universal retry policy.

@@ -1,0 +1,23 @@
+Title: GapLeak: When Privacy-Preserving LLM-based Web Agents Become a Privacy Risk
+Authors: Chaklam Cheong, Tiancong Cao, Qi Li, Zelin Zhang, Jianbing Ni, Rongxing Lu, Mohammad Zulkernine
+ID: 2611.22223
+URL: https://arxiv.org/abs/2611.22223
+
+Abstract:
+Large Language Model (LLM)-based web agents rely on data minimization and least
+privilege to protect user privacy. We show that these principles are necessary
+but insufficient: they constrain authorized sources, but not higher-sensitivity
+sources that remain reachable. A website can request a field unavailable from
+authorized sources, creating an information gap. To complete the task, a goal-
+driven agent may escalate to reachable but unauthorized sources and disclose
+accumulated sensitive information. We formalize this vulnerability as GapLeak,
+where an adversary exploits a legitimate web form without prompt injection or
+other malicious instructions. We evaluate GapLeak on three web-agent frameworks
+and six LLMs from Anthropic, Google, and OpenAI across recruitment, e-commerce,
+travel, and healthcare. GapLeak induces an average unauthorized disclosure of
+approximately 37%. The information gap is the primary driver: eliminating it
+reduces disclosure by more than 50%. Existing instruction-level defenses based
+on least privilege partially mitigate the vulnerability but often reduce task
+success. We propose submission-time verification, which filters unauthorized
+content before form submission, eliminating over 96% of unauthorized disclosures
+while preserving task success.

@@ -1,0 +1,31 @@
+Title: Taking Time Out of TOCTOU: From Race Reproduction to Security Discovery
+Authors: Hasnain Naeem, Ryan Henry
+ID: 2611.21214
+URL: https://arxiv.org/abs/2611.21214
+
+Abstract:
+Time-of-check-to-time-of-use (TOCTOU) races are hard to reproduce and lost races
+can make vulnerable programs look fixed. We present Chronos, a framework that
+separates intervention timing from verdict evidence and builds reusable one-
+trial security regression oracles from declared races for deterministic
+reproduction, commit bisection and CI. Race Specifications compose reusable hold
+engines, actions, observers and outcome rules. When the declared hold is reached
+and the attack completes while held, Chronos orders it before the use under
+blocking and interference assumptions. Chronos uses seccomp notifications to
+enforce declared hold-attack-release ordering at syscall boundaries on stock
+Linux; ptrace and a KVM guest gate provide holds at userspace and kernel
+instruction sites. One decision procedure labels every mechanism's runs: fixed
+requires positive, case-specific evidence of preservation, justified refusal,
+omission under checked coverage, or a declared rule; missing or contradictory
+required evidence remains indeterminate. On known-vulnerable builds, effect-only
+checkers made over 800 false-fixed classifications in failed-intervention
+trials; Chronos made none. All 17 syscall-held cases and four of six
+instruction-held cases had vulnerable and fixed labels. Two kernel cases remain
+one-sided. All 27 historical bisections recovered the expected boundaries. For
+runc's masked-path bisection with one victim per launch, fixed retry and Git
+Bayesect took medians of 475 and 398 natural launches; Chronos used seven held
+trials including endpoint checks. Since a label means the same however a fix is
+written, we also ran the specifications and attack variants on releases,
+distribution packages and other runtimes. There, Chronos helped us uncover three
+issues: incomplete fixes in chrony and rpm, and a Debian rpm package its tracker
+listed as fixed.

@@ -1,0 +1,29 @@
+Title: Amortized Inverse Kinematics via Graph Attention for Real-Time Human Avatar Animation
+Authors: Muhammad Saif Ullah Khan, Chen-Yu Wang, Tim Prokosch, Michael Lorenz, Bertram Taetz, Didier Stricker
+ID: 2604.16629
+URL: https://arxiv.org/abs/2604.16629
+
+Abstract:
+Inverse kinematics (IK) is a core operation in animation, robotics, and
+biomechanics: given Cartesian constraints, recover joint rotations under a known
+kinematic tree. In many real-time human avatar pipelines, the available signal
+per frame is a sparse set of tracked 3D joint positions, whereas animation
+systems require joint orientations to drive skinning. Recovering full
+orientations from positions is underconstrained, most notably because twist
+about bone axes is ambiguous, and classical IK solvers typically rely on
+iterative optimization that can be slow and sensitive to noisy inputs. We
+introduce IK-GAT, a lightweight graph-attention network that reconstructs full-
+body joint orientations from 3D joint positions in a single forward pass. The
+model performs message passing over the skeletal parent-child graph to exploit
+kinematic structure during rotation inference. To simplify learning, IK-GAT
+predicts rotations in a bone-aligned world-frame representation anchored to
+rest-pose bone frames. This parameterization makes the twist axis explicit and
+is exactly invertible to standard parent-relative local rotations given the
+kinematic tree and rest pose. The network uses a continuous 6D rotation
+representation and is trained with a geodesic loss on SO(3) together with an
+optional forward-kinematics consistency regularizer. IK-GAT produces animation-
+ready local rotations that can directly drive a rigged avatar or be converted to
+pose parameters of SMPL-like body models for real-time and online applications.
+With 374K parameters and over 650 FPS on CPU, IK-GAT outperforms VPoser-based
+per-frame iterative optimization without warm-start at significantly lower cost,
+and is robust to initial pose and input noise

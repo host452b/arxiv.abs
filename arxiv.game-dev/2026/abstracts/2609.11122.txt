@@ -1,0 +1,24 @@
+Title: A Model-Centric DevOps Architecture for DEVS-Based Digital Twin Simulation Services
+Authors: Arnis Lektauers, Gusts Linkevičs, Guntis Mosāns, Arina Fokina, Rasa Gulbe
+ID: 2609.11122
+URL: https://arxiv.org/abs/2609.11122
+
+Abstract:
+Digital twin simulation models evolve and are redeployed like software. Engines
+based on the Discrete Event System Specification (DEVS) have a sound formal
+basis but offer little support for versioning, automated validation, or
+continuous delivery in cloud-native environments. This paper proposes a model-
+centric DevOps architecture that deploys DEVS-based digital twin simulations as
+managed services. Models are first-class DevOps artefacts written in a
+declarative language based on YAML (YAML Ain't Markup Language) with a tuple-
+level mapping to the multiPDEVS formalism. Repository continuous integration
+(CI) validates publishing manifests, the engine loader performs syntactic,
+structural, and static semantic checks before every simulation, and published
+model artefacts are versioned and immutable, so that an earlier validated
+version can be selected by pinning its identifier. The platform runs as
+containerised microservices on Kubernetes with engine adaptations that
+externalise inputs and results and expose lifecycle control. An initial case
+study on bus route 22 in Riga exercises the lifecycle on an offline model with
+roughly 115,000 DEVS atomic components and reports single-container throughput
+and concurrent job execution on one Kubernetes node. Behavioural validation and
+multi-node evaluation remain future work.

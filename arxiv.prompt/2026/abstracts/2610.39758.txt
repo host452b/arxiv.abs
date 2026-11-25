@@ -1,0 +1,22 @@
+Title: SEAL: Sealed Queries for Local Sanitization against Indirect Prompt Injection
+Authors: Doohyun Kim, Donghwa Kang, Mingyu Jun, Brent ByungHoon Kang
+ID: 2610.39758
+URL: https://arxiv.org/abs/2610.39758
+
+Abstract:
+Indirect prompt injection threatens local LLM agents through untrusted tool
+outputs, motivating defenses that suppress attacks while preserving task
+evidence under limited inference budgets. We introduce SEAL, which learns a soft
+prompt and scoring readout offline to sanitize tool outputs using a frozen task
+model. SEAL constructs scoring queries from trusted initial context and the
+learned prompt, keeping the reference independent of inspected tool text. It
+scores tokens without normalization across context tokens and uses preservation
+regularization to encourage retention of useful evidence during localized
+deletion. This design requires neither defense-generated tokens nor a separate
+verifier model. Across AgentDojo and AgentDyn, SEAL suppresses attacks while
+improving task completion under attack. Specifically, on AgentDojo, SEAL reduces
+attack success from 34.6\% to 0.1\% and increases Joint---task completion
+without attack success---from 51.4\% to 77.5\%, while using approximately
+$127\times$ fewer defense-related tokens than PISanitizer, a state-of-the-art
+prompt injection defense. Replication on a second backbone with the same
+training recipe supports applicability across model families.

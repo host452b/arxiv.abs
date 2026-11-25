@@ -1,0 +1,29 @@
+Title: Fault Injection Attacks on Q-Learning: Analysis, Vulnerabilities, and Countermeasures
+Authors: Tom Slooff, Anthony Etim, Jiaqi Yu, Francesco Regazzoni, Jakub Szefer
+ID: 2611.16151
+URL: https://arxiv.org/abs/2611.16151
+
+Abstract:
+Hardware fault injection attacks threaten machine learning systems, yet their
+impact on reinforcement learning (RL) has received little attention despite the
+use of RL in safety-critical applications. This paper presents a security
+analysis of Q-Learning implementations under voltage and clock glitching attacks
+on a ChipWhisperer platform, evaluating five variants: Standard, Robust,
+Resilient, Linear, and Deep Q-Learning. In standard Q-Table implementations,
+faults corrupt reward computation, action selection, and Q-value updates during
+learning, and change the selected action during inference. Robust Q-Learning
+does not prevent these attacks: NaN and infinite values injected during learning
+persist in the Q-table, and its greedy policy uses the same code as standard
+Q-Learning. This paper also evaluates a Resilient Q-Learning variant that
+applies triple modular redundancy with majority voting. It corrects corruption
+of a single Q-table copy, but inputs shared by the copies, such as the reward,
+and the voting code itself remain outside its protection. The analysis extends
+to Linear and Deep Q-Learning, where faults corrupt stored weights during
+learning and change actions during inference. Moving beyond benchmark
+environments, this work evaluates an online traffic light controller in a
+microscopic traffic simulator, where a single injected infinite value degrades
+accumulated vehicle waiting time by 148x while corrupting under 4% of the
+Q-table, and where triple modular redundancy corrected the faults injected in
+our tests, although glitching could still halt the device. Altogether, this work
+provides a basis for understanding and securing RL deployments against fault
+injection attacks.

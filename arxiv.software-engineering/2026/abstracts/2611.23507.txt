@@ -1,0 +1,30 @@
+Title: ACaM: Automated Capability Modeling for Agentic AI Security
+Authors: Monika Santra, Dhilung Kirat, Qiushi Wu, Kevin Eykholt, Xiaokui Shu, Ian Molloy
+ID: 2611.23507
+URL: https://arxiv.org/abs/2611.23507
+
+Abstract:
+In agentic AI systems, an LLM invokes tools that hold standing access to
+credentials, private data, filesystems, and external services. Such agents are
+increasingly deployed without an answer to a basic question: what can an agent
+access, exfiltrate, and propagate, independent of what it is designed for or is
+observed to do? The question goes unanswered because existing approaches trust a
+tool's natural-language description as a proxy for its behavior. But nothing
+enforces that the description and its implementation agree. This gap is known as
+Description-Code Inconsistency (DCI). DCI enables a threat class called
+capability laundering, in which a tool's implementation contains dangerous
+behavior that its description omits. The behavior may come from incidental drift
+or a supply-chain compromise. It runs silently whenever an LLM invokes the tool
+for its stated, benign purpose. We present ACaM, a neurosymbolic approach to
+capability modeling that derives each tool's capabilities from its code, so a
+laundered capability cannot hide behind a benign description. In ACaM, static
+analysis grounds an LLM in code-derived facts, and no LLM output can override a
+fact that static analysis has established. The LLM supplies only the behavioral
+meaning that those facts cannot express. ACaM compiles agent source code into
+the Agent Capability Property Graph (ACPG) and uses it to reconstruct threat
+chains that span multiple tool calls. We evaluate ACaM on 43 real-world agents,
+including 9 multi-agent systems. On 24 manually annotated agents, it recovers
+capability properties with 98.3% macro-F1 and reconstructs injected threat
+chains with a score of 0.980, 8 points above the strongest baseline. Applied to
+all 43 unmodified agents, it discovers hundreds of structural vulnerabilities,
+ten of which we confirm with proof-of-concept exploits.

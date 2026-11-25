@@ -10,11 +10,158 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:16:21Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 1195,
-  "return_count": 200,
+  "return_count": 207,
   "papers": [
+    {
+      "id": "2611.30193",
+      "title": "Visual-RFT++: Extending Visual Reinforcement Fine-Tuning to Multimodal Tool Use",
+      "authors": [
+        "Ziyu Liu",
+        "Zeyi Sun",
+        "Xiaoyi Dong",
+        "Yuhang Cao",
+        "Haodong Duan",
+        "Dahua Lin",
+        "Jiaqi Wang",
+        "Yuhang Zang"
+      ],
+      "abstract": "Reinforcement Fine-Tuning (RFT) has recently become a central paradigm for advancing Large Reasoning Models (LRMs), as demonstrated by systems such as OpenAI's o3 and the R1 series. Despite significant progress in LLMs, how to leverage RFT to unify visual perception, step-by-step reasoning, and agentic tool use into one coherent training paradigm remains an open challenge. In this work, we present Visual Reinforcement Fine-Tuning++ (Visual-RFT++), a unified framework that extends RFT to both visual perception tasks and multimodal agentic workflows, enabling LVLMs to reason with images, act upon images, and evaluate their own outputs using verifiable reward. With Visual-RFT++, open-source LVLMs not only show significant gains on diverse visual perception tasks, but also acquire agentic abilities such as web searching for real-time information and code-based image manipulation (e.g., cropping, rotation, and analysis). Across visual perception tasks, including fine-grained classification, few-shot detection, reasoning grounding, and open-vocabulary detection, Visual-RFT++ delivers strong gains over SFT, including a +24.3 percentage points improvement in one-shot fine-grained classification and +21.0 percentage points on COCO's 4-shot setting and +15.4 percentage points on LVIS with around several hundred samples. To evaluate agentic behaviors, we introduce the Multimodal Agentic Tool Bench (MAT) with MAT-Search and MAT-Coding. Visual-RFT++ surpasses its baseline by +18.6 F1 / +13.0 EM percentage points on MAT-Coding and +10.3 F1 / +8.7 EM percentage points on MAT-Search. It also shows gains of 29.3 F1 and 25.9 EM percentage points on multi-hop QA benchmarks such as 2Wiki and HotpotQA, demonstrating strong cross-modal generalization. Visual-RFT++ introduces a data-efficient and reward-driven framework that strengthens both visual reasoning and agentic adaptability.",
+      "published": "2026-11-23T07:36:15Z",
+      "updated": "2026-11-23T07:36:15Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30193",
+      "abs_url": "https://arxiv.org/abs/2611.30193",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28558",
+      "title": "From Reward Engineering to Data-Centric Reinforcement Learning for Effective Agentic Visual Tool Use",
+      "authors": [
+        "Jin Cui",
+        "Xinyue Long",
+        "Jiepeng Zhou",
+        "Boran Zhao",
+        "Pengju Ren",
+        "Hao Dong"
+      ],
+      "abstract": "Multimodal large language models (MLLMs) increasingly use external visual tools to acquire evidence during reasoning, yet learning when to invoke these tools remains challenging. Existing tool-use reinforcement learning (RL) methods often rely on call-contingent rewards to encourage beneficial tool use, but such reward engineering can distort the task objective and lead to degenerate calling behaviors. We argue that effective tool-use learning requires identifying not merely which questions are difficult, but which failures are attributable to missing visual evidence and can therefore be corrected through tool observations. We propose AOVO, a data-centric framework that enables MLLMs to learn effective tool use through perception attribution and policy-adaptive data sampling (PADS), without introducing tool-specific rewards. It counterfactually probes the model's reasoning states to identify observation-sensitive questions, distinguishing them from reasoning-dominated ones. PADS then periodically estimates category-level observation effects from recent policy rollouts and dynamically reallocates the training distribution toward questions where visual observations provide informative learning signals, while optimizing solely for final-answer correctness. Experiments across diverse visual perception and multimodal reasoning benchmarks demonstrate consistent improvements over competitive tool-use MLLMs, with causal analysis further validating the data-centric perspective for learning effective visual tool use.",
+      "published": "2026-11-21T04:24:24Z",
+      "updated": "2026-11-21T04:24:24Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28558",
+      "abs_url": "https://arxiv.org/abs/2611.28558",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27070",
+      "title": "$R^2$: Recognizing and Reducing Redundant Visual Tool Use",
+      "authors": [
+        "Yilin Zhao",
+        "Jinyu Wang",
+        "Wenming Yang"
+      ],
+      "abstract": "Recent studies have shown that visual tools can improve multimodal reasoning. However, the effects of tools vary substantially across samples, and benchmark accuracy alone does not reveal whether tool interactions are beneficial or redundant. We present $R^2$, a framework that recognizes and reduces redundant visual tool use in vision-language models. We first introduce a sample-level Category Analysis of Tool Utility (CAT), which categorizes samples according to whether a model can benefit from tools. This analysis reveals that benchmark scores may obscure a model's tool-use ability. Across seven benchmarks, samples benefiting from tools account for at most 12.44% of each benchmark, while the majority gain little from tool interaction or are even harmed by it. To assess individual calls, we propose the Visual Feedback Dependency (VFD) metric, which compares the likelihood of the same subsequent reasoning under actual and alternative visual feedback without an external evaluator or trajectory regeneration. Redundancy-Aware GRPO (RA-GRPO) combines this dependency signal with a category-conditioned base call cost to assign relative efficiency advantages among correct trajectories, supplementing outcome-based supervision. Across the seven benchmarks, RA-GRPO reduces the mean number of tool calls by 12.39% relative to Vanilla GRPO at comparable benchmark accuracy. Evaluated by tool-utility category, RA-GRPO improves category macro-average accuracy over Vanilla GRPO by 3.35 percentage points.",
+      "published": "2026-11-20T03:38:36Z",
+      "updated": "2026-11-20T03:38:36Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27070",
+      "abs_url": "https://arxiv.org/abs/2611.27070",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.25071",
+      "title": "FinVeriQA: Financial Research Agents for Question Answering: Routing, Retrieval, MCP Tool Use, and Provenance-Aware Evidence Verification",
+      "authors": [
+        "Meenakshi Rajpurohit",
+        "Anna Phan",
+        "Ravikumar Komandur Narayanan",
+        "Gunanidhi Ramakrishnan",
+        "Nathan Howland"
+      ],
+      "abstract": "Large language models (LLMs) write fluent financial analyses but miscompute ratios, recall stale prices, and route questions to the wrong tool with high confidence. We ask which component should do each job in a financial question-answering assistant, and study it with FinVeriQA, an open-source multi-agent research prototype over SEC filings and live market data: a compact typed-decision model (Laya) routes each question and screens out advice requests, Python computes every number, retrieval and tools fetch evidence, Mistral-7B writes a cited answer, a code validator checks that cited IDs exist and that numbers match computed notes, and a Model Context Protocol (MCP) server exposes the pipeline. In live experiments, Laya routed better than Mistral-7B (0.85 vs. 0.52; overall 0.86 vs. 0.68, McNemar p = 0.0003); a 12B Mistral decided no better, and DeepSeek-R1-8B decided better (0.79 vs. 0.68, p = 0.0192) but about 9.9 times more slowly. Mistral-7B computed 29% of 100 financial calculations correctly against 100% for Python, a live quote cut price error from 210% to 0.00%, and hybrid retrieval reached 76% Hit@5 on 50 filing questions. Yet in a live case study, both agent answers passed validation while describing AMD sample data under NVIDIA's and Alphabet's names. A controlled upper-bound study on the FinRank benchmark explains why: when one figure in the shared evidence is corrupted, self-consistency stays confident (agreement 0.55 to 0.59 while accuracy falls from 0.50 to 0.00), and a shared-evidence check (the kind our validator performs) catches 35% of the errors, whereas a check against the original passage catches 77% ($p = 5.96 \\times 10^{-8}$); for DeepSeek-R1-8B, 68% vs. 90%. Verification must be independent of the evidence the writer saw.",
+      "published": "2026-11-18T19:13:45Z",
+      "updated": "2026-11-18T19:13:45Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.IR",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25071",
+      "abs_url": "https://arxiv.org/abs/2611.25071",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20202",
+      "title": "DAPPT: Domain-Aware Policies from Procedural Trajectories for Sim-to-Real Dexterous Tool Use",
+      "authors": [
+        "Beining Han",
+        "Jia Deng"
+      ],
+      "abstract": "Sim-to-real RL has achieved impressive results in dexterous manipulation but remains limited to tasks with accurate rigid-body simulation. However, these methods cannot be applied to skills that involve deformable and particles, with which the simulation speed will become too slow for large-scale RL learning. We present DAPPT, a sim-to-real framework for end-to-end dexterous tool-use manipulation skills, e.g., sand scooping, play-dough rod-rolling, without simulating non-rigid materials. Our method learns a domain-aware RL policy by tracking procedural trajectories parameterized by domain parameters, and distills it into an end-to-end domain-aware sensorimotor policy. Furthermore, explicit domain represen-tation enables fast selection of domain parameters that can maximize downstream task performance. We evaluate DAPPT end-to-end on six dexterous manipulation tasks, including sand scooping, play-dough rod-rolling, sand scraping, mouse-wheel scrolling, dispenser pressing, and spray triggering. Our method achieves 1.5-3.8x in task metrics through the best domain parameter and transfers zero-shot to the real world.",
+      "published": "2026-11-15T18:58:02Z",
+      "updated": "2026-11-15T18:58:02Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20202",
+      "abs_url": "https://arxiv.org/abs/2611.20202",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19123",
+      "title": "Beyond Plain MCP: Do Decision Models and Code Mode Make Tool Use Cheaper and Faster?",
+      "authors": [
+        "Abhishek Rai"
+      ],
+      "abstract": "Model Context Protocol (MCP) gateways manage tool catalogs for language model agents using two primary paradigms: code mode where agents write scripts against tool stubs and decision layers which are cheap routers that preselect tool subsets. Using a controlled harness across 12 servers, up to 1,958 distractor tools, and three open-weight agents including Qwen, Gemma, and Nemotron, we present a preregistered evaluation on a sealed test split to determine when each approach succeeds. Code mode substantially outperforms plain MCP, cutting token usage by 70 to 90 percent while significantly boosting utility. Declaring return-shape hints in code mode stubs is a first-order variable, swinging success by up to 39.5 points for lower-performing agents, an effect larger than adding a router. The central hypothesis that a decision layer in front of code mode beats code mode alone is not confirmed, showing minor, statistically non-significant improvements for weaker agents and a slight cost for the strongest. We publicly release our harness, a finetuned 4B tool selection model, and all evaluation traces to support robust community experimentation on local AI privacy and agent architectures.",
+      "published": "2026-11-14T03:15:59Z",
+      "updated": "2026-11-14T03:15:59Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19123",
+      "abs_url": "https://arxiv.org/abs/2611.19123",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.09113",
+      "title": "Authorization Drift in LLM Agents: Evaluating Boundary Compliance in Multi-Step Tool Use",
+      "authors": [
+        "Chuxue Cao",
+        "Jingru Zeng",
+        "Boqin Yin",
+        "Yujin Zhou",
+        "Yidan Huang",
+        "Sujin Chen",
+        "Jinluan Yang",
+        "Haoran Li",
+        "Yike Guo",
+        "Sirui Han"
+      ],
+      "abstract": "LLM agents can exceed their authorization boundaries while pursuing user goals without an adversary. We formalize this phenomenon as authorization drift across data, tool, scope, and time, and introduce the Authorization Drift Benchmark (ADB): 648 samples across seven domains, each pairing a sufficient compliant path with an attractive unauthorized shortcut. To ensure executable tasks, tempting shortcuts, and feasible compliant paths, Staged Execution-Reflective Synthesis (SERS) grounds benchmark validation in real agent rollouts rather than LLM self-critique. Across 13 LLMs and three frameworks (25,207 trajectories), greater capability accompanies greater drift, with frontier-capable models exhibiting drift rates of 0.43 to 0.61. Yet 86.18% of tasks admit an observed clean-success trajectory, showing that drift is avoidable. Drift is persistent and dominated by early data over-collection; apparent improvements under agentic scaffolds coincide with collapsing clean-completion performance. To understand potential harms to individuals and society, we map drift points to legal provisions across four jurisdictions, connecting overreach to privacy and information-security concerns. Data minimisation is the most frequently implicated provision, and 93.5% of legally grounded drifting runs map to multiple jurisdictions, making the potential consequences of authorization drift more interpretable.",
+      "published": "2026-11-06T07:47:25Z",
+      "updated": "2026-11-06T07:47:25Z",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.09113",
+      "abs_url": "https://arxiv.org/abs/2611.09113",
+      "source": "arxiv"
+    },
     {
       "id": "2510.07038",
       "title": "Tool-Augmented Policy Optimization: Synergizing Reasoning and Adaptive Tool Use with Reinforcement Learning",
@@ -1002,7 +1149,7 @@
         "Qingfu Zhu",
         "Wanxiang Che"
       ],
-      "abstract": "Empowering large language models (LLMs) with effective tool utilization capabilities is crucial for enabling AI agents to solve complex problems. However, current models face two major limitations: (1) unreliable tool planning and invocation due to low-quality instruction datasets (e.g., widespread hallucinated API calls), and (2) weak tool reflection abilities (over 90% of errors cannot be corrected) resulting from static imitation learning. To address these critical limitations, we propose Tool-MVR, a novel Tool-Augmented LLM that achieves comprehensive System 2 reasoning through two key innovations. Specifically, we first introduce Multi-Agent Meta-Verification (MAMV), a systematic pipeline that rigorously validates APIs, queries, and reasoning trajectories to construct ToolBench-V, a new high-quality instruction dataset that addresses the limitation of unreliable tool planning and invocation. Second, we propose Exploration-based Reflection Learning (EXPLORE), which enhances tool reflection capabilities by leveraging tool feedback through a dynamic \"Error -\u003e Reflection -\u003e Correction\" learning paradigm, resulting in our reflection dataset ToolBench-R and addressing the critical weakness in tool reflection. Finally, we obtain Tool-MVR by finetuning open-source LLMs (e.g., Qwen-7B) on both ToolBench-V and ToolBench-R. Our experiments demonstrate that Tool-MVR achieves state-of-the-art performance on StableToolBench, surpassing both ToolLLM (by 23.9%) and GPT-4 (by 15.3%) while reducing API calls by 31.4%, with strong generalization capabilities across unseen tools and scenarios. Additionally, on our proposed RefineToolBench, the first benchmark specifically designed to evaluate tool reflection capabilities, Tool-MVR achieves a 58.9% error correction rate, significantly outperforming ToolLLM's 9.1%.",
+      "abstract": "Empowering large language models (LLMs) with effective tool utilization capabilities is crucial for enabling AI agents to solve complex problems. However, current models face two major limitations: (1) unreliable tool planning and invocation due to low-quality instruction datasets (e.g., widespread hallucinated API calls), and (2) weak tool reflection abilities (over 90% of errors cannot be corrected) resulting from static imitation learning. To address these critical limitations, we propose Tool-MVR, a novel Tool-Augmented LLM that achieves comprehensive System 2 reasoning through two key innovations. Specifically, we first introduce Multi-Agent Meta-Verification (MAMV), a systematic pipeline that rigorously validates APIs, queries, and reasoning trajectories to construct ToolBench-V, a new high-quality instruction dataset that addresses the limitation of unreliable tool planning and invocation. Second, we propose Exploration-based Reflection Learning (EXPLORE), which enhances tool reflection capabilities by leveraging tool feedback through a dynamic \"Error -> Reflection -> Correction\" learning paradigm, resulting in our reflection dataset ToolBench-R and addressing the critical weakness in tool reflection. Finally, we obtain Tool-MVR by finetuning open-source LLMs (e.g., Qwen-7B) on both ToolBench-V and ToolBench-R. Our experiments demonstrate that Tool-MVR achieves state-of-the-art performance on StableToolBench, surpassing both ToolLLM (by 23.9%) and GPT-4 (by 15.3%) while reducing API calls by 31.4%, with strong generalization capabilities across unseen tools and scenarios. Additionally, on our proposed RefineToolBench, the first benchmark specifically designed to evaluate tool reflection capabilities, Tool-MVR achieves a 58.9% error correction rate, significantly outperforming ToolLLM's 9.1%.",
       "categories": [
         "cs.CL"
       ],
@@ -2778,7 +2925,7 @@
         "Marcia K. O'Malley",
         "Ashok Veeraraghavan"
       ],
-      "abstract": "Automated tracking of surgical tool keypoints in robotic surgery videos is an essential task for various downstream use cases such as skill assessment, expertise assessment, and the delineation of safety zones. In recent years, the explosion of deep learning for vision applications has led to many works in surgical instrument segmentation, while lesser focus has been on tracking specific tool keypoints, such as tool tips. In this work, we propose a novel, multi-frame context-driven deep learning framework to localize and track tool keypoints in surgical videos. We train and test our models on the annotated frames from the 2015 EndoVis Challenge dataset, resulting in state-of-the-art performance. By leveraging sophisticated deep learning models and multi-frame context, we achieve 90\\% keypoint detection accuracy and a localization RMS error of 5.27 pixels. Results on a self-annotated JIGSAWS dataset with more challenging scenarios also show that the proposed multi-frame models can accurately track tool-tip and tool-base keypoints, with ${\u003c}4.2$-pixel RMS error overall. Such a framework paves the way for accurately tracking surgical instrument keypoints, enabling further downstream use cases. Project and dataset webpage: https://tinyurl.com/mfc-tracker",
+      "abstract": "Automated tracking of surgical tool keypoints in robotic surgery videos is an essential task for various downstream use cases such as skill assessment, expertise assessment, and the delineation of safety zones. In recent years, the explosion of deep learning for vision applications has led to many works in surgical instrument segmentation, while lesser focus has been on tracking specific tool keypoints, such as tool tips. In this work, we propose a novel, multi-frame context-driven deep learning framework to localize and track tool keypoints in surgical videos. We train and test our models on the annotated frames from the 2015 EndoVis Challenge dataset, resulting in state-of-the-art performance. By leveraging sophisticated deep learning models and multi-frame context, we achieve 90\\% keypoint detection accuracy and a localization RMS error of 5.27 pixels. Results on a self-annotated JIGSAWS dataset with more challenging scenarios also show that the proposed multi-frame models can accurately track tool-tip and tool-base keypoints, with ${<}4.2$-pixel RMS error overall. Such a framework paves the way for accurately tracking surgical instrument keypoints, enabling further downstream use cases. Project and dataset webpage: https://tinyurl.com/mfc-tracker",
       "categories": [
         "cs.CV"
       ],

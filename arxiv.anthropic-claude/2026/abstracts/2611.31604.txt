@@ -1,0 +1,27 @@
+Title: Adapt, Label, Distill: Foundation-Model Supervision for Efficient Object Detection
+Authors: Zhengye Yang, Anthony Wang, Yuyang Li, Mehmet Kerem Turkcan, Beizhan Yan, Zoran Kostic
+ID: 2611.31604
+URL: https://arxiv.org/abs/2611.31604
+
+Abstract:
+Object detectors often transfer poorly to specialized domains, where box
+annotations are scarce and deployment requires compact, real-time models. Large
+vision foundation models can provide offline supervision, but their zero-shot
+predictions may be poorly aligned with the target domain. We present an adapt-
+label-distill pipeline that uses limited target annotations to specialize a
+foundation teacher and transfer its supervision to compact detectors. We adapt
+SAM3 on the labeled subset, generate pseudo-labels for the remaining unlabeled
+images, and train YOLOv11 students with confidence-guided supervision. Teacher
+confidence weights pseudo-label losses, while zero-gating retains uncertain
+hypotheses during assignment without applying their associated training losses.
+Experiments across six target domains and three student capacities show
+substantial gains in several domains, while revealing limited or negative
+transfer in others. Teacher comparisons under a common hard-label training
+recipe support the choice of SAM3, and comparisons with an EfficientTeacher
+adaptation provide additional evidence against an online SSOD baseline. With
+YOLOv11m, our pipeline improves over STAC-style self-training by up to 15.3 AP
+and reaches 51.6 AP on Garbage, compared with 54.1 under full supervision. On
+NVIDIA Jetson AGX Orin, the deployed student achieves 188 FPS versus 2.9 FPS for
+SAM3, benefiting from foundation-model supervision without incurring the
+teacher's deployment cost. Code is available at
+https://github.com/zk2172-columbia/ProjectAdaptLabelDistill_ObjectDetection.

@@ -1,0 +1,29 @@
+Title: SymbolicLight V2: Hybrid Neuromorphic Architecture and Sparse Execution for Low-Energy Language Inference
+Authors: Ting Liu
+ID: 2609.09772
+URL: https://arxiv.org/abs/2609.09772
+
+Abstract:
+SymbolicLight V2 combines sparse event computation with continuous-state
+processing in a hybrid neuromorphic language architecture. Extending V1's spike-
+gated dual paths, it adds graded signed events at further projections and
+softmax-free local attention. We implement the 194M-parameter model on an Alveo
+U50C FPGA using digital fixed-point arithmetic and on an ARM CPU using sparse
+integer execution. Across three same-checkpoint FPGA implementations at 175 MHz,
+active-row weight gathering and valid-state KV loading raise decode throughput
+from 474.6 to 643.2 tokens/s for a 32-token prefix and 128 outputs. Estimated
+gross card energy falls from 0.06087 to 0.04407 J per generated token, a 27.6%
+reduction. Complete-request energy, including prefill, falls by 24.4-27.7%
+across three prefix lengths. An independent idle split attributes 82.8% of gross
+card energy to loaded idle, explaining the benefit of shorter token latency.
+Against the recorded RTX 5090 compiled-FP32 baseline, integer FPGA execution
+uses 89.1% less estimated card energy during short-context decode; arithmetic
+precisions differ, and the GPU baseline is not the lowest-energy tested
+configuration. On four Cortex-A76 cores of a ROCK 5T, complete requests reach
+65.4 tokens/s at 9.80 W and 0.151 J per generated token at the adapter's AC
+input. These results connect event sparsity to omitted computation and data
+movement. The mechanisms also support other dedicated V2 implementations:
+increasing throughput by a greater factor than active power lowers energy per
+generated token. Evaluation holds the deployed checkpoint fixed; its quality
+trails a same-budget dense control, so the results do not establish equal-
+quality efficiency.

@@ -10,11 +10,187 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:44:12Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 584,
-  "return_count": 200,
+  "return_count": 208,
   "papers": [
+    {
+      "id": "2611.13762",
+      "title": "Exploiting What NVIDIA Profilers Hide: Fast and Accurate Analytical GPU Performance Modeling",
+      "authors": [
+        "Ziwen Wang",
+        "Qi Luo",
+        "Kunlin Li",
+        "Changxi Liu",
+        "Dongsheng Wang",
+        "Yun Chen"
+      ],
+      "abstract": "GPUs have become essential to many fields, including AI and scientific computing. As GPUs grow more complex, the design space of their hardware configurations becomes increasingly large, yet cycle-level simulators remain too slow to explore it. Analytical models make this exploration much faster. However, existing GPU analytical models fall short of accurately predicting performance across hardware configurations, because they re-estimate or scale every stall of a warp on the target configuration. We observe that fixed-latency stalls stay the same across configurations, whereas queueing stalls vary with the pressure on each hardware unit. Based on this observation, we propose ForeSight, a queueing analytical model that reuses the fixed-latency stalls measured on GPU hardware and recomputes the queueing stalls of each hardware unit from its pressure. To provide ForeSight with the counter values of each hardware unit, we build UnitSight, a profiler that recovers these values, which NVIDIA's official profilers hide by aggregating across units. Our evaluation on hardware configurations of nine NVIDIA GPUs shows that ForeSight predicts kernel execution time with a mean absolute percentage error (MAPE) of 8.3%, compared with 14.1% for the best baseline. ForeSight also predicts the end-to-end execution time of LLM inference on vLLM with a MAPE of 2.0%. It runs 49x faster than the cycle-level simulator Accel-Sim and faster than interval-based models such as GCoM. With the aid of ForeSight, we explore configurations derived from the H20 GPU for LLM inference and find one with 1.78x its performance/cost.",
+      "published": "2026-11-10T09:02:38Z",
+      "updated": "2026-11-10T09:02:38Z",
+      "categories": [
+        "cs.AR",
+        "cs.PF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13762",
+      "abs_url": "https://arxiv.org/abs/2611.13762",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.28615",
+      "title": "KoalaGS: Complexity-Aware Continuous Level of Detail for Gaussian Splatting",
+      "authors": [
+        "Radu Beche",
+        "Raoul de Charette"
+      ],
+      "abstract": "Deploying a trained 3D Gaussian Splatting scene under shrinking compute budgets requires one primitive set to remain effective when rendered at smaller prefixes. In this continuous level of detail (LoD) setting, the challenge is to decide which Gaussians should retain capacity as the budget decreases. A pilot study on 3DGS-MCMC reconstructions shows that image complexity, computed from the input views before optimization, predicts where reconstruction error concentrates in image and 3D space. It also reveals that simple regions contain too many Gaussians and degrade as much as complex ones at lower budgets, despite being inherently cheaper to represent. Subsequently, in KoalaGS, during training we use this complexity prior to bias relocation toward poorly reconstructed areas while ensuring smooth degradation across LoDs. A primitive importance score then enables inference at low-capacity, while preserving the scene structure. Tested across three datasets, KoalaGS maintains competitive full-capacity quality while significantly improving quality across the budget spectrum, yielding smoother transitions across LoDs, and enabling faster progressive streaming.",
+      "published": "2026-10-20T17:55:06Z",
+      "updated": "2026-10-20T17:55:06Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28615",
+      "abs_url": "https://arxiv.org/abs/2610.28615",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.12299",
+      "title": "Argus: Orchestrating Cross-Layer GPU Performance Measurements around Semantic Regions",
+      "authors": [
+        "Jianzhu Yao",
+        "Yue Guan",
+        "Srivatsan Ramesh",
+        "Yuanwei Fang",
+        "Jian Jiao",
+        "Boda Li",
+        "Yueming Hao",
+        "Xinwei Qiang",
+        "Pramod Viswanath",
+        "Yufei Ding",
+        "Bill Yoshimi",
+        "Alexey Loginov",
+        "Shane Nay",
+        "Adnan Aziz"
+      ],
+      "abstract": "GPU developers and automated optimizers need performance evidence for semantic code regions--such as neural-network operator implementations and pipeline stages--but this evidence is fragmented across profiling tools. Answering a region-level question can require manually constructing probes and program variants, isolating interfering measurements, and mapping evidence to regions and execution contexts. We present Argus, a region-centric measurement planner and runtime that automates this workflow. Clients identify regions with boundary markers and select signals and execution scopes. Argus preserves region identity across compilation, execution, and measurement variants, constructs interference-aware multi-run plans, and orchestrates transformations and profiling across backends. It joins compiler-, hardware-, and system-level evidence using region identity and dynamic execution context, producing reports that record measurement origins and attribution ambiguity. We evaluate Argus across agentic kernel optimization, persistent megakernel optimization, and cross-level PGO. Across 44 persistent-GEMM and attention configurations, Argus improves 39/44 cases and raises AlphaEvolve's geometric-mean speedup from 5.4% to 8.9%. On a persistent TinyLlama-1.1B decode megakernel, an optimization agent reaches 1.65 ms/token with Argus versus 4.92 ms/token without it, producing a kernel $2.1\\times$ faster than PyTorch with CUDA Graphs. Finally, Argus-guided cross-level PGO improves compute--communication overlap, increasing throughput by 7% on average across five multi-GPU settings.",
+      "published": "2026-09-11T00:07:04Z",
+      "updated": "2026-09-11T00:07:04Z",
+      "categories": [
+        "cs.DC",
+        "cs.PF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.12299",
+      "abs_url": "https://arxiv.org/abs/2609.12299",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.02414",
+      "title": "Analyzing GPU Performance in Virtualized Environments: A~Case Study",
+      "authors": [
+        "Adel Belkhiri",
+        "Michel Dagenais"
+      ],
+      "abstract": "The graphics processing unit (GPU) plays a crucial role in boosting application performance and enhancing computational tasks. Thanks to its parallel architecture and energy efficiency, the GPU has become essential in many computing scenarios. On the other hand, the advent of GPU virtualization has been a significant breakthrough, as it provides scalable and adaptable GPU resources for virtual machines. However, this technology faces challenges in debugging and analyzing the performance of GPU-accelerated applications. Most current performance tools do not support virtual GPUs (vGPUs), highlighting the need for more advanced tools. Thus, this article introduces a novel performance analysis tool that is designed for systems using vGPUs. Our tool is compatible with the Intel GVT-g virtualization solution, although its underlying principles can apply to many vGPU-based systems. Our tool uses software tracing techniques to gather detailed runtime data and generate relevant performance metrics. It also offers many synchronized graphical views, which gives practitioners deep insights into GVT-g operations and helps them identify potential performance bottlenecks in vGPU-enabled virtual machines.",
+      "published": "2026-08-03T15:53:47Z",
+      "updated": "2026-08-03T15:53:47Z",
+      "categories": [
+        "cs.DC",
+        "cs.PF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.02414",
+      "abs_url": "https://arxiv.org/abs/2608.02414",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.22432",
+      "title": "TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters",
+      "authors": [
+        "Zhiwen Mo",
+        "Yu Cheng",
+        "Lei Wang",
+        "Zhengju Tang",
+        "Lei Xu",
+        "Guoyu Li",
+        "Yuqi Dong",
+        "Lingxiao Ma",
+        "Yuqing Xia",
+        "Jilong Xue",
+        "Fan Yang",
+        "Luo Mai",
+        "Zhi Yang",
+        "Wayne Luk",
+        "Hongxiang Fan"
+      ],
+      "abstract": "Recent GPU programming frameworks such as Triton, TileLang, and CUDA Tile adopt tiles as first-class primitives, making tile-centric programming the prevailing approach for high-performance GPU kernels. Performance-analysis tooling has not followed: programmers still rely on coarse roofline bounds, opaque ML predictors, or post-hoc profilers to understand kernel execution. This gap is acute for modern AI workloads, where kernel fusion and distributed inference depend on tensor cores, CUDA cores, cache hierarchies, memory pipelines, and inter-GPU networks. We present TileSight, a tile-centric performance-modeling tool that elevates the tile from a programming primitive to an analysis primitive. Within a GPU core, TileSight models compute-memory pipeline overlap; across cores, it models the cache hierarchy; across GPUs, it models inter-node communication. All layers share the tile abstraction: the intra-tile layer expresses work as a resource vector spanning network, memory, and compute pipelines; the inter-tile layer schedules dependent and ordered actions to expose legal overlap and infers multi-level cache hit rates from tile reuse distance; and the cross-device layer maps remote tensor accesses to placements and routes them through an alpha-beta stage cost. On A100, H200, B200, and B6000, TileSight predicts single-GPU kernel latency with 12.35% pooled mean absolute percentage error (MAPE), outperforming state-of-the-art baselines and transferring better across architectures. Its L2 cache-hit-rate predictions are within roughly one percentage point of measurements on every GPU. At up to 32 GPUs, TileSight achieves 16.18% weighted MAPE (wMAPE) on fused distributed kernels and 13.52% wMAPE on end-to-end vLLM serving. In optimization, TileSight selects tile configurations competitive with strong vendor and expert baselines. TileSight will be open-sourced upon publication.",
+      "published": "2026-07-24T15:50:23Z",
+      "updated": "2026-07-24T15:50:23Z",
+      "categories": [
+        "cs.DC",
+        "cs.PF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.22432",
+      "abs_url": "https://arxiv.org/abs/2607.22432",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.06565",
+      "title": "AI Level of Detail: Distance-Aware ML Model Precision Selection for Real-Time Human Motion Prediction in Games",
+      "authors": [
+        "Mathew Varghese"
+      ],
+      "abstract": "Modern game engines spend significant compute animating NPCs with learned motion models. This paper proposes AI Level of Detail (AI LOD), a framework in which machine learning inference precision is adapted based on the distance between each NPC and the player camera. The core idea mirrors classical geometry LOD: substitute a cheaper approximation where the difference is imperceptible. Here, the approximation is a lower-precision quantized machine learning model rather than a lower-polygon mesh. The contribution of this work is the AI LOD concept itself: that inference-time quantization can serve as the LOD axis for AI-driven character animation - and more broadly, for any AI-based runtime system where perceptual sensitivity varies with context. The convolutional sequence-to-sequence model of Li et al. is used as a representative example to demonstrate the concept, with its trained checkpoint exported into three ONNX Runtime variants (FP32, FP16, and INT8 per-tensor), intended to be routed by a distance-based selector at runtime. Evaluation on the CMU Mocap dataset provides initial evidence that each precision tier can be served at its assigned distance range with negligible perceptible degradation, supporting the broader premise that distance-aware ML model precision selection is a viable LOD strategy for AI-based character animation.",
+      "published": "2026-06-04T17:27:00Z",
+      "updated": "2026-06-04T17:27:00Z",
+      "categories": [
+        "cs.GR",
+        "cs.HC",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06565",
+      "abs_url": "https://arxiv.org/abs/2606.06565",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.13191",
+      "title": "Fast Voxelization and Level of Detail for Microgeometry Rendering",
+      "authors": [
+        "Javier Fabre",
+        "Carlos Castillo",
+        "Carlos Rodriguez-Pardo",
+        "Jorge Lopez-Moreno"
+      ],
+      "abstract": "Many materials show anisotropic light scattering patterns due to the shape and local alignment of their underlying micro structures: surfaces with small elements such as fibers, or the ridges of a brushed metal, are very sparse and require a high spatial resolution to be properly represented as a volume. The acquisition of voxel data from such objects is a time and memory-intensive task, and most rendering approaches require an additional Level-of-Detail (LoD) data structure to aggregate the visual appearance, as observed from multiple distances, in order to reduce the number of samples computed per pixel (E.g.: MIP mapping). In this work we introduce first, an efficient parallel voxelization method designed to facilitate fast data aggregation at multiple resolution levels, and second, a novel representation based on hierarchical SGGX clustering that provides better accuracy than baseline methods. We validate our approach with a CUDA-based implementation of the voxelizer, tested both on triangle meshes and volumetric fabrics modeled with explicit fibers. Finally, we show the results generated with a path tracer based on the proposed LoD rendering model.",
+      "published": "2026-04-14T18:16:15Z",
+      "updated": "2026-04-14T18:16:15Z",
+      "categories": [
+        "cs.GR",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.13191",
+      "abs_url": "https://arxiv.org/abs/2604.13191",
+      "source": "arxiv"
+    },
+    {
+      "id": "2603.27125",
+      "title": "TX-Digital Twin: Visualizing Supercomputer GPU Performance Data Stream",
+      "authors": [
+        "Elena Baskakova",
+        "William Bergeron",
+        "Matthew Hubbell",
+        "Hayden Jananthan",
+        "Jeremy Kepner"
+      ],
+      "abstract": "Supercomputers are complex, dynamic systems that serve thousands of users and are built with thousands of compute nodes. Due to the vast amounts of system and performance data needed to accurately capture their status, supercomputers require complex methods to monitor, maintain, and optimize. Data visualization is a powerful technique for overseeing these large streams of data in an easily interpretable way. The MIT Lincoln Laboratory Supercomputing Center (LLSC) enables effective monitoring through combining 3D gaming technology with compound data streams in the TX-Digital Twin, a 3D simulation of the supercomputer. The TX-Digital Twin offers both live and historical data, in visual and text formats, and tracks a multitude of revealing performance metrics. Recent increasing interest in GPU-accelerated computing has driven a need for monitoring and maintenance of GPU-accelerated resources in supercomputers. In this paper, we build on our previous solution by integrating the visualization of additional GPU metrics, such as GPU memory usage, temperature, and power draw, into the TX-Digital Twin. Using techniques in draw call optimization, we add clear and effective displays of the new metrics while keeping the effects on performance minimal.",
+      "published": "2026-03-28T04:32:01Z",
+      "updated": "2026-03-28T04:32:01Z",
+      "categories": [
+        "cs.DC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2603.27125",
+      "abs_url": "https://arxiv.org/abs/2603.27125",
+      "source": "arxiv"
+    },
     {
       "id": "2511.19202",
       "title": "NVGS: Neural Visibility for Occlusion Culling in 3D Gaussian Splatting",
@@ -1902,14 +2078,14 @@
     },
     {
       "id": "1905.03136",
-      "title": "Performance Engineering for Real and Complex Tall \u0026 Skinny Matrix Multiplication Kernels on GPUs",
+      "title": "Performance Engineering for Real and Complex Tall & Skinny Matrix Multiplication Kernels on GPUs",
       "authors": [
         "Dominik Ernst",
         "Georg Hager",
         "Jonas Thies",
         "Gerhard Wellein"
       ],
-      "abstract": "General matrix-matrix multiplications with double-precision real and complex entries (DGEMM and ZGEMM) in vendor-supplied BLAS libraries are best optimized for square matrices but often show bad performance for tall \u0026 skinny matrices, which are much taller than wide. NVIDIA's current CUBLAS implementation delivers only a fraction of the potential performance as indicated by the roofline model in this case. We describe the challenges and key characteristics of an implementation that can achieve close to optimal performance. We further evaluate different strategies of parallelization and thread distribution, and devise a flexible, configurable mapping scheme. To ensure flexibility and allow for highly tailored implementations we use code generation combined with autotuning. For a large range of matrix sizes in the domain of interest we achieve at least 2/3 of the roofline performance and often substantially outperform state-of-the art CUBLAS results on an NVIDIA Volta GPGPU.",
+      "abstract": "General matrix-matrix multiplications with double-precision real and complex entries (DGEMM and ZGEMM) in vendor-supplied BLAS libraries are best optimized for square matrices but often show bad performance for tall & skinny matrices, which are much taller than wide. NVIDIA's current CUBLAS implementation delivers only a fraction of the potential performance as indicated by the roofline model in this case. We describe the challenges and key characteristics of an implementation that can achieve close to optimal performance. We further evaluate different strategies of parallelization and thread distribution, and devise a flexible, configurable mapping scheme. To ensure flexibility and allow for highly tailored implementations we use code generation combined with autotuning. For a large range of matrix sizes in the domain of interest we achieve at least 2/3 of the roofline performance and often substantially outperform state-of-the art CUBLAS results on an NVIDIA Volta GPGPU.",
       "categories": [
         "cs.MS",
         "cs.PF"
@@ -3180,7 +3356,7 @@
         "Monika Henzinger",
         "Veronika Loitzenbauer"
       ],
-      "abstract": "Games on graphs provide the appropriate framework to study several central problems in computer science, such as the verification and synthesis of reactive systems. One of the most basic objectives for games on graphs is the liveness (or Büchi) objective that given a target set of vertices requires that some vertex in the target set is visited infinitely often. We study generalized Büchi objectives (i.e., conjunction of liveness objectives), and implications between two generalized Büchi objectives (known as GR(1) objectives), that arise in numerous applications in computer-aided verification. We present improved algorithms and conditional super-linear lower bounds based on widely believed assumptions about the complexity of (A1) combinatorial Boolean matrix multiplication and (A2) CNF-SAT. We consider graph games with $n$ vertices, $m$ edges, and generalized Büchi objectives with $k$ conjunctions. First, we present an algorithm with running time $O(k \\cdot n^2)$, improving the previously known $O(k \\cdot n \\cdot m)$ and $O(k^2 \\cdot n^2)$ worst-case bounds. Our algorithm is optimal for dense graphs under (A1). Second, we show that the basic algorithm for the problem is optimal for sparse graphs when the target sets have constant size under (A2). Finally, we consider GR(1) objectives, with $k_1$ conjunctions in the antecedent and $k_2$ conjunctions in the consequent, and present an $O(k_1 \\cdot k_2 \\cdot n^{2.5})$-time algorithm, improving the previously known $O(k_1 \\cdot k_2 \\cdot n \\cdot m)$-time algorithm for $m \u003e n^{1.5}$.",
+      "abstract": "Games on graphs provide the appropriate framework to study several central problems in computer science, such as the verification and synthesis of reactive systems. One of the most basic objectives for games on graphs is the liveness (or Büchi) objective that given a target set of vertices requires that some vertex in the target set is visited infinitely often. We study generalized Büchi objectives (i.e., conjunction of liveness objectives), and implications between two generalized Büchi objectives (known as GR(1) objectives), that arise in numerous applications in computer-aided verification. We present improved algorithms and conditional super-linear lower bounds based on widely believed assumptions about the complexity of (A1) combinatorial Boolean matrix multiplication and (A2) CNF-SAT. We consider graph games with $n$ vertices, $m$ edges, and generalized Büchi objectives with $k$ conjunctions. First, we present an algorithm with running time $O(k \\cdot n^2)$, improving the previously known $O(k \\cdot n \\cdot m)$ and $O(k^2 \\cdot n^2)$ worst-case bounds. Our algorithm is optimal for dense graphs under (A1). Second, we show that the basic algorithm for the problem is optimal for sparse graphs when the target sets have constant size under (A2). Finally, we consider GR(1) objectives, with $k_1$ conjunctions in the antecedent and $k_2$ conjunctions in the consequent, and present an $O(k_1 \\cdot k_2 \\cdot n^{2.5})$-time algorithm, improving the previously known $O(k_1 \\cdot k_2 \\cdot n \\cdot m)$-time algorithm for $m > n^{1.5}$.",
       "categories": [
         "cs.DS",
         "cs.LO"
@@ -3374,7 +3550,7 @@
         "Silvio Rizzi",
         "Esteban Meneses"
       ],
-      "abstract": "Current climate change has posed a grand challenge in the field of numerical modeling due to its complex, multiscale dynamics. In hydrological modeling, the increasing demand for high-resolution, real-time simulations has led to the adoption of GPU-accelerated platforms and performance portable programming frameworks such as Kokkos. In this work, we present a comprehensive performance study of the SERGHEI-SWE solver, a shallow water equations code, across four state-of-the-art heterogeneous HPC systems: Frontier (AMD MI250X), JUWELS Booster (NVIDIA A100), JEDI (NVIDIA H100), and Aurora (Intel Max 1550). We assess strong scaling up to 1024 GPUs and weak scaling upwards of 2048 GPUs, demonstrating consistent scalability with a speedup of 32 and an efficiency upwards of 90\\% for most almost all the test range. Roofline analysis reveals that memory bandwidth is the dominant performance bottleneck, with key solver kernels residing in the memory-bound region. To evaluate performance portability, we apply both harmonic and arithmetic mean-based metrics while varying problem size. Results indicate that while SERGHEI-SWE achieves portability across devices with tuned problem sizes (\u003c70\\%), there is room for kernel optimization within the solver with more granular control of the architecture specifically by using Kokkos teams and architecture specific tunable parameters. These findings position SERGHEI-SWE as a robust, scalable, and portable simulation tool for large-scale geophysical applications under evolving HPC architectures with potential to enhance its performance.",
+      "abstract": "Current climate change has posed a grand challenge in the field of numerical modeling due to its complex, multiscale dynamics. In hydrological modeling, the increasing demand for high-resolution, real-time simulations has led to the adoption of GPU-accelerated platforms and performance portable programming frameworks such as Kokkos. In this work, we present a comprehensive performance study of the SERGHEI-SWE solver, a shallow water equations code, across four state-of-the-art heterogeneous HPC systems: Frontier (AMD MI250X), JUWELS Booster (NVIDIA A100), JEDI (NVIDIA H100), and Aurora (Intel Max 1550). We assess strong scaling up to 1024 GPUs and weak scaling upwards of 2048 GPUs, demonstrating consistent scalability with a speedup of 32 and an efficiency upwards of 90\\% for most almost all the test range. Roofline analysis reveals that memory bandwidth is the dominant performance bottleneck, with key solver kernels residing in the memory-bound region. To evaluate performance portability, we apply both harmonic and arithmetic mean-based metrics while varying problem size. Results indicate that while SERGHEI-SWE achieves portability across devices with tuned problem sizes (<70\\%), there is room for kernel optimization within the solver with more granular control of the architecture specifically by using Kokkos teams and architecture specific tunable parameters. These findings position SERGHEI-SWE as a robust, scalable, and portable simulation tool for large-scale geophysical applications under evolving HPC architectures with potential to enhance its performance.",
       "categories": [
         "cs.DC",
         "cs.PF"
@@ -4002,7 +4178,7 @@
         "Patricia Bouyer",
         "Stéphane Le Roux"
       ],
-      "abstract": "We study two-player reachability games on finite graphs. At each state the interaction between the players is concurrent and there is a stochastic Nature. Players also play stochastically. The literature tells us that 1) Player B, who wants to avoid the target state, has a positional strategy that maximizes the probability to win (uniformly from every state) and 2) from every state, for every ε \u003e 0, Player A has a strategy that maximizes up to ε the probability to win. Our work is two-fold. First, we present a double-fixed-point procedure that says from which state Player A has a strategy that maximizes (exactly) the probability to win. This is computable if Nature's probability distributions are rational. We call these states maximizable. Moreover, we show that for every ε \u003e 0, Player A has a positional strategy that maximizes the probability to win, exactly from maximizable states and up to ε from sub-maximizable states. Second, we consider three-state games with one main state, one target, and one bin. We characterize the local interactions at the main state that guarantee the existence of an optimal Player A strategy. In this case there is a positional one. It turns out that in many-state games, these local interactions also guarantee the existence of a uniform optimal Player A strategy. In a way, these games are well-behaved by design of their elementary bricks, the local interactions. It is decidable whether a local interaction has this desirable property.",
+      "abstract": "We study two-player reachability games on finite graphs. At each state the interaction between the players is concurrent and there is a stochastic Nature. Players also play stochastically. The literature tells us that 1) Player B, who wants to avoid the target state, has a positional strategy that maximizes the probability to win (uniformly from every state) and 2) from every state, for every ε > 0, Player A has a strategy that maximizes up to ε the probability to win. Our work is two-fold. First, we present a double-fixed-point procedure that says from which state Player A has a strategy that maximizes (exactly) the probability to win. This is computable if Nature's probability distributions are rational. We call these states maximizable. Moreover, we show that for every ε > 0, Player A has a positional strategy that maximizes the probability to win, exactly from maximizable states and up to ε from sub-maximizable states. Second, we consider three-state games with one main state, one target, and one bin. We characterize the local interactions at the main state that guarantee the existence of an optimal Player A strategy. In this case there is a positional one. It turns out that in many-state games, these local interactions also guarantee the existence of a uniform optimal Player A strategy. In a way, these games are well-behaved by design of their elementary bricks, the local interactions. It is decidable whether a local interaction has this desirable property.",
       "categories": [
         "cs.GT"
       ],

@@ -1,0 +1,27 @@
+Title: Distortion of AI Alignment Revisited: RLHF is a Decent Utilitarian Aligner
+Authors: Kazusato Oko, Annie Ulichney, Nika Haghtalab, Han Bao
+ID: 2609.12651
+URL: https://arxiv.org/abs/2609.12651
+
+Abstract:
+While Reinforcement Learning from Human Feedback (RLHF) is the standard paradigm
+for aligning large language models with human preferences, its effectiveness in
+pluralistic settings has been called into question. Notably, recent work by Gölz
+et al. (2025) demonstrated that the \textit{distortion} -- defined as the
+multiplicative gap between the average user utility of the RLHF policy and the
+optimal average utility -- can scale exponentially with the Bradley-Terry
+temperature parameter $β$ when users have heterogeneous preferences. In this
+work, we present a fine-grained analysis of the distortion of RLHF with reward
+clipping and demonstrate that such exponential degradation is not a fundamental
+property of the algorithm but rather a consequence of distribution mismatch
+between the distribution generating preference data ($μ$) and the KL reference
+policy ($π_{\mathrm{ref}}$). To this end, we establish tight upper and lower
+bounds on the distortion of RLHF across multiple regimes of the KL
+regularization strength. We show that in a representative regime, under the
+Bradley-Terry model, the distortion is $\tildeΘ(βB + β)$, where $B$ is an upper
+bound on the log density ratio between $μ$ and $π_{\mathrm{ref}}$. In
+particular, when there is no distribution mismatch (i.e., $μ=
+π_{\mathrm{ref}}$), RLHF achieves the optimal distortion of $O(β)$ up to a
+constant. Our results suggest that, to reasonably maximize average utility with
+RLHF, it is preferable to use on-policy sampled preference data or to fine-tune
+before RLHF on data from a source close to $μ$.

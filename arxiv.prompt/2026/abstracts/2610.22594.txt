@@ -1,0 +1,23 @@
+Title: The Model Knows Better: Defending Medical Multi-Agent Systems Against Prompt Injection
+Authors: Fardin Ahsan Sakib, Ziwei Zhu, Ozlem Uzuner
+ID: 2610.22594
+URL: https://arxiv.org/abs/2610.22594
+
+Abstract:
+Medical multi-agent systems, in which LLM agents discuss a case, are
+increasingly studied for clinical decision support. Prompt injection, text that
+an attacker adds to a model's input, can manipulate LLMs into wrong decisions.
+How it affects these systems, and how to protect them, remains unclear. Across
+two systems, two model families and three benchmarks, a single injected passage
+succeeds in up to 61% of cases, and collaboration does not consistently protect
+against it. Existing defenses help only partly: they miss injections that look
+like ordinary clinical text. Yet when asked to check the injected text against
+the patient's findings, a model that followed the injection usually rejects it.
+We therefore propose a training-free defense that verifies the clinical
+judgments behind the system's decision. Following clinical practice, it
+separates the patient's findings from clinical judgments, such as diagnoses,
+recommendations and instructions, and checks each judgment against the findings
+alone, so the decision rests only on supported judgments. Our defense
+outperforms all baselines on every benchmark, lowering attack success on MedQA
+to 4-7% while maintaining accuracy on cases without an attack, and remains
+effective with a medical model and against defense-aware and adaptive attacks.

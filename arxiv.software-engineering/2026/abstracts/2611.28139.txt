@@ -1,0 +1,28 @@
+Title: Dynamics-Guided Conditional MeanFlow from Regional Interaction to Internal Revision and Its Application to CT Imaging
+Authors: Md Shifatul Ahsan Apurba, Md Selim, Jin Chen
+ID: 2611.28139
+URL: https://arxiv.org/abs/2611.28139
+
+Abstract:
+Conditional image enhancement requires spatially varying corrections, yet fixed-
+depth models allocate similar computational budgets regardless of where
+additional refinement is needed. Although one-step flow models reduce inference
+costs and iterative restoration methods introduce subsequent corrections, how
+predicted transformation dynamics can guide internal feature refinement remains
+underexplored. We introduce IRCMF, a dynamics-guided Conditional MeanFlow
+framework that combines regional interaction with recurrent internal revision.
+The decoder predicts signed interval velocity and a learned velocity-change cue.
+A soft-region graph aggregates contextual information for velocity estimation,
+while a dynamics-conditioned graph establishes regional relationships to guide
+recurrent bottleneck updates. The revised features are processed by the shared
+decoder to recompute velocity, establishing feedback between transformation
+dynamics and internal representations. An actor-critic policy controls regional
+updates and further revisions to balance enhancement quality and computational
+cost. We evaluate IRCMF on two computed tomography (CT) datasets, NLST for
+STANDARD-to-LUNG kernel enhancement and LDCT-and-Projection-data for simulated
+low-to-routine-dose enhancement. With nine decoder evaluations, IRCMF achieves
+slice-level PSNR of $36.24 \pm 3.49$ dB and SSIM of $0.97 \pm 0.01$ on NLST, and
+PSNR of $32.45 \pm 1.97$ dB and SSIM of $0.84 \pm 0.05$ on LDCT-and-Projection-
+data. The learned policy reduces average decoder evaluations to 4.42 and 3.45,
+respectively, lowering per-slice latency from 97.00 to 51.82 ms and from 97.12
+to 41.95 ms, with PSNR reductions of only 0.20 and 0.06 dB.

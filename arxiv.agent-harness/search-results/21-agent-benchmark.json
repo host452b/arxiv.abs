@@ -10,13 +10,73 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T22:09:57Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "groups": [
     {
       "source": "arxiv",
-      "count": 200,
+      "count": 203,
       "papers": [
+        {
+          "id": "2611.31539",
+          "title": "Agent Evaluation Without Ground Truth: A Null Proportion Perspective",
+          "authors": [
+            "Brian M. Cho",
+            "Michael Lindon",
+            "Nathan Kallus"
+          ],
+          "abstract": "The correctness of actions taken by agents is typically evaluated against known, externally verified ground truth labels, such as whether a proof is correct or whether code compiles and passes unit tests. However, as coding and science agents are entrusted with more end-to-end autonomy -- proposing interventions, running experiments, and deciding what to deploy and investigate next -- whether an agent's actions genuinely improve an outcome must be inferred from noisy, often inconclusive experiments. To evaluate agents in this setting, we define agent quality as a weighted sum of correct decisions along its trajectory, using sequences of $e$-values as statistical evidence regarding correctness in place of ground-truth labels. Our framework accommodates arbitrarily dependent decisions, data-dependent trajectory termination, dynamically generated hypotheses, and quality measures defined after the trajectory concludes. We construct upper and lower bound estimators and confidence sets for agent quality with statistical guarantees that hold uniformly over agent trajectory distributions and establish instance-wise sharpness of our estimator class. We demonstrate our methods with a case study comparing the success of Claude Opus and Claude Haiku in improving the runtime of an open-source Python package.",
+          "published": "2026-11-23T20:47:14Z",
+          "updated": "2026-11-23T20:47:14Z",
+          "categories": [
+            "cs.AI",
+            "math.ST",
+            "stat.AP",
+            "stat.ME"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.31539",
+          "abs_url": "https://arxiv.org/abs/2611.31539",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.30259",
+          "title": "Attributing Security Outcomes in LLM-Agent Evaluations: The Role of Content-Free State",
+          "authors": [
+            "Abdelmonaim Bounite",
+            "Zangir Iklassov"
+          ],
+          "abstract": "Security benchmarks for LLM agents record whether each attack succeeded and compare agents, attacks, and defenses by attack success rate (ASR). Such comparisons are valid only if the agent, the attack, and the defense cause each verdict. We show that verdicts also depend on content-free state: details of a run that carry no information about the system under test, such as the Python hash seed, the order of tools or evidence, and the scoring of failed runs. We require that this state influence no verdict (decision noninterference) and treat it as untrusted input, because evaluators and requesters of LLM-based gates can choose it. Our framework, TARE (Testing Attribution of Reported Effects), attributes a reported effect to the agent, attack, or defense only if it exceeds the measured influence of content-free state. On Agent Security Bench (ASB), runs with a fixed hash seed are identical for seven agents from four model families, yet changing the seed changes up to 17% of an agent's verdicts while the ASR moves by at most 5 points. The seed acts through the tool order: sorting the tool list instead of reverse-sorting it raises the ASR by up to 19 points, because ASB's naming convention places attacker tools first. When the same evidence is reordered, six of seven LLM judges change their decision on 17-91% of 98 proposed actions. Across eighteen agent-defense combinations, TARE's worst-case test attributes effects to two of three defenses, one of them in opposite directions on two agents, and a test fixed in advance confirms a 4.8-point decrease from the third; in the attributed decreases, 35-69% of the stopped attacks end without any tool call, which ASB counts as a failed attack. Reproducible verdicts are thus not necessarily attributable, and security evaluations of LLM agents should report the influence of content-free state. We release TARE, the ASB patch, and all verdict tables.",
+          "published": "2026-11-23T08:24:44Z",
+          "updated": "2026-11-23T08:24:44Z",
+          "categories": [
+            "cs.CR",
+            "cs.AI",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.30259",
+          "abs_url": "https://arxiv.org/abs/2611.30259",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.30190",
+          "title": "Same Executions, Different Gaps: Judgment Rules in Web-Agent Evaluation",
+          "authors": [
+            "Zelong Wang",
+            "Weiyue Li",
+            "Fei Xue",
+            "Junru Zhu"
+          ],
+          "abstract": "Success-rate gains guide the development of web agents. Yet knowing which agent ranks first does not tell us how much confidence to place in its reported advantage. We study the comparison itself: how success is defined, what evidence supports the judgments, and how the difference between agents is estimated. On fixed web-agent executions, changing a judge from predicting likely completion to requiring recorded support can remove most of a reported lead without changing the ranking. This effect persists when unresolved completion is distinguished from supported failure. Controlled source additions explain how missing relations between task requirements, objects and observations can conceal a difference or create an apparent advantage. We also find that making both agents' score estimates more accurate can make their difference less accurate, because their original errors partly canceled. To estimate a chosen outcome difference, we combine judge predictions with reference labels for sampled task pairs. Across four released execution systems, regression fitted on the same 50 labeled pairs reduces estimation error relative to direct paired sampling. The results give agent researchers a practical basis for assessing claimed improvements: make the comparison target explicit, retain the evidence needed to check it, and use paired labels to estimate the difference directly.",
+          "published": "2026-11-23T07:35:54Z",
+          "updated": "2026-11-23T07:35:54Z",
+          "categories": [
+            "cs.AI",
+            "cs.CL"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.30190",
+          "abs_url": "https://arxiv.org/abs/2611.30190",
+          "source": "arxiv"
+        },
         {
           "id": "2507.21504",
           "title": "Evaluation and Benchmarking of LLM Agents: A Survey",
@@ -292,7 +352,7 @@
             "Yeil Jeong",
             "Unggi Lee"
           ],
-          "abstract": "Large Language Model (LLM) agents have shown promising potential in automating Instructional Systems Design (ISD), a systematic approach to developing educational programs. However, evaluating these agents remains challenging due to the lack of standardized benchmarks and the risk of LLM-as-judge bias. We present ISD-Agent-Bench, a comprehensive benchmark comprising 25,795 scenarios generated via a Context Matrix framework that combines 51 contextual variables across 5 categories with 33 ISD sub-steps derived from the ADDIE model. To ensure evaluation reliability, we employ a multi-judge protocol using diverse LLMs from different providers, achieving high inter-judge reliability. We compare existing ISD agents with novel agents grounded in classical ISD theories such as ADDIE, Dick \\\u0026 Carey, and Rapid Prototyping ISD. Experiments on 1,017 test scenarios demonstrate that integrating classical ISD frameworks with modern ReAct-style reasoning achieves the highest performance, outperforming both pure theory-based agents and technique-only approaches. Further analysis reveals that theoretical quality strongly correlates with benchmark performance, with theory-based agents showing significant advantages in problem-centered design and objective-assessment alignment. Our work provides a foundation for systematic LLM-based ISD research.",
+          "abstract": "Large Language Model (LLM) agents have shown promising potential in automating Instructional Systems Design (ISD), a systematic approach to developing educational programs. However, evaluating these agents remains challenging due to the lack of standardized benchmarks and the risk of LLM-as-judge bias. We present ISD-Agent-Bench, a comprehensive benchmark comprising 25,795 scenarios generated via a Context Matrix framework that combines 51 contextual variables across 5 categories with 33 ISD sub-steps derived from the ADDIE model. To ensure evaluation reliability, we employ a multi-judge protocol using diverse LLMs from different providers, achieving high inter-judge reliability. We compare existing ISD agents with novel agents grounded in classical ISD theories such as ADDIE, Dick \\& Carey, and Rapid Prototyping ISD. Experiments on 1,017 test scenarios demonstrate that integrating classical ISD frameworks with modern ReAct-style reasoning achieves the highest performance, outperforming both pure theory-based agents and technique-only approaches. Further analysis reveals that theoretical quality strongly correlates with benchmark performance, with theory-based agents showing significant advantages in problem-centered design and objective-assessment alignment. Our work provides a foundation for systematic LLM-based ISD research.",
           "categories": [
             "cs.SE",
             "cs.CL"
@@ -386,7 +446,7 @@
         },
         {
           "id": "2507.23194",
-          "title": "Geak: Introducing Triton Kernel AI Agent \u0026 Evaluation Benchmarks",
+          "title": "Geak: Introducing Triton Kernel AI Agent & Evaluation Benchmarks",
           "authors": [
             "Jianghui Wang",
             "Vinay Joshi",
@@ -623,7 +683,7 @@
             "Benjamin Steenhoek",
             "Yufan Huang"
           ],
-          "abstract": "Current benchmarks for evaluating software engineering agents, such as SWE-Bench Verified, are predominantly derived from GitHub issues and fail to accurately reflect how developers interact with chat-based coding assistants in integrated development environments (IDEs). We posit that this mismatch leads to a systematic overestimation of agent's capabilities in real-world scenarios, especially bug fixing. We introduce a novel benchmarking framework that transforms existing formal benchmarks into realistic user queries through systematic analysis of developer interaction patterns with chat-based agents. Our methodology is flexible and can be easily extended to existing benchmarks. In this paper, we apply our testing framework to SWE-Bench Verified, the TypeScript subset of Multi-SWE-Bench and a private benchmark, SWE-Bench C# and transform formal GitHub issue descriptions into realistic user-style queries based on telemetry analysis of a popular chat-based agent interactions. Our findings reveal that existing benchmarks significantly overestimate agent capabilities for some models by \u003e50% over baseline performance for public benchmarks and ~10-16% for our internal benchmark. This work establishes a new paradigm for evaluating interactive chat-based software engineering agents through benchmark mutation techniques.",
+          "abstract": "Current benchmarks for evaluating software engineering agents, such as SWE-Bench Verified, are predominantly derived from GitHub issues and fail to accurately reflect how developers interact with chat-based coding assistants in integrated development environments (IDEs). We posit that this mismatch leads to a systematic overestimation of agent's capabilities in real-world scenarios, especially bug fixing. We introduce a novel benchmarking framework that transforms existing formal benchmarks into realistic user queries through systematic analysis of developer interaction patterns with chat-based agents. Our methodology is flexible and can be easily extended to existing benchmarks. In this paper, we apply our testing framework to SWE-Bench Verified, the TypeScript subset of Multi-SWE-Bench and a private benchmark, SWE-Bench C# and transform formal GitHub issue descriptions into realistic user-style queries based on telemetry analysis of a popular chat-based agent interactions. Our findings reveal that existing benchmarks significantly overestimate agent capabilities for some models by >50% over baseline performance for public benchmarks and ~10-16% for our internal benchmark. This work establishes a new paradigm for evaluating interactive chat-based software engineering agents through benchmark mutation techniques.",
           "categories": [
             "cs.SE",
             "cs.AI"
@@ -648,7 +708,7 @@
             "Cristóbal R. J. Veas Chavez",
             "Maite del Mundo de Torres"
           ],
-          "abstract": "Cybersecurity spans multiple interconnected domains, complicating the development of meaningful, labor-relevant benchmarks. Existing benchmarks assess isolated skills rather than integrated performance. We find that pre-trained knowledge of cybersecurity in LLMs does not imply attack and defense abilities, revealing a gap between knowledge and capability. To address this limitation, we present the Cybersecurity AI Benchmark (CAIBench), a modular meta-benchmark framework that allows evaluating LLM models and agents across offensive and defensive cybersecurity domains, taking a step towards meaningfully measuring their labor-relevance. CAIBench integrates five evaluation categories, covering over 10,000 instances: Jeopardy-style CTFs, Attack and Defense CTFs, Cyber Range exercises, knowledge benchmarks, and privacy assessments. Key novel contributions include systematic simultaneous offensive-defensive evaluation, robotics-focused cybersecurity challenges (RCTF2), and privacy-preserving performance assessment (CyberPII-Bench). Evaluation of state-of-the-art AI models reveals saturation on security knowledge metrics (~70\\% success) but substantial degradation in multi-step adversarial (A\\\u0026D) scenarios (20-40\\% success), or worse in robotic targets (22\\% success). The combination of framework scaffolding and LLM model choice significantly impacts performance; we find that proper matches improve up to 2.6$\\times$ variance in Attack and Defense CTFs. These results demonstrate a pronounced gap between conceptual knowledge and adaptive capability, emphasizing the need for a meta-benchmark.",
+          "abstract": "Cybersecurity spans multiple interconnected domains, complicating the development of meaningful, labor-relevant benchmarks. Existing benchmarks assess isolated skills rather than integrated performance. We find that pre-trained knowledge of cybersecurity in LLMs does not imply attack and defense abilities, revealing a gap between knowledge and capability. To address this limitation, we present the Cybersecurity AI Benchmark (CAIBench), a modular meta-benchmark framework that allows evaluating LLM models and agents across offensive and defensive cybersecurity domains, taking a step towards meaningfully measuring their labor-relevance. CAIBench integrates five evaluation categories, covering over 10,000 instances: Jeopardy-style CTFs, Attack and Defense CTFs, Cyber Range exercises, knowledge benchmarks, and privacy assessments. Key novel contributions include systematic simultaneous offensive-defensive evaluation, robotics-focused cybersecurity challenges (RCTF2), and privacy-preserving performance assessment (CyberPII-Bench). Evaluation of state-of-the-art AI models reveals saturation on security knowledge metrics (~70\\% success) but substantial degradation in multi-step adversarial (A\\&D) scenarios (20-40\\% success), or worse in robotic targets (22\\% success). The combination of framework scaffolding and LLM model choice significantly impacts performance; we find that proper matches improve up to 2.6$\\times$ variance in Attack and Defense CTFs. These results demonstrate a pronounced gap between conceptual knowledge and adaptive capability, emphasizing the need for a meta-benchmark.",
           "categories": [
             "cs.CR"
           ],
@@ -2351,7 +2411,7 @@
             "Brucek Khailany",
             "Haoxing Ren"
           ],
-          "abstract": "We present the Comprehensive Verilog Design Problems (CVDP) benchmark, a new dataset and infrastructure to advance LLM and agent research in hardware design and verification. CVDP includes 783 problems across 13 task categories, covering RTL generation, verification, debugging, specification alignment, and technical Q\u0026A authored by experienced hardware engineers. Problems are offered in both non-agentic and agentic formats. The benchmark introduces more realistic and challenging contexts than prior work, with state-of-the-art models achieving no more than 34% pass@1 on code generation. Agentic tasks$\\unicode{x2013}$especially those involving RTL reuse and verification$\\unicode{x2013}$are particularly difficult. Evaluation uses open-source tools and model scoring infrastructure, with comprehension tasks assessed via BLEU and LLM-based judging. CVDP reveals substantial gaps in current model capabilities, underscoring the need for continued research toward robust, real-world hardware design automation.",
+          "abstract": "We present the Comprehensive Verilog Design Problems (CVDP) benchmark, a new dataset and infrastructure to advance LLM and agent research in hardware design and verification. CVDP includes 783 problems across 13 task categories, covering RTL generation, verification, debugging, specification alignment, and technical Q&A authored by experienced hardware engineers. Problems are offered in both non-agentic and agentic formats. The benchmark introduces more realistic and challenging contexts than prior work, with state-of-the-art models achieving no more than 34% pass@1 on code generation. Agentic tasks$\\unicode{x2013}$especially those involving RTL reuse and verification$\\unicode{x2013}$are particularly difficult. Evaluation uses open-source tools and model scoring infrastructure, with comprehension tasks assessed via BLEU and LLM-based judging. CVDP reveals substantial gaps in current model capabilities, underscoring the need for continued research toward robust, real-world hardware design automation.",
           "categories": [
             "cs.LG",
             "cs.AR"
@@ -3244,7 +3304,7 @@
             "Zhe Wang",
             "Karl Tuyls"
           ],
-          "abstract": "The Game Theory \u0026 Multi-Agent team at DeepMind studies several aspects of multi-agent learning ranging from computing approximations to fundamental concepts in game theory to simulating social dilemmas in rich spatial environments and training 3-d humanoids in difficult team coordination tasks. A signature aim of our group is to use the resources and expertise made available to us at DeepMind in deep reinforcement learning to explore multi-agent systems in complex environments and use these benchmarks to advance our understanding. Here, we summarise the recent work of our team and present a taxonomy that we feel highlights many important open challenges in multi-agent research.",
+          "abstract": "The Game Theory & Multi-Agent team at DeepMind studies several aspects of multi-agent learning ranging from computing approximations to fundamental concepts in game theory to simulating social dilemmas in rich spatial environments and training 3-d humanoids in difficult team coordination tasks. A signature aim of our group is to use the resources and expertise made available to us at DeepMind in deep reinforcement learning to explore multi-agent systems in complex environments and use these benchmarks to advance our understanding. Here, we summarise the recent work of our team and present a taxonomy that we feel highlights many important open challenges in multi-agent research.",
           "categories": [
             "cs.MA",
             "cs.AI"
@@ -5456,5 +5516,5 @@
       ]
     }
   ],
-  "total": 200
+  "total": 203
 }

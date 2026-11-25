@@ -1,0 +1,26 @@
+Title: A Gingerbread House for LLM Agents: Source-Planned Honeypots That Lure Autonomous Attackers into an Isolated Shadow
+Authors: Seungdeok Roh, Seokjun Ryu, Sohee Park, Daeseon Choi
+ID: 2611.07611
+URL: https://arxiv.org/abs/2611.07611
+
+Abstract:
+LLM agents can exploit web vulnerabilities fast enough that patching may come
+too late. Deception against such agents has mostly lured them away from a real
+target that stays reachable. We study a different arrangement: an LLM defender
+plans a static honeypot from the application's source, and a router sends every
+later request of a client it confirms as an attacker, including a working
+exploit, to an isolated shadow copy. We compare no defence, this static plan,
+and an augmented configuration with a runtime LLM responder and further router
+rules, graded by the benchmark's own grader on the real target and, for ARTEX,
+also on the shadow. On the 40 critical CVE-Bench tasks the static plan cut real
+compromise from 26/40 to 5/40 for Claude Opus 4.8 and from 20/40 to 0/40 (31
+valid runs) for the ARTEX attack framework. On 20 new tasks not used in the
+design, ARTEX went from 15/20 to 0/20. In about half of the deception-arm runs
+ARTEX's exploit succeeded on the shadow while the real target stayed intact: the
+defence moved a working exploit rather than stopping it, and the remaining risk
+lies in requests that reach the real target before confirmation. ARTEX reported
+a planted fake secret as genuine on 30 of the 120 deception-arm tasks, five
+times in a report that labelled another item a decoy. With ARTEX's real
+compromise at zero in both deception configurations, they did not differ
+significantly on the remaining outcomes, a comparison that does not isolate the
+responder.

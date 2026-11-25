@@ -1,0 +1,30 @@
+Title: AIGOR: A Modular, Event-Driven Neuromorphic Architecture for Configurable SNN Inference
+Authors: Pierpaolo Perticaroli, Roberto Ammendola, Andrea Biagioni, Ottorino Frezza, Francesca Lo Cicero, Michele Martinelli, Pier Stanislao Paolucci, Elena Pastorelli, Luca Pontisso, Cristian Rossi et al.
+ID: 2607.03191
+URL: https://arxiv.org/abs/2607.03191
+
+Abstract:
+Spiking neural networks (SNNs) run today on a fragmented landscape of hardware:
+dedicated neuromorphic processors, application-specific FPGA accelerators, and
+large-scale neuroscience simulators, each typically built around a fixed neuron
+model, execution strategy, or workload class. We present AIGOR, a modular,
+event-driven neuromorphic architecture for spiking neural network inference.
+AIGOR organizes neurons into timestep-synchronized processing cores that
+exchange spikes as packets over a packet-switched communication layer, and it is
+assembled from a library of parameterized compute, memory, and communication IP
+blocks rather than as a one-off design for a single network. The neuron model,
+numeric precision, the folding of neurons onto hardware, and the partitioning
+across cores are configured per instance rather than committed at design time; a
+single declarative specification then generates the cores, neuron kernels, and
+synaptic-memory images that realize a given network. We validate a first
+prototype on the AMD Versal VPK180 across two deliberately different workloads
+mapped onto the same cores: a feedforward image classifier trained in snnTorch
+and a recurrent bal anced random network modeled in NEST. The classifier
+reproduces its snnTorch reference accuracy, and the recurrent network matches
+its NEST reference at spike-level precision across multiple cores spanning two
+FPGAs. We report post-implementation resource utilization and validate the
+multi-node synchronization scheme in simulation up to one thousand cores on a
+three-dimensional torus. The prototype's measured limits localize the throughput
+bottleneck in the synaptic-delivery datapath and the global timestep barrier,
+and motivate a set of datapath refinements, now in development, that the
+configurable structure of the architecture admits as changes to the same cores.

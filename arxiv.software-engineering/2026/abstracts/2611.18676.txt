@@ -1,0 +1,30 @@
+Title: Application-Oriented Evaluation of CPU/GPU Quantum Simulators: From Foundational Circuits to Quantum Chemistry
+Authors: Anurag K. S. V., Ashish Kumar Patra, Afra Navas, Ruchika Bhat, Sai Shankar P., Rahul Maitra, Manas Mukherjee, Jaiganesh G
+ID: 2611.18676
+URL: https://arxiv.org/abs/2611.18676
+
+Abstract:
+Quantum computing simulators underpin the development and prototyping of quantum
+algorithms, yet the practical choice between competing software stacks and their
+CPU and GPU backends is rarely guided by application-oriented evidence. We
+present a systematic, quantum hardware-agnostic evaluation of two widely used
+stacks, CUDA-Q and Qiskit, selected as the simulators closest to production
+execution paths, across CPU and GPU backends, and across single- and double-
+precision arithmetic. The evaluation spans foundational utility circuits (GHZ-
+state preparation and QFT/QFT$^\dagger$ mirror circuits) through applied quantum
+chemistry (Variational Quantum Eigensolver (VQE) energy estimation with standard
+UCCSD and a depth-reduced LCNot-UCCSD ansatz, and direct sampling on hydrogen
+chains up to 32 qubits). The results yield concrete selection guidance: GPU-
+accelerated double precision delivers consistent speedups, typically $2\times$
+to $10\times$ for tractable application workloads and substantially larger at
+the widest circuits up to $100\times$ or more, and governs the maximum simulable
+system size under fixed compute memory, while CPU statevector backends and
+Qiskit Aer remain competitive, and at times preferable, at low qubit counts and
+wide but shallow circuits. We demonstrate the practical payoff of this guidance
+by extending an in-house developed QSCI(LCNot-UCCSD)-RBM electronic-structure
+workflow, previously constrained to a 16-qubit active space on a CPU, to a
+32-qubit (10 electrons, 16 orbitals) active space with GPU acceleration,
+completing a 20-point potential-energy-surface scan of N$_{2}$ in the cc-pVDZ
+basis. This end-to-end evaluation establishes that the principled simulator
+selection translates directly into expanded scientific reach and faster
+algorithmic prototyping.

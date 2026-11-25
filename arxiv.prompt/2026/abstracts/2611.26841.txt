@@ -1,0 +1,23 @@
+Title: Weight-Space Programming Writes In-Context Learning and Matches Fine-Tuning in Language Models
+Authors: Konstantinos Skianis, Aristidis Likas
+ID: 2611.26841
+URL: https://arxiv.org/abs/2611.26841
+
+Abstract:
+Weight-space programming is a frontier language model's recently reported
+ability to read another network's weights and edit them without gradient
+descent. We investigate how examples can provide a weight update so that a
+weaker language model performs the task with nothing in the prompt, and study
+what the updates are. Our experiments cover six tasks, four frontier editors and
+three families of weaker language models, without the editors being told
+anything about in-context learning (ICL). In most runs, the editors measure the
+ICL task vector, the shift the examples cause in the residual stream at the
+final prompt token, and write it into the weights, at its sparsest into near-
+silent MLP units keyed to the prompt format. Results reach the accuracy of ICL
+and fine-tuning on the same examples, LoRA included, usually leaving perplexity
+untouched, with worse performance under changes of wording. We also qualify the
+comparison by counting unfinished runs, observing that one editor falls below
+fine-tuning; held only to the seen examples, without task pairs of their own,
+only the strongest editor has similar performance. Given a task and unlabelled
+inputs, that editor writes its own examples and does nearly as well on unseen
+items as with labels.

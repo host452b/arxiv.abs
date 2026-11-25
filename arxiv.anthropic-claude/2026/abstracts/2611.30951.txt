@@ -1,0 +1,20 @@
+Title: Evaluable Language-Model Treatment Policies for Sepsis Resuscitation via Offline Value-Guided Selection
+Authors: Yue Pei, Shining Bo, Yingying Zhang, Qinggang Ge, Zhiling Zhao, Jian Cheng, Haogang Zhu
+ID: 2611.30951
+URL: https://arxiv.org/abs/2611.30951
+
+Abstract:
+Offline treatment learning must balance imitation, which stays close to logged
+evidence but ignores outcomes, against value maximisation, which uses outcomes
+but drifts toward treatments the records cannot verify. Numerical reinforcement
+learning strikes this balance during training. For large language models (LLMs),
+directly using sparse retrospective outcomes for fine-tuning raises challenges
+of delayed credit assignment and limited evidence for alternative treatments. We
+present R-LLMC, which strikes the balance at inference for sepsis resuscitation.
+A behaviour-supervised LLM, decoded into an exact distribution over 25
+vasopressor-fluid actions, proposes clinician-anchored candidates; an offline
+critic selects among them by estimated long-term value. The policy has a closed
+form for off-policy evaluation, and its rationale is written after selection, so
+explanation cannot steer treatment. In experiments on held-out MIMIC-III
+patients, R-LLMC exceeded the clinician reference in doubly robust value by
++0.214 (95\% CI 0.091-0.300), with fitted Q evaluation agreeing.

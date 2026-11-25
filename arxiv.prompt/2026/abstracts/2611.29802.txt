@@ -1,0 +1,26 @@
+Title: Relativising Integrity and Robustness: Prompt Injection and Partitioned Enclaves
+Authors: Brijesh Dongol
+ID: 2611.29802
+URL: https://arxiv.org/abs/2611.29802
+
+Abstract:
+Relative security (RS) judges a system against a reference system, but has only
+been applied to confidentiality. We introduce relative integrity (RI), which
+states that every behaviour a system exhibits under an attacker's influence must
+be one the reference can exhibit for the same trusted inputs. RS and RI each
+choose their own reference runs, so together they accept attacks whose leak and
+effects the reference reproduces only in different runs. We therefore develop a
+further property, relative robustness (RR), which asks the same runs to
+reproduce both and is strictly stronger than RS and RI together. We give proof
+methods for RI and RR and a disproof method for RI, and apply them in two
+domains: (1) LLM agents under prompt injection, where the reference runs the
+same plan with a model that never obeys untrusted content, and (2) C programs
+partitioned across an SGX or TrustZone enclave boundary, where the reference
+keeps every function inside. We evaluate the properties on models of five
+published attacks, a support desk, an OP-TEE HOTP token and common agent
+defences. Two cases pass RS and RI but fail RR: an injection that makes the
+support desk's model accept any customer, as one input did in the Tensor Trust
+game, and the simulation step of the attack on Secret Network, in which an SGX
+enclave reveals a transfer's outcome without committing it. Our work is fully
+mechanised in Isabelle/HOL, with the enclave programs verified in C using
+AutoCorres2.

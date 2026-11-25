@@ -1,0 +1,26 @@
+Title: LLMRunner: Closed Workload Model Performance Testing Framework for LLM Servings
+Authors: Arush Upadhyaya, Debadatta Mishra
+ID: 2611.15372
+URL: https://arxiv.org/abs/2611.15372
+
+Abstract:
+Performance testing large language model (LLM) serving engines is a crucial
+requirement considering the criticality of the infrastructure for deploying
+conversational AI at scale. Most of the benchmarking tools used to carryout
+performance evaluation of LLM serving do not capture realistic workload
+orchestration unlike closed workload performance testing infrastructure used in
+other domains such as web and database engines. For example, state-of-the-art
+LLM benchmarks for performance testing model traffic as streams of independent
+single-turn and stand-alone requests omitting the end-user behavior such as
+think-time between conversational turns. We present LLMRunner, a performance
+tester for LLM serving that addresses this gap by providing a framework to
+generate realistic load consisting of multi-turn conversations with configurable
+end-user parameters such as number of users in the workload loop, think-time
+distributions etc. Moreover, LLMRunner provides declarative matrix-sweep
+experiment plans, integrated GPU and KV-cache monitoring, and an automated
+artifact collection and plotting subsystem. We use LLMRunner to comparatively
+analyze the performance of LLM serving when NVIDIA CUDA Unified Virtual Memory
+(UVM) is used as a drop-in replacement memory allocator for the Key-Value cache
+(KV-Cache). Our test demonstrates that UVM incurs no measurable throughput or
+latency penalty compared to the baseline memory allocation technique for non-
+oversubscription scenarios.

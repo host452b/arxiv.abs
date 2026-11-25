@@ -1,6 +1,6 @@
 # arxiv.game-dev — Game Development Research: Full Academic Landscape
 
-**5,197 arXiv abstracts** from 29 targeted searches in the CS category, covering every core technical domain of the Game Developer Roadmap.
+**5,730 arXiv abstracts** from 29 targeted searches in the CS category, covering every core technical domain of the Game Developer Roadmap.
 
 **Knowledge Document:** [readme_game_roadmap.md](readme_game_roadmap.md) — Complete Game Development Roadmap
 

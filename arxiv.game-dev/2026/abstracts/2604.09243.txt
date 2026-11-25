@@ -1,0 +1,22 @@
+Title: BVH-Accelerated Ray Tracing for High-Frequency Electromagnetic Backscattering
+Authors: Marco Pasquale, Andong Hu, Luca Pennati, Ivy Peng, Stefano Markidis
+ID: 2604.09243
+URL: https://arxiv.org/abs/2604.09243
+
+Abstract:
+As computational complexity in electromagnetics increases with frequency, full-
+wave solvers become computationally infeasible for electrically large problems.
+To address this limitation, we present a shooting and bouncing rays (SBR) method
+for efficiently modeling electromagnetic backscattering of metallic objects in
+the high-frequency regime. The method couples multi-reflection geometrical-
+optics ray transport with a physical optics surface integral discretized over
+ray tubes. To reduce the massive ray-surface intersection search space, we use a
+bounding volume hierarchy (BVH) and organize the computation as a trace-
+integrate pipeline. The ray tracing generates hit data, and the physical optics
+integral is evaluated over valid intersections only. Numerical accuracy is
+controlled through an incident-ray sampling rule that mitigates phase aliasing
+in the discretized physical optics integration. The method is accelerated on
+NVIDIA and AMD GPUs and parallelized with MPI. We validate against analytical
+Mie solutions for a perfectly electrically conducting (PEC) sphere and
+demonstrate applicability to a complex aircraft geometry for monostatic radar
+cross-section prediction.

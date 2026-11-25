@@ -1,0 +1,22 @@
+Title: EvoRS: On-Policy Self-Evolution of Reward Systems for Open-Ended Reinforcement Learning
+Authors: Weiyuan Li, Aili Chen, Xintao Wang, Yikai Zhang, Qingqing Dong, Jinghan Xu, Hongru Hou, Wenxuan Zhao, Chengkun Lang, Jun Gao et al.
+ID: 2609.12459
+URL: https://arxiv.org/abs/2609.12459
+
+Abstract:
+Open-ended reinforcement learning often relies on rubric-based rewards for tasks
+without directly verifiable answers. Yet the policy and reward system form a
+dynamic feedback loop: as the policy optimizes the current reward, an initially
+useful reward system may become unreliable due to reward hacking or reduced
+response discriminability. The reward system should therefore evolve rather than
+remain fixed during training. Existing dynamic-rubric methods adapt evaluation
+criteria, but reward failures can also arise from scoring mechanisms or signal
+composition. We introduce EvoRS, a self-evolving RL framework that evolves the
+reward system from on-policy experience, representing it as an executable
+Reward-DAG. Specifically, an agentic designer updates this system from on-policy
+rollouts and reward traces to maintain train-time reliability. Across writing
+and roleplay, EvoRS achieves the best quality under all three judges,
+outperforming the policy by \(2.107\) and \(4.767\) points, respectively, while
+reducing reward hacking and coverage failures and preserving reward
+informativeness. Ablations confirm that a comprehensive fixed reward system
+cannot remain reliable in open-ended tasks and must evolve throughout training.

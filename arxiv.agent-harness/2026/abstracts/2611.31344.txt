@@ -1,0 +1,26 @@
+Title: Query Obfuscation with Embedding-Optimized Noise (EON): A Representational Blindspot in Agentic Retrieval
+Authors: Ankit Gupta, Christoph Adami, Emily Dolson
+ID: 2611.31344
+URL: https://arxiv.org/abs/2611.31344
+
+Abstract:
+In modern agentic and semantic retrieval systems, dense embedding models
+increasingly determine which intent, tool, document, memory, or image to
+retrieve for a query. We identify a representational failure mode in this
+pipeline: a meaningful query can be replaced by visibly nonsemantic content
+while preserving much of its retrieval outcome, even when the candidate bank is
+hidden from the optimizer. We introduce Embedding-Optimized Noise (EON),
+constructed using only the natural query representation, without access to
+candidate embeddings, relevance labels, rankings, retrieval feedback, or
+guardrail decisions. Despite this corpus-blind objective, EONs frequently
+preserve intent and tool routing, benchmark document search, episodic agent-
+memory retrieval, and cross-modal search across multiple dense embedding
+families. Crucially, this disconnect carries serious security implications: for
+malicious queries, an EON can reliably evade input guardrails that block the
+natural query, executing the intended safety-sensitive retrieval undetected.
+Through the geometry of the embedding space, we then characterize how query-
+level representation matching can reliably maintain subsequent retrieval
+outcomes over candidates unseen during optimization. Together, these findings
+expose a fundamental phenomenon across dual encoders that we call BLINDSPOT,
+where systems remain operationally blind to nonsemantic artifacts while reliably
+retrieving real, consequential content.

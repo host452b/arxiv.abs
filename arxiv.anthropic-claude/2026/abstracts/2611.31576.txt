@@ -1,0 +1,31 @@
+Title: Lit Up but Not Needed: Scoped Lesions Show Where Multimodal Mixture-of-Experts Depend on Their Experts
+Authors: Zhixuan Ge, Anqi Li, Kexin Geng, Wei Qiu
+ID: 2611.31576
+URL: https://arxiv.org/abs/2611.31576
+
+Abstract:
+Cognitive neuroscience learned that an activation map is not a map of necessity.
+Regions that light up during a task are not always needed for it, and only
+lesions reveal which ones are. Mixture-of-experts (MoE) vision-language models
+come with an activation map for free, since the router records which experts
+respond to image and text tokens, and recent work reads modality-specialized
+experts off this map. We bring the lesion. In Qwen3-VL-30B-A3B, Kimi-VL-A3B and
+Gemma-4-26B-A4B, 3 to 12% of the experts are vision-exclusive: image tokens
+route to them at up to five times the uniform rate and text tokens almost never.
+In Qwen3-VL they receive a quarter of all image-token routing, and lesioning all
+of them costs less than one percentage point on average over eight perception
+benchmarks and free-form OCR, no more than lesioning a random set of the same
+size. In Kimi-VL and Gemma-4 the lesion also costs no more than a random set.
+Scoped lesions, which remove an expert set only at image positions or only at
+text positions, then show where the models do depend on their experts. In
+Qwen3-VL, silencing every expert at every image position costs 3 points, against
+45 at text positions, where the dependence sits in dual-use experts that text-
+only tasks need as well. Across models the image-side dependence is 2 to 3
+points in Qwen3-VL and Kimi-VL and 26 in Gemma-4. Reading text in images is the
+one ability that needs image-position experts in every model. The exclusive
+experts receive informative patches, produce outputs of ordinary size, and stay
+inert under sensory deprivation: text-only training recruits them only when load
+balancing forces it. In Kimi-VL the balancing bias itself manufactures most of
+them. Load balancing draws the modality map in the part of the computation the
+models depend on least. Expert selection, pruning and skipping should follow the
+lesion, not the map.

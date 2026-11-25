@@ -1,0 +1,30 @@
+Title: Static Analysis Guidance for Secure LLM Code Generation
+Authors: Daniele Lunghi, Alberick Euraste Djiré, Zacharie Chenail-Larcher, Mélissa Tessa, Quentin Stiévenart, Jacques Klein, Florent Avellaneda, Naouel Moha, Tegawendé'e F. Bissyandé
+ID: 2611.26312
+URL: https://arxiv.org/abs/2611.26312
+
+Abstract:
+Static analyzers are cheap and widely deployed, which makes their reports a
+candidate feedback signal for secure LLM code generation. Existing approaches
+place the analyzer inside an iterative repair loop with intermediate steps,
+which is costly and makes it hard to isolate the report's effect on the model.
+We introduce two strategies that give the finding to the model during
+generation. When the analyzer raises an alert, generation is rolled back, and
+the finding is inserted either as a code comment (Comment) or in the user
+message (Steering). We compare them with two iterative approaches and a control
+without the analyzer, across three models and three Python benchmarks, and we
+measure security using each benchmark's oracle. Guidance during generation is
+cheap and can be effective, at 0.9 to 1.9 times the baseline's output tokens
+against up to 24.1 times for iterative approaches. With DeepSeek-V4.1-flash on
+RiskyPy, Steering raises the share of functional and secure programs from 52.5%
+to 64.4%, close to the best iterative approach (66.2%) while using less than a
+fifth of the tokens. A per-rule analysis shows that rules with a local fix
+benefit most, and replacing the XML parser is net-positive on two of the three
+models. The study also identifies when guidance should not be applied. Analyzers
+flag at most 5.6% of the functional but insecure programs on SecEvalPlus,
+leaving little guidance to act on. When a static analysis alert (warning or
+error) contradicts the task, models tend to follow the analyzer and break the
+program. The two Qwen2.5 models often fail when the fix requires restructuring
+the code. These results indicate that static-analysis guidance is worth applying
+with a capable model, on rules with a local fix, and after filtering alerts that
+conflict with the task specification.

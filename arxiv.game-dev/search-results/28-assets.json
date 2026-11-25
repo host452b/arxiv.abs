@@ -10,11 +10,289 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:46:27Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 301,
-  "return_count": 200,
+  "return_count": 214,
   "papers": [
+    {
+      "id": "2611.29675",
+      "title": "CrysLDM: Latent Diffusion Model for Crystal Material Generation",
+      "authors": [
+        "Subhojyoti Khastagir",
+        "Kishalay Das",
+        "Pawan Goyal",
+        "Seung-Cheol Lee",
+        "Satadeep Bhattacharjee",
+        "Niloy Ganguly"
+      ],
+      "abstract": "Generating new crystal materials with desirable chemical properties has long been a challenging task. Existing diffusion models operate in feature space, requiring complex diffusion architectures to model the joint distribution of atom types, coordinates, and lattice structures. This complexity increases the number of diffusion steps, leading to higher training and sampling costs. In this work, we aim to generate novel crystal materials within a time- and resource-constrained setup, where existing models are not well-suited. To address this, we propose CrysLDM, a novel latent diffusion model for 3D crystal materials, which integrates a variational autoencoder and a diffusion model. The VAE encoder maps 3D crystal structures into a latent space, where the diffusion model operates. Since CrysLDM leverages a smooth, lower-dimensional latent space, it simplifies the generative process and accelerates both training and inference. Through extensive experiments on benchmark datasets and tasks, we show that CrysLDM generates stable and valid materials with quality comparable to state-of-the-art methods, while being significantly more efficient in terms of computational resources and time.",
+      "published": "2026-11-22T18:30:08Z",
+      "updated": "2026-11-22T18:30:08Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29675",
+      "abs_url": "https://arxiv.org/abs/2611.29675",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.12650",
+      "title": "Explicit LOD-Conditioned Anisotropic Filtering for Neural Texture Compression",
+      "authors": [
+        "Shin Fujieda",
+        "Takahiro Harada"
+      ],
+      "abstract": "Neural texture compression (NTC) stores material textures compactly, but the dominant feature-pyramid design receives no filtering from the GPU texture unit: it learns each material at a fixed UV and level of detail and has no explicit anisotropic-filtering (AF) mechanism. Setting the filter from the footprint aspect ratio alone is not enough: a single input cannot carry both the shape of the footprint and its size, so the image is too blurry near the camera by the same amount at every distance. Our method, AF-NTC, instead conditions the decoder on the same three bounded values a hardware sampler uses: minor-axis scale (LOD), aspect ratio, and major-axis orientation. These drive a tap line along the major axis and a level blend across the minor axis, and we train against anisotropically filtered ground truth. At $25\\%$ of a full BC7 mip chain, AF-NTC beats the no-AF trilinear-BC7 baseline on all ten material--scene pairs we compare ($+1.3$ to $+7.6$\\,dB), and it is $0.0$ to $3.4$\\,dB below the $4\\times$-larger anisotropic-BC7, depending on the material.",
+      "published": "2026-11-09T16:22:18Z",
+      "updated": "2026-11-09T16:22:18Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.12650",
+      "abs_url": "https://arxiv.org/abs/2611.12650",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.40322",
+      "title": "MatLoom: Layered Text-to-Material Generation in a Compact Program Space",
+      "authors": [
+        "Anson Y. Lam",
+        "Shuqing Li",
+        "Michael R. Lyu"
+      ],
+      "abstract": "Material generation should produce not only an appearance, but also the rules that construct it. We introduce MatLoom, a compact, layer-oriented language for text-to-material generation with pretrained language models. Each program composes alpha-masked layers whose shared spatial expressions define coverage and physically based rendering (PBR) channels, making dependencies between patterns, color, and relief explicit. A standalone interpreter evaluates the program into material maps, while the source retains named fields and layer parameters for subsequent authoring. Without task-specific fine-tuning, our pipeline uses parser-guided repair and preview-based critique to revise material designs, then searches noise seeds while keeping each candidate's remaining source fixed. On a curated benchmark of 141 prompts evaluated with six backbones, our best-performing configuration achieves higher mean scores than three diffusion baselines on all four flat-layout prompt-alignment metrics, and the margin persists on seven of the eight metric-layout cells under feasible equal-budget selection including best-of-10 sampling with the same quick scorer, with staged CLIPScore a statistical tie. A per-metric oracle bound over the same ten samples, which requires test labels, narrows the judge margins to 6.1 points flat and a staged statistical tie. Its initial programs already exceed all three baselines on mean BLIPScore, before critique or seed search. Retained programs have a median length of 21 lines when pooled across backbones. In a blind four-way comparison involving 30 participants and 20 prompts, our renders receive 59.2% of choices, compared with 19.3% for the most-preferred baseline. Compact executable programs thus offer a way to generate prompt-aligned materials while retaining their construction as part of the asset.",
+      "published": "2026-09-30T17:55:06Z",
+      "updated": "2026-11-20T01:50:51Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.CL",
+        "cs.MM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.40322",
+      "abs_url": "https://arxiv.org/abs/2609.40322",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.34934",
+      "title": "TaoTex: Boosting Texture Detail Fidelity for Native 3D Material Generation",
+      "authors": [
+        "Xiuchao Wu",
+        "Shuichang Lai",
+        "Jiangjing Lyu",
+        "Chengfei Lyu"
+      ],
+      "abstract": "Recent 3D generation models can produce accurate geometries while still struggling to reconstruct detailed textures. We propose a diffusion-based native 3D material generation model TaoTex, which faithfully recovers intricate textures through tailored strategies and improvements. First, we develop a data construction agent to create high-frequency textured 3D assets to bridge the data gap in public datasets. Training with these data significantly enhances the ability of TaoTex to recover challenging details such as text and patterns. Second, we design a multi-level feature fusion (MLFF) module to adaptively integrate local and global features of the conditional input, providing more complete texture cues for the diffusion model and thereby enhancing reconstruction fidelity. To alleviate VAE reconstruction errors, we adopt a latent-to-pixel space loss transition, further improving the pixel-level details and generation quality. Finally, we scale TaoTex to multi-view inputs by incorporating learnable viewpoint embeddings, achieving accurate and consistent material reconstruction across views. Extensive experiments demonstrate that our method significantly outperforms existing approaches in preserving texture details in both single- and multi-view settings.",
+      "published": "2026-09-28T11:31:38Z",
+      "updated": "2026-09-28T11:31:38Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.34934",
+      "abs_url": "https://arxiv.org/abs/2609.34934",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.30234",
+      "title": "OmniFabric: Coherent UV Space Texture Synthesis for 3D Garment Reconstruction",
+      "authors": [
+        "Ding-Jiun Huang",
+        "Yuanhao Wang",
+        "Cheng Zhang",
+        "Hugo Bertiche",
+        "Alexandru-Eugen Ichim",
+        "Thabo Beeler",
+        "Fernando De la Torre"
+      ],
+      "abstract": "Automated generation of production-ready 3D garment assets from a single image is a central challenge in digital content creation. While recent generative models have significantly advanced 3D geometry reconstruction, synthesizing high-quality textures remains a bottleneck. Existing methods often bake environmental illumination and shadows directly into the texture map, or they fail to maintain global structural coherence, making the resulting assets unusable for physical simulation and relighting. In this work, we introduce OmniFabric, a novel approach that synthesizes globally coherent texture maps directly within the 2D sewing pattern space. Given a single reference image, our pipeline utilizes an estimated 3D mesh and generative priors of powerful Vision-Language Models (VLM) to establish a complete but coarse texture initialization across the unwrapped sewing patterns. We then leverage a specialized diffusion transformer, trained via an automated synthetic data engine and conditioned on 3D positional features, to refine this initialization directly in the canonical UV domain. This effectively removes distortion and baked-in artifacts to extract a clean and normalized texture map that preserves the original garment design. Extensive experiments demonstrate that OmniFabric significantly outperforms state-of-the-art baselines, yielding photorealistic 3D garments with high-quality textures.",
+      "published": "2026-09-24T17:53:55Z",
+      "updated": "2026-09-24T17:53:55Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.30234",
+      "abs_url": "https://arxiv.org/abs/2609.30234",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.23606",
+      "title": "Beyond UV Mapping: Mesh Texture Compression via Surface-Aligned Texture Fields",
+      "authors": [
+        "Jianqiang Wang",
+        "Junhui Hou",
+        "Siyu Ren",
+        "Weiyao Lin",
+        "Wenping Wang"
+      ],
+      "abstract": "Mesh texture compression typically relies on 2D UV atlases, whose chart discontinuities and mapping overhead can limit coding efficiency. To tackle this challenge, we introduce TexF, a surface-aligned texture field that organizes texture attributes in sparse voxels derived from the mesh surface. This representation supports high-resolution textures while preserving local 3D correlations for compression and enabling direct surface queries. For bitstream compression, TexF reuses established 3D attribute codecs, with voxel locations reconstructed from the decoded mesh without separate transmission. For GPU-resident compression, we develop 3DNTC, which combines quantized hash features with a lightweight decoder for random-access reconstruction at surface positions. Differentiable rendering enables image-space refinement of both voxel attributes and compressed neural fields. Experiments on the MPEG and AOM mesh compression benchmarks demonstrate improved average rate-distortion performance over representative UV-based methods for both bitstream and GPU-resident compression. 3DNTC also supports real-time rendering.",
+      "published": "2026-09-20T12:48:32Z",
+      "updated": "2026-10-16T14:31:28Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.23606",
+      "abs_url": "https://arxiv.org/abs/2609.23606",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.28102",
+      "title": "What Will This Copper Look Like Later? Forecasting Surface Appearance and Rendering It as a PBR Material",
+      "authors": [
+        "Teejuta Sriwaranon",
+        "Borworntat Dendumrongkul",
+        "Tanapat Chamted",
+        "Pizzanu Kanongchaiyos"
+      ],
+      "abstract": "Digital design requires predicting how a metal surface will look later in its oxidation; this paper presents such a pipeline for copper. Given a fixed-camera observation, the system forecasts appearance 10 accelerated units ahead and converts it into the albedo, normal, roughness and metallic maps a renderer consumes. Forecasting is evaluated as an authoring tool would use it, on a copper specimen the system has not observed: an entire recording is held out, so training and checkpoint selection use one specimen and the test set is the whole of a second, recorded on a different day and condition. Under this protocol a learned spatio-temporal model with a monotone oxidation state, the most accurate forecaster within a single recording, is less accurate than copying the last observed frame on an unseen specimen, in both directions, as are three further trained architectures. The only forecaster that transfers is a closed-form global color extrapolation with no trained parameters, improving on copy-last-frame by 13.4% and 50.6%, with a margin that increases with horizon to +16.7% and +55.5% at t+10. Two controls qualify this: correcting every frame for the photometric drift measured on a non-oxidizing reference region leaves both margins intact, ruling out uncontrolled exposure as their source, and a moving-block bootstrap over the 6 independent windows each recording contains separates the larger margin from zero but leaves the smaller one not individually significant. The mechanism is measured: a learned susceptibility map encodes where corrosion begins on the training specimen and misleads on a new one, whereas the global color trajectory is what specimens share. The pipeline therefore deploys the closed-form forecaster for unseen specimens and the learned model only for continuing one already observed. Code, splits, protocol and leakage audit are released.",
+      "published": "2026-08-28T09:09:58Z",
+      "updated": "2026-08-28T09:09:58Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.28102",
+      "abs_url": "https://arxiv.org/abs/2608.28102",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.27888",
+      "title": "Thread-Efficient Decoding for Neural Texture Compression",
+      "authors": [
+        "Janarbek Matai",
+        "Sho Ikeda",
+        "Lukasz Lipski",
+        "Takahiro Harada"
+      ],
+      "abstract": "Neural texture compression (NTC) achieves higher compression ratios than BCn formats but suffers from GPU thread divergence, which significantly reduces runtime performance. In this work, we propose a shared decoder MLP architecture -- trained with a gradual decoder freezing schedule -- combined with texture clustering to reduce thread divergence by 25%-52% while preserving rendering quality. We evaluate our method on over 500 textures and multiple real rendering scenes, demonstrating up to 8.48x speedup on the Radeon RX 9070 XT GPU compared to non-shared baselines. Our key contributions include: (1) a unified shared decoder architecture that reduces divergence by grouping textures; (2) a training recipe with gradual decoder freezing that improves stability and reconstruction accuracy; (3) a semantic clustering strategy using CLIP embeddings that groups similar textures for effective decoder sharing; and (4) comprehensive performance and ablation studies validating our approach.",
+      "published": "2026-08-28T03:52:48Z",
+      "updated": "2026-08-28T03:52:48Z",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.27888",
+      "abs_url": "https://arxiv.org/abs/2608.27888",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.28776",
+      "title": "Representations from Pretrained Machine-Learning Interatomic Potentials as Coarse Coordinates for Material Generation and Evaluation",
+      "authors": [
+        "Paul Hagemann",
+        "Katharina Ueltzen",
+        "Simon Müller",
+        "Janine George",
+        "Philipp Benner"
+      ],
+      "abstract": "Generative machine learning is increasingly used for inorganic crystal structure generation. Most models and the corresponding evaluation approaches rely on simple forms of crystal structure representation. In this paper, we showcase the power of atom-averaged features from pretrained Machine-Learning Interatomic Potentials (MLIPs), such as MACE, for such tasks. We first introduce a distance measure that assesses the output of material generative models by capturing both quality and novelty in a single distribution-based evaluation framework. In particular, we introduce the Coarse-Fine Transport Distance (CFTD) using two different featurizers, where the quality component is based on coarse MACE features. We showcase CFTD's versatility in capturing crystal-structure quality while also detecting memorization, and compare it with the recently introduced continuous SUN metrics. We further show that coarse MACE features can be used as guidance for a material generative model.",
+      "published": "2026-07-30T18:56:34Z",
+      "updated": "2026-07-30T18:56:34Z",
+      "categories": [
+        "cs.LG",
+        "cond-mat.mtrl-sci"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.28776",
+      "abs_url": "https://arxiv.org/abs/2607.28776",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.13318",
+      "title": "Reflecting Process Expertise in Procedural Material Generation",
+      "authors": [
+        "Kunal Gupta",
+        "Gaurav Joshi",
+        "Yen-Ru Chen",
+        "Seemandhar Jain",
+        "Ishit Mehta",
+        "Manmohan Chandraker"
+      ],
+      "abstract": "Procedural material creation underpins applications in digital content creation, visual effects, and 3D asset design. Achieving high-quality results requires more than reproducing node graphs -- it demands understanding the process by which experts construct materials. We formulate procedural material generation as retrieval-time process reasoning over expert demonstrations, elevating process to a first-class representation beyond graph-only synthesis. Concretely, we represent expert workflows as process traces: textual records of construction steps, parameters, and design intent. To instantiate this idea, we use a pretrained LLM-based ProcessSynthesizer to synthesize a process trace aligned with a user's intent and a pretrained LLM-based Compiler to ground the process trace into an executable Blender material graph. Because procedural expertise is most naturally conveyed through demonstrations, we leverage tutorial videos as a source of process knowledge and extract textual, LLM-compatible traces using automated video analysis tools. In an expert study with five Blender artists (avg. 7.5 years of experience), materials generated by reflecting expert demonstrations were found to produce workflows requiring fewer edits, and more closely match professional design strategies than methods operating solely on static artifacts. A user study with 150 participants further shows that our approach achieves superior generation and editing performance compared to prior procedural systems. All code, models, and data will be available at https://materialapprentice.github.io",
+      "published": "2026-07-14T22:59:32Z",
+      "updated": "2026-07-23T10:02:57Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.13318",
+      "abs_url": "https://arxiv.org/abs/2607.13318",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.26913",
+      "title": "Neural Texture Compression using Hypernetworks",
+      "authors": [
+        "Belcour Laurent"
+      ],
+      "abstract": "Recent work on neural texture compression has demonstrated that it is possible to learn small, per-material texture representations (composed of latent textures and a small Multi-Layer Perceptron decoder) that can be decoded in real-time during shading to reproduce the input to a physically based shading model. However, existing methods require performing gradient-descent optimization per material for a given MLP and latent configuration. In this work, we train a single hypernetwork that outputs both the latent features and the MLP's weights and biases. Though the solution space is high-dimensional, this approach produces results comparable in quality to the current reference neural texture compressors. We further extend this approach to infer multiple decoders at once or even produce decoders that learn super-resolution.",
+      "published": "2026-06-25T11:52:11Z",
+      "updated": "2026-06-25T11:52:11Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.26913",
+      "abs_url": "https://arxiv.org/abs/2606.26913",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.14988",
+      "title": "Toward Richer Material Generation via Procedural Data Enhancement",
+      "authors": [
+        "Yunchen Yu",
+        "Jacob Munkberg",
+        "Jon Hasselgren",
+        "Chris Cummings",
+        "Steve Marschner",
+        "Andrea Weidlich"
+      ],
+      "abstract": "Generative models for material creation are fundamentally limited by the quality and expressivity of available training data. Simple physically based rendering (PBR) materials, which combine a diffuse term with a single-lobe specular component, are commonly used for training but are insufficient to capture many important visual effects present in real materials. We present a method that enhances such simple PBR materials to more expressive ones, by augmenting the single GGX specular lobe into a layered model that captures a broader range of non-diffuse effects. Starting from a simple material, we procedurally construct a corresponding multi-lobe non-diffuse component guided by physical priors, enabling effects such as dust, clearcoat, and layered scattering. To provide a compact representation for downstream applications, we encode this non-diffuse component as a neural material with a shared 6D latent space, where each material instance is represented by two latent textures and decoded by a pretrained universal MLP. We further regularize the latent space to support material generation. The resulting neural material dataset enables training generative models for richer material creation. To demonstrate this application, we finetune a video diffusion model to produce neural latent textures that encode our multi-lobe material, and present generative results as proof of feasibility. Our procedural data enhancement approach is an important step toward improving expressivity in material generation.",
+      "published": "2026-06-12T22:15:44Z",
+      "updated": "2026-06-12T22:15:44Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.14988",
+      "abs_url": "https://arxiv.org/abs/2606.14988",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.23804",
+      "title": "Perceptually Lossless Tactile Texture Synthesis with Compact Spectral Envelope Models",
+      "authors": [
+        "Jagan K. Balasubramanian",
+        "Yasemin Vardar"
+      ],
+      "abstract": "Modern audio-visual media rely on compact representations for efficient storage and transmission, whereas realistic digital touch still depends on high-resolution tactile recordings. Existing approaches for representing tactile signals constrain manipulation and limit the generation of new content. Here, we introduce two compact representations, spectral beta and spectral slope, that capture the temporal spectral structure of finger-surface friction signals while preserving perceptually relevant information. Spectral beta models spectral skewness using a two-parameter beta distribution, whereas spectral slope approximates the spectrum with an asymmetric bandpass filter defined by low- and high-pass orders. We evaluated these representations in a perceptual study with 14 participants using five virtual textures rendered on a friction-modulation display and compared them with physical textures and high-fidelity reproductions of recorded signals. Spectral beta achieved perceptual similarity ratings comparable to those of the original high-fidelity reproductions. Regression analysis further showed that matching spectral energy across nine critical frequency bands was the strongest predictor of perceived realism. Together, these findings suggest that tactile texture perception depends primarily on fundamental temporal spectral patterns and that modeling these patterns is sufficient for perceptually realistic rendering. These results establish an efficient and scalable framework for haptic compression, communication, and synthetic texture generation.",
+      "published": "2026-05-22T16:05:33Z",
+      "updated": "2026-07-09T05:54:23Z",
+      "categories": [
+        "cs.HC",
+        "eess.SP"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.23804",
+      "abs_url": "https://arxiv.org/abs/2605.23804",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.16612",
+      "title": "PRISMat: Policy-Driven, Permutation-Invariant Autoregressive Material Generation",
+      "authors": [
+        "Claire Schlesinger",
+        "Circe Hsu",
+        "Peter Schindler",
+        "Robin Walters"
+      ],
+      "abstract": "Rapid identification of candidate materials with target properties has become a key task in materials science. Machine learning has emerged as an alternative to physics-based simulation, offering a faster and cheaper way to filter materials based on their stability and other target properties, reducing the number of candidates that reach the costly synthesis stage. Recently, Large Language Models (LLMs) have been applied to this role, but these models are parameter-heavy and computationally expensive both during training and at inference time, making them unsuitable for high-throughput tasks. This inefficiency stems from both the large over-parameterization of language models and the difficulty of framing material generation as a sequence learning problem. In this paper, we present PRISMat, a cost-effective, permutation-invariant model, which addresses these limitations. We show that PRISMat, despite taking less time for inference, is able to outperform LLMs in generating crystal slabs conditioned on critical materials' surface properties. In targeted material discovery, we achieve mean absolute errors of 0.188 eV/A$^2$ and 2.79 eV for cleavage energy and work function tasks, respectively, reducing the error of the next best model by 4$\\times$.",
+      "published": "2026-05-15T20:27:11Z",
+      "updated": "2026-05-15T20:27:11Z",
+      "categories": [
+        "cs.AI",
+        "cond-mat.mtrl-sci"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.16612",
+      "abs_url": "https://arxiv.org/abs/2605.16612",
+      "source": "arxiv"
+    },
     {
       "id": "2411.16080",
       "title": "Boosting 3D Object Generation through PBR Materials",
@@ -2500,7 +2778,7 @@
         "Lourdes Agapito",
         "Alessio Del Bue"
       ],
-      "abstract": "We present billboard Splatting (BBSplat) - a novel approach for novel view synthesis based on textured geometric primitives. BBSplat represents the scene as a set of optimizable textured planar primitives with learnable RGB textures and alpha-maps to control their shape. BBSplat primitives can be used in any Gaussian Splatting pipeline as drop-in replacements for Gaussians. The proposed primitives close the rendering quality gap between 2D and 3D Gaussian Splatting (GS), enabling the accurate extraction of 3D mesh as in the 2DGS framework. Additionally, the explicit nature of planar primitives enables the use of the ray-tracing effects in rasterization. Our novel regularization term encourages textures to have a sparser structure, enabling an efficient compression that leads to a reduction in the storage space of the model up to x17 times compared to 3DGS. Our experiments show the efficiency of BBSplat on standard datasets of real indoor and outdoor scenes such as Tanks\u0026Temples, DTU, and Mip-NeRF-360. Namely, we achieve a state-of-the-art PSNR of 29.72 for DTU at Full HD resolution.",
+      "abstract": "We present billboard Splatting (BBSplat) - a novel approach for novel view synthesis based on textured geometric primitives. BBSplat represents the scene as a set of optimizable textured planar primitives with learnable RGB textures and alpha-maps to control their shape. BBSplat primitives can be used in any Gaussian Splatting pipeline as drop-in replacements for Gaussians. The proposed primitives close the rendering quality gap between 2D and 3D Gaussian Splatting (GS), enabling the accurate extraction of 3D mesh as in the 2DGS framework. Additionally, the explicit nature of planar primitives enables the use of the ray-tracing effects in rasterization. Our novel regularization term encourages textures to have a sparser structure, enabling an efficient compression that leads to a reduction in the storage space of the model up to x17 times compared to 3DGS. Our experiments show the efficiency of BBSplat on standard datasets of real indoor and outdoor scenes such as Tanks&Temples, DTU, and Mip-NeRF-360. Namely, we achieve a state-of-the-art PSNR of 29.72 for DTU at Full HD resolution.",
       "categories": [
         "cs.CV"
       ],

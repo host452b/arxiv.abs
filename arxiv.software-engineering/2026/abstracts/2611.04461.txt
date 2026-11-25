@@ -1,0 +1,30 @@
+Title: A Security Analysis of Verifiable Credential Verification Pipelines: Attack Surface Arising from JSON-LD/RDFC Canonicalization Compared with SD-JWT VC and mdoc
+Authors: Naohiro Fujie, Shigeya Suzuki
+ID: 2611.04461
+URL: https://arxiv.org/abs/2611.04461
+
+Abstract:
+We evaluate, at implementation level and under an explicit threat model, the
+verification pipelines of three Verifiable Credential (VC) formats: SD-JWT VC;
+the W3C Verifiable Credentials Data Model 2.0 with the Data Integrity
+cryptosuite eddsa-rdfc-2022 (W3C VCDM); and mdoc (ISO/IEC 18013-5). For W3C VCDM
+we identify and exercise three structural attack surfaces from remote context
+resolution and RDFC-1.0 canonicalization: denial of service (DoS) via poison
+graphs, context injection through @context, and server-side request forgery
+(SSRF) reachable via malicious URLs, all at default settings. A poison graph,
+whose blank-node references are symmetric enough to force RDFC-1.0 into deep
+recursion, raises it to 278x the baseline from five blank nodes in 527 bytes,
+and to 13.5 s from eight. Every experiment ran in four environments sharing
+runtime and library versions; the multiple moves with the machine (251--424x for
+one input), not with its speed. Cost tracks that symmetry rather than the node
+count: an acyclic input with 1,500 blank nodes stays at 462--714x. A call limit
+separates the two: every attack family aborts at 16 or below, every legitimate
+credential completes at 1, but a shallow, wide recursion, such as the acyclic
+control, passes whatever the bound. DoS does not presuppose adversarial input:
+with production education schemas, canonicalization costs 23--34x a simple
+credential in one environment, 16--49x across four. Effective mitigations are a
+static document loader, which removes the retrieval latency and both remote-
+context surfaces; a context allowlist; and a call limit with a size bound. SD-
+JWT VC and mdoc need neither canonicalization nor external references, and our
+verifiers resisted every vector evaluated. These are not format-specific defects
+but properties of the pipeline and its configuration.

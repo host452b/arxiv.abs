@@ -1,0 +1,22 @@
+Title: Automated Parameter Sensitivity Ranking in Audio Synthesis
+Authors: Ogulcan Kibar, Baris Ozcan
+ID: 2610.38740
+URL: https://arxiv.org/abs/2610.38740
+
+Abstract:
+Software synthesizers expose dozens of coupled controls, many of them redundant
+or perceptually inert at typical operating points. This paper presents a two-
+stage, measure-and-validate framework that ranks parameters by their influence
+on the audio output and then checks that ranking against an independent,
+variance-based experiment. Every rendered clip is normalized to -23 LUFS and
+described by five spectral fingerprints, so that gain shifts cannot masquerade
+as timbral change. The Sweep Test scores each parameter by spectral deviation
+over a 101-step sweep; the Sobol Test scores it by summed per-cell variance over
+a 128-point Sobol excitation. Across five architecturally distinct synthesizers
+(TorchSynth, Pyo, Pedalboard, Csound, and FluidSynth) spanning 48 to 76
+parameters, the two tests agree at Spearman ρ= 0.82-0.96 (p-values \le 7.2
+\times 10^{-15}) on the four engines that render deterministically, and at ρ=
+0.32 on the one with process-level render noise--a diagnostic of that engine
+rather than of the method. The strong correlations survive reducing the Sobol
+budget from 128 to 32 points, and the complete analysis costs a one-time offline
+budget of about 66,000 renders.

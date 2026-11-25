@@ -1,0 +1,26 @@
+Title: Isolation Is Not Confidentiality: Security Boundaries of Geometric Access Control in RAG
+Authors: Steve Nouyep, Maxime Puys, Sébastien Salva
+ID: 2611.14061
+URL: https://arxiv.org/abs/2611.14061
+
+Abstract:
+Retrieval-Augmented Generation (RAG) systems increasingly rely on vector
+databases containing documents governed by different access-control policies.
+Recent search-preserving geometric approaches enforce such access control by
+structuring the embedding space so that transformed embeddings, which we call
+protected representations, remain retrievable without exposing information
+across policy boundaries. We provide a unified security analysis of this
+paradigm, covering policy isolation, representation confidentiality, query
+forgery resistance, and policy-membership hiding. We consider both a curious
+cloud service provider observing the protected representations stored in the
+vector database and a curious user holding aligned pairs of original embeddings
+and protected representations. Evaluating the available implementations of the
+works proposing these geometric transformation mechanisms across three encoders,
+we find that geometric transformations preserve retrieval utility and provide
+strong policy isolation, but do not provide the other security properties. A
+curious user can recover the original embeddings from a few hundred pairs and
+forge policy-compatible queries at a higher cost that grows with encoder
+dimension for secret per-policy transformations. Moreover, policy-dependent
+geometry can leak policy membership even when unauthorized retrieval is
+prevented. These results show that policy isolation, confidentiality, forgery
+resistance, and membership hiding are distinct security objectives.

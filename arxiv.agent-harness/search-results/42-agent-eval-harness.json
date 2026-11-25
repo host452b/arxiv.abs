@@ -10,13 +10,126 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T22:11:39Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "groups": [
     {
       "source": "arxiv",
-      "count": 42,
+      "count": 47,
       "papers": [
+        {
+          "id": "2611.33098",
+          "title": "Delegent: A Multi-Agent Harness That Reduces Cost without Sacrificing Performance",
+          "authors": [
+            "Lingwei Gu",
+            "Jimmy Lin"
+          ],
+          "abstract": "Agents built on frontier language models are expensive. At every step, the frontier model re-reads its entire context and executes every subtask regardless of its difficulty. This paper explores the simple thesis that much of this cost can be removed by delegating easy subtasks to a small language model, or SLM, that runs on hardware one already owns. To test it, we build Delegent, a simple and effective agent harness built on Claude Code, in which the frontier model stays in charge of every task but hands focused subtasks, such as investigating code, running tests, and searching a corpus, to SLM subagents. Existing approaches such as cascades and model routers usually choose which model executes the entire task, whereas in Delegent, the frontier model always leads the execution and delegates easy subtasks to the SLM. No router or model is trained, so either model can be swapped freely. With the help of a 27B FP8 SLM, Delegent reduces the frontier cost of long-horizon coding by 67% and of agentic search by 59%, with no loss in task performance, and even a 2B SLM that fits on a laptop reduces the coding cost by 66%. The savings grow with the legwork that the frontier model would otherwise do itself, and a short instruction, which leaves the main coding tasks to the frontier model, accounts for most of the saving and keeps the 2B SLM from losing tasks. Code: https://github.com/castorini/delegent",
+          "published": "2026-11-24T18:34:40Z",
+          "updated": "2026-11-24T18:34:40Z",
+          "categories": [
+            "cs.AI",
+            "cs.IR"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.33098",
+          "abs_url": "https://arxiv.org/abs/2611.33098",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.29062",
+          "title": "HyperHarness: Learning to Generate Personalized Agent Harnesses from User Histories",
+          "authors": [
+            "Zhaoxuan Tan",
+            "Jiachen Zhao",
+            "Jingbo Yang",
+            "Zheyuan Liu",
+            "Chuhan Wang",
+            "Pei Zhou",
+            "Mengting Wan",
+            "Meng Jiang"
+          ],
+          "abstract": "Personalized LLM agents rely on an agent harness, the surrounding memory and control code, to connect user history with downstream decisions. Existing methods typically employ either a single shared memory workflow across all users, which is efficient to deploy but cannot adapt how evidence is retrieved and interpreted across diverse histories, or per-user harness optimization, which customizes behavior for each user but requires costly repeated candidate evaluation at deployment and suffers from sparse, noisy supervision in raw logs. To address this trade-off, we present HyperHarness, a framework that learns a shared history-to-harness generator to synthesize executable, user-specific retrieval and answer-guidance code directly from user histories. Given a user's permitted history, HyperHarness prompts a construction LLM to write personalized retrieval and guidance functions, while downstream task scores across training users supervise iterative refinements to the shared generator without reference harnesses or answering-model updates. At deployment, the frozen generator constructs a harness for each unseen user in a single pass from history alone, eliminating per-user task-scored search. Across three benchmarks (PersonaMemv3, Mem-PAL, and MemoryCD) and three answering models (Qwen3.5-9B, Qwen3.8-27B, and GPT-5.6-Luna), HyperHarness achieves the highest aggregate score in seven of nine settings and ranks second in the remaining two, improving over the strongest baselines by up to 5.95 points while cutting matched answer-time tokens by 90.32% over long-context prompting. Analyses show that optimization tailors context allocation to each executor, transfers to unseen user clusters, and amortizes adaptation costs.",
+          "published": "2026-11-21T21:57:03Z",
+          "updated": "2026-11-21T21:57:03Z",
+          "categories": [
+            "cs.CL"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.29062",
+          "abs_url": "https://arxiv.org/abs/2611.29062",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.28202",
+          "title": "AutoPILOT: A Visual Agent Harness for Real-Time Gameplay",
+          "authors": [
+            "Mark Zhao",
+            "Pengcheng Wang",
+            "Rui Yang",
+            "Jiarui Yao",
+            "Xirui Jiang",
+            "Yuxi Chen",
+            "Bingxuan Li",
+            "Hanyang Chen",
+            "Ke Yang",
+            "Manling Li",
+            "Tong Zhang",
+            "Huan Zhang"
+          ],
+          "abstract": "Multimodal foundation models can play video games well when the game waits for them, but often fail when it keeps running. We find that much of this gap lies in the harness, which decides what the model sees, what it remembers, and how its outputs become actions over time. Existing harnesses such as VISTA improve the first two, yet turn each model call into at most one action, so the agent acts only as often as its model thinks. We introduce AutoPILOT, which changes the third: in each model call, the model can send a primitive action, start an open-loop macro, or write a closed-loop controller that keeps playing from the screen without further model calls until it hands control back. To evaluate agents in real-time games, we build AFK-Bench, 120 diverse browser games grouped by how they respond to inaction and playable in real time or with the clock paused. With GPT-6.1 Sol under the same budgets, AutoPILOT reaches 68.6% real-time success against 38.3% for VISTA, and on GameWorld it keeps 80.0% in real time while VISTA drops from 84.1% to 42.9%. Its gains hold across models, and it reaches VISTA's final success rate at a fifth of its API cost. Our results suggest that how a harness turns model outputs into actions over time is a central yet underexplored part of agent design, and we hope AutoPILOT and AFK-Bench will serve as a foundation for agents in a world that does not wait.",
+          "published": "2026-11-20T18:56:49Z",
+          "updated": "2026-11-20T18:56:49Z",
+          "categories": [
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.28202",
+          "abs_url": "https://arxiv.org/abs/2611.28202",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.27110",
+          "title": "RemoteEvolver: Expanding Earth Observation Capabilities through Agent Harness Evolution",
+          "authors": [
+            "Shengxiang Xu",
+            "Liang Yao",
+            "Shuyi Chen",
+            "Yishu Wang",
+            "Shimin Di",
+            "Fan Liu",
+            "Bishun Yao",
+            "Hanghui Guo",
+            "Xinyu Liu",
+            "Chengye Liang",
+            "Yuyu Luo",
+            "Min-Ling Zhang"
+          ],
+          "abstract": "We are interested in developing a continually self-improving remote sensing agentic system. It should identify and address its capability gaps, retaining the resulting improvements to enhance performance on subsequent tasks. However, existing systems typically rely on fixed toolsets and confine their experience accumulation to re-orchestrating predefined capabilities, constraining both capability expansion and the transfer of improvements across tasks. As the infrastructure for agentic systems, the harness manages tools and workflow knowledge as editable, persistent resources outside the base model. These resources can therefore be updated and reused across tasks without additional post-training. Based on these observations, we propose RemoteEvolver, an external harness for remote sensing agents that drives tool and workflow evolution through execution feedback. With the base model parameters fixed, RemoteEvolver acquires missing specialized tools on demand and distills verified successful execution experience from individual tasks into agent skills that can be reused across tasks. The acquired tools and accumulated skills jointly support planning and execution on subsequent tasks. Experiments on Earth-Bench and OpenEarthAgent-Bench show that RemoteEvolver achieves average accuracy gains of 8.18 and 23.86 percentage points over its initial state when tools are fully available and partially missing. Under the same settings, it also outperforms the state-of-the-art methods by an average of 6.77 and 17.10 percentage points, respectively.",
+          "published": "2026-11-20T04:33:45Z",
+          "updated": "2026-11-20T04:33:45Z",
+          "categories": [
+            "cs.CV"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.27110",
+          "abs_url": "https://arxiv.org/abs/2611.27110",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.27090",
+          "title": "Exercised, Rarely Recovered: What Public Reports Say About Recovery in 50 AI Agent Harnesses and Runtimes",
+          "authors": [
+            "Kaviru Hapuarachchi"
+          ],
+          "abstract": "When an AI coding agent deletes the wrong files or a long agent run crashes, users fall back on recovery mechanisms: resume from a checkpoint, undo, ask for approval, read the log. Research runtimes promise stronger guarantees, such as saga-style compensation and transactional rollback. We ask what public evidence shows about whether either kind works in real use. Under a protocol frozen before data collection, we graded 12 persistent agent runtimes, 26 coding-agent harnesses and 12 research runtimes on eight recovery mechanisms, from not found to exercised in a real run, with two blind coding passes, adjudication and re-verification against archived sources. Recovery is exercised almost everywhere in practice: 11 of 12 runtimes and 25 of 26 harnesses have at least one real-use report. Yet of 128 such reports, only 19 describe the run fully recovering; 54 are partial and 45 failed. Checkpoint/resume recovered once in 27 reports, rollback once in 15. Research runtimes show the opposite profile: guarantees evaluated on benchmarks, none reported in operation, and compensation of external effects, their central guarantee, is offered by no harness at all.",
+          "published": "2026-11-20T04:05:35Z",
+          "updated": "2026-11-20T04:05:35Z",
+          "categories": [
+            "cs.SE",
+            "cs.AI",
+            "cs.MA"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.27090",
+          "abs_url": "https://arxiv.org/abs/2611.27090",
+          "source": "arxiv"
+        },
         {
           "id": "2602.22480",
           "title": "VeRO: An Evaluation Harness for Agents to Optimize Agents",
@@ -1040,5 +1153,5 @@
       ]
     }
   ],
-  "total": 42
+  "total": 47
 }

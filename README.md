@@ -2,7 +2,7 @@
 
 # arxiv.abs — arXiv Paper Abstracts for AI Research & Sci-Fi Worldbuilding
 
-**48,000+ curated paper abstracts across thirteen collections (1996–2026), covering AI/LLM Prompt Engineering, cross-disciplinary AGI/Sci-Fi research, AI Agent skills, AI-Human futures, health science, game development, Human × AI co-development, software engineering, QA/quality engineering, LLM agent harness research, Anthropic/Claude AI research, child development & education, and US stock market investment analysis.**
+**55,000+ curated paper abstracts across thirteen collections (1996–2026), covering AI/LLM Prompt Engineering, cross-disciplinary AGI/Sci-Fi research, AI Agent skills, AI-Human futures, health science, game development, Human × AI co-development, software engineering, QA/quality engineering, LLM agent harness research, Anthropic/Claude AI research, child development & education, and US stock market investment analysis.**
 
 ---
 
@@ -12,20 +12,20 @@ This repository contains thirteen curated paper abstract collections:
 
 | Collection | Papers | Categories | Years |
 |-----------|--------|------------|-------|
-| [`arxiv.prompt`](arxiv.prompt/) | 4,780 | 8 sections | 2023–2026 |
-| [`arxiv.agi-scifi`](arxiv.agi-scifi/) | 13,606 | 52 topics | 2023–2026 |
-| [`arxiv.agent-skills`](arxiv.agent-skills/) | 2,606 | 14 skills | 2000–2026 |
-| [`arxiv.game-dev`](arxiv.game-dev/) | 5,197 | 29 categories | 1996–2026 |
-| [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 1,814 | 12 topics | unlimited |
-| [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,125 | 7 topics | unlimited |
-| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 73 | 25 categories | 2013–2026 |
-| [`arxiv.software-engineering`](arxiv.software-engineering/) | 4,418 | 35 categories | 2020–2026 |
-| [`arxiv.qa-quality-engineering`](arxiv.qa-quality-engineering/) | 3,069 | 35 categories | 2020–2026 |
-| [`arxiv.agent-harness`](arxiv.agent-harness/) | 2,177 | 42 topics | 2020–2026 |
-| [`arxiv.anthropic-claude`](arxiv.anthropic-claude/) | 2,628 | 35 topics | 2021–2026 |
-| [`arxiv.child-development`](arxiv.child-development/) | 5,072 | 37 topics | 2010–2026 |
-| [`arxiv.us-stock-market`](arxiv.us-stock-market/) | 1,241 | 24 topics | 2010–2026 |
-| **Total** | **~47,806** | **345+** | |
+| [`arxiv.prompt`](arxiv.prompt/) | 5,080 | 8 sections | 2023–2026 |
+| [`arxiv.agi-scifi`](arxiv.agi-scifi/) | 14,741 | 52 topics | 2023–2026 |
+| [`arxiv.agent-skills`](arxiv.agent-skills/) | 2,905 | 14 skills | 2000–2026 |
+| [`arxiv.game-dev`](arxiv.game-dev/) | 5,730 | 29 categories | 1996–2026 |
+| [`arxiv.ai-human-future`](arxiv.ai-human-future/) | 2,221 | 12 topics | unlimited |
+| [`arxiv.qbio-health`](arxiv.qbio-health/) | 1,245 | 7 topics | unlimited |
+| [`arxiv.game-dev-with-ai`](arxiv.game-dev-with-ai/) | 74 | 25 categories | 2013–2026 |
+| [`arxiv.software-engineering`](arxiv.software-engineering/) | 5,304 | 35 categories | 2020–2026 |
+| [`arxiv.qa-quality-engineering`](arxiv.qa-quality-engineering/) | 3,591 | 35 categories | 2020–2026 |
+| [`arxiv.agent-harness`](arxiv.agent-harness/) | 3,654 | 42 topics | 2020–2026 |
+| [`arxiv.anthropic-claude`](arxiv.anthropic-claude/) | 4,079 | 35 topics | 2021–2026 |
+| [`arxiv.child-development`](arxiv.child-development/) | 5,156 | 37 topics | 2010–2026 |
+| [`arxiv.us-stock-market`](arxiv.us-stock-market/) | 1,336 | 24 topics | 2010–2026 |
+| **Total** | **~55,116** | **345+** | |
 
 ---
 
@@ -115,36 +115,36 @@ arxiv.abs/
 ├── README.md                              # English
 ├── README.zh-CN.md                        # Chinese
 ├── STANDARDS.md                           # Collection format standards
-├── arxiv.prompt/                          # Prompt engineering (4,780 papers)
+├── arxiv.prompt/                          # Prompt engineering (5,080 papers)
 │   ├── README.md / README.zh-CN.md
 │   ├── prompt_ai.md / prompt_ai.zh-CN.md  # 50 core techniques
 │   └── 2023–2026/abstracts/
-├── arxiv.agi-scifi/                       # AGI & sci-fi (13,606 papers)
+├── arxiv.agi-scifi/                       # AGI & sci-fi (14,741 papers)
 │   ├── README.md / README.zh-CN.md
 │   ├── agi-scifi.md / agi-scifi.zh-CN.md  # Key findings
 │   ├── search-index.json
 │   └── 2023–2026/abstracts/
-├── arxiv.agent-skills/                    # Agent skills (2,606 papers)
+├── arxiv.agent-skills/                    # Agent skills (2,905 papers)
 │   ├── README.md / README.zh-CN.md
 │   ├── agent-skills-findings.zh-CN.md
 │   ├── search-index.json
 │   └── 2000–2026/abstracts/
-├── arxiv.game-dev/                        # Game dev classical (5,197 papers)
+├── arxiv.game-dev/                        # Game dev classical (5,730 papers)
 │   ├── README.md / README.zh-CN.md
 │   ├── readme_game_roadmap.md
 │   ├── search-index.json
 │   └── 1996–2026/abstracts/
-├── arxiv.ai-human-future/                 # AI-human futures (1,814 papers)
+├── arxiv.ai-human-future/                 # AI-human futures (2,221 papers)
 │   ├── README.md / README.zh-CN.md
 │   ├── ai-future-findings.zh-CN.md
 │   ├── search-index.json
 │   └── abstracts/
-├── arxiv.qbio-health/                     # Health science (1,125 papers)
+├── arxiv.qbio-health/                     # Health science (1,245 papers)
 │   ├── README.md / README.zh-CN.md
 │   ├── health-findings.zh-CN.md
 │   ├── search-index.json
 │   └── abstracts/
-└── arxiv.game-dev-with-ai/                # Human × AI co-dev (73 curated papers)
+└── arxiv.game-dev-with-ai/                # Human × AI co-dev (74 curated papers)
     ├── README.md / README.zh-CN.md
     ├── readme_game_dev_with_ai.md          # Landscape & practitioner roadmap
     ├── search-index.json

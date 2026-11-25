@@ -10,11 +10,171 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:44:45Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 124,
-  "return_count": 124,
+  "total_results": 131,
+  "return_count": 131,
   "papers": [
+    {
+      "id": "2611.30502",
+      "title": "A CPU-Only Framework for Mining Collectively-Behaving Bots in MMORPGs",
+      "authors": [
+        "Hyunsoo Kim",
+        "Jaeman Son",
+        "Sangdeok Seo",
+        "Ilhan Bang",
+        "Man Jae Cho"
+      ],
+      "abstract": "MMORPGs continually face automated programs (bots) that disrupt gameplay balance and in-game economies. An unsupervised Transformer framework can mine collectively behaving bot groups, but its multi-GPU training is costly in live operations. We show that such GPU-trained sequence models are not strictly necessary for this task. Our CPU pipeline pairs zone embeddings learned from movement context, which place teleport-linked zones close together, with a training-free coordinate kernel, and then applies density clustering. It trains 3-5$\\times$ faster than the GPU-based Transformer (56-86$\\times$ on the same CPU) while matching its mining quality on two commercial MMORPGs, and has been deployed since late 2024. We also share deployment lessons on how to set the clustering threshold and when to retrain.",
+      "published": "2026-11-23T11:22:05Z",
+      "updated": "2026-11-23T11:22:05Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30502",
+      "abs_url": "https://arxiv.org/abs/2611.30502",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.28698",
+      "title": "Scaling in Games: Continued Pre-Training For Embodied Agents In Diverse Virtual Worlds",
+      "authors": [
+        "Kuan Zhang",
+        "Yukun Chen",
+        "Zhihao Yang",
+        "Yue Su",
+        "Xiangnan Wu",
+        "Zirong Chen",
+        "Run Luo",
+        "Jinkun Hou",
+        "Tao Tan",
+        "Yinhe Zheng",
+        "Yiming Li"
+      ],
+      "abstract": "Scaling data, diversity and model capacity has improved embodied learning in physical environments, where diverse experiences remain grounded in shared physical laws. Whether these gains extend to virtual worlds with different visual styles, dynamics, controls, and objectives remains unclear. We investigate this question through a controlled study of continued pre-training (CPT) across three axes: data volume, diversity, and model size. Our 120 training configurations span four model sizes from 0.8B to 27B, six data budgets from 50 to 1,600 hours, and five mixtures ranging from Minecraft-only data to diverse multi-world corpora. We assess performance and generalization using three-level validation losses and gameplay benchmarks from in-corpus worlds to unseen worlds. Our results show: (1) more data improves in-corpus performance, diversity improves transfer to related worlds with limited gains in distant worlds, and model size improves data efficiency but generalizes worse to distant worlds under single-world training; (2) we observe an early interface phase with broad cross-world benefits and a later world phase with gains narrowed to in-corpus and related worlds, and fit an empirical scaling law relating validation loss to data volume, diversity and model size; and (3) our models are competitive with Minecraft specialists and frontier models in 3D worlds, and perform best in real-time settings. However, the limits of imitation and persistent gaps in distant worlds suggest that building generalist embodied agents requires richer training stages beyond continued pre-training.",
+      "published": "2026-10-20T11:09:09Z",
+      "updated": "2026-10-20T11:09:09Z",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.28698",
+      "abs_url": "https://arxiv.org/abs/2610.28698",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.14985",
+      "title": "Converting Sequenced Fuzzy Cognitive Maps to Causal Virtual Worlds with Large Video Generators",
+      "authors": [
+        "Akash Kumar Panda",
+        "Olaoluwa Adigun",
+        "Bart Kosko"
+      ],
+      "abstract": "We show how users can create and manipulate causal virtual worlds with large-language-model (LLM) and large-video-model agents. The approach uses feedback fuzzy cognitive maps (FCMs) both to model the granular causal structure of the virtual world and to guide its causal evolution. The local causal rules are partial or fuzzy while the FCM's feedback structure produces global equilibria that define causal scenarios. A sequence of \\emph{dynamical} meta-rules of the form ``If $\\mathcal{A}$ then $\\mathcal{B}$\" define the causal scenes of the virtual-world video. The if-part causal pattern $\\mathcal{A}$ perturbs the FCM's virtual world at the user's or agent's discretion. The FCM's transient feedback dynamics define the meta-rule's causal arrow of implication. The then-part $\\mathcal{B}$ is the resulting equilibrium attractor such as a FCM limit cycle or fixed point. Our algorithm extracts these meta-rules from the FCM and guides the LLM agent to write a script based on the FCM meta-rule sequence. The large video generator converts the meta-rule into a video scene in accord with the flow of the dynamics. We applied the agent-based technique to a simple FCM that describes an undersea world of dolphins and sharks. Google's Gemini 3.1 generated the script and Google's Veo 3.1 generated the dolphin-shark video. The approach is general and can scale by mixing larger FCMs and AI agents to produce more immersive virtual worlds.",
+      "published": "2026-09-14T03:44:40Z",
+      "updated": "2026-09-14T03:44:40Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.14985",
+      "abs_url": "https://arxiv.org/abs/2609.14985",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.14512",
+      "title": "Beyond Scene Description: Multi-Agent Orchestration for Non-visual Access to Virtual Worlds",
+      "authors": [
+        "Toqeer Ali Syed",
+        "Ali Akarma",
+        "Adeel Ahmad",
+        "Danial Hameed"
+      ],
+      "abstract": "Virtual worlds now host classrooms, meetings, conferences, shops, and social venues, and nearly every interaction they expose assumes a user who can scan a three-dimensional scene, follow avatars, and read floating panels. Blind and visually impaired (BVI) users are left with assistive tools that each solve one task in isolation: naming an object, reading text, describing a scene, or planning a route. A live virtual room defeats that model: obstacles, speakers, gestures, chat, slides, and notifications arrive together, and a tool that narrates all of them trades a visual barrier for an auditory one. This paper presents MetaBlind, an architecture that distributes nonvisual access across eight specialized agents, spanning perception, navigation, social and object interaction, communication, safety and trust, memory, and personalization, and that places an Accessibility Orchestrator between those agents and the user. Agents publish candidate information into a shared accessibility context instead of speaking to the user directly. The orchestrator scores each candidate on safety relevance, goal relevance, urgency, confidence, user relevance, and estimated listening load, then releases only the items it judges relevant at that moment through speech, structured audio, or haptic output. We give the selection step a formal statement, specify the orchestration cycle as an algorithm, and define an evaluation protocol against a single-agent assistant. MetaBlind is reported at the design stage, with no prototype measurement or user study, and the protocol states which outcomes would support the design and which would refute it.",
+      "published": "2026-09-13T13:34:34Z",
+      "updated": "2026-09-13T13:34:34Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.14512",
+      "abs_url": "https://arxiv.org/abs/2609.14512",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.03557",
+      "title": "From Prompt to Service: An SLM-Based Agent Orchestration Gateway for AI-Driven Virtual Worlds",
+      "authors": [
+        "Louis Nisiotis",
+        "Aimilios Hadjiliasi"
+      ],
+      "abstract": "As generative AI capabilities expand, AI-driven virtual worlds face a growing architectural challenge. Users interact through in-world interfaces in multimodal ways, yet their requests demand fundamentally different AI backend models and computational resources. Embedding these capabilities directly into virtual world systems reduces extensibility, complicates maintenance, and limits the ability to coordinate services distributed across edge and cloud infrastructure. This paper presents an SLM-based Agent Orchestration Gateway, a lightweight runtime coordination mechanism that decouples a virtual world client from heterogeneous AI backends through intent-driven service routing. An edge-deployed SLM classifies the semantic intent of each user prompt, a configurable service registry validates and resolves the routing decision, and the selected backend is invoked transparently, enabling new AI capabilities to be introduced in the virtual world without modifying the client application. The gateway is implemented and evaluated within the InterwovenXR virtual museum testbed. The evaluation shows that compact SLMs can serve as reliable intent routers on edge hardware, and that task-specific fine-tuning can transform sub-billion-parameter models into practical, low-latency routers. A layered configuration pairing a fine-tuned sub billion-parameter model as router with a larger SLM for conversational response generation is shown to be deployable on mid-range edge hardware and more efficient than delegating both responsibilities to a single model. The findings show that SLMs can support practical AI service orchestration in virtual worlds and the work contributes an evaluated architecture for scalable, extensible, and edge-supported AI interaction, enabling virtual agents become access points to distributed generative AI services.",
+      "published": "2026-06-02T12:22:03Z",
+      "updated": "2026-09-02T10:23:41Z",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.03557",
+      "abs_url": "https://arxiv.org/abs/2606.03557",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.09965",
+      "title": "Towards Generalist Game Agents: A Survey of Foundation Models in Virtual Worlds",
+      "authors": [
+        "Kuan Zhang",
+        "Dongchen Liu",
+        "Qiyue Zhao",
+        "Tianyu Xin",
+        "Yue Su",
+        "Haisheng Wang",
+        "Han Yin",
+        "Hongbo Ma",
+        "Peize Li",
+        "Tianjun Gu",
+        "Xiangnan Wu",
+        "Xinran Zhang",
+        "Yongxuan Li",
+        "Zirong Chen",
+        "Yiming Li"
+      ],
+      "abstract": "The real world unfolds along a single set of physics laws, yet human intelligence demonstrates a remarkable capacity to generalize experiences from this singular physical existence into a multiverse of games, each governed by entirely different rules, aesthetics, physics, and objectives. This omni-reality adaptability is a hallmark of general intelligence. As Artificial Intelligence progresses towards Artificial General Intelligence, the multiverse of games has evolved from mere entertainment into the ultimate ground for training and evaluating AGI. The pursuit of this generality has unfolded across four eras: from environment-specific symbolic and reinforcement learning agents, to current large foundation models acting as generalist players, and toward a future creator stage where agent both creates new game worlds and continually evolves within them. We trace the full lifecycle of a generalist game player along four interdependent pillars: Dataset, Model, Harness, and Benchmark. Every advance across these pillars can be read as an attempt to break one of five fundamental trade-offs that currently bound the whole system. Building on this end-to-end view, we chart a five-step roadmap, progressing from single-game mastery to the ultimate creator stage in which the agent simultaneously creates and evolves within theoretical game multiverse. Taken together, our work offers a unified lens onto a rapidly shifting field, and a principled path toward the omnipotent generalist agent capable of seamlessly mastering any challenge within the multiverse of games, thereby paving the way for AGI.",
+      "published": "2026-05-11T04:16:41Z",
+      "updated": "2026-10-26T07:07:19Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.09965",
+      "abs_url": "https://arxiv.org/abs/2605.09965",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.05163",
+      "title": "PhysForge: Generating Physics-Grounded 3D Assets for Interactive Virtual World",
+      "authors": [
+        "Yunhan Yang",
+        "Chunshi Wang",
+        "Junliang Ye",
+        "Yang Li",
+        "Zanxin Chen",
+        "Zehuan Huang",
+        "Yao Mu",
+        "Zhuo Chen",
+        "Chunchao Guo",
+        "Xihui Liu"
+      ],
+      "abstract": "Synthesizing physics-grounded 3D assets is a critical bottleneck for interactive virtual worlds and embodied AI. Existing methods predominantly focus on static geometry, overlooking the functional properties essential for interaction. We propose that interactive asset generation must be rooted in functional logic and hierarchical physics. To bridge this gap, we introduce PhysForge, a decoupled two-stage framework supported by PhysDB, a large-scale dataset of 150,000 assets with four-tier physical annotations. First, a VLM acts as a \"physical architect\" to plan a \"Hierarchical Physical Blueprint\" defining material, functional, and kinematic constraints. Second, a physics-grounded diffusion model realizes this blueprint by synthesizing high-fidelity geometry alongside precise kinematic parameters via a novel KineVoxel Injection (KVI) mechanism. Experiments demonstrate that PhysForge produces functionally plausible, simulation-ready assets, providing a robust data engine for interactive 3D content and embodied agents.",
+      "published": "2026-05-06T17:33:23Z",
+      "updated": "2026-05-06T17:33:23Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.05163",
+      "abs_url": "https://arxiv.org/abs/2605.05163",
+      "source": "arxiv"
+    },
     {
       "id": "2311.07887",
       "title": "Challenges of Securing Massively Multiplayer Online Games",
@@ -1348,7 +1508,7 @@
         "Michalis Xenos",
         "Maria Manuel Sa"
       ],
-      "abstract": "The UNESCO (2022) points out that the gap between the existing awareness of a person or a community, and the actual habits of everyday life, is attributed to: low levels of understanding the environmental issues at stake; low levels of knowledge regarding energy and climate issues; and lack of attention to social, emotional or behavioral learning. In this context, as environmental and energetic concerns grow rapidly in our daily lives, RAISE - Raising environmental knowledge \u0026 awareness, an ERAMUS+ project with partners from three countries (Greece, Portugal, and Italy), was born. The project's first and main objective is to increase the environmental knowledge and awareness (EK\u0026A) of schoolchildren. To achieve this goal, a survey was first carried out to ascertain the students' knowledge and, based on these results, scenarios and educational material were drawn up to build a pedagogical tool - a 3D Virtual World Learning Environment (3D VWLE). This paper presents the desktop research results and the main features of the game that are intended to match the identified educational needs. The 3D VWLE puts students in situations where they can acquire transferable skills. The project demonstrated that the simulation effect of 3D VWLE on skills provides an excellent online learning environment for students to work on and improve their abilities. In other words, virtual worlds open the door to a new way of learning and teaching.",
+      "abstract": "The UNESCO (2022) points out that the gap between the existing awareness of a person or a community, and the actual habits of everyday life, is attributed to: low levels of understanding the environmental issues at stake; low levels of knowledge regarding energy and climate issues; and lack of attention to social, emotional or behavioral learning. In this context, as environmental and energetic concerns grow rapidly in our daily lives, RAISE - Raising environmental knowledge & awareness, an ERAMUS+ project with partners from three countries (Greece, Portugal, and Italy), was born. The project's first and main objective is to increase the environmental knowledge and awareness (EK&A) of schoolchildren. To achieve this goal, a survey was first carried out to ascertain the students' knowledge and, based on these results, scenarios and educational material were drawn up to build a pedagogical tool - a 3D Virtual World Learning Environment (3D VWLE). This paper presents the desktop research results and the main features of the game that are intended to match the identified educational needs. The 3D VWLE puts students in situations where they can acquire transferable skills. The project demonstrated that the simulation effect of 3D VWLE on skills provides an excellent online learning environment for students to work on and improve their abilities. In other words, virtual worlds open the door to a new way of learning and teaching.",
       "categories": [
         "cs.HC"
       ],
@@ -1848,7 +2008,7 @@
         "Matthias Siebke",
         "Anja Feldmann"
       ],
-      "abstract": "The development of Internet technologies enables software developers to build virtual worlds such as Massively Multi-Player Online Role-Playing Games (MMORPGs). The population of such games shows super-linear growing tendency. It is estimated that the number of Internet users subscribed in MMORPGs is more than 22 million worldwide [1]. However, only little is known about the characteristics of traffic generated by such games as well as the behavior of their subscribers. In this paper, we characterize the traffic behavior of World of Warcraft, the most subscribed MMORPG in the world, by analyzing Internet traffic data sets collected from a European tier-1 ISP in two different time periods. We find that World of Warcraft is an influential application regarding the time spent by users (1.76 and 4.17 Hours/day on average in our measurement), while its traffic share is comparatively low (\u003c 1 %). In this respect, we look at the World of Warcraft subscriber's gaming behavior by categorizing them into two different types of users (solitary users and group users) and compare these two groups in relation to the playing behavior (duration as the metric) and the in-game behavior (distance as the metric).",
+      "abstract": "The development of Internet technologies enables software developers to build virtual worlds such as Massively Multi-Player Online Role-Playing Games (MMORPGs). The population of such games shows super-linear growing tendency. It is estimated that the number of Internet users subscribed in MMORPGs is more than 22 million worldwide [1]. However, only little is known about the characteristics of traffic generated by such games as well as the behavior of their subscribers. In this paper, we characterize the traffic behavior of World of Warcraft, the most subscribed MMORPG in the world, by analyzing Internet traffic data sets collected from a European tier-1 ISP in two different time periods. We find that World of Warcraft is an influential application regarding the time spent by users (1.76 and 4.17 Hours/day on average in our measurement), while its traffic share is comparatively low (< 1 %). In this respect, we look at the World of Warcraft subscriber's gaming behavior by categorizing them into two different types of users (solitary users and group users) and compare these two groups in relation to the playing behavior (duration as the metric) and the in-game behavior (distance as the metric).",
       "categories": [
         "cs.NI"
       ],

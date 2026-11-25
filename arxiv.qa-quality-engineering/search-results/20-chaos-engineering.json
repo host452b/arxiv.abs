@@ -10,11 +10,181 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:51:17Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 101,
-  "return_count": 101,
+  "total_results": 110,
+  "return_count": 110,
   "papers": [
+    {
+      "id": "2611.31667",
+      "title": "Exteroceptive Sensor Faults in Autonomous Vehicles: A Cross-Modal Taxonomy and Fault Injection Toolkit",
+      "authors": [
+        "Davide Possenti",
+        "Daniele Cianca",
+        "Stefano Arrigoni",
+        "Francesco Braghini"
+      ],
+      "abstract": "Autonomous vehicles rely on cameras, LiDAR, and radar to perceive their surroundings, yet these exteroceptive sensors can be degraded by hardware aging, environmental interference, miscalibration, embedded software errors, and combinations of these causes, with direct consequences for perception quality and safety. Existing surveys and benchmarks mostly address individual sensors, isolated conditions, or vehicle-level consequences, and no common vocabulary relates fault origins across the three modalities. This paper reviews the literature on exteroceptive sensor faults and proposes a cross-modal, origin-driven taxonomy that organizes them into five categories, namely hardware, environmental, calibration, software, and synergistic faults, mapping each entry to its physical or logical mechanism, observable manifestation, and affected subsystem, and relating the categories to the safety analyses of ISO 26262 and ISO 21448. To make the taxonomy operational, we release an open-source fault injection toolkit with 94 symptom-level routines (41 camera, 27 LiDAR, and 26 radar), four graded severity levels, reproducible burst scheduling, and per-frame labels recording the fault category, affected subsystem, and severity. Examples on the Boreas dataset illustrate how each category alters camera images, LiDAR point clouds, and radar scans. Together, the taxonomy and the toolkit provide a shared reference and a controlled testbed for studying sensor reliability, developing and benchmarking fault detection and diagnosis methods, and building fault-annotated datasets for the safety validation of perception systems. The toolkit is publicly available at https://github.com/davidepossenti/AV-SensorFault-Toolkit.",
+      "published": "2026-11-23T22:57:52Z",
+      "updated": "2026-11-23T22:57:52Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31667",
+      "abs_url": "https://arxiv.org/abs/2611.31667",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31129",
+      "title": "FATCAT: Fault Injection Attacks Targeting Chip-level Alignment",
+      "authors": [
+        "Peter Horvath",
+        "Ilia Shumailov",
+        "Zhuoran Liu",
+        "Lukasz Chmielewski",
+        "Lejla Batina"
+      ],
+      "abstract": "Model alignment is the primary safety and security mechanism for enforcing refusal of malicious prompts in modern foundation models; yet, existing adversarial evaluations implicitly assume underlying hardware integrity. In this paper, we present FATCAT, the first physical fault-injection attacks capable of eliminating refusal in modern large language and vision-language models. Specifically, we present a non-invasive electromagnetic (EM) fault injection attack targeting GPU-accelerated Systems-on-Chip with physical access, requiring neither software execution privileges nor model-layer access. By leveraging an autonomous Radio Frequency (RF) side-channel trigger to synchronize EM faults to the prompt prefill phase, the attack corrupts safety-critical memory transactions across off-chip LPDDR5 DRAM and on-chip LPDDR physical interfaces without crashing the system while preserving model coherence. Evaluated on an NVIDIA Jetson Orin Nano and AGX Thor running Llama 3.2 1B and Gemma 3 1B, localized physical faults reliably force models to fulfill restricted requests, demonstrating that model-level alignment provides no robust security guarantees without hardware-level fault tolerance. Finally, we demonstrate the physical-world consequences of this vulnerability on an active 6-DoF robotic manipulator controlled by a SmolVLA vision-language-action policy. Our attack silently corrupts the model forcing the arm into abrupt, hazardous lunges; in two instances the robotic arm attempted to pinch the paper author -- proving that hardware faults can directly translate into real physical harm.",
+      "published": "2026-11-23T18:01:58Z",
+      "updated": "2026-11-23T18:01:58Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31129",
+      "abs_url": "https://arxiv.org/abs/2611.31129",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23313",
+      "title": "Model Discovery for Virtual Chaos Engineering with Incomplete Tracing: An eBPF Study",
+      "authors": [
+        "Anatoly A. Krasnovsky"
+      ],
+      "abstract": "Model-based fault experiments can assess the consequences of component failures before intervening in a running application. Recent work on model discovery and graph simulation acquired operation models from application telemetry and used them for availability prediction. Applying this approach to operational legacy systems raises an acquisition problem: the required traces may be absent or incomplete, while introducing them can require changes across heterogeneous components. These systems continue to serve business operations during extended maintenance and modernization. External observation offers a possible route to model-based fault analysis before a tracing retrofit, but collecting telemetry does not by itself establish that an executable operation model can be obtained. We investigate this route using extended Berkeley Packet Filter (eBPF) observations and the existing graph-based modelling approach. A 108-case study varied application software development kit (SDK) tracing across absent, partial and full conditions in three public applications. Discovered dependencies were combined with declared operation requirements, deployment facts and scenario assumptions; model forecasts preceded independent execution checks. With SDK tracing disabled, the tested OpenTelemetry eBPF Instrumentation path supported all seven operations in two applications across three repetitions. Forecasts agreed exactly in 17 of 21 operation-repetition groups; the maximum state-weighted discrepancy was 4.22 percentage points. Combining observed context links supported nine additional groups under partial tracing. The results establish an acquisition path for virtual fault experiments under the tested observation constraints and identify limits imposed by protocols, evidence association and operation semantics.",
+      "published": "2026-11-13T05:42:04Z",
+      "updated": "2026-11-13T05:42:04Z",
+      "categories": [
+        "cs.SE",
+        "cs.DC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23313",
+      "abs_url": "https://arxiv.org/abs/2611.23313",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19915",
+      "title": "CHERI under Fault Injection: An Emulation-Based Security Evaluation of Capability Hardware Enhanced RISC Instructions",
+      "authors": [
+        "Eva Sophia Schreyer"
+      ],
+      "abstract": "Memory-safety vulnerabilities continue to dominate real-world exploit chains despite decades of research into software mitigations. CHERI is a hardware architecture that enforces spatial and temporal memory safety by augmenting pointers with hardware-checked metadata, thus preventing software-based exploitation, but its threat model explicitly excludes fault injection. This thesis investigates whether targeted fault injection can undermine CHERI's memory-safety guarantees in a pure-capability CHERI-RISC-V environment. Two fault classes are considered: bit flips corrupting capability metadata, and fault-induced check skipping on capability store instructions. We implement fault injection primitives in a QEMU-based emulation environment, which enables deterministic, repeatable experiments without specialised hardware. With them, we demonstrate four attack scenarios: buffer overflows, control-flow hijacking, data-only attacks, and use-after-free. Each succeeds with one or two targeted faults (lower bounds under the emulation-based setting). Check skipping offers an alternative route to control-flow hijacking and data-only attacks, with a minimum of one fault. These results show that CHERI's guarantees depend on the physical integrity of capability metadata, the uninterrupted execution of metadata checks, and the integrity of the revocation bitmap: a single targeted fault can circumvent spatial safety, temporal safety, or control-flow integrity. CHERI still raises the cost of exploitation, since fault injection is a prerequisite for every attack and the sentry mechanism forces an attacker to supply a valid tagged capability or spend a second fault restoring the tag. Based on these findings, we propose mitigations: ECC-protected capability memory, capability field authentication codes, redundant execution of security-critical checks, and revocation bitmap integrity verification.",
+      "published": "2026-11-15T10:08:16Z",
+      "updated": "2026-11-15T10:08:16Z",
+      "categories": [
+        "cs.CR",
+        "cs.AR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19915",
+      "abs_url": "https://arxiv.org/abs/2611.19915",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16151",
+      "title": "Fault Injection Attacks on Q-Learning: Analysis, Vulnerabilities, and Countermeasures",
+      "authors": [
+        "Tom Slooff",
+        "Anthony Etim",
+        "Jiaqi Yu",
+        "Francesco Regazzoni",
+        "Jakub Szefer"
+      ],
+      "abstract": "Hardware fault injection attacks threaten machine learning systems, yet their impact on reinforcement learning (RL) has received little attention despite the use of RL in safety-critical applications. This paper presents a security analysis of Q-Learning implementations under voltage and clock glitching attacks on a ChipWhisperer platform, evaluating five variants: Standard, Robust, Resilient, Linear, and Deep Q-Learning. In standard Q-Table implementations, faults corrupt reward computation, action selection, and Q-value updates during learning, and change the selected action during inference. Robust Q-Learning does not prevent these attacks: NaN and infinite values injected during learning persist in the Q-table, and its greedy policy uses the same code as standard Q-Learning. This paper also evaluates a Resilient Q-Learning variant that applies triple modular redundancy with majority voting. It corrects corruption of a single Q-table copy, but inputs shared by the copies, such as the reward, and the voting code itself remain outside its protection. The analysis extends to Linear and Deep Q-Learning, where faults corrupt stored weights during learning and change actions during inference. Moving beyond benchmark environments, this work evaluates an online traffic light controller in a microscopic traffic simulator, where a single injected infinite value degrades accumulated vehicle waiting time by 148x while corrupting under 4% of the Q-table, and where triple modular redundancy corrected the faults injected in our tests, although glitching could still halt the device. Altogether, this work provides a basis for understanding and securing RL deployments against fault injection attacks.",
+      "published": "2026-11-12T01:24:46Z",
+      "updated": "2026-11-21T09:39:29Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16151",
+      "abs_url": "https://arxiv.org/abs/2611.16151",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.06386",
+      "title": "Shoot on (Core)Sight: Re-enabling Secure Debug on the RP2350 with Photon-Emission Microscopy and Laser Fault Injection",
+      "authors": [
+        "Antoine Plin"
+      ],
+      "abstract": "Fault-resistant policy storage does not guarantee fault-resistant enforcement. We demonstrated this distinction on the RP2350A4 using differential photon-emission microscopy (PEM) and laser fault injection (LFI). PEM narrowed the area for laser scanning, which found two sites where pulses set the DEBUGEN bits enabling core~1 Secure debug. An online attack sequence using only Serial Wire Debug (SWD) feedback restored sustained access. After rescue reset, the sequence recovered a 128-bit test secret. This reset reloads the secret's runtime page lock from a stored policy that permits Secure reads and prevents user firmware from tightening the lock.",
+      "published": "2026-11-04T11:49:44Z",
+      "updated": "2026-11-04T11:49:44Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.06386",
+      "abs_url": "https://arxiv.org/abs/2611.06386",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.34358",
+      "title": "EAST: Embodied AI Safety Testing via Systematic Fault Injection in Digital Twins",
+      "authors": [
+        "Yuhao Tian",
+        "Tao Li",
+        "Ling Zhou",
+        "Dave Towey",
+        "Zhaoxin Fan",
+        "Wenjun Wu",
+        "Rubing Huang",
+        "Tsong Yueh Chen"
+      ],
+      "abstract": "Task success is not a sufficient measure of safety for embodied artificial intelligence (AI), because robots may complete objectives while violating safety requirements. Existing evaluations often emphasize performance and robustness, but lack a systematic route from documented safety hazards to executable, verifiable tests. We present EAST (Embodied AI Safety Testing), a digital-twin framework that converts literature-grounded safety evidence into fault-injection tests across perception, instructions, environments, actions, and timing. EAST combines an expert-reviewed safety-fault taxonomy and eight executable operators with applicability and validity constraints. Its three-stage workflow generates test specifications, verifies fault realization during simulated execution, and independently assesses safety challenges, violations, task outcomes, and behavioral signatures using simulator-state evidence. The framework preserves execution traces and replayable records, supporting attribution and reproducibility across experiments. We evaluate EAST on six RoboTwin manipulation tasks and two policy architectures, ACT and RDT, against alternative testing strategies under matched budgets. Across five comparative campaigns, EAST targets all 74 admissible task-policy-operator combinations and obtains valid evidence for 63, while achieving safety-challenge exposure rates close to Random-Legal and Rule-Based. Moreover, 82 valid EAST executions complete their tasks despite safety violations, revealing risks concealed by success-oriented evaluation. These findings support systematic, validity-aware, reproducible safety testing beyond task-completion metrics.",
+      "published": "2026-10-25T15:10:51Z",
+      "updated": "2026-10-25T15:10:51Z",
+      "categories": [
+        "cs.SE",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.34358",
+      "abs_url": "https://arxiv.org/abs/2610.34358",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.31598",
+      "title": "Controlled Radio Fault Injection and Telemetry Evaluation for Open 5G RANs",
+      "authors": [
+        "Babak Azkaei",
+        "Maxim Bîtiu",
+        "Georgios Exarchakos",
+        "Kishor Chandra Joshi"
+      ],
+      "abstract": "Radio access network (RAN) telemetry reveals radio conditions, protocol behavior, and their consequences for applications. Evaluating its usefulness requires controlled impairments and observations of the same execution. We present C and Python channel brokers and a fault injection workflow for software 5G testbeds connecting an OCUDU base station and a software UE through ZeroMQ. The brokers apply scheduled, directional transformations to I/Q samples and restore the link, while the workflow jointly records applied faults, native and programmable (codelet) telemetry, and application delay. We demonstrate this capability through 45 comparative trials of brief uplink interruptions and stepped additive noise. These use cases distinguish recognizing a radio change from measuring its service consequence: native missing-feedback events retrospectively identify interruptions, whereas noise changes decoding-error measurements without producing those events. Median on-time round-trip times remain near 30 ms, but the prespecified comparisons show mean increases in on-time 95th-percentile delay of 354 and 604 ms for one and five interruptions, and 113 ms for noise. Adding receive-side radio link control (RLC) codelet summaries did not improve interruption classification on held-out trials. The framework provides a reusable way to evaluate measurement choices under known radio faults, before using them in monitoring or learning systems.",
+      "published": "2026-10-22T17:31:18Z",
+      "updated": "2026-10-22T17:31:18Z",
+      "categories": [
+        "cs.NI",
+        "eess.SY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.31598",
+      "abs_url": "https://arxiv.org/abs/2610.31598",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.30197",
+      "title": "Alpha: Systematic Fault Injection and Robustness Evaluation for LLM-Driven Embodied Manipulation",
+      "authors": [
+        "Jona Joy"
+      ],
+      "abstract": "Large language models (LLMs) are increasingly integrated into embodied robotic planning, yet standard benchmarks primarily evaluate end-to-end task completion in nominal environments, obscuring failure origins across the execution stack. We present Alpha, a systematic fault-injection and robustness-evaluation framework for LLM-driven manipulation in simulation. Alpha injects calibrated faults across perception (sensor lag), actuation (grip slip), kinematics (unreachable targets), and planning (planner-output corruption), alongside concurrent conditions. To separate physical vulnerabilities from planner sensitivities, we introduce a matched methodology pairing an LLM agent (Llama-3 via Ollama) against a deterministic Scripted Oracle planner across a balanced 150-episode matrix under identical seeds, geometries, and safety criteria. Across the matrix, the Oracle achieves 64.0% (48/75) success while the LLM achieves 44.0% (33/75) (paired McNemar p = 3.01 x 10^-4). Crucially, excluding planner-output corruption, performance across all physical and kinematic conditions is identical: 55.0% (33/60) for both planners with zero discordant pairs (McNemar p = 1.00). This demonstrates that physical actuator slip, kinematic reach boundaries, and perceptual staleness affect deterministic controllers and LLM planners equivalently. The performance gap is driven entirely by planner-output corruption (100% Oracle vs. 0% LLM), isolating the prompt-to-JSON serialization and validation interface rather than a cognitive reasoning deficit. We also audit 169 historical pilot attempts for transparency.",
+      "published": "2026-10-21T07:06:59Z",
+      "updated": "2026-10-21T07:06:59Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30197",
+      "abs_url": "https://arxiv.org/abs/2610.30197",
+      "source": "arxiv"
+    },
     {
       "id": "2008.07072",
       "title": "Artificial Neural Networks and Fault Injection Attacks",
@@ -321,7 +491,7 @@
         "Khaled Khasawneh",
         "Mohammed E. Fouda"
       ],
-      "abstract": "The safety alignment of Language Models (LMs) is a critical concern, yet their integrity can be challenged by direct parameter manipulation attacks, such as those potentially induced by fault injection. As LMs are increasingly deployed using low-precision quantization for efficiency, this paper investigates the efficacy of such attacks for jailbreaking aligned LMs across different quantization schemes. We propose gradient-guided attacks, including a tailored progressive bit-level search algorithm introduced herein and a comparative word-level (single weight update) attack. Our evaluation on Llama-3.2-3B, Phi-4-mini, and Llama-3-8B across FP16 (baseline), and weight-only quantization (FP8, INT8, INT4) reveals that quantization significantly influences attack success. While attacks readily achieve high success (\u003e80% Attack Success Rate, ASR) on FP16 models, within an attack budget of 25 perturbations, FP8 and INT8 models exhibit ASRs below 20% and 50%, respectively. Increasing the perturbation budget up to 150 bit-flips, FP8 models maintained ASR below 65%, demonstrating some resilience compared to INT8 and INT4 models that have high ASR. In addition, analysis of perturbation locations revealed differing architectural targets across quantization schemes, with (FP16, INT4) and (INT8, FP8) showing similar characteristics. Besides, jailbreaks induced in FP16 models were highly transferable to subsequent FP8/INT8 quantization (\u003c5% ASR difference), though INT4 significantly reduced transferred ASR (avg. 35% drop). These findings highlight that while common quantization schemes, particularly FP8, increase the difficulty of direct parameter manipulation jailbreaks, vulnerabilities can still persist, especially through post-attack quantization.",
+      "abstract": "The safety alignment of Language Models (LMs) is a critical concern, yet their integrity can be challenged by direct parameter manipulation attacks, such as those potentially induced by fault injection. As LMs are increasingly deployed using low-precision quantization for efficiency, this paper investigates the efficacy of such attacks for jailbreaking aligned LMs across different quantization schemes. We propose gradient-guided attacks, including a tailored progressive bit-level search algorithm introduced herein and a comparative word-level (single weight update) attack. Our evaluation on Llama-3.2-3B, Phi-4-mini, and Llama-3-8B across FP16 (baseline), and weight-only quantization (FP8, INT8, INT4) reveals that quantization significantly influences attack success. While attacks readily achieve high success (>80% Attack Success Rate, ASR) on FP16 models, within an attack budget of 25 perturbations, FP8 and INT8 models exhibit ASRs below 20% and 50%, respectively. Increasing the perturbation budget up to 150 bit-flips, FP8 models maintained ASR below 65%, demonstrating some resilience compared to INT8 and INT4 models that have high ASR. In addition, analysis of perturbation locations revealed differing architectural targets across quantization schemes, with (FP16, INT4) and (INT8, FP8) showing similar characteristics. Besides, jailbreaks induced in FP16 models were highly transferable to subsequent FP8/INT8 quantization (<5% ASR difference), though INT4 significantly reduced transferred ASR (avg. 35% drop). These findings highlight that while common quantization schemes, particularly FP8, increase the difficulty of direct parameter manipulation jailbreaks, vulnerabilities can still persist, especially through post-attack quantization.",
       "categories": [
         "cs.CR",
         "cs.AI"
@@ -418,7 +588,7 @@
         "André Corsetti",
         "Fátima Mattiello-Francisco"
       ],
-      "abstract": "Since the 2000's, an increased number of nanosatellites have accessed space. However, studies show that the number of unsuccessful nanosatellite missions is very expressive. Moreover, these statistics are correlated to poor verification and validation processes used by hobbyists satellite developers because major space agencies keep high successful ratings even with small/nano satellites missions due to its rigorous V\\\u0026V processes. Aiming to improve payloads integration testing of NanosatC-BR-2, a 2-U Cubesat based nanosatellite under development by INPE, the fault injection technique has been used. It is very useful technique to test systems prototypes. We present the design and implementation of a Failure Emulator Mechanism (FEM) on I2C communication bus for testing the interaction among the NCBR2 subsystems, supporting interoperability and robustness requirements verification. The FEM is modelled to work at the communication bus emulating eventual faults of the communicating subsystems in the messages exchanged. Using an Arduino board for the FEM and NI LabView environment it is possible to program the mechanism to inject different faults at the I2C bus during different operation modes. Based on a serial architecture, the FEM will be able to intercept all messages and implement different faults as service and timing faults. The FEM interface with the tester is designed in LabView environment. Control and observation facilities are available to generate and upload the faultload script to FEM Arduino board. The proposed FEM architecture and its implementation are validated using two subsystems under testing prototypes: the OnBoard Data Handling Computer and the Langmuir Probe NCBR2 payload. For this analysis purpose, the prototypes simulate in two different Arduinos boards the expected behavior of each subsystem in the communication.",
+      "abstract": "Since the 2000's, an increased number of nanosatellites have accessed space. However, studies show that the number of unsuccessful nanosatellite missions is very expressive. Moreover, these statistics are correlated to poor verification and validation processes used by hobbyists satellite developers because major space agencies keep high successful ratings even with small/nano satellites missions due to its rigorous V\\&V processes. Aiming to improve payloads integration testing of NanosatC-BR-2, a 2-U Cubesat based nanosatellite under development by INPE, the fault injection technique has been used. It is very useful technique to test systems prototypes. We present the design and implementation of a Failure Emulator Mechanism (FEM) on I2C communication bus for testing the interaction among the NCBR2 subsystems, supporting interoperability and robustness requirements verification. The FEM is modelled to work at the communication bus emulating eventual faults of the communicating subsystems in the messages exchanged. Using an Arduino board for the FEM and NI LabView environment it is possible to program the mechanism to inject different faults at the I2C bus during different operation modes. Based on a serial architecture, the FEM will be able to intercept all messages and implement different faults as service and timing faults. The FEM interface with the tester is designed in LabView environment. Control and observation facilities are available to generate and upload the faultload script to FEM Arduino board. The proposed FEM architecture and its implementation are validated using two subsystems under testing prototypes: the OnBoard Data Handling Computer and the Langmuir Probe NCBR2 payload. For this analysis purpose, the prototypes simulate in two different Arduinos boards the expected behavior of each subsystem in the communication.",
       "categories": [
         "cs.OH"
       ],
