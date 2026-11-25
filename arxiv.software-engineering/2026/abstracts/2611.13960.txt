@@ -1,0 +1,31 @@
+Title: From Attack Surface to Defense Architecture: Compositional Security for Agentic Coding Harnesses
+Authors: Simon Hegelich, Habiba Sarhan, Morteza Shahrezaye, Kolja Hegelich, Christian Montag, Ralf Schneider, Erik Cambria
+ID: 2611.13960
+URL: https://arxiv.org/abs/2611.13960
+
+Abstract:
+AI coding harnesses couple language models to shells, filesystems, and network
+sockets so that agents can resolve issues and run tests. That coupling turns the
+harness into an automated Living-off-the-Land (LotL) platform: once an adversary
+can inject instructions into retrieved content, dual-use binaries such as bash,
+curl, and find become the payload rather than a vulnerability to be separately
+exploited. We argue that security in agentic systems is not an emergent
+behavioral property of individual language models, but a structural property of
+the cognitive architecture and of the composition of permissions across
+interacting agents and humans. Static regex blacklists miss flag permutations
+and structural attacks, whereas LLM-as-a-Judge guardrails ask a second model to
+guess physical invariants at tens to hundreds of milliseconds per call while
+over-blocking benign work. We present ActiveSecHarness, a neurosymbolic
+reference-monitor architecture organized around Separation of Intelligence and
+Authority across four pillars: (1) Macaroon-inspired HMAC capability tokens
+across four Trust and Authority Rings; (2) a product taint lattice L_trust x
+L_sens and a compositional Separation-of-Duties ledger over shared workspace
+provenance; (3) deterministic OS/subprocess guards; and (4) extended bytecode
+certificates, split-horizon dual-key audit logs, a self-healing verification
+loop (CodeVerifier, DualModelReviewer, SecurityTestSynthesizer), and a
+progressive pedagogical UserWikiManager. On N=252 fixtures and a 12+12 multi-
+step trajectory suite, Ring 0 achieves FPR=0.000 (0.939 unfitted out-of-sample /
+0.962 OS-inert; 1.000 post-audit conformance ABR) in 31.5 us median latency
+(4,517x faster than a live local LLM-judge) and blocks 12/12 multi-step kill
+chains at 0.000 benign trajectory FPR (266.7 us/step; ~24 us/step O(1) ledger
+state folding).

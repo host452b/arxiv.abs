@@ -1,0 +1,28 @@
+Title: Ask Before You Answer: A Question-Driven Evidence Reasoning Architecture (QERA) for In-Context Learning
+Authors: Jinhu Qi, Minda Hu, Wentao Zhang, Zixing Song, Irwin King
+ID: 2610.35083
+URL: https://arxiv.org/abs/2610.35083
+
+Abstract:
+AI assistants are increasingly asked to reason over a user's own web traces:
+group chats, community threads, activity logs and revision histories. On CL-
+bench Life, a benchmark of such real-life context learning, frontier LLMs solve
+fewer than one task in five. We find that the request is not the specification:
+over 80% of the benchmark's rubrics share less than 60% of their content words
+with the final request, as for a rule set two turns earlier or every record that
+meets the user's criterion, and LLMs answering directly pass only 67% of these
+implicit rubrics against 81% of the others. We propose QERA, a Question-driven
+Evidence Reasoning Architecture that asks before it answers. QERA first turns
+the request into a requirement checklist and typed information needs, filtered
+by code for faithfulness to the user's words; it then answers from the whole
+conversation, asks the same questions again with quotes verified by code, and
+applies a guarded local repair. It needs no training or rubrics and makes about
+four LLM calls per task. On all 405 tasks with four frontier LLMs, QERA attains
+the highest solving rate on every LLM (21.0% on average, against 18.2% for the
+strongest of three inference-time baselines and 14.6% for direct answering) and
+leads every baseline significantly when pooled across LLMs, while using fewer
+tokens than PSCI and 4-5% of the tokens of Ctx2Skill. Ablations on GPT-6-Luna
+show that the gain is settled before the answer, by a fixed answer protocol
+(+3.8 rubric points) and the request-specific questions (+1.6), and that it is
+concentrated on implicit rubrics, with checking afterwards refining mainly
+numeric requirements.

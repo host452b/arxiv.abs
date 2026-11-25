@@ -1,0 +1,23 @@
+Title: GainCtrl: Predicting Remaining Gains for Efficient LLM Agent Execution
+Authors: Kangwen Zhao, Jianfeng Cai, Ruopei Sun, Mingxiao Feng, Peng Zhang, Wengang Zhou, Houqiang Li
+ID: 2611.20736
+URL: https://arxiv.org/abs/2611.20736
+
+Abstract:
+Large language models (LLMs) are widely used to power agents that interact with
+tools and environments to solve complex tasks. Repeated attempts improve the
+quality of tool-using agents, but continued execution incurs additional costs
+even when it is unlikely to improve the best result ultimately returned. This
+raises the question of when to stop an attempt to reduce execution cost while
+preserving task-level Best-of-N quality. To address this question, we introduce
+GainCtrl, a gain-based execution controller for LLMs. In GainCtrl, a lightweight
+CPU predictor uses interaction histories to estimate expected positive gains
+over retained scores, which are then used to guide stopping decisions with
+calibrated thresholds to limit the loss in mean Best-of-N task quality. We
+evaluate the controller through trajectory replay across three environments and
+three LLM actors. Comparisons of interpolated quality-cost Pareto frontiers show
+that GainCtrl generally uses fewer tokens than baselines at matched target
+quality. Fixed policies also achieve quality close to that of full execution
+while substantially reducing token consumption. The predictor runs at
+millisecond latency on a single CPU thread, supporting repeated monitoring
+without access to LLM internals.

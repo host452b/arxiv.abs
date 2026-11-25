@@ -1,0 +1,18 @@
+Title: Internalizing Chain-of-thought into Looped Transformers
+Authors: Kehang Zhou, Pinyan Lu
+ID: 2610.25998
+URL: https://arxiv.org/abs/2610.25998
+
+Abstract:
+Chain-of-thought (CoT) enables constant-bit-size transformers to perform
+general-purpose computation through generated tokens (Li and Wang, 2025a),
+whereas looped transformers carry out the same computation by recurrence in
+hidden states (latent thought). We construct a family of constant-bit-size
+looped transformers that interpolates between CoT and latent thought. For a
+prescribed loop count $L=L(n)$ and a fixed integer $k\ge1$ satisfying
+$s(n)^{1/k}=Ω(L)$, our transformer simulates a time-$t(n)$, space-$s(n)$ Turing
+machine using a context window of $O(s(n)/L)$ and $O(t(n)s(n)^{1/k}/L)$
+generated tokens, reducing both resources by a factor of $L$ relative to the
+corresponding unlooped queue-machine simulation. The construction also holds
+with softmax attention at constant bit-size, under the finite-precision kernel
+specified in this paper.

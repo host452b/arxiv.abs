@@ -1,0 +1,19 @@
+Title: GraftRay: Physically Based Mesh Insertion into Gaussian Splatting Scenes via Path Tracing
+Authors: Jinxin Ai, Matthias Nießner
+ID: 2610.37036
+URL: https://arxiv.org/abs/2610.37036
+
+Abstract:
+We present GraftRay, a unified method for physically consistent insertion of
+mesh objects into 2D and 3D Gaussian Splatting (2DGS/3DGS) indoor scenes,
+accounting for lighting interactions between objects and their surroundings. We
+lift albedo, roughness, metallic and normals from diffusion-based 2D priors onto
+the Gaussians by back-projection, model windows and lamps as analytic area
+emitters, and recover their absolute radiance from ordinary LDR captures with a
+low-dimensional fit over unit-radiance bases. A path tracer over Gaussians and
+meshes then produces view-consistent shading, interreflections and soft shadows,
+which are composited onto the original reconstruction by differential rendering,
+preserving the untouched background. On synthetic, real and generated scenes,
+GraftRay outperforms recent insertion and inverse-rendering baselines in image
+fidelity and shadow accuracy at competitive cost, and users prefer its lighting
+and shadows over those of the baselines.

@@ -1,0 +1,26 @@
+Title: ZIMPAF & RedPhuzz: High-fidelity Web Application Fuzzing via Branch, Language Construct, and Function Call Monitoring
+Authors: Tennov Simanjuntak, Christoph Csallner
+ID: 2607.25012
+URL: https://arxiv.org/abs/2607.25012
+
+Abstract:
+We present ZIMPAF, runtime interpreter instrumentation, and RedPhuzz, a fuzzer,
+to realize high-fidelity fuzzing framework. ZIMPAF implements multi-granular
+interceptors to collect traces of branch coverage, errors and exceptions,
+functions and language constructs, and input-tainted branches. It identifies
+tainted vulnerable functions, marking them as high-value fuzzing targets, and
+untainted vulnerable functions using in-situ static analysis called backward
+constant probe, allowing them to be skipped, without pre-fuzzing static taint
+analysis. The traces are utilized by RedPhuzz to perform targeted function- and
+input-level fuzzing that goes beyond traditional coverage-based fuzzing,
+supported by three novel mutation strategies: sanitization-aware, input-in-
+branch-aware, and data-type-aware mutation. Furthermore, we introduce multi-
+stage vulnerability detection that extends beyond error- and exception-based
+detection, capable of detecting silent vulnerabilities. We evaluate RedPhuzz's
+performance against its predecessor, Phuzz, on 86 test cases across six
+benchmark web applications. RedPhuzz detects all vulnerabilities, whereas Phuzz
+fails to detect 16. RedPhuzz is 77% faster than Phuzz despite performing more
+tasks. ZIMPAF is faster than Phuzz's instrumentation (PCOV and UOPZ) while
+writing significantly more data. ZIMPAF achieves 2.1 to 41.22 times higher
+throughput than PCOV and UOPZ across five sampled benchmarks, and 0.87 times for
+one.

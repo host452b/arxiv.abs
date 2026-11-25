@@ -1,0 +1,30 @@
+Title: Mayfly: Lifecycle-Aware High-Bandwidth Flash for Recursive Self-Improvement
+Authors: Chunlin Tian, Mingjia Fan, Feng Yu, Qingyun Zou, Wenju Zhao, Weng-Fai Wong, Bingsheng He
+ID: 2611.32264
+URL: https://arxiv.org/abs/2611.32264
+
+Abstract:
+Recursive self-improvement (RSI) lets an LLM improve its agent system by
+proposing and evaluating candidate variants across tasks. A generation's
+sessions grow their KV caches together and release them as they finish, creating
+a burst followed by a decline. At high concurrency, even the KV of sessions
+ready to run exceeds the GPU's HBM. Offloading that KV to host DRAM or SSDs adds
+capacity but leaves ready sessions waiting for HBM space before execution. High-
+Bandwidth Flash (HBF) can serve the overflow in place, but excessive reads
+lengthen decode steps and repeated writes consume flash endurance. Our key
+insight is that where ready KV is read should follow the burst and its decline:
+from HBF in place while the burst overflows HBM, as much as each step's
+bandwidth allows, and from HBM again as the decline frees it. A switch between
+ready and parked decides only whether a block is read, so its flash copy stays
+valid, and a session's end, which the orchestrator announces, decides when its
+private KV dies. We present Mayfly, lifecycle-guided HBF management for RSI.
+Mayfly bounds per-step HBF reads during overflow and returns KV to HBM as
+sessions finish and free space. It retains a valid backing copy of each block
+evicted from HBM to avoid rewrites across state transitions, and forwards
+session-end signals to the controller to avoid copying dead KV during garbage
+collection. Experimental results show that, at 128 sessions per generation on
+four added HBF sites, Mayfly finishes 34% sooner than parking the same KV on HBF
+and 23% sooner than reading it from HBF whenever HBM is full; its gain over
+parking grows with concurrency, to 55% at 256 sessions on eight sites. Keeping
+one flash copy per block and trimming at announced session ends avoid write
+amplification.

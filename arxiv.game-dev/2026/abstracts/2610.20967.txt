@@ -1,0 +1,21 @@
+Title: MIDI-REPA: Improving Text-to-Music Generation with Symbolic Representation Alignment
+Authors: Song-Ze Yu, Fang-Duo Tsai, Yi-Hsuan Yang
+ID: 2610.20967
+URL: https://arxiv.org/abs/2610.20967
+
+Abstract:
+State-of-the-art text-to-music models increasingly rely on scaling model
+capacity, data, and compute, while still learning musical structure directly
+from dense audio. Yet melody, rhythm, harmony, and structure can be represented
+compactly in symbolic form. We introduce MIDI-REPA, a representation-alignment
+framework that derives MIDI supervision from automatic music transcription (AMT)
+to align intermediate representations of a flow-matching DiT. Building on the
+122M-parameter FluxAudio-S baseline from the 2026 ICME Academic Text-To-Music
+Challenge, we investigate what, where, and when to align. Aligning a MuScriptor-
+derived piano roll with an early DiT layer throughout the full flow trajectory
+performs the best. Without additional training data or techniques, MIDI-REPA
+remains competitive on the ATTM objective metrics while remaining trainable on a
+single RTX 3090 in about 31 hours. Our results highlight symbolic supervision as
+a simple and inexpensive learning signal for improving text-to-music generation.
+We release our transcription pipeline, JamendoMIDI, training code, and audio
+samples at https://midi-repa.vaclis.net.

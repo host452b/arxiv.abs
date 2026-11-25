@@ -1,0 +1,26 @@
+Title: Robust PnP on a Neuromorphic Processor for Object Pose Estimation
+Authors: Tam Ngoc-Bang Nguyen, Mohsi Jawaid, Tat-Jun Chin
+ID: 2607.16834
+URL: https://arxiv.org/abs/2607.16834
+
+Abstract:
+Neuromorphic computing is gaining attention in robotic perception due to its
+higher energy efficiency. While neural network-based methods can more readily
+exploit the distributed and parallelized structure of neuromorphic computers,
+crafting neuromorphic solutions for non-learning tasks is less straightforward.
+This hampers the usage of neuromorphic computing for perception pipelines that
+depend on both learning and non-learning components, such as object pose
+estimation (OPE) where state-of-the-art methods use a deep network to predict 2D
+landmarks and nonlinear optimization to solve perspective-n-point (PnP). In this
+paper, we propose a novel neuromorphic-deployable formulation for robust PnP,
+where given outlier-prone 2D-3D correspondences, the object pose with the
+largest number of inliers is determined. Underpinning our method is a
+distributed algorithm for robust least squares estimation of rigid body pose
+that can be executed on a neuromorphic processor. We also design a spiking
+neural network (SNN) to predict 2D landmarks from event data, where the main
+layers of the SNN were designed according to the principles of spiking neurons.
+Overall, our work enables neuromorphic treatment of the major stages of an OPE
+pipeline, from event sensing and learned landmark prediction, to geometric
+optimization for robust PnP. Results on neuromophic hardware (Intel Loihi 2)
+indicate the higher energy efficiency our neuromorphic robust PnP, while
+achieving competitive accuracy.

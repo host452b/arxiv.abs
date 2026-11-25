@@ -1,0 +1,31 @@
+Title: PropGen: Automated Property Generation for Property-Based Testing of Mobile Apps
+Authors: Yiheng Xiong, Shiwen Song, Bo Ma, Ting Su, Xiaofei Xie
+ID: 2604.13463
+URL: https://arxiv.org/abs/2604.13463
+
+Abstract:
+Mobile apps often suffer from functional bugs that do not cause crashes but
+instead manifest as incorrect behaviors under specific user interactions. Such
+bugs are difficult to detect by conventional automatic testing techniques
+because they often lack explicit \textit{test oracles}. Property-based testing
+can effectively expose them by specifying intended behavior as properties and
+checking them under diverse interactions. However, its practical use is limited
+by the reliance on manually written properties, which are difficult and
+expensive to construct. To address this limitation, this paper explores the use
+of large language models (LLMs) to automate property construction for property-
+based testing of mobile apps. This is challenging in two ways. \textit{First},
+it is difficult to systematically uncover and execute diverse app
+functionalities. \textit{Second}, it is difficult to derive valid properties
+from functionality execution results. To address these challenges, we introduce
+PropGen, which infers candidate app functionalities as hypotheses from GUI
+states, validates each hypothesis by executing it to collect behavioral
+evidence, synthesizes properties from the collected evidence, and refines
+imprecise properties based on testing feedback. We implemented PropGen and
+evaluated it on 12 real-world Android apps. The results show that PropGen can
+effectively identify and execute app functionalities, generate valid properties,
+and refine most imprecise ones. Across all apps, PropGen inferred 1,210 valid
+functionalities and correctly executed 977 of them, compared with 491 and 187
+for the baseline. It generated 985 properties, 912 of which were valid, and
+successfully refined 118 of 127 imprecise ones exposed during testing. Using the
+resulting properties, we found 25 previously unknown functional bugs, many of
+which were missed by existing testing techniques.

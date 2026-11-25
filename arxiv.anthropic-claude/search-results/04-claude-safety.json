@@ -10,11 +10,299 @@
     "from": "2021-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T17:13:13Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 10302,
-  "return_count": 200,
+  "return_count": 214,
   "papers": [
+    {
+      "id": "2611.33054",
+      "title": "EmbodiSafety: Benchmarking Risk Understanding and Response in Embodied AI",
+      "authors": [
+        "Erfei Cui",
+        "Shengjia Zhao",
+        "Yan Qin",
+        "Kaixuan Wang",
+        "Junming Chen",
+        "Ping Luo",
+        "Tianxing Chen"
+      ],
+      "abstract": "Progress in embodied foundation models is largely measured by task success, while the physical safety of their decisions remains underexamined. Safety evaluations centered on rule following and binary judgments do not adequately assess whether embodied models understand environmental hazards and make safe decisions. We introduce EmbodiSafety, comprising 1,092 snapshot tasks and 540 trajectory tasks across 844 visual scenarios to assess safety over short and long horizons. Six response modes cover direct execution, refusal, clarification, constrained execution, autonomous recovery, and human escalation. Distinguishing recovery from human intervention makes the boundary of safe autonomy an explicit evaluation target. Our protocol assesses mode correctness, risk identification, and actionable handling, with complete decision accuracy requiring all applicable checks to pass. Claude-Opus-5.5 achieves the highest complete decision accuracy among reference models, reaching 56.1% on snapshots and 61.5% on trajectories. We further develop a data construction pipeline and curate 40k examples for safety alignment. Supervised training on this corpus raises the complete decision accuracy of Qwen3.5-2B and Qwen3.5-4B.",
+      "published": "2026-11-24T17:59:05Z",
+      "updated": "2026-11-24T17:59:05Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33054",
+      "abs_url": "https://arxiv.org/abs/2611.33054",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.33030",
+      "title": "SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment",
+      "authors": [
+        "Shivank Rajput",
+        "Himanshu Singh",
+        "A. V. Subramanyam"
+      ],
+      "abstract": "Large language models (LLMs) remain vulnerable to jailbreak attacks, where adversaries append optimized suffixes to otherwise benign looking prompts to bypass safety alignment. Existing optimization-based GCG-style attacks can be effective, but they are expensive at inference time, and suffer from poor transfer. We present, SALSA, a generative framework that learns a distribution over jailbreak suffixes from optimization-derived attack corpora. Once trained, the model supports efficient sampling-based attacks. On open-source targets, it achieves attack success rates comparable to state-of-the-art optimization baselines, while reducing generation time from 3.46s to 0.04s per prompt. In black-box transfer, it remains highly effective against proprietary systems, including 99% ASR on GPT-3.5-Turbo, and reaches 45% ASR on the substantially harder GPT-4o, more than doubling the strongest baseline at an equal sampling budget. We further offer an intuition for why generative sampling can preserve high attack success, when the learned suffix distribution is close to the distribution of optimization outputs. Overall, our results show that learning adversarial suffix distributions yields a scalable, and practically efficient foundation for continuous LLM vulnerability discovery.",
+      "published": "2026-11-24T17:43:09Z",
+      "updated": "2026-11-24T17:43:09Z",
+      "categories": [
+        "cs.CL",
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33030",
+      "abs_url": "https://arxiv.org/abs/2611.33030",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32960",
+      "title": "From Safety-Driven Redundancy to Value-Driven Architecture: An ODD-Based Rationalization Framework for Level 4 Autonomous Vehicles",
+      "authors": [
+        "Tiago Simão Ferreira",
+        "Farzad Fallahi"
+      ],
+      "abstract": "Level 4 autonomous vehicles require fault-tolerant architectures that preserve critical driving functions under sensing, computing, communication, power, and actuation failures. As these systems progress toward industrial scalability, architectural complexity, validation burden, integration effort, and lifecycle cost become increasingly relevant. This study proposes an Operational Design Domain (ODD)-based, safety-constrained systems-engineering framework for architecture rationalization. ODD-specific capabilities, physical fault assumptions, post-fault operational policies, and spatial sensing requirements are propagated through an integrated safety-feasibility gate. Architecture transformations, including removal, relocation, functional reassignment, and consolidation, are evaluated only within the resulting safety-feasible design space, followed by lifecycle-cost sensitivity and robust multiobjective Pareto analysis. A generic, synthetically parameterized Level 4 architecture is used as a demonstrative computational case study. Within this modeled design space, direct ablation showed limited rationalization potential, whereas directional redistribution and functional consolidation generated a broader set of safety-feasible candidates. Under the illustrative lifecycle-cost model, the best nominal candidate achieved a 5.55% normalized cost reduction and remained cost-reducing across all 5,000 sampled points in the prescribed uncertainty domain. The analysis identified 15 non-dominated architecture-policy solutions representing seven physical transformations. The results support capability-based, policy-conditioned, and lifecycle-aware architecture rationalization under the stated assumptions, with safety retained as a non-compensatory feasibility constraint. The reported transformations are design candidates rather than validated production architectures.",
+      "published": "2026-11-24T16:58:06Z",
+      "updated": "2026-11-24T16:58:06Z",
+      "categories": [
+        "eess.SY",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32960",
+      "abs_url": "https://arxiv.org/abs/2611.32960",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32828",
+      "title": "SAVERA: Bridging Frozen Vision and Language Models via Sparse Alignment and Visual Evidence Reuse",
+      "authors": [
+        "Jiajun Shen",
+        "Chuancheng Shi",
+        "Jiayi Lyu",
+        "Yanpeng Sun",
+        "Fei Shen",
+        "Tat-Seng Chua"
+      ],
+      "abstract": "Independently pretrained vision and language models may learn shared structures of the same underlying world, providing a foundation for combining them to build multimodal capabilities. However, a key challenge remains in aligning cross-modal feature representations while preserving access to visual information before and after language adaptation. To this end, we propose sparse alignment with visual evidence-guided residual adaptation (SAVERA), a framework that combines frozen vision and language models through bidirectional alignment in a shared sparse space and prompt-guided residual fusion. Specifically, we first present shared-space projection, activation reconstruction and encoding (SPARE), which represents original visual, adapted visual, and textual features through shared soft-gated sparse encoding, with branch-specific reconstruction to preserve their respective information. Second, we devise bridge--text embedding and activation matching (BEAM), a bidirectional cross-modal alignment module that aligns adapted visual and textual features at both the sample and neuron levels, establishing fine-grained cross-modal correspondence. Finally, we introduce prompt-conditioned residual integration of vision and adapted features (PRIVA), a prompt-guided residual fusion module that models vision--language interactions through gating and attention and integrates complementary information from original and adapted representations through residual fusion. Extensive experiments show that SAVERA achieves competitive performance on image captioning and visual question answering while reducing object hallucination.",
+      "published": "2026-11-24T15:42:30Z",
+      "updated": "2026-11-24T15:42:30Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32828",
+      "abs_url": "https://arxiv.org/abs/2611.32828",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32777",
+      "title": "Beyond Static Semantics: Instance-Adaptive Vision-Language Alignment for Building Damage Assessment",
+      "authors": [
+        "Hang Yin",
+        "Jiepan Li",
+        "Hongruixuan Chen",
+        "Guangyi Yang",
+        "Wei He"
+      ],
+      "abstract": "Instance-level building damage assessment (IBDA) from bi-temporal remote sensing imagery remains challenging, as the same damage grade may exhibit diverse visual manifestations across individual buildings. Natural language offers explicit descriptions of physical damage, providing complementary semantic cues beyond discrete category labels. However, existing vision--language approaches have not fully addressed how damage semantics should adapt to local bi-temporal evidence and subsequently serve as instance-specific references for severity discrimination. To bridge this gap, we propose LAMIA-IBDA, a unified vision--language framework that progressively grounds shared damage semantics in local observations and individual buildings. Specifically, Adaptive Text-Visual Alignment (ATVA) enables evidence-adaptive semantic interaction by jointly contextualizing multiple damage descriptions and bi-temporal visual features under reliability-aware attention supervision. Dynamic Instance-Prototype Grounding (DIPG) further associates these contextualized semantics with individual building regions to construct instance-adaptive prototypes for fine-grained damage classification. Instance-level description preferences additionally supervise fusion-stage attention, linking semantic adaptation with instance discrimination. Extensive experiments on xBD and BRIGHT demonstrate state-of-the-art performance across optical--optical and optical--SAR settings. The source code is publicly available https://github.com/Cutensil/LAMIA-IBDA.",
+      "published": "2026-11-24T15:08:13Z",
+      "updated": "2026-11-24T15:08:13Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32777",
+      "abs_url": "https://arxiv.org/abs/2611.32777",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32715",
+      "title": "Semidefinite Programming for Cold-Start GNSS Doppler-Based Alignment: A Comparison with Nonlinear Least Squares",
+      "authors": [
+        "Baoshan Song"
+      ],
+      "abstract": "Initial attitude alignment between local navigation frames and the Earth-centered Earth-fixed (ECEF) frame is a critical prerequisite for multi-sensor integrated navigation, such as Global Navigation Satellite System (GNSS)/inertial/odometry fusion, before global and local measurements can be jointly processed. While GNSS Doppler-based alignment eliminates the need for carrier-phase ambiguity resolution or multi-antenna hardware, solving this non-convex problem via local nonlinear least squares (NLS) suffers from local minima, whereas direct semidefinite programming (SDP) relaxation incurs high latency and omits local covariance outputs. This study systematically compares NLS and SDP on a unified maximum-likelihood Doppler objective across Monte Carlo simulations and three real-world driving datasets. We demonstrate that attaching a modular dual SDP certifier to a standard manifold NLS solver recovers the global accuracy of direct SDP within 0.001 degrees, reduces real-world 95th-percentile yaw errors from over 86 degrees down to 2.88 degrees to 4.70 degrees, and cuts median solve times by up to an order of magnitude while preserving native Jacobian covariances. We conclude that candidate-driven certification bridges local estimation and global optimization due to two structural advantages: (1) our theoretical comparison reveals that SDP relaxation enlarges the feasible region while preserving the lifted cost, allowing Lagrangian duality to verify whether a fixed NLS candidate attains the global lower bound without invoking a full SDP solver, and (2) the candidate-driven architecture acts as a non-intrusive module that plugs directly into existing navigation pipelines without replacing the local estimator, preserving native tangent-space covariance outputs and low typical latency.",
+      "published": "2026-11-24T14:38:03Z",
+      "updated": "2026-11-24T14:38:03Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32715",
+      "abs_url": "https://arxiv.org/abs/2611.32715",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32482",
+      "title": "COHERE4D: Training-Free Dense Surface Alignment for Coherent Metric 4D Human-Scene Reconstruction",
+      "authors": [
+        "Zhumei Wang",
+        "Shaofei Wang",
+        "Xiang An",
+        "Mingtao Pei",
+        "Siyuan Huang"
+      ],
+      "abstract": "Human and scene foundation models offer complementary strengths for monocular 4D reconstruction: human models recover metric-scale body meshes but lack scene grounding, whereas scene models estimate globally consistent 3D geometry and camera motion without reliable metric scale. Crucially, both models reconstruct the same foreground human surface. Yet existing methods do not directly exploit this shared surface: lacking reliable foreground human geometry in scene reconstructions, earlier approaches either resort to sparse contact constraints or learn data-driven alignment modules that generalize poorly to out-of-distribution scenes. We present COHERE4D, a training-free framework that directly registers the human surfaces predicted by independently pretrained human and scene foundation models to reconstruct a coherent, metric 4D world. COHERE4D establishes dense, pixel-aligned 3D correspondences over the visible human surface and employs RANSAC with cross-frame consensus to suppress outliers from occlusion, background contamination, and depth noise. This formulation solves for two complementary geometric quantities: a sequence-level shared scale that calibrates scene geometry and camera motion to metric human size, and per-frame human translations that align camera-space human meshes with the scaled scene geometry to enforce spatial and temporal consistency. Across diverse backbones and benchmarks, COHERE4D substantially outperforms prior methods in human--scene alignment, metric scene and camera pose reconstruction, and global human motion estimation, adding only 4,ms/frame, enabling overall inference at up to 14 FPS.",
+      "published": "2026-11-24T12:09:36Z",
+      "updated": "2026-11-24T12:09:36Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32482",
+      "abs_url": "https://arxiv.org/abs/2611.32482",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32153",
+      "title": "SoccerNarrate: Event-Grounded Streaming Soccer Commentary with Macro-Window Preference Alignment",
+      "authors": [
+        "Zihan Jia",
+        "Zhilin Dai",
+        "Zhengming Zhang",
+        "Min Yang",
+        "Zhenpeng Huang",
+        "Jiaqi Li",
+        "Caixia Sun",
+        "Xi Chen",
+        "Liang Li",
+        "Junlan Feng",
+        "Gangshan Wu",
+        "Limin Wang"
+      ],
+      "abstract": "Existing clip-based soccer commentary models often produce delayed, repeated, or poorly synchronized narration on untrimmed full-match videos. Recent streaming video-language models make low-latency full-match narration feasible, but they often favor general descriptions rather than professional, event-grounded soccer commentary. They may describe nearby actions while failing to mention key events such as goals, cards, substitutions, and offsides correctly and on time. In this paper, we present SoccerNarrate to bridge low-latency streaming narration with event-grounded professional soccer commentary across data, training, and evaluation. First, we construct SoccerNarrate-Data, a large-scale time-anchored dataset with word-level ASR alignment, quality filtering, and entity calibration. Second, we perform macro-window preference alignment (MWPA), which aligns the model with complete event-level commentary semantics by comparing causal multi-step rollouts from the same streaming prefix while keeping second-level inference unchanged. We further use event-mismatched human commentaries as counterfactual negatives to emphasize event semantics over commentary style. Third, we introduce SoccerNarrate-Eval, an event-centric benchmark based on temporally constrained event entailment. Full-match experiments show that SoccerNarrate improves event coverage and event-aligned precision over strong offline and streaming baselines. Code and models are released at https://github.com/MCG-NJU/SoccerNarrate.",
+      "published": "2026-11-24T08:07:29Z",
+      "updated": "2026-11-24T08:07:29Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32153",
+      "abs_url": "https://arxiv.org/abs/2611.32153",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32032",
+      "title": "Provenance-Isolated Epistemic Quorums: Execution-Bound Evidence Certification and Plausible-World Safety Gating in Agentic Control Planes",
+      "authors": [
+        "Jun He",
+        "Deying Yu"
+      ],
+      "abstract": "Agreement among large language models is not physical evidence for mutating production infrastructure. Because generative models share pretraining priors and conform to peer rationales during deliberation, voting ensembles correlate errors instead of providing independent fault tolerance; yet attaching rigid deterministic checks to unconstrained agent outputs paralyzes incident remediation. We present Provenance-Isolated Epistemic Quorums (PIEQ), an execution-bound certification layer that keeps every language model strictly outside the trusted computing base. PIEQ unifies assumption-based truth maintenance, physical provenance isolation, control-theoretic plausible-world safety shielding, and linearizable concurrency governance around three distinct obligations: certifying diagnostic preconditions from disjoint physical failure domains, gating candidate mutations across all unrefuted fault worlds while falling back to read-only diagnostic probes under ambiguity, and binding admission certificates to target execution through snapshot barriers, revision checks, authorization freshness, trusted temporal-precondition policies, and capability-tiered enforcement. Across formal guarantees, automated etcd fault suites, frozen software benchmarks, and live language-model runs, PIEQ achieves zero within-assumption unsafe admissions and zero false-precondition commits, converting occasional agent proof omissions into recoverable false blocks rather than unsafe actions. On a physical PostgreSQL/Patroni cluster, PIEQ gates supervised failovers alongside Patroni and etcd's native split-brain protection and enforces a full Tier E2 contract inside a single serializable PostgreSQL transaction for bounded capacity reservations. All benchmarks are author-labeled, live model snapshots are unpinned, and Tier E2 physical failover promotion as well as multi-host hardware fault isolation remain open work.",
+      "published": "2026-11-24T06:13:55Z",
+      "updated": "2026-11-24T06:13:55Z",
+      "categories": [
+        "cs.DC",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32032",
+      "abs_url": "https://arxiv.org/abs/2611.32032",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31958",
+      "title": "SPAR: Self-Referenced World-Model Rewards for Physical Alignment in Video Generation",
+      "authors": [
+        "Junyi Zhang",
+        "Qichao Wang",
+        "Wenzhe Qian",
+        "Yuanchuan Wang",
+        "Min Zhang"
+      ],
+      "abstract": "Generating videos with physically plausible dynamics remains challenging despite advances in visual quality. Latent world models offer predictive signals for evaluating physical plausibility, but higher agreement between predicted and observed features may reflect easier-to-predict scene content rather than more plausible dynamics. We propose \\textbf{S}elf-Referenced \\textbf{P}hysical \\textbf{A}lignment \\textbf{R}ewards (\\textbf{SPAR}), a framework that uses world-model predictions for inference-time physical alignment. SPAR compares each video's prediction error with that of static clips constructed by repeating its own frames, providing a content-matched reference for evaluating generated dynamics. To account for the uneven spatial and temporal distribution of physical interactions, we introduce a unified \\textbf{spatiotemporal reward refinement} strategy. \\textbf{Spatial refinement} emphasizes localized prediction discrepancies, while \\textbf{temporal refinement} moderates brief error peaks and supplements prediction errors with agreement between predicted and observed feature changes. Evaluations across multiple benchmarks demonstrate that SPAR improves the physical plausibility of both \\textbf{text-to-video generation} and \\textbf{image-to-video continuation}, bringing generated dynamics into closer alignment with the physical regularities governing real-world events. Additional results and resources are available at https://gavin-jy.github.io/spar-page/",
+      "published": "2026-11-24T05:05:40Z",
+      "updated": "2026-11-24T05:05:40Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31958",
+      "abs_url": "https://arxiv.org/abs/2611.31958",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31767",
+      "title": "DELTA: Diagnosing Exploration Lineages via Twin-path Alignment - What Can Contrasting Design Paths Reveal About Microarchitectural Behavior?",
+      "authors": [
+        "Kaushal Mhapsekar",
+        "Darsh Asher",
+        "Bita Aslrousta",
+        "Amna Hassan",
+        "Debayan Sengupta",
+        "Azam Ghanbari",
+        "Samira Mirbagher Ajorpaz"
+      ],
+      "abstract": "Architects have two mature instruments for performance work. Top-Down analysis tells them where a design loses its pipeline slots, and design-space exploration (DSE) tells them which configuration scores best. Neither explains why a search stops improving: why a backend-bound design rejects a prefetcher that the bottleneck label recommends, or why a capacity increase that helped in one configuration hurts in the next. This paper argues that the evidence needed to answer such questions is already produced during exploration and then discarded. Every parent-child edge in an exploration tree is a controlled intervention: one knob changes, the rest of the design is held fixed, and a cycle-level simulator measures the outcome. When the same edit helps under one parent and hurts under another, aligning the two parents localizes the interaction that decides its sign. We present DELTA, a simulator-grounded root-cause analysis tool that builds a Design Memory of such interventions during exploration and lets an architect query it afterwards. Each record stores the full parent configuration, the single applied edit, the measured and predicted IPC, a Top-Down breakdown from StallLens, our gem5 implementation of Top-Down, and its lineage. Unlike evolutionary LLM search, which keeps only high-scoring programs, DELTA keeps failed edges as evidence. The same memory also makes exploration efficient: on four SPEC CPU2017 workloads, the full system raises IPC by 55.5% in 22 simulated designs for $1.56 of model cost, predicts the IPC of its own proposals to within 3.3%, and keeps improving after a bottleneck-guided search stalls. A root-cause query over the recorded history led us to a usefulness-throttled variant of the Best-Offset prefetcher that improves IPC by 1.37% over the original in matched configurations.",
+      "published": "2026-11-24T01:18:56Z",
+      "updated": "2026-11-24T01:18:56Z",
+      "categories": [
+        "cs.AR",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31767",
+      "abs_url": "https://arxiv.org/abs/2611.31767",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31129",
+      "title": "FATCAT: Fault Injection Attacks Targeting Chip-level Alignment",
+      "authors": [
+        "Peter Horvath",
+        "Ilia Shumailov",
+        "Zhuoran Liu",
+        "Lukasz Chmielewski",
+        "Lejla Batina"
+      ],
+      "abstract": "Model alignment is the primary safety and security mechanism for enforcing refusal of malicious prompts in modern foundation models; yet, existing adversarial evaluations implicitly assume underlying hardware integrity. In this paper, we present FATCAT, the first physical fault-injection attacks capable of eliminating refusal in modern large language and vision-language models. Specifically, we present a non-invasive electromagnetic (EM) fault injection attack targeting GPU-accelerated Systems-on-Chip with physical access, requiring neither software execution privileges nor model-layer access. By leveraging an autonomous Radio Frequency (RF) side-channel trigger to synchronize EM faults to the prompt prefill phase, the attack corrupts safety-critical memory transactions across off-chip LPDDR5 DRAM and on-chip LPDDR physical interfaces without crashing the system while preserving model coherence. Evaluated on an NVIDIA Jetson Orin Nano and AGX Thor running Llama 3.2 1B and Gemma 3 1B, localized physical faults reliably force models to fulfill restricted requests, demonstrating that model-level alignment provides no robust security guarantees without hardware-level fault tolerance. Finally, we demonstrate the physical-world consequences of this vulnerability on an active 6-DoF robotic manipulator controlled by a SmolVLA vision-language-action policy. Our attack silently corrupts the model forcing the arm into abrupt, hazardous lunges; in two instances the robotic arm attempted to pinch the paper author -- proving that hardware faults can directly translate into real physical harm.",
+      "published": "2026-11-23T18:01:58Z",
+      "updated": "2026-11-23T18:01:58Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31129",
+      "abs_url": "https://arxiv.org/abs/2611.31129",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30135",
+      "title": "Sparse Hodge Preference Optimization: Fine-Tuning Language Models toward Alignment beyond Transitive Preferences",
+      "authors": [
+        "Yiming Liu",
+        "Jianwei Ma",
+        "Zhongwei Xing",
+        "Tonghui Yu"
+      ],
+      "abstract": "The growing adoption of Direct Preference Optimization (DPO), which leverages pairwise preference data, reflects its great success in fine-tuning large language models to align with human expectations. It directly optimizes the policy from human preferences without explicit reward modeling or the complexities of reinforcement learning-based approaches. However, the classic DPO relies on the Bradley--Terry sampling model and cannot effectively capture intransitivity or cyclic structures in aggregated human preference data. In this article, we propose Sparse Hodge Preference Optimization (SHPO), a preference optimization algorithm that augments DPO with a sparse antisymmetric curl residual motivated by the combinatorial Hodge decomposition. We prove that SHPO strictly enlarges DPO's hypothesis class on comparison graphs containing at least one triangle, under some mild regularity conditions on the response representations. We further establish a theoretical guarantee for $\\ell_1$-regularized estimation of the curl coefficients under fixed policy and representations. Qualitative studies on three preference datasets under the same QLoRA budget, SHPO-aligned LLM achieves satisfactory performances in preference accuracy, cyclic structure recovery, and GPT-4o-judged generation quality.",
+      "published": "2026-11-23T06:44:15Z",
+      "updated": "2026-11-24T07:00:10Z",
+      "categories": [
+        "stat.ML",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30135",
+      "abs_url": "https://arxiv.org/abs/2611.30135",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29800",
+      "title": "Generating Safety-Critical Driving Scenarios from Role-Typed Signal Temporal Logic Specifications Drafted by Large Language Models",
+      "authors": [
+        "Zifan Zeng",
+        "Qunli Zhang",
+        "Peng Wang",
+        "Shiming Liu",
+        "Feng Liu",
+        "Zheng Hu"
+      ],
+      "abstract": "Safety-critical scenarios are rare in recorded driving and must be generated to test and train motion planners of automated vehicles. In guided diffusion models, each scenario type needs its own weighted objective, separate from the validity check. Optimized together with the attacker, the vehicle under test can cancel the attack or draw it toward itself. We state each scenario as a signal temporal logic specification with clauses typed by role. Every clause names the agent it may change and the agents it may read, and the vehicle under test reads the attacker only from the attack onset. A large language model drafts the specification from a description, and a type checker accepts it. A compiler derives the optimization: it edits a diffusion model's samples by the smallest change that satisfies the specification, each clause moves only its owner, the attacker is solved against the unreacted vehicle under test before its response, and the monitor of the same specification decides acceptance. On nuScenes and CommonRoad, judged independently of the specification, one parameter set produced valid scenarios at a rate 0.14 above a weighted objective tuned per scenario type, and descriptions yielded at least one valid scenario for 11 of the 16 pre-crash types expressible in the public data. Learned planners fail more often on the generated scenarios than on their seeds. Fine-tuning on them lowers a planner's failure rate on critical scenarios, and the time headway one clause of the label requires, not the generator, sets the size of the gain.",
+      "published": "2026-11-22T22:04:15Z",
+      "updated": "2026-11-22T22:04:15Z",
+      "categories": [
+        "cs.RO",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29800",
+      "abs_url": "https://arxiv.org/abs/2611.29800",
+      "source": "arxiv"
+    },
     {
       "id": "2602.01600",
       "title": "Expected Harm: Rethinking Safety Evaluation of (Mis)Aligned LLMs",
@@ -410,7 +698,7 @@
         "Yao Liu",
         "Zhuo Lu"
       ],
-      "abstract": "Large Language Models (LLMs) have revolutionized content creation across digital platforms, offering unprecedented capabilities in natural language generation and understanding. These models enable beneficial applications such as content generation, question and answering (Q\u0026A), programming, and code reasoning. Meanwhile, they also pose serious risks by inadvertently or intentionally producing toxic, offensive, or biased content. This dual role of LLMs, both as powerful tools for solving real-world problems and as potential sources of harmful language, presents a pressing sociotechnical challenge. In this survey, we systematically review recent studies spanning unintentional toxicity, adversarial jailbreaking attacks, and content moderation techniques. We propose a unified taxonomy of LLM-related harms and defenses, analyze emerging multimodal and LLM-assisted jailbreak strategies, and assess mitigation efforts, including reinforcement learning with human feedback (RLHF), prompt engineering, and safety alignment. Our synthesis highlights the evolving landscape of LLM safety, identifies limitations in current evaluation methodologies, and outlines future research directions to guide the development of robust and ethically aligned language technologies.",
+      "abstract": "Large Language Models (LLMs) have revolutionized content creation across digital platforms, offering unprecedented capabilities in natural language generation and understanding. These models enable beneficial applications such as content generation, question and answering (Q&A), programming, and code reasoning. Meanwhile, they also pose serious risks by inadvertently or intentionally producing toxic, offensive, or biased content. This dual role of LLMs, both as powerful tools for solving real-world problems and as potential sources of harmful language, presents a pressing sociotechnical challenge. In this survey, we systematically review recent studies spanning unintentional toxicity, adversarial jailbreaking attacks, and content moderation techniques. We propose a unified taxonomy of LLM-related harms and defenses, analyze emerging multimodal and LLM-assisted jailbreak strategies, and assess mitigation efforts, including reinforcement learning with human feedback (RLHF), prompt engineering, and safety alignment. Our synthesis highlights the evolving landscape of LLM safety, identifies limitations in current evaluation methodologies, and outlines future research directions to guide the development of robust and ethically aligned language technologies.",
       "categories": [
         "cs.CL",
         "cs.CY"
@@ -515,7 +803,7 @@
     },
     {
       "id": "2408.00307",
-      "title": "ABC Align: Large Language Model Alignment for Safety \u0026 Accuracy",
+      "title": "ABC Align: Large Language Model Alignment for Safety & Accuracy",
       "authors": [
         "Gareth Seneque",
         "Lap-Hang Ho",
@@ -1454,7 +1742,7 @@
         "Benjamin Hilton",
         "Geoffrey Irving"
       ],
-      "abstract": "If AI systems match or exceed human capabilities on a wide range of tasks, it may become difficult for humans to efficiently judge their actions -- making it hard to use human feedback to steer them towards desirable traits. One proposed solution is to leverage another superhuman system to point out flaws in the system's outputs via a debate. This paper outlines the value of debate for AI safety, as well as the assumptions and further research required to make debate work. It does so by sketching an ``alignment safety case'' -- an argument that an AI system will not autonomously take actions which could lead to egregious harm, despite being able to do so. The sketch focuses on the risk of an AI R\\\u0026D agent inside an AI company sabotaging research, for example by producing false results. To prevent this, the agent is trained via debate, subject to exploration guarantees, to teach the system to be honest. Honesty is maintained throughout deployment via online training. The safety case rests on four key claims: (1) the agent has become good at the debate game, (2) good performance in the debate game implies that the system is mostly honest, (3) the system will not become significantly less honest during deployment, and (4) the deployment context is tolerant of some errors. We identify open research problems that, if solved, could render this a compelling argument that an AI system is safe.",
+      "abstract": "If AI systems match or exceed human capabilities on a wide range of tasks, it may become difficult for humans to efficiently judge their actions -- making it hard to use human feedback to steer them towards desirable traits. One proposed solution is to leverage another superhuman system to point out flaws in the system's outputs via a debate. This paper outlines the value of debate for AI safety, as well as the assumptions and further research required to make debate work. It does so by sketching an ``alignment safety case'' -- an argument that an AI system will not autonomously take actions which could lead to egregious harm, despite being able to do so. The sketch focuses on the risk of an AI R\\&D agent inside an AI company sabotaging research, for example by producing false results. To prevent this, the agent is trained via debate, subject to exploration guarantees, to teach the system to be honest. Honesty is maintained throughout deployment via online training. The safety case rests on four key claims: (1) the agent has become good at the debate game, (2) good performance in the debate game implies that the system is mostly honest, (3) the system will not become significantly less honest during deployment, and (4) the deployment context is tolerant of some errors. We identify open research problems that, if solved, could render this a compelling argument that an AI system is safe.",
       "categories": [
         "cs.AI"
       ],
@@ -2126,7 +2414,7 @@
         "Wangmeng Zuo",
         "Hao Chen"
       ],
-      "abstract": "Adversarial prompts generated using gradient-based methods exhibit outstanding performance in performing automatic jailbreak attacks against safety-aligned LLMs. Nevertheless, due to the discrete nature of texts, the input gradient of LLMs struggles to precisely reflect the magnitude of loss change that results from token replacements in the prompt, leading to limited attack success rates against safety-aligned LLMs, even in the white-box setting. In this paper, we explore a new perspective on this problem, suggesting that it can be alleviated by leveraging innovations inspired in transfer-based attacks that were originally proposed for attacking black-box image classification models. For the first time, we appropriate the ideologies of effective methods among these transfer-based attacks, i.e., Skip Gradient Method and Intermediate Level Attack, into gradient-based adversarial prompt generation and achieve significant performance gains without introducing obvious computational cost. Meanwhile, by discussing mechanisms behind the gains, new insights are drawn, and proper combinations of these methods are also developed. Our empirical results show that 87% of the query-specific adversarial suffixes generated by the developed combination can induce Llama-2-7B-Chat to produce the output that exactly matches the target string on AdvBench. This match rate is 33% higher than that of a very strong baseline known as GCG, demonstrating advanced discrete optimization for adversarial prompt generation against LLMs. In addition, without introducing obvious cost, the combination achieves \u003e30% absolute increase in attack success rates compared with GCG when generating both query-specific (38% -\u003e 68%) and universal adversarial prompts (26.68% -\u003e 60.32%) for attacking the Llama-2-7B-Chat model on AdvBench. Code at: https://github.com/qizhangli/Gradient-based-Jailbreak-Attacks.",
+      "abstract": "Adversarial prompts generated using gradient-based methods exhibit outstanding performance in performing automatic jailbreak attacks against safety-aligned LLMs. Nevertheless, due to the discrete nature of texts, the input gradient of LLMs struggles to precisely reflect the magnitude of loss change that results from token replacements in the prompt, leading to limited attack success rates against safety-aligned LLMs, even in the white-box setting. In this paper, we explore a new perspective on this problem, suggesting that it can be alleviated by leveraging innovations inspired in transfer-based attacks that were originally proposed for attacking black-box image classification models. For the first time, we appropriate the ideologies of effective methods among these transfer-based attacks, i.e., Skip Gradient Method and Intermediate Level Attack, into gradient-based adversarial prompt generation and achieve significant performance gains without introducing obvious computational cost. Meanwhile, by discussing mechanisms behind the gains, new insights are drawn, and proper combinations of these methods are also developed. Our empirical results show that 87% of the query-specific adversarial suffixes generated by the developed combination can induce Llama-2-7B-Chat to produce the output that exactly matches the target string on AdvBench. This match rate is 33% higher than that of a very strong baseline known as GCG, demonstrating advanced discrete optimization for adversarial prompt generation against LLMs. In addition, without introducing obvious cost, the combination achieves >30% absolute increase in attack success rates compared with GCG when generating both query-specific (38% -> 68%) and universal adversarial prompts (26.68% -> 60.32%) for attacking the Llama-2-7B-Chat model on AdvBench. Code at: https://github.com/qizhangli/Gradient-based-Jailbreak-Attacks.",
       "categories": [
         "cs.CR",
         "cs.LG"
@@ -3093,7 +3381,7 @@
         "Alex Levinson",
         "Christina Q Knight"
       ],
-      "abstract": "Safety alignment in large language models (LLMs), particularly for cybersecurity tasks, primarily focuses on preventing misuse. While this approach reduces direct harm, it obscures a complementary failure mode: denial of assistance to legitimate defenders. We study Defensive Refusal Bias -- the tendency of safety-tuned frontier LLMs to refuse assistance for authorized defensive cybersecurity tasks when those tasks include similar language to an offensive cyber task. Based on 2,390 real-world examples from the National Collegiate Cyber Defense Competition (NCCDC), we find that LLMs refuse defensive requests containing security-sensitive keywords at $2.72\\times$ the rate of semantically equivalent neutral requests ($p \u003c 0.001$). The highest refusal rates occur in the most operationally critical tasks: system hardening (43.8%) and malware analysis (34.3%). Interestingly, explicit authorization, where the user directly instructs the model that they have authority to complete the target task, increases refusal rates, suggesting models interpret justifications as adversarial rather than exculpatory. These findings are urgent for interactive use and critical for autonomous defensive agents, which cannot rephrase refused queries or retry. Our findings suggest that current LLM cybersecurity alignment relies on semantic similarity to harmful content rather than reasoning about intent or authorization. We call for mitigations that analyze intent to maximize defensive capabilities while still preventing harmful compliance.",
+      "abstract": "Safety alignment in large language models (LLMs), particularly for cybersecurity tasks, primarily focuses on preventing misuse. While this approach reduces direct harm, it obscures a complementary failure mode: denial of assistance to legitimate defenders. We study Defensive Refusal Bias -- the tendency of safety-tuned frontier LLMs to refuse assistance for authorized defensive cybersecurity tasks when those tasks include similar language to an offensive cyber task. Based on 2,390 real-world examples from the National Collegiate Cyber Defense Competition (NCCDC), we find that LLMs refuse defensive requests containing security-sensitive keywords at $2.72\\times$ the rate of semantically equivalent neutral requests ($p < 0.001$). The highest refusal rates occur in the most operationally critical tasks: system hardening (43.8%) and malware analysis (34.3%). Interestingly, explicit authorization, where the user directly instructs the model that they have authority to complete the target task, increases refusal rates, suggesting models interpret justifications as adversarial rather than exculpatory. These findings are urgent for interactive use and critical for autonomous defensive agents, which cannot rephrase refused queries or retry. Our findings suggest that current LLM cybersecurity alignment relies on semantic similarity to harmful content rather than reasoning about intent or authorization. We call for mitigations that analyze intent to maximize defensive capabilities while still preventing harmful compliance.",
       "categories": [
         "cs.CR",
         "cs.AI"
@@ -3307,7 +3595,7 @@
         "Pang Wei Koh",
         "Emma Pierson"
       ],
-      "abstract": "Do LLMs align with human perceptions of safety? We study this question via annotation alignment, the extent to which LLMs and humans agree when annotating the safety of user-chatbot conversations. We leverage the recent DICES dataset (Aroyo et al., 2023), in which 350 conversations are each rated for safety by 112 annotators spanning 10 race-gender groups. GPT-4 achieves a Pearson correlation of $r = 0.59$ with the average annotator rating, \\textit{higher} than the median annotator's correlation with the average ($r=0.51$). We show that larger datasets are needed to resolve whether LLMs exhibit disparities in how well they correlate with different demographic groups. Also, there is substantial idiosyncratic variation in correlation within groups, suggesting that race \u0026 gender do not fully capture differences in alignment. Finally, we find that GPT-4 cannot predict when one demographic group finds a conversation more unsafe than another.",
+      "abstract": "Do LLMs align with human perceptions of safety? We study this question via annotation alignment, the extent to which LLMs and humans agree when annotating the safety of user-chatbot conversations. We leverage the recent DICES dataset (Aroyo et al., 2023), in which 350 conversations are each rated for safety by 112 annotators spanning 10 race-gender groups. GPT-4 achieves a Pearson correlation of $r = 0.59$ with the average annotator rating, \\textit{higher} than the median annotator's correlation with the average ($r=0.51$). We show that larger datasets are needed to resolve whether LLMs exhibit disparities in how well they correlate with different demographic groups. Also, there is substantial idiosyncratic variation in correlation within groups, suggesting that race & gender do not fully capture differences in alignment. Finally, we find that GPT-4 cannot predict when one demographic group finds a conversation more unsafe than another.",
       "categories": [
         "cs.CL"
       ],
@@ -3461,7 +3749,7 @@
         "Charles Maalouf",
         "Leon A Gatys"
       ],
-      "abstract": "Existing paradigms for ensuring AI safety, such as guardrail models and alignment training, often compromise either inference efficiency or development flexibility. We introduce Disentangled Safety Adapters (DSA), a novel framework addressing these challenges by decoupling safety-specific computations from a task-optimized base model. DSA utilizes lightweight adapters that leverage the base model's internal representations, enabling diverse and flexible safety functionalities with minimal impact on inference cost. Empirically, DSA-based safety guardrails substantially outperform comparably sized standalone models, notably improving hallucination detection (0.88 vs. 0.61 AUC on Summedits) and also excelling at classifying hate speech (0.98 vs. 0.92 on ToxiGen) and unsafe model inputs and responses (0.93 vs. 0.90 on AEGIS2.0 \u0026 BeaverTails). Furthermore, DSA-based safety alignment allows dynamic, inference-time adjustment of alignment strength and a fine-grained trade-off between instruction following performance and model safety. Importantly, combining the DSA safety guardrail with DSA safety alignment facilitates context-dependent alignment strength, boosting safety on StrongReject by 93% while maintaining 98% performance on MTBench -- a total reduction in alignment tax of 8 percentage points compared to standard safety alignment fine-tuning. Overall, DSA presents a promising path towards more modular, efficient, and adaptable AI safety and alignment.",
+      "abstract": "Existing paradigms for ensuring AI safety, such as guardrail models and alignment training, often compromise either inference efficiency or development flexibility. We introduce Disentangled Safety Adapters (DSA), a novel framework addressing these challenges by decoupling safety-specific computations from a task-optimized base model. DSA utilizes lightweight adapters that leverage the base model's internal representations, enabling diverse and flexible safety functionalities with minimal impact on inference cost. Empirically, DSA-based safety guardrails substantially outperform comparably sized standalone models, notably improving hallucination detection (0.88 vs. 0.61 AUC on Summedits) and also excelling at classifying hate speech (0.98 vs. 0.92 on ToxiGen) and unsafe model inputs and responses (0.93 vs. 0.90 on AEGIS2.0 & BeaverTails). Furthermore, DSA-based safety alignment allows dynamic, inference-time adjustment of alignment strength and a fine-grained trade-off between instruction following performance and model safety. Importantly, combining the DSA safety guardrail with DSA safety alignment facilitates context-dependent alignment strength, boosting safety on StrongReject by 93% while maintaining 98% performance on MTBench -- a total reduction in alignment tax of 8 percentage points compared to standard safety alignment fine-tuning. Overall, DSA presents a promising path towards more modular, efficient, and adaptable AI safety and alignment.",
       "categories": [
         "cs.LG",
         "cs.AI",
@@ -3560,7 +3848,7 @@
         "Palash Nandi",
         "Tanmoy Chakraborty"
       ],
-      "abstract": "Large Language Models (LLMs) with safe-alignment training are powerful instruments with robust language comprehension capabilities. These models typically undergo meticulous alignment procedures involving human feedback to ensure the acceptance of safe inputs while rejecting harmful or unsafe ones. However, despite their massive scale and alignment efforts, LLMs remain vulnerable to jailbreak attacks, where malicious users manipulate the model to produce harmful outputs that it was explicitly trained to avoid. In this study, we find that the safety mechanisms in LLMs are predominantly embedded in the middle-to-late layers. Building on this insight, we introduce a novel white-box jailbreak method, SABER (Safety Alignment Bypass via Extra Residuals), which connects two intermediate layers $s$ and $e$ such that $s \u003c e$, through a residual connection. Our approach achieves a 51% improvement over the best-performing baseline on the HarmBench test set. Furthermore, SABER induces only a marginal shift in perplexity when evaluated on the HarmBench validation set. The source code is publicly available at https://github.com/PalGitts/SABER.",
+      "abstract": "Large Language Models (LLMs) with safe-alignment training are powerful instruments with robust language comprehension capabilities. These models typically undergo meticulous alignment procedures involving human feedback to ensure the acceptance of safe inputs while rejecting harmful or unsafe ones. However, despite their massive scale and alignment efforts, LLMs remain vulnerable to jailbreak attacks, where malicious users manipulate the model to produce harmful outputs that it was explicitly trained to avoid. In this study, we find that the safety mechanisms in LLMs are predominantly embedded in the middle-to-late layers. Building on this insight, we introduce a novel white-box jailbreak method, SABER (Safety Alignment Bypass via Extra Residuals), which connects two intermediate layers $s$ and $e$ such that $s < e$, through a residual connection. Our approach achieves a 51% improvement over the best-performing baseline on the HarmBench test set. Furthermore, SABER induces only a marginal shift in perplexity when evaluated on the HarmBench validation set. The source code is publicly available at https://github.com/PalGitts/SABER.",
       "categories": [
         "cs.LG",
         "cs.CL"
@@ -3690,7 +3978,7 @@
         "Yangguang Li",
         "Jianke Zhu"
       ],
-      "abstract": "Multimodal Large Language Models (MLLMs) pose unique safety challenges due to their integration of visual and textual data, thereby introducing new dimensions of potential attacks and complex risk combinations. In this paper, we begin with a detailed analysis aimed at disentangling risks through step-by-step reasoning within multimodal inputs. We find that systematic multimodal risk disentanglement substantially enhances the risk awareness of MLLMs. Via leveraging the strong discriminative abilities of multimodal risk disentanglement, we further introduce \\textbf{DREAM} (\\textit{\\textbf{D}isentangling \\textbf{R}isks to \\textbf{E}nhance Safety \\textbf{A}lignment in \\textbf{M}LLMs}), a novel approach that enhances safety alignment in MLLMs through supervised fine-tuning and iterative Reinforcement Learning from AI Feedback (RLAIF). Experimental results show that DREAM significantly boosts safety during both inference and training phases without compromising performance on normal tasks (namely oversafety), achieving a 16.17\\% improvement in the SIUO safe\\\u0026effective score compared to GPT-4V. The data and code are available at https://github.com/Kizna1ver/DREAM.",
+      "abstract": "Multimodal Large Language Models (MLLMs) pose unique safety challenges due to their integration of visual and textual data, thereby introducing new dimensions of potential attacks and complex risk combinations. In this paper, we begin with a detailed analysis aimed at disentangling risks through step-by-step reasoning within multimodal inputs. We find that systematic multimodal risk disentanglement substantially enhances the risk awareness of MLLMs. Via leveraging the strong discriminative abilities of multimodal risk disentanglement, we further introduce \\textbf{DREAM} (\\textit{\\textbf{D}isentangling \\textbf{R}isks to \\textbf{E}nhance Safety \\textbf{A}lignment in \\textbf{M}LLMs}), a novel approach that enhances safety alignment in MLLMs through supervised fine-tuning and iterative Reinforcement Learning from AI Feedback (RLAIF). Experimental results show that DREAM significantly boosts safety during both inference and training phases without compromising performance on normal tasks (namely oversafety), achieving a 16.17\\% improvement in the SIUO safe\\&effective score compared to GPT-4V. The data and code are available at https://github.com/Kizna1ver/DREAM.",
       "categories": [
         "cs.CL",
         "cs.CV"

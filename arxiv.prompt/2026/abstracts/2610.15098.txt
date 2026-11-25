@@ -1,0 +1,20 @@
+Title: TIDE: Trajectory-Informed Skill Distillation for Efficient Text-to-Video Prompt Optimization
+Authors: Chengxing Zhou, Yuliang Huang, Jingwei Song
+ID: 2610.15098
+URL: https://arxiv.org/abs/2610.15098
+
+Abstract:
+Text-to-video (T2V) models are highly sensitive to prompt specificity, while
+iterative prompt optimization typically improves generation quality only through
+repeated video generation and vision-language model evaluation at inference
+time. We propose TIDE, a framework that distills this costly search process into
+an interpretable and reusable prompt-rewriting Skill. TIDE formulates prompt
+rewriting as a set of source-conditioned rule modules, each targeting a distinct
+semantic dimension. Once distilled, the frozen Skill activates the relevant
+rules and generates both positive and negative prompts in a single LLM call,
+followed by only one T2V generation, without test-time visual search or backbone
+fine-tuning. Evolved using only 100 prompts over 14 hours, TIDE achieves prompt-
+optimization performance comparable to computationally expensive search-based
+methods. Moreover, when transferred to previously unseen video-generation
+models, TIDE outperforms existing approaches specifically designed or trained
+for those models. Code is available at https://github.com/xiningin/TIDE_T2V.

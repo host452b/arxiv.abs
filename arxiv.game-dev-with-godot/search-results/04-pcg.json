@@ -10,11 +10,106 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-27T08:49:16Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 676,
-  "return_count": 200,
+  "return_count": 205,
   "papers": [
+    {
+      "id": "2611.10394",
+      "title": "Crustify: Repository-Level Generation of Safe Rust Bindings with LLM Agents and Coverage-Guided Testing",
+      "authors": [
+        "Marius Momeu",
+        "Marius Arvinte",
+        "Cory Cornelius",
+        "Koushik Sen"
+      ],
+      "abstract": "Wrapping C code in a safe Rust interface lets Rust applications use it without writing unsafe code, until the code itself is migrated to Rust. Such bindings are tedious and error-prone to write, however: their internals use unsafe code that the Rust compiler does not check, so a single mistake can introduce undefined behavior (UB), and they have so far been written mostly by hand. We present Crustify, an agentic co-translator that generates safe Rust bindings for repository-level C libraries. Crustify schedules a target's types and symbols into dependency-ordered waves of independent batches that agents bind concurrently. Its agents derive the ownership and lifecycle contract of every pointer and type they wrap, check each binding with coverage-guided equivalence and UB tests under sanitizers and Miri, and review every wave. They build on three tools that we contribute: (a) ffibox, Rust primitives for C/Rust interop that mirror Box, Arc, and Vec for C objects without ever forming a reference to memory that C may alias; (b) Wavefront, a neuro-symbolic static analyzer that orders a target's items by their dependencies, including those that casts and type-erased pointers hide; and (c) ffimap, a rustc-based analysis that maps the unsafe surface of bindings. On libgit2 and ffmpeg, with one developer in the loop, Crustify generated safe bindings for 41.9% and 42.8% of their public APIs in about 51.9 and 58.9 hours. On the interface consumers are expected to use, only 1.6% and 0.4% of the bindings' public functions are unsafe, and only 0.1% and 0.6% have a raw pointer in their signature. Their tests cover 98.92% and 99.07% of the Rust code and 45.95% and 67.20% of libgit2 and of ffmpeg's libavutil, and the reviewers fixed 8 and 13 defects that caused UB reachable from Rust. To our knowledge, this is the first work to automate the generation of safe Rust bindings for C libraries.",
+      "published": "2026-11-07T02:00:16Z",
+      "updated": "2026-11-07T02:00:16Z",
+      "categories": [
+        "cs.PL",
+        "cs.AI",
+        "cs.CR",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.10394",
+      "abs_url": "https://arxiv.org/abs/2611.10394",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.06569",
+      "title": "PhyRoGen: Synthetic Generation of Physical Robot Manipulation Puzzles Using Procedural Content Generation",
+      "authors": [
+        "Lennart Julian Droß",
+        "Andreas Orthey",
+        "Marc Toussaint"
+      ],
+      "abstract": "Robot manipulation of physical puzzles is important for automatic assembly and disassembly tasks. However, to enable robots to solve physical puzzles, manipulation skills need to be learned, which requires large training datasets, the generation of which is often time consuming and tedious. To overcome this problem, we propose the Physical Robot Manipulation Puzzle Generation framework (PhyRoGen), which leverages procedural content generation (PCG) for automated generation of synthetic datasets of manipulation puzzles. PhyRoGen is a general-purpose puzzle generator, which can generate physical puzzles with interlocking object dependencies, where one articulated object must be manipulated before another can be moved. Based upon PhyRoGen, we define six concrete generators which we use to generate 24 physical puzzles. By using a benchmarking framework, we are able to solve all puzzles in 1 to 300 seconds using sampling-based planning algorithms. Finally, we demonstrate that every generated puzzle is manipulatable by using a KUKA LBR iiwa robot in a physical simulation. This shows that our framework is able to procedurally generate unique, solvable robot manipulation puzzles, which is a crucial ingredient to benchmark manipulation algorithms and to develop robust foundation models.",
+      "published": "2026-06-04T17:48:31Z",
+      "updated": "2026-06-04T17:48:31Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06569",
+      "abs_url": "https://arxiv.org/abs/2606.06569",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.02455",
+      "title": "LLM-Assisted Repository-Level Generation with Structured Spec-Driven Engineering",
+      "authors": [
+        "Shuzhao Feng",
+        "Boqi Chen",
+        "Brett H Meyer",
+        "Gunter Mussbacher"
+      ],
+      "abstract": "State-of-the-art Large Language Models (LLMs) excel in code generation at the function level. However, the output quality significantly declines when scaling to repository-level systems. Current workflows relying only on natural language prompts suffer from inherent ambiguity and a lack of verifiability. To address this, we propose structured spec-driven engineering (SSDE), a paradigm that leverages structured artifacts to guide LLM generation. We argue that structured specifications as LLM inputs make high-quality, repository-level code generation a tangible goal, while at the same time offering superior verifiability, leading to significant potential for improvement. We first investigate the feasibility of this vision through a pilot study generating Model-View-Controller (MVC) business logic for three software systems using five LLMs, and then highlight the potential, challenges, and future roadmap for SSDE.",
+      "published": "2026-05-04T10:58:22Z",
+      "updated": "2026-05-04T10:58:22Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.02455",
+      "abs_url": "https://arxiv.org/abs/2605.02455",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.01783",
+      "title": "Runtime Evaluation of Procedural Content Generation in an Endless Runner Game Using Autonomous Agents",
+      "authors": [
+        "Rishabh Kar"
+      ],
+      "abstract": "Procedural Content Generation (PCG) enables game content to be created algorithmically without direct manual level-design effort, but it introduces a serious evaluation problem: generated content may become unbalanced, blocked, repetitive, or technically unsolvable. This paper presents Momentum, an endless-runner game that integrates runtime terrain generation, environment object spawning, and autonomous agent-based evaluation into a single gameplay loop. Ground tiles and environmental objects are generated dynamically as the player advances, object placement follows a constraint-driven mechanism inspired by Wave Function Collapse (WFC), and the runtime navigation surface is rebuilt asynchronously to remain consistent with the streamed environment. Two autonomous evaluation agents move ahead of the player and inspect the generated path: an aerial scanner that examines the corridor geometrically, and a ground-traversal agent that validates the same region from a navigational perspective. The evaluation pipeline combines ray casting, volumetric physics sweeps, obstacle-layer filtering, and structured crash reporting to identify problematic generated scenarios before they reach the player. The work demonstrates how generation and validation can be unified within the same runtime loop, rather than treating evaluation as a separate offline pass. Around this implementation, the paper formulates a measurable evaluation framework along the canonical PCG axes of playability, diversity, controllability, and runtime performance, derives a structural saturation bound on the spawner from its own placement constraints, and quantifies the per-segment scanning cost of the agents from first principles.",
+      "published": "2026-05-03T08:44:27Z",
+      "updated": "2026-05-03T08:44:27Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.01783",
+      "abs_url": "https://arxiv.org/abs/2605.01783",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.13100",
+      "title": "Contract-Coding: Towards Repo-Level Generation via Structured Symbolic Paradigm",
+      "authors": [
+        "Yi Lin",
+        "Lujin Zhao",
+        "Yijie Shi"
+      ],
+      "abstract": "The shift toward intent-driven software engineering (often termed \"Vibe Coding\") exposes a critical Context-Fidelity Trade-off: vague user intents overwhelm linear reasoning chains, leading to architectural collapse in complex repo-level generation. We propose Contract-Coding, a structured symbolic paradigm that bridges unstructured intent and executable code via Autonomous Symbolic Grounding. By projecting ambiguous intents into a formal Language Contract, our framework serves as a Single Source of Truth (SSOT) that enforces topological independence, effectively isolating inter-module implementation details, decreasing topological execution depth and unlocking Architectural Parallelism. Empirically, while state-of-the-art agents suffer from different hallucinations on the Greenfield-5 benchmark, Contract-Coding achieves 47\\% functional success while maintaining near-perfect structural integrity. Our work marks a critical step towards repository-scale autonomous engineering: transitioning from strict \"specification-following\" to robust, intent-driven architecture synthesis. Our code is available at https://github.com/imliinyi/Contract-Coding.",
+      "published": "2026-04-10T09:30:08Z",
+      "updated": "2026-04-10T09:30:08Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.13100",
+      "abs_url": "https://arxiv.org/abs/2604.13100",
+      "source": "arxiv"
+    },
     {
       "id": "2603.25719",
       "title": "Agent Factories for High Level Synthesis: How Far Can General-Purpose Coding Agents Go in Hardware Optimization?",
@@ -696,7 +791,7 @@
         "Wei Yang",
         "Tao Xie"
       ],
-      "abstract": "Automatic unit test (UT) generation is essential for software quality assurance, but existing approaches--including symbolic execution, search-based approaches, and recent LLM-based generators--struggle to produce human-quality tests with correct, meaningful assertions and reliable chain-of-thought (CoT) explanations. We identify a gap in UT training data: repository-mined tests lack developer CoTs, while LLM-distilled CoTs are often incorrect or incomplete. To address this issue, we propose a novel data-distillation approach that uses self-debugging to produce high-quality UT training examples paired with faithful CoTs. Our approach combines (1) guided test repair, a heuristic loop (error-, failure-, and coverage-focused steps) that asks the used model to diagnose and iteratively fix generated tests, and (2) CoT compression, which compacts original and debugging CoTs into concise explanations that directly justify correct tests. We apply this pipeline to a large corpus of open-source projects to construct a dataset of 74,518 high-quality \u003cfocal method, test, CoT\u003e examples, and then use it for supervised fine-tuning of a base model. An empirical evaluation shows that the fine-tuned model achieves high UT generation effectiveness: it attains a pass rate of 36.17% on test assertions, a branch coverage of 43.90%, and a mutation score of 88.66%, substantially higher than state-of-the-art commercial models like o4-mini.",
+      "abstract": "Automatic unit test (UT) generation is essential for software quality assurance, but existing approaches--including symbolic execution, search-based approaches, and recent LLM-based generators--struggle to produce human-quality tests with correct, meaningful assertions and reliable chain-of-thought (CoT) explanations. We identify a gap in UT training data: repository-mined tests lack developer CoTs, while LLM-distilled CoTs are often incorrect or incomplete. To address this issue, we propose a novel data-distillation approach that uses self-debugging to produce high-quality UT training examples paired with faithful CoTs. Our approach combines (1) guided test repair, a heuristic loop (error-, failure-, and coverage-focused steps) that asks the used model to diagnose and iteratively fix generated tests, and (2) CoT compression, which compacts original and debugging CoTs into concise explanations that directly justify correct tests. We apply this pipeline to a large corpus of open-source projects to construct a dataset of 74,518 high-quality <focal method, test, CoT> examples, and then use it for supervised fine-tuning of a base model. An empirical evaluation shows that the fine-tuned model achieves high UT generation effectiveness: it attains a pass rate of 36.17% on test assertions, a branch coverage of 43.90%, and a mutation score of 88.66%, substantially higher than state-of-the-art commercial models like o4-mini.",
       "categories": [
         "cs.SE"
       ],
@@ -929,7 +1024,7 @@
         "Roberto Trotta",
         "Matteo Viel"
       ],
-      "abstract": "We demonstrate the capabilities of probabilistic diffusion models to reduce dramatically the computational cost of expensive hydrodynamical simulations to study the relationship between observable baryonic cosmological probes and dark matter at field level and well into the non-linear regime. We introduce a novel technique, Cosmo-FOLD (Cosmological Fields via Overlap Latent Diffusion) to rapidly generate accurate and arbitrarily large cosmological and astrophysical 3-dimensional fields, conditioned on a given input field. We are able to generate TNG300-2 dark matter density and gas temperature fields from a model trained only on ~1% of the volume (a process we refer to as `upscaling'), reproducing both large scale coherent dark matter filaments and power spectra to within 10% for wavenumbers k \u003c= 5 h Mpc^-1. These results are obtained within a small fraction of the original simulation cost and produced on a single GPU. Beyond one and two points statistics, the bispectrum is also faithfully reproduced through the inclusion of positional encodings. Finally, we demonstrate Cosmo-FOLD's generalisation capabilities by upscaling a CAMELS volume of 25 (Mpc h^-1)^3 to a full TNG300-2 volume of 205 (Mpc h^-1)^3$ with no fine-tuning. Cosmo-FOLD opens the door to full field-level simulation-based inference on cosmological scale.",
+      "abstract": "We demonstrate the capabilities of probabilistic diffusion models to reduce dramatically the computational cost of expensive hydrodynamical simulations to study the relationship between observable baryonic cosmological probes and dark matter at field level and well into the non-linear regime. We introduce a novel technique, Cosmo-FOLD (Cosmological Fields via Overlap Latent Diffusion) to rapidly generate accurate and arbitrarily large cosmological and astrophysical 3-dimensional fields, conditioned on a given input field. We are able to generate TNG300-2 dark matter density and gas temperature fields from a model trained only on ~1% of the volume (a process we refer to as `upscaling'), reproducing both large scale coherent dark matter filaments and power spectra to within 10% for wavenumbers k <= 5 h Mpc^-1. These results are obtained within a small fraction of the original simulation cost and produced on a single GPU. Beyond one and two points statistics, the bispectrum is also faithfully reproduced through the inclusion of positional encodings. Finally, we demonstrate Cosmo-FOLD's generalisation capabilities by upscaling a CAMELS volume of 25 (Mpc h^-1)^3 to a full TNG300-2 volume of 205 (Mpc h^-1)^3$ with no fine-tuning. Cosmo-FOLD opens the door to full field-level simulation-based inference on cosmological scale.",
       "categories": [
         "astro-ph.CO",
         "astro-ph.IM",
@@ -2030,7 +2125,7 @@
         "Yang Liu",
         "Zhi Jin"
       ],
-      "abstract": "Automated code generation driven by Large Lan- guage Models (LLMs) has enhanced development efficiency, yet generating complex application-level software code remains challenging. Multi-agent frameworks show potential, but existing methods perform inadequately in large-scale application-level software code generation, failing to ensure reasonable orga- nizational structures of project code and making it difficult to maintain the code generation process. To address this, this paper envisions a Knowledge-Guided Application-Level Code Generation framework named KGACG, which aims to trans- form software requirements specification and architectural design document into executable code through a collaborative closed- loop of the Code Organization \u0026 Planning Agent (COPA), Coding Agent (CA), and Testing Agent (TA), combined with a feedback mechanism. We demonstrate the collaborative process of the agents in KGACG in a Java Tank Battle game case study while facing challenges. KGACG is dedicated to advancing the automation of application-level software development.",
+      "abstract": "Automated code generation driven by Large Lan- guage Models (LLMs) has enhanced development efficiency, yet generating complex application-level software code remains challenging. Multi-agent frameworks show potential, but existing methods perform inadequately in large-scale application-level software code generation, failing to ensure reasonable orga- nizational structures of project code and making it difficult to maintain the code generation process. To address this, this paper envisions a Knowledge-Guided Application-Level Code Generation framework named KGACG, which aims to trans- form software requirements specification and architectural design document into executable code through a collaborative closed- loop of the Code Organization & Planning Agent (COPA), Coding Agent (CA), and Testing Agent (TA), combined with a feedback mechanism. We demonstrate the collaborative process of the agents in KGACG in a Java Tank Battle game case study while facing challenges. KGACG is dedicated to advancing the automation of application-level software development.",
       "categories": [
         "cs.SE"
       ],
@@ -2498,7 +2593,7 @@
         "Zixiang Tang",
         "Yunqing Li"
       ],
-      "abstract": "Controlling desktop applications via software remains a fundamental yet under-served problem. Existing multi-modal large language models (MLLMs) ingest screenshots and task instructions to generate keystrokes and mouse events, but they suffer from prohibitive inference latency, poor sample efficiency on long-horizon sparse-reward tasks, and infeasible on-device deployment. We introduce a lightweight hierarchical reinforcement learning framework, ComputerAgent, that formulates OS control as a two-level option process (manager and subpolicy), employs a triple-modal state encoder (screenshot, task ID, numeric state) to handle visual and contextual diversity, integrates meta-actions with an early-stop mechanism to reduce wasted interactions, and uses a compact vision backbone plus small policy networks for on-device inference (15M parameters). On a suite of 135 real-world desktop tasks, ComputerAgent attains 92.1% success on simple tasks (\u003c8 steps) and 58.8% on hard tasks (\u003e=8 steps), matching or exceeding 200B-parameter MLLM baselines on simple scenarios while reducing model size by over four orders of magnitude and halving inference time. These results demonstrate that hierarchical RL offers a practical, scalable alternative to monolithic MLLM-based automation for computer control.",
+      "abstract": "Controlling desktop applications via software remains a fundamental yet under-served problem. Existing multi-modal large language models (MLLMs) ingest screenshots and task instructions to generate keystrokes and mouse events, but they suffer from prohibitive inference latency, poor sample efficiency on long-horizon sparse-reward tasks, and infeasible on-device deployment. We introduce a lightweight hierarchical reinforcement learning framework, ComputerAgent, that formulates OS control as a two-level option process (manager and subpolicy), employs a triple-modal state encoder (screenshot, task ID, numeric state) to handle visual and contextual diversity, integrates meta-actions with an early-stop mechanism to reduce wasted interactions, and uses a compact vision backbone plus small policy networks for on-device inference (15M parameters). On a suite of 135 real-world desktop tasks, ComputerAgent attains 92.1% success on simple tasks (<8 steps) and 58.8% on hard tasks (>=8 steps), matching or exceeding 200B-parameter MLLM baselines on simple scenarios while reducing model size by over four orders of magnitude and halving inference time. These results demonstrate that hierarchical RL offers a practical, scalable alternative to monolithic MLLM-based automation for computer control.",
       "categories": [
         "cs.AI",
         "cs.LG"
@@ -3180,7 +3275,7 @@
         "Christian Schlötterer",
         "Stefan Kramer"
       ],
-      "abstract": "The investigation of allele frequency trajectories in populations evolving under controlled environmental pressures has become a popular approach to study evolutionary processes on the molecular level. Statistical models based on well-defined evolutionary concepts can be used to validate different hypotheses about empirical observations. Despite their popularity, classic statistical models like the Wright-Fisher model suffer from simplified assumptions such as the independence of selected loci along a chromosome and uncertainty about the parameters. Deep generative neural networks offer a powerful alternative known for the integration of multivariate dependencies and noise reduction. Due to their high data demands and challenging interpretability they have, so far, not been widely considered in the area of population genomics. To address the challenges in the area of Evolve and Resequencing experiments (E\u0026R) based on pooled sequencing (Pool-Seq) data, we introduce a deep generative neural network that aims to model a concept of evolution based on empirical observations over time. The proposed model estimates the distribution of allele frequency trajectories by embedding the observations from single nucleotide polymorphisms (SNPs) with information from neighboring loci. Evaluation on simulated E\u0026R experiments demonstrates the model's ability to capture the distribution of allele frequency trajectories and illustrates the representational power of deep generative models on the example of linkage disequilibrium (LD) estimation. Inspecting the internally learned representations enables estimating pairwise LD, which is typically inaccessible in Pool-Seq data. Our model provides competitive LD estimation in Pool-Seq data high degree of LD when compared to existing methods.",
+      "abstract": "The investigation of allele frequency trajectories in populations evolving under controlled environmental pressures has become a popular approach to study evolutionary processes on the molecular level. Statistical models based on well-defined evolutionary concepts can be used to validate different hypotheses about empirical observations. Despite their popularity, classic statistical models like the Wright-Fisher model suffer from simplified assumptions such as the independence of selected loci along a chromosome and uncertainty about the parameters. Deep generative neural networks offer a powerful alternative known for the integration of multivariate dependencies and noise reduction. Due to their high data demands and challenging interpretability they have, so far, not been widely considered in the area of population genomics. To address the challenges in the area of Evolve and Resequencing experiments (E&R) based on pooled sequencing (Pool-Seq) data, we introduce a deep generative neural network that aims to model a concept of evolution based on empirical observations over time. The proposed model estimates the distribution of allele frequency trajectories by embedding the observations from single nucleotide polymorphisms (SNPs) with information from neighboring loci. Evaluation on simulated E&R experiments demonstrates the model's ability to capture the distribution of allele frequency trajectories and illustrates the representational power of deep generative models on the example of linkage disequilibrium (LD) estimation. Inspecting the internally learned representations enables estimating pairwise LD, which is typically inaccessible in Pool-Seq data. Our model provides competitive LD estimation in Pool-Seq data high degree of LD when compared to existing methods.",
       "categories": [
         "cs.LG",
         "q-bio.PE"
@@ -3399,7 +3494,7 @@
         "Carlo Romeo",
         "Andrew D. Bagdanov"
       ],
-      "abstract": "Balancing combat encounters in Dungeons \u0026 Dragons (D\u0026D) is a complex task that requires Dungeon Masters (DM) to manually assess party strength, enemy composition, and dynamic player interactions while avoiding interruption of the narrative flow. In this paper, we propose Encounter Generation via Reinforcement Learning (NTRL), a novel approach that automates Dynamic Difficulty Adjustment (DDA) in D\u0026D via combat encounter design. By framing the problem as a contextual bandit, NTRL generates encounters based on real-time party members attributes. In comparison with classic DM heuristics, NTRL iteratively optimizes encounters to extend combat longevity (+200%), increases damage dealt to party members, reducing post-combat hit points (-16.67%), and raises the number of player deaths while maintaining low total party kills (TPK). The intensification of combat forces players to act wisely and engage in tactical maneuvers, even though the generated encounters guarantee high win rates (70%). Even in comparison with encounters designed by human Dungeon Masters, NTRL demonstrates superior performance by enhancing the strategic depth of combat while increasing difficulty in a manner that preserves overall game fairness.",
+      "abstract": "Balancing combat encounters in Dungeons & Dragons (D&D) is a complex task that requires Dungeon Masters (DM) to manually assess party strength, enemy composition, and dynamic player interactions while avoiding interruption of the narrative flow. In this paper, we propose Encounter Generation via Reinforcement Learning (NTRL), a novel approach that automates Dynamic Difficulty Adjustment (DDA) in D&D via combat encounter design. By framing the problem as a contextual bandit, NTRL generates encounters based on real-time party members attributes. In comparison with classic DM heuristics, NTRL iteratively optimizes encounters to extend combat longevity (+200%), increases damage dealt to party members, reducing post-combat hit points (-16.67%), and raises the number of player deaths while maintaining low total party kills (TPK). The intensification of combat forces players to act wisely and engage in tactical maneuvers, even though the generated encounters guarantee high win rates (70%). Even in comparison with encounters designed by human Dungeon Masters, NTRL demonstrates superior performance by enhancing the strategic depth of combat while increasing difficulty in a manner that preserves overall game fairness.",
       "categories": [
         "cs.AI"
       ],
@@ -3938,7 +4033,7 @@
         "Jagadeesh Balam",
         "Boris Ginsburg"
       ],
-      "abstract": "We introduce a data-driven approach for enabling word-level timestamp prediction in the Canary model. Accurate timestamp information is crucial for a variety of downstream tasks such as speech content retrieval and timed subtitles. While traditional hybrid systems and end-to-end (E2E) models may employ external modules for timestamp prediction, our approach eliminates the need for separate alignment mechanisms. By leveraging the NeMo Forced Aligner (NFA) as a teacher model, we generate word-level timestamps and train the Canary model to predict timestamps directly. We introduce a new \u003c|timestamp|\u003e token, enabling the Canary model to predict start and end timestamps for each word. Our method demonstrates precision and recall rates between 80% and 90%, with timestamp prediction errors ranging from 20 to 120 ms across four languages, with minimal WER degradation. Additionally, we extend our system to automatic speech translation (AST) tasks, achieving timestamp prediction errors around 200 milliseconds.",
+      "abstract": "We introduce a data-driven approach for enabling word-level timestamp prediction in the Canary model. Accurate timestamp information is crucial for a variety of downstream tasks such as speech content retrieval and timed subtitles. While traditional hybrid systems and end-to-end (E2E) models may employ external modules for timestamp prediction, our approach eliminates the need for separate alignment mechanisms. By leveraging the NeMo Forced Aligner (NFA) as a teacher model, we generate word-level timestamps and train the Canary model to predict timestamps directly. We introduce a new <|timestamp|> token, enabling the Canary model to predict start and end timestamps for each word. Our method demonstrates precision and recall rates between 80% and 90%, with timestamp prediction errors ranging from 20 to 120 ms across four languages, with minimal WER degradation. Additionally, we extend our system to automatic speech translation (AST) tasks, achieving timestamp prediction errors around 200 milliseconds.",
       "categories": [
         "cs.CL",
         "cs.SD",

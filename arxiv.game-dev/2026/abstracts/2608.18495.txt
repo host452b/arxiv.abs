@@ -1,0 +1,25 @@
+Title: Physics-Unrolled Neural Operator for Accelerating High-Fidelity Wireless Ray Tracing
+Authors: Rafid Umayer Murshed, Saif Ur Rahman, Mingyue Tang, Elahe Soltanaghai
+ID: 2608.18495
+URL: https://arxiv.org/abs/2608.18495
+
+Abstract:
+Site-specific wireless design relies on ray tracing to predict how signal
+strength varies across a floorplan, but a converged indoor radio map takes tens
+of seconds to simulate and planning a single building requires thousands of
+them. A learned surrogate can remove most of that cost, yet training one runs
+into a second problem: high-fidelity labels are exactly what is too expensive to
+produce at scale, so the affordable labels come from finite-ray simulations that
+carry residual Monte Carlo noise. We address this with RayNO, a physics-unrolled
+neural operator that reconstructs the converged output of a ray tracer from one
+cheap low-fidelity run and scene priors. Rather than treating a radio map as a
+generic image, RayNO refines the field through three stages matched to
+reflection, diffraction, and scattering, each supervised by a label of matching
+physical complexity. We prove that when the label error is conditionally
+unbiased the learned operator can end up closer to the high-fidelity reference
+than the labels it was trained on, and we verify that condition directly in the
+simulator using repeated independent ray seeds. Across diverse floorplans, RayNO
+outperforms image-to-image baselines, wireless learning models, monolithic
+neural operators, and classical multi-fidelity regression on both image-quality
+and wireless deployment metrics, while reducing the cost of a high-fidelity map
+from roughly 28 s to 0.11 s.

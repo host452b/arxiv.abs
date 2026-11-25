@@ -1,0 +1,25 @@
+Title: PeAR: A Static Binary Rewriting Framework for Binary-Only Fuzzing
+Authors: Alvin Charles, Adrian Herrera, Peter Oslington, Alwen Tiu
+ID: 2606.02126
+URL: https://arxiv.org/abs/2606.02126
+
+Abstract:
+Binary-only fuzzing is a key technique for finding bugs in close-source
+software. Without access to source code, the fuzzer must rely on static or
+dynamic binary instrumentation for coverage guidance. In practice, most fuzzers
+favor dynamic binary instrumentation (DBI), accepting runtime overhead to avoid
+the perceived accuracy and soundness challenges associated with static binary
+instrumentation (SBI). We show that these concerns are unwarranted, and that
+accurate, scalable~SBI is achievable using off-the-shelf frameworks. Building on
+these frameworks, we develop PeAR, an extensible binary-only fuzzing framework.
+We demonstrate PeAR's versatility by implementing several modern fuzzer features
+-- including, deferred initialization, persistent mode, and shared-memory
+fuzzing. We evaluate PeAR over 4.25 CPU-yrs of fuzzing on the FUZZBENCH
+benchmark and find that PeAR: (i) successfully instruments 88% of FUZZBENCH
+targets, comparable to the best SBI-based fuzzers; (ii) achieves a median
+throughput improvement of 4x when using persistent mode and shared memory
+fuzzing; and (iii) attains coverage comparable to compiler-based
+instrumentation. Our results show that SBI is a practical and effective
+technique for binary-only fuzzing, and that modern binary rewriting frameworks
+can apply complex instrumentation with high granularity and negligible
+performance compromise.

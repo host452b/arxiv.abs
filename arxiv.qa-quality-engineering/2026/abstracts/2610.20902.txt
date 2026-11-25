@@ -1,0 +1,28 @@
+Title: Thinking in Graphs: Neo4j-Backed Exploit-Chain Reasoning for LLM Penetration-Testing Agents
+Authors: Joas Antonio dos Santos Barbosa
+ID: 2610.20902
+URL: https://arxiv.org/abs/2610.20902
+
+Abstract:
+LLM coding agents such as Claude Code and OpenAI Codex can drive penetration-
+testing tools, but they reason about an engagement as a flat list of findings in
+a context window. Attackers think in graphs: isolated low-severity exposures
+turn catastrophic once chained through credential capture, privilege escalation,
+and lateral movement. This gap feeds a common belief that AI agents cannot truly
+chain exploitation; we argue this describes the flat context window, not the
+model. We present ChainGraph, a pattern that externalizes exploit-chain
+reasoning into a Neo4j property graph wired to an off-the-shelf agent via the
+Model Context Protocol, no bespoke harness. Findings, attack steps, credentials,
+assets, and tamper-evident evidence receipts are typed nodes with pre/post-
+condition edges; JSON/Markdown holds documentary memory while Neo4j holds
+reasoning memory. We formalize five operator questions (next-step inference,
+entry-to-crown-jewel pathing, combined-severity promotion, evidence provenance,
+and chokepoint identification) as reusable Cypher and Graph Data Science
+queries, plus a chain-severity score distinct from per-finding local severity.
+On a synthetic multi-forest Active Directory engagement modeled on GOAD, in live
+Neo4j with GDS, three findings rated Medium in isolation become Critical once
+their path to the forest root is materialized, and betweenness centrality names
+the best chain break-points. Scoping each decision to a graph result rather than
+re-reading the engagement cut the reasoning payload by about 98% on a token
+proxy. We give a reproducible setup for Claude Code and Codex. Results are
+illustrative single-run measurements, not a benchmark.

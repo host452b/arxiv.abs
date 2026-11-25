@@ -1,0 +1,28 @@
+Title: Deletion Is Not Substitution: Component Attribution in a Layered Prompt-Injection Gateway for LLM Tool Calls
+Authors: İpek Abasıkeleş Turgut, Edip Gümüş
+ID: 2610.33198
+URL: https://arxiv.org/abs/2610.33198
+
+Abstract:
+Prompt-injection defenses for LLM agents are commonly built as cascades of
+increasingly costly stages, and ablation studies evaluate their components by
+switching each stage off and counting the detections lost. In a cascade,
+however, stages are not independent: a stage's contribution depends on what is
+routed to it and how its verdicts are enforced, so deletion-based ablation can
+mislead. We test this on BARBICAN, a four-tier, fail-closed gateway for Model
+Context Protocol tool calls, developed in our group, that routes borderline
+inputs to a neural arbitrator. After reproducing its recorded evaluation
+exactly, we apply deletion, constant substitution, repair and transplant to its
+arbitration stage. The findings rest on over thirty instrumented runs over
+25,000 prompts, two platforms, an independent check set and six versions from
+the system's history. Depending on how "switching off" is defined, deletion
+credits the stage with contributions that differ by more than an order of
+magnitude, whereas substitution shows that its verdicts can affect only a few
+inputs, all attacks. Neither repairing the stage nor replacing it with a much
+stronger classifier changed the system appreciably: its influence is set by its
+position, not its quality. An observation that bounds the decisions a routed
+stage can change explains this, and a cascade of public classifiers reproduces
+it whenever routing concentrates attacks. Treating constant verdicts as mutants,
+we derive a continuous-integration gate that detects a stage whose verdicts
+cannot reach the output and, in light of these results, offer a three-point
+roadmap for ablation studies.

@@ -1,0 +1,28 @@
+Title: A Fault-Tolerant Spike-Time Interface for Approximate Agreement in Distributed Neuromorphic Systems
+Authors: Arman Ferdowsi, Maryam DehghanChenary, Kevin Tierney, Atakan Aral
+ID: 2608.18151
+URL: https://arxiv.org/abs/2608.18151
+
+Abstract:
+Large neuromorphic systems contain many processing tiles that may replicate a
+shared control parameter such as a threshold reference. If these copies diverge,
+identical inputs may be processed under different intended settings. We study
+how tiles can reduce this disagreement when communication carries only labeled
+spike times and up to \(f\) sender labels may be Byzantine. A raw event stream
+cannot supply the one-value-per-sender input required by classical approximate
+agreement because a faulty sender can remain silent, flood a receiver, or report
+different times to different receivers. We introduce the Spike-time Interface
+for Faults, or \SIF, which combines paced epochs, sender attribution, per-label
+\FirstSpike admission, bounded timing error, and a silence sentinel. For an
+affine one-spike code, midpoint decoding attains the exact deterministic minimax
+error \(ρ=\min\{1/2,ω/L\}\), where \(ω\) is the residual timing uncertainty and
+\(L\) is the usable encoding window. \SpikeTrim applies the classical mean-
+subsequence-reduced (MSR) rule to the sender-indexed decoded values. For
+\(n\ge3f+1\), it guarantees one-step robust validity, the tight noiseless
+contraction factor \(f/(n-2f)\) under direct updates, an explicit worst-case
+asymptotic disagreement bound, and finite recovery after transient agreement-
+state corruption. A closed-form test determines whether a validated timing
+budget meets a target disagreement. Simulations illustrate the fault threshold,
+timing dependence, flooding resistance, and recovery. A controlled spiking
+classifier experiment shows an association between faster control-state
+alignment and lower prediction disagreement under a finite maintenance budget.

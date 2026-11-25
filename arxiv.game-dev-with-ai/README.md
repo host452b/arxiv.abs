@@ -1,6 +1,6 @@
 # arxiv.game-dev-with-ai — Human × AI Co-Development: The New Game Dev Paradigm
 
-**73 curated arXiv abstracts** (filtered from 542 raw results) from 25 targeted searches, covering the emerging frontier where AI becomes a co-developer, co-designer, and production partner in game development. Filtered to remove game-theory, MARL benchmarks, and AI-playing-games papers — keeping only papers directly relevant to human × AI game creation.
+**74 curated arXiv abstracts** (filtered from 542 raw results) from 25 targeted searches, covering the emerging frontier where AI becomes a co-developer, co-designer, and production partner in game development. Filtered to remove game-theory, MARL benchmarks, and AI-playing-games papers — keeping only papers directly relevant to human × AI game creation.
 
 **Core question:** In the new era of AI-augmented development — where LLMs, agents, and generative models join the team — how do humans and AI collaborate to build games faster, better, and more creatively?
 

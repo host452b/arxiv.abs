@@ -1,0 +1,24 @@
+Title: LLM-based Low-Level Integration Test Generation for Java
+Authors: Qinghua Xu, Guancheng Wang, Lionel Briand, Zhaoqiang Guo, Kui Liu
+ID: 2605.26851
+URL: https://arxiv.org/abs/2605.26851
+
+Abstract:
+Large language models (LLMs) show promise for automated test generation, but
+most approaches target unit tests with mocked dependencies. Low-level
+integration testing instead exercises a class with its real, in-project
+dependencies, exposing faults involving object construction, API call sequences,
+and component interactions. Generating such tests is challenging because LLMs
+may lack project-specific knowledge (not knowing) or violate provided
+constraints (not following). We present IntTestGen, an LLM-based approach that
+combines context-enriched generation with constraint-enforced fixing. It mines
+dependency usage patterns from project code to guide test generation, then
+applies symbol-, protocol-, and iteration-level constraints during repair using
+a ClassIndex, a Markov typestate model, and experience memory. We evaluate
+IntTestGen against the state-of-the-art LLM-based baseline PANTA and search-
+based baseline EvoSuite on Defects4J and Deps4J, a new post-cutoff benchmark of
+recent Java repositories. Across the two benchmarks, IntTestGen improves line
+coverage by 19.99 and 22.69 percentage points, branch coverage by 24.90 and
+15.78 points, and mutation score by 13.67 and 0.17 points, respectively. It also
+covers 378 and 55 additional lines of dependency code. Ablation results confirm
+that all major components contribute to performance.

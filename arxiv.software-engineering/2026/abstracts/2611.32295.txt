@@ -1,0 +1,23 @@
+Title: Norn: Context-Length-Aware Optimization of Weight and KV Cache Placement for Offloaded LLM Inference
+Authors: Naoto Sugiura, Hiroki Matsutani
+ID: 2611.32295
+URL: https://arxiv.org/abs/2611.32295
+
+Abstract:
+Offloading model weights and the key-value (KV) cache to host memory enables
+large language models (LLMs) to run on a single memory-constrained GPU. As the
+KV cache grows during decoding, GPU memory requirements and the costs of KV
+cache transfers and attention computation change. However, existing offloading
+methods generally use static computation assignments and placements of model
+weights and the KV cache, preventing them from adapting to these changes and
+degrading inference performance. We propose Norn, a context-length-aware
+offloaded LLM inference method. Based on offline profiling, Norn co-optimizes
+computation assignments and placements at the sublayer level, precomputing
+multiple execution plans and their switching points. During decoding, Norn
+switches plans as context length increases, overlapping computation and data
+transfers without knowing the output length in advance. For prefill, Norn
+employs operator-major chunked prefill to avoid repeated weight transfers and
+automatically selects the chunk size. Experiments with Qwen3-14B and Qwen3-32B
+on two single-GPU systems show up to a 16.8$\times$ speedup in end-to-end
+latency over Pipelined Sharding and a 4.2$\times$ speedup over its oracle
+variant with known input and output lengths.

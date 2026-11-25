@@ -1,0 +1,26 @@
+Title: Staying True to the Origin: Continuous Image Stylization with Smooth Transitions
+Authors: Rui Xu, Hanmo Zhang, Songhua Liu
+ID: 2608.08125
+URL: https://arxiv.org/abs/2608.08125
+
+Abstract:
+Recent advances in generative models have achieved remarkable performance in
+text- and image-conditioned editing. However, preserving the content of a given
+image while referencing style patterns from another remains challenging, often
+leading to uncontrollable stylization results. In this paper, we approach image
+stylization from the perspective of continuous control, aiming to enable modern
+Diffusion Transformer (DiT)-based multi-reference editing models to (1)
+faithfully preserve the semantic structure of the content image, (2) render
+strong stylization effects, and (3) smoothly transition between the two. To this
+end, we propose a simple yet effective two-stage training strategy along with a
+style-strength-aware spline formulation. Specifically, in the first stage, the
+model is trained to produce strongly stylized outputs while preserving the
+content semantics as much as possible. In the second stage, with the base model
+frozen, we learn a set of anchor projectors that map various stylization
+strengths into the model parameter space. During inference, by performing style-
+strength-aware spline interpolation in a low-rank space, our method enables
+continuous control over stylization strength, even though the model is trained
+with only a few discrete strength levels. Extensive experiments demonstrate that
+our method supports precise and continuous manipulation of stylization strength
+while generating high-fidelity results with modern DiT models. Project page:
+https://reychiaro.github.io/StyleController.

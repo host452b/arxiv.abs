@@ -1,0 +1,27 @@
+Title: An Empirical Study of Reinforcement Learning Scaling Laws
+Authors: Zeyu Zheng, Clare Lyle, Khimya Khetarpal, Will Dabney
+ID: 2610.33420
+URL: https://arxiv.org/abs/2610.33420
+
+Abstract:
+The discovery of scaling laws enables prediction of the performance, the optimal
+resource allocation strategy, and the best hyperparameter configuration of a
+large-scale training job based on inexpensive experiments at smaller scales.
+Guided by these empirical scaling laws, the deep learning community has achieved
+great success in training large (self-)supervised models on Internet-scale
+datasets. In contrast, despite its potential and wide application, reinforcement
+learning (RL) has yet to find a guiding principle for predictable scaling. In
+this work, we conduct an empirical study of RL scaling laws of an actor-critic
+algorithm in two procedurally generated environments, Starpilot and Craftax. We
+discover empirical scaling laws with strong predictive performance in both
+environments. The discovered scaling laws accurately predict the aforementioned
+three quantities for larger-scale training jobs up to two orders of magnitude in
+total training compute. In particular, we employ a variant of Elo scores for the
+single-agent RL paradigm as an alternative performance metric than the commonly
+used mean episode return. Our results show that the Elo score is a much more
+predictable metric than the mean episode return, making it a better choice for
+fitting scaling laws. By applying our discovered scaling laws to increase
+training compute, we establish a new state of the art in the challenging Craftax
+environment. Beneath the surface of the global scaling trend, we also observe a
+non-monotonic scaling pattern of the compute-optimal model size in Craftax. We
+connect this observation to a pathology known as Ray interference.

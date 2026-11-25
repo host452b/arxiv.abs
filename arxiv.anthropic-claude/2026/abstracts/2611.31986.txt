@@ -1,0 +1,24 @@
+Title: Network-Guided Automated Synthesis of MAC Units for Neural Network Inference
+Authors: Zhouyang Wu, Hongyang Pan, Chuyu Wang, Ji Zhuang, Keren Zhu, Xin Zhao, Xuan Zeng
+ID: 2611.31986
+URL: https://arxiv.org/abs/2611.31986
+
+Abstract:
+In neural inference accelerators, multiply-accumulate (MAC) datapaths account
+for the majority of circuit area and critical-path delay, where operator-level
+numerical formats simultaneously dictate hardware overhead and quantization
+error. Yet no straightforward mapping exists between hardware cost and end-to-
+end network accuracy: logic synthesis transforms datapaths in a highly nonlinear
+manner, while numerical errors propagate and couple across layers. To address
+this disconnect, we present NAMSI, an automated network-aware MAC synthesis
+framework tailored for neural inference. NAMSI characterizes heterogeneous data
+formats using a format-distribution representation (FD) and leverages topology-
+aware accuracy and hardware-cost modeling (TaH), calibrated with actual post-
+synthesis Area-Delay Product (ADP) measurements, to jointly estimate coupled
+full-network accuracy and circuit cost. Furthermore, reversible lattice search
+(RLS) is introduced to tractably navigate the exponentially scaling design
+space. Evaluations across five neural networks on ImageNet-1K demonstrate that
+under post-training quantization (PTQ), NAMSI achieves 54.2%-60.4% reductions in
+post-synthesis MAC ADP compared with FP32 while retaining at least 99% of full-
+precision Top-1 accuracy, surpassing baseline approaches in both hardware
+efficiency and accuracy preservation.

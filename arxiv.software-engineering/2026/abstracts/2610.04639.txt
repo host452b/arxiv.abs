@@ -1,0 +1,31 @@
+Title: When Talk Isn't Code: Comparing LLM Agents That Simulate and Develop Software
+Authors: Xiang Li, Aichun Huang, Mingming Zhang, Zheli Liu
+ID: 2610.04639
+URL: https://arxiv.org/abs/2610.04639
+
+Abstract:
+LLMs are used both to simulate network protocol implementations, as honeypots
+do, and to write them. Prior work evaluates the two uses separately, from a
+model's answers or conversations in one case and from its generated code in the
+other. We observe that a knowledge probe (asking the model which security checks
+an implementation needs) and a conversation can credit security checks that the
+generated program lacks, but no study has compared them with the code the same
+model writes. To fill this gap, we present the first such comparison between
+simulation mode (S-mode), where the model plays the implementation in a
+conversation, and development mode (D-mode), where the model writes the program
+and the program is attacked, with a knowledge probe as a baseline. We design and
+implement a harness that judges all three with one attack suite and one oracle,
+and evaluate 15 LLMs on four protocol implementations. We find that with the
+full security specification, the median model's attack success is at most 4\% on
+reassembly, HTTP, and firewall implementations in both modes, but 13\% in S-mode
+and 15\% in D-mode on DNS. In D-mode, adding the missing DNS requirement to the
+specification cuts that attack from 100\% to 34\% and changes only that check,
+whereas deleting a stated rule weakens the program on other checks too. Asking
+the model beforehand does not predict which checks a program has, since 13 of
+the 14 models that write a DNS resolver name the check, yet all 42 programs lack
+it. S-mode is a useful first filter, flagging 82\% of the real DNS
+vulnerabilities and leaving 96\% of the safe cases unflagged. It errs in both
+directions, over-reporting security checks that D-mode does not implement and
+under-reporting checks that D-mode does. S-mode can screen but not replace
+D-mode testing, and security requirements should be written down even when a
+model can recite them.

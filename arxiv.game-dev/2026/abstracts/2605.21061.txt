@@ -1,0 +1,24 @@
+Title: Grounding Driving VLA via Inverse Kinematics
+Authors: Junsung Park, Hyunjung Shim
+ID: 2605.21061
+URL: https://arxiv.org/abs/2605.21061
+
+Abstract:
+Counterfactual obstacle insertion exposes blind planning in representative
+Driving VLAs: their trajectories remain largely unchanged despite a vehicle
+appearing directly ahead. An empirically calibrated bias-variance analysis
+identifies how ego-predictable training examples admit a shortcut through ego
+status and commands. We address this failure with an inverse-kinematics-inspired
+architecture that anchors trajectory decoding on current and predicted future
+visual states. First, a next visual state prediction objective that requires the
+LLM to predict the future visual scene provides dense visual supervision and
+suppresses shortcut paths. Second, a separate Inverse Kinematics Network (a
+cross-attention-based conditional diffusion model) that takes only the current
+and future visual states as input is designed to suppress reliance on ego status
+and textual shortcuts during trajectory decoding. Our 0.5B model achieves state-
+of-the-art trajectory planning performance on NAVSIM-v1, NAVSIM-v2, and nuScenes
+using cameras alone, without LiDAR or a BEV encoder. Against the matched
+OpenDriveVLA* baseline, it improves NAVSIM PDMS and EPDMS by 19.0 and 20.4
+points, respectively. Controlled ablations and intervention analyses support
+improved use of visual features, with future-state prediction sharpening hazard-
+specific responses.

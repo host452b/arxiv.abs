@@ -1,0 +1,26 @@
+Title: CSI-Agnostic End-to-End Neural Decoding of LDPC Codes under Synchronization Errors
+Authors: Yi Kuang, Shu Liu, Ningning Wang
+ID: 2611.30037
+URL: https://arxiv.org/abs/2611.30037
+
+Abstract:
+Correcting synchronization errors (insertions, deletions, and substitutions) in
+concatenated coding schemes, typically comprising an inner marker code and an
+outer Low-Density Parity-Check (LDPC) code, poses a significant challenge.
+Traditional algebraic decoding fails entirely under sequence misalignment. While
+recent neural pipelines attempt to resolve this, they typically demand exact
+channel state information (CSI) for inner synchronization and suffer from error
+propagation caused by premature syndrome binarization before outer decoding. In
+this paper, we propose ASDecoder, a data-driven, CSI-agnostic end-to-end neural
+decoding architecture specifically designed for LDPC codes over insertion-
+deletion-substitution (IDS) channels. ASDecoder features a CNN-Transformer
+front-end that implicitly aligns variable-length sequences and fuses multi-read
+redundancies without requiring explicit CSI. Tightly integrated into this
+pipeline is a novel \emph{syndrome-free} BiDecoder back-end. By mapping
+continuous soft features directly into a sparse-masked graph attention network,
+it strictly avoids intermediate hard decisions and effectively captures
+topological constraints. Experiments demonstrate that a single universal
+ASDecoder outperforms the BCJRFormer baseline, providing consistent error
+correction across highly asymmetric channels. Furthermore, it generalizes
+robustly to real-world deployment scenarios, including the industrial CCSDS
+$(128,64)$ QC-LDPC standard and non-linear DNA biological constraints.

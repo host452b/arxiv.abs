@@ -1,0 +1,25 @@
+Title: Local Important Separators with Applications to Unbreakable Decomposition and Multicut
+Authors: Aditya Anand, Euiwoong Lee, Yaowei Long, Thatchaphol Saranurak
+ID: 2610.39030
+URL: https://arxiv.org/abs/2610.39030
+
+Abstract:
+We present the first local FPT algorithm for finding important separators: Given
+an undirected graph $G$ with $n$ vertices and $m$ edges, vertices $s,t$ and
+parameters $k$ and $ν$, we can enumerate all $s$-$t$ important separators of
+size at most $k$ and volume at most $ν$ in time $\tilde{O}(ν2^{O(k)})$. Known
+approaches spend either $Ω(m)$ time (not local) or $ν^{Ω(k)}$ time (not FPT).
+Using this local algorithm, we show the following applications. (1) The first is
+an improved construction of unbreakable decomposition, a powerful generalization
+of tree decompositions. For any $k$, we can compute a $(5k,k)$-unbreakable
+decomposition with adhesion $4k$ in $\tilde{O}(k^{O(k)}m)$ time. This strictly
+subsumes the result of Anand, Lee, Li, Long, and Saranurak (SODA 2025) and is
+faster than the recent $O(k^{O(k^2)}m)$-time algorithm by Korhonen (STOC 2025)
+when $k = ω\Bigl(\sqrt{\frac{\log \log n}{\log \log \log n}}\Bigr)$. Our
+algorithm is also simpler than that of Korhonen (STOC 2025). (2) We give a near-
+linear time algorithm for single-sink important separators. For any sink $t$, we
+can list all $v$-$t$ important separators of size at most $k$ across all $v \in
+V(G)$ in time $\tilde{O}(2^{O(k)}m)$. Known approaches trivially compute $v$-$t$
+important separators for each $v$, taking $Ω(4^k k mn)$ time. (3) Using the
+above result on single-sink important separators, we speed up undirected shadow
+removal and give the first almost-linear time FPT algorithm for Edge Multicut.

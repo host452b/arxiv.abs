@@ -1,0 +1,26 @@
+Title: ExSpike: A General Full-Event Neuromorphic Architecture for Exploiting Irregular Sparsity with Event Compression
+Authors: Yuehai Chen, Farhad Merchant
+ID: 2606.20414
+URL: https://arxiv.org/abs/2606.20414
+
+Abstract:
+Spiking neural networks (SNNs) promise energy-efficient computing due to their
+sparse spatio-temporal activity. However, effectively translating such irregular
+sparsity into practical performance and energy gains remains challenging, as
+full-event computing architectures are still underexplored. This paper proposes
+ExSpike, a general full-event neuromorphic architecture that fully exploits
+irregular sparsity in SNNs. To realize pure event-driven execution, we first
+propose a set of dataflow optimizations to ensure that the inputs to each SNN
+layer remain spike-based, thereby enabling full-event execution throughout the
+network. We then design a hardware-efficient full-event architecture, named
+ExSpike, which supports the optimized pure event-driven dataflow and an
+additional Attention Core for spike-driven self-attention. To further improve
+computing efficiency, we introduce adjacent-position event compression to reduce
+redundant accumulations across spatially adjacent spike sequences. ExSpike is
+implemented on an AMD Xilinx Virtex-7 FPGA and evaluated on both classification
+and segmentation workloads. Experimental results show that ExSpike achieves high
+normalized energy efficiency across diverse SNN models while maintaining
+competitive accuracy, delivering up to 479.15 GOPS, 281.85 GOPS/W, and 0.80
+GOPS/W/PE. In particular, ExSpike achieves up to 10$\times$ higher PE-normalized
+energy efficiency than the SOTA FPGA-based SNN accelerator (FireFly-T). The code
+for ExSpike is available at https://github.com/xiaoyuehai/ExSpike.

@@ -1,0 +1,30 @@
+Title: Fixed Detectors, Moving Code: How Well Do Static Security Analyzers Hold Up over a Decade of C/C++ Evolution?
+Authors: Junhua Tang, Zhengsong Zhang. Haipeng Cai
+ID: 2611.03742
+URL: https://arxiv.org/abs/2611.03742
+
+Abstract:
+Static application security testing (SAST) tools are often deployed on the
+assumption that detectors configured today will remain effective on future code,
+including previously unknown vulnerabilities. We test this assumption using
+20,000 vulnerable and fixed C/C++ cases from 1,116 open-source projects
+(2016-2025), evaluated with three CodeQL releases, three Infer releases, and one
+Semgrep configuration. To distinguish temporal effects from shifts in code
+composition, we compare yearly populations, project- and label-matched year
+pairs, and within-project trajectories. We investigate the largest within-
+project declines through repair diffs, detection predicates, alert locations,
+and execution logs, while accounting for failed, degraded, and costly analyses.
+Under changed-file case-label scoring, overall F1 ranges from 0.066 to 0.478,
+but count-based AUROC stays near chance (0.495-0.526). Newer CodeQL releases
+attain higher F1 alongside nearly parallel rises in recall and false-positive
+rate, not stronger separation of vulnerable from fixed cases. In project-matched
+year pairs, CodeQL R2024 has negative mean later-minus-earlier F1 at every
+source-year gap, whereas Infer v1.1 and v1.3 have positive means throughout.
+Among selected drops, only 6 of 39 CodeQL and 2 of 620 Infer findings overlap a
+changed repair line. For Semgrep, 78.96% of cases show parser or timeout
+diagnostics even though every run reports success. These results suggest that
+apparent changes in temporal SAST effectiveness can arise from broader alerting,
+changing analysis coverage, and incidental findings, not solely from losses in
+vulnerability detection. Evaluations of temporal sustainability should fix
+detector conditions, control for projects, inspect repair-level evidence, and
+report failed or degraded analyses.

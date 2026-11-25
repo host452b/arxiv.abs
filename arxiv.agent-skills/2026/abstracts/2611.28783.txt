@@ -1,0 +1,25 @@
+Title: 3DCodeFactory: Scaling Training Data for 3D Code Agents
+Authors: Zhaoyu Wang, Xueru Wen, XingYu Li, Jie Lou
+ID: 2611.28783
+URL: https://arxiv.org/abs/2611.28783
+
+Abstract:
+As code agents evolve, their scope is expanding from generating simple static 3D
+meshes to constructing structurally complete, complex, interactive 3D scenes.
+However, existing datasets mainly rely on converting or captioning pre-existing
+3D assets, consisting mostly of single-turn code data for static single objects
+and struggling to scale task diversity and scene complexity, leaving such
+training data scarce. We present 3DCodeFactory, an automated framework that
+directly constructs diverse, complex 3D training data from abundant raw text
+(e.g., diffusion prompts and product descriptions). The framework first
+leverages an image generator to synthesize 3D reference images from raw text as
+visual anchors, guiding the generation of concrete modeling specifications and
+interactive functional requirements; meanwhile, it jointly constructs visual,
+specification, and functional rubrics from the reference images and requirements
+to automatically score and filter multi-turn agent rollouts. Based on this
+framework, we release 3DCodeFactory-Data, comprising 5,045 high-quality task
+instances and multi-turn interaction trajectories. Fine-tuning Qwen3.5-9B and
+Qwen3.8-27B on 3DCodeFactory-Data significantly improves performance on
+BlenderWorld, P3D-Bench, and 3DCodeBench, consistently outperforming models
+trained on existing open-source 3D code datasets, with our 27B model further
+surpassing the same-series 2.4T flagship Qwen3.8-Max in overall performance.

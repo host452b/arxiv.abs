@@ -10,11 +10,47 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:46:48Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 95,
-  "return_count": 95,
+  "total_results": 97,
+  "return_count": 97,
   "papers": [
+    {
+      "id": "2611.11295",
+      "title": "Samyama-SDG: A Declarative GraphQL @count and Regex/Ontology Synthetic Data Compiler with $O(1)$-Memory Referential Integrity and Causal Ground Truth",
+      "authors": [
+        "Madhulatha Mandarapu",
+        "Sandeep Kunkunuru"
+      ],
+      "abstract": "Synthetic data generators face a divide between declarative relational mockets and domain causal simulators. Declarative generators specify entities, regexes, and foreign keys via schemas, but buffer parent primary-key pools in RAM ($O(N)$ memory) and lack ontology bindings or causal ground truth. Conversely, domain simulators emit realistic streams and ground-truth labels, but require thousands of lines of procedural code per domain. We present Samyama-SDG (sdg-rs), a Rust synthetic data compiler unifying declarative schema compilation with ontology-bound causal simulation. At Layer 1, Samyama-SDG compiles Cardinality-Extended GraphQL schemas (@count, @pk, @ontology, @regex, @dist, @fk, @after) and an Attribute Data Dictionary into a topologically sorted DAG. Combining stateless counter-based seekable PRNGs (SplitMix64 over $(\\text{seed}, \\text{entity}, \\text{row}, \\text{field})$) with index-bijective primary keys $f_{\\text{PK}}(s, E, i)$ lets child tables resolve uniform or Zipfian foreign keys and multi-hop @after constraints in $O(1)$ memory without buffering parent tables. At Layer 2, causal processes layer fault propagation and machine-scorable ground truth (ground_truth.jsonl) over the same seekable PRNG and samyama-ontologies binder. Across three schemas, Samyama-SDG generates $1{,}000{,}000$ records in $128.79\\text{ ms}$--$172.43\\text{ ms}$ ($5.80\\text{M}$--$7.76\\text{M}$ rows/s) and $5{,}000{,}000$ records in $676.12\\text{ ms}$--$808.56\\text{ ms}$ at flat $31.4\\text{ MiB}$--$35.1\\text{ MiB}$ memory, with $0$ conformance errors across $1{,}150{,}000$ foreign keys and $900{,}000$ temporal constraints.",
+      "published": "2026-11-08T10:40:35Z",
+      "updated": "2026-11-13T15:33:55Z",
+      "categories": [
+        "cs.DB"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.11295",
+      "abs_url": "https://arxiv.org/abs/2611.11295",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.04769",
+      "title": "RESTberus: Trace-Aware Benchmarking of Automated REST API Testing Tools Across Microservice Dependencies",
+      "authors": [
+        "John Toniutti",
+        "Massimiliano Baldo",
+        "Marino Miculan",
+        "Vincenzo Riccio"
+      ],
+      "abstract": "Existing REST API testing benchmarks focus on isolated services, overlooking failures arising from interactions with downstream dependencies. In microservice systems, response bodies and entry-point operations alone cannot reliably distinguish failures, compromising tool comparisons. We present RESTberus, a Kubernetes-based benchmarking platform for black-box REST API testing tools on deployed microservice systems. By complementing API-level evidence with distributed traces, RESTberus can distinguish failures manifesting in the target service from those manifesting in downstream dependencies. Across six tools on two microservice benchmarks, our trace-aware deduplication strategy achieves 87.1% accuracy, outperforming baselines from prior work by 10-13 percentage points. Our empirical study shows that all tools expose downstream failures, accounting for 11.7% of estimated unique failures on average, which isolated-service benchmarks cannot expose. On single-service benchmarks, RESTberus produces statistically equivalent results to RESTgym, demonstrating that integration-level assessments can preserve compatibility with existing tools and comparability with prior evaluations.",
+      "published": "2026-11-03T12:13:15Z",
+      "updated": "2026-11-03T12:13:15Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04769",
+      "abs_url": "https://arxiv.org/abs/2611.04769",
+      "source": "arxiv"
+    },
     {
       "id": "2305.07346",
       "title": "Do RESTful API Design Rules Have an Impact on the Understandability of Web APIs? A Web-Based Experiment with API Descriptions",

@@ -1,0 +1,23 @@
+Title: MLIR-MRacle: Memory-Model-Aware Metamorphic Fuzzing of Concurrent MLIR
+Authors: Aaron Gabayoyo, Aidan Dakhama, Ajitha Rajan
+ID: 2611.24804
+URL: https://arxiv.org/abs/2611.24804
+
+Abstract:
+Multi-level compilers built on MLIR lower concurrent programs through many
+stages towards targets with potentially drastically different memory models,
+where an optimisation which appears reasonable, can silently change program
+behaviour. Testing these lowerings is hard: a concurrent program often has no
+single expected outcome, and existing MLIR fuzzers often assume determinism. We
+present MLIR-MRacle, a memory-model-aware metamorphic fuzzer for concurrent MLIR
+programs. MLIR-MRacle applies metamorphic relations gated by the target memory
+model, so that both the original and transformed programs remain well defined -
+executing both repeatedly, and comparing their outcome sets or distributions
+withone of two statistical oracles. A coverage guided campaign driver built on
+libafl is used to perform continuous fuzzing. MRs, memory models, oracles, and
+execution backends all provide extension points for future researchers and
+compiler engineers to build off this package. In a case study on Armv8 hardware,
+MLIR-MRacle ran over 145k trials across four configurations, reaching up to
+93.6k compiler coverage edges, and found a bug in the OpenMP dialect verifier
+that has since been fixed upstream. Video:
+https://youtu.be/lKtGk0H97Ts?si=dWLUHl2CJ24ep6JY

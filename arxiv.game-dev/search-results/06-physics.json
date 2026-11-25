@@ -10,11 +10,554 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:42:39Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 682,
-  "return_count": 200,
+  "return_count": 226,
   "papers": [
+    {
+      "id": "2611.23473",
+      "title": "Reliability by Architecture: Agentic Workflows for Validated Multi-Physics Simulation from Natural Language",
+      "authors": [
+        "Søren Taverniers",
+        "Eric Darve",
+        "Hamdi A. Tchelepi"
+      ],
+      "abstract": "Preparing, executing, and validating strongly coupled multi-physics simulations require expert time. Agentic workflows use large language models (LLMs) to coordinate them from natural-language descriptions, but reliability requires checks of physical consistency and fidelity to the problem description. Our agentic harness implements explicit task allocation: LLMs interpret user requests and simulator diagnostics, generate input components not covered by predefined construction rules, and propose repairs, while deterministic routines construct supported components and check inputs, edits, and results. We evaluate CO2-storage problems using the multi-physics simulator GEOS, from compositional flow to flow-poromechanics with frictional fault contact. In 80 attempts on two flow problems, grounding raises the proportion of structurally valid inputs from 5/20 to 20/20, but acceptance reaches 20/20 only with complete rule-based input preparation. With identical inputs, local repairs correct three seeded defects while preserving valid inputs. Supporting tests identify simulations passing physics checks despite differing from the problem description or reference results.",
+      "published": "2026-11-17T20:25:26Z",
+      "updated": "2026-11-17T20:25:26Z",
+      "categories": [
+        "cs.CE",
+        "cs.AI",
+        "physics.comp-ph"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23473",
+      "abs_url": "https://arxiv.org/abs/2611.23473",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16312",
+      "title": "Alloy: A Multi-Material Physics Engine for Robot Learning",
+      "authors": [
+        "Pranay Gupta",
+        "Deepanshu Rohilla"
+      ],
+      "abstract": "Robots handle much more than rigid objects: towels, cables, water, sand. The simulators used to train robots at scale are strongest on rigid bodies, and adding another material usually means a second engine and hand-written glue between the two. We present Alloy, an open-source physics engine for robot learning in which rigid robots, cloth, cables, liquids, granular material and soft bodies share one scene. Each object is described once; Alloy assigns it to a solver suited to its material, couples the solvers inside every control step, and runs the scene in many parallel worlds on one GPU, or on a CPU. Every world carries a health grade, to help tell a failure of the physics from a failure of the policy. Alloy is built on Newton, MuJoCo Warp and Warp, and it is written to be driven by coding agents: its documentation ships inside the package, every error names its fix, and the engine is exposed as tools over the Model Context Protocol. In a cold test, agents that had never seen Alloy installed a pre-release from the package index and trained policies for walking, cable handling and pouring on a single GPU. We also report how throughput grows with the number of worlds, depth-camera throughput, agreement with closed-form references, and a reliability test over a thousand worlds.",
+      "published": "2026-11-12T05:14:10Z",
+      "updated": "2026-11-12T05:14:10Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16312",
+      "abs_url": "https://arxiv.org/abs/2611.16312",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.13214",
+      "title": "Collision Avoidance and Collision Detection Strategies to Counteract Large-Scale FMCW Automotive Radar Interference",
+      "authors": [
+        "Francesco Miccoli",
+        "Vittorio Todisco",
+        "Fabrizio Cuccoli",
+        "Matteo Passeri",
+        "Vincent Martinez",
+        "Alessandro Bazzi"
+      ],
+      "abstract": "Automotive radars operating in dense traffic environments may experience significant mutual interference, potentially degrading sensing reliability for advanced driver assistance systems (ADAS). This issue motivates the development of techniques to mitigate interference among multiple radar-equipped vehicles sharing the same spectrum. This paper investigates interference mitigation strategies for uncoordinated radar networks through system-level simulation. Two approaches are considered: frame-by-frame collision avoidance (FbF-CA), which exploits idle intervals to measure the perceived interference and possibly adapt the operating frequency, and frame-by-frame collision detection (FbF-CD), which estimates interference during transmission based on observed chirp collisions. An event-driven radar network simulator is used to model realistic highway traffic and radar interactions. Results show that collision avoidance provides higher robustness when a larger bandwidth is available, while collision detection is more effective under bandwidth-limited conditions. The analysis highlights the trade-off between collision avoidance and collision detection mitigation strategies and provides design insights for scalable automotive radar deployments.",
+      "published": "2026-11-09T20:36:01Z",
+      "updated": "2026-11-09T20:36:01Z",
+      "categories": [
+        "cs.NI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13214",
+      "abs_url": "https://arxiv.org/abs/2611.13214",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.12162",
+      "title": "Same Physics, Different Gradients: A State-of-the-Art Report on Differentiable Physics Simulation",
+      "authors": [
+        "Lei Shu",
+        "Zizhou Huang",
+        "Yunuo Chen",
+        "Yifei Li",
+        "Tao Du",
+        "Minchen Li",
+        "Tuur Stuyck",
+        "Miles Macklin",
+        "Kui Wu",
+        "Bo Zhu",
+        "Yin Yang",
+        "Ming C. Lin",
+        "Alberta Longhini",
+        "Rika Antonova",
+        "Leonidas Guibas",
+        "Gordon Wetzstein",
+        "Jeannette Bohg",
+        "Chenfanfu Jiang"
+      ],
+      "abstract": "Differentiable simulation propagates derivatives through a physics simulator, turning animation, system identification, control, and computational design into gradient-based optimization. Engines differ in the physics they model and, less visibly, in which mathematical object they differentiate. We separate two questions the literature conflates. The referent is which object the returned derivative belongs to: the finite computation that executed, the converged equation it approximates, or the continuous dynamics. The realization describes the organization of the backward pass: automatically generated differentiation, an equation-level adjoint solve, or a custom adjoint. The referent defines the target against which exactness is assessed; the implementation determines how accurately that target is approximated. Cost depends on the realization together with how the states needed by the backward pass are retained or recovered. Crossing the axes places every method and engine we classify in a cell, separates claims the literature merges, and shows that the apparent trade-off between exactness and memory follows from how methods have been built rather than from a constraint. A second, orthogonal taxonomy covers contact, where the map is non-smooth. We then ask whether a correct gradient helps. Four mechanisms by which useful gradients are lost are cataloged and measured on one testbed, where the advantage of the exact derivative over the equation-level adjoint depends on where the fitting target comes from as much as on the solver budget, and we review the evidence that zeroth-order methods can outperform simulator gradients in the regimes where those mechanisms act. The model classes, systems techniques and applications are surveyed through this lens, and we close with a reporting checklist, a released diagnostic that computes it, and a research agenda.",
+      "published": "2026-11-09T10:13:58Z",
+      "updated": "2026-11-09T10:13:58Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV",
+        "cs.LG",
+        "cs.RO",
+        "math.NA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.12162",
+      "abs_url": "https://arxiv.org/abs/2611.12162",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.11344",
+      "title": "Spatial Harness: Grounding Spatial Reasoning in Executable World States with Physics Engines",
+      "authors": [
+        "Chentao Cao",
+        "Zhanke Zhou",
+        "Sangni Duan",
+        "Bo Han",
+        "Hang Li"
+      ],
+      "abstract": "Spatial reasoning requires understanding how objects and observers are arranged in a scene and how their relations change with viewpoint or movement. Vision-language models (VLMs) typically perform both steps through model-internal reasoning, forming an implicit scene interpretation from partial views and imagining the consequences of spatial transformations. A misread scene can lead to a wrong answer, while even a correct interpretation does not ensure that imagined transformations satisfy spatial constraints. We introduce Spatial Harness, which represents scenes as explicit and executable world states to ground spatial reasoning in physics-engine feedback. A Perceiver integrates scene constraints extracted from the question with specialized visual estimates to place objects and cameras in a shared coordinate frame. The resulting state is instantiated in a physics engine, where a Reasoner executes viewpoint changes and uses computed measurements and rendered views to guide reasoning. We evaluate on MindCube, SAT, MMSI-Bench, and SpatialRGPT-Bench with open- and closed-weight VLMs. On MindCube, Spatial Harness improves Qwen3.5-27B from 52.70% to 71.14%, surpassing pySpatial by 7.52 percentage points. Given identical annotated object and camera poses, it reaches 98.25% versus 71.81% for model-internal reasoning. Code is publicly available at: https://github.com/tmlr-group/Spatial-Harness",
+      "published": "2026-11-08T12:43:14Z",
+      "updated": "2026-11-08T12:43:14Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.11344",
+      "abs_url": "https://arxiv.org/abs/2611.11344",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.05157",
+      "title": "Macrocanonical Generator Networks: Data-Efficient Neural Surrogates for Amortized Physics Simulation",
+      "authors": [
+        "Niall Jeffrey",
+        "Benjamin D. Wandelt"
+      ],
+      "abstract": "Many scientific simulations are computationally expensive, limiting their use in simulation-based inference, uncertainty quantification, and decision making. We introduce macrocanonical generator networks, a framework for learning fast, data-efficient neural surrogates for amortized simulation of stationary physical processes by matching multiscale statistics of a target process. Inspired by microcanonical maximum-entropy synthesis, which matches feature statistics per sample by inner-loop optimization, our approach instead trains a neural generator to satisfy the same constraints in expectation, preserving physically realistic sample-to-sample fluctuations. We prove that gradient-descent training induces preconditioned gradient-descent dynamics in sample space that inherit the symmetry-preservation properties of the microcanonical gradient descent of Bruna and Mallat, amortizing its per-sample inner-loop optimization into a single training run after which every sample is generated in one forward pass. We further show that residual generator parameterizations initialized near the identity, trained with a small learning rate, preserve entropy locally during early optimization and mitigate mode collapse. Experiments on cosmology and fluid simulations show that macrocanonical generators recover realistic samples from extremely small training sets, in some cases a single training example, while generating new realizations more than $10^6$ times faster per sample than the reference simulator and more than $10^3$ times faster than microcanonical gradient descent. The trained generators can be reused for downstream pretraining, including simulation-based inference, providing a data-efficient route to multi-fidelity scientific machine learning workflows.",
+      "published": "2026-11-03T16:30:49Z",
+      "updated": "2026-11-03T16:30:49Z",
+      "categories": [
+        "cs.LG",
+        "astro-ph.CO",
+        "stat.ML"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.05157",
+      "abs_url": "https://arxiv.org/abs/2611.05157",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.37972",
+      "title": "Application of PDE emulators for a multi-material, multi-physics simulation problem",
+      "authors": [
+        "Diane Oyen",
+        "Morgan Jones",
+        "Adithan Kathirgamaraju",
+        "Abu Bucker Siddik",
+        "Alexander Most",
+        "David Schodt",
+        "Christine Sweeney",
+        "Kyle Hickmann",
+        "Michael McCann",
+        "Jemma Stachelek",
+        "Alexius Wadell",
+        "Michal Kucer",
+        "Mahindra Rautela",
+        "Siddharth Mansingh",
+        "James Amarel",
+        "Gerd J. Kunde",
+        "Emily Casleton Taylor",
+        "Soumi De",
+        "Ayan Biswas",
+        "Aimee Hungerford",
+        "Nathan Debardeleben",
+        "Earl Lawrence"
+      ],
+      "abstract": "Machine learning (ML) architectures are being developed for fast emulation of numerical simulators to accelerate both scientific discovery and engineering design. While these approaches are well-tested on popular PDE (partial differential equation) benchmarks, it is necessary to evaluate their performance on datasets that more accurately reflect industrial and engineering applications. We evaluate several computer vision-based architectures trained as surrogate models on a challenging computational physics task involving multiple materials, revealing significant implementation challenges for adapting certain pre-trained models, including transformer-based architectures. For such multi-physics multi-material datasets, our results underscore the importance of learning algorithms designed for sparse and imbalanced data, techniques for adapting spatial encodings and physical consistency metrics, in addition to methods for reducing the cost of generating sufficient training data.",
+      "published": "2026-10-27T21:10:01Z",
+      "updated": "2026-10-27T21:10:01Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.37972",
+      "abs_url": "https://arxiv.org/abs/2610.37972",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.30679",
+      "title": "AgentDreamer: Agentic 3D Motion Reasoning for Text-Controllable Physics Simulation",
+      "authors": [
+        "Mijeong Kim",
+        "Suho Park",
+        "Junha Park",
+        "Bohyung Han"
+      ],
+      "abstract": "We propose AgentDreamer, an agent-guided optimization framework that aligns text instructions with simulated motion through explicit 3D motion planning. Given a text instruction and scene geometry, an off-the-shelf agent translates the instruction into a structured semantic motion prior, specifying what should move, in which direction, and in what temporal order. The agent represents this prior using parametric functions over a series of temporal chunks, yielding dense 3D trajectories. We then optimize the parameters of a differentiable MPM simulator such that its rollout best matches the prior while remaining constrained by the scene dynamics. This allows the agent to provide semantic guidance from language, while the simulator grounds it in physically feasible motion. We further introduce Motion-IG, an information-theoretic metric for text-motion alignment based on masked text recovery. By comparing the likelihood of recovering masked motion-related content with and without the simulated motion, Motion-IG measures the information contributed by the motion beyond that available from the remaining text and scene context. Experiments show that AgentDreamer improves text alignment over video-based guidance, producing simulations that more closely follow the requested physical behavior.",
+      "published": "2026-10-22T03:46:22Z",
+      "updated": "2026-10-22T03:46:22Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30679",
+      "abs_url": "https://arxiv.org/abs/2610.30679",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.24301",
+      "title": "Torch-DPhys: A Torch-Native, MOOSE-Compatible Framework for Differentiable Physics Simulation and Hybrid Machine Learning Integration",
+      "authors": [
+        "Akzhol Almukhametov",
+        "Yang Liu"
+      ],
+      "abstract": "We present Torch-DPhys, a Torch-native framework implemented in PyTorch for differentiable physics simulation and hybrid physics-machine learning. It implements selected thermal-hydraulic modeling concepts and discretizations from MOOSE's Thermal Hydraulics Module and the System Analysis Module (SAM), with a preliminary extension to continuum mechanics. Native tensor residuals support CPU and GPU execution, compilation of selected numerical kernels, and sparse direct linear solves. Sensitivities are obtained by differentiating executed numerical operations or through discrete adjoints of converged residual equations. Verification combines analytical solutions, reference-code comparisons, and derivative checks. Demonstrations cover plane-strain elasticity, one- and two-loop thermal-hydraulic transients, and an axisymmetric molten-salt fast reactor. For the reactor, comparison with SAM-Lite gives a maximum normalized field discrepancy of 1.13 x 10^-5 over 200 adaptive time steps, demonstrating agreement between the tested discrete implementations. Selected transient sensitivities are assessed using tangent-linear calculations and finite differences on fixed time schedules. Two applications illustrate the framework's connection between simulation and optimization. A residual-adjoint parameter-identification calculation recovers nominal pump head and heating power with relative errors below 0.06% from noiseless synthetic MOOSE observations. A separate three-loop plant demonstration uses solver-in-the-loop training of a predictive controller by differentiating trajectory-level objectives through the thermal-hydraulic simulation. These examples illustrate a foundation for gradient-based inference, control, and coupled physics-machine learning models in nuclear engineering.",
+      "published": "2026-10-16T22:52:43Z",
+      "updated": "2026-10-16T22:52:43Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.24301",
+      "abs_url": "https://arxiv.org/abs/2610.24301",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.38153",
+      "title": "PowerSim: Differentiable Physics Simulation and Rendering with Power Diagrams",
+      "authors": [
+        "Trong-Tung Nguyen",
+        "Anand Bhattad"
+      ],
+      "abstract": "We introduce PowerSim, a method to bring physically grounded, differentiable dynamics to PowerFoam's power diagram based 3D representation. PowerSim directly couples a pre-trained PowerFoam scene to the Material Point Method (MPM) by exploiting a natural alignment between the two: the geometric and appearance properties of each primitive correspond closely to the quantities MPM already tracks as an object deforms. Consequently, simulated motion can drive the scene's geometry and appearance directly, without an auxiliary representation in between. Built on this framework, we enable a range of applications on real and synthetic scenes: (1) simulating a static scene under user interaction, (2) recovering spatially varying material fields, (3) compositing primitives from independently captured scenes into a single simulation-ready scene and (4) ray-tracing reflections that update consistently as the object deforms. Our results suggest that PowerSim excels over previous frameworks for physically grounded dynamics, while unlocking unique advantages-such as secondary ray lighting effects on dynamic scenes. Results are best viewed on our project website: https://power-sim.github.io/.",
+      "published": "2026-09-29T17:58:37Z",
+      "updated": "2026-09-29T17:58:37Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.38153",
+      "abs_url": "https://arxiv.org/abs/2609.38153",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.37342",
+      "title": "Collision Detection is Instance $\\widetilde{O}$ptimal Under the Birthday Threshold",
+      "authors": [
+        "Omri Ben-Eliezer",
+        "Tomer Grossman",
+        "Václav Rozhoň",
+        "Jakub Tětek"
+      ],
+      "abstract": "Can structural knowledge about a hash function help accelerate the (black box) detection of collisions in it? This question is fundamental to cryptography theory given the importance of collision-resistant hash functions, and in this paper we tackle it from the angle of instance optimality, an ultimate notion of beyond worst case algorithm analysis that has gained significant traction in recent years. Instance optimality asks for a single algorithm that, on every input, performs nearly as well as the best correct algorithm that ``knows the structure'' of that specific input. Here we measure algorithms by the number of queries they make to the hash function $f\\colon [n]\\to [n]$, and we say that an algorithm ``knows the structure'' of the input if, in addition to query access to $f$, it has free access to an unlabeled copy $π^{-1}\\circ f\\circπ$ of $f$, for an unknown permutation $π$ on $[n]$. We prove the existence of an (almost) instance-optimal algorithm for collision detection in the regime most interesting from a cryptographic perspective: among functions where finding a collision takes significantly less than $\\sqrt{n}$ queries. Specifically, we prove the existence of a single algorithm $A$ that, for any input $f$ in which a structure-aware algorithm can find a collision using $q\\leq O(\\sqrt{n/\\log n})$ queries in expectation, $A$ can find a collision in at most $O(q\\log n)$ queries. The $O(\\log n)$ multiplicative overhead is tight, matching a lower bound of Ben-Eliezer, Grossman, and Naor [ICALP'25], and partially resolving their main open question. Our result implies, in particular, that it is impossible for a cryptographic designer to plant purely structural backdoors for collision finding (for this unlabeled notion of structure): whatever collisions the designer's secret knowledge finds, the public can find with a multiplicative overhead of $O(\\log n)$.",
+      "published": "2026-09-29T12:11:31Z",
+      "updated": "2026-09-29T12:11:31Z",
+      "categories": [
+        "cs.DS",
+        "cs.CC",
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.37342",
+      "abs_url": "https://arxiv.org/abs/2609.37342",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.35639",
+      "title": "GPUPhysBench: Benchmarking Coding Agents for Correct and Efficient GPU Physics Simulation",
+      "authors": [
+        "Yuchen Sun",
+        "Jinjin He",
+        "Sinan Wang",
+        "Bo Zhu"
+      ],
+      "abstract": "Writing fast GPU code for physical simulation is difficult: implementations must preserve numerical accuracy while handling irregular data access, synchronization, and iterative solvers. We introduce GPUPhysBench, a benchmark of 50 tasks testing whether coding agents can meet these demands. Tasks cover fluids, deformable solids, and granular materials, from individual simulation operators to complete simulators. Agents write, compile, test, and optimize GPU code with access to a NVIDIA GPU under fixed time budgets. We report pass rates and runtime performance relative to expert-optimized reference implementations. In a single-attempt evaluation of six frontier model-harness pairs, the two strongest pass all 50 tasks, but even the fastest reaches at least 0.9 the reference speed on only 22% of them, and no submission is more than 5% faster than the reference. The largest gaps arise in collision detection, constraint solving, and iterative solvers. GPUPhysBench brings physical simulation workloads to coding-agent evaluation, testing both the ability to implement numerical methods correctly and the ability to make them run efficiently.",
+      "published": "2026-09-28T17:06:44Z",
+      "updated": "2026-09-28T17:06:44Z",
+      "categories": [
+        "cs.DC",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.35639",
+      "abs_url": "https://arxiv.org/abs/2609.35639",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.30599",
+      "title": "Learning-Accelerated Narrow-Phase Collision Detection via Check Ordering for Sampling-Based Motion Planning",
+      "authors": [
+        "Hao Jiang",
+        "Yinghan Wang",
+        "Jianping He",
+        "Xiaoming Duan"
+      ],
+      "abstract": "Collision detection is critical for ensuring the safety of planned paths. However, it imposes a non-negligible computational burden on motion planners, motivating extensive studies on collision-detection acceleration. In commonly used phase-based collision-detection methods, the broad phase employs hierarchical structures to rapidly discard object pairs that are clearly collision-free, while the subsequent narrow phase performs detailed collision checks on the remaining object pairs whose collision status cannot be determined by the broad phase. Although these methods effectively reduce the number of detailed checks through broad-phase pruning, the narrow phase is usually executed in the default order returned by the broad phase, with little explicit optimization of the check order. This leaves room for further acceleration, especially in cluttered environments where many object pairs may remain after the broad phase and the narrow phase can account for a significant portion of the total detection time. In this work, we propose a learning-based method to accelerate phase-based collision detection by optimizing the check order in the narrow phase. We first formulate the expected time cost of the narrow phase and derive an optimal check-ordering criterion that minimizes this expectation. Since the priors required by this criterion are difficult to obtain in advance, we design a hypernetwork-based model to predict collision probabilities, which are then used to approximate the optimal check order. The resulting order guides the execution of exact mesh checks in the narrow phase, thereby reducing detection time without replacing the underlying geometric collision checker. Simulation results show that our method effectively accelerates phase-based collision detection and improves the efficiency and success rate of sampling-based motion planning, especially in cluttered environments.",
+      "published": "2026-09-24T22:28:08Z",
+      "updated": "2026-09-24T22:28:08Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.30599",
+      "abs_url": "https://arxiv.org/abs/2609.30599",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.24199",
+      "title": "NVIDIA Cosmos-H-Dreams: Real-Time Generative Physics Simulation for Surgical Robotics",
+      "authors": [
+        "Javier Gamazo Tejero",
+        "Lukas Zbinden",
+        "Keyur Sheth",
+        "Raghavendra K M",
+        "Nadim Daher",
+        "Diego Granero Maraña",
+        "Filip Binkiewicz",
+        "Patrick Thornycroft",
+        "Mahdi Azizian",
+        "Sean D. Huver"
+      ],
+      "abstract": "Generative simulation for surgical robotics still lacks real-time interaction. Physical-robot experiments, often involving animal or cadaver labs, are time-consuming, costly, and difficult to reproduce, while classical simulators struggle to capture photorealistic appearance and deformable-tissue dynamics. We address this gap with Cosmos-H-Dreams, an integrated real-time surgical world-model system combining an action-conditioned generative model, a teacher-to-student distillation recipe, and a deployment stack built on the NVIDIA FlashDreams streaming-inference library. Starting from Cosmos-H-Surgical-Simulator, a multi-embodiment action-conditioned surgical video world model fine-tuned on the large-scale Open-H-Embodiment corpus, we post-train this checkpoint on embodiment- and procedure-specific data. By distilling the resulting bidirectional teacher into a causal, few-step student with Self Forcing, we turn a passive video generator into a controllable surgical simulator that streams at $\\sim$160 inference FPS on a single NVIDIA RTX PRO 6000 Blackwell workstation GPU. Crucially, Cosmos-H-Dreams is controller-agnostic: any interface that emits a stream of robot kinematics can drive it. We demonstrate live control through a browser keyboard over WebRTC, a Meta Quest headset over WebXR, a commercial surgical robot console such as CMR Surgical's Versius, and learned policies operating in closed loop. To our knowledge, this is the first interactive surgical world model supporting live human and policy control. Human operators and policies alike can act inside the synthesized world and observe the consequences in real time. We release Cosmos-H-Dreams as an open surgical simulation system, providing a common foundation for surgical education, scalable synthetic data generation, and future intraoperative decision support.",
+      "published": "2026-08-25T08:09:40Z",
+      "updated": "2026-08-27T12:43:06Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.24199",
+      "abs_url": "https://arxiv.org/abs/2608.24199",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.09296",
+      "title": "CADEngBench: It Looks Like CAD, but Does It Work? Evaluating Parametric Design, Assembly Reasoning, and Physics Simulation",
+      "authors": [
+        "Harmanjot Singh",
+        "Abhra Dubey",
+        "Jorge Alejandro Amador Herrera"
+      ],
+      "abstract": "A CAD model is not engineering-grade merely because it looks correct. It must satisfy design requirements, respond predictably to parameter changes, support controlled edits, match a reference structural response under a declared analysis, and connect to other parts through valid joints. We present CADEngBench, a two-track benchmark for these capabilities. CADEngBench-P evaluates 300 parametric parts, each used for one zero-to-CAD task and one functional-editing task (600 tasks in total), through boundary-representation (B-Rep) validity, engineering and DFM checks, parameter-family perturbations, functional editing, and matched linear-static FEA in CalculiX. CADEngBench-A evaluates 150 body pairs through ranked joint retrieval, exact face-and-edge grounding, joint-frame prediction, and kinematic verification. Across eight multimodal, code-capable models, editing supplied CAD is substantially easier than generating it, while complex edits and matched FEA remain difficult. Assembly predictions often locate the relevant region but fail to recover the recorded joint or mating entities. These results show that CAD evaluation must test engineering behavior rather than appearance alone.",
+      "published": "2026-08-10T08:47:18Z",
+      "updated": "2026-08-10T08:47:18Z",
+      "categories": [
+        "cs.AI",
+        "cs.CV",
+        "cs.LG",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.09296",
+      "abs_url": "https://arxiv.org/abs/2608.09296",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.25871",
+      "title": "Multi-Solver Coupling for Parallel Adaptive Multi-Physics Simulations with Trixi$.$jl and deal$.$II",
+      "authors": [
+        "Vivienne Ehlert",
+        "Gregor Gassner",
+        "Martin Kronbichler",
+        "Hendrik Ranocha",
+        "Michael Schlottke-Lakemper"
+      ],
+      "abstract": "Many standalone frameworks for numerical solvers have been developed to tackle the simulation of specific single- or multi-physics problems. For solving coupled problems, common approaches are to extend existing solvers, to develop an entirely new solver or to couple two existing solvers by using the interface provided by a coupling library or framework. However, to the best of our knowledge, there is not yet a framework that allows the easy and direct development of coupled solvers. In this work, we prototype a portable reproducible cross-language framework for the development of coupled parallel adaptive solvers using Trixi$.$jl and deal$.$II for the numerical simulation of coupled multi-physics problems. Currently, this is tightly entangled with an example coupled solver. We show its usability by developing a partitioned strongly-coupled multi-physics solver for the dynamics of Newtonian self-gravitational gases. For the coupled solver, we validate the expected order of convergence, physical sensibility of the results and mesh adaptivity. Finally, we investigate its parallel scaling. A publicly accessible reproducibility repository for the numerical results and code is available.",
+      "published": "2026-07-28T15:37:49Z",
+      "updated": "2026-07-28T15:37:49Z",
+      "categories": [
+        "math.NA",
+        "cs.MS"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.25871",
+      "abs_url": "https://arxiv.org/abs/2607.25871",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.08025",
+      "title": "PGD-NO: A Neural Operator with Precomputed Geometry Decomposition for 3D Million-scale Physics Simulations",
+      "authors": [
+        "Weiheng Zhong",
+        "Jing Bi",
+        "Victor Oancea",
+        "Hadi Meidani"
+      ],
+      "abstract": "While neural PDE solvers have demonstrated significant potential for accelerating engineering simulations, existing architectures remain constrained by high memory consumption and the single node bottleneck, where the maximum processable mesh resolution is strictly limited by the VRAM of a single compute unit. To address these challenges, we propose PGD-NO, a neural operator with Precomputed Geometry Decomposition, that relocates the computational overhead of geometric encoding to a deterministic pre-computation phase. By utilizing an iterative geometry decomposition algorithm to extract geometry tokens, our model decouples feature extraction from solution querying. This architecture enables linear memory scalability, allowing high fidelity learning on meshes exceeding 10 million nodes, a scale where existing architectures typically encounter memory exhaustion. PGD-NO demonstrates competitive predictive accuracy across diverse industrial benchmarks and provides intrinsic interpretability through attention mechanisms. By effectively overcoming traditional mesh-size constraints, PGD-NO offers a robust and efficient solution for the next generation of large-scale, high-fidelity industrial design applications.",
+      "published": "2026-07-09T01:03:26Z",
+      "updated": "2026-07-09T01:03:26Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.08025",
+      "abs_url": "https://arxiv.org/abs/2607.08025",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.07601",
+      "title": "CARLA-GS: Decoupling Representation, Reasoning, and Physics Simulation for Autonomous Driving Corner-Case Synthesis",
+      "authors": [
+        "Kaicong Huang",
+        "Meng Ma",
+        "Ruimin Ke"
+      ],
+      "abstract": "Safety evaluation for autonomous driving is dominated by rare, safety-critical interactions, motivating simulators that can deliberately synthesize corner cases with photorealistic observations. Corner-case generation is inherently a multi-source problem spanning visual representation, scene reasoning, and vehicle trajectory generation and control. Prior knowledge- and model-based approaches typically focus on scene or trajectory components in isolation, while diffusion-based methods attempt end-to-end generation but still struggle to ensure spatiotemporal consistency and physical realism. To unify these aspects within a single framework, we propose CARLA-GS, a modular corner-case synthesis pipeline that decouples visual representation, semantic reasoning, and physics-based execution while maintaining tight cross-module coupling. Starting from real driving data, we reconstruct an editable gaussian scene with additional geometry-consistent constraints. A multi-agent LLM then performs scene-level reasoning to identify risky interactions and generate intent-level waypoint trajectories, while the low-level motion control is delegated to CARLA, where a PID controller ensures kinematic and dynamic feasibility. The simulated vehicle states are finally re-projected into the gaussian scene for ego-centric rendering. This design enables high-level semantic reasoning, low-level physically executable motion, and photorealistic corner-case generation within a unified pipeline. Experiments on the Waymo Open Dataset show, both quantitatively and qualitatively, that our framework enables controllable corner-case generation and produces photorealistic, spatiotemporally consistent videos aligned with semantic intent and physically feasible motion.",
+      "published": "2026-07-08T16:20:19Z",
+      "updated": "2026-07-08T16:20:19Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.07601",
+      "abs_url": "https://arxiv.org/abs/2607.07601",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.01428",
+      "title": "FUSE: A Partitioned Field-Exchange Framework for Coupling Physics Simulations in FEBio",
+      "authors": [
+        "Steve A. Maas",
+        "Farhan Muhib",
+        "Jeffrey A. Weiss"
+      ],
+      "abstract": "Computational biomechanics increasingly requires models that combine mechanics, transport, chemistry, and biological regulation across different spatial and temporal scales. The FEBio simulation software provides extensive open-source capabilities for modeling these processes using monolithic approaches. However, assembling independently developed physics models into reproducible coupled workflows remains challenging. Existing approaches often require custom scripts or external software pipelines, which can limit model reuse and complicate development. We present FUSE, the FEBio Unified Simulation and Exchange framework, a partitioned coupling plugin that enables separately defined FEBio models to communicate through structured field exchange. FUSE is designed for problems that are best solved independently, particularly when fast mechanical responses influence slower biological or chemical evolution. The framework uses a time-decoupled strategy in which a primary model advances on the longer time scale, while one or more secondary models are repeatedly initialized, supplied with updated fields, solved over shorter time horizons, with results returned to the primary model. Field exchange utilizes existing FEBio data maps, output fields, and user-specified filters, allowing coupled workflows to be constructed without modifying the underlying solvers. The framework was able to reproduce reference coupled solutions while handling bidirectional transfer, spatial field mapping, and filtered exchange of model variables. Example applications demonstrated coupling between mechanical loading and chemical degradation in injured cartilage and interaction between biological tissue formation and mechanical feedback during bone healing. By separating coupling logic from physics implementation, FUSE provides a practical mechanism for building maintainable multiphysics workflows within FEBio.",
+      "published": "2026-07-01T19:46:00Z",
+      "updated": "2026-07-01T19:46:00Z",
+      "categories": [
+        "cs.CE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.01428",
+      "abs_url": "https://arxiv.org/abs/2607.01428",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.21753",
+      "title": "Scene-Level Heterogeneous Physics Simulation with 3D Gaussian Splats",
+      "authors": [
+        "Xiaoyang Liu",
+        "Shangzhe Wu",
+        "Kai Han"
+      ],
+      "abstract": "3D Gaussian Splatting (3DGS) has achieved state-of-the-art photorealistic rendering, but the representation gap prevents these assets from being physically interactive. Production-grade physics engines do not understand the 3DGS representation, while prior physics-for-3DGS methods are monolithic silos. These prior works are fundamentally limited, demonstrating only object-centric physics in isolated environments, such as on an ideal plane. They are incapable of interacting with complex static collision geometry or heterogeneous assets. We propose a novel framework that, for the first time, bridges this gap by enabling 3DGS assets to participate in scene-level, heterogeneous, multi-solver physical simulations. Our core contribution is a Representation Abstraction Framework that translates all diverse assets, including 3DGS, virtual meshes, and fluids, into a unified physical particle set. This abstraction is key to enabling complex behaviors, such as the non-rigid deformation of 3DGS assets, within a unified physics pipeline. This particle set, along with the static scene collision boundaries derived from scene capture, is processed within a solver-agnostic physics kernel. The physical results are then mapped back to drive each asset's specific visual reconstruction. This architecture unlocks capabilities impossible with prior art. We demonstrate complex, two-way interactions between deformable 3DGS assets, standard CG assets such as fluids and meshes, and large-scale captured static environments, showcasing realistic coupled phenomena that were previously unattainable.",
+      "published": "2026-06-19T21:12:52Z",
+      "updated": "2026-06-19T21:12:52Z",
+      "categories": [
+        "cs.GR",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.21753",
+      "abs_url": "https://arxiv.org/abs/2606.21753",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.19504",
+      "title": "Simulating Robotic Locomotion in Sand: Resistive Force Theory in an Open-Source Physics Engine",
+      "authors": [
+        "Ryan Walker Brown",
+        "Laura K. Treers",
+        "Kathryn A. Daltorio"
+      ],
+      "abstract": "Recent advancements in Resistive Force Theory (RFT) enable approximation of ground reaction forces for locomotion in sand without the computational expense of modeling interactions with individual grains. However, these tools have been absent in 3D physics engines commonly used for robot simulation. We explore if resistive force approximations are sufficient, when integrated with standard dynamics calculations, to provide a stable substrate for a freely walking robot. To determine this, we implement 3D Granular Resistive Force Theory (3D RFT) in a physics simulation engine, MuJoCo. We verify simulations in multiple scenarios to demonstrate that key trends due to end effector shape, speed, and loading are preserved. Our implementation predicts both walking distance and foot sinkage of a 12-Degree of Freedom hexapod robot within 7\\% of experiments in sand. While RFT has inherent approximations, the open source tool described here has potential to help develop new and improved robot designs to traverse granular media substrates.",
+      "published": "2026-06-17T18:41:52Z",
+      "updated": "2026-09-28T02:10:13Z",
+      "categories": [
+        "cs.RO",
+        "eess.SY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.19504",
+      "abs_url": "https://arxiv.org/abs/2606.19504",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.09923",
+      "title": "Conformal Prediction for Neural Operators: Distribution-Free Uncertainty Quantification in Physics Simulation",
+      "authors": [
+        "Michael Chin"
+      ],
+      "abstract": "Neural operators such as the Fourier Neural Operator (FNO) have emerged as powerful surrogates for solving partial differential equations (PDEs), achieving speedups of several orders of magnitude over traditional numerical solvers. However, deploying these models in safety-critical engineering applications -- such as thermal management of electronic components and battery systems -- requires not only accurate point predictions but also rigorous uncertainty guarantees. Existing uncertainty quantification (UQ) methods for neural operators, including Monte Carlo Dropout and Deep Ensembles, provide only relative uncertainty estimates without formal coverage guarantees. In this work, we propose the first application of split conformal prediction to neural operator-based physics simulation, providing distribution-free prediction intervals with finite-sample coverage guarantees. We further introduce a normalized conformal prediction scheme that leverages MC Dropout uncertainty to produce adaptive-width intervals, yielding tighter intervals in regions of low uncertainty and wider intervals where the model is less certain. Full-scale experiments (33.7M parameters, 800 training samples, 5 ensemble members, NVIDIA V100) on steady-state heat conduction benchmarks demonstrate that our method achieves 89.1% empirical coverage at the target level of alpha=0.1, while producing spatially adaptive prediction intervals that reflect the underlying physical uncertainty structure. We also provide an uncertainty decomposition framework that separates epistemic uncertainty (68% of total) from aleatoric uncertainty (32% of total), offering actionable guidance for data collection and model improvement. Our method is implemented in an open-source platform with REST API endpoints and interactive 3D visualization.",
+      "published": "2026-06-07T08:52:38Z",
+      "updated": "2026-06-07T08:52:38Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.09923",
+      "abs_url": "https://arxiv.org/abs/2606.09923",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.00444",
+      "title": "Real-Time Physics Simulation with Dynamic Mesh-Gaussian Reconstructions",
+      "authors": [
+        "Adrian Ramlal",
+        "John S. Zelek"
+      ],
+      "abstract": "Integrating dynamic 3D reconstructions into physics simulation requires fixed mesh topology for efficient collision detection, but state-of-the-art methods like DG-Mesh produce varying topology optimized for geometric quality. We investigate whether topology conversion can enable physics integration while preserving reconstruction fidelity. We propose a dual-representation framework combining fixed-topology meshes for physics with Gaussian splatting for rendering, achieving 4.65$\\times$ speedup over varying-topology baselines through runtime vertex buffer updates. We evaluate two conversion strategies, temporal correspondence tracking and template-based projection, against native fixed-topology methods (MaGS) on the DG-Mesh dataset. Our evaluation reveals that both conversion approaches incur 65-80% geometric degradation, producing results inferior to MaGS despite DG-Mesh's superior initial quality. This demonstrates that high-quality reconstruction and physics-compatible topology represent fundamentally distinct objectives that cannot be reconciled through post-processing. Our findings inform future development of physics-aware reconstruction methods and our framework enables real-time simulation with any fixed-topology approach.",
+      "published": "2026-05-30T00:30:11Z",
+      "updated": "2026-05-30T00:30:11Z",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.00444",
+      "abs_url": "https://arxiv.org/abs/2606.00444",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.31481",
+      "title": "Batched Differentiable Rigid Body Dynamics in PyTorch for GPU-Accelerated Robot Learning",
+      "authors": [
+        "Yue Wang",
+        "Yanran Xu",
+        "Wenbo Wu",
+        "Chuanhang Qiu",
+        "Zhaoxing Li"
+      ],
+      "abstract": "As robot control shifts toward large-scale reinforcement learning with in-loop dynamics computation, the community's reliance on CPU-bound libraries such as Pinocchio creates a throughput bottleneck in GPU-based training pipelines. We present BARD (Batched Articulated Rigid-body Dynamics), a self-contained PyTorch implementation of Featherstone's rigid-body dynamics algorithms, optimized for batched GPU evaluation and automatic differentiation. Three design choices make this efficient: a tiered lazy-evaluation cache that avoids redundant tree traversals, matmul-free joint transforms via pre-computed Rodrigues constants, and level-parallel propagation that reduces sequential operations to tree-depth batched steps. On five robot models (7-23 DOFs), BARD matches Pinocchio numerically while reaching up to 64x higher throughput for Forward Kinematics and 63x for Jacobians at batch size 4096 on an NVIDIA H200. We validate differentiability through gradient-based system identification on a 7-DOF manipulator, recovering link masses to 1.24% mean error under 5% torque noise, and integrate BARD into an Isaac Lab AMP training pipeline for an 11-DOF spined quadruped with 4096 parallel environments, where it is 8.5x faster than Pinocchio and 2.0x faster than ADAM for in-loop dynamics. BARD is open-sourced at: https://github.com/YueWang996/bard-pytorch-dynamics.",
+      "published": "2026-05-29T16:07:28Z",
+      "updated": "2026-05-29T16:07:28Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.31481",
+      "abs_url": "https://arxiv.org/abs/2605.31481",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.16395",
+      "title": "OrbiSim: World Models as Differentiable Physics Engines for Embodied Intelligence",
+      "authors": [
+        "Jiajian Li",
+        "Jingyuan Huang",
+        "Junru Gong",
+        "Qi Wang",
+        "Xiaokang Yang",
+        "Yunbo Wang"
+      ],
+      "abstract": "We present OrbiSim, a novel robotic simulation paradigm that redefines world models as a fully differentiable physics engine for embodied intelligence. Unlike prior world models that focus on unconstrained imagination in latent or visual domains, OrbiSim establishes a unified, physically-grounded pathway that bridges structured scene assets, neural dynamics, and downstream reinforcement learning. By enabling end-to-end differentiability throughout the entire simulation loop -- spanning from explicit state transitions to visual observation generation -- OrbiSim supports tasks traditionally intractable for classical simulators, such as differentiable contact modeling, gradient-based policy optimization under sparse rewards, and intuitive physical inference. Empirical results demonstrate that OrbiSim significantly outperforms state-of-the-art world models in both predictive fidelity and control performance. Furthermore, its consistent responsiveness to asset configurations and physical parameters suggests its potential as a differentiable tool for enhancing robot simulation and policy training.",
+      "published": "2026-05-12T13:43:53Z",
+      "updated": "2026-10-16T15:22:03Z",
+      "categories": [
+        "cs.RO",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.16395",
+      "abs_url": "https://arxiv.org/abs/2605.16395",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.23520",
+      "title": "Rethinking Collision Detection on GPU Ray Tracing Architecture",
+      "authors": [
+        "Durga Keerthi Mandarapu",
+        "Isaac Fuksman",
+        "Artem Pelenitsyn",
+        "Gilbert Bernstein",
+        "Milind Kulkarni"
+      ],
+      "abstract": "Discrete Collision Detection (DCD) is a fundamental task in several domains including particle-based physics simulations. Efficient DCD uses indexing structures such as Bounding Volume Hierarchy (BVH), but accelerating irregular BVH traversals demands meticulous efforts to achieve performance. Modern GPUs feature Ray Tracing (RT) architecture that provides hardware acceleration for BVH traversal and optimized drivers for BVH construction. Recent work has attempted to exploit RT architecture to accelerate DCD on spherical particles by reducing DCD to fixed-radius neighbor search. However, this reduction breaks down for particles with different radii, necessitating the use of large bounding boxes that result in a higher number of duplicate collisions and poor performance. To address these limitations, we present Mochi, a new reduction that reformulates DCD on RT architecture by exploiting the symmetry of collision relations to support both uniform and non-uniform spherical particles efficiently. Mochi introduces per-object proxy spheres that decouple BVH bounding volumes from the collision search radius, enabling significantly tighter bounding boxes without sacrificing correctness. Mochi is provably sound and guarantees that all true collisions are detected. We integrate Mochi into an end-to-end particle simulation pipeline and evaluate it across large-scale particle workloads, showing consistent speedups over state-of-the-art BVH-based and RT-based DCD implementations. Mochi generalizes prior RT-based neighbor search formulations while avoiding their fundamental limitations for non-uniform spheres.",
+      "published": "2026-04-26T03:56:53Z",
+      "updated": "2026-04-26T03:56:53Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.23520",
+      "abs_url": "https://arxiv.org/abs/2604.23520",
+      "source": "arxiv"
+    },
     {
       "id": "2603.14634",
       "title": "Physically Accurate Rigid-Body Dynamics in Particle-Based Simulation",
@@ -475,7 +1018,7 @@
     },
     {
       "id": "2302.06001",
-      "title": "On Second-Order Derivatives of Rigid-Body Dynamics: Theory \u0026 Implementation",
+      "title": "On Second-Order Derivatives of Rigid-Body Dynamics: Theory & Implementation",
       "authors": [
         "Shubham Singh",
         "Ryan P. Russell",
@@ -685,7 +1228,7 @@
         "Ryan P. Russell",
         "Patrick M. Wensing"
       ],
-      "abstract": "Optimization-based robot control strategies often rely on first-order dynamics approximation methods, as in iLQR. Using second-order approximations of the dynamics is expensive due to the costly second-order partial derivatives of the dynamics with respect to the state and control. Current approaches for calculating these derivatives typically use automatic differentiation (AD) and chain-rule accumulation or finite-difference. In this paper, for the first time, we present analytical expressions for the second-order partial derivatives of inverse dynamics for open-chain rigid-body systems with floating base and multi-DoF joints. A new extension of spatial vector algebra is proposed that enables the analysis. A recursive algorithm with complexity of $\\mathcal{O}(Nd^2)$ is also provided where $N$ is the number of bodies and $d$ is the depth of the kinematic tree. A comparison with AD in CasADi shows speedups of 1.5-3$\\times$ for serial kinematic trees with $N\u003e 5$, and a C++ implementation shows runtimes of $\\approx$51$μs$ for a quadruped.",
+      "abstract": "Optimization-based robot control strategies often rely on first-order dynamics approximation methods, as in iLQR. Using second-order approximations of the dynamics is expensive due to the costly second-order partial derivatives of the dynamics with respect to the state and control. Current approaches for calculating these derivatives typically use automatic differentiation (AD) and chain-rule accumulation or finite-difference. In this paper, for the first time, we present analytical expressions for the second-order partial derivatives of inverse dynamics for open-chain rigid-body systems with floating base and multi-DoF joints. A new extension of spatial vector algebra is proposed that enables the analysis. A recursive algorithm with complexity of $\\mathcal{O}(Nd^2)$ is also provided where $N$ is the number of bodies and $d$ is the depth of the kinematic tree. A comparison with AD in CasADi shows speedups of 1.5-3$\\times$ for serial kinematic trees with $N> 5$, and a C++ implementation shows runtimes of $\\approx$51$μs$ for a quadruped.",
       "categories": [
         "cs.RO"
       ],
@@ -1615,7 +2158,7 @@
         "Mohamad Ali-Dib",
         "Kristen Menou"
       ],
-      "abstract": "[Abridged abstract] Large Language Models (LLMs) can solve some undergraduate-level to graduate-level physics textbook problems and are proficient at coding. Combining these two capabilities could one day enable AI systems to simulate and predict the physical world.\n  We present an evaluation of state-of-the-art (SOTA) LLMs on PhD-level to research-level computational physics problems. We condition LLM generation on the use of well-documented and widely-used packages to elicit coding capabilities in the physics and astrophysics domains. We contribute $\\sim 50$ original and challenging problems in celestial mechanics (with REBOUND), stellar physics (with MESA), 1D fluid dynamics (with Dedalus) and non-linear dynamics (with SciPy). Since our problems do not admit unique solutions, we evaluate LLM performance on several soft metrics: counts of lines that contain different types of errors (coding, physics, necessity and sufficiency) as well as a more \"educational\" Pass-Fail metric focused on capturing the salient physical ingredients of the problem at hand.\n  As expected, today's SOTA LLM (GPT4) zero-shot fails most of our problems, although about 40\\% of the solutions could plausibly get a passing grade. About $70-90 \\%$ of the code lines produced are necessary, sufficient and correct (coding \\\u0026 physics). Physics and coding errors are the most common, with some unnecessary or insufficient lines. We observe significant variations across problem class and difficulty. We identify several failure modes of GPT4 in the computational physics domain.\n  Our reconnaissance work provides a snapshot of current computational capabilities in classical physics and points to obvious improvement targets if AI systems are ever to reach a basic level of autonomy in physics simulation capabilities.",
+      "abstract": "[Abridged abstract] Large Language Models (LLMs) can solve some undergraduate-level to graduate-level physics textbook problems and are proficient at coding. Combining these two capabilities could one day enable AI systems to simulate and predict the physical world.\n  We present an evaluation of state-of-the-art (SOTA) LLMs on PhD-level to research-level computational physics problems. We condition LLM generation on the use of well-documented and widely-used packages to elicit coding capabilities in the physics and astrophysics domains. We contribute $\\sim 50$ original and challenging problems in celestial mechanics (with REBOUND), stellar physics (with MESA), 1D fluid dynamics (with Dedalus) and non-linear dynamics (with SciPy). Since our problems do not admit unique solutions, we evaluate LLM performance on several soft metrics: counts of lines that contain different types of errors (coding, physics, necessity and sufficiency) as well as a more \"educational\" Pass-Fail metric focused on capturing the salient physical ingredients of the problem at hand.\n  As expected, today's SOTA LLM (GPT4) zero-shot fails most of our problems, although about 40\\% of the solutions could plausibly get a passing grade. About $70-90 \\%$ of the code lines produced are necessary, sufficient and correct (coding \\& physics). Physics and coding errors are the most common, with some unnecessary or insufficient lines. We observe significant variations across problem class and difficulty. We identify several failure modes of GPT4 in the computational physics domain.\n  Our reconnaissance work provides a snapshot of current computational capabilities in classical physics and points to obvious improvement targets if AI systems are ever to reach a basic level of autonomy in physics simulation capabilities.",
       "categories": [
         "cs.AI",
         "astro-ph.EP",
@@ -1996,7 +2539,7 @@
       "authors": [
         "Bradley Camburn"
       ],
-      "abstract": "We present the first foundational AI model for universal physics simulation that learns physical laws directly from boundary-condition data without requiring a priori equation encoding. Traditional physics-informed neural networks (PINNs) and finite-difference methods necessitate explicit mathematical formulation of governing equations, fundamentally limiting their generalizability and discovery potential. Our sketch-guided diffusion transformer approach reimagines computational physics by treating simulation as a conditional generation problem, where spatial boundary conditions guide the synthesis of physically accurate steady-state solutions.\n  By leveraging enhanced diffusion transformer architectures with novel spatial relationship encoding, our model achieves direct boundary-to-equilibrium mapping and is generalizable to diverse physics domains. Unlike sequential time-stepping methods that accumulate errors over iterations, our approach bypasses temporal integration entirely, directly generating steady-state solutions with SSIM \u003e 0.8 while maintaining sub-pixel boundary accuracy. Our data-informed approach enables physics discovery through learned representations analyzable via Layer-wise Relevance Propagation (LRP), revealing emergent physical relationships without predetermined mathematical constraints. This work represents a paradigm shift from AI-accelerated physics to AI-discovered physics, establishing the first truly universal physics simulation framework.",
+      "abstract": "We present the first foundational AI model for universal physics simulation that learns physical laws directly from boundary-condition data without requiring a priori equation encoding. Traditional physics-informed neural networks (PINNs) and finite-difference methods necessitate explicit mathematical formulation of governing equations, fundamentally limiting their generalizability and discovery potential. Our sketch-guided diffusion transformer approach reimagines computational physics by treating simulation as a conditional generation problem, where spatial boundary conditions guide the synthesis of physically accurate steady-state solutions.\n  By leveraging enhanced diffusion transformer architectures with novel spatial relationship encoding, our model achieves direct boundary-to-equilibrium mapping and is generalizable to diverse physics domains. Unlike sequential time-stepping methods that accumulate errors over iterations, our approach bypasses temporal integration entirely, directly generating steady-state solutions with SSIM > 0.8 while maintaining sub-pixel boundary accuracy. Our data-informed approach enables physics discovery through learned representations analyzable via Layer-wise Relevance Propagation (LRP), revealing emergent physical relationships without predetermined mathematical constraints. This work represents a paradigm shift from AI-accelerated physics to AI-discovered physics, establishing the first truly universal physics simulation framework.",
       "categories": [
         "cs.LG",
         "cs.AI",
@@ -2254,7 +2797,7 @@
     },
     {
       "id": "2402.14801",
-      "title": "Mochi: Fast \\\u0026 Exact Collision Detection",
+      "title": "Mochi: Fast \\& Exact Collision Detection",
       "authors": [
         "Durga Keerthi Mandarapu",
         "Nicholas James",

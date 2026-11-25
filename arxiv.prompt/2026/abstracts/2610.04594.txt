@@ -1,0 +1,31 @@
+Title: SIFT: Robust Meta-Faithfulness Verification of Chain-of-Thought Reasoning Under Distribution Shift
+Authors: Noor Islam S. Mohammad, Md. Basim Al Zabir Shammo, Hasan Siddiki, Mahmudul Hasan, Md. Faisal Sheikh, Jakaria Habib
+ID: 2610.04594
+URL: https://arxiv.org/abs/2610.04594
+
+Abstract:
+Chain-of-Thought (CoT) faithfulness detectors are widely used to audit reasoning
+models, yet a detector is itself a predictor whose verdicts are treated as
+stable properties. We ask whether a detector is faithful to itself under
+distribution shift. We formalize meta-faithfulness as an invariance principle: a
+valid detector must return identical verdicts on traces that differ only by
+transformations preserving ground-truth faithfulness. We prove three results:
+(i) no detector using only intervention-response profiles can separate faithful
+from epiphenomenal mechanisms with identical signatures; (ii) any detector
+relying on shift-sensitive features violates invariance at a rate independent of
+its in-distribution accuracy; (iii) an asymptotic certified selective-risk
+guarantee enables confident abstention. We operationalize the principle in
+FaithShift, a stress-test protocol spanning ten shift axes, and propose SIFT, a
+hidden-state trajectory detector trained with cross-environment invariance
+objectives and certified abstention. Across 14,996 traces, four domains, and
+eight models, three findings emerge. First, transfer collapse is real: all
+existing detectors show gaps $\geq 0.15$ AUROC. Second, the dominant bottleneck
+is sampling stochasticity, not shift: over 80% of detector instability stems
+from random seed variation, falsifying our preregistered prediction that shift-
+attributable violations exceed 0.25. Third, SIFT cuts invariance violations by
+64% over the best single-seed baseline, but a four-seed ensemble of any detector
+narrows the margin to 0.01 (indistinguishable at matched coverage, $p=0.21$),
+and SIFT needs a 51% abstention rate. Cross-model transfer degrades from within-
+family to cross-family to open-weight-to-API, partly closed by multi-model
+training. We offer a framework for auditing auditors: the real barrier is
+detector variance, not distribution shift.

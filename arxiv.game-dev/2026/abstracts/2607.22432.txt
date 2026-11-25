@@ -1,0 +1,31 @@
+Title: TileSight: A First-Principles Tile-Centric Analytical GPU Performance Model from Cores to Clusters
+Authors: Zhiwen Mo, Yu Cheng, Lei Wang, Zhengju Tang, Lei Xu, Guoyu Li, Yuqi Dong, Lingxiao Ma, Yuqing Xia, Jilong Xue et al.
+ID: 2607.22432
+URL: https://arxiv.org/abs/2607.22432
+
+Abstract:
+Recent GPU programming frameworks such as Triton, TileLang, and CUDA Tile adopt
+tiles as first-class primitives, making tile-centric programming the prevailing
+approach for high-performance GPU kernels. Performance-analysis tooling has not
+followed: programmers still rely on coarse roofline bounds, opaque ML
+predictors, or post-hoc profilers to understand kernel execution. This gap is
+acute for modern AI workloads, where kernel fusion and distributed inference
+depend on tensor cores, CUDA cores, cache hierarchies, memory pipelines, and
+inter-GPU networks. We present TileSight, a tile-centric performance-modeling
+tool that elevates the tile from a programming primitive to an analysis
+primitive. Within a GPU core, TileSight models compute-memory pipeline overlap;
+across cores, it models the cache hierarchy; across GPUs, it models inter-node
+communication. All layers share the tile abstraction: the intra-tile layer
+expresses work as a resource vector spanning network, memory, and compute
+pipelines; the inter-tile layer schedules dependent and ordered actions to
+expose legal overlap and infers multi-level cache hit rates from tile reuse
+distance; and the cross-device layer maps remote tensor accesses to placements
+and routes them through an alpha-beta stage cost. On A100, H200, B200, and
+B6000, TileSight predicts single-GPU kernel latency with 12.35% pooled mean
+absolute percentage error (MAPE), outperforming state-of-the-art baselines and
+transferring better across architectures. Its L2 cache-hit-rate predictions are
+within roughly one percentage point of measurements on every GPU. At up to 32
+GPUs, TileSight achieves 16.18% weighted MAPE (wMAPE) on fused distributed
+kernels and 13.52% wMAPE on end-to-end vLLM serving. In optimization, TileSight
+selects tile configurations competitive with strong vendor and expert baselines.
+TileSight will be open-sourced upon publication.

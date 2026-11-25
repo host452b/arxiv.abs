@@ -1,0 +1,27 @@
+Title: Whole-Body Inverse Kinematics with Graph Diffusion
+Authors: Helong Huang, Kai Tan, Feng Wen, Guowei Huang, Xingyue Quan
+ID: 2606.00086
+URL: https://arxiv.org/abs/2606.00086
+
+Abstract:
+Inverse kinematics (IK) is a fundamental problem in robotics, requiring the
+generation of joint configurations that satisfy target end-effector poses.
+Existing approaches often struggle to generalize across diverse robot
+morphologies and to effectively model the multi-modal nature of IK, particularly
+in articulated systems with multiple kinematic branches. In this work, we
+propose GraphDiff-IK, a structure-aware graph diffusion framework for inverse
+kinematics. Specifically, we represent the robot as a kinematic graph
+constructed from the robot URDF, where nodes correspond to actuated joints and
+edges encode kinematic dependencies. Building upon this representation, we
+formulate IK as a conditional graph diffusion process that directly generates
+joint configurations on the robot graph. To better capture structural
+dependencies in articulated systems, we further introduce a structure-aware
+graph reasoning framework with hierarchical stage-wise message passing and
+torso-aware conditioning for multi-branch robots. In addition, we incorporate
+noisy forward kinematics feedback and task-space supervision to improve
+geometric consistency during denoising. The proposed framework provides a
+unified formulation that naturally supports single-arm robots, dual-arm systems,
+and articulated robots with torso or waist structures. Extensive experiments on
+diverse robotic platforms demonstrate that the proposed method achieves accurate
+and stable IK performance while preserving the ability to generate multiple
+feasible solutions for redundant robotic systems.

@@ -10,11 +10,1149 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:52:30Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 4948,
-  "return_count": 200,
+  "return_count": 254,
   "papers": [
+    {
+      "id": "2611.32588",
+      "title": "CoReQ: Condition-Aware Cross-Modal Repair and Quality-Guided Robust Collaborative Perception",
+      "authors": [
+        "Ziwei Guo",
+        "Lingzhi Li",
+        "Jin Wang",
+        "Yunjiang Xu",
+        "Yupeng Ouyang",
+        "Benyuan Yang",
+        "Yujun Shi"
+      ],
+      "abstract": "Multi-vehicle collaborative perception can use observations from different perspectives to alleviate the problems of occlusion and limited sensing range. However, missing echoes and false echoes caused by bad weather will reduce the quality of single-vehicle features and affect collaborative detection. LiDAR provides richer geometric information, and 4D Radar has strong weather adaptability. The complementarity of the two provides the possibility to improve perception under degraded observations. However, how to adjust cross-modal repair according to the current observation conditions and how to reasonably integrate multi-vehicle features whose reliability still differs after repair are still problems that need to be solved. To this end, we propose CoReQ, a condition-aware repair and quality-guided collaborative perception framework. For the former, the condition-guided bidirectional cross-modal repair module (CBCR) extracts vehicle-level observation conditions from point cloud occupancy, density and feature statistics, and adjusts the bidirectional correction of LiDAR and Radar features accordingly. For the latter, we combine local reliability assessment with collaborative weighting: first, the task-aware quality estimation module (TaQE) uses the classification and positioning information of the EMA teacher to construct a supervision target and predict the spatial quality of the repaired features; then, the condition and quality guided fusion module (CoQF) matches the quality information with the content, and the observation conditions of both parties are jointly used for multi-vehicle feature weighted fusion. Experiments on V2X-R and V2X-Radar-C show that the framework is competitive under a variety of observation conditions, achieving significant gains in AP@0.7 on V2X-R under snowy conditions, and achieving the highest AP among the compared V2X-Radar-C methods.",
+      "published": "2026-11-24T13:26:48Z",
+      "updated": "2026-11-24T13:26:48Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32588",
+      "abs_url": "https://arxiv.org/abs/2611.32588",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32550",
+      "title": "Self-supervised quality evaluation of grid maps without ground truth",
+      "authors": [
+        "Unal Artan",
+        "Manuel Castellano-Quero",
+        "Johannes A. Stork",
+        "Martin Magnusson"
+      ],
+      "abstract": "Maps are widely used in the robotics community for localization and path planning and the ability to identify incorrect or inaccurate regions of a map is an area of active research interest. For large environments, manual edits of the map can be very time consuming and a tool which can assist a map editor is needed. With this paper, we contribute to robot introspection through self-assessment of map quality, using only a given map as input to be independent of the underlying mapping algorithm. Current methods for map quality assessment rely on ground-truth or labelled information for training classifiers, both of which can be difficult to obtain. In this paper, we propose a self-supervised learning approach to map quality assessment of 2D occupancy grid maps which identifies regions of a map that require further investigation. We leverage an autoencoder for patches extracted from the map to capture the dominant structure of the map. By evaluating the reconstruction loss of a patch reconstructed with the learned model, we can evaluate whether it contains an unusual structure, which indicates the need of further investigation. We evaluate our method on the outcome of state-of-the-art grid mapping methods using benchmark datasets as well as maps from warehouse environments, highlighting the application to more complex environments. We show that the method identifies regions with sparse data, clutter, and misregistrations.",
+      "published": "2026-11-24T13:05:56Z",
+      "updated": "2026-11-24T13:05:56Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32550",
+      "abs_url": "https://arxiv.org/abs/2611.32550",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31496",
+      "title": "Reading Between the Layers: Where Representation Quality Lives, and What Geometry Reveals",
+      "authors": [
+        "Arnesh Batra",
+        "Aniket Khandelwal",
+        "Arush Gumber",
+        "Krish Thukral",
+        "Kushagra Agrawal",
+        "Dev Sharma"
+      ],
+      "abstract": "Representation quality in pretrained text foundation models is not concentrated at the final layer, yet practitioners routinely probe it there because layer selection without labels has remained an open problem. We present a large-scale empirical study of where layer quality lives across 25 models spanning four architectural families and four pretraining strategies, evaluated on 13 datasets across classification, pair classification, semantic textual similarity, and multiple-choice question answering. Peak probing layers depend systematically on pretraining strategy and architecture: masked encoders peak in late-middle layers, sequence-to-sequence models shift their peak with task type, contrastive sentence encoders concentrate signal at the final layer under CLS and last-token readouts but peak early under mean pooling, and decoder-only models exhibit distinct phase structure tied to depth. We distill these findings into the Stable Geometry Index (SGI), a closed-form, fully label-free selector with no fitted coefficients combining power-law fit quality, effective-rank capacity, spectral stability, and a weak depth prior. Across 383 evaluation groups SGI improves over the last-layer baseline and lifts Hit@3 from 0.39 to 0.52, recovering 40% of the gap to the oracle without using any labels, and exceeds a supervised ELMo-style layer mix on the matched subset despite using strictly less information. Our ablations also reverse a common assumption in the spectral-decay literature: power-law fit quality is a stronger predictor of layer quality than the exponent's proximity to one.",
+      "published": "2026-11-23T20:07:46Z",
+      "updated": "2026-11-23T20:07:46Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31496",
+      "abs_url": "https://arxiv.org/abs/2611.31496",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31062",
+      "title": "X-BQSR: Holistic Acceleration of Base Quality Recalibration for Scalable Genomic Analysis",
+      "authors": [
+        "Eugenio Marinelli",
+        "Ivan Donchev Kabadzhov",
+        "Raja Appuswamy"
+      ],
+      "abstract": "With the continued decline in sequencing costs, genomics-based precision medicine is gaining increasing importance. The Genome Analysis Toolkit (GATK) is the standard framework for converting raw genomic data into actionable variants, but one of its most expensive steps is base quality score recalibration (BQSR), which corrects systematic sequencing errors. Despite significant work on accelerating other parts of the variant calling pipeline, BQSR has not been systematically explored on GPUs. In this work, we analyze BQSR to identify computational and I/O bottlenecks and show that simply offloading key stages to an accelerator is insufficient to achieve overall gains. We then present X-BQSR, a holistic redesign of the entire BQSR pipeline, including I/O, compression, and kernel execution, to better leverage GPU parallelism. We implement X-BQSR using portable SYCL kernels for NVIDIA, AMD, and Intel GPUs, along with native CUDA and HIP backends for comparison, and we evaluate its performance against previous FPGA work. Our evaluation shows up to 141.7x acceleration compared to standard GATK and 8.7x acceleration compared to a proprietary GPU-accelerated solution.",
+      "published": "2026-11-23T17:20:33Z",
+      "updated": "2026-11-23T17:20:33Z",
+      "categories": [
+        "cs.DC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31062",
+      "abs_url": "https://arxiv.org/abs/2611.31062",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31038",
+      "title": "Boltz-Flow: Generating High-Quality Robot Action from Boltzmann Machine",
+      "authors": [
+        "Hengzhi Jiang",
+        "Haixu Liu",
+        "Jindou Jia",
+        "Tinglan Wang",
+        "Shaobo Chen",
+        "Yiren Zhao",
+        "Ziyang Rao",
+        "Laiyuan Cui",
+        "Jiaxin Dong",
+        "Yin Ma",
+        "Hai Wei",
+        "Jiaqi Bai",
+        "Tuo An",
+        "Xinyu Zhou",
+        "Hao Ban",
+        "Hongdong Zhu",
+        "Yanqi Wang",
+        "Jiaqi Dou",
+        "Nuo Qian",
+        "Qi Liu",
+        "Bin Jin",
+        "Chang Wu",
+        "Qingfeng Li",
+        "Hui Yang",
+        "Weiyu Guo",
+        "Dicong Qiu",
+        "Qi Gao",
+        "Jianwei Niu",
+        "Kai Wen",
+        "Jianfei Yang"
+      ],
+      "abstract": "Flow-matching policies integrate a velocity field from a fixed, observation-independent Gaussian source. However, since the source is unimodal and identical across all tasks, the limited representational capacity of Gaussian distributions constrains how far a policy can scale with growing task diversity. Moreover, the source factorizes over time steps and control dimensions, discarding the coordination that manipulation requires. We introduce Boltz-Flow, which replaces Gaussian initialization with a more powerful, observation- and instruction-conditioned Boltzmann source while leaving the base VLA unchanged. Boltz-Flow parameterizes this source with a conditional Boltzmann machine that assigns an energy value to each binary source state. A listwise objective, supervised entirely by offline demonstrations, aligns this energy with the quality of actions produced after frozen flow integration. At inference, the energy defines an Ising instance whose solution is decoded into continuous noise before a single standard integration. We use a physical coherent Ising machine during training. Experiments show that Boltz-Flow improves $π_{0.5}$ across three benchmarks, outperforming the compared strong policy baselines and competing noise optimization methods on LIBERO and RoboTwin 2.0 and ranking second only to LEAP on LIBERO-Plus. Additional experiments show gains under noise-adapted fine-tuning, with action-to-action warm starts, and on the SmolVLA backbone.",
+      "published": "2026-11-23T17:10:08Z",
+      "updated": "2026-11-23T17:10:08Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31038",
+      "abs_url": "https://arxiv.org/abs/2611.31038",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30778",
+      "title": "What Quality Engineers Need to Know About Generative AI: Structured Data Extraction",
+      "authors": [
+        "Fadel M. Megahed",
+        "Ying-Ju Chen",
+        "Yamin Dahwich",
+        "Zhao-Wei Chen",
+        "Lucas K. Hung",
+        "Arthur Carvalho",
+        "L. Allison Jones-Farmer",
+        "Ibrahim Yousif",
+        "Inez M. Zwetsloot"
+      ],
+      "abstract": "In this expository paper, we explain how quality engineers can use large language models (LLMs) and vision-language models (VLMs) for structured data extraction. We introduce the relevant concepts, discuss structured extraction from a measurement-system perspective, and demonstrate its implementation in R and Python. We then present two freely available web-based applications (apps): (a) extracting information from automotive recall notices and (b) monitoring quality engineering research on arXiv. To ensure the accuracy of our AI-driven structured extraction, human evaluators validated the results. In the first app, four reviewers assessed information extracted from 30 recall notices using two models, with 98.6% of the 720 field-level ratings judged fully correct. In the second app, 21 authors evaluated information extracted from 45 of their arXiv papers. All paper summaries were rated mostly correct or correct, although the evaluations identified problems with some classification fields and mathematical expressions. These results demonstrate the practical potential of structured data extraction while emphasizing the need to validate the extracted information. We make both apps and their source code publicly available so that readers can adapt the approach to their own applications.",
+      "published": "2026-11-23T14:44:59Z",
+      "updated": "2026-11-23T14:44:59Z",
+      "categories": [
+        "cs.CE",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30778",
+      "abs_url": "https://arxiv.org/abs/2611.30778",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29834",
+      "title": "Data-Quality-Aware Fundus Classification with Anatomy-Guided Glaucoma Assessment and Cross-Dataset Evaluation",
+      "authors": [
+        "Imdadul Haque Sourav",
+        "Marjana Jannat Miti",
+        "Md. Jehadul Islam Mony"
+      ],
+      "abstract": "Background: Deep learning fundus classifiers often perform well internally, but duplicated images, inconsistent labels, acquisition differences and poor threshold transfer can undermine their reliability. We assess nine-class classifiers beyond internal accuracy, using a data audit, frozen-model external evaluation and an anatomy-guided specialist. Methods: Nine-class experts (ConvNeXt-Small, EfficientNetV2-Small, DenseNet169) were trained with three seeds. Auditing 5,318 images for exact duplicates and cross-label conflicts removed 464 conflict groups (942 images) and six same-label copies, leaving 4,370 images. An anatomy-guided glaucoma specialist read disc-centred crops with vessel and disc/cup segmentation maps, plus cup-to-disc features. Frozen models were evaluated on RFMiD and JSIEC, and a prespecified comparison on REFUGE was replicated on ORIGA, G1020 and PAPILA. Results: ConvNeXt-Small reached an internal accuracy of 0.910, macro-F1 of 0.917 and AUC of 0.982; disc and cup Dice scores were 0.966 and 0.915. Across seeds, the fixed anatomy-guided mix left internal accuracy unchanged relative to equal soft voting (-0.001) but raised mean external closed-set accuracy by 4.9 percentage points on RFMiD (positive in two of three seeds) and 2.3 on JSIEC. On REFUGE (800 photographs) it improved balanced accuracy by 7.4 percentage points (95% CI 5.1 to 9.5), and by 2.1 on ORIGA, with positive gains on G1020 and PAPILA. Thresholds transferred poorly (REFUGE sensitivity 0.950, specificity 0.411). Conclusions: Retinal classifiers should be judged by data-quality auditing, anatomy-informed modelling and multi-cohort evaluation. Anatomy-guided fusion improved transfer at no internal cost, but gains varied by cohort and thresholds did not transfer, so internal metrics alone do not establish reliable performance.",
+      "published": "2026-11-22T23:33:32Z",
+      "updated": "2026-11-22T23:33:32Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29834",
+      "abs_url": "https://arxiv.org/abs/2611.29834",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29693",
+      "title": "HandiVid: A High-Quality Dataset for Hand-Driven Interactive Video Generation",
+      "authors": [
+        "Chaoyang Zhang",
+        "Shaohao Rui",
+        "Xiaofeng Mao",
+        "Yuanxun Xu",
+        "Haoyuan Xia",
+        "Xiaohong Liu",
+        "Qinghe Du",
+        "Weijie Ma"
+      ],
+      "abstract": "Hand-driven egocentric interactive video generation aims to generate dynamic scenes with realistic interaction responses conditioned on hand movements and camera motion. However, existing egocentric video datasets struggle to provide scene diversity, meaningful hand-object interactions, and reliable motion annotations simultaneously. To address these limitations, we introduce HandiVid, a high-quality dataset comprising 200K curated and annotated egocentric interaction video clips for hand-driven interactive video generation. We develop a unified data processing pipeline that integrates public datasets, online videos and synthetic videos. Through video quality assessment, hand detection filtering, and multi-stage interaction validation using vision-language models (VLMs), we select high-quality video clips with meaningful hand-object interactions. Since 3D hand reconstruction relies on initial hand detections, we integrate SAM 3 into the hand detection pipeline to reduce missed detections and improve the completeness of 3D hand annotations. Each video clip is provided with high-quality hand renderings, camera trajectories, and interaction descriptions. Comprehensive dataset analysis and downstream video generation experiments demonstrate the effectiveness of HandiVid in terms of data diversity, annotation quality, and controllable video generation.",
+      "published": "2026-11-22T18:55:46Z",
+      "updated": "2026-11-22T18:55:46Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29693",
+      "abs_url": "https://arxiv.org/abs/2611.29693",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29549",
+      "title": "CompareDR: Benchmarking Deep Research Reports from Individual Quality to Comparative Merit",
+      "authors": [
+        "Wanli Wu",
+        "He Zhu",
+        "Yue Xu",
+        "Haolin Ren",
+        "Yan Chen",
+        "XunLiang Cai",
+        "Fan Yang",
+        "LingChuan Liu",
+        "Shizhu He"
+      ],
+      "abstract": "Deep research systems can produce reports with different evidence, analyses, and conclusions for the same query. A reader deciding which findings to rely on needs to know how well each report meets the task requirements and which differences matter to the answer. A score for a single report can summarize its quality, but it does not identify which contributions make one report more useful than another. We introduce CompareDR, a benchmark that combines task-specific pointwise audits with guideline-based pairwise comparisons. We use passage-linked report representations to locate relevant differences and selective evidence verification to check claims that could affect the judgment. The benchmark comprises 40 Chinese and English tasks from three existing benchmarks, 360 reports from nine systems, 1,099 human-reviewed evaluation criteria, and human preferences elicited through blinded comparisons of 80 report pairs. The hybrid evaluator matches 69 of these 80 preferences (86.25%, Cohen's $κ=0.746$). The benchmark supports both comparisons of research systems and examination of the evidence and analyses behind those judgments.",
+      "published": "2026-11-22T15:23:07Z",
+      "updated": "2026-11-22T15:23:07Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29549",
+      "abs_url": "https://arxiv.org/abs/2611.29549",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29385",
+      "title": "Exploiting Queue Information for Quality of Services Routing in SDN Networks",
+      "authors": [
+        "Hong-Li Lin",
+        "Yung-Chung Wang"
+      ],
+      "abstract": "Routing costs determine how deterministic networks allocate feasible queue resources to successive flow requests. We propose a topology-aware cost that combines normalized network-calculus post-admission delay and backlog bounds with static path diversity and shortest-path load concentration. Their product weights the backlog premium above a delay baseline within a shared queue-level routing, LARAC, and admission-control framework. Across ten paired runs, the proposed cost admits 657.7, 478.9, and 168.2 more flows than Max-Risk on Polska, NSFNET, and COST266, respectively; the corresponding 95% confidence intervals exclude zero. Germany50 shows a smaller gain of 67.6 flows with an interval crossing zero. The proposed cost has the highest mean acceptance among five costs on three of the four topologies. Gains are accompanied by comparable or lower mean hop counts and cannot be explained simply by higher aggregate utilization. On 100-1000-node networks, risk-aware costs remain comparatively stable while delay-only acceptance declines. A centralized SDN realization reduces distributed control and protocol-state overhead, while large-scale results expose the associated routing-performance tradeoff.",
+      "published": "2026-11-22T10:57:45Z",
+      "updated": "2026-11-22T10:57:45Z",
+      "categories": [
+        "cs.NI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29385",
+      "abs_url": "https://arxiv.org/abs/2611.29385",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28915",
+      "title": "Which Model Belongs in the Loop? Evaluating Fitness Functions for Network Topology Optimization with a Quality-Diversity Algorithm",
+      "authors": [
+        "Paul Bannmüller",
+        "Olayiwola Arowolo",
+        "Jochen Stiasny",
+        "Jochen Cremer"
+      ],
+      "abstract": "Network topology optimization (NTO) can reduce redispatch cost by rerouting power flows in transmission systems. To approach NTO, a complex combinatorial problem, gradient-free optimization algorithms that leverage diversity have shown promising results. These algorithms rely on frequent evaluations of candidate topologies by fitness functions. Recent work has shown that fast DC power flow-based fitness functions can serve this purpose. However, DC power flow fitness functions can misjudge the cost and feasibility of topologies, potentially leading to wrong operational decisions. Understanding the impact of fitness function accuracy on optimization performance is therefore crucial. This study compares the optimization performance of four fitness functions based on DC and AC power flow and on DC and AC optimal power flow. Furthermore, we propose a ranking-based metric to estimate the optimization performance of a fitness function on a curated dataset. Case studies cover the IEEE 118-bus case with 50 congested operating points and a 793-bus case for validation. Results show that optimal power flow-based fitness functions perform better in the optimization loop than power flow-based ones. Additionally, the results indicate that the metric can predict the optimization performance order of the fitness functions, but only if the distribution shift between the curated dataset and the search path of the optimization is small.",
+      "published": "2026-11-21T16:41:10Z",
+      "updated": "2026-11-21T16:41:10Z",
+      "categories": [
+        "cs.NE",
+        "eess.SY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28915",
+      "abs_url": "https://arxiv.org/abs/2611.28915",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28850",
+      "title": "MQCODet: Modality Quality-Guided Collaborative Optimization for UAV-Based RGB-T Tiny Pedestrian Detection",
+      "authors": [
+        "Hui Li",
+        "Jianbo Ma",
+        "Hui Luo",
+        "Guanglin Qi",
+        "Zhixing Wang",
+        "Haorui Zuo",
+        "Jianlin Zhang"
+      ],
+      "abstract": "Unmanned aerial vehicle (UAV)-based RGB-thermal (RGB-T) remote sensing provides complementary visual and thermal information for pedestrian perception under complex aerial observation conditions. However, detecting tiny pedestrians in UAV-based RGB-T imagery remains challenging due to cross-modal spatial heterogeneity, manifested as modality quality imbalance and spatial position misalignment. Existing RGB-T detectors primarily address these challenges at the feature fusion stage, without establishing an effective coupling between feature fusion and object localization, potentially resulting in suboptimal detection performance. To address this limitation, we introduce a Modality Quality-Guided Collaborative Optimization Detector (MQCODet), which extends modality quality from a fusion prior to a localization supervision cue. Specifically, we propose a Dynamic Calibration and Region-Aware Fusion (DCRF) module that progressively refines cross-modal spatial alignment and performs region-aware fusion to generate reliable multi-scale features and a scene-level modality quality prior. We further design an Efficient Contextual Interaction (ECI) encoder to enhance multi-scale feature interaction while preserving fine-grained spatial details. Moreover, we propose a Modality-Aware Adaptive (MAA) loss that incorporates the modality prior and object scale to adaptively balance spatial consistency and geometric similarity for localization supervision. Extensive experiments demonstrate that MQCODet surpasses state-of-the-art methods on two UAV-based RGB-T tiny pedestrian detection benchmarks while achieving real-time inference on the edge platform.",
+      "published": "2026-11-21T15:03:50Z",
+      "updated": "2026-11-21T15:03:50Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28850",
+      "abs_url": "https://arxiv.org/abs/2611.28850",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28817",
+      "title": "Rate-Quality-Energy Convex Hull for High Dynamic Range Adaptive Video Streaming",
+      "authors": [
+        "Amritha Premkumar",
+        "Christian Herglotz"
+      ],
+      "abstract": "High Dynamic Range (HDR) video introduces substantially higher decoding complexity and energy consumption than Standard Dynamic Range (SDR), yet most adaptive streaming pipelines still rely on bitrate ladders optimized using SDR-oriented metrics such as VMAF. These ladders fail to capture HDR-specific perceptual behavior and ignore decoder-side energy, resulting in energetically inefficient operating points. This work proposes a rate-quality-energy convex-hull optimization framework that jointly considers bitrate, HDR-aware perceptual quality (HDRVMAF), and client-side processing energy, including decoding and upscaling. Experiments on twelve 4K HDR sequences from the LIVE HDR Video Quality Assessment Database evaluate 72 representations per clip and demonstrate that traditional VMAF-optimized ladders frequently select high-resolution encodes that become dominated once energy is accounted for. Compared to the Default HLS ladder, our HDR-aware method achieves substantial bitrate savings of up to 54.34% at equal HDRVMAF, while yielding relative client-side energy reductions of up to 43.10% under higher energy weighting. These results demonstrate the effectiveness of the proposed framework as a practical foundation for constructing HDR bitrate ladders that explicitly expose and control perceptual quality-energy trade-offs.",
+      "published": "2026-11-21T14:03:52Z",
+      "updated": "2026-11-21T14:03:52Z",
+      "categories": [
+        "eess.IV",
+        "cs.MM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28817",
+      "abs_url": "https://arxiv.org/abs/2611.28817",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28615",
+      "title": "Can Ideologues Agree on Quality? From Non-identifiable Latent Factors to Collective Outcomes",
+      "authors": [
+        "David Gamba",
+        "Seura Ha",
+        "Daniel M. Romero",
+        "Grant Schoenebeck"
+      ],
+      "abstract": "To surface \"objective\" fact-check notes, X's Community Notes uses Biased Matrix Factorization (BMF) on crowd-sourced ratings to separate note quality from reviewer ideology. We show that for any correctly specified model that decomposes ratings into quality and ideological alignment, this separation requires fixing an ideological anchor: a reference point for what counts as neutral. We give a characterization for the standard implementation: with $L_2$ regularization, BMF anchors quality at a point proportional to the mean reviewer ideology, recovering objective quality if and only if the mean reviewer is neutral, assuming note quality is uncorrelated with note leaning. This parallels the Condorcet Jury Theorem: collective judgment recovers truth when the pool is unbiased on average. When that assumption fails, BMF's recovered ranking shifts toward maximizing aggregate reviewer satisfaction, which coincides with social welfare only when the pool is representative. This is not specific to BMF; the rating matrix admits a continuous family of gauge-equivalent decompositions, each implying a different quality ranking, so no mechanism based on ratings alone can recover quality without implicitly choosing such an anchor. What appears to be routine hyperparameter tuning is in fact a normative choice about whose preferences define quality.",
+      "published": "2026-11-21T06:59:33Z",
+      "updated": "2026-11-21T06:59:33Z",
+      "categories": [
+        "cs.CY",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28615",
+      "abs_url": "https://arxiv.org/abs/2611.28615",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28566",
+      "title": "Modeling Perceived Promptness in Simultaneous Interpreting from Quality, Structure, and Timing Signals",
+      "authors": [
+        "Ziyu Zhang",
+        "Satoshi Nakamura"
+      ],
+      "abstract": "Simultaneous interpreting requires interpreters to convey the source accurately while keeping pace with it in real time. Timing measures such as segment-onset delay capture part of this requirement, but may not fully reflect how professional evaluators judge promptness. We investigate whether these judgments can be explained by timing alone or whether the interpreted output provides additional information. Our dataset contains 622 Chinese-English and English-Chinese segments from 16 source speeches and seven interpreters. Two senior professional interpreters rated each segment for language quality (LQ), expressiveness (EXP), and perceived latency (LAT), which we also refer to as professional promptness. On held-out source speeches, onset delay alone achieves a Pearson correlation of r = .318 with LAT ratings. Combining predicted LQ and EXP with delay improves the correlation to r = .475. Lexical and structural features provide a stronger signal, reaching r = .632 when combined with delay and r = .658 when predicted quality is also included. These results suggest that professional promptness judgments reflect properties of the interpreted output beyond when the interpreter begins speaking. The additional contribution of predicted quality over structural features, however, is modest. Although the two evaluators differ in how strongly quality relates to LAT, cross-evaluator predictions remain positively correlated with LAT ratings. The overall pattern also holds when each interpreter is held out in turn.",
+      "published": "2026-11-21T04:47:20Z",
+      "updated": "2026-11-21T04:47:20Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28566",
+      "abs_url": "https://arxiv.org/abs/2611.28566",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28548",
+      "title": "X-AQA: Unifying Action Quality Assessment with Multimodal Large Language Models and Multi-Domain Learning",
+      "authors": [
+        "Kaili Zheng",
+        "Wei Ding",
+        "Yuchen Ding",
+        "Kaiwen Wang",
+        "Xun Zhu",
+        "Chenyi Guo",
+        "Yudong Zhang",
+        "Ji Wu"
+      ],
+      "abstract": "Action Quality Assessment (AQA) aims to evaluate the quality of human actions, yet existing methods are predominantly developed and evaluated on individual datasets with different task formulations and assessment criteria. We introduce X-AQA, the first unified training and evaluation framework for general-purpose AQA with multimodal large language models (MLLMs). We construct X-AQA-40K, a training corpus comprising 40,163 samples from 22 data sources across four domains: competitive sports, fitness exercises, rehabilitation, and general skills. We convert heterogeneous annotations into a unified question-answering format, incorporating dataset-specific annotation guidelines and official scoring rules when available. Using this corpus, we fine-tune Qwen3.5-9B to develop a single MLLM capable of handling diverse AQA tasks. We further establish X-AQA-Bench, which evaluates both in-distribution (ID) performance on datasets represented during training and out-of-distribution (OOD) generalization on four held-out datasets. The resulting model outperforms all evaluated open-source MLLMs on X-AQA-Bench and achieves competitive performance relative to proprietary MLLMs. Ablation studies further demonstrate that multi-domain joint training and explicitly providing assessment criteria in prompts both improve OOD generalization. X-AQA establishes a unified foundation for advancing general-purpose AQA across diverse real-world domains. Data and models are released at \\hyperlink{https://huggingface.co/collections/Kelly0510/x-aqa}{here}.",
+      "published": "2026-11-21T04:11:16Z",
+      "updated": "2026-11-21T04:11:16Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28548",
+      "abs_url": "https://arxiv.org/abs/2611.28548",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28179",
+      "title": "Quality-Control Policies Shape Model Behaviour in Computational Pathology",
+      "authors": [
+        "Mario Parreño Centeno",
+        "Yu Guan",
+        "Pedro Montero Pavón",
+        "Sanna Palosaari",
+        "Juha Väyrynen"
+      ],
+      "abstract": "Quality-control policies determine which image regions are used by computational pathology models, but their effects are difficult to isolate when quality estimation and input selection are coupled. We make these policies explicit, configurable and testable. We introduce PathQC-3C, comprising 1,661 densely annotated regions from 1,194 haematoxylin and eosin whole-slide images across 32 cancer/tissue categories, and TileNet, a framework that separates dense tissue/background/artefact estimation from task-specific input-selection policies. We evaluated the default predictor across three held-out cohorts and against harmonised quality-control comparators, assessed policy decisions in a blinded single-pathologist audit, and tested alternative policies in three downstream settings. In retrospective CAMELYON16 multiple-instance learning, background-aware selection improved the pooled out-of-fold area under the receiver operating characteristic curve from 0.758 to 0.839 compared with random sampling from the same exhaustive candidate pool under a fixed tile budget. In weak-label lung classification, strict artefact exclusion reduced the pre-matching candidate pool by approximately 43%, with small metric-dependent differences after matching training-set size and patient contribution. PathQCAug, which composites real artefact components during tumour-stroma model adaptation, improved macro Dice on high-artefact tiles under severe held-out composited artefacts across three training seeds and outperformed random-erasing and clean-tissue controls. Separating quality estimation from policy execution provides an auditable way to control which image content enters computational pathology models; the appropriate policy is task specific, and clinical utility remains to be established.",
+      "published": "2026-11-20T09:15:02Z",
+      "updated": "2026-11-20T09:15:02Z",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28179",
+      "abs_url": "https://arxiv.org/abs/2611.28179",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27913",
+      "title": "Star Panoptic Quality: Selectively Evaluating Split and Merged Instances",
+      "authors": [
+        "Erik Großkopf",
+        "Paula Tamara Buzduga",
+        "Hendrik Möller",
+        "Florian Kofler"
+      ],
+      "abstract": "Detecting individual instances is crucial for many segmentation problems. However, expert instance annotations are often unavailable, so instances are approximated heuristically (e.g., as connected components of semantic maps), which can merge touching objects or split fragmented ones. Even when expert annotations exist, expert disagreement or structural delineation biases can yield split or merged reference instances, corresponding to over- or under-segmentation, respectively. Panoptic Quality (PQ) and related metrics capture both segmentation and detection quality while weighting all instances equally, regardless of size. Yet when the references are biased, these metrics can neither detect split or merged instances nor distinguish valid from invalid overor under-segmentation. We present Star Panoptic Quality (StarPQ), a novel evaluation ramework, which closes this gap in two steps: First, we construct a so-called star forest in the bipartite graph whose clean, merge, and split stars isolate different failure modes. Second, we calculate the final metric by individually weighting each failure mode, allowing practitioners to account for instance delineation biases. Across various experiments, we demonstrate that StarPQ not only enables targeted penalization or eniency towards specific failure modes, but also serves as a diagnostic tool to reveal their prevalence.",
+      "published": "2026-11-20T17:51:51Z",
+      "updated": "2026-11-20T17:51:51Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27913",
+      "abs_url": "https://arxiv.org/abs/2611.27913",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27835",
+      "title": "Auditable Financial Knowledge Graphs: Schema-Driven Construction and Intrinsic Quality Evaluation",
+      "authors": [
+        "Samarth Sarin",
+        "Lovepreet Singh",
+        "Dhagash Mehta"
+      ],
+      "abstract": "Financial documents combine narrative disclosures, accounting metrics, corporate structures, management commentary, and time-dependent facts, making them difficult to represent using conventional chunk-based retrieval-augmented generation systems. This paper presents an auditable, schema-driven methodology for constructing temporal financial knowledge graphs from page-delimited documents parsed using a general purpose document intelligence service. Overlapping document windows undergo phased large language model extraction of structural entities, quantitative observations, and domain-specific relationships. Candidate graph elements are validated against predefined schemas and consolidated through scope-aware exact, normalized, fuzzy, embedding-based, and LLM-assisted entity resolution. Temporal merge constraints, deterministic edge deduplication, conflict-aware property management, and fine-grained provenance preserve issuer identity, reporting-period validity, and traceability to source evidence. The contributions of this work comprise the proposed methodology for financial knowledge graph construction, the creation of an evidence-grounded temporal knowledge graph from heterogeneous financial documents, and an intrinsic framework for evaluating the quality of the resulting graph. The evaluation framework assesses seven weighted dimensions, two hard validation gates, and structural diagnostics. By separating graph-quality assessment from downstream retrieval and answer generation, the framework supports systematic diagnosis and iterative refinement of the constructed graph.",
+      "published": "2026-11-20T16:54:47Z",
+      "updated": "2026-11-20T16:54:47Z",
+      "categories": [
+        "cs.AI",
+        "cs.CE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27835",
+      "abs_url": "https://arxiv.org/abs/2611.27835",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27621",
+      "title": "Automating Multi-View Quality Assessment of 3D Annotation Layouts",
+      "authors": [
+        "Hongyi Yang",
+        "Jinao Wu",
+        "Yanwei Zhang",
+        "Shengwen Fu",
+        "Haibin Ling",
+        "Bingyao Huang",
+        "Jingwei Qu"
+      ],
+      "abstract": "Text labels provide descriptive information about elements in visual scenes. In 3D visualization, the arrangement of these labels and their connections to target locations forms an annotation layout. Assessing layout quality supports comparisons between alternative layouts. However, existing quality measures often focus on specific layout properties and may not fully reflect human judgments of overall quality. Moreover, a layout may appear clear from one viewpoint but suffer from occlusion or clutter from another. To address these issues, we propose a multi-view quality assessment method based on a multimodal large language model (MLLM). We fine-tune a compact MLLM using structured supervision from human ratings to predict a rating for each quality dimension in each view. These ratings are aggregated into view-level and sample-level quality scores. To support training and evaluation, we construct the Annotation Layouts with Quality Assessment (ALQA) dataset, containing 3,216 layout samples from 1,072 3D objects across 13 categories. Each layout is rendered from 5 predefined viewpoints, and each view is independently rated by 3 human raters across 5 quality dimensions. On ALQA, our method agrees more closely with human reference scores than the evaluated MLLM baselines, and a user study demonstrates strong agreement with human preferences in layout ranking.",
+      "published": "2026-11-20T13:50:01Z",
+      "updated": "2026-11-20T13:50:01Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27621",
+      "abs_url": "https://arxiv.org/abs/2611.27621",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27512",
+      "title": "PGS-PCQA: Perceptually Gated Synthetic Supervision for No-Reference Point Cloud Quality Assessment",
+      "authors": [
+        "Qinyuan Fan",
+        "Meng Zhang",
+        "Clemens Gühmann"
+      ],
+      "abstract": "Existing no-reference point cloud quality assessment (NR-PCQA) methods perform well within individual datasets but generalize poorly across datasets. We identify insufficient distortion coverage in training data as a key cause: on unseen distortion types, models rank severity levels near chance or even in reverse. We propose perceptually gated synthetic supervision for no-reference point cloud quality assessment (PGS-PCQA), an NR-PCQA model trained with synthetic distortion ranking. It builds a synthetic distortion bank from source reference point clouds and uses within-type severity ranking as supervision in addition to the source mean opinion scores (MOS), requiring no subjective scores for the synthetic samples. Since higher severity does not always mean lower perceived quality, a perceptual gate softens the ranking targets of pairs with small perceptual differences in rendered views. The synthetic supervision is used only during training and needs no target-domain data. In a single training run on SJTU-PCQA, PGS-PCQA achieves Spearman rank correlation coefficients (SRCCs) of 0.709 on WPC and 0.751 on BASICS. The corresponding published DSP-PCQA scores are 0.595 and 0.723. Under reference-disjoint cross-validation, PGS-PCQA achieves SRCCs of 0.955 on SJTU-PCQA, 0.934 on WPC, 0.906 on BASICS, and 0.791 on LS-PCQA Part I. In the exclusion experiment, the reported scores for the reduced synthetic bank represent 58-65% of the full-bank SRCC gain relative to training without the bank. Code is available at https://github.com/Fan-QY/PGS-PCQA.",
+      "published": "2026-11-20T12:02:08Z",
+      "updated": "2026-11-20T12:02:08Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27512",
+      "abs_url": "https://arxiv.org/abs/2611.27512",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27012",
+      "title": "Many Plans at Once: Diverse Top-Quality Planning in Continuous Time",
+      "authors": [
+        "Mahyar Jahani-nasab",
+        "Hamid Rezatofighi",
+        "Mor Vered",
+        "Buser Say"
+      ],
+      "abstract": "Planners for physical systems usually return a single trajectory, which leaves no alternative when an unmodeled constraint invalidates the chosen route or downstream preferences change. A set of plans computed in advance provides ready-made alternatives and warm-starts for fast adaptation, but only if the plans are both low-cost and mutually distinct. Discrete planning addresses this with top-quality and diverse planning, but these ideas do not transfer to continuous time, where every valid trajectory has infinitely many valid near-copies, and existing trajectory planners converge to one or a few solutions. We present Many Plans at Once (MPAO), which treats every plan it finds as a reason to search elsewhere: it samples untrained neural networks whose outputs meet the boundary conditions by construction, trains corrections shared by networks from the same distribution, stores every validated plan, and adapts its sampling to what it has found, which makes it anytime. We define the goal by bringing the cost bound of top-quality planning and the distinctness threshold of diverse planning to continuous time. Under equal budgets against five baselines, MPAO is the only method that solves all 40 instances across four domains. On contact-rich manipulation, it is the only method with plans within 25% of the best known cost on one task, and returns about ten times as many such plans as the strongest baseline on the other two.",
+      "published": "2026-11-20T02:41:43Z",
+      "updated": "2026-11-20T02:41:43Z",
+      "categories": [
+        "cs.AI",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27012",
+      "abs_url": "https://arxiv.org/abs/2611.27012",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.25510",
+      "title": "Life-IQA+: Boosting Blind Image Quality Assessment via GCN-enhanced Layer Interaction and Flexible Hierarchical Expert Specialization",
+      "authors": [
+        "Long Tang",
+        "Guoquan Zheng",
+        "Huiyu Duan",
+        "Jie Hao",
+        "Yucheng Zhu",
+        "Liang Yuan",
+        "Xiongkuo Min",
+        "Guangtao Zhai"
+      ],
+      "abstract": "Blind image quality assessment (BIQA) is essential for evaluating and optimizing visual experience. Existing BIQA methods typically aggregate features from multiple backbone stages without accounting for their unequal contributions to quality prediction. Furthermore, uniformly supervising all experts may constrain their flexibility and limit the diversity of the learned quality representations. To address these issues, we present Life-IQA+, a quality representation decoding framework that combines graph convolutional network (GCN) enhanced layer interaction and flexible hierarchical expert specialization. Specifically, the layer interaction module constructs quality queries from GCN-refined deepest-stage features and uses penultimate-stage features as keys and values, thereby enabling cross-layer representation interaction via the cross-attention mechanism. Building on these representations, we further introduce a flexible hierarchical mixture-of-experts (MoE) architecture comprising a densely activated shared expert layer and a sparsely activated routed expert layer. To enhance the representation diversity and ability of experts, we apply auxiliary classification supervision to a subset of shared experts using distortion-type labels for synthetic datasets and discretized quality-level labels for authentic datasets. Experiments on synthetic and authentic distortion benchmarks, together with controlled ablations of expert configurations and supervision strategies, show that Life-IQA+ achieves competitive prediction accuracy with a favorable balance between accuracy and computational cost. The code is available at: https://github.com/TANGLONG2/Life-IQA-PlusPlus.",
+      "published": "2026-11-19T05:00:06Z",
+      "updated": "2026-11-19T05:00:06Z",
+      "categories": [
+        "eess.IV",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25510",
+      "abs_url": "https://arxiv.org/abs/2611.25510",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.25477",
+      "title": "AIstatLab at BraTS-GoAT 2026 Task 3: Quality-Controlled Consensus Pseudo-Labeling and Dense Expert Adaptation",
+      "authors": [
+        "Heeseung Shin",
+        "Changwon Lim"
+      ],
+      "abstract": "BraTS-GoAT Task 3 evaluates brain-tumor segmentation across heterogeneous entities using shared ET, TC, and WT regions. We present a 3D ResidualEncoderUNet trained with quality-controlled consensus pseudo-labels, a training-only nested-region objective, and a four-expert bottleneck adapter. Five-fold ResEnc-M/L teachers gener ated predictions for 1,138 unlabeled cases; fusion, hierarchy enforcement, and confidence-and-agreement screening retained 983 for training with 1,351 annotated cases. The final five-fold ResEnc-M entry achieved mean DSC 0.834, mean NSD 0.510, and Acalc = 0.6720 on the validation server. Component effects were modest and region-dependent, with the clearest gains on ET. Source code is available at https://github.com/HeeSeung-Shin/Brats2026-Goat-HS.",
+      "published": "2026-11-19T04:06:45Z",
+      "updated": "2026-11-19T04:06:45Z",
+      "categories": [
+        "eess.IV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25477",
+      "abs_url": "https://arxiv.org/abs/2611.25477",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.24233",
+      "title": "Psychometrics-Inspired Coreset Selection for Image Quality Assessment",
+      "authors": [
+        "Susu Jiang",
+        "Xuelin Shen",
+        "Baoliang Chen"
+      ],
+      "abstract": "Collecting large-scale subjective annotations remains a critical bottleneck in training accurate image quality assessment (IQA) models. Coreset selection reduces this burden by selecting representative images before annotation. However, diversity in a visual feature space does not necessarily reflect diversity in perceptual quality, raising a fundamental question about which quality-related factors the representation should encode. We propose GRAM, a quality-aware representation learning framework inspired by the graded response model (GRM) from psychometrics. GRM describes how an individual's latent ability determines the probabilities of reaching successive assessment grades, with response sensitivity and grade thresholds governing this relationship. In this paper, we find that this principle naturally aligns with perceptual quality assessment, where the impact of image degradation depends on image content and distortion characteristics. Building on this connection, GRAM models quality judgments through three complementary factors: latent quality, content-dependent response sensitivity, and distortion-dependent grade thresholds. These factors jointly determine the probabilities of attaining different quality grades and the resulting expected quality score. The learned parameters provide a structured quality-aware representation that complements general visual features for coreset selection. Experiments on nine datasets demonstrate improvements across different selection strategies, downstream IQA models, and annotation budgets. The code will be made publicly available.",
+      "published": "2026-11-18T11:08:48Z",
+      "updated": "2026-11-18T11:08:48Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24233",
+      "abs_url": "https://arxiv.org/abs/2611.24233",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.24012",
+      "title": "FlyVQA: Seeing Video Frame Interpolation Quality through Fly Eyes",
+      "authors": [
+        "Baoliang Chen",
+        "Lingyu Zhu",
+        "Zhiwei Zhong",
+        "Shiqi Wang"
+      ],
+      "abstract": "The ultimate ambition of visual quality assessment is to reproduce the neural computations of human vision and thereby achieve full alignment with human perception. However, the immense complexity of human visual circuitry makes this goal difficult to realize. Recently released fly visual connectomes provide a tractable biological starting point. Despite differences between fly and human vision, the fly's well-characterized motion pathways motivate us to investigate their potential for assessing the perceptual impact of temporal distortions. In this paper, we use a shared, frozen fly visual circuit to perform full-reference quality assessment of frame-interpolated videos, whose artifacts can disrupt temporal consistency. Specifically, compound-eye sampling maps reference and distorted sequences into the circuit, while a connectome-aware readout quantifies discrepancies in cell-type-specific activity and excitatory--inhibitory synaptic dynamics. Reference-guided temporal pooling and a lightweight regression head integrate these differences into a quality score. Experiments across multiple interpolation methods demonstrate better agreement with human ratings than CNN, RNN, and Transformer baselines with comparable parameters, supporting a biologically grounded approach to perceptual quality modeling.",
+      "published": "2026-11-18T08:04:11Z",
+      "updated": "2026-11-18T08:04:11Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24012",
+      "abs_url": "https://arxiv.org/abs/2611.24012",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.24010",
+      "title": "HHW-Ego: DSLR-Quality Enhancement for Multi-Source Wearable Ego Imaging",
+      "authors": [
+        "Yunfei Tong",
+        "Qianqian Sun",
+        "Jixiang Luo",
+        "Dell Zhang",
+        "Hao Sun"
+      ],
+      "abstract": "Wearable ego-centric images are now in high demand for scenarios ranging from daily smart glass usage to embodied intelligence. But the image quality is far behind smart phone due to the lacking paired high-quality reference images and the dedicated enhancement systems. To solve this, a customized degradation pipeline is designed to generate paired samples matching wearable camera images, boosting the upper limit of enhancement performance. Besides a two-stage enhancement framework is further built: first, tuning an efficient model on the paired dataset to enhance real wearable images; second, using hyperspectral data to refine color temperature for better quality. Moreover we present HHW-Ego, a multi-source paired dataset integrating with Hyperspectral, High-dynamic range and Wearable Ego-centric data, which includes 5,000 image groups spanning indoor/outdoor and day/night scenes. On held-out paired data, Stage-1 fine-tuning improves PSNR, SSIM, Lab distance, and LPIPS for Real-ESRGAN and PFT-SR. On real wearable images, no-reference metrics, human preference, gamut analysis, and visual comparisons characterize the effects of Stage 2.",
+      "published": "2026-11-18T08:01:42Z",
+      "updated": "2026-11-18T08:01:42Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24010",
+      "abs_url": "https://arxiv.org/abs/2611.24010",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23890",
+      "title": "EVA-RSI: Recursive Self-Improvement of Video Evaluators for Judging Temporal Quality",
+      "authors": [
+        "Yu Yuan",
+        "Ruizhou Ding",
+        "Shaoheng Fang",
+        "Stanley H. Chan",
+        "Zhuo Chen"
+      ],
+      "abstract": "Video evaluators play an important role in video generation, yet they miss motion defects, limiting the quality of generated videos. Recursive self-improvement (RSI) has made strong progress in mathematics and coding, where explicit verifiers provide reliable feedback on a single goal. Video evaluation poses two difficulties for RSI: it has no verifier, and it must judge many dimensions at once, such as physics, smoothness and dynamics, where a gain on one can cost another. We introduce EVA-RSI, a multi-agent framework for exploring RSI under these two constraints. We build a fixed proxy exam with construction-defined targets by applying controlled changes to videos, such as temporal reversal and frame dropping. These edits supply supervision without human annotation. A small set of human-labeled real videos anchors the exam to human judgment. Each dimension has an LLM agent that proposes improvements. A leader agent coordinates the proposals, and a Nash bargaining rule selects updates that balance progress across dimensions. Humans design the exam, review candidate changes and revise the curriculum between stages. Starting from Qwen3-VL-8B, EVA-RSI improves motion evaluation, with the largest gain on smoothness, and the gains carry over to defect types never seen during the run. On the dynamics subsets of public benchmarks, our evaluator achieves the highest observed scores among 21 tested models. As an RL reward, it increases generated motion and earns human preference. A data-selection pipeline incorporating it also increases motion.",
+      "published": "2026-11-18T05:41:49Z",
+      "updated": "2026-11-18T05:41:49Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23890",
+      "abs_url": "https://arxiv.org/abs/2611.23890",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23342",
+      "title": "Confidence-Based Materials Data Quality Assessment via Domain Knowledge and Graph-Structured Learning",
+      "authors": [
+        "Sihan Liaing",
+        "Ji Zhang",
+        "Kehan Wang",
+        "Zihao Gao",
+        "Wei Ma",
+        "Yangang Wang",
+        "Zongguo Wang"
+      ],
+      "abstract": "The rapid development of materials machine learning relies on large-scale, heterogeneous datasets, yet model reliability is often compromised by imperfect data from diverse experiments, simulations, and database integration. Real-world materials databases may contain measurement errors, failed calculations, missing or duplicate records, and hidden violations of physicochemical constraints. Such problems are difficult to identify because corrupted samples may remain statistically plausible rather than appearing as explicit outliers. In this paper, we propose a confidence-based materials data quality assessment framework that integrates domain knowledge with graph-structured learning. Data quality is formulated as a continuous confidence estimation problem rather than a binary anomaly identification task, enabling sample-level assessment and historical-reference-based batch comparison. A nine-dimensional feature-quality prior and duplicate-aware sample initialization are calibrated using materials domain rules and statistical evidence. Confidence is further refined through sample-feature bipartite graph propagation and weakly supervised graph attention, while a Memory-GAT module provides historical reference scoring. Experiments on 23 ODDS benchmark datasets show that the generic module achieves an average AUC-ROC of 0.866. In five repeated mixed-contamination experiments on mp\\_20, rule calibration improves HistGradientBoostingRegressor test $R^2$ from $0.538\\pm0.008$ to $0.616\\pm0.014$. Graph refinement increases average precision from $0.943\\pm0.004$ to 0.953\\pm0.004$, while the rule-calibrated configuration has the highest mean test $R^2$ among the evaluated screening configurations. Five repeated MACE subset experiments further show an increase in $R^2$ from $0.590\\pm0.053$ to $0.880\\pm0.027$ after rule-based screening.",
+      "published": "2026-11-17T08:06:38Z",
+      "updated": "2026-11-17T08:06:38Z",
+      "categories": [
+        "cs.LG",
+        "cond-mat.mtrl-sci",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23342",
+      "abs_url": "https://arxiv.org/abs/2611.23342",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23324",
+      "title": "A Differential Theory of Quality-Resource Trade-offs for AI Model Selection: The Multiresource Frontier and Its Minimax Price",
+      "authors": [
+        "Dmitry Ignatov"
+      ],
+      "abstract": "Comparing AI models across resource budgets yields quality-resource frontiers relating error to latency, parameter count, training compute, and energy. Offset power laws summarize such frontiers, but their fitted parameters reveal neither the price-independent geometry nor the manner in which trade-offs extend across several resource channels. This paper addresses both gaps by developing a differential theory in which this structure is made explicit. Each frontier admits a price-independent plane-curve representation relating the effective number of active resource channels, $N_{\\mathrm{eff}} = s^2/κ$ (squared slope over curvature), to the remaining log-error depth, $ΔS = \\ln(\\varepsilon/\\varepsilon_{\\infty})$. This representation separates intrinsic shape from the scale and origin of the resource axis. Complete monotonicity and divisibility yield differential inequalities and frontier bounds. When each of $N$ resources contributes one active channel, the theory gives the parameter-free operating rule $N_{\\mathrm{eff}} = 1$ in delivered units and derives minimax resource prices $λ^{\\star}_i = α_i/(N+1)$ with an exact worst-case regret of $\\ln(N+1)$ nats. The results make it possible to interpret measured frontiers and compare resource costs without hand-chosen exchange rates. The theory is evaluated on 117 published frontiers and implemented in the open-source package nn-rank, which derives prices from measured quality and cost, ranks candidates, and reports supported choices and minimax regret: https://github.com/ABrain-One/nn-rank",
+      "published": "2026-11-15T21:36:44Z",
+      "updated": "2026-11-15T21:36:44Z",
+      "categories": [
+        "stat.ML",
+        "cs.IT",
+        "cs.LG",
+        "cs.PF",
+        "math.OC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23324",
+      "abs_url": "https://arxiv.org/abs/2611.23324",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22564",
+      "title": "Lost in Read-out: Locating the Image Quality Gap in Vision-Language Models with a Closed-Form Edit",
+      "authors": [
+        "Zhuangzi Li",
+        "Shilv Cai",
+        "Jian Jin",
+        "Zhiyi Pan",
+        "Haihong Xiao",
+        "Weisi Lin"
+      ],
+      "abstract": "Vision-language models (VLMs) are widely used as zero-shot image quality assessors, yet their good-vs-poor answers agree only moderately with human opinion. We ask whether these models fail to see quality or fail to say it. Layer-wise probes on five VLMs point to the second: quality is linearly decodable from the vision encoder and still from the last language layer, far better than the answer reveals, and about a hundred labels recover most of it. The loss lies mainly in the final read-out, which partly reads something else: relative to human opinion, it over-rewards colorfulness and under-rewards sharpness on all five models. We test this by intervention: if the read-out is at fault, a closed-form edit of a single last-layer neuron, fitted to many prompts at once, should close the gap and no more. Both hold. Under prompts never used for fitting, the edit recovers 86--100\\% of what a ridge head on the last-layer state, fitted under the same prompts, finds beyond the answer on KonIQ. Where that gap is small, it gains little, too little for our transfer criterion on the two largest models; where the head itself is below the answer, it lowers the score; and it works only when written from the middle of the language model on. Unlike unconstrained fine-tuning, the edit leaves perception question answering intact. It does not carry over to yes-or-no or rating questions, and it reverses the good--poor contrast after sentiment-laden sentences. Code will be made available.",
+      "published": "2026-11-17T10:49:41Z",
+      "updated": "2026-11-17T10:49:41Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22564",
+      "abs_url": "https://arxiv.org/abs/2611.22564",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22388",
+      "title": "Hidden Variables Behind Real-Robot Data Quality: Lessons from Hundreds of Thousands of Hours",
+      "authors": [
+        "Maniformer Real-World Manipulation Team",
+        "Che Tsang Calvin",
+        "Xingyu Chen",
+        "Bowen Jiang",
+        "Naixiang Gao",
+        "Xiongfeng Cai",
+        "Enlin Gu",
+        "Ruiying Li",
+        "Peize Li",
+        "Mianrui Zhu",
+        "Haomiao Zhang",
+        "Xin He",
+        "Minhui Yu",
+        "Jun Zhao",
+        "Zihao Zhu",
+        "Yang Chen",
+        "Jingmei Jin",
+        "Keru Zhou",
+        "Chen Wang",
+        "Chang Zhou",
+        "Zhiwen Hou",
+        "Di Yang",
+        "Wenjun Sun",
+        "Fan Yang",
+        "Liyan Zhang",
+        "Yi Lu",
+        "Haojun Ma",
+        "Jun Zhu",
+        "Pengxin Zha",
+        "Zhaosheng Wang",
+        "Xin Zhao",
+        "Xindong He",
+        "Chiming Liu",
+        "Jianheng Song",
+        "Jiayao Ma",
+        "Maoqing Yao",
+        "Guanghui Ren",
+        "Qian Wang",
+        "Wei Shan",
+        "Yang Yang",
+        "Li Liu",
+        "Wenhao Wang"
+      ],
+      "abstract": "As real-robot data collection scales, collection-system design shapes both operator efficiency and the behaviors learned by robot policies. Workspace limitations, control-interface friction, and latency can introduce pauses, detours, and corrective motions into otherwise successful demonstrations. We investigate these effects across embodiment, teleoperation control, and data consistency, combining a kinematic study of 25 dual-arm robots, controlled teleoperation experiments, and real-robot evaluation of fine-tuned $π_{0.5}$ policies. The embodiment study shows that positional reachability overstates orientation-aware task coverage and that modest shoulder motion can substantially expand the effective workspace. Teleoperation experiments show that parallelizing body-part control reduces task completion time by 43-53%, while compliant control improves success and reduces peak contact forces on constrained and contact-rich tasks. Policy-learning experiments show that demonstrations must capture the visual information underlying action choices: active-search demonstrations improve arm-selection accuracy from chance (50%) to 100%. Calibration experiments reveal that mixed-calibration training data remain usable in our tested configurations when an inference-aligned subset is retained, whereas inference-time miscalibration causes all 30 trials to fail. Policies also retain approximately 90% of the extra path length in detour-contaminated demonstrations, showing how inefficient operator motions persist in learned behavior. Together, these findings connect collection-system design to demonstration quality and downstream policy execution. They motivate evaluating effective workspace, control efficiency, observation completeness, calibration alignment, and motion quality before scaling collection, and addressing system-induced compensations at their source.",
+      "published": "2026-11-17T08:38:45Z",
+      "updated": "2026-11-17T08:38:45Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22388",
+      "abs_url": "https://arxiv.org/abs/2611.22388",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22323",
+      "title": "Agent Trajectories as Evidence for Software Quality Assurance",
+      "authors": [
+        "Jonathan Ullrich",
+        "Julien Siebert",
+        "Michael Kläs",
+        "Adam Trendowicz",
+        "Andreas Jedlitschka"
+      ],
+      "abstract": "Autonomous software agents increasingly plan, implement, and test software with limited human oversight. Their decisions may introduce implicit assumptions that final code and passing tests do not adequately expose. We propose analyzing observable agent trajectories alongside software and agent specifications and AI generated artifacts as evidence for targeted quality assurance. The aim is to prioritize consequential decisions for scrutiny, investigate their possible contribution to software problems, and inform improvements to specifications and development practices. Industrial experience motivates the idea; available execution records and preliminary analysis methods make it plausible. However, trajectories alone do not establish that decisions are justified, outcomes acceptable, or corrective changes effective. We ask how this evidence can support review, diagnosis, and continuous quality improvement, and when simpler QA approaches suffice. Perspectives from requirements engineering, verification and validation, agent systems, causal inference, empirical software engineering, and human factors could help develop and evaluate the idea.",
+      "published": "2026-11-17T07:22:29Z",
+      "updated": "2026-11-17T07:22:29Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22323",
+      "abs_url": "https://arxiv.org/abs/2611.22323",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22117",
+      "title": "RetiDual-Select: Reliability-Aware Specialist-Generalist Routing for Retinal OCT under Image-Quality Shift",
+      "authors": [
+        "Zihao Han",
+        "Philippe De Wilde"
+      ],
+      "abstract": "Adaptive fusion can repair a static ensemble's errors, but can also overturn correct decisions. RetiDual-Select combines retinal specialist RETFound with the image encoder of the medical vision-language model MedSigLIP, separating candidate fusion, routing safety and predictive review. Calibrated product-of-experts (PoE) fusion is the static reference, a small gate proposes an alternative for each image, a validation-frozen harm guard decides whether that candidate may replace the reference, and a separate score prioritizes review. Static PoE reached the highest or joint-highest clean accuracy on all three datasets. At a clean 2% accepted-error target the review policy accepted 94.3% of Kermany-4 images at 99.89% selective accuracy, and 92.4% of OCT-C8 at 98.65%. Both branches were correct on 95.0% and 91.8% of clean images; only 4.4% and 6.2% had exactly one correct branch. Across 15 prespecified synthetic conditions, adaptive gains were concentrated in severe contrast reduction, where this routing opportunity widened roughly ninefold; percentile rescaling largely removed the effect, linking it to compressed dynamic range. In post-hoc validation-only analyses, gain was higher when the gate followed the more reliable branch, and a frozen guard cut the worst-condition OCT-C8 loss from 1.39 to 0.36 percentage points. Adaptive routing was useful when image quality created a reliability opportunity and the gate followed it; otherwise the system retained Static PoE or deferred for review. The findings are bounded by the synthetic perturbations evaluated and do not establish robustness to natural acquisition or scanner shift.",
+      "published": "2026-11-17T02:59:12Z",
+      "updated": "2026-11-17T02:59:12Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22117",
+      "abs_url": "https://arxiv.org/abs/2611.22117",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21419",
+      "title": "Quality and Similarity Indicators for Video-Based Heart Rate and Respiratory Rate Fusion: A Controlled Evaluation",
+      "authors": [
+        "Nhi Nguyen",
+        "Le Nguyen",
+        "Manuel Lage Cañellas",
+        "Miguel Bordallo López",
+        "Constantino Álvarez Casado"
+      ],
+      "abstract": "Camera-based heart rate (HR) and respiratory rate (RR) estimates vary in reliability from window to window, and a common remedy is to fuse several extraction methods with weights from reference-free signal quality indicators. However, few studies test whether these indicators identify the most accurate method in each window or outperform simpler fusion. We evaluate 11 quality indicators and 8 inter-method similarity measures for fusing 7 HR and 10 RR extractors on four public datasets (75 test subjects). Filters, indicator directions, weighting parameters and a learned ridge baseline are selected on a separate five-subject set before testing. Fusion is compared with equal averaging, a constant typical-rate predictor, the best single method selected in advance and in hindsight, and a per-window oracle with a permutation-based null, using subject-level bootstrap confidence intervals. For HR, quality-weighted fusion reduced mean absolute error by 10.9% [5.2, 18.4] relative to averaging and by 15.6% [8.1, 23.1] relative to the method selected in advance, and was statistically indistinguishable from the best method selected in hindsight. Weighting methods by their agreement did not improve on averaging. For RR, the indicators could not identify the more accurate estimates: sharpened quality weighting increased error (-2.6% [-4.8, -0.8]), fused estimates were uncorrelated with the reference (r <= 0.22), and averaging was less accurate than the typical-rate predictor (-3.1% [-6.1, -0.4]). With a second respiratory reference, apparent RR gains reflected estimates moving toward its typical rate. Quality-guided fusion is worthwhile for video HR; for RR, 30-s windows improved estimates but not fusion.",
+      "published": "2026-11-16T17:10:13Z",
+      "updated": "2026-11-16T17:10:13Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21419",
+      "abs_url": "https://arxiv.org/abs/2611.21419",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20226",
+      "title": "Streaming across viewing conditions - The effect of viewing distance and display luminance on video quality",
+      "authors": [
+        "Dounia Hammou",
+        "Lukáš Krasula",
+        "Christos G. Bampis",
+        "Zhi Li",
+        "Rafał K. Mantiuk"
+      ],
+      "abstract": "The visibility of streamed video distortions is affected by the user's display and viewing conditions, such as their display's luminance or the viewing distance. Distortions become less visible at lower luminance levels or farther viewing distances. However, most image and video quality metrics assume fixed optimal display and viewing conditions, making them insensitive to the viewing conditions. In this work, we demonstrate how existing metrics can be adapted to account for both factors and compare such an adaptation with the metrics that natively model viewing conditions. First, we collected a new video quality dataset, HDR-VDC, which contains streaming distortions in 4K HDR videos. The dataset consists of 12 4K and 4 FHD HDR source video content, each distorted with AV1 encoding and Lanczos upscaling from a lower resolution. The quality loss due to the distortions was measured at two viewing distances, corresponding to 60 and 120 pixels per visual degree, and two display mean luminance levels, varying by a factor of 8 in terms of luminance. Next, we developed a pre-processing framework that lets us adapt many quality metrics so that they can evaluate content across the viewing distances and luminance levels. The framework employs a display model and perceptually uniform encoding, PU21, to account for the effect of display luminance, and perspective projection scaling (PPS) to account for the effect of viewing distance. We used the framework to compare the performance of 35 state-of-the-art metrics. This allowed us to identify a selection of existing quality metrics that can be effectively adapted to account for the viewing conditions.",
+      "published": "2026-11-15T19:51:38Z",
+      "updated": "2026-11-15T19:51:38Z",
+      "categories": [
+        "eess.IV",
+        "cs.CV",
+        "cs.MM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20226",
+      "abs_url": "https://arxiv.org/abs/2611.20226",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19802",
+      "title": "Machine interpreting competitiveness: a discourse-sensitive comparison of meaning and target-language quality in English-Chinese simultaneous interpreting",
+      "authors": [
+        "Yuanyuan Ding"
+      ],
+      "abstract": "Machine interpreting (MI), or AI-enabled speech translation, is increasingly visible in professional and public-facing communication, yet its performance relative to human simultaneous interpreters remains insufficiently understood. Existing studies are often limited by a single discourse mode and evaluation frameworks that are not well aligned with interpreting as a discourse-level communicative activity. The present study compares five commercial MI systems with 26 human interpreters (14 professionals, 12 advanced students) on English-to-Chinese simultaneous interpreting across planned and unplanned discourse, focusing on meaning and target-language quality. In these materials, MI performance differed sharply between the two discourse modes. In the planned formal speech, the strongest system became highly competitive on meaning, entering the upper human range, and a second system also performed strongly. In the extemporaneous interview, however, no MI system approached the stronger human tiers. Code-level analysis further shows that similar overall scores often masked different error profiles. Human interpreters were more likely to preserve the broader communicative trajectory through selective omission, restructuring, and contextual inference, whereas even the best MI systems were more vulnerable to semantic distortion, discourse-tracking failures, and context-insensitive interpretation. On target-language quality, the human advantage proved more stable than on meaning. Unintelligible or nonsensical output and disfluency carryover emerge as particularly salient weaknesses in machine performance, especially in spontaneous discourse. Overall, the findings are consistent with a discourse-sensitive account of where MI appears competitive, where it remains limited, and why these distinctions matter for interpreting practice, interpreter education, and future MI development.",
+      "published": "2026-11-15T05:22:21Z",
+      "updated": "2026-11-18T00:38:25Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19802",
+      "abs_url": "https://arxiv.org/abs/2611.19802",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19684",
+      "title": "Early Readability of Trajectory Quality in Diffusion Driving Planners",
+      "authors": [
+        "Xiang Zhang",
+        "Ziyang Leng",
+        "Yuxin Bao",
+        "Zhihao Zhao",
+        "Bolei Zhou",
+        "Xugui Zhou"
+      ],
+      "abstract": "Diffusion-based driving planners can generate multiple trajectories for the same scene, but these candidates vary in quality. Can their internal states reveal which candidate will be better before denoising is complete? We systematically study this question in three pretrained planners: Alpamayo, ReCogDrive-IL, and HDP, using linear probes to predict final trajectory quality from intermediate states and evaluating candidate ranking and selection on held-out scenes. Across all three planners, we observe that states from the first denoiser evaluation already support informative selection, while further denoising does not consistently improve selection quality. Further analyses show that readout depends on the representation and reader, and that selection can coexist with limited overall ranking accuracy. These findings motivate an early-selection method that selects after the first denoiser evaluation and completes only the chosen candidate. This reduces computation relative to fully denoising every candidate and improves open-loop trajectory quality over random selection across all three planners. In particular, it reduces Alpamayo's average displacement error by 17.8% and 13.4% in one- and four-camera configurations, respectively. Closed-loop evaluations also show higher mean driving scores and progress.",
+      "published": "2026-11-15T00:42:12Z",
+      "updated": "2026-11-15T00:42:12Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19684",
+      "abs_url": "https://arxiv.org/abs/2611.19684",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18890",
+      "title": "Benchmark Factory: Agentic Benchmark Creation via Dataset Curation and Label-Free Quality Anchors",
+      "authors": [
+        "Shervin Shahidi",
+        "James Poon",
+        "Hang Xie",
+        "Kenneth O. Xu",
+        "Robin Håkanson",
+        "Vikram Nair",
+        "Jens Pillgram-Larsen",
+        "Nachiappan Nagappan"
+      ],
+      "abstract": "Teams deploying coding agents need benchmarks built from their own code, but curating and validating them by hand is resource intensive, and an unvalidated benchmark can mislead silently. We present Benchmark Factory, an autonomous meta-agent loop with human checkpoints: an LLM agent writes sourcing queries over landed production code changes, runs models of known relative strength on each candidate, diagnoses why a candidate fails, and repairs it by editing its queries, prompts, and configuration until it clears quality anchors that need no per-task human labels. We used Benchmark Factory to build benchmarks for five developer cohorts at our organization. Engineering raters scored a 5% sample 2.3 for task quality and 2.6 for grader verdicts on a 1-to-3 scale. On configurations never used to build them, the benchmarks ranked Claude Opus~4.7 at high reasoning effort above low effort (60.6% vs. 54.4% of tasks passed, $p=0.002$) and GPT-5.5 above GPT-5.4 (65.8% vs. 60.5%, $p=0.004$); 9 of the 10 per-cohort comparisons pointed the same way. A deliberately trivial benchmark failed the anchors; five broken graders failed them, even under a relaxed rule fixed in advance that the real grader passes; and with model labels shuffled so that no true ordering existed, random redraws of a candidate passed in at most 1.4% of simulations. The anchors are necessary, not sufficient, conditions for a valid benchmark, designed to focus human review on what the loop cannot repair.",
+      "published": "2026-11-13T19:49:01Z",
+      "updated": "2026-11-13T19:49:01Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18890",
+      "abs_url": "https://arxiv.org/abs/2611.18890",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18865",
+      "title": "FiReIQ: Field-Level Confidence Estimation with Reasoning and Image Quality in Document Extraction",
+      "authors": [
+        "Xiao Liu",
+        "Yage Wang",
+        "Qi Yu",
+        "Giri Iyengar"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have demonstrated strong performance in structured document extraction, yet their deployment in high-stakes applications requires reliable confidence estimates for individual fields. Existing uncertainty estimators often aggregate signals across an entire generation, obscuring field-specific reasoning uncertainty while overlooking visual degradations that may lead to confident extraction errors. To address these limitations, we introduce FiReIQ, a field-level confidence estimation framework that combines field-aligned reasoning signals from a single VLM generation with local and global image-quality features through quality-conditioned visual fusion. To facilitate systematic evaluation, we further introduce FiReIQ-Bench, a benchmark spanning financial receipts and legal contracts. Experiments with two reasoning VLMs show that FiReIQ consistently improves confidence discrimination, selective prediction, and probabilistic accuracy over existing estimators. These gains extend to private financial service data, where FiReIQ improves AUROC by 6.8% and coverage at 95% precision by 10.6% over an existing baseline. Together, these results highlight the potential of FiReIQ to reduce manual review while enabling more reliable document automation.",
+      "published": "2026-11-13T19:12:50Z",
+      "updated": "2026-11-13T19:12:50Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18865",
+      "abs_url": "https://arxiv.org/abs/2611.18865",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18790",
+      "title": "Same Evidence, Different Verdicts: Delivery of CT Images and DICOM Metadata Changes VLM Quality-Control Decisions",
+      "authors": [
+        "Nicolas Avelar"
+      ],
+      "abstract": "Vision-language models (VLMs) are being proposed as automated checks on clinical imaging inputs, where a scan and its DICOM metadata can disagree; a truncated CT series wrongly admitted to volumetric follow-up, such as lung-nodule growth assessment in screening, biases the measurement. A natural safeguard is to let the model judge the image before it sees the metadata. We find this backfires. On 60 NLST chest CT pairs with coverage defects whose ground truth is computed from scan geometry, a false header that Claude Haiku 5.5 resisted when shown with the image (2% of its detections overruled) overturned 91% of them when it arrived after the model's answer (Nemotron-3.5-VL 43% to 100%). With the order reversed, the image overturned 98-100% of the header's errors (Claude models): whichever source came second won. This is not generic sycophancy: a neutral \"please confirm\" reversed 0 of 1,072 correct refusals, and the effect persisted when the header arrived as a tool result, as in agentic pipelines. One warning sentence cut sequential reversal to at most 9%, and the pattern held on 24 real mismatched pairs. Contributions: (i) evidence that VLM input-check decisions on identical evidence depend on delivery; (ii) a testbed with exact geometric ground truth; (iii) a validation protocol for clinical VLM input checks. Code, prompts and all call logs: https://github.com/nav92061/ct-vlm-delivery-order",
+      "published": "2026-11-13T01:10:59Z",
+      "updated": "2026-11-13T01:10:59Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18790",
+      "abs_url": "https://arxiv.org/abs/2611.18790",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18437",
+      "title": "Accounting for Trust and Safety: Bounding Content-Moderation Quality from Records You Already Hold",
+      "authors": [
+        "Aayush Agarwal",
+        "Daron Veer Singh Sohi",
+        "Linda Cornelison"
+      ],
+      "abstract": "Platforms use expert audits to measure content-moderation quality. This paper develops a formal method for checking those claims using records platforms already maintain, such as appeal reversals and confirmed reports. These records provide one-sided bounds: they can show that a stated quality target was missed, but cannot prove that it was met. The paper presents the theory, limitations, constructed examples, and a prospective protocol for future evaluation. It reports no analysis of Meta operational data, no experiment, and no production result.",
+      "published": "2026-11-13T17:13:55Z",
+      "updated": "2026-11-13T17:13:55Z",
+      "categories": [
+        "cs.CY"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18437",
+      "abs_url": "https://arxiv.org/abs/2611.18437",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18429",
+      "title": "Do Underwater Image Quality Metrics Agree with Human Perception? A Benchmark with Human Choices, Simple Edits and Generative Drift",
+      "authors": [
+        "Rishii Kumar Singh",
+        "Abhinav Rajput",
+        "Dinesh Kumar Vishwakarma"
+      ],
+      "abstract": "Underwater image enhancement is challenging to evaluate due to the lack of clean reference images, so researchers rely on no-reference image quality assessment (NR-IQA) metrics. However, it remains unclear whether these metrics agree with human judgments. We evaluate 73 handcrafted underwater, learned underwater, vision-language and general-purpose metrics against human preferences on five references: four published opinion-score sets and a new paired-comparison study. For each metric, we measure how often it selects the same image as people when comparing versions of the same scene. We further test whether simple image edits and small adversarial perturbations raise metric scores above the enhancement people preferred, and whether scores decrease as repeated generative edits add noise. Our results show that no metric consistently matches human preferences. The best worst-case Cohen's kappa over the five references is only 0.23 (Q-Align), while two raters in our study agree with a median kappa of 0.41. The widely used UCIQE often favors edits that people reject. On a Nano Banana Pro replica chain that should leave the image unchanged, only 22 of 73 scores decrease at every checkpoint, while noise grows by 2.5 times. We also introduce TrustUIQA, a benchmark that combines the human references, our study choices, the edited, attacked and generated images, and the scores of every metric on every image. The code is available at https://github.com/TrustUIQA/TrustUIQA and TrustUIQA at https://huggingface.co/datasets/TrustUIQA/TrustUIQA.",
+      "published": "2026-11-13T17:10:13Z",
+      "updated": "2026-11-13T17:10:13Z",
+      "categories": [
+        "cs.CV",
+        "eess.IV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18429",
+      "abs_url": "https://arxiv.org/abs/2611.18429",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.17146",
+      "title": "HiVE-VQA: Hierarchical Interaction via Volumetric Embedding for Video Quality Assessment",
+      "authors": [
+        "Robbie Hamilton",
+        "Fan Zhang",
+        "David Bull"
+      ],
+      "abstract": "The proliferation of user-generated video content has made accurate and robust no-reference video quality assessment (NR-VQA) a highly important challenge. Existing research increasingly relies on architecturally complex multi-branch pipelines or computationally intensive fine-tuning of single-branch backbones. In this paper, we investigate whether a single frozen video foundation model can serve as an effective NR-VQA backbone, and propose HiVE-VQA, the first framework (to our knowledge) to apply a JEPA-based video encoder to this task. HiVE-VQA extracts token grids from multiple depths of a pre-trained V-JEPA 2.1 encoder and stacks them into a hierarchical spatio-temporal volume, which a compact 3D convolutional head fuses across its layer, spatial, and temporal axes, combining low-level distortion cues from shallow layers with the semantic and temporal context captured at greater depths. The encoder remains frozen throughout, so only the head is trained: 5.2M parameters (5.7\\% of the total), with no auxiliary multi-modal models and an inference cost that is invariant to video resolution. Trained solely on LSVQ and evaluated without any fine-tuning, HiVE-VQA outperforms 17 state-of-the-art (SOTA) methods in SROCC and PLCC on both intra-dataset (LSVQ-test, LSVQ-1080p) and cross-dataset (KoNViD-1k, LIVE-VQC) benchmarks. These results indicate that hierarchical, depth-wise fusion of features from a single frozen video foundation model provides a more effective and efficient basis for NR-VQA than task-specific multi-network fusion. Code and model checkpoints are available at https://github.com/RobHam99/HiVE-VQA.",
+      "published": "2026-11-12T17:32:10Z",
+      "updated": "2026-11-12T17:32:10Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.17146",
+      "abs_url": "https://arxiv.org/abs/2611.17146",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16451",
+      "title": "HIFC-IQA: Train-Free Cross-Domain Image Quality Assessment via Dual-Process Cognition",
+      "authors": [
+        "Yu Li",
+        "Zhengran Shen",
+        "Puchao Zhou",
+        "Yukang Ding",
+        "Yachun Mi",
+        "Boyuan Yang",
+        "Xi Zhai",
+        "Shaohui Liu"
+      ],
+      "abstract": "The gap between controlled synthetic distortions and complex real-world degradations introduces a critical domain shift challenge for No-Reference Image Quality Assessment. Although Unsupervised Domain Adaptation (UDA) approaches attempt to address this issue, they remain constrained by substantial retraining overhead and cumulative error propagation inherent in iterative pseudo-labeling. Inspired by the dual-process theory of human cognition for remarkable generalization ability, we propose Hierarchical Intuitive and Fuzzy Consensus (HIFC), a completely train-free Cross-Domain IQA framework. HIFC employs asymmetric perceptual decomposition to disentangle semantic content from distortion-sensitive representations. The final quality score is fused through the synergy of two complementary branches: a memory consensus branch that retrieves a stable Fuzzy Quality Centroid from a synthetic reference gallery, and an intuitive branch that captures aesthetic polarization via zero-shot vision-language alignment. Extensive experiments show that HIFC achieves state-of-the-art performance across multiple benchmarks, attaining the highest average SRCC and PLCC among competing UDA methods. Most notably, in the challenging synthetic-to-authentic cross-domain setting, HIFC achieves a substantial performance margin over competing methods, demonstrating remarkable robustness and generalization.",
+      "published": "2026-11-12T08:04:40Z",
+      "updated": "2026-11-12T08:04:40Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16451",
+      "abs_url": "https://arxiv.org/abs/2611.16451",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16414",
+      "title": "Small Language Models for Inference-Capability Routing: Effects of Model Capacity and Prompt Optimization on Downstream Quality and Efficiency",
+      "authors": [
+        "Sailendra Kolluru",
+        "Maheshkumar Duvvarapu"
+      ],
+      "abstract": "Optional reasoning, retrieval, web search, and tool use can improve large language model responses but incur unnecessary computation when activated indiscriminately. This study investigates whether prompt optimization can compensate for limited router capacity and whether classification gains translate into downstream efficiency. The proposed framework uses prompt-driven small language models to make four independent capability decisions, allowing multiple capabilities to be selected per query. Qwen2.5 routers ranging from 1.5B to 14B parameters are compared across five prompting strategies, followed by an evaluation of capability-specific optimized configurations using a fixed GPT-OSS-120B downstream model on 127 questions. Under minimal prompting, increasing router capacity does not consistently improve classification performance. Prompt optimization narrows the capacity gap for reasoning and calculator routing, whereas RAG and web search retain larger benefits from higher capacity. Similar classification F1 scores do not necessarily imply equivalent downstream behavior: false-positive activations increase unnecessary computation, while missed capabilities can reduce answer quality. The 14B router achieves a mean BERTScore F1 of 0.8408, compared with 0.8418 when all capabilities are enabled, while reducing average downstream token consumption by 68.7\\% (8,837 to 2,764 tokens) and median downstream latency by 80.5\\% (9.79 to 1.91 seconds). These savings exclude router overhead, which is measured separately in a different inference environment and increases with router capacity. The findings demonstrate that the relationship between router capacity, prompt design, and downstream efficiency is capability-dependent. Consequently, router selection must consider error profiles and routing overhead alongside classification performance.",
+      "published": "2026-11-12T07:25:46Z",
+      "updated": "2026-11-12T07:25:46Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16414",
+      "abs_url": "https://arxiv.org/abs/2611.16414",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.15271",
+      "title": "MoE Pretraining:Parallelism Layout Changes the Model, Not Quality",
+      "authors": [
+        "Esther Xin"
+      ],
+      "abstract": "Large Mixture-of-Experts (MoE) models are trained across many machines, and the way the work is split, the parallelism layout, often changes between runs: a job resumes on a different GPU count, a cluster is resized, or an ablation runs on a new setup. In exact arithmetic the layout should not matter, but in real arithmetic it changes the order in which numbers are added, and some MoE rules such as load balancing and expert capacity are often computed per machine. We ask whether the layout changes the trained MoE model. We pretrain the same small MoE language models (25M to 117M parameters, 20M FineWeb-Edu tokens) with the same seed, data and hyperparameters under 9 data-parallel and expert-parallel layouts, in fp32 on CPUs and fp16 on a GPU, and compare each run with the effect of a new random seed. Across 80 runs we find: (1) The layout does not change model quality, but it does change the model: final predictions differ about 80% as much as with a new seed, and over 90% of routing decisions differ. Any layout, a one-bit change to one weight, or a different CPU thread count has the same effect. (2) The cause is the router: decisions that flip are almost exactly those where two experts were nearly tied (AUC 0.97 to 1.00 in the first 16 steps). (3) More, smaller experts create more near-ties (2.7% with 8 experts, 23% with 64) and less reproducible routing (68% vs. 100% of decisions differ), but outputs do not drift further. (4) A dense model of the same active size is far more stable (0.12x the seed level in fp32, 0.58x in fp16), while the MoE reaches about 0.8x at both precisions and twice as fast. (5) When pretraining resumes on a new layout, timing matters: switching at 84% of pretraining barely changes the final model, while switching at 10%, just after warm-up, changes it substantially. We release code, run logs and data.",
+      "published": "2026-11-11T10:02:28Z",
+      "updated": "2026-11-11T10:02:28Z",
+      "categories": [
+        "cs.DC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.15271",
+      "abs_url": "https://arxiv.org/abs/2611.15271",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.14211",
+      "title": "Verifiable Agentic Traffic Class: A Policed Quality-of-Service Mechanism for Agentic AI Traffic, Evaluated from Simulation to Real-Kernel Adversarial Testing",
+      "authors": [
+        "Naveen Babu Narayanan Nair",
+        "Sajay Kurup"
+      ],
+      "abstract": "Software agents built on large language models generate traffic unlike human web traffic, yet routers have no class for it and cannot verify a sender's claim to be an agent. This paper proposes the Verifiable Agentic Traffic Class (VATC), which combines a reserved Differentiated Services Code Point (DSCP) value declaring agent traffic, a router-side classifier that demotes flows contradicting the declaration to a class served after best-effort traffic, and a rate-limited priority queue. VATC was compared with static Differentiated Services (DiffServ), a dedicated class that trusts the marking, and fq_codel, a per-flow fair-queuing scheduler, in two simulators and on a real Linux kernel. VATC matched DiffServ under steady load. In a constructed burst it cut mean agent queuing delay by 98% relative to DiffServ in simulation (assuming an immediate verdict), at a 12% increase in human delay; most of the gain came from the separate class. Under a spoofed flood in the kernel, the rate limit held human latency 11 times below DiffServ's. Without verification, DiffServ and a tightly configured fq_codel gave legitimate agents lower latency than VATC; a live four-feature classifier then demoted all 20 bulk-shaped spoofers and gave agents 0.30 ms, but missed six spoofers that copied the agent pattern. With emulated network delay, a timing feature of the classifier stopped separating agent from human flows. In real agent harnesses on a congested link, router queueing took 13% to 63% of task time, depending on harness and assumed model latency. The traffic was synthetic or sandbox-scale.",
+      "published": "2026-11-10T15:33:22Z",
+      "updated": "2026-11-10T15:33:22Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.NI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14211",
+      "abs_url": "https://arxiv.org/abs/2611.14211",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.13972",
+      "title": "Data Quality Challenges in Multimodal Tourism Recommender Systems",
+      "authors": [
+        "Zehui Wang",
+        "Wolfram Höpken",
+        "Dietmar Jannach"
+      ],
+      "abstract": "Modern recommender systems increasingly consider diverse data modalities to enhance model performance. However, the quality of the underlying multimodal data (e.g. data from social media platforms) has received limited attention so far. Focusing on tourism recommendation, we examine real-world challenges encountered when using datasets from Yelp and Instagram. Issues include noise from fake reviews, hallucinated content from LLMs, modality contradictions, and demographic bias. We outline future directions such as quality-aware fusion, structured and controlled LLM-based content generation to reduce hallucinations, and user group differentiation to improve the robustness and reliability of multimodal recommendation systems.",
+      "published": "2026-11-10T12:08:40Z",
+      "updated": "2026-11-10T12:08:40Z",
+      "categories": [
+        "cs.IR",
+        "cs.LG",
+        "cs.MM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13972",
+      "abs_url": "https://arxiv.org/abs/2611.13972",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.31218",
+      "title": "QICOM: Open-Source Software for Reproducible Image Quality Evaluation, Blinded Assessment, and Radiomic Comparison",
+      "authors": [
+        "Fabio Mattiussi",
+        "Switinder Ghotra"
+      ],
+      "abstract": "QICOM (Quality Image COMparator) is open-source software for quantitative image comparison, paired radiomics, and blinded assessment. It saves processing settings, image identities, measurements, and response mappings so a comparison can be reopened and recalculated. We evaluate reference agreement, responses to controlled perturbations, and recovery of saved analyses. Synthetic experiments cover 37 quantitative descriptors using independentnumerical references and separate upstream integration comparisons. The QICOM/MIRP backend meets the reference tolerances for all 482 numeric IBSI 1 digital-phantom entries and all 1,622 entries across configurations A-E of the public CT reference case; these comprise 1,804 feature/aggregation comparisons and 300 preprocessing diagnostics. Restricting masked SSIM and HFEN to complete kernel support removes the observed dependence on excluded pixels. In a synthetic filtering example, stronger smoothing increases SSIM while worsening MSE and HFEN relative to milder smoothing and changing GLCM contrast more strongly. Reopened radiomics projects reproduce all 43 feature pairs per comparison, and two blinded deliveries return four correctly mapped scripted responses. These experiments document the calculations and data transfers linking the three workflows.",
+      "published": "2026-10-22T13:03:26Z",
+      "updated": "2026-10-22T13:03:26Z",
+      "categories": [
+        "eess.IV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.31218",
+      "abs_url": "https://arxiv.org/abs/2610.31218",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.24093",
+      "title": "Does AI-Assisted Development Homogenize Software? An Empirical Study of Code Similarity, Quality, and Evolution",
+      "authors": [
+        "Luciano Marchezan",
+        "Romain Lefeuvre",
+        "Kevin Delcourt",
+        "Benoit Combemale",
+        "Houari Sahraoui"
+      ],
+      "abstract": "AI-assisted software development is evolving from interactive LLM assistance toward agentic systems that autonomously perform software engineering tasks, yet the effects of this shift remain insufficiently understood. We present an empirical study of 50 long-lived Java and Python open-source projects across three eras: pre-LLM, potentially LLM-assisted, and detected agentic development. Using snapshots from Software Heritage, we examine code similarity, software quality, and software evolution. Similarity is measured semantically through embedding-based cosine similarity and syntactically through CodeBLEU*. Quality is assessed with SonarQube metrics covering maintainability, complexity, reliability, and security. Evolution is characterized by annualized growth rates of LOC, functions, classes, files, and statements, and by commit activity in the three months preceding each snapshot. Results show no consistent evidence of increased similarity as semantic and syntactic similarity decreased significantly in Java for both the LLM and agentic eras relative to the pre-LLM era, while Python showed no significant differences. Software quality remained largely stable, although the agentic era showed significantly lower code-smell and SQALE index densities. Structural growth was generally lower in the agentic era, particularly for files, whereas development activity increased moderately in Java, especially in commits and added lines. These findings challenge the assumption that LLM- and agent-assisted development necessarily homogenizes code, degrades quality, or accelerates growth.",
+      "published": "2026-10-16T18:22:51Z",
+      "updated": "2026-10-16T18:22:51Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.24093",
+      "abs_url": "https://arxiv.org/abs/2610.24093",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.12890",
+      "title": "Evaluation of Software Quality Through Refactoring Commit-Impact Analysis",
+      "authors": [
+        "Md Safayat Hossen",
+        "Sheikh Moonwara Anjum Monisha",
+        "Shadid Intisar Quasem"
+      ],
+      "abstract": "The aim of this study is to conduct an empirical analysis of the correlation between code modifications and software quality. This will be achieved by examining the effects of changes made before and after each refactoring commit, using software metrics such as size, complexity, code smells, vulnerability, and bug detection. The objective is to conduct static code analysis on open-source software from GitHub repositories using various repository mining and static code analysis tools. Our approach involves formulating research-based questions and utilizing the specified tools to obtain results that will enable us to resolve the case study. The obtained results have been summarised and further analyzed using tables and graphs to achieve the objective.",
+      "published": "2026-10-09T02:24:39Z",
+      "updated": "2026-10-09T02:24:39Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.12890",
+      "abs_url": "https://arxiv.org/abs/2610.12890",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.05978",
+      "title": "VibeCheck: Assessing the Quality of LLM-Generated Unit Tests: A Multi-agent Empirical Study across Heterogeneous Repositories",
+      "authors": [
+        "Anika Tabassum",
+        "Mushahid Intesum",
+        "Md. Fahim Arefin",
+        "Tarannum Shaila Zaman"
+      ],
+      "abstract": "LLM-based IDE agents are increasingly used to generate repository-grounded unit tests, yet common evaluations often rely on execution success or coverage. These metrics can miss deeper quality issues such as weak assertions, missing edge cases, poor isolation, and limited maintainability. This paper presents VibeCheck, an empirical study of unit test generation across 15 student-developed Python and JavaScript/TypeScript repositories. We evaluate Kiro, Antigravity, and Cursor with Claude Sonnet 4.5 as the underlying agent, under repository-only, zero-shot conditions using a five-dimensional rubric covering runnability, assertion strength, logic and edge-case coverage, isolation/determinism, and maintainability. We also apply leave-one-out cross-agent peer evaluation to compare tools and identify failure patterns. Results show a clear execution-adequacy gap: generated tests are often runnable but frequently lack strong assertions and meaningful behavioral coverage. Weak assertions and missing edge cases occur more often than blocking failures, showing that runnable tests can still be shallow. VibeCheck provides a reliability-oriented framework for evaluating LLM-generated tests beyond pass/fail outcomes.",
+      "published": "2026-09-05T08:46:26Z",
+      "updated": "2026-09-14T09:44:22Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.05978",
+      "abs_url": "https://arxiv.org/abs/2609.05978",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.26689",
+      "title": "Regression Test Selection for Updated Capability Modules in Compositional ML Systems via Atomic-Quality Probes",
+      "authors": [
+        "Xue Qin",
+        "Simin Luan",
+        "Cong Yang",
+        "Zhijun Li"
+      ],
+      "abstract": "Compositional machine-learning (ML) systems assemble runtime behavior from libraries of independently re-trained capability modules. Replacing one module raises a regression-testing question that static dependence analysis cannot answer: which existing compositions stay valid, and at what test cost? We frame capability updates as regression test selection (RTS) and contribute four results. First, a paired cross-version swap protocol isolates the marginal effect of a single module update. Second, on two contact-rich manipulation tasks we characterize a dominant-skill effect: one capability module reaches 88.0% atomic success while siblings stay at or below 32.0%, and its inclusion shifts composition success by up to 52 percentage points; a controlled weight-space interpolation tracks composition success against atomic quality point-by-point (pooled Pearson r=0.94), and the effect replicates on a second task, where the governing module must lie on the critical path of the phase sequence. Third, off-policy behavioral-distance metrics fail to identify the dominant module. Fourth, a margin-gated Hybrid Selector matches full revalidation at zero per-decision test cost (75.0% gold-label agreement, with no detectable difference) and reaches 81.25% match at half of full-revalidation cost, beating a cost-matched random budget (Monte-Carlo p=0.039). A resolution analysis shows that coarse evaluation overstates the apparent advantage of full revalidation. The atomic-quality probe gives a principled test-selection criterion for capability-update regression testing in compositional ML systems.",
+      "published": "2026-04-29T13:56:11Z",
+      "updated": "2026-07-02T11:05:58Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.26689",
+      "abs_url": "https://arxiv.org/abs/2604.26689",
+      "source": "arxiv"
+    },
     {
       "id": "2107.13687",
       "title": "Qualities of Quality: A Tertiary Review of Software Quality Measurement Research",
@@ -461,7 +1599,7 @@
       "authors": [
         "Max McKinnon"
       ],
-      "abstract": "The ability of large language models (LLMs) to recall and retrieve information from long contexts is critical for many real-world applications. Prior work (Liu et al., 2023) reported that LLMs suffer significant drops in retrieval accuracy for facts placed in the middle of large contexts, an effect known as \"Lost in the Middle\" (LITM). We find the model Gemini 2.5 Flash can answer needle-in-a-haystack questions with great accuracy regardless of document position including when the document is nearly at the input context limit. Our results suggest that the \"Lost in the Middle\" effect is not present for simple factoid Q\\\u0026A in Gemini 2.5 Flash, indicating substantial improvements in long-context retrieval.",
+      "abstract": "The ability of large language models (LLMs) to recall and retrieve information from long contexts is critical for many real-world applications. Prior work (Liu et al., 2023) reported that LLMs suffer significant drops in retrieval accuracy for facts placed in the middle of large contexts, an effect known as \"Lost in the Middle\" (LITM). We find the model Gemini 2.5 Flash can answer needle-in-a-haystack questions with great accuracy regardless of document position including when the document is nearly at the input context limit. Our results suggest that the \"Lost in the Middle\" effect is not present for simple factoid Q\\&A in Gemini 2.5 Flash, indicating substantial improvements in long-context retrieval.",
       "categories": [
         "cs.IR",
         "cs.AI"
@@ -1159,7 +2297,7 @@
     },
     {
       "id": "2305.16635",
-      "title": "Impossible Distillation: from Low-Quality Model to High-Quality Dataset \u0026 Model for Summarization and Paraphrasing",
+      "title": "Impossible Distillation: from Low-Quality Model to High-Quality Dataset & Model for Summarization and Paraphrasing",
       "authors": [
         "Jaehun Jung",
         "Peter West",
@@ -1284,7 +2422,7 @@
     },
     {
       "id": "2012.07581",
-      "title": "Quality Estimation \u0026 Interpretability for Code Translation",
+      "title": "Quality Estimation & Interpretability for Code Translation",
       "authors": [
         "Mayank Agarwal",
         "Kartik Talamadupula",
@@ -1447,7 +2585,7 @@
         "Bastien Pietropoli",
         "Andrea Visentin"
       ],
-      "abstract": "This chapter presents a comprehensive taxonomy for assessing data quality in the context of data monetisation, developed through a systematic literature review. Organising over one hundred metrics and Key Performance Indicators (KPIs) into four subclusters (Fundamental, Contextual, Resolution, and Specialised) within the Balanced Scorecard (BSC) framework, the taxonomy integrates both universal and domain-specific quality dimensions. By positioning data quality as a strategic connector across the BSC's Financial, Customer, Internal Processes, and Learning \u0026 Growth perspectives, it demonstrates how quality metrics underpin valuation accuracy, customer trust, operational efficiency, and innovation capacity. The framework's interconnected \"metrics layer\" ensures that improvements in one dimension cascade into others, maximising strategic impact. This holistic approach bridges the gap between granular technical assessment and high-level decision-making, offering practitioners, data stewards, and strategists a scalable, evidence-based reference for aligning data quality management with sustainable value creation.",
+      "abstract": "This chapter presents a comprehensive taxonomy for assessing data quality in the context of data monetisation, developed through a systematic literature review. Organising over one hundred metrics and Key Performance Indicators (KPIs) into four subclusters (Fundamental, Contextual, Resolution, and Specialised) within the Balanced Scorecard (BSC) framework, the taxonomy integrates both universal and domain-specific quality dimensions. By positioning data quality as a strategic connector across the BSC's Financial, Customer, Internal Processes, and Learning & Growth perspectives, it demonstrates how quality metrics underpin valuation accuracy, customer trust, operational efficiency, and innovation capacity. The framework's interconnected \"metrics layer\" ensures that improvements in one dimension cascade into others, maximising strategic impact. This holistic approach bridges the gap between granular technical assessment and high-level decision-making, offering practitioners, data stewards, and strategists a scalable, evidence-based reference for aligning data quality management with sustainable value creation.",
       "categories": [
         "cs.DB",
         "cs.CY"
@@ -2270,7 +3408,7 @@
         "Naeemul Hassan",
         "Manoranjan Paul"
       ],
-      "abstract": "The information ecosystem today is overwhelmed by an unprecedented quantity of data on versatile topics are with varied quality. However, the quality of information disseminated in the field of medicine has been questioned as the negative health consequences of health misinformation can be life-threatening. There is currently no generic automated tool for evaluating the quality of online health information spanned over a broad range. To address this gap, in this paper, we applied a data mining approach to automatically assess the quality of online health articles based on 10 quality criteria. We have prepared a labeled dataset with 53012 features and applied different feature selection methods to identify the best feature subset with which our trained classifier achieved an accuracy of 84%-90% varied over 10 criteria. Our semantic analysis of features shows the underpinning associations between the selected features \u0026 assessment criteria and further rationalize our assessment approach. Our findings will help in identifying high-quality health articles and thus aiding users in shaping their opinion to make the right choice while picking health-related help from online.",
+      "abstract": "The information ecosystem today is overwhelmed by an unprecedented quantity of data on versatile topics are with varied quality. However, the quality of information disseminated in the field of medicine has been questioned as the negative health consequences of health misinformation can be life-threatening. There is currently no generic automated tool for evaluating the quality of online health information spanned over a broad range. To address this gap, in this paper, we applied a data mining approach to automatically assess the quality of online health articles based on 10 quality criteria. We have prepared a labeled dataset with 53012 features and applied different feature selection methods to identify the best feature subset with which our trained classifier achieved an accuracy of 84%-90% varied over 10 criteria. Our semantic analysis of features shows the underpinning associations between the selected features & assessment criteria and further rationalize our assessment approach. Our findings will help in identifying high-quality health articles and thus aiding users in shaping their opinion to make the right choice while picking health-related help from online.",
       "categories": [
         "cs.CY",
         "cs.LG",
@@ -3948,7 +5086,7 @@
         "Gerhard Satzger",
         "Niklas Kühl"
       ],
-      "abstract": "Organizations increasingly adopt Retrieval-Augmented Generation (RAG) to enhance Large Language Models with enterprise-specific knowledge. However, current data quality (DQ) frameworks have been primarily developed for static datasets, and only inadequately address the dynamic, multi-stage nature of RAG systems. This study aims to develop DQ dimensions for this new type of AI-based systems. We conduct 16 semi-structured interviews with practitioners of leading IT service companies. Through a qualitative content analysis, we inductively derive 15 distinct DQ dimensions across the four processing stages of RAG systems: data extraction, data transformation, prompt \u0026 search, and generation. Our findings reveal that (1) new dimensions have to be added to traditional DQ frameworks to also cover RAG contexts; (2) these new dimensions are concentrated in early RAG steps, suggesting the need for front-loaded quality management strategies, and (3) DQ issues transform and propagate through the RAG pipeline, necessitating a dynamic, step-aware approach to quality management.",
+      "abstract": "Organizations increasingly adopt Retrieval-Augmented Generation (RAG) to enhance Large Language Models with enterprise-specific knowledge. However, current data quality (DQ) frameworks have been primarily developed for static datasets, and only inadequately address the dynamic, multi-stage nature of RAG systems. This study aims to develop DQ dimensions for this new type of AI-based systems. We conduct 16 semi-structured interviews with practitioners of leading IT service companies. Through a qualitative content analysis, we inductively derive 15 distinct DQ dimensions across the four processing stages of RAG systems: data extraction, data transformation, prompt & search, and generation. Our findings reveal that (1) new dimensions have to be added to traditional DQ frameworks to also cover RAG contexts; (2) these new dimensions are concentrated in early RAG steps, suggesting the need for front-loaded quality management strategies, and (3) DQ issues transform and propagate through the RAG pipeline, necessitating a dynamic, step-aware approach to quality management.",
       "categories": [
         "cs.AI",
         "cs.HC"
@@ -4059,7 +5197,7 @@
         "Qiming Cui",
         "Michael Dinitz"
       ],
-      "abstract": "We revisit the central online problem of ski rental in the \"algorithms with predictions\" framework from the point of view of distributional predictions. Ski rental was one of the first problems to be studied with predictions, where a natural prediction is simply the number of ski days. But it is both more natural and potentially more powerful to think of a prediction as a distribution p-hat over the ski days. If the true number of ski days is drawn from some true (but unknown) distribution p, then we show as our main result that there is an algorithm with expected cost at most OPT + O(min(max({eta}, 1) * sqrt(b), b log b)), where OPT is the expected cost of the optimal policy for the true distribution p, b is the cost of buying, and {eta} is the Earth Mover's (Wasserstein-1) distance between p and p-hat. Note that when {eta} \u003c o(sqrt(b)) this gives additive loss less than b (the trivial bound), and when {eta} is arbitrarily large (corresponding to an extremely inaccurate prediction) we still do not pay more than O(b log b) additive loss. An implication of these bounds is that our algorithm has consistency O(sqrt(b)) (additive loss when the prediction error is 0) and robustness O(b log b) (additive loss when the prediction error is arbitrarily large). Moreover, we do not need to assume that we know (or have any bound on) the prediction error {eta}, in contrast with previous work in robust optimization which assumes that we know this error.\n  We complement this upper bound with a variety of lower bounds showing that it is essentially tight: not only can the consistency/robustness tradeoff not be improved, but our particular loss function cannot be meaningfully improved.",
+      "abstract": "We revisit the central online problem of ski rental in the \"algorithms with predictions\" framework from the point of view of distributional predictions. Ski rental was one of the first problems to be studied with predictions, where a natural prediction is simply the number of ski days. But it is both more natural and potentially more powerful to think of a prediction as a distribution p-hat over the ski days. If the true number of ski days is drawn from some true (but unknown) distribution p, then we show as our main result that there is an algorithm with expected cost at most OPT + O(min(max({eta}, 1) * sqrt(b), b log b)), where OPT is the expected cost of the optimal policy for the true distribution p, b is the cost of buying, and {eta} is the Earth Mover's (Wasserstein-1) distance between p and p-hat. Note that when {eta} < o(sqrt(b)) this gives additive loss less than b (the trivial bound), and when {eta} is arbitrarily large (corresponding to an extremely inaccurate prediction) we still do not pay more than O(b log b) additive loss. An implication of these bounds is that our algorithm has consistency O(sqrt(b)) (additive loss when the prediction error is 0) and robustness O(b log b) (additive loss when the prediction error is arbitrarily large). Moreover, we do not need to assume that we know (or have any bound on) the prediction error {eta}, in contrast with previous work in robust optimization which assumes that we know this error.\n  We complement this upper bound with a variety of lower bounds showing that it is essentially tight: not only can the consistency/robustness tradeoff not be improved, but our particular loss function cannot be meaningfully improved.",
       "categories": [
         "cs.LG",
         "cs.DS"

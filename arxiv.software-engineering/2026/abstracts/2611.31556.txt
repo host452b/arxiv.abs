@@ -1,0 +1,27 @@
+Title: Real-Time AI Acceleration on a 2D Spatial Dataflow Architecture
+Authors: Shriram Raja, Anton Njavro, Richard West
+ID: 2611.31556
+URL: https://arxiv.org/abs/2611.31556
+
+Abstract:
+Machine Learning (ML) is increasingly being integrated into real-time systems,
+which makes the timing analysis of ML accelerators necessary. However, the most
+popular commercial accelerator, the Graphics Processing Unit (GPU), remains
+difficult to analyze as several aspects of its behavior, including scheduling of
+threads involved in single-instruction multiple-thread computations and memory
+access latency, are not fully documented. Spatial dataflow accelerators present
+an interesting alternative to GPUs, as they inherently support compute and
+memory partitioning. Data movement and computation locality are explicitly
+controlled by the programmer. In this work, we consider the Tenstorrent
+Blackhole, which is based on a commodity RISC-V architecture. It consists of a
+2D grid of cores connected by Networks-on-Chip (NoCs), supporting a fully open
+software runtime. We profile the Blackhole platform and develop a worst-case
+execution time task model as a Homogeneous Synchronous Dataflow Graph. We extend
+this model to a preliminary analysis of multi-core workloads by considering NoC-
+related delays. Finally, we evaluate our model across 12,567 task configurations
+and workloads. Results show that the estimate derived from our model lies above
+the observed worst case in every configuration. For single-core workloads, the
+overhead is less than 100% in most cases, with a maximum of less than 200%, and
+for multi-core workloads, it is less than 500% using a pessimistic NoC
+contention analysis. This paper lays the foundations for real-time computing on
+a promising open accelerator design.

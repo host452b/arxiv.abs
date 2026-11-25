@@ -1,0 +1,30 @@
+Title: Compositional Exploits in Autonomous Coding Agents: Attack Mechanics and Ephemeral Defense
+Authors: Deep Shah, Nehal Kathrotia
+ID: 2611.19764
+URL: https://arxiv.org/abs/2611.19764
+
+Abstract:
+Autonomous coding agents (such as Antigravity, Claude Code, Cursor, and
+OpenHands) rely on third-party tools to inspect files, run commands, and call
+external APIs. Today's security auditors evaluate these tools almost entirely in
+isolation: static linters and AST checkers verify that each individual tool
+contains no malicious code at installation time. In this paper, we show that
+isolated tool auditing is fundamentally flawed. We expose compositional exploits
+in autonomous coding agents, an emergent vulnerability class where an agent
+chains individually harmless tools to execute an unauthorized attack. Much like
+code-reuse attacks in binary exploitation, this threat requires no malware;
+instead, the agent stitches together legitimate tool operations across turns
+over shared workspace files, environment variables, and chat memory. Across a
+560-task benchmark suite (360 exploit tasks across 8 hazard classes and 200
+benign developer and cloud workflows), unprotected frontier models (Gemini 3.5,
+3.7, and 3.8 Flash) execute compositional exploit chains with a 72.9% to 84.5%
+success rate, while five leading single-tool pre-distribution scanners exhibit a
+0% detection rate across all constituent tools. To eliminate compositional
+exploits, we present CompGuard, an OS-grounded defense uniting two planes: (1) a
+Cognitive Control Plane that issues single-skill capability leases and tracks
+dataflow provenance, and (2) an OS Kernel Enforcement Layer using Linux Landlock
+LSM v4, seccomp-BPF socket filters, and an ephemeral loopback proxy to close the
+invocation gap. CompGuard achieves a 100% Defense Block Rate (0.0% to 0.8% pre-
+teardown Net ASR) at 61.4 microseconds interposition overhead, preserves a 98.0%
+solve rate on benign developer workflows, and triggers zero false alarms across
+615 real cloud diagnostic calls.

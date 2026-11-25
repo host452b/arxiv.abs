@@ -1,0 +1,25 @@
+Title: Hardening JavaScript Programs against LLM-Based Vulnerability Detection
+Authors: Zhenhao Tian, Jintong Yu, Jingwei Feng, Jianwei Zhuge, Penghui Li
+ID: 2611.25718
+URL: https://arxiv.org/abs/2611.25718
+
+Abstract:
+JavaScript programs are often distributed as source code, so attackers can
+analyze them for vulnerabilities. LLM-based vulnerability detection agents now
+make this analysis much easier. To mitigate this emerging threat, we present
+AntiAgent, a defense that lets developers harden their programs against such
+detection agents. AntiAgent transforms a program before release to impede an
+agent's analysis. To find effective transformations, AntiAgent evolves a corpus
+of programs with known vulnerabilities and traces how a detection agent analyzes
+each evolved version. It keeps the versions on which the agent misses or
+misreports the vulnerability and extracts their transformations into reusable
+rules. To protect a new program, AntiAgent carefully divides the task between an
+LLM and the rules, so that the transformations adapt to the program while
+preserving its semantics. We evaluate AntiAgent on real-world JavaScript
+applications against four detection agents, including Claude Code and Codex.
+AntiAgent reduces the number of vulnerabilities that each agent detects by
+52.0-60.7%, outperforming the conventional obfuscator JS-Obfuscator and the LLM-
+based transformation method FPA on every agent. The transformed programs pass
+all project tests, indicating that AntiAgent preserves the original program
+semantics. The transformation rules also remain effective on vulnerability types
+absent from the corpus and on programs written in another language like Python.

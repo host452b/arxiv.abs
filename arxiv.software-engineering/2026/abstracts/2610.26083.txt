@@ -1,0 +1,27 @@
+Title: MX-Like Tensor Core for LLM Inference with NPU Integration via Hardware-Software Co-Design Exploration
+Authors: Zijun Zhao, Ruichu Ao, Stef Cuyckens, Marian Verhelst, Chao Fang
+ID: 2610.26083
+URL: https://arxiv.org/abs/2610.26083
+
+Abstract:
+Block-scaled quantization formats such as OCP Microscaling (MX) and NVFP4 have
+been widely adopted as efficient data formats for LLM inference. However, the
+design space of these formats spanned by shared scale, weight, and activation
+format combinations has not been systematically explored, and the joint
+accuracy-silicon tradeoff across this space remains uncharacterized, leaving the
+true Pareto-optimal configurations for NPU-based edge LLM deployment an open
+question. To bridge this gap, we conduct a joint hardware-software (HW-SW) co-
+design exploration of the above underexplored MX-like design space with three
+innovations. 1) We define and systematically characterize the full 8-bit scale
+format family within the MX-like design space, jointly with asymmetric weight-
+activation precision, identifying configurations that outperform the MX and
+NVFP4-like (without per-tensor scaling, PTS) baselines. 2) We build a per-format
+specialized MAC datapath template that enables fair hardware cost evaluation
+across the space. 3) We develop an automated co-design flow, integrated into the
+open-source SNAX NPU platform, that enables joint HW-SW analysis across the
+design space. Overall, our co-design exploration reveals that scale format
+matters only under aggressive FP4 quantization, yielding a case-oriented design
+guideline for both scale format and asymmetric weight-activation precision. We
+further identify UE5M3 as a favorable accuracy-hardware tradeoff for the FP4
+regime, reducing perplexity degradation by up to 25.3% relative to the
+NVFP4-like baseline, at a cost of only +0.06% area and +0.49% power overhead.

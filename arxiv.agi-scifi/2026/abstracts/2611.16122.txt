@@ -1,0 +1,30 @@
+Title: Intent-Aware Protection for AI Agents
+Authors: Fady Copty, Neta Haiby, Max Braitmaiere, Julia Korsunsky
+ID: 2611.16122
+URL: https://arxiv.org/abs/2611.16122
+
+Abstract:
+AI agents increasingly access enterprise data, invoke powerful tools, and act
+with limited human oversight. Existing security defenses primarily detect prompt
+injection, harmful outputs, or suspicious behavior, but do not determine whether
+an agent remains faithful to the purpose for which it was deployed. An action
+may contain no attack pattern and stay within granted permissions while still
+violating the agent's role, organizational constraints, or purpose. We introduce
+Intent- Aware Security, a framework that treats trusted agent intent as a first-
+class security object. We define Intent Preservation and Intent Drift, and
+operationalize them through an Intent Profile: an agent-specific representation
+extracted from organizational, role, and developer intent. We further introduce
+an Intent-Aware benchmark of 887 validated samples across 35 agents, built by a
+generation procedure that fixes ground-truth labels before LLM realization, and
+four Intent Profile-based protections: pre-execution detection, post-execution
+detection, input alignment, and system-prompt hardening. Across all evaluations,
+Intent Profile-based protection outperforms all profile-free baselines on the
+primary metric. On our benchmark, it raises four-class acro-F1 from 45% to 79%
+(Out-of-Scope F1 from 8% to 76%). On more than 10,000 executed AgentDojo
+trajectories, where ground truth comes from environment state, profile-based
+post-execution detection reaches 0.949 AUROC versus AlignmentCheck 0.909, 0.897
+with raw agent configuration and 0.843 without context. Profile-based input
+alignment improves protection success by 7 points over DataFilter with a
+comparable benign utility. These results suggest that an agent's intended
+purpose can serve as a useful security reference for detecting and mitigating
+deviations from its deployed role and operational boundaries.

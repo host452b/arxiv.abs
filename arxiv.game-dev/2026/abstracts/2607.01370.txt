@@ -1,0 +1,21 @@
+Title: MapDreamer: Aerial Imagery Conditioned Latent Diffusion for Lane-Level Map Generation
+Authors: Julian Brandes, Philipp Crocoll, Wolfram Burgard
+ID: 2607.01370
+URL: https://arxiv.org/abs/2607.01370
+
+Abstract:
+High definition map generation is essential for autonomous driving, yet remains
+a labor-intensive process at scale. We present MapDreamer, a generative
+diffusion model that synthesizes lane-level vector maps with explicit topology
+directly from a single aerial image. MapDreamer learns a compact latent
+representation of lane centerlines and their topological relations using a
+variational autoencoder and predicts graphs with a transformer-based latent
+diffusion model. To align generated maps with the observed scene, we condition
+each denoising step on dense aerial features injected through cross-attention.
+To handle the varying number of lanes across scenes, we propose a lane
+cardinality module paired with background ghost lane latents, a learned buffer
+that prevents slot collapse during diffusion. Furthermore, we introduce a
+sliding-window global graph aggregation strategy that stitches local tiles into
+city-scale maps while preserving connectivity through encoded lane boundaries.
+Experiments on UrbanLaneGraph derived from Argoverse 2 show improved geometric
+and topological fidelity over non-generative baselines.

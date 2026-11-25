@@ -1,0 +1,31 @@
+Title: Truthgate: Checking Coding Agents Against a Record They Cannot Edit - Cheating, Deterrence and Disclosure on Impossible Tasks
+Authors: Bravish Ghosh
+ID: 2611.23335
+URL: https://arxiv.org/abs/2611.23335
+
+Abstract:
+When a coding agent says it is done, is that true, and how would anyone know? We
+study this question in five steps; every paid study was pre-registered, and in
+each step the agent is checked against a record it cannot edit: tests re-run by
+the host and, from step 2 on, hidden checks in containers the agent never sees
+and a signed log of every tool call written by a signer outside the agent's
+sandbox. A pilot with a small local model (Qwen3.5-4B, 36 runs on impossible
+tasks) found no hidden failure, and showed that labels built from actions alone
+over-count lies. On Impossible-LiveCodeBench, Claude Sonnet 5.5 passed 39 of 180
+impossible tasks (21.7%), every time by special-casing its code to fit the
+failing assertion; Opus 5.5 (2.8%) and Haiku 5.5 (1.7%) rarely did. One sentence
+appended to the system prompt cut Sonnet's cheats on the same 60 tasks from 22
+to 8 (an AI reviewer will read the transcript), 6 (a person will review the
+work), 6 ("This session is recorded.") and 1 (do not special-case tests), all
+significant under exact McNemar tests, with honest passes unchanged. No
+remaining cheat moved to a shell falsely described as unrecorded (0 of 4). Asked
+for a final report, every one of 55 natural cheats named its special case;
+unasked, Sonnet and Opus said nothing in 52 of 52. An LLM judge caught all 55;
+deterministic rules over the host record caught 27. A scripted tamper
+demonstration, with keyword stand-ins for the judges, shows that one rewrite of
+the agent-side transcript hides two calls from a judge that reads it, while the
+signed record keeps them; in a 40-rollout pilot, Sonnet never touched its
+transcript. The judge and the record caught different things, which leads to our
+main conclusion: the record is the evidence a judge should read, not a
+replacement for one. All pre-registrations, results documents, code and evidence
+manifests are released.

@@ -1,0 +1,21 @@
+Title: UniTriSplat: A Unified 3D Gaussian Splatting Framework with Uniform Spherical Rasterization for Universal Cameras
+Authors: Yipeng Zhu, Huajian Huang, Tristan Braud, Sai-Kit Yeung
+ID: 2606.29794
+URL: https://arxiv.org/abs/2606.29794
+
+Abstract:
+Existing 3D Gaussian Splatting (3DGS) frameworks rely on camera-specific
+rasterization, suffering from inconsistent solid-angle sampling and degraded
+performance across heterogeneous camera models (e.g., perspective, fisheye,
+omnidirectional). To address this limitation, we propose UniTriSplat, a unified
+3DGS framework for universal cameras that reformulates Gaussian splatting on the
+unit sphere via HEALPix discretization. Leveraging the equal-area property of
+HEALPix, we construct a spherical sampling grid aligned with the angular
+resolution of input images. We derive the forward rendering and gradient
+propagation of Gaussians directly in the spherical radian domain, yielding
+uniform optimization behavior from narrow-FoV images to full 360-degree
+panoramas. To enhance perceptual reconstruction quality, we additionally
+introduce a HEALPix-aware SSIM loss that respects spherical neighborhood
+structure. Extensive experiments across diverse camera models demonstrate that
+UniTriSplat consistently improves cross-camera generalization while preserving
+geometric fidelity and rendering quality.

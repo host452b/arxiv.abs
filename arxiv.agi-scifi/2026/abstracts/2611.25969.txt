@@ -1,0 +1,31 @@
+Title: PWLNet: A Framework for Linearized Neural Surrogates in Nonlinear Process Optimization
+Authors: Sunoy Sanyal, Canberk Demir, Metin Türkay, Erdal Aydın
+ID: 2611.25969
+URL: https://arxiv.org/abs/2611.25969
+
+Abstract:
+Neural networks represent nonlinear process systems accurately, but embedding
+them in optimization is difficult because smooth activations introduce
+nonlinear, nonconvex constraints. PWLNet is a Python framework for building
+optimization-compatible neural surrogates through exact and piecewise-linear
+reformulations. It combines baseline and physics-informed training,
+optimization-aware pruning, and Pyomo embeddings based on ReLU mixed-integer
+linear models, exact tanh nonlinear models, PWL-tanh formulations, and binary-
+free SOSX branch-and-LP. PWL-native training uses the same activation in
+training and embedding, avoiding extra linearization error. It is evaluated on
+Boston housing, the Williams-Otto process, the Van de Vusse reactor, and a
+hydroformylation semi-batch reactor. On Boston housing, SOSX training gave the
+best common-architecture model (test MAE 1.984, R2 = 0.925). On Williams-Otto,
+pruning 15% of hidden neurons reduced MILP solution time 6.5-fold while
+preserving the selected operating point. For the Van de Vusse reactor, a
+physics-informed ReLU RNN pruned from 32 to 12 hidden units enabled tractable
+exact MILP embedding and a 4% true-plant economic gain over the best ramp-and-
+hold policy, while terminal-aware shrinking-horizon prediction reached 99.7% of
+the direct-shooting reference. For the hydroformylation reactor, one-step exact-
+tanh IPOPT reached 99.2% of the certified reference product with peak pressure
+20.002 bar (limit 20 bar) and 14.36 s total solve time over 280 moves; ReLU and
+PWL-native controllers achieved comparable recovery, with ReLU fastest. Longer
+horizons and physics-informed training did not consistently improve closed-loop
+results. Overall, compact linearized neural surrogates enable accurate,
+tractable optimization in steady-state and dynamic applications, with constraint
+fidelity identified as a key direction for improvement.

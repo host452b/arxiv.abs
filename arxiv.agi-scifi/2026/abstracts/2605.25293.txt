@@ -1,0 +1,30 @@
+Title: Neuromorphic LiDAR-based Bird's Eye View Object Detection using Energy-efficient Spiking Neural Networks
+Authors: Sambit Mohapatra, Senthil Yogamani, Heinrich Gotzig, Patrick Mader
+ID: 2605.25293
+URL: https://arxiv.org/abs/2605.25293
+
+Abstract:
+Autonomous driving perception demands accurate and efficient processing of
+three-dimensional sensor data under strict power constraints. Traditional
+convolutional neural networks achieve strong detection accuracy but are
+computationally intensive, limiting their suitability for deployment on
+resource-constrained neuromorphic platforms. Spiking neural networks offer a
+compelling alternative through event-driven sparse computation, yet their
+application to complex real-world perception tasks such as three-dimensional
+object detection remains limited. In this work, we propose an end-to-end spiking
+encoder-decoder network for object detection in bird's eye view representations
+of LiDAR point clouds, trained using surrogate gradient backpropagation. We
+train two variants: a membrane potential variant that reads continuous neuron
+state at the output stage for maximum accuracy, achieving
+$92.05$/$87.04$/$86.51$ AP at $\mathrm{IoU}\!=\!0.5$ (Easy/Moderate/Hard), and,
+a fully binary spiking variant that operates exclusively on spike trains at
+every layer for direct neuromorphic deployment. We evaluate four input spike
+encoding strategies and demonstrate that allowing the network to learn spike
+representations directly from data outperforms hand-crafted Poisson, latency,
+and z-axis encoding schemes on the KITTI benchmark, where sequential frames are
+unavailable and the BEV input is presented repeatedly across timesteps as a
+proxy for temporal streaming. A block-wise energy analysis demonstrates a
+$3.33\times$ reduction in synaptic operation energy over an equivalent CNN under
+conservative loop-based operation. Together, these results demonstrate the
+viability of spiking neural networks for accurate and energy-efficient
+neuromorphic perception in autonomous driving.

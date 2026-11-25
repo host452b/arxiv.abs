@@ -1,0 +1,24 @@
+Title: Prompt-Level Reward Specifications for Open-Ended Post-Training
+Authors: Zijun Weng, Xiaohui Hu, Shuangyong Song, Yongxiang Li, Kaidong Yu, Xuanjing Huang
+ID: 2605.29275
+URL: https://arxiv.org/abs/2605.29275
+
+Abstract:
+Open-ended post-training benefits from rewards that make prompt-specific success
+conditions explicit, rather than relying only on post-hoc scalar scores. In
+instruction following, writing, and decision-support tasks, response quality
+depends on local requirements, holistic preferences, and explicit constraints,
+but existing reward methods often leave these criteria implicit or cover only
+narrowly verifiable cases. We propose a prompt-level reward specification
+framework that separates reward specification from reward computation. Given
+only prompts, our framework constructs reusable task-adaptive rubrics and
+executable hard-constraint checkers offline, making reward criteria explicit
+before training and reusable across rollouts. At scoring time, artifact-anchored
+rubric and code scores are combined with an independent global score for
+residual holistic quality, yielding a normalized hybrid reward over requirement
+satisfaction, holistic quality, and deterministic constraints. The framework
+requires no human preference annotations, reference answers, or a separately
+trained reward model. Experiments show that the resulting reward improves
+offline RM-style response ranking and supports online reinforcement learning
+across multiple open-ended benchmarks. Ablations further show that rubrics,
+global scoring, and executable verification provide complementary supervision.

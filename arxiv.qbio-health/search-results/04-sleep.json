@@ -10,11 +10,468 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T08:12:59Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 186,
-  "return_count": 186,
+  "total_results": 209,
+  "return_count": 209,
   "papers": [
+    {
+      "id": "2611.22070",
+      "title": "Why do continual physical learners need sleep?",
+      "authors": [
+        "Nada Elmeligy",
+        "Nidhi Pashine",
+        "J. M. Schwarz"
+      ],
+      "abstract": "Sleep is widespread across the animal kingdom, including in organisms without a centralized nervous system. Does learning create a need for sleep, even without biology? To explore this question, we study a disordered spring network trained to perform a sequence of mechanical allosteric tasks through local changes in bond stiffness. We find that continual learning progressively reduces the network's ability to acquire new tasks as individual bonds become increasingly specialized. We identify an exact algebraic relationship between the polarization of bond dominance and the network's remaining learning capacity, providing a quantitative measure of this loss of adaptability. We then demonstrate that random internal perturbations allow individual bonds to estimate their mechanical dominance and locally adjust their stiffnesses to restore learning capacity. However, the forces associated with active learning bias these local measurements and interfere with restoration. Separating learning and repair into wake-like and sleep-like phases removes this interference and improves continual-learning performance. Our results suggest that the need for offline restorative phases can emerge from the mechanics of physical learning, even in systems without biological components.",
+      "published": "2026-11-17T01:48:08Z",
+      "updated": "2026-11-17T01:48:08Z",
+      "categories": [
+        "physics.bio-ph",
+        "cond-mat.dis-nn",
+        "cond-mat.soft",
+        "nlin.AO",
+        "q-bio.NC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22070",
+      "abs_url": "https://arxiv.org/abs/2611.22070",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.02216",
+      "title": "Do agents need to sleep?",
+      "authors": [
+        "Ido Haber",
+        "Giulio Tononi"
+      ],
+      "abstract": "LLM-based agents, which increasingly operate persistently across sessions and accumulate memory through interaction, already exhibit the familiar symptoms of unchecked plasticity: semantic drift, degraded retrieval precision, propagation of stored errors, and saturation of memory capacity. Drawing on the selectionist \"ringing, resonance and renormalization\" (RRR) account of sleep, we propose that each of its three phases maps onto an operation feasible in digital memory architectures. Engineers building stateful agents, meanwhile, are independently rediscovering the problems sleep evolved to solve: what to forget, and when to do the forgetting. From this we derive the falsifiable prediction that selectionist consolidation will outperform instructionist alternatives as memory stores grow large. The core claim concerns the nature of continuous learning itself: plasticity has a price, and for any system that learns continuously under finite capacity while coupled to its environment, that price is sleep.",
+      "published": "2026-11-01T21:24:59Z",
+      "updated": "2026-11-03T17:52:05Z",
+      "categories": [
+        "q-bio.NC",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.02216",
+      "abs_url": "https://arxiv.org/abs/2611.02216",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.00550",
+      "title": "Governing Equations of Human Sleep Macro-Structure:Symbolic Discovery from 1,106 Nights",
+      "authors": [
+        "Junhui Gao"
+      ],
+      "abstract": "Human sleep is organized into a small number of cycles per night: deep sleep dominates early cycles, REM lengthens toward morning, and light sleep clusters at cycle boundaries. These regularities have long been described qualitatively but never distilled into closed-form laws from large-scale data. A total of 1,106 nights (Sleep-EDF 153 + SHHS 953) are segmented into REM-anchored cycles, and four cycle-indexed statistics follow simple closed-form equations: cycle length declines nearly linearly (R^2=0.996), REM duration follows an inverted U (R^2=0.873), deep-sleep (N3) run length decays exponentially (R^2=0.987) with a time constant of 2.94 cycles, consistent with the homeostatic Process S of the two-process model, and light-sleep (N1) run length follows a U shape (R^2=0.956), confirming a \"long-short-long\" pattern across the night. The laws are reproduced by per-night differentiable fitting (142/142 and 773/773 nights converge), by unconstrained symbolic regression (PySR), and by a 500-night generative synthesizer built from them. Their robustness is established against the two main methodological threats: bootstrap CIs computed by resampling whole nights (1,000 replications) exclude zero for every shape term, and a five-level scan of the REM-merge segmentation threshold preserves every qualitative form. These appear to be the first closed-form laws governing the macro-structure of sleep, distilled and tested across an age-mixed sample (healthy young adults and community-based older adults).",
+      "published": "2026-10-31T02:19:16Z",
+      "updated": "2026-10-31T02:19:16Z",
+      "categories": [
+        "cs.AI",
+        "q-bio.QM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.00550",
+      "abs_url": "https://arxiv.org/abs/2611.00550",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.33033",
+      "title": "Duration-Aware World Models for Sleep Staging with Dwell-Time Constraints",
+      "authors": [
+        "Junhui Gao"
+      ],
+      "abstract": "Closed-loop neuromodulation requires sleep staging that respects stage-specific minimum dwells: stimulation policies switch by sleep stage, and a policy change is permitted only after the current stage has persisted for its minimum duration. Discriminative classifiers fragment stage trajectories---for example, a 30 s Wake segment inside a 10 min N2 run---and even hidden semi-Markov smoothing leaves 11.3% of segments below the minimum dwell threshold. This paper presents a world model in which a recurrent state-space model (RSSM) learns dwell structure endogenously from EEG, via duration-aware latent sampling, a survival-curve dwell prior, and transition-matrix calibration, and a trajectory-level hard-constraint layer guarantees the minimum dwell at decoding. On SHHS-1 (200 subjects, 160/20/20, three repeated splits), the model reaches a test accuracy of 0.690 +/- 0.053 (95% CI over 3 folds) versus 0.641 +/- 0.042 for an identically split discriminative baseline, with macro-F1 +17.5 pp and better accuracy on all three folds. On Sleep-EDF the constraint layer cuts below-threshold segments from 71.8% to 0.1% with no accuracy loss (0.734 to 0.737), and an online locked scheduler reduces RL policy switches by 87% per night while keeping every policy run at least 90 s. To the best of the author's knowledge, this is the first system to couple learned dwell statistics with a decoding-time hard guarantee. Code and pretrained weights will be released.",
+      "published": "2026-10-14T09:09:42Z",
+      "updated": "2026-10-14T09:09:42Z",
+      "categories": [
+        "q-bio.QM",
+        "cs.NE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.33033",
+      "abs_url": "https://arxiv.org/abs/2610.33033",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.21486",
+      "title": "Neural Computation Runs on Dissipative Structures Under Cyclic Calibration: A Systems Perspective on Sleep",
+      "authors": [
+        "Javier Diaz"
+      ],
+      "abstract": "Biological function operates far from thermodynamic equilibrium, sustained by metastable structures that continuously cycle through synthesis, function execution, and degradation--consuming energy and exporting entropy in the process. Neural computation exemplifies this dissipative organization, relying on low-entropy structures engaged in dynamic processes that define key information transfer and processing parameters such as gain, threshold, and integration time. This perspective proposes that sleep serves as a systemic recalibration phase required to reset crucial signaling parameters that drift during dissipative processing. During wakefulness, neural activity progressively consumes and disrupts the organization of the very substrate from which it emerges, leading to parameter drift and reduced computational precision. Sleep maintains computational accuracy across activity cycles by recalibrating function-structure coupling--that is, by counterbalancing entropic drift. Rather than explaining the experimentally observed sleep need through homeostatic regulation of unknown physiological variables, this perspective reframes it as an emergent property of neural computation under thermodynamic constraints.",
+      "published": "2026-10-15T08:24:43Z",
+      "updated": "2026-10-15T08:24:43Z",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21486",
+      "abs_url": "https://arxiv.org/abs/2610.21486",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.13918",
+      "title": "DyssomniaNN: Multi-Scale Spiking Neural Modeling of Human Sleep Disorders and Perceived Restedness",
+      "authors": [
+        "Daniel Szelogowski"
+      ],
+      "abstract": "Clinical sleep medicine repeatedly documents profound divergences between objective sleep duration and subjective daytime impairment, notably exemplified by sleep state misperception in paradoxical insomnia and boundary instability in narcolepsy type 1. Here, we present DyssomniaNN: a multi-scale biophysical computational framework coupling Borbély's two-process regulation of sleep homeostasis and circadian drive with Saper's hypothalamic reciprocal flip-flop circuit and a recurrent corticothalamic leaky integrate-and-fire spiking neural network. We formalize five clinical cohorts across an identical 72-hour photoperiod: healthy control, circadian rhythm sleep-wake disorder (delayed-phase), chronic insomnia, paradoxical insomnia, and narcolepsy type 1. The synthetic local field potential converges closely with empirical human electroencephalography spectra from the PhysioNet Sleep-EDF database across all canonical frequency bands (spectral mean absolute error of 0.33--0.35). Furthermore, we introduce the Well-Rested Index to quantify restorative efficacy. Simulations reveal that sleep duration fails to predict restorative recovery: paradoxical insomnia achieves normal total sleep time (21.15 h) yet yields low restoration (37.6%) from unsuppressed cortical beta-band intrusion, whereas hypocretin deficiency in narcolepsy produces severe nocturnal fragmentation (781 min of wake after sleep onset) and 35 sleep-onset rapid eye movement periods. DyssomniaNN provides an in silico platform for mechanistic sleep research and virtual neuropharmacology.",
+      "published": "2026-10-09T17:52:23Z",
+      "updated": "2026-10-09T17:52:23Z",
+      "categories": [
+        "cs.NE",
+        "cs.ET",
+        "cs.LG",
+        "q-bio.NC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.13918",
+      "abs_url": "https://arxiv.org/abs/2610.13918",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.28252",
+      "title": "Circadian Derived Features for Early Discrimination Across Insomnia Severity Levels: At Least 8 Weeks of Monitoring Are Needed for Clinically Meaningful Assessment",
+      "authors": [
+        "Soheil Saghafi",
+        "Thomas C. Neylan",
+        "Qiao Li",
+        "Samuel A. McLean",
+        "Gari D. Clifford"
+      ],
+      "abstract": "Background: Wearable devices provide continuous, objective measures of daily activity and offer promise for assessing sleep disorders. However, the minimum monitoring duration needed to differentiate insomnia severity remains unclear. We investigated when wearable-derived behavioral features become informative for distinguishing Insomnia Severity Index (ISI) categories and examined the contribution of Activity Count (AC) and circadian-derived features. Methods: We analyzed wearable data from 2,305 participants in the Advancing Understanding of Recovery after Trauma (AURORA) study. Separate binary classifiers were developed for four ISI categories across six follow-up periods using AC and circadian-derived feature sets. Performance was evaluated using accuracy, F1-score, precision, recall, and AUROC. Results: Classification improved with longer monitoring. Across ISI categories, approximately eight weeks was the earliest time point at which wearable-derived features consistently achieved informative discrimination, with modest improvements thereafter. Participants without clinically significant insomnia were easiest to identify, reaching an AUROC of 0.693. Circadian-derived features performed comparably to, and in several cases better than, AC features, suggesting that the temporal organization of daily activity provides information beyond overall activity volume. Conclusions: Approximately eight weeks of longitudinal wearable monitoring may represent a practical minimum for differentiating ISI-defined insomnia categories. Longer monitoring provided only incremental improvements. Circadian behavioral features show promise as digital biomarkers for objective insomnia assessment.",
+      "published": "2026-09-23T15:13:48Z",
+      "updated": "2026-09-23T15:13:48Z",
+      "categories": [
+        "q-bio.QM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.28252",
+      "abs_url": "https://arxiv.org/abs/2609.28252",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.22713",
+      "title": "From daylight to darkness: a nonlocal model of circadian activity cycles",
+      "authors": [
+        "Dan Bell",
+        "Timothé Boyer",
+        "Hao Wang"
+      ],
+      "abstract": "An animal's ability to perceive its surroundings, as well as the ecological interactions it experiences, can be strongly influenced by the sleep patterns of both itself and surrounding species. Animals with limited sensory capabilities may struggle to navigate their habitat at night, while in a predator-prey system, it may be detrimental for prey to be inactive while predators are awake and hunting. Here, we develop a general mathematical framework to study these interactions using partial differential equations, incorporating activity cycles and daylight-dependent perception into existing models of animal movement. We show that both the dominant sensory mode and the length of daylight are key factors determining the strength of aggregation in social species. Extending this framework to a two-species predator-prey system, we use game-theoretic approaches to show that the equilibrium sleep strategy of each species is shaped not only by its own sensory capabilities, but also by those of its ecological opponent. Depending on the sensory capabilities of the two species, equilibrium strategies may consist of a single sleep pattern or a combination of multiple sleep patterns.",
+      "published": "2026-09-19T02:52:16Z",
+      "updated": "2026-09-19T02:52:16Z",
+      "categories": [
+        "q-bio.PE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.22713",
+      "abs_url": "https://arxiv.org/abs/2609.22713",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.00520",
+      "title": "A distributed-delay Wilson-Cowan model of sleep-related rhythms in the corticothalamic system",
+      "authors": [
+        "Eva Kaslik",
+        "Anca Radulescu",
+        "Anca Stanoev"
+      ],
+      "abstract": "The corticothalamic circuit supports rhythms with timescales that differ by orders of magnitude: sleep spindles, the sigma-band events of non-rapid-eye-movement (NREM) sleep, and infra-slow fluctuations near 0.02Hz that organize when spindles occur. Because the anatomy is the same in both cases, architecture alone cannot determine which rhythm the circuit expresses. We ask whether the temporal structure of the circuit's own feedback can. In a four-population Wilson--Cowan model comprising cortical excitatory and inhibitory populations, thalamic relay cells, and the thalamic reticular nucleus (TRN), we first establish how connectivity controls access to oscillatory behavior, and then introduce temporal coupling as either a weak Gamma distributed delay or a discrete delay. We investigate three distinct connectivity levels: recurrent cortical excitation gates whether the circuit can oscillate at all, the reciprocal relay-TRN pair determines where the oscillation lies and how it is configured, sustained, and terminated, and reticular self-inhibition limits its extent. We then examine how these connectivity-dependent regimes are affected by delayed coupling. Although delay does not change the equilibria themselves, it can substantially alter their stability and the organization of the resulting oscillatory dynamics. Under weak Gamma integration, short delays support spindle-compatible oscillations in the sigma band, while longer delays give rise to a much slower regime near 0.02Hz. The discrete-delay formulation produces a qualitatively different and more complex bifurcation structure. Together, these results show that the dynamics of the corticothalamic circuit depend not only on its connectivity, but also on the temporal organization of interactions within the circuit.",
+      "published": "2026-09-01T00:39:55Z",
+      "updated": "2026-09-01T00:39:55Z",
+      "categories": [
+        "q-bio.NC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.00520",
+      "abs_url": "https://arxiv.org/abs/2609.00520",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.05462",
+      "title": "Toward a Dynamical Taxonomy of Insomnia: A Multiaxial Framework for Sleep-State Transitions and Architectural Failure",
+      "authors": [
+        "Alexander Poltorak"
+      ],
+      "abstract": "Insomnia disorder is defined at the syndrome level, yet similar complaints can arise from different abnormalities in sleep regulation, state transition, state stabilization, spatial recruitment, architectural sequencing, and state perception. We propose a multiaxial dynamical framework whose principal contribution is organizational: a candidate profile is specified by the dynamical operation that fails, the sleep stage or boundary at which it fails, and its causal status. Objective sleep duration, age, circadian phase, comorbidity, medication exposure, and night-to-night variability are modifier/covariate dimensions rather than additional mechanistic classes. A local Landau-Ginzburg formalism, adopted from prior cortical and sleep-dynamics work, supplies a phenomenological language for nested hypotheses. Its relaxational form applies only to boundary-local dynamics under an approximate gradient description; non-gradient escape requires an action or quasipotential treatment, and whole-night REM-NREM sequencing requires reactive or oscillatory dynamics. Routine polysomnography usually identifies effective combinations rather than curvature, escape action, bias, noise, and relaxation separately. The strongest boundary-level evidence concerns sleep onset, where published results are consistent with bifurcation-like or bistable dynamics but do not yet exclude a driven smooth transition produced by the homeostatic-circadian ramp. The remaining operation classes are hypothesis-generating extensions. The taxonomy is judged by pragmatic utility, including improved communication, stratification, and prediction; the scalar-field implementation and specific dynamical profiles are separately falsifiable. The framework is a phenomenological organizing model rather than a new diagnosis, validated biomarker, or treatment-selection system.",
+      "published": "2026-08-05T23:11:21Z",
+      "updated": "2026-08-05T23:11:21Z",
+      "categories": [
+        "physics.bio-ph",
+        "q-bio.NC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.05462",
+      "abs_url": "https://arxiv.org/abs/2608.05462",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.03000",
+      "title": "A Landau-Ginzburg Phenomenology of Sleep-Stage Transitions",
+      "authors": [
+        "Alexander Poltorak"
+      ],
+      "abstract": "Sleep staging provides a reproducible clinical description, but it does not by itself explain why some boundaries are abrupt while others are graded, or why transition windows contain instability, synchrony, and apparent state coexistence. We develop a local Landau-Ginzburg phenomenology in which each boundary is represented by motion in an effective potential of a spatially extended, noisy, dissipative neural field. A latent cortical-ordering coordinate phi is inferred from prespecified EEG/PSG observables through a measurement model designed to avoid circularity. The canonical boundaries are treated separately. Existing data support a fold-like loss of wake stability at sleep onset; whether that fold lies on a globally bistable cusp with hysteresis remains open. N1-to-N2 and N2-to-N3 are posed as continuous-like ordering crossovers, NREM-to-REM as a candidate first-order-like desynchronizing switch, and a possible within-N3 mixed or tricritical-like regime as a speculative hypothesis. The Ginzburg term adds spatial predictions - growth of correlation length and local-to-global recruitment - that are absent from scalar sleep-onset models. We specify the evidence needed to distinguish bifurcation, coexistence, noise-driven escape, smooth crossover, and scoring-induced discontinuity. Illustrative time-dependent Ginzburg-Landau simulations reproduce the proposed signature classes. A synthetic classification experiment partially distinguished six archetypes (cross-validated accuracy 0.49 +/- 0.005; balanced baseline 0.17), with little change under a noise-regime shift. These analyses establish the internal consistency and testability of the framework, not the proposed taxonomy in human sleep. Transition-centered EEG validation is required before clinical or neuromodulation applications are pursued.",
+      "published": "2026-08-04T01:33:50Z",
+      "updated": "2026-08-04T01:33:50Z",
+      "categories": [
+        "physics.bio-ph",
+        "q-bio.NC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.03000",
+      "abs_url": "https://arxiv.org/abs/2608.03000",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.02562",
+      "title": "A curvature-based criterion for harmonic circadian waveforms",
+      "authors": [
+        "Yusuke Yamada",
+        "Yutaro Kabata",
+        "Ryoya Fukasaku",
+        "Hiroshi Ito"
+      ],
+      "abstract": "Experimental and theoretical studies of circadian rhythms have focused largely on the period, on mutants that alter it and on phase shifts, and this focus has driven the identification of clock genes and clarified how clocks entrain to light--dark cycles. The waveform of the oscillation itself, by contrast, has attracted little attention as an indicator of the properties of the underlying oscillator. To assess the waveform directly, we focus on whether the trajectory in the plane spanned by a variable and its time derivative possesses an inflection point, and we define an oscillation to be harmonic when no inflection point is present. Bioluminescence recordings from cyanobacteria and from the mammalian SCN were harmonic in this sense, as were most of the core clock components in mathematical models of the circadian clock. Numerical analysis of the Goodwin model, a minimal representation of the core circadian oscillator, yielded harmonic oscillation throughout. We confirmed this numerical trend semi-analytically using a piecewise-linearized Goodwin model. Because it evaluates the properties of a waveform without assuming a model structure, the approach we propose offers a new perspective on the waveform analysis of biological rhythms in general, not only circadian ones.",
+      "published": "2026-08-03T17:43:58Z",
+      "updated": "2026-08-03T17:43:58Z",
+      "categories": [
+        "q-bio.QM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.02562",
+      "abs_url": "https://arxiv.org/abs/2608.02562",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.00662",
+      "title": "No persistent circadian oscillator at genome resolution: pseudo-coherence in gut microbiome dynamics",
+      "authors": [
+        "V. Troude",
+        "L. Takayasu",
+        "R. Maskawa",
+        "W. Suda",
+        "D. Sornette",
+        "H. Takayasu",
+        "M. Takayasu"
+      ],
+      "abstract": "Diurnal rhythms in the gut microbiome are commonly read as evidence of host-driven entrainment or of microbial oscillators that synchronise to a common clock. We reanalyse hourly genome-resolved (MAG-level) mouse-gut time series with diagnostics tailored to test that interpretation. At this resolution and for both animals in the dataset, the time-frequency representation carries no persistent ridge; the time-averaged spectrum is enhanced at low frequencies and depleted at intermediate frequencies; the lagged covariance is markedly time-asymmetric, with a global imbalance peak near tens of hours; and an amplitude-adjusted Fourier surrogate test identifies a weak time-averaged construction in the candidate circadian band, never as a fixed time-frequency ridge. The two functional guilds that carry the inferred non-normal amplification are identified independently by the rankings of two inferred dynamical modes (the reaction mode, into which fluctuations are transiently amplified, and the non-normal mode, which injects them), and recover the primary polysaccharide degraders of Bacteroidota and the secondary butyrate and propionate fermenters of Bacillota A without invoking any phase information. The conjunction of these signatures matches a stable but strongly non-normal stochastic regime, that is, pseudo-coherence: geometric amplification reshapes stochastic fluctuations onto a low-dimensional reaction subspace, producing intermittent synchronisation-like episodes, broken time-reversal symmetry, and emergent time-averaged characteristic scales without an underlying oscillator. We propose a falsifiable test via high-resolution clock-gene-knockout cohorts.",
+      "published": "2026-08-01T13:33:29Z",
+      "updated": "2026-08-01T13:33:29Z",
+      "categories": [
+        "physics.bio-ph",
+        "nlin.AO",
+        "q-bio.GN"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.00662",
+      "abs_url": "https://arxiv.org/abs/2608.00662",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.23284",
+      "title": "StageGuard: Physiologically Constrained Sleep Staging",
+      "authors": [
+        "Juntang Wang",
+        "Yihan Wang",
+        "Hao Wu",
+        "Jiayu Gao",
+        "Shixin Xu",
+        "Dongmian Zou"
+      ],
+      "abstract": "Automated sleep staging is increasingly used in large-scale studies to derive sleep-architecture endpoints: total sleep time, REM latency, sleep efficiency, and bout-duration statistics. Deep learning models achieve epoch-level accuracy approaching inter-rater agreement, yet often produce hypnograms that violate physiological invariants, such as rare transitions (e.g., direct Wake -> REM) or excessively fragmented sequences. Such violations can bias downstream sleep metrics, regardless of overall accuracy. We propose StageGuard, a plug-and-play, backbone-agnostic structured-inference framework that wraps any neural sleep-staging backbone with physiology-informed priors. StageGuard combines (1) a differentiable soft transition penalty that discourages physiologically rare transitions during training, and (2) a semi-Markov constrained decoder with a duration-augmented state space that jointly enforces transition penalties and minimum bout durations at inference. Unlike hard-prohibition methods, it admits rare transitions when emission evidence is overwhelming, leaving informative pathological events recoverable rather than blocked. StageGuard constrains staging outputs to satisfy known physiological priors rather than modeling sleep generatively. We quantify the validity gap using transition-violation rate (TVR) and fragmentation index (FI) and demonstrate that, across six backbones and four datasets, StageGuard reduces TVR to physiologically plausible levels and lowers FI by 56-62%, while maintaining or slightly improving classification accuracy. Crucially, improved constraint satisfaction translates into 59-79% lower error on derived sleep-architecture statistics not directly optimized by the method, and recovers the direction and effect size of expert-defined subgroup differences (OSA severity, age) more faithfully than the unconstrained baseline.",
+      "published": "2026-07-25T16:37:46Z",
+      "updated": "2026-07-25T16:37:46Z",
+      "categories": [
+        "cs.LG",
+        "q-bio.QM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.23284",
+      "abs_url": "https://arxiv.org/abs/2607.23284",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.21214",
+      "title": "A Kuramoto phase model to explore the synchronisation of a network of circadian clocks",
+      "authors": [
+        "Franck Delaunay",
+        "Antoine Fortuné",
+        "Ines Krawczyk",
+        "Maréchal Anastasia",
+        "Mathieu Mezache",
+        "Laurent Tournier"
+      ],
+      "abstract": "We propose a model of the circadian clock in a population of cells based on a network of oscillators, derived from the Kuramoto model. The coupling between oscillators is described by a global interaction term but we introduce a phase-dependent coupling mechanism, such that oscillators interact only within a specific interval of the cycle corresponding to a specific stage of the circadian cycle. We analytically demonstrate that this modified system achieves complete asymptotic phase synchronisation, provided specific conditions on the initial phase distribution and the coupling window length are met. To bridge this theoretical framework with experimental observations, we introduce a signal processing procedure based on wavelet decomposition to extract quantitative oscillatory features from Per2::luciferase reporter traces. We then calibrate the model against datasets from both wild type and Cry2 knockout hepatocyte spheroids using a two-step quasi-Monte Carlo filtering algorithm. The comparative analysis reveals significant phenotypic divergence, showing that the Cry2KO condition alters the identifiability landscape of the model's parameters and introduces new compensatory mechanisms that confound the initial population heterogeneity with long-term macroscopic signal decay.",
+      "published": "2026-07-23T11:27:07Z",
+      "updated": "2026-07-23T11:27:07Z",
+      "categories": [
+        "math.DS",
+        "q-bio.CB"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.21214",
+      "abs_url": "https://arxiv.org/abs/2607.21214",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.06579",
+      "title": "Recovering Candidate Circadian Regulators of Arrhythmic Pituitary Hormone Genes Using Reliability-Weighted Magnetic Laplacian with rwMagLap",
+      "authors": [
+        "Shabnam Sodagari",
+        "Nick Jasperson"
+      ],
+      "abstract": "We study how to recover candidate circadian-clock regulators of pituitary hormone genes that are important for women's health but do not show a clear 24-hour rhythm in bulk tissue, aiming to nominate clock-linked regulatory targets that could inform future chronopharmacologic and chronotherapeutic strategies. We propose \\textbf{rwMagLap}, which builds a graph on rhythmic backbone genes. For each edge, we combine 24-hour fit quality with peak-time phase, represented as a complex unit-circle value, yielding a Hermitian adjacency matrix and a magnetic Laplacian. We insert arrhythmic hormone genes, treated as anchors, by a reliability-weighted nearest-neighbor projection. The projected anchor-neighbor weights are pooled into a soft teleport distribution, and complex personalized PageRank then ranks rhythmic backbone genes by the magnitude of their PageRank scores. In pituitary data, we find that all 11 women's-health anchors are arrhythmic. Even so, we find that the top-50 list is $7.95\\times$ enriched for the 13-gene KEGG circadian set (7 of the 8 set genes in the 454-gene backbone; corrected Benjamini-Hochberg (BH) $p_{\\mathrm{BH}}=4\\times10^{-6}$) and $4.54\\times$ enriched for the 111-gene Reactome set (8 of 16 genes; $p_{\\mathrm{BH}}=1.6\\times10^{-4}$), while a phase-blind real-valued baseline recovers none. We recover candidates through reliability weighting and phase-aware seeding rather than through magnetic propagation. The magnetic phase adds a different capability: it represents temporal order. On pituitary backbone, the magnetic embedding recovers measured peak-time order of connected pituitary genes with accuracy $0.971$, while $q{=}0$, i.e., no magnetic charge, is at chance.",
+      "published": "2026-07-03T01:37:59Z",
+      "updated": "2026-07-03T01:37:59Z",
+      "categories": [
+        "q-bio.QM",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.06579",
+      "abs_url": "https://arxiv.org/abs/2607.06579",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.28261",
+      "title": "Habitual lifestyle timing explains circadian timing, but daily lifestyle changes do not, in free-living humans across 2000 days",
+      "authors": [
+        "Billy C. Smith",
+        "Zeel Pansara",
+        "Rosanne H. Timmerman",
+        "Emmanuel Molefi",
+        "Tiago Da Silva Costa",
+        "Christopher Thornton",
+        "Lucas G. S. França",
+        "Rachel E. Stirling",
+        "Sarah E. Heaps",
+        "Philippa J. Karoly",
+        "Mario Leocadio-Miguel",
+        "Peter N. Taylor",
+        "Karoline Leiberg",
+        "Yujiang Wang"
+      ],
+      "abstract": "Background: Both between- and within-subject variations in circadian timing matter for health. If lifestyle changes could be used to regulate circadian timing, they would offer accessible and scalable routes to chronotherapy, but this link remains unclear under real-life conditions. Here, we explore how lifestyle 'traits' (such as typical wake time) and 'states' (day-to-day deviations from traits, such as waking up later than typical) explain between- and within-subject variation in acrophase (peak time) of the circadian rhythm of heart rate (CRHR). Methods: We collected free-living wearable data (smartwatch, continuous glucose monitor) from healthy volunteers for up to 4 weeks. The CRHR was derived from activity-adjusted heart rate, and acrophase was defined as time-of-day at daily CRHR peak. Sleep, food, and physical activity 'factors' were calculated and split into traits and states. Using a linear mixed-effects model, we tested how traits and states associate with between- and within-subject acrophase variance. Findings: Data from 105 healthy volunteers (66 female, age = 42.5 $\\pm$ 15.7 years) spanning ~2000 days (18.8 $\\pm$ 8.30 days each) were analysed. Traits were substantially more influential than states, explaining 42.3% versus 0.9% of total acrophase variance. Accordingly, traits explained 86.5% of between-subject variance, whereas states explained only 1.8% of within-subject variance. Sleep, food and physical activity factors contributed both jointly and uniquely, and lifestyle timing mattered most. Interpretation: Between-subject lifestyle traits explained acrophase better than within-subject lifestyle states. This asymmetry, alongside the considerable overlap between factors, supports sustained, holistic, timing-focused lifestyle adjustments as chronotherapy targets, testable through future interventional studies.",
+      "published": "2026-06-26T16:47:04Z",
+      "updated": "2026-06-26T16:47:04Z",
+      "categories": [
+        "q-bio.QM",
+        "stat.AP"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.28261",
+      "abs_url": "https://arxiv.org/abs/2606.28261",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.23114",
+      "title": "Circadian output network can buffer period variability",
+      "authors": [
+        "Ismail M Nur",
+        "Hotaka Kaji",
+        "Yuzuru Mitsui",
+        "Hiroshi Ito"
+      ],
+      "abstract": "Circadian rhythms are biological oscillations that govern 24-hour physiological and behavioral processes across most organisms. Recent bioimaging studies have revealed that even individual cells can exhibit circadian rhythms. The period of cellular oscillations can fluctuate due to molecular noise in the circadian clock machinery. Whether regulatory networks downstream of the clock amplify or attenuate clock-derived period fluctuations remains poorly understood. In this study, we numerically observed period variability in a self-sustained oscillator coupled to an output network. Our numerical calculations demonstrated that a serial pathway does not merely relay timing signals but actively shapes rhythmic reliability. The extent of this reduction depended on parameters of both the clock and output systems. For more complex output networks, the shortest-path length from the core oscillator was a major determinant of increased oscillation precision. This noise-buffering effect saturated in long cascades. These results suggest the existence of an intrinsic precision-enhancing mechanism embedded within circadian output networks.",
+      "published": "2026-06-22T09:58:41Z",
+      "updated": "2026-06-22T09:58:41Z",
+      "categories": [
+        "q-bio.MN"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.23114",
+      "abs_url": "https://arxiv.org/abs/2606.23114",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.13017",
+      "title": "Deep Sleep Classification via EEG Signal Criticality: A Passive BCI Approach for Sleep-Improvement Neurofeedback",
+      "authors": [
+        "Stanisław Narębski",
+        "Tomasz Komendziński",
+        "Tomasz M. Rutkowski"
+      ],
+      "abstract": "Automated sleep staging is a fundamental application of passive Brain-Computer Interfaces (pBCI), decoding spontaneous neural states to enable closed-loop interventions independent of user intent. This study evaluates criticality features derived from Detrended Fluctuation Analysis (DFA) for the specific identification of deep sleep (N3). We analyzed $347,232$ EEG epochs from $290$ older women using UMAP manifold learning to visualize state transitions. Subsequently, six classifiers were benchmarked via 10-fold cross-validation, using balanced accuracy to determine the optimal \"state-sensing\" engine for neurofeedback.Naive Bayes achieved the highest mean balanced accuracy ($87.17\\% \\pm 0.24\\%$), significantly outperforming a fully connected deep neural network (FNN: $81.58\\%$) and Random Forest ($80.97\\%$). Linear models (LDA: $57.21\\%$; SVM: $51.01\\%$) performed poorly, indicating that DFA-derived criticality features reside on a distinct, non-linear manifold. Probabilistic decoding of EEG criticality provides a high-accuracy sensing mechanism for pBCIs. This robust classification pipeline supports the development of state-dependent neurofeedback, such as targeted auditory stimulation, to enhance cognitive recovery.",
+      "published": "2026-06-11T07:53:29Z",
+      "updated": "2026-06-11T07:53:29Z",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.13017",
+      "abs_url": "https://arxiv.org/abs/2606.13017",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.10889",
+      "title": "Sleep EEG Signal Criticality as a Non-Invasive Predictor of Cognitive Decline in Dementia",
+      "authors": [
+        "Stanisław Narębski",
+        "Tomasz Komendziński",
+        "Tomasz M. Rutkowski"
+      ],
+      "abstract": "Early detection of neurodegeneration remains a critical clinical challenge. This study investigates whether sleep EEG signal criticality, quantified via Multifractal Detrended Fluctuation Analysis (MFDFA), serves as a non-invasive biomarker for future cognitive decline. We analyzed longitudinal data from the National Sleep Research Resource (NSRR) Study of Osteoporotic Fractures (SOF) cohort, comparing baseline sleep EEG dynamics between women who remained cognitively normal and those who later progressed to dementia-related impairment ($3MS < 78$).Our results reveal significant group-level differences in Hurst exponent $H(q)$ distributions, particularly during non-REM stages N2 and N3. Cognitively healthy individuals exhibited signal dynamics significantly closer to an optimally critical state across all electrode locations ($p \\leqslant 0.001$), supporting the Brain Criticality Hypothesis. Supervised UMAP projections confirmed clear spatial separation between groups throughout the overnight sleep architecture.The dementia group demonstrated a shift in DFA exponents toward $1.0$, suggesting that a reconfiguration of scale-free neural dynamics during sleep precedes clinical symptoms. These findings highlight the potential for MFDFA-derived measures to be integrated into automated, sleep-based screening tools, enabling earlier preventative interventions during the prodromal window of dementia.",
+      "published": "2026-06-09T14:02:40Z",
+      "updated": "2026-06-09T14:02:40Z",
+      "categories": [
+        "q-bio.NC",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.10889",
+      "abs_url": "https://arxiv.org/abs/2606.10889",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.23521",
+      "title": "Population-Specific Genetic and Non-Genetic Influences on Sleep Traits and Health Outcomes",
+      "authors": [
+        "Jiheum Park",
+        "Stephanie Y. Shue",
+        "Rocio Barragan",
+        "Jeong Yun Yang",
+        "Tian Gu",
+        "Chin Hur",
+        "Marie-Pierre St-Onge"
+      ],
+      "abstract": "Sleep traits are shaped by genetic and environmental factors and may influence many health conditions. The All of Us Research Program, which includes EHR, physical measurements, genomic data, and wearable data across ancestry groups, provides an opportunity to study genetic and non-genetic contributors to sleep-related health outcomes. We examined associations between genetic predispositions to chronotype, sleep duration, and short sleep and health outcomes across ancestries, as well as the role of measured sleep duration. We used All of Us genome-wide association study results, including ancestry-specific and meta-analyses for 3,414 phenotypes, to identify phenotypes associated with 455 sleep-related SNPs. Cross-sectional and longitudinal analyses (n = 212,529) evaluated associations between polygenic risk scores (PRS) and anthropometric and metabolic measures from EHR. A subgroup analysis (n = 7,655) assessed sleep duration using Fitbit data. Across six ancestry groups, SNP analysis identified 61 phenotypes linked to 29 sleep-trait-associated SNPs. The chronotype SNP rs1421085 in FTO showed the strongest associations with obesity, diabetes, and cardiovascular conditions, mainly in European, American, and African groups. PRS analysis showed that higher predisposition to shorter sleep duration was associated with increased risk of obesity and diabetes, with ancestry-specific variation. Measured sleep duration attenuated these associations, with relative contributions of 85.6%-99.9% in cross-sectional analyses and 7.1%-44.0% in longitudinal analyses compared with PRS. This study identified health conditions associated with genetic predispositions to sleep traits and suggests that actual sleep duration may play a prominent role in sleep-related health outcomes. Differences among meta-, pooled-, and ancestry-specific analyses highlight the importance of population-specific research.",
+      "published": "2026-05-22T11:36:32Z",
+      "updated": "2026-05-22T11:36:32Z",
+      "categories": [
+        "q-bio.GN"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.23521",
+      "abs_url": "https://arxiv.org/abs/2605.23521",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.18588",
+      "title": "OSSMM: An Open-Source Sleep Monitor and Modulator",
+      "authors": [
+        "Jonny Giordano",
+        "Fergal Stapleton",
+        "Gabriel Palma",
+        "Barak A. Pearlmutter"
+      ],
+      "abstract": "We present the Open-Source Sleep Monitor and Modulator (OSSMM), an open-source hardware and software platform for accessible sleep research. The OSSMM comprises a small wearable headband built from 3D prints and affordable commercial-off-the-shelf (COTS) components at a material cost under 40 euros, supported by a companion Android application. The system requires no conductive gels, disposable electrodes, or specialized equipment, and captures multiple biosignals movement, pulse, electrooculography (EOG), and putative electroencephalography (EEG) with wireless connectivity for data storage and potential sleep modulation capability via an onboard vibration motor. A proof-of-concept single-participant evaluation across 15 nights demonstrated that the captured biosignals support four-stage sleep classification (Wake, Light Sleep, Deep Sleep, REM) using conventional machine learning methods, with the best-performing model achieving a Macro F1-score of 0.770 and accuracy of 0.776 against a validated non-contact sleep monitor ($κ$=0.63 with PSG). Two technical findings are of particular note. First, inexpensive, reusable conductive thermoplastic polyurethane (CTPU) electrodes from commercial fitness chest straps captured a differential signal whose spectral properties in canonical EEG frequency bands, including signatures consistent with sleep spindles, are the principal features driving classification. Second, this signal is obtained from just two frontal electrodes without a dedicated ground reference, suggesting that practical sleep staging is achievable with simpler configurations than typically employed. All hardware designs, software, and build instructions are openly available to support replication and modification by the research community.",
+      "published": "2026-05-18T16:04:23Z",
+      "updated": "2026-05-18T16:04:23Z",
+      "categories": [
+        "stat.ME",
+        "q-bio.QM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.18588",
+      "abs_url": "https://arxiv.org/abs/2605.18588",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.01252",
+      "title": "A Data-Driven Measure of REM Sleep Propensity for Human and Rodent Sleep",
+      "authors": [
+        "Naghmeh Akhavan",
+        "Alexander G. Ginsberg",
+        "Madelyn E. C. Cruz",
+        "Yunxi Yan",
+        "Shelby R. Stowe",
+        "Dinesh Pal",
+        "Franz Weber",
+        "Cecilia G. Diniz Behn",
+        "Victoria Booth"
+      ],
+      "abstract": "Mammalian sleep is characterized by multiple alternations between episodes of rapid-eye-movement sleep (REMS) and non-REM sleep (NREMS). While the mechanisms governing the timing of these ultradian NREMS-REMS cycles remain poorly understood, the phenomenon of REMS pressure, namely a drive for REMS that builds up between REMS episodes, is thought to be a contributing factor. Prior analyses of NREMS-REMS cycles in mice has suggested that time in NREMS is a primary contributor to REMS pressure. Building on that finding, we previously introduced a REMS propensity measure defined as the probability to enter REMS before the accumulation of an additional amount of NREMS. Analyzing mouse ultradian cycle data, we showed that REMS propensity at REMS onset was positively correlated with REMS bout duration and with the probability of the occurrence of a REMS bout followed by a short inter-REMS interval, called a sequential REMS cycle. In this paper, we extend our analyses of REMS propensity to human and rat ultradian NREMS-REMS cycle data. We show that, as in mice, human and rat sleep contain both short NREMS-REMS sequential cycles and longer single NREMS-REMS cycles, though there are some differences in the relative distributions of cycle durations. Although rodents exhibit polyphasic sleep in contrast with the consolidated sleep of humans, the calculated REMS propensity measures in all three species show similar profiles as functions of time spent in NREMS: specifically, REMS propensity increases with time spent in NREMS until it reaches a peak value, and then it decays with additional time in NREMS. Positive correlations of REMS propensity at REMS onset with REMS bout duration were present in both human and rat data as in mouse data, suggesting that time spent in NREMS also influences REMS duration in these species.",
+      "published": "2026-04-01T02:37:18Z",
+      "updated": "2026-04-01T02:37:18Z",
+      "categories": [
+        "q-bio.QM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.01252",
+      "abs_url": "https://arxiv.org/abs/2604.01252",
+      "source": "arxiv"
+    },
     {
       "id": "2507.19772",
       "title": "External light schedules can induce nighttime sleep disruptions in a Homeostat-Circadian-Light Model for sleep in young children",
@@ -945,7 +1402,7 @@
         "Parisa Rashidi",
         "Azra Bihorac"
       ],
-      "abstract": "Background: Circadian desynchrony characterized by the misalignment between an individual's internal biological rhythms and external environmental cues, significantly affects various physiological processes and health outcomes. Quantifying circadian desynchrony often requires prolonged and frequent monitoring, and currently, an easy tool for this purpose is missing. Additionally, its association with the incidence of delirium has not been clearly explored. Methods: A prospective observational study was carried out in intensive care units (ICU) of a tertiary hospital. Circadian transcriptomics of blood monocytes from 86 individuals were collected on two consecutive days, although a second sample could not be obtained from all participants. Using two public datasets comprised of healthy volunteers, we replicated a model for determining internal circadian time. We developed an approach to quantify circadian desynchrony by comparing internal circadian time and external blood collection time. We applied the model and quantified circadian desynchrony index among ICU patients, and investigated its association with the incidence of delirium. Results: The replicated model for determining internal circadian time achieved comparable high accuracy. The quantified circadian desynchrony index was significantly higher among critically ill ICU patients compared to healthy subjects, with values of 10.03 hours vs 2.50-2.95 hours (p \u003c 0.001). Most ICU patients had a circadian desynchrony index greater than 9 hours. Additionally, the index was lower in patients whose blood samples were drawn after 3pm, with values of 5.00 hours compared to 10.01-10.90 hours in other groups (p \u003c 0.001)...",
+      "abstract": "Background: Circadian desynchrony characterized by the misalignment between an individual's internal biological rhythms and external environmental cues, significantly affects various physiological processes and health outcomes. Quantifying circadian desynchrony often requires prolonged and frequent monitoring, and currently, an easy tool for this purpose is missing. Additionally, its association with the incidence of delirium has not been clearly explored. Methods: A prospective observational study was carried out in intensive care units (ICU) of a tertiary hospital. Circadian transcriptomics of blood monocytes from 86 individuals were collected on two consecutive days, although a second sample could not be obtained from all participants. Using two public datasets comprised of healthy volunteers, we replicated a model for determining internal circadian time. We developed an approach to quantify circadian desynchrony by comparing internal circadian time and external blood collection time. We applied the model and quantified circadian desynchrony index among ICU patients, and investigated its association with the incidence of delirium. Results: The replicated model for determining internal circadian time achieved comparable high accuracy. The quantified circadian desynchrony index was significantly higher among critically ill ICU patients compared to healthy subjects, with values of 10.03 hours vs 2.50-2.95 hours (p < 0.001). Most ICU patients had a circadian desynchrony index greater than 9 hours. Additionally, the index was lower in patients whose blood samples were drawn after 3pm, with values of 5.00 hours compared to 10.01-10.90 hours in other groups (p < 0.001)...",
       "categories": [
         "q-bio.QM",
         "cs.AI"
@@ -1303,7 +1760,7 @@
         "Zhanwei Du",
         "Petter Holme"
       ],
-      "abstract": "The dynamics of infectious diseases propagating in populations depends both on human interaction patterns, the contagion process and the pathogenesis within hosts. The immune system follows a circadian rhythm and, consequently, the chance of getting infected varies with the time of day an individual is exposed to the pathogen. The movement and interaction of people also follow 24-hour cycles, which couples these two phenomena. We use a stochastic metapopulation model informed by hourly mobility data for two medium-sized Chinese cities. By this setup, we investigate how the epidemic risk depends on the difference of the clocks governing the population movement and the immune systems. In most of the scenarios we test, we observe circadian rhythms would constrain the pace and extent of disease emergence. The three measures (strength, outward transmission risk and introduction risk) are highly correlated with each other. For example of the Yushu City, outward transmission risk and introduction risk are correlated with a Pearson's correlation coefficient of 0.83, and the risks correlate to strength with coefficients of $-0.85$ and $-0.75$, respectively (all have $p\u003c0.05$), in simulations with no circadian effect and $R_0=1.5$. The relation between the circadian rhythms of the immune system and daily routines in human mobility can affect the pace and extent of infectious disease spreading. Shifting commuting times could mitigate the emergence of outbreaks.",
+      "abstract": "The dynamics of infectious diseases propagating in populations depends both on human interaction patterns, the contagion process and the pathogenesis within hosts. The immune system follows a circadian rhythm and, consequently, the chance of getting infected varies with the time of day an individual is exposed to the pathogen. The movement and interaction of people also follow 24-hour cycles, which couples these two phenomena. We use a stochastic metapopulation model informed by hourly mobility data for two medium-sized Chinese cities. By this setup, we investigate how the epidemic risk depends on the difference of the clocks governing the population movement and the immune systems. In most of the scenarios we test, we observe circadian rhythms would constrain the pace and extent of disease emergence. The three measures (strength, outward transmission risk and introduction risk) are highly correlated with each other. For example of the Yushu City, outward transmission risk and introduction risk are correlated with a Pearson's correlation coefficient of 0.83, and the risks correlate to strength with coefficients of $-0.85$ and $-0.75$, respectively (all have $p<0.05$), in simulations with no circadian effect and $R_0=1.5$. The relation between the circadian rhythms of the immune system and daily routines in human mobility can affect the pace and extent of infectious disease spreading. Shifting commuting times could mitigate the emergence of outbreaks.",
       "categories": [
         "q-bio.PE"
       ],
@@ -1754,7 +2211,7 @@
         "Peter Anderer",
         "Ronald M. Aarts"
       ],
-      "abstract": "Automated sleep stage classification using heart-rate variability is an active field of research. In this work limitations of the current state-of-the-art are addressed through the use of deep learning techniques and their efficacy is demonstrated. First, a temporal model is proposed for the inference of sleep stages from electrocardiography using a deep long- and short-term (LSTM) classifier and it is shown that this model outperforms previous approaches which were often limited to non-temporal or Markovian classifiers on a comprehensive benchmark data set (292 participants, 541214 samples) comprising a wide range of ages and pathological profiles, achieving a Cohen's $κ$ of $0.61\\pm0.16$ and accuracy of $76.30\\pm10.17$ annotated according to the Rechtschaffen \u0026 Kales annotation standard.\n  Subsequently, it is demonstrated how knowledge learned on this large benchmark data set can be re-used through transfer learning for the classification of photoplethysmography (PPG) data. This is done using a smaller data set (60 participants, 91479 samples) that is annotated with the more recent American Association of Sleep Medicine annotation standard, achieving a Cohen's $κ$ of $0.63\\pm0.13$ and accuracy of $74.65\\pm8.63$ for wrist-mounted PPG-based sleep stage classification, higher than any previously reported performance using this sensor modality. This demonstrates the feasibility of knowledge transfer in sleep staging to adapt models for new sensor modalities as well as different annotation strategies.",
+      "abstract": "Automated sleep stage classification using heart-rate variability is an active field of research. In this work limitations of the current state-of-the-art are addressed through the use of deep learning techniques and their efficacy is demonstrated. First, a temporal model is proposed for the inference of sleep stages from electrocardiography using a deep long- and short-term (LSTM) classifier and it is shown that this model outperforms previous approaches which were often limited to non-temporal or Markovian classifiers on a comprehensive benchmark data set (292 participants, 541214 samples) comprising a wide range of ages and pathological profiles, achieving a Cohen's $κ$ of $0.61\\pm0.16$ and accuracy of $76.30\\pm10.17$ annotated according to the Rechtschaffen & Kales annotation standard.\n  Subsequently, it is demonstrated how knowledge learned on this large benchmark data set can be re-used through transfer learning for the classification of photoplethysmography (PPG) data. This is done using a smaller data set (60 participants, 91479 samples) that is annotated with the more recent American Association of Sleep Medicine annotation standard, achieving a Cohen's $κ$ of $0.63\\pm0.13$ and accuracy of $74.65\\pm8.63$ for wrist-mounted PPG-based sleep stage classification, higher than any previously reported performance using this sensor modality. This demonstrates the feasibility of knowledge transfer in sleep staging to adapt models for new sensor modalities as well as different annotation strategies.",
       "categories": [
         "q-bio.NC"
       ],
@@ -1802,7 +2259,7 @@
         "Michael Sommerauer",
         "Preben Kidmose"
       ],
-      "abstract": "Isolated REM sleep behavior disorder (iRBD) is a key prodromal marker of Parkinson's disease (PD), and video-polysomnography (vPSG) remains the diagnostic gold standard. However, manual sleep staging is particularly challenging in neurodegenerative diseases due to EEG abnormalities and fragmented sleep, making PSG assessments a bottleneck for deploying new RBD screening technologies at scale. We adapted U-Sleep, a deep neural network, for generalizable sleep staging in PD and iRBD. A pretrained U-Sleep model, based on a large, multisite non-neurodegenerative dataset (PUB; 19,236 PSGs across 12 sites), was fine-tuned on research datasets from two centers (Lundbeck Foundation Parkinson's Disease Research Center (PACE) and the Cologne-Bonn Cohort (CBC); 112 PD, 138 iRBD, 89 age-matched controls. The resulting model was evaluated on an independent dataset from the Danish Center for Sleep Medicine (DCSM; 81 PD, 36 iRBD, 87 sleep-clinic controls). A subset of PSGs with low agreement between the human rater and the model (Cohen's $κ$ \u003c 0.6) was re-scored by a second blinded human rater to identify sources of disagreement. Finally, we applied confidence-based thresholds to optimize REM sleep staging. The pretrained model achieved mean $κ$ = 0.81 in PUB, but $κ$ = 0.66 when applied directly to PACE/CBC. By fine-tuning the model, we developed a generalized model with $κ$ = 0.74 on PACE/CBC (p \u003c 0.001 vs. the pretrained model). In DCSM, mean and median $κ$ increased from 0.60 to 0.64 (p \u003c 0.001) and 0.64 to 0.69 (p \u003c 0.001), respectively. In the interrater study, PSGs with low agreement between the model and the initial scorer showed similarly low agreement between human scorers. Applying a confidence threshold increased the proportion of correctly identified REM sleep epochs from 85% to 95.5%, while preserving sufficient (\u003e 5 min) REM sleep for 95% of subjects.",
+      "abstract": "Isolated REM sleep behavior disorder (iRBD) is a key prodromal marker of Parkinson's disease (PD), and video-polysomnography (vPSG) remains the diagnostic gold standard. However, manual sleep staging is particularly challenging in neurodegenerative diseases due to EEG abnormalities and fragmented sleep, making PSG assessments a bottleneck for deploying new RBD screening technologies at scale. We adapted U-Sleep, a deep neural network, for generalizable sleep staging in PD and iRBD. A pretrained U-Sleep model, based on a large, multisite non-neurodegenerative dataset (PUB; 19,236 PSGs across 12 sites), was fine-tuned on research datasets from two centers (Lundbeck Foundation Parkinson's Disease Research Center (PACE) and the Cologne-Bonn Cohort (CBC); 112 PD, 138 iRBD, 89 age-matched controls. The resulting model was evaluated on an independent dataset from the Danish Center for Sleep Medicine (DCSM; 81 PD, 36 iRBD, 87 sleep-clinic controls). A subset of PSGs with low agreement between the human rater and the model (Cohen's $κ$ < 0.6) was re-scored by a second blinded human rater to identify sources of disagreement. Finally, we applied confidence-based thresholds to optimize REM sleep staging. The pretrained model achieved mean $κ$ = 0.81 in PUB, but $κ$ = 0.66 when applied directly to PACE/CBC. By fine-tuning the model, we developed a generalized model with $κ$ = 0.74 on PACE/CBC (p < 0.001 vs. the pretrained model). In DCSM, mean and median $κ$ increased from 0.60 to 0.64 (p < 0.001) and 0.64 to 0.69 (p < 0.001), respectively. In the interrater study, PSGs with low agreement between the model and the initial scorer showed similarly low agreement between human scorers. Applying a confidence threshold increased the proportion of correctly identified REM sleep epochs from 85% to 95.5%, while preserving sufficient (> 5 min) REM sleep for 95% of subjects.",
       "categories": [
         "cs.LG",
         "q-bio.QM"
@@ -2305,7 +2762,7 @@
         "Wickwire Emerson",
         "Ze Wang"
       ],
-      "abstract": "Background: Adolescence is a critical period of brain maturation and heightened vulnerability to cognitive and mental health disorders. Sleep plays a vital role in neurodevelopment, yet the mechanisms linking insufficient sleep to adverse brain and behavioral outcomes remain unclear. The glymphatic system (GS), a brain-wide clearance pathway, may provide a key mechanistic link. Methods: Participants from the Adolescent Brain Cognitive Development (ABCD) Study (n =6,800; age ~ 11 years) were categorized into sleep-sufficient (\u003e=9 h/night) and sleep-insufficient (\u003c9 h/night) groups. Linear models tested associations among sleep, PVS burden, brain volumes, and behavioral outcomes. Mediation analyses evaluated whether PVS burden explained sleep-related effects. Results: Adolescents with insufficient sleep exhibited significantly greater PVS burden, reduced cortical, subcortical, and white matter volumes, poorer cognitive performance across multiple domains (largest effect in crystallized intelligence), and elevated psychopathology (largest effect in general problems). Sleep duration and quality were strongly associated with PVS burden. Mediation analyses revealed that PVS burden partially mediated sleep effects on cognition and mental health, with indirect proportions up to 10.9%. Sequential models suggested a pathway from sleep -\u003e PVS -\u003e brain volume -\u003e behavior as the most plausible route. Conclusions: Insufficient sleep during adolescence is linked to glymphatic dysfunction, reflected by increased PVS burden, which partially accounts for adverse effects on brain structure, cognition, and mental health. These findings highlight the GS as a potential mechanistic pathway and imaging biomarker, underscoring the importance of promoting adequate sleep to support neurodevelopment and mental health.",
+      "abstract": "Background: Adolescence is a critical period of brain maturation and heightened vulnerability to cognitive and mental health disorders. Sleep plays a vital role in neurodevelopment, yet the mechanisms linking insufficient sleep to adverse brain and behavioral outcomes remain unclear. The glymphatic system (GS), a brain-wide clearance pathway, may provide a key mechanistic link. Methods: Participants from the Adolescent Brain Cognitive Development (ABCD) Study (n =6,800; age ~ 11 years) were categorized into sleep-sufficient (>=9 h/night) and sleep-insufficient (<9 h/night) groups. Linear models tested associations among sleep, PVS burden, brain volumes, and behavioral outcomes. Mediation analyses evaluated whether PVS burden explained sleep-related effects. Results: Adolescents with insufficient sleep exhibited significantly greater PVS burden, reduced cortical, subcortical, and white matter volumes, poorer cognitive performance across multiple domains (largest effect in crystallized intelligence), and elevated psychopathology (largest effect in general problems). Sleep duration and quality were strongly associated with PVS burden. Mediation analyses revealed that PVS burden partially mediated sleep effects on cognition and mental health, with indirect proportions up to 10.9%. Sequential models suggested a pathway from sleep -> PVS -> brain volume -> behavior as the most plausible route. Conclusions: Insufficient sleep during adolescence is linked to glymphatic dysfunction, reflected by increased PVS burden, which partially accounts for adverse effects on brain structure, cognition, and mental health. These findings highlight the GS as a potential mechanistic pathway and imaging biomarker, underscoring the importance of promoting adequate sleep to support neurodevelopment and mental health.",
       "categories": [
         "q-bio.PE",
         "q-bio.NC"
@@ -2738,7 +3195,7 @@
         "Philippa J. Karoly",
         "Yujiang Wang"
       ],
-      "abstract": "Objective: The circadian rhythm synchronizes physiological and behavioural patterns with the 24-hour light-dark cycle. Disruption to the circadian rhythm is linked to various health conditions, though optimal methods to describe these disruptions remain unclear. An emerging approach is to examine the intra-individual variability in measurable properties of the circadian rhythm over extended periods. Epileptic seizures are modulated by circadian rhythms, but the relevance of circadian rhythm disruption in epilepsy remains unexplored. Our study investigates intra-individual circadian variability in epilepsy and its relationship with seizures.\n  Methods: We retrospectively analyzed over 70,000 hours of wearable smartwatch data (Fitbit) from 143 people with epilepsy (PWE) and 31 healthy controls. Circadian oscillations in heart rate time series were extracted, daily estimates of circadian period, acrophase, and amplitude properties were produced, and estimates of the intra-individual variability of these properties over an entire recording were calculated.\n  Results: PWE exhibited greater intra-individual variability in period (76 min vs. 57 min, d=0.66, p\u003c0.001) and acrophase (64 min vs. 48 min, d=0.49, p=0.004) compared to controls, but not in amplitude (2 bpm, d=-0.15, p=0.49). Variability in circadian properties showed no correlation with seizure frequency, nor any differences between weeks with and without seizures.\n  Significance: For the first time, we show that heart rate circadian rhythms are more variable in PWE, detectable via consumer wearable devices. However, no association with seizure frequency or occurrence was found, suggesting that this variability might be underpinned by the epilepsy aetiology rather than being a seizure-driven effect.",
+      "abstract": "Objective: The circadian rhythm synchronizes physiological and behavioural patterns with the 24-hour light-dark cycle. Disruption to the circadian rhythm is linked to various health conditions, though optimal methods to describe these disruptions remain unclear. An emerging approach is to examine the intra-individual variability in measurable properties of the circadian rhythm over extended periods. Epileptic seizures are modulated by circadian rhythms, but the relevance of circadian rhythm disruption in epilepsy remains unexplored. Our study investigates intra-individual circadian variability in epilepsy and its relationship with seizures.\n  Methods: We retrospectively analyzed over 70,000 hours of wearable smartwatch data (Fitbit) from 143 people with epilepsy (PWE) and 31 healthy controls. Circadian oscillations in heart rate time series were extracted, daily estimates of circadian period, acrophase, and amplitude properties were produced, and estimates of the intra-individual variability of these properties over an entire recording were calculated.\n  Results: PWE exhibited greater intra-individual variability in period (76 min vs. 57 min, d=0.66, p<0.001) and acrophase (64 min vs. 48 min, d=0.49, p=0.004) compared to controls, but not in amplitude (2 bpm, d=-0.15, p=0.49). Variability in circadian properties showed no correlation with seizure frequency, nor any differences between weeks with and without seizures.\n  Significance: For the first time, we show that heart rate circadian rhythms are more variable in PWE, detectable via consumer wearable devices. However, no association with seizure frequency or occurrence was found, suggesting that this variability might be underpinned by the epilepsy aetiology rather than being a seizure-driven effect.",
       "categories": [
         "q-bio.NC"
       ],
@@ -2757,7 +3214,7 @@
         "Eugen Trinka",
         "Yvonne Höller"
       ],
-      "abstract": "Slow wave sleep duration and spectral abnormalities are related to both epilepsy and depression, but it is unclear how depressive symptoms in patients with epilepsy are affected by slow wave sleep duration and clinical factors, and how the spectral characteristics of slow wave sleep reflect a potential interaction of epilepsy and depression. Long-term video-EEG monitoring was conducted in 51 patients with focal epilepsy, 13 patients with generalized epilepsy, and 9 patients without epilepsy. Slow wave sleep segments were manually marked in the EEG and duration as well as EEG power spectra were extracted. Depressive symptoms were documented with the Beck Depression Inventory (BDI). At least mild depressive symptoms (BDI\u003e9) were found among 23 patients with focal epilepsy, 5 patients with generalised epilepsy, and 6 patients who had no epilepsy diagnosis. Slow wave sleep duration was shorter for patients with at least mild depressive symptoms (p=.004), independently from epilepsy diagnosis, antiseizure medication, age, and sex. Psychoactive medication was associated with longer slow wave sleep duration (p=.008). Frontal sigma band power (13-15 Hz) during slow wave sleep was higher for patients without epilepsy and without depressive symptoms as compared to patients without depressive symptoms but with focal epilepsy (p=.005). Depressive symptoms affect slow wave sleep duration of patients with epilepsy similarly as in patients without epilepsy. Since reduced slow wave sleep can increase the likelihood of seizure occurrence, these results stress the importance of adequate treatment for patients with epilepsy who experience depressive symptoms.",
+      "abstract": "Slow wave sleep duration and spectral abnormalities are related to both epilepsy and depression, but it is unclear how depressive symptoms in patients with epilepsy are affected by slow wave sleep duration and clinical factors, and how the spectral characteristics of slow wave sleep reflect a potential interaction of epilepsy and depression. Long-term video-EEG monitoring was conducted in 51 patients with focal epilepsy, 13 patients with generalized epilepsy, and 9 patients without epilepsy. Slow wave sleep segments were manually marked in the EEG and duration as well as EEG power spectra were extracted. Depressive symptoms were documented with the Beck Depression Inventory (BDI). At least mild depressive symptoms (BDI>9) were found among 23 patients with focal epilepsy, 5 patients with generalised epilepsy, and 6 patients who had no epilepsy diagnosis. Slow wave sleep duration was shorter for patients with at least mild depressive symptoms (p=.004), independently from epilepsy diagnosis, antiseizure medication, age, and sex. Psychoactive medication was associated with longer slow wave sleep duration (p=.008). Frontal sigma band power (13-15 Hz) during slow wave sleep was higher for patients without epilepsy and without depressive symptoms as compared to patients without depressive symptoms but with focal epilepsy (p=.005). Depressive symptoms affect slow wave sleep duration of patients with epilepsy similarly as in patients without epilepsy. Since reduced slow wave sleep can increase the likelihood of seizure occurrence, these results stress the importance of adequate treatment for patients with epilepsy who experience depressive symptoms.",
       "categories": [
         "q-bio.NC"
       ],
@@ -3014,7 +3471,7 @@
         "Hritik Arasu",
         "Faisal R Jahangiri"
       ],
-      "abstract": "Sleep staging models often degrade when deployed on patients with unseen physiology or recording conditions. We propose a streaming, source-free test-time adaptation (TTA) recipe that combines entropy minimization (Tent) with Batch-Norm statistic refresh and two safety rails: an entropy gate to pause adaptation on uncertain windows and an EMA-based reset to reel back drift. On Sleep-EDF Expanded, using single-lead EEG (Fpz-Cz, 100 Hz, 30s epochs; R\u0026K to AASM mapping), we show consistent gains over a frozen baseline at seconds-level latency and minimal memory, reporting per-stage metrics and Cohen's k. The method is model-agnostic, requires no source data or patient calibration, and is practical for on-device or bedside use.",
+      "abstract": "Sleep staging models often degrade when deployed on patients with unseen physiology or recording conditions. We propose a streaming, source-free test-time adaptation (TTA) recipe that combines entropy minimization (Tent) with Batch-Norm statistic refresh and two safety rails: an entropy gate to pause adaptation on uncertain windows and an EMA-based reset to reel back drift. On Sleep-EDF Expanded, using single-lead EEG (Fpz-Cz, 100 Hz, 30s epochs; R&K to AASM mapping), we show consistent gains over a frozen baseline at seconds-level latency and minimal memory, reporting per-stage metrics and Cohen's k. The method is model-agnostic, requires no source data or patient calibration, and is practical for on-device or bedside use.",
       "categories": [
         "cs.LG",
         "cs.AI",
@@ -3265,7 +3722,7 @@
         "Barbara Heude",
         "Marie-Aline Charles"
       ],
-      "abstract": "Objective. Sleep duration may vary inter-individually and intra-individually over time. We aimed at both identifying night-sleep duration (NSD) trajectories among preschoolers and studying associated factors. Methods. NSD were collected within the French birth-cohort study EDEN at ages 2, 3 and 5-6 years through parental questionnaires, and were used to model NSD trajectories among 1205 children. Familial socioeconomic factors, maternal sociodemographic, health and lifestyle characteristics as well as child health, lifestyle, and sleep characteristics at birth and/or at age 2 years were investigated in association with NSD using multinomial logistic regressions. Results. Five distinct NSD trajectories were identified: short (SS, \u003c10h, 4.9%), medium-low (MLS, \u003c11h, 47.8%), medium-high (MHS, $\\approx$11h30, 37.2%), long (LS, $\\ge$11h30, 4.5%) and changing (CS, i.e. $\\ge$11h30 then \u003c11h, 5.6%) NSD trajectories. Multivariable analyses showed in particular that, compared to the MHS trajectory, factors associated with increased risk for belonging to SS trajectory were male gender, first child, maternal age and working status, night-waking, parental presence when falling asleep, television-viewing duration and both the `Processed and fast foods' and the `Baby food' dietary patterns at age 2 years. Factors positively associated with the CS trajectory were maternal smoking, bottle-feeding at night and the `Processed and fast foods' dietary pattern at age 2 years whereas child's activity and emotionality scores at age 1 year were negatively associated. Conclusion. We identified distinct NSD trajectories among preschoolers and associated early life factors. Some of them may reflect less healthy lifestyle, providing cues for early multi-behavioral prevention interventions",
+      "abstract": "Objective. Sleep duration may vary inter-individually and intra-individually over time. We aimed at both identifying night-sleep duration (NSD) trajectories among preschoolers and studying associated factors. Methods. NSD were collected within the French birth-cohort study EDEN at ages 2, 3 and 5-6 years through parental questionnaires, and were used to model NSD trajectories among 1205 children. Familial socioeconomic factors, maternal sociodemographic, health and lifestyle characteristics as well as child health, lifestyle, and sleep characteristics at birth and/or at age 2 years were investigated in association with NSD using multinomial logistic regressions. Results. Five distinct NSD trajectories were identified: short (SS, <10h, 4.9%), medium-low (MLS, <11h, 47.8%), medium-high (MHS, $\\approx$11h30, 37.2%), long (LS, $\\ge$11h30, 4.5%) and changing (CS, i.e. $\\ge$11h30 then <11h, 5.6%) NSD trajectories. Multivariable analyses showed in particular that, compared to the MHS trajectory, factors associated with increased risk for belonging to SS trajectory were male gender, first child, maternal age and working status, night-waking, parental presence when falling asleep, television-viewing duration and both the `Processed and fast foods' and the `Baby food' dietary patterns at age 2 years. Factors positively associated with the CS trajectory were maternal smoking, bottle-feeding at night and the `Processed and fast foods' dietary pattern at age 2 years whereas child's activity and emotionality scores at age 1 year were negatively associated. Conclusion. We identified distinct NSD trajectories among preschoolers and associated early life factors. Some of them may reflect less healthy lifestyle, providing cues for early multi-behavioral prevention interventions",
       "categories": [
         "stat.AP",
         "q-bio.NC"
@@ -3782,7 +4239,7 @@
         "Marie-Aline Charles",
         "Sabine Plancoulaine"
       ],
-      "abstract": "Objective: 25-hydroxyvitamin D (25OHD) deficiency has been associated with sleep disorders in adults. Only three cross-sectional studies were performed in children and showed an association between 25OHD deficiency and both obstructive sleep apnea syndrome and primary snoring. No longitudinal study has been performed in children from the general population. We analyzed the association between cord-blood vitamin D level at birth and night-sleep duration trajectories for children between 2 and 5-6 years old in a non-clinical cohort.Method: We included 264 children from the French EDEN mother-child birth-cohort with both cord-blood 25OHD level determined by radio-immunoassay at birth, and night-sleep trajectories for children between 2 and 5-6 years old obtained by the group-based trajectory modeling method. Associations between 25OHD and sleep trajectories were assessed by multinomial logistic regression adjusted for maternal and child characteristics.Results: The trajectories short sleep (\u003c10h30/night), medium-low sleep (10h30-11h00/night), medium-high sleep ($\\approx$11h30/night), long sleep ($\\ge$11h30/night) and changing sleep (decreased from $\\ge$11h30 to 10h30-11h00/night) represented 5%, 46%, 37%, 4% and 8% of the children, respectively. The mean 25OHD level was 19 ng/ml (SD=11, range 3 to 63). It was 12 (SD=7), 20 (SD=11), 19 (SD=10), 14 (SD=7) and 16 (SD=8) ng/ml for children with short, medium-low, medium-high, long and changing sleep trajectories, respectively. On adjusted analysis, for each 1-ng/ml decrease in 25OHD level, the odds of belonging to the short sleep versus medium-high sleep trajectory was increased (odds ratio =1.12, 95% confidence interval [1.01-1.25]). We found no other significant association between 25OHD level and other trajectories.Conclusion: Low 25OHD level at birth may be associated with increased probability of being a persistent short sleeper in preschool years. These results need confirmation.",
+      "abstract": "Objective: 25-hydroxyvitamin D (25OHD) deficiency has been associated with sleep disorders in adults. Only three cross-sectional studies were performed in children and showed an association between 25OHD deficiency and both obstructive sleep apnea syndrome and primary snoring. No longitudinal study has been performed in children from the general population. We analyzed the association between cord-blood vitamin D level at birth and night-sleep duration trajectories for children between 2 and 5-6 years old in a non-clinical cohort.Method: We included 264 children from the French EDEN mother-child birth-cohort with both cord-blood 25OHD level determined by radio-immunoassay at birth, and night-sleep trajectories for children between 2 and 5-6 years old obtained by the group-based trajectory modeling method. Associations between 25OHD and sleep trajectories were assessed by multinomial logistic regression adjusted for maternal and child characteristics.Results: The trajectories short sleep (<10h30/night), medium-low sleep (10h30-11h00/night), medium-high sleep ($\\approx$11h30/night), long sleep ($\\ge$11h30/night) and changing sleep (decreased from $\\ge$11h30 to 10h30-11h00/night) represented 5%, 46%, 37%, 4% and 8% of the children, respectively. The mean 25OHD level was 19 ng/ml (SD=11, range 3 to 63). It was 12 (SD=7), 20 (SD=11), 19 (SD=10), 14 (SD=7) and 16 (SD=8) ng/ml for children with short, medium-low, medium-high, long and changing sleep trajectories, respectively. On adjusted analysis, for each 1-ng/ml decrease in 25OHD level, the odds of belonging to the short sleep versus medium-high sleep trajectory was increased (odds ratio =1.12, 95% confidence interval [1.01-1.25]). We found no other significant association between 25OHD level and other trajectories.Conclusion: Low 25OHD level at birth may be associated with increased probability of being a persistent short sleeper in preschool years. These results need confirmation.",
       "categories": [
         "stat.AP",
         "q-bio.NC"
@@ -3920,7 +4377,7 @@
         "Nicholas Afonin",
         "Andrew S. P. Lim"
       ],
-      "abstract": "Objectives: We present and evaluate a Mamba-based deep-learning model for diagnosis and event-level characterization of sleep disordered breathing based on signals from the ANNE One, a non-intrusive dual-module wireless wearable system measuring chest electrocardiography, triaxial accelerometry, chest and finger temperature, and finger phototplethysmography.\n  Methods: We obtained concurrent PSG and wearable sensor recordings from 384 adults attending a tertiary care sleep laboratory. Respiratory events in the PSG were manually annotated in accordance with AASM guidelines. Wearable sensor and PSG recordings were automatically aligned based on the ECG signal, alignment confirmed by visual inspection, and PSG-derived respiratory event labels were used to train and evaluate a deep sequential neural network based on the Mamba architecture.\n  Results: In 57 recordings in our test set (mean age 56, mean AHI 10.8, 43.86\\% female) the model-predicted AHI was highly correlated with that derived form the PSG labels (R=0.95, p=8.3e-30, men absolute error 2.83). This performance did not vary with age or sex. At a threshold of AHI$\u003e$5, the model had a sensitivity of 0.96, specificity of 0.87, and kappa of 0.82, and at a threshold of AHI$\u003e$15, the model had a sensitivity of 0.86, specificity of 0.98, and kappa of 0.85. At the level of 30-sec epochs, the model had a sensitivity of 0.93 and specificity of 0.95, with a kappa of 0.68 regarding whether any given epoch contained a respiratory event.\n  Conclusions: Applied to data from the ANNE One, a Mamba-based deep learning model can accurately predict AHI and identify SDB at clinically relevant thresholds, achieves good epoch- and event-level identification of individual respiratory events, and shows promise at physiological characterization of these events including event type (central vs. other) and event duration.",
+      "abstract": "Objectives: We present and evaluate a Mamba-based deep-learning model for diagnosis and event-level characterization of sleep disordered breathing based on signals from the ANNE One, a non-intrusive dual-module wireless wearable system measuring chest electrocardiography, triaxial accelerometry, chest and finger temperature, and finger phototplethysmography.\n  Methods: We obtained concurrent PSG and wearable sensor recordings from 384 adults attending a tertiary care sleep laboratory. Respiratory events in the PSG were manually annotated in accordance with AASM guidelines. Wearable sensor and PSG recordings were automatically aligned based on the ECG signal, alignment confirmed by visual inspection, and PSG-derived respiratory event labels were used to train and evaluate a deep sequential neural network based on the Mamba architecture.\n  Results: In 57 recordings in our test set (mean age 56, mean AHI 10.8, 43.86\\% female) the model-predicted AHI was highly correlated with that derived form the PSG labels (R=0.95, p=8.3e-30, men absolute error 2.83). This performance did not vary with age or sex. At a threshold of AHI$>$5, the model had a sensitivity of 0.96, specificity of 0.87, and kappa of 0.82, and at a threshold of AHI$>$15, the model had a sensitivity of 0.86, specificity of 0.98, and kappa of 0.85. At the level of 30-sec epochs, the model had a sensitivity of 0.93 and specificity of 0.95, with a kappa of 0.68 regarding whether any given epoch contained a respiratory event.\n  Conclusions: Applied to data from the ANNE One, a Mamba-based deep learning model can accurately predict AHI and identify SDB at clinically relevant thresholds, achieves good epoch- and event-level identification of individual respiratory events, and shows promise at physiological characterization of these events including event type (central vs. other) and event duration.",
       "categories": [
         "q-bio.QM",
         "cs.LG"
@@ -4007,7 +4464,7 @@
       "authors": [
         "Xiaoran Han"
       ],
-      "abstract": "Due to time constraints, mental health professionals in China are unable to offer patients prolonged talk therapy, leaving a gap in care for patients with psychological disorders, including aberrant sleep and eating patterns, maladaptive explanatory styles, and gastrointestinal dysfunction. To bridge this gap in care and address these problems in a large-scale manner, we built NeuroPal, a large language model (LLM)-assistant that provides scalable, evidence-based interventions with three clinically validated modules: (1) a sleep chronotherapy planner to output personalized circadian rhythm correction protocols, (2) a cognitive-behavioral reframing engine grounded in CBT and humanistic principles to shift negative attributional biases, and (3) a biochemical regulation advisor to output phytotherapy formulations to regulate sleep-metabolism-gut-axis imbalances. In collaboration with Peking Union Medical College Hospital and Xiangya Hospital Central South University, we ran an RCT protocol with 513 participants with mood/anxiety disorders and showed statistically significant improvements towards primary endpoints (\u003e p\u003c.01). Experiment shows 37.2% drop in the Pittsburgh Sleep Quality Index (PSQI), 28.6% rise in positive affective word usages (LIWC analysis), and 23.4% improvement in patient-reported digestive comfort. The assistant also reached 89.1% adherence rates, significantly higher than the human-guided therapy intervention (72.3%) in matched controls. Our results indicate that an LLM-driven multimodal intervention is able to successfully bridge time-constrained clinical practice while preserving therapeutic effectiveness. For next steps, we plan to explore longitudinal outcome tracking and FDA/CFDA certification routes.",
+      "abstract": "Due to time constraints, mental health professionals in China are unable to offer patients prolonged talk therapy, leaving a gap in care for patients with psychological disorders, including aberrant sleep and eating patterns, maladaptive explanatory styles, and gastrointestinal dysfunction. To bridge this gap in care and address these problems in a large-scale manner, we built NeuroPal, a large language model (LLM)-assistant that provides scalable, evidence-based interventions with three clinically validated modules: (1) a sleep chronotherapy planner to output personalized circadian rhythm correction protocols, (2) a cognitive-behavioral reframing engine grounded in CBT and humanistic principles to shift negative attributional biases, and (3) a biochemical regulation advisor to output phytotherapy formulations to regulate sleep-metabolism-gut-axis imbalances. In collaboration with Peking Union Medical College Hospital and Xiangya Hospital Central South University, we ran an RCT protocol with 513 participants with mood/anxiety disorders and showed statistically significant improvements towards primary endpoints (> p<.01). Experiment shows 37.2% drop in the Pittsburgh Sleep Quality Index (PSQI), 28.6% rise in positive affective word usages (LIWC analysis), and 23.4% improvement in patient-reported digestive comfort. The assistant also reached 89.1% adherence rates, significantly higher than the human-guided therapy intervention (72.3%) in matched controls. Our results indicate that an LLM-driven multimodal intervention is able to successfully bridge time-constrained clinical practice while preserving therapeutic effectiveness. For next steps, we plan to explore longitudinal outcome tracking and FDA/CFDA certification routes.",
       "categories": [
         "q-bio.NC"
       ],
@@ -4088,11 +4545,11 @@
     },
     {
       "id": "2509.04454",
-      "title": "Mechanisms for anesthesia, unawareness, respiratory depression, memory replay and sleep: MHb \u003e IPN \u003e PAG + DRN + MRN \u003e claustrum \u003e cortical slow waves",
+      "title": "Mechanisms for anesthesia, unawareness, respiratory depression, memory replay and sleep: MHb > IPN > PAG + DRN + MRN > claustrum > cortical slow waves",
       "authors": [
         "Karin Vadovičová"
       ],
-      "abstract": "My findings show what causes loss of awareness, anesthesia, memory replay, opioid induced respiratory depression (OIRD), and slow-wave sleep (SWS). Opiates are fast pain relievers and anesthetics that can cause respiratory arrest. I found how mu-opioids and anesthetics by activating medial habenula (MHb) and/or interpeduncular nucleus (IPN) induce unawareness and slowdown respiration. MHb projects to IPN and both increase their glucose intake during anesthesia (Herkenham, 1981). The question is: What is the MHb-IPN circuit doing? I found that it promotes SWS, memory replay, sharp-wave ripples, spindles, hippocampo-cortical replay, synaptogenesis, rest and recovery, by activating median raphe (MRN) serotonin, and by inhibiting the theta state circuit, new memories encoding, awareness, arousal, alert wakefulness, and REM sleep. It causes also natural slowdown of respiration and heart rate, while it inhibits locomotion and arousal. This extended model adds role of the dentate gyrus\u003eposterior septum\u003eMHb\u003eIPN\u003eMRN\u003ehippocampus + BF + claustrum\u003ecortical slow-waves in memory replay, ripples, loss of awareness, SWS, and anesthesia. It proposes new neural mechanism for anesthetic ketamine, nitrous oxide, and phencyclidine effects: activation of the IPN\u003eMRN\u003eclaustrum\u003ecortical SWA circuit by the 5-HT2a receptors in the IPN and claustrum. My model shows why are ketamine and psychedelics anxiolytic and antidepressant. How they by activating the 5-HT2a receptors in vACC/infralimbic cortex increase safety, well-being signal, socializing, and cognitive flexibility, and attenuate fear, worries, anger, impulsivity, self-defence, and wanting. This model claims that mu-opioids, acetylcholine, nicotine, endocannabinoids, adenosine, GLP-1RA, and substance P activate the MHb-IPN-MRN circuit which promotes rest, recovery, repair, serotonin-BDNF-protein production, spines growth, and anti-inflammatory state.",
+      "abstract": "My findings show what causes loss of awareness, anesthesia, memory replay, opioid induced respiratory depression (OIRD), and slow-wave sleep (SWS). Opiates are fast pain relievers and anesthetics that can cause respiratory arrest. I found how mu-opioids and anesthetics by activating medial habenula (MHb) and/or interpeduncular nucleus (IPN) induce unawareness and slowdown respiration. MHb projects to IPN and both increase their glucose intake during anesthesia (Herkenham, 1981). The question is: What is the MHb-IPN circuit doing? I found that it promotes SWS, memory replay, sharp-wave ripples, spindles, hippocampo-cortical replay, synaptogenesis, rest and recovery, by activating median raphe (MRN) serotonin, and by inhibiting the theta state circuit, new memories encoding, awareness, arousal, alert wakefulness, and REM sleep. It causes also natural slowdown of respiration and heart rate, while it inhibits locomotion and arousal. This extended model adds role of the dentate gyrus>posterior septum>MHb>IPN>MRN>hippocampus + BF + claustrum>cortical slow-waves in memory replay, ripples, loss of awareness, SWS, and anesthesia. It proposes new neural mechanism for anesthetic ketamine, nitrous oxide, and phencyclidine effects: activation of the IPN>MRN>claustrum>cortical SWA circuit by the 5-HT2a receptors in the IPN and claustrum. My model shows why are ketamine and psychedelics anxiolytic and antidepressant. How they by activating the 5-HT2a receptors in vACC/infralimbic cortex increase safety, well-being signal, socializing, and cognitive flexibility, and attenuate fear, worries, anger, impulsivity, self-defence, and wanting. This model claims that mu-opioids, acetylcholine, nicotine, endocannabinoids, adenosine, GLP-1RA, and substance P activate the MHb-IPN-MRN circuit which promotes rest, recovery, repair, serotonin-BDNF-protein production, spines growth, and anti-inflammatory state.",
       "categories": [
         "q-bio.NC"
       ],

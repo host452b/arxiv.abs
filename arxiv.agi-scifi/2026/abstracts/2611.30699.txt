@@ -1,0 +1,30 @@
+Title: Stress2Twin: Profile-Driven Network Digital Twins for Guarded Edge Computing Resource Management
+Authors: Julian Jimenez-Agudelo, Paola Soto, Ayat Zaki-Hindi, Sébastien Faye, Nina Slamnik-Kriještorac, Johann Marquez-Barja, Miguel Camelo-Botero
+ID: 2611.30699
+URL: https://arxiv.org/abs/2611.30699
+
+Abstract:
+Heterogeneous edge systems require resource managers to determine how many
+application replicas to deploy, where to place them, and how to distribute
+incoming requests while satisfying service-level performance constraints.
+Acquiring the performance knowledge required for these decisions through
+exhaustive multi-node characterization is measurement-intensive and becomes
+increasingly difficult as the number of workers and configurations grows.
+Stress2Twin is a profile-driven Network Digital Twin (NDT) framework that
+profiles edge nodes independently and composes their measured behavior into a
+system-level resource-management model. Machine-level oracles characterize
+latency, throughput, loss, queueing, and power as functions of assigned request
+rate and replica count. A guarded optimizer derives operating regions and tests
+neighboring request-rate states before retaining a replica count, reserving
+capacity before measured nonlinear degradation. Independent profiling of our
+three-worker Kubernetes testbed requires 271 measured states, corresponding to
+approximately 4.5 hours, compared with an estimated 123 hours for exhaustive
+characterization of the considered cluster configuration space. In a single-run
+ramp evaluation, the selected policy records no latency or loss-threshold
+violations within the derived 1,650 requests per second (RPS) supported range
+and reduces estimated power by 27.84% relative to RPS100 Round Robin (RR)
+placement. An additional single-run evaluation under a non-monotonic workload
+records no latency violation and 19.67% lower estimated energy than a stabilized
+RPS50 RR policy. These results show that independently acquired machine profiles
+can support capacity-aware resource consolidation within a measured operating
+range. Power savings use an idealized active-worker accounting model.

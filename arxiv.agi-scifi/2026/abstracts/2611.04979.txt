@@ -1,0 +1,29 @@
+Title: Scaling Laws For Data-Constrained Dense Retrieval
+Authors: Bowen Fu, Jingtao Zhan
+ID: 2611.04979
+URL: https://arxiv.org/abs/2611.04979
+
+Abstract:
+Dense retrieval models are typically obtained by fine-tuning pretrained language
+models on supervised retrieval data, where high-quality annotations or
+interaction logs are often limited and reused across many epochs. This data-
+constrained regime differs from the abundant-data setting assumed by standard
+scaling laws, making it unclear how the best attainable retrieval performance
+changes with model size and unique fine-tuning data. We study this question
+through the minimum achievable evaluation loss (MAEL), defined as the lowest
+evaluation loss reached during training under fixed model-size and data-budget
+constraints. We first show that learning-rate choices strongly affect
+optimization trajectories but have little effect on the final attainable MAEL:
+after rescaling the optimization-step axis, learning curves collapse across
+learning rates, and CKA analysis shows that checkpoints reaching MAEL learn
+highly similar representations. We then fine-tune 35 BERT-family dense
+retrievers on MS MARCO subsets and find that MAEL is accurately described by a
+simple multiplicative power law over non-embedding parameters and unique
+samples, outperforming commonly used additive scaling formulations. We further
+derive a scaling law for the training step at which MAEL is reached and show
+that optimal weight decay follows an approximately invariant EMA timescale,
+yielding lower MAEL and stronger retrieval performance on both in-domain and
+out-of-domain benchmarks. Finally, combining loss and step scaling suggests
+that, in our observed regime, increasing pretrained model size is approximately
+1.46 times as fine-tuning-compute-efficient as increasing unique in-domain data
+for reducing MAEL.

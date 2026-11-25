@@ -1,0 +1,30 @@
+Title: Striatal Optogenetic Modulation Shifts Seizure Onset Timing: A Survival-Analysis Reanalysis with Effect Sizes, Permutation Validation, and Sensitivity Analysis
+Authors: Siddhardha Nanda
+ID: 2611.17795
+URL: https://arxiv.org/abs/2611.17795
+
+Abstract:
+We present a worked methods vignette, not a novel biological claim: a reanalysis
+of the public dataset accompanying Hyder and colleagues' report that optogenetic
+activation and inhibition of the dorsal striatum bidirectionally control
+seizures, applying a time-to-event framework to the pilocarpine-induced status
+epilepticus (SE) arm, the only arm with genuine per-animal event-level data
+rather than aggregate statistics. The original study compared latencies with a
+Mann-Whitney U test (ChR2 vs GFP: p = 0.0125; ArchT vs GFP: p = 0.0025). We
+first directly replicate that test on the same data (p = 0.0151 and p = 0.0025),
+confirming we analyze the same numbers, then designate the log-rank test as this
+reanalysis's pre-specified primary comparison, with a Cox model, a label-
+permutation test, a bootstrap confidence interval, and a leave-one-out analysis
+serving as validation checks rather than co-equal findings. ChR2 activation
+delays SE onset relative to its paired GFP control (hazard ratio 0.338, 95% CI
+0.128-0.895; log-rank p = 0.023), and ArchT inhibition accelerates it (hazard
+ratio 9.18, 95% CI 1.91-44.09; log-rank p = 0.0011); a Schoenfeld-residual check
+found no significant proportional-hazards violation, though this check has
+limited power at n = 8-11 per group. Both results are confirmed by a
+2,000-shuffle permutation test and survive leave-one-out, though the ChR2
+comparison loses significance in 2 of 20 leave-one-out iterations, a fragility
+we report rather than omit. We do not claim this demonstrates anything the field
+did not already believe; its value is methodological, a reusable survival-
+analysis template with a Cox-derived effect size and documented sensitivity,
+extending naturally to future datasets with genuine censoring, which this one
+does not have.

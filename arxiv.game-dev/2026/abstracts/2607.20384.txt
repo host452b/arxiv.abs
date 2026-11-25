@@ -1,0 +1,21 @@
+Title: Split Radiance Cascades: Real-Time Global Illumination via Sparse Radiance Probes
+Authors: Rouli Freeman, Alexander Sannikov, Joe Pitt-Francis
+ID: 2607.20384
+URL: https://arxiv.org/abs/2607.20384
+
+Abstract:
+Radiance probe methods are a popular and well-tested approach for approximating
+diffuse global illumination for real-time graphics, but they commonly suffer
+from a lack of detail due to the large spacing between probes. Radiance Cascade
+(RC) fixes this by increasing spatial resolution and reducing angular resolution
+for light and occlusion from closer objects, which allows it to provide details
+at all scales without noise or aliasing. However, leading implementations of RC
+either run in 2D or screenspace, due to the prohibitive costs of storing high-
+detail volumetric radiance information. In this work, we adapt Radiance Cascades
+for accurate real-time 3D diffuse global illumination using a sparse hashmap to
+store world-space probes. We introduce ray splitting, a method for calculating
+radiance intervals used in RC by tracing rays from visible surfaces and
+calculating their contribution to cascades based on their hit distance. We
+evaluate our algorithm, Split Radiance Cascades, on a variety of scenes, and
+demonstrate that it can provide high-quality indirect illumination in both
+single-frame and temporally accumulated contexts.

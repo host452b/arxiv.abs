@@ -1,0 +1,27 @@
+Title: WasmLens: Automatic Glass-Box Instrumentation for Composed WebAssembly Applications
+Authors: Michiel Van Kenhove, Ewout Verlinde, José Santos, Filip De Turck, Bruno Volckaert, Merlijn Sebrechts
+ID: 2611.12710
+URL: https://arxiv.org/abs/2611.12710
+
+Abstract:
+The WebAssembly Component Model enables language-independent composition of
+independently developed components, but complicates observability. Existing
+tracing support flattens execution hierarchy by attributing every span created
+inside a composition to a single host-level parent context, so execution across
+component boundaries cannot be reconstructed. The problem is amplified because
+components are typically deployed as black boxes whose internals cannot be
+modified or inspected by the system integrator. To address these limitations, we
+propose a revised wasi:otel/tracing design in which the runtime maintains a per-
+component span stack, restoring parent-child relationships across component
+boundaries without changing component interfaces or source code. This change has
+since been adopted upstream. Building on this design, we present WasmLens, an
+automatic instrumentation tool that derives instrumentation points from a
+composition graph and injects tracing middleware into already composed binaries,
+yielding end-to-end traces for black-box compositions with no developer
+configuration. This automatic instrumentation raises mean request latency from
+$238$ $μ$s to $454$ $μ$s across six component boundaries. Raising the expected
+number of boundary crossings from 6 to 11 further increases latency to $514$
+$μ$s, an incremental cost of $12$ $μ$s per crossing, of which $10.4$ $μ$s is
+attributable to instrumentation. These results show that instrumentation
+overhead is additive in composition depth rather than proportional to baseline
+execution time.

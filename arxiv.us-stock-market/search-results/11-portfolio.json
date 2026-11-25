@@ -10,13 +10,190 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-26T15:22:46Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "groups": [
     {
       "source": "arxiv",
-      "count": 151,
+      "count": 160,
       "papers": [
+        {
+          "id": "2610.27751",
+          "title": "Market Regime-Based Multi-Asset Portfolio Optimization Using Nested Clustered Optimization for Tactical Asset Allocation",
+          "authors": [
+            "Supriadi",
+            "Bambang Siswoyo"
+          ],
+          "abstract": "We investigate the interaction between market regime detection and Nested Clustered Optimization (NCO) for tactical asset allocation across heterogeneous multi-asset portfolios. The central empirical question is whether conditioning the NCO pipeline, encompassing covariance estimation, hierarchical clustering, and weight allocation, on latent market states genuinely enhances risk-adjusted performance, or conversely, whether estimation uncertainty within regime-filtered sub-samples induces severe turnover and performance drag. We implement a causal rolling Gaussian Hidden Markov Model (HMM) coupled with an adaptive rebalancing mechanism that distinguishes regime shifts from portfolio weight drift. The framework is evaluated on a monthly Indonesian multi-asset universe comprising sovereign bond yields (SBN), the LQ45 equity index, spot gold (XAU/IDR), foreign exchange (CNY/IDR), and Bitcoin (BTC/IDR) across a 56-month out-of-sample period (January 2021 to August 2025). Rigorous walk-forward backtesting reveals that standard regime-agnostic NCO achieves remarkable capital preservation and risk-adjusted efficiency, delivering a 29.97% cumulative return (5.78% annualized), a maximum drawdown of only 2.18%, a Calmar ratio of 2.65, and low monthly turnover of 5.41%. In contrast, conditioning NCO on an unconstrained HMM in a small multi-asset universe amplifies parameter estimation noise and induces excessive rebalancing (47 events; 24.58% average monthly turnover), which erodes net cumulative return to 1.60% and increases drawdown to 9.99%. These findings demonstrate that without explicit transition persistence or asymmetric downside objectives, regime-switching frameworks can degrade rather than improve clustered portfolio stability, establishing crucial empirical boundaries for machine learning asset allocation.",
+          "published": "2026-10-20T07:13:17Z",
+          "updated": "2026-10-29T12:47:09Z",
+          "categories": [
+            "q-fin.PM"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2610.27751",
+          "abs_url": "https://arxiv.org/abs/2610.27751",
+          "source": "arxiv"
+        },
+        {
+          "id": "2610.09246",
+          "title": "Conditional value-at-risk under reward-penalty mechanism with applications to robust portfolio management",
+          "authors": [
+            "Jun Cai",
+            "Tiantian Mao",
+            "Zhiqiao Song"
+          ],
+          "abstract": "In this paper, we present robust portfolio selection models by incorporating a reward and penalty mechanism into portfolio management. We assume that the joint distribution of the losses of the underlying risky assets in a portfolio is uncertain but lies within a multivariate distribution set. Our goal is to identify optimal portfolio allocations by minimizing the worst-case conditional value-at-risk (CVaR) of portfolio loss under the reward and penalty mechanism and distribution uncertainty. Our models can also be used to investigate the problem of how to balance portfolio losses with their associated downside risk in portfolio management. We first derive an explicit closed-form expression for the worst-case CVaR under the reward-penalty mechanism, which generalizes several existing models and results regarding the worst-case CVaR, such as those studied in Jagannathan (1977), Chen et al. (2011), and Cai et al. (2024). We then apply this expression to obtain optimal portfolio allocations that minimize the worst-case CVaR under both a classical mean-covariance-based multivariate distribution set and a generalized mean-covariance-based multivariate distribution set introduced in Kang et al. (2019). Additionally, we utilize real market data to illustrate the application of the proposed models and the corresponding optimal portfolio allocations in portfolio management. Our empirical experiments show that portfolios based on the proposed models have the potential to outperform those based on several existing related models. Furthermore, the results demonstrate that incorporating downside risk into portfolio loss helps better manage risk and can achieve higher investment returns than considering either downside risk or portfolio loss alone. Moreover, our experiments reveal the trade-off between improving expected portfolio return and controlling the worst-case portfolio CVaR.",
+          "published": "2026-10-07T00:18:21Z",
+          "updated": "2026-10-07T00:18:21Z",
+          "categories": [
+            "q-fin.PM",
+            "q-fin.RM"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2610.09246",
+          "abs_url": "https://arxiv.org/abs/2610.09246",
+          "source": "arxiv"
+        },
+        {
+          "id": "2609.29887",
+          "title": "Cost-Sensitive Online Window Size Selection for Portfolio Management",
+          "authors": [
+            "Yi-Chen Liu",
+            "Chung-Han Hsieh"
+          ],
+          "abstract": "This paper investigates cost-sensitive online window size selection for portfolio management under changing market conditions. Specifically, we propose a two-level framework that constructs portfolios using candidate window sizes and dynamically aggregates them through online learning. By treating candidate window sizes as ``experts,'' we dynamically update their aggregation weights using turnover-inclusive losses. Moreover, we derive finite-horizon cost-sensitive tracking-regret bounds that account for turnover of the aggregated portfolio, with static regret as a special case. Under bounded losses and cost rates, suitably tuned Fixed Share achieves asymptotically no tracking regret for sublinear switching budgets, with Hedge covering the static case.",
+          "published": "2026-09-24T14:35:25Z",
+          "updated": "2026-09-28T03:07:13Z",
+          "categories": [
+            "math.OC",
+            "cs.LG",
+            "q-fin.PM"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2609.29887",
+          "abs_url": "https://arxiv.org/abs/2609.29887",
+          "source": "arxiv"
+        },
+        {
+          "id": "2609.27113",
+          "title": "Active Portfolio Management in Concentrated Equity Markets",
+          "authors": [
+            "Brian Ceco",
+            "Xiaofei Shi",
+            "Ting-Kam Leonard Wong"
+          ],
+          "abstract": "The equal-weighted portfolio is a passive, rule-based strategy that has historically been difficult to outperform, delivering higher returns than the capitalization-weighted \"market\" benchmark across many markets and periods. Stochastic portfolio theory (SPT) reveals that this relative performance is regime dependent, with the equal-weighted portfolio underperforming during periods of increasing market concentration and high correlations, particularly market bubbles. These observations have motivated us to formulate and solve a stochastic control problem in which an investor actively allocates between the equal-weighted and market portfolios. The investor bases their allocation decisions on forecasts made under a flexible stochastic diversity--dispersion (SDD) model. Using a quadratic surrogate for implementation frictions, we characterize the optimal allocation through a linear forward--backward SDE and obtain an explicit \"aiming in front of a moving target\" representation of the optimal trading rate, in the spirit of Gârleanu and Pedersen. The penalty parameters are calibrated in sample to match the cumulative wealth effect of proportional transaction costs, while out-of-sample performance is evaluated with those costs deducted directly from portfolio wealth. Using historical S&P 500 data, we show that a mean-reverting SDD specification reproduces several empirical features of market diversity and dispersion. In out-of-sample backtests from 1995 to 2024, the resulting strategies deliver higher cumulative net returns than both the equal-weighted and market portfolios, and higher information ratios than the equal-weighted portfolio after 15-basis-point proportional transaction costs.",
+          "published": "2026-09-22T22:08:37Z",
+          "updated": "2026-10-14T13:43:21Z",
+          "categories": [
+            "q-fin.PM",
+            "math.OC",
+            "q-fin.MF"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2609.27113",
+          "abs_url": "https://arxiv.org/abs/2609.27113",
+          "source": "arxiv"
+        },
+        {
+          "id": "2606.00143",
+          "title": "Regime-Adaptive Continual Learning for Portfolio Management",
+          "authors": [
+            "Chaofan Pan",
+            "Lingfei Ren",
+            "Linbo Xiong",
+            "Yonghao Li",
+            "Wei Wei",
+            "Xin Yang"
+          ],
+          "abstract": "Financial markets are inherently non-stationary, exhibiting frequent regime shifts and structural changes that render traditional Portfolio Management (PM) approaches ineffective. Existing remedies, such as rolling-window retraining and naive online fine-tuning, are hindered by high computational costs and insufficient knowledge utilization, respectively, resulting in low returns and limited adaptability. Continual learning (CL) offers a promising paradigm by enabling trading agents to accumulate and transfer knowledge across sequential tasks. In this paper, we propose \\textbf{Re}gime-aware \\textbf{C}ontinual \\textbf{A}daptive \\textbf{P}ortfolio management (\\textbf{ReCAP}), a novel framework that integrates CL into PM to address the challenges of dynamic financial environments. ReCAP employs an adaptive regime detection module to segment historical market data into variable-length regimes, enabling regime-specific learning of policy vectors and the construction of a policy library. During continual trading, a regime-gate module adaptively combines policy vectors from the library based on the current market state, facilitating rapid adaptation to newly detected regimes. Only the regime-gate and the current regime's policy vector are continually updated to preserve useful knowledge effectively. Extensive experiments on five real-world datasets demonstrate that ReCAP consistently outperforms popular baselines, achieving superior returns in long-term investment horizons and rapid adaptation to regime shifts.",
+          "published": "2026-05-29T02:24:45Z",
+          "updated": "2026-05-29T02:24:45Z",
+          "categories": [
+            "q-fin.PM",
+            "cs.AI"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2606.00143",
+          "abs_url": "https://arxiv.org/abs/2606.00143",
+          "source": "arxiv"
+        },
+        {
+          "id": "2605.29413",
+          "title": "From Classical Optimization to Bayesian Integration: A Comprehensive Analysis of Systematic Portfolio Management",
+          "authors": [
+            "Ajay Kumar Verma",
+            "Shravya Barkam"
+          ],
+          "abstract": "This paper compares a series of contemporary portfolio construction approaches by employing ten U.S. stocks (TSLA, WMT, BAC, GS, LLY, MRK, GOOG, META, AAPL and XOM) in a time frame from September 2023 to December 2025. The paper explores both basic mean-variance optimization, constrained optimization, Fama French five factor regression modeling, Monte Carlo simulation, and the Black-Litterman model to determine how constraints to a solution, risk factors to a strategy, simulated approximations, and specific market views may all impact the outcome of portfolio allocation, performance and stability. Overall, the results show that standard optimization may result in highly concentrated portfolios, while constrained optimization leads to changes in portfolio allocations by altering the efficient frontier, five factor regression models suggest that a basic investment style of defensive large value and profitability exposure, Monte Carlo approximation is a viable technique to arrive at mean-variance optimal portfolios provided the simulations are high enough especially under a box constraint, the Black Litterman portfolio approach produces more economically intuitive allocations and greater stability compared to standard mean-variance optimization as the approach balances equilibrium returns with investor views.",
+          "published": "2026-05-28T06:02:21Z",
+          "updated": "2026-05-28T06:02:21Z",
+          "categories": [
+            "q-fin.PM",
+            "q-fin.MF",
+            "q-fin.RM",
+            "q-fin.ST",
+            "stat.AP"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2605.29413",
+          "abs_url": "https://arxiv.org/abs/2605.29413",
+          "source": "arxiv"
+        },
+        {
+          "id": "2605.27887",
+          "title": "PortBench: A Correlation-Aware, Full-Pipeline Benchmark for LLM-Driven Portfolio Management",
+          "authors": [
+            "Yuxuan Zhao",
+            "Sijia Chen",
+            "Ningxin Su"
+          ],
+          "abstract": "Large language models (LLMs) have shown strong performance across diverse financial tasks, yet portfolio management (PM) remains poorly evaluated. Existing benchmarks exhibit two gaps: they are often equity-only and ignore cross-asset correlations; they provide limited insight into where errors arise and how they affect subsequent decisions. We introduce PortBench, a benchmark with market data spanning six asset classes from 2015 to 2025. PortBench comprises a static QA dataset of 6,269 questions across seven task templates and a dynamic five-stage portfolio evaluation. Dynamic evaluation uses a class-level correlation score for allocation and CEPS to summarize reference-based stage scores. We further evaluate under three stress windows and three risk profiles, and support real-time evaluation on newly arriving market data. Evaluating ten LLMs reveals a disconnect: high financial QA scores do not ensure consistent portfolio outperformance. LLMs concentrate exposure in correlated assets, and their portfolios achieve higher Sharpe than equal weighting in 54.2\\% of 120 evaluations across four market periods. Our source code is available at \\href{https://github.com/AgenticFinLab/portbench}{this https URL}.",
+          "published": "2026-05-27T03:08:23Z",
+          "updated": "2026-10-09T05:46:22Z",
+          "categories": [
+            "cs.AI",
+            "q-fin.PM"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2605.27887",
+          "abs_url": "https://arxiv.org/abs/2605.27887",
+          "source": "arxiv"
+        },
+        {
+          "id": "2605.17307",
+          "title": "Deep Reinforcement Learning Framework for Diversified Portfolio Management Across Global Equity Markets",
+          "authors": [
+            "Kamil Kashif",
+            "Robert Ślepaczuk"
+          ],
+          "abstract": "This study develops and evaluates a deep reinforcement learning framework for dynamic portfolio allocation across global equity markets. The Soft Actor-Critic algorithm is used to learn continuous portfolio weights within a Markov Decision Process, incorporating transaction costs, turnover penalties, and diversification constraints into the reward function. Five model configurations are compared, varying in reward formulation, policy structure (flat versus hierarchical Dirichlet), portfolio constraints, and temporal encoder (LSTM versus Transformer), and evaluated via walk-forward optimization across sixteen out-of-sample folds spanning 2003-2026 on the Nasdaq-100, Nikkei 225, and Euro Stoxx 50. Results show that RL strategies achieve competitive risk-adjusted performance primarily in the Euro Stoxx 50, where statistically significant abnormal returns are observed, but the central hypothesis is only partially confirmed: no strategy achieves statistically significant excess returns relative to Buy and Hold under HAC-robust inference across all markets. Regime analysis reveals that RL adds the most value during periods of elevated uncertainty, while ensemble aggregation across markets improves risk-adjusted performance and confirms the benefits of geographic diversification.",
+          "published": "2026-05-17T07:50:37Z",
+          "updated": "2026-05-17T07:50:37Z",
+          "categories": [
+            "q-fin.PM",
+            "cs.AI",
+            "cs.LG",
+            "cs.NE",
+            "q-fin.TR"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2605.17307",
+          "abs_url": "https://arxiv.org/abs/2605.17307",
+          "source": "arxiv"
+        },
+        {
+          "id": "2604.03946",
+          "title": "Asset allocation using a Markov process of clustered efficient frontier coefficients states",
+          "authors": [
+            "Nolan Alexander",
+            "William Scherer",
+            "Jamey Thompson"
+          ],
+          "abstract": "We propose a novel asset allocation model using a Markov process of states defined by clustered efficient frontier coefficients. While most research in Markov models of the market characterize regimes using return and volatility, we instead propose characterizing these states using efficient frontiers, which provide more information on the interactions of underlying assets that comprise the market. Efficient frontiers can be decomposed to their functional form, a square-root second-order polynomial defined by three coefficients, to provide a dimensionality reduction of the return vector and covariance matrix. Each month, the proposed model hierarchically clusters the monthly coefficients data up to the current month, to characterize the market states, then defines a Markov process on the sequence of states. To incorporate these states into portfolio optimization, for each state, we calculate the tangency portfolio using only return data in that state. We then take the expectation of these weights for each state, weighted by the probability of transitioning from the current state to each state. To empirically validate our proposed model, we employ three sets of assets that span the market, and show that our proposed model significantly outperforms benchmark portfolios.",
+          "published": "2026-04-05T03:40:52Z",
+          "updated": "2026-04-05T03:40:52Z",
+          "categories": [
+            "q-fin.PM",
+            "stat.AP"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2604.03946",
+          "abs_url": "https://arxiv.org/abs/2604.03946",
+          "source": "arxiv"
+        },
         {
           "id": "2011.00572",
           "title": "Asset Allocation via Machine Learning and Applications to Equity Portfolio Management",
@@ -109,7 +286,7 @@
             "Chi-Lin Li",
             "Chung-Han Hsieh"
           ],
-          "abstract": "This paper introduces a unified framework for adaptive portfolio management, integrating dynamic Black-Litterman (BL) optimization with the general factor model, Elastic Net regression, and mean-variance portfolio optimization, which allows us to generate investors views and mitigate potential estimation errors systematically. Specifically, we propose an innovative dynamic sliding window algorithm to respond to the constantly changing market conditions. This algorithm allows for the flexible window size adjustment based on market volatility, generating robust estimates for factor modeling, time-varying BL estimations, and optimal portfolio weights. Through extensive ten-year empirical studies using the top 100 capitalized assets in the S\u0026P 500 index, accounting for turnover transaction costs, we demonstrate that this combined approach leads to computational advantages and promising trading performances.",
+          "abstract": "This paper introduces a unified framework for adaptive portfolio management, integrating dynamic Black-Litterman (BL) optimization with the general factor model, Elastic Net regression, and mean-variance portfolio optimization, which allows us to generate investors views and mitigate potential estimation errors systematically. Specifically, we propose an innovative dynamic sliding window algorithm to respond to the constantly changing market conditions. This algorithm allows for the flexible window size adjustment based on market volatility, generating robust estimates for factor modeling, time-varying BL estimations, and optimal portfolio weights. Through extensive ten-year empirical studies using the top 100 capitalized assets in the S&P 500 index, accounting for turnover transaction costs, we demonstrate that this combined approach leads to computational advantages and promising trading performances.",
           "categories": [
             "q-fin.PM",
             "math.OC",
@@ -244,7 +421,7 @@
           "authors": [
             "Angelos Filos"
           ],
-          "abstract": "In this thesis, we develop a comprehensive account of the expressive power, modelling efficiency, and performance advantages of so-called trading agents (i.e., Deep Soft Recurrent Q-Network (DSRQN) and Mixture of Score Machines (MSM)), based on both traditional system identification (model-based approach) as well as on context-independent agents (model-free approach). The analysis provides conclusive support for the ability of model-free reinforcement learning methods to act as universal trading agents, which are not only capable of reducing the computational and memory complexity (owing to their linear scaling with the size of the universe), but also serve as generalizing strategies across assets and markets, regardless of the trading universe on which they have been trained. The relatively low volume of daily returns in financial market data is addressed via data augmentation (a generative approach) and a choice of pre-training strategies, both of which are validated against current state-of-the-art models. For rigour, a risk-sensitive framework which includes transaction costs is considered, and its performance advantages are demonstrated in a variety of scenarios, from synthetic time-series (sinusoidal, sawtooth and chirp waves), simulated market series (surrogate data based), through to real market data (S\\\u0026P 500 and EURO STOXX 50). The analysis and simulations confirm the superiority of universal model-free reinforcement learning agents over current portfolio management model in asset allocation strategies, with the achieved performance advantage of as much as 9.2\\% in annualized cumulative returns and 13.4\\% in annualized Sharpe Ratio.",
+          "abstract": "In this thesis, we develop a comprehensive account of the expressive power, modelling efficiency, and performance advantages of so-called trading agents (i.e., Deep Soft Recurrent Q-Network (DSRQN) and Mixture of Score Machines (MSM)), based on both traditional system identification (model-based approach) as well as on context-independent agents (model-free approach). The analysis provides conclusive support for the ability of model-free reinforcement learning methods to act as universal trading agents, which are not only capable of reducing the computational and memory complexity (owing to their linear scaling with the size of the universe), but also serve as generalizing strategies across assets and markets, regardless of the trading universe on which they have been trained. The relatively low volume of daily returns in financial market data is addressed via data augmentation (a generative approach) and a choice of pre-training strategies, both of which are validated against current state-of-the-art models. For rigour, a risk-sensitive framework which includes transaction costs is considered, and its performance advantages are demonstrated in a variety of scenarios, from synthetic time-series (sinusoidal, sawtooth and chirp waves), simulated market series (surrogate data based), through to real market data (S\\&P 500 and EURO STOXX 50). The analysis and simulations confirm the superiority of universal model-free reinforcement learning agents over current portfolio management model in asset allocation strategies, with the achieved performance advantage of as much as 9.2\\% in annualized cumulative returns and 13.4\\% in annualized Sharpe Ratio.",
           "categories": [
             "q-fin.PM",
             "cs.LG",
@@ -428,7 +605,7 @@
             "James Thompson",
             "Yinsen Miao"
           ],
-          "abstract": "Over the past half-century, the empirical finance community has produced vast literature on the advantages of the equally weighted S\\\u0026P 500 portfolio as well as the often overlooked disadvantages of the market capitalization weighted Standard and Poor's (S\\\u0026P 500) portfolio (see \\cite{Bloom}, \\cite{Uppal}, \\cite{Jacobs}, \\cite{Treynor}). However, portfolio allocation based on Tukey's transformational ladde have, rather surprisingly, remained absent from the literature. In this work, we consider the S\\\u0026P 500 portfolio over the 1958-2015 time horizon weighted by Tukey's transformational ladder (\\cite{Tukey2}): $1/x^2,\\,\\, 1/x,\\,\\, 1/\\sqrt{x},\\,\\, \\text{log}(x),\\,\\, \\sqrt{x},\\,\\, x,\\,\\, \\text{and} \\,\\, x^2$, where $x$ is defined as the market capitalization weighted S\\\u0026P 500 portfolio. Accounting for dividends and transaction fees, we find that the 1/$x^2$ weighting strategy produces cumulative returns that significantly dominates all other portfolios, achieving a compound annual growth rate of 18\\% over the 1958-2015 horizon. Our story is furthered by a startling phenomenon: both the cumulative and annual returns of the $1/x^2$ weighting strategy are superior to those of the $1/x$ weighting strategy, which are in turn superior to those of the 1/$\\sqrt{x}$ weighted portfolio, and so forth, ending with the $x^2$ transformation, whose cumulative returns are the lowest of the seven transformations of Tukey's transformational ladder. The order of cumulative returns precisely follows that of Tukey's transformational ladder. To the best of our knowledge, we are the first to discover this phenomenon.",
+          "abstract": "Over the past half-century, the empirical finance community has produced vast literature on the advantages of the equally weighted S\\&P 500 portfolio as well as the often overlooked disadvantages of the market capitalization weighted Standard and Poor's (S\\&P 500) portfolio (see \\cite{Bloom}, \\cite{Uppal}, \\cite{Jacobs}, \\cite{Treynor}). However, portfolio allocation based on Tukey's transformational ladde have, rather surprisingly, remained absent from the literature. In this work, we consider the S\\&P 500 portfolio over the 1958-2015 time horizon weighted by Tukey's transformational ladder (\\cite{Tukey2}): $1/x^2,\\,\\, 1/x,\\,\\, 1/\\sqrt{x},\\,\\, \\text{log}(x),\\,\\, \\sqrt{x},\\,\\, x,\\,\\, \\text{and} \\,\\, x^2$, where $x$ is defined as the market capitalization weighted S\\&P 500 portfolio. Accounting for dividends and transaction fees, we find that the 1/$x^2$ weighting strategy produces cumulative returns that significantly dominates all other portfolios, achieving a compound annual growth rate of 18\\% over the 1958-2015 horizon. Our story is furthered by a startling phenomenon: both the cumulative and annual returns of the $1/x^2$ weighting strategy are superior to those of the $1/x$ weighting strategy, which are in turn superior to those of the 1/$\\sqrt{x}$ weighted portfolio, and so forth, ending with the $x^2$ transformation, whose cumulative returns are the lowest of the seven transformations of Tukey's transformational ladder. The order of cumulative returns precisely follows that of Tukey's transformational ladder. To the best of our knowledge, we are the first to discover this phenomenon.",
           "categories": [
             "q-fin.PM"
           ],
@@ -562,7 +739,7 @@
             "Lorenzo Pugliese",
             "Jad Zeroual"
           ],
-          "abstract": "This paper investigates the application of Simulated Bifurcation algorithms to approximate optimal asset allocations. It will provide the reader with an explanation of the physical principles underlying the method and a Python implementation of the latter applied to 441 assets belonging to the S\u0026P500 index. In addition, the paper tackles the problem of the selection of an optimal sub-allocation; in this particular case, we find an adequate solution in an unrivaled timescale.",
+          "abstract": "This paper investigates the application of Simulated Bifurcation algorithms to approximate optimal asset allocations. It will provide the reader with an explanation of the physical principles underlying the method and a Python implementation of the latter applied to 441 assets belonging to the S&P500 index. In addition, the paper tackles the problem of the selection of an optimal sub-allocation; in this particular case, we find an adequate solution in an unrivaled timescale.",
           "categories": [
             "q-fin.PM",
             "q-fin.CP",
@@ -605,7 +782,7 @@
           "authors": [
             "Marco Avellaneda"
           ],
-          "abstract": "It is widely known that the common risk-factors derived from PCA beyond the first eigenportfolio are generally difficult to interpret and thus to use in practical portfolio management. We explore a alternative approach (HPCA) which makes strong use of the partition of the market into sectors. We show that this approach leads to no loss of information with respect to PCA in the case of equities (constituents of the S\u0026P 500) and also that the associated common factors admit simple interpretations. The model can also be used in markets in which the sectors have asynchronous price information, such as single-name credit default swaps, generalizing the works of Cont and Kan (2011) and Ivanov (2016).",
+          "abstract": "It is widely known that the common risk-factors derived from PCA beyond the first eigenportfolio are generally difficult to interpret and thus to use in practical portfolio management. We explore a alternative approach (HPCA) which makes strong use of the partition of the market into sectors. We show that this approach leads to no loss of information with respect to PCA in the case of equities (constituents of the S&P 500) and also that the associated common factors admit simple interpretations. The model can also be used in markets in which the sectors have asynchronous price information, such as single-name credit default swaps, generalizing the works of Cont and Kan (2011) and Ivanov (2016).",
           "categories": [
             "q-fin.PM"
           ],
@@ -783,7 +960,7 @@
             "Vanni Noferini",
             "Spyridon Vrontos"
           ],
-          "abstract": "We investigate an application of network centrality measures to portfolio optimization, by generalizing the method in [Pozzi, Di Matteo and Aste, \\emph{Spread of risks across financial markets: better to invest in the peripheries}, Scientific Reports 3:1665, 2013], that however had significant limitations with respect to the state of the art in network theory. In this paper, we systematically compare many possible variants of the originally proposed method on S\\\u0026P 500 stocks. We use daily data from twenty-seven years as training set and their following year as test set. We thus select the best network-based methods according to different viewpoints including for instance the highest Sharpe Ratio and the highest expected return. We give emphasis in new centrality measures and we also conduct a thorough analysis, which reveals significantly stronger results compared to those with more traditional methods. According to our analysis, this graph-theoretical approach to investment can be used successfully by investors with different investment profiles leading to high risk-adjusted returns.",
+          "abstract": "We investigate an application of network centrality measures to portfolio optimization, by generalizing the method in [Pozzi, Di Matteo and Aste, \\emph{Spread of risks across financial markets: better to invest in the peripheries}, Scientific Reports 3:1665, 2013], that however had significant limitations with respect to the state of the art in network theory. In this paper, we systematically compare many possible variants of the originally proposed method on S\\&P 500 stocks. We use daily data from twenty-seven years as training set and their following year as test set. We thus select the best network-based methods according to different viewpoints including for instance the highest Sharpe Ratio and the highest expected return. We give emphasis in new centrality measures and we also conduct a thorough analysis, which reveals significantly stronger results compared to those with more traditional methods. According to our analysis, this graph-theoretical approach to investment can be used successfully by investors with different investment profiles leading to high risk-adjusted returns.",
           "categories": [
             "q-fin.PM",
             "math.CO",
@@ -1509,7 +1686,7 @@
             "Felix Fießinger",
             "Mitja Stadje"
           ],
-          "abstract": "Focusing on gains \u0026 losses relative to a risk-free benchmark instead of terminal wealth, we consider an asset allocation problem to maximize time-consistently a mean-risk reward function with a general risk measure which is i) law-invariant, ii) cash- or shift-invariant, and iii) positively homogeneous, and possibly plugged into a general function. Examples include (relative) Value at Risk, coherent risk measures, variance, and generalized deviation risk measures. We model the market via a generalized version of the multi-dimensional Black-Scholes model using $α$-stable Lévy processes and give supplementary results for the classical Black-Scholes model. The optimal solution to this problem is a Nash subgame equilibrium given by the solution of an extended Hamilton-Jacobi-Bellman equation. Moreover, we show that the optimal solution is deterministic under appropriate assumptions.",
+          "abstract": "Focusing on gains & losses relative to a risk-free benchmark instead of terminal wealth, we consider an asset allocation problem to maximize time-consistently a mean-risk reward function with a general risk measure which is i) law-invariant, ii) cash- or shift-invariant, and iii) positively homogeneous, and possibly plugged into a general function. Examples include (relative) Value at Risk, coherent risk measures, variance, and generalized deviation risk measures. We model the market via a generalized version of the multi-dimensional Black-Scholes model using $α$-stable Lévy processes and give supplementary results for the classical Black-Scholes model. The optimal solution to this problem is a Nash subgame equilibrium given by the solution of an extended Hamilton-Jacobi-Bellman equation. Moreover, we show that the optimal solution is deterministic under appropriate assumptions.",
           "categories": [
             "q-fin.MF",
             "math.OC"
@@ -1680,7 +1857,7 @@
             "Jeremie Desgagne-Bouchard",
             "Carl Dussault"
           ],
-          "abstract": "The problem of portfolio management represents an important and challenging class of dynamic decision making problems, where rebalancing decisions need to be made over time with the consideration of many factors such as investors preferences, trading environments, and market conditions. In this paper, we present a new portfolio policy network architecture for deep reinforcement learning (DRL)that can exploit more effectively cross-asset dependency information and achieve better performance than state-of-the-art architectures. In particular, we introduce a new property, referred to as \\textit{asset permutation invariance}, for portfolio policy networks that exploit multi-asset time series data, and design the first portfolio policy network, named WaveCorr, that preserves this invariance property when treating asset correlation information. At the core of our design is an innovative permutation invariant correlation processing layer. An extensive set of experiments are conducted using data from both Canadian (TSX) and American stock markets (S\u0026P 500), and WaveCorr consistently outperforms other architectures with an impressive 3%-25% absolute improvement in terms of average annual return, and up to more than 200% relative improvement in average Sharpe ratio. We also measured an improvement of a factor of up to 5 in the stability of performance under random choices of initial asset ordering and weights. The stability of the network has been found as particularly valuable by our industrial partner.",
+          "abstract": "The problem of portfolio management represents an important and challenging class of dynamic decision making problems, where rebalancing decisions need to be made over time with the consideration of many factors such as investors preferences, trading environments, and market conditions. In this paper, we present a new portfolio policy network architecture for deep reinforcement learning (DRL)that can exploit more effectively cross-asset dependency information and achieve better performance than state-of-the-art architectures. In particular, we introduce a new property, referred to as \\textit{asset permutation invariance}, for portfolio policy networks that exploit multi-asset time series data, and design the first portfolio policy network, named WaveCorr, that preserves this invariance property when treating asset correlation information. At the core of our design is an innovative permutation invariant correlation processing layer. An extensive set of experiments are conducted using data from both Canadian (TSX) and American stock markets (S&P 500), and WaveCorr consistently outperforms other architectures with an impressive 3%-25% absolute improvement in terms of average annual return, and up to more than 200% relative improvement in average Sharpe ratio. We also measured an improvement of a factor of up to 5 in the stability of performance under random choices of initial asset ordering and weights. The stability of the network has been found as particularly valuable by our industrial partner.",
           "categories": [
             "q-fin.PM",
             "cs.LG"
@@ -1723,7 +1900,7 @@
             "Stig-Johan Wiklund",
             "Magnus Ytterstad"
           ],
-          "abstract": "Project portfolio management is an essential process for organizations aiming to optimize the value of their R\u0026D investments. In this article, we introduce a new tool designed to support the prioritization of projects within project portfolio management. We label this tool the PIT-plot, an acronym for Project Impact Tornado plot, with reference to the similarity to the Tornado plot often used for sensitivity analyses. Many traditional practices in portfolio management focus on the properties of the projects available to the portfolio. We are with the PIT-plot changing the perspective and focus not on the properties of the projects themselves, but on the impact that the projects may have on the portfolio. This enables the strategic portfolio management to identify and focus on the projects of largest impact to the portfolio, either for the purpose of risk mitigation or for the purpose of value-adding efforts.",
+          "abstract": "Project portfolio management is an essential process for organizations aiming to optimize the value of their R&D investments. In this article, we introduce a new tool designed to support the prioritization of projects within project portfolio management. We label this tool the PIT-plot, an acronym for Project Impact Tornado plot, with reference to the similarity to the Tornado plot often used for sensitivity analyses. Many traditional practices in portfolio management focus on the properties of the projects available to the portfolio. We are with the PIT-plot changing the perspective and focus not on the properties of the projects themselves, but on the impact that the projects may have on the portfolio. This enables the strategic portfolio management to identify and focus on the projects of largest impact to the portfolio, either for the purpose of risk mitigation or for the purpose of value-adding efforts.",
           "categories": [
             "q-fin.PM"
           ],
@@ -1833,7 +2010,7 @@
             "Giorgio Ferrari",
             "Shihao Zhu"
           ],
-          "abstract": "This paper investigates the consumption and investment decisions of an individual facing uncertain lifespan and stochastic labor income within a Black-Scholes market framework. A key aspect of our study involves the agent's option to choose when to acquire life insurance for bequest purposes. We examine two scenarios: one with a fixed bequest amount and another with a controlled bequest amount. Applying duality theory and addressing free-boundary problems, we analytically solve both cases, and provide explicit expressions for value functions and optimal strategies in both cases. In the first scenario, where the bequest amount is fixed, distinct outcomes emerge based on different levels of risk aversion parameter $γ$: (i) the optimal time for life insurance purchase occurs when the agent's wealth surpasses a critical threshold if $γ\\in (0,1)$, or (ii) life insurance should be acquired immediately if $γ\u003e1$. In contrast, in the second scenario with a controlled bequest amount, regardless of $γ$ values, immediate life insurance purchase proves to be optimal. Finally, we extend the analysis to consider a scenario in which the individual earmarks part of her initial wealth for inheritance, where a critical wealth threshold consistently emerges.",
+          "abstract": "This paper investigates the consumption and investment decisions of an individual facing uncertain lifespan and stochastic labor income within a Black-Scholes market framework. A key aspect of our study involves the agent's option to choose when to acquire life insurance for bequest purposes. We examine two scenarios: one with a fixed bequest amount and another with a controlled bequest amount. Applying duality theory and addressing free-boundary problems, we analytically solve both cases, and provide explicit expressions for value functions and optimal strategies in both cases. In the first scenario, where the bequest amount is fixed, distinct outcomes emerge based on different levels of risk aversion parameter $γ$: (i) the optimal time for life insurance purchase occurs when the agent's wealth surpasses a critical threshold if $γ\\in (0,1)$, or (ii) life insurance should be acquired immediately if $γ>1$. In contrast, in the second scenario with a controlled bequest amount, regardless of $γ$ values, immediate life insurance purchase proves to be optimal. Finally, we extend the analysis to consider a scenario in which the individual earmarks part of her initial wealth for inheritance, where a critical wealth threshold consistently emerges.",
           "categories": [
             "q-fin.PM"
           ],
@@ -2202,7 +2379,7 @@
             "Qiguo Sun",
             "Xibei Yang"
           ],
-          "abstract": "Previous research on option strategies has primarily focused on their behavior near expiration, with limited attention to the transient value process of the portfolio. In this paper, we formulate Iron Condor portfolio optimization as a stochastic optimal control problem, examining the impact of the control process \\( u(k_i, τ) \\) on the portfolio's potential profitability and risk. By assuming the underlying price process as a bounded martingale within $[K_1, K_2]$, we prove that the portfolio with a strike structure of $k_1 \u003c k_2 = K_2 \u003c S_t \u003c k_3 = K_3 \u003c k_4$ has a submartingale value process, which results in the optimal stopping time aligning with the expiration date $τ= T$. Moreover, we construct a data generator based on the Rough Heston model to investigate general scenarios through simulation. The results show that asymmetric, left-biased Iron Condor portfolios with $τ= T$ are optimal in SPX markets, balancing profitability and risk management. Deep out-of-the-money strategies improve profitability and success rates at the cost of introducing extreme losses, which can be alleviated by using an optimal stopping strategy. Except for the left-biased portfolios $τ$ generally falls within the range of [50\\%,75\\%] of total duration. In addition, we validate these findings through case studies on the actual SPX market, covering bullish, sideways, and bearish market conditions.",
+          "abstract": "Previous research on option strategies has primarily focused on their behavior near expiration, with limited attention to the transient value process of the portfolio. In this paper, we formulate Iron Condor portfolio optimization as a stochastic optimal control problem, examining the impact of the control process \\( u(k_i, τ) \\) on the portfolio's potential profitability and risk. By assuming the underlying price process as a bounded martingale within $[K_1, K_2]$, we prove that the portfolio with a strike structure of $k_1 < k_2 = K_2 < S_t < k_3 = K_3 < k_4$ has a submartingale value process, which results in the optimal stopping time aligning with the expiration date $τ= T$. Moreover, we construct a data generator based on the Rough Heston model to investigate general scenarios through simulation. The results show that asymmetric, left-biased Iron Condor portfolios with $τ= T$ are optimal in SPX markets, balancing profitability and risk management. Deep out-of-the-money strategies improve profitability and success rates at the cost of introducing extreme losses, which can be alleviated by using an optimal stopping strategy. Except for the left-biased portfolios $τ$ generally falls within the range of [50\\%,75\\%] of total duration. In addition, we validate these findings through case studies on the actual SPX market, covering bullish, sideways, and bearish market conditions.",
           "categories": [
             "q-fin.PM"
           ],
@@ -2794,7 +2971,7 @@
           "authors": [
             "Sakae Oya"
           ],
-          "abstract": "Managing a large-scale portfolio with many assets is one of the most challenging tasks in the field of finance. It is partly because estimation of either covariance or precision matrix of asset returns tends to be unstable or even infeasible when the number of assets $p$ exceeds the number of observations $n$. For this reason, most of the previous studies on portfolio management have focused on the case of$ p \u003c n$. To deal with the case of $p \u003e n$, we propose to use a new Bayesian framework based on adaptive graphical LASSO for estimating the precision matrix of asset returns in a large-scale portfolio. Unlike the previous studies on graphical LASSO in the literature, our approach utilizes a Bayesian estimation method for the precision matrix proposed by Oya and Nakatsuma (2022) so that the positive definiteness of the precision matrix should be always guaranteed. As an empirical application, we construct the global minimum variance portfolio of $p = 100$ for various values of n with the proposed approach as well as the non-Bayesian graphical LASSO approach, and compare their out-of-sample performance with the equal weight portfolio as the benchmark. In this comparison, the proposed approach produces more stable results than the non-Bayesian approach in terms of Sharpe ratio, portfolio composition and turnover. Furthermore, the proposed approach succeeds in estimating the precision matrix even if $n$ is much smaller than $p$ and the non-Bayesian approach fails to do so.",
+          "abstract": "Managing a large-scale portfolio with many assets is one of the most challenging tasks in the field of finance. It is partly because estimation of either covariance or precision matrix of asset returns tends to be unstable or even infeasible when the number of assets $p$ exceeds the number of observations $n$. For this reason, most of the previous studies on portfolio management have focused on the case of$ p < n$. To deal with the case of $p > n$, we propose to use a new Bayesian framework based on adaptive graphical LASSO for estimating the precision matrix of asset returns in a large-scale portfolio. Unlike the previous studies on graphical LASSO in the literature, our approach utilizes a Bayesian estimation method for the precision matrix proposed by Oya and Nakatsuma (2022) so that the positive definiteness of the precision matrix should be always guaranteed. As an empirical application, we construct the global minimum variance portfolio of $p = 100$ for various values of n with the proposed approach as well as the non-Bayesian graphical LASSO approach, and compare their out-of-sample performance with the equal weight portfolio as the benchmark. In this comparison, the proposed approach produces more stable results than the non-Bayesian approach in terms of Sharpe ratio, portfolio composition and turnover. Furthermore, the proposed approach succeeds in estimating the precision matrix even if $n$ is much smaller than $p$ and the non-Bayesian approach fails to do so.",
           "categories": [
             "q-fin.PM",
             "stat.AP"
@@ -2878,7 +3055,7 @@
             "Eisuke Yamagata",
             "Shunsuke Ono"
           ],
-          "abstract": "Sparse index tracking is a prominent passive portfolio management strategy that constructs a sparse portfolio to track a financial index. A sparse portfolio is preferable to a full portfolio in terms of reducing transaction costs and avoiding illiquid assets. To achieve portfolio sparsity, conventional studies have utilized $\\ell_p$-norm regularizations as a continuous surrogate of the $\\ell_0$-norm regularization. Although these formulations can construct sparse portfolios, their practical application is challenging due to the intricate and time-consuming process of tuning parameters to define the precise upper limit of assets in the portfolio. In this paper, we propose a new problem formulation of sparse index tracking using an $\\ell_0$-norm constraint that enables easy control of the upper bound on the number of assets in the portfolio. Moreover, our approach offers a choice between constraints on portfolio and turnover sparsity, further reducing transaction costs by limiting asset updates at each rebalancing interval. Furthermore, we develop an efficient algorithm for solving this problem based on a primal-dual splitting method. Finally, we illustrate the effectiveness of the proposed method through experiments on the S\u0026P500 and Russell3000 index datasets.",
+          "abstract": "Sparse index tracking is a prominent passive portfolio management strategy that constructs a sparse portfolio to track a financial index. A sparse portfolio is preferable to a full portfolio in terms of reducing transaction costs and avoiding illiquid assets. To achieve portfolio sparsity, conventional studies have utilized $\\ell_p$-norm regularizations as a continuous surrogate of the $\\ell_0$-norm regularization. Although these formulations can construct sparse portfolios, their practical application is challenging due to the intricate and time-consuming process of tuning parameters to define the precise upper limit of assets in the portfolio. In this paper, we propose a new problem formulation of sparse index tracking using an $\\ell_0$-norm constraint that enables easy control of the upper bound on the number of assets in the portfolio. Moreover, our approach offers a choice between constraints on portfolio and turnover sparsity, further reducing transaction costs by limiting asset updates at each rebalancing interval. Furthermore, we develop an efficient algorithm for solving this problem based on a primal-dual splitting method. Finally, we illustrate the effectiveness of the proposed method through experiments on the S&P500 and Russell3000 index datasets.",
           "categories": [
             "q-fin.PM",
             "cs.CE",
@@ -3276,7 +3453,7 @@
             "Vincent Tam",
             "Kwan L. Yeung"
           ],
-          "abstract": "Deep or reinforcement learning (RL) approaches have been adapted as reactive agents to quickly learn and respond with new investment strategies for portfolio management under the highly turbulent financial market environments in recent years. In many cases, due to the very complex correlations among various financial sectors, and the fluctuating trends in different financial markets, a deep or reinforcement learning based agent can be biased in maximising the total returns of the newly formulated investment portfolio while neglecting its potential risks under the turmoil of various market conditions in the global or regional sectors. Accordingly, a multi-agent and self-adaptive framework namely the MASA is proposed in which a sophisticated multi-agent reinforcement learning (RL) approach is adopted through two cooperating and reactive agents to carefully and dynamically balance the trade-off between the overall portfolio returns and their potential risks. Besides, a very flexible and proactive agent as the market observer is integrated into the MASA framework to provide some additional information on the estimated market trends as valuable feedbacks for multi-agent RL approach to quickly adapt to the ever-changing market conditions. The obtained empirical results clearly reveal the potential strengths of our proposed MASA framework based on the multi-agent RL approach against many well-known RL-based approaches on the challenging data sets of the CSI 300, Dow Jones Industrial Average and S\u0026P 500 indexes over the past 10 years. More importantly, our proposed MASA framework shed lights on many possible directions for future investigation.",
+          "abstract": "Deep or reinforcement learning (RL) approaches have been adapted as reactive agents to quickly learn and respond with new investment strategies for portfolio management under the highly turbulent financial market environments in recent years. In many cases, due to the very complex correlations among various financial sectors, and the fluctuating trends in different financial markets, a deep or reinforcement learning based agent can be biased in maximising the total returns of the newly formulated investment portfolio while neglecting its potential risks under the turmoil of various market conditions in the global or regional sectors. Accordingly, a multi-agent and self-adaptive framework namely the MASA is proposed in which a sophisticated multi-agent reinforcement learning (RL) approach is adopted through two cooperating and reactive agents to carefully and dynamically balance the trade-off between the overall portfolio returns and their potential risks. Besides, a very flexible and proactive agent as the market observer is integrated into the MASA framework to provide some additional information on the estimated market trends as valuable feedbacks for multi-agent RL approach to quickly adapt to the ever-changing market conditions. The obtained empirical results clearly reveal the potential strengths of our proposed MASA framework based on the multi-agent RL approach against many well-known RL-based approaches on the challenging data sets of the CSI 300, Dow Jones Industrial Average and S&P 500 indexes over the past 10 years. More importantly, our proposed MASA framework shed lights on many possible directions for future investigation.",
           "categories": [
             "q-fin.PM",
             "cs.LG"
@@ -3317,7 +3494,7 @@
             "Patrice Fontaine",
             "Sonia Jimenez-Garcès"
           ],
-          "abstract": "We use the Grossman \\\u0026 Stiglitz (1980) framework to build a reference portfolio for uninformed investors and employ this portfolio to assess the performance of actively managed equity mutual funds. We propose an empirical methodology to construct this reference portfolio using the information on prices and supply. We show that mutual funds provide, on average, an insignificant alpha of 23 basis points per year when considering this portfolio as a reference. With the stock market index as a proxy for the market portfolio, the average fund alpha is negative and highly significant, --128 basis points per year. The results are robust when considering various subsets of funds based on their characteristics and their degree of selectivity. In line with rational expectations equilibrium models considering asymmetrically informed investors and partially revealing equilibrium prices, our study supports that active management adds value for uniformed investors.",
+          "abstract": "We use the Grossman \\& Stiglitz (1980) framework to build a reference portfolio for uninformed investors and employ this portfolio to assess the performance of actively managed equity mutual funds. We propose an empirical methodology to construct this reference portfolio using the information on prices and supply. We show that mutual funds provide, on average, an insignificant alpha of 23 basis points per year when considering this portfolio as a reference. With the stock market index as a proxy for the market portfolio, the average fund alpha is negative and highly significant, --128 basis points per year. The results are robust when considering various subsets of funds based on their characteristics and their degree of selectivity. In line with rational expectations equilibrium models considering asymmetrically informed investors and partially revealing equilibrium prices, our study supports that active management adds value for uniformed investors.",
           "categories": [
             "q-fin.GN",
             "q-fin.PM"
@@ -3357,5 +3534,5 @@
       ]
     }
   ],
-  "total": 151
+  "total": 160
 }

@@ -10,11 +10,289 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:50:32Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 89,
-  "return_count": 89,
+  "total_results": 103,
+  "return_count": 103,
   "papers": [
+    {
+      "id": "2611.23282",
+      "title": "Ephyra: A Property-Based Testing Framework for the LLM Era",
+      "authors": [
+        "Alperen Keles"
+      ],
+      "abstract": "Coding agents now write a growing share of software tests; however, property-based testing (PBT) libraries are designed with historical considerations. We present Ephyra, a PBT library in Rust built on three concepts: customizability, observability and generator synthesis. Ephyra lets users compose their own testing loops from generation, mutation and shrinking, and synthesize these components to satisfy functional predicates. Applying Ephyra to 14 open source systems, we have found 349 bugs and reported 300 of them, in database management systems (SQLite, Turso, PostgreSQL, DuckDB, DataFusion), the verified policy engine (Cedar), the SQL equivalence prover (QED), the URL parser used in Node.js (ada-url), reimplementations of existing open source systems in Rust (coreutils, brush, gitoxide), and compilers (binaryen, OCaml, and OxCaml).",
+      "published": "2026-10-23T21:07:17Z",
+      "updated": "2026-10-23T21:07:17Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23282",
+      "abs_url": "https://arxiv.org/abs/2611.23282",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21058",
+      "title": "Underpinning Property-Based Testing",
+      "authors": [
+        "Ernest Ng",
+        "Segev Elazar Mittelman",
+        "Joshua M. Cohen",
+        "Katherine Hough",
+        "Michael Hicks",
+        "Harrison Goldstein"
+      ],
+      "abstract": "As the property-based testing community strives to automate challenging parts of the process away from users --- in particular, the construction of generators --- it is critical that we can clearly state what it means for that automation to be correct. We present a new framework for PBT, implemented in the Lean theorem prover, that provides a more solid foundation to build on. Our generators are interpretable: interpreted one way, they can be run efficiently as programs that sample randomness; and interpreted another way, they enable a wide range of correctness proofs, including proofs about distributions that other foundational PBT models do not support. We evaluate our framework extensively, with both small and large benchmarks and case studies, arguing that the extra power brought by distributional proofs is practically important for the next generation of generator automation.",
+      "published": "2026-11-16T13:10:47Z",
+      "updated": "2026-11-16T13:10:47Z",
+      "categories": [
+        "cs.PL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21058",
+      "abs_url": "https://arxiv.org/abs/2611.21058",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.15920",
+      "title": "Spec-Driven PBT: Deriving Semantic Invariants from Code Specifications for Agentic Property-based Testing",
+      "authors": [
+        "Aditya Shukla",
+        "Kartik Gupta",
+        "Ali Alavi",
+        "Pashootan Vaezipoor"
+      ],
+      "abstract": "Software is increasingly written by AI agents that produce an implementation from a natural language specification, a practice known as agentic coding. Code is now produced faster than it can be reviewed, and has been shown to exhibit its own characteristic failure patterns. Property-based testing (PBT), a long-standing technique in which invariant properties of a program are checked against many generated inputs, has recently been revisited with LLM agents authoring the properties, thereby removing the high-effort derivation of invariants that has long hindered its adoption. Existing methods, however, derive these properties from the implementation alone (Code-driven PBT). At the same time, a thorough specification such as a product requirements document has become routine within agentic coding, yet its role in testing the resulting code remains underexplored. We study the value of the specification as a source of properties for testing agent-written code. Our key insight is that the specification, unlike the implementation, records what the code was meant to do, and invariants derived from it are not biased by particular implementation choices. We propose Spec-Driven PBT, an agent that first expresses invariants in natural language from the specification and only then inspects the implementation to translate them into concrete tests. Across 25 applications from ViBench, Spec-Driven PBT finds a novel set of bugs that Code-driven PBT misses, while writing 2.4x fewer property tests. Though the two approaches surface a roughly equivalent number of bugs, there is little overlap: nearly 60% of the 169 total bugs are found by only one. Qualitatively, we find that the bugs unique to Spec-Driven PBT tend to violate documented product workflows whereas those to Code-driven PBT instead concentrate on implementation robustness, offering complementary value for bug discovery in agent-written code.",
+      "published": "2026-11-11T19:16:05Z",
+      "updated": "2026-11-17T18:03:00Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.15920",
+      "abs_url": "https://arxiv.org/abs/2611.15920",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.36427",
+      "title": "Property-Based Testing for Robust Softmax and Cross-Entropy",
+      "authors": [
+        "Muhammad Maaz"
+      ],
+      "abstract": "A recent paper of Barron et. al. (2026) identified two numerical issues with the softmax and cross-entropy functions in virtually all standard machine learning libraries (e.g., PyTorch and JAX). We show that these issues can be recovered through simple property-based tests in Hypothesis. However, our tests identify an additional edge case where their implementation fails. We then propose an even more robust softmax implementation which passes these tests and also supports use in causal attention masking. We compare our implementation with theirs and discuss some of the differences. Overall, this work shows that property-based testing can be a powerful tool for discovering and fixing numerical issues in machine learning libraries. Our implementations and property-based tests can be found at https://github.com/mmaaz-git/softmax-fix.",
+      "published": "2026-10-27T00:20:33Z",
+      "updated": "2026-10-27T00:20:33Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.36427",
+      "abs_url": "https://arxiv.org/abs/2610.36427",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.31820",
+      "title": "Hypothesis-awkward: Property-Based Testing Strategies for Awkward Array",
+      "authors": [
+        "Tai Sakuma",
+        "Ianna Osborne",
+        "Peter Elmer"
+      ],
+      "abstract": "Hypothesis-awkward is a collection of Hypothesis strategies for Awkward Array. Awkward Array can represent a wide variety of nested, variable-length, mixed-type data. Many tools that process Awkward Arrays are widely used and actively developed. The unit test cases of many of these tools list predefined input samples. In practice, such samples can cover only a small portion of the vast combinatorial space of Awkward Array instances. Hypothesis, a Python property-based testing library, generates test data that can make test cases fail and automatically explores edge cases. The main strategy of Hypothesis-awkward generates nearly all possible Awkward Arrays, with options to control the layout, data types, missing values, masks, and other array attributes. Property-based tests written with these strategies have begun to run in the continuous integration of Awkward Array; to date, they cover a small part of Awkward Array and have found 37 bugs in it, as well as one in Hypothesis itself. These strategies make the tests of Awkward Array and of the tools that use it more reliable.",
+      "published": "2026-09-25T16:23:15Z",
+      "updated": "2026-09-25T16:23:15Z",
+      "categories": [
+        "cs.SE",
+        "hep-ex"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.31820",
+      "abs_url": "https://arxiv.org/abs/2609.31820",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.04219",
+      "title": "Large Language Models for Fuzz Testing in Microservices: A Systematic Literature Review",
+      "authors": [
+        "Ying Song",
+        "Ke Ping",
+        "Yuqing Wang",
+        "Xiaozhou Li"
+      ],
+      "abstract": "Microservice systems (MSS) increasingly rely on heterogeneous APIs whose combinatorial input space and stateful dependencies challenge traditional fuzz testing. Meanwhile, Large Language Models (LLMs) have recently been introduced to enhance fuzzing with semantic reasoning over specifications, inputs, and runtime feedback. This paper presents a systematic literature review (SLR) of LLM-assisted fuzz testing for microservices to synthesise how LLMs are applied, evaluated, and what challenges remain. Following established SLR guidelines, we analyze 20 primary studies published between 2024 and 2026. Results show LLMs are mainly used as semantic input generators in black-box fuzzing, with a growing shift towards agent-based and retrieval-augmented architectures, improving valid input generation and modestly increasing coverage and vulnerability detection. However, evaluation remains heterogeneous, with limited benchmark standardization, scarce cost reporting, and a bias toward single-service experiments, highlighting a gap with real-world multi-service systems. This review provides a taxonomy of LLM roles and integrations, a consolidated view of evaluation practices, and a mapping of open challenges to research directions, supporting the design and deployment of LLM-driven fuzzing in microservices.",
+      "published": "2026-07-02T16:12:28Z",
+      "updated": "2026-07-02T16:12:28Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.04219",
+      "abs_url": "https://arxiv.org/abs/2609.04219",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.09855",
+      "title": "The Greatness of Science Cannot Be Planned: Agentic Auto-Research is Fuzz Testing",
+      "authors": [
+        "Yifeng He",
+        "Jicheng Wang",
+        "Yinzhe Zhao",
+        "Chengyang Shi",
+        "Jiachen Liu",
+        "Hao Chen"
+      ],
+      "abstract": "Agentic auto-research is emerging, but most systems treat scientific discovery as goal-oriented optimization against a final benchmark. This paradigm rewards a sparse final verdict and ignores the exploration that precedes it. When agents optimize only the final score, they overfit to the test conditions and sample blindly rather than search. Within a declared research problem, a research agent and a greybox fuzzer for software analysis face the same sparse feedback. A fuzzer rarely finds a bug directly, but coverage makes partial progress observable on every execution. Fuzzers use that dense signal to mutate inputs and allocate effort, rather than merely rank completed runs. Auto-research needs the same two capabilities. First, each experiment must expose a cheap, dense signal of epistemic progress before final scientific validation is available. Second, that signal must determine the next intervention so the agent searches rather than repeatedly samples. Because the progress signal provides guidance rather than a final verdict, final validation must still evaluate claims using evidence protected from adaptive reuse. We propose controlled tests to determine whether candidate signals predict validated progress, whether feedback-directed search yields more validated discoveries per unit cost than repeated sampling, and whether protected validation reduces false discoveries. In a simulated physics environment, an AI research agent that tracks its intermediate epistemic progress discovers a hidden physical law. Optimization-driven baselines fail because they repeatedly sample and overfit to their existing data instead of probing unfamiliar regimes. Feedback architecture, not generation capacity, is the central bottleneck in auto-research.",
+      "published": "2026-08-10T17:13:02Z",
+      "updated": "2026-08-24T00:22:29Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.09855",
+      "abs_url": "https://arxiv.org/abs/2608.09855",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.24577",
+      "title": "Evaluating Fuzz Testing for Reinforcement Learning Agents",
+      "authors": [
+        "Zhibin Kang",
+        "Hanmo You",
+        "Dong Wang",
+        "Haiming Zheng",
+        "Junjie Chen"
+      ],
+      "abstract": "Reinforcement Learning (RL) agents are increasingly deployed in safety-critical domains such as robotics, autonomous driving, and drone control, where unexpected behaviors may lead to severe real-world consequences. Fuzz testing has recently emerged as a promising method for exploring the vast state spaces of RL agents and exposing crashes. Although numerous RL fuzzing methods have been proposed, existing studies often differ in evaluation settings, baselines, and metrics, making it difficult to draw reliable conclusions about their relative effectiveness and practical usefulness. To address this gap, we present the first comprehensive empirical study that systematically evaluates RL fuzzing methods from four complementary perspectives: effectiveness, diversity, efficiency, and practical utility. We benchmark five state-of-the-art methods alongside random testing under unified configurations across three environments of increasing complexity (MountainCar, BipedalWalker, and CARLA), and further assess the downstream usefulness of detected crashes for agent robustness improvement and safety monitoring. Our results reveal several key insights. For instance,throughput-oriented methods like MDPFuzz demonstrate superior effectiveness and efficiency in crash discovery, while methods explicitly designed to encourage exploration like SeqDivFuzz excel at uncovering diverse crash behaviors. We also show that fuzzing-generated crashes can meaningfully improve agent robustness and enable accurate safety monitoring with strong cross-method generalization. Beyond these empirical findings, we distill actionable guidance for both researchers and practitioners, highlighting the benefits of combining complementary fuzzing strategies and adopting multi-level diversity analysis to achieve more comprehensive and practical RL testing.",
+      "published": "2026-07-27T15:46:57Z",
+      "updated": "2026-07-27T15:46:57Z",
+      "categories": [
+        "cs.LG",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.24577",
+      "abs_url": "https://arxiv.org/abs/2607.24577",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.09072",
+      "title": "Agentic Proof and Property-Based Testing via Property-Templates in Data-Intensive Computing",
+      "authors": [
+        "Seongmin Lee",
+        "Yaoxuan Wu",
+        "Miryung Kim"
+      ],
+      "abstract": "As the cost of code generation becomes cheaper with AI, the new bottleneck in software engineering has shifted to intent specification and validation. Overcoming this durability crisis of AI-driven coding requires more than traditional fuzzing: each candidate property must be proven correct over a model and shown to hold on the real implementation, making formal proof and systematic property-based testing (PBT) complementary. However, validating properties this way at scale requires solving two subproblems: verifying candidate properties and operationalizing PBT without AI hallucination. We hypothesize that recurring property patterns, cast as property templates--abstract, parameterized forms with holes--address both at once. This paper investigates recurring property patterns in Apache Spark. In data-intensive scalable computing systems, correctness properties arise from the principles of data partition, computation decomposition, and dataflow computation. For instance, aggregation decomposition relates a global function executed on the entire dataset to a local function followed by a recombiner. We design an agentic, dual-track validation framework that uses property templates to formally verify correctness in the Lean 4 theorem prover and instantiate PBT templates as executable PySpark tests. Our evaluation shows that property templates increase agentic proof engineering success by up to 2.6x (1.6x on average) and reduce proof hallucinations by 59%. Template-guided PBT synthesis reduces intent misalignments from 22 to 1 and cuts synthesis cost by up to 5.7x (3.8x on average). Template-guided synthesis further exceeds a state-of-the-art Spark fuzzer and approaches unguided LLM-based PBT on code coverage. Finally, comparing the two tracks is informative: when a proof succeeds yet a PBT finds a counterexample, the mismatch identifies a gap between the formal model and implementation.",
+      "published": "2026-07-10T03:33:47Z",
+      "updated": "2026-07-10T03:33:47Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.09072",
+      "abs_url": "https://arxiv.org/abs/2607.09072",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.11132",
+      "title": "Properties with Holes: Meta-Property-Based Testing of Data-Intensive Computing Frameworks",
+      "authors": [
+        "Yaoxuan Wu",
+        "Ingrid Lee",
+        "Ahmad Humayun",
+        "Muhammad Ali Gulzar",
+        "Miryung Kim"
+      ],
+      "abstract": "Data-intensive computing frameworks such as Apache Spark and Flink keep expanding their APIs with new data types, expressions, and operators. Their most damaging bugs return silently wrong results rather than crashing, which tools that detect only crashes or exceptions cannot see. Property-based testing can catch such bugs, but only if someone writes a property with a strong oracle, and writing properties one API at a time cannot keep pace with this growth. We observe that many such properties are instances of a few textbook principles: congruence of equivalent expressions, relational-algebra equivalences, and aggregate decomposition. Each principle holds not only for an isolated operator but also for any workload built around it. We present Holey, which introduces meta-properties: properties with holes. A meta-property fixes how a workload is transformed and which relation its outputs must satisfy, but leaves open the expressions or operators being related. A developer fills the holes with a short binding. Holey then turns the resulting concrete property into many executable tests by generating schema-valid multi-stage workloads and input data around it. Each meta-property has a typing rule over its holes. A binding is checked once against this rule, and we prove that every test generated from a type-correct binding is schema-valid. Seven meta-properties yield 207 concrete properties, with bindings averaging under 20 lines. Holey found 17 previously unknown wrong-result bugs in the latest releases of Spark and Flink, 9 of which need relations that existing SQL testing oracles such as TLP and NoREC do not state, and its meta-properties express 55 of 65 testable historical Spark correctness issues. Its generated workloads cover 1.9x the branches covered by CometFuzz.",
+      "published": "2026-06-09T17:25:38Z",
+      "updated": "2026-10-20T19:21:01Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.11132",
+      "abs_url": "https://arxiv.org/abs/2606.11132",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.06747",
+      "title": "Tensor Algebraic Property Skeletons: Amplifying Property-Based Testing for AI Compilers",
+      "authors": [
+        "Yuxin Qiu",
+        "Ben Limpanukorn",
+        "Seongmin Lee",
+        "Jiyuan Wang",
+        "Qian Zhang",
+        "Miryung Kim"
+      ],
+      "abstract": "Deep learning (DL) compilers such as TVM and ONNX-MLIR lower tensor computation graphs into optimized executables for target backends. Testing these compilers has made substantial progress in generating well-formed inputs in the context of fuzzing. However, such generation alone does not catch semantic drifts from algebraic invariants that graph transformations and optimizations are expected to preserve. While tensor algebra has been studied for decades, it has not been transformed into executable property-based tests (PBTs) for DL compilers because doing so requires the time-consuming and error-prone task of jointly constructing operators, tensors, and oracles. The central challenge is no longer generating well-formed inputs for fuzzing DL compilers, but bootstrapping executable PBTs with such inputs and correct oracles based on tensor algebra. We realize this vision in Propilot, an LLM-driven agentic property-based testing framework for DL compilers. First, Propilot represents tensor algebra knowledge as reusable property skeletons, each coupled with operator constraints and oracle templates. Second, given a target compiler, Propilot instantiates these skeletons into executable PBTs by generating paired tensor computation graphs, tensor inputs, and expected semantic relations as oracles. Third, to prevent generated tests from degenerating into invalid or uninformative PBTs, Propilot validates each PBT candidate before execution for applicability and safety. Validation feedback, execution results, and coverage signals guide subsequent generation. We evaluate Propilot on TVM with 212 operators and 20 property skeletons, generating 4,579 PBTs. Compared with direct LLM-based PBT generation, Propilot reduces redundancy by 49% and eliminates invalid tests through explicit property skeletons. This effectiveness translates into finding semantic errors and numerical discrepancies.",
+      "published": "2026-06-04T22:01:30Z",
+      "updated": "2026-06-18T01:49:06Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06747",
+      "abs_url": "https://arxiv.org/abs/2606.06747",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.15229",
+      "title": "PBT-Bench: Benchmarking AI Agents on Property-Based Testing",
+      "authors": [
+        "Lucas Jing",
+        "Xinqi Wang",
+        "Liao Zhang",
+        "Simon S. Du"
+      ],
+      "abstract": "Existing code benchmarks measure whether an agent can produce any test that reproduces a known bug, or whether it can produce a patch that fixes a described issue. Neither isolates the distinct skill of property-based testing: deriving a semantic invariant from documentation, and then constructing an input-generation strategy precise enough to make a random search reveal the violation. We introduce PBT-Bench, a benchmark of 100 curated property-based testing problems across 40 real Python libraries. Each problem injects one or more semantic bugs (365 in total, mean 3.65 per problem) designed so that default-strategy random inputs almost never trigger them; the agent must read the library's documentation, identify the relevant invariant, and specify a Hypothesis @given strategy that concentrates mass in the trigger region. Bugs are stratified across three difficulty levels (L1-L3) spanning single-constraint boundary bugs to stateful, cross-function protocol violations. We evaluate eight contemporary LLMs under two prompting regimes (open-ended baseline vs. explicit Hypothesis scaffolding) for three independent runs per configuration. Bug recall under the PBT-guided prompt ranges from 42.1% to 83.4% across models; under the open-ended baseline, from 31.4% to 76.7%. Hypothesis scaffolding lifts mid-capability models by over 20 percentage points, but yields smaller gains for the strongest models, with two exceptions showing degradation, suggesting the structured prompt can interfere with certain model behaviours rather than complementing them. The hardest bugs prove model-specific: different architectures fail on different problems, leaving persistent gaps that no single model closes. We release the benchmark, harness, and full evaluation corpus to support downstream work on documentation-grounded semantic reasoning.",
+      "published": "2026-05-13T18:01:05Z",
+      "updated": "2026-10-06T07:14:56Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.15229",
+      "abs_url": "https://arxiv.org/abs/2605.15229",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.13463",
+      "title": "PropGen: Automated Property Generation for Property-Based Testing of Mobile Apps",
+      "authors": [
+        "Yiheng Xiong",
+        "Shiwen Song",
+        "Bo Ma",
+        "Ting Su",
+        "Xiaofei Xie"
+      ],
+      "abstract": "Mobile apps often suffer from functional bugs that do not cause crashes but instead manifest as incorrect behaviors under specific user interactions. Such bugs are difficult to detect by conventional automatic testing techniques because they often lack explicit \\textit{test oracles}. Property-based testing can effectively expose them by specifying intended behavior as properties and checking them under diverse interactions. However, its practical use is limited by the reliance on manually written properties, which are difficult and expensive to construct. To address this limitation, this paper explores the use of large language models (LLMs) to automate property construction for property-based testing of mobile apps. This is challenging in two ways. \\textit{First}, it is difficult to systematically uncover and execute diverse app functionalities. \\textit{Second}, it is difficult to derive valid properties from functionality execution results. To address these challenges, we introduce PropGen, which infers candidate app functionalities as hypotheses from GUI states, validates each hypothesis by executing it to collect behavioral evidence, synthesizes properties from the collected evidence, and refines imprecise properties based on testing feedback. We implemented PropGen and evaluated it on 12 real-world Android apps. The results show that PropGen can effectively identify and execute app functionalities, generate valid properties, and refine most imprecise ones. Across all apps, PropGen inferred 1,210 valid functionalities and correctly executed 977 of them, compared with 491 and 187 for the baseline. It generated 985 properties, 912 of which were valid, and successfully refined 118 of 127 imprecise ones exposed during testing. Using the resulting properties, we found 25 previously unknown functional bugs, many of which were missed by existing testing techniques.",
+      "published": "2026-04-15T04:33:53Z",
+      "updated": "2026-10-08T05:38:41Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.13463",
+      "abs_url": "https://arxiv.org/abs/2604.13463",
+      "source": "arxiv"
+    },
+    {
+      "id": "2603.27002",
+      "title": "Etna: An evaluation platform for property-based testing",
+      "authors": [
+        "Alperen Keles",
+        "Jessica Shi",
+        "Nikhil Kamath",
+        "Tin Nam Liu",
+        "Ceren Mert",
+        "Harrison Goldstein",
+        "Benjamin C. Pierce",
+        "Leonidas Lampropoulos"
+      ],
+      "abstract": "Property-based testing is a mainstay of functional programming, boasting a rich literature, an enthusiastic user community, and an abundance of tools~ -- so many, indeed, that new users may have difficulty choosing. Moreover, any given framework may support a variety of strategies for generating test inputs; even experienced users may wonder which are better in any given situation. Sadly, the PBT literature, though long on creativity, is short on rigorous comparisons to help answer such questions. We present ETNA, a platform for empirical evaluation and comparison of PBT techniques. ETNA incorporates a number of popular PBT frameworks and testing workloads from the literature, and its extensible architecture makes adding new ones easy, while handling the technical drudgery of performance measurement. To illustrate its benefits, we use ETNA to carry out several experiments with popular PBT approaches in Rocq, Haskell, OCaml, Racket, and Rust, allowing users to more clearly understand best practices and tradeoffs.",
+      "published": "2026-03-27T21:24:28Z",
+      "updated": "2026-08-12T00:27:46Z",
+      "categories": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2603.27002",
+      "abs_url": "https://arxiv.org/abs/2603.27002",
+      "source": "arxiv"
+    },
     {
       "id": "2601.11972",
       "title": "Enhancing Fuzz Testing Efficiency through Automated Fuzz Target Generation",
@@ -921,7 +1199,7 @@
         "Rohan Padhye",
         "Miryung Kim"
       ],
-      "abstract": "The emerging data-intensive applications are increasingly dependent on data-intensive scalable computing (DISC) systems, such as Apache Spark, to process large data. Despite their popularity, DISC applications are hard to test. In recent years, fuzz testing has been remarkably successful; however, it is nontrivial to apply such traditional fuzzing to big data analytics directly because: (1) the long latency of DISC systems prohibits the applicability of fuzzing, and (2) conventional branch coverage is unlikely to identify application logic from the DISC framework implementation. We devise a novel fuzz testing tool called BigFuzz that automatically generates concrete data for an input Apache Spark program. The key essence of our approach is that we abstract the dataflow behavior of the DISC framework with executable specifications and we design schema-aware mutations based on common error types in DISC applications. Our experiments show that compared to random fuzzing, BigFuzz is able to speed up the fuzzing time by 1477X, improves application code coverage by 271%, and achieves 157% improvement in detecting application errors. The demonstration video of BigFuzz is available at https://www.youtube.com/watch?v=YvYQISILQHs\u0026feature=youtu.be.",
+      "abstract": "The emerging data-intensive applications are increasingly dependent on data-intensive scalable computing (DISC) systems, such as Apache Spark, to process large data. Despite their popularity, DISC applications are hard to test. In recent years, fuzz testing has been remarkably successful; however, it is nontrivial to apply such traditional fuzzing to big data analytics directly because: (1) the long latency of DISC systems prohibits the applicability of fuzzing, and (2) conventional branch coverage is unlikely to identify application logic from the DISC framework implementation. We devise a novel fuzz testing tool called BigFuzz that automatically generates concrete data for an input Apache Spark program. The key essence of our approach is that we abstract the dataflow behavior of the DISC framework with executable specifications and we design schema-aware mutations based on common error types in DISC applications. Our experiments show that compared to random fuzzing, BigFuzz is able to speed up the fuzzing time by 1477X, improves application code coverage by 271%, and achieves 157% improvement in detecting application errors. The demonstration video of BigFuzz is available at https://www.youtube.com/watch?v=YvYQISILQHs&feature=youtu.be.",
       "categories": [
         "cs.SE"
       ],
@@ -1127,7 +1405,7 @@
         "Tim Nelson",
         "Shriram Krishnamurthi"
       ],
-      "abstract": "Context: The success of QuickCheck has led to the development of property-based testing (PBT) libraries for many languages and the process is getting increasing attention. However, unlike regular testing, PBT is not widespread in collegiate curricula. Furthermore, the value of PBT is not limited to software testing. The growing use of formal methods in, and the growth of software synthesis, all create demand for techniques to train students and developers in the art of specification writing. We posit that PBT forms a strong bridge between testing and the act of specification: it's a form of testing where the tester is actually writing abstract specifications.\n  Inquiry: Even well-informed technologists mention the difficulty of finding good motivating examples for its use. We take steps to fill this lacuna.\n Approach \u0026 Knowledge: We find that the use of \"relational\" problems -- those for which an input may admit multiple valid outputs -- easily motivates the use of PBT. We also notice that such problems are readily available in the computer science pantheon of problems (e.g., many graph and sorting algorithms). We have been using these for some years now to teach PBT in collegiate courses.\n  Grounding: In this paper, we describe the problems we use and report on students? completion of them. We believe the problems overcome some of the motivation issues described above. We also show that students can do quite well at PBT for these problems, suggesting that the topic is well within their reach. In the process, we introduce a simple method to evaluate the accuracy of their specifications, and use it to characterize their common mistakes.\n  Importance: Based on our findings, we believe that relational problems are an underutilized motivating example for PBT. We hope this paper initiates a catalog of such problems for educators (and developers) to use, and also provides a concrete (though by no means exclusive) method to analyze the quality of PBT.",
+      "abstract": "Context: The success of QuickCheck has led to the development of property-based testing (PBT) libraries for many languages and the process is getting increasing attention. However, unlike regular testing, PBT is not widespread in collegiate curricula. Furthermore, the value of PBT is not limited to software testing. The growing use of formal methods in, and the growth of software synthesis, all create demand for techniques to train students and developers in the art of specification writing. We posit that PBT forms a strong bridge between testing and the act of specification: it's a form of testing where the tester is actually writing abstract specifications.\n  Inquiry: Even well-informed technologists mention the difficulty of finding good motivating examples for its use. We take steps to fill this lacuna.\n Approach & Knowledge: We find that the use of \"relational\" problems -- those for which an input may admit multiple valid outputs -- easily motivates the use of PBT. We also notice that such problems are readily available in the computer science pantheon of problems (e.g., many graph and sorting algorithms). We have been using these for some years now to teach PBT in collegiate courses.\n  Grounding: In this paper, we describe the problems we use and report on students? completion of them. We believe the problems overcome some of the motivation issues described above. We also show that students can do quite well at PBT for these problems, suggesting that the topic is well within their reach. In the process, we introduce a simple method to evaluate the accuracy of their specifications, and use it to characterize their common mistakes.\n  Importance: Based on our findings, we believe that relational problems are an underutilized motivating example for PBT. We hope this paper initiates a catalog of such problems for educators (and developers) to use, and also provides a concrete (though by no means exclusive) method to analyze the quality of PBT.",
       "categories": [
         "cs.SE"
       ],

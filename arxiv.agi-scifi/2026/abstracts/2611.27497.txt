@@ -1,0 +1,27 @@
+Title: Path-Aware Fusion of Infrastructure RF Sensing and Robot Perception in a Live Robotic Digital Twin
+Authors: Alberto Martínez Méndez, Antonio de la Oliva, Carlos J. Bernardos
+ID: 2611.27497
+URL: https://arxiv.org/abs/2611.27497
+
+Abstract:
+Mobile robots in industrial workspaces must react to people that their onboard
+sensors cannot yet observe. Communication infrastructure can fill part of this
+gap by acting as a sensor, but its observations differ from camera and LiDAR
+evidence in meaning, spatial support, and rate. We present a live robotic
+Digital Twin (DT) that integrates heterogeneous sensing branches, a commodity
+60-GHz link, joint Wi-Fi/5G sensing, a fixed camera, and robot-borne LiDAR, as
+spatially grounded observations with explicit freshness, and that uses the
+robot's live pose and heading to decide whether evidence lies on the path the
+robot is about to sweep. We show that a 60-GHz link carrying near-gigabit
+traffic detects human presence through the phase signature of its antenna array
+(balanced accuracy 0.98 on unseen sessions and 0.999 from one day to the next in
+a first site), but that a second site with a different link geometry requires a
+site-specific model (0.98 on unseen sessions after retraining, 0.73 without). On
+a Unitree Go2 patrolling under the DT, every person entering the camera field or
+the 60-GHz link stopped the robot (20/20); for the camera, the median time from
+physical entry to standstill was 1.83 s, of which detection, DT update, and
+networking take about 0.15 s and the rest is the 0.5-s confirmation and the
+robot's braking. Path-aware gating removed all stops caused by off-path presence
+(5 stops versus 0 for the same scenario), stale branches stopped the robot in
+fail-safe mode (6/6) and were ignored otherwise (0/6), and five unattended laps
+produced no false stop.

@@ -1,0 +1,25 @@
+Title: Adapting Linear-Time Architectures for Tabular In-Context Learning
+Authors: David Schnurr, Felix Sarnthein, Thomas Hofmann, Imanol Schlag
+ID: 2609.36337
+URL: https://arxiv.org/abs/2609.36337
+
+Abstract:
+Tabular foundation models achieve strong performance by conditioning on labelled
+examples in context, but softmax attention limits their use on large datasets.
+Existing linear-time alternatives, however, are mostly causal, and their
+potential for tabular in-context learning (ICL) remains underexplored. To
+address this, we (1) revisit causal training setups, (2) compare linear sequence
+mixers, and (3) investigate their ICL generalisation beyond the pretraining
+context length. First, we show that the best training setup for causal models
+resembles next-token prediction. Then, perhaps surprisingly, the most promising
+linear sequence mixer is causal: DeltaNet outperforms even non-causal linear
+attention. However, it degrades beyond $2$-$4\times$ the pretraining context
+length, and existing mitigation strategies such as bidirectionality defer the
+problem at best. A hidden-state oracle shows that this is not a capacity
+problem. Instead, our analysis points to an instability in the recurrent state,
+which drifts in deeper layers of causal models. Since DeltaNet's learned write
+rates overfit to the pretraining regime, we modulate them with a time-dependent
+decay schedule intervention to stabilise length generalisation. Finally, re-
+introducing non-causality by reading out from the final state allows us to
+closely match a controlled softmax attention baseline on OpenML-CC18 and
+TabArena.

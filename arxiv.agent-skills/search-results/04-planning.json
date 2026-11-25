@@ -10,11 +10,92 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:20:17Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 822,
-  "return_count": 200,
+  "return_count": 204,
   "papers": [
+    {
+      "id": "2611.25056",
+      "title": "Attacks and Defenses in Decentralized Multi-Agent Systems with Hop-by-Hop Task Decomposition and Delegation",
+      "authors": [
+        "Matthew D. Laws",
+        "Maria Lazou",
+        "Alina Oprea",
+        "Cristina Nita-Rotaru"
+      ],
+      "abstract": "Decentralized multi-agent LLM systems enable independently administered agents, each with its own operator, model, memory, and configuration, to collaborate on complex tasks without centralized coordination. Agents autonomously decompose tasks, execute subtasks and delegate remaining work to peers, enabling scalability and eliminating single points of failure. However, decentralization also introduces significant security challenges, as no single entity has complete visibility into task execution or the authority to enforce correct behavior across agents. In this paper, we systematize threats from malicious agents in decentralized multi-agent systems and propose mitigation techniques. We first design and evaluate attacks against integrity, availability, and confidentiality, demonstrating that a single malicious agent can cause up to 100% task failure, inflate token consumption and runtime by up to 7.7x and 3.2x, respectively, and exfiltrate up to 94% of relevant prior tasks from benign agents. We then present a cryptographic protocol that produces an irrefutable verified execution trace of every action taken in the system and develop an auditor that analyzes these traces to detect and attribute malicious behavior. Evaluations on HiddenBench using gpt-6.1-sol and Qwen3.8-27B-FP8 show that our protocol incurs negligible latency overhead, while the auditor detects and correctly attributes 98% of attacks, including those that comply with the protocol.",
+      "published": "2026-11-18T19:06:28Z",
+      "updated": "2026-11-18T19:06:28Z",
+      "categories": [
+        "cs.CR",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25056",
+      "abs_url": "https://arxiv.org/abs/2611.25056",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20510",
+      "title": "WTR-Drive: World-Task Decomposition with Structured Risk Supervision for End-to-End Driving",
+      "authors": [
+        "Haoyu Xing",
+        "Shaobing Ding",
+        "Guanglei Zhao",
+        "Guanhua Zhao",
+        "Nawu Peng",
+        "Mingyang Hou"
+      ],
+      "abstract": "Proposal-conditioned scene predictions can lack a common object-level reference across candidate trajectories. Aggregate planning scores also leave the objects and times associated with violations implicit. We present WTR-Drive (World-Task-Risk Driving), a Drive-JEPA-based planner that separates shared scene estimation from proposal-conditioned reasoning. A proposal-independent World Memory estimates object states, map structure, and future motion by re-reading the original visual features at each refinement round. Proposal feedback updates a residual Task branch without writing back to World Memory. This branch guides refinement through candidate-specific retrieval and gated visual feedback. A final Task readout supplies candidate-conditioned features for scoring. We derive structured risk targets from existing candidate-scoring rollouts without additional simulator calls. For at-fault collision and time-to-collision violations, the targets encode event existence, association with shared object slots, and the first violation time bin. On the NAVSIM navtest split, WTR-Drive achieves 94.66 PDMS on v1 and 88.24 EPDMS on v2 (expert-frame sequential evaluation). These scores are 0.96 and 0.44 points above the published Drive-JEPA values, respectively. Candidate-level analysis shows that higher best-candidate scores can coexist with lower selected-trajectory scores, revealing a gap between candidate quality and selection effectiveness.",
+      "published": "2026-11-16T04:30:41Z",
+      "updated": "2026-11-16T04:30:41Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20510",
+      "abs_url": "https://arxiv.org/abs/2611.20510",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16671",
+      "title": "NSDL: Neuro-Symbolic Division of Labor for Multi-Robot Task Planning",
+      "authors": [
+        "Xincheng Tan",
+        "Ke Wang",
+        "Yining Di",
+        "Minfeng Zhu"
+      ],
+      "abstract": "Planning for a heterogeneous robot team from a scene image and an instruction involves two kinds of decisions. Some must be judged from the scene: which goals are already met, how the task splits, and which robot does what. Others follow from these and can be computed: prerequisite actions, handoffs between robots, and timing. We argue that each kind should go to the component suited to it: a small vision-language model learns the first, and a deterministic solver computes the second. In NSDL (Neuro-Symbolic Division of Labor), the trained model writes its judgments as a plan sketch, which lists the goals that still need action and the intended steps in order, each with a robot. The solver expands the sketch into an executable joint plan. The model calls two tools, a detector for evidence and the solver, and is trained with the solver in the loop. We evaluate on the public VIKI-L2 benchmark and on LOCUS-Bench, a new benchmark that grades the two kinds of difficulty separately. NSDL outperforms end-to-end planners and formalize-then-plan baselines on both benchmarks and with three backbones from 3B to 8B; the 7B model reaches 97.0% out-of-distribution accuracy on VIKI-L2. Ordering and scheduling errors nearly disappear once the solver writes the structure; the remaining failures are misjudged states, and most goals the model misses are ones it never lists. Code, model weights, and LOCUS-Bench are publicly available at https://github.com/Xincheng-Tan/NSDL.",
+      "published": "2026-11-12T11:47:48Z",
+      "updated": "2026-11-12T11:47:48Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16671",
+      "abs_url": "https://arxiv.org/abs/2611.16671",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.12409",
+      "title": "Bridging Task Planning and Execution for Language-Conditioned Bimanual Manipulation",
+      "authors": [
+        "Emanuele Cuzzocrea",
+        "Giuseppina Iannotti",
+        "Luca Rossini",
+        "Arturo Laurenzi",
+        "Nikos Tsagarakis"
+      ],
+      "abstract": "Robots are increasingly expected to execute natural-language manipulation tasks in real-world environments. This is particularly relevant in household assistance and logistics, where clutter requires reasoning about both task objectives and execution feasibility. This challenge becomes even more pronounced for bimanual humanoid platforms, where coordinating two manipulators introduces additional interaction and kinematic constraints. We present a zero-shot vision-language framework for execution-aware bimanual manipulation that jointly reasons about task objectives and physical feasibility. Planning is grounded in a structured scene representation that combines semantic object relations with execution constraints, enabling the selection of obstacle relocations and execution choices while preserving task semantics. Compatible actions are organised into parallel bimanual stages with explicit pre- and post-conditions. A hierarchical validator evaluates these conditions under perceptual uncertainty and uses stage-level execution history to support local recovery or targeted replanning. Experiments on the CENTAURO hybrid wheeled-legged humanoid robot across nine language-conditioned manipulation scenarios show higher task success than a non-execution-aware baseline. In dedicated failure scenarios, hierarchical validation recovers from execution failures with fewer model queries than always replanning. These results demonstrate the benefits of combining execution reasoning directly into task planning. Videos and additional material are available on the Project Webpage: https://advrhumanoids.github.io/bridging-planning-execution/.",
+      "published": "2026-11-09T13:43:11Z",
+      "updated": "2026-11-09T13:43:11Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.12409",
+      "abs_url": "https://arxiv.org/abs/2611.12409",
+      "source": "arxiv"
+    },
     {
       "id": "2308.10393",
       "title": "Decomposition-based Hierarchical Task Allocation and Planning for Multi-Robots under Hierarchical Temporal Logic Specifications",
@@ -2678,12 +2759,12 @@
     },
     {
       "id": "2511.04758",
-      "title": "ScheduleStream: Temporal Planning with Samplers for GPU-Accelerated Multi-Arm Task and Motion Planning \u0026 Scheduling",
+      "title": "ScheduleStream: Temporal Planning with Samplers for GPU-Accelerated Multi-Arm Task and Motion Planning & Scheduling",
       "authors": [
         "Caelan Garrett",
         "Fabio Ramos"
       ],
-      "abstract": "Bimanual and humanoid robots are appealing because of their human-like ability to leverage multiple arms to efficiently complete tasks. However, controlling multiple arms at once is computationally challenging due to the growth in the hybrid discrete-continuous action space. Task and Motion Planning (TAMP) algorithms can efficiently plan in hybrid spaces but generally produce plans, where only one arm is moving at a time, rather than schedules that allow for parallel arm motion. In order to extend TAMP to produce schedules, we present ScheduleStream, the first general-purpose framework for planning \u0026 scheduling with sampling operations. ScheduleStream models temporal dynamics using hybrid durative actions, which can be started asynchronously and persist for a duration that's a function of their parameters. We propose domain-independent algorithms that solve ScheduleStream problems without any application-specific mechanisms. We apply ScheduleStream to Task and Motion Planning \u0026 Scheduling (TAMPAS), where we use GPU acceleration within samplers to expedite planning. We compare ScheduleStream algorithms to several ablations in simulation and find that they produce more efficient solutions. We demonstrate ScheduleStream on several real-world bimanual robot tasks at https://schedulestream.github.io.",
+      "abstract": "Bimanual and humanoid robots are appealing because of their human-like ability to leverage multiple arms to efficiently complete tasks. However, controlling multiple arms at once is computationally challenging due to the growth in the hybrid discrete-continuous action space. Task and Motion Planning (TAMP) algorithms can efficiently plan in hybrid spaces but generally produce plans, where only one arm is moving at a time, rather than schedules that allow for parallel arm motion. In order to extend TAMP to produce schedules, we present ScheduleStream, the first general-purpose framework for planning & scheduling with sampling operations. ScheduleStream models temporal dynamics using hybrid durative actions, which can be started asynchronously and persist for a duration that's a function of their parameters. We propose domain-independent algorithms that solve ScheduleStream problems without any application-specific mechanisms. We apply ScheduleStream to Task and Motion Planning & Scheduling (TAMPAS), where we use GPU acceleration within samplers to expedite planning. We compare ScheduleStream algorithms to several ablations in simulation and find that they produce more efficient solutions. We demonstrate ScheduleStream on several real-world bimanual robot tasks at https://schedulestream.github.io.",
       "categories": [
         "cs.RO",
         "cs.AI",

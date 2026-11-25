@@ -10,11 +10,382 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:49:43Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 236,
-  "return_count": 200,
+  "return_count": 219,
   "papers": [
+    {
+      "id": "2611.23256",
+      "title": "Generative AI in Software Testing: Practitioners' Perspectives on the Benefits, Challenges, Opportunities, and Risks",
+      "authors": [
+        "Chamari Dasanayake",
+        "Rahul Mohanani",
+        "Vladimir Mandić",
+        "Burak Turhan"
+      ],
+      "abstract": "Generative Artificial Intelligence (GenAI) increasingly supports software testing, yet empirical evidence on practitioners' perceptions remains limited. This study investigates perceived benefits, challenges, opportunities, and risks of GenAI in software testing through a questionnaire survey of 64 practitioners. Closed-ended responses were analyzed descriptively, while open-ended responses were qualitatively coded to contextualize the findings. Among the respondents, 34 were users (those with regular or experimental use of GenAI in testing) and 30 were non-users (those without prior use of GenAI in testing). Results show generally positive perceptions of GenAI for reducing effort, test generation, and debugging, alongside concerns about prompt dependence, trust, and incorrect outputs. Users were more positive about several concrete benefits while also more frequently prioritizing reliability-related risks, whereas non-users showed greater uncertainty about some technically specific challenges. Overall, the findings position GenAI as an assistive technology requiring human validation and highlight the importance of considering practitioners' experience with GenAI when interpreting perceptions of GenAI-assisted testing.",
+      "published": "2026-09-26T16:59:50Z",
+      "updated": "2026-09-26T16:59:50Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23256",
+      "abs_url": "https://arxiv.org/abs/2611.23256",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.25233",
+      "title": "Noise-Awareness in Quantum Software Testing: An Empirical Landscape Analysis",
+      "authors": [
+        "Mir Mohammad Yousuf",
+        "Shabir Ahmad Sofi",
+        "Bisma Majid"
+      ],
+      "abstract": "Noisy Intermediate-Scale Quantum (NISQ) hardware has transformed quantum computing into a practical experimental platform while introducing fundamental challenges associated with hardware noise, decoherence, and probabilistic execution. Although quantum software testing (QST) has rapidly emerged as an active research area, it remains unclear to what extent existing testing methodologies explicitly engage with noisy and hardware-constrained execution environments. This paper presents a systematic empirical landscape analysis of noise-awareness in QST research through a deterministic, taxonomy-guided analytical framework applied to 61 papers published between 2018 and 2025 across eight testing paradigms, contrasting how contributions are framed with how they are evaluated. Among the analyzed papers, 47 (77.0%) are noise-oblivious and only 14 (23.0%) explicitly engage with noise-related execution concerns, while only 11 (18.0%) report evaluation on physical hardware or a noisy simulator. Test generation, the largest paradigm, exhibits a noise-awareness rate of only 14.3%, and debugging and repair 18.2%; coverage-based, metamorphic, and differential testing contain no noise-aware contributions. Noise-aware methodologies emerged late and remain outnumbered in all analyzed years. Framing and evaluation are strongly associated (odds ratio 40.5, p < 0.001) yet diverge for individual papers: 5 of the 14 noise-aware papers evaluate only on ideal simulators. Inferential statistical tests are reported in only 16.4% of papers. The classification framework was validated against a blinded, human-coded reference sample, achieving almost perfect inter-rater agreement on testing-technique classification and substantial agreement on noise-awareness. The framework provides a reusable empirical basis for longitudinal analysis of hardware-conscious testing practice.",
+      "published": "2026-10-18T12:54:10Z",
+      "updated": "2026-10-18T12:54:10Z",
+      "categories": [
+        "cs.SE",
+        "quant-ph"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.25233",
+      "abs_url": "https://arxiv.org/abs/2610.25233",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.22089",
+      "title": "Are We Testing the Wrong Quantum Bugs? A Study of Fault Representation Gaps in Quantum Software Testing",
+      "authors": [
+        "Asif Mohammed Saad",
+        "Ahsanul Ameen Sabit",
+        "Jonah Brandenburgh",
+        "Jiyuan Wang",
+        "Qian Zhang",
+        "Soneya Binta Hossain"
+      ],
+      "abstract": "Quantum software relies on compilers, intermediate representations, and execution frameworks that transform programs before execution. Faults in these components can change the behavior of otherwise correct quantum programs. Yet quantum testing techniques are often evaluated using mutation-generated faults and curated bug benchmarks. We investigate how well the faults represented by these artifacts reflect those encountered in modern quantum software. We audit four quantum mutation-testing tools and three curated bug benchmarks, and collect 410 verified bugs from ten quantum software repositories over two years. We classify faults from all three sources into a common taxonomy of 56 bug families and compare their representation across mutation operators, curated benchmarks, and recent real-world bugs. The mutation tools support 20 bug families, and curated benchmarks add 15 more. Yet only 56 of the 410 real-world bugs (13.7%) belong to families represented by either source; the remaining 354 (86.3%) belong to families absent from both. The largest unrepresented families concern compiler transformations (66 bugs), type handling (53), and input validation (47). Unlike local gate or statement changes, these faults often depend on intermediate representations, compiler pipelines, input types, or dependency versions. Existing mutation operators primarily modify circuits and program constructs, whereas many real-world faults arise in the compilers, representations, and framework interfaces that process them. Addressing this gap requires looking beyond circuit-level faults toward testing semantic preservation across compiler transformations, correctness at representation boundaries, and interactions between software components. Our study provides empirical evidence to guide fault models and benchmarks that capture these mechanisms and preserve the contexts needed to reproduce them.",
+      "published": "2026-10-15T15:41:56Z",
+      "updated": "2026-10-16T17:58:07Z",
+      "categories": [
+        "cs.SE",
+        "cs.PL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22089",
+      "abs_url": "https://arxiv.org/abs/2610.22089",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.16594",
+      "title": "Software Testing Meets Bayesian Workflow: A Literature-Driven Artifact Study of Probabilistic Programs",
+      "authors": [
+        "Oleg Jarma",
+        "Maja Dall",
+        "Raúl Pardo",
+        "Mahsa Varshosaz",
+        "Andrzej Wąsowski"
+      ],
+      "abstract": "Automated testing is an effective software quality assurance method, but it is rarely used for probabilistic models. This is despite the heavy use of probabilistic programming for data analytics in research and engineering, where the consequences of errors are dire. A key obstacle is the specification of testable correctness properties for probabilistic models, known as the oracle problem. Like machine learning, probabilistic programming is used precisely where no analytical specification exists: had we been able to write one, we would have written an algorithm instead of fitting a model. An alternative is partial, proxy correctness specifications. The statistics literature already offers many, but as quality guidelines that require human judgment: comparing plots, visually analyzing shapes of distributions, assessing whether parameter values are ''far'' or ''close enough''. These guidelines are not systematically automated. In this work, we elicit, implement, and study testable correctness properties of probabilistic models. We extract 17 broadly applicable properties for probabilistic models from one of the most widely used textbooks in Bayesian data analysis, Statistical Rethinking by McElreath. For each property, we select and implement a test oracle, and study its utility for automatic testing, using a population of 59 probabilistic models from academic and industrial sources. We find realistic use cases (models under test) for all the properties. We observe that the vast majority of tests are not flaky in practice, despite the theoretical potential for flakiness. To the best of our knowledge, we are the first to investigate the effectiveness of mutation testing for probabilistic models, showing that standard mutation operators do not capture faults tracked by the probabilistic properties.",
+      "published": "2026-10-12T11:16:51Z",
+      "updated": "2026-10-12T11:16:51Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.16594",
+      "abs_url": "https://arxiv.org/abs/2610.16594",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.37526",
+      "title": "Exploring Emotional Intelligence in Software Testing",
+      "authors": [
+        "Cristina Martinez Montes",
+        "Pushpamalar Rajendran",
+        "Grace Karuri",
+        "Felix Dobslaw"
+      ],
+      "abstract": "Background: Emotional Intelligence (EI) is the ability to recognise, understand, and manage one's own and others' emotions. Software testers deliver judgements about colleagues' work under deadlines they do not control, and prior work on emotion in software engineering has mostly studied developers. Aims: To explore how software testers describe the part EI plays in their day-to-day work, in communication and conflict within the team, and in responding to requirements volatility. Method: Semi-structured interviews with 16 software testers in Sweden working in teams that use agile practices, across aviation, automotive, healthcare, IT services, administration, banking and pharmaceuticals, analysed with reflexive thematic analysis informed by Goleman's EI framework. Results: Three themes. Testers described regulating stress under deadline pressure and drawing motivation from recognition, clarity and autonomy; managing the daily delivery of critical findings to colleagues so that trust survives; and responding to requirements change with frustration that turned into decisions about what to leave untested, into advocacy for process change, or into workarounds. Read against developer-focused studies, the themes point to features of the testing role: the work product is a criticism of a colleague's work, success is invisible while failure is attributed, and the tester's window shrinks with every upstream delay. Conclusions: For testers, managing emotions is a constant job requirement. The results highlight that the importance of EI increases when the development process lacks an independent testing phase. The findings also inform implications for teams and, ultimately, for organisations and future research.",
+      "published": "2026-09-29T13:14:22Z",
+      "updated": "2026-09-29T13:14:22Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.37526",
+      "abs_url": "https://arxiv.org/abs/2609.37526",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.15387",
+      "title": "WebCraftBench: Evaluating Web Application Generation from a Software Testing Perspective",
+      "authors": [
+        "Chenxu Liu",
+        "Zilu Zou",
+        "Peizhong Gao",
+        "Jiawen Tao",
+        "Zhexin Zhang",
+        "Guang Chen",
+        "Haowei Lin",
+        "Ying Zhou",
+        "Tianyi Bai",
+        "Dolly Deng",
+        "Suncong Zheng",
+        "Maxm Pan"
+      ],
+      "abstract": "Human evaluation provides a direct measure of the quality of LLM-generated web applications. However, fitting human judgments through automated evaluation remains challenging. Static benchmarks can credit functionality that exists in source code but is unreachable at runtime. Interactive benchmarks exercise the application, yet incomplete exploration can cause them to miss implemented functionality and confound application defects with agent execution failures. To address these limitations, we propose WebCraftBench, an interactive benchmark for evaluating web application generation from a software testing perspective. WebCraftBench instruments each generated application and uses code coverage to guide an agent in exploring its functionality through user-simulated interactions. It then abstracts the interaction trace into a state-transition graph and evaluates the application along three dimensions: visual aesthetics, usability, and requirement alignment. By separating exploration from scoring, WebCraftBench collects runtime evidence without constraining exploration to predefined acceptance criteria. WebCraftBench comprises 369 real-world user requirements and 5,088 acceptance criteria. Evaluation of 17 frontier LLMs reveals distinct strengths across the three dimensions, with no model leading on every dimension. On 197 validated sessions sampled from an internal arena, WebCraftBench achieves 85.3\\% agreement with human preferences, with agreement generally increasing as the score difference between paired applications grows. Further experiments show that coverage guidance improves exploration coverage and the model rankings remain stable when the judge model is replaced.",
+      "published": "2026-09-14T11:14:39Z",
+      "updated": "2026-09-20T07:31:58Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.15387",
+      "abs_url": "https://arxiv.org/abs/2609.15387",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.00354",
+      "title": "Exploring Quantum Software Testing Across Research and Practice: Emerging Results from a Multivocal Literature Review",
+      "authors": [
+        "Rodolfo Gil-Pereira",
+        "Ronnie de Souza Santos",
+        "Cleyton Magalhaes",
+        "Italo Santos"
+      ],
+      "abstract": "This paper presents preliminary findings from a multivocal literature review investigating how quantum software testing is characterized across academic and practitioner-oriented sources. Our study integrated peer-reviewed studies with gray literature, including blogs, tutorials, forums, technical reports, documentation pages, and company webpages. Our results indicate a rapidly evolving but fragmented ecosystem involving classical adapted testing approaches, quantum-specific techniques, statistical validation methods, simulators, debugging environments, and verification frameworks. The reviewed material also revealed recurring challenges related to scalability limitations, hardware noise, probabilistic execution, limited observability, and immature tooling ecosystems. These findings provide an initial characterization of how research and practice currently discuss quantum software testing challenges, techniques, and tooling.",
+      "published": "2026-08-24T02:39:24Z",
+      "updated": "2026-08-24T02:39:24Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.00354",
+      "abs_url": "https://arxiv.org/abs/2609.00354",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.17927",
+      "title": "(Over)Reliance on Test Agents in AI-Assisted Software Testing",
+      "authors": [
+        "Eduard Paul Enoiu"
+      ],
+      "abstract": "AI-based test agents promise to accelerate software testing by shortening feedback loops in continuous development and improving scalability and maintainability. To realize these benefits, engineers must still be able to assess if agent outputs are useful, valid, and reliable, rather than treating them as credible because they come from a capable system. This paper argues that overreliance on AI in testing is both an agency problem, in which engineers may cede cognitive control over test design decisions, and an assurance problem, in which testing artifacts may be accepted as evidence without sufficient scrutiny. We develop this argument through three theoretical lenses: software testing as cognitive problem-solving, test agents as adaptively autonomous entities, and test design argumentation as a means of making generated tests reviewable. We propose a framework for collecting data on overreliance in test agent workflows and identify specific modes of overdependence. The goal is to support accelerated testing without weakening judgment or the assurance value of testing evidence.",
+      "published": "2026-07-20T13:23:49Z",
+      "updated": "2026-07-20T13:23:49Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.17927",
+      "abs_url": "https://arxiv.org/abs/2607.17927",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.12223",
+      "title": "TestMiner: Software Testing Analysis for GitHub Repositories",
+      "authors": [
+        "Andre Hora",
+        "José Miguel Rojas",
+        "Romain Robbes"
+      ],
+      "abstract": "Software systems have unique testing characteristics. Some projects can emphasize unit tests, while others may focus on end-to-end testing. Test organization may vary across ecosystems: in languages like Python and Java, tests are typically placed in dedicated folders, whereas Go and Rust projects commonly co-locate tests with source code. These distinctions make it harder to understand how a project approaches testing. In this paper, we present TestMiner, a tool for exploring software testing in GitHub repositories. TestMiner provides an overview of a project's testing practices, including test statistics, test location, test metrics across releases, and dependencies related to testing. We used TestMiner in an undergraduate Software Testing course, where 50 students explored the testing practices of real-world GitHub repositories. Overall, students expressed positive feedback regarding TestMiner. They were able to critically explore a variety of testing practices, including test organization, test evolution, test fixtures, mocking, and edge-case testing. TestMiner is available at: https://andrehora.github.io/testminer. Screencast: https://youtu.be/w1sBgLTq-7Y.",
+      "published": "2026-07-13T23:52:13Z",
+      "updated": "2026-07-13T23:52:13Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.12223",
+      "abs_url": "https://arxiv.org/abs/2607.12223",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.02029",
+      "title": "Benchmarking Quantum Software Testing with Scalable Quantum Programs",
+      "authors": [
+        "Yuechen Li",
+        "Minqi Shao",
+        "Xiyuan Li",
+        "Jianjun Zhao",
+        "Kai-Yuan Cai"
+      ],
+      "abstract": "Quantum software testing (QST) checks whether quantum programs behave according to their intended specifications. A key requirement for QST research is a benchmark that supports rigorous empirical evaluation on programs that are testable and better reflect current software development practices. However, existing studies heavily rely on small hard-coded or circuit-level benchmarks, while available quantum programs are scattered across repositories without clear selection criteria, which limits fair comparison and systematic reproducibility. To this end, we present Qolumbina, a benchmark infrastructure for controlled QST experiments on scalable quantum programs. Qolumbina curates 40 programs from open-source repositories, turns them into test-ready subjects through systematic selection, refactoring, specifications, test case examples, unit tests, and standardized interfaces. We also propose QST-oriented criteria to characterize quantum programs along functionality, output behavior, development complexity, and quantum-specific execution complexity. Using these criteria, our empirical study shows that Qolumbina covers diverse testing-relevant properties and supports scalability analysis beyond fixed-size circuit benchmarks. Through controlled experiments with two recent QST approaches, we demonstrate the feasibility of using Qolumbina for execution-cost and fault-detection studies, and highlight backend-dependent effects that can influence QST result interpretation.",
+      "published": "2026-07-02T10:56:35Z",
+      "updated": "2026-07-02T10:56:35Z",
+      "categories": [
+        "cs.SE",
+        "quant-ph"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.02029",
+      "abs_url": "https://arxiv.org/abs/2607.02029",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.21682",
+      "title": "Humor in Software Testing Education",
+      "authors": [
+        "Isabella Graßl",
+        "Benoit Baudry"
+      ],
+      "abstract": "Software testing is often perceived as monotonous, which can negatively influence students' emotional engagement with testing. While prior work suggests that humor can increase engagement in professional software development contexts, we know little about humor's effect in software testing education. This paper explores how humorous elements in software testing assignments affect students' emotional engagement, sense of belonging, and creative thinking. We introduced humor in introductory software testing courses at universities in Canada and Germany, and conducted a mixed-methods study with students. Our results show that humor had a strong positive influence on students' experiences of software testing. Students perceived testing as more engaging and less monotonous, felt more comfortable and accepted in class, and reported increased creative thinking about testing tasks. These effects were particularly strong for female students, especially with respect to sense of belonging. Our findings suggest that humor represents a low-threshold pedagogical approach which is beneficial for students, and has the potential to create a more welcoming learning environment.",
+      "published": "2026-06-19T18:43:25Z",
+      "updated": "2026-06-19T18:43:25Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.21682",
+      "abs_url": "https://arxiv.org/abs/2606.21682",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.15683",
+      "title": "Applications of Causality in Software Testing: A Rapid Review",
+      "authors": [
+        "Tiancheng Ma",
+        "Nasir U. Eisty"
+      ],
+      "abstract": "Causal inference offers a principled framework for understanding how interventions influence software behavior, yet its adoption in software testing remains fragmented across different tasks and research communities. In this rapid review, we systematically analyze 27 studies that apply causal reasoning to software testing activities such as debugging, fairness assessment, and performance evaluation. We organize the literature using a layered causal inference pipeline, spanning causal representation, structure discovery, identification, and effect estimation, to reveal how existing work maps onto fundamental causal reasoning stages. Our analysis shows a concentration of research on identification and estimation, while representation and discovery techniques are underexplored in testing contexts. We also identify cross-layer challenges, including model misspecification, untested assumptions, and limited empirical evaluation, which hinder practical application. Based on these insights, we propose a research agenda that highlights underrepresented opportunities for advancing causal methods in software testing. This structured perspective aims to unify disparate contributions and guide future empirical and methodological work in the intersection of causality and software testing.",
+      "published": "2026-04-04T14:53:56Z",
+      "updated": "2026-04-04T14:53:56Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.15683",
+      "abs_url": "https://arxiv.org/abs/2606.15683",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.08806",
+      "title": "Governance Controls for AI-Generated Test Artifacts in Autonomous Software Testing",
+      "authors": [
+        "Dimple Bajaj",
+        "Deepak Khetan"
+      ],
+      "abstract": "Artificial Intelligence (AI) and Large Language Models (LLMs) are increasingly used in autonomous software testing; however, AI-generated test artifacts often suffer from hallucinations, compliance violations, security risks, and limited explainability. To enhance the reliability, transparency, and trustworthiness of AI-generated testing artifacts, this research introduces the concept of Governance-Aware Autonomous Testing Framework (GATF). The framework extends the autonomous testing lifecycle with governance validation, explainability analysis, probabilistic risk assessment, compliance monitoring, as well as audit governance. Experiments were performed with Defects4J and PROMISE software engineering datasets. The proposed framework successfully reduced the governance-related risks by 89.6% and demonstrated 94.3% accuracy in governance, 96.5% artifact reliability, 94.2% compliance accuracy, and 90.8% explainability performance. The results show that autonomous testing systems that are governance-aware can significantly enhance the reliability, transparency, and operational security of autonomous testing systems in comparison to conventional AI-based testing systems. The proposed architecture is scalable and reliable and provides a safe environment for software testing.",
+      "published": "2026-06-07T19:53:19Z",
+      "updated": "2026-06-07T19:53:19Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.08806",
+      "abs_url": "https://arxiv.org/abs/2606.08806",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.04189",
+      "title": "Exploring the Output of Software Testing Tools through a Visual Comparative Analysis",
+      "authors": [
+        "Brandon Lit",
+        "Anthony Maocheia-Ricci",
+        "Thomas Driscoll"
+      ],
+      "abstract": "Software testing is a fundamental process of software development, and prior work has shown that visualizations of test results support testers' decision-making. However, Human-Computer Interaction research on software testing has yet to explore and understand the shared interface elements and patterns in visualization of testing outputs. To address this, we conducted a visual comparative analysis of the output of 50 software testing tools and harnesses (44 with CLI output, 6 with GUI output) across four popular programming languages. Our analysis reveals the common interface elements in software testing tools, how these tools display and visualize test results, as well as the specific make-up of the output. Our findings provide insight on how visual testing output is formatted and how colour is used across both CLI and GUI environments, identifying trends that can be applied by developers of testing tools.",
+      "published": "2026-05-05T18:28:14Z",
+      "updated": "2026-05-05T18:28:14Z",
+      "categories": [
+        "cs.HC",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.04189",
+      "abs_url": "https://arxiv.org/abs/2605.04189",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.20462",
+      "title": "Deja Vu at Scale: Paraphrase-Robust Detection of Duplicate Gherkin Steps in Behaviour-Driven Software Testing with Sentence-Transformer Embeddings and a 1.1M-Step Open Benchmark",
+      "authors": [
+        "Ali Hassaan Mughal",
+        "Noor Fatima",
+        "Muhammad Bilal"
+      ],
+      "abstract": "Context. Behaviour-Driven Development (BDD) suites in Gherkin accumulate step-text duplication with documented maintenance cost. Prior detectors either require runnable tests or are single-organisation, leaving a gap: a static, paraphrase-robust, step-level detector and a public benchmark to calibrate it. Objective. We release (i) the largest cross-organisational BDD step corpus to date, (ii) a labelled pair-level calibration benchmark, and (iii) a four-strategy detector with a consolidation-savings model linking clusters to ISO/IEC 25010 maintainability sub-characteristics. Method. The corpus contains 347 public GitHub repositories, 23,667 .feature files, and 1,113,616 Gherkin steps, SPDX-tagged. The detector layers exact hashing, normalised Levenshtein, sentence-transformer cosine, and a Levenshtein-banded hybrid. Calibration uses 1,020 manually labelled step pairs under a released rubric (60-pair overlap, Fleiss kappa = 0.84). We report precision, recall, and F1 with bootstrap 95% CIs under the primary rubric and a score-free relabelling, and benchmark against SourcererCC-style and NiCad-style lexical baselines. Results. Step-weighted exact-duplicate rate is 80.2%; median-repository rate is 58.6% (Spearman rho = 0.51). The top hybrid cluster has 20,737 occurrences across 2,245 files. Near-exact reaches F1 = 0.822 on score-free labels; semantic F1 = 0.906 under the primary rubric reflects a disclosed stratification artefact. Lexical baselines reach F1 = 0.761 and 0.799. The savings model estimates 893,357 corpus-wide eliminable step occurrences; on the median repository 62.5% of step lines are eliminable.",
+      "published": "2026-04-22T11:44:05Z",
+      "updated": "2026-06-12T07:43:16Z",
+      "categories": [
+        "cs.SE",
+        "cs.CL",
+        "cs.IR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.20462",
+      "abs_url": "https://arxiv.org/abs/2604.20462",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.17715",
+      "title": "Program Structure-aware Language Models: Targeted Software Testing beyond Textual Semantics",
+      "authors": [
+        "Khang Tran",
+        "Khoa Nguyen",
+        "Cristian Borcea",
+        "NhatHai Phan"
+      ],
+      "abstract": "Recent advances in large language models for test case generation have improved branch coverage via prompt-engineered mutations. However, they still lack principled mechanisms for steering models toward specific high-risk execution branches, limiting their effectiveness for discovering subtle bugs and security vulnerabilities. We propose GLMTest, the first program structure-aware LLM framework for targeted test case generation that seamlessly integrates code property graphs and code semantics using a graph neural network and a language model to condition test case generation on execution branches. This structured conditioning enables controllable and branch-targeted test case generation, thereby potentially enhancing bug and security risk discovery. Experiments on real-world projects show that GLMTest built on a Qwen2.5-Coder-7B-Instruct model improves branch accuracy from 27.4% to 50.2% on TestGenEval benchmark compared with state-of-the-art LLMs, i.e., Claude-Sonnet-4.5 and GPT-4o-mini.",
+      "published": "2026-04-20T01:54:01Z",
+      "updated": "2026-04-20T01:54:01Z",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.17715",
+      "abs_url": "https://arxiv.org/abs/2604.17715",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.15270",
+      "title": "Enhancing Large Language Models with Retrieval Augmented Generation for Software Testing and Inspection Automation",
+      "authors": [
+        "Zoe Fingleton",
+        "Nazanin Siavash",
+        "Armin Moin"
+      ],
+      "abstract": "In this paper, we focus on automating two of the widely used Verification and Validation (V&V) activities in the Software Development Lifecycle (SDLC): Software testing and software inspection (also known as review). Concerning the former, we concentrate on automated test case generation using Large Language Models (LLMs). For the latter, we enable inspection of the source code by LLMs. To address the known LLM hallucination problem, in which LLMs confidently produce incorrect outputs, we implement a Retrieval Augmented Generation (RAG) pipeline to integrate supplementary knowledge sources and provide additional context to the LLM. Our experimental results indicate that incorporating external context via the RAG pipeline has a generally positive impact on both test case generation and code inspection. This novel approach reduces the total project cost by saving human testers'/inspectors' time. It also improves the effectiveness and efficiency of these V&V activities, as evidenced by our experimental study.",
+      "published": "2026-04-16T17:41:49Z",
+      "updated": "2026-04-16T17:41:49Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.15270",
+      "abs_url": "https://arxiv.org/abs/2604.15270",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.04047",
+      "title": "Software Testing Beyond Closed Worlds: Open-World Games as an Extreme Case",
+      "authors": [
+        "Yusaku Kato",
+        "Norihiro Yoshida",
+        "Erina Makihara",
+        "Katsuro Inoue"
+      ],
+      "abstract": "Software testing research has traditionally relied on closed-world assumptions, such as finite state spaces, reproducible executions, and stable test oracles. However, many modern software systems operate under uncertainty, non-determinism, and evolving conditions, challenging these assumptions. This paper uses open-world games as an extreme case to examine the limitations of closed-world testing. Through a set of observations grounded in prior work, we identify recurring characteristics that complicate testing in such systems, including inexhaustible behavior spaces, non-deterministic execution outcomes, elusive behavioral boundaries, and unstable test oracles. Based on these observations, we articulate a vision of software testing beyond closed-world assumptions, in which testing supports the characterization and interpretation of system behavior under uncertainty. We further discuss research directions for automated test generation, evaluation metrics, and empirical study design. Although open-world games serve as the motivating domain, the challenges and directions discussed in this paper extend to a broader class of software systems operating in dynamic and uncertain environments.",
+      "published": "2026-04-05T10:24:01Z",
+      "updated": "2026-04-08T06:55:46Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.04047",
+      "abs_url": "https://arxiv.org/abs/2604.04047",
+      "source": "arxiv"
+    },
+    {
+      "id": "2603.26329",
+      "title": "Large Language Models for Software Testing Education: an Experience Report",
+      "authors": [
+        "Peng Yang",
+        "Yunfeng Zhu",
+        "Chao Chang",
+        "Shengcheng Yu",
+        "Zhenyu Chen",
+        "Yong Tang"
+      ],
+      "abstract": "The rapid integration of Large Language Models (LLMs) into software engineering practice is reshaping how software testing activities are performed. LLMs are increasingly used to support software testing. Consequently, software testing education must evolve to prepare students for this new paradigm. However, while students have already begun to use LLMs in an ad hoc manner for testing tasks, there is limited empirical understanding of how such usage influences their testing behaviors, judgment, and learning outcomes. It is necessary to conduct a systematic investigation into how students learn to evaluate, control, and refine LLM-assisted testing results. This paper presents a mixed-methods, two-phase exploratory study on human-LLM collaboration in software testing education. In Phase I, we analyze classroom learning artifacts and interaction records from 15 students, together with a large-scale survey conducted in a national software testing competition (337 valid responses), to identify recurring prompt-related difficulties across testing tasks. The results reveal systematic interaction breakdowns, including missing contextual information, insufficient constraints, rigid one-shot prompting, and limited strategy-driven iteration, with automated test script generation emerging as a particularly heterogeneous and effort-intensive interaction context. Building on these findings, Phase II conducts an illustrative classroom practice that operationalizes the observed breakdowns into a lightweight, stage-aware prompt scaffold for test script generation, guiding students to explicitly articulate execution-relevant information such as environmental assumptions, interaction grounding, synchronization, and validation intent, and reporting descriptive shifts in students' testing-related articulation when interacting with LLMs.",
+      "published": "2026-03-27T11:46:53Z",
+      "updated": "2026-03-27T11:46:53Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2603.26329",
+      "abs_url": "https://arxiv.org/abs/2603.26329",
+      "source": "arxiv"
+    },
     {
       "id": "2103.09172",
       "title": "On Testing and Debugging Quantum Software",
@@ -334,7 +705,7 @@
     },
     {
       "id": "2302.03287",
-      "title": "ChatGPT and Software Testing Education: Promises \u0026 Perils",
+      "title": "ChatGPT and Software Testing Education: Promises & Perils",
       "authors": [
         "Sajed Jalil",
         "Suzzana Rafi",
@@ -2228,7 +2599,7 @@
         "Ning Luo",
         "Linlin Zhang"
       ],
-      "abstract": "Unit level test has been widely recognized as an important approach to improve the software quality, as it can expose bugs earlier during the development phase. However, manual unit level test development is often tedious and insufficient. Also, it is hard for developers to precisely identify the most error prone code block deserving the best test coverage by themselves. In this paper, we present the automatic Unit level test framework we used for intel media driver development. It can help us identify the most critical code block, provide the test coverage recommendation, and automatically generate \u003e80% ULT code (~400K Lines of test code) as well as ~35% test cases (~7K test cases) for intel media driver. It helps us to greatly shrink the average ULT development effort from ~24 Man hours to ~3 Man hours per 1000 Lines of driver source code.",
+      "abstract": "Unit level test has been widely recognized as an important approach to improve the software quality, as it can expose bugs earlier during the development phase. However, manual unit level test development is often tedious and insufficient. Also, it is hard for developers to precisely identify the most error prone code block deserving the best test coverage by themselves. In this paper, we present the automatic Unit level test framework we used for intel media driver development. It can help us identify the most critical code block, provide the test coverage recommendation, and automatically generate >80% ULT code (~400K Lines of test code) as well as ~35% test cases (~7K test cases) for intel media driver. It helps us to greatly shrink the average ULT development effort from ~24 Man hours to ~3 Man hours per 1000 Lines of driver source code.",
       "categories": [
         "cs.SE"
       ],
@@ -2343,7 +2714,7 @@
         "Shangxin Guo",
         "Chee Wei Tan"
       ],
-      "abstract": "The rapid pace of large-scale software development places increasing demands on traditional testing methodologies, often leading to bottlenecks in efficiency, accuracy, and coverage. We propose a novel perspective on software testing by positing bug detection and coding with fewer bugs as two interconnected problems that share a common goal, which is reducing bugs with limited resources. We extend our previous work on AI-assisted programming, which supports code auto-completion and chatbot-powered Q\u0026A, to the realm of software testing. We introduce Copilot for Testing, an automated testing system that synchronizes bug detection with codebase updates, leveraging context-based Retrieval Augmented Generation (RAG) to enhance the capabilities of large language models (LLMs). Our evaluation demonstrates a 31.2% improvement in bug detection accuracy, a 12.6% increase in critical test coverage, and a 10.5% higher user acceptance rate, highlighting the transformative potential of AI-driven technologies in modern software development practices.",
+      "abstract": "The rapid pace of large-scale software development places increasing demands on traditional testing methodologies, often leading to bottlenecks in efficiency, accuracy, and coverage. We propose a novel perspective on software testing by positing bug detection and coding with fewer bugs as two interconnected problems that share a common goal, which is reducing bugs with limited resources. We extend our previous work on AI-assisted programming, which supports code auto-completion and chatbot-powered Q&A, to the realm of software testing. We introduce Copilot for Testing, an automated testing system that synchronizes bug detection with codebase updates, leveraging context-based Retrieval Augmented Generation (RAG) to enhance the capabilities of large language models (LLMs). Our evaluation demonstrates a 31.2% improvement in bug detection accuracy, a 12.6% increase in critical test coverage, and a 10.5% higher user acceptance rate, highlighting the transformative potential of AI-driven technologies in modern software development practices.",
       "categories": [
         "cs.SE",
         "cs.AI",
@@ -3523,7 +3894,7 @@
         "Francisco Chicano",
         "José Antonio Ortega Toro"
       ],
-      "abstract": "In Software Product Lines (SPLs) it may be difficult or even impossible to test all the products of the family because of the large number of valid feature combinations that may exist. Thus, we want to find a minimal subset of the product family that allows us to test all these possible combinations (pairwise). Furthermore, when testing a single product is a great effort, it is desirable to first test products composed of a set of priority features. This problem is called Prioritized Pairwise Test Data Generation Problem.\n  State-of-the-art algorithms based on Integer Linear Programming for this problema are faster enough for small and medium instances. However, there exists some real instances that are too large to be computed with these algorithms in a reasonable time because of the exponential growth of the number of candidate solutions. Also, these heuristics not always lead us to the best solutions. In this work we propose a new approach based on a hybrid metaheuristic algorithm called Construct, Merge, Solve \u0026 Adapt. We compare this matheuristic with four algorithms: a Hybrid algorithm based on Integer Linear Programming ((HILP), a Hybrid algorithm based on Integer Nonlinear Programming (HINLP), the Parallel Prioritized Genetic Solver (PPGS), and a greedy algorithm called prioritized-ICPL. The analysis reveals that CMSA results in statistically significantly better quality solutions in most instances and for most levels of weighted coverage, although it requires more execution time.",
+      "abstract": "In Software Product Lines (SPLs) it may be difficult or even impossible to test all the products of the family because of the large number of valid feature combinations that may exist. Thus, we want to find a minimal subset of the product family that allows us to test all these possible combinations (pairwise). Furthermore, when testing a single product is a great effort, it is desirable to first test products composed of a set of priority features. This problem is called Prioritized Pairwise Test Data Generation Problem.\n  State-of-the-art algorithms based on Integer Linear Programming for this problema are faster enough for small and medium instances. However, there exists some real instances that are too large to be computed with these algorithms in a reasonable time because of the exponential growth of the number of candidate solutions. Also, these heuristics not always lead us to the best solutions. In this work we propose a new approach based on a hybrid metaheuristic algorithm called Construct, Merge, Solve & Adapt. We compare this matheuristic with four algorithms: a Hybrid algorithm based on Integer Linear Programming ((HILP), a Hybrid algorithm based on Integer Nonlinear Programming (HINLP), the Parallel Prioritized Genetic Solver (PPGS), and a greedy algorithm called prioritized-ICPL. The analysis reveals that CMSA results in statistically significantly better quality solutions in most instances and for most levels of weighted coverage, although it requires more execution time.",
       "categories": [
         "cs.AI",
         "cs.SE"
@@ -3690,7 +4061,7 @@
         "Alessio Gambi",
         "Sebastiano Panichella"
       ],
-      "abstract": "Simulation environments are essential for the continuous development of complex cyber-physical systems such as self-driving cars (SDCs). Previous results on simulation-based testing for SDCs have shown that many automatically generated tests do not strongly contribute to identification of SDC faults, hence do not contribute towards increasing the quality of SDCs. Because running such \"uninformative\" tests generally leads to a waste of computational resources and a drastic increase in the testing cost of SDCs, testers should avoid them. However, identifying \"uninformative\" tests before running them remains an open challenge. Hence, this paper proposes SDCScissor, a framework that leverages Machine Learning (ML) to identify SDC tests that are unlikely to detect faults in the SDC software under test, thus enabling testers to skip their execution and drastically increase the cost-effectiveness of simulation-based testing of SDCs software. Our evaluation concerning the usage of six ML models on two large datasets characterized by 22'652 tests showed that SDC-Scissor achieved a classification F1-score up to 96%. Moreover, our results show that SDC-Scissor outperformed a randomized baseline in identifying more failing tests per time unit.\n  Webpage \u0026 Video: https://github.com/ChristianBirchler/sdc-scissor",
+      "abstract": "Simulation environments are essential for the continuous development of complex cyber-physical systems such as self-driving cars (SDCs). Previous results on simulation-based testing for SDCs have shown that many automatically generated tests do not strongly contribute to identification of SDC faults, hence do not contribute towards increasing the quality of SDCs. Because running such \"uninformative\" tests generally leads to a waste of computational resources and a drastic increase in the testing cost of SDCs, testers should avoid them. However, identifying \"uninformative\" tests before running them remains an open challenge. Hence, this paper proposes SDCScissor, a framework that leverages Machine Learning (ML) to identify SDC tests that are unlikely to detect faults in the SDC software under test, thus enabling testers to skip their execution and drastically increase the cost-effectiveness of simulation-based testing of SDCs software. Our evaluation concerning the usage of six ML models on two large datasets characterized by 22'652 tests showed that SDC-Scissor achieved a classification F1-score up to 96%. Moreover, our results show that SDC-Scissor outperformed a randomized baseline in identifying more failing tests per time unit.\n  Webpage & Video: https://github.com/ChristianBirchler/sdc-scissor",
       "categories": [
         "cs.SE"
       ],
@@ -4082,7 +4453,7 @@
         "Faris Muhammad",
         "Hamed Al-Raweshidy"
       ],
-      "abstract": "Software logs generated by sophisticated network emulators in the telecommunications industry, such as VIAVI TM500, are extremely complex, often comprising tens of thousands of text lines with minimal resemblance to natural language. Only specialised expert engineers can decipher such logs and troubleshoot defects in test runs. While AI offers a promising solution for automating defect triage, potentially leading to massive revenue savings for companies, state-of-the-art large language models (LLMs) suffer from significant drawbacks in this specialised domain. These include a constrained context window, limited applicability to text beyond natural language, and high inference costs. To address these limitations, we propose a compact convolutional neural network (CNN) architecture that offers a context window spanning up to 200,000 characters and achieves over 96% accuracy (F1\u003e0.9) in classifying multifaceted software logs into various layers in the telecommunications protocol stack. Specifically, the proposed model is capable of identifying defects in test runs and triaging them to the relevant department, formerly a manual engineering process that required expert knowledge. We evaluate several LLMs; LLaMA2-7B, Mixtral 8x7B, Flan-T5, BERT and BigBird, and experimentally demonstrate their shortcomings in our specialized application. Despite being lightweight, our CNN significantly outperforms LLM-based approaches in telecommunications log classification while minimizing the cost of production. Our defect triaging AI model is deployable on edge devices without dedicated hardware and widely applicable across software logs in various industries.",
+      "abstract": "Software logs generated by sophisticated network emulators in the telecommunications industry, such as VIAVI TM500, are extremely complex, often comprising tens of thousands of text lines with minimal resemblance to natural language. Only specialised expert engineers can decipher such logs and troubleshoot defects in test runs. While AI offers a promising solution for automating defect triage, potentially leading to massive revenue savings for companies, state-of-the-art large language models (LLMs) suffer from significant drawbacks in this specialised domain. These include a constrained context window, limited applicability to text beyond natural language, and high inference costs. To address these limitations, we propose a compact convolutional neural network (CNN) architecture that offers a context window spanning up to 200,000 characters and achieves over 96% accuracy (F1>0.9) in classifying multifaceted software logs into various layers in the telecommunications protocol stack. Specifically, the proposed model is capable of identifying defects in test runs and triaging them to the relevant department, formerly a manual engineering process that required expert knowledge. We evaluate several LLMs; LLaMA2-7B, Mixtral 8x7B, Flan-T5, BERT and BigBird, and experimentally demonstrate their shortcomings in our specialized application. Despite being lightweight, our CNN significantly outperforms LLM-based approaches in telecommunications log classification while minimizing the cost of production. Our defect triaging AI model is deployable on edge devices without dedicated hardware and widely applicable across software logs in various industries.",
       "categories": [
         "cs.CL",
         "cs.AI",

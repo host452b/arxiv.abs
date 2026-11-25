@@ -1,0 +1,31 @@
+Title: From Software History to Executable Regression Tasks: A System for Evaluating Software Agents
+Authors: Ruikai Shi, Zhengran Zeng, Rui Xie, Shikun Zhang, Wei Ye
+ID: 2610.25308
+URL: https://arxiv.org/abs/2610.25308
+
+Abstract:
+As software agents increasingly generate and modify code, evaluating their
+ability to review changes and discover defects becomes important. Such
+evaluation needs executable project environments for investigation and reliable
+defect references supported by reproducible behavior. Existing code review
+benchmarks provide limited support for this combination. We present a system
+that constructs executable regression instances from historical introducing--
+fixing commit pairs and developer tests. The system extracts candidate tests
+from fixing-side changes, then uses constrained agents to transplant them and
+configure version-specific environments while preserving production code and
+test expectations. Independent replay and evidence-based review verify whether
+tests that fail on the introducing version and pass on the fixing version
+support the proposed regression relationship. Accepted instances retain both
+versions' replay recipes, validated tests, and execution evidence. Repair-
+supported analysis and human review add root-cause locations, tested repairs,
+and causal explanations. These instances support bug detection and localization
+in code review, and enable bug repair and regression-test generation on the same
+defects. The system constructs 172 validated instances from 522 candidates
+across 11 Python projects. We evaluate three software agents with ten models and
+additional reasoning-effort settings on 83 manually selected, enriched instances
+across the three tasks. Precise root-line localization remains challenging,
+while baseline combinations achieve repair and regression-test generation
+success rates of up to 68.7% and 77.1%, respectively. Leading configurations
+differ by task, and higher task performance does not necessarily yield greater
+API-cost efficiency. Our approach provides reusable executable evidence for
+studying agents' defect discovery, repair, and testing capabilities.

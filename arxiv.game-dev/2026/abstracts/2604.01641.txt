@@ -1,0 +1,25 @@
+Title: LivingWorld: Interactive 4D World Generation with Environmental Dynamics
+Authors: Hyeongju Mun, In-Hwan Jin, Sohyeong Kim, Kyeongbo Kong
+ID: 2604.01641
+URL: https://arxiv.org/abs/2604.01641
+
+Abstract:
+We introduce LivingWorld, an interactive framework for generating 4D worlds with
+environmental dynamics from a single image. While recent advances in 3D scene
+generation enable large-scale environment creation, most approaches focus
+primarily on reconstructing static geometry, leaving scene-scale environmental
+dynamics such as clouds, water, or smoke largely unexplored. Modeling such
+dynamics is challenging because motion must remain coherent across an expanding
+scene while supporting low-latency user feedback. LivingWorld addresses this
+challenge by progressively constructing a globally coherent motion field as the
+scene expands. To maintain global consistency during expansion, we introduce a
+geometry-aware alignment module that resolves directional and scale ambiguities
+across views. We further represent motion using a compact hash-based motion
+field, enabling efficient querying and stable propagation of dynamics throughout
+the scene. This representation also supports bidirectional motion propagation
+during rendering, producing long and temporally coherent 4D sequences without
+relying on expensive video-based refinement. On a single RTX 5090 GPU,
+generating each new scene expansion step requires 9 seconds, followed by 3
+seconds for motion alignment and motion field updates, enabling interactive 4D
+world generation with globally coherent environmental dynamics. Video
+demonstrations are available at paper.pnu-cvsp.com/LivingWorld.

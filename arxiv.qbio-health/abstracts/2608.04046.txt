@@ -1,0 +1,24 @@
+Title: The Cost of Binarizing Survival Outcomes in Clinical Prognostic Modeling
+Authors: Shashank Yadav, David M. Routman, Andrew Y. K. Foong
+ID: 2608.04046
+URL: https://arxiv.org/abs/2608.04046
+
+Abstract:
+Survival analysis is an established framework for analyzing time-to-event data,
+yet many clinical machine learning studies still binarize the outcome before
+model training. This practice excludes censored patients, collapses temporal
+information into a single threshold, and can affect which features are selected
+as prognostically relevant. We examine the cost of this binarization in the
+context of Bayesian network (BN) feature selection, using two recent
+publications as case studies: one that applies BN-based feature selection to a
+head-and-neck cancer cohort and a second surgical cohort study that, while not
+BN-based, likewise binarizes its survival endpoint. We replace the binary
+scoring function with the Cox partial log-likelihood for feature-to-outcome
+edges, a modification we call the Survival-Aware Bayesian network, and recover
+prognostic features that binarization misses. Our ablation experiment confirms
+that the improvement is driven by the time-to-event scoring formulation rather
+than by retaining more patients. The results generalize across five endpoint-
+cohort combinations in head-and-neck cancer and extend to three further cancer
+types (breast, colorectal, and kidney). We propose that clinical studies with
+survival outcomes should use time-to-event methods by default, as binarization
+discards the prognostic signal retained by survival analysis.

@@ -1,0 +1,27 @@
+Title: Beyond the Patch: Reconstructing an Incomplete-Fix Patch Bypass in LLM Agent Frameworks with Control-Gated, Benign Probes
+Authors: Chaitanya Garware
+ID: 2611.20514
+URL: https://arxiv.org/abs/2611.20514
+
+Abstract:
+Replaying a vulnerability's original proof-of-concept after patching tests
+whether its reported trigger remains reproducible, but does not establish that
+the underlying security invariant holds on other code paths. We present a
+benign, control-gated reconstruction method and a pilot study across four LLM
+agent frameworks and four invariant classes. For PraisonAI, we compare original-
+trigger replay (B0) with a distinct sibling-path probe (M). We also perform five
+before/after reconstructions across Langroid, Agno, and CrewAI. Each run reports
+VIOLATION, NO_VIOLATION_OBSERVED, or INCONCLUSIVE, gated by a positive
+authorized control. Probes use inert markers or builtins-reachability checks. At
+PraisonAI 4.6.31, the original tool-loading trigger is blocked while the
+tool_override path still violates the invariant. This reproduces the publicly
+documented CVE-2026-44334 bypass of CVE-2026-40287; neither tested path shows a
+violation at 4.6.32. For CrewAI, we observe a violation in tested release 1.11.0
+and confinement in 1.11.1, without claiming the earliest fixed release. Fourteen
+harness-validation scenarios produced their expected verdicts. Only one same-
+version B0-versus-M divergence is demonstrated. The PraisonAI probes invoke
+loader functions directly and establish boundary behavior under the supplied
+setup, not a full end-to-end exploit. A non-violation verdict applies only to
+the tested probe, version, and configuration and is not a proof of safety. This
+pilot reconstructs a known incomplete fix; it neither introduces a new testing
+technique nor estimates vulnerability prevalence.

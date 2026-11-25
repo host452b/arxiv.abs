@@ -1,0 +1,29 @@
+Title: Climbing the Hill: Prompt Injection Red-Teaming Against Frontier Models with Curriculum Reinforcement Learning
+Authors: Chenlong Yin, Xiaolong Jin, Wei Zou, Yanting Wang, Jinyuan Jia
+ID: 2609.33628
+URL: https://arxiv.org/abs/2609.33628
+
+Abstract:
+Prompt injection is a leading security risk for LLMs and LLM-based applications
+such as agents. State-of-the-art red-teaming methods for prompt injection
+leverage reinforcement learning (RL) to train an attacker LLM to generate
+effective injected prompts. However, when targeting frontier LLMs such as
+GPT-6-Luna, a major challenge is the cold-start problem: every attack attempt by
+the attacker LLM fails and thus receives zero reward, providing no signal for
+learning. In this work, we propose a curriculum learning-based method to address
+the cold-start problem. In particular, we propose to train the attacker LLM
+against a sequence of increasingly robust target LLMs, with each stage warm-
+starting from the attacker LLM obtained in the previous one. However, simply
+training against a weak target (e.g., GPT-4o-mini) may not sufficiently prepare
+the attacker LLM to obtain useful learning signals against a frontier LLM (e.g.,
+GPT-5.6-Terra). Instead, we find that the design of the curriculum is critical:
+after each stage, the attacker LLM needs to partially succeed against the next
+target LLM such that it can learn from successful attempts to attack the new
+target. Our extensive evaluation shows that our method can effectively red-team
+frontier LLMs, achieving an attack success rate (ASR@10) of 93.8\% and 45.0\%
+against GPT-5.6-Luna and GPT-5.6-Terra on AgentDyn, whereas state-of-the-art RL
+methods such as RL-Hammer and PISmith achieve 0\% ASR under the same setting.
+Moreover, we find that the attacker LLM transfers across targets, e.g., an
+attacker LLM trained to defeat one strong LLM (GPT-5.6-Terra) also succeeds
+against six other frontier LLMs (e.g., GPT-6-Luna) it was never trained on. Our
+code is available at https://github.com/albert-y1n/PIForge.

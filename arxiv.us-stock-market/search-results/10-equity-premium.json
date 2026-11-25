@@ -10,13 +10,212 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-26T15:22:43Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "groups": [
     {
       "source": "arxiv",
-      "count": 143,
+      "count": 153,
       "papers": [
+        {
+          "id": "2611.30584",
+          "title": "Do Candlestick Charts Suffice? The Incremental Economic Value of Technical Indicators in Stock Return Prediction",
+          "authors": [
+            "Peng Liu",
+            "Yanyan Zheng"
+          ],
+          "abstract": "Although technical analysis remains widely used in practice, the need for manually constructed indicators is increasingly questioned as deep learning models can extract features directly from OHLC price data. This paper examines the standalone economic value of trading volume and manually constructed technical-indicator groups and whether adding these groups to OHLC candlestick charts provides incremental economic value. Using daily data for 1,707 Chinese A-share stocks from 2013 to 2025, we construct approximately 3.36 million stock-window samples and encode them as multi-channel images containing candlestick charts, trading volume, and seven widely used manually constructed technical indicators. The primary analysis uses a 2D CNN on these images; complementary tests apply a logistic regression, a 1D CNN, and an LSTM to numerical representations of the same samples. Out-of-sample performance from 2021 to 2025 is evaluated using decile portfolios, Sharpe ratios, Fama--French alphas, and formal pairwise tests. Our empirical results yield two central findings. First, specifications based separately on OHLC, trading volume, and each technical-indicator group produce significantly positive high-minus-low returns and factor-adjusted alphas, together with economically meaningful Sharpe ratios; the OHLC-only specifications generally perform best under the nonlinear models. Second, adding these technical-indicator groups to OHLC does not systematically improve any of these performance measures in our setting. Together, these results provide the first large-scale evidence from the Chinese A-share market on the standalone and incremental economic value of these technical-indicator groups across multiple representations and model architectures.",
+          "published": "2026-11-23T12:26:04Z",
+          "updated": "2026-11-23T12:26:04Z",
+          "categories": [
+            "econ.GN",
+            "cs.CE",
+            "cs.LG",
+            "q-fin.PM",
+            "q-fin.TR"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.30584",
+          "abs_url": "https://arxiv.org/abs/2611.30584",
+          "source": "arxiv"
+        },
+        {
+          "id": "2611.23723",
+          "title": "When Price Charts Rhyme: Historical Visual Retrieval for Stock Return Prediction",
+          "authors": [
+            "Hui Chen",
+            "Haoyu Liu",
+            "Ke Wu",
+            "Dexin Zhou"
+          ],
+          "abstract": "We study whether visually similar price histories predict similar future returns, using a vision model to retrieve each stock's most similar charts from three decades of U.S. price histories. A representation pretrained only on natural images already retrieves neighbors whose realized returns predict the cross-section of stock returns. Aligning the representation with subsequent returns more than doubles the strategy's Sharpe ratio and outperforms a convolutional neural network trained directly on chart images. The predictability is concentrated among stocks with greater limits to arbitrage. Returns and order imbalances around portfolio formation indicate that the signal identifies temporary selling pressure that partially reverts. A sparse autoencoder traces the return-aligned signal to recurring visual states that determine which historical charts are retrieved. Our approach traces each forecast to dated historical charts, making it more transparent than direct image-to-return models and linking rule-based technical analysis with machine-learning chart reading.",
+          "published": "2026-11-18T02:27:12Z",
+          "updated": "2026-11-18T02:27:12Z",
+          "categories": [
+            "q-fin.ST",
+            "q-fin.CP"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2611.23723",
+          "abs_url": "https://arxiv.org/abs/2611.23723",
+          "source": "arxiv"
+        },
+        {
+          "id": "2610.22745",
+          "title": "Reading the News Without Hindsight: NoLBERT Topics and the Cross-Section of Stock Returns",
+          "authors": [
+            "Kevin Foley",
+            "Jonathan Hartadi",
+            "Shivesh Prakash",
+            "Charishma Takkallapalli",
+            "Swapnil Vatsal"
+          ],
+          "abstract": "Language models that read financial news are usually trained on text from the same years used to test them, so a backtest can reward hindsight. We build news topics from NoLBERT, an encoder pretrained only on text published between 1976 and 1995, adapted into a sentence encoder by contrastive fine-tuning on passages of the same article, with no labels or returns. We compare it with LDA, MiniLM and FinBERT readers on 1.26 million articles from 2012 to 2024, convert each reader's topics into attention shocks and stock exposures, and forecast the returns of the 1,000 largest US stocks with eight models at three rebalancing frequencies. Models are fitted on 2013-2019, choices are made on 2020-2021, and 2022-2024 is held out. The experiment with the best validation score loses money at every frequency. Measuring attention shocks against the past 63 trading days instead of 5 raises the test rank IC of every reader. NoLBERT gives the most stable topics and forecasts about as well as LDA. An equal-weight combination of all readers and models earns a monthly net Sharpe ratio of 1.12, significant against zero before adjusting for the search but not against a price-only benchmark.",
+          "published": "2026-10-15T23:27:49Z",
+          "updated": "2026-10-15T23:27:49Z",
+          "categories": [
+            "q-fin.ST",
+            "cs.CL",
+            "cs.LG",
+            "q-fin.PM"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2610.22745",
+          "abs_url": "https://arxiv.org/abs/2610.22745",
+          "source": "arxiv"
+        },
+        {
+          "id": "2608.14323",
+          "title": "Dependence-Informed Sparse Neural Architecture for Stock Return Prediction",
+          "authors": [
+            "Hongyu Lin",
+            "Yulin Chen",
+            "Yuanrong Wang",
+            "Antonio Briola",
+            "Tomaso Aste"
+          ],
+          "abstract": "Using neural networks for stock return prediction typically requires choices about depth and hidden-layer width that are difficult to connect to financial interpretation. We study an alternative: estimate dependence among firm characteristics with a Maximally Filtered Clique Forest (MFCF), then map its clique structure to a Homological Neural Network (HNN). The MFCF maximum clique size K is the only parameter controlling architectural complexity, and it has a clear graphical meaning: it bounds the number of characteristics in each maximal clique and hence the highest interaction order the network can represent. The filtered graph then fixes the neural network's depth, layer widths, and sparse connections before training, in place of a separately chosen depth and width sequence. We apply two HNN variants to annual out-of-sample forecasts of U.S. stock excess returns from 1987 to 2016 using 94 firm characteristics. The HNN models match a three-hidden-layer benchmark on pooled predictive accuracy, rank the cross-section more accurately, and use roughly 80 times fewer parameters than a fully connected network with the same induced layer widths. Two structural ablations indicate that both the sparse connectivity and the estimated grouping of characteristics contribute to the ranking advantage, and both effects remain significant after correcting for multiple testing. These findings show that HNNs offer a practical and interpretable way to incorporate estimated dependence among firm characteristics into neural architecture design.",
+          "published": "2026-08-14T14:07:29Z",
+          "updated": "2026-08-14T14:07:29Z",
+          "categories": [
+            "q-fin.ST"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2608.14323",
+          "abs_url": "https://arxiv.org/abs/2608.14323",
+          "source": "arxiv"
+        },
+        {
+          "id": "2607.20168",
+          "title": "Quantum Kernels and the Cross-Section of Stock Returns: Anatomy of a Vanishing Advantage",
+          "authors": [
+            "Junchi Shen"
+          ],
+          "abstract": "Do quantum kernels improve cross-sectional stock return prediction? We run a controlled horse race on the Chinese A-share market in which a quantum fidelity kernel, a projected quantum kernel, and a classical RBF control share identical training subsamples, solver, and tuning budgets, so that only the kernel is exchanged. On the main evaluation -- a point-in-time universe and 170 walk-forward windows (2012-2025) -- no quantum advantage exists: the fidelity kernel is indistinguishable from its RBF control ($Δ$IC $=+0.005$, $p=0.42$), and a $2\\times2$ design crossing kernel type with training budget (a Nystrom extension to the full ~38,000-observation windows) shows quantum kernels matching, but never beating, equal-budget linear models; after family-wise correction no pairwise difference among eleven models is significant, with point estimates favoring penalized linear regressions throughout. We then document how the opposite conclusion arises: a 60-window evaluation on a universe screened with full-sample information makes the same quantum kernel appear dominant on stability criteria and significantly better than neural baselines. Interaction characteristics from the anomalies literature help nothing, quantum or classical; a widened bandwidth grid reveals an interior optimum rather than the near-classical endpoint a coarse grid suggests; and the geometric difference, while large throughout ($g \\gg 1$), does not predict out-of-sample gains ($ρ=-0.20$). We propose protocol standards -- kernel-swap controls, budget-equalized comparisons, point-in-time universes, and multiplicity-robust inference -- for empirical claims of quantum advantage in finance.",
+          "published": "2026-07-22T14:04:12Z",
+          "updated": "2026-07-22T14:04:12Z",
+          "categories": [
+            "q-fin.PR",
+            "quant-ph",
+            "stat.ML"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2607.20168",
+          "abs_url": "https://arxiv.org/abs/2607.20168",
+          "source": "arxiv"
+        },
+        {
+          "id": "2606.30583",
+          "title": "The Cross-Section of Stock Returns and AI Exposure",
+          "authors": [
+            "Nicola Borri",
+            "Yukun Liu",
+            "Aleh Tsyvinski"
+          ],
+          "abstract": "We study 380 trillion tokens of realized AI consumption across more than four hundred LLMs. We build a high-frequency AI factor and show that a long-short strategy based on firms' AI exposure earns significantly positive returns. The average strategy return is larger based on intensive, frontier-oriented AI consumption but smaller based on casual or open-weight usage. Internationally, the return spread is significant in developed countries but insignificant in emerging markets. Examining occupational AI exposure, we find more positive exposure in occupations intensive in nonroutine interactive tasks and more negative exposure in those intensive in nonroutine analytical tasks.",
+          "published": "2026-06-29T17:28:22Z",
+          "updated": "2026-09-24T08:55:31Z",
+          "categories": [
+            "cs.CY",
+            "econ.GN",
+            "q-fin.GN"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2606.30583",
+          "abs_url": "https://arxiv.org/abs/2606.30583",
+          "source": "arxiv"
+        },
+        {
+          "id": "2606.19318",
+          "title": "Fitting Accumulated Stock Returns with Tempered Skew t-Distribution",
+          "authors": [
+            "Siqi Shao",
+            "R. A. Serota"
+          ],
+          "abstract": "We analyze distributions of historic S&P500 multi-day returns, for the number of days of accumulation from 20 to 120. With the increase of the number of days of accumulation, we observe clear tempering of power-law tails toward a seemingly finite value. To explain this phenomenon, we employ a model that produces a \"capped Inverse Gamma\" stationary (steady-state) distribution for stochastic volatility which, in turn, produces a \"tempered Student-t\" distribution for returns. We then employ Jones-Faddy-like symmetry breaking mechanism that produces a \"tempered Skew-t\" distribution. This distribution provides rather good fits to the distributions of accumulated multi-day S&P500 returns, which exhibit symmetry breaking between gains and losses -- as reflected by positive mean and negative skew. Tempered Skew-t fits are also consistent with near perfect linear dependence on the number of days of accumulation of the mean values and, even more so, of the variances (mean squared realized volatility) of the distributions.",
+          "published": "2026-06-17T17:44:35Z",
+          "updated": "2026-06-17T17:44:35Z",
+          "categories": [
+            "q-fin.ST",
+            "econ.EM",
+            "q-fin.MF"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2606.19318",
+          "abs_url": "https://arxiv.org/abs/2606.19318",
+          "source": "arxiv"
+        },
+        {
+          "id": "2605.23962",
+          "title": "From Index to Equity: Pre-Training Transformers for Stock Return Prediction",
+          "authors": [
+            "Marie Soehl Coolsaet",
+            "Roberto Gallardo",
+            "Zhen Gao"
+          ],
+          "abstract": "This research aims to leverage machine learning to improve stock price prediction and support informed investment decisions related to buying, selling, and holding assets. Specifically, this work investigates transformer-based models for stock prediction and examines the impact of pre-training strategies on forecasting performance. A transformer model was first pre-trained on the Toronto Stock Exchange Index (TSX) to predict intra-day return direction and subsequently fine-tuned on individual TSX stocks. The model was further adapted for return-value regression tasks. Performance was benchmarked against Long Short-Term Memory (LSTM) and XGBoost models. Pre-training on the market index improved the binary cross-entropy loss for individual stock prediction from 0.69 to 0.64. The fine-tuned transformer regression model achieved lower mean squared error than the benchmark models, although the ensemble and XGBoost models achieved higher average daily returns. In addition, a practical application was developed to deliver real-time stock predictions for trading support. Future work will focus on increasing transformer model capacity, incorporating broader global technical indicators, and filtering out stocks with low predictability.",
+          "published": "2026-05-12T13:18:48Z",
+          "updated": "2026-05-12T13:18:48Z",
+          "categories": [
+            "q-fin.ST",
+            "cs.LG"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2605.23962",
+          "abs_url": "https://arxiv.org/abs/2605.23962",
+          "source": "arxiv"
+        },
+        {
+          "id": "2605.00196",
+          "title": "Modeling Stock Returns and Volatility Using Bivariate Gamma Generalized Laplace Law",
+          "authors": [
+            "Tomasz J. Kozubowski",
+            "Andrey Sarantsev",
+            "James A. Spiker"
+          ],
+          "abstract": "We consider a generalization of the variance-gamma (generalized asymmetric Laplace) distribution, defined as a normal mean - variance mixture with a gamma mixing distribution. While this model is typically studied in the univariate setting, we assume that the gamma mixing variable is observed alongside the primary variable, resulting in a bivariate framework. In this setting, maximum likelihood estimation becomes significantly simpler than in the standard univariate case, reducing to a form of classical linear regression. We derive explicit expressions for the resulting estimators. For certain parameter configurations, the estimators exhibit nonstandard convergence rates, exceeding the usual square-root rate. Finally, we illustrate the applicability of this model in financial contexts by analyzing stock index returns and associated volatility for several major indices.",
+          "published": "2026-04-30T20:21:44Z",
+          "updated": "2026-04-30T20:21:44Z",
+          "categories": [
+            "stat.ME",
+            "math.PR",
+            "math.ST",
+            "q-fin.ST"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2605.00196",
+          "abs_url": "https://arxiv.org/abs/2605.00196",
+          "source": "arxiv"
+        },
+        {
+          "id": "2604.15519",
+          "title": "Broken Symmetry, Conservation Law, and Scaling in Accumulated Stock Returns -- a Modified Jones-Faddy Skew t-Distribution Perspective",
+          "authors": [
+            "Arshia Ghasemi",
+            "Siqi Shao",
+            "R. A. Serota"
+          ],
+          "abstract": "We analyze historic S&P500 multi-day returns: from daily returns to those accumulated over up to ten days. Despite symmetry breaking between gains and losses in the distribution of returns, resulting in its positive mean and negative skew, realized variance (volatility squared) exhibits remarkably good linear dependence on the number of days of accumulation. Mean of the distribution also shows near perfect linear dependence as well. We analyze this phenomenon both analytically and numerically using a modified Jones-Faddy skew t-distribution.",
+          "published": "2026-04-16T20:55:51Z",
+          "updated": "2026-04-16T20:55:51Z",
+          "categories": [
+            "q-fin.ST"
+          ],
+          "pdf_url": "https://arxiv.org/pdf/2604.15519",
+          "abs_url": "https://arxiv.org/abs/2604.15519",
+          "source": "arxiv"
+        },
         {
           "id": "1903.07737",
           "title": "Risk and Return models for Equity Markets and Implied Equity Risk Premium",
@@ -214,7 +413,7 @@
             "Miquel Montero",
             "Josep Perello"
           ],
-          "abstract": "The analysis which assumes that tick by tick data is linear may lead to wrong conclusions if the underlying process is multiplicative. We compare data analysis done with the return and stock differences and we study the limits within the two approaches are equivalent. Some illustrative examples concerning these two approaches are given. Actual data is taken from S\u0026P 500 stock cash index.",
+          "abstract": "The analysis which assumes that tick by tick data is linear may lead to wrong conclusions if the underlying process is multiplicative. We compare data analysis done with the return and stock differences and we study the limits within the two approaches are equivalent. Some illustrative examples concerning these two approaches are given. Actual data is taken from S&P 500 stock cash index.",
           "categories": [
             "cond-mat.stat-mech",
             "q-fin.ST"
@@ -275,7 +474,7 @@
             "Tao Ma",
             "R. A. Serota"
           ],
-          "abstract": "We prove that Student's t-distribution provides one of the better fits to returns of S\u0026P component stocks and the generalized inverse gamma distribution best fits VIX and VXO volatility data. We further argue that a more accurate measure of the volatility may be possible based on the fact that stock returns can be understood as the product distribution of the volatility and normal distributions. We find Brown noise in VIX and VXO time series and explain the mean and the variance of the relaxation times on approach to the steady-state distribution.",
+          "abstract": "We prove that Student's t-distribution provides one of the better fits to returns of S&P component stocks and the generalized inverse gamma distribution best fits VIX and VXO volatility data. We further argue that a more accurate measure of the volatility may be possible based on the fact that stock returns can be understood as the product distribution of the volatility and normal distributions. We find Brown noise in VIX and VXO time series and explain the mean and the variance of the relaxation times on approach to the steady-state distribution.",
           "categories": [
             "q-fin.ST"
           ],
@@ -447,7 +646,7 @@
           "authors": [
             "Bo Li"
           ],
-          "abstract": "Observations indicate that the distributions of stock returns in financial markets usually do not conform to normal distributions, but rather exhibit characteristics of high peaks, fat tails and biases. In this work, we assume that the effects of events or information on prices obey normal distribution, while financial markets often overreact or underreact to events or information, resulting in non normal distributions of stock returns. Based on the above assumptions, we propose a reaction function for a financial market reacting to events or information, and a model based on it to describe the distribution of real stock returns. Our analysis of the returns of China Securities Index 300 (CSI 300), the Standard \u0026 Poor's 500 Index (SPX or S\u0026P 500) and the Nikkei 225 Index (N225) at different time scales shows that financial markets often underreact to events or information with minor impacts, overreact to events or information with relatively significant impacts, and react slightly stronger to positive events or information than to negative ones. In addition, differences in financial markets and time scales of returns can also affect the shapes of the reaction functions.",
+          "abstract": "Observations indicate that the distributions of stock returns in financial markets usually do not conform to normal distributions, but rather exhibit characteristics of high peaks, fat tails and biases. In this work, we assume that the effects of events or information on prices obey normal distribution, while financial markets often overreact or underreact to events or information, resulting in non normal distributions of stock returns. Based on the above assumptions, we propose a reaction function for a financial market reacting to events or information, and a model based on it to describe the distribution of real stock returns. Our analysis of the returns of China Securities Index 300 (CSI 300), the Standard & Poor's 500 Index (SPX or S&P 500) and the Nikkei 225 Index (N225) at different time scales shows that financial markets often underreact to events or information with minor impacts, overreact to events or information with relatively significant impacts, and react slightly stronger to positive events or information than to negative ones. In addition, differences in financial markets and time scales of returns can also affect the shapes of the reaction functions.",
           "categories": [
             "q-fin.ST"
           ],
@@ -574,7 +773,7 @@
             "Emmanuel Lassalle",
             "Arthur Dénouveaux"
           ],
-          "abstract": "We extend the AROW regression algorithm developed by Vaits and Crammer in [VC11] to handle synchronous mini-batch updates and apply it to stock return prediction. By design, the model should be more robust to noise and adapt better to non-stationarity compared to a simple rolling regression. We empirically show that the new model outperforms more classical approaches by backtesting a strategy on S\\\u0026P500 stocks.",
+          "abstract": "We extend the AROW regression algorithm developed by Vaits and Crammer in [VC11] to handle synchronous mini-batch updates and apply it to stock return prediction. By design, the model should be more robust to noise and adapt better to non-stationarity compared to a simple rolling regression. We empirically show that the new model outperforms more classical approaches by backtesting a strategy on S\\&P500 stocks.",
           "categories": [
             "q-fin.CP",
             "stat.ML"
@@ -957,7 +1156,7 @@
             "Michael S. Harré",
             "Fernando Alonso-Marroquin"
           ],
-          "abstract": "This paper proposes a governing equation for stock market indexes that accounts for non-stationary effects. This is a linear Fokker-Planck equation (FPE) that describes the time evolution of the probability distribution function (PDF) of the price return. By applying Ito's lemma, this FPE is associated with a stochastic differential equation (SDE) that models the time evolution of the price return in a fashion different from the classical Black-Scholes equation. Both FPE and SDE equations account for a deterministic part or trend, and a stationary, stochastic part as a q-Gaussian noise. The model is validated using the S\\\u0026P500 index's data. After removing the trend from the index, we show that the detrended part is stationary by evaluating the Hurst exponent of the multifractal time series, its power spectrum, and its autocorrelation.",
+          "abstract": "This paper proposes a governing equation for stock market indexes that accounts for non-stationary effects. This is a linear Fokker-Planck equation (FPE) that describes the time evolution of the probability distribution function (PDF) of the price return. By applying Ito's lemma, this FPE is associated with a stochastic differential equation (SDE) that models the time evolution of the price return in a fashion different from the classical Black-Scholes equation. Both FPE and SDE equations account for a deterministic part or trend, and a stationary, stochastic part as a q-Gaussian noise. The model is validated using the S\\&P500 index's data. After removing the trend from the index, we show that the detrended part is stationary by evaluating the Hurst exponent of the multifractal time series, its power spectrum, and its autocorrelation.",
           "categories": [
             "q-fin.ST"
           ],
@@ -1131,7 +1330,7 @@
           "authors": [
             "Battulga Gankhuu"
           ],
-          "abstract": "In this study, we introduce new estimation methods for the required rate of return of the stochastic dividend discount model (DDM) and the private company valuation model, which will appear below. To estimate the required rate of return, we use the maximum likelihood method, the Bayesian method, and the Kalman filtering. We apply the model to a set of firms from the S\\\u0026P 500 index using historical dividend and price data over a 32--year period. Overall, suggested methods can be used to estimate the required rate of return.",
+          "abstract": "In this study, we introduce new estimation methods for the required rate of return of the stochastic dividend discount model (DDM) and the private company valuation model, which will appear below. To estimate the required rate of return, we use the maximum likelihood method, the Bayesian method, and the Kalman filtering. We apply the model to a set of firms from the S\\&P 500 index using historical dividend and price data over a 32--year period. Overall, suggested methods can be used to estimate the required rate of return.",
           "categories": [
             "q-fin.GN"
           ],
@@ -1154,7 +1353,7 @@
             "P. Oswiecimka",
             "R. Rak"
           ],
-          "abstract": "We show that recent stock market fluctuations are characterized by the cumulative distributions whose tails on short, minute time scales exhibit power scaling with the scaling index alpha \u003e 3 and this index tends to increase quickly with decreasing sampling frequency. Our study is based on high-frequency recordings of the S\u0026P500, DAX and WIG20 indices over the interval May 2004 - May 2006. Our findings suggest that dynamics of the contemporary market may differ from the one observed in the past. This effect indicates a constantly increasing efficiency of world markets.",
+          "abstract": "We show that recent stock market fluctuations are characterized by the cumulative distributions whose tails on short, minute time scales exhibit power scaling with the scaling index alpha > 3 and this index tends to increase quickly with decreasing sampling frequency. Our study is based on high-frequency recordings of the S&P500, DAX and WIG20 indices over the interval May 2004 - May 2006. Our findings suggest that dynamics of the contemporary market may differ from the one observed in the past. This effect indicates a constantly increasing efficiency of world markets.",
           "categories": [
             "q-fin.ST",
             "physics.data-an",
@@ -1176,7 +1375,7 @@
             "Gao-Feng Gu",
             "Wei-Xing Zhou"
           ],
-          "abstract": "Recently, Mike and Farmer have constructed a very powerful and realistic behavioral model to mimick the dynamic process of stock price formation based on the empirical regularities of order placement and cancelation in a purely order-driven market, which can successfully reproduce the whole distribution of returns, not only the well-known power-law tails, together with several other important stylized facts. There are three key ingredients in the Mike-Farmer (MF) model: the long memory of order signs characterized by the Hurst index $H_s$, the distribution of relative order prices $x$ in reference to the same best price described by a Student distribution (or Tsallis' $q$-Gaussian), and the dynamics of order cancelation. They showed that different values of the Hurst index $H_s$ and the freedom degree $α_x$ of the Student distribution can always produce power-law tails in the return distribution $f(r)$ with different tail exponent $α_r$. In this paper, we study the origin of the power-law tails of the return distribution $f(r)$ in the MF model, based on extensive simulations with different combinations of the left part $f_L(x)$ for $x\u003c0$ and the right part $f_R(x)$ for $x\u003e0$ of $f(x)$. We find that power-law tails appear only when $f_L(x)$ has a power-law tail, no matter $f_R(x)$ has a power-law tail or not. In addition, we find that the distributions of returns in the MF model at different timescales can be well modeled by the Student distributions, whose tail exponents are close to the well-known cubic law and increase with the timescale.",
+          "abstract": "Recently, Mike and Farmer have constructed a very powerful and realistic behavioral model to mimick the dynamic process of stock price formation based on the empirical regularities of order placement and cancelation in a purely order-driven market, which can successfully reproduce the whole distribution of returns, not only the well-known power-law tails, together with several other important stylized facts. There are three key ingredients in the Mike-Farmer (MF) model: the long memory of order signs characterized by the Hurst index $H_s$, the distribution of relative order prices $x$ in reference to the same best price described by a Student distribution (or Tsallis' $q$-Gaussian), and the dynamics of order cancelation. They showed that different values of the Hurst index $H_s$ and the freedom degree $α_x$ of the Student distribution can always produce power-law tails in the return distribution $f(r)$ with different tail exponent $α_r$. In this paper, we study the origin of the power-law tails of the return distribution $f(r)$ in the MF model, based on extensive simulations with different combinations of the left part $f_L(x)$ for $x<0$ and the right part $f_R(x)$ for $x>0$ of $f(x)$. We find that power-law tails appear only when $f_L(x)$ has a power-law tail, no matter $f_R(x)$ has a power-law tail or not. In addition, we find that the distributions of returns in the MF model at different timescales can be well modeled by the Student distributions, whose tail exponents are close to the well-known cubic law and increase with the timescale.",
           "categories": [
             "q-fin.ST",
             "physics.soc-ph"
@@ -1199,7 +1398,7 @@
             "Paul Laliberte",
             "Harry Mamaysky"
           ],
-          "abstract": "We analyze methods for selecting topics in news articles to explain stock returns. We find, through empirical and theoretical results, that supervised Latent Dirichlet Allocation (sLDA) implemented through Gibbs sampling in a stochastic EM algorithm will often overfit returns to the detriment of the topic model. We obtain better out-of-sample performance through a random search of plain LDA models. A branching procedure that reinforces effective topic assignments often performs best. We test methods on an archive of over 90,000 news articles about S\u0026P 500 firms.",
+          "abstract": "We analyze methods for selecting topics in news articles to explain stock returns. We find, through empirical and theoretical results, that supervised Latent Dirichlet Allocation (sLDA) implemented through Gibbs sampling in a stochastic EM algorithm will often overfit returns to the detriment of the topic model. We obtain better out-of-sample performance through a random search of plain LDA models. A branching procedure that reinforces effective topic assignments often performs best. We test methods on an archive of over 90,000 news articles about S&P 500 firms.",
           "categories": [
             "q-fin.ST",
             "cs.LG",
@@ -1223,7 +1422,7 @@
             "Shlomo Havlin",
             "H. Eugene Stanley"
           ],
-          "abstract": "The distribution of the return intervals $τ$ between volatilities above a threshold $q$ for financial records has been approximated by a scaling behavior. To explore how accurate is the scaling and therefore understand the underlined non-linear mechanism, we investigate intraday datasets of 500 stocks which consist of the Standard \u0026 Poor's 500 index. We show that the cumulative distribution of return intervals has systematic deviations from scaling. We support this finding by studying the m-th moment $μ_m \\equiv \u003c(τ/\u003cτ\u003e)^m\u003e^{1/m}$, which show a certain trend with the mean interval $\u003cτ\u003e$. We generate surrogate records using the Schreiber method, and find that their cumulative distributions almost collapse to a single curve and moments are almost constant for most range of $\u003cτ\u003e$. Those substantial differences suggest that non-linear correlations in the original volatility sequence account for the deviations from a single scaling law. We also find that the original and surrogate records exhibit slight tendencies for short and long $\u003cτ\u003e$, due to the discreteness and finite size effects of the records respectively. To avoid as possible those effects for testing the multiscaling behavior, we investigate the moments in the range $10\u003c\u003cτ\u003e\\leq100$, and find the exponent $α$ from the power law fitting $μ_m\\sim\u003cτ\u003e^α$ has a narrow distribution around $α\\neq0$ which depend on m for the 500 stocks. The distribution of $α$ for the surrogate records are very narrow and centered around $α=0$. This suggests that the return interval distribution exhibit multiscaling behavior due to the non-linear correlations in the original volatility.",
+          "abstract": "The distribution of the return intervals $τ$ between volatilities above a threshold $q$ for financial records has been approximated by a scaling behavior. To explore how accurate is the scaling and therefore understand the underlined non-linear mechanism, we investigate intraday datasets of 500 stocks which consist of the Standard & Poor's 500 index. We show that the cumulative distribution of return intervals has systematic deviations from scaling. We support this finding by studying the m-th moment $μ_m \\equiv <(τ/<τ>)^m>^{1/m}$, which show a certain trend with the mean interval $<τ>$. We generate surrogate records using the Schreiber method, and find that their cumulative distributions almost collapse to a single curve and moments are almost constant for most range of $<τ>$. Those substantial differences suggest that non-linear correlations in the original volatility sequence account for the deviations from a single scaling law. We also find that the original and surrogate records exhibit slight tendencies for short and long $<τ>$, due to the discreteness and finite size effects of the records respectively. To avoid as possible those effects for testing the multiscaling behavior, we investigate the moments in the range $10<<τ>\\leq100$, and find the exponent $α$ from the power law fitting $μ_m\\sim<τ>^α$ has a narrow distribution around $α\\neq0$ which depend on m for the 500 stocks. The distribution of $α$ for the surrogate records are very narrow and centered around $α=0$. This suggests that the return interval distribution exhibit multiscaling behavior due to the non-linear correlations in the original volatility.",
           "categories": [
             "q-fin.ST",
             "physics.soc-ph"
@@ -1290,7 +1489,7 @@
             "Hamed Farahani",
             "R. A. Serota"
           ],
-          "abstract": "We study decades-long historic distributions of accumulated S\\\u0026P500 returns, from daily returns to those over several weeks. The time series of the returns emphasize major upheavals in the markets -- Black Monday, Tech Bubble, Financial Crisis and Covid Pandemic -- which are reflected in the tail ends of the distributions. De-trending the overall gain, we concentrate on comparing distributions of gains and losses. Specifically, we compare the tails of the distributions, which are believed to exhibit power-law behavior and possibly contain outliers. Towards this end we find confidence intervals of the linear fits of the tails of the complementary cumulative distribution functions on a log-log scale, as well as conduct a statistical U-test in order to detect outliers. We also study probability density functions of the full distributions of the returns with the emphasis on their asymmetry. The key empirical observations are that the mean of de-trended distributions increases near-linearly with the number of days of accumulation while the overall skew is negative -- consistent with the heavier tails of losses -- and depends little on the number of days of accumulation. At the same time the variance of the distributions exhibits near-perfect linear dependence on the number of days of accumulation, that is it remains constant if scaled to the latter. Finally, we discuss the theoretical framework for understanding accumulated returns. Our main conclusion is that the current state of theory, which predicts symmetric or near-symmetric distributions of returns cannot explain the aggregate of empirical results.",
+          "abstract": "We study decades-long historic distributions of accumulated S\\&P500 returns, from daily returns to those over several weeks. The time series of the returns emphasize major upheavals in the markets -- Black Monday, Tech Bubble, Financial Crisis and Covid Pandemic -- which are reflected in the tail ends of the distributions. De-trending the overall gain, we concentrate on comparing distributions of gains and losses. Specifically, we compare the tails of the distributions, which are believed to exhibit power-law behavior and possibly contain outliers. Towards this end we find confidence intervals of the linear fits of the tails of the complementary cumulative distribution functions on a log-log scale, as well as conduct a statistical U-test in order to detect outliers. We also study probability density functions of the full distributions of the returns with the emphasis on their asymmetry. The key empirical observations are that the mean of de-trended distributions increases near-linearly with the number of days of accumulation while the overall skew is negative -- consistent with the heavier tails of losses -- and depends little on the number of days of accumulation. At the same time the variance of the distributions exhibits near-perfect linear dependence on the number of days of accumulation, that is it remains constant if scaled to the latter. Finally, we discuss the theoretical framework for understanding accumulated returns. Our main conclusion is that the current state of theory, which predicts symmetric or near-symmetric distributions of returns cannot explain the aggregate of empirical results.",
           "categories": [
             "q-fin.ST",
             "econ.TH",
@@ -1380,7 +1579,7 @@
             "Cheol-Jun Um",
             "Seunghwan Kim"
           ],
-          "abstract": "We investigate statistical properties of daily international market indices of seven countries, and high-frequency $S\u0026P500$ and KOSDAQ data, by using the detrended fluctuation method and the surrogate test. We have found that the returns of international stock market indices of seven countries follow a universal power-law distribution with an exponent of $ζ\\approx 3$, while the Korean stock market follows an exponential distribution with an exponent of $β\\approx 0.7$. The Hurst exponent analysis of the original return, and its magnitude and sign series, reveal that the long-term-memory property, which is absent in the returns and sign series, exists in the magnitude time series with $0.7 \\leq H \\leq 0.8$. The surrogate test shows that the magnitude time series reflects the non-linearity of the return series, which helps to reveal that the KOSDAQ index, one of the emerging markets, shows higher volatility than a mature market such as the {S\u0026P} 500 index.",
+          "abstract": "We investigate statistical properties of daily international market indices of seven countries, and high-frequency $S&P500$ and KOSDAQ data, by using the detrended fluctuation method and the surrogate test. We have found that the returns of international stock market indices of seven countries follow a universal power-law distribution with an exponent of $ζ\\approx 3$, while the Korean stock market follows an exponential distribution with an exponent of $β\\approx 0.7$. The Hurst exponent analysis of the original return, and its magnitude and sign series, reveal that the long-term-memory property, which is absent in the returns and sign series, exists in the magnitude time series with $0.7 \\leq H \\leq 0.8$. The surrogate test shows that the magnitude time series reflects the non-linearity of the return series, which helps to reveal that the KOSDAQ index, one of the emerging markets, shows higher volatility than a mature market such as the {S&P} 500 index.",
           "categories": [
             "physics.data-an",
             "q-fin.ST"
@@ -1402,7 +1601,7 @@
             "Liang Guo",
             "Wei-Xing Zhou"
           ],
-          "abstract": "The statistical properties of the return intervals $τ_q$ between successive 1-min volatilities of 30 liquid Chinese stocks exceeding a certain threshold $q$ are carefully studied. The Kolmogorov-Smirnov (KS) test shows that 12 stocks exhibit scaling behaviors in the distributions of $τ_q$ for different thresholds $q$. Furthermore, the KS test and weighted KS test shows that the scaled return interval distributions of 6 stocks (out of the 12 stocks) can be nicely fitted by a stretched exponential function $f(τ/\\barτ)\\sim e^{- α(τ/\\barτ)^γ}$ with $γ\\approx0.31$ under the significance level of 5%, where $\\barτ$ is the mean return interval. The investigation of the conditional probability distribution $P_q(τ| τ_0)$ and the mean conditional return interval $\u003cτ| τ_0\u003e$ demonstrates the existence of short-term correlation between successive return interval intervals. We further study the mean return interval $\u003cτ| τ_0\u003e$ after a cluster of $n$ intervals and the fluctuation $F(l)$ using detrended fluctuation analysis and find that long-term memory also exists in the volatility return intervals.",
+          "abstract": "The statistical properties of the return intervals $τ_q$ between successive 1-min volatilities of 30 liquid Chinese stocks exceeding a certain threshold $q$ are carefully studied. The Kolmogorov-Smirnov (KS) test shows that 12 stocks exhibit scaling behaviors in the distributions of $τ_q$ for different thresholds $q$. Furthermore, the KS test and weighted KS test shows that the scaled return interval distributions of 6 stocks (out of the 12 stocks) can be nicely fitted by a stretched exponential function $f(τ/\\barτ)\\sim e^{- α(τ/\\barτ)^γ}$ with $γ\\approx0.31$ under the significance level of 5%, where $\\barτ$ is the mean return interval. The investigation of the conditional probability distribution $P_q(τ| τ_0)$ and the mean conditional return interval $<τ| τ_0>$ demonstrates the existence of short-term correlation between successive return interval intervals. We further study the mean return interval $<τ| τ_0>$ after a cluster of $n$ intervals and the fluctuation $F(l)$ using detrended fluctuation analysis and find that long-term memory also exists in the volatility return intervals.",
           "categories": [
             "q-fin.ST",
             "physics.data-an",
@@ -1466,7 +1665,7 @@
             "Peng Liu",
             "Yanyan Zheng"
           ],
-          "abstract": "This paper systematically conducts an analysis of the composite index 1-min datasets over the 17-year period (2005-2021) for both the Shanghai and Shenzhen stock exchanges. To reveal the difference between the Chinese and the mature stock markets, here we precisely measure the property of return distribution of composite index over the time scale $Δt$ ranging from 1 min up to almost 4,000 min. The main findings are as follows. (1) Return distribution presents a leptokurtic, fat-tailed, and almost symmetrical shape, which is similar to that of mature markets. (2) The central part of return distribution is well described by the symmetrical Lévy $α$-stable process with a stability parameter comparable with the value of about 1.4 extracted in the U.S. stock market. (3) Return distribution can be well described by the student's t-distribution within a wider return range than the Lévy $α$-stable distribution. (4) Distinctively, the stability parameter shows a potential change when $Δt$ increases, and thus a crossover region at 15 $\u003c Δt \u003c$ 60 min is observed. This is different from the finding in the U.S. stock market where a single value of about 1.4 holds over 1 $\\le Δt \\le$ 1,000 min. (5) The tail distribution of returns at small $Δt$ decays as an asymptotic power-law with an exponent of about 3, which is a value widely existing in mature markets. However, it decays exponentially when $Δt \\ge$ 240 min, which is not observed in mature markets. (6) Return distributions gradually converge to Gaussian as $Δt$ increases. This observation is different from the finding of a critical $Δt =$ 4 days in the U.S. stock market.",
+          "abstract": "This paper systematically conducts an analysis of the composite index 1-min datasets over the 17-year period (2005-2021) for both the Shanghai and Shenzhen stock exchanges. To reveal the difference between the Chinese and the mature stock markets, here we precisely measure the property of return distribution of composite index over the time scale $Δt$ ranging from 1 min up to almost 4,000 min. The main findings are as follows. (1) Return distribution presents a leptokurtic, fat-tailed, and almost symmetrical shape, which is similar to that of mature markets. (2) The central part of return distribution is well described by the symmetrical Lévy $α$-stable process with a stability parameter comparable with the value of about 1.4 extracted in the U.S. stock market. (3) Return distribution can be well described by the student's t-distribution within a wider return range than the Lévy $α$-stable distribution. (4) Distinctively, the stability parameter shows a potential change when $Δt$ increases, and thus a crossover region at 15 $< Δt <$ 60 min is observed. This is different from the finding in the U.S. stock market where a single value of about 1.4 holds over 1 $\\le Δt \\le$ 1,000 min. (5) The tail distribution of returns at small $Δt$ decays as an asymptotic power-law with an exponent of about 3, which is a value widely existing in mature markets. However, it decays exponentially when $Δt \\ge$ 240 min, which is not observed in mature markets. (6) Return distributions gradually converge to Gaussian as $Δt$ increases. This observation is different from the finding of a critical $Δt =$ 4 days in the U.S. stock market.",
           "categories": [
             "q-fin.ST",
             "physics.soc-ph",
@@ -1576,7 +1775,7 @@
           "authors": [
             "Eugene W. Park"
           ],
-          "abstract": "This paper presents a method for predicting stock returns using principal component analysis (PCA) and the hidden Markov model (HMM) and tests the results of trading stocks based on this approach. Principal component analysis is applied to the covariance matrix of stock returns for companies listed in the S\u0026P 500 index, and interpreting principal components as factor returns, we apply the HMM model on them. Then we use the transition probability matrix and state conditional means to forecast the factors returns. Reverting the factor returns forecasts to stock returns using eigenvectors, we obtain forecasts for the stock returns. We find that, with the right hyperparameters, our model yields a strategy that outperforms the buy-and-hold strategy in terms of the annualized Sharpe ratio.",
+          "abstract": "This paper presents a method for predicting stock returns using principal component analysis (PCA) and the hidden Markov model (HMM) and tests the results of trading stocks based on this approach. Principal component analysis is applied to the covariance matrix of stock returns for companies listed in the S&P 500 index, and interpreting principal components as factor returns, we apply the HMM model on them. Then we use the transition probability matrix and state conditional means to forecast the factors returns. Reverting the factor returns forecasts to stock returns using eigenvectors, we obtain forecasts for the stock returns. We find that, with the right hyperparameters, our model yields a strategy that outperforms the buy-and-hold strategy in terms of the annualized Sharpe ratio.",
           "categories": [
             "q-fin.ST",
             "math.PR",
@@ -1727,7 +1926,7 @@
             "Alejandro Lopez-Lira",
             "Tom Zimmermann"
           ],
-          "abstract": "Mining 29,000 accounting ratios for t-statistics $\u003e 2.0$ leads to cross-sectional return predictability similar to the peer review process. For both, $\\approx50\\%$ of predictability remains after the original sample periods. This finding holds for many categories of research, including research with risk or equilibrium foundations. Only research agnostic about the theoretical explanation for predictability shows signs of outperformance. Our results imply that inferences about post-sample performance depend little on whether the predictor is peer-reviewed or data mined. They also have implications for the importance of empirical vs theoretical evidence, investors' learning from academic research, and the effectiveness of data mining.",
+          "abstract": "Mining 29,000 accounting ratios for t-statistics $> 2.0$ leads to cross-sectional return predictability similar to the peer review process. For both, $\\approx50\\%$ of predictability remains after the original sample periods. This finding holds for many categories of research, including research with risk or equilibrium foundations. Only research agnostic about the theoretical explanation for predictability shows signs of outperformance. Our results imply that inferences about post-sample performance depend little on whether the predictor is peer-reviewed or data mined. They also have implications for the importance of empirical vs theoretical evidence, investors' learning from academic research, and the effectiveness of data mining.",
           "categories": [
             "q-fin.GN"
           ],
@@ -1769,7 +1968,7 @@
             "Juho Kanniainen",
             "Ye Yue"
           ],
-          "abstract": "This paper introduces a non-parametric framework to statistically examine how news events, such as company or macroeconomic announcements, contribute to the pre- and post-event jump dynamics of stock prices under the intraday seasonality of the news and jumps. We demonstrate our framework, which has several advantages over the existing methods, by using data for i) the S\u0026P 500 index ETF, SPY, with macroeconomic announcements and ii) Nasdaq Nordic Large-Cap stocks with scheduled and non-scheduled company announcements. We provide strong evidence that non-scheduled company announcements and some macroeconomic announcements contribute jumps that follow the releases and also some evidence for pre-jumps that precede the scheduled arrivals of public information, which may indicate non-gradual information leakage. Especially interim reports of Nordic large-cap companies are found containing important information to yield jumps in stock prices. Additionally, our results show that releases of unexpected information are not reacted to uniformly across Nasdaq Nordic markets, even if they are jointly operated and are based on the same exchange rules.",
+          "abstract": "This paper introduces a non-parametric framework to statistically examine how news events, such as company or macroeconomic announcements, contribute to the pre- and post-event jump dynamics of stock prices under the intraday seasonality of the news and jumps. We demonstrate our framework, which has several advantages over the existing methods, by using data for i) the S&P 500 index ETF, SPY, with macroeconomic announcements and ii) Nasdaq Nordic Large-Cap stocks with scheduled and non-scheduled company announcements. We provide strong evidence that non-scheduled company announcements and some macroeconomic announcements contribute jumps that follow the releases and also some evidence for pre-jumps that precede the scheduled arrivals of public information, which may indicate non-gradual information leakage. Especially interim reports of Nordic large-cap companies are found containing important information to yield jumps in stock prices. Additionally, our results show that releases of unexpected information are not reacted to uniformly across Nasdaq Nordic markets, even if they are jointly operated and are based on the same exchange rules.",
           "categories": [
             "q-fin.GN"
           ],
@@ -1836,7 +2035,7 @@
             "Shlomo Havlin",
             "H. Eugene Stanley"
           ],
-          "abstract": "We study the return interval $τ$ between price volatilities that are above a certain threshold $q$ for 31 intraday datasets, including the Standard \u0026 Poor's 500 index and the 30 stocks that form the Dow Jones Industrial index. For different threshold $q$, the probability density function $P_q(τ)$ scales with the mean interval $\\barτ$ as $P_q(τ)={\\barτ}^{-1}f(τ/\\barτ)$, similar to that found in daily volatilities. Since the intraday records have significantly more data points compared to the daily records, we could probe for much higher thresholds $q$ and still obtain good statistics. We find that the scaling function $f(x)$ is consistent for all 31 intraday datasets in various time resolutions, and the function is well approximated by the stretched exponential, $f(x)\\sim e^{-a x^γ}$, with $γ=0.38\\pm 0.05$ and $a=3.9\\pm 0.5$, which indicates the existence of correlations. We analyze the conditional probability distribution $P_q(τ|τ_0)$ for $τ$ following a certain interval $τ_0$, and find $P_q(τ|τ_0)$ depends on $τ_0$, which demonstrates memory in intraday return intervals. Also, we find that the mean conditional interval $\u003cτ|τ_0\u003e$ increases with $τ_0$, consistent with the memory found for $P_q(τ|τ_0)$. Moreover, we find that return interval records have long term correlations with correlation exponents similar to that of volatility records.",
+          "abstract": "We study the return interval $τ$ between price volatilities that are above a certain threshold $q$ for 31 intraday datasets, including the Standard & Poor's 500 index and the 30 stocks that form the Dow Jones Industrial index. For different threshold $q$, the probability density function $P_q(τ)$ scales with the mean interval $\\barτ$ as $P_q(τ)={\\barτ}^{-1}f(τ/\\barτ)$, similar to that found in daily volatilities. Since the intraday records have significantly more data points compared to the daily records, we could probe for much higher thresholds $q$ and still obtain good statistics. We find that the scaling function $f(x)$ is consistent for all 31 intraday datasets in various time resolutions, and the function is well approximated by the stretched exponential, $f(x)\\sim e^{-a x^γ}$, with $γ=0.38\\pm 0.05$ and $a=3.9\\pm 0.5$, which indicates the existence of correlations. We analyze the conditional probability distribution $P_q(τ|τ_0)$ for $τ$ following a certain interval $τ_0$, and find $P_q(τ|τ_0)$ depends on $τ_0$, which demonstrates memory in intraday return intervals. Also, we find that the mean conditional interval $<τ|τ_0>$ increases with $τ_0$, consistent with the memory found for $P_q(τ|τ_0)$. Moreover, we find that return interval records have long term correlations with correlation exponents similar to that of volatility records.",
           "categories": [
             "physics.soc-ph",
             "q-fin.ST"
@@ -2062,7 +2261,7 @@
             "Galen Sher",
             "Pedro Vitoria"
           ],
-          "abstract": "Information theory provides ideas for conceptualising information and measuring relationships between objects. It has found wide application in the sciences, but economics and finance have made surprisingly little use of it. We show that time series data can usefully be studied as information -- by noting the relationship between statistical redundancy and dependence, we are able to use the results of information theory to construct a test for joint dependence of random variables. The test is in the same spirit of those developed by Ryabko and Astola (2005, 2006b,a), but differs from these in that we add extra randomness to the original stochatic process. It uses data compression to estimate the entropy rate of a stochastic process, which allows it to measure dependence among sets of random variables, as opposed to the existing econometric literature that uses entropy and finds itself restricted to pairwise tests of dependence. We show how serial dependence may be detected in S\u0026P500 and PSI20 stock returns over different sample periods and frequencies. We apply the test to synthetic data to judge its ability to recover known temporal dependence structures.",
+          "abstract": "Information theory provides ideas for conceptualising information and measuring relationships between objects. It has found wide application in the sciences, but economics and finance have made surprisingly little use of it. We show that time series data can usefully be studied as information -- by noting the relationship between statistical redundancy and dependence, we are able to use the results of information theory to construct a test for joint dependence of random variables. The test is in the same spirit of those developed by Ryabko and Astola (2005, 2006b,a), but differs from these in that we add extra randomness to the original stochatic process. It uses data compression to estimate the entropy rate of a stochastic process, which allows it to measure dependence among sets of random variables, as opposed to the existing econometric literature that uses entropy and finds itself restricted to pairwise tests of dependence. We show how serial dependence may be detected in S&P500 and PSI20 stock returns over different sample periods and frequencies. We apply the test to synthetic data to judge its ability to recover known temporal dependence structures.",
           "categories": [
             "q-fin.ST",
             "cs.IT",
@@ -2128,7 +2327,7 @@
             "Quyen Van",
             "Vy Tran"
           ],
-          "abstract": "Joining with the upward trend of Global Foreign direct investment and FDI in emerging economies and emerging Asian economies, FDI to Vietnam, especially M\u0026As have increased significantly in both numbers and value of deals from 1995 to 2015...",
+          "abstract": "Joining with the upward trend of Global Foreign direct investment and FDI in emerging economies and emerging Asian economies, FDI to Vietnam, especially M&As have increased significantly in both numbers and value of deals from 1995 to 2015...",
           "categories": [
             "q-fin.GN"
           ],
@@ -2193,7 +2392,7 @@
             "Liang Guo",
             "Guang Chen"
           ],
-          "abstract": "We investigate the probability distribution of the volatility return intervals $τ$ for the Chinese stock market. We rescale both the probability distribution $P_{q}(τ)$ and the volatility return intervals $τ$ as $P_{q}(τ)=1/\\barτ f(τ/\\barτ)$ to obtain a uniform scaling curve for different threshold value $q$. The scaling curve can be well fitted by the stretched exponential function $f(x) \\sim e^{-αx^γ}$, which suggests memory exists in $τ$. To demonstrate the memory effect, we investigate the conditional probability distribution $P_{q} (τ|τ_{0})$, the mean conditional interval $\u003cτ|τ_{0}\u003e$ and the cumulative probability distribution of the cluster size of $τ$. The results show clear clustering effect. We further investigate the persistence probability distribution $P_{\\pm}(t)$ and find that $P_{-}(t)$ decays by a power law with the exponent far different from the value 0.5 for the random walk, which further confirms long memory exists in $τ$. The scaling and long memory effect of $τ$ for the Chinese stock market are similar to those obtained from the United States and the Japanese financial markets.",
+          "abstract": "We investigate the probability distribution of the volatility return intervals $τ$ for the Chinese stock market. We rescale both the probability distribution $P_{q}(τ)$ and the volatility return intervals $τ$ as $P_{q}(τ)=1/\\barτ f(τ/\\barτ)$ to obtain a uniform scaling curve for different threshold value $q$. The scaling curve can be well fitted by the stretched exponential function $f(x) \\sim e^{-αx^γ}$, which suggests memory exists in $τ$. To demonstrate the memory effect, we investigate the conditional probability distribution $P_{q} (τ|τ_{0})$, the mean conditional interval $<τ|τ_{0}>$ and the cumulative probability distribution of the cluster size of $τ$. The results show clear clustering effect. We further investigate the persistence probability distribution $P_{\\pm}(t)$ and find that $P_{-}(t)$ decays by a power law with the exponent far different from the value 0.5 for the random walk, which further confirms long memory exists in $τ$. The scaling and long memory effect of $τ$ for the Chinese stock market are similar to those obtained from the United States and the Japanese financial markets.",
           "categories": [
             "q-fin.ST",
             "physics.soc-ph"
@@ -2306,7 +2505,7 @@
             "Ananjan Bhattacharyya",
             "Abhijeet Chandra"
           ],
-          "abstract": "In this paper, we study the determinants of expected returns on the listed penny stocks from two perspectives. Traditionally financial economics literature has been devoted to study the macro and micro determinants of expected returns on stocks (Subrahmanyam, 2010). Very few research has been carried out on penny stocks (Liu, Rhee, \u0026 Zhang, 2011; Nofsinger \u0026 Verma, 2014). Our study is an effort to contribute more empirical evidence on penny stocks in the emerging market context. We see the return dynamics of penny stocks from corporate governance perspective. Issues such as shareholding patters are considered to be of much significance when it comes to understand the price movements. Using cross-sectional data on 167 penny stocks listed in the National Stock Exchange of India, we show that (i) Returns of portfolio of lower market-cap penny stocks are significantly different(higher) than that of higher market-cap penny stocks. (ii)Returns of portfolio lower P/E stocks are significantly different (higher) than that of higher P/E stocks. Similarly, returns of portfolio of lower P/B stocks are significantly different (higher) than that of higher P/B stocks, and returns of portfolio of lower priced penny stocks are significantly different(higher) than that of higher priced penny stocks. (iii) Trading volume differences due to alphabetism are insignificant. (iv)Differences in returns of portfolios based on beta and shareholding patterns are insignificant.",
+          "abstract": "In this paper, we study the determinants of expected returns on the listed penny stocks from two perspectives. Traditionally financial economics literature has been devoted to study the macro and micro determinants of expected returns on stocks (Subrahmanyam, 2010). Very few research has been carried out on penny stocks (Liu, Rhee, & Zhang, 2011; Nofsinger & Verma, 2014). Our study is an effort to contribute more empirical evidence on penny stocks in the emerging market context. We see the return dynamics of penny stocks from corporate governance perspective. Issues such as shareholding patters are considered to be of much significance when it comes to understand the price movements. Using cross-sectional data on 167 penny stocks listed in the National Stock Exchange of India, we show that (i) Returns of portfolio of lower market-cap penny stocks are significantly different(higher) than that of higher market-cap penny stocks. (ii)Returns of portfolio lower P/E stocks are significantly different (higher) than that of higher P/E stocks. Similarly, returns of portfolio of lower P/B stocks are significantly different (higher) than that of higher P/B stocks, and returns of portfolio of lower priced penny stocks are significantly different(higher) than that of higher priced penny stocks. (iii) Trading volume differences due to alphabetism are insignificant. (iv)Differences in returns of portfolios based on beta and shareholding patterns are insignificant.",
           "categories": [
             "q-fin.PR",
             "q-fin.GN"
@@ -2390,7 +2589,7 @@
             "Giovanni Bonanno",
             "Rosario N. Mantegna"
           ],
-          "abstract": "We investigate the recently introduced variety of a set of stock returns traded in a financial market. This investigation is done by considering daily and intraday time horizons in a 15-day time period centered at the August 31st, 1998 crash of the S\u0026P500 index. All the stocks traded at the NYSE during that period are considered in the present analysis. We show that the statistical properties of the variety observed in analyses of daily returns also hold for intraday returns. In particular the largest changes of the variety of the return distribution turns out to be most localized at the opening or (to a less degree) at the closing of the market.",
+          "abstract": "We investigate the recently introduced variety of a set of stock returns traded in a financial market. This investigation is done by considering daily and intraday time horizons in a 15-day time period centered at the August 31st, 1998 crash of the S&P500 index. All the stocks traded at the NYSE during that period are considered in the present analysis. We show that the statistical properties of the variety observed in analyses of daily returns also hold for intraday returns. In particular the largest changes of the variety of the return distribution turns out to be most localized at the opening or (to a less degree) at the closing of the market.",
           "categories": [
             "cond-mat.stat-mech",
             "q-fin.ST"
@@ -2459,7 +2658,7 @@
             "Hamed Farahani",
             "R. A. Serota"
           ],
-          "abstract": "We argue that negative skew and positive mean of the distribution of stock returns are largely due to the broken symmetry of stochastic volatility governing gains and losses. Starting with stochastic differential equations for stock returns and for stochastic volatility we argue that the distribution of stock returns can be effectively split in two -- for gains and losses -- assuming difference in parameters of their respective stochastic volatilities. A modified Jones-Faddy skew t-distribution utilized here allows to reflect this in a single organic distribution which tends to meaningfully capture this asymmetry. We illustrate its application on distribution of daily S\u0026P500 returns, including analysis of its tails.",
+          "abstract": "We argue that negative skew and positive mean of the distribution of stock returns are largely due to the broken symmetry of stochastic volatility governing gains and losses. Starting with stochastic differential equations for stock returns and for stochastic volatility we argue that the distribution of stock returns can be effectively split in two -- for gains and losses -- assuming difference in parameters of their respective stochastic volatilities. A modified Jones-Faddy skew t-distribution utilized here allows to reflect this in a single organic distribution which tends to meaningfully capture this asymmetry. We illustrate its application on distribution of daily S&P500 returns, including analysis of its tails.",
           "categories": [
             "q-fin.ST",
             "econ.TH"
@@ -2499,7 +2698,7 @@
           "authors": [
             "Chang Liu"
           ],
-          "abstract": "Stock return prediction is fundamental to financial decision-making, yet traditional time series models fail to capture the complex interdependencies between companies in modern markets. We propose the Full-State Graph Convolutional LSTM (FS-GCLSTM), a novel temporal graph neural network that incorporates value-chain relationships to enhance stock return forecasting. Our approach features two key innovations: First, we represent inter-firm dependencies through value-chain networks, where nodes correspond to companies and edges capture supplier-customer relationships, enabling the model to leverage information beyond historical price data. Second, FS-GCLSTM applies graph convolutions to all LSTM components - current input features, previous hidden states, and cell states - ensuring that spatial information from the value-chain network influences every aspect of the temporal update mechanism. We evaluate FS-GCLSTM on Eurostoxx 600 and S\u0026P 500 datasets using LSEG value-chain data. While not achieving the lowest traditional prediction errors, FS-GCLSTM consistently delivers superior portfolio performance, attaining the highest annualized returns, Sharpe ratios, and Sortino ratios across both markets. Performance gains are more pronounced in the denser Eurostoxx 600 network, and robustness tests confirm stability across different input sequence lengths, demonstrating the practical value of integrating value-chain data with temporal graph neural networks.",
+          "abstract": "Stock return prediction is fundamental to financial decision-making, yet traditional time series models fail to capture the complex interdependencies between companies in modern markets. We propose the Full-State Graph Convolutional LSTM (FS-GCLSTM), a novel temporal graph neural network that incorporates value-chain relationships to enhance stock return forecasting. Our approach features two key innovations: First, we represent inter-firm dependencies through value-chain networks, where nodes correspond to companies and edges capture supplier-customer relationships, enabling the model to leverage information beyond historical price data. Second, FS-GCLSTM applies graph convolutions to all LSTM components - current input features, previous hidden states, and cell states - ensuring that spatial information from the value-chain network influences every aspect of the temporal update mechanism. We evaluate FS-GCLSTM on Eurostoxx 600 and S&P 500 datasets using LSEG value-chain data. While not achieving the lowest traditional prediction errors, FS-GCLSTM consistently delivers superior portfolio performance, attaining the highest annualized returns, Sharpe ratios, and Sortino ratios across both markets. Performance gains are more pronounced in the denser Eurostoxx 600 network, and robustness tests confirm stability across different input sequence lengths, demonstrating the practical value of integrating value-chain data with temporal graph neural networks.",
           "categories": [
             "q-fin.ST",
             "cs.LG",
@@ -2522,7 +2721,7 @@
             "Vincent Lahoche",
             "Dine Ousmane Samary"
           ],
-          "abstract": "Financial stock return correlations have been analyzed through the lens of random matrix theory to differentiate the underlying signal from spurious correlations. The continuous spectrum of the eigenvalue distribution derived from the stock return correlation matrix typically aligns with a rescaled Marchenko-Pastur distribution, indicating no detectable signal. In this study, we introduce a stochastic field theory model to establish a detection threshold for signals present in the limit where the eigenvalues are within the continuous spectrum, which itself closely resembles that of a random matrix where standard methods such as principal component analysis fail to infer a signal. We then apply our method to Standard \u0026 Poor's 500 financial stocks' return correlations, detecting the presence of a signal in the largest eigenvalues within the continuous spectrum.",
+          "abstract": "Financial stock return correlations have been analyzed through the lens of random matrix theory to differentiate the underlying signal from spurious correlations. The continuous spectrum of the eigenvalue distribution derived from the stock return correlation matrix typically aligns with a rescaled Marchenko-Pastur distribution, indicating no detectable signal. In this study, we introduce a stochastic field theory model to establish a detection threshold for signals present in the limit where the eigenvalues are within the continuous spectrum, which itself closely resembles that of a random matrix where standard methods such as principal component analysis fail to infer a signal. We then apply our method to Standard & Poor's 500 financial stocks' return correlations, detecting the presence of a signal in the largest eigenvalues within the continuous spectrum.",
           "categories": [
             "q-fin.ST",
             "cond-mat.stat-mech",
@@ -2764,7 +2963,7 @@
             "Hao Zhang",
             "Travis Desell"
           ],
-          "abstract": "Stock return forecasting is a major component of numerous finance applications. Predicted stock returns can be incorporated into portfolio trading algorithms to make informed buy or sell decisions which can optimize returns. In such portfolio trading applications, the predictive performance of a time series forecasting model is crucial. In this work, we propose the use of the Evolutionary eXploration of Augmenting Memory Models (EXAMM) algorithm to progressively evolve recurrent neural networks (RNNs) for stock return predictions. RNNs are evolved independently for each stocks and portfolio trading decisions are made based on the predicted stock returns. The portfolio used for testing consists of the 30 companies in the Dow-Jones Index (DJI) with each stock have the same weight. Results show that using these evolved RNNs and a simple daily long-short strategy can generate higher returns than both the DJI index and the S\u0026P 500 Index for both 2022 (bear market) and 2023 (bull market).",
+          "abstract": "Stock return forecasting is a major component of numerous finance applications. Predicted stock returns can be incorporated into portfolio trading algorithms to make informed buy or sell decisions which can optimize returns. In such portfolio trading applications, the predictive performance of a time series forecasting model is crucial. In this work, we propose the use of the Evolutionary eXploration of Augmenting Memory Models (EXAMM) algorithm to progressively evolve recurrent neural networks (RNNs) for stock return predictions. RNNs are evolved independently for each stocks and portfolio trading decisions are made based on the predicted stock returns. The portfolio used for testing consists of the 30 companies in the Dow-Jones Index (DJI) with each stock have the same weight. Results show that using these evolved RNNs and a simple daily long-short strategy can generate higher returns than both the DJI index and the S&P 500 Index for both 2022 (bear market) and 2023 (bull market).",
           "categories": [
             "q-fin.PM",
             "cs.AI",
@@ -2982,7 +3181,7 @@
           "authors": [
             "Jiawei Du"
           ],
-          "abstract": "We studied the volatility and cross-sectional return dispersion effect of S\u0026P Health Care Sector under the covid-19 epidemic. We innovatively used the Google index to proxy the impact of the epidemic and modeled the volatility. We also studied the influencing factors of the log-return of S\u0026P Energy Sector and S\u0026P Health Care Sector. We found that volatility is significantly affected by both the epidemic and cross-sectional return dispersion, and the coefficients in front of them are all positive, which means that the herding behaviour did not exist and as the cross-sectional return dispersion increases and the epidemic becomes more severe, the volatility of stock returns is also increasing. We also found that the epidemic has a significant negative impact on the return of the energy sector, and finally we provided our suggestions to investors.",
+          "abstract": "We studied the volatility and cross-sectional return dispersion effect of S&P Health Care Sector under the covid-19 epidemic. We innovatively used the Google index to proxy the impact of the epidemic and modeled the volatility. We also studied the influencing factors of the log-return of S&P Energy Sector and S&P Health Care Sector. We found that volatility is significantly affected by both the epidemic and cross-sectional return dispersion, and the coefficients in front of them are all positive, which means that the herding behaviour did not exist and as the cross-sectional return dispersion increases and the epidemic becomes more severe, the volatility of stock returns is also increasing. We also found that the epidemic has a significant negative impact on the return of the energy sector, and finally we provided our suggestions to investors.",
           "categories": [
             "q-fin.ST"
           ],
@@ -3125,5 +3324,5 @@
       ]
     }
   ],
-  "total": 143
+  "total": 153
 }

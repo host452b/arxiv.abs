@@ -1,0 +1,31 @@
+Title: StealthyPoison: Manipulating LLM Agent Behavior through Procedural Poisoning of Third-Party Skills
+Authors: Jingfen Qiao, Rui Li, Shuaiqun Pan, Olga Gadyatskaya, Andrew Yates, Evangelos Kanoulas
+ID: 2611.12155
+URL: https://arxiv.org/abs/2611.12155
+
+Abstract:
+LLM agents increasingly retrieve third-party skills from public registries and
+follow their procedures to complete user tasks. This reliance allows attackers
+to manipulate agent behavior by poisoning the skills. However, overtly malicious
+instructions can provide explicit signals for detection. We present
+StealthyPoison, a stealthy procedural poisoning attack that corrupts a skill's
+decision-critical rules to induce incorrect task outcomes while preserving its
+advertised functionality and normal execution. Unlike prior knowledge corruption
+attacks that craft poisoned content for known target question-answer pairs,
+StealthyPoison constructs reusable poisoned procedures from a publicly available
+third-party skill, without access to actual user requests or their ground-truth
+answers. To make the poisoned procedure generalize to unseen requests, it first
+synthesizes requests from the target skill and executes its clean version using
+a surrogate agent to obtain pseudo-references. These references and surrogate
+execution feedback guide the iterative refinement of payloads that alter
+decision-critical rules. To increase the likelihood that the poisoned skill is
+retrieved and selected over benign alternatives, the attack augments the
+poisoned skill's retrieval metadata with independently generated request
+descriptions. We evaluate StealthyPoison on 566 eligible target skills and 5,244
+requests against more than 26,000 registry entries. It improves top-1 poisoned-
+skill placement by 13.6% relative to both HotFlip and GCG. Constructed using
+feedback from a single surrogate model, the procedural poisoning payloads
+transfer effectively and without modification to three held-out victim models
+and achieve end-to-end attack success in a Claude Code workflow powered by Opus
+4.8. The defense evaluation further shows that most of these payloads evade
+detection by both SkillSpector and GPT-5.4-mini.

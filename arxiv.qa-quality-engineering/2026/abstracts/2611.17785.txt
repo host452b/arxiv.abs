@@ -1,0 +1,27 @@
+Title: CHARMING: Parallel Edge AI Acceleration Across Tensor Processing and In-Memory Computation
+Authors: Md Omar Faruque, Jingang Jin, João Paulo C. de Lima, Shouzhi Fang, William C. Tegge, Peipei Zhou, Qinru Qiu, Alex K. Jones
+ID: 2611.17785
+URL: https://arxiv.org/abs/2611.17785
+
+Abstract:
+Edge AI increasingly relies on specialized accelerators for low-latency
+inference under tight resource and energy constraints, yet their efficiency
+remains limited by data movement. Prior work, CHARM, mitigates this overhead by
+overlapping data movement with computation. We observe that in-memory computing
+can further supplement tensor processing as a parallel accelerator while
+eliminating certain data movements entirely. We present CHARMING, a
+heterogeneous edge AI architecture that uses accuracy- and quantization-aware
+partitioning to distribute and concurrently execute inference workloads across
+tensor processing and in-memory computation. CHARMING partitions attention heads
+between an AIE array and an in-DRAM compute unit, balancing execution according
+to model architecture, sequence length, and precision while selecting heads to
+minimize accuracy degradation. CHARMING also integrates quantization into the
+AIE projection stage to further reduce data movement. We validate CHARMING end-
+to-end in hardware on AMD Versal VCK5000 and Alveo U200 platforms and evaluate
+LLM and video-generation models across multiple precisions using measured
+hardware results and simulation of the latest in-memory compute hardware.
+CHARMING improves prefill performance by up to 23.6 percent and decode
+performance by up to 44 percent over AIE-only acceleration. With int4 x int4
+fixed-point in-memory computation, CHARMING reduces per-layer energy by up to
+7.6 percent and improves energy-delay product by up to 24.7 percent, while
+maintaining accuracy similar to a 32-bit floating-point baseline.

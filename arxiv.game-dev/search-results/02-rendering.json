@@ -10,11 +10,322 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:43:03Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 219,
-  "return_count": 200,
+  "return_count": 216,
   "papers": [
+    {
+      "id": "2610.11752",
+      "title": "2DGS-Planner: Rasterization-based Path Planning in 2D Gaussian Splatting Map",
+      "authors": [
+        "Jiwon Park",
+        "Dong-Uk Seo",
+        "Hyun Myung"
+      ],
+      "abstract": "Gaussian splatting provides an explicit and efficiently rasterizable scene representation for robot navigation. However, individual Gaussian primitives may not reliably represent obstacles as they are jointly optimized through alpha-composited rendering from a finite set of reconstruction views. We propose 2DGS-Planner, a path planner for ground robots that reads planning-relevant geometry from a 2D Gaussian splatting (2DGS) map through rasterization, rather than treating individual Gaussian primitives as obstacles. During offline roadmap construction, multi-view attribution converts rendered normal dispersion into structural scores for non-ground disks supported by the reconstruction views. These scores guide adaptive node sampling on the ground. Path-aligned orthographic queries validate candidate edges, while cylindrical queries estimate local clearance fields that are cached on the edges. During online planning, graph search initializes a route, and path refinement reuses the cached fields while accounting for the robot's dimensions and ground constraints. Experiments demonstrate improved roadmap connectivity, more accurate clearance estimation, and higher planning success compared with the tested baselines. These results support rasterization as an effective geometric query interface for planning directly on Gaussian maps. Code and data are available at https://2dgs-planner.github.io/",
+      "published": "2026-10-08T11:41:38Z",
+      "updated": "2026-10-08T11:41:38Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.11752",
+      "abs_url": "https://arxiv.org/abs/2610.11752",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.06762",
+      "title": "Real-time Rendering of Pre-integrated Neural Emitters",
+      "authors": [
+        "Arno Coomans",
+        "Floor Verhoeven",
+        "Edoardo A. Dominici",
+        "Markus Steinberger"
+      ],
+      "abstract": "Direct illumination from non-trivial emitters with occluding housing, high-polygon emissive meshes, spatially varying emission, or deformable assemblies is a persistent bottleneck in real-time rendering. Current real-time solutions either rely on simplified analytical representations or fall back to runtime sampling. Analytical methods are restricted to simple emitter geometry, pure sampling-based estimators need high sampling budgets to be noise-free, and proxy representations still require runtime integration over outgoing radiance around the emitter. We present Neural Emission Fields (NEF), a representation that eliminates runtime integration by precomputing the illumination in the volume around the emitter. This neural field is parameterized by position, normal, view direction, and material parameters. Using a two-headed diffuse/glossy architecture, it yields noise-free unoccluded direct illumination from a single network evaluation per shading point. Because training is performed in the emitter's local frame, a trained NEF acts as a portable lighting asset reusable across scenes under rigid transforms. Internal interreflections, self-occlusion, spatially varying emission, and deformations are absorbed into the learned representation at zero additional runtime cost.",
+      "published": "2026-10-05T17:35:36Z",
+      "updated": "2026-10-05T17:35:36Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.06762",
+      "abs_url": "https://arxiv.org/abs/2610.06762",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.21199",
+      "title": "OnomatoBridge: Onomatopoeia Translation and Rendering Pipeline in Manga",
+      "authors": [
+        "Takara Taniguchi",
+        "Wataru Shimoda",
+        "Kota Yamaguchi",
+        "Hideki Nakayama"
+      ],
+      "abstract": "Manga is a comic drawn by black and white paints gaining popularity around the world. Onomatopoeia in Manga specifically appeals to the audience with its unique visual styles, which convey sound, motion, and emotion. Visual onomatopoeia translation requires the clean replacement of Japanese onomatopoeia with onomatopoeia in the other language while preserving their visual style. Existing approaches often produce residual artifacts or style inconsistency when removing the Japanese onomatopoeia and rendering stylized English onomatopoeia. To approach these problems, we present OnomatoBridge, a filtering pipeline for visual onomatopoeia translation. We evaluate OnomatoBridge from Japanese to English on the Manga109 onomatopoeia dataset and compare it with baseline image editing models. Experimental results show that the filtered outputs by the proposed method outperform those of conventional methods. OnomatoBridge improves English text correctness by roughly 10 to 25 points and reduces residual Japanese text by about 20 to 50% in relative terms.",
+      "published": "2026-09-18T01:28:04Z",
+      "updated": "2026-09-18T01:28:04Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.21199",
+      "abs_url": "https://arxiv.org/abs/2609.21199",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.03613",
+      "title": "TileGS: Tile-Local Depth Binning for Gaussian Splatting Rasterization",
+      "authors": [
+        "Wei Tan",
+        "Matias Turkulainen",
+        "Lauri Ilola",
+        "Hamed Rezazadegan Tavakoli",
+        "Juho Kannala"
+      ],
+      "abstract": "Real-time 3D Gaussian Splatting (3DGS) achieves high rendering quality, but standard rasterization still traverses a globally sorted tile stream that creates long per-tile ranges and heavy geometry-attribute traffic. We present TileGS, a tile-local reorganization of Gaussian splatting. TileGS turns each long tile range into a sequence of shorter depth-local ranges, rasterizes those ranges in front-to-back order, and applies selective repair where coarse ordering is insufficient to match baseline compositing. Across a 9-scene benchmark on desktop and laptop Ada GPUs, our default No-GW (No Geometry-Write) variant delivers a mean 1.44x raster-kernel speedup on RTX 4090 and mean end-to-end frame speedups of 1.069x on RTX 4090 and 1.094x on RTX 1000 Ada over gsplat--a widely used optimized open-source 3DGS implementation--while matching the gsplat output up to numerical noise (|Delta PSNR| < 0.001 dB, |Delta SSIM| < 0.001, |Delta LPIPS| < 0.001). Full-suite RTX 4090 Nsight Compute profiling reveals TileGS is faster despite lower SM throughput, lower active-warp occupancy, and higher DRAM traffic, while total SASS thread instructions fall by 1.26x. Source-attributed profiling confirms that geometry attributes dominate the remaining memory pressure (85.8% of total raster traffic and 88.6% of excess sectors). Together, these counters support the interpretation that TileGS improves raster performance by reducing effective raster traversal work, rather than by reducing byte volume, improving coalescing, increasing occupancy, or directly reducing measured warp divergence.",
+      "published": "2026-09-03T09:59:32Z",
+      "updated": "2026-09-03T09:59:32Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.03613",
+      "abs_url": "https://arxiv.org/abs/2609.03613",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.17682",
+      "title": "Differentiable Voronoi Ray Tracing Beyond Rasterization Speeds",
+      "authors": [
+        "Bernardo Taveira",
+        "Carl Lindström",
+        "Joakim Johnander",
+        "Fredrik Kahl"
+      ],
+      "abstract": "Real-time novel view synthesis is dominated by rasterized explicit primitives. These projection-based pipelines provide high throughput but require specialized extensions for non-pinhole effects such as distortion, rolling shutter, and depth of field. Ray-based rendering expresses these effects naturally but is generally assumed too slow for competitive real-time rendering. We analyze the factors governing throughput in differentiable Voronoi ray tracing and identify traversal length, per-cell work, and memory locality as principal determinants. Guided by this, we introduce VoroTracing, which co-designs the scene representation, optimization, and GPU execution to reduce these costs. Compact octahedral appearance textures reduce memory traffic, while surface-concentrated opacity promotes early termination. The fixed-budget representation is optimized without pruning or densification and rendered with a GPU implementation designed for coherent traversal. On Mip-NeRF 360, VoroTracing renders at 623 FPS on an RTX 5090, providing $3.2\\times$ the throughput of the fastest prior ray-based method and $2.8\\times$ that of 3D Gaussian Splatting, while maintaining competitive reconstruction quality. Our renderer supports fisheye, rolling-shutter, motion-blur, and depth-of-field effects through ray generation and sampling, requiring no specialized rasterization. These results show that real-time throughput can be achieved with the flexibility of ray-based rendering. We release our source code, see https://research.zenseact.com/publications/vorotracing",
+      "published": "2026-08-18T11:55:58Z",
+      "updated": "2026-08-18T11:55:58Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.17682",
+      "abs_url": "https://arxiv.org/abs/2608.17682",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.17390",
+      "title": "Six Ways to Draw Vangers with WebGPU: Real-Time Rendering of Editable Multi-Layer Height Fields",
+      "authors": [
+        "Dzmitry Malyshau"
+      ],
+      "abstract": "Terrain level-of-detail is measured almost exclusively on digital elevation models: single-valued, smooth at the sampling scale, sampled from real topography. Game terrain is often none of these. We compare six rendering methods - height-field ray marching, voxel-accelerated ray marching, sliced proxy geometry, per-sample bar rasterization, compute scattering, and a fitted triangle mesh - implemented in a single engine over a single data path, on the hand-authored multi-layer terrain of Vangers (1998), scored against a CPU ray cast of the same source data. Every method must preserve the two solid intervals available at a ground sample, render at interactive rates, and reflect local terrain destruction without reloading the level. These constraints rule out treating caves as decoration or amortizing a static preprocessing step over an immutable map. From the original game's top-down camera the six methods look interchangeable. At eye-level horizons they do not: point scattering loses coverage, slicing bands, and an over-simplified mesh can miss a wall. At the selected quality settings a greedy triangulated irregular network (TIN) has the lowest mean frame time on every device we measured, but the fit cost is set by the second layer rather than by floor relief, and making that mesh editable retains 319 MiB of GPU geometry and 535 MiB of CPU triangulation. All six implementations use the same native wgpu / WebGPU API and canonical WGSL. We release the engine, the harness, and a one-command measurement protocol.",
+      "published": "2026-08-18T05:31:23Z",
+      "updated": "2026-08-18T05:31:23Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.17390",
+      "abs_url": "https://arxiv.org/abs/2608.17390",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.09604",
+      "title": "A Hybrid Neural-Microfacet BRDF Model for Real-Time Rendering",
+      "authors": [
+        "Louis De Oliveira",
+        "Anastasia Karpova",
+        "Georges Nader",
+        "Antoine Houdard",
+        "Pierre Mezieres",
+        "Damien Rioux-Lavoie",
+        "Romain Pacanowski"
+      ],
+      "abstract": "Over the past decade, microfacet-based BRDF models have formed the foundation of real-time rendering pipelines. Despite their widespread use, they often fail to reproduce subtle appearance effects arising from complex light-surface interactions, which have led to the emergence of specialized physics-based models for specific optical phenomena (e.g., diffraction, iridescence, multilayers). Although more accurate, these models lose versatility and lack performance for real-time rendering. Recently introduced, neural models have demonstrated their ability to approximate BRDF reference data coming from measurements, simulations, or even complex shading networks. However, most current neural models require relatively large networks, making them costly for real-time rendering. In this paper, we introduce a hybrid model that combines a GGX-type microfacet model and a neural model to leverage the best features of both representations. The neural component corrects the appearance approximated by the microfacet component, allowing much smaller network than in existing neural models. We show that, at identical memory cost, our model approximates measurements better than state-of-the-art neural models for a low evaluation overhead compared to a microfacet-based model. Furthermore, our hybrid model remains easily editable by artists and benefits from an important sampling scheme, making it attractive for both offline and real-time rendering.",
+      "published": "2026-08-10T13:46:33Z",
+      "updated": "2026-08-10T13:46:33Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.09604",
+      "abs_url": "https://arxiv.org/abs/2608.09604",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.04230",
+      "title": "High-Performance Real-Time Implicit Strand-Based Hair Rendering via Software Rasterization",
+      "authors": [
+        "Lukas Lipp",
+        "Adrian Jarabo",
+        "Michael Wimmer",
+        "Lukas Bode"
+      ],
+      "abstract": "In this work we propose an efficient deferred software rasterization pipeline for real-time rendering of strand-based hair using hair meshes. Hair plays a crucial role in creating expressive 3D characters, yet strand-based approaches are often restricted to high-end hardware and typically applied to only a small number of hero characters. Hair meshes have proven to be an efficient representation capable of handling a wide variety of groom styles, but existing mesh shader-based implementations still suffer from significant bottlenecks. In this work, we address these limitations with a software rasterization approach that improves performance and compatibility. Our method enables efficient far-field strand-based hair rendering-even at a single sample per pixel-by combining deferred shading with a strand filtering and reconstruction step, while requiring only minimal hardware support. To further enhance scalability, we introduce a level-of-detail (LOD) scheme that adapts hair representation and shading complexity based on viewing distance and screen-space coverage, reducing computational cost further while preserving visual fidelity. To the best of our knowledge, this is the first approach to achieve this combination of efficiency, flexibility, scalability, and broad hardware compatibility.",
+      "published": "2026-07-05T11:05:45Z",
+      "updated": "2026-07-05T11:05:45Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.04230",
+      "abs_url": "https://arxiv.org/abs/2607.04230",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.29794",
+      "title": "UniTriSplat: A Unified 3D Gaussian Splatting Framework with Uniform Spherical Rasterization for Universal Cameras",
+      "authors": [
+        "Yipeng Zhu",
+        "Huajian Huang",
+        "Tristan Braud",
+        "Sai-Kit Yeung"
+      ],
+      "abstract": "Existing 3D Gaussian Splatting (3DGS) frameworks rely on camera-specific rasterization, suffering from inconsistent solid-angle sampling and degraded performance across heterogeneous camera models (e.g., perspective, fisheye, omnidirectional). To address this limitation, we propose UniTriSplat, a unified 3DGS framework for universal cameras that reformulates Gaussian splatting on the unit sphere via HEALPix discretization. Leveraging the equal-area property of HEALPix, we construct a spherical sampling grid aligned with the angular resolution of input images. We derive the forward rendering and gradient propagation of Gaussians directly in the spherical radian domain, yielding uniform optimization behavior from narrow-FoV images to full 360-degree panoramas. To enhance perceptual reconstruction quality, we additionally introduce a HEALPix-aware SSIM loss that respects spherical neighborhood structure. Extensive experiments across diverse camera models demonstrate that UniTriSplat consistently improves cross-camera generalization while preserving geometric fidelity and rendering quality.",
+      "published": "2026-06-29T05:14:48Z",
+      "updated": "2026-06-29T05:14:48Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.29794",
+      "abs_url": "https://arxiv.org/abs/2606.29794",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.28622",
+      "title": "Meshtryoshka: Differentiable Rendering of Real-World Scenes via Mesh Rasterization",
+      "authors": [
+        "David Charatan",
+        "Daniel Xu",
+        "Richard Szeliski",
+        "George Kopanas",
+        "Vincent Sitzmann"
+      ],
+      "abstract": "Differentiable rendering has emerged as a powerful approach for 3D reconstruction and novel view synthesis. State-of-the-art differentiable rendering methods combine a variety of custom representations of 3D geometry and appearance with specialized renderers. However, most downstream tasks in computer graphics rely on 3D meshes. While prior work has attempted differentiable rendering with mesh representations, these approaches are limited to object-centric scenes and fail to reconstruct large-scale, unbounded scenes. In this work, we introduce Meshtryoshka, a novel mesh differentiable rendering framework that combines an off-the-shelf triangle rasterizer with a 3D representation that consists of nested mesh shells which resemble a matryoshka doll. In every forward pass, the mesh shells are extracted anew from a 3D signed distance function via iso-surface extraction, and the opacities for each vertex are computed as a function of signed distance. Each mesh shell is then rasterized independently, and the final image is created via alpha compositing. Crucially, mesh vertex positions are updated only indirectly via gradients that flow through the opacity values into the signed distance function, and hence, our method is compatible with off-the-shelf mesh renderers that need not be differentiable with respect to vertex positions. On object-centric scenes, our method performs competitively with surface-based differentiable rendering techniques. Our differentiable mesh rendering method scales to unbounded, real-world 3D scenes, where it yields high-quality novel view synthesis results approaching those of state-of-the-art, non-mesh methods. Our method suggests that it may be possible to solve the differentiable rendering problem without relying on specialized renderers, only using conventional tools from the computer graphics toolbox.",
+      "published": "2026-06-26T21:44:36Z",
+      "updated": "2026-07-11T07:20:26Z",
+      "categories": [
+        "cs.CV",
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.28622",
+      "abs_url": "https://arxiv.org/abs/2606.28622",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.23031",
+      "title": "DrivingVoxels: Compositional Sparse Voxel Rasterization for Dynamic Driving Scene Reconstruction",
+      "authors": [
+        "Tania Aguirre",
+        "Luis Roldão",
+        "Moussab Bennehar",
+        "Nathan Piasco",
+        "Dzmitry Tsishkou",
+        "Simone Rossi",
+        "Pietro Michiardi"
+      ],
+      "abstract": "Reconstructing dynamic urban scenes remains challenging due to the unbounded nature of driving environments and the presence of multiple dynamic objects. Currently, potentially faster sparse voxel methods are mainly designed for static scenarios. On the other hand, dynamic approaches based on 3D Gaussian Splatting, despite their high-fidelity, are often time-consuming for driving scenarios and exhibit uncontrollable memory growth in large scenes. To address these limitations, we present DrivingVoxels, a compositional sparse voxel rendering framework for dynamic driving scenes. Our method jointly rasterizes sparse voxels from multiple independent octrees within a single rendering pass. Each rigid dynamic object is represented by an octree defined in its local coordinate frame, while a separate static octree models the stationary background. DrivingVoxels adopts a fully explicit, neural-free representation together with a LiDAR-guided structural initialization that efficiently captures scene geometry. We evaluate our framework on the PandaSet benchmark, demonstrating that DrivingVoxels performs on par on perceptual metrics and better on structural metrics for NVS and reconstruction while requiring shorter training times than previous 3DGS-base methods to an efficient optimization workflow anchored by a strong LiDAR prior.",
+      "published": "2026-06-22T08:42:16Z",
+      "updated": "2026-06-22T08:42:16Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.23031",
+      "abs_url": "https://arxiv.org/abs/2606.23031",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.25178",
+      "title": "Lightweight Real-Time Rendering Parameter Optimization via XGBoost-Driven Lookup Tables",
+      "authors": [
+        "Baijun Tan",
+        "Francesco Moretti"
+      ],
+      "abstract": "Achieving a desirable balance between rendering quality and real-time performance is a long-standing challenge in modern game and rendering engines, particularly on resource-constrained mobile devices such as laptops, tablets, and smartphones. Existing approaches to automatic rendering parameter optimization either depend on exhaustive per-scene pre-computation that spans several days, suffer from the prohibitive inference overhead of neural networks that prevents per-frame adaptation, or lack generalizability across heterogeneous hardware and diverse scenes. In this paper, we propose \\textbf{LUT-Opt}, a lightweight, general-purpose framework for adaptive per-frame rendering parameter optimization. Our method decomposes the joint optimization of rendering time and image quality into a tractable two-stage pipeline. In the offline stage, we train a pair of XGBoost regressors to predict rendering time and image quality from rendering parameters, hardware state, and scene complexity descriptors. The trained ensemble models are then distilled into compact lookup tables (LUTs) through systematic discretization and a two-phase linear search that first constrains rendering time and subsequently maximizes structural similarity (SSIM). During runtime, the pre-computed LUT is queried every frame in sub-millisecond time, enabling truly adaptive parameter selection with negligible computational overhead. We validate LUT-Opt on two representative rendering techniques -- subsurface scattering (SSS) and hybrid-pipeline ambient occlusion (AO) -- implemented within Unreal Engine 5. Extensive experiments across multiple scenes and GPU configurations demonstrate that LUT-Opt reduces subsurface scattering rendering time by approximately 40\\% and ambient occlusion rendering time by roughly 70\\%, while incurring only about 2\\% increase in image quality error, with per-frame inference latency below 0.1\\ ms.",
+      "published": "2026-04-28T03:37:24Z",
+      "updated": "2026-11-19T20:29:07Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.25178",
+      "abs_url": "https://arxiv.org/abs/2604.25178",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.24994",
+      "title": "Power Foam: Unifying Real-Time Differentiable Ray Tracing and Rasterization",
+      "authors": [
+        "Shrisudhan Govindarajan",
+        "Daniel Rebain",
+        "Dor Verbin",
+        "Kwang Moo Yi",
+        "Anish Prabhu",
+        "Andrea Tagliasacchi"
+      ],
+      "abstract": "We introduce a differentiable 3D representation that unifies the ray tracing capabilities of foam-based ray tracing with the efficiency of modern rasterization pipelines. While prior foam representations enable constant-time ray traversal through an explicit volumetric partition of space, their potentially unbounded cells hinder efficient tile-based rasterization. We address this limitation by generalizing Voronoi foams to bounded power diagrams with controllable cell extents, enabling spatially bounded primitives without requiring expensive Delaunay triangulations during training. We further introduce an oriented surface formulation that explicitly models interfaces between interior and exterior regions, and decouple geometry from appearance by embedding differentiable texture directly on these surfaces. Together, these contributions yield a representation that preserves state-of-the-art ray tracing efficiency while achieving rasterization performance competitive with current generation 3DGS, providing a practical path toward unified real-time differentiable rendering.",
+      "published": "2026-04-27T20:58:36Z",
+      "updated": "2026-04-27T20:58:36Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.24994",
+      "abs_url": "https://arxiv.org/abs/2604.24994",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.23537",
+      "title": "Distance Field Rasterization for End-to-End Mesh Reconstruction",
+      "authors": [
+        "Jinkai Cui",
+        "Kaiwen Song",
+        "Chumeng Niu",
+        "Juyong Zhang"
+      ],
+      "abstract": "Rasterization based methods have recently enabled high-quality novel view synthesis at real-time rates, but their underlying volumetric primitives do not expose a direct, globally consistent surface representation, leaving sur face extraction to heuristic post-processing. In contrast, implicit signed dis tance field (SDF) methods provide well-defined surfaces but are typically optimized with computationally expensive ray marching. We propose SD FRaster, a rasterizable SDF representation that bridges this gap by combin ing the efficiency of rasterization with signed distance field for end-to-end mesh reconstruction. Starting from a Delaunay tetrahedralization, we op timize a continuous SDF over a tetrahedral grid and render it efficiently by rasterizing tetrahedra and alpha-compositing their contributions. We further integrate differentiable Marching Tetrahedra into the optimization loop, enablingend-to-endmeshreconstructionwithoutpost-processingmesh extraction. Experiments on DTU and Tanks and Temples demonstrate that SDFRaster achieves higher-quality and more complete surface reconstruc tions with lower storage cost than state-of-the-art approaches. Project page: https://ustc3dv.github.io/SDFRaster/",
+      "published": "2026-04-26T05:18:28Z",
+      "updated": "2026-04-26T05:18:28Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.23537",
+      "abs_url": "https://arxiv.org/abs/2604.23537",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.21749",
+      "title": "CuRast: Cuda-Based Software Rasterization for Billions of Triangles",
+      "authors": [
+        "Markus Schütz",
+        "Lukas Lipp",
+        "Elias Kristmann",
+        "Michael Wimmer"
+      ],
+      "abstract": "Previous work shows that small triangles can be rasterized efficiently with compute shaders. Building on this insight, we explore how far this can be pushed for massive triangle datasets without the need to construct acceleration structures in advance. Method: A 3-stage rasterization pipeline first rasterizes small triangles directly in stage 1, using atomicMin to store the closest fragments. Larger triangles are forwarded to stages 2 and 3. Results: CuRast can render models with hundreds of millions of triangles up to 2-5x (unique) or up to 12x (instanced) faster than Vulkan. Vulkan remains an order of magnitude faster for low-poly meshes. Limitations: We currently focus on dense, opaque meshes that you would typically obtain from photogrammetry/3D reconstruction. Blending/Transparency is not yet supported, and scenes with thousands of low-poly meshes are not implemented efficiently. Future Work: To make it suitable for games and a wider range of use cases, future work will need to (1) optimize handling of scenes with tens of thousands of nodes/meshes, (2) add support for hierarchical clustered LODs such as those produced by Meshoptimizer, (3) add support for transparency, likely in its own stage so as to keep opaque rasterization untouched and fast. Source Code: https://github.com/m-schuetz/CuRast",
+      "published": "2026-04-23T14:57:24Z",
+      "updated": "2026-04-24T12:39:18Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.21749",
+      "abs_url": "https://arxiv.org/abs/2604.21749",
+      "source": "arxiv"
+    },
+    {
+      "id": "2603.27151",
+      "title": "DiffSoup: Direct Differentiable Rasterization of Triangle Soup for Extreme Radiance Field Simplification",
+      "authors": [
+        "Kenji Tojo",
+        "Bernd Bickel",
+        "Nobuyuki Umetani"
+      ],
+      "abstract": "Radiance field reconstruction aims to recover high-quality 3D representations from multi-view RGB images. Recent advances, such as 3D Gaussian splatting, enable real-time rendering with high visual fidelity on sufficiently powerful graphics hardware. However, efficient online transmission and rendering across diverse platforms requires drastic model simplification, reducing the number of primitives by several orders of magnitude. We introduce DiffSoup, a radiance field representation that employs a soup (i.e., a highly unstructured set) of a small number of triangles with neural textures and binary opacity. We show that this binary opacity representation is directly differentiable via stochastic opacity masking, enabling stable training without a mollifier (i.e., smooth rasterization). DiffSoup can be rasterized using standard depth testing, enabling seamless integration into traditional graphics pipelines and interactive rendering on consumer-grade laptops and mobile devices. Code is available at https://github.com/kenji-tojo/diffsoup.",
+      "published": "2026-03-28T06:00:57Z",
+      "updated": "2026-08-15T16:17:44Z",
+      "categories": [
+        "cs.GR",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2603.27151",
+      "abs_url": "https://arxiv.org/abs/2603.27151",
+      "source": "arxiv"
+    },
     {
       "id": "2401.05345",
       "title": "DISTWAR: Fast Differentiable Rendering on Raster-based Rendering Pipelines",
@@ -467,7 +778,7 @@
         "Thomas Leimkühler",
         "George Drettakis"
       ],
-      "abstract": "Radiance Field methods have recently revolutionized novel-view synthesis of scenes captured with multiple photos or videos. However, achieving high visual quality still requires neural networks that are costly to train and render, while recent faster methods inevitably trade off speed for quality. For unbounded and complete scenes (rather than isolated objects) and 1080p resolution rendering, no current method can achieve real-time display rates. We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (\u003e= 30 fps) novel-view synthesis at 1080p resolution. First, starting from sparse points produced during camera calibration, we represent the scene with 3D Gaussians that preserve desirable properties of continuous volumetric radiance fields for scene optimization while avoiding unnecessary computation in empty space; Second, we perform interleaved optimization/density control of the 3D Gaussians, notably optimizing anisotropic covariance to achieve an accurate representation of the scene; Third, we develop a fast visibility-aware rendering algorithm that supports anisotropic splatting and both accelerates training and allows realtime rendering. We demonstrate state-of-the-art visual quality and real-time rendering on several established datasets.",
+      "abstract": "Radiance Field methods have recently revolutionized novel-view synthesis of scenes captured with multiple photos or videos. However, achieving high visual quality still requires neural networks that are costly to train and render, while recent faster methods inevitably trade off speed for quality. For unbounded and complete scenes (rather than isolated objects) and 1080p resolution rendering, no current method can achieve real-time display rates. We introduce three key elements that allow us to achieve state-of-the-art visual quality while maintaining competitive training times and importantly allow high-quality real-time (>= 30 fps) novel-view synthesis at 1080p resolution. First, starting from sparse points produced during camera calibration, we represent the scene with 3D Gaussians that preserve desirable properties of continuous volumetric radiance fields for scene optimization while avoiding unnecessary computation in empty space; Second, we perform interleaved optimization/density control of the 3D Gaussians, notably optimizing anisotropic covariance to achieve an accurate representation of the scene; Third, we develop a fast visibility-aware rendering algorithm that supports anisotropic splatting and both accelerates training and allows realtime rendering. We demonstrate state-of-the-art visual quality and real-time rendering on several established datasets.",
       "categories": [
         "cs.GR",
         "cs.CV"
@@ -728,7 +1039,7 @@
         "Ze Yang",
         "Raquel Urtasun"
       ],
-      "abstract": "High-fidelity sensor simulation of light-based sensors such as cameras and LiDARs is critical for safe and accurate autonomy testing. Neural radiance field (NeRF)-based methods that reconstruct sensor observations via ray-casting of implicit representations have demonstrated accurate simulation of driving scenes, but are slow to train and render, hampering scale. 3D Gaussian Splatting (3DGS) has demonstrated faster training and rendering times through rasterization, but is primarily restricted to pinhole camera sensors, preventing usage for realistic multi-sensor autonomy evaluation. Moreover, both NeRF and 3DGS couple the representation with the rendering procedure (implicit networks for ray-based evaluation, particles for rasterization), preventing interoperability, which is key for general usage. In this work, we present Sparse Local Fields (SaLF), a novel volumetric representation that supports rasterization and raytracing. SaLF represents volumes as a sparse set of 3D voxel primitives, where each voxel is a local implicit field. SaLF has fast training (\u003c30 min) and rendering capabilities (50+ FPS for camera and 600+ FPS LiDAR), has adaptive pruning and densification to easily handle large scenes, and can support non-pinhole cameras and spinning LiDARs. We demonstrate that SaLF has similar realism as existing self-driving sensor simulation methods while improving efficiency and enhancing capabilities, enabling more scalable simulation. https://waabi.ai/salf/",
+      "abstract": "High-fidelity sensor simulation of light-based sensors such as cameras and LiDARs is critical for safe and accurate autonomy testing. Neural radiance field (NeRF)-based methods that reconstruct sensor observations via ray-casting of implicit representations have demonstrated accurate simulation of driving scenes, but are slow to train and render, hampering scale. 3D Gaussian Splatting (3DGS) has demonstrated faster training and rendering times through rasterization, but is primarily restricted to pinhole camera sensors, preventing usage for realistic multi-sensor autonomy evaluation. Moreover, both NeRF and 3DGS couple the representation with the rendering procedure (implicit networks for ray-based evaluation, particles for rasterization), preventing interoperability, which is key for general usage. In this work, we present Sparse Local Fields (SaLF), a novel volumetric representation that supports rasterization and raytracing. SaLF represents volumes as a sparse set of 3D voxel primitives, where each voxel is a local implicit field. SaLF has fast training (<30 min) and rendering capabilities (50+ FPS for camera and 600+ FPS LiDAR), has adaptive pruning and densification to easily handle large scenes, and can support non-pinhole cameras and spinning LiDARs. We demonstrate that SaLF has similar realism as existing self-driving sensor simulation methods while improving efficiency and enhancing capabilities, enabling more scalable simulation. https://waabi.ai/salf/",
       "categories": [
         "cs.CV",
         "cs.RO"
@@ -1355,7 +1666,7 @@
         "Stephen Guimond",
         "Matthias Zwicker"
       ],
-      "abstract": "Exploring scientific datasets with billions of samples in real-time visualization presents a challenge - balancing high-fidelity rendering with speed. This work introduces a novel renderer - Neural Accelerated Renderer (NAR), that uses the neural deferred rendering framework to visualize large-scale scientific point cloud data. NAR augments a real-time point cloud rendering pipeline with high-quality neural post-processing, making the approach ideal for interactive visualization at scale. Specifically, we train a neural network to learn the point cloud geometry from a high-performance multi-stream rasterizer and capture the desired postprocessing effects from a conventional high-quality renderer. We demonstrate the effectiveness of NAR by visualizing complex multidimensional Lagrangian flow fields and photometric scans of a large terrain and compare the renderings against the state-of-the-art high-quality renderers. Through extensive evaluation, we demonstrate that NAR prioritizes speed and scalability while retaining high visual fidelity. We achieve competitive frame rates of $\u003e$ 126 fps for interactive rendering of $\u003e$ 350M points (i.e., an effective throughput of $\u003e$ 44 billion points per second) using $\\sim$12 GB of memory on RTX 2080 Ti GPU. Furthermore, we show that NAR is generalizable across different point clouds with similar visualization needs and the desired post-processing effects could be obtained with substantial high quality even at lower resolutions of the original point cloud, further reducing the memory requirements.",
+      "abstract": "Exploring scientific datasets with billions of samples in real-time visualization presents a challenge - balancing high-fidelity rendering with speed. This work introduces a novel renderer - Neural Accelerated Renderer (NAR), that uses the neural deferred rendering framework to visualize large-scale scientific point cloud data. NAR augments a real-time point cloud rendering pipeline with high-quality neural post-processing, making the approach ideal for interactive visualization at scale. Specifically, we train a neural network to learn the point cloud geometry from a high-performance multi-stream rasterizer and capture the desired postprocessing effects from a conventional high-quality renderer. We demonstrate the effectiveness of NAR by visualizing complex multidimensional Lagrangian flow fields and photometric scans of a large terrain and compare the renderings against the state-of-the-art high-quality renderers. Through extensive evaluation, we demonstrate that NAR prioritizes speed and scalability while retaining high visual fidelity. We achieve competitive frame rates of $>$ 126 fps for interactive rendering of $>$ 350M points (i.e., an effective throughput of $>$ 44 billion points per second) using $\\sim$12 GB of memory on RTX 2080 Ti GPU. Furthermore, we show that NAR is generalizable across different point clouds with similar visualization needs and the desired post-processing effects could be obtained with substantial high quality even at lower resolutions of the original point cloud, further reducing the memory requirements.",
       "categories": [
         "cs.GR",
         "cs.CV",
@@ -1467,7 +1778,7 @@
         "Shixuan Sun",
         "Yuhao Zhu"
       ],
-      "abstract": "3D Gaussian Splatting (3DGS) has vastly advanced the pace of neural rendering, but it remains computationally demanding on today's mobile SoCs. To address this challenge, we propose Lumina, a hardware-algorithm co-designed system, which integrates two principal optimizations: a novel algorithm, S^2, and a radiance caching mechanism, RC, to improve the efficiency of neural rendering. S2 algorithm exploits temporal coherence in rendering to reduce the computational overhead, while RC leverages the color integration process of 3DGS to decrease the frequency of intensive rasterization computations. Coupled with these techniques, we propose an accelerator architecture, LuminCore, to further accelerate cache lookup and address the fundamental inefficiencies in Rasterization. We show that Lumina achieves 4.5x speedup and 5.3x energy reduction against a mobile Volta GPU, with a marginal quality loss (\u003c 0.2 dB peak signal-to-noise ratio reduction) across synthetic and real-world datasets.",
+      "abstract": "3D Gaussian Splatting (3DGS) has vastly advanced the pace of neural rendering, but it remains computationally demanding on today's mobile SoCs. To address this challenge, we propose Lumina, a hardware-algorithm co-designed system, which integrates two principal optimizations: a novel algorithm, S^2, and a radiance caching mechanism, RC, to improve the efficiency of neural rendering. S2 algorithm exploits temporal coherence in rendering to reduce the computational overhead, while RC leverages the color integration process of 3DGS to decrease the frequency of intensive rasterization computations. Coupled with these techniques, we propose an accelerator architecture, LuminCore, to further accelerate cache lookup and address the fundamental inefficiencies in Rasterization. We show that Lumina achieves 4.5x speedup and 5.3x energy reduction against a mobile Volta GPU, with a marginal quality loss (< 0.2 dB peak signal-to-noise ratio reduction) across synthetic and real-world datasets.",
       "categories": [
         "cs.AR"
       ],
@@ -2638,7 +2949,7 @@
         "Wenbo Zhu",
         "Yingyan Celine Lin"
       ],
-      "abstract": "Neural Radiance Field (NeRF) based rendering has attracted growing attention thanks to its state-of-the-art (SOTA) rendering quality and wide applications in Augmented and Virtual Reality (AR/VR). However, immersive real-time (\u003e 30 FPS) NeRF based rendering enabled interactions are still limited due to the low achievable throughput on AR/VR devices. To this end, we first profile SOTA efficient NeRF algorithms on commercial devices and identify two primary causes of the aforementioned inefficiency: (1) the uniform point sampling and (2) the dense accesses and computations of the required embeddings in NeRF. Furthermore, we propose RT-NeRF, which to the best of our knowledge is the first algorithm-hardware co-design acceleration of NeRF. Specifically, on the algorithm level, RT-NeRF integrates an efficient rendering pipeline for largely alleviating the inefficiency due to the commonly adopted uniform point sampling method in NeRF by directly computing the geometry of pre-existing points. Additionally, RT-NeRF leverages a coarse-grained view-dependent computing ordering scheme for eliminating the (unnecessary) processing of invisible points. On the hardware level, our proposed RT-NeRF accelerator (1) adopts a hybrid encoding scheme to adaptively switch between a bitmap- or coordinate-based sparsity encoding format for NeRF's sparse embeddings, aiming to maximize the storage savings and thus reduce the required DRAM accesses while supporting efficient NeRF decoding; and (2) integrates both a dual-purpose bi-direction adder \u0026 search tree and a high-density sparse search unit to coordinate the two aforementioned encoding formats. Extensive experiments on eight datasets consistently validate the effectiveness of RT-NeRF, achieving a large throughput improvement (e.g., 9.7x - 3,201x) while maintaining the rendering quality as compared with SOTA efficient NeRF solutions.",
+      "abstract": "Neural Radiance Field (NeRF) based rendering has attracted growing attention thanks to its state-of-the-art (SOTA) rendering quality and wide applications in Augmented and Virtual Reality (AR/VR). However, immersive real-time (> 30 FPS) NeRF based rendering enabled interactions are still limited due to the low achievable throughput on AR/VR devices. To this end, we first profile SOTA efficient NeRF algorithms on commercial devices and identify two primary causes of the aforementioned inefficiency: (1) the uniform point sampling and (2) the dense accesses and computations of the required embeddings in NeRF. Furthermore, we propose RT-NeRF, which to the best of our knowledge is the first algorithm-hardware co-design acceleration of NeRF. Specifically, on the algorithm level, RT-NeRF integrates an efficient rendering pipeline for largely alleviating the inefficiency due to the commonly adopted uniform point sampling method in NeRF by directly computing the geometry of pre-existing points. Additionally, RT-NeRF leverages a coarse-grained view-dependent computing ordering scheme for eliminating the (unnecessary) processing of invisible points. On the hardware level, our proposed RT-NeRF accelerator (1) adopts a hybrid encoding scheme to adaptively switch between a bitmap- or coordinate-based sparsity encoding format for NeRF's sparse embeddings, aiming to maximize the storage savings and thus reduce the required DRAM accesses while supporting efficient NeRF decoding; and (2) integrates both a dual-purpose bi-direction adder & search tree and a high-density sparse search unit to coordinate the two aforementioned encoding formats. Extensive experiments on eight datasets consistently validate the effectiveness of RT-NeRF, achieving a large throughput improvement (e.g., 9.7x - 3,201x) while maintaining the rendering quality as compared with SOTA efficient NeRF solutions.",
       "categories": [
         "cs.AR"
       ],
@@ -2830,7 +3141,7 @@
         "Sivabalan Manivasagam",
         "Raquel Urtasun"
       ],
-      "abstract": "We propose a new method for realistic real-time novel-view synthesis (NVS) of large scenes. Existing neural rendering methods generate realistic results, but primarily work for small scale scenes (\u003c50 square meters) and have difficulty at large scale (\u003e10000 square meters). Traditional graphics-based rasterization rendering is fast for large scenes but lacks realism and requires expensive manually created assets. Our approach combines the best of both worlds by taking a moderate-quality scaffold mesh as input and learning a neural texture field and shader to model view-dependant effects to enhance realism, while still using the standard graphics pipeline for real-time rendering. Our method outperforms existing neural rendering methods, providing at least 30x faster rendering with comparable or better realism for large self-driving and drone scenes. Our work is the first to enable real-time rendering of large real-world scenes.",
+      "abstract": "We propose a new method for realistic real-time novel-view synthesis (NVS) of large scenes. Existing neural rendering methods generate realistic results, but primarily work for small scale scenes (<50 square meters) and have difficulty at large scale (>10000 square meters). Traditional graphics-based rasterization rendering is fast for large scenes but lacks realism and requires expensive manually created assets. Our approach combines the best of both worlds by taking a moderate-quality scaffold mesh as input and learning a neural texture field and shader to model view-dependant effects to enhance realism, while still using the standard graphics pipeline for real-time rendering. Our method outperforms existing neural rendering methods, providing at least 30x faster rendering with comparable or better realism for large self-driving and drone scenes. Our work is the first to enable real-time rendering of large real-world scenes.",
       "categories": [
         "cs.CV",
         "cs.AI",
@@ -3126,7 +3437,7 @@
         "Nikolay Atanasov",
         "Truong Nguyen"
       ],
-      "abstract": "Simultaneous Localization and Mapping (SLAM) is one of the most important environment-perception and navigation algorithms for computer vision, robotics, and autonomous cars/drones. Hence, high quality and fast mapping becomes a fundamental problem. With the advent of 3D Gaussian Splatting (3DGS) as an explicit representation with excellent rendering quality and speed, state-of-the-art (SOTA) works introduce GS to SLAM. Compared to classical pointcloud-SLAM, GS-SLAM generates photometric information by learning from input camera views and synthesize unseen views with high-quality textures. However, these GS-SLAM fail when moving objects occupy the scene that violate the static assumption of bundle adjustment. The failed updates of moving GS affects the static GS and contaminates the full map over long frames. Although some efforts have been made by concurrent works to consider moving objects for GS-SLAM, they simply detect and remove the moving regions from GS rendering (\"anti'' dynamic GS-SLAM), where only the static background could benefit from GS. To this end, we propose the first real-time GS-SLAM, \"DynaGSLAM'', that achieves high-quality online GS rendering, tracking, motion predictions of moving objects in dynamic scenes while jointly estimating accurate ego motion. Our DynaGSLAM outperforms SOTA static \u0026 \"Anti'' dynamic GS-SLAM on three dynamic real datasets, while keeping speed and memory efficiency in practice.",
+      "abstract": "Simultaneous Localization and Mapping (SLAM) is one of the most important environment-perception and navigation algorithms for computer vision, robotics, and autonomous cars/drones. Hence, high quality and fast mapping becomes a fundamental problem. With the advent of 3D Gaussian Splatting (3DGS) as an explicit representation with excellent rendering quality and speed, state-of-the-art (SOTA) works introduce GS to SLAM. Compared to classical pointcloud-SLAM, GS-SLAM generates photometric information by learning from input camera views and synthesize unseen views with high-quality textures. However, these GS-SLAM fail when moving objects occupy the scene that violate the static assumption of bundle adjustment. The failed updates of moving GS affects the static GS and contaminates the full map over long frames. Although some efforts have been made by concurrent works to consider moving objects for GS-SLAM, they simply detect and remove the moving regions from GS rendering (\"anti'' dynamic GS-SLAM), where only the static background could benefit from GS. To this end, we propose the first real-time GS-SLAM, \"DynaGSLAM'', that achieves high-quality online GS rendering, tracking, motion predictions of moving objects in dynamic scenes while jointly estimating accurate ego motion. Our DynaGSLAM outperforms SOTA static & \"Anti'' dynamic GS-SLAM on three dynamic real datasets, while keeping speed and memory efficiency in practice.",
       "categories": [
         "cs.CV"
       ],
@@ -3438,7 +3749,7 @@
         "Kai Zheng",
         "Andrew W. Browne"
       ],
-      "abstract": "Objective: To develop software utilizing optical character recognition toward the automatic extraction of data from bar charts for meta-analysis. Methods: We utilized a multistep data extraction approach that included figure extraction, text detection, and image disassembly. PubMed Central papers that were processed in this manner included clinical trials regarding macular degeneration, a disease causing blindness with a heavy disease burden and many clinical trials. Bar chart characteristics were extracted in both an automated and manual fashion. These two approaches were then compared for accuracy. These characteristics were then compared using a Bland-Altman analysis. Results: Based on Bland-Altman analysis, 91.8% of data points were within the limits of agreement. By comparing our automated data extraction with manual data extraction, automated data extraction yielded the following accuracies: X-axis labels 79.5%, Y-tick values 88.6%, Y-axis label 88.6%, Bar value \u003c5% error 88.0%. Discussion: Based on our analysis, we achieved an agreement between automated data extraction and manual data extraction. A major source of error was the incorrect delineation of 7s as 2s by optical character recognition library. We also would benefit from adding redundancy checks in the form of a deep neural network to boost our bar detection accuracy. Further refinements to this method are justified to extract tabulated and line graph data to facilitate automated data gathering for meta-analysis.",
+      "abstract": "Objective: To develop software utilizing optical character recognition toward the automatic extraction of data from bar charts for meta-analysis. Methods: We utilized a multistep data extraction approach that included figure extraction, text detection, and image disassembly. PubMed Central papers that were processed in this manner included clinical trials regarding macular degeneration, a disease causing blindness with a heavy disease burden and many clinical trials. Bar chart characteristics were extracted in both an automated and manual fashion. These two approaches were then compared for accuracy. These characteristics were then compared using a Bland-Altman analysis. Results: Based on Bland-Altman analysis, 91.8% of data points were within the limits of agreement. By comparing our automated data extraction with manual data extraction, automated data extraction yielded the following accuracies: X-axis labels 79.5%, Y-tick values 88.6%, Y-axis label 88.6%, Bar value <5% error 88.0%. Discussion: Based on our analysis, we achieved an agreement between automated data extraction and manual data extraction. A major source of error was the incorrect delineation of 7s as 2s by optical character recognition library. We also would benefit from adding redundancy checks in the form of a deep neural network to boost our bar detection accuracy. Further refinements to this method are justified to extract tabulated and line graph data to facilitate automated data gathering for meta-analysis.",
       "categories": [
         "cs.IR"
       ],
@@ -3747,7 +4058,7 @@
         "Jee Won Lee",
         "Jongseong Brad Choi"
       ],
-      "abstract": "Sparse-voxel rasterization is a fast, differentiable alternative for optimization-based scene reconstruction, but it tends to underfit low-frequency content, depends on brittle pruning heuristics, and can overgrow in ways that inflate VRAM. We introduce LiteVoxel, a self-tuning training pipeline that makes SV rasterization both steadier and lighter. Our loss is made low-frequency aware via an inverse-Sobel reweighting with a mid-training gamma-ramp, shifting gradient budget to flat regions only after geometry stabilize. Adaptation replaces fixed thresholds with a depth-quantile pruning logic on maximum blending weight, stabilized by EMA-hysteresis guards and refines structure through ray-footprint-based, priority-driven subdivision under an explicit growth budget. Ablations and full-system results across Mip-NeRF 360 (6scenes) and Tanks \u0026 Temples (3scenes) datasets show mitigation of errors in low-frequency regions and boundary instability while keeping PSNR/SSIM, training time, and FPS comparable to a strong SVRaster pipeline. Crucially, LiteVoxel reduces peak VRAM by ~40%-60% and preserves low-frequency detail that prior setups miss, enabling more predictable, memory-efficient training without sacrificing perceptual quality.",
+      "abstract": "Sparse-voxel rasterization is a fast, differentiable alternative for optimization-based scene reconstruction, but it tends to underfit low-frequency content, depends on brittle pruning heuristics, and can overgrow in ways that inflate VRAM. We introduce LiteVoxel, a self-tuning training pipeline that makes SV rasterization both steadier and lighter. Our loss is made low-frequency aware via an inverse-Sobel reweighting with a mid-training gamma-ramp, shifting gradient budget to flat regions only after geometry stabilize. Adaptation replaces fixed thresholds with a depth-quantile pruning logic on maximum blending weight, stabilized by EMA-hysteresis guards and refines structure through ray-footprint-based, priority-driven subdivision under an explicit growth budget. Ablations and full-system results across Mip-NeRF 360 (6scenes) and Tanks & Temples (3scenes) datasets show mitigation of errors in low-frequency regions and boundary instability while keeping PSNR/SSIM, training time, and FPS comparable to a strong SVRaster pipeline. Crucially, LiteVoxel reduces peak VRAM by ~40%-60% and preserves low-frequency detail that prior setups miss, enabling more predictable, memory-efficient training without sacrificing perceptual quality.",
       "categories": [
         "cs.CV"
       ],

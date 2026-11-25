@@ -1,0 +1,23 @@
+Title: Containment Verification: AI Safety Guarantees Independent of Alignment
+Authors: Royce Moon, Lav R. Varshney
+ID: 2605.09045
+URL: https://arxiv.org/abs/2605.09045
+
+Abstract:
+Agentic frameworks are the software layer through which AI agents act in the
+world. Existing safety methods intervene on the model and therefore remain
+conditional on unverifiable properties of learned behavior. We introduce
+containment verification, which locates safety guarantees in the agentic
+framework itself. Under havoc oracle semantics, the AI is modeled as an
+unconstrained oracle over the framework's typed action space, and the verified
+containment layer must enforce the boundary policy for every typed action value
+the AI can emit. For boundary-enforceable properties, expressed over modeled
+boundary events, action arguments, and state, we prove a universal guarantee by
+forward-simulation refinement and mechanize it in Dafny. We instantiate the
+paradigm by verifying PocketFlow, a minimalist agentic LLM framework, and use an
+agentic synthesis pipeline to generate the specification, operational model, and
+refinement proof under an information barrier against tautological
+specifications. To our knowledge, this is the first deductive formal
+verification of an agentic framework. The guarantee is independent of alignment
+because it quantifies over the framework's typed action boundary rather than
+over model behavior.

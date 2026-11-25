@@ -1,0 +1,30 @@
+Title: BenchMeUp: Building Software Engineering Benchmarks from Natural-Language Specifications
+Authors: Islem Bouzenia, Michael Pradel
+ID: 2610.37283
+URL: https://arxiv.org/abs/2610.37283
+
+Abstract:
+Software-engineering research relies on benchmarks that evaluate new techniques
+on a set of problem instances. Unfortunately, manually constructing benchmarks
+is labor-intensive, as researchers must find suitable instances, prepare
+execution environments, establish expected outcomes, and validate correctness.
+This paper presents BenchMeUp, an approach for automatically creating software-
+engineering benchmarks from natural-language specifications. Given a
+specification defining the desired instances, data sources, and evaluation
+procedures, BenchMeUp generates search rules and a construction plan, invokes
+parallel LLM agents that identify candidate instances and construct executable
+instances, validates the results in fresh execution environments, and packages
+the instances behind a unified command-line interface. We evaluate the approach
+on four tasks: program repair, issue reproduction, compiler autotuning, and
+fixing static-analysis warnings. Targeting 50 instances per task (200 in total),
+BenchMeUp constructs 198 instances, of which 196 (99\%) are successfully
+packaged. Search and construction take 36 minutes and \$0.79 per instance, on
+average. Evaluating eight existing techniques on the generated benchmarks, we
+find that 189 of 196 packaged instances (96\%) support end-to-end evaluation,
+allowing users to study the effectiveness of the techniques. Checking every
+constructed instance against its source, the specification, and its expected
+outcome, we find that 180 of 198 (91\%) meet all criteria, compared with 10 of
+200 instances delivered by Codex (general-purpose coding agent). Overall, we
+show that LLM-based agents can automate benchmark construction across diverse
+software-engineering tasks and produce executable instances that existing
+techniques can use, while validity beyond execution still needs to be checked.

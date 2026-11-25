@@ -1,0 +1,28 @@
+Title: Governed Self-Improvement for a Local-First Security Analyzer: Baseline Measurements and a Preregistered Evaluation Protocol for Tantular Cyber
+Authors: Raditio Ghifiardi, Rifny Rachman
+ID: 2611.10425
+URL: https://arxiv.org/abs/2611.10425
+
+Abstract:
+Local-first security tools let organizations analyze code without sending it to
+third-party services, but the small language models they can run locally are
+weaker than hosted ones and are hard to improve without breaching the privacy
+guarantee that motivates them. We present Tantular Cyber, an open-source, read-
+only repository security analyzer that keeps deterministic scanner findings
+authoritative and confines a locally served language model to advisory
+explanations in Bahasa Indonesia. We report its measured v0.3.0 baseline on a
+synthetic, ground-truth benchmark: combining Semgrep with an interprocedural
+call-graph scanner yields precision 0.843 and recall 0.915 (Semgrep alone: 0.818
+and 0.766). The advisory layer is the weak point: 57% of explanations met an
+evidence-grounding check, against 95% for a different 8B model under identical
+prompts. A forensic re-scoring of retained outputs shows that every grounding
+failure cites a code identifier absent from the evidence shown, and that a
+prompt change which appeared to raise grounding from 0.56 to 0.72 did so partly
+by citing nothing. We document two evaluation-validity hazards we encountered:
+silent model-file migration during a run and non-reproducible published figures.
+Building on these lessons and on constraint-aware evaluation from security
+operations research, we propose a governed self-improvement loop (code-free
+feedback, curated data, a cheapest-first intervention ladder from prompts to
+LoRA and weight-space edits, hard gates, and human release approval) and
+preregister the protocol by which its first cycle will be judged. We report no
+results for the loop itself.

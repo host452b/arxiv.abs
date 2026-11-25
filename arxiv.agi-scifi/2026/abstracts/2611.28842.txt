@@ -1,0 +1,24 @@
+Title: Learning How a Body Moves: Few-Shot Body Inference for Visual World Models of Animated Characters
+Authors: Amarnath R
+ID: 2611.28842
+URL: https://arxiv.org/abs/2611.28842
+
+Abstract:
+Two visually identical animated characters can respond differently to the same
+action command because their body dynamics differ. For example, a stiff blob and
+its bouncy twin reach different heights when both receive the jump command.
+Given only the first frame and the action command, a visual world model has no
+information to distinguish these twins, because their initial appearances are
+identical. We therefore propose an in-context world model that encodes clips of
+a character's other actions into a body representation, using a contrastive loss
+to separate look-alike characters. We introduce ToonTwins, a benchmark of 144 2D
+cartoon characters that run, jump, fall, turn and crouch. Its characters form
+look-alike groups of four that differ only in their dynamics profile, and we
+also evaluate the model on 32 animated animals from DeformingThings4D. Even with
+a body code from these clips, the latent pixel world model we tested recovered
+at most 25 percent of the twins' jump height difference. On new shapes, our
+model identified the correct twin in 85.9 percent of cases, compared with 76.7
+percent for a transformer baseline that reads the same clips without a body
+summary, and in a controlled ablation the contrastive loss gave more than half
+of this gain. On the animated animals, it reduced the mean path prediction error
+by 8.5 percent against a model without body information.

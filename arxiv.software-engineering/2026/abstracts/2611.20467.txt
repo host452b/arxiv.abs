@@ -1,0 +1,22 @@
+Title: On the Applicability of $p$-adic Numbers in Computational Modules for Neural Networks
+Authors: Vladimir Evgrafov
+ID: 2611.20467
+URL: https://arxiv.org/abs/2611.20467
+
+Abstract:
+The applicability of $p$-adic arithmetic as an intermediate computational module
+in an otherwise unchanged machine-learning pipeline is investigated. A one-
+feature linear regression on the scikit-learn Diabetes dataset serves as the
+test model. The fitted coefficients are represented in $\mathbb{Q}_p$,
+predictions are computed in that field, and rational reconstruction is applied
+to the outputs. In the pyAdic experiments, rational reconstruction either
+returns no result or produces values that differ from the baseline predictions;
+changing computational precision can change both the magnitude and sign of the
+reconstructed value. In SageMath, forward conversions succeed, but the
+reconstructed predictions differ from the baseline. An alternative
+representation based on digit reversal fails to preserve ordinary addition
+because of carry propagation. Under the tested settings, none of the test
+predictions is reconstructed correctly. These results show that the tested
+conversion and reconstruction procedures do not provide a compatible
+intermediate module even for linear regression. Models defined directly over
+$p$-adic data and operations offer a direction for further investigation.

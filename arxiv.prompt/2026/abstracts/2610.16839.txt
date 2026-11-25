@@ -1,0 +1,30 @@
+Title: Label Collapse in Diffusion Language Model In-Context Learning
+Authors: Ziye Guo, Ye Yuan
+ID: 2610.16839
+URL: https://arxiv.org/abs/2610.16839
+
+Abstract:
+In-context learning (ICL) applies large language models to new tasks by
+prepending a few labeled demonstrations to a query. Prior work has studied how
+demonstration ordering affects ICL, but the interaction between label
+arrangement patterns and model biases has not been systematically examined. We
+define label collapse as the failure mode in which the model generates query-
+independent labels, and show that it is architecturally universal at the tested
+8-9B scale: five models spanning autoregressive (Llama-3, Qwen3.5) and discrete
+diffusion (LLaDA, iLLaDA, LLaDA-Instruct) families all exhibit label collapse
+even under the class-balanced alternating arrangement, with some label word
+pairs collapsing in virtually every tested condition and others flipping their
+collapse direction with arrangement. Critically, accuracy alone cannot detect
+this collapse: models can achieve near-chance accuracy while generating query-
+independent labels, a score indistinguishable from balanced performance, so the
+failure can persist undetected in deployment. We measure separation, the log-
+odds of the two label words at the query position (the quantity that label-bias
+calibration operates on), as a complementary diagnostic that exposes collapse
+hidden beneath surface accuracy, together with a measurement protocol that
+guards label extraction against tokenizer and formatting artifacts. For
+autoregressive models, collapse persists where the majority-label-bias account
+does not apply, and arrangement patterns can reverse the collapse direction; for
+diffusion models, we present a systematic evaluation of ICL failure modes,
+complementing contemporaneous studies of dLLM context comprehension and
+demonstration-order sensitivity, and identify open questions about how iterative
+denoising interacts with label biases.

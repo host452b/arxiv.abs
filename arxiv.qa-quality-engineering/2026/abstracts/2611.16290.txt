@@ -1,0 +1,27 @@
+Title: Parallel Computing Systems for the Optimal Selection of Process Equipment
+Authors: Andrey B. Borisenko
+ID: 2611.16290
+URL: https://arxiv.org/abs/2611.16290
+
+Abstract:
+This monograph addresses the optimal selection of equipment for chemical-
+engineering systems of multiproduct batch plants, a large-scale NP-hard discrete
+optimization problem in which, for each processing stage, a unit of standard
+size must be chosen so that the total capital cost of the equipment is minimized
+while the system remains operable and produces the required products within a
+given time horizon. We present the mathematical model of system operation and
+analyze its computational properties. We then develop a sequential branch-and-
+bound algorithm and its parallel versions for shared-memory systems (OpenMP),
+distributed-memory clusters (MPI, master-worker), and graphics processing units
+(CUDA), including recursive and iterative tree traversal, shared-memory
+optimization, and branch-divergence reduction. To overcome the exponential
+growth of the run time, we propose a hybrid metaheuristic in which Ant Colony
+Optimization finds a feasible initial solution and Simulated Annealing improves
+it, and we implement it on GPUs with thousands of independent threads. Finally,
+we propose random, constant, and multi-constant approaches to tuning the
+parameters of the ant colony algorithm based on statistical analysis of many
+parallel runs, and we study the program on GPUs of three generations and on
+nodes with several GPUs. Computational experiments on multi-core processors,
+clusters, and GPUs show that the parallel hybrid algorithm finds solutions
+within 0.01% of the branch-and-bound optimum in tens of seconds instead of tens
+of hours.

@@ -1,0 +1,26 @@
+Title: Targeted In-Context Poisoning of Tabular Foundation Models: An Empirical Study
+Authors: Adem Alparslan
+ID: 2611.28396
+URL: https://arxiv.org/abs/2611.28396
+
+Abstract:
+Tabular foundation models (TFMs) predict the label of a query row conditioned on
+a context of labelled rows, without training on them. Drawn from operational
+data, the context becomes an attack surface. We study targeted in-context
+poisoning in its simplest form: an attacker with write access to the context's
+source places exact copies of a target row there with the wrong label. On 30
+OpenML datasets for binary classification, one such poison row flips on average
+53% (TabICL) and 65% (TabPFN) of the predictions correct without attack, and
+three poison rows flip almost all. The same copy with the true label flips
+almost none, and performance on the remaining rows hardly changes. Predictions
+flip by two routes: in TabICL, the target row's embedding rotates towards the
+mean of the wrong class; in TabPFN, the poison row pulls genuine rows of the
+wrong class along. The TFMs thus infer soundly, but from forged evidence.
+Predictions of trained models flip as well: almost always for a random forest,
+for CatBoost as often as for the TFMs, hardly for a logistic regression. New
+with TFMs is not the kind of vulnerability but the timing: the data take effect
+at the moment of prediction, not through training, and a poison row in a live
+context can be deleted afterwards. Three established requirements must therefore
+cover the context: access control for its source, traceability per prediction,
+which can also deter, and validation at prediction time. A detection mechanism
+shows how such validation can work.

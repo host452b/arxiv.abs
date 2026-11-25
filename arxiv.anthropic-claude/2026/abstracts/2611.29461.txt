@@ -1,0 +1,22 @@
+Title: LLM-Assisted Verilog Code Refinement for Efficient RTL Clock Gating
+Authors: Geuna Chang, Seohyun Kim, Youngsoo Shin
+ID: 2611.29461
+URL: https://arxiv.org/abs/2611.29461
+
+Abstract:
+RTL clock gating is a popular technique for reducing clock power at the early
+design stage. Iterative updates of Verilog code, clock-gating inference, and
+analysis of clock-gating efficiency (CGE) are time-consuming and pose challenges
+to RTL designers. LLM-assisted automatic refinement of Verilog code for
+improving CGE is proposed. Since CGE and power depend on switching activity,
+LLMs generate Idle, Typical, and Peak workloads of the design, one of which is
+selected by the user as the optimization target. Four LLM clock-gating agents,
+each given a guideline for a particular clock-gating technique, then
+sequentially refine the Verilog code, focusing on the registers with low flop-
+gating efficiency (FGE) under the selected workload. Code updates are accepted
+only if they are functionally equivalent and reduce post-synthesis power without
+violating area and timing constraints. Experimental results with five RTL
+designs show an average FGE improvement of 12.1 percentage points and an average
+power reduction of 23.6% (up to 59.3%) under the selected workloads, compared to
+the original Verilog code, outperforming a commercial tool and an LLM baseline,
+which achieve average power reductions of only 4.1% and 8.6%, respectively.

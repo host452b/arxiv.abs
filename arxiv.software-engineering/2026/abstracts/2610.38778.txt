@@ -1,0 +1,21 @@
+Title: Slant: Shaping Traffic for Resource-Efficient Microservices
+Authors: Congwei Zhang, Chieh-Jan Mike Liang, Mengbai Xiao, Yifei Zou, Shulun Wu, Xiangyu Gao, Xiuzhen Cheng, Dongxiao Yu
+ID: 2610.38778
+URL: https://arxiv.org/abs/2610.38778
+
+Abstract:
+Microservice architectures rely on load balancers to distribute requests across
+service replicas, yet existing designs largely optimize for balanced routing
+without considering how routing shapes autoscaling signals and resource
+efficiency. We present Slant, a resource-aware load balancing framework that
+intentionally creates safe traffic imbalance to improve resource utilization.
+Slant profiles service-specific critical points, computes conservative multi-
+dimensional capacity, derives imbalance-aware routing weights that maintain hot
+and cold pods, and falls back to safer behavior under anomalies. By exposing
+clearer utilization signals, Slant works with existing vertical pod autoscalers
+(VPAs) without modification. Experiments on three microservice benchmarks show
+that Slant reduces allocated CPU cores by up to 26\% while lowering P99 latency
+by up to 18\% compared to Round-Robin. Under dynamic workloads, Slant triggers
+VPA scale-up 45\% faster and completes scale-in 40\% faster. Under anomalies, it
+recovers 40\% faster from pod failures and limits latency amplification to
+1.8$\times$ versus 2.6$\times$ during downstream slowdowns.

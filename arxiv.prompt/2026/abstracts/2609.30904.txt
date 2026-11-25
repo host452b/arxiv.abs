@@ -1,0 +1,25 @@
+Title: QReason: Query-Focused Decoupled Chain-of-Thought for Efficient Passage Reranking
+Authors: Yang Zhang, Wenhan Liu, Qiannan Zhu, Mingming Li, Yuanfei Huang
+ID: 2609.30904
+URL: https://arxiv.org/abs/2609.30904
+
+Abstract:
+Passage reranking plays a crucial role in information retrieval by refining the
+ordering of candidate passages to better reflect relevance. Existing listwise
+LLM rerankers with Chain-of-Thought (CoT) reasoning can handle complex queries
+effectively, but they suffer from substantial redundancy and high latency due to
+sliding-window strategies, which repeatedly generate highly similar CoTs. To
+address this, we propose QReason, a decoupled framework that separates query-
+focused reasoning from window-specific passage relevance assessment.
+Specifically, QReason introduces a dedicated rewriter that generates a ranking-
+oriented reasoning query once, capturing the query's core intent while avoiding
+redundant reasoning, and then reuses it across all windows with a non-reasoning
+reranker. The rewriter is trained via a two-stage process that first uses
+supervised fine-tuning with relevant-passage guidance through semantic evidence
+to produce deeply grounded, query-focused CoTs. It then applies reinforcement
+learning to align CoT generation with both the inference-time setting and the
+reranking objective, optimizing listwise metrics and passage-level
+discrimination to produce reusable reasoning chains for reranking. Experiments
+on the BRIGHT benchmark demonstrate that QReason significantly reduces redundant
+reasoning, achieves ranking performance comparable to or better than strong
+reasoning-based rerankers, and outperforms existing query rewriting models.

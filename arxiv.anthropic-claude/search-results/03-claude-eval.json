@@ -10,11 +10,1152 @@
     "from": "2021-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T17:13:08Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 24361,
-  "return_count": 200,
+  "return_count": 253,
   "papers": [
+    {
+      "id": "2611.33093",
+      "title": "AIChipBench: Benchmarking LLM Agents for Automated AI Accelerator Design",
+      "authors": [
+        "Guangyuan Wang",
+        "Chengran Li",
+        "Minchen Luo",
+        "Jichen Feng",
+        "Mengdi Wang",
+        "Yifan Zhang"
+      ],
+      "abstract": "A language-model decoder carries state between decoding steps, and in hardware a wrong state update can leave the current token correct and corrupt the output several tokens later, so a design can pass output tests and still be wrong. AIChipBench asks what LLM coding agents need to build such hardware correctly. Agents implement quantized Qwen3.5, Gemma 3, Gemma 4, and Llama 3.2 decoders in synthesizable register-transfer-level (RTL) code against an executable integer reference that specifies the outputs and the stored state at every decoding step. They debug against public tests under fixed budgets; their frozen designs are graded on held-out token sequences, resets, memory stalls, and synthesis, and a second track asks them to speed up a correct design at nearly fixed area. Across 9,136 attempts by four coding agents, the difficulty lies in stored state. Feedback that points to the first state mismatch raises acceptance over output-only feedback in all 12 agent--task cells of a matched study, by 25.0 to 46.9 percentage points, and halves the agent-hours per accepted design. Regraded on new sequences and conditions, 45 of 69 accepted designs fail within the 32 steps their tests required. More than a third of attempts to speed up a correct design end without one. An overall score ranks Sol 5.6 and Fable 5.1 above Astra 6 and Opus 5.5, and both halves of the instances give this order in all 200 random splits. Hardware agents therefore need debugging feedback that exposes stored state, and their benchmarks need final tests well beyond the development cases.",
+      "published": "2026-11-24T18:28:41Z",
+      "updated": "2026-11-24T18:28:41Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33093",
+      "abs_url": "https://arxiv.org/abs/2611.33093",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.33054",
+      "title": "EmbodiSafety: Benchmarking Risk Understanding and Response in Embodied AI",
+      "authors": [
+        "Erfei Cui",
+        "Shengjia Zhao",
+        "Yan Qin",
+        "Kaixuan Wang",
+        "Junming Chen",
+        "Ping Luo",
+        "Tianxing Chen"
+      ],
+      "abstract": "Progress in embodied foundation models is largely measured by task success, while the physical safety of their decisions remains underexamined. Safety evaluations centered on rule following and binary judgments do not adequately assess whether embodied models understand environmental hazards and make safe decisions. We introduce EmbodiSafety, comprising 1,092 snapshot tasks and 540 trajectory tasks across 844 visual scenarios to assess safety over short and long horizons. Six response modes cover direct execution, refusal, clarification, constrained execution, autonomous recovery, and human escalation. Distinguishing recovery from human intervention makes the boundary of safe autonomy an explicit evaluation target. Our protocol assesses mode correctness, risk identification, and actionable handling, with complete decision accuracy requiring all applicable checks to pass. Claude-Opus-5.5 achieves the highest complete decision accuracy among reference models, reaching 56.1% on snapshots and 61.5% on trajectories. We further develop a data construction pipeline and curate 40k examples for safety alignment. Supervised training on this corpus raises the complete decision accuracy of Qwen3.5-2B and Qwen3.5-4B.",
+      "published": "2026-11-24T17:59:05Z",
+      "updated": "2026-11-24T17:59:05Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33054",
+      "abs_url": "https://arxiv.org/abs/2611.33054",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.33036",
+      "title": "Towards Realistic Evaluation of Uncertainty Quantification for LLM-Based Recommender Systems",
+      "authors": [
+        "Hao Wu",
+        "Sipeng Chen",
+        "Weikai Li",
+        "Tianyi Chen",
+        "Qiancheng Yang",
+        "Hang Zhou",
+        "Yizhou Sun",
+        "Wei Wang",
+        "Xiao Luo"
+      ],
+      "abstract": "Large language models (LLMs) provide a flexible interface for recommendation systems. However, their issued rankings require reliable instance-level uncertainty monitoring. In this scenario, comparing uncertainty quantification (UQ) methods becomes challenging because LLM rankers lack a standard item-classification head. Their scores may depend on option labels, prompts, generation procedures, and the available user and item evidence. Existing methods derive uncertainty from different sources and apply it at different stages of the recommendation process. Some methods evaluate an issued ranking, whereas others use uncertainty to change the ranking itself, making direct comparison difficult. Here we introduce a fixed-ranking benchmark which evaluates eight heterogeneous UQ signals as record-level monitors under a shared output contract. We evaluate these signals across four recommendation datasets and two LLM backbones under a shared fixed-ranking protocol. From the results, we draw three main observations. First, UQ method ordering changes across backbones even on the same reference instances. Second, ranking-aligned Top10Mass provides the strongest scalar Error@10 detection in several evaluation conditions, reflecting effective cutoff-aligned monitoring, while its advantage narrows for popularity-tail targets. Third, scalar UQ signals are weak at identifying which control has the larger clipped NDCG@10 difference, whereas source-specific signals, including Perturbation Rank Instability and simple listwise distances, provide stronger paired-control agreement, reflecting their sensitivity to the two controlled evidence sources. These findings motivate us to evaluate ranking-failure detection, robustness across recommendation conditions, and responses to controlled evidence changes as distinct properties of UQ.",
+      "published": "2026-11-24T17:48:54Z",
+      "updated": "2026-11-24T17:48:54Z",
+      "categories": [
+        "cs.IR",
+        "cs.CL",
+        "cs.LG",
+        "stat.ML"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33036",
+      "abs_url": "https://arxiv.org/abs/2611.33036",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32964",
+      "title": "Benchmarking Evidence Sufficiency in Vision-Language Models for Autonomous Driving",
+      "authors": [
+        "Nhat Ha Nguyen",
+        "Sudipta Chowdhury",
+        "Lokesh Das"
+      ],
+      "abstract": "Reliable driving VLMs must do more than answer correctly or localize relevant scene actors: they must determine whether the available visual evidence is sufficient to support an answer. Existing evaluations largely treat grounding and answerability as separate measurements, making it difficult to distinguish well-supported predictions from those localized to relevant but insufficient evidence. We introduce DriveAnswer, a benchmark of 20,151 questions across seven reasoning families, that operationalizes this distinction using matched strong- and weak-evidence configurations. Each pair preserves the underlying scene fact and semantic answer while changing whether the observations support answering, making abstention the appropriate response under weak evidence. On the six-family evaluation, the strongest zero-shot baseline reaches 67.31% strong-evidence accuracy, yet only 21.55% of matched questions satisfy both answer-abstain behavior and complete grounding. With controlled adaptation, Gemma-4-12B reaches 63.29% on this joint capability, nearly tripling its zero-shot performance. Qwen3-VL-8B exhibits the same broad improvement in evidence-sensitive answering and grounding. These results show that semantic correctness, evidence sufficiency, and grounding are distinct capabilities that should be evaluated jointly.",
+      "published": "2026-11-24T17:01:37Z",
+      "updated": "2026-11-24T17:01:37Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32964",
+      "abs_url": "https://arxiv.org/abs/2611.32964",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32940",
+      "title": "Do Vision-Language Models Know Their Own Visual Weaknesses? Probing Capability-Level Metacognition",
+      "authors": [
+        "Dohoon Kim",
+        "Taesup Moon"
+      ],
+      "abstract": "Metacognition includes knowing one's own strengths and weaknesses across kinds of tasks, not only judging whether a single answer is correct. We test whether vision-language models (VLMs) know in advance which kinds of visual tasks and image conditions are hard for them, across a wide range of open and proprietary models. Because some tasks are hard for every model, we separate what a model knows about this shared difficulty from what it knows about itself. We find that VLMs know little in advance about their visual weaknesses. They misjudge their overall accuracy and do not even know which kinds of tasks are hard for every model, and most misjudge how degraded images affect them. We further train VLMs to predict their own accuracy, which teaches them their own level of accuracy on kinds unseen in training but not which kinds are hard for them. However, information about these weaknesses appears once a model starts solving. On a few unlabeled questions of a kind, the probability a model assigns to its own answers follows weaknesses particular to the model, across kinds of tasks and image conditions. VLMs thus hold information about their own weaknesses that their stated predictions do not yet reflect. By separating what is particular to a model from what holds for every model, our evaluation offers a test for methods that aim to teach VLMs their own weaknesses, and the answer probability offers them a signal to start from.",
+      "published": "2026-11-24T16:46:34Z",
+      "updated": "2026-11-24T16:46:34Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32940",
+      "abs_url": "https://arxiv.org/abs/2611.32940",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32877",
+      "title": "Simultaneously Boosting Efficiency and Capability for Linear Attention via Adaptive Channel Compression and Activation Purification",
+      "authors": [
+        "Senqi Guan",
+        "Xianchao Zhang",
+        "Moyan Tian",
+        "Linlin Zong",
+        "Wenxin Liang",
+        "Xinyue Liu"
+      ],
+      "abstract": "Self-attention's quadratic complexity constitutes a core bottleneck for Vision Transformers (ViTs). Existing efficiency-oriented optimizations, including softmax-based and linear attention (LA) variants, generally compromise model representational capacity, leading to inevitable performance degradation. We propose a novel linear attention which alleviates this efficiency-capability dilemma. For the first time, we embed an Adaptive Channel Compression and Activation Purification (ACCAP) mechanism into the QKV projection of linear attention, which enables the model to retain high-dimensional feature information while performing computations with reduced channels. We further fuse a focused kernel function and a self-gating module into ACCAP to construct a lightweight linear attention module (ACCAP-LA). Our theoretical analysis shows that, compared to standard linear attention, ACCAP-LA reduces the attention module's parameter count by 79.17% and FLOPs by 77.5%. Extensive experiments demonstrate ACCAP-LA's effectiveness: when applied to ViT, it achieves 79.4% Top-1 accuracy on ImageNet-1K with only 5.8M parameters, and more notably, it boasts strong cross-architecture compatibility, boosting EfficientViT-b1 and PVT-T by 3.3% and 3.4% respectively.",
+      "published": "2026-11-24T16:12:24Z",
+      "updated": "2026-11-24T16:12:24Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32877",
+      "abs_url": "https://arxiv.org/abs/2611.32877",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32848",
+      "title": "Measurement Artifacts in Trustworthiness Evaluations of Quantized Small Language Models",
+      "authors": [
+        "Tanzeel Abbas",
+        "Tehseen Zia",
+        "David Windridge"
+      ],
+      "abstract": "Evaluations of quantized language models attribute the change in a benchmark score to quantization. We write the measured change as the true change plus a term contributed by the instrument. Instrument error that is the same at every precision can shrink a paired comparison but cannot create or reverse an effect. Error that interacts with quantization can do both, and it is reported as an effect of quantization. We estimate this interaction for four measurement choices in 8 instruction-tuned models below two billion parameters, at float16, LLM.int8() and NF4, on identical items. Measured against labels from two human annotators, the 4-bit rise in harmful compliance is about half to two-thirds of the rise in non-refusal that a corrected key word detector records. Cloze and lettered multiple-choice scoring disagree about the effect of quantization far more than their noise allows: their estimates correlate at \\r{ho} = 0.10, against a ceiling of about 0.77. LLM.int8() answers and generations depend on which items share a batch, and padding alone changes its answers. Rounding activations to 8 bits is enough to produce this dependence. NF4 is batch-invariant. The two largest reported calibration losses are response-bias shifts. We release item-level predictions, option scores and human annotations, and give recommendations for evaluating compressed small models.",
+      "published": "2026-11-24T15:54:46Z",
+      "updated": "2026-11-24T15:54:46Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32848",
+      "abs_url": "https://arxiv.org/abs/2611.32848",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32803",
+      "title": "MRBench: Benchmarking Physical Necessity Reasoning in Heterogeneous Multi-Robot Manipulation",
+      "authors": [
+        "Yanzhe Chen",
+        "Zhijun Cao",
+        "Ruihe An",
+        "Chang Gong",
+        "Mike Zheng Shou"
+      ],
+      "abstract": "Recent advances in multi-robot manipulation have shown how robots can collaborate to accomplish complex tasks. However, successful coordination does not reveal which robots are actually needed. The same task may require different teams as robot capabilities change, resources become unavailable, or objects replace robotic support. We argue that reliable multi-robot manipulation requires physical necessity reasoning: understanding what a task demands, which resources can fulfill those demands, and which are truly necessary. We introduce MRBench, a benchmark for physical necessity reasoning in heterogeneous multi-robot manipulation. It comprises eight tasks with distinct concurrency and reach constraints, each evaluated under five configurations that change the required resources while preserving the task goal. Our evaluation reveals that existing coordination agents perform well with reference teams but struggle when robot embodiments change or passive objects can replace robotic support. To address this gap, we propose MRScissors, which separates task requirements from measured physical capabilities and identifies minimal feasible teams through constrained search. Across two model backbones, MRScissors achieves 85.4% and 91.2% team-selection accuracy, outperforming the strongest baselines by 10.4 and 9.5 points, respectively. Together, these findings expose a critical gap between coordinating robots and understanding their physical necessity.",
+      "published": "2026-11-24T15:25:53Z",
+      "updated": "2026-11-24T15:25:53Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32803",
+      "abs_url": "https://arxiv.org/abs/2611.32803",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32734",
+      "title": "ASCENT: A Benchmark for Evaluating and Advancing Stepwise Diagnostic Reasoning in Large Language Models on Common Clinical Scenarios",
+      "authors": [
+        "Yera Choi",
+        "Yeong Hwa Kim",
+        "Jaedeok Lee",
+        "Taekang Kim",
+        "Sangdoo Yun",
+        "Seong-Eun Moon"
+      ],
+      "abstract": "Large language models (LLMs) excel at medical question answering yet are rarely evaluated on the stepwise diagnostic reasoning that defines real clinical workflows, where impressions are revised as information accumulates. We build Annotated Stepwise Clinical rEasoning for NaturalisTic Diagnosis (ASCENT), a clinician-annotated benchmark and training resource of 3,078 stepwise problems derived from MedQA-USMLE that decomposes each vignette into EMR-aligned steps (Findings, Impression, supporting Rationale), enabling evaluation of intermediate reasoning under incomplete information. Experiments and training with ASCENT revealed insights into how current LLMs handle stepwise diagnostic reasoning. Even strong reasoning models that perform well on MedQA-USMLE leave substantial headroom on ASCENT, and general-purpose frontier models trail further, exposing a persistent gap between fully informed and stepwise diagnosis. Fine-tuning Qwen2.5-7B and 32B on ASCENT yields measurable F1 gains over both pre-trained and HuatuoGPT-o1 CoT-trained baselines, with gains driven primarily by precision. Complementary robustness analyses (counterfactual perturbation, format-vs-content control, judge agreement, and rollout) further show that ASCENT-fine-tuned models rely on the diagnostic content of prior impressions rather than imitating their output format, while error propagation under rollout remains a key challenge for clinical deployment.",
+      "published": "2026-11-24T14:49:50Z",
+      "updated": "2026-11-24T14:49:50Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32734",
+      "abs_url": "https://arxiv.org/abs/2611.32734",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32683",
+      "title": "DeCoNav-Act: Benchmarking Collective Physical Capability in Multi-Robot Mobile Manipulation",
+      "authors": [
+        "Yunzi Wu",
+        "Sunyao Zhou",
+        "Xiaotao Zhang",
+        "Yucheng Deng",
+        "Yuehao Huang",
+        "Lin Qian",
+        "Xuanrui Cui",
+        "Xinhai Li",
+        "Chenjia Bai",
+        "Hongqing Chu",
+        "Xuelong Li"
+      ],
+      "abstract": "Robot teams can split workloads or combine complementary bodies, but only if each robot leaves the shared world in a state its teammate can use. Existing multi-robot benchmarks emphasize task allocation and skill sequencing, rarely testing whether the resulting physical states are usable. To evaluate collective physical capability, we introduce DeCoNav-Act, a benchmark for language-guided multi-robot mobile manipulation in a shared physics simulation. Its 350 homogeneous and 150 heterogeneous tasks, each verified by joint reference execution, span two coordination mechanisms: parallel workloads in shared space and physical dependencies in which one robot establishes a condition for a teammate to use. Beyond team success, DeCoNav-Act measures path efficiency and handoff coverage and success, and adds a diagnostic from verified pre-handoff states. Evaluating sensor-grounded adaptations of ASPIRE and RAX and our agent CoMoMa, we find that with GPT-5.6-luna no method completes a task, at most 8.8% of dependencies are reached, and even from pre-handoff states no handoff is completed; with GPT-6.1-sol, CoMoMa establishes the condition in 26.5% of trials, but only 4.1% succeed.",
+      "published": "2026-11-24T14:24:37Z",
+      "updated": "2026-11-24T14:24:37Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32683",
+      "abs_url": "https://arxiv.org/abs/2611.32683",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32652",
+      "title": "Power Side-Channel Evaluation using Multi-FPGA Systems",
+      "authors": [
+        "Yaswanth Tavva",
+        "Geng Luo",
+        "Trevor E. Carlson",
+        "Li-Shiuan Peh"
+      ],
+      "abstract": "Complex out-of-order processors are difficult to evaluate for power side-channel leakage before tapeout. A single FPGA often lacks sufficient capacity, whereas conventional CAD-based analysis is too slow to support the large numbers of traces required by practical attacks. Multi-FPGA emulation provides greater capacity, but existing partitioning schemes are not security-aware and thus results in poor attack performance. This work presents Scissors, a security-aware multi-FPGA partitioning approach for pre-silicon power side-channel evaluation of complex out-of-order processors. Scissors uses side-channel vulnerability factor (SVF) analysis to identify signals correlated with the secret key. It then keeps strongly key-correlated signals confined to one FPGA partition (measured) while moving rest of the signals to the other FPGAs (support), improving the observability of the side-channel information. We evaluate Scissors through RTL simulations and physical measurements on a two-U200 FPGA testbed, using frequency-domain CPA with a Hamming-weight leakage model. RTL ablation shows that only 68-71 high-SVF signals dominate key recovery process. For a single-core processor (SingleBOOM), Scissors recovers the key with 12,000 traces, compared with 49,000 for the unpartitioned design and 43,000 for TritonPart, while improving correct-key correlation by $2.83\\times$. For a quad-core processor (QuadBOOM), which exceeds the capacity of the CW340 single-FPGA platform, Scissors reduces the required traces from 111,000 to 66,000 and improves correlation by $1.48\\times$ over TritonPart. Scissors also reduces QuadBOOM RTL-to-bitstream generation from 61 h 39 min to 6 h 40 min, a $9.25\\times$ speedup. These results show that security-aware partitioning improves leakage observability and attack performance while substantially reducing implementation time for complex processors against the baseline method.",
+      "published": "2026-11-24T14:09:36Z",
+      "updated": "2026-11-24T14:09:36Z",
+      "categories": [
+        "cs.CR",
+        "cs.AR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32652",
+      "abs_url": "https://arxiv.org/abs/2611.32652",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32649",
+      "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
+      "authors": [
+        "Qingle Liu",
+        "Jieming Li",
+        "Pei-lin Li",
+        "Shenghan Zheng",
+        "Ruize Yang",
+        "Sunqi Fan",
+        "Deyao Hong",
+        "Huan-ang Gao",
+        "Meng-Hao Guo",
+        "Shuojin Yang"
+      ],
+      "abstract": "In-context learning (ICL) lets agents acquire new rules from context and adapt to user-specific requirements at inference time. The same frontier agents now operate both computers and robots, yet their ICL remains insufficiently assessed: existing benchmarks are largely offline, rely on text or static images, and risk training-data contamination, while robot evaluations are limited to method-level ablations. We present ICLWorld, an online benchmark that evaluates the ICL of agents from digital to physical worlds, covering computer use and robot use, together with UIverse, a unified harness that turns every environment into a user interface. We build 30 environments, record 630 demonstration videos (10+ hours), and design 160 tasks with customized, often counter-intuitive rules that cannot be satisfied without learning from the context. Each task comes with three rule versions, given as text or video, and we test generalization at three levels, from replaying the demonstration to new instances and unseen environments. Across six frontier models, the strongest agents, Claude Opus 5.5 and GPT-6 Astra, succeed on 82% and 76% of computer-use runs but only 27% and 26% of robot-use runs, and a no-rule control reduces success to at most 8%. GPT-6 Astra succeeds under all three rule versions on only 38% of computer-use tasks, half its rate under a single rule, and answers 98% of robot rule questions correctly yet completes only 20% of these tasks. Frontier agents learn rules comparably well from video and from text and transfer them across environments, whereas weaker agents rely on text and lose most of their video-based success once the demonstrated situation is resampled. These findings reveal substantial gaps between the digital and the physical world and between identifying a rule and acting on it.",
+      "published": "2026-11-24T14:07:17Z",
+      "updated": "2026-11-24T14:07:17Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32649",
+      "abs_url": "https://arxiv.org/abs/2611.32649",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32646",
+      "title": "A Text-to-SQL Benchmark for Official Statistics",
+      "authors": [
+        "Lucas Lageweg",
+        "Karen Goes",
+        "Tom van den Broek",
+        "Frank Pijpers",
+        "Paul Groth",
+        "Jan-Christoph Kalo"
+      ],
+      "abstract": "Official statistics are critical datasets for a wide variety of actors, including policymakers and businesses. For providers of official statistics, improving accessibility, governance, and disclosure of their data is of key importance. This can be improved by providing question-answering systems based on text-to-SQL approaches. However, existing text-to-SQL benchmarks do not resemble this setting. Official statistics are published as open-domain catalogs of thousands of wide tables whose columns and values are codes, and whose meaning is recorded in separate metadata rather than in a relational schema. To address this gap, we introduce LOCuST, a text-to-SQL benchmark that pairs over two thousand English and Dutch tables from Statistics Netherlands with a semantic knowledge graph. The graph describes the tables, measures, and dimension codes through labels, definitions, hierarchies, and units, and is the external knowledge a system needs to find the right tables and ground a question in the right codes. The benchmark includes expert-annotated questions for different query and aggregation types, including raw value retrieval, summations, proportion calculations, and joins. Alongside standard evaluation measures, we introduce an observation F1 metric that measures how close a query is to the ground truth even when the answers are different. We evaluate a variety of state-of-the-art LLMs and find that they struggle to write SQL that answers the questions correctly.",
+      "published": "2026-11-24T14:05:10Z",
+      "updated": "2026-11-24T14:05:10Z",
+      "categories": [
+        "cs.AI",
+        "cs.IR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32646",
+      "abs_url": "https://arxiv.org/abs/2611.32646",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32610",
+      "title": "Privacy Disclosure Control Benchmark (PDC-Bench): How Faithfully Do LLMs Keep Privacy Constraints on In-Context Disclosure Granularity?",
+      "authors": [
+        "Kosuke Fujita",
+        "Daiki Nishiyama",
+        "Jun Sakuma"
+      ],
+      "abstract": "In LLM task execution, a constraint on the permitted disclosure granularity of personal attributes is sometimes imposed on the output. For example, if a person's private attribute is their location (San Francisco) and disclosure is permitted only at the country level, an output at the state level (California) violates the constraint. Detecting such violations requires capturing not only direct privacy leakage (San Francisco) but also semantic leakage (California). However, existing benchmarks cannot measure the degree of leakage with respect to a given semantic constraint such as the country-level limit. We therefore formalize disclosure control as a constraint on the permitted ceiling over the hierarchy of a knowledge graph. Building on this formulation, we construct PDC-Bench, a benchmark of 16,105 samples covering geography, age, race and ethnicity, and occupation. In our experiments applying PDC-Bench to eleven LLMs, 62% of the constraint violations were semantic leakage. We further found that semantic leakage depends less on the model than on the permitted disclosure granularity and the task's need for the private attribute; reliable auditing must therefore target semantic leakage together with these two factors. Data, prompts, and code are available at https://github.com/fuji1655/PDC-Bench.",
+      "published": "2026-11-24T13:43:03Z",
+      "updated": "2026-11-24T13:43:03Z",
+      "categories": [
+        "cs.CR",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32610",
+      "abs_url": "https://arxiv.org/abs/2611.32610",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32579",
+      "title": "Follow-Bench 2.0: An End-to-End 3D Benchmark for Socially-Aware Robot Person Following",
+      "authors": [
+        "Hanjing Ye",
+        "Tianle Zeng",
+        "Jianwei Peng",
+        "Yanci Wen",
+        "Yuchen Zhou",
+        "Yonggen Ling",
+        "Hong Zhang"
+      ],
+      "abstract": "Socially-aware robot person following (RPF) requires a mobile robot to follow a designated person in dynamic human environments while maintaining target identity, avoiding obstacles and pedestrians, and preserving socially comfortable formations. Existing benchmarks only partially evaluate this coupled problem: embodied visual tracking benchmarks emphasize target visibility with limited social interaction, person re-identification benchmarks study perception without closed-loop control, and motion-planning benchmarks often assume ground-truth target and pedestrian states. We introduce Follow-Bench 2.0, an end-to-end 3D benchmark for evaluating socially-aware RPF under coupled perception--planning challenges. Built in Unreal Engine, Follow-Bench 2.0 provides difficulty-leveled scenarios with diverse pedestrian flows, lighting and weather conditions, cluttered layouts, bottlenecks, queueing behaviors, distractors, and temporary target occlusions. The benchmark supports modular perception--planning pipelines, end-to-end visual policies, and foundation-model-based active trackers under a unified closed-loop protocol. It further evaluates both back- and side-following configurations and reports safety--comfort metrics covering task success, target visibility, target recovery, social-space intrusion, following formation, and motion smoothness. Experiments show that RPF-oriented modular pipelines substantially outperform current end-to-end visual policies on close and socially comfortable following, but also reveal that socially-aware RPF remains far from solved in interaction-heavy environments and especially in side-following. Follow-Bench 2.0 therefore provides a diagnostic platform for studying how perception errors, occlusions, crowd interactions, and following configurations jointly affect robot person following.",
+      "published": "2026-11-24T13:20:05Z",
+      "updated": "2026-11-24T13:20:05Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32579",
+      "abs_url": "https://arxiv.org/abs/2611.32579",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32568",
+      "title": "Representation and Model Contributions on Small Molecular Benchmarks: Controlled Comparisons and External Evaluation",
+      "authors": [
+        "Nora A. M. A. Talkhan",
+        "Ibrahim Abdelbaky",
+        "Fatma A. Omara"
+      ],
+      "abstract": "Improvements in molecular property prediction are usually attributed to the model, although part of the gain may come from the molecular representation. New models are commonly benchmarked against a random forest (RF) trained on a molecular fingerprint, a comparison that changes the model and the representation at the same time. We separate the two contributions with a two-by-two factorial design in which the RF and a second model (CatBoost or the tabular foundation models TabPFN and TabFM) are each trained on a fingerprint and on RDKit descriptors, and each effect is tested with a paired scaffold bootstrap. Seven small MoleculeNet datasets (3 regression, 4 classification) are evaluated on the published split of a recent graph transformer (DGT), on 10 additional scaffold splits and on external datasets. For solubility and lipophilicity, the representation effect exceeds the model effect in every main factorial design, in all three evaluations. For hydration free energy, the result depends on the starting fingerprint: from ECFP4 the representation effect is larger, and from MACCS neither effect is significantly larger. On the classification datasets, only one main factorial design has a significant difference between the two effects. Although the model effect is smaller on solubility and lipophilicity, TabFM outperforms the RF on all 7 datasets when both use RDKit descriptors. With RDKit descriptors in place of a fingerprint, the RF baseline reported for DGT surpasses the transformer's published solubility score. We recommend that model comparisons evaluate classical baselines on more than one representation and report the representation and model effects separately.",
+      "published": "2026-11-24T13:13:51Z",
+      "updated": "2026-11-24T13:13:51Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32568",
+      "abs_url": "https://arxiv.org/abs/2611.32568",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32550",
+      "title": "Self-supervised quality evaluation of grid maps without ground truth",
+      "authors": [
+        "Unal Artan",
+        "Manuel Castellano-Quero",
+        "Johannes A. Stork",
+        "Martin Magnusson"
+      ],
+      "abstract": "Maps are widely used in the robotics community for localization and path planning and the ability to identify incorrect or inaccurate regions of a map is an area of active research interest. For large environments, manual edits of the map can be very time consuming and a tool which can assist a map editor is needed. With this paper, we contribute to robot introspection through self-assessment of map quality, using only a given map as input to be independent of the underlying mapping algorithm. Current methods for map quality assessment rely on ground-truth or labelled information for training classifiers, both of which can be difficult to obtain. In this paper, we propose a self-supervised learning approach to map quality assessment of 2D occupancy grid maps which identifies regions of a map that require further investigation. We leverage an autoencoder for patches extracted from the map to capture the dominant structure of the map. By evaluating the reconstruction loss of a patch reconstructed with the learned model, we can evaluate whether it contains an unusual structure, which indicates the need of further investigation. We evaluate our method on the outcome of state-of-the-art grid mapping methods using benchmark datasets as well as maps from warehouse environments, highlighting the application to more complex environments. We show that the method identifies regions with sparse data, clutter, and misregistrations.",
+      "published": "2026-11-24T13:05:56Z",
+      "updated": "2026-11-24T13:05:56Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32550",
+      "abs_url": "https://arxiv.org/abs/2611.32550",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32534",
+      "title": "EmbodiedStudio: A Task-Driven Simulation Generation Platform for Embodied Learning and Evaluation",
+      "authors": [
+        "Yang Zhao",
+        "Xubo Yang"
+      ],
+      "abstract": "Training and evaluating robots across diverse tasks requires a supply of simulation environments suited to those tasks. While recent scene and task generators offer a promising way to expand this supply, delivering a usable task environment still faces two practical gaps: generated scenes that look plausible in appearance often fail to support the intended task interactions or remain physically stable in simulation, and generated scoring programs frequently attempt task conditions without implementing them faithfully. We present EmbodiedStudio, a task-driven simulation generation platform that bridges these gaps by jointly authoring scene, task, robot-behavior, and rubric programs under closed-loop simulation feedback and independent review. Crucially, as the coding agent iteratively debugs scenes, behaviors, and stateful rubrics in simulation, this closed-loop process natively yields both forward construction experience for learning to build environments and physical execution experience for policy learning, all bound to frozen environment revisions for repeatable evaluation. Across scene generation, rubric evaluation, ablations, and learning studies, EmbodiedStudio substantially improves task readiness and rubric faithfulness while improving physical stability and retaining actionable supervision signals for layout authoring and policy adaptation.",
+      "published": "2026-11-24T12:58:24Z",
+      "updated": "2026-11-24T12:58:24Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32534",
+      "abs_url": "https://arxiv.org/abs/2611.32534",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32529",
+      "title": "ContinualDrive: A Deployment-Anchored, Multi-Axis Benchmark for Continual Updates of Learned Driving Planners",
+      "authors": [
+        "Zirui Li",
+        "Zhiqi Mao",
+        "Yangang Ren",
+        "Heye Huang",
+        "Haohan Yang",
+        "Qihang Huang",
+        "Zhan Chen",
+        "Chen Lv"
+      ],
+      "abstract": "Learned driving planners keep being updated after deployment as new logs arrive, yet continual learning evaluations rarely ask whether an update improves on the deployed model, and their verdicts rest on unstated evaluation choices. We present ContinualDrive, a deployment-anchored benchmark for post-deployment continual learning of driving planners. It updates a deployed planner on real-world nuPlan logs one scenario-type group at a time, evaluates the same checkpoints in open and closed loop, makes four measurement axes explicit (evaluation loop, reference checkpoint, temporal aggregation and stream protocol), and anchors a three-valued release verdict to the deployed checkpoint. We study two planners (PlanTF and Diffusion Planner) under full fine-tuning and adapter or LoRA updates, with and without replay or gradient projection, in three task orders. Verdicts can reverse or vanish when one axis changes: open-loop ADE ranks the final PlanTF model above the deployed one in half of its core-suite runs, whereas every closed-loop score ranks it below; backward transfer misses this loss, which on average is already present when each group has just been learned; and regime rankings vary far less across training seeds than across task orders. In the core suite of full and adapter updates, no regime measurably improved on the deployed planner in closed loop; on a panel more than ten times larger every evaluated final checkpoint trails it, and joint training on all groups recovers much of the loss without exceeding its nuPlan closed-loop score. We distill these findings into a reporting contract and will release the code and all checkpoints.",
+      "published": "2026-11-24T12:53:32Z",
+      "updated": "2026-11-24T12:53:32Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32529",
+      "abs_url": "https://arxiv.org/abs/2611.32529",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32508",
+      "title": "RecurSciBench: Benchmarking Recursive Self-Improvement in Data-Driven Scientific Research",
+      "authors": [
+        "Wenxi Xu",
+        "Chuan Qin",
+        "Zihan Wang",
+        "Zixing Chen",
+        "Le Zhang",
+        "Jingbo Zhou",
+        "Hao Wang",
+        "Yuanchun Zhou",
+        "Hengshu Zhu"
+      ],
+      "abstract": "Large language model (LLM)-based agents are advancing the automation of data-driven scientific research. Recent advances in recursive self-improvement (RSI) offer the potential for these agents to continuously improve through experience, but evaluating transfer across scientific tasks requires executable, scientifically verifiable tasks and independent assessment of self-improvement gains. We introduce RecurSciBench, a scalable benchmark for evaluating RSI in data-driven scientific research. Its RecurSciPipe framework automatically constructs scientific modeling and data analysis tasks from raw datasets, with execution-based verification and scientific validity checks. RecurSciBench spans four scientific domains, multiple data modalities, and varied scientific objectives. We evaluate four RSI systems by comparing their initial and evolved states on independent tasks after evolution on source tasks, covering within-type, cross-type, and cross-domain transfer. Experiments show that the benefits of self-improvement vary across agent systems and scientific domains. Positive overall gains can coexist with regressions on individual tasks. Experience can transfer across task types and benefit other domains even without measurable gains in the source domain.",
+      "published": "2026-11-24T12:38:22Z",
+      "updated": "2026-11-24T12:38:22Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32508",
+      "abs_url": "https://arxiv.org/abs/2611.32508",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32476",
+      "title": "ViTacLab: Physically Consistent Visuo-Tactile Simulation, Benchmarking, and Representation Learning for Robotic Manipulation",
+      "authors": [
+        "Linjing You",
+        "Zeming Yang",
+        "Zhenhao Shen",
+        "Shengqiang Xu",
+        "Guanda Li",
+        "Wenxuan Li",
+        "Jiyu Guo",
+        "Jasper Lu",
+        "Kyle Xu",
+        "Shawn Xie",
+        "Junjie Zhu",
+        "Siyu Wu",
+        "Jian Liu",
+        "Changhao Zhang",
+        "Rongchong Li",
+        "Zeyi Li",
+        "Hengshuang Zhao",
+        "Ruihai Wu"
+      ],
+      "abstract": "Tactile sensing is essential for contact-rich robotic manipulation, but existing visuo-tactile simulators trade physical fidelity for scalability, and benchmarks largely focus on two-finger grippers. We present ViTacLab, a framework comprising ViTacSim, ViTacBench, and ViTacPolicy. ViTacSim uses a tri-modal tactile primitive: a global sparse contact-force lattice, a local dense force array, and tactile images. Anchored to PhysX contact-solver outputs, it corrects normal inconsistency through local stiffness alignment and reconstructs tangential forces under decoupled slip-stick regimes while preserving GPU parallelism. A joint projection preserves the sparse wrench and enforces local friction cones. ViTacBench spans parallel grippers, dexterous hands, and bimanual systems, with tasks ranging from vision-dominant to tactile-dominant regimes. ViTacPolicy aggregates variable numbers of heterogeneous tactile inputs using spatial-pose embeddings and a Transformer, and aligns force-array and tactile-image modalities through a two-stream VQ-VAE with a shared codebook. Controlled Hertzian-reference indentation and real-sensor sliding tests reduce normal and tangential force RMSE from 2.31 and 1.85 N to 0.42 and 0.53 N, respectively. Throughput reaches 2,482.9 tactile-pipeline FPS at 256 parallel environments. Simulation and real-world experiments show gains on several contact-rich tasks, while low absolute success on tactile-dominant tasks highlights the remaining difficulty of purely tactile control.",
+      "published": "2026-11-24T12:06:34Z",
+      "updated": "2026-11-24T12:06:34Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32476",
+      "abs_url": "https://arxiv.org/abs/2611.32476",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32413",
+      "title": "A Face Robot which Imitates Human Musculoskeletal Skin System and Its Evaluation on Basic Movement of Facial Expression",
+      "authors": [
+        "Shun Kaneko",
+        "Shunnosuke Yoshimura",
+        "Akihiro Miki",
+        "Kento Kawaharazuka",
+        "Kei Okada"
+      ],
+      "abstract": "Facial robots require many coordinated, smallamplitude motions, but accommodating these motions in a compact face remains difficult. This paper presents an anatomically inspired facial-robot platform that reproduces the layered organization of the human facial musculoskeletal system. The platform comprises bone, muscle, and skin components whose geometry, shape, and attachment locations are derived from three-dimensional anatomical data. Wire-driven, compliant muscle components are routed through PTFE tubes, allowing actuation to be placed away from the face. We describe the selection and fabrication of 65 muscles (34 muscle types) required to reproduce the 47 target action units (AUs) in the Facial Action Coding System (FACS). We then evaluate the reproducibility of individual AUs in two stages: muscle actuation without skin and actuation after the silicone skin is attached. Forty of the 47 target AUs were reproduced with the muscle components, and 30 were reproduced after skin attachment. These results demonstrate the feasibility of reproducing a broad range of FACS facial expressions using an anatomically inspired musculoskeletal structure. The proposed platform provides a foundation for the systematic development and evaluation of future anatomically inspired facial robots",
+      "published": "2026-11-24T11:17:58Z",
+      "updated": "2026-11-24T11:17:58Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32413",
+      "abs_url": "https://arxiv.org/abs/2611.32413",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32371",
+      "title": "A Description-Derived Drug-Drug Interaction Benchmark Reveals Split-Dependent Molecular Representation Rankings",
+      "authors": [
+        "Manel Gil-Sorribes",
+        "Isaac Filella-Merce",
+        "Alexis Molina"
+      ],
+      "abstract": "Drug-drug interaction (DDI) prediction is clinically important and poses a distinct challenge for molecular representation learning. Unlike single-molecule property prediction, DDI requires a predictor to compose two molecular representations into a relational outcome. DrugBank provides curator-authored DDI descriptions rather than ready-made categorical labels, so a categorical prediction target must first be derived from the text. We construct a dataset of DDI pairs by mapping processed descriptions to six text-derived categories and define a benchmark with four holdout regimes that restrict train-test chemical overlap from random pairs to scaffold-disjoint evaluation. We then use this benchmark to compare molecular fingerprints, pretrained sequence representations, and graph-derived features across five seeds and multiple classifier heads. Molecular fingerprints lead the high- overlap random split, whereas graph-derived representations lead the drug- and scaffold-holdout regimes, with the gap increasing as molecular overlap is restricted. Changing the classifier head affects absolute performance but not the relative representation ranking. These results show that representation rankings change with test-set novelty under a fixed description-derived label space.",
+      "published": "2026-11-24T10:40:38Z",
+      "updated": "2026-11-24T10:40:38Z",
+      "categories": [
+        "q-bio.BM",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32371",
+      "abs_url": "https://arxiv.org/abs/2611.32371",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32368",
+      "title": "Decision Models: An Introduction and Capability Evaluation",
+      "authors": [
+        "Rongtao Zhang",
+        "Mingjing Qi"
+      ],
+      "abstract": "Applications such as ticket routing and incident triage need decisions that software can act on. Decision models provide these outputs through explicit types for choices, binary judgments, and policy scores. We evaluate the accuracy, output validity, and request latency of eleven configurations on 1,000 English and Chinese cases across nine task suites. StartLux Instant achieves 95.3% overall accuracy, returns valid outputs on all 1,000 cases, and has a median request latency of 0.084 s. It reaches 99.4% on classification and routing and selects the correct response on all 100 tool-selection cases. The highest overall accuracy among the evaluated configurations is 97.1%. These results show how a typed decision service can support fast, programmatic decisions and why its suitability depends on task-specific errors and latency requirements.",
+      "published": "2026-11-24T10:38:36Z",
+      "updated": "2026-11-24T10:38:36Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32368",
+      "abs_url": "https://arxiv.org/abs/2611.32368",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32321",
+      "title": "FigmaEval: A Benchmark for Evaluating AI Agents in Professional UI Design",
+      "authors": [
+        "Xinyue Huang",
+        "Yongyong Gao",
+        "Zhengyuan Pan",
+        "Zheng Wei",
+        "Xinya Liu",
+        "Duanyi Yan",
+        "Zhiyu Hang",
+        "Zheng Ma",
+        "Lewei Lu"
+      ],
+      "abstract": "Recent advances in AI agents have enabled autonomous UI design using professional tools such as Figma, yet evaluating their design capabilities remains challenging due to the open-ended nature of design tasks and the absence of unique ground truths. We introduce FigmaEval, a benchmark for evaluating AI agents on professional UI design tasks, comprising 84 tasks and 783 screens derived from real-world Figma design files. FigmaEval adopts a constrained-specification, open-solution paradigm, standardizing task requirements and design resources while allowing agents to independently determine layouts, visual hierarchies, component composition, and visual presentation. To assess design quality beyond reference similarity, we develop 22 expert-grounded evaluation rubrics across six dimensions and introduce a human evaluation arena where professional designers compare agent-generated designs through blinded pairwise judgments. Evaluating eleven models under a unified Figma agent setup, we find substantial agreement between rubric-based assessments and human preferences, alongside distinct differences in design practices and quality--efficiency trade-offs. FigmaEval provides a framework for systematically assessing professional UI design capabilities and understanding the strengths and limitations of current AI agents.",
+      "published": "2026-11-24T10:14:21Z",
+      "updated": "2026-11-24T10:14:21Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32321",
+      "abs_url": "https://arxiv.org/abs/2611.32321",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32285",
+      "title": "SofaSpace: A Benchmark for Executable Visual Spatial Reasoning in Continuous Motion and Environment Construction",
+      "authors": [
+        "Ze Rong",
+        "Kun Shi",
+        "Zhedong Zheng"
+      ],
+      "abstract": "A rigid body can fit at its start and goal yet collide with a wall as it moves between them. Inspired by the moving sofa problem, we introduce SofaSpace, a benchmark for visual spatial reasoning through continuous planar rigid-body transport and environment construction. SofaSpace contains 3,000 scenes organized around three challenges: geometric compatibility, nonlocal maneuver planning, and interactive and temporal coordination. Four task views ask models to plan a motion, reconstruct a layout, design an environment that meets transport requirements, or jointly generate a layout and a motion. A separate set of 534 SofaSpace-Hard tasks tests planning and judgment. A geometric verifier checks the entire body throughout each submitted motion. On static planning tasks, endpoint agreement and continuous validity differ substantially within the same submitted plans: Claude drops from 97.2% to 52.8%, DeepSeek from 100.0% to 30.6%, and Kimi from 97.2% to 29.4%, while the strongest configuration retains 98.3% full validity. Environment construction reveals a further gap. Of 295 feasible layouts generated by the strongest configuration, 181 satisfy all evaluated functional requirements; for Kimi, one of 172 does. These results show how executable checks distinguish endpoint agreement from valid motion and geometric feasibility from functional compliance.",
+      "published": "2026-11-24T09:48:26Z",
+      "updated": "2026-11-24T09:48:26Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32285",
+      "abs_url": "https://arxiv.org/abs/2611.32285",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32251",
+      "title": "CaveBench: Benchmarking Abductive Physical Reasoning from Internal Observations",
+      "authors": [
+        "Guanxin Lin",
+        "Chen Yang",
+        "Shenxiang Zeng",
+        "Honghui Zhu",
+        "Xin Li",
+        "Wenbo Deng",
+        "Jiansheng Fan",
+        "Chen Wang"
+      ],
+      "abstract": "Vision-language models (VLMs) are advancing in physical reasoning, but whether they can understand external physical drivers from internal observations remains an open question. Existing benchmarks have not specifically targeted this setting. To this end, we introduce CaveBench, a benchmark for abductive physical reasoning from internal observations. Models receive apparatus descriptions and internal images while the external controls remain hidden, and must infer the operations responsible for the observed responses. CaveBench spans 20 apparatus scenes in five physical domains and contains 10,200 simulated episodes, split into 9,000 training, 1,000 validation, and 200 test episodes. Questions span one to six events and require the complete control set at every event, testing whether an explanation accounts for the entire process. Synchronized observations and control records provide the inputs and reference answers. Evaluating 27 VLM configurations yields six-event exact-match accuracies of 68.0% for the strongest closed-source model and 12.5% for the strongest open-weight model. Seven adaptation baselines show that single-event gains need not improve complete sequences. Error analysis identifies failures in visual identification, physical inference, evidence integration, and action composition, specifying where current models struggle to connect internal phenomena with their external causes.",
+      "published": "2026-11-24T09:27:40Z",
+      "updated": "2026-11-24T09:27:40Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32251",
+      "abs_url": "https://arxiv.org/abs/2611.32251",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32242",
+      "title": "Can You Find the Edit When Nothing Looks Wrong? A Paired Benchmark for Text-Driven Image Manipulation Localization Beyond Semantic Abnormality",
+      "authors": [
+        "Peiyu Zhuang",
+        "Jianquan Yang",
+        "Zhuoying Cai",
+        "Yi Jiang",
+        "Yingquan Chen",
+        "Xinle Wang",
+        "Zeqin Yu",
+        "Dongdong Lin",
+        "Ruitao Xie",
+        "Kaige Li",
+        "Xiaochun Cao"
+      ],
+      "abstract": "Instruction-driven image editing can alter a photograph while keeping the result coherent with the scene. Existing benchmarks lack matched plausible and anomalous edits of the same target, making it difficult to measure how localization performance changes with semantic plausibility. We construct a paired benchmark by generating semantically plausible and anomalous replacements of the same target in each source photograph. Both edits use the same editor, language, and generation settings. We estimate a separate mask for each output and retain pairs with sufficient mask overlap, enabling direct comparison of localization performance under the two semantic conditions. The release contains 47,747 bilingual triplets from 6,500 photographs, spanning four editors, three source domains, and six intended violation types. Across nine public localizers, editor-averaged IoU is lower on plausible edits in 26 of 27 model-dataset comparisons. This gap persists under pixel-change controls and region-size analyses. These findings reveal a semantic-plausibility shortcut: localization often weakens when an edited result looks ordinary. The benchmark provides a controlled setting for measuring this gap and developing localizers that remain effective on plausible edits.",
+      "published": "2026-11-24T09:19:33Z",
+      "updated": "2026-11-24T09:19:33Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32242",
+      "abs_url": "https://arxiv.org/abs/2611.32242",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32233",
+      "title": "Roboclock: A Unified Benchmark for Time-Aware Robotic Intelligence",
+      "authors": [
+        "Yujie Zhao",
+        "Anthony L. Hu",
+        "Zimeng Huang",
+        "Zhijing Wu",
+        "Luobin Wang",
+        "Richard Li",
+        "Shrivas Sudharsan",
+        "Henrik I. Christensen",
+        "Jishen Zhao"
+      ],
+      "abstract": "Time is a fundamental dimension of robotic intelligence: a robot may fail despite physically correct actions if it acts outside a valid time window, responds too slowly to an event, or fails to meet required throughput. Yet existing robotic benchmarks primarily emphasize spatial correctness and logical task completion, largely overlooking the temporal constraints of real-world applications. We present RoboClock, a unified benchmark for time-aware robotic manipulation featuring 60 tasks across five application domains. Mirroring these failure modes, RoboClock structures tasks around three types of temporal constraints: Temporal Window, Event-Reactive, and Throughput. Furthermore, RoboClock incorporates a Latency-Aligned evaluation protocol that continuously advances environment time during model inference and control-interface delays, paired with time-sensitive metrics. Evaluating over 30 methods, we find that the best-performing approach is the trained VLA, yet it achieves only 8.3% temporal success even on Easy-level tasks, with persistent challenges in generalization and transfer. These findings reveal fundamental limitations in current robotic systems and highlight the need to jointly optimize physical competence, temporal reasoning, and execution latency.",
+      "published": "2026-11-24T09:13:14Z",
+      "updated": "2026-11-24T09:13:14Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32233",
+      "abs_url": "https://arxiv.org/abs/2611.32233",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32168",
+      "title": "Benchmarking Protein Structure Tokenizers as Generation Targets for Language Models",
+      "authors": [
+        "Yong Liu",
+        "Zhanpeng Shi",
+        "Peicong Lin",
+        "Zhenyi Zhong",
+        "Yizhou Dang",
+        "Wendi Wu",
+        "Haoling Li",
+        "Jiayu Gu",
+        "Duo An",
+        "Shuangjia Zheng"
+      ],
+      "abstract": "Discrete structure tokenizers are the standard way to give a language model access to protein three-dimensional structure, yet they are selected on how accurately they can be read, their reconstruction fidelity, while the property that governs generation is how well a model can write them. We measure this property, writability, directly: holding the base model, data, recipe and compute fixed, we swap only the tokenizer and train the same 9B model to emit structure tokens residue by residue, over eight tokenizers, four compute budgets and three evaluation sets (96 cells). At 2B tokens final writability runs from TM 0.662 down to 0.378 under identical conditions, with five of the eight arms clearing the TM 0.5 mark at which a fold is usually called correct and three falling short of it. Neither codebook size nor reconstruction ceiling explains where an arm lands; the best and worst both use 8192 codewords. What does explain the spread is local structure preservation of the code space. In DPLM-2 a one-bit codeword error costs 0.019 TM where a random codeword costs 0.347, and the trained model's own errors are correspondingly local, at 0.51 of the random Hamming expectation; FoldToken4 fails both tests at the same codebook size and is 0.13 TM less writable. Three controls discipline how such a benchmark may be read. A same-recipe rerun puts the noise floor at $σ=0.0067$ TM, which collapses an apparent six-way ranking into four tiers. A reference-free geometry panel turns out to be nearly orthogonal to TM (Pearson $-0.58$), with the worst arm by TM producing the most physically valid backbones. And two pre-registered interventions are null for a reason the mechanism measurements reveal: the quantity they target saturates at 1.5B tokens while TM is still rising. All 131 evaluation cells, including raw generated token streams, are released.",
+      "published": "2026-11-24T08:19:49Z",
+      "updated": "2026-11-24T08:19:49Z",
+      "categories": [
+        "q-bio.QM",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32168",
+      "abs_url": "https://arxiv.org/abs/2611.32168",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32161",
+      "title": "Making Evaluation Explicit Is Not Enough: Supervising the Evaluation Process in Generative Reward Models",
+      "authors": [
+        "Qiyuan Chen",
+        "Yuze Zhao",
+        "Jiahe Chen",
+        "Hongsen Huang",
+        "Hongxia Xu",
+        "Yingda Chen",
+        "Jian Wu"
+      ],
+      "abstract": "Generative reward models (GRMs) make language-model evaluation more explicit by generating critiques, rubrics, or intermediate analyses before predicting a final preference. However, explicit evaluation does not necessarily imply a reliable evaluation process: under outcome-only supervision, a model may reach the correct final preference while producing weak or unsupported intermediate judgments, turning the evaluation into a post-hoc rationalization. We introduce STEP-GRM, a framework that directly supervises the intermediate evaluation process of rubric-based GRMs. In addition to conventional preference supervision, STEP-GRM provides structural guidance for rubric construction and local supervision for criterion-level judgments, encouraging the model to learn not only the correct final preference but also a more reliable process for reaching it. Extensive experiments show that STEP-GRM achieves strong performance on standard reward-modeling benchmarks while improving the consistency and correctness of intermediate evaluations. Moreover, reward signals produced by STEP-GRM lead to better downstream policy optimization, demonstrating that more reliable evaluation processes can translate into practical gains beyond reward-model accuracy.",
+      "published": "2026-11-24T08:13:05Z",
+      "updated": "2026-11-24T08:13:05Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32161",
+      "abs_url": "https://arxiv.org/abs/2611.32161",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32152",
+      "title": "RoboProbe: Benchmarking Physical Plausibility of Robot World Models",
+      "authors": [
+        "Zhuoying Yang",
+        "Jiachen Ni",
+        "Yichen Guo",
+        "Xiaoshan Wu",
+        "Mengyu Wang"
+      ],
+      "abstract": "Evaluating the physical plausibility of generated videos is critical for reliable robotic planning with world models. These videos inform action proposal and assessment before real-world execution, so undetected physical violations can lead to erroneous assessments of action feasibility and safety. Yet current video generators often produce physically implausible interactions. Detecting such violations directly with vision-language models (VLMs) remains challenging as physical verification requires evidence-grounded spatiotemporal reasoning beyond high-level semantic understanding. We develop five law-specific metrics for evaluating physical plausibility by combining spatiotemporal evidence from segmentation, tracking, 3D geometry, or appearance comparisons with targeted VLM reasoning: Contact fidelity, Object persistence, Solidity, Robot deformation, and Object deformation. Building on this metric suite, we introduce RoboProbe, an agentic evaluation framework that coordinates metric execution and selectively refines evaluations through constrained actions. To evaluate the physical plausibility of robot world models, we further introduce RP-Bench, with 761 human-labeled generated videos and 130 real demonstrations of 239 manipulation tasks from 12 robot datasets. On RP-Bench, all five metrics achieve AUROCs above 0.85 and outperform the evaluated learned judges, prior evaluators, and a frames-only Gemini baseline. Applying these metrics to five video generators reveals distinct patterns of physical violations across models, in both violation types and frequencies.",
+      "published": "2026-11-24T08:06:52Z",
+      "updated": "2026-11-24T08:06:52Z",
+      "categories": [
+        "cs.CV",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32152",
+      "abs_url": "https://arxiv.org/abs/2611.32152",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32100",
+      "title": "EEGJev: A System One Decision Model and Benchmark for Multi-Task EEG Question Answering",
+      "authors": [
+        "Dengzhe Hou",
+        "Kazunori D. Yamada"
+      ],
+      "abstract": "A single electroencephalographic (EEG) recording can support multiple decoding tasks. Fixed-label tests cannot show how EEG foundation models handle changing questions or options. We introduce EEGJev, a fast decision model that scores candidate answers in one pass. Our benchmark, EEGJev-Bench, covers six question types across 19 public EEG sources. We held the recording and options fixed while switching between questions about attributes paired during training, such as facial expression and the hand participants were asked to use. Across 13 test sources, EEGJev selected a label for the requested attribute with 99.70% accuracy (49.20% under uniform choice). Balanced accuracy for the specific answer was 62.04%. Its 95th-percentile response time was shorter than NeuroLM's on matched validation questions answered individually. EEGJev lets users switch decoding targets by changing the question. With EEGJev-Bench, researchers can test whether new decoders follow the question more reliably, identify the correct answer more often, or both.",
+      "published": "2026-11-24T07:20:23Z",
+      "updated": "2026-11-24T07:20:23Z",
+      "categories": [
+        "eess.SP",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32100",
+      "abs_url": "https://arxiv.org/abs/2611.32100",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31839",
+      "title": "Spec-Test Coverage Gap: Detecting Overspecified Tests in SWE-Bench-Style Benchmarks",
+      "authors": [
+        "Avi Aggarwal",
+        "Yiran Hu"
+      ],
+      "abstract": "SWE-bench-style benchmarks, such as SWE-bench Verified (Verified) and SWE-bench Pro (Pro), evaluate coding agents with tests taken from the change that originally fixed each issue. However, these tests can enforce details the task never states, causing correct alternative fixes to fail. Such overspecified tests have so far been found mainly through expensive expert review. To address this, we define the Spec-Test Coverage Gap (STCG), a 1-4 scale measuring overspecification, and score it with two LLM judges, Claude Opus 5.5 and GPT-6.1 Sol, which are given the specification and the test patch. A task is flagged as overspecified when both judges score it 3 or higher. Our study has three parts. First, we validate the judges on 206 tasks that earlier human audits and agent results label as overspecified or fine. Second, we apply STCG to all 500 Verified and 731 public Pro tasks and compare the flags with the results of the top 30 Verified submissions. Third, we verify the flags by asking Claude Opus 5.5 to loosen the overspecified requirements of flagged tasks, and regrade 2,186 failed patches from those submissions. Our main findings are: (1) Overspecified tests are detectable: on the validation tasks, the judges correctly flag 89% of the tasks that human audits identify as overspecified and wrongly flag only 4% of the tasks known to be fine. (2) Overspecified tests are common: applied to whole benchmarks, the judges flag 23% of Verified and 35% of Pro tasks. (3) Flagged tasks are much harder for agents: the top 30 Verified submissions resolve only 31% of the flagged tasks on average, against 88% of the other tasks. (4) Overspecified tests change the leaderboard: relaxing the tests lets 61% of the 2,186 failed patches on flagged tasks pass. Counting these patches as resolved would add 33 to 60 tasks to each top-30 submission, raising resolve rates by up to 12 percentage points.",
+      "published": "2026-11-24T02:33:36Z",
+      "updated": "2026-11-24T02:33:36Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31839",
+      "abs_url": "https://arxiv.org/abs/2611.31839",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31833",
+      "title": "Not All Interpretation Methods Are Created Equal: Tiered Evaluation of AI Interpretability",
+      "authors": [
+        "Nicolas Sanchez",
+        "Bin Yu"
+      ],
+      "abstract": "As AI transitions to sociotechnical deployments, uninterpretable models pose serious threats to reliability, public trust and contestability. However, not all interpretation methods are created equal: for interpretability to enhance deployment safety and effectiveness, interpretation methods must be evaluated in a tiered system to differentiate evidence levels of trustworthiness, rather than validated through isolated interpretation instances. Our core vision is that elevating the evaluation of interpretation methods to a core AI assessment metric will drive robust knowledge discovery from data (KDD) and ensure safe, contestable sociotechnical deployments of AI. To this end, we propose TRUST, a tiered evaluation framework that builds upon the Predictability-Computability-Stability (PCS) principles for Veridical Data Science (VDS) and the Predictive, Descriptive and Relevant (PDR) foundations. To differentiate interpretation methods effectively and systematically, TRUST grades interpretation across five tiers: Task-Aligned PDR Foundations, Rigorous Epistemic Grounding, Unifying Semantic Understanding, Scope Transferability, and Targeted Prospective Validation. We present a start-to-finish case study of the iterative Random Forest (iRF) family under TRUST and contrast it with other LLM interpretation methods that struggle to clear specific tiers. Finally, we conclude with brief initial thoughts on how TRUST principles can extend in autonomous agentic frameworks. Ultimately, the TRUST framework fosters contestability and epistemic grounding as foundational evaluation principles for human-machine workflows and, eventually, autonomous agentic workflows.",
+      "published": "2026-11-24T02:31:21Z",
+      "updated": "2026-11-24T02:31:21Z",
+      "categories": [
+        "cs.AI",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31833",
+      "abs_url": "https://arxiv.org/abs/2611.31833",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31814",
+      "title": "Beyond the Benchmark: Localizing Released Autonomous Driving Models to Real Vehicles",
+      "authors": [
+        "Morui Zhu",
+        "Deyuan Qu",
+        "Qi Chen",
+        "Qing Yang"
+      ],
+      "abstract": "Released autonomous-driving models achieve strong benchmark performance, yet deploying them on a new real vehicle remains challenging. We study this deployment gap and find that released models can remain coupled to assumptions from their source sensing, data, and execution processes even after conventional adaptation. We introduce Released-to-Real (R2R), a deployment-localization methodology that identifies such source-system coupling and corrects only the affected components while preserving the released model. For data and behavior adaptation, we find that the mismatch between trajectory-level optimization and receding-horizon execution enters through the ego state rather than the observation, and introduce Human-Anchored Reinforcement Learning (HA-RL), which corrects it on recorded target driving without the costly rollouts of generative closed-loop reinforcement learning (RL). For physical sensor adaptation, R2R localizes and corrects source-dependent spatial and temporal representations with frozen perception weights, requiring neither target annotations nor retraining. HA-RL improves the closed-loop success rate of a released diffusion-based planner from 82.2% to 95.2%, while sensor adaptation across multiple released detectors and three real sensor rigs improves the vehicle mean average precision (mAP) of a released multi-camera detector from 0.041 to 0.420 on a five-camera target rig. These results provide a practical path for preparing released models before deployment on new real vehicles. Our project page is publicly available at https://released-to-real.github.io.",
+      "published": "2026-11-24T02:06:37Z",
+      "updated": "2026-11-24T02:06:37Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31814",
+      "abs_url": "https://arxiv.org/abs/2611.31814",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31803",
+      "title": "SceneMemBench: A Benchmark for Scene Memory in Interactive Video World Models",
+      "authors": [
+        "Yuheng Si",
+        "Linye Lyu",
+        "Jiawei Zhou",
+        "Lingyi Du",
+        "Nanfei Ye",
+        "Aobo Liu",
+        "Yu Liu",
+        "Yu Li",
+        "Cheng Zhuo"
+      ],
+      "abstract": "Interactive video world models generate navigable worlds frame by frame, but a persistent world requires previously observed scenes to remain recoverable as users move away and return. Existing memory evaluations, however, often focus on seen-view revisits and full rollouts, leaving cross-view scene recovery underexplored while entangling memory with trajectory-following errors and accumulated generation degradation. We introduce SceneMemBench, a benchmark for scene memory in interactive video world models. It evaluates two complementary dimensions: seen-view recall versus novel-view recovery, and controlled diagnosis versus end-to-end interaction. We introduce Continued Rollout from a shared ground-truth observation history, alongside Full Rollout over complete model-generated interactions. SceneMemBench contains 600 controlled trajectories across 33 Unreal Engine scenes and 60 Full Rollout cases, covering eight representative open- and closed-source models. We evaluate scene recovery along subject consistency, appearance fidelity, and geometric consistency. Results show that novel-view recovery is generally more challenging than seen-view recall, while model profiles under controlled histories can differ markedly from those observed in full interaction. Together, these findings reveal complementary failure modes obscured by seen-view revisits or end-to-end rollouts alone.",
+      "published": "2026-11-24T01:56:13Z",
+      "updated": "2026-11-24T01:56:13Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31803",
+      "abs_url": "https://arxiv.org/abs/2611.31803",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31708",
+      "title": "PRETZEL: A Benchmark for Cyclic Peptide Structure Prediction",
+      "authors": [
+        "Yongchan Hong",
+        "Zihang Fang",
+        "Mukta Ubale",
+        "Yan Liu",
+        "Xingyao Chen",
+        "Vsevolod Katritch"
+      ],
+      "abstract": "Macrocyclic peptides are a growing therapeutic modality, and co-folding models are increasingly used to predict their structures. Yet published evaluations rely on small, loosely curated target sets that differ from paper to paper, so results are not comparable, and most report pose RMSD alone, without checking whether the predicted molecule is chemically correct. We introduce PRETZEL (Prediction of Ring-Enclosed Topology: Zero-shot Evaluation of cycLic peptides), a benchmark of 285 curated cyclic peptide-protein complexes spanning three cyclization chemistries, all post-dating the training cutoff of every model evaluated. PRETZEL has three components: PRETZEL-SET, an evaluation set annotated by cyclization chemistry and chemical novelty; PRETZEL-TWIST, a specification layer that compiles a single canonical macrocycle description into each engine's native input format and verifies the returned structure; and PRETZEL-SALT, an evaluation suite pairing standard pose metrics with validity checks for bond distances, bond angles, dihedrals, and ring closure. Using these, we evaluate AlphaFold3, Boltz-2, Protenix-v2, and HighFold3. Protenix-v2 achieves the best median RMSD at 9.05 A, with 19.3% of predictions under 2 A and 37.5% under 5 A. Accuracy varies by cyclization chemistry: models handle head-to-tail macrocycles relatively well but degrade on stapled targets. Chemical validity is weaker still: at most 8.1% of predictions have a fully valid set of inter-residue bonds, and no engine closes every macrocycle in more than 80.7% of its predictions, so pose accuracy alone is an insufficient criterion. These failures share a cause: co-folding models place macrocycles without representing them, treating cyclization and non-canonical chemistry as annotations layered onto a residue sequence rather than as first-class structure. PRETZEL is released with all inputs, predictions, and evaluation code.",
+      "published": "2026-11-23T23:59:02Z",
+      "updated": "2026-11-23T23:59:02Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31708",
+      "abs_url": "https://arxiv.org/abs/2611.31708",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31703",
+      "title": "E-Waste-Bench: A Large-Scale Benchmark for Visual Triage of Data-Center Hardware",
+      "authors": [
+        "Nader Lobandi",
+        "Mohammad Mehdi Hosseini",
+        "Lombe Chileshe",
+        "Mohammad Mahoor"
+      ],
+      "abstract": "Retired data-center hardware can often be refurbished or resold, but triage demands more than object categories. A model must tell visually similar parts apart, judge condition under damage and occlusion, and read the printed part number. We audit nine public e-waste collections. They cover mostly consumer devices (only 10% of images are labeled as a data-center part), label neither condition nor printed text, and contain 42% exact or augmented duplicates. We introduce E-Waste-Bench, 328K photographs drawn from 762K deduplicated images and labeled for class (24 classes), granularity, condition and printed text. Images come from those collections and the web, where a recipe-based crawler works beside an agent built on an open-weight vision-language model. The agent vets new sources and reads sites the crawler cannot parse, and both are steered toward under-represented classes. Training labels are model-made, splits follow near-duplicate groups, and human annotators label a test set of nearly 10,000 images. We benchmark classification, condition, detection, text perception and cross-dataset transfer. On this test set, a ConvNeXt-T trained on E-Waste-Bench reaches 64.3% top-1, against 31.5% with the public collections alone. Near-duplicate leakage inflates top-1 by 3.0 points under model-made test labels but by less than 0.1 under human labels, so model-labeled benchmarks need group splits. Accuracy falls to 42.1% on marketplace and auction photographs, the closest proxy for hardware leaving service. Data and code will be released.",
+      "published": "2026-11-23T23:48:58Z",
+      "updated": "2026-11-23T23:48:58Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31703",
+      "abs_url": "https://arxiv.org/abs/2611.31703",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31615",
+      "title": "Eliciting sandbagged LLM capability via structural interventions on attention-head functional networks",
+      "authors": [
+        "Manzi Fabrice Niyigaba",
+        "Ishan Verma Prasad",
+        "Sansheng Cao",
+        "Zheng Huang",
+        "Yujun Yan"
+      ],
+      "abstract": "Reliably evaluating the capabilities of advanced AI systems is critical for safe development and deployment, yet such evaluations may be undermined by sandbagging, a situation in which a model strategically suppresses capabilities it possesses. Existing work has developed controlled sandbagging settings and methods for detecting or eliciting hidden capabilities, but comparatively little is known about how a model's internal neural computation changes when its capabilities are suppressed. In this work, we study sandbagging through the lens of internal functional organization. Inspired by network neuroscience, we construct functional graphs from attention-head activations and compare their organization under honest and sandbagging conditions while holding the model architecture and weights fixed. Surprisingly, across model architectures and community detection methods, we find a consistent structural signature in which sandbagging is associated with reduced functional connectivity within detected communities. We further demonstrate that this reorganization can guide capability elicitation. Ablating attention heads that exhibit the largest connectivity changes substantially recovers suppressed performance while largely preserving performance under honest behavior. Moreover, incorporating these structural signals further improves existing inference-level and weight-level elicitation methods. Together, our results show that sandbagging is accompanied by systematic reorganization of internal computation and demonstrate that functional network structure can provide both a mechanistic lens for understanding capability suppression and a practical signal for recovering hidden capabilities.",
+      "published": "2026-11-23T22:01:51Z",
+      "updated": "2026-11-23T22:01:51Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31615",
+      "abs_url": "https://arxiv.org/abs/2611.31615",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31595",
+      "title": "LUCID: Statistically Grounded Self-Correction for LLM Reasoning Evaluation",
+      "authors": [
+        "Satiyabooshan Murugaboopathy",
+        "Adel Daoud",
+        "Connor T. Jerzak"
+      ],
+      "abstract": "Cheap language-model raters grade chain-of-thought reasoning at scale, yet systematic step-rating errors can skew reasoning audits and solution rankings. We introduce LUCID (Loop for Unbiased Calibration via Inference-time Diagnosis), which pairs prompt self-correction with Design-based Supervised Learning (DSL). Without retraining or weight access, LUCID calibrates binary step ratings by aligning predicted and expert soundness rates. From a small expert-labeled set, LUCID summarizes rater bias in plain text and prompts the rater to re-grade unseen steps. For example, on PRM800K, GPT-5-mini grades too strictly, under-rating computation, verification, and late-trace steps most acutely. In one pass, LUCID shrinks GPT-5-mini's calibration gap from 7.8 to 0.9 percentage points in absolute predicted-expert rate difference. LUCID also halves false alarms (sound steps rated unsound) and lifts error-detection F1 on unsound steps by 32%. LUCID retains these gains with 1,000 diagnostic steps or overall-gap feedback alone. The loop also transfers across models and domains: it applies GPT-5-mini's bias profile to lift GLM-5.2's PRM800K accuracy, and it narrows calibration gaps for overly strict but capable raters across math, science, web, and logic benchmarks. Because prompt feedback shifts thresholds without improving class-balanced sound/unsound discrimination, LUCID filters re-grading with pre-/post-checks that skip already calibrated raters and roll back ineffective passes. Finally, we reuse that expert set with raw corpus ratings in DSL for calibration and regression debiasing, and apply DSL to pair-labeled steps for sound-step transitions. DSL's out-of-fold soundness probabilities lift best-of-K selection to match expert labels, while its doubly-robust estimators beat expert-only regression fits at small budgets and cut sound-step transition error by nearly two-thirds.",
+      "published": "2026-11-23T21:40:54Z",
+      "updated": "2026-11-23T21:40:54Z",
+      "categories": [
+        "cs.CL",
+        "cs.LG",
+        "stat.ME"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31595",
+      "abs_url": "https://arxiv.org/abs/2611.31595",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31346",
+      "title": "What People Choose Not to Say: A Multimodal Benchmark for Fine-Grained Information Manipulation in Conversations",
+      "authors": [
+        "Yuhan Bian",
+        "Zhaokai Liang",
+        "Jia Wang",
+        "Haoyu Liu",
+        "Yu Chen",
+        "Jianfeng Qu",
+        "Zhixu Li"
+      ],
+      "abstract": "Recent advances in MLLMs have improved social understanding, enabling models to recognize emotions and distinguish truthful from deceptive behaviors. However, existing benchmarks largely focus on coarse-grained emotion recognition or binary truth-deception detection, overlooking the diverse ways people manipulate information in conversations, such as withholding, leakage, fabrication, evasion, and defensive counterclaim. Understanding these behaviors requires reasoning about underlying facts, participant knowledge, and conversational context, making them difficult to evaluate reliably. To address this gap, we introduce InfoCon, a multimodal benchmark for fine-grained information manipulation in conversations. InfoCon identifies six fine-grained strategies and derives a coarse consistency label from their factual and interactional relations. We develop an evidence-grounded multi-agent annotation framework to construct and verify reliable labels from rich contextual evidence. We benchmark representative multimodal models and systematically analyze their fine-grained information manipulation understanding, providing a testbed beyond binary truth-deception judgments.",
+      "published": "2026-11-23T17:57:08Z",
+      "updated": "2026-11-23T17:57:08Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31346",
+      "abs_url": "https://arxiv.org/abs/2611.31346",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31215",
+      "title": "Seeking in Space: Benchmarking Purposeful Active Exploration of Vision-Language Models for Spatial Reasoning",
+      "authors": [
+        "Xiwei Liu",
+        "Yulong Li",
+        "Xuhui Li",
+        "Xinlin Zhuang",
+        "Zhixiang Lu",
+        "Haolin Yang",
+        "Jianxu Chen",
+        "Yifan Lu",
+        "Zhiran Zhang",
+        "Yutong Xie"
+      ],
+      "abstract": "Humans explore unfamiliar spaces with purpose, deciding where to look until they have gathered the evidence a spatial question requires. However, can vision-language models (VLMs), which reason increasingly well over curated images and videos, also seek in space when the evidence is not handed to them? We present ActSpace-Bench, a benchmark of 994 questions across 234 exploration episodes in 72 real-scanned indoor scenes, where a model starts from a single view, navigates real captured frames, and must gather evidence before answering. To assess whether such exploration is purposeful, we introduce a controlled evaluation protocol that fixes each model as the reasoner and compares its own exploration against a same-budget random walk and an oracle route, separating evidence seeking from spatial reasoning. Every question is verified to require exploration and answered from 3D annotations, masked-evidence questions test whether models know when to abstain, and over 95% of sampled questions are confirmed correct by human verification. Evaluations of 23 proprietary, open-weight, and spatially specialized VLMs reveal that the strongest models do seek evidence with purpose but lose much of it to limited memory, whereas weaker and specialized models explore no better than a random walk or fail to reason over the evidence they are given, pointing to memory and evidence-grounded reasoning as the next targets for active spatial intelligence.",
+      "published": "2026-11-23T18:55:44Z",
+      "updated": "2026-11-23T18:55:44Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31215",
+      "abs_url": "https://arxiv.org/abs/2611.31215",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31068",
+      "title": "UMAMI: A Multimodal Benchmark Dataset for Evidence-Grounded Dietary Decisions",
+      "authors": [
+        "Safal Thapaliya",
+        "Jiatan Huang",
+        "Debapriya Chatterjee",
+        "Yanfang Ye",
+        "Chuxu Zhang"
+      ],
+      "abstract": "Dietary decisions require identifying a food's nutrient content and considering individual dietary needs, but recognizing food from an image alone does not provide this information. Visually similar foods can have different nutrient profiles, so selecting the wrong food record can lead to incorrect decisions even when nutrient rules are applied correctly. Furthermore, satisfying nutrient constraints does not necessarily establish a food's relevance to a person's intake. Evaluating these challenges together requires connecting food images, nutrient records, and individual intake histories. To support this evaluation, we introduce UMAMI (Unified Multimodal Assessment of Meals and Intake), a multimodal dataset and benchmark linking independently collected food images with nutrient profiles and respondent health and intake records. Using this dataset, we construct three diagnostic tasks covering visual nutrient question answering, personalized food recommendation, and condition-aware food substitution. Paired instances and input controls examine how visual identity and respondent context affect decisions. Our experiments identify errors in both food-record selection and nutrient-rule application, while showing that higher rule compliance does not necessarily improve alignment with subsequent recorded intake. These findings highlight the need to evaluate how multimodal systems select and use structured evidence for dietary decisions. The dataset, code, and dashboard are available at https://umami-benchmark.github.io.",
+      "published": "2026-11-23T17:23:52Z",
+      "updated": "2026-11-23T17:23:52Z",
+      "categories": [
+        "cs.CV",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31068",
+      "abs_url": "https://arxiv.org/abs/2611.31068",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31063",
+      "title": "From Local Errors to System Failures: Modeling and Benchmarking Error Propagation in Multi-Agent LLM Systems",
+      "authors": [
+        "Wenlong Yu",
+        "Bingxu Lu",
+        "Qilong Wang",
+        "Qinghua Hu",
+        "Qianru Sun"
+      ],
+      "abstract": "In multi-agent systems (MAS) built on large language models (LLMs), errors can propagate through intermediate messages and compromise final answers. However, outcome-based evaluation obscures how agents amplify, attenuate, or correct these errors. We propose Response-Aware Error Propagation among Agents (REPA), a structural model that connects measured local responses to system-level error propagation. REPA separately estimates input assembly and agent processing across multiple error channels, while theoretical analysis relates local modeling errors to endpoint prediction error. Experiments span three Qwen base models, six MAS workflows, and ten knowledge and reasoning settings in ErrPropBench-10. REPA achieves a mean condition-level Spearman correlation of 0.84 across base models, compared with 0.47 for direct regression. Controlled experiments also demonstrate its utility for targeted recovery. REPA-guided retrieval-augmented generation (RAG) improves accuracy over no retrieval by an average of 19 percentage points with 16% additional tokens. By linking local agent behavior to system susceptibility, REPA provides an interpretable foundation for studying error propagation and developing targeted optimization in MAS.",
+      "published": "2026-11-23T17:20:43Z",
+      "updated": "2026-11-23T17:20:43Z",
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31063",
+      "abs_url": "https://arxiv.org/abs/2611.31063",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30742",
+      "title": "Transport-Safe Evaluation of LLM Agents: Trajectory-Dependent Judge Error and Anytime-Valid Auditing",
+      "authors": [
+        "Yulliwas Ameur",
+        "Samia Bouzefrane",
+        "Soumya Banerjee"
+      ],
+      "abstract": "Large language model (LLM) agents are often ranked by an LLM judge whose error rates are measured once and reused for every agent. The corrected success rates can then be biased when the judge's errors depend on the trajectory and agents differ in the trajectories they produce for successes or failures. We derive the exact asymptotic bias and give a chain of checks from identification to simultaneous ranks. On a four-agent semi-synthetic benchmark, a scalar correction with oracle calibration has maximum bias 0.245 and mean pointwise coverage 0.016, and never recovers the full ranking (0/250 replications). Augmented inverse-probability weighting (AIPW) with a uniform or a design-aware random audit keeps the maximum bias below 0.003, with mean pointwise coverage of 0.939 and 0.950. In a 48-cell stress test, effective target support rises only from 0.209 to 0.805 as calibration grows from 600 to 4,800 labels, while audited AIPW keeps a mean absolute error of 0.018-0.020. Without calibration support, or with judge dependence within an externally justified bound, we report valid bounds or sensitivity sets and carry them into rank sets. An e-process confidence sequence stays valid, for a stable target, under predictable adaptive auditing and arbitrary stopping.",
+      "published": "2026-11-23T14:19:52Z",
+      "updated": "2026-11-23T14:19:52Z",
+      "categories": [
+        "cs.AI",
+        "stat.ME"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30742",
+      "abs_url": "https://arxiv.org/abs/2611.30742",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30590",
+      "title": "POMA: Beyond Final Flags -- Process-Level Evaluation of Base LLMs in Vulnerability Exploitation",
+      "authors": [
+        "Gufeng Zhang",
+        "Yiru Zhao",
+        "Shengyu Liu",
+        "Weichen Yan",
+        "Xingwang Xiang",
+        "Yiran Ma",
+        "Benxiao Tang",
+        "Lei Zhao",
+        "Jinxin Ma"
+      ],
+      "abstract": "As large language models (LLMs) evolve from text generation to autonomous software-engineering execution, automated vulnerability exploitability verification has emerged as a vital frontier in software quality assurance and security validation. Existing security benchmarks, however, largely judge models by binary pass/fail outcomes or coarse stage milestones. Such outcome-centric scoring obscures fine-grained failure dynamics across long-horizon execution and conflates the intrinsic capability of a base LLM with external agent scaffolding. We present POMA (Pwn-Oriented Model Assessment), a process-level evaluation methodology and platform that isolates base LLMs under a unified execution baseline -- fixing task inputs, tool interfaces, target environments, feedback formats, and execution budgets -- while measuring intermediate states and transitions from runtime evidence. Evaluating four frontier base LLMs across 55 CTF Pwn challenges and 10 real-world vulnerability reproduction tasks exposes persistent capability attrition along the exploitation chain: from vulnerability knowledge to executable implementation, from client-side actions to verified target states, from failure localization to precise repair, and across iterative revisions. In real-world software, models further struggle to satisfy format, semantic, differential, and crash-identity constraints simultaneously. By pinpointing where execution chains break down, POMA provides an empirical foundation for trustworthy capability assessment and principled vulnerability-agent design. Our benchmark catalogs, process-measurement evaluator, and sample harness are publicly available at https://github.com/maple-pwn/poma-release .",
+      "published": "2026-11-23T12:31:14Z",
+      "updated": "2026-11-23T12:31:14Z",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30590",
+      "abs_url": "https://arxiv.org/abs/2611.30590",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30460",
+      "title": "Rethinking the Evaluation of Contrastive Decoding for Hallucination Mitigation in Multimodal Large Language Models",
+      "authors": [
+        "Ting Chen",
+        "Geng Li",
+        "Guohao Chen",
+        "Hanjia Lyu"
+      ],
+      "abstract": "Contrastive decoding (CD) mitigates object hallucination in multimodal large language models (MLLMs) by contrasting token distributions under different conditions to adjust token scores. However, existing generative and discriminative benchmarks primarily measure final task scores, which can be confounded by candidate filtering, changes in generation trajectories, and response biases, making it difficult to isolate the effects of the underlying contrastive adjustments. To address these limitations while complementing existing evaluations, we introduce CONCOR (Contrastive Correction Evaluation), a controlled benchmark that directly evaluates the competition between ground-truth and different types of hallucinated candidates using the Contrastive Grounding Margin (CGM). CGM also enables analysis of directional consistency, composition, and reliability of contrastive corrections. Our evaluation reveals that existing CD methods exhibit distinct correction behaviors: some consistently favor ground-truth candidates, whereas others produce strong corrections but also introduce more errors. Crucially, these differences help explain their contrasting responses to increased contrast strength, which improves some methods while degrading others. These findings highlight the importance of evaluating the contrastive correction itself, rather than relying solely on final-output performance, and CONCOR provides a controlled and interpretable framework for understanding and improving CD methods for hallucination mitigation.",
+      "published": "2026-11-23T10:51:35Z",
+      "updated": "2026-11-23T10:51:35Z",
+      "categories": [
+        "cs.CL",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30460",
+      "abs_url": "https://arxiv.org/abs/2611.30460",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30288",
+      "title": "Face Is Not All You Need: MIME Benchmark for Incomplete Multimodal Emotion Recognition",
+      "authors": [
+        "Yuxin Jia",
+        "Xing Lan",
+        "Wensong Wang",
+        "Jian Xue",
+        "Feiliang Ren",
+        "Ke Lu"
+      ],
+      "abstract": "Multimodal Emotion Recognition (MER) is a fundamental task in multimedia understanding, where state-of-the-art methods have achieved prominent success relying on the assumption of complete, well-aligned multimodal inputs. However, real-world unconstrained scenarios often suffer from unpredictable modality degradation and information loss, leading to catastrophic performance collapse of existing MER models that heavily depend on facial cues as the core inference anchor. However, few systematic works evaluate model robustness under diverse, fine-grained incomplete settings, as prior works are limited to coarse-grained full-modality removal and neglect interpretable analysis of emotional reasoning. To bridge this gap, we formally define the Incomplete Multimodal Emotion Recognition (IMER) task, which benchmarks model generalization and robustness under multi-grained modality and emotional information loss. We further construct MIME, a dedicated IMER benchmark with 2,000 video segments covering realistic fine-grained facial-detail degradation, severe facial degradation, and extreme full-modality loss, surpassing the limited coarse-grained settings of prior works. We also propose the Chain of Emotion (CoE) analysis paradigm with tailored metrics to dissect the fine-grained emotional cue perception and reasoning process of Multimodal Large Language Models (MLLMs). Extensive experiments on seven mainstream MLLMs reveal that body language and scene context act as critical compensatory mechanisms under facial degradation, while a pronounced gap exists between models' basic visual perception ability and high-level cognitive reasoning. Our work provides a focused evaluation platform and actionable insights for advancing robust multimodal emotion recognition. Our dataset and code are public at https://yuxinokk.github.io/MIME.",
+      "published": "2026-11-23T08:44:30Z",
+      "updated": "2026-11-23T08:44:30Z",
+      "categories": [
+        "cs.MM",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30288",
+      "abs_url": "https://arxiv.org/abs/2611.30288",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30259",
+      "title": "Attributing Security Outcomes in LLM-Agent Evaluations: The Role of Content-Free State",
+      "authors": [
+        "Abdelmonaim Bounite",
+        "Zangir Iklassov"
+      ],
+      "abstract": "Security benchmarks for LLM agents record whether each attack succeeded and compare agents, attacks, and defenses by attack success rate (ASR). Such comparisons are valid only if the agent, the attack, and the defense cause each verdict. We show that verdicts also depend on content-free state: details of a run that carry no information about the system under test, such as the Python hash seed, the order of tools or evidence, and the scoring of failed runs. We require that this state influence no verdict (decision noninterference) and treat it as untrusted input, because evaluators and requesters of LLM-based gates can choose it. Our framework, TARE (Testing Attribution of Reported Effects), attributes a reported effect to the agent, attack, or defense only if it exceeds the measured influence of content-free state. On Agent Security Bench (ASB), runs with a fixed hash seed are identical for seven agents from four model families, yet changing the seed changes up to 17% of an agent's verdicts while the ASR moves by at most 5 points. The seed acts through the tool order: sorting the tool list instead of reverse-sorting it raises the ASR by up to 19 points, because ASB's naming convention places attacker tools first. When the same evidence is reordered, six of seven LLM judges change their decision on 17-91% of 98 proposed actions. Across eighteen agent-defense combinations, TARE's worst-case test attributes effects to two of three defenses, one of them in opposite directions on two agents, and a test fixed in advance confirms a 4.8-point decrease from the third; in the attributed decreases, 35-69% of the stopped attacks end without any tool call, which ASB counts as a failed attack. Reproducible verdicts are thus not necessarily attributable, and security evaluations of LLM agents should report the influence of content-free state. We release TARE, the ASB patch, and all verdict tables.",
+      "published": "2026-11-23T08:24:44Z",
+      "updated": "2026-11-23T08:24:44Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30259",
+      "abs_url": "https://arxiv.org/abs/2611.30259",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30052",
+      "title": "ESGPT: A Data-Centric ESG Language Model with Unified Instruction and Benchmark Resources",
+      "authors": [
+        "Jaeyoung Lee",
+        "Misuk Kim"
+      ],
+      "abstract": "ESG analysis requires complex language understanding across diverse sources, including corporate reports, news, and disclosures, for tasks such as ESG relevance detection, action interpretation, impact analysis, and question answering. However, existing ESG datasets are fragmented by task and source, with heterogeneous formats and annotation schemes, limiting their use for training general-purpose ESG LLMs and unified evaluation. In this work, we construct ESG-Instruct, a 30,000-instance ESG instruction dataset built from public ESG resources, and ESGU-Bench, an ESG understanding benchmark covering six representative ESG tasks. Based on these resources, we further develop ESGPT, an 8B ESG-specialized LLM, and evaluate it against diverse open-source and API-based LLMs. Experimental results show that general-purpose LLMs exhibit substantial performance variation across ESG tasks, while ESGPT, despite its relatively small scale, achieves the best performance on multiple ESG tasks. This work provides unified data and benchmark resources for training and evaluating ESG-specialized LLMs.",
+      "published": "2026-11-23T04:56:39Z",
+      "updated": "2026-11-23T04:56:39Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30052",
+      "abs_url": "https://arxiv.org/abs/2611.30052",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29972",
+      "title": "When 1+1 $\\neq$ 2: Benchmarking Civil-Time Reasoning in Large Language Models",
+      "authors": [
+        "Melika Shirian",
+        "Kianoosh Vadaei",
+        "Arshia Hemmat",
+        "Mohammad Hossein Shaker Ardakani",
+        "Ali Mamanpoosh",
+        "Matin Moqadas",
+        "Amirmasoud Rismanchian",
+        "Afsaneh Fatemi"
+      ],
+      "abstract": "Calendar arithmetic is non-linear. When 1:59 AM + 1 minute occurs during daylight saving spring-forward, the result is 3:00 AM, not 2:00 AM, as the hour is skipped. We introduce CivilTime-Bench, a benchmark for civil-time reasoning covering daylight saving transitions, non-hour offsets, date-line crossings, and ISO week boundaries. With 60,011 training and 10,500 evaluation examples under strict output-contract evaluation, we benchmark seven LLMs (six instruction-tuned models and Llama-3.1-8B base) and find: zero-shot exact match varies substantially across models, contract-aware prompting often improves format compliance but yields inconsistent accuracy gains, few-shot in-context learning provides model-dependent improvements, and fine-tuning achieves 74.6--86.6% EM on synthetic evaluation but only 36.6--45.2% on HumanTime-500 for models with valid results on both splits, highlighting substantial limitations in generalization. We release the benchmark and code.",
+      "published": "2026-11-23T03:40:13Z",
+      "updated": "2026-11-23T03:40:13Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29972",
+      "abs_url": "https://arxiv.org/abs/2611.29972",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29467",
+      "title": "Beyond Accuracy: A Diagnostic Benchmark for Hypothesis-Driven Experiment Planning in LLM Agents",
+      "authors": [
+        "Ryo Kuroki",
+        "Amin Mansouri",
+        "Philippe Schwaller"
+      ],
+      "abstract": "Evaluating large language model (LLM) agents on scientific tasks typically reduces to final-task accuracy, which obscures where reasoning succeeds or breaks down. We introduce a benchmark and diagnostic evaluation framework for hypothesis-driven adaptive experimental planning in closed-world system identification, instantiated in kinetic mechanism identification. The framework goes beyond final accuracy in two ways. First, we evaluate exploration behavior by quantifying the extent to which agents exhibit space-filling or corner-seeking patterns in the experimental design space. Second, we decompose the reasoning process into four interpretable steps: belief update, hypothesis discrimination, discriminative experiment design, and predictive reasoning under interventions, each scored separately on reasoning traces. Across ten LLM agents, we find that stronger agents outperform both adaptive (Bayesian optimization) and non-adaptive (Latin hypercube) baselines and exhibit exploration patterns inconsistent with naive heuristics. Decomposing reasoning reveals that the stronger agents score consistently well across all four steps, whereas weaker agents often succeed at belief update and hypothesis discrimination but are less reliable at translating them into actionable designs and sharp contrastive predictions. Independent expert annotations support predictive reasoning under our stated validation criteria, while evidence for discriminative experiment design is positive but less consistent. The results suggest a gap between recognizing plausible hypotheses and translating them into contrastive predictions, with more tentative evidence for a corresponding experiment-design bottleneck. The benchmark website is available at https://schwallergroup.github.io/beyond-accuracy/.",
+      "published": "2026-11-22T13:13:12Z",
+      "updated": "2026-11-22T13:13:12Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29467",
+      "abs_url": "https://arxiv.org/abs/2611.29467",
+      "source": "arxiv"
+    },
     {
       "id": "2504.14773",
       "title": "PLANET: A Collection of Benchmarks for Evaluating LLMs' Planning Capabilities",
@@ -205,7 +1346,7 @@
         "Sheryl Hsu",
         "Tahsin Reasat"
       ],
-      "abstract": "Bengali is an underrepresented language in NLP research. However, it remains a challenge due to its unique linguistic structure and computational constraints. In this work, we systematically investigate the challenges that hinder Bengali NLP performance by focusing on the absence of standardized evaluation benchmarks. We then evaluated 10 recent open source Large Language Models (LLMs) in 8 of the translated datasets and performed a comprehensive error analysis to pinpoint their primary failure modes. Our findings reveal consistent performance gaps for Bengali compared to English, particularly for smaller models and specific model families like Mistral. We also identified promising robustness in certain architectures, such as DeepSeek, that maintain more stable performance across languages. Our analysis reveals an inverse relationship between tokenization efficiency and LLM accuracy where models tend to perform worse when inputs are excessively tokenized, whereas more efficient \\\u0026 concise tokenization results in improved performance. These findings highlight critical areas where current models fall short and underscore the need for improved dataset quality and evaluation methodologies tailored to multilingual contexts. This work will catalyze further research on NLP for underrepresented languages, helping to democratize access to advanced language technologies worldwide. The code and dataset used in this research is publicly available at https://github.com/BengaliAI/bn-llm-benchmark.",
+      "abstract": "Bengali is an underrepresented language in NLP research. However, it remains a challenge due to its unique linguistic structure and computational constraints. In this work, we systematically investigate the challenges that hinder Bengali NLP performance by focusing on the absence of standardized evaluation benchmarks. We then evaluated 10 recent open source Large Language Models (LLMs) in 8 of the translated datasets and performed a comprehensive error analysis to pinpoint their primary failure modes. Our findings reveal consistent performance gaps for Bengali compared to English, particularly for smaller models and specific model families like Mistral. We also identified promising robustness in certain architectures, such as DeepSeek, that maintain more stable performance across languages. Our analysis reveals an inverse relationship between tokenization efficiency and LLM accuracy where models tend to perform worse when inputs are excessively tokenized, whereas more efficient \\& concise tokenization results in improved performance. These findings highlight critical areas where current models fall short and underscore the need for improved dataset quality and evaluation methodologies tailored to multilingual contexts. This work will catalyze further research on NLP for underrepresented languages, helping to democratize access to advanced language technologies worldwide. The code and dataset used in this research is publicly available at https://github.com/BengaliAI/bn-llm-benchmark.",
       "categories": [
         "cs.CL",
         "cs.LG"
@@ -925,7 +2066,7 @@
         "Fred Zhang",
         "Philip E. Tetlock"
       ],
-      "abstract": "Forecasts of future events are essential inputs into informed decision-making. Machine learning (ML) systems have the potential to deliver forecasts at scale, but there is no framework for evaluating the accuracy of ML systems on a standardized set of forecasting questions. To address this gap, we introduce ForecastBench: a dynamic benchmark that evaluates the accuracy of ML systems on an automatically generated and regularly updated set of 1,000 forecasting questions. To avoid any possibility of data leakage, ForecastBench is comprised solely of questions about future events that have no known answer at the time of submission. We quantify the capabilities of current ML systems by collecting forecasts from expert (human) forecasters, the general public, and LLMs on a random subset of questions from the benchmark ($N=200$). While LLMs have achieved super-human performance on many benchmarks, they perform less well here: expert forecasters outperform the top-performing LLM ($p$-value $\u003c0.001$). We display system and human scores in a public leaderboard at www.forecastbench.org.",
+      "abstract": "Forecasts of future events are essential inputs into informed decision-making. Machine learning (ML) systems have the potential to deliver forecasts at scale, but there is no framework for evaluating the accuracy of ML systems on a standardized set of forecasting questions. To address this gap, we introduce ForecastBench: a dynamic benchmark that evaluates the accuracy of ML systems on an automatically generated and regularly updated set of 1,000 forecasting questions. To avoid any possibility of data leakage, ForecastBench is comprised solely of questions about future events that have no known answer at the time of submission. We quantify the capabilities of current ML systems by collecting forecasts from expert (human) forecasters, the general public, and LLMs on a random subset of questions from the benchmark ($N=200$). While LLMs have achieved super-human performance on many benchmarks, they perform less well here: expert forecasters outperform the top-performing LLM ($p$-value $<0.001$). We display system and human scores in a public leaderboard at www.forecastbench.org.",
       "categories": [
         "cs.LG",
         "cs.AI",
@@ -1802,7 +2943,7 @@
     },
     {
       "id": "2504.16137",
-      "title": "Virology Capabilities Test (VCT): A Multimodal Virology Q\u0026A Benchmark",
+      "title": "Virology Capabilities Test (VCT): A Multimodal Virology Q&A Benchmark",
       "authors": [
         "Jasper Götting",
         "Pedro Medeiros",
@@ -2310,7 +3451,7 @@
         "Haofei Yu",
         "Jiaxuan You"
       ],
-      "abstract": "Evaluating consistency in large language models (LLMs) is crucial for ensuring reliability, particularly in complex, multi-step interactions between humans and LLMs. Traditional self-consistency methods often miss subtle semantic changes in natural language and functional shifts in code or equations, which can accumulate over multiple transformations. To address this, we propose ConsistencyChecker, a tree-based evaluation framework designed to measure consistency through sequences of reversible transformations, including machine translation tasks and AI-assisted programming tasks. In our framework, nodes represent distinct text states, while edges correspond to pairs of inverse operations. Dynamic and LLM-generated benchmarks ensure a fair assessment of the model's generalization ability and eliminate benchmark leakage. Consistency is quantified based on similarity across different depths of the transformation tree. Experiments on eight models from various families and sizes show that ConsistencyChecker can distinguish the performance of different models. Notably, our consistency scores-computed entirely without using WMT paired data-correlate strongly (r \u003e 0.7) with WMT 2024 auto-ranking, demonstrating the validity of our benchmark-free approach. Our implementation is available at: https://github.com/ulab-uiuc/consistencychecker.",
+      "abstract": "Evaluating consistency in large language models (LLMs) is crucial for ensuring reliability, particularly in complex, multi-step interactions between humans and LLMs. Traditional self-consistency methods often miss subtle semantic changes in natural language and functional shifts in code or equations, which can accumulate over multiple transformations. To address this, we propose ConsistencyChecker, a tree-based evaluation framework designed to measure consistency through sequences of reversible transformations, including machine translation tasks and AI-assisted programming tasks. In our framework, nodes represent distinct text states, while edges correspond to pairs of inverse operations. Dynamic and LLM-generated benchmarks ensure a fair assessment of the model's generalization ability and eliminate benchmark leakage. Consistency is quantified based on similarity across different depths of the transformation tree. Experiments on eight models from various families and sizes show that ConsistencyChecker can distinguish the performance of different models. Notably, our consistency scores-computed entirely without using WMT paired data-correlate strongly (r > 0.7) with WMT 2024 auto-ranking, demonstrating the validity of our benchmark-free approach. Our implementation is available at: https://github.com/ulab-uiuc/consistencychecker.",
       "categories": [
         "cs.AI",
         "cs.CL"
@@ -2365,7 +3506,7 @@
     },
     {
       "id": "2403.04553",
-      "title": "Improvements \u0026 Evaluations on the MLCommons CloudMask Benchmark",
+      "title": "Improvements & Evaluations on the MLCommons CloudMask Benchmark",
       "authors": [
         "Varshitha Chennamsetti",
         "Laiba Mehnaz",
@@ -2807,7 +3948,7 @@
         "James Thorne",
         "Minjoon Seo"
       ],
-      "abstract": "Recently, using a powerful proprietary Large Language Model (LLM) (e.g., GPT-4) as an evaluator for long-form responses has become the de facto standard. However, for practitioners with large-scale evaluation tasks and custom criteria in consideration (e.g., child-readability), using proprietary LLMs as an evaluator is unreliable due to the closed-source nature, uncontrolled versioning, and prohibitive costs. In this work, we propose Prometheus, a fully open-source LLM that is on par with GPT-4's evaluation capabilities when the appropriate reference materials (reference answer, score rubric) are accompanied. We first construct the Feedback Collection, a new dataset that consists of 1K fine-grained score rubrics, 20K instructions, and 100K responses and language feedback generated by GPT-4. Using the Feedback Collection, we train Prometheus, a 13B evaluator LLM that can assess any given long-form text based on customized score rubric provided by the user. Experimental results show that Prometheus scores a Pearson correlation of 0.897 with human evaluators when evaluating with 45 customized score rubrics, which is on par with GPT-4 (0.882), and greatly outperforms ChatGPT (0.392). Furthermore, measuring correlation with GPT-4 with 1222 customized score rubrics across four benchmarks (MT Bench, Vicuna Bench, Feedback Bench, Flask Eval) shows similar trends, bolstering Prometheus's capability as an evaluator LLM. Lastly, Prometheus achieves the highest accuracy on two human preference benchmarks (HHH Alignment \u0026 MT Bench Human Judgment) compared to open-sourced reward models explicitly trained on human preference datasets, highlighting its potential as an universal reward model. We open-source our code, dataset, and model at https://kaistai.github.io/prometheus/.",
+      "abstract": "Recently, using a powerful proprietary Large Language Model (LLM) (e.g., GPT-4) as an evaluator for long-form responses has become the de facto standard. However, for practitioners with large-scale evaluation tasks and custom criteria in consideration (e.g., child-readability), using proprietary LLMs as an evaluator is unreliable due to the closed-source nature, uncontrolled versioning, and prohibitive costs. In this work, we propose Prometheus, a fully open-source LLM that is on par with GPT-4's evaluation capabilities when the appropriate reference materials (reference answer, score rubric) are accompanied. We first construct the Feedback Collection, a new dataset that consists of 1K fine-grained score rubrics, 20K instructions, and 100K responses and language feedback generated by GPT-4. Using the Feedback Collection, we train Prometheus, a 13B evaluator LLM that can assess any given long-form text based on customized score rubric provided by the user. Experimental results show that Prometheus scores a Pearson correlation of 0.897 with human evaluators when evaluating with 45 customized score rubrics, which is on par with GPT-4 (0.882), and greatly outperforms ChatGPT (0.392). Furthermore, measuring correlation with GPT-4 with 1222 customized score rubrics across four benchmarks (MT Bench, Vicuna Bench, Feedback Bench, Flask Eval) shows similar trends, bolstering Prometheus's capability as an evaluator LLM. Lastly, Prometheus achieves the highest accuracy on two human preference benchmarks (HHH Alignment & MT Bench Human Judgment) compared to open-sourced reward models explicitly trained on human preference datasets, highlighting its potential as an universal reward model. We open-source our code, dataset, and model at https://kaistai.github.io/prometheus/.",
       "categories": [
         "cs.CL",
         "cs.LG"
@@ -2900,7 +4041,7 @@
         "Alex Remedios",
         "Alan Cooney"
       ],
-      "abstract": "Uncontrollable autonomous replication of language model agents poses a critical safety risk. To better understand this risk, we introduce RepliBench, a suite of evaluations designed to measure autonomous replication capabilities. RepliBench is derived from a decomposition of these capabilities covering four core domains: obtaining resources, exfiltrating model weights, replicating onto compute, and persisting on this compute for long periods. We create 20 novel task families consisting of 86 individual tasks. We benchmark 5 frontier models, and find they do not currently pose a credible threat of self-replication, but succeed on many components and are improving rapidly. Models can deploy instances from cloud compute providers, write self-propagating programs, and exfiltrate model weights under simple security setups, but struggle to pass KYC checks or set up robust and persistent agent deployments. Overall the best model we evaluated (Claude 3.7 Sonnet) has a \u003e50% pass@10 score on 15/20 task families, and a \u003e50% pass@10 score for 9/20 families on the hardest variants. These findings suggest autonomous replication capability could soon emerge with improvements in these remaining areas or with human assistance.",
+      "abstract": "Uncontrollable autonomous replication of language model agents poses a critical safety risk. To better understand this risk, we introduce RepliBench, a suite of evaluations designed to measure autonomous replication capabilities. RepliBench is derived from a decomposition of these capabilities covering four core domains: obtaining resources, exfiltrating model weights, replicating onto compute, and persisting on this compute for long periods. We create 20 novel task families consisting of 86 individual tasks. We benchmark 5 frontier models, and find they do not currently pose a credible threat of self-replication, but succeed on many components and are improving rapidly. Models can deploy instances from cloud compute providers, write self-propagating programs, and exfiltrate model weights under simple security setups, but struggle to pass KYC checks or set up robust and persistent agent deployments. Overall the best model we evaluated (Claude 3.7 Sonnet) has a >50% pass@10 score on 15/20 task families, and a >50% pass@10 score for 9/20 families on the hardest variants. These findings suggest autonomous replication capability could soon emerge with improvements in these remaining areas or with human assistance.",
       "categories": [
         "cs.CR",
         "cs.AI"
@@ -3323,7 +4464,7 @@
         "Liang Feng",
         "Kay Chen Tan"
       ],
-      "abstract": "The ability to understand causality significantly impacts the competence of large language models (LLMs) in output explanation and counterfactual reasoning, as causality reveals the underlying data distribution. However, the lack of a comprehensive benchmark currently limits the evaluation of LLMs' causal learning capabilities. To fill this gap, this paper develops CausalBench based on data from the causal research community, enabling comparative evaluations of LLMs against traditional causal learning algorithms. To provide a comprehensive investigation, we offer three tasks of varying difficulties, including correlation, causal skeleton, and causality identification. Evaluations of 19 leading LLMs reveal that, while closed-source LLMs show potential for simple causal relationships, they significantly lag behind traditional algorithms on larger-scale networks ($\u003e50$ nodes). Specifically, LLMs struggle with collider structures but excel at chain structures, especially at long-chain causality analogous to Chains-of-Thought techniques. This supports the current prompt approaches while suggesting directions to enhance LLMs' causal reasoning capability. Furthermore, CausalBench incorporates background knowledge and training data into prompts to thoroughly unlock LLMs' text-comprehension ability during evaluation, whose findings indicate that, LLM understand causality through semantic associations with distinct entities, rather than directly from contextual information or numerical distributions.",
+      "abstract": "The ability to understand causality significantly impacts the competence of large language models (LLMs) in output explanation and counterfactual reasoning, as causality reveals the underlying data distribution. However, the lack of a comprehensive benchmark currently limits the evaluation of LLMs' causal learning capabilities. To fill this gap, this paper develops CausalBench based on data from the causal research community, enabling comparative evaluations of LLMs against traditional causal learning algorithms. To provide a comprehensive investigation, we offer three tasks of varying difficulties, including correlation, causal skeleton, and causality identification. Evaluations of 19 leading LLMs reveal that, while closed-source LLMs show potential for simple causal relationships, they significantly lag behind traditional algorithms on larger-scale networks ($>50$ nodes). Specifically, LLMs struggle with collider structures but excel at chain structures, especially at long-chain causality analogous to Chains-of-Thought techniques. This supports the current prompt approaches while suggesting directions to enhance LLMs' causal reasoning capability. Furthermore, CausalBench incorporates background knowledge and training data into prompts to thoroughly unlock LLMs' text-comprehension ability during evaluation, whose findings indicate that, LLM understand causality through semantic associations with distinct entities, rather than directly from contextual information or numerical distributions.",
       "categories": [
         "cs.LG"
       ],
@@ -3647,7 +4788,7 @@
         "Trung Dung Hoang",
         "Jacob Haimes"
       ],
-      "abstract": "The prevalence of Vision-Language Models (VLMs) raises important questions about privacy in an era where visual information is increasingly available. While foundation VLMs demonstrate broad knowledge and learned capabilities, we specifically investigate their ability to infer geographic location from previously unseen image data. This paper introduces a benchmark dataset collected from Google Street View that represents its global distribution of coverage. Foundation models are evaluated on single-image geolocation inference, with many achieving median distance errors of \u003c300 km. We further evaluate VLM \"agents\" with access to supplemental tools, observing up to a 30.6% decrease in distance error. Our findings establish that modern foundation VLMs can act as powerful image geolocation tools, without being specifically trained for this task. When coupled with increasing accessibility of these models, our findings have greater implications for online privacy. We discuss these risks, as well as future work in this area.",
+      "abstract": "The prevalence of Vision-Language Models (VLMs) raises important questions about privacy in an era where visual information is increasingly available. While foundation VLMs demonstrate broad knowledge and learned capabilities, we specifically investigate their ability to infer geographic location from previously unseen image data. This paper introduces a benchmark dataset collected from Google Street View that represents its global distribution of coverage. Foundation models are evaluated on single-image geolocation inference, with many achieving median distance errors of <300 km. We further evaluate VLM \"agents\" with access to supplemental tools, observing up to a 30.6% decrease in distance error. Our findings establish that modern foundation VLMs can act as powerful image geolocation tools, without being specifically trained for this task. When coupled with increasing accessibility of these models, our findings have greater implications for online privacy. We discuss these risks, as well as future work in this area.",
       "categories": [
         "cs.CV",
         "cs.CR",

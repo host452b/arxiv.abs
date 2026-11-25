@@ -1,0 +1,27 @@
+Title: Weight-Space Backdoors in Open-Weight LLMs: Cross-Architecture Attacks and Blind Model Forensics
+Authors: Mohammed Tanveer
+ID: 2611.28543
+URL: https://arxiv.org/abs/2611.28543
+
+Abstract:
+Open-weight language models are vulnerable to trigger-conditioned behaviors
+introduced through sparse post-training weight modifications, creating supply-
+chain risks beyond conventional provenance checks. We present Neural Sentinel, a
+cross-architecture study of gradient-guided backdoor insertion and model
+forensics spanning 18 checkpoints across 14 architecture families (124M-31.3B
+parameters), including state-space and recurrent models. On Phi-2, modifying
+approximately 0.0002% of parameters induced an exact short-marker output after
+300 steps (332 seconds), with mean next-token KL divergence of $1.5 \times
+10^{-5}$ and 100% top-1 agreement over evaluated positions of eight fixed
+reference prompts. Separate experiments produced structured tool-call-formatted
+outputs without establishing downstream execution. We identify three procedure-
+dependent response regimes -- Gradient-Permeable, Scale-Threshold, and Gradient-
+Fragmented -- and evaluate PPO-based weight-space exploration, which showed no
+statistically significant advantage over random search. For defense, Neural
+Sentinel combines weight-difference analysis, trigger discovery, activation
+probing, and contextual output inspection. In a 22-artifact development cohort,
+its reference-optional scanner classified 4/5 backdoored artifacts as
+BACKDOORED; the remaining positive and all 17 clean artifacts were SUSPICIOUS.
+These findings establish the feasibility of sparse conditional-output insertion
+and evidence-producing forensic triage, while identifying limitations in
+behavioral-drift assessment and clean-model admission.

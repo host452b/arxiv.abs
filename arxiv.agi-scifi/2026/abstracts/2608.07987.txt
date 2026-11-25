@@ -1,0 +1,28 @@
+Title: Advantage-Guided Gate: Reshaping Open-Ended Reasoning for Vision-Based Spatial Intelligence
+Authors: Ling Lin, Yang Bai, Congcong Zhu, Jiangming Shi, Meng Wang, Yang Long, Jingrun Chen, Ling Shao, Huazhu Fu
+ID: 2608.07987
+URL: https://arxiv.org/abs/2608.07987
+
+Abstract:
+Multimodal large language models (MLLMs) have demonstrated significant potential
+in complex spatial scene understanding and reasoning tasks. However, their open-
+ended reasoning process is prone to decision errors and error accumulation,
+leading to instability in answer quality. To address this, we propose an
+advantage-guided gating framework that dynamically intervenes in and corrects
+deviations during the reasoning process. Specifically, we model step-by-step
+reasoning as a finite-horizon decision process and introduce Monte Carlo value
+evaluation on the reasoning tree to provide intermediate supervision signals.
+The framework includes Step-Advantage Gate and Trajectory-Advantage Gate, which
+dynamically select high-value reasoning steps and high-quality complete
+reasoning trajectories, respectively. During training, we perform supervised
+learning for the gates using reasoning trees generated via multi-branch
+sampling, and combine shared-parameter initialization with task-specific heads
+to achieve cross-task robustness and diversity. During inference, the model
+greedily selects high-value prefix reasoning steps while choosing the optimal
+reasoning head based on the problem type, thereby significantly improving the
+accuracy of the final answer. Furthermore, we constructed the Reasoning-
+Tree-160k dataset and performed two-stage learning on it. Extensive experiments
+demonstrate that this advantage-guided gating framework effectively enhances the
+performance of benchmark MLLMs in visual-based spatial understanding and
+reasoning tasks. The code is open to the public for research:
+https://github.com/LingLin-ll/Advantage-Guided-Gate.

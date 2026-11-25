@@ -10,11 +10,107 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:49:48Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 164,
-  "return_count": 164,
+  "total_results": 169,
+  "return_count": 169,
   "papers": [
+    {
+      "id": "2610.36185",
+      "title": "Can AI Guide Testing Without Generating Tests? A Comparative Study of AI-Assisted Unit Testing",
+      "authors": [
+        "Zihan Fang",
+        "Ron Asoulin-Handelman",
+        "Helen Wu",
+        "Yu Huang",
+        "Gina R. Bai"
+      ],
+      "abstract": "Recent advances in generative AI have enabled assistants to generate increasingly sophisticated executable unit tests. However, novices may accept these outputs without independently identifying what to test, evaluating test-suite completeness, or verifying correctness, potentially limiting opportunities to develop essential testing skills. Although prior work has explored AI-assisted test generation and feedback-oriented programming tutors, little is known about whether AI can support novices' testing practices without generating tests for them. To investigate this, we introduce TestCompass, a generative AI tutor that provides targeted feedback on weaknesses in students' test suites without generating executable tests. In a classroom study with 18 students, we compared TestCompass with a general AI assistant across two Java unit-testing tasks, examining students' testing behaviors, test-suite quality, and subjective experiences. We found that participants using the general-purpose AI assistant produced more tests, whereas TestCompass participants spent more time developing and verifying tests themselves. However, most test-suite quality measures were comparable between conditions, and TestCompass participants achieved similar requirement coverage with significantly fewer test methods ($p=0.012$) in one task. Neither group reported short-term improvements in perceived testing knowledge or confidence. These findings suggest that feedback-oriented AI can support meaningful testing outcomes while preserving opportunities for hands-on testing practice, offering a complementary approach to AI-assisted testing education.",
+      "published": "2026-10-26T19:18:29Z",
+      "updated": "2026-10-26T19:18:29Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.36185",
+      "abs_url": "https://arxiv.org/abs/2610.36185",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.02952",
+      "title": "GTDD: Generative Test-Driven Development for AI Coding Agents with Adversarial Testing",
+      "authors": [
+        "Masahiro Kato"
+      ],
+      "abstract": "Test-driven development gives AI coding agents executable requirements for implementing software. Because these agents can adapt their implementations to the examples they observe, passing a predetermined collection of tests can leave substantial parts of the intended behavior unimplemented. We propose Generative Test-Driven Development (GTDD), a formulation of test-driven development in which a separate testing agent generates new inputs after each candidate implementation is fixed, using a human-specified behavioral contract and the feedback from earlier rounds. A trusted evaluator checks these inputs, returns reduced counterexamples to the coding agent, and saves them for regression testing, so development continually confronts failures beyond the initial examples. We characterize the evidence that this process provides through a finite-population analysis of false acceptance under adaptive candidate selection. The resulting bounds quantify how test visibility and repeated feedback affect acceptance, and show that fresh random audits after candidate commitment control false acceptance across development rounds. In a paired experiment on a stateful key-value store, both policies that regenerated tests during development ended with lower mean failure rates than the policy whose tests were generated once by the same language model, and giving the tester the candidate's source produced no detectable additional improvement. Further conditions requesting equal numbers of tests did not isolate any single feature of the policies as the source of this difference. GTDD combines this adaptive development feedback with established regression tests and an independent acceptance rule.",
+      "published": "2026-10-02T07:45:33Z",
+      "updated": "2026-10-02T07:45:33Z",
+      "categories": [
+        "cs.SE",
+        "cs.LG",
+        "stat.ME",
+        "stat.ML"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.02952",
+      "abs_url": "https://arxiv.org/abs/2610.02952",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.09671",
+      "title": "Introducing Consort: A Spec-First Agent Framework for Enforced, Test-Driven Development on Live Database Branches",
+      "authors": [
+        "Kevin Hartman"
+      ],
+      "abstract": "When an agent writes code, the development framework becomes the control system for a non-deterministic worker. Spec-first, agent-driven frameworks have gained rapid traction since 2025; the installable ones, GitHub Spec Kit, obra/superpowers, BMAD, and GSD, and our own, all capture intent through a specification or durable planning artifacts. Since they agree on capturing intent up front, what separates them is how each enforces the engineering discipline that keeps agent-written code clean, correct, and maintainable. Every framework enforces that discipline somehow; they differ in how. We characterize three modes: enforcement by persuasion (prompt discipline the model may ignore), by front-loaded structure (strong specs, then a trusted build), and through controls the agent cannot edit (a deterministic orchestrator, human-approved gates, immutable tests, and a green result that must pass against a live, branched database). We introduce Consort, a spec-first, test-driven agent framework built on the third, enforcing that discipline through controls the agent runs inside but cannot bypass, in which a deterministic orchestrator drives separate role agents through a spec-first design lane and a test-driven build lane on a live database branch. We argue that enforcing the tests and gates in code keeps agent-written code honest and verifiable, while its specialized roles, like the human roles before them, are what make it maintainable, claims we frame as a pre-registered, testable hypothesis.",
+      "published": "2026-09-09T03:38:38Z",
+      "updated": "2026-09-09T03:38:38Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.DB"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.09671",
+      "abs_url": "https://arxiv.org/abs/2609.09671",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.22406",
+      "title": "Vibe Coding: An Experiment with Test-Driven Development",
+      "authors": [
+        "Moritz Mock",
+        "Barbara Russo"
+      ],
+      "abstract": "Context: Conversational Large Language Models (CLLMs) can automatically generate code by collaborating with users through natural language. However, poor collaboration can lead to poor quality output. Objective: This exploratory study aims to investigate how humans and CLLMs can collaborate as peers through vibe coding, an approach that integrates principles from prompt engineering, agile design, and human-AI co-creation to enhance collaboration. Method: We designed four interaction models representing different collaboration patterns in the software development process: the solo model (human-only development), the collaborative model (human-CLLM collaboration), the fully automated model (development autonomously performed by a CLLM), and the agentic model (development autonomously performed by the MetaGPT~X platform). Based on these models, we implemented corresponding Test-Driven Development (TDD) workflows using structured prompts and Python scripts. We then conducted a controlled pre-experimental study with TDD professionals to compare the solo and collaborative workflows. In addition, we performed repeated exploratory executions of fully automated and agentic workflows on the same development tasks to obtain complementary evidence. Results: Our findings suggest that the choice of interaction model should depend on the development objective. Agentic workflows are best suited for rapid development and functionally correct production code but may introduce additional implementation complexity. However, they may also introduce additional implementation decisions that are not explicitly required by the functional specifications, resulting in untested decision points. In contrast, collaborative workflows produce higher-quality, better-organized test suites. Conclusions: Our work explored how...",
+      "published": "2026-07-24T15:24:57Z",
+      "updated": "2026-07-24T15:24:57Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.22406",
+      "abs_url": "https://arxiv.org/abs/2607.22406",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.17242",
+      "title": "From Runnable to Shippable: Multi-Agent Test-Driven Development for Generating Full-Stack Web Applications from Requirements",
+      "authors": [
+        "Yuxuan Wan",
+        "Tingshuo Liang",
+        "Jiakai Xu",
+        "Jingyu Xiao",
+        "Yintong Huo",
+        "Michael R Lyu"
+      ],
+      "abstract": "Coding agents can generate runnable web applications, but their outputs frequently fail to satisfy functional requirements. Although test-driven development (TDD) offers a principled repair loop, applying it to web applications requires deriving executable acceptance tests, validating behavior through dynamic browser interactions, and translating observed failures into actionable feedback. We present TDDev, an experimental instrument that automates these tasks and enables closed-loop TDD with minimal human mediation. Using TDDev, we conduct the first controlled study of TDD for full-stack web application generation across 20 diverse web applications, multiple backbone models, two coding agents, and three TDD implementations. With sufficiently capable backbones, TDD improves accuracy by 15.5--23.7 percentage points and remains effective across both minimal and full-featured coding agents; replacing unreliable feedback with a stronger tester restores positive gains for a lower-capability backbone. Incremental TDD provides bounded control, Whole-Project TDD enables coordinated repair and achieves the highest cost efficiency in most configurations, and Agentic TDD performs best with highly capable models. Based on these findings, we provide a practical decision tree that selects an implementation according to model capability, feedback reliability, and deployment objectives. By automating acceptance testing and failure-guided repair, TDDev also reduces the human testing and intervention required during development.",
+      "published": "2026-05-17T03:48:41Z",
+      "updated": "2026-09-16T03:08:26Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.17242",
+      "abs_url": "https://arxiv.org/abs/2605.17242",
+      "source": "arxiv"
+    },
     {
       "id": "2401.02153",
       "title": "Unit Testing in ASP Revisited: Language and Test-Driven Development Environment",
@@ -1941,7 +2037,7 @@
         "Ning Luo",
         "Linlin Zhang"
       ],
-      "abstract": "Unit level test has been widely recognized as an important approach to improve the software quality, as it can expose bugs earlier during the development phase. However, manual unit level test development is often tedious and insufficient. Also, it is hard for developers to precisely identify the most error prone code block deserving the best test coverage by themselves. In this paper, we present the automatic Unit level test framework we used for intel media driver development. It can help us identify the most critical code block, provide the test coverage recommendation, and automatically generate \u003e80% ULT code (~400K Lines of test code) as well as ~35% test cases (~7K test cases) for intel media driver. It helps us to greatly shrink the average ULT development effort from ~24 Man hours to ~3 Man hours per 1000 Lines of driver source code.",
+      "abstract": "Unit level test has been widely recognized as an important approach to improve the software quality, as it can expose bugs earlier during the development phase. However, manual unit level test development is often tedious and insufficient. Also, it is hard for developers to precisely identify the most error prone code block deserving the best test coverage by themselves. In this paper, we present the automatic Unit level test framework we used for intel media driver development. It can help us identify the most critical code block, provide the test coverage recommendation, and automatically generate >80% ULT code (~400K Lines of test code) as well as ~35% test cases (~7K test cases) for intel media driver. It helps us to greatly shrink the average ULT development effort from ~24 Man hours to ~3 Man hours per 1000 Lines of driver source code.",
       "categories": [
         "cs.SE"
       ],
@@ -3279,7 +3375,7 @@
         "Wei Yang",
         "Tao Xie"
       ],
-      "abstract": "Automatic unit test (UT) generation is essential for software quality assurance, but existing approaches--including symbolic execution, search-based approaches, and recent LLM-based generators--struggle to produce human-quality tests with correct, meaningful assertions and reliable chain-of-thought (CoT) explanations. We identify a gap in UT training data: repository-mined tests lack developer CoTs, while LLM-distilled CoTs are often incorrect or incomplete. To address this issue, we propose a novel data-distillation approach that uses self-debugging to produce high-quality UT training examples paired with faithful CoTs. Our approach combines (1) guided test repair, a heuristic loop (error-, failure-, and coverage-focused steps) that asks the used model to diagnose and iteratively fix generated tests, and (2) CoT compression, which compacts original and debugging CoTs into concise explanations that directly justify correct tests. We apply this pipeline to a large corpus of open-source projects to construct a dataset of 74,518 high-quality \u003cfocal method, test, CoT\u003e examples, and then use it for supervised fine-tuning of a base model. An empirical evaluation shows that the fine-tuned model achieves high UT generation effectiveness: it attains a pass rate of 36.17% on test assertions, a branch coverage of 43.90%, and a mutation score of 88.66%, substantially higher than state-of-the-art commercial models like o4-mini.",
+      "abstract": "Automatic unit test (UT) generation is essential for software quality assurance, but existing approaches--including symbolic execution, search-based approaches, and recent LLM-based generators--struggle to produce human-quality tests with correct, meaningful assertions and reliable chain-of-thought (CoT) explanations. We identify a gap in UT training data: repository-mined tests lack developer CoTs, while LLM-distilled CoTs are often incorrect or incomplete. To address this issue, we propose a novel data-distillation approach that uses self-debugging to produce high-quality UT training examples paired with faithful CoTs. Our approach combines (1) guided test repair, a heuristic loop (error-, failure-, and coverage-focused steps) that asks the used model to diagnose and iteratively fix generated tests, and (2) CoT compression, which compacts original and debugging CoTs into concise explanations that directly justify correct tests. We apply this pipeline to a large corpus of open-source projects to construct a dataset of 74,518 high-quality <focal method, test, CoT> examples, and then use it for supervised fine-tuning of a base model. An empirical evaluation shows that the fine-tuned model achieves high UT generation effectiveness: it attains a pass rate of 36.17% on test assertions, a branch coverage of 43.90%, and a mutation score of 88.66%, substantially higher than state-of-the-art commercial models like o4-mini.",
       "categories": [
         "cs.SE"
       ],
@@ -3380,7 +3476,7 @@
     },
     {
       "id": "2507.17271",
-      "title": "Seed\u0026Steer: Guiding Large Language Models with Compilable Prefix and Branch Signals for Unit Test Generation",
+      "title": "Seed&Steer: Guiding Large Language Models with Compilable Prefix and Branch Signals for Unit Test Generation",
       "authors": [
         "Shuaiyu Zhou",
         "Zhengran Zeng",
@@ -3389,7 +3485,7 @@
         "Shikun Zhang",
         "Wei Ye"
       ],
-      "abstract": "Unit tests play a vital role in the software development lifecycle. Recent advances in Large Language Model (LLM)-based approaches have significantly improved automated test generation, garnering attention from both academia and industry. We revisit LLM-based unit test generation from a novel perspective by decoupling prefix generation and assertion generation. To characterize their respective challenges, we define Initialization Complexity and adopt Cyclomatic Complexity to measure the difficulty of prefix and assertion generation, revealing that the former primarily affects compilation success, while the latter influences test coverage. To address these challenges, we propose Seed\u0026Steer, a two-step approach that combines traditional unit testing techniques with the capabilities of large language models. Seed\u0026Steer leverages conventional unit testing tools (e.g., EvoSuite) to generate method invocations with high compilation success rates, which serve as seeds to guide LLMs in constructing effective test contexts. It then introduces branching cues to help LLMs explore diverse execution paths (e.g., normal, boundary, and exception cases) and generate assertions with high coverage. We evaluate Seed\u0026Steer on five real-world Java projects against state-of-the-art baselines. Results show that Seed\u0026Steer improves the compilation pass rate by approximately 7%, successfully compiling 792 and 887 previously failing cases on two LLMs. It also achieves up to ~73% branch and line coverage across focal methods of varying complexity, with coverage improvements ranging from 1.09* to 1.26*. Our code, dataset, and experimental scripts will be publicly released to support future research and reproducibility.",
+      "abstract": "Unit tests play a vital role in the software development lifecycle. Recent advances in Large Language Model (LLM)-based approaches have significantly improved automated test generation, garnering attention from both academia and industry. We revisit LLM-based unit test generation from a novel perspective by decoupling prefix generation and assertion generation. To characterize their respective challenges, we define Initialization Complexity and adopt Cyclomatic Complexity to measure the difficulty of prefix and assertion generation, revealing that the former primarily affects compilation success, while the latter influences test coverage. To address these challenges, we propose Seed&Steer, a two-step approach that combines traditional unit testing techniques with the capabilities of large language models. Seed&Steer leverages conventional unit testing tools (e.g., EvoSuite) to generate method invocations with high compilation success rates, which serve as seeds to guide LLMs in constructing effective test contexts. It then introduces branching cues to help LLMs explore diverse execution paths (e.g., normal, boundary, and exception cases) and generate assertions with high coverage. We evaluate Seed&Steer on five real-world Java projects against state-of-the-art baselines. Results show that Seed&Steer improves the compilation pass rate by approximately 7%, successfully compiling 792 and 887 previously failing cases on two LLMs. It also achieves up to ~73% branch and line coverage across focal methods of varying complexity, with coverage improvements ranging from 1.09* to 1.26*. Our code, dataset, and experimental scripts will be publicly released to support future research and reproducibility.",
       "categories": [
         "cs.SE"
       ],

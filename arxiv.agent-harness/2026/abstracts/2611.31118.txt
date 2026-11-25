@@ -1,0 +1,21 @@
+Title: TideSand: Performance-Accurate Sandbox Multiplexing for LLM Agents
+Authors: Shulu Li, Hanchen Li, Xiaokun Chen, Qiuyang Mang, Hanfei Chen, Jacky Kwok, Hanfei Yu, Alvin Cheung, Edward A. Lee, Joseph E. Gonzalez et al.
+ID: 2611.31118
+URL: https://arxiv.org/abs/2611.31118
+
+Abstract:
+We propose TideSand, a sandbox system that intelligently multiplexes resources
+for performance-sensitive LLM agents, such as auto research agents working on
+system measurement tasks. TideSand combines three key ideas: agent-aware
+scheduling, which schedules sandbox execution intelligently at the tool call
+level to avoid resource contention; speculative swapping, which offloads the
+memory of sandboxes waiting on inference and restores it before their next tool
+call; and selective rollback, which checkpoints selected sandboxes when
+contention occurs and restores them when machines are idle. We evaluate TideSand
+across six model-workload pairs on AlgoTune, Terminal-Bench 4.0, and Terminal-
+Bench Science. TideSand achieves 3.8-10x higher throughput than strict
+reservation while maintaining tool-call fidelity, or 7-44% higher fidelity than
+overcommit baselines at similar throughput. Moreover, TideSand reduces the
+evaluation error on Algotune by 19x through improved tool-call fidelity. We hope
+the work motivates future research to maintain tool call fidelity while keeping
+resource utilization high through statistical multiplexing.

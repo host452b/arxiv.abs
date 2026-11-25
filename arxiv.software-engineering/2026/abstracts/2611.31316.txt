@@ -1,0 +1,28 @@
+Title: Diffs Are Cheap, Show Me the Trajectory: An Empirical Study of Trajectory-Informed Code Review
+Authors: Zijian Luo, Pengfei Gao, Dayi Lin, Zhiyu Fan, Yongqiang Tian, Alejandro Carderera de Diego, Judge Hiciano, Gemma Garriga, Qingwei Lin, Dongmei Zhang
+ID: 2611.31316
+URL: https://arxiv.org/abs/2611.31316
+
+Abstract:
+Code review typically starts from the final diff. However, the diff reveals
+little about how the code was developed. Coding-agent trajectories preserve
+intermediate decisions, failed attempts, and validation evidence that may assist
+code review. We systematically investigate whether and how these trajectories
+can help independent review agents identify problems in the resulting code,
+beyond inspecting the final diff and repository. We develop a procedure that
+generates review comments by comparing the initial and merged versions of pull
+requests, and assess it against withheld human review comments. Using held-out
+reference implementations as comparison targets for agent-produced code, we
+construct a dataset linking 339 implementations of 113 DeepSWE tasks with their
+trajectories and 882 synthetic reference review comments. Across three coding-
+agent configurations and two review harnesses, we compare diff-only review,
+full-trajectory access, and four alternative ways of presenting and using
+trajectories. Full-trajectory access raises mean reference recall from 23.03% to
+25.87%, but improves recall in only four of six configurations. All four
+alternatives improve mean reference recall over diff-only by between 4.05 and
+7.32 percentage points. The gains also extend to review comments that explain
+task-verifier failures. Higher recall can require more tokens and longer review
+time, while simpler trajectory views remain competitive. These results support
+development trajectories as an additional source of code-review context and show
+that their benefits and resource costs depend on how they are presented and
+used.

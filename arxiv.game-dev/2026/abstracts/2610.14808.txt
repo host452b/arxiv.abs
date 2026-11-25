@@ -1,0 +1,23 @@
+Title: Testuary: Agentic Test Generation with Zero-Shot Parallelism
+Authors: Kevin Kammler, Dominik Sobania
+ID: 2610.14808
+URL: https://arxiv.org/abs/2610.14808
+
+Abstract:
+Agentic approaches for automated test generation can reach high-quality results,
+but they improve a given test suite incrementally, so a weak starting point may
+lead to many iterations or insufficient tests. To address this, we present
+Testuary, which provides the agentic phases with an improved starting point.
+Testuary first generates multiple test suites through independent, parallel
+zero-shot requests, checks and repairs them deterministically, and combines them
+into a single suite with a novel structural merging approach. A runtime-weighted
+set-cover reduction removes redundant tests without losing covered lines,
+branches, or killed mutants. After that, two agentic phases target the remaining
+gaps in coverage and mutation score. We compare Testuary with established search
+and LLM-based test generation approaches. The non-agentic first phase alone
+already significantly outperforms the current state-of-the-art. After the
+agentic phases, Testuary achieves on average more than 99.9% line and branch
+coverage as well as a mutation score of 98.6%, significantly outperforming all
+compared baseline approaches. Testuary needs fewer model requests and its test
+suites are on average smaller and faster than those of the compared agentic
+approach.

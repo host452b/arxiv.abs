@@ -1,0 +1,26 @@
+Title: CASCoDe: A Closed-Loop Agentic Framework for Analog Sizing and Layout Co-Design
+Authors: Ziming Wei, Bingyang Liu, David Z. Pan
+ID: 2611.11710
+URL: https://arxiv.org/abs/2611.11710
+
+Abstract:
+Expert analog layouts differ from auto-generated ones in density and regularity,
+not only in legality: experts make a succession of discrete, hierarchical
+physical decisions and revisit each after extracted electrical results, while
+most existing automated flows act on a physical search space fixed before the
+controller runs. We present CASCoDe, a closed-loop LLM agent framework for
+analog netlist-to-layout design that formalizes those expert decisions as a
+hierarchical discrete action space-sizing selection, structural floorplan, local
+layout refinement, routing-attempt selection-on which the agent runs feedback-
+driven tree search from a circuit netlist to a verified GDS. The agent authors
+the circuit-specific floorplans and scripts, and an execution layer of interface
+adaptations over adapted tools make every action land at physical implementation
+and be judged by DRC, LVS, and extracted-RC simulation. On 20 SKY130 amplifiers
+spanning single-, two-, and three-stage topologies, CASCoDe is the only flow
+that delivers a DRC- and LVS-clean routed layout when meeting design
+specifications for every circuit. It reduces area by 59-85% (mean 71%) against a
+conventional P&R flow on identical PCells, raises mean device density from 0.39
+to 0.74 against APPlace, MAGICAL, ALIGN and ICPI. A layout that beats every
+baseline in area and legality appears after 11 minutes of agent time on average,
+and ablations show that the structured action space and the feedback-guided tree
+search each reduce area and search cost.

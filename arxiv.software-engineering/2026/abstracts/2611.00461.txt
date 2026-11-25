@@ -1,0 +1,31 @@
+Title: $k$-Center under Weak and Strong Distance Oracles with an Application to Minimum Sum of Radii Clustering
+Authors: Zachary Friggstad, Mahya Jamshidian, Ali Vakilian
+ID: 2611.00461
+URL: https://arxiv.org/abs/2611.00461
+
+Abstract:
+In the weak-strong distance oracle model of Bateni, Dharangutte, Jayaram and
+Wang (COLT 2024), a metric $(X,d)$ on $n$ points is accessed through two
+oracles: a cheap weak oracle that returns each queried distance correctly with
+probability $1-δ$ and permits arbitrary values on corrupted pairs, chosen by an
+adversary who knows the entire metric and all corrupted pairs, and an expensive
+strong oracle that reveals a point exactly. The goal is to cluster well while
+making as few strong queries as possible. Our main result is a
+$(6+\varepsilon)$-approximation for $k$-center using $O(k\log
+n\log(\varepsilon^{-1}\log n))$ strong point queries, for any fixed
+$\varepsilon>0$. This improves both the $(14+\varepsilon)$ approximation factor
+and the $O(k\log^2 n\log(\varepsilon^{-1}\log n))$ query bound of Bateni et al.
+It also improves the query complexity of the recent
+$(6+\varepsilon)$-approximation of Pradhan, Bhattacharya and Jaiswal (AISTATS
+2026), in the variant of the model they study. Our algorithm outputs an
+explicitly known sketch of an otherwise unknown metric: a concrete metric on at
+most $k$ points that a downstream algorithm can compute with directly, with no
+further queries and no noise. As an application, we give a simple FPT algorithm
+for Minimum Sum of Radii (MSR) that returns a constant-factor solution using
+$2^{O(k\log k)}\cdot O(\log n\log\log n)$ strong queries. We complement the
+upper bound with an $Ω(k\log(n/k))$ lower bound for $k$-center with assignment
+that holds for row-local algorithms. These algorithms assign two unqueried
+points to the same center whenever their weak distances to the strong-queried
+points are exactly the same. Our algorithm and those of Bateni et al. and
+Pradhan et al. are all row-local, so our query bound is optimal for this class
+up to the $O(\log\log n)$ factor.

@@ -1,0 +1,25 @@
+Title: Repeating Work Can Lower Energy per Successful Goal in LLM Agents
+Authors: Deepak Panigrahy, Stephen Abkin, Aakash Tyagi, David Kebo Houngninou, Rabi Mahapatra
+ID: 2611.10315
+URL: https://arxiv.org/abs/2611.10315
+
+Abstract:
+When a temporary call failure interrupts a tool-using LLM agent, the framework
+must choose how much completed work to repeat. Repeating less completed work
+intuitively saves computation, but recovery mechanisms also change subsequent
+execution and the chance of success. We compare recovery mechanisms by energy
+per successful goal (EpG), which divides the energy of all task runs (including
+failed runs) by the number that finish correctly. In controlled vLLM experiments
+on one node, we measure board energy above idle for eight recovery options on
+reliably solved multi-turn tasks, with selected comparisons across three model
+families. For the model tested across all eight options, with the prefix cache
+retained, starting over has 22 percent lower EpG than continuing after early
+failures. Under the same cache condition, continuing has 24 percent lower EpG
+than starting over after late failures. Among all eight recovery options,
+repeating only the interrupted turn has the lowest observed EpG after early and
+late tool failures on this model. Holding recovery fixed, retaining the prefix
+cache reduces prompt tokens needing fresh computation by 86 percent but reduces
+recovery energy by only 8 percent at contexts up to 7,333 tokens. These
+measurements and a condition relating recovery energy and success show when
+repeating work lowers EpG, helping framework developers choose how their agents
+recover on their intended models and tasks.

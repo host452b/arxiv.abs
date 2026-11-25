@@ -10,11 +10,600 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:50:23Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 187,
-  "return_count": 187,
+  "total_results": 216,
+  "return_count": 216,
   "papers": [
+    {
+      "id": "2611.26535",
+      "title": "Complete Test Suites for Effectful Automata",
+      "authors": [
+        "Bálint Kocsis",
+        "Rick Koenders",
+        "Joshua Moerman",
+        "Jurriaan Rot"
+      ],
+      "abstract": "Complete test suites for automata are (finite) sets of words that enable testing an implementation against a specification: when a (black-box) automaton passes the test suite, completeness guarantees that it is equivalent to the specification on all (infinitely many) words. A well-known method for constructing complete test suites for deterministic automata is the W-method, used in conformance testing and automata learning. Based on a recent categorical generalisation of the W-method, we propose a framework for~the construction and analysis of test suites for a certain class of effectful automata defined by commutative monads. By working in the Eilenberg-Moore category of the associated monad at hand, we obtain a generic notion of effectful W-method, together with a completeness theorem. We show how to apply the framework and derive complete test suites for non-deterministic and weighted automata.",
+      "published": "2026-11-19T18:16:03Z",
+      "updated": "2026-11-23T16:48:13Z",
+      "categories": [
+        "cs.FL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.26535",
+      "abs_url": "https://arxiv.org/abs/2611.26535",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22291",
+      "title": "When the World Is the Test Suite: Agentic Intelligence for the Physical World",
+      "authors": [
+        "Kaixin Li",
+        "Meng Luo",
+        "Yanlin Li",
+        "Yuchen Tian",
+        "Xiang Liu",
+        "Xiangru Jian",
+        "Yan Yang",
+        "Zhiheng Xi",
+        "Yang Zhang",
+        "Ziyang Luo",
+        "Mingfei Cheng",
+        "Hongzhan Lin"
+      ],
+      "abstract": "Coding agents built to repair software now write, test, and repair programs for robots, laboratories, and industrial controllers. Unlike in software engineering, no test suite comes with the code. Whether a program works must be established by running it on a robot, in a physics simulator, or through the policies it helps to train, and such evidence is costly to obtain and can itself be wrong. As these agents take on more physical tasks, how their programs are judged matters as much as how they are written. This paper examines this emerging area, agentic intelligence for the physical world, by treating the world as the program's test suite. We organize the discussion around three questions: how agents write programs for the physical world, how these programs are tested, and how agents learn from the results. We first trace how language models for robots and software engineering agents came together, ask which software testing practices carry over to physical tests, and describe each program by where it sits relative to the actuator and by what judges it. For writing, we cover programs that act as robot policies and programs that support policy learning by producing rewards, tasks, and training worlds. For testing, we examine what physical trials cost, what traces, learned judges, simulators, and formal checks can establish in their place, and what safety requires beyond task success. For learning, we discuss how tested programs are retained as experience, in skill libraries and in model weights. Finally, we turn to benchmarks and evaluation practice and outline open challenges. Writing programs is becoming cheap, while trustworthy evidence about what they do remains costly. Progress will therefore depend on a physical counterpart of continuous integration: verification cheap enough to run often, reliable enough to trust under search, and maintained alongside the experience it validates.",
+      "published": "2026-11-17T06:48:03Z",
+      "updated": "2026-11-17T06:48:03Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22291",
+      "abs_url": "https://arxiv.org/abs/2611.22291",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.06950",
+      "title": "KG-AST for Cheaper CI/CD: Budgeted Test Selection and AI Bug Review",
+      "authors": [
+        "Henry Yeung"
+      ],
+      "abstract": "Continuous integration and AI-assisted review spend the same budget on every commit, although few commits introduce bugs. We study KG-AST, which scores each commit risk from git history and code-graph features before heavy tests or AI review run, so the budget goes to the riskiest commits first, and which hands the AI reviewer only a graph slice around the change. On 155 open-source projects in 11 languages, a single cross-language model trained on other projects ranks commits so that heavy testing of the riskiest 20% covers 49-64% of bug-introducing commits depending on the language, against 20% for random selection and 40-55% for testing the biggest change first. Every language beats the biggest-change baseline, by 3.8 to 13.2 points. In 20 Java projects the gain at a 20% budget is 15.1 points (64.6% vs 49.5%, 95% interval +11.6 to +18.4), and the model wins in 19 of the 20 projects. About twelve training projects suffice; richer features, tuning and cleaner labels did not help. An AI reviewer that sees only a commit's diff finds 26% of later-fixed defects exactly (32% with graph context), and about half of its findings that did not match a later fix were judged real by independent AI judges. A static call-graph selector runs about 8% of a test suite while including a test written for the fix in 85% of 67 fix commits. The Poincare embedding used in our retrieval work adds nothing measurable here: commit-risk AUC, bug review and severity ranking are unchanged or worse. The labels are noisy and the budget metric assumes a heavy test catches the bug it covers; no CI minutes were measured.",
+      "published": "2026-11-03T16:28:29Z",
+      "updated": "2026-11-03T16:28:29Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.06950",
+      "abs_url": "https://arxiv.org/abs/2611.06950",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.24475",
+      "title": "Safety Analysis of CPSs Over-the-air Updates: Test Case Prioritization and Selection",
+      "authors": [
+        "Andrea Bombarda",
+        "Luca Carminati",
+        "Nunzio Marco Bisceglia",
+        "Mehrnoosh Askarpour",
+        "Sahar Kokaly",
+        "Ramesh S",
+        "Marsha Chechik",
+        "Claudio Menghi"
+      ],
+      "abstract": "Over-the-air (OTA) updates for Cyber-Physical Systems (CPS) allow engineers to modify their software wirelessly. In the automotive domain, they enable manufacturers to update software without physical access to the vehicle. However, OTA updates can generate a large number of possible software configurations. For example, end users may decide whether or not to install any given OTA updates. The combinatorial explosion of these configurations hampers SW testing, a standard practice for detecting errors in CPS. To overcome this limitation, we propose CRISP (CRIticality-based Selection and Prioritization), a novel framework supporting test case prioritization and selection in the context of OTA updates. Our framework leverages test case robustness, i.e., how far they are from violating the system requirements, to drive test case prioritization and selection. It enables engineers to rank test case executions from most to least critical, and to select only the critical test cases relevant to a given OTA update. We evaluated our approach using a representative SW product line consisting of seven different vehicles, 22 driving scenarios, and two software components. We considered 224 tests, requiring 59 hours of execution time. We assessed the effectiveness of CRISP across five OTA updates. We compared our solution with (a) a random test case prioritization and selection algorithm, and (b) AP-DISC, identified as the state-of-the-art solution in a recent empirical study on the subject. Our results show that CRISP outperforms our baselines in finding failure-revealing test cases, and that our selection procedure can be configured to find reasonable and practical tradeoffs among accuracy (percentage of failure-revealing test cases identified) and computational time (time required to find them).",
+      "published": "2026-10-17T05:44:20Z",
+      "updated": "2026-10-17T05:44:20Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.24475",
+      "abs_url": "https://arxiv.org/abs/2610.24475",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.17224",
+      "title": "CodeLift: Your Test Suite Is Secretly a Dense SWE Curriculum",
+      "authors": [
+        "Junjielong Xu",
+        "Huachao Zhu",
+        "Alyssa Wu",
+        "Zhichao Hu",
+        "Pinjia He"
+      ],
+      "abstract": "The pass-all-test binary reward has become a standard recipe for training software engineering agents, but its sparsity eliminates difference of partially correct patches. The test pass-rate is a natural alternative. However, we find that it is not a reliable indicator of patch quality. A functionality being tested can be covered by either one challenging test or one hundred trivial tests, where the majority might be already satisfied pass-to-pass tests. We introduce CodeLift, a reinforcement learning method that dynamically calibrates pass-rate rewards, turning the test suite into an adaptive curriculum. At each iteration, CodeLift groups tests that kill the same patches and patches that pass the same tests, then gives more weight to test groups that fewer patch groups pass. This reduces the impact of majority simple tests and focuses more on what is still challenging. Within each rollout, CodeLift applies the same scoring rule to repository snapshots, assigning credit to useful actions even when later ones introduce regressions. Experiments on SWE benchmarks show that CodeLift consistently improves pass@1/2/4/8 over binary and pass-rate baselines. Analyses show that CodeLift provides dense, stable learning signals and unlocks the inherent curriculum in the test suite.",
+      "published": "2026-10-12T18:00:58Z",
+      "updated": "2026-10-30T09:23:23Z",
+      "categories": [
+        "cs.LG",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.17224",
+      "abs_url": "https://arxiv.org/abs/2610.17224",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.15964",
+      "title": "Small but Mighty: Test Suites as Improvement Signals for Self-Evolving Agents",
+      "authors": [
+        "Yutong Cheng",
+        "Wei Cheng",
+        "Wenchao Yu",
+        "Dawei Zhou",
+        "Haifeng Chen"
+      ],
+      "abstract": "A self-evolving agent rewrites its own harness and must decide which rewrites to keep, so its improvement signal is the check a rewrite has to pass. Verifying a rewrite by agent rollout is expensive and subjective, while executable checks such as the repository's own tests are too sparse to catch behavior-changing rewrites, rejecting only a quarter of them. We instead take test feedback as the executable signal, and search for test suites that are both small and strong with a quality-diversity evolutionary algorithm, so that the signal is dense and informative. TeSearch treats suite size as a behavior descriptor, so that quality is pursued at every size and a small, strong suite is reachable, and learns a transition kernel during the search that denoises the LLM as an actuator on that descriptor. Across 129 real-world modules and three backbones, TeSearch delivers the highest-quality suites of any method compared, LLM-driven evolutionary search included, and the smallest of any LLM-based one. Used as the improvement signal of a self-evolving agent, it rejects 59.9% of behavior-changing rewrites against 25.3% for the repository's tests, at a 4.0% false-alarm rate and 3.5 s per decision. The code and data are available at https://github.com/ccsnow127/TeSearch.",
+      "published": "2026-10-11T22:36:54Z",
+      "updated": "2026-10-11T22:36:54Z",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.15964",
+      "abs_url": "https://arxiv.org/abs/2610.15964",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.13065",
+      "title": "TestSuiteBench: Coding Agents Struggle to Generate Strong Test Suites from Specifications",
+      "authors": [
+        "Kazuki Egashira",
+        "Niels Mündler-Sasahara",
+        "Mark Niklas Müller",
+        "Martin Vechev"
+      ],
+      "abstract": "Coding agents are increasingly used to create large software projects. While code-generation benchmarks have scaled accordingly to full applications, test-generation benchmarks remain limited to individual functions or bug fixes. In particular, generating complete test suites for complex software from scratch remains unexplored. To address this gap, we introduce TestSuiteBench, a benchmark of 165 open-source applications, each with a structured and detailed specification of intended behavior, a reference implementation, a reference test suite, and on average 74 mutants. Each mutant is generated from a single requirement of the specification and refined to isolate that behavior: 73\\% are killed by exactly one reference test and, on average, by only 0.2\\% of the remaining tests. We find that even frontier coding agents struggle to generate strong test suites given our specifications, achieving mutation scores below 60\\%, despite their suites being largely valid and 88\\% of their tests passing on the reference implementation. We observe that generated test suites often lack relevant input combinations and are smaller than reference test suites. Meanwhile, implementations generated for the same specifications pass 82\\% of the reference tests. These results show agents can build software they cannot verify, a gap that directly limits fully autonomous software development.",
+      "published": "2026-10-09T06:26:02Z",
+      "updated": "2026-10-09T06:26:02Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.13065",
+      "abs_url": "https://arxiv.org/abs/2610.13065",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.10242",
+      "title": "TestGRAD: Evolving Test Suites via Failure Pattern Momentum for SWE-Agent Ensemble",
+      "authors": [
+        "Pengfei He",
+        "Jiayuan Zhou",
+        "Shaowei Wang",
+        "Ruiqi Pan"
+      ],
+      "abstract": "SWE-agent ensembles improve issue resolution by combining candidate patches from different agents with complementary strengths. The central problem is therefore test-based selection: generate tests, execute candidate patches, and identify the best patch. We formulate this process as test-space optimization: evolving an executable repository test suite until it distinguishes competing patches. Existing test-generation methods are limited optimizers. They usually lack an explicit loss for ensemble selection, optimize through incomplete directions that mostly create new tests or delete old ones, and perform one-off generation without feedback from repeated failures. Inspired by gradient descent with momentum, we introduce TestGRAD, a framework for automatic test optimization. TestGRAD centers on three concepts. Differential loss gives the optimizer an explicit execution-defined target: useful tests should separate candidate patches by behavior. Full CRUD gradients expand the update direction from merely creating or deleting tests to reading existing test infrastructure, creating new tests, updating stale assertions, and deleting only obsolete tests. Failure Pattern Momentum mines frequent failure sequences from memory, allowing the optimizer to avoid repeated non-discriminative directions while compressing the failure-history context. On SWE-bench Verified, TestGRAD achieves 84.2% Pass@1 with a 4-agent ensemble, outperforming the strongest baseline (80.6%) by an absolute improvement of 3.6 percentage points, while compressing failure-history context by over $100\\times$.",
+      "published": "2026-10-07T15:25:15Z",
+      "updated": "2026-10-07T15:25:15Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10242",
+      "abs_url": "https://arxiv.org/abs/2610.10242",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.24341",
+      "title": "Evaluating the effectiveness of class-level LLM-generated test suites in Python",
+      "authors": [
+        "Bilal Al-Ahmad",
+        "M. Harshvardhan",
+        "Khaled El-Fakih",
+        "Anas AlSobeh"
+      ],
+      "abstract": "Context: Large language models (LLMs) can generate unit tests quickly, but high structural coverage does not establish that those tests execute reliably or detect faults. Existing evidence often treats coverage as the principal outcome and rarely compares prompt strategies and models through mutation testing at class level. Objective: This study examines how prompt strategy and model choice shape the executability, structural coverage, fault-detection effectiveness, and structural quality of LLM-generated Python test suites relative to human-written suites. Method: We evaluate multiple prompt strategies across a diverse set of current LLM configurations on the ClassEval benchmark. The evaluation combines execution outcomes, line and branch coverage, Cosmic Ray mutation scores, and structural quality indicators. Primary analyses treat successful execution as a prerequisite; paired comparisons use only classes shared by the relevant executable subsets. Results: Structural coverage is consistently near its ceiling and offers little discrimination among configurations. Executability varies substantially. The proposed prompt performs strongly for mutation score, but no prompt dominates across models. Model choice explains more variation than prompt choice, and their interaction shows that prompt effectiveness depends on the selected model. Human and LLM suites are evaluated on unequal executable subsets, so their relative mutation scores do not establish superiority. Conclusion: Reliable assessment of LLM-generated tests should treat executability as a gate and combine coverage with mutation testing and structural quality indicators. In practice, model selection should precede prompt tuning.",
+      "published": "2026-09-21T09:37:19Z",
+      "updated": "2026-09-21T09:37:19Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.24341",
+      "abs_url": "https://arxiv.org/abs/2609.24341",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.08953",
+      "title": "DJPlus: Generating minimal test suites for strong coverage criteria in graph models",
+      "authors": [
+        "Yavuz Köroğlu",
+        "Mutlu Beyazıt",
+        "Onur Kılınççeker",
+        "Serge Demeyer",
+        "Franz Wotawa"
+      ],
+      "abstract": "Automated test generation from graph models is essential to model-based testing. In this type of testing, graph coverage ensures test suite strength but also results in long test cases that take time to execute on the system under test. We propose a novel optimization-driven method, DJPlus, which generates reduced test suites while satisfying given graph-based test requirements. We implement DJPlus and show the feasibility of edge-pair criterion, a stronger coverage criterion than vertex or edge criteria, on four realistic systems, while prime path criterion poses scalability issues. Our evaluation reveals that the alternative methods generate 2 to 26 times more redundant test steps than DJPlus and DJPlus decreases test execution times by reducing the number of test steps. These results show that DJPlus is a positive step towards tackling the challenges of model-based testing at an industrial scale.",
+      "published": "2026-09-08T16:10:45Z",
+      "updated": "2026-09-08T16:10:45Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.08953",
+      "abs_url": "https://arxiv.org/abs/2609.08953",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.04205",
+      "title": "DTM: Deterministic Approaches for Black-box Test Suite Minimization with Tree-based Similarity",
+      "authors": [
+        "Md Siam",
+        "Shartaz Sajid Nahid",
+        "Md Arif Hasan",
+        "Nurul Ahad Tawhid",
+        "Kazi Sakib"
+      ],
+      "abstract": "Black-box Test Suite Minimization (TSM) techniques reduce testing costs without requiring access to production code. However, existing effective approaches rely on evolutionary search algorithms, introducing non-determinism that produces inconsistent results across runs, undermining reliability in automated testing pipelines. We propose DTM (Deterministic approaches for black-box Test suite Minimization), a framework that ensures deterministic test suite reduction while preserving effectiveness and efficiency. DTM converts test cases into Abstract Syntax Trees and computes pairwise similarities using four tree-based measures. For subset selection, it employs three deterministic algorithms: Modified Minimum Spanning Tree, Spectral Clustering, and Dynamic Programming. We evaluated DTM on 16 Java projects from Defects4J with 661 buggy versions. Experimental results show that DTM achieved an average accuracy of 0.74 with an execution time of just 0.98 minutes, outperforming all state-of-the-art approaches. Moreover, it consistently produced identical results across multiple runs, ensuring full determinism.",
+      "published": "2026-05-16T14:07:41Z",
+      "updated": "2026-05-16T14:07:41Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.04205",
+      "abs_url": "https://arxiv.org/abs/2609.04205",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.26746",
+      "title": "FaultLens: Learning Compact Behavioral Test Suites for Generated Operational Programs",
+      "authors": [
+        "Zeming Liu",
+        "Hang Lyu",
+        "Jingtao Zhang"
+      ],
+      "abstract": "Generated operational programs are often validated with either a few hand-written examples or exhaustive regression suites. The former can miss sparse boundary and interaction faults, while the latter can be unnecessarily expensive. We introduce FaultLens, a method for learning compact behavioral test suites while preserving an auditable connection to executed evidence. It executes a rich probe domain once, stores the fault-probe kill relation as a sparse outcome cache, and learns probe orderings only from earlier program generations. A fault-driven greedy component exploits known kill structure, while a mutation-independent diversity component covers probe families, cases, templates, and temporal bins. Their alternating hybrid remains useful when a new program contains a fault mechanism absent from ordering construction. We evaluate twenty generated operational policies across four environments, ten execution seeds, 1,200 measured run summaries, 2,160 controlled program transformations, and 4,120,200 executed program-probe pairs. Of 1,960 intended faulty transformations, 1,779 alter a contract or output somewhere in the finite audit domain; 200 additional controls preserve behavior. A 32-probe hybrid learned on generations 1-3 covers 576/582 (99.0%) dynamically killable faults in generations 4-5 using 1.2-2.0% of the exhaustive domain. With an entire fault family withheld from training, diversity raises scenario-family macro coverage from 84.6% to 94.9%. In a downstream deployment study, a conservative admission rule reduces severe tail regressions from 15/20 program-environment groups to 0/20. FaultLens provides a prioritized evidence mechanism, not a proof of correctness, and makes its budget, evidence source, generalization split, and misses explicit.",
+      "published": "2026-08-27T07:37:28Z",
+      "updated": "2026-09-10T07:56:23Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.26746",
+      "abs_url": "https://arxiv.org/abs/2608.26746",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.03337",
+      "title": "Assessing Behavioral Validation in UI Component Test Suites Using Inferred Metamorphic Relations",
+      "authors": [
+        "Yu Pei",
+        "Cunming Zhang",
+        "Jeongju Sohn",
+        "Mike Papadakis"
+      ],
+      "abstract": "UI component libraries are commonly assessed using execution-based metrics such as statement and branch coverage, yet these metrics provide limited insight into whether tests verify the behavioral relations implied by component APIs and documentation. This paper presents an MR-based framework that uses inferred metamorphic relations (MRs) as an empirical behavioral reference, rather than a complete specification, for assessing UI component test suites. Given a component's source, documentation, and tests, the framework infers component-specific MRs using a UI-specific taxonomy, aligns tests with the inferred relations through hybrid deterministic and semantic analysis, and computes relation-level MR coverage metrics. We manually validate both the inferred MR space and the test--MR alignment. Our evaluation shows that existing test suites exercise substantially more behavioral relations than they explicitly validate: MR Cover remains between 42.5% and 47.6% across three LLM configurations and consistently below MR Touch. Most uncovered relations are weak-oracle cases, where behaviors are exercised but lack explicit behavioral validation. MR coverage also complements execution-based coverage by revealing behavioral gaps not reflected by statement or branch coverage alone. We further assess practical relevance through issue-description mapping, oracle strengthening, and MR-relevant injected faults. Most reported issue descriptions can be mapped to inferred MR relation types; weak-oracle relations often expose missing validation evidence; and MR labels show a trend in MR-relevant fault detection. Overall, MR coverage provides a complementary relation-level perspective for assessing behavioral validation in modern UI component testing.",
+      "published": "2026-08-04T08:48:46Z",
+      "updated": "2026-08-04T08:48:46Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.03337",
+      "abs_url": "https://arxiv.org/abs/2608.03337",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.22880",
+      "title": "Do Coverage and Mutation Scores of LLM-Generated Test Suites Correlate with Their Effectiveness? (Replicability Study)",
+      "authors": [
+        "Junda Zhao",
+        "Shurui Zhou",
+        "Eldan Cohen"
+      ],
+      "abstract": "Recent advances in large language models (LLMs) have driven growing interest in using LLMs to automate test generation. Prior work commonly evaluates generated test suites using proxy metrics such as code coverage and mutation score. However, studies by Inozemtseva et al. and Papadakis et al. show that, for human-written tests, correlations among coverage, mutation, and real-bug detection can largely vanish once test suite size is controlled, raising concerns about the validity of evaluations based on proxy metrics. It also remains unclear whether these conclusions carry over to LLM-generated tests, given that prevailing LLM-based test-generation workflows differ substantially from traditional approaches. In this paper, we conduct a large-scale replication study of these two prior works using a wide range of test suites generated by a diverse set of LLMs, and re-examine the relationships among coverage, mutation, and real-bug detection effectiveness. Our findings diverge substantially from prior results. We show that the usefulness of coverage and mutation is highly context-dependent: in regression-style settings where the code provided to the LLM can be reasonably assumed bug-free, these metrics can provide meaningful signals when comparing across models; in another common scenario where the code-under-test may already be buggy and the goal is to expose the bug within the code-under-test, they no longer serve as reliable indicators. We also find little evidence that test suite size is a dominant confounder for correlations among coverage, mutation, and real-bug detection for LLM-generated tests. Based on these findings, we discuss how to interpret results from prior studies and provide actionable guidance for evaluating LLM-based test generation.",
+      "published": "2026-07-24T19:46:30Z",
+      "updated": "2026-07-24T19:46:30Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.22880",
+      "abs_url": "https://arxiv.org/abs/2607.22880",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.20046",
+      "title": "Test Case Prioritization for DNNs via Neural Collapse Instability",
+      "authors": [
+        "Chunyu Liu",
+        "Mingyuan Li",
+        "Yang Li",
+        "Wenmin Li",
+        "Fei Gao",
+        "Tengfei Tu",
+        "Su-Juan Qin"
+      ],
+      "abstract": "With the widespread deployment of deep neural networks (DNNs) in safety-critical domains, reducing the cost of model validation under limited testing budgets has become increasingly important. Existing test case prioritization techniques often rely on single-checkpoint confidence signals derived from output probabilities. However, DNNs can be confidently wrong, and the confidence margin between the predicted and competing classes is frequently small, which weakens early fault discovery. To address this limitation, we propose a Neural-Collapse-Inspired Prioritization (NCIP) framework that replaces absolute confidence with cross-checkpoint prediction variability in the terminal training regime, where model geometry becomes highly structured. NCIP introduces two key components. First, it selects an NC-guided representative subset of training checkpoints using an equiangularity score of classifier weights, quantified as the standard deviation of pairwise cosine similarities among class weight vectors. Second, it prioritizes test inputs by their prediction variability across the selected checkpoints, surfacing boundary-adjacent and failure-prone samples that are unstable under checkpoint-induced decision boundary shifts. Extensive experiments across multiple datasets and architectures show that NCIP achieves strong performance in early fault discovery compared with competitive baselines, with 1.5 to 16.6 percent RAUC-ALL gains and 4.9 to 20.6 percent RAUC-500 gains under the same testing budget. NCIP further attains the best average performance across all dataset-model pairs.",
+      "published": "2026-07-22T11:41:04Z",
+      "updated": "2026-07-22T11:41:04Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.20046",
+      "abs_url": "https://arxiv.org/abs/2607.20046",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.05461",
+      "title": "AdaStop: Cost-Aware Early Stopping for DNN Test Selection",
+      "authors": [
+        "Bonan Shen",
+        "Wei-Jung Huang",
+        "Xin Liu",
+        "Jiazhou Gao",
+        "Tao Ning"
+      ],
+      "abstract": "Existing methods for testing deep neural networks (DNNs) primarily prioritize test inputs likely to reveal model faults under a fixed labeling budget. In practice, choosing that budget is difficult: too little testing misses failures, while too much incurs unnecessary labeling costs. This work studies the stopping problem in DNN testing. We formulate testing as a cost--benefit decision process in which labeling an input incurs cost $c$ and discovering a fault yields value $v$. Based on this formulation, we introduce \\textit{AdaStop}, a framework that estimates the marginal fault discovery rate during testing and stops labeling when the estimated rate falls below the threshold $τ= c/v$. Experiments across multiple datasets, architectures, and selection strategies show that $65$--$84\\%$ of faults can be discovered using only $9$--$31\\%$ of the labeling budget.",
+      "published": "2026-07-06T01:17:18Z",
+      "updated": "2026-07-06T01:17:18Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.05461",
+      "abs_url": "https://arxiv.org/abs/2607.05461",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.28229",
+      "title": "Humanizing Automatically Generated Unit Test Suites with LLM-Based Refactoring",
+      "authors": [
+        "Wendkûuni C. Ouédraogo",
+        "Yinghua Li",
+        "Xueqi Dang",
+        "Paweł Borsukiewicz",
+        "Liang Xiao",
+        "Lingfeng Bao",
+        "Anil Koyuncu",
+        "Jacques Klein",
+        "David Lo",
+        "Tegawendé F. Bissyandé"
+      ],
+      "abstract": "Search-based test generation tools such as EvoSuite produce compilable and high-coverage unit tests at scale, but their suites are often hard to read and maintain. LLMs can generate more natural tests, yet direct generation remains brittle, with compilation rates of only 51-78% in our study. We introduce TestHumanizer, a hybrid SBST+LLM approach that uses LLMs as controlled refactoring layers over compilable SBST suites to improve naming, structure, and developer-oriented clarity while preserving behavior and compilation validity. We evaluate TestHumanizer on 350 classes from Defects4J and SF110. EvoSuite generates 15 suites per class, and each suite is refactored under three context configurations using gpt-4o and mistral-large-2407, yielding 31,500 refactorings. TestHumanizer reaches 88-98% compilation rates, close to EvoSuite's 100% baseline and clearly above direct LLM generation. Structural coverage is largely preserved, typically within 1-2 percentage points, and 86-95% of refactorings satisfy a composite faithful-refactoring threshold. Refactored suites also improve predicted readability, reduce control-flow and cognitive complexity, and mitigate structural smells. The summary-based setting offers the most robust trade-off, while long code-centric prompts are more prone to hallucination-induced failures. A developer study on 30 classes and 444 test methods confirms significant gains in perceived readability and willingness to adopt, with Wilcoxon p less than 0.01 and substantial inter-rater agreement. Overall, LLMs are most effective not as standalone generators but as validation-gated refinement layers over robust SBST outputs.",
+      "published": "2026-06-26T16:18:56Z",
+      "updated": "2026-07-01T13:24:38Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.28229",
+      "abs_url": "https://arxiv.org/abs/2606.28229",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.10417",
+      "title": "Beyond Coverage and Kill Scores: Empirically Measuring Test Suite Behavioural Gaps",
+      "authors": [
+        "Partha Protim Paul",
+        "Reid Holmes"
+      ],
+      "abstract": "Traditional test adequacy metrics measure a system's implementation, not whether it adheres to its expected behaviour. While developers rely heavily on code coverage and mutation testing to assess test suite quality, these metrics are fundamentally implementation-centric and cannot detect gaps between what the code is expected to do and what it actually does. Unfortunately, there has been no way to reliably detect these discrepancies; in this paper we introduce an automated proof-of-concept approach to investigate these gaps. The approach extracts expected method-level behaviours from natural language documentation and source code, maps them to existing test cases, and identifies gaps between expected and validated behaviours. We evaluate the approach across ten popular open-source Java libraries comprising 8,922 methods, extracting 20,729 behaviours with 93.1% precision. Our empirical analysis conservatively estimates that 17.5% of detected expected behaviours remain entirely untested, which we term as the test suite's behavioural gap. To determine if these gaps are merely an artifact of human-driven testing, we evaluate state-of-the-art automated test generators (EVOSUITE / ASTER), finding that they similarly fail to validate at least 20.6% / 27.1% of detected expected behaviours. We further demonstrate that behavioural gaps are not predicted by traditional structural metrics: the majority of untested behaviours occur in methods that already have high line coverage, and over half persist in methods with high mutation kill score. These results suggest behavioural coverage acts as an independent dimension of test suite adequacy that can complement traditional structural metrics.",
+      "published": "2026-06-09T04:46:32Z",
+      "updated": "2026-06-09T04:46:32Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.10417",
+      "abs_url": "https://arxiv.org/abs/2606.10417",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.25785",
+      "title": "A Scalable Benchmark Test Suite for Dynamic Multi-Objective Optimization with a Changing Number of Objectives",
+      "authors": [
+        "Ke Shang",
+        "Zhiyun Xiao",
+        "Yuxuan Liu",
+        "Jianguo Li",
+        "Shaojiang Wang",
+        "Wei Sun"
+      ],
+      "abstract": "Dynamic multi-objective optimization with a changing number of objectives has recently attracted increasing attention due to its relevance to real-world problems whose evaluation criteria may evolve over time. However, existing benchmark test suites for this problem setting suffer from a fundamental limitation: when the number of objectives changes, the objective functions themselves also change implicitly. This makes it difficult to isolate and evaluate an algorithm's capability to handle dynamics in the number of objectives alone. In this paper, we analyze this issue in detail and show that several theoretical properties claimed in prior studies rely on an assumption that is violated by commonly used test suites. To address this problem, we propose a scalable benchmark test suite in which the objective functions are fixed throughout the optimization process, while the number of active objectives changes over time. Our benchmark is constructed by defining a maximum-objective problem and dynamically selecting subsets of objectives. To avoid degeneracy issues in classical DTLZ and WFG problems, we adopt Minus-DTLZ and Minus-WFG formulations, in which all objectives are mutually conflicting. Extensive benchmark studies using representative algorithms from the literature demonstrate the usefulness and flexibility of the proposed test suite.",
+      "published": "2026-05-25T12:33:20Z",
+      "updated": "2026-05-25T12:33:20Z",
+      "categories": [
+        "cs.NE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.25785",
+      "abs_url": "https://arxiv.org/abs/2605.25785",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.25441",
+      "title": "Temporal Modeling of Change History for Black-Box Test Suite Minimization",
+      "authors": [
+        "Kamruzzaman Asif",
+        "Md. Siam",
+        "Kazi Sakib"
+      ],
+      "abstract": "Test Suite Minimization (TSM) reduces the size of test suites while preserving their fault detection capability. In black-box TSM, reduction is performed without relying on production-code instrumentation. While several black-box TSM approaches have explored metrics like test logs or test similarity, these often suffer from scalability and efficiency issues. Recently, change history has been explored as a lightweight and scalable indicator for guiding black-box TSM. However, existing approaches treat historical modifications uniformly, ignoring the temporal dynamics of software evolution where recently modified code tends to be more fault-prone. To address this limitation, we introduce temporal modeling into black-box TSM and propose Temporal Risk-driven Test Suite Minimization (TRTM). TRTM extracts modification history from version-control metadata and applies exponential temporal attenuation to weight changes based on recency, producing time-weighted class-level risk scores that reflect fault-proneness. Next, it determines dependencies between test cases and production classes by constructing static call graphs derived solely from test code, preserving the black-box setting. The risk scores of the classes exercised by each test case are then aggregated using statistical measures such as Average and Geometric Mean to compute a risk score for the test case. Finally, test cases with the highest risk scores are selected to construct the reduced suite. Evaluation on a large dataset containing 14 projects with 631 versions shows that TRTM consistently outperforms the state-of-the-art baseline, achieving a mean Accuracy of 0.72 (vs. 0.66) and Fault Detection Rate (FDR) of 0.75 (vs. 0.69), while also reducing execution time.",
+      "published": "2026-05-25T05:37:55Z",
+      "updated": "2026-05-25T05:37:55Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.25441",
+      "abs_url": "https://arxiv.org/abs/2605.25441",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.25356",
+      "title": "Names Are All You Need: Effective and Safe Regression Test Selection for Python",
+      "authors": [
+        "You Wang",
+        "Michael Pradel",
+        "Zhongxin Liu"
+      ],
+      "abstract": "Regression test selection reduces the cost of regression testing by executing only those tests affected by a code change. Despite extensive study of RTS in statically typed languages, achieving effective and safe RTS in Python is challenging. Python's dynamic typing makes precise call-graph construction difficult, which can cause call-graph-based RTS to miss affected tests. Python's eager importing mechanism, in contrast, renders file-level dependency analysis overly conservative. This paper presents NameRTS, the first Python RTS approach based on fine-grained dependency analysis. NameRTS models a Python program as a bipartite graph of code element nodes and name nodes, with edges capturing definitions and references. RTS is formulated as a reachability problem on this graph: a test is selected if any modified code element is reachable from the names used in that test. This design avoids call-graph construction, enabling a conservative analysis amenable to safety. To control dependency cascades introduced by coarse name matching, NameRTS applies two pruning strategies that leverage prior test executions and context information to refine name matching. To evaluate NameRTS, we construct the first Python RTS dataset with a ground truth indicating which test files are affected by each commit. We compare NameRTS with the best-performing baseline, BabelRTS, an RTS technique based on coarse file-level dependencies. On this benchmark, NameRTS skips 69.90% of test files on average, outperforming BabelRTS by 146.5%. It also reduces end-to-end testing time by 45.59%, yielding a 107.7% improvement over BabelRTS. In terms of safety, NameRTS selects all affected tests for 99.6% of commits, with only rare misses in exceptional cases. In contrast, BabelRTS is safe for 76.6% of commits. These results demonstrate the effectiveness of NameRTS, paving the way for more efficient regression testing in Python.",
+      "published": "2026-05-25T02:20:29Z",
+      "updated": "2026-05-25T02:20:29Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.25356",
+      "abs_url": "https://arxiv.org/abs/2605.25356",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.22175",
+      "title": "SWE-Mutation: Can LLMs Generate Reliable Test Suites in Software Engineering?",
+      "authors": [
+        "Yuxuan Sun",
+        "Yuze Zhao",
+        "Yufeng Wang",
+        "Yao Du",
+        "Zhiyuan Ma",
+        "Jinbo Wang",
+        "Mengdi Zhang",
+        "Kai Zhang",
+        "Zhenya Huang"
+      ],
+      "abstract": "Evaluating software engineering capabilities has become a core component of modern large language models (LLMs); however, the key bottleneck hindering further scaling lies not in the scarcity of high-quality solutions, but in the lack of high-quality test suites. Test suites are indispensable both for synthesizing program repair trajectories and for providing precise feedback signals in reinforcement learning. Unfortunately, due to the high cost and difficulty of annotation, high-quality test suites have long been hard to obtain, while those automatically generated by LLMs tend to be superficial and lack sufficient discriminative power. As a first step toward constructing high-quality test suites, we introduce SWE-Mutation, a benchmark for evaluating LLM-generated test suites. The benchmark characterizes test suites by introducing systematically mutated solutions that attempt to ``fool'' the test suites and pass validation. We further propose an agentic, language-agnostic framework for automatically generating complex mutants. Our benchmark consists of 2,636 mutated variants derived from 800 original instances and includes a multilingual subset spanning nine programming languages. Experiments on seven LLMs reveal that even DeepSeek-V3.1 achieves only 10.20% verification and 36.15% detection rates, highlighting the inadequacy of current LLMs. Additionally, our agentic mutation strategy enhances realism, reducing average detection rates from 71.04% to 39.81% compared to conventional methods. These findings expose persistent deficiencies in the ability of current LLMs to generate reliable and discriminative test suites.",
+      "published": "2026-05-21T08:45:50Z",
+      "updated": "2026-05-21T08:45:50Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.22175",
+      "abs_url": "https://arxiv.org/abs/2605.22175",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.15232",
+      "title": "Method-level Change-proneness: A Better Metric for Black-box Test Suite Minimization",
+      "authors": [
+        "Md Siam",
+        "Kazi Sakib"
+      ],
+      "abstract": "Test Suite Minimization (TSM) reduces the size of test suites while preserving their fault detection capability. In black-box TSM, reduction is performed without analyzing production code. While several black-box TSM approaches have explored metrics like test logs or test similarity, those often suffer from scalability and efficiency issues. On the other hand, change-proneness (CP), recently emerged as an efficient and scalable alternative metric, has only been applied at class level. To accurately identify fault-revealing test cases, we propose CP at finer-grained method-level and implement Method-level Change-proneness based Test-suite Minimization (MCTM). MCTM first calculates CP for each method from version control metadata, then determines the dependency between test cases and methods by analyzing the test-code call-graph. Next, it scores the association between test cases and their invoked methods using statistical measures such as Average, Geometric Mean etc. Finally, test cases with the highest scores are selected to form the reduced suite. Evaluation on 15 open-source Java projects with 635 buggy versions shows MCTM achieves 0.93 accuracy and 0.94 fault detection rate on average, significantly outperforming class-level CP and similarity-based approaches while maintaining superior efficiency.",
+      "published": "2026-05-13T18:13:58Z",
+      "updated": "2026-05-13T18:13:58Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.15232",
+      "abs_url": "https://arxiv.org/abs/2605.15232",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.14568",
+      "title": "Given, When, Then, Again: Mining Subscenario Refactoring Candidates in Behaviour-Driven Test Suites with ML Classifiers and LLM-Judge Baselines",
+      "authors": [
+        "Ali Hassaan Mughal",
+        "Noor Fatima",
+        "Muhammad Bilal"
+      ],
+      "abstract": "Context. Behaviour-Driven Development (BDD) test suites accumulate duplicated step subsequences. Three published refactoring patterns are available (within-file Background, within-repo reusable-scenario invocation, cross-organisational shared higher-level step), but no prior work automates which recurring subsequences are worth extracting or which mechanism applies. Objective. Rank recurring step subsequences (\"slices\") by refactoring suitability (extraction-worthy), pre-map each to one of the three patterns, and quantify prevalence across the public BDD ecosystem. Method. Every contiguous L-step window (L in [2, 18]) in a 339-repository / 276-upstream-owner Gherkin corpus is keyed by paraphrase-robust cluster identifiers and counted under three scopes. SBERT / UMAP / HDBSCAN clustering recovers paraphrase-equivalent slices. Three authors label a stratified 200-slice pool against a written rubric. An XGBoost extraction-worthy classifier trained under 5-fold cross-validation is compared with a tuned rule baseline and two open-weight Large Language Model (LLM) judges. Results. The miner produces 5,382,249 slices collapsing to 692,020 recurring patterns. Three-author Fleiss' kappa = 0.56 (extraction-worthy) and 0.79 (mechanism). The classifier reaches out-of-fold F1 = 0.891 (95% CI [0.852, 0.927]), outperforming both the rule baseline (F1 = 0.836, p = 0.017) and the better LLM judge (F1 = 0.728, p = 1.5e-4). 75.0%, 59.5%, and 11.7% of scenarios carry a within-file Background, within-repo reusable-scenario, and cross-organisational shared-step candidate, respectively; the figures are stable under a sweep of the classifier decision threshold. Conclusion. Paraphrase-robust subscenario discovery yields a corpus-wide census of BDD refactoring candidates; pipeline, classifier predictions, labelled pool, and rubric are released under Apache-2.0.",
+      "published": "2026-05-14T08:38:04Z",
+      "updated": "2026-06-26T09:42:46Z",
+      "categories": [
+        "cs.SE",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.14568",
+      "abs_url": "https://arxiv.org/abs/2605.14568",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.26689",
+      "title": "Regression Test Selection for Updated Capability Modules in Compositional ML Systems via Atomic-Quality Probes",
+      "authors": [
+        "Xue Qin",
+        "Simin Luan",
+        "Cong Yang",
+        "Zhijun Li"
+      ],
+      "abstract": "Compositional machine-learning (ML) systems assemble runtime behavior from libraries of independently re-trained capability modules. Replacing one module raises a regression-testing question that static dependence analysis cannot answer: which existing compositions stay valid, and at what test cost? We frame capability updates as regression test selection (RTS) and contribute four results. First, a paired cross-version swap protocol isolates the marginal effect of a single module update. Second, on two contact-rich manipulation tasks we characterize a dominant-skill effect: one capability module reaches 88.0% atomic success while siblings stay at or below 32.0%, and its inclusion shifts composition success by up to 52 percentage points; a controlled weight-space interpolation tracks composition success against atomic quality point-by-point (pooled Pearson r=0.94), and the effect replicates on a second task, where the governing module must lie on the critical path of the phase sequence. Third, off-policy behavioral-distance metrics fail to identify the dominant module. Fourth, a margin-gated Hybrid Selector matches full revalidation at zero per-decision test cost (75.0% gold-label agreement, with no detectable difference) and reaches 81.25% match at half of full-revalidation cost, beating a cost-matched random budget (Monte-Carlo p=0.039). A resolution analysis shows that coarse evaluation overstates the apparent advantage of full revalidation. The atomic-quality probe gives a principled test-selection criterion for capability-update regression testing in compositional ML systems.",
+      "published": "2026-04-29T13:56:11Z",
+      "updated": "2026-07-02T11:05:58Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.26689",
+      "abs_url": "https://arxiv.org/abs/2604.26689",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.25363",
+      "title": "Commit-Aware Learning-Based Test Case Prioritization for Continuous Integration",
+      "authors": [
+        "Lorenzo Abbondante",
+        "Gerardo Canfora"
+      ],
+      "abstract": "Regression testing in Continuous Integration (CI) pipelines is increasingly costly due to the growing size and execution frequency of test suites. Test Case Prioritization (TCP) mitigates this problem by reordering tests to expose faults earlier. However, most existing techniques rely primarily on historical execution data and coverage metrics, neglecting the rich structural information contained in code changes. This paper proposes a commit-aware, learning-based TCP method that combines structural properties of version-control diffs, test coverage relations, and historical execution behavior into a unified predictive model. Given a new commit, the method estimates the probability that each test suite will reveal at least one failure and prioritizes test execution accordingly. We evaluate our method on five Defects4J projects using a leave-one-project-out cross-project validation setting. Results show that the commit-aware TCP significantly outperform non-commit-aware-baselines in both classification and prioritization effectiveness. Our findings show that including commit structural semantics substantially enhances regression fault detection and enables robust, generalizable learning-based TCP in CI environments.",
+      "published": "2026-04-28T08:30:25Z",
+      "updated": "2026-06-10T16:56:28Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.25363",
+      "abs_url": "https://arxiv.org/abs/2604.25363",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.23342",
+      "title": "Empirical Insights of Test Selection Metrics under Multiple Testing Objectives and Distribution Shifts",
+      "authors": [
+        "Jingyu Zhang",
+        "Fan Wang",
+        "Jacky Keung",
+        "Yihan Liao",
+        "Yan Xiao",
+        "Lei Ma"
+      ],
+      "abstract": "Deep learning (DL)-based systems can exhibit unexpected behavior when exposed to out-of-distribution (OOD) scenarios, posing serious risks in safety-critical domains such as malware detection and autonomous driving. This underscores the importance of thoroughly testing such systems before deployment. To this end, researchers have proposed a wide range of test selection metrics designed to effectively select inputs. However, prior evaluations of metrics reveal three key limitations: (1) narrow testing objectives, for example, many studies assess metrics only for fault detection, leaving their effectiveness for performance estimation unclear; (2) limited coverage of OOD scenarios, with natural and label shifts are rarely considered; (3) Biased dataset selection, where most work focuses on image data while other modalities remain underexplored. Consequently, a unified benchmark that examines how these metrics perform under multiple testing objectives, diverse OOD scenarios, and different data modalities is still lacking. This leaves practitioners uncertain about which test selection metrics are most suitable for their specific objectives and contexts. To address this gap, we conduct an extensive empirical study of 15 existing metrics, evaluating them under three testing objectives (fault detection, performance estimation, and retraining guidance), five types of OOD scenarios (corrupted, adversarial, temporal, natural, and label shifts), three data modalities (image, text, and Android packages), and 13 DL models. In total, our study encompasses 1,640 experimental scenarios, offering a comprehensive evaluation and statistical analysis.",
+      "published": "2026-04-25T15:05:32Z",
+      "updated": "2026-04-25T15:05:32Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.23342",
+      "abs_url": "https://arxiv.org/abs/2604.23342",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.17508",
+      "title": "Augmenting unit test suites from integration tests",
+      "authors": [
+        "Katerina Paltoglou",
+        "Vassilis E. Zafeiris"
+      ],
+      "abstract": "We propose a method that employs static and dynamic analysis for augmenting a test suite with automatically generated unit tests. The method is most suitable for test suites where the stratification of unit, integration and system tests does not conform to the recommended test pyramid structure: numerous unit tests providing high code coverage and forming the base, fewer integration tests in the middle that verify component collaboration, and far fewer system or UI tests at the top that exercise acceptance or other scenarios of use. Instead, integration and system tests represent the majority of test cases, resulting in coarse-grained tests with limited fault localization and longer execution times. The method leverages integration tests, exercising a component and its dependencies, to generate unit tests that verify component dependencies in isolation. We showcase and empirically evaluate the proposed method in the Node.js platform, although it can be ported and adapted to other languages and platforms. The evaluation is based on a research prototype implemented as a Node.js tool and is conducted in the context of twelve open source JS applications (benchmark projects). Evaluation results support the effectiveness and practicality of our approach.",
+      "published": "2026-04-19T15:58:55Z",
+      "updated": "2026-05-07T08:20:50Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.17508",
+      "abs_url": "https://arxiv.org/abs/2604.17508",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.01799",
+      "title": "TestDecision: Sequential Test Suite Generation via Greedy Optimization and Reinforcement Learning",
+      "authors": [
+        "Guoqing Wang",
+        "Chengran Yang",
+        "Xiaoxuan Zhou",
+        "Zeyu Sun",
+        "Bo Wang",
+        "David Lo",
+        "Dan Hao"
+      ],
+      "abstract": "With the rapid evolution of LLMs, automated software testing is witnessing a paradigm shift. While proprietary models like GPT-4o demonstrate impressive capabilities, their high deployment costs and data privacy concerns make open-source LLMs the practical imperative for many academic and industrial scenarios. In the field of automated test generation, it has evolved to iterative workflows to construct test suites based on LLMs. When utilizing open-source LLMs, we empirically observe they lack a suite-level perspective, suffering from structural myopia-failing to generate new tests with large marginal gain based on the current covered status. In this paper, from the perspective of sequences, we formalize test suite generation as a MDP and demonstrate that its objective exhibits monotone submodularity, which enables an effective relaxation of this NP-hard global optimization into a tractable step-wise greedy procedure. Guided by this insight, we propose TestDecision, which transforms LLMs into neural greedy experts. TestDecision consists of two synergistic components: (1) an inference framework which implements test suite construction following a step-wise greedy strategy; and (2) a training pipeline of reinforcement learning which equips the base LLM with sequential test generation ability to maximize marginal gain. Comprehensive evaluations on the ULT benchmark demonstrate that TestDecision significantly outperforms existing advanced methods. It brings an improvement between 38.15-52.37% in branch coverage and 298.22-558.88% in execution pass rate over all base models, achieving a comparable performance on 7B backbone with a much larger proprietary LLM GPT-5.2. Furthermore, TestDecision can find 58.43-95.45% more bugs than vanilla base LLMs and exhibit superior generalization on LiveCodeBench, proving its capability to construct high-quality test suites.",
+      "published": "2026-04-02T09:13:52Z",
+      "updated": "2026-04-17T04:26:54Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.01799",
+      "abs_url": "https://arxiv.org/abs/2604.01799",
+      "source": "arxiv"
+    },
     {
       "id": "2106.13891",
       "title": "Test Case Selection and Prioritization Using Machine Learning: A Systematic Literature Review",
@@ -407,7 +996,7 @@
         "Dan Hao",
         "Lu Zhang"
       ],
-      "abstract": "In recent years, many test case prioritization (TCP) techniques have been proposed to speed up the process of fault detection. However, little work has taken the efficiency problem of these techniques into account. In this paper, we target the Greedy Additional (GA) algorithm, which has been widely recognized to be effective but less efficient, and try to improve its efficiency while preserving effectiveness. In our Accelerated GA (AGA) algorithm, we use some extra data structures to reduce redundant data accesses in the GA algorithm and thus the time complexity is reduced from $\\mathcal{O}(m^2n)$ to $\\mathcal{O}(kmn)$ when $n \u003e m$, where $m$ is the number of test cases, $n$ is the number of program elements, and $k$ is the iteration number. Moreover, we observe the impact of iteration numbers on prioritization efficiency on our dataset and propose to use a specific iteration number in the AGA algorithm to further improve the efficiency. We conducted experiments on 55 open-source subjects. In particular, we implemented each TCP algorithm with two kinds of widely-used input formats, adjacency matrix and adjacency list. Since a TCP algorithm with adjacency matrix is less efficient than the algorithm with adjacency list, the result analysis is mainly conducted based on TCP algorithms with adjacency list. The results show that AGA achieves 5.95X speedup ratio over GA on average, while it achieves the same average effectiveness as GA in terms of Average Percentage of Fault Detected (APFD). Moreover, we conducted an industrial case study on 22 subjects, collected from Baidu, and find that the average speedup ratio of AGA over GA is 44.27X, which indicates the practical usage of AGA in real-world scenarios.",
+      "abstract": "In recent years, many test case prioritization (TCP) techniques have been proposed to speed up the process of fault detection. However, little work has taken the efficiency problem of these techniques into account. In this paper, we target the Greedy Additional (GA) algorithm, which has been widely recognized to be effective but less efficient, and try to improve its efficiency while preserving effectiveness. In our Accelerated GA (AGA) algorithm, we use some extra data structures to reduce redundant data accesses in the GA algorithm and thus the time complexity is reduced from $\\mathcal{O}(m^2n)$ to $\\mathcal{O}(kmn)$ when $n > m$, where $m$ is the number of test cases, $n$ is the number of program elements, and $k$ is the iteration number. Moreover, we observe the impact of iteration numbers on prioritization efficiency on our dataset and propose to use a specific iteration number in the AGA algorithm to further improve the efficiency. We conducted experiments on 55 open-source subjects. In particular, we implemented each TCP algorithm with two kinds of widely-used input formats, adjacency matrix and adjacency list. Since a TCP algorithm with adjacency matrix is less efficient than the algorithm with adjacency list, the result analysis is mainly conducted based on TCP algorithms with adjacency list. The results show that AGA achieves 5.95X speedup ratio over GA on average, while it achieves the same average effectiveness as GA in terms of Average Percentage of Fault Detected (APFD). Moreover, we conducted an industrial case study on 22 subjects, collected from Baidu, and find that the average speedup ratio of AGA over GA is 44.27X, which indicates the practical usage of AGA in real-world scenarios.",
       "categories": [
         "cs.SE"
       ],
@@ -843,7 +1432,7 @@
       "authors": [
         "Petar Radanliev"
       ],
-      "abstract": "Problem Space: AI Vulnerabilities and Quantum Threats Generative AI vulnerabilities: model inversion, data poisoning, adversarial inputs. Quantum threats Shor Algorithm breaking RSA ECC encryption. Challenge Secure generative AI models against classical and quantum cyberattacks. Proposed Solution Collaborative Penetration Testing Suite Five Integrated Components: DAST SAST OWASP ZAP, Burp Suite, SonarQube, Fortify. IAST Contrast Assess integrated with CI CD pipeline. Blockchain Logging Hyperledger Fabric for tamper-proof logs. Quantum Cryptography Lattice based RLWE protocols. AI Red Team Simulations Adversarial ML \u0026 Quantum-assisted attacks. Integration Layer: Unified workflow for AI, cybersecurity, and quantum experts. Key Results 300+ vulnerabilities identified across test environments. 70% reduction in high-severity issues within 2 weeks. 90% resolution efficiency for blockchain-logged vulnerabilities. Quantum-resistant cryptography maintained 100% integrity in tests. Outcome: Quantum AI Security Protocol integrating Blockchain Quantum Cryptography AI Red Teaming.",
+      "abstract": "Problem Space: AI Vulnerabilities and Quantum Threats Generative AI vulnerabilities: model inversion, data poisoning, adversarial inputs. Quantum threats Shor Algorithm breaking RSA ECC encryption. Challenge Secure generative AI models against classical and quantum cyberattacks. Proposed Solution Collaborative Penetration Testing Suite Five Integrated Components: DAST SAST OWASP ZAP, Burp Suite, SonarQube, Fortify. IAST Contrast Assess integrated with CI CD pipeline. Blockchain Logging Hyperledger Fabric for tamper-proof logs. Quantum Cryptography Lattice based RLWE protocols. AI Red Team Simulations Adversarial ML & Quantum-assisted attacks. Integration Layer: Unified workflow for AI, cybersecurity, and quantum experts. Key Results 300+ vulnerabilities identified across test environments. 70% reduction in high-severity issues within 2 weeks. 90% resolution efficiency for blockchain-logged vulnerabilities. Quantum-resistant cryptography maintained 100% integrity in tests. Outcome: Quantum AI Security Protocol integrating Blockchain Quantum Cryptography AI Red Teaming.",
       "categories": [
         "cs.CR",
         "cs.AI",
@@ -1132,7 +1721,7 @@
     },
     {
       "id": "2507.06343",
-      "title": "Quality attributes of test cases and test suites -- importance \u0026 challenges from practitioners' perspectives",
+      "title": "Quality attributes of test cases and test suites -- importance & challenges from practitioners' perspectives",
       "authors": [
         "Huynh Khanh Vi Tran",
         "Nauman bin Ali",
@@ -1618,7 +2207,7 @@
         "Bocheng Xiao",
         "Heming Cui"
       ],
-      "abstract": "Deep Neural Networks~(DNNs) have been widely deployed in software to address various tasks~(e.g., autonomous driving, medical diagnosis). However, they could also produce incorrect behaviors that result in financial losses and even threaten human safety. To reveal the incorrect behaviors in DNN and repair them, DNN developers often collect rich unlabeled datasets from the natural world and label them to test the DNN models. However, properly labeling a large number of unlabeled datasets is a highly expensive and time-consuming task.\n  To address the above-mentioned problem, we propose NSS, Neuron Sensitivity guided test case Selection, which can reduce the labeling time by selecting valuable test cases from unlabeled datasets. NSS leverages the internal neuron's information induced by test cases to select valuable test cases, which have high confidence in causing the model to behave incorrectly. We evaluate NSS with four widely used datasets and four well-designed DNN models compared to SOTA baseline methods. The results show that NSS performs well in assessing the test cases' probability of fault triggering and model improvement capabilities. Specifically, compared with baseline approaches, NSS obtains a higher fault detection rate~(e.g., when selecting 5\\% test case from the unlabeled dataset in MNIST \\\u0026 LeNet1 experiment, NSS can obtain 81.8\\% fault detection rate, 20\\% higher than baselines).",
+      "abstract": "Deep Neural Networks~(DNNs) have been widely deployed in software to address various tasks~(e.g., autonomous driving, medical diagnosis). However, they could also produce incorrect behaviors that result in financial losses and even threaten human safety. To reveal the incorrect behaviors in DNN and repair them, DNN developers often collect rich unlabeled datasets from the natural world and label them to test the DNN models. However, properly labeling a large number of unlabeled datasets is a highly expensive and time-consuming task.\n  To address the above-mentioned problem, we propose NSS, Neuron Sensitivity guided test case Selection, which can reduce the labeling time by selecting valuable test cases from unlabeled datasets. NSS leverages the internal neuron's information induced by test cases to select valuable test cases, which have high confidence in causing the model to behave incorrectly. We evaluate NSS with four widely used datasets and four well-designed DNN models compared to SOTA baseline methods. The results show that NSS performs well in assessing the test cases' probability of fault triggering and model improvement capabilities. Specifically, compared with baseline approaches, NSS obtains a higher fault detection rate~(e.g., when selecting 5\\% test case from the unlabeled dataset in MNIST \\& LeNet1 experiment, NSS can obtain 81.8\\% fault detection rate, 20\\% higher than baselines).",
       "categories": [
         "cs.LG",
         "cs.SE"
@@ -3445,7 +4034,7 @@
         "Alessio Gambi",
         "Sebastiano Panichella"
       ],
-      "abstract": "Simulation environments are essential for the continuous development of complex cyber-physical systems such as self-driving cars (SDCs). Previous results on simulation-based testing for SDCs have shown that many automatically generated tests do not strongly contribute to identification of SDC faults, hence do not contribute towards increasing the quality of SDCs. Because running such \"uninformative\" tests generally leads to a waste of computational resources and a drastic increase in the testing cost of SDCs, testers should avoid them. However, identifying \"uninformative\" tests before running them remains an open challenge. Hence, this paper proposes SDCScissor, a framework that leverages Machine Learning (ML) to identify SDC tests that are unlikely to detect faults in the SDC software under test, thus enabling testers to skip their execution and drastically increase the cost-effectiveness of simulation-based testing of SDCs software. Our evaluation concerning the usage of six ML models on two large datasets characterized by 22'652 tests showed that SDC-Scissor achieved a classification F1-score up to 96%. Moreover, our results show that SDC-Scissor outperformed a randomized baseline in identifying more failing tests per time unit.\n  Webpage \u0026 Video: https://github.com/ChristianBirchler/sdc-scissor",
+      "abstract": "Simulation environments are essential for the continuous development of complex cyber-physical systems such as self-driving cars (SDCs). Previous results on simulation-based testing for SDCs have shown that many automatically generated tests do not strongly contribute to identification of SDC faults, hence do not contribute towards increasing the quality of SDCs. Because running such \"uninformative\" tests generally leads to a waste of computational resources and a drastic increase in the testing cost of SDCs, testers should avoid them. However, identifying \"uninformative\" tests before running them remains an open challenge. Hence, this paper proposes SDCScissor, a framework that leverages Machine Learning (ML) to identify SDC tests that are unlikely to detect faults in the SDC software under test, thus enabling testers to skip their execution and drastically increase the cost-effectiveness of simulation-based testing of SDCs software. Our evaluation concerning the usage of six ML models on two large datasets characterized by 22'652 tests showed that SDC-Scissor achieved a classification F1-score up to 96%. Moreover, our results show that SDC-Scissor outperformed a randomized baseline in identifying more failing tests per time unit.\n  Webpage & Video: https://github.com/ChristianBirchler/sdc-scissor",
       "categories": [
         "cs.SE"
       ],

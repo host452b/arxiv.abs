@@ -1,0 +1,23 @@
+Title: Genie Sim PanoWorld: An Infinite Indoor 3D World Generation Pipeline via Panoramic Scene Modeling and Simulation
+Authors: Yongxin Su, Linjie Hou, Feng Wang, Jialin Tang, Zhijun Li, Qian Wang, Maoqing Yao
+ID: 2607.26646
+URL: https://arxiv.org/abs/2607.26646
+
+Abstract:
+We address the problem of reconstructing a high-fidelity, freely navigable 3D
+scene from a single $360^\circ$ panorama, without per-scene optimization or
+multi-view capture. Existing methods either lack metric trajectory control,
+which hinders reliable downstream 3D reconstruction, or struggle with large
+disocclusions under long-range camera motion while requiring high-end multi-GPU
+servers.We present Genie Sim PanoWorld, a two-stage feed-forward pipeline that
+bridges generation and reconstruction via an explicit, trajectory-controllable
+panoramic video. A NavMesh-planned $\mathrm{SE}(3)$ roaming trajectory is
+injected into a latent video diffusion model through dense geometry-warped
+conditioning; long--short trajectory mixed training and a self-consistency
+objective based on shortcut models together yield high-fidelity video in four
+CFG-free denoising steps. A feed-forward panoramic reconstructor then lifts the
+generated video into a high-fidelity 3D Gaussian scene that supports real-time,
+free-viewpoint roaming and can be directly used as a simulation-ready asset for
+embodied AI applications. Experiments show that Genie Sim PanoWorld outperforms
+geometry-conditioned baselines in both panoramic video generation and downstream
+3D reconstruction, while generalizing zero-shot to unseen indoor scenes.

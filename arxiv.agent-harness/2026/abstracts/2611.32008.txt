@@ -1,0 +1,22 @@
+Title: LIBRA: Runtime Co-Tuning of Batch Size and Parallelism for Time-Efficient LLM Training
+Authors: Shengkai Lyu, Hairui Zhao, Daran Sun, Yida Gu, Xingchen Liu, YueYuan Zhou, Zheng Wei, Guangming Tan, Dingwen Tao
+ID: 2611.32008
+URL: https://arxiv.org/abs/2611.32008
+
+Abstract:
+Training large language models (LLMs) requires choosing both a batch size and a
+parallel configuration. Existing systems make these decisions in isolation,
+tuning parallelism for throughput and batch size for convergence, but neither
+objective alone determines training efficiency. We present LIBRA, a lightweight
+runtime framework that co-tunes batch size and parallel configuration to
+minimize end-to-end time. LIBRA treats throughput and convergence as two noisy
+objectives and searches their joint space using parallel noisy expected
+hypervolume improvement (qNEHVI). To make this runtime search efficient, we
+propose hierarchical pruning, which removes infeasible and low-throughput
+parallel configurations through system-level performance estimation and then
+narrows batch-size candidates through critical-batch-size-aware convergence
+monitoring. We further design acquisition-guided parallel evaluation (AGPE),
+which evaluates surviving candidates concurrently across GPU groups in order of
+their acquisition values. On clusters of up to 256 GPUs, LIBRA reduces time-to-
+convergence by 31.1% on average over state-of-the-art methods, while runtime
+tuning accounts for only 0.3-3.5% of overall time.

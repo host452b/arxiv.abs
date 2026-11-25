@@ -1,0 +1,24 @@
+Title: VeriBase: Automated Construction of Theorem Libraries for Software Verification
+Authors: Zihao Zhang, Zenan Li, Taolue Chen, Zhe Zhou, Tao Xie, Yuan Yao
+ID: 2611.01743
+URL: https://arxiv.org/abs/2611.01743
+
+Abstract:
+Software verification is typically more challenging than coding. Software
+developers routinely build on mature libraries and APIs, but turning successful
+verification solutions into reusable libraries still requires substantial expert
+effort. In this paper, we propose VeriBase, a framework for automatically
+constructing software-verification libraries by jointly generalizing code and
+its associated theorems from successful verification solutions. The key
+challenge is to generalize implementations together with the theorem statements
+and proofs that depend on these implementations, and reconcile overlapping
+components across verification tasks. To this end, VeriBase treats code and its
+associated theorems as declaration families, and designs a three-phase pipeline,
+which proves seed tasks, generalizes code and associated theorems, and harvests
+the resulting families into shared interfaces. VeriBase updates dependent
+declarations as interface change and uses Lean to check the resulting code and
+proofs. We evaluate VeriBase across four benchmarks with three backend LLMs. The
+results show that the general-purpose library built from independent 4,191
+programs increases the average task success rate by up to 17.0% and meanwhile
+reduces the proof completion time by up to 21.4%. When VeriBase constructs a
+benchmark-specific library, further improvement can be observed.

@@ -1,0 +1,20 @@
+Title: Directed Neuro-Symbolic Stochastic Execution for Verification of Distributed Parallel AI Programs
+Authors: Gautham Koorma, Vikas Sharma, George Edwards, Mahdi Eslamimehr
+ID: 2608.07947
+URL: https://arxiv.org/abs/2608.07947
+
+Abstract:
+Distributed parallel Artificial Intelligence (AI) programs expose reliability
+gaps that conventional testing cannot close: parallel executions are non-
+deterministic, and AI workloads bring high-dimensional inputs and non-linear
+operations that defeat fuzzing and symbolic execution in isolation. We present
+Directed Neuro-Symbolic Stochastic Execution (DNSSE), a hybrid testing framework
+that couples schedule prediction guided by a Large Language Model (LLM) with
+symbolic constraint solving and coverage-guided stochastic mutation. We model
+distributed AI executions as non-deterministic transition systems, specify
+correctness in linear temporal logic, and prove soundness, bounded completeness,
+and probabilistic completeness of the hybrid solver, together with an expected-
+cost analysis of LLM-guided schedule exploration. A scalable implementation on
+PyTorch and Ray detects 2.9% more concurrency bugs than the strongest baseline
+and raises average branch coverage from 68.6 % to 91.6 % across five realistic
+distributed AI benchmarks.

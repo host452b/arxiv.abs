@@ -1,0 +1,27 @@
+Title: BitShare: Sensitivity-Aware Binning and Bit Sharing for Compacting LLM Weight Storage
+Authors: Qiuyu Ren, Sudipta Paria, Aritra Dasgupta, Swarup Bhunia
+ID: 2611.28607
+URL: https://arxiv.org/abs/2611.28607
+
+Abstract:
+Decoding with large language models at small batch sizes is limited by memory
+bandwidth, so the bits stored per weight largely set its cost. Group-wise
+integer quantization stores every weight of a group at the same precision,
+although the input channels of a group differ in sensitivity. We present
+BITSHARE, a codebook-free weight format that keeps the integer grid and the
+dequantizer of group-wise quantization but varies precision within each group.
+Sensitivity-aware binning places the channels of each group into three bins at
+fixed positions, and static bit sharing with optimal bit-value allocation lets
+the less sensitive weights share their lower bits, each stored once per group or
+once per pair of weights. A sharing-aware version of GPTQ chooses every stored
+value, with no fine-tuning and no codebook. BITSHARE has two modes. BITSHARE-U
+gives every group the same layout, so its decoder routes bits by fixed wiring,
+while BITSHARE-N chooses a layout per group within the same bit budget. With
+calibration on the Pile and at the same storage, both modes have lower
+perplexity than GPTQ at 3 and 2 bits on WikiText-2 and C4. At 2 bits across
+Llama-2 and Llama-3 models, BITSHARE-N lowers WikiText-2 perplexity by up to 70%
+against SliM-LLM and up to 35% against GPTAQ. At the 2-bit perplexity of SliM-
+LLM, BITSHARE-U stores 13.6-19.4% fewer bits per weight, cutting DRAM weight
+traffic by the same fraction. A verified hardware decoder implementation
+synthesized in SkyWater 130 nm reconstructs BITSHARE weights at the throughput
+of INT-n and SliM-LLM decoders.

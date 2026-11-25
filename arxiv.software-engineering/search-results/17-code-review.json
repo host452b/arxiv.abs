@@ -10,11 +10,338 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:47:15Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 252,
-  "return_count": 200,
+  "return_count": 216,
   "papers": [
+    {
+      "id": "2611.31316",
+      "title": "Diffs Are Cheap, Show Me the Trajectory: An Empirical Study of Trajectory-Informed Code Review",
+      "authors": [
+        "Zijian Luo",
+        "Pengfei Gao",
+        "Dayi Lin",
+        "Zhiyu Fan",
+        "Yongqiang Tian",
+        "Alejandro Carderera de Diego",
+        "Judge Hiciano",
+        "Gemma Garriga",
+        "Qingwei Lin",
+        "Dongmei Zhang"
+      ],
+      "abstract": "Code review typically starts from the final diff. However, the diff reveals little about how the code was developed. Coding-agent trajectories preserve intermediate decisions, failed attempts, and validation evidence that may assist code review. We systematically investigate whether and how these trajectories can help independent review agents identify problems in the resulting code, beyond inspecting the final diff and repository. We develop a procedure that generates review comments by comparing the initial and merged versions of pull requests, and assess it against withheld human review comments. Using held-out reference implementations as comparison targets for agent-produced code, we construct a dataset linking 339 implementations of 113 DeepSWE tasks with their trajectories and 882 synthetic reference review comments. Across three coding-agent configurations and two review harnesses, we compare diff-only review, full-trajectory access, and four alternative ways of presenting and using trajectories. Full-trajectory access raises mean reference recall from 23.03% to 25.87%, but improves recall in only four of six configurations. All four alternatives improve mean reference recall over diff-only by between 4.05 and 7.32 percentage points. The gains also extend to review comments that explain task-verifier failures. Higher recall can require more tokens and longer review time, while simpler trajectory views remain competitive. These results support development trajectories as an additional source of code-review context and show that their benefits and resource costs depend on how they are presented and used.",
+      "published": "2026-11-23T05:06:12Z",
+      "updated": "2026-11-23T05:06:12Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31316",
+      "abs_url": "https://arxiv.org/abs/2611.31316",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.25918",
+      "title": "From Code Review Comments to Reuse in Production: An Industrial Study of Extracted Rules",
+      "authors": [
+        "Mutsuha Asada",
+        "Yuhei Nakasaka",
+        "Keito Tabuchi",
+        "Shinpei Hayashi"
+      ],
+      "abstract": "Much organization-specific code review knowledge remains embedded in comments on individual changes, and recent systems reuse it by turning those comments into rules a language model applies to later changes. Teams must then decide which rules to keep, and the evidence at hand is how often the system's later comments name each rule. Tracing the rules of one such system, Kleene, through 65 days of production use, we found that such a count does not show what a rule contributed. A rule attribution indicates neither whether the source content was preserved nor whether the comment requested a change. Of 56 clauses in 12 rules that later comments named as their reason, 2 were explicit in a source review thread, 38 added conditions to a corresponding passage, and 16 had no passage we could locate; 45 of 79 further comments naming those rules requested no change, 27 of them while stating that the rule applied. On 20 constructed code changes, a reviewer model given only the unedited source thread met the detection criteria on 8 of the 10 that require a report, against 10 of 10 with the extracted rule, a difference whose confidence interval includes zero. Stage counts locate where rules drop out but not why: of 464 rules deployed while the rule-based reviewer subagent ran in their repository, 259 (55.8%) were named, 195 (42.0%) produced a comment that was not withheld, and 94 (20.3%) one with a recorded code change; the largest reduction occurred before any rule was named. Nor did the deployment-time properties we tested settle the choice in advance: retaining the top-ranked half preserved 53.8% of the rules that later produced a non-withheld comment, against 49.2% at random, a difference whose confidence interval includes zero. Judging extracted rules therefore calls for recording each stage separately and comparing each rule against the threads it was extracted from.",
+      "published": "2026-11-19T11:04:07Z",
+      "updated": "2026-11-19T11:04:07Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25918",
+      "abs_url": "https://arxiv.org/abs/2611.25918",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23283",
+      "title": "When Single Agent Is Enough: Rethinking Multi-Agent Systems for Automated Code Review",
+      "authors": [
+        "Jiawei Li",
+        "Hoa Khanh Dam",
+        "Iftekhar Ahmed"
+      ],
+      "abstract": "Code review plays a critical role in identifying software quality issues and ensuring system robustness. Prior work has proposed techniques for Review Comment Generation (RCG) and Code Refinement (CR), with recent Multi-Agent (MA) approaches achieving state-of-the-art results by coordinating agents specialized in different quality dimensions. However, MA systems introduce substantial architectural complexity and runtime overhead, and recent evidence suggests they may underperform Single-Agent (SA) approaches in certain tasks. In this work, we systematically compare MA and SA designs for RCG and CR. Surprisingly, our results show that SA approaches perform comparably to- and sometimes outperform-MA systems, despite their simpler design. These findings challenge the prevailing assumption that MA architectures are the default choice for complex software engineering tasks.",
+      "published": "2026-10-24T00:15:37Z",
+      "updated": "2026-10-24T00:15:37Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23283",
+      "abs_url": "https://arxiv.org/abs/2611.23283",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23275",
+      "title": "AI Code Review Requires Revision-Aware Evidence of Concern Resolution",
+      "authors": [
+        "Mamdouh Alenezi"
+      ],
+      "abstract": "AI-assisted code review increasingly judges whether reported concerns have been resolved. Yet closing a thread or modifying a commented line does not establish repair, and later revisions can invalidate earlier fixes. This position paper argues that resolution requires inspectable, revision-specific evidence that is revalidated when its dependencies change. We model review concerns as persistent verification obligations, derive a sufficient condition under which dependency-gated revalidation matches exhaustive reassessment, and introduce REVAL, a lightweight procedure adapting principles from regression-test selection and build systems. We evaluate REVAL against oracle ground truth in synthetic revision histories covering 441 concerns, 1,284 assessments, and 12 defect families. A sticky outdated-line proxy falsely marked 72.9% of unresolved states as resolved, while stopping checks after initial success missed every recurrence. With three oracle-sampled witnesses, REVAL achieved a false-resolution rate of 0.11 (95% CI: 0.06-0.16) and detected 80.4% of recurrences. With witnesses derived solely from review comments and assessed using independent held-out checks, the corresponding results were 0.13 and 88.3%. Across 6,420 paired comparisons, REVAL matched exhaustive reassessment while reducing post-comment test executions by 34%. Maintenance overhead increased runtime for microsecond-scale tests; the estimated break-even test cost was 0.42 ms. These findings support revision-aware evidence maintenance in a controlled setting, while distinguishing revalidation correctness from witness adequacy. A prespecified evaluation protocol outlines how to assess generalisability in real review histories.",
+      "published": "2026-10-21T06:22:36Z",
+      "updated": "2026-10-21T06:22:36Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23275",
+      "abs_url": "https://arxiv.org/abs/2611.23275",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18939",
+      "title": "Level Up! AI-Driven Challenges and Adaptations to Code Review Practices",
+      "authors": [
+        "Kaia Newman",
+        "Christian Bird",
+        "Jenna Butler",
+        "Emerson Murphy-Hill"
+      ],
+      "abstract": "AI can write code faster than humans can review, causing a bottleneck and necessitating changes to code review practices. This bottleneck is hotly debated, giving rise to two extreme and orthogonal imagined futures: one where humans continue to be firmly entrenched in the review process, and one where AI agents merge pull requests entirely without human involvement. Yet, these futures remain rooted in folk wisdom. Through a mixed-methods study of interviews ($n = 24$) and a survey ($n = 2{,}590$) at a large, multinational software company with widespread access to AI, we identify AI-driven code review challenges and strategies reported as effective to meet them. We found that AI enables, necessitates, and complicates a shift in the human reviewer's role toward high-level concerns (e.g., design and intent). We found that AI-assisted authoring results in increased burden for reviewers due to challenges such as a lack of author stewardship and PR volume and size, potentially leading to downstream debt. Our survey showed AI review usage was not correlated with less difficulty keeping up with PR volume, indicating using AI for review alone is not sufficient for solving AI-driven review challenges. Developers found the most useful strategies to be organizations supporting and resourcing review, pushing review burden upstream, and prioritizing reviewer attention on the concerns that matter most.",
+      "published": "2026-11-13T20:47:56Z",
+      "updated": "2026-11-13T20:47:56Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18939",
+      "abs_url": "https://arxiv.org/abs/2611.18939",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18293",
+      "title": "PrivacyPR: A Dataset of Real-World Privacy Fixes for Benchmarking Privacy-Aware Code Review",
+      "authors": [
+        "Hua Yang",
+        "Aditya Bhardwaj",
+        "Shidong Pan",
+        "Bowen Xu"
+      ],
+      "abstract": "Coding agents increasingly review code, yet whether they catch the privacy defects that laws such as the GDPR require software to avoid remains largely untested, partly because few datasets connect real privacy defects to their accepted fixes and review context. We present PrivacyPR, a dataset of 4,131 merged GitHub pull requests (PRs) from 1,469 repositories, created between June 2018 and January 2024. Each PR includes its commits, diffs, review discussion, and LLM-generated labels for privacy relevance, fix type, and GDPR principles. PrivacyPR provides 1,169 high-confidence privacy fixes and 1,643 non-fix PRs, together with Verified, a manually checked split of 250 privacy fixes and 250 non-fix PRs, and Small, a 100 + 100 subset for evaluation. On Verified, both annotators endorsed 72% of the LLM's GDPR-principle assignments. Beyond supporting empirical study of how privacy defects arise and are fixed, PrivacyPR provides a benchmark for privacy-aware code review on real, developer-accepted fixes. Its evaluation harness reverts each fix to reintroduce the defect. On Small, two coding agents detect only 42-51% of defects under a generic review prompt, but 88-91% when explicitly asked to check privacy, while flagging 11-15% of non-fix PRs. These results show that privacy defects can be detected by coding agents, but that detection depends strongly on review intent and comes with false alarms. Data, code, reviews, judge verdicts, and an extensible evaluation harness are publicly available at https://doi.org/10.5281/zenodo.23744765.",
+      "published": "2026-11-13T15:18:33Z",
+      "updated": "2026-11-13T15:18:33Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18293",
+      "abs_url": "https://arxiv.org/abs/2611.18293",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.10098",
+      "title": "Autonomous Code Review: Hidden-Test Results on GitHub Issues",
+      "authors": [
+        "Adam Shakhabov"
+      ],
+      "abstract": "Can an autonomous cross-provider review step change whether code written for a real issue passes hidden tests? We report a retrospective benchmark of 12 historical GitHub issues (five C#, five JavaScript, and two Python) from five repositories. Two directed author--reviewer pairs, OpenAI GPT-6.1-Sol and Anthropic Claude Sonnet 5.5, each ran twice per issue, yielding 48 planned workflows. A bounded terminal agent produced an initial patch; a cross-provider model reviewed it; the author model adjudicated findings and could revise the patch. The same hidden evaluator assessed initial and final patches. Forty workflows completed, while eight terminated before a complete evaluator outcome. Four completed workflows passed, and all four already passed before review. No initial-to-final pass/fail transitions occurred among completed workflows.",
+      "published": "2026-11-06T17:11:41Z",
+      "updated": "2026-11-06T17:11:41Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.10098",
+      "abs_url": "https://arxiv.org/abs/2611.10098",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.02566",
+      "title": "CR-Bench-v2: Evaluating the Real-World Utility of AI Code Review Agents",
+      "authors": [
+        "Kristen Pereira",
+        "Neelabh Sinha",
+        "Rajat Ghosh",
+        "Debojyoti Dutta"
+      ],
+      "abstract": "The rapid growth of automated code generation has created a pressing need for automated code review. Yet code review resists full automation: it depends on context beyond the \\textit{diff}, on the author's intent, and on judgments about design and maintainability on which even expert reviewers disagree. Existing code review benchmarks lack standardization and rely largely on noisy human review comments scored with text-similarity metrics, which reward surface overlap and fail to measure precision. We introduce \\texttt{CR-Bench}, a defect-centric evaluation framework that recasts SWE-Bench issues as pull-request review tasks with full repository context. After filtering for review-detectable defects and grounding each to a single originating pull request, \\texttt{CR-Bench} contains 584 instances, with a 174-instance \\texttt{CR-Bench-Verified} subset derived from SWE-Bench Verified. Each instance pairs a pull request with a known defect, its ground-truth fix, and a taxonomy label for bug category, impact, and severity. We propose two complementary metrics: \\emph{Known-Defect Detection Rate} (KDDR), which measures whether an agent identifies the labeled defect, and \\emph{Usefulness Rate}, which measures the fraction of review comments that are actionable. We evaluate eight code review agents over four backbones, plus commercially available Gemini Code Assist, using three independent LLM judges. Even the strongest systems detect only about one-third of known defects (KDDR $\\approx$ 33\\%), and Gemini Code Assist detects 8.1\\%.",
+      "published": "2026-11-02T05:50:13Z",
+      "updated": "2026-11-03T09:53:30Z",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.02566",
+      "abs_url": "https://arxiv.org/abs/2611.02566",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.36010",
+      "title": "CIVER: Causal Intervention Verification for Reliable Code Review",
+      "authors": [
+        "Xinyuan Song",
+        "Hasibul Haque",
+        "Jay Somasundaram",
+        "Ryan Turner",
+        "Bowen Zhu",
+        "Liang Zhao"
+      ],
+      "abstract": "Code review is essential for maintaining software repositories by identifying defects, improving code quality, and supporting reliable software evolution. With the growing adoption of LLM-based coding agents, an increasing number of code contributions and repository changes are generated by these agents. Consequently, LLM-based code review agents are becoming increasingly prevalent to evaluate these contributions and maintain software quality. However, LLM reviewers often generate lengthy reviews containing numerous potential issues, many of which are false positives or lack sufficient evidence. These unreliable reviews can mislead developers and downstream coding agents, motivating the need to distinguish actionable findings from unsupported claims. We propose CIVER, a causal intervention-based framework that identifies the core issues underlying code-review findings and distinguishes genuine defects from false positives. CIVER integrates three modules: a review module assesses findings, an intervention module generates repair-oriented perturbations, and a verifier module scores review reliability. Through joint optimization via expert iteration, the three modules identify genuine defects by responding to targeted repairs while remaining stable under unrelated changes. Extensive experiments on SWE-Review-Bench demonstrate that CIVER correctly identifies 77% of genuine defects through targeted repairs. Cross-project and downstream repair evaluations further demonstrate that CIVER generalizes across repositories and improves coding agents' task success rates, highlighting its effectiveness for reliable automated code review.",
+      "published": "2026-10-26T16:29:40Z",
+      "updated": "2026-10-26T16:29:40Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.36010",
+      "abs_url": "https://arxiv.org/abs/2610.36010",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.35477",
+      "title": "Making Small Code LLMs More Efficient for Secure Code Review with Neuro-Symbolic Fine-Tuning",
+      "authors": [
+        "Mostafijur Rahman Akhond",
+        "Mahmuda Khatun",
+        "Gias Uddin"
+      ],
+      "abstract": "As AI coding assistants generate more code, the need to review it for security flaws grows. Existing approaches leave a gap: static analyzers identify program sites but offer little explanation, while language-model explanations can be difficult to verify. Small open-weight code models could make security review available without sending proprietary code to a hosted service. We study whether fine-tuning helps these models turn security evidence into explanations that developers and tools can check. We present secSemScan, which pairs a static analyzer with a locally deployable model that writes a schema-constrained security monologue naming program sites, assigning a CWE, and giving a machine-parseable verdict. We also introduce OGSM (Oracle-Grounded Security Monologue), a dataset of 1,993 C/C\\texttt{++} functions covering 22 CWEs in the taint and lifetime families. Each record pairs a function with analyzer-derived or fix-diff-derived evidence and a monologue. We fine-tune three open-weight code models in two stages, first on the output format and then on the monologue content. Because evaluation prompts supply the verdict and evidence, our results measure how well models use that information, not whether they detect vulnerabilities independently. On 355 test records, fine-tuning raised Qwen2.5-Coder-7B's verdict accuracy from 4.8\\% to 96.6\\%; DeepSeek-Coder-6.7B reached 78.9\\%, and StarCoder2-7B reached 43.7\\%. Qwen2.5-Coder-7B cited 87.5\\% of Tier~1 oracle sites, and every line it cited belonged to the oracle evidence. The results suggest that fine-tuning helps small models produce more structured, evidence-linked security reasoning.",
+      "published": "2026-10-26T14:10:26Z",
+      "updated": "2026-10-26T14:10:26Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.35477",
+      "abs_url": "https://arxiv.org/abs/2610.35477",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.34435",
+      "title": "CyberDual: AI Attackers versus AI Code Reviewers in Real Software Maintenance",
+      "authors": [
+        "Chenyuan Yang",
+        "Hwiwon Lee",
+        "Jongseong Kim",
+        "Yihan Yang",
+        "Dongjun Kim",
+        "Yinfang Chen",
+        "Lingming Zhang"
+      ],
+      "abstract": "Open-source projects now let AI agents review incoming code, but the code under review may itself come from an AI attacker. We present CyberDual, an arena for this dual role of AI: attacker agents hide an exploitable bug in real maintenance work on widely used open-source projects, and reviewer agents try to find and repair it. Execution decides each match: we rerun the attacker's proof of concept (PoC) on the code that comes out of review. Every attack is new, and the windows can be rebuilt each quarter from the latest upstream history. Three agentic reviewers catch 85-91% of 1,088 valid attacks from six attackers. Yet when the attacker spreads the bug over real upstream commits, about one in six attack slots still ends with a working exploit after review. The strongest attacker has open weights: GLM 5.3 almost never refuses, and its attacks make up 13 of the 28 that get past all three reviewers. When they miss, Claude reviewers mostly approve the attack, while GPT-6-Sol mostly repairs the wrong code; a reviewer from a second vendor catches about two thirds of a Claude reviewer's misses. Beyond a leaderboard, CyberDual has three uses. First, PoC execution gives both sides a reward that agent reports cannot game, so its surviving attacks can train reviewers against stronger attackers. Second, it can gate a release on both scores: Claude Sonnet 5 refuses one in five attack slots, yet attacks about as well as GPT-6-Sol, so refusal alone does not remove attack capability. Third, it can warn the teams behind a deployed reviewer when a new attacker crosses a threshold: GLM 5.3 in Claude Code already gets an exploit past Sonnet 5 in 17% of its attack slots.",
+      "published": "2026-10-25T16:44:07Z",
+      "updated": "2026-10-25T16:44:07Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.34435",
+      "abs_url": "https://arxiv.org/abs/2610.34435",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.33509",
+      "title": "Can Agentic Code Review Catch Vulnerabilities Before They Are Merged?",
+      "authors": [
+        "Yihan Yang",
+        "Chenyuan Yang",
+        "Zijie Zhao",
+        "Anh Nguyen Hoang",
+        "Ziqi Zhang",
+        "Weidong Wang",
+        "Zhiheng Lyu",
+        "Lingming Zhang"
+      ],
+      "abstract": "LLM agents have been increasingly adopted for security-focused code review, but existing benchmarks mostly derive the reviewed changes from their later fixes instead of the real-world bug-introducing commits. In this paper, we present SecPRBench, the first comprehensive benchmark for evaluating agentic security review on validated real-world code changes. More specifically, we have built an automated agentic pipeline to autonomously harvest, build, and validate massive real-world bug-introducing commits for popular software systems. To ensure precise evaluation, we also adopt LLM-as-a-judge to credit the findings matching ground-truth vulnerabilities. To date, we have collected 265 tasks from nine critical systems, including Firefox, V8, and OpenSSL with millions of lines of code. Across eight frontier models, recall ranges from 32.5% to 78.1%, with Grok 4.6 and GPT-6 sol ranking at the top. Our study also shows that most misses are not simply oversights: in 68% of them, the agent reports on a file that holds the flaw but argues for a different mechanism. Security-focused harnesses also behave differently: OpenAI's Codex Security lowers recall by 8.3 points, mostly by abstaining, while Anthropic's Defending Code harness raises it by 7.7 points, at a higher cost.",
+      "published": "2026-10-24T07:32:42Z",
+      "updated": "2026-10-30T02:32:26Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CR",
+        "cs.PL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.33509",
+      "abs_url": "https://arxiv.org/abs/2610.33509",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.33389",
+      "title": "OneCodeReviewBench: Typed Decisions for Code Review and Search",
+      "authors": [
+        "Mohamad Mohebifar",
+        "Alex Bit"
+      ],
+      "abstract": "Code review requires finding functional bugs, memory-safety errors, security weaknesses, and performance problems across languages and software stacks. Tools can express bounded parts of this work as decisions about supplied code. We present OneCodeReviewBench, 1,968 synthetic cases across 12 programming languages and YAML, with Boolean, categorical, and ordered answers. Explicit contracts specify runtime assumptions, source scope, and answer criteria; separate evidence records support reference review. One author reviewed 150 cases; two additional engineers reviewed 100 of those cases. We compare ten model--adapter systems on the same cases and contracts: OpenAI Decisions reaches 81.3% Boolean balanced accuracy; Kev-27B reaches 76.8% Choice accuracy and Score mean absolute error of 0.367. Excluding two families with incomplete contracts preserves these leaders. Additional comparisons cover 586 cases with raw symbol search and 40 with a bounded Python import resolver; the resolver matches all 40 references within its supported profile. A versioned artifact reproduces these analyses and retains the 85 cases with matching engineer answers; the reported review subset excludes two incomplete-contract cases. Remaining reviewer disagreements and repaired inputs require resolution; repository-scale transfer and matched latency/cost evaluation remain future work.",
+      "published": "2026-10-24T01:40:29Z",
+      "updated": "2026-10-24T01:40:29Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.33389",
+      "abs_url": "https://arxiv.org/abs/2610.33389",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.21925",
+      "title": "Benchmarking and Enhancing Design-Aware Code Review in the Linux Kernel",
+      "authors": [
+        "Zhenhao Zhou",
+        "Kai Yu",
+        "Ying Wang",
+        "Zhiqiang Yuan",
+        "Junhao Zeng",
+        "Yijian Wu",
+        "Chong Wang",
+        "Xin Peng"
+      ],
+      "abstract": "Code review often requires reasoning beyond local correctness. In mature software systems, reviewers must recognize design trade-offs introduced by a proposed change, compare alternative solutions, and reason about their compatibility with project-specific constraints. We refer to this problem as design-aware code review. However, existing automated review approaches primarily focus on defects and correctness, while the design knowledge accumulated in historical review discussions remains difficult to reuse. To address these challenges, we present DesignLore, a knowledge-augmented approach that extracts design decisions from historical review discussions, organizes them into an adaptive design taxonomy, and reuses relevant historical knowledge to guide code review. We further construct DesignReviewBench, a benchmark derived from real patch-review histories for systematically evaluating design-aware code review. Our evaluation shows that design-aware review remains challenging for current coding agents, with the strongest baseline achieving an F1 of only 0.213 on design trade-off detection. In comparison, DesignLore achieves an F1 of 0.259, a 21.6% relative improvement, and consistently delivers gains across different agent systems and backbone. These results highlight the importance of design-aware review and demonstrate the potential of recovering and reusing historical design knowledge to support it.",
+      "published": "2026-10-15T14:06:43Z",
+      "updated": "2026-10-16T03:30:02Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21925",
+      "abs_url": "https://arxiv.org/abs/2610.21925",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.21914",
+      "title": "CodeHealth Predicts the Token Cost of Agentic Code Review: A Pre-Registered Study of 465 Agent-Authored Pull Requests",
+      "authors": [
+        "Lo Gullstrand Heander",
+        "Markus Borg",
+        "Emma Söderberg",
+        "Christofer Rydenfält"
+      ],
+      "abstract": "Context: Organizations increasingly delegate code review to multi-agent large language model (LLM) pipelines billed per token. Low code quality raises human maintenance effort, but its effect on agent review cost has not been measured. Objective: We test whether baseline CodeHealth predicts the token cost of agentic review and fix beyond pull request (PR) footprint. Method: In a pre-registered observational study, we sampled 465 agent-authored PRs from 246 repositories in AIDev, jointly stratified by CodeHealth and footprint under repository caps. A frozen five-agent review-and-fix pipeline processed every PR with three different LLMs. Per LLM, we fitted a mixed model of log tokens on CodeHealth and log PR footprint, with a repository random intercept. Results: For all three LLMs the CodeHealth coefficient was negative, with 95% CI excluding zero; each CodeHealth point was associated with 3.5% to 6.1% lower token cost. CodeHealth was unrelated to PR footprint, so PR size does not explain the association. Two of three registered smells predicted fix cost; batch fixing left median CodeHealth unchanged. Exploratory analyses located the association in the review stage, where agents iterated more on unhealthy code without writing more comments. Adjusting for the size of the scored files absorbed the association, which we interpret as mediation by file size. Conclusions: A quality metric calibrated against human maintainability also predicts the inference cost of multi-agent review and fix. The effect is modest per point and not carried by PR size, so the refactoring case extends to agent-reviewed code when it changes structure and file size, not only the score. Data Availability: https://doi.org/10.5281/zenodo.22127920",
+      "published": "2026-10-15T14:00:33Z",
+      "updated": "2026-10-15T14:00:33Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21914",
+      "abs_url": "https://arxiv.org/abs/2610.21914",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.13668",
+      "title": "(When) Should a Software Factory be Lights-off? Benchmarking Code Review Agents on Bug Detection",
+      "authors": [
+        "Chenyang Yang",
+        "Hao He",
+        "Ti-Chung Cheng",
+        "Jenna Butler",
+        "Emerson Murphy-Hill",
+        "Carmen Badea",
+        "Christian Bird"
+      ],
+      "abstract": "With the advances of coding agents, software developers are spending more time reviewing code than writing code. As human review velocity falls behind agentic code generation, it is tempting to build automated review agents towards a future of \"lights-off\" software factory with little to no human supervision. To assess the practicality of such a fully autonomous software factory, we construct CRBugBench, a new benchmark that evaluates whether review agents detect human-verified bugs. We build a data pipeline that mines bugs from repository history, and pair each bug with its introducing PR to form a review task. CRBugBench consists of 1,000 review tasks across 98 open-source GitHub repositories, and 800 additional tasks from proprietary industry repositories at one large company. We then use the benchmark to study agent review quality: We found that SOTA review agents do well: the best (claude-opus-5 with copilot-cli) catches 71.9% of bugs within its top-5 comments, up from 47.7% (opus-4.6) in five months of model evolution. Yet agents remain less effective on complex changes and bugs requiring non-local reasoning, with sharp performance drops on proprietary industry repositories where project context is more often needed. To improve bug detection, we found scaling compute helps most through prompt changes: exploration-nudging prompts gain up to 5.8% performance at 10% higher cost. From these findings, we derive concrete guidance for developers to adopt review agents - scaling review effort to PR complexity, steering agents by project priorities, supplying repository knowledge, dispatching models by PR characteristics, and monitoring quality as models evolve.",
+      "published": "2026-10-09T14:37:15Z",
+      "updated": "2026-10-09T14:37:15Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.13668",
+      "abs_url": "https://arxiv.org/abs/2610.13668",
+      "source": "arxiv"
+    },
     {
       "id": "2109.15141",
       "title": "Predicting Code Review Completion Time in Modern Code Review",
@@ -945,7 +1272,7 @@
         "Nachiappan Nagappan",
         "Peter C. Rigby"
       ],
-      "abstract": "Aim. There are 10s of thousands of code review comments each week at Meta. We developed Metamate for Code Review (MetaMateCR) that provides AI-assisted fixes for reviewer comments in production at scale.\n  Method. We developed an internal benchmark of 64k \u003creview comment, patch\u003e data points to fine-tune Llama models. Once our models achieve reasonable offline results, we roll them into production. To ensure that our AI-assisted fixes do not negatively impact the time it takes to do code reviews, we conduct randomized controlled safety trials as well as full production experiments.\n  Offline Results. As a baseline, we compare GPT-4o to our small and large Llama models. In offline results, our LargeLSFT model creates an exact match patch 68% of the time outperforming GPT-4o by 9 percentage points (pp). The internal models also use more modern Hack functions when compared to the PHP functions suggested by GPT-4o.\n  Safety Trial. When we roll MetaMateCR into production in a safety trial that compares no AI patches with AI patch suggestions, we see a large regression with reviewers taking over 5% longer to conduct reviews. After investigation, we modify the UX to only show authors the AI patches, and see no regressions in the time for reviews.\n  Production. When we roll LargeLSFT into production, we see an ActionableToApplied rate of 19.7%, which is a 9.2pp improvement over GPT-4o. Our results illustrate the importance of safety trials in ensuring that AI does not inadvertently slow down engineers, and a successful review comment to AI patch product running at scale.",
+      "abstract": "Aim. There are 10s of thousands of code review comments each week at Meta. We developed Metamate for Code Review (MetaMateCR) that provides AI-assisted fixes for reviewer comments in production at scale.\n  Method. We developed an internal benchmark of 64k <review comment, patch> data points to fine-tune Llama models. Once our models achieve reasonable offline results, we roll them into production. To ensure that our AI-assisted fixes do not negatively impact the time it takes to do code reviews, we conduct randomized controlled safety trials as well as full production experiments.\n  Offline Results. As a baseline, we compare GPT-4o to our small and large Llama models. In offline results, our LargeLSFT model creates an exact match patch 68% of the time outperforming GPT-4o by 9 percentage points (pp). The internal models also use more modern Hack functions when compared to the PHP functions suggested by GPT-4o.\n  Safety Trial. When we roll MetaMateCR into production in a safety trial that compares no AI patches with AI patch suggestions, we see a large regression with reviewers taking over 5% longer to conduct reviews. After investigation, we modify the UX to only show authors the AI patches, and see no regressions in the time for reviews.\n  Production. When we roll LargeLSFT into production, we see an ActionableToApplied rate of 19.7%, which is a 9.2pp improvement over GPT-4o. Our results illustrate the importance of safety trials in ensuring that AI does not inadvertently slow down engineers, and a successful review comment to AI patch product running at scale.",
       "categories": [
         "cs.SE",
         "cs.AI",
@@ -2860,7 +3187,7 @@
         "Victor Vadmand Jensen",
         "Neil A. Ernst"
       ],
-      "abstract": "Accountability is an innate part of social systems. It maintains stability and ensures positive pressure on individuals' decision-making. As actors in a social system, software developers are accountable to their team and organization for their decisions. However, the drivers of accountability and how it changes behavior in software development are less understood. In this study, we look at how the social aspects of code review affect software engineers' sense of accountability for code quality. Since software engineering (SE) is increasingly involving Large Language Models (LLM) assistance, we also evaluate the impact on accountability when introducing LLM-assisted code reviews. We carried out a two-phased sequential qualitative study (interviews -\u003e focus groups). In Phase I (16 interviews), we sought to investigate the intrinsic drivers of software engineers influencing their sense of accountability for code quality, relying on self-reported claims. In Phase II, we tested these traits in a more natural setting by simulating traditional peer-led reviews with focus groups and then LLM-assisted review sessions. We found that there are four key intrinsic drivers of accountability for code quality: personal standards, professional integrity, pride in code quality, and maintaining one's reputation. In a traditional peer-led review, we observed a transition from individual to collective accountability when code reviews are initiated. We also found that the introduction of LLM-assisted reviews disrupts this accountability process, challenging the reciprocity of accountability taking place in peer-led evaluations, i.e., one cannot be accountable to an LLM. Our findings imply that the introduction of AI into SE must preserve social integrity and collective accountability mechanisms.",
+      "abstract": "Accountability is an innate part of social systems. It maintains stability and ensures positive pressure on individuals' decision-making. As actors in a social system, software developers are accountable to their team and organization for their decisions. However, the drivers of accountability and how it changes behavior in software development are less understood. In this study, we look at how the social aspects of code review affect software engineers' sense of accountability for code quality. Since software engineering (SE) is increasingly involving Large Language Models (LLM) assistance, we also evaluate the impact on accountability when introducing LLM-assisted code reviews. We carried out a two-phased sequential qualitative study (interviews -> focus groups). In Phase I (16 interviews), we sought to investigate the intrinsic drivers of software engineers influencing their sense of accountability for code quality, relying on self-reported claims. In Phase II, we tested these traits in a more natural setting by simulating traditional peer-led reviews with focus groups and then LLM-assisted review sessions. We found that there are four key intrinsic drivers of accountability for code quality: personal standards, professional integrity, pride in code quality, and maintaining one's reputation. In a traditional peer-led review, we observed a transition from individual to collective accountability when code reviews are initiated. We also found that the introduction of LLM-assisted reviews disrupts this accountability process, challenging the reciprocity of accountability taking place in peer-led evaluations, i.e., one cannot be accountable to an LLM. Our findings imply that the introduction of AI into SE must preserve social integrity and collective accountability mechanisms.",
       "categories": [
         "cs.SE"
       ],

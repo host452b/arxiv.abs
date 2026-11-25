@@ -1,0 +1,30 @@
+Title: Tenlai-TTS 2.0: Continuous-Representation LLM-Based TTS System with End-to-End Training
+Authors: Changfeng Gao, Yong Ren, Jun Yuan, Zhengkun Tian, Ye Bai, Zhao You, Shidong Shang
+ID: 2611.29226
+URL: https://arxiv.org/abs/2611.29226
+
+Abstract:
+Autoregressive text-to-speech (TTS) with continuous speech latents avoids
+quantization-induced information loss, but typically relies on a latent space
+that is learned separately and then frozen before language-model training. Such
+a space must satisfy two competing requirements: it must retain enough acoustic
+detail for high-fidelity reconstruction, yet be sufficiently structured and
+regularized to support autoregressive prediction by a language model. We present
+Tenlai-TTS 2.0, which learns continuous speech representations through end-to-
+end training to balance acoustic detail with autoregressive predictability. The
+model comprises a speech encoder with a capacity-controlled Gaussian bottleneck,
+a large language model (LLM) with an autoregressive diffusion transformer (AR-
+DiT) head, a flow-matching (FM) mel-spectrogram decoder, and a multi-task
+recognition model (RM). With energy normalization and fixed-variance Gaussian
+noise, the bottleneck has a closed-form upper bound on its information rate.
+Through joint optimization with reconstruction, recognition, and next-patch
+prediction objectives, we learn continuous speech representations that suit all
+three tasks and train the LLM and AR-DiT for autoregressive generation. The LLM
+and AR-DiT are further optimized using differentiable reconstruction and
+recognition feedback on their predicted latents through the FM decoder and RM.
+On Seed-TTS-eval, this feedback-based optimization reduces character error rate
+(CER) from 0.82% to 0.74% on test-zh and from 8.32% to 7.08% on test-hard-zh,
+and word error rate (WER) from 1.32% to 1.27% on test-en, compared with joint
+training alone. Subsequent reinforcement learning further reduces CER to 6.29%
+on test-hard-zh and WER to 1.08% on test-en, with speaker similarity scores of
+0.811, 0.766, and 0.784 on test-zh, test-en, and test-hard-zh, respectively.

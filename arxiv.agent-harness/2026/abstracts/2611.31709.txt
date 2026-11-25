@@ -1,0 +1,21 @@
+Title: RTLDetective: Agentic RTL Debugging through Dataflow Analysis and Simulation-Guided Fault Localization
+Authors: Neusha Javidnia, Ruisi Zhang, Farinaz Koushanfar
+ID: 2611.31709
+URL: https://arxiv.org/abs/2611.31709
+
+Abstract:
+Large language model (LLM) agents have shown promise in RTL debugging, yet
+accurately localizing functional errors and generating reliable repairs remain
+challenging. We propose RTLDetective, a multi-agent framework that integrates
+signal dependency analysis, simulation-guided fault localization, and knowledge-
+based reasoning for automated RTL debugging and repair. RTLDetective constructs
+signal dependency graphs from RTL code and extracts failure information from
+waveform traces. A lightweight localizer agent predicts expected intermediate
+signal values and evaluates them through targeted simulation interventions,
+iteratively probing signal dependencies to isolate suspicious logic and identify
+potential fault locations. A debug agent combines this evidence with static
+analysis, a curated knowledge base of hardware design principles and RTL bug
+patterns, and reasoning to generate corrected RTL. To reduce inference overhead,
+the framework reuses cached context across debugging iterations. We evaluate
+RTLDetective on the MEIC benchmark, achieving an 86.1% fix rate, 13.9 percentage
+points above the best baseline, while making fewer LLM calls.

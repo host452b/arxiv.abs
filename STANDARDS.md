@@ -175,17 +175,17 @@ README 中按年份列出论文数与目录链接：
 
 | 专题 | 论文数 | 搜索类别数 | 时间范围 |
 |------|--------|-----------|---------|
-| `arxiv.prompt` | 4,780 | — | 2023–2026 |
-| `arxiv.agi-scifi` | 13,606 | 52 | 2023–2026 |
-| `arxiv.agent-skills` | 2,606 | 14 | 2000–2026 |
-| `arxiv.game-dev` | 5,197 | 29 | 1996–2026 |
-| `arxiv.ai-human-future` | 1,814 | 12 | 无限制 |
-| `arxiv.qbio-health` | 1,125 | 7 | 无限制 |
-| `arxiv.game-dev-with-ai` | 73 | 25 | 2013–2026 |
-| `arxiv.software-engineering` | 4,418 | 42 | 2020–2026 |
-| `arxiv.qa-quality-engineering` | 3,069 | 35 | 2020–2026 |
-| `arxiv.agent-harness` | 2,177 | 42 | 2020–2026 |
-| `arxiv.anthropic-claude` | 2,628 | 35 | 2021–2026 |
-| `arxiv.child-development` | 5,072 | 37 | 2010–2026 |
-| `arxiv.us-stock-market` | 1,241 | 24 | 2010–2026 |
-| **合计** | **~47,806** | **345+** | |
+| `arxiv.prompt` | 5,080 | — | 2023–2026 |
+| `arxiv.agi-scifi` | 14,741 | 52 | 2023–2026 |
+| `arxiv.agent-skills` | 2,905 | 14 | 2000–2026 |
+| `arxiv.game-dev` | 5,730 | 29 | 1996–2026 |
+| `arxiv.ai-human-future` | 2,221 | 12 | 无限制 |
+| `arxiv.qbio-health` | 1,245 | 7 | 无限制 |
+| `arxiv.game-dev-with-ai` | 74 | 25 | 2013–2026 |
+| `arxiv.software-engineering` | 5,304 | 42 | 2020–2026 |
+| `arxiv.qa-quality-engineering` | 3,591 | 35 | 2020–2026 |
+| `arxiv.agent-harness` | 3,654 | 42 | 2020–2026 |
+| `arxiv.anthropic-claude` | 4,079 | 35 | 2021–2026 |
+| `arxiv.child-development` | 5,156 | 37 | 2010–2026 |
+| `arxiv.us-stock-market` | 1,336 | 24 | 2010–2026 |
+| **合计** | **~55,116** | **345+** | |

@@ -1,0 +1,30 @@
+Title: Evaluating Container Orchestration for Neuromorphic Workloads in Virtual Edge Environments
+Authors: Huyen Pham, Bilhanan Silverajan
+ID: 2605.15866
+URL: https://arxiv.org/abs/2605.15866
+
+Abstract:
+The growing adoption of edge computing has created an increasing need for
+workloads capable of operating under strict resource and energy constraints.
+Neuromorphic computing, and spiking neural networks (SNNs) in particular, offers
+an energy-efficient alternative to conventional machine learning through event-
+driven computation. However, how SNN workloads behave when deployed within
+modern container orchestration frameworks, especially in edge environments,
+remains largely unexplored. This paper investigates the feasibility of deploying
+and orchestrating SNN workloads in a virtual edge environment using Kubernetes,
+focusing on end-to-end latency, throughput, classification accuracy,
+infrastructure overhead, and runtime behavior under concurrent load. Experiments
+were conducted on a single-node K3d cluster running on a Windows 11 host with
+WSL2 and Docker Desktop. The results show that SNN workloads are highly
+sensitive to resource availability. Restricting CPU to 0.5 cores increased
+median latency by 47.6x and reduced throughput by 49x, while the most
+constrained configuration failed due to insufficient memory. Classification
+accuracy remained stable across all working configurations. From an
+orchestration perspective, K3d successfully deployed and scaled SNN workloads,
+though its default round-robin routing policy introduced significant tail
+latency under replica scaling, highlighting a mismatch between stateless load-
+balancing assumptions and long-running inference workloads. Overall, this study
+provides a baseline for deploying neuromorphic workloads in containerized edge
+environments and highlights the importance of resource provisioning and
+orchestration configuration. Future work should explore improved routing
+strategies, memory optimization, and validation on physical edge hardware.

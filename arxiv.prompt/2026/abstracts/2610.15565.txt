@@ -1,0 +1,27 @@
+Title: Genesis: Visual Augmentation Primitives for Multimodal Chain-of-Thought Reasoning
+Authors: Fan Yang, Lifeng Chen, Yipu Wang, Han Wang, Feilong Chen, Yidong Ma, Zhiyang Chen, Chaoyang Zhao, Lingxiang Wu, Hanqi Jiang et al.
+ID: 2610.15565
+URL: https://arxiv.org/abs/2610.15565
+
+Abstract:
+Recent multimodal large language models achieve promising results on visual
+reasoning tasks, approaching human-level performance on existing STEM
+benchmarks. However, these capabilities degrade under complex real-world scenes.
+We identify that chain-of-thought reasoning remains largely confined to the
+linguistic space, rarely anchoring each step in visual evidence. The main cause
+is the absence of such data during training. In this work, we introduce a
+training data augmentation pipeline, \textbf{Visual Augmentation Primitives}
+(VAP), which leverages state-of-the-art vision generative models to synthesize
+diverse photorealistic training samples and corresponding reasoning text. VAP
+introduces some basic operators and applies them to a seed image and gets a
+variant. It also constructs coherent multimodal reasoning chains throughout the
+generation process. Such training data force models to perceive visual content
+and perform logical reasoning according to them at every step. We further
+introduce multimodal chain-of-thought rubric-based reinforcement learning to
+enhance this. It rewards not only text reasoning but also visual reasoning by
+scoring intermediate reasoning steps for logical validity, completeness, and
+consistency. Moreover, we construct the UNREAL benchmark to systematically
+evaluate visual reasoning on hyperrealistic scenes across controllable
+difficulty levels. Experiments show that a 4B model built on this framework
+surpasses 8B baselines, with performance improving consistently as the model
+scales to 32B, validating the scaling law for visual reasoning.

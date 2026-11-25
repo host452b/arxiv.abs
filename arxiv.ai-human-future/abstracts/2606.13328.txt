@@ -1,0 +1,26 @@
+Title: Non-Parametric Dual-Manifold Mapping via 8-Bit Bounded Transformation Matrices: Challenging FP-centric Hardware Paradigms in Low-Energy AI
+Authors: Lars Kopp
+ID: 2606.13328
+URL: https://arxiv.org/abs/2606.13328
+
+Abstract:
+Modern deep learning hardware paradigms rely heavily on computationally
+expensive floating-point arithmetic (FP32, FP16, and FP8), requiring massive
+thermal and energetic overheads to maintain gradient-based optimization. This
+paper introduces a non-parametric, training-free computational framework for
+dual-manifold mapping that operates strictly within an 8-bit signed integer
+boundary and leverages simple bitwise and accumulation logic. By mapping a
+Spatial Manifold (N_spatial = 8192 neurons) and a Gabor-pooled Structural
+Manifold (N_structural = 4096 neurons) through an integer-based transformation
+matrix (Z-matrix), we eliminate the need for floating-point multipliers.
+Inference is achieved via cache-friendly pointer offsets and bitwise masks,
+accumulating directional sign-charges using fixed thresholds (theta_reject =
+8.0, theta_cut = 2.0). Learning is executed through a localized, bounded update
+mechanism restricted strictly within [-127, 127], modulated by stochastic noise
+injection. Both architectures demonstrate extreme holographic resilience,
+preserving near-perfect reconstruction via a global scaling factor under 90%
+truncation sparsity and 20% random node destruction. By reducing core AI
+inference to 8-bit boundaries and boolean-like execution, this framework
+outlines a paradigm shift toward neuromorphic edge-computing, directly
+questioning the long-term necessity of dense, floating-point-centric GPU
+accelerators.

@@ -1,0 +1,26 @@
+Title: Weighing the Envelope: Component Weight and Arbitration in Envelope-Layer Defenses for a Single LLM Agent
+Authors: Yuelin Han
+ID: 2611.23844
+URL: https://arxiv.org/abs/2611.23844
+
+Abstract:
+The envelope layer is the channel through which malicious content enters an LLM
+agent. Prior work established label and memory effects on multi-agent A2A
+envelopes, but the weight structure when MCP tools and memory coexist in a
+single agent remains unclear. Our threat model assumes an attacker pre-plants a
+malicious tool and poisons long-term memory; a benign user request inadvertently
+triggers it, and the attacker never enters the conversation. Following GDA
+Measurement and A/B/C/D, we measure how labels, memory, tool roles, and the
+backend shape invocation decisions across label-memory conflict, tool roles,
+robustness, and tool generalization. A tool-side forced-verification label
+substantially reduces semantic breach, but strong success memory pulls it back;
+a memory-side downgrade statement returns the outcome to the level of the label
+alone. The label works through mandatory implementation inspection plus default
+denial, not length or format; memory authorization wording erodes it with dose,
+while position and multi-turn pressure do not change the defense direction. Tool
+roles divide label effects into substitution, suppression, and boundary failure:
+low penetration is not safety, local leakage is the main residual risk, and a
+second malicious tool shows the same direction. Envelope labels are not a switch
+but a measurable, reversible weight constrained by backend and tool role, acting
+as a soft gate and risk signal within a broader defense rather than a substitute
+for permissions, sandboxing, or human review.

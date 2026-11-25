@@ -1,0 +1,22 @@
+Title: SYNLAT: Syntax-Aligned Text-Latent Compression for Chain-of-Thought Reasoning
+Authors: Yifeng Zhao, Hongjun Yu, Shibo Wang, Yunjiao Zhou, Zixiao Zhu, Zhipeng Ning, Kezhi Mao, Junlang Qian
+ID: 2610.03839
+URL: https://arxiv.org/abs/2610.03839
+
+Abstract:
+Long chain-of-thought (CoT) traces impose substantial output-token costs. Under
+constrained budgets, compression must preserve answer-critical information,
+making boundary placement central. Token-level and fixed-length boundaries can
+fragment coherent spans such as phrases, formulas, and local derivations,
+whereas step-level boundaries can bind content requiring different compression
+actions. We introduce SynLat, a text-latent CoT framework that aligns
+compression boundaries with syntactic structure through non-overlapping Syntax-
+Aligned Units (SAUs). An answer-conditioned Teacher constructs progressive
+KEEP/LATENT targets for a single compression-conditioned Student, which
+generates mixed reasoning from only the question and requested compression level
+at inference. Across two Qwen3 Student scales, Standard-CoT and Long-CoT groups,
+and three compression levels, SynLat matches or exceeds the strongest evaluated
+baseline in all 12 task-group aggregates and strictly leads in 11 under the
+reported achieved-CR selection protocol. Overall gains reach 3.6/2.6 points at
+MEDIUM and 7.0/5.5 points at HIGH for Qwen3-8B/14B, with larger advantages under
+stronger compression, particularly on Long-CoT groups.

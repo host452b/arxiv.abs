@@ -1,0 +1,20 @@
+Title: ToFu: Exploiting and Fuzzing the LLM-Orchestrator-Tool Trust Boundary
+Authors: Md Nazmul Islam Ananto, Pierre Prevost-Avenel, Colin Smith, Kyungtae Kim, Taegyu Kim, Arslan Khan
+ID: 2610.13651
+URL: https://arxiv.org/abs/2610.13651
+
+Abstract:
+Large language models (LLMs) are increasingly deployed as agents that interact
+with external software through tools, with an orchestration layer translating
+model outputs into structured tool invocations. This architecture creates an
+LLM-orchestrator-tool trust boundary where tool semantics may go unenforced and
+LLM-generated arguments may be incorrectly treated as trusted. We present ToFu,
+a tool-aware framework that automatically derives semantic security checks for
+LLM tools from their existing metadata and a CWE-guided sanitizer corpus. ToFu
+specializes these checks to individual tools and automatically generates fuzzing
+harnesses and semantic oracles using runtime introspection and outcome
+sanitization. We evaluated ToFu across 273 MCP servers containing 3405 tools and
+identified verified bugs corresponding to CWE weakness classes in 343 tools
+across 118 of the servers. Our findings show that real-world tools frequently
+fail to enforce their documented input semantics, making it unsafe to treat LLM-
+generated arguments as trusted.

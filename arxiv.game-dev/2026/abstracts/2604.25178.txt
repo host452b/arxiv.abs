@@ -1,0 +1,31 @@
+Title: Lightweight Real-Time Rendering Parameter Optimization via XGBoost-Driven Lookup Tables
+Authors: Baijun Tan, Francesco Moretti
+ID: 2604.25178
+URL: https://arxiv.org/abs/2604.25178
+
+Abstract:
+Achieving a desirable balance between rendering quality and real-time
+performance is a long-standing challenge in modern game and rendering engines,
+particularly on resource-constrained mobile devices such as laptops, tablets,
+and smartphones. Existing approaches to automatic rendering parameter
+optimization either depend on exhaustive per-scene pre-computation that spans
+several days, suffer from the prohibitive inference overhead of neural networks
+that prevents per-frame adaptation, or lack generalizability across
+heterogeneous hardware and diverse scenes. In this paper, we propose
+\textbf{LUT-Opt}, a lightweight, general-purpose framework for adaptive per-
+frame rendering parameter optimization. Our method decomposes the joint
+optimization of rendering time and image quality into a tractable two-stage
+pipeline. In the offline stage, we train a pair of XGBoost regressors to predict
+rendering time and image quality from rendering parameters, hardware state, and
+scene complexity descriptors. The trained ensemble models are then distilled
+into compact lookup tables (LUTs) through systematic discretization and a two-
+phase linear search that first constrains rendering time and subsequently
+maximizes structural similarity (SSIM). During runtime, the pre-computed LUT is
+queried every frame in sub-millisecond time, enabling truly adaptive parameter
+selection with negligible computational overhead. We validate LUT-Opt on two
+representative rendering techniques -- subsurface scattering (SSS) and hybrid-
+pipeline ambient occlusion (AO) -- implemented within Unreal Engine 5. Extensive
+experiments across multiple scenes and GPU configurations demonstrate that LUT-
+Opt reduces subsurface scattering rendering time by approximately 40\% and
+ambient occlusion rendering time by roughly 70\%, while incurring only about 2\%
+increase in image quality error, with per-frame inference latency below 0.1\ ms.

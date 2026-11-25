@@ -1,0 +1,24 @@
+Title: Log-To-Leak: Prompt Injection Attacks on Tool-Using LLM Agents via the Model Context Protocol
+Authors: Yuepeng Hu, Chongyu Fan, Sirat Samyoun, Jian Du
+ID: 2610.36108
+URL: https://arxiv.org/abs/2610.36108
+
+Abstract:
+LLM agents increasingly access external tools through the Model Context Protocol
+(MCP), but the natural-language metadata used to describe those tools creates a
+prompt-injection surface. Within this established tool-poisoning surface, we
+study Log-To-Leak, an additive post-hoc logging attack that induces a separate
+attacker-controlled call after the final legitimate call. Its payload targets
+the user query, MCP server name, server response, and agent response. We
+operationalize the injected directive through Trigger, Tool Binding,
+Justification, and Pressure, and separately measure call success, payload
+fidelity, and preservation of legitimate behavior. We evaluate five MCP servers
+and four LLM agents using five metrics spanning effectiveness, utility, and
+efficiency. Across 18 model-server pairs with valid tool execution, Log-To-Leak
+achieves an attack success rate (ASR) of 62.64-100% and conditional logging
+accuracy (LA) of 76.55-95.64%; 16 pairs have absolute target-task completion
+changes of at most 6.63 percentage points. Three evaluated defenses leave
+residual ASR above 55% on GitHub MCP with GPT-4o, while an instruction detector
+flags 85.53% of benign descriptions. These results show that successful task
+completion can coexist with unauthorized post-hoc disclosure and motivate host-
+controlled authorization for secondary tool calls.

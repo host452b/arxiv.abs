@@ -1,0 +1,27 @@
+Title: Self-Reflection Fine-Tuning: Enhancing Agent Security against Prompt Injection Attacks from Failure Experience
+Authors: Zixuan Wang, Hao Li, Fengyu Gao, G. Edward Suh, Yi Zeng, Yevgeniy Vorobeychik, Ning Zhang, Chaowei Xiao
+ID: 2610.04269
+URL: https://arxiv.org/abs/2610.04269
+
+Abstract:
+Large language model (LLM) agents are increasingly deployed in tool-augmented
+environments, but their reliance on external inputs makes them highly vulnerable
+to prompt injection attacks that can hijack task objectives. Existing safety
+alignment methods rely on static expert trajectories or preference optimization,
+limiting their ability to generalize to adaptive attack patterns. In this work,
+we propose Self-Reflection Fine-Tuning (SRFT), a training framework that enables
+agents to improve robustness by learning from their own failure experiences
+under adversarial conditions. Instead of passively imitating expert behaviors,
+SRFT exposes the agent to compromised trajectories constructed via injected
+attacks, and leverages an expert model to generate structured self-reflection
+reasoning that contrasts unsafe and optimal actions. This reflective supervision
+teaches the agent to identify malicious instructions, reason about their
+consequences, and maintain alignment with the original user intent. We
+instantiate this framework in SR-Agent, built on Llama-3.1-8B-Instruct and
+Qwen3-8B, and evaluate it on both static and adaptive prompt injection
+benchmarks. Experimental results show that SRFT substantially reduces attack
+success rates while preserving task performance, and demonstrates strong
+generalization under adaptive attacks. These findings suggest that learning from
+failure via self-reflection is a promising direction for building robust and
+secure LLM agents. Our code is released at https://github.com/Eden-
+Wang1710/srft-repo.

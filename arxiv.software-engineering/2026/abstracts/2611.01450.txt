@@ -1,0 +1,25 @@
+Title: CipherFlow: Compiling AI Programs for Efficient Cryptographically Secure Inference
+Authors: Hedong Zhang, Mengxin Zheng, Qian Lou
+ID: 2611.01450
+URL: https://arxiv.org/abs/2611.01450
+
+Abstract:
+Cryptographically secure inference faces two practical challenges: making secure
+programming accessible to AI developers and data scientists, and achieving
+efficient execution across deployment environments. Developers must compose
+cryptographic primitives correctly, while performance depends on hardware,
+networks, and evolving ciphertext states. We present CipherFlow, a compiler
+framework that takes a high-level AI computation graph, available cryptographic
+primitives, and a target hardware and network configuration to generate an
+executable, latency-optimized secure inference program. CipherFlow automates
+cryptographic execution decisions through three techniques: MicroBench profiles
+deployment-specific primitive costs; state-expanded planning jointly optimizes
+homomorphic encryption (HE) and secure multi-party computation (MPC) placement,
+conversions, and ciphertext maintenance under cryptographic-state constraints;
+and BlockFold summarizes branched regions to scale planning to Transformer
+graphs. Evaluation using measured HE/MPC backend costs across CPU/GPU and
+network settings shows up to 16.5$\times$ speedup on BERT-base and over
+22$\times$ on ViT compared with static hybrid placement baselines. CipherFlow
+separates model programming from cryptographic execution decisions, enabling
+developers to express AI computations while the compiler constructs efficient
+secure programs.

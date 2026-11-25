@@ -1,0 +1,25 @@
+Title: What Should an LLM Know? Knowledge-Guided Warm Starts for Software Optimization
+Authors: Srinath Srinivasan, Tim Menzies
+ID: 2611.23331
+URL: https://arxiv.org/abs/2611.23331
+
+Abstract:
+Large language models (LLMs) process gigabytes in minutes; human experts work
+far more slowly. Prior studies that explored combinations of human/AI optimizers
+ignore this gap. Those studies asked systems or humans to label too many
+examples (e.g., SynthCore needs over four dozen per trial). Here, we test human
+and AI knowledge under a budget where evaluation is practical (a few dozen
+labels or fewer). We compare five baselines (random search, RRP, EZR, few-shot
+prompting, and a budget-matched SynthCore variant) against three ways to give an
+LLM domain knowledge before it proposes its first configurations: (1) AMP lists
+the domain's rules, then checks each candidate against them; (2) HKMA adds
+scouted data or documentation to the prompt; and (3) H-DKP has human experts
+correct the LLM's rules. We find that domain knowledge improves the "start-up"
+phase of LLM optimization, but only when that knowledge is checked, by the LLM
+itself or by a human expert. Across 49 datasets, unchecked knowledge did no
+better than few-shot prompting or EZR. On the other hand, AMP's self-checking
+variant (AMP-4) reached the best statistical rank in 44 of 49 datasets (budget-
+matched SynthCore: 23 of 49), and H-DKP did so in 7 of 8 expert studies. These
+checks cost little: half a cent of LLM calls per trial, or 6 to 10 expert
+contacts. Hence we say LLMs may not need more data, but rather their knowledge
+needs checking (and checking is cheap).

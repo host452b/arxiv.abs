@@ -1,11 +1,11 @@
 # arxiv.agi-scifi — 跨学科 AGI 与科幻研究
 
-13,606 篇 arXiv 论文摘要，来自全学科 52 个关键词搜索（2023–2026），覆盖 AGI、物理、宇宙学、太空、生物、经济等领域。
+14,741 篇 arXiv 论文摘要，来自全学科 52 个关键词搜索（2023–2026），覆盖 AGI、物理、宇宙学、太空、生物、经济等领域。
 
 ## 核心发现总结
 
-- [**English** — Key Findings from 13,606 Papers](agi-scifi.md)
-- [**中文** — 13,606 篇论文核心发现总结](agi-scifi.zh-CN.md)
+- [**English** — Key Findings from 14,741 Papers](agi-scifi.md)
+- [**中文** — 14,741 篇论文核心发现总结](agi-scifi.zh-CN.md)
 
 ## 搜索索引
 

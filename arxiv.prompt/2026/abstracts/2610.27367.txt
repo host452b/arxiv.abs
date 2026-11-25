@@ -1,0 +1,26 @@
+Title: Explore More, Validate Less: Efficient Reflective Prompt Optimization
+Authors: Xiaofan Zhou, Lu Cheng
+ID: 2610.27367
+URL: https://arxiv.org/abs/2610.27367
+
+Abstract:
+Reflective prompt optimization improves instructions using task feedback, but
+coupling candidate generation with full-validation-based selection can make
+search costly and sequential. We propose a two-stage framework that decouples
+reflective candidate-pool construction from validation allocation. During
+construction, sampled parents first answer training questions, and groups of
+their saved responses guide parallel reflection and revision. Each child is
+screened on its group's questions against the corresponding parent scores.
+Improving, nonduplicate prompts enter the pool and can become parents without
+full validation. After construction, an exploration policy selects candidates
+from the frozen pool under a fixed full-validation budget, and the prompt with
+the highest measured validation score is returned. This separation allows
+candidate-pool size and validation budget to be set independently. We evaluate
+random selection and a multilayer perceptron with similarity-based exploration
+(MLP + similarity) on five benchmarks using Qwen3.5-9B and
+Llama-3.1-8B-Instruct. With 100 retained candidates and 20 full validations, our
+framework improves over the initial solver by up to 11.22 percentage points. MLP
++ similarity improves over the initial solver in all ten comparisons, although
+neither selection policy consistently outperforms the other. These results
+support separating reflective search from budgeted validation while leaving room
+for stronger candidate-selection policies.

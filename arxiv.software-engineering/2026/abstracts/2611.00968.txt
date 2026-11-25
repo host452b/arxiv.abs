@@ -1,0 +1,30 @@
+Title: Autotuning GPU Thread Block Sizes for Large-Scale Stencil Applications Using the OPS DSL
+Authors: Kevin Antonio Nava Garcia, Istvan Zoltan Reguly
+ID: 2611.00968
+URL: https://arxiv.org/abs/2611.00968
+
+Abstract:
+Large-scale structured-mesh stencil applications can run for hours or days on
+modern HPC GPU platforms, making launch-configuration choices important. OPS
+enables high-level stencil codes to target multiple GPU architectures, but its
+GPU backends rely on a default or user-selected global block/workgroup shape,
+even though different kernels, problem geometries, and architectures may favor
+different configurations. This paper presents a transparent per-kernel
+block/workgroup-shape autotuning extension for OPS. The extension explores valid
+block/workgroup shapes during execution, records the fastest configuration for
+each kernel, and enables precomputed replay of the selected configurations in
+subsequent runs. We evaluate the approach on structured-mesh proxy and academic
+research applications, covering 459 unique kernels across 3 NVIDIA and 2 AMD
+GPUs. The evaluation reports speedup distributions, representative wall-time
+summaries, timing variability, and input problem shape effects. Replaying the
+best per-kernel launch shapes improves 923 of 995 measured application/input/GPU
+cases over the default OPS shape. Depending on the GPU, the median speedup
+ranges from 1.02x to 1.18x, with individual configurations of LAPL2D, TTI3D, and
+OpenSBLI-based TGV solvers exceeding 1.5x. The results also show that
+performance sensitivity is not limited to launch shape. At fixed cell count,
+changing the input problem shape changes precomputed-replay runtime by 0.8-34.6%
+in representative cases, while kernel-level timing variability depends on the
+interaction between runtime contribution, input problem shape, and GPU/backend
+behavior. Overall, automatic per-kernel block/workgroup-shape selection improves
+OPS performance across GPUs, provided shape sensitivity and timing stability are
+interpreted together.

@@ -1,0 +1,31 @@
+Title: artist: A Python package for differentiable ray tracing and gradient-based optimization of solar tower power plant operation
+Authors: Marlene Busch, Marie Weiel, Kaleb Phipps, Daniel Maldonado Quinto, Max Pargmann, Robert Pitz-Paal, Markus Götz
+ID: 2611.20851
+URL: https://arxiv.org/abs/2611.20851
+
+Abstract:
+Solar tower power plants provide dispatchable, renewable energy by concentrating
+sunlight with thousands of mirrors, called heliostats, onto a central receiver.
+Efficient operation requires accurate modeling of the optical path from each
+heliostat to the receiver and compensation for manufacturing imperfections,
+kinematic misalignment, and material degradation that distort the flux
+distribution. Conventional ray tracers predict the flux from an assumed plant
+model but are limited to forward simulation. They cannot recover unknown plant
+parameters from measured flux nor directly optimize plant operation. We present
+artist, an open-source, FAIR4RS-compliant Python package implementing a fully
+differentiable digital twin of solar tower power plants. By making the optical
+pipeline, comprising heliostat surface representation, kinematics, blocking, and
+ray tracing, end to end differentiable, artist turns the digital twin from a
+passive forward model into an active physics-based tool for inverse modeling and
+data-driven optimization. The resulting gradient-based framework unifies tasks
+usually handled by separate solutions, such as reconstructing heliostat surfaces
+and kinematics from operational flux images without costly deflectometry,
+predicting irradiance at the receiver, and optimizing aim points to realize a
+desired receiver flux density distribution. Built on PyTorch, artist scales to
+real plants through GPU acceleration, a structure-of-arrays memory layout, and
+nested data parallelism. It interfaces with open data sources such as the PAINT
+database. We describe the software architecture, physical models, and
+optimization framework, and demonstrate the workflow on representative tasks. By
+integrating modeling, prediction, and optimization into a single open,
+interpretable package, artist provides a principled foundation for data-driven
+research toward autonomous solar tower operation.

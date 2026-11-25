@@ -1,0 +1,27 @@
+Title: Software World Models: From Consequence Prediction to Decision Value
+Authors: Tongli Su, Yuntong Hu, Liang Zhao, Bowen Zhu, JayaSai Somasundaram, Hasibul Haque
+ID: 2610.04940
+URL: https://arxiv.org/abs/2610.04940
+
+Abstract:
+A coding agent may safely modify one repository while silently breaking
+downstream services, libraries, or datastores that depend on it. Exhaustively
+running integration tests after every agent action is impractical, so the agent
+must predict these failures before executing them. Existing software world
+models predict the agent's own observations, while static change-impact analysis
+only identifies where a change may propagate. We instead introduce the Software
+World Model (SWM), which models the broader system affected by a code change and
+predicts its blast set: the components that the change will break. SWM follows
+three stages: explore, learn, and act. Explore executes candidate changes from
+restored system states, prioritizing regions where observed failures contradict
+the dependency graph. Learn fine-tunes a language model on these execution
+outcomes to predict downstream breakage. Act converts sampled predictions into
+per-consumer break probabilities for change ranking, proactive migration, and
+deciding when another execution is worth its cost. On held-out synthetic
+systems, SWM improves blast-set F1 from 0.431 for static reachability to
+$0.571\pm0.037$, more than halves ranking regret, and improves migration return
+at all nine evaluation checkpoints. The two methods are complementary:
+reachability is stronger on dependencies represented in the graph, while SWM
+recovers failures caused by couplings the graph misses. Experiments on held-out
+real libraries further show that predicting structured failure outcomes, rather
+than only scalar risk, is important for downstream decision quality.

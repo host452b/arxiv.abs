@@ -1,0 +1,26 @@
+Title: Denoising for Neuromorphic Cameras Based on Graph Spectral Features
+Authors: Shimpei Harada, Junya Hara, Hiroshi Higashi, Yuichi Tanaka
+ID: 2605.14734
+URL: https://arxiv.org/abs/2605.14734
+
+Abstract:
+Neuromorphic cameras, also known as event-based cameras, can detect changes in
+the environmental brightness asynchronously and independently for each pixel.
+They output the brightness changes, i.e., events, as 3-D (2-D pixel coordinates
++ time) streaming data. While event-based cameras are used in many applications
+because of their desirable characteristics, e.g., high temporal resolution, low
+latency, low power consumption, and high dynamic range, their measurements
+contain considerable noise due to their high sensitivity. In this paper, we
+propose a denoising method for event-based cameras based on graph spectral
+features. In the proposed method, we first construct a graph where nodes
+represent events and edges represent the spatiotemporal distance between the
+events. To calculate the graph-specified parameter that controls the
+connectivities of a constructed graph, we utilize the prior on the density of
+3-D events. We then calculate the eigenvectors of the graph Laplacian. The
+obtained eigenvectors are used to extract noiseless events directly. In the
+calculation of the eigenvectors, we customize the graph Laplacian to reorder its
+eigenvalues. This allows us to leverage fast eigensolver algorithms instead of
+the naive eigendecomposition and thereby reduce computational complexity. In
+experiments on synthetic and real-world event data, we demonstrate that the
+proposed method effectively removes noise events from the raw events compared to
+alternative methods.

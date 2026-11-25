@@ -10,11 +10,194 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:15:42Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 278,
-  "return_count": 200,
+  "return_count": 208,
   "papers": [
+    {
+      "id": "2611.32241",
+      "title": "Motion Chain of Thought: Disentangling Motion Semantics from Visual Appearance for Robotic Manipulation",
+      "authors": [
+        "Xiangkai Ma",
+        "Xinyi Wang",
+        "Junjie Wang",
+        "Sheng Xu",
+        "Mingyang Li",
+        "Yue Ma",
+        "Han Zhang",
+        "Yuzheng Zhuang",
+        "Wenzhong Li",
+        "Zhihao Yuan"
+      ],
+      "abstract": "World Action Models (WAMs) aim to construct a unified architecture capable of understanding world state evolution and guiding action generation. However, existing visual branches focus on predicting static visual observation, rather than reflecting potential transition information that captures the evolution of world states under motion interactions. This leads to representational entanglement between high-level physical condition evolution and low-level action trajectory generation within the Action Model, creating a structural bottleneck while weakening the predictive capability of world evolution modeling for action generation. We propose PILOT (Physical Inference for Latent Optimized Trajectories), whose core Representational Deduction (RD) bridges this gap by integrating motion chain-of-thought (CoT) guidance as a native model capability. Specifically, RD aims to encourage the action branch to explicitly model potential state transition tokens, which are retained as CoT in the reasoning space to guide fine-grained motion trajectory. Experiments demonstrate that RD not only improves the success rate and generalization ability of WAMs in complex robotic manipulation tasks but also enhances the model's physical interpretability by decoupling high-level motion semantics from low-level trajectory details. Furthermore, the abundant state transition supervision signals introduced by RD effectively alleviate the sparse supervision in action generation, supporting data-efficient real-robot adaptation with reduced demonstration sets.",
+      "published": "2026-11-24T09:19:03Z",
+      "updated": "2026-11-24T09:19:03Z",
+      "categories": [
+        "cs.RO",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32241",
+      "abs_url": "https://arxiv.org/abs/2611.32241",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30366",
+      "title": "REACT: Response-based Expert Assembly from Contextual Trajectories",
+      "authors": [
+        "Hesen Yang",
+        "Yuxue Liu",
+        "Yanzhe Chen",
+        "Weibo Zhao",
+        "Junwei Su",
+        "Dan Hu",
+        "Shenggan Cheng",
+        "Xuanlei Zhao",
+        "Wenchao Zhou",
+        "Junhua Wang",
+        "Lansong Diao",
+        "Yang You"
+      ],
+      "abstract": "Dense feed-forward networks are unaffected by how their neurons are grouped: every neuron is evaluated. Sparse execution makes this grouping consequential, because each input can access only a few experts. An arbitrary partition can therefore retain pretrained weights while separating computations that an input needs together. We argue that upcycling should organize neurons according to their responses to similar inputs. To establish this correspondence, we introduce a context-guided upcycling approach REACT, Response-based Expert Assembly from Contextual Trajectories, that uses frozen denoising trajectories to connect input contexts with pretrained neuron responses. We first identify contexts after timestep-wise centering to account for distribution shifts across noise levels, then use their associated responses to allocate intact neurons to routed experts. The same contexts initialize the corresponding router entries, aligning expert contents with their intended inputs, while global activation statistics select an always-active shared expert. Layer-wise reconstruction and end-to-end adaptation refine this initialization for sparse execution. On ImageNet-1K, our approach achieves better generation quality while activating only 37.5% of the original FFN parameters and reducing total per-token activated parameters by 27.6%.",
+      "published": "2026-11-23T09:36:05Z",
+      "updated": "2026-11-23T09:36:05Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30366",
+      "abs_url": "https://arxiv.org/abs/2611.30366",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27556",
+      "title": "Bringing AI Assistance to the Beznau Nuclear Power Plant: A Hierarchical System of LLM Agents for Reactor Monitoring",
+      "authors": [
+        "Wenqi Zhou",
+        "Leonardo Baldo",
+        "Edwin Kolbe",
+        "Manuel Arias Chao"
+      ],
+      "abstract": "Beznau Unit 1 in Switzerland, in operation since 1969, is the most experienced nuclear reactor still running worldwide. Five decades of incremental modernization have left its monitoring systems, alarm logs, variable catalogs, technical specifications and investigation reports in separate silos that were never designed to be queried together. As a result, investigating a core instrumentation anomaly means slow, manual gathering of knowledge scattered across databases, documents, and experienced colleagues. We present a hierarchical multi-agent assistant built on large language models (LLMs) to support these investigations and reduce the need for tedious manual searches in SAP systems. An orchestrating agent breaks down an engineer's question and hands the parts to specialized sub-agents, each with read-only access to one source. Domain expertise is written as natural-language procedures that plant engineers can read, review and revise. The system is strictly advisory, with every answer traced back to its sources. We also report organizational lessons from introducing agentic AI into a culture built on safety, traceability and conservative change. Beyond the technical architecture, the Beznau case study examines how an assistant can be introduced into a setting where evidence must be traceable, changes carefully reviewed, and operational decisions retained by plant personnel, paving the way for the responsible use of agentic AI in industrial plant monitoring.",
+      "published": "2026-11-20T12:52:34Z",
+      "updated": "2026-11-20T12:52:34Z",
+      "categories": [
+        "cs.MA",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27556",
+      "abs_url": "https://arxiv.org/abs/2611.27556",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22691",
+      "title": "Making the World React Realistically: A Closed-Loop Interactive World Model for Autonomous Driving",
+      "authors": [
+        "Jia Hu",
+        "Yang Chang",
+        "Panqu Wang",
+        "Zhijun Fu",
+        "Chang Liu",
+        "Changjian Yu",
+        "Jintao Lai"
+      ],
+      "abstract": "World models (WMs) generate driving scenarios beyond recorded logs, enabling the training and evaluation of autonomous driving systems in unseen interactions. However, existing WMs struggle to ensure both behavioral realism and visual fidelity, since they overlook the relationship between vehicle interactions and the ego visual observations. We propose a closed-loop interactive WM that couples behavior modeling and visual rendering. First, imitation-learned background-vehicle (BV) policies are fine-tuned with multi-agent reinforcement learning in the closed loop against an end-to-end ego planner that reacts to the rendered images, so that their interaction behaviors match those in real logs. Second, the viewpoints exposed by these interactions guide a per-Gaussian diagnosis of each 3D Gaussian vehicle asset, which attenuates view-dependent colors on under-observed Gaussians and fills never-observed surfaces with generated Gaussians, while preserving the observed appearance. Third, signal lights are rendered according to the driving intentions of the vehicles, by an editor that learns the light states unobserved for a vehicle through counterfactual fine-tuning with a light-state classifier. On long-tail closed-loop scenarios, our method reduces the divergence from real-world interaction behaviors by 85% and improves novel-view vehicle PSNR by 2.0dB over the state-of-the-art WM. The significance of BV light signaling in WMs is shown, as the rendered signal lights conveying BV driving intentions indirectly impact ego driving behaviors in a quarter of the scenarios.",
+      "published": "2026-11-17T12:39:42Z",
+      "updated": "2026-11-17T12:39:42Z",
+      "categories": [
+        "cs.RO",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22691",
+      "abs_url": "https://arxiv.org/abs/2611.22691",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20011",
+      "title": "ReactBench-AD: Do Driving VLAs and World-Action Models React to Imminent Hazards in Their Path?",
+      "authors": [
+        "Nikos Theodoridis",
+        "Reenu Mohandas",
+        "Sushil Sharma",
+        "Ciarán Hogan",
+        "Ganesh Sistu",
+        "Anthony Scanlan",
+        "Tim Brophy",
+        "Ciarán Eising"
+      ],
+      "abstract": "Vision-Language-Action models (VLAs) and World-Action Models (WAMs) have emerged in autonomous driving with the promise of strong generalization to long-tail scenarios. Although these models achieve state-of-the-art results on autonomous driving benchmarks, most existing benchmarks are dominated by nominal scenarios and therefore cannot test this promise. To test one such long-tail capability that is critical for safety, we introduce ReactBench-AD, a benchmark that measures how driving models react to objects that appear in the ego vehicle's path. Built on real NAVSIM and PhysicalAI-Autonomous-Vehicles scenes, ReactBench-AD composites a crossing pedestrian, a standing pedestrian, or a stationary car consistently across all camera views and history frames. Each edited scene thus forms an exact, pixel-level counterfactual pair with its original, which allows us to isolate the causal effect of the inserted object on the predicted trajectory. Evaluating four VLAs and two WAMs, we find that they react weakly, often barely at all. Finally, we test how easily one of the evaluated VLAs, ReCogDrive, can be taught to brake hard for imminent hazards: a short fine-tuning stage on edited scenes substantially improves its reactions, with the learned behavior generalizing to unseen objects and fully real scenes, at minimal cost to nominal driving. These results call into question the out-of-the-box long-tail capabilities of these models, but suggest that they can be a strong foundation for acquiring them with little additional training, highlighting the value of real or synthetic data that demonstrates the long-tail behaviors nominal datasets rarely contain.",
+      "published": "2026-11-15T13:42:52Z",
+      "updated": "2026-11-17T19:28:26Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI",
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20011",
+      "abs_url": "https://arxiv.org/abs/2611.20011",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19244",
+      "title": "Agentic On-Policy Distillation Implicitly Reshapes LLMs' ReAct Patterns",
+      "authors": [
+        "Deyang Kong",
+        "Zhaoyi Li",
+        "Sijian Ren",
+        "Ying Wei",
+        "Defu Lian",
+        "Shikun Zhang",
+        "Wei Ye"
+      ],
+      "abstract": "On-policy distillation (OPD) transfers specialized capabilities to language-model agents, but its cross-domain effects on interaction remain unclear. We investigate how OPD reshapes ReAct interaction patterns across mathematics, ALFWorld, and $τ^2$-bench, focusing on reasoning, actions, and observation acquisition. General-reasoning supervision reduces mathematical tool attempts from 70.4% to 14.4% while increasing accuracy from 16.7% to 38.0%; code-interpreter supervision improves household actions and retail queries. In contrast, ALFWorld supervision reduces $τ^2$-bench accuracy from 41.5% to 6.6%, accompanied by frequent tool calls that violate user-information dependencies. To address negative transfer using only source-domain training trajectories, we explore selective OPD guided by teacher preference changes before and after domain-specific RL. Retaining the top 95% of positions raises $τ^2$ accuracy from 11.5% to 29.9% with a source-learning trade-off.",
+      "published": "2026-11-14T08:18:45Z",
+      "updated": "2026-11-18T05:32:45Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19244",
+      "abs_url": "https://arxiv.org/abs/2611.19244",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.18723",
+      "title": "Acting by Intent, Reacting by Sight: Visual Conditioned Reflexes for Real-Time VLM Agents",
+      "authors": [
+        "Qiancheng Zhou",
+        "Wenhua Zhang"
+      ],
+      "abstract": "Vision-Language Models (VLMs) have shown strong capabilities as generalist agents that perceive, reason, and act in interactive environments. Yet real-time environments such as video games demand both deliberate control for exploration and split-second reactions to fast-moving hazards. Existing agents struggle to handle both: relying solely on direct VLM actions is too slow for sudden events, whereas delegating execution to fixed scripts leaves the agent blind at the moment of action, leading to frequent misfires whenever the scene shifts. Humans overcome this by pairing normal conscious control with conditioned reflexes-while the mind handles deliberate actions and shapes reflex rules, the reflex itself still relies on live vision to make the final instant decision. Emulating this mechanism, we propose ViCoR (Visual Conditioned Reflex). Alongside normal gameplay actions, the main VLM defines and updates lightweight situational guidance for recurring events, while a fast visual reflex branch (invoking the VLM in no-thinking mode) inspects live local views with motion cues to make the final sub-second action decisions. By offloading 67.8% of high-frequency reactions to the reflex branch (680 ms per check), ViCoR reduces average per-action decision latency by 2.6x (from 14.0 s to 5.4 s) and cuts token consumption by 36.9%. Across 17 diverse 2D and 3D games in the GameWorld benchmark, ViCoR achieves state-of-the-art performance, improving task success rate by +11.8% (from 52.9% to 64.7%) and average normalized progress by +13.9% (from 66.5% to 80.4%) over the strongest deliberative VLM and script baselines. In fast-paced real-time games, ViCoR refines its reflexes across episodes to boost progress by 1.67x, and even with a low-effort main planner, surpasses high-effort deliberative baselines by +8.1% at one-third of the token cost.",
+      "published": "2026-11-09T11:27:31Z",
+      "updated": "2026-11-09T11:27:31Z",
+      "categories": [
+        "cs.CV",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.18723",
+      "abs_url": "https://arxiv.org/abs/2611.18723",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.13929",
+      "title": "ReACT: Reflection-Consistent Modulation and Cross-Load Consistency for Humanoid Velocity Tracking Under Asymmetric Loads",
+      "authors": [
+        "Xianghui Wang",
+        "Aoran Fu",
+        "Liyou Luo",
+        "Shanze Wang",
+        "Xiaoyu Shen",
+        "Dan Zhang",
+        "Wei Zhang"
+      ],
+      "abstract": "In recent years, humanoid loco-manipulation has progressed to whole-body grasping, lifting, and transport. A basic requirement underlying these tasks is carrying the object to its destination, which depends on the locomotion controller accurately executing velocity commands from the navigation policy. However, carrying an object in one hand introduces a persistent asymmetric upper-body load that can degrade velocity tracking. Persistent tracking biases can accumulate into position and heading deviations, increasing the risk of collisions and navigation failure. To address this problem, we present ReACT, a framework for accurate velocity tracking under asymmetric upper-body loads. Reflection-consistent disturbance modulation uses the estimated wrench to modulate actor features for load compensation while preserving action correspondence under reflected observations. Cross-load tracking consistency training compares loaded and unloaded conditions under the same velocity commands to promote consistent velocity tracking across loading conditions. Simulation experiments on a Unitree G1 humanoid robot show improved velocity tracking and reduced directional bias under varying asymmetric loads. Real-world experiments demonstrate collision-free goal reaching in all 40 tested navigation trials under unilateral hand loads with a fixed mapless navigation policy.",
+      "published": "2026-11-10T11:18:34Z",
+      "updated": "2026-11-10T11:18:34Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13929",
+      "abs_url": "https://arxiv.org/abs/2611.13929",
+      "source": "arxiv"
+    },
     {
       "id": "2507.05234",
       "title": "React-tRace: A Semantics for Understanding React Hooks",
@@ -779,7 +962,7 @@
         "Matthew Renze",
         "Erhan Guven"
       ],
-      "abstract": "In this study, we investigated the effects of self-reflection in large language models (LLMs) on problem-solving performance. We instructed nine popular LLMs to answer a series of multiple-choice questions to provide a performance baseline. For each incorrectly answered question, we instructed eight types of self-reflecting LLM agents to reflect on their mistakes and provide themselves with guidance to improve problem-solving. Then, using this guidance, each self-reflecting agent attempted to re-answer the same questions. Our results indicate that LLM agents are able to significantly improve their problem-solving performance through self-reflection ($p \u003c 0.001$). In addition, we compared the various types of self-reflection to determine their individual contribution to performance. All code and data are available on GitHub at https://github.com/matthewrenze/self-reflection",
+      "abstract": "In this study, we investigated the effects of self-reflection in large language models (LLMs) on problem-solving performance. We instructed nine popular LLMs to answer a series of multiple-choice questions to provide a performance baseline. For each incorrectly answered question, we instructed eight types of self-reflecting LLM agents to reflect on their mistakes and provide themselves with guidance to improve problem-solving. Then, using this guidance, each self-reflecting agent attempted to re-answer the same questions. Our results indicate that LLM agents are able to significantly improve their problem-solving performance through self-reflection ($p < 0.001$). In addition, we compared the various types of self-reflection to determine their individual contribution to performance. All code and data are available on GitHub at https://github.com/matthewrenze/self-reflection",
       "categories": [
         "cs.CL",
         "cs.AI"
@@ -1071,7 +1254,7 @@
         "Juhyeong Lee",
         "Sung Joong Kim"
       ],
-      "abstract": "Despite rapid improvements in the performance of central processing unit (CPU), the calculation cost of simulating chemically reacting flow using CFD remains infeasible in many cases. The application of the convolutional neural networks (CNNs) specialized in image processing in flow field prediction has been studied, but the need to develop a neural netweork design fitted for CFD is recently emerged. In this study, a neural network model introducing the finite volume method (FVM) with a unique network architecture and physics-informed loss function was developed to accelerate CFD simulations. The developed network model, considering the nature of the CFD flow field where the identical governing equations are applied to all grids, can predict the future fields with only two previous fields unlike the CNNs requiring many field images (\u003e10,000). The performance of this baseline model was evaluated using CFD time series data from non-reacting flow and reacting flow simulation; counterflow and hydrogen flame with 20 detailed chemistries. Consequently, we demonstrated that (1) the FVM-based network architecture provided improved accuracy of multistep time series prediction compared to the previous MLP model (2) the physic-informed loss function prevented non-physical overfitting problem and ultimately reduced the error in time series prediction (3) observing the calculated residuals in an unsupervised manner could indirectly estimate the network accuracy. Additionally, under the reacting flow dataset, the computational speed of this network model was measured to be about 10 times faster than that of the CFD solver.",
+      "abstract": "Despite rapid improvements in the performance of central processing unit (CPU), the calculation cost of simulating chemically reacting flow using CFD remains infeasible in many cases. The application of the convolutional neural networks (CNNs) specialized in image processing in flow field prediction has been studied, but the need to develop a neural netweork design fitted for CFD is recently emerged. In this study, a neural network model introducing the finite volume method (FVM) with a unique network architecture and physics-informed loss function was developed to accelerate CFD simulations. The developed network model, considering the nature of the CFD flow field where the identical governing equations are applied to all grids, can predict the future fields with only two previous fields unlike the CNNs requiring many field images (>10,000). The performance of this baseline model was evaluated using CFD time series data from non-reacting flow and reacting flow simulation; counterflow and hydrogen flame with 20 detailed chemistries. Consequently, we demonstrated that (1) the FVM-based network architecture provided improved accuracy of multistep time series prediction compared to the previous MLP model (2) the physic-informed loss function prevented non-physical overfitting problem and ultimately reduced the error in time series prediction (3) observing the calculated residuals in an unsupervised manner could indirectly estimate the network accuracy. Additionally, under the reacting flow dataset, the computational speed of this network model was measured to be about 10 times faster than that of the CFD solver.",
       "categories": [
         "cs.LG"
       ],
@@ -4291,7 +4474,7 @@
         "Qichao Liu",
         "Xiaopeng Li"
       ],
-      "abstract": "Achieving rapid and effective active collision avoidance in dynamic interactive traffic remains a core challenge for autonomous driving. This paper proposes REACT (Runtime-Enabled Active Collision-avoidance Technique), a closed-loop framework that integrates risk assessment with active avoidance control. By leveraging energy transfer principles and human-vehicle-road interaction modeling, REACT dynamically quantifies runtime risk and constructs a continuous spatial risk field. The system incorporates physically grounded safety constraints such as directional risk and traffic rules to identify high-risk zones and generate feasible, interpretable avoidance behaviors. A hierarchical warning trigger strategy and lightweight system design enhance runtime efficiency while ensuring real-time responsiveness. Evaluations across four representative high-risk scenarios including car-following braking, cut-in, rear-approaching, and intersection conflict demonstrate REACT's capability to accurately identify critical risks and execute proactive avoidance. Its risk estimation aligns closely with human driver cognition (i.e., warning lead time \u003c 0.4 s), achieving 100% safe avoidance with zero false alarms or missed detections. Furthermore, it exhibits superior real-time performance (\u003c 50 ms latency), strong foresight, and generalization. The lightweight architecture achieves state-of-the-art accuracy, highlighting its potential for real-time deployment in safety-critical autonomous systems.",
+      "abstract": "Achieving rapid and effective active collision avoidance in dynamic interactive traffic remains a core challenge for autonomous driving. This paper proposes REACT (Runtime-Enabled Active Collision-avoidance Technique), a closed-loop framework that integrates risk assessment with active avoidance control. By leveraging energy transfer principles and human-vehicle-road interaction modeling, REACT dynamically quantifies runtime risk and constructs a continuous spatial risk field. The system incorporates physically grounded safety constraints such as directional risk and traffic rules to identify high-risk zones and generate feasible, interpretable avoidance behaviors. A hierarchical warning trigger strategy and lightweight system design enhance runtime efficiency while ensuring real-time responsiveness. Evaluations across four representative high-risk scenarios including car-following braking, cut-in, rear-approaching, and intersection conflict demonstrate REACT's capability to accurately identify critical risks and execute proactive avoidance. Its risk estimation aligns closely with human driver cognition (i.e., warning lead time < 0.4 s), achieving 100% safe avoidance with zero false alarms or missed detections. Furthermore, it exhibits superior real-time performance (< 50 ms latency), strong foresight, and generalization. The lightweight architecture achieves state-of-the-art accuracy, highlighting its potential for real-time deployment in safety-critical autonomous systems.",
       "categories": [
         "cs.RO",
         "eess.SY"
@@ -4399,7 +4582,7 @@
         "Lingyong Cao",
         "Shuyuan Lin"
       ],
-      "abstract": "Objectives: Large language models (LLMs) can harness medical knowledge for intelligent question answering (Q\u0026A), promising support for auxiliary diagnosis and medical talent cultivation. However, there is a deficiency of highly efficient retrieval-augmented generation (RAG) frameworks within the domain of Traditional Chinese Medicine (TCM). Our purpose is to observe the effect of the Tree-Organized Self-Reflective Retrieval (TOSRR) framework on LLMs in TCM Q\u0026A tasks.\n  Materials and Methods: We introduce the novel approach of knowledge organization, constructing a tree structure knowledge base with hierarchy. At inference time, our self-reflection framework retrieves from this knowledge base, integrating information across chapters. Questions from the TCM Medical Licensing Examination (MLE) and the college Classics Course Exam (CCE) were randomly selected as benchmark datasets.\n  Results: By coupling with GPT-4, the framework can improve the best performance on the TCM MLE benchmark by 19.85% in absolute accuracy, and improve recall accuracy from 27% to 38% on CCE datasets. In manual evaluation, the framework improves a total of 18.52 points across dimensions of safety, consistency, explainability, compliance, and coherence.\n  Conclusion: The TOSRR framework can effectively improve LLM's capability in Q\u0026A tasks of TCM.",
+      "abstract": "Objectives: Large language models (LLMs) can harness medical knowledge for intelligent question answering (Q&A), promising support for auxiliary diagnosis and medical talent cultivation. However, there is a deficiency of highly efficient retrieval-augmented generation (RAG) frameworks within the domain of Traditional Chinese Medicine (TCM). Our purpose is to observe the effect of the Tree-Organized Self-Reflective Retrieval (TOSRR) framework on LLMs in TCM Q&A tasks.\n  Materials and Methods: We introduce the novel approach of knowledge organization, constructing a tree structure knowledge base with hierarchy. At inference time, our self-reflection framework retrieves from this knowledge base, integrating information across chapters. Questions from the TCM Medical Licensing Examination (MLE) and the college Classics Course Exam (CCE) were randomly selected as benchmark datasets.\n  Results: By coupling with GPT-4, the framework can improve the best performance on the TCM MLE benchmark by 19.85% in absolute accuracy, and improve recall accuracy from 27% to 38% on CCE datasets. In manual evaluation, the framework improves a total of 18.52 points across dimensions of safety, consistency, explainability, compliance, and coherence.\n  Conclusion: The TOSRR framework can effectively improve LLM's capability in Q&A tasks of TCM.",
       "categories": [
         "cs.CL"
       ],

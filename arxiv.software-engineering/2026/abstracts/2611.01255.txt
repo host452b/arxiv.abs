@@ -1,0 +1,25 @@
+Title: AdapBench: Adaptive Early-Stopping and Prioritization for Efficient Microbenchmarking in Cloud-based CI/CD
+Authors: Sebastian Koch, Jonas Heisterberg, Nils Japke, Trever Schirmer, David Bermbach
+ID: 2611.01255
+URL: https://arxiv.org/abs/2611.01255
+
+Abstract:
+Cloud-based software systems frequently release new versions, a fact further
+accelerated through agentic coding. Each new release, however, brings the risk
+of performance regressions which can irritate end users, increase infrastructure
+costs, and increase carbon footprints. Therefore, developers strive to catch
+such regressions in testing stages, usually through so-called continuous
+benchmarking. The standard way of doing this is using microbenchmark suites
+which, however, take notoriously long to execute. Optimizing the execution of
+microbenchmark suites is, hence, an active field of research. In this paper, we
+propose AdapBench, an online scheduling system for reducing the execution
+duration of microbenchmark suites. AdapBench is the first approach which
+dynamically makes at-runtime decisions for prioritizing the most informative
+benchmarks and early-stopping each one once enough evidence has accumulated to
+accept or reject a performance change hypothesis. We evaluate our prototype on
+eight popular Java projects, commonly used by microbenchmark research, and four
+additional Go projects. At matched 90% change detections and false-positive rate
+compared to an optimistic uniform run, AdapBench saves 42% of the aggregate
+execution duration on the Java projects, with negligible scheduling overhead
+(below 0.001% of the total runtime). On the Go projects, AdapBench finds every
+performance change with zero false positives while saving 85% of the full run.

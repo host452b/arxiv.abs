@@ -10,11 +10,183 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:50:25Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 731,
-  "return_count": 200,
+  "return_count": 207,
   "papers": [
+    {
+      "id": "2611.31962",
+      "title": "Are Web Agents Still Detectable? Stress-Testing Bot Defenses with Coordinated Evasion",
+      "authors": [
+        "Parsa Nilforushan",
+        "Gemmin Sugiura",
+        "Kourosh Hashemi",
+        "Peiman Zhiani",
+        "Mohammad A. Tayebi"
+      ],
+      "abstract": "AI web agents can autonomously navigate websites and complete various tasks. As their capabilities and adoption expand, evaluating bot defenses requires adversarial stress tests. Although prior work demonstrates that existing agents can remain detectable, it remains unclear how effective bot defenses are against adversaries that coordinate evasion across browser fingerprints, automation controls, and interaction behavior. To investigate this threat, we introduce DarkAgent, an autonomous web agent that combines a forked Chromium browser that conceals automation artifacts and generative models that produce human-like mouse and keyboard traces. To address the limitations of existing keyboard mimickers, our keyboard model jointly generates realistic key events and their timings while reliably reproducing the target text. Released agent detectors accept our generated behavior as human, and trained classifiers find it substantially harder to distinguish from human traces than existing mimickers. DarkAgent achieves an 89% page-access bypass rate across a third-party stealth benchmark, exceeding the strongest published baseline by 12 percentage points. To further enhance the measurement of agents, we introduce a benchmark that measures browser fingerprints, interaction behavior, and network activity to assess each channel's contribution to detecting adversarial agents such as DarkAgent. On this benchmark, browser and behavioral modifications are complementary: either alone remains detectable, and only their combination evades all tested checks. Together, our findings expose the gap between passing existing bot defenses and reproducing human behavior, and point to timing between actions as a remaining signal for defenders.",
+      "published": "2026-11-24T05:11:39Z",
+      "updated": "2026-11-24T05:11:39Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31962",
+      "abs_url": "https://arxiv.org/abs/2611.31962",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29268",
+      "title": "Benchmarking Web Agent Defenses Against Adaptive Visual Prompt Injection",
+      "authors": [
+        "Haichuan Zhang",
+        "Zhiyuan Zhong",
+        "Shih-Chieh Dai",
+        "Xinyu Sun",
+        "Guanhong Tao"
+      ],
+      "abstract": "Multimodal web agents automate website interactions but remain vulnerable to visual prompt injection (VPI), where malicious webpage content manipulates their visual processing and induces unintended actions. Although several defenses focus on detecting injected instructions in screenshots, malicious destinations such as phishing URLs embedded in HTML can remain hidden yet accessible through agent interactions. Existing evaluations have also not sufficiently examined adaptive attackers who know the defense mechanisms. To address these limitations, we introduce AdaptiveVPI, the first benchmark for systematically evaluating adaptive VPI threats in web agents. Specifically, we present a dataset of 360 webpage instances spanning 6 distinct hijack strategies across 10 real-world websites, with malicious destinations not visible in screenshots. We design an adaptive attack framework that iteratively refines malicious instructions based on feedback from the defense mechanism being evaluated. We also introduce three metrics to measure the extent of agent hijacking at three different levels. Across 10 defense configurations for computer-use agents and 11 defense configurations for browser-use agents, our adaptive attacks achieve average success rates of 91.87% and 91.99%, respectively. These results reveal a gap between current VPI defenses and realistic threats and highlight the need for defenses designed with adaptive attackers in mind.",
+      "published": "2026-11-22T06:20:09Z",
+      "updated": "2026-11-22T06:20:09Z",
+      "categories": [
+        "cs.CR",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29268",
+      "abs_url": "https://arxiv.org/abs/2611.29268",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22223",
+      "title": "GapLeak: When Privacy-Preserving LLM-based Web Agents Become a Privacy Risk",
+      "authors": [
+        "Chaklam Cheong",
+        "Tiancong Cao",
+        "Qi Li",
+        "Zelin Zhang",
+        "Jianbing Ni",
+        "Rongxing Lu",
+        "Mohammad Zulkernine"
+      ],
+      "abstract": "Large Language Model (LLM)-based web agents rely on data minimization and least privilege to protect user privacy. We show that these principles are necessary but insufficient: they constrain authorized sources, but not higher-sensitivity sources that remain reachable. A website can request a field unavailable from authorized sources, creating an information gap. To complete the task, a goal-driven agent may escalate to reachable but unauthorized sources and disclose accumulated sensitive information. We formalize this vulnerability as GapLeak, where an adversary exploits a legitimate web form without prompt injection or other malicious instructions. We evaluate GapLeak on three web-agent frameworks and six LLMs from Anthropic, Google, and OpenAI across recruitment, e-commerce, travel, and healthcare. GapLeak induces an average unauthorized disclosure of approximately 37%. The information gap is the primary driver: eliminating it reduces disclosure by more than 50%. Existing instruction-level defenses based on least privilege partially mitigate the vulnerability but often reduce task success. We propose submission-time verification, which filters unauthorized content before form submission, eliminating over 96% of unauthorized disclosures while preserving task success.",
+      "published": "2026-11-17T05:06:25Z",
+      "updated": "2026-11-17T05:06:25Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22223",
+      "abs_url": "https://arxiv.org/abs/2611.22223",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.17955",
+      "title": "WebArena-Pro: A Heterogeneous, Multimodal, Reproducible Benchmark for Web Agents",
+      "authors": [
+        "Imene Kerboua",
+        "Fatemeh Pesaran Zadeh",
+        "Xing Han Lù",
+        "Weijian Qi",
+        "Alexander Miller",
+        "Junyi Song",
+        "Yunjia Tian",
+        "Dongjin Kang",
+        "Seyeon Choi",
+        "Marzia Nouri",
+        "Ewen Gueguen",
+        "Matteo Boglioni",
+        "Fengyuan Liu",
+        "Zeyi Liao",
+        "Mengqi Yuan",
+        "Yue Li",
+        "Alexandre Lacoste",
+        "Alexandre Drouin",
+        "Spandana Gella",
+        "Huan Sun",
+        "Gunhee Kim",
+        "Siva Reddy"
+      ],
+      "abstract": "Web agents powered by large language and vision-language models are increasingly applied to realistic browser work that spans heterogeneous applications, multimodal content, and stateful workflows. However, existing reproducible web-agent benchmarks cover only a small number of web applications drawn from a few software categories, and restrict modality to text and vision. Live benchmarks broaden site coverage but sacrifice reproducibility, since pages and data drift between runs. Moreover, existing benchmarks do not meaningfully evaluate whether agents can understand and use audio and video content embedded within web tasks. To address these gaps, we introduce WebArena-Pro, a benchmark comprising 300 tasks across 20 self-hosted web applications in six domain categories, spanning distinct interface conventions, workflows, and data models. Across the evaluated agents, the best performance is achieved by both Codex with GPT 6.1 Sol and Claude Code with Claude Opus 5.5 at 62.3%, followed by OpenCode with Kimi 3.1 Pro at 60.7%. The strongest GenericAgent configurations, Gemini 3.1 Pro omni and Gemma4 31B, both achieve 30.3%. Among reproducible, human-curated web agent benchmarks, WebArena-Pro provides the broadest application coverage and the most comprehensive multimodal support to date. The benchmark treats audio and video as core observations alongside text and vision, with dedicated actions for extracting information from each. WebArena-Pro runs each task in isolation and supports reproducible, parallel evaluation. Tasks are authored through a dedicated annotator interface, filtered by LLM-assisted triage, and finally validated by humans before release. Project page: https://webarena-pro.github.io",
+      "published": "2026-11-13T09:44:48Z",
+      "updated": "2026-11-13T09:44:48Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.17955",
+      "abs_url": "https://arxiv.org/abs/2611.17955",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16744",
+      "title": "Scale-Induced Semantic Shift in Visual Prompt Injection Against VLMs and Web Agents",
+      "authors": [
+        "Yiheng Zhao",
+        "Runze Ji",
+        "Chenyu Yi",
+        "Yi Yu",
+        "Bingquan Shen",
+        "Alex Kot",
+        "Xudong Jiang"
+      ],
+      "abstract": "Visual content in multimedia systems may be resized, compressed, or re-rendered before it is interpreted by a vision-language model. We study a security failure mode in which these transformations change the machine-readable semantics of an image: a textual instruction is not recovered at a $512\\times512$ presentation resolution under our evaluation protocol but becomes recoverable after aggressive downsampling. We formulate this behavior as Scale-Induced Semantic Shift (SISS) and develop a closed-loop black-box framework that combines dual-scale verification, selective self-hardening, shallow-layer low-rank adaptation, and pixel-space noise regularization. On a fixed 300-case benchmark, the third SISS refinement round obtains a $58.75\\%$ average attack success rate across four closed-source vision-language models, compared with $41.08\\%$ for the strongest generation baseline. A controlled sweep bounds the effect to aggressive compression: average success decreases to $17.68\\%$, $6.85\\%$, and $5.60\\%$ at $128\\times128$, $224\\times224$, and $336\\times336$, respectively. In a downstream web-agent study, the generated images increase hidden-instruction perception, but absolute behavioral compromise remains about $4\\%$. Generic input transformations provide little protection in a separate defense protocol, whereas the proposed ScaleGuard consistency detector reduces non-adaptive success from $61.4\\%$ to $24.3\\%$ and one-round defense-aware success from $42.5\\%$ to $15.0\\%$, with no observed rejection among matched clean controls. The results characterize a bounded but reproducible semantic inconsistency in multimedia preprocessing and motivate scale-consistent visual-language inference.",
+      "published": "2026-11-12T12:57:11Z",
+      "updated": "2026-11-12T12:57:11Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16744",
+      "abs_url": "https://arxiv.org/abs/2611.16744",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.15600",
+      "title": "MemCredit: From Relevance to Utility for Decision-Time Memory in Long-Horizon Web Agents",
+      "authors": [
+        "Quanjiang Guo",
+        "Sijie Wang",
+        "Qianyang Zhu",
+        "Ben Zhang",
+        "Jinchuan Zhang",
+        "Ke Yan",
+        "Zhao Kang"
+      ],
+      "abstract": "Large language model (LLM) agents increasingly operate over long Web interaction histories, making memory management critical for reliable and efficient decision making. Existing methods primarily optimize storage, retrieval, or compression, but the memories most semantically relevant to the current state are not necessarily those that most improve the agent's action. We introduce MemCredit, a decision-centric memory framework that shifts memory selection from semantic relevance to decision utility. MemCredit estimates the state-, reference-context-, and policy-conditional marginal contribution of individual memories through controlled counterfactual interventions, and distills these intervention-derived credits into a lightweight utility estimator. At inference time, semantic relevance is used only for high-recall candidate generation, while predicted utility arbitrates which memories are retained under a fixed token budget, without modifying the underlying agent policy or requiring additional environment interaction. We evaluate MemCredit on ALFWorld and WebShop against representative memory baselines. On ALFWorld, MemCredit achieves 86.57 SR@50 under a 500-token historical-memory budget, compared with 65.67% for BM25 retrieval. Counterfactual analysis further shows that memory utility is sparse, strongly state dependent, and poorly captured by semantic relevance. These results suggest that decision utility provides a more effective principle than relevance alone for long-horizon agent memory management.",
+      "published": "2026-11-11T15:17:38Z",
+      "updated": "2026-11-11T15:17:38Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.15600",
+      "abs_url": "https://arxiv.org/abs/2611.15600",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.11971",
+      "title": "Harness Matters: Measuring and Dissecting Security Resilience in Web Agents",
+      "authors": [
+        "Xinyi Wu",
+        "Jiagui Chen",
+        "JiaYi Dong",
+        "Geng Hong",
+        "Xudong Pan",
+        "Jiarun Dai",
+        "Mingxuan Liu",
+        "Min Yang"
+      ],
+      "abstract": "Web agents extend LLMs from text generation to real-world web interaction by relying on execution harnesses that interpret user goals, perceive webpages, plan actions, and ground model decisions into browser operations. While prior work has recognized that agent security depends on more than the backend model alone, how harness design quantitatively shapes web-agent security remains insufficiently measured. To systematically study web-agent harness security, we first characterize web-agent harnesses as a four-stage execution workflow covering goal interpretation, webpage perception, reasoning and planning, and action execution. Based on this abstraction, we build WebTrap Farm, a systematic and extensible evaluation framework covering three representative attack categories: malicious user prompts, malicious prompt injection, and deceptive web design. To avoid conflating security with task capability, we use paired usability calibration tasks to separate genuine defensive behavior from capability limitations. Our evaluation shows that existing web-agent harnesses remain vulnerable to typical attacks, with some unsafe behaviors occurring even without explicit attack content, revealing harness-intrinsic security failures (RQ1). Statistical analysis further shows that both harness and backend model significantly affect security outcomes, indicating that deployed-agent security is jointly shaped by the harness and backend model (RQ2). Finally, we localize where defensive behavior emerges across workflow stages and identify more secure design mechanisms, providing actionable guidance for building more robust web agents (RQ3). These findings highlight the web-agent harness as an important security boundary and motivate moving beyond model-centric defenses toward harness-level security design.",
+      "published": "2026-11-09T06:53:04Z",
+      "updated": "2026-11-09T06:53:04Z",
+      "categories": [
+        "cs.CR",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.11971",
+      "abs_url": "https://arxiv.org/abs/2611.11971",
+      "source": "arxiv"
+    },
     {
       "id": "2510.12635",
       "title": "Memory as Action: Autonomous Context Curation for Long-Horizon Agentic Tasks",
@@ -1305,7 +1477,7 @@
         "Nils-Lucas Schönfeld",
         "Ruth Stock-Homburg"
       ],
-      "abstract": "The increasing deployment of autonomous AI agents on the web is hampered by a fundamental misalignment: agents must infer affordances from human-oriented user interfaces, leading to brittle, inefficient, and insecure interactions. To address this, we introduce VOIX, a web-native framework that enables websites to expose reliable, auditable, and privacy-preserving capabilities for AI agents through simple, declarative HTML elements. VOIX introduces \u003ctool\u003e and \u003ccontext\u003e tags, allowing developers to explicitly define available actions and relevant state, thereby creating a clear, machine-readable contract for agent behavior. This approach shifts control to the website developer while preserving user privacy by disconnecting the conversational interactions from the website. We evaluated the framework's practicality, learnability, and expressiveness in a three-day hackathon study with 16 developers. The results demonstrate that participants, regardless of prior experience, were able to rapidly build diverse and functional agent-enabled web applications. Ultimately, this work provides a foundational mechanism for realizing the Agentic Web, enabling a future of seamless and secure human-AI collaboration on the web.",
+      "abstract": "The increasing deployment of autonomous AI agents on the web is hampered by a fundamental misalignment: agents must infer affordances from human-oriented user interfaces, leading to brittle, inefficient, and insecure interactions. To address this, we introduce VOIX, a web-native framework that enables websites to expose reliable, auditable, and privacy-preserving capabilities for AI agents through simple, declarative HTML elements. VOIX introduces <tool> and <context> tags, allowing developers to explicitly define available actions and relevant state, thereby creating a clear, machine-readable contract for agent behavior. This approach shifts control to the website developer while preserving user privacy by disconnecting the conversational interactions from the website. We evaluated the framework's practicality, learnability, and expressiveness in a three-day hackathon study with 16 developers. The results demonstrate that participants, regardless of prior experience, were able to rapidly build diverse and functional agent-enabled web applications. Ultimately, this work provides a foundational mechanism for realizing the Agentic Web, enabling a future of seamless and secure human-AI collaboration on the web.",
       "categories": [
         "cs.HC",
         "cs.AI",
@@ -2284,7 +2456,7 @@
         "Anuj Mahajan",
         "Hamsa Balakrishnan"
       ],
-      "abstract": "The ability of Language Models (LMs) to understand natural language makes them a powerful tool for parsing human instructions into task plans for autonomous robots. Unlike traditional planning methods that rely on domain-specific knowledge and handcrafted rules, LMs generalize from diverse data and adapt to various tasks with minimal tuning, acting as a compressed knowledge base. However, LMs in their standard form face challenges with long-horizon tasks, particularly in partially observable multi-agent settings. We propose an LM-based Long-Horizon Planner for Multi-Agent Robotics (LLaMAR), a cognitive architecture for planning that achieves state-of-the-art results in long-horizon tasks within partially observable environments. LLaMAR employs a plan-act-correct-verify framework, allowing self-correction from action execution feedback without relying on oracles or simulators. Additionally, we present MAP-THOR, a comprehensive test suite encompassing household tasks of varying complexity within the AI2-THOR environment. Experiments show that LLaMAR achieves a 30% higher success rate than other state-of-the-art LM-based multi-agent planners in MAP-THOR and Search \\\u0026 Rescue tasks. Code can be found at https://github.com/nsidn98/LLaMAR",
+      "abstract": "The ability of Language Models (LMs) to understand natural language makes them a powerful tool for parsing human instructions into task plans for autonomous robots. Unlike traditional planning methods that rely on domain-specific knowledge and handcrafted rules, LMs generalize from diverse data and adapt to various tasks with minimal tuning, acting as a compressed knowledge base. However, LMs in their standard form face challenges with long-horizon tasks, particularly in partially observable multi-agent settings. We propose an LM-based Long-Horizon Planner for Multi-Agent Robotics (LLaMAR), a cognitive architecture for planning that achieves state-of-the-art results in long-horizon tasks within partially observable environments. LLaMAR employs a plan-act-correct-verify framework, allowing self-correction from action execution feedback without relying on oracles or simulators. Additionally, we present MAP-THOR, a comprehensive test suite encompassing household tasks of varying complexity within the AI2-THOR environment. Experiments show that LLaMAR achieves a 30% higher success rate than other state-of-the-art LM-based multi-agent planners in MAP-THOR and Search \\& Rescue tasks. Code can be found at https://github.com/nsidn98/LLaMAR",
       "categories": [
         "cs.RO",
         "cs.MA"
@@ -2648,7 +2820,7 @@
       "authors": [
         "Alaa Daoud"
       ],
-      "abstract": "The Web is ubiquitous, increasingly populated with interconnected data, services, people, and objects. Semantic web technologies (SWT) promote uniformity of data formats, as well as modularization and reuse of specifications (e.g., ontologies), by allowing them to include and refer to information provided by other ontologies. In such a context, multi-agent system (MAS) technologies are the right abstraction for developing decentralized and open Web applications in which agents discover, reason and act on Web resources and cooperate with each other and with people. The aim of the project is to propose an approach to transform \"Agent and artifact (A\u0026A) meta-model\" into a Web-readable format with ontologies in line with semantic web formats and to reuse already existing ontologies in order to provide uniform access for agents to things.",
+      "abstract": "The Web is ubiquitous, increasingly populated with interconnected data, services, people, and objects. Semantic web technologies (SWT) promote uniformity of data formats, as well as modularization and reuse of specifications (e.g., ontologies), by allowing them to include and refer to information provided by other ontologies. In such a context, multi-agent system (MAS) technologies are the right abstraction for developing decentralized and open Web applications in which agents discover, reason and act on Web resources and cooperate with each other and with people. The aim of the project is to propose an approach to transform \"Agent and artifact (A&A) meta-model\" into a Web-readable format with ontologies in line with semantic web formats and to reuse already existing ontologies in order to provide uniform access for agents to things.",
       "categories": [
         "cs.SE",
         "cs.AI",
@@ -4005,7 +4177,7 @@
         "Banghua Zhu",
         "Yi Wu"
       ],
-      "abstract": "Recent advancements in LLM-based agents have demonstrated remarkable capabilities in handling complex, knowledge-intensive tasks by integrating external tools. Among diverse choices of tools, search tools play a pivotal role in accessing vast external knowledge. However, open-source agents still fall short of achieving expert-level Search Intelligence, the ability to resolve ambiguous queries, generate precise searches, analyze results, and conduct thorough exploration. Existing approaches fall short in scalability, efficiency, and data quality. For example, small turn limits in existing online RL methods, e.g. \u003c=10, restrict complex strategy learning. This paper introduces ASearcher, an open-source project for large-scale RL training of search agents. Our key contributions include: (1) Scalable fully asynchronous RL training that enables long-horizon search while maintaining high training efficiency. (2) A prompt-based LLM agent that autonomously synthesizes high-quality and challenging QAs, creating a large-scale QA dataset. Through RL training, our prompt-based QwQ-32B agent achieves substantial improvements, with 78.0% and 34.3% Avg@4 gains on xBench and GAIA, respectively. Notably, our agent exhibits extreme long-horizon search, with tool calls exceeding 100 turns and output tokens exceeding 400k during training time. With a simple agent design and no external LLMs, ASearcher-Web-QwQ achieves Avg@4 scores of 51.1 on xBench and 58.7 on GAIA, surpassing existing open-source 32B agents. Finally, we also show that ASearcher-Web-QwQ could achieve performance of commercial systems using external summary tool in a zero-shot transfer manner and test-time search. We open-source our models, training data, and codes in https://github.com/inclusionAI/ASearcher.",
+      "abstract": "Recent advancements in LLM-based agents have demonstrated remarkable capabilities in handling complex, knowledge-intensive tasks by integrating external tools. Among diverse choices of tools, search tools play a pivotal role in accessing vast external knowledge. However, open-source agents still fall short of achieving expert-level Search Intelligence, the ability to resolve ambiguous queries, generate precise searches, analyze results, and conduct thorough exploration. Existing approaches fall short in scalability, efficiency, and data quality. For example, small turn limits in existing online RL methods, e.g. <=10, restrict complex strategy learning. This paper introduces ASearcher, an open-source project for large-scale RL training of search agents. Our key contributions include: (1) Scalable fully asynchronous RL training that enables long-horizon search while maintaining high training efficiency. (2) A prompt-based LLM agent that autonomously synthesizes high-quality and challenging QAs, creating a large-scale QA dataset. Through RL training, our prompt-based QwQ-32B agent achieves substantial improvements, with 78.0% and 34.3% Avg@4 gains on xBench and GAIA, respectively. Notably, our agent exhibits extreme long-horizon search, with tool calls exceeding 100 turns and output tokens exceeding 400k during training time. With a simple agent design and no external LLMs, ASearcher-Web-QwQ achieves Avg@4 scores of 51.1 on xBench and 58.7 on GAIA, surpassing existing open-source 32B agents. Finally, we also show that ASearcher-Web-QwQ could achieve performance of commercial systems using external summary tool in a zero-shot transfer manner and test-time search. We open-source our models, training data, and codes in https://github.com/inclusionAI/ASearcher.",
       "categories": [
         "cs.CL",
         "cs.AI"
@@ -4023,7 +4195,7 @@
       "authors": [
         "Wilson Y. Lee"
       ],
-      "abstract": "Why do language agents fail on tasks they are capable of solving? We argue that many such failures are reliability failures caused by stochastic drift from a task's latent solution structure, not capability failures. Every well-defined tool-use task imposes a canonical solution path (i.e., a convergent set of tool invocations shared across successful runs) and agent success depends critically on whether a trajectory stays within this path's operating envelope. We establish this causally using a natural experiment that holds model capability and task difficulty fixed by construction. We analyze trajectories from the Toolathlon benchmark: 22 frontier models each attempt 108 real-world tool-use tasks across 3 independent runs, yielding 515 model$\\times$task units where the same model succeeds on some runs and fails on others due to LLM sampling stochasticity alone. Within these units, successful runs adhere significantly more closely to the canonical solution path than failed runs ($+$0.060 Jaccard, $p\u003c0.0001$, $n=488$ units, 95% CI [+0.043, +0.077]). This result survives six robustness checks including cross-model-family leave-one-out validation. Critically, the causal mechanism is gradual and self-reinforcing: the adherence gap is statistically indistinguishable from zero through the first 50% of the trajectory, ruling out early-branching selection bias, and each off-canonical tool call raises the probability that the next call is also off-canonical by 22.7 percentage points ($\\hatβ=+0.227$, $p\u003c0.0001$), more than doubling the baseline rate. These findings imply that agent reliability cannot be improved by capability scaling alone, but offer a highly actionable intervention: a simple monitor that restarts the bottom tercile of runs based on mid-trajectory canonical adherence lifts success rates by $+$8.8 percentage points among intervened runs.",
+      "abstract": "Why do language agents fail on tasks they are capable of solving? We argue that many such failures are reliability failures caused by stochastic drift from a task's latent solution structure, not capability failures. Every well-defined tool-use task imposes a canonical solution path (i.e., a convergent set of tool invocations shared across successful runs) and agent success depends critically on whether a trajectory stays within this path's operating envelope. We establish this causally using a natural experiment that holds model capability and task difficulty fixed by construction. We analyze trajectories from the Toolathlon benchmark: 22 frontier models each attempt 108 real-world tool-use tasks across 3 independent runs, yielding 515 model$\\times$task units where the same model succeeds on some runs and fails on others due to LLM sampling stochasticity alone. Within these units, successful runs adhere significantly more closely to the canonical solution path than failed runs ($+$0.060 Jaccard, $p<0.0001$, $n=488$ units, 95% CI [+0.043, +0.077]). This result survives six robustness checks including cross-model-family leave-one-out validation. Critically, the causal mechanism is gradual and self-reinforcing: the adherence gap is statistically indistinguishable from zero through the first 50% of the trajectory, ruling out early-branching selection bias, and each off-canonical tool call raises the probability that the next call is also off-canonical by 22.7 percentage points ($\\hatβ=+0.227$, $p<0.0001$), more than doubling the baseline rate. These findings imply that agent reliability cannot be improved by capability scaling alone, but offer a highly actionable intervention: a simple monitor that restarts the bottom tercile of runs based on mid-trajectory canonical adherence lifts success rates by $+$8.8 percentage points among intervened runs.",
       "categories": [
         "cs.CL",
         "cs.LG"
@@ -4148,7 +4320,7 @@
         "Xiangliang Zhang",
         "Chandan K. Reddy"
       ],
-      "abstract": "Multi-turn Text-to-SQL aims to translate a user's conversational utterances into executable SQL while preserving dialogue coherence and grounding to the target schema. However, most existing systems only regard this task as a simple text translation task and follow a short-horizon paradigm, generating a query per turn without execution, explicit verification, and refinement, which leads to non-executable or incoherent outputs. We present MTSQL-R1, an agentic training framework for long-horizon multi-turn Text-to-SQL. We cast the task as a Markov Decision Process (MDP) in which an agent interacts with (i) a database for execution feedback and (ii) a persistent dialogue memory for coherence verification, performing an iterative propose to execute -\u003e verify -\u003e refine cycle until all checks pass. Experiments on COSQL and SPARC demonstrate that MTSQL-R1 consistently outperforms strong baselines, highlighting the importance of environment-driven verification and memory-guided refinement for conversational semantic parsing. Full recipes (including code, trained models, logs, reasoning trajectories, etc.) will be released after the internal review to contribute to community research.",
+      "abstract": "Multi-turn Text-to-SQL aims to translate a user's conversational utterances into executable SQL while preserving dialogue coherence and grounding to the target schema. However, most existing systems only regard this task as a simple text translation task and follow a short-horizon paradigm, generating a query per turn without execution, explicit verification, and refinement, which leads to non-executable or incoherent outputs. We present MTSQL-R1, an agentic training framework for long-horizon multi-turn Text-to-SQL. We cast the task as a Markov Decision Process (MDP) in which an agent interacts with (i) a database for execution feedback and (ii) a persistent dialogue memory for coherence verification, performing an iterative propose to execute -> verify -> refine cycle until all checks pass. Experiments on COSQL and SPARC demonstrate that MTSQL-R1 consistently outperforms strong baselines, highlighting the importance of environment-driven verification and memory-guided refinement for conversational semantic parsing. Full recipes (including code, trained models, logs, reasoning trajectories, etc.) will be released after the internal review to contribute to community research.",
       "categories": [
         "cs.CL",
         "cs.AI",
@@ -4174,7 +4346,7 @@
         "Tianqing Fang",
         "Yangqiu Song"
       ],
-      "abstract": "Enabling LLMs to effectively operate long-horizon task which requires long-term planning and multiple interactions is essential for open-world autonomy. Conventional methods adopt planning with actions where a executable action list would be provided as reference. However, this action representation choice would be impractical when the environment action space is combinatorial exploded (e.g., open-ended real world). This naturally leads to a question: As environmental action space scales, what is the optimal action representation for long-horizon agents? In this paper, we systematically study the effectiveness of two different action representations. The first one is conventional planning with actions (PwA) which is predominantly adopted for its effectiveness on existing benchmarks. The other one is planning with schemas (PwS) which instantiate an action schema into action lists (e.g., \"move [OBJ] to [OBJ]\" -\u003e \"move apple to desk\") to ensure concise action space and reliable scalability. This alternative is motivated by its alignment with human cognition and its compliance with environment-imposed action format restriction. We propose cognitive bandwidth perspective as a conceptual framework to qualitatively understand the differences between these two action representations and empirically observe a representation-choice inflection point between ALFWorld (~35 actions) and SciWorld (~500 actions), which serve as evidence of the need for scalable representations. We further conduct controlled experiments to study how the location of this inflection point interacts with different model capacities: stronger planning proficiency shifts the inflection rightward, whereas better schema instantiation shifts it leftward. Finally, noting the suboptimal performance of PwS agents, we provide an actionable guide for building more capable PwS agents for better scalable autonomy.",
+      "abstract": "Enabling LLMs to effectively operate long-horizon task which requires long-term planning and multiple interactions is essential for open-world autonomy. Conventional methods adopt planning with actions where a executable action list would be provided as reference. However, this action representation choice would be impractical when the environment action space is combinatorial exploded (e.g., open-ended real world). This naturally leads to a question: As environmental action space scales, what is the optimal action representation for long-horizon agents? In this paper, we systematically study the effectiveness of two different action representations. The first one is conventional planning with actions (PwA) which is predominantly adopted for its effectiveness on existing benchmarks. The other one is planning with schemas (PwS) which instantiate an action schema into action lists (e.g., \"move [OBJ] to [OBJ]\" -> \"move apple to desk\") to ensure concise action space and reliable scalability. This alternative is motivated by its alignment with human cognition and its compliance with environment-imposed action format restriction. We propose cognitive bandwidth perspective as a conceptual framework to qualitatively understand the differences between these two action representations and empirically observe a representation-choice inflection point between ALFWorld (~35 actions) and SciWorld (~500 actions), which serve as evidence of the need for scalable representations. We further conduct controlled experiments to study how the location of this inflection point interacts with different model capacities: stronger planning proficiency shifts the inflection rightward, whereas better schema instantiation shifts it leftward. Finally, noting the suboptimal performance of PwS agents, we provide an actionable guide for building more capable PwS agents for better scalable autonomy.",
       "categories": [
         "cs.AI",
         "cs.CL"
@@ -4508,7 +4680,7 @@
       "authors": [
         "Mustafa Arslan"
       ],
-      "abstract": "Large Language Models (LLMs) are fundamentally constrained by the quadratic computational cost of self-attention and the \"Lost in the Middle\" phenomenon, where reasoning capabilities degrade as context windows expand. Existing solutions, primarily \"Flat RAG\" architectures relying on vector databases, treat memory as an unstructured bag of embeddings, failing to capture the hierarchical and temporal structure of long-horizon interactions. This paper presents Aeon, a Neuro-Symbolic Cognitive Operating System that redefines memory as a managed OS resource. Aeon structures memory into a Memory Palace (a spatial index implemented via Atlas, a SIMD-accelerated Page-Clustered Vector Index) and a Trace (a neuro-symbolic episodic graph). This architecture introduces three advances: (1) Symmetric INT8 Scalar Quantization, achieving 3.1x spatial compression and 5.6x math acceleration via NEON SDOT intrinsics; (2) a decoupled Write-Ahead Log (WAL) ensuring crash-recoverability with statistically negligible overhead (\u003c1%); and (3) a Sidecar Blob Arena eliminating the prior 440-character text ceiling via an append-only mmap-backed blob file with generational garbage collection. The Semantic Lookaside Buffer (SLB) exploits conversational locality to achieve sub-5us retrieval latencies, with INT8 vectors dequantized to FP32 on cache insertion to preserve L1-resident lookup performance. Benchmarks on Apple M4 Max demonstrate that the combined architecture achieves 4.70ns INT8 dot product latency, 3.09us tree traversal at 100K nodes (3.4x over FP32), and P99 read latency of 750ns under hostile 16-thread contention via epoch-based reclamation.",
+      "abstract": "Large Language Models (LLMs) are fundamentally constrained by the quadratic computational cost of self-attention and the \"Lost in the Middle\" phenomenon, where reasoning capabilities degrade as context windows expand. Existing solutions, primarily \"Flat RAG\" architectures relying on vector databases, treat memory as an unstructured bag of embeddings, failing to capture the hierarchical and temporal structure of long-horizon interactions. This paper presents Aeon, a Neuro-Symbolic Cognitive Operating System that redefines memory as a managed OS resource. Aeon structures memory into a Memory Palace (a spatial index implemented via Atlas, a SIMD-accelerated Page-Clustered Vector Index) and a Trace (a neuro-symbolic episodic graph). This architecture introduces three advances: (1) Symmetric INT8 Scalar Quantization, achieving 3.1x spatial compression and 5.6x math acceleration via NEON SDOT intrinsics; (2) a decoupled Write-Ahead Log (WAL) ensuring crash-recoverability with statistically negligible overhead (<1%); and (3) a Sidecar Blob Arena eliminating the prior 440-character text ceiling via an append-only mmap-backed blob file with generational garbage collection. The Semantic Lookaside Buffer (SLB) exploits conversational locality to achieve sub-5us retrieval latencies, with INT8 vectors dequantized to FP32 on cache insertion to preserve L1-resident lookup performance. Benchmarks on Apple M4 Max demonstrate that the combined architecture achieves 4.70ns INT8 dot product latency, 3.09us tree traversal at 100K nodes (3.4x over FP32), and P99 read latency of 750ns under hostile 16-thread contention via epoch-based reclamation.",
       "categories": [
         "cs.AI"
       ],
@@ -4691,7 +4863,7 @@
         "Abhishek Chandwani",
         "Ishan Gupta"
       ],
-      "abstract": "Large language models excel on objectively verifiable tasks such as math and programming, where evaluation reduces to unit tests or a single correct answer. In contrast, real-world enterprise work is often subjective and context-dependent: success hinges on organizational goals, user intent, and the quality of intermediate artifacts produced across long, multi-tool workflows.\n  We introduce LH-Bench, a three-pillar evaluation design that moves beyond binary correctness to score autonomous, long-horizon execution on subjective enterprise tasks. The pillars are: (i) expert-grounded rubrics that give LLM judges the domain context needed to score subjective work, (ii) curated ground-truth artifacts that enable stepwise reward signals (e.g., chapter-level annotation for content tasks), and (iii) pairwise human preference evaluation for convergent validation. We show that domain-authored rubrics provide substantially more reliable evaluation signals than LLM-authored rubrics (kappa = 0.60 vs. 0.46), and that human preference judgments confirm the same top-tier separation (p \u003c 0.05), evidence that expert-grounded evaluation can scale without sacrificing reliability. We release public datasets and report results on two environments: Figma-to-code (33 real .fig tasks against the Figma API via MCP) and Programmatic content (41 courses comprising 183 individually-evaluated chapters on a course platform serving 30+ daily users).",
+      "abstract": "Large language models excel on objectively verifiable tasks such as math and programming, where evaluation reduces to unit tests or a single correct answer. In contrast, real-world enterprise work is often subjective and context-dependent: success hinges on organizational goals, user intent, and the quality of intermediate artifacts produced across long, multi-tool workflows.\n  We introduce LH-Bench, a three-pillar evaluation design that moves beyond binary correctness to score autonomous, long-horizon execution on subjective enterprise tasks. The pillars are: (i) expert-grounded rubrics that give LLM judges the domain context needed to score subjective work, (ii) curated ground-truth artifacts that enable stepwise reward signals (e.g., chapter-level annotation for content tasks), and (iii) pairwise human preference evaluation for convergent validation. We show that domain-authored rubrics provide substantially more reliable evaluation signals than LLM-authored rubrics (kappa = 0.60 vs. 0.46), and that human preference judgments confirm the same top-tier separation (p < 0.05), evidence that expert-grounded evaluation can scale without sacrificing reliability. We release public datasets and report results on two environments: Figma-to-code (33 real .fig tasks against the Figma API via MCP) and Programmatic content (41 courses comprising 183 individually-evaluated chapters on a course platform serving 30+ daily users).",
       "categories": [
         "cs.AI"
       ],

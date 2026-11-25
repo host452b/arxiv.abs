@@ -1,0 +1,23 @@
+Title: Native Block-Quantized Matrix Multiplication and Explicit K/V Residency with Dual-View Access for LLM Inference on RISC-V Vector Processors
+Authors: Weiying Wang, Yuanyang Xiang, Zhiwei Zhang
+ID: 2611.31937
+URL: https://arxiv.org/abs/2611.31937
+
+Abstract:
+Some key execution states in large language model inference persist across
+multiple instructions and are difficult to express and exploit within RVV
+semantics centered on individual operations. We define specialization boundaries
+according to data-state lifetimes and propose Quantized Block Streams (QBS) and
+Attention/KV Context (AKV) while preserving RVV programmability. QBS organizes
+native-block format processing, block traversal, integer computation, and
+ordered FP32 accumulation into a unified execution process, whereas AKV
+maintains local K/V residency and supplies operand views aligned with the
+computation direction while leaving Attention arithmetic on RVV. Cycle-accurate
+RTL evaluation shows that QBS achieves geometric-mean speedups of 35.68x and
+51.34x for projection Compute and Matmul, respectively, while AKV achieves a
+1.45x geometric-mean speedup over Tiled RVV for Decode Attention. Compared with
+the baseline, the complete design increases total area by 12.65%; on the
+evaluated projection workloads, throughput per area and energy efficiency
+improve by 46.63x and 19.78x, respectively. Further evaluation demonstrates
+applicability across multiple block-quantization formats and across models with
+different Attention organizations.

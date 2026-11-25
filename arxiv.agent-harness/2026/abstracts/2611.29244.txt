@@ -1,0 +1,26 @@
+Title: TurboFHE: An Efficient and Scalable Multi-GPU Framework for Homomorphic LLM Inference
+Authors: Honghui You, Haoping Yang, Wenzhe Wang, Lei Ju
+ID: 2611.29244
+URL: https://arxiv.org/abs/2611.29244
+
+Abstract:
+Fully homomorphic encryption (FHE) enables privacy-preserving large language
+model inference but remains computationally intensive. Existing multi-GPU FHE
+inference systems rely on expert-crafted parallelization plans that generalize
+poorly across hardware platforms and applications. We present \fwName, a
+framework that automatically compiles CKKS inference programs into efficient
+multi-GPU executables. Its compiler can split different nodes of the same
+computation graph at the ciphertext and polynomial level. Guided by a
+measurement-based performance model, its hardware-aware planner jointly
+optimizes task partitioning, placement, operand residency, and transfer
+scheduling. %Critical-path-guided rewrites extract shared computation and
+restructure homomorphic sums. Its backend then generates optimized GPU kernels
+and executes plans using CUDA graphs and selective point-to-point transfers.
+\fwName adapts its plans to diverse hardware configurations and FHE inference
+algorithms for large-scale models. On a single A100 GPU, \fwName achieves a
+$24.5\times$ speedup over THOR's reported BERT-Base inference latency. For
+Cerium's Llama-3-8B workload, \fwName outperforms Cerium's expert-crafted plans
+by $1.14\times$, $1.16\times$, and $1.24\times$ on 2, 4, and 8 RTX PRO~6000
+GPUs, respectively. On A100 GPUs, \fwName achieves $98.0\%$, $91.8\%$, and
+$79.3\%$ parallel efficiency for the same workload on 2, 4, and 8 GPUs,
+respectively.

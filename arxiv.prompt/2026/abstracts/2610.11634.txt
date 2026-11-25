@@ -1,0 +1,24 @@
+Title: LTBD: Learnable Trust-Boundary Delimiters for Prompt Injection Defense
+Authors: Luman Zhao, Minghui Xu, Yue Zhang, Yijun Yang
+ID: 2610.11634
+URL: https://arxiv.org/abs/2610.11634
+
+Abstract:
+Large language models (LLMs) perform remarkably well on complex tasks, yet
+remain highly vulnerable to prompt injection attacks, where malicious
+instructions embedded in external data can override user intent. Existing
+defenses remain limited by model fine-tuning requirements, vulnerability to
+adaptive attacks, or reliance on brittle handcrafted prompts. We argue that a
+fundamental source of this vulnerability is the lack of an explicit
+representation of trust provenance. To address this, we introduce Learnable
+Trust-Boundary Delimiters (LTBD), a lightweight defense that explicitly encodes
+trust boundaries in the input while keeping the LLM parameters unchanged. LTBD
+uses a small number of learnable delimiters to distinguish trusted user
+instructions from untrusted external data, enabling the model to better respect
+the intended trust hierarchy. Experimental results show that LTBD substantially
+outperforms inference-time defenses and performs competitively with training-
+based approaches, while preserving benign-task utility and introducing
+negligible inference overhead. In particular, LTBD achieves 0.00% ASR on
+AlpacaFarm and only 0.11-0.19% ASR on TaskTracker. LTBD also remains effective
+under adaptive attacks, where adversaries have full knowledge of the defense and
+explicitly attempt to bypass it.

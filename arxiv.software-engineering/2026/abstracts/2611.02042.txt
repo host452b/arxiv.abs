@@ -1,0 +1,30 @@
+Title: SANAI: Secure ECC Distributed Keyed Parity Embedded in Weights for Protecting Neural Networks against Bit-Flip Attacks
+Authors: Habibur Rahaman, Daniel Lobo, Md Rezoan Ferdous, Swarup Bhunia
+ID: 2611.02042
+URL: https://arxiv.org/abs/2611.02042
+
+Abstract:
+Quantized neural networks store weights in dense memory, where bit flips caused
+by voltage scaling, aging, radiation, or deliberate attacks such as RowHammer
+can severely degrade model behavior. A single corrupted high-order bit can cause
+misclassifications or nonsensical language-model outputs. Embedded error-
+correcting codes (ECC) avoid dedicated parity storage by hiding parity within
+model weights, but existing schemes embed uniformly across layers and bit
+planes, leave parity unsecured, and tolerate bit-error rates (BERs) only up to
+about 6%. An adversary aware of sensitive weights and the ECC scheme can also
+bypass protection by exceeding the correction capability of targeted codewords.
+We propose SANAI, a sensitivity-guided, bit-plane-selective scheme that protects
+critical model weights against bit flips with zero additional parity-storage
+overhead. SANAI secures parity through keyed embedding across a two-dimensional
+weight space: spread-transform dither modulation binds parity to a secret key,
+and keyed interleaving disperses concentrated attacks across codewords. We
+derive a survival law showing that robustness is governed by the correctable
+fraction t/n rather than by t alone, and a closed-form bound on the protectable
+fraction of a model. As a streaming checker on an 8x8 systolic array, SANAI
+verifies weights on the load path with 0.41% area overhead and no additional
+memory. Across ten vision backbones, three quantization schemes, and ten
+language models from 82M to 13B parameters, SANAI stays within about one
+percentage point of clean accuracy at BERs up to 12%, twice the maximum of prior
+embedded-ECC approaches. It survives fine-tuning bit-exactly, neutralizes
+progressive and targeted bit-flip attacks, and exactly corrects AttentionBreaker
+and SilentStriker attacks.

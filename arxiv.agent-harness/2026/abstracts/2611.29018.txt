@@ -1,0 +1,31 @@
+Title: Watermark Claims Under Test: Lessons from Auditing a Production LLM
+Authors: Felix Desyatirikov
+ID: 2611.29018
+URL: https://arxiv.org/abs/2611.29018
+
+Abstract:
+Can we tell whether an LLM is watermarked without knowing its secret key?
+Published black-box tests suggest that carefully designed prompts can reveal the
+statistical footprint of a watermark. This paper examines what happens when
+those tests move from controlled reference implementations to a deployed model
+whose watermarking parameters are undisclosed. We present an audit of the Red-
+Green watermark presence test on Claude. Across ten initial configurations, the
+published test never rejects on a model the provider states is watermarked,
+despite detecting a local reference at comparable sample sizes. Controlled
+experiments expose a failure mode: including the prompt in the watermark's
+repeated-context history suppresses marking exactly where the test measures it.
+The watermark remains active, but the probe becomes blind. Attempts to repair
+the probe reveal further confounds. Constructed contexts can trigger native
+digit-to-word preferences, while comparisons within a single response can
+measure how the model plans its answer. Tokenization changes which contexts the
+probe actually controls. These findings show why validation on a surrogate model
+does not establish validity on the model under investigation. A redesigned probe
+finds a substantial context-dependent shift on Claude Fable that is absent on
+two sibling controls. However, the pre-registered decision remains inconclusive
+because selective refusals violate the protocol, and the effect's watermark
+origin is unresolved. We show how to design controls, distinguish statistical
+rejection from evidence of watermarking and interpret a null without treating it
+as proof of absence. We provide researchers and practitioners working on LLM
+evaluation, watermarking, and provenance with an audit checklist grounded in
+concrete successes and failures. Code, prompts, and parsed responses are
+available for reproducing the analyses.

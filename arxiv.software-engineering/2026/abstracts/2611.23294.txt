@@ -1,0 +1,27 @@
+Title: From Ambiguous Tickets to Ranked Hypotheses: Multi-Agent Root-Cause Analysis for Autonomous Heavy-Vehicle Software
+Authors: Marten Seegers, Maximilian Kneissl, Enrique Aguayo-Lara, Chih-Hong Cheng
+ID: 2611.23294
+URL: https://arxiv.org/abs/2611.23294
+
+Abstract:
+Autonomous haulage systems run safety-critical software on driverless mining
+trucks, with no onboard driver to detect or mitigate abnormal behavior. Every
+failure in testing or operation must therefore be traced to its root cause to
+keep the safety case valid and limit downtime. An investigation often starts
+from a sparse ticket containing an approximate timestamp, sometimes a suspected
+cause, and a multimodal vehicle recording of several gigabytes. We present a
+multi-agent root-cause analysis (RCA) workflow that turns this input into a
+telemetry-grounded event chain, ranked causal hypotheses, and candidate code
+locations. A suspected cause in the ticket, which could anchor the analysis on a
+false theory, goes to a single LLM analyst in a separate agent session. Non-
+neural tools select the relevant telemetry once, before analysis, and an LLM
+condenses it into shared evidence artifacts; this more than halved the cost per
+incident compared with per-analyst querying. Specialist analyst agents then
+apply established RCA techniques in parallel, including fault tree analysis,
+Kepner-Tregoe analysis, and call-chain tracing, and hypotheses that several LLM
+analysts reach independently rank higher. We evaluated the workflow on 12 held-
+out industrial incidents against a single agent with the same model and tools.
+It located the faulty file more often (10 vs. 8 cases) at higher cost. Two human
+domain experts accepted a top-three hypothesis in 4 and 9 cases, respectively.
+The gap, which two LLM judges did not resolve, shows that rating causal
+explanations is itself a hard evaluation problem.

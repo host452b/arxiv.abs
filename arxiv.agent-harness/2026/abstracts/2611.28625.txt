@@ -1,0 +1,25 @@
+Title: IndexerStage: Staging Indexer-K across Memory Tiers for Sparse-Attention LLM Serving
+Authors: Xin Zhang, Weifeng Zhang, Xianyan Xie, Huijun Shen, Xijin Yin, Zhen He, Yinben Xia, Xiang Li, ZeKun He, Yachen Wang et al.
+ID: 2611.28625
+URL: https://arxiv.org/abs/2611.28625
+
+Abstract:
+Long-context sparse-attention serving can remain limited by graphics processing
+unit (GPU) memory after attention data is offloaded. DeepSeek Sparse Attention
+retains Indexer-K state to select the tokens that attention will read. Its
+indexer scans this growing state in full at every layer and decode step. A full
+scan requires the current layer's state, however, not simultaneous residency of
+every layer. We present IndexerStage, a serving runtime that externalizes
+Indexer-K state while preserving native GPU score, top-k, and attention kernels.
+It stages completed pages through shared execution buffers and preserves new
+entries locally. Joint memory-and-transfer admission checks storage and each
+layer's transfer demand before accepting a growing batch. The backing tier
+gathers pages; the model-serving GPU controls transfer timing and byte budgets.
+We implement IndexerStage in SGLang on 16 model-serving and 16 backing H800
+GPUs. Across 16K--64K inputs, local streaming storage occupies 0.65--0.70 GiB
+per model-serving GPU. Relative to host-memory-backed HiSparse, batch size
+increases by 12.28--23.08% and decode throughput in tokens per second (TPS)
+reaches 1.08--1.14x. At 64K with the latent-KV backing path fixed, the larger
+batch achieves 1.10x decode TPS; enabling streaming at batch size 24 adds 2.42%
+to time per output token. Mixed-length dynamic serving increases mean generating
+batch size by 12.07% and delivers 1.31x decode TPS.

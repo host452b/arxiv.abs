@@ -1,0 +1,31 @@
+Title: FUSE: A Partitioned Field-Exchange Framework for Coupling Physics Simulations in FEBio
+Authors: Steve A. Maas, Farhan Muhib, Jeffrey A. Weiss
+ID: 2607.01428
+URL: https://arxiv.org/abs/2607.01428
+
+Abstract:
+Computational biomechanics increasingly requires models that combine mechanics,
+transport, chemistry, and biological regulation across different spatial and
+temporal scales. The FEBio simulation software provides extensive open-source
+capabilities for modeling these processes using monolithic approaches. However,
+assembling independently developed physics models into reproducible coupled
+workflows remains challenging. Existing approaches often require custom scripts
+or external software pipelines, which can limit model reuse and complicate
+development. We present FUSE, the FEBio Unified Simulation and Exchange
+framework, a partitioned coupling plugin that enables separately defined FEBio
+models to communicate through structured field exchange. FUSE is designed for
+problems that are best solved independently, particularly when fast mechanical
+responses influence slower biological or chemical evolution. The framework uses
+a time-decoupled strategy in which a primary model advances on the longer time
+scale, while one or more secondary models are repeatedly initialized, supplied
+with updated fields, solved over shorter time horizons, with results returned to
+the primary model. Field exchange utilizes existing FEBio data maps, output
+fields, and user-specified filters, allowing coupled workflows to be constructed
+without modifying the underlying solvers. The framework was able to reproduce
+reference coupled solutions while handling bidirectional transfer, spatial field
+mapping, and filtered exchange of model variables. Example applications
+demonstrated coupling between mechanical loading and chemical degradation in
+injured cartilage and interaction between biological tissue formation and
+mechanical feedback during bone healing. By separating coupling logic from
+physics implementation, FUSE provides a practical mechanism for building
+maintainable multiphysics workflows within FEBio.

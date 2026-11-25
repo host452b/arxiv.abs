@@ -1,0 +1,31 @@
+Title: Cross-Dataset Inference of Central-Satellite Classification and Host Halo Masses from Galaxy neighbours with Machine Learning
+Authors: Alice Chen, Camille Avestruz, Niayesh Afshordi, Yen-Ting Lin
+ID: 2611.24803
+URL: https://arxiv.org/abs/2611.24803
+
+Abstract:
+The classification of galaxies as centrals or satellites gives insight into the
+galaxy-halo connection. This, together with halo mass estimates, can be used to
+connect observed galaxy populations to underlying dark matter structure. To (1)
+classify galaxies as centrals or satellites and (2) estimate the host halo mass
+for centrals, we train XGBoost models on IllustrisTNG (TNG100) galaxies, using
+the distances (3D or projected (2+1)D redshift space) and $M_*$ of their ten
+nearest neighbours. We then test the model on EAGLE to measure its robustness
+after applying a simple domain-alignment step that corrects for a relative shift
+in the $M_*$ distribution between TNG100 and EAGLE. We further augment the
+training data by combining feature sets from neighbour samples with varying
+lower $M_*$ thresholds. On the TNG100 test set, the central/satellite classifier
+reaches purity and completeness $=0.97$ (0.95) in 3D (projected redshift) space
+at the threshold where purity=completeness, and the halo-mass regressor achieves
+$r^2$=0.98 (0.93) when evaluated on true centrals and $r^2=0.93$ (0.93) when
+evaluated on inferred centrals. Applied to EAGLE after alignment, the classifier
+achieves purity/completeness $=0.95$ (0.95), while halo-mass inference yields
+$r^2=0.91$ ($0.87$) for true centrals and $r^2=0.83$ (0.77) for inferred
+centrals; training-data augmentation most improves the halo-mass estimation
+task. Satellites misclassified as centrals underpredict the true masses of host
+halos, especially if they are closer to a lower mass halo's central than its own
+host's central and/or has a significantly lower $M_*$ than its own central.
+These results show that survey-accessible information such as projected
+separations and stellar masses - combined with simulation-trained models and
+domain alignment - can enable reliable central identification and host halo mass
+estimation to an $r^2\geq 0.85$.

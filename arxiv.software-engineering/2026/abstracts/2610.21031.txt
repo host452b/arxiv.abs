@@ -1,0 +1,28 @@
+Title: Blind Watermarking of Software Repositories via Module Placement
+Authors: Khadija Mohamed, Khaled Fathy, Mamdouh Farouk, Mohamed M. Darwish
+ID: 2610.21031
+URL: https://arxiv.org/abs/2610.21031
+
+Abstract:
+Source-code watermarking supports provenance tracking by embedding a recoverable
+identifier in a software artifact. Many existing approaches encode this
+identifier in tokens or program syntax, exposing the watermark to
+transformations that modify the source text. We present PlaceMark, a blind
+watermarking system that encodes a payload in the placement of modules within a
+repository. Each eligible module is identified by its filename and top-level
+definition names. A secret key determines its ordered candidate destinations and
+its position in the reading order; the module's location within its candidate
+list determines the encoded symbol. Embedding relocates selected modules and
+updates their import references. Extraction uses the distributed repository, the
+key, and agreed decoding parameters, without an original copy or placement
+ledger. Capacity measurements on ten Python repositories yield nominal
+capacities of 249 to 2,166 bits in nine repositories, while one provides no
+placement channel. In 216 trials of the evaluated text transformations, the
+payload is recovered exactly. Relocation degrades recovery gradually on Django,
+Airflow and Salt, while on Pylint a path-based exclusion in our implementation
+lets relocation change carrier membership, and we measure it for an untargeted
+adversary and for one that concentrates its budget on the public carrier set.
+Changes to filenames or definition names alter the identity input and are
+measured separately. Exact recovery also depends on placement feasibility. The
+results characterize module placement as a carrier that can complement
+watermarks embedded in source text.

@@ -1,0 +1,26 @@
+Title: Bilinear Hulls for Support Splitting: Characterization, Optimization, and Applications
+Authors: Yusuke Aikawa, Keita Ishizuka, Tomoki Moriya
+ID: 2611.01337
+URL: https://arxiv.org/abs/2611.01337
+
+Abstract:
+Sendrier's Support Splitting Algorithm (SSA) is the standard solver for the
+Permutation Equivalence Problem (PEP); its cost is dominated by a term that
+grows exponentially in the hull dimension. We study, mathematically, how much
+this cost can be lowered by replacing the standard inner product, on which the
+hull is defined, with an alternative bilinear form. Two structural results give
+a complete answer: only a narrow two-parameter family of bilinear forms produces
+a hull on which SSA can still operate, namely those whose matrix in the standard
+basis is a linear combination of the identity and the all-ones matrix; and even
+within this family the hull dimension drops by at most one (with the reduction
+achieved on every self-dual code whose length is coprime to the field
+characteristic). Together, these results give a tight upper bound: since SSA on
+a code with hull dimension $h$ has cost dominated by $q^h$, replacing the
+standard hull with $\mathrm{Hull}_M$ lowers this dominant term from $q^h$ to at
+best $q^{h-1}$, so no bilinear-form generalization of the inner product can
+reduce the SSA cost by more than a factor of $q$, the field size. Going beyond
+this requires invariants outside the bilinear framework. As an application, we
+verify that PEP-based SPECK admits the factor-$q$ cost reduction, while LEP-
+based LESS and PKP-based PERK lie outside our framework. A SageMath
+implementation of the bilinear-hull preprocessing confirms feasibility at
+SPECK's recommended length $n = 252$.

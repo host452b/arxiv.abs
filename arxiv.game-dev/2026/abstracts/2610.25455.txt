@@ -1,0 +1,31 @@
+Title: Self-Crystallizing Behavior Trees: Amortizing Foundation-Model Reasoning into Deterministic Control for Autonomous Drones
+Authors: Behnam Moradi
+ID: 2610.25455
+URL: https://arxiv.org/abs/2610.25455
+
+Abstract:
+Classical robot control, Finite State Machines and Behavior Trees (BTs), is
+deterministic and inspectable but fixed at design time: it fails on situations
+its designers did not anticipate. Foundation models can synthesize new control
+logic at runtime, at a cost in latency and non-determinism hard to accept in
+safety-critical aerial systems. Existing LLM-driven approaches keep the model in
+the loop permanently and discard what it produces. We propose Self-Crystallizing
+Behavior Trees (SCBT), in which the foundation model is a compiler rather than a
+runtime. When a BT node fails, an LLM proposes a minimal, mission-agnostic
+subtree patch; CMA-ES tunes its parameters in simulation; a contextual bandit
+decides whether a stored patch or a new LLM call is worth its cost; and a three-
+stage admission pipeline (static check, invariant-monitored replays, an
+empirical margin over the unpatched tree) admits only patches that demonstrably
+recover. Admitted patches are stored in a fleet library and, once the LLM call
+rate decays, crystallized into a deterministic BT that no human wrote. We
+implement SCBT on Microsoft Project AirSim with a schema-constrained LLM
+pipeline (Gemini 3.1 Pro) and a lockstep simulator. Over three seeds of a
+20-episode learning phase with wind-gust and battery failures, SCBT used
+$11\pm1.4$ LLM calls against 26 for whole-tree regeneration and 22 without a
+library, with 0.33 calls per episode in the second half. The crystallized trees,
+28 and 33 nodes with two patches each, reached $97\pm2\%$ mission success with
+no learning running, against 12\% for the unpatched tree and 98\% for a hand-
+coded expert tree, and reproduce decision traces exactly when re-ticked offline.
+Two negative results: replay admission rejected useful wind recoveries by
+attributing wind-induced geofence excursions to the patch, and a static-only
+ablation generalized better to held-out failures.

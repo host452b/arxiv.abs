@@ -1,0 +1,19 @@
+Title: ICLHerd: Herding-Based Data Selection for LLMs with In-Context Learning as a Proxy
+Authors: Yuqiao Wen, Lili Mou
+ID: 2610.27142
+URL: https://arxiv.org/abs/2610.27142
+
+Abstract:
+Data selection plays a central role in modern large language model training, as
+the quality of training data strongly influences downstream performance. A
+common approach is to curate a development set that encodes the desired skills
+(e.g., reasoning or multilinguality) and select data that are similar to them.
+Existing methods compute similarity using cosine distance over either the
+model's hidden states or gradients. However, we observe that this max-similarity
+strategy induces a mode-seeking bias: the selected data clusters tightly around
+the development samples. To address this, we propose ICLHerd, a data selection
+framework that leverages the von Mises-Fisher kernel to balance mode-seeking
+with mode-averaging. We further introduce in-context learning as a validation
+proxy, enabling efficient hyperparameter search over the balance trade-off.
+Results show that ICLHerd outperforms existing LLM data selection algorithms,
+highlighting the importance of balancing mode-seeking and mode-averaging.

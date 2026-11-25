@@ -1,0 +1,29 @@
+Title: Right Verdict, Right Reason? An Execution-Grounded Study of Whether LLM Vulnerability Detectors Understand Vulnerabilities
+Authors: Leizhen Zhang, Sheng Chen
+ID: 2611.28584
+URL: https://arxiv.org/abs/2611.28584
+
+Abstract:
+Large language models (LLMs) are increasingly used to detect vulnerabilities,
+and their benchmark scores are often read as evidence that they understand the
+vulnerabilities they report. We test this reading against program execution. For
+515 C and C++ functions from BigVul and PrimeVul whose vulnerability we
+reproduce with a proof of concept, we identify the line at which the fault
+occurs and the statements on which the faulting run depended. These facts ground
+a ladder of five tests, from telling a vulnerable function from its fixed
+version, through locating the fault and reacting to its removal, to judging
+execution-confirmed edits and predicting the outcome of a concrete run. Each
+test is paired with a baseline that needs no understanding, such as a rule that
+picks lines with risky calls, and we repeat the study on 195 vulnerabilities
+published after the training cutoffs of the models. Four findings emerge. First,
+telling a vulnerable function from its fixed version is hard. The open-weight
+models separate no more pairs than chance, although five of them show a weak
+sensitivity to the fix, and the commercial models still label many screened
+fixed versions vulnerable. Second, the commercial models locate the fault beyond
+a keyword rule, while removing that evidence changes the verdicts of the
+strongest model only on the newer vulnerabilities. Third, given the program
+input, the commercial models predict whether a run faults better than a rule
+that looks for added checks, and the prediction follows the input. Fourth, on
+the newer vulnerabilities this advantage disappears and the lead of the
+strongest model narrows, while localization persists. We release the framework,
+the per-function evidence, and an execution-confirmed counterfactual benchmark.

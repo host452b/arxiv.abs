@@ -1,0 +1,24 @@
+Title: Same Evidence, Different Verdicts: Delivery of CT Images and DICOM Metadata Changes VLM Quality-Control Decisions
+Authors: Nicolas Avelar
+ID: 2611.18790
+URL: https://arxiv.org/abs/2611.18790
+
+Abstract:
+Vision-language models (VLMs) are being proposed as automated checks on clinical
+imaging inputs, where a scan and its DICOM metadata can disagree; a truncated CT
+series wrongly admitted to volumetric follow-up, such as lung-nodule growth
+assessment in screening, biases the measurement. A natural safeguard is to let
+the model judge the image before it sees the metadata. We find this backfires.
+On 60 NLST chest CT pairs with coverage defects whose ground truth is computed
+from scan geometry, a false header that Claude Haiku 5.5 resisted when shown
+with the image (2% of its detections overruled) overturned 91% of them when it
+arrived after the model's answer (Nemotron-3.5-VL 43% to 100%). With the order
+reversed, the image overturned 98-100% of the header's errors (Claude models):
+whichever source came second won. This is not generic sycophancy: a neutral
+"please confirm" reversed 0 of 1,072 correct refusals, and the effect persisted
+when the header arrived as a tool result, as in agentic pipelines. One warning
+sentence cut sequential reversal to at most 9%, and the pattern held on 24 real
+mismatched pairs. Contributions: (i) evidence that VLM input-check decisions on
+identical evidence depend on delivery; (ii) a testbed with exact geometric
+ground truth; (iii) a validation protocol for clinical VLM input checks. Code,
+prompts and all call logs: https://github.com/nav92061/ct-vlm-delivery-order

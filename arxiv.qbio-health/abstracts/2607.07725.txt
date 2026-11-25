@@ -1,0 +1,28 @@
+Title: SHIFT: Survival Prediction from Incomplete and Heterogeneous Genomic Data
+Authors: Muhammet Sami Yavuz, Ayhan Can Erdur, Sabri Mustafa Kahya, Benedikt Wiestler, Jana Lipkova
+ID: 2607.07725
+URL: https://arxiv.org/abs/2607.07725
+
+Abstract:
+Genomic prediction models often fail to transfer across institutions because
+sequencing panels differ across sites, creating structural feature missingness
+at deployment. Existing approaches to this challenge typically restrict analysis
+to genes shared across cohorts, exclude patients with incomplete profiles, or
+rely on test-time imputation, all of which can reduce robustness and limit the
+use of multi-center data. We propose Survival prediction Handling Incomplete
+Features using Transformer (SHIFT), a missingness-aware survival model that
+directly predicts from incomplete genomic inputs without test-time imputation.
+SHIFT represents each genomic feature separately and uses masked self-attention,
+along with a feature-availability mask, so that predictions are based only on
+observed inputs. Further, we introduce variable-rate feature masking during
+training to improve robustness to heterogeneous missingness patterns. We
+evaluate the approach on glioblastoma and lung squamous cell carcinoma with
+external validation across multiple cohorts, including a challenging setting
+with severe cross-cohort panel mismatch. Across these settings, SHIFT shows
+strong generalization and compares favorably with standard survival baselines
+and imputation-based approaches, while using a single model across differing
+feature sets. We also find that incorporating patients from incomplete cohorts
+during development can improve performance on external data, suggesting that
+partially observed cohorts need not be excluded from model building. These
+results support missingness-aware modeling as a practical strategy for multi-
+center survival prediction in precision oncology.

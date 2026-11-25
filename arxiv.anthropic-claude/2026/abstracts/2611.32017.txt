@@ -1,0 +1,29 @@
+Title: Learning Agent States for Latent Action Modeling
+Authors: Shaoan Xie, Fan Feng, Peiyuan Zhu, Peter Spirtes, Kun Zhang
+ID: 2611.32017
+URL: https://arxiv.org/abs/2611.32017
+
+Abstract:
+Latent action models (LAMs) learn action-like latents from unlabeled video by
+coupling frame-pair inference with latent-conditioned prediction, enabling
+policy and world-model pretraining. However, what the latent must explain
+depends on the representation space used for action inference and transition
+prediction. When this space entangles the agent's evolving physical state with
+visual context, such as background and persistent agent appearance, inferred
+latents can encode information unrelated to the agent's actions. To address this
+challenge, we propose Agent-State LAM, which jointly learns a compact agent-
+state representation and latent actions modeling its transitions. The compact
+state aggregates dense visual features into a shared space for both action
+inference and forward prediction. To guide what this state retains, we introduce
+spatially matched temporal discrimination (SMTD), which trains the state to
+distinguish its source frame from nearby frames through spatially flexible
+matching with frozen local visual features. Rather than comparing global frame
+representations, SMTD scores each frame by emphasizing its strongest local
+feature matches across spatial locations. This scoring allows background and
+persistent agent appearance to remain matched across frames despite
+displacement, making these shared cues less informative for identifying the
+source frame and encouraging the representation to capture the agent's evolving
+physical state. Extensive experiments on distracting control tasks and six real
+robot video datasets demonstrate improved action recovery, downstream control,
+and world-model prediction. Code and checkpoints are available at
+https://github.com/Mid-Push/Agent-State-LAM.

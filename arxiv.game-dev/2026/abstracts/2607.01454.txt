@@ -1,0 +1,27 @@
+Title: SE(2) Navigation Mesh
+Authors: Shuyang Shi, Kaixian Qu, Changan Chen, Ines Kast, Yuntao Ma, Marco Hutter
+ID: 2607.01454
+URL: https://arxiv.org/abs/2607.01454
+
+Abstract:
+Global navigation for ground robots in complex multi-level environments requires
+representations that accurately capture traversable regions while enabling
+efficient path planning. Current approaches present key limitations: Point
+clouds and volumetric occupancy maps lack explicit surface structure for
+traversability estimation, whereas direct pathfinding on dense triangle meshes
+is computationally prohibitive. Navigation meshes mitigate these challenges
+through polygonal abstraction of the underlying mesh, but assume yaw-invariant
+traversability, rendering them unsuitable for non-circular robots in constrained
+spaces. We propose SE(2) Navigation Mesh (SE(2) NavMesh), a polygonal
+representation of traversable regions that encodes yaw-dependent traversability.
+Our method evaluates traversability using footprint masks and constructs a graph
+over yaw-specific layers with explicit translational and rotational
+connectivity. Grounded in this representation, we develop an A*-String
+Pulling-A* (ASA) pathfinding strategy that hierarchically optimizes robot
+position and heading. We also present an online method that incrementally
+updates the SE(2) NavMesh from streaming point clouds during concurrent geometry
+reconstruction. In simulation, the SE(2) NavMesh captures over 50% more
+traversable area than classical NavMeshes, and the SE(2) NavMesh + ASA pipeline
+consistently outperforms sampling-based baselines in constrained environments.
+Extensive real-world experiments on a physical robot validate real-time online
+generation and successful navigation across multiple environments.

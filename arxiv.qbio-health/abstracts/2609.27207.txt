@@ -1,0 +1,24 @@
+Title: BreCol: Benchmarking Classical and Deep-Learning Methods for Microbiome-Based Cancer Detection
+Authors: Jeffrey M. Dick
+ID: 2609.27207
+URL: https://arxiv.org/abs/2609.27207
+
+Abstract:
+DNA sequencing of the gut microbial community shows promise for cancer
+detection, but questions remain about the generalizability of results across
+studies. We propose BreCol, a benchmark of 2,040 16S rRNA gene sequencing runs
+across 26 studies spanning breast cancer, colorectal cancer, and healthy
+cohorts. Train-test splits are made within pre-2023 studies, while holdout
+evaluation uses studies from 2023 onward, reflecting temporal separation from
+training data. Classical models reach test/holdout AUCs of 0.77/0.60 for cancer
+diagnosis and 1.00/0.83 for cancer type prediction. We train the models on both
+cancer types simultaneously and find that colorectal cancer is often easier to
+detect than breast cancer. We also evaluate two deep learning models: HyenaDNA,
+a long-range sequence model that pools hidden states for classification, and
+SetBERT, a transformer that produces contextualized embeddings over sets of
+reads. Both deep learning models underperform the best classical methods on
+holdout data, though tuning training set size and the classification head yields
+modest gains. Our classical pipeline uses unsupervised clustering to derive
+features from tetramer frequencies, preserving within-run compositional signal
+and achieving near state-of-the-art performance without relying on taxonomic
+assignments. BreCol data and associated code are publicly available.

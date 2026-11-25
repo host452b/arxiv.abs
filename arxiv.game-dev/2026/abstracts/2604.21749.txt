@@ -1,0 +1,24 @@
+Title: CuRast: Cuda-Based Software Rasterization for Billions of Triangles
+Authors: Markus Schütz, Lukas Lipp, Elias Kristmann, Michael Wimmer
+ID: 2604.21749
+URL: https://arxiv.org/abs/2604.21749
+
+Abstract:
+Previous work shows that small triangles can be rasterized efficiently with
+compute shaders. Building on this insight, we explore how far this can be pushed
+for massive triangle datasets without the need to construct acceleration
+structures in advance. Method: A 3-stage rasterization pipeline first rasterizes
+small triangles directly in stage 1, using atomicMin to store the closest
+fragments. Larger triangles are forwarded to stages 2 and 3. Results: CuRast can
+render models with hundreds of millions of triangles up to 2-5x (unique) or up
+to 12x (instanced) faster than Vulkan. Vulkan remains an order of magnitude
+faster for low-poly meshes. Limitations: We currently focus on dense, opaque
+meshes that you would typically obtain from photogrammetry/3D reconstruction.
+Blending/Transparency is not yet supported, and scenes with thousands of low-
+poly meshes are not implemented efficiently. Future Work: To make it suitable
+for games and a wider range of use cases, future work will need to (1) optimize
+handling of scenes with tens of thousands of nodes/meshes, (2) add support for
+hierarchical clustered LODs such as those produced by Meshoptimizer, (3) add
+support for transparency, likely in its own stage so as to keep opaque
+rasterization untouched and fast. Source Code:
+https://github.com/m-schuetz/CuRast

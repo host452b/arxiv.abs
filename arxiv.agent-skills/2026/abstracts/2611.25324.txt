@@ -1,0 +1,23 @@
+Title: Verified Netlist-to-RTL Recovery with LLM Agents
+Authors: Ahmet Efe, Recep Bugra Uludag, Ulya R. Karpuzcu
+ID: 2611.25324
+URL: https://arxiv.org/abs/2611.25324
+
+Abstract:
+Gate-level netlists circulate among IP integrators and foundries and can be
+extracted from chips. Reverse engineering them into readable register-transfer-
+level (RTL) code would help an adversary understand and modify a design, but
+remains difficult because word-level operations are scattered across many gates.
+Large language models (LLMs) can write and optimize RTL, but often fail to
+recover it from a whole netlist. We propose LOCA (LOgic Cone Attack), an LLM-
+based attack that divides an anonymized netlist into logic cones, has parallel
+agents rewrite them, and assembles compact RTL. Each cone contains the complete
+next-state logic of a group of related registers, giving an agent a small,
+meaningful task. Of five partitioning methods tested, only grouped cones lead to
+recovery. LOCA keeps only RTL proven equivalent to the netlist and measures its
+quality by compression. Function-preserving obfuscation does not stop LOCA on
+the tested designs, whereas unknown keys or hidden cell functions prevent it
+from proving recovery of the original design. Across 21 model-design pairs, LOCA
+recovers 17, versus 6 with whole-netlist prompting. Per-run recovery across
+models rises from 5% to 74%, at a median cost below one dollar with a low-cost
+model.

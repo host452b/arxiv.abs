@@ -1,0 +1,27 @@
+Title: Plug-and-Play Sensor Evolution in Software-Defined Vehicles through Asset Administration Shells
+Authors: Akshay Narla, Nasser Jazdi, Michael Weyrich
+ID: 2611.23298
+URL: https://arxiv.org/abs/2611.23298
+
+Abstract:
+Software-defined vehicles (SDVs) promise continuous software evolution, but
+sensor integration in deployed vehicles still depends on manual configuration,
+hardware-specific drivers, and repeated application-side adaptation. Existing
+standards address only parts of this problem. AUTOSAR standardizes selected
+sensor interfaces, the Vehicle Signal Specification (VSS) standardizes signal
+semantics, and Asset Administration Shells (AAS) standardize digital asset
+descriptions. However, these building blocks are rarely combined into an end-to-
+end onboarding path for sensors attached after vehicle deployment. This paper
+presents an AAS-driven plug-and-play sensor integration framework for safety-
+supervised sensors. Each sensor is represented by an AAS that combines hardware
+identification, interface metadata, VSS mappings, and references to
+containerized driver and optional application software. After physical
+connection, an edge gateway identifies the device, retrieves the matching AAS,
+deploys the referenced software, and publishes the resulting data under stable
+vehicle signal paths. A prototype on a resource-constrained edge gateway
+connected to an RR100 UGV demonstrates automated integration of a USB camera and
+an ultrasonic sensor. Across repeated integration cycles, the prototype reaches
+operational state in about 2s, shows no failed events, and keeps applications
+independent of hardware-specific interfaces. The results indicate that the
+introduction of AAS as an executable onboarding contract enables automated
+runtime deployment of sensor drivers in SDV environments.

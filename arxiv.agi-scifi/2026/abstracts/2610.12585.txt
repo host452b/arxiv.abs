@@ -1,0 +1,29 @@
+Title: Parallel Design of a GPU-Resident Semi-Lagrangian Drift-Kinetic Solver on Unstructured Extruded Tokamak Meshes
+Authors: Mark F. Adams
+ID: 2610.12585
+URL: https://arxiv.org/abs/2610.12585
+
+Abstract:
+Semi-Lagrangian (SL) schemes advect a distribution function along
+characteristics and remap it to a fixed grid. They are unconditionally stable
+without a global solve, and with discontinuous Galerkin (DG) integration the
+transfer along a magnetic field line conserves mass exactly. This paper presents
+the parallel and GPU design of a 3X+2V SLDG drift-kinetic tokamak solver on
+unstructured, flux-surface-aligned poloidal planes of shaped cross section,
+extruded toroidally. Transport follows magnetic field lines across the planes,
+and each velocity channel advances a fixed distance per step, proportional to
+its parallel speed, so the halo depth a channel needs grows with its speed.
+Velocity-dependent ragged halos exploit this, sending each channel only its own
+upwind depth. The 4D decomposition includes the toroidal angle, the 2D poloidal
+plane and the magnetic moment, and leaves the parallel velocity whole: no stage
+transports across the magnetic moment, while a parallel-velocity partition would
+put a halo inside the acceleration stage. On NVIDIA A100s the design strong-
+scales over the magnetic-moment axis from one to 12 four-GPU nodes, and a weak
+series of three points refining all five phase-space dimensions together, 16x in
+total per series point, holds a weak-scaling efficiency of 75% on 16 GPUs and
+57% on 256, from a one-GPU base case. The pointwise interpolations within the
+poloidal plane do not conserve mass, and the full step's mass drift stays below
+2.1x10^-5 at every series point. The design was implemented with an AI code
+assistant under a machine-checked regression discipline, in which every change
+is held to one of four exactness classes, from bit-identical to a physics rate
+within a stated tolerance.

@@ -1,0 +1,31 @@
+Title: Ceiling of a Task: When Can a Transformer Succeed Without Its Chain of Thought?
+Authors: Jiashu He, Jinxuan Fan, Xiao Xiao, Radu Marculescu, Alejandro Ribeiro
+ID: 2609.33134
+URL: https://arxiv.org/abs/2609.33134
+
+Abstract:
+Reasoning models generate long chains of thought before they answer, yet it is
+debated whether the content of these chains does real computational work or is
+largely decorative. We study this question by viewing a transformer as a shallow
+circuit. One forward pass through a fixed number of layers has constant depth,
+so any procedure that runs the model a constant number of times is a shallow
+circuit. We call the best accuracy that a shallow circuit can reach on a task
+the ceiling of the task, and a task is serial if its ceiling lies below one. We
+prove three results on serial tasks that hold for every transformer, no matter
+how it was trained. Necessity: replacing the chain by anything that does not
+depend on its content, such as filler tokens or a restatement of the question,
+drives the accuracy down to the ceiling, and on a maximally serial task down to
+chance. Depth: no shallow computation can write the chain of a model whose
+accuracy exceeds the ceiling, not even approximately. Locality: the answer is
+one shallow pass away from the finished chain, so all of the serial reasoning
+happens in the chain. On word problems of finite groups, whose ceilings are
+known, small transformers trained from scratch, with or without reinforcement
+learning, attain the predicted numbers: chain-trained models solve every input
+length and fall to chance when the chain is erased, chainless models collapse to
+the ceiling as the input length grows, and open-weight reasoning models given
+the same problem in words return to the baseline without their chain. On
+MATH-500 and AIME, erasing the chain costs open reasoning models 0.52 to 0.82
+accuracy, a sentence shuffle is harmless, and a token shuffle is as harmful as
+erasing; the same holds for checkpoints trained by GRPO with a correct or a
+random reward. The ceiling of a task therefore answers when a transformer can
+succeed without its chain of thought.

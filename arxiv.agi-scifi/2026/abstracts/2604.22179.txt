@@ -1,0 +1,23 @@
+Title: Hardware-Software Co-Design for Event-Driven SNN Deployment on Low-Cost Neuromorphic FPGAs
+Authors: Jiwoon Lee, Souvik Chakraborty, Syed Bahauddin Alam, Cheolsoo Park
+ID: 2604.22179
+URL: https://arxiv.org/abs/2604.22179
+
+Abstract:
+Low-cost FPGA platforms can broaden access to neuromorphic systems research, but
+current spiking neural network (SNN) workflows remain divided between hardware-
+first implementations, which are difficult to integrate with PyTorch-style
+development, and software-first frameworks, which often stop at simulation or
+GPU execution. This paper presents a semantics-preserving hardware-software co-
+design framework for the deterministic deployment of PyTorch-defined SNNs to
+event-driven FPGA execution. A single exported artifact carries weights,
+thresholds, connectivity descriptors, and grouped time-to-first-spike (TTFS)
+decoding metadata from software definition to board execution and is reused
+unchanged by both the software reference and the board runtime. A 10-class MNIST
+TTFS classifier implemented in the routed 80 MHz design achieves 87.40% accuracy
+and matches the software reference on all 10,000 test images. The programmable-
+logic path delivers a service latency of 0.1375 μs/image and an estimated
+dynamic energy of 31.6 nJ/image, while scope-aware comparisons with matched GPU
+and CPU baselines keep accelerator-only and system-level measurements distinct.
+These results show that low-cost event-driven FPGA hardware can provide a direct
+and reproducible software-to-board path for software-defined SNN models.

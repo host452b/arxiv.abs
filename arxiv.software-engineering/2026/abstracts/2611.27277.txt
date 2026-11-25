@@ -1,0 +1,26 @@
+Title: Stratum: A Hardware-Software Co-Design Framework for SNN Inference on RISC-V
+Authors: Wajahat Riaz, Muhammad Adeel Pasha, Shahid Masud, Muhammad Ali Siddiqi
+ID: 2611.27277
+URL: https://arxiv.org/abs/2611.27277
+
+Abstract:
+Efficient spiking neural network (SNN) inference on RISC-V processors requires
+tracing implementation costs back to the compiler and hardware decisions that
+produce them. Training environments, compilers, and cycle-level simulators,
+however, typically operate as distinct tools, making this attribution difficult.
+This paper presents Stratum, a framework that integrates an snnTorch-trained
+SNN, an MLIR-based compiler stack, and a cycle-level gem5-based RISC-V model
+into a unified workflow. Stratum exposes two optimization levers, software
+decisions in the generated code and hardware configuration choices in the
+simulated core, and uses stage-level cycle measurements to identify performance
+bottlenecks. We demonstrate Stratum on a two-layer N-MNIST network with three
+controlled comparisons: (i)~dense vs.\ spike-gated lowering of
+\texttt{snn.linear}, (ii)~output-outer vs.\ spike-major weight layout with
+spike-gating enabled in both binaries, and (iii)~L2 cache capacity with both
+layouts. Our spike-gated lowering reduces simulated inference time by $64\times$
+(453.2\,ms to 7.04\,ms), and our spike-major layout cuts it by a further 37.2\%
+(to 4.42\,ms) at 4\,MiB L2, with the predicted class unchanged. The layout
+speedup grows from $1.59\times$ to $1.88\times$ when L2 shrinks to 1\,MiB. These
+results show that Stratum enables rapid early evaluation of design choices at
+both the software level (compiler stack) and the hardware level (cycle-level
+gem5 simulation).

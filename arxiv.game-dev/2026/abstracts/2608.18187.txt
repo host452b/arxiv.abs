@@ -1,0 +1,31 @@
+Title: AdaRare: Telemetry-Guided Joint Profile Control for Greybox Fuzzing
+Authors: Jingchuan Ma, Tongan Liu, Yanhua Liu, Qiaoyun Huang
+ID: 2608.18187
+URL: https://arxiv.org/abs/2608.18187
+
+Abstract:
+Greybox fuzzers combine interacting queue, mutation, dictionary, energy, and
+comparison-solving control surfaces, while prior adaptive systems typically
+optimize other decision objects or control layers. We present AdaRare, an AFL++
+extension that coordinates five internal actuation mechanisms as one bounded in-
+process profile updated every 5,000 ms. Completed-window, action-induced
+telemetry feeds an arm-local recency-weighted linear scorer and a profile-
+conditioned controller target. The scorer borrows the algebraic structure of
+disjoint LinUCB, but serves as a closed-loop profile-ranking mechanism rather
+than a calibrated contextual-bandit action-value estimator or statistical
+confidence bound. Across three sequential repeated-trial phases, Main provides
+broad integrated-system evidence: AdaRare has higher median edge coverage than
+vanilla AFL++ on all eight targets, with five Holm-significant comparisons. In
+the strongest matched result, Full AdaRare has higher median edge coverage than
+CmpLog-matched AFL++ on all five follow-up targets, with four Holm-significant
+comparisons. Batch A finds higher medians for telemetry-guided selection than
+fixed-context, random, and round-robin schedules in all 15 target-control
+comparisons, with 13 Holm-significant comparisons. The experiments do not
+establish independent No-A6-versus-Shadow or scarcity-bundle effects; A6
+evidence is target-dependent and weakens under batch-wide correction. In an
+unmatched firmware case study, AdaRare-generated inputs exposed five distinct
+memory-corruption findings, each reproduced in a separate environment and later
+assigned a CVE identifier. Controller-boundary compute P99 medians are below 6.5
+ms for a five-second window; complete-boundary P99 medians including synchronous
+logging are below 14.7 ms. These measurements characterize boundary latency, not
+total system overhead.

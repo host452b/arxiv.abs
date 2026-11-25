@@ -1,0 +1,30 @@
+Title: MoE Pretraining:Parallelism Layout Changes the Model, Not Quality
+Authors: Esther Xin
+ID: 2611.15271
+URL: https://arxiv.org/abs/2611.15271
+
+Abstract:
+Large Mixture-of-Experts (MoE) models are trained across many machines, and the
+way the work is split, the parallelism layout, often changes between runs: a job
+resumes on a different GPU count, a cluster is resized, or an ablation runs on a
+new setup. In exact arithmetic the layout should not matter, but in real
+arithmetic it changes the order in which numbers are added, and some MoE rules
+such as load balancing and expert capacity are often computed per machine. We
+ask whether the layout changes the trained MoE model. We pretrain the same small
+MoE language models (25M to 117M parameters, 20M FineWeb-Edu tokens) with the
+same seed, data and hyperparameters under 9 data-parallel and expert-parallel
+layouts, in fp32 on CPUs and fp16 on a GPU, and compare each run with the effect
+of a new random seed. Across 80 runs we find: (1) The layout does not change
+model quality, but it does change the model: final predictions differ about 80%
+as much as with a new seed, and over 90% of routing decisions differ. Any
+layout, a one-bit change to one weight, or a different CPU thread count has the
+same effect. (2) The cause is the router: decisions that flip are almost exactly
+those where two experts were nearly tied (AUC 0.97 to 1.00 in the first 16
+steps). (3) More, smaller experts create more near-ties (2.7% with 8 experts,
+23% with 64) and less reproducible routing (68% vs. 100% of decisions differ),
+but outputs do not drift further. (4) A dense model of the same active size is
+far more stable (0.12x the seed level in fp32, 0.58x in fp16), while the MoE
+reaches about 0.8x at both precisions and twice as fast. (5) When pretraining
+resumes on a new layout, timing matters: switching at 84% of pretraining barely
+changes the final model, while switching at 10%, just after warm-up, changes it
+substantially. We release code, run logs and data.

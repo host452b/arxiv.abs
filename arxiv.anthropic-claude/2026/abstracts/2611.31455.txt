@@ -1,0 +1,25 @@
+Title: The Fingerprinting Paradox: Why Sensitivity Undermines Black-Box Model Integrity Verification
+Authors: Shahinul Hoque, Farhin Farhad Riya, Jinyuan Sun, Fnu Suya
+ID: 2611.31455
+URL: https://arxiv.org/abs/2611.31455
+
+Abstract:
+Black-box integrity verification aims to detect unauthorized modifications to
+outsourced models using only prediction APIs. Existing frameworks seek to
+improve verification efficiency through sensitive fingerprints: queries whose
+predictions are more likely to change under tampering than those of genuine
+inputs. We show that this sensitivity can also help dishonest providers
+recognize verification queries and selectively conceal tampering. We prove that
+excess sensitivity relative to genuine inputs lower-bounds statistical
+distinguishability. We evaluate five integrity verification frameworks across
+three model architectures, three datasets, and three adversarial knowledge
+settings. When the deployed framework is known, our fingerprint detectors
+achieve AUCs at least 0.989, and selective filtering makes all five frameworks
+require significantly larger estimated query budgets than genuine inputs,
+reversing their intended efficiency advantage. A query-efficiency advantage
+remains marginally in a small subset of evaluated settings with poor detection
+transfer. We further design verification methods under stronger concealment
+constraints but find that reduced detectability comes with losses in sensitivity
+or fingerprint-generation success. Our results expose a sensitivity-
+detectability tension and show that sensitivity alone does not ensure efficient
+black-box verification against adaptive malicious providers.

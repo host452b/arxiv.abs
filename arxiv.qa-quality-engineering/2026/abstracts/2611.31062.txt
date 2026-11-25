@@ -1,0 +1,22 @@
+Title: X-BQSR: Holistic Acceleration of Base Quality Recalibration for Scalable Genomic Analysis
+Authors: Eugenio Marinelli, Ivan Donchev Kabadzhov, Raja Appuswamy
+ID: 2611.31062
+URL: https://arxiv.org/abs/2611.31062
+
+Abstract:
+With the continued decline in sequencing costs, genomics-based precision
+medicine is gaining increasing importance. The Genome Analysis Toolkit (GATK) is
+the standard framework for converting raw genomic data into actionable variants,
+but one of its most expensive steps is base quality score recalibration (BQSR),
+which corrects systematic sequencing errors. Despite significant work on
+accelerating other parts of the variant calling pipeline, BQSR has not been
+systematically explored on GPUs. In this work, we analyze BQSR to identify
+computational and I/O bottlenecks and show that simply offloading key stages to
+an accelerator is insufficient to achieve overall gains. We then present X-BQSR,
+a holistic redesign of the entire BQSR pipeline, including I/O, compression, and
+kernel execution, to better leverage GPU parallelism. We implement X-BQSR using
+portable SYCL kernels for NVIDIA, AMD, and Intel GPUs, along with native CUDA
+and HIP backends for comparison, and we evaluate its performance against
+previous FPGA work. Our evaluation shows up to 141.7x acceleration compared to
+standard GATK and 8.7x acceleration compared to a proprietary GPU-accelerated
+solution.

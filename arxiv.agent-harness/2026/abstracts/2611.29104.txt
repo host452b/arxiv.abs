@@ -1,0 +1,27 @@
+Title: When Does Decomposition Help? Empirical Study on Workload-Architecture Affinity in LLM Inference Serving
+Authors: Jihui Yang, Wentai Wu, Jiahua Huang, Weiwei Lin, Ligang He, Linghong Tsang
+ID: 2611.29104
+URL: https://arxiv.org/abs/2611.29104
+
+Abstract:
+Large language model (LLM) inference can be organized as independent monolithic
+replicas, tensor- or pipeline-parallel serving groups, or disaggregated prefill
+and decode services. Although decomposition is often presented as a route to
+higher efficiency, its benefit depends on workload shape, model fit, and whether
+phase-specific resources can be independently scaled. Existing comparisons
+frequently change several of these factors at once. We isolate the architectural
+effect by evaluating five SGLang serving organizations under the same
+four-A100-40GB hardware envelope, pinned Qwen3-8B model, software stack,
+prompts, and arrival schedules. Our evaluation contains 150 audited conditions
+over short-chat, decode-heavy, and 32K prefill-heavy workloads. Four independent
+one-GPU replicas achieve the lowest end-to-end latency for short chat and long
+output and are the only architecture stable in every condition. Pipeline
+parallelism reduces 32K time to first token by 58-59% at non-stress rates, while
+hybrid pipeline-based disaggregation achieves the best 32K end-to-end latency at
+0.4 requests/s. In contrast, B's single-VM static TP2+TP2 split, without
+independent phase scaling, does not improve tested latency over replication and
+collapses at higher 32K load. These results reveal a workload-architecture
+affinity: pipeline decomposition favors prefill-heavy computation, whereas
+replication favors decode-heavy and concurrent traffic. More broadly,
+decomposition is not a monotonic optimization; its value depends on matching
+parallelism granularity to the dominant phase and preserving queue stability.

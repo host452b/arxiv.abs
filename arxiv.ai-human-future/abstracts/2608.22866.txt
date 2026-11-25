@@ -1,0 +1,28 @@
+Title: Toward Sub-1 kB Identity-Preserving Face Compression: A Benchmark of Codecs, a Custom Learned Codec, and Studies of Resolution, Demographic Fairness, Recompression, and Adversarial Robustness
+Authors: Petr Hurtik, Jakub Sochor
+ID: 2608.22866
+URL: https://arxiv.org/abs/2608.22866
+
+Abstract:
+Storing face images under a hard sub-kilobyte budget, as required for identity
+documents, smart-card biometrics and bandwidth-constrained verification, forces
+a codec to discard most of the signal while keeping what a face matcher actually
+reads: identity. Generic codecs optimize pixel fidelity, not the embedding
+distances that drive verification, so which codec, resolution and setting best
+preserve identity at 1024 bytes or less, and how that degrades at 512, is
+unclear. We benchmark ten general and face-specific codecs across resolutions,
+byte budgets, two datasets (controlled Color FERET, in-the-wild AI-Solutions-KK)
+and four anchor face matchers, with a fourteen-model ViT and CNN roster
+confirming the ranking is backbone-invariant. We then train a custom identity-
+preserving codec that hits the byte budget exactly via binary search over a
+frozen gain table, and run four studies: resolution, demographic fairness,
+recompression, and no-box adversarial robustness. Sub-kilobyte identity
+preservation is feasible, but which codec to deploy depends entirely on the
+budget. At 1024 bytes and the 112 px working resolution the problem is close to
+solved: modern codecs hold Color FERET equal-error rate under 0.35 percent on
+the ArcFace anchor. At 512 bytes the field re-sorts: AVIF, HEIF, JPEG XL and
+legacy JPEG collapse to 28 to 98 percent false-non-match rate at FMR 1e-4, while
+WebP, JPEG-AI and our byte-budgeted learned codecs stay out of that band, with
+24.3 percent for WebP against 6.9 percent for our accurate variant in the wild.
+That re-sort, not the 1024-byte ranking, is the operational result: a codec
+chosen at 1 kB is not the codec to deploy at half that.

@@ -10,11 +10,97 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:50:56Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 149,
-  "return_count": 149,
+  "total_results": 153,
+  "return_count": 153,
   "papers": [
+    {
+      "id": "2611.25809",
+      "title": "ALIoTh: Orchestrating Multi-Agent LLMs for Autonomous IoT Penetration Testing",
+      "authors": [
+        "Francesco Aurelio Pironti",
+        "Luigi Arena",
+        "Francesco Blefari",
+        "Matteo Lupinacci",
+        "Francesco Romeo",
+        "Alessio Maresca"
+      ],
+      "abstract": "Penetration testing in Internet of Things (IoT) environments, especially those composed of various different devices, e.g., smart plugs, smart cameras, and smart doors, presents great challenges across the phases of information gathering, attack surface enumeration, privilege escalation, and lateral movement. This paper introduces ALIoTh, a multi-agent, workflow-driven penetration testing framework that integrates Large Language Models agents within a Self-Retrieval-Augmented Generation (Self-RAG) architecture to autonomously identify and exploit vulnerabilities in IoT and Industrial-IoT (IIoT) environments. By leveraging state-of-the-art language models and orchestrating specialized agents via the LangGraph framework, ALIoTh dynamically plans and executes a full-spectrum offensive pipeline. This includes network, devices, and service enumeration, vulnerability assessment, payload generation, reverse shell deployment, and privilege escalation on each device. The Self-RAG mechanism equips expert agents with contextual access to IoT security knowledge, e.g., related documentation, tool manuals, and known attack techniques, enhancing their reasoning capabilities in scenarios involving multiple device exploitation and group policy manipulation.",
+      "published": "2026-11-19T09:31:08Z",
+      "updated": "2026-11-23T10:13:04Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25809",
+      "abs_url": "https://arxiv.org/abs/2611.25809",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.40214",
+      "title": "DYNAS: A Dynamic Network Penetration Testing Framework Using Deep Hierarchical Reinforcement Learning",
+      "authors": [
+        "Md. Rakibul Hassan",
+        "Majedul Islam",
+        "Md. Ashraful Alam",
+        "Muhammad Iqbal Hossain",
+        "Swakkhar Shatabda"
+      ],
+      "abstract": "As network scale and uncertainty complicate automated penetration testing, reinforcement learning (RL) environments must support controlled evaluation under defensive and non-stationary conditions. We present DYNAS (Dynamic Network Attack Simulator), which combines parameterized large-scale scenario generation with stateful intrusion detection responses, explicit scan false-positive and false-negative noise, temporary service unavailability, and duration-based action timeouts. We further introduce Pen-DHRL, a recurrent manager--worker policy that selects persistent subgoals using IDS-conditioned global context. We compare Pen-DHRL with GNN, Invariant, and Attention baselines across four scenario variants and multiple training regimes. Under IDS-disabled training followed by IDS-enabled evaluation, Pen-DHRL obtains approximately 64\\% and 24\\% higher reward per step on Bridge and Dynamic, respectively, and approximately 26\\% and 30\\% more captured hosts on VarA and VarB than the next-best baseline. With all defensive dynamics active from the beginning of training, Pen-DHRL achieves positive mean episode returns in all four scenarios, whereas the flat baselines produce negative mean returns in all 12 architecture--scenario combinations; staged curriculum training produces positive mean returns across all 16 evaluated combinations.",
+      "published": "2026-10-29T14:58:32Z",
+      "updated": "2026-10-29T14:58:32Z",
+      "categories": [
+        "cs.CR",
+        "cs.LG",
+        "cs.NI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.40214",
+      "abs_url": "https://arxiv.org/abs/2610.40214",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.21373",
+      "title": "Evaluating and Improving Static Application Security Testing Tools for Rust",
+      "authors": [
+        "Huaien Zhang",
+        "Zhengjie Zhao",
+        "Yu Pei",
+        "Tian Dong",
+        "Minxue Pan",
+        "Shin Hwei Tan",
+        "Hao Chen"
+      ],
+      "abstract": "Rust has become a popular systems programming language in recent years because of its strong guarantees on memory and concurrency safety. Many types of system software have been re-implemented in Rust. However, Rust programs can still suffer from common memory and concurrency vulnerabilities due to unsafe code and misunderstandings of its complex mechanisms. To mitigate such vulnerabilities, developers often rely on static application security testing (SAST) tools. However, the effectiveness of existing Rust SAST tools on real-world vulnerabilities remains underexplored. In this paper, we first conduct an empirical evaluation of mainstream Rust SAST tools using security vulnerabilities identified in real-world Rust applications. We systematically assess their effectiveness, uncover common weaknesses, and analyze the root causes behind them. Motivated by the study, we propose TRUST, a large language model (LLM)-assisted automated testing framework. TRUST automatically analyzes the official Rust reference to derive and implement semantics-preserving transformations. It leverages these transformations to generate mutant programs for evaluating Rust SAST tools and uncovering potential faults within them. Overall, TRUST has revealed 46 faults across six popular SAST tools, 17 of which have been confirmed. In addition, our study yields ten empirical findings and four practical lessons that provide actionable guidance for developing more effective, robust, and maintainable Rust SAST tools.",
+      "published": "2026-10-15T06:54:04Z",
+      "updated": "2026-10-17T07:49:27Z",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21373",
+      "abs_url": "https://arxiv.org/abs/2610.21373",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.21309",
+      "title": "Combining LLM and Dynamic Analysis for Universal Testing of Static Application Security Testing Tools",
+      "authors": [
+        "Huaien Zhang",
+        "Yu Pei",
+        "Hao Chen",
+        "Shin Hwei Tan"
+      ],
+      "abstract": "Static application security testing (SAST) tools help detect potential software vulnerabilities, but they themselves contain faults undermining reliability and usability. Automated testing can address these issues, yet current techniques suffer from limited program transformation diversity and lack mechanisms to verify generated variants, leading to reduced fault detection and high manual effort. We present LLM4SAST, the first universal framework detecting faults in SAST tools using large language models and dynamic feedback. Our key insight is leveraging LLMs to understand and transform code in diverse programming languages. We design novel metamorphic relations with transformations to guide variant generation, using an LLM to produce multi-language variants that satisfy these relations. To reduce erroneous variants and identify unique faults, we propose two heuristics: dynamic-feedback-driven selection and program-differencing-based clustering. For each metamorphic relation, a report-centric test oracle detects variants that fail tests and identifies underlying faults by differentially analyzing SAST reports of the seed program and its variants. LLM4SAST identified 66 unique faults across six SAST tools, with 32 confirmed or fixed after being reported to developers, demonstrating effectiveness. The proposed heuristics eliminate 47.8% of false positives, and LLM4SAST detects 3.4 times more faults while requiring only 39.8% of the variants compared to existing approaches.",
+      "published": "2026-10-15T05:57:29Z",
+      "updated": "2026-10-17T07:56:23Z",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.21309",
+      "abs_url": "https://arxiv.org/abs/2610.21309",
+      "source": "arxiv"
+    },
     {
       "id": "2407.17269",
       "title": "Advanced Penetration Testing for Enhancing 5G Security",
@@ -554,7 +640,7 @@
         "Muhammad Iqbal",
         "Howon Kim"
       ],
-      "abstract": "Penetration testing, a critical component of cybersecurity, typically requires extensive time and effort to find vulnerabilities. Beginners in this field often benefit from collaborative approaches with the community or experts. To address this, we develop CIPHER (Cybersecurity Intelligent Penetration-testing Helper for Ethical Researchers), a large language model specifically trained to assist in penetration testing tasks. We trained CIPHER using over 300 high-quality write-ups of vulnerable machines, hacking techniques, and documentation of open-source penetration testing tools. Additionally, we introduced the Findings, Action, Reasoning, and Results (FARR) Flow augmentation, a novel method to augment penetration testing write-ups to establish a fully automated pentesting simulation benchmark tailored for large language models. This approach fills a significant gap in traditional cybersecurity Q\\\u0026A benchmarks and provides a realistic and rigorous standard for evaluating AI's technical knowledge, reasoning capabilities, and practical utility in dynamic penetration testing scenarios. In our assessments, CIPHER achieved the best overall performance in providing accurate suggestion responses compared to other open-source penetration testing models of similar size and even larger state-of-the-art models like Llama 3 70B and Qwen1.5 72B Chat, particularly on insane difficulty machine setups. This demonstrates that the current capabilities of general LLMs are insufficient for effectively guiding users through the penetration testing process. We also discuss the potential for improvement through scaling and the development of better benchmarks using FARR Flow augmentation results. Our benchmark will be released publicly at https://github.com/ibndias/CIPHER.",
+      "abstract": "Penetration testing, a critical component of cybersecurity, typically requires extensive time and effort to find vulnerabilities. Beginners in this field often benefit from collaborative approaches with the community or experts. To address this, we develop CIPHER (Cybersecurity Intelligent Penetration-testing Helper for Ethical Researchers), a large language model specifically trained to assist in penetration testing tasks. We trained CIPHER using over 300 high-quality write-ups of vulnerable machines, hacking techniques, and documentation of open-source penetration testing tools. Additionally, we introduced the Findings, Action, Reasoning, and Results (FARR) Flow augmentation, a novel method to augment penetration testing write-ups to establish a fully automated pentesting simulation benchmark tailored for large language models. This approach fills a significant gap in traditional cybersecurity Q\\&A benchmarks and provides a realistic and rigorous standard for evaluating AI's technical knowledge, reasoning capabilities, and practical utility in dynamic penetration testing scenarios. In our assessments, CIPHER achieved the best overall performance in providing accurate suggestion responses compared to other open-source penetration testing models of similar size and even larger state-of-the-art models like Llama 3 70B and Qwen1.5 72B Chat, particularly on insane difficulty machine setups. This demonstrates that the current capabilities of general LLMs are insufficient for effectively guiding users through the penetration testing process. We also discuss the potential for improvement through scaling and the development of better benchmarks using FARR Flow augmentation results. Our benchmark will be released publicly at https://github.com/ibndias/CIPHER.",
       "categories": [
         "cs.CR",
         "cs.AI"
@@ -592,7 +678,7 @@
       "authors": [
         "Petar Radanliev"
       ],
-      "abstract": "Problem Space: AI Vulnerabilities and Quantum Threats Generative AI vulnerabilities: model inversion, data poisoning, adversarial inputs. Quantum threats Shor Algorithm breaking RSA ECC encryption. Challenge Secure generative AI models against classical and quantum cyberattacks. Proposed Solution Collaborative Penetration Testing Suite Five Integrated Components: DAST SAST OWASP ZAP, Burp Suite, SonarQube, Fortify. IAST Contrast Assess integrated with CI CD pipeline. Blockchain Logging Hyperledger Fabric for tamper-proof logs. Quantum Cryptography Lattice based RLWE protocols. AI Red Team Simulations Adversarial ML \u0026 Quantum-assisted attacks. Integration Layer: Unified workflow for AI, cybersecurity, and quantum experts. Key Results 300+ vulnerabilities identified across test environments. 70% reduction in high-severity issues within 2 weeks. 90% resolution efficiency for blockchain-logged vulnerabilities. Quantum-resistant cryptography maintained 100% integrity in tests. Outcome: Quantum AI Security Protocol integrating Blockchain Quantum Cryptography AI Red Teaming.",
+      "abstract": "Problem Space: AI Vulnerabilities and Quantum Threats Generative AI vulnerabilities: model inversion, data poisoning, adversarial inputs. Quantum threats Shor Algorithm breaking RSA ECC encryption. Challenge Secure generative AI models against classical and quantum cyberattacks. Proposed Solution Collaborative Penetration Testing Suite Five Integrated Components: DAST SAST OWASP ZAP, Burp Suite, SonarQube, Fortify. IAST Contrast Assess integrated with CI CD pipeline. Blockchain Logging Hyperledger Fabric for tamper-proof logs. Quantum Cryptography Lattice based RLWE protocols. AI Red Team Simulations Adversarial ML & Quantum-assisted attacks. Integration Layer: Unified workflow for AI, cybersecurity, and quantum experts. Key Results 300+ vulnerabilities identified across test environments. 70% reduction in high-severity issues within 2 weeks. 90% resolution efficiency for blockchain-logged vulnerabilities. Quantum-resistant cryptography maintained 100% integrity in tests. Outcome: Quantum AI Security Protocol integrating Blockchain Quantum Cryptography AI Red Teaming.",
       "categories": [
         "cs.CR",
         "cs.AI",
@@ -826,7 +912,7 @@
       "authors": [
         "Sheetal Temara"
       ],
-      "abstract": "ChatGPT is a generative pretrained transformer language model created using artificial intelligence implemented as chatbot which can provide very detailed responses to a wide variety of questions. As a very contemporary phenomenon, this tool has a wide variety of potential use cases that have yet to be explored. With the significant extent of information on a broad assortment of potential topics, ChatGPT could add value to many information security uses cases both from an efficiency perspective as well as to offer another source of security information that could be used to assist with securing Internet accessible assets of organizations. One information security practice that could benefit from ChatGPT is the reconnaissance phase of penetration testing. This research uses a case study methodology to explore and investigate the uses of ChatGPT in obtaining valuable reconnaissance data. ChatGPT is able to provide many types of intel regarding targeted properties which includes Internet Protocol (IP) address ranges, domain names, network topology, vendor technologies, SSL/TLS ciphers, ports \u0026 services, and operating systems used by the target. The reconnaissance information can then be used during the planning phase of a penetration test to determine the tactics, tools, and techniques to guide the later phases of the penetration test in order to discover potential risks such as unpatched software components and security misconfiguration related issues. The study provides insights into how artificial intelligence language models can be used in cybersecurity and contributes to the advancement of penetration testing techniques.\n  Keywords: ChatGPT, Penetration Testing, Reconnaissance",
+      "abstract": "ChatGPT is a generative pretrained transformer language model created using artificial intelligence implemented as chatbot which can provide very detailed responses to a wide variety of questions. As a very contemporary phenomenon, this tool has a wide variety of potential use cases that have yet to be explored. With the significant extent of information on a broad assortment of potential topics, ChatGPT could add value to many information security uses cases both from an efficiency perspective as well as to offer another source of security information that could be used to assist with securing Internet accessible assets of organizations. One information security practice that could benefit from ChatGPT is the reconnaissance phase of penetration testing. This research uses a case study methodology to explore and investigate the uses of ChatGPT in obtaining valuable reconnaissance data. ChatGPT is able to provide many types of intel regarding targeted properties which includes Internet Protocol (IP) address ranges, domain names, network topology, vendor technologies, SSL/TLS ciphers, ports & services, and operating systems used by the target. The reconnaissance information can then be used during the planning phase of a penetration test to determine the tactics, tools, and techniques to guide the later phases of the penetration test in order to discover potential risks such as unpatched software components and security misconfiguration related issues. The study provides insights into how artificial intelligence language models can be used in cybersecurity and contributes to the advancement of penetration testing techniques.\n  Keywords: ChatGPT, Penetration Testing, Reconnaissance",
       "categories": [
         "cs.CR",
         "cs.AI"
@@ -1100,7 +1186,7 @@
         "Shanchieh Jay Yang",
         "Michael Zuzak"
       ],
-      "abstract": "Recent advances in Large Language Models (LLMs) have driven interest in automating cybersecurity penetration testing workflows, offering the promise of faster and more consistent vulnerability assessment for enterprise systems. Existing LLM agents for penetration testing primarily rely on self-guided reasoning, which can produce inaccurate or hallucinated procedural steps. As a result, the LLM agent may undertake unproductive actions, such as exploiting unused software libraries or generating cyclical responses that repeat prior tactics. In this work, we propose a guided reasoning pipeline for penetration testing LLM agents that incorporates a deterministic task tree built from the MITRE ATT\u0026CK Matrix, a proven penetration testing kll chain, to constrain the LLM's reaoning process to explicitly defined tactics, techniques, and procedures. This anchors reasoning in proven penetration testing methodologies and filters out ineffective actions by guiding the agent towards more productive attack procedures. To evaluate our approach, we built an automated penetration testing LLM agent using three LLMs (Llama-3-8B, Gemini-1.5, and GPT-4) and applied it to navigate 10 HackTheBox cybersecurity exercises with 103 discrete subtasks representing real-world cyberattack scenarios. Our proposed reasoning pipeline guided the LLM agent through 71.8\\%, 72.8\\%, and 78.6\\% of subtasks using Llama-3-8B, Gemini-1.5, and GPT-4, respectively. Comparatively, the state-of-the-art LLM penetration testing tool using self-guided reasoning completed only 13.5\\%, 16.5\\%, and 75.7\\% of subtasks and required 86.2\\%, 118.7\\%, and 205.9\\% more model queries. This suggests that incorporating a deterministic task tree into LLM reasoning pipelines can enhance the accuracy and efficiency of automated cybersecurity assessments",
+      "abstract": "Recent advances in Large Language Models (LLMs) have driven interest in automating cybersecurity penetration testing workflows, offering the promise of faster and more consistent vulnerability assessment for enterprise systems. Existing LLM agents for penetration testing primarily rely on self-guided reasoning, which can produce inaccurate or hallucinated procedural steps. As a result, the LLM agent may undertake unproductive actions, such as exploiting unused software libraries or generating cyclical responses that repeat prior tactics. In this work, we propose a guided reasoning pipeline for penetration testing LLM agents that incorporates a deterministic task tree built from the MITRE ATT&CK Matrix, a proven penetration testing kll chain, to constrain the LLM's reaoning process to explicitly defined tactics, techniques, and procedures. This anchors reasoning in proven penetration testing methodologies and filters out ineffective actions by guiding the agent towards more productive attack procedures. To evaluate our approach, we built an automated penetration testing LLM agent using three LLMs (Llama-3-8B, Gemini-1.5, and GPT-4) and applied it to navigate 10 HackTheBox cybersecurity exercises with 103 discrete subtasks representing real-world cyberattack scenarios. Our proposed reasoning pipeline guided the LLM agent through 71.8\\%, 72.8\\%, and 78.6\\% of subtasks using Llama-3-8B, Gemini-1.5, and GPT-4, respectively. Comparatively, the state-of-the-art LLM penetration testing tool using self-guided reasoning completed only 13.5\\%, 16.5\\%, and 75.7\\% of subtasks and required 86.2\\%, 118.7\\%, and 205.9\\% more model queries. This suggests that incorporating a deterministic task tree into LLM reasoning pipelines can enhance the accuracy and efficiency of automated cybersecurity assessments",
       "categories": [
         "cs.CR",
         "cs.LG"
@@ -1120,7 +1206,7 @@
         "Hanzheng Dai",
         "Jun Yan"
       ],
-      "abstract": "Automated penetration testing (AutoPT) based on reinforcement learning (RL) has proven its ability to improve the efficiency of vulnerability identification in information systems. However, RL-based PT encounters several challenges, including poor sampling efficiency, intricate reward specification, and limited interpretability. To address these issues, we propose a knowledge-informed AutoPT framework called DRLRM-PT, which leverages reward machines (RMs) to encode domain knowledge as guidelines for training a PT policy. In our study, we specifically focus on lateral movement as a PT case study and formulate it as a partially observable Markov decision process (POMDP) guided by RMs. We design two RMs based on the MITRE ATT\\\u0026CK knowledge base for lateral movement. To solve the POMDP and optimize the PT policy, we employ the deep Q-learning algorithm with RM (DQRM). The experimental results demonstrate that the DQRM agent exhibits higher training efficiency in PT compared to agents without knowledge embedding. Moreover, RMs encoding more detailed domain knowledge demonstrated better PT performance compared to RMs with simpler knowledge.",
+      "abstract": "Automated penetration testing (AutoPT) based on reinforcement learning (RL) has proven its ability to improve the efficiency of vulnerability identification in information systems. However, RL-based PT encounters several challenges, including poor sampling efficiency, intricate reward specification, and limited interpretability. To address these issues, we propose a knowledge-informed AutoPT framework called DRLRM-PT, which leverages reward machines (RMs) to encode domain knowledge as guidelines for training a PT policy. In our study, we specifically focus on lateral movement as a PT case study and formulate it as a partially observable Markov decision process (POMDP) guided by RMs. We design two RMs based on the MITRE ATT\\&CK knowledge base for lateral movement. To solve the POMDP and optimize the PT policy, we employ the deep Q-learning algorithm with RM (DQRM). The experimental results demonstrate that the DQRM agent exhibits higher training efficiency in PT compared to agents without knowledge embedding. Moreover, RMs encoding more detailed domain knowledge demonstrated better PT performance compared to RMs with simpler knowledge.",
       "categories": [
         "cs.AI",
         "cs.CR",
@@ -1598,7 +1684,7 @@
         "Vasileios Gkioulos",
         "Sokratis Katsikas"
       ],
-      "abstract": "It is well established that industrial control systems comprise the operational backbone of modern critical infrastructures, yet their increasing connectivity exposes them to cyber threats that are difficult to study and remedy safely under real-time operational conditions. In this paper, we present ICSSPulse, an open-source, modular, and extensible penetration testing platform designed for the security assessment of ICS communication protocols. To the best of our knowledge, ICSSPulse is the first web-based platform that unifies network scanning, protocol-aware Modbus and OPC~UA interaction, and Large Language Model (LLM)-assisted reporting within a single, lightweight ecosystem. Our platform provides a user-friendly graphical interface that orchestrates enumeration, exploitation, and reporting activities over simulated industrial services, enabling safe and reproducible experimentation. It supports protocol-level discovery, asset enumeration, and controlled read/write interactions, while preserving protocol fidelity and operational transparency. Experimental evaluation using synthetic Modbus test servers, a Factory I/O water treatment scenario, and a custom OPC~UA production-line model demonstrated ICSSPulse's potential to discover active industrial services, enumerate process-relevant assets, and manipulate process variables. A key contribution of this work lies in the integration of an LLM-assisted reporting module that automatically translates technical findings into structured executive and technical reports, with mitigation guidance informed by the ICS MITRE ATT\u0026CK ICS matrix.",
+      "abstract": "It is well established that industrial control systems comprise the operational backbone of modern critical infrastructures, yet their increasing connectivity exposes them to cyber threats that are difficult to study and remedy safely under real-time operational conditions. In this paper, we present ICSSPulse, an open-source, modular, and extensible penetration testing platform designed for the security assessment of ICS communication protocols. To the best of our knowledge, ICSSPulse is the first web-based platform that unifies network scanning, protocol-aware Modbus and OPC~UA interaction, and Large Language Model (LLM)-assisted reporting within a single, lightweight ecosystem. Our platform provides a user-friendly graphical interface that orchestrates enumeration, exploitation, and reporting activities over simulated industrial services, enabling safe and reproducible experimentation. It supports protocol-level discovery, asset enumeration, and controlled read/write interactions, while preserving protocol fidelity and operational transparency. Experimental evaluation using synthetic Modbus test servers, a Factory I/O water treatment scenario, and a custom OPC~UA production-line model demonstrated ICSSPulse's potential to discover active industrial services, enumerate process-relevant assets, and manipulate process variables. A key contribution of this work lies in the integration of an LLM-assisted reporting module that automatically translates technical findings into structured executive and technical reports, with mitigation guidance informed by the ICS MITRE ATT&CK ICS matrix.",
       "categories": [
         "cs.CR"
       ],

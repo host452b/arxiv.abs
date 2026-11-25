@@ -1,0 +1,27 @@
+Title: TileGS: Tile-Local Depth Binning for Gaussian Splatting Rasterization
+Authors: Wei Tan, Matias Turkulainen, Lauri Ilola, Hamed Rezazadegan Tavakoli, Juho Kannala
+ID: 2609.03613
+URL: https://arxiv.org/abs/2609.03613
+
+Abstract:
+Real-time 3D Gaussian Splatting (3DGS) achieves high rendering quality, but
+standard rasterization still traverses a globally sorted tile stream that
+creates long per-tile ranges and heavy geometry-attribute traffic. We present
+TileGS, a tile-local reorganization of Gaussian splatting. TileGS turns each
+long tile range into a sequence of shorter depth-local ranges, rasterizes those
+ranges in front-to-back order, and applies selective repair where coarse
+ordering is insufficient to match baseline compositing. Across a 9-scene
+benchmark on desktop and laptop Ada GPUs, our default No-GW (No Geometry-Write)
+variant delivers a mean 1.44x raster-kernel speedup on RTX 4090 and mean end-to-
+end frame speedups of 1.069x on RTX 4090 and 1.094x on RTX 1000 Ada over gsplat
+--a widely used optimized open-source 3DGS implementation--while matching the
+gsplat output up to numerical noise (|Delta PSNR| < 0.001 dB, |Delta SSIM| <
+0.001, |Delta LPIPS| < 0.001). Full-suite RTX 4090 Nsight Compute profiling
+reveals TileGS is faster despite lower SM throughput, lower active-warp
+occupancy, and higher DRAM traffic, while total SASS thread instructions fall by
+1.26x. Source-attributed profiling confirms that geometry attributes dominate
+the remaining memory pressure (85.8% of total raster traffic and 88.6% of excess
+sectors). Together, these counters support the interpretation that TileGS
+improves raster performance by reducing effective raster traversal work, rather
+than by reducing byte volume, improving coalescing, increasing occupancy, or
+directly reducing measured warp divergence.

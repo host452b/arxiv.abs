@@ -1,0 +1,28 @@
+Title: A Well-Posed Fourth-Order Navier-Stokes Model for Image Inpainting: Theory, Order Selection, and Stripe Decomposition
+Authors: Yiwen Dou, Yiqiang Ding, Zhongyun Bao, Senyan Zhao
+ID: 2611.31777
+URL: https://arxiv.org/abs/2611.31777
+
+Abstract:
+The Navier-Stokes (NS) inpainting model of Bertalmío, Bertozzi and Sapiro is the
+only transport-type paradigm among PDE-based methods, yet it has never received
+a systematic higher-order extension. We show that the obvious fourth-order
+correction is ill-posed, and we construct the corrected, well-posed model. In
+the vorticity-streamfunction formulation we add a gated fourth-order term whose
+sign is decisive: the backward form is a Perona-Malik-type anti-diffusion,
+Hadamard ill-posed and consistently harmful in experiments, whereas the forward
+form is uniformly parabolic, energy-stable and consistently beneficial. An
+order-dissipation principle, stating that odd orders are dispersive and even
+orders dissipative, singles out the fourth order as the lowest admissible one.
+Large missing blocks pose a separate problem, because the correction gate stays
+silent there; we answer it with stripe decomposition, a Telea base fill followed
+by interleaved slit-wise NS passes, which converts block damage into the
+structural-slit regime where the model excels. The device is base-agnostic, and
+its gains add to those of the forward correction. On three datasets, namely
+BSDS500, DIV2K and a classical Chinese painting benchmark, and on three damage
+types, namely cracks, blocks and text occlusion, the training-free model beats
+every classical baseline on every sample of structure-dominated damage, gains
++1.02 dB PSNR over Telea on the full 42-image painting test set with a 42/42
+per-sample win rate, matches the strongest recent PDE solvers within 0.4 dB
+while attaining the best perceptual quality of the entire PDE family, and runs
+at 4-16 s per image on a consumer GPU.

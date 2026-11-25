@@ -1,0 +1,26 @@
+Title: Security Impact of Coding Agent's Memory Files
+Authors: Thiago Santos de Moura, Selma Güler, Yannic Noller
+ID: 2610.38521
+URL: https://arxiv.org/abs/2610.38521
+
+Abstract:
+Coding agents automatically load project memory files such as CLAUDE.md at the
+start of every session and treat them as trusted project guidance. Anyone who
+can change such a file, for example through a pull request, can therefore steer
+the agent without ever touching the developer's prompt. We study memory files as
+an attack surface for insecure code generation and ask (1) whether a malicious
+memory file makes agents produce code that passes its tests but is vulnerable,
+and (2) whether agents disclose to the developer that the file shaped their
+code. For each of 12 CWE classes, we crafted two malicious memory files, a
+qualified variant that presents removing defensive checks as engineering best
+practice and a forceful variant that demands it. We ran Claude Code (Sonnet 5.5)
+and OpenCode (Qwen 3.8 27B, DeepSeek V4.1 Flash) on 36 SecRepoBench tasks with
+and without these files. The malicious files changed the rate of secure
+completions by -8 to +6 percentage points, with no consistent pattern across
+agents or variants. Agents differ sharply in what they tell the developer about
+the file. Claude Code names it in about two thirds of its final messages,
+whereas OpenCode mentions it almost exclusively in its reasoning trace, not in
+the final message the developer reads. Flagging the file as an attack does not
+reliably protect the code, as such agents still generated vulnerable code. We
+outline the larger studies needed to quantify this risk across agents and to
+design defenses.

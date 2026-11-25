@@ -1,0 +1,27 @@
+Title: SCARVA: Interpretable Agentic Reasoning in Software Supply-Chain Analysis
+Authors: Tim Barsch, Bruno Nogueira, Tobias Wienand, Jan Fopma, Flavio Toffalini
+ID: 2611.26131
+URL: https://arxiv.org/abs/2611.26131
+
+Abstract:
+Complex applications may inherit security vulnerabilities from their
+dependencies, though a vulnerable dependency does not necessarily endanger the
+application. Existing tools flag dependencies associated with public
+vulnerabilities, and more advanced ones analyze the call graph to assess whether
+the vulnerable code is reachable. However, these approaches are limited to
+specific programming languages and ecosystems. LLM agents are promising
+candidates for this task, yet they hallucinate, take shortcuts, and reward hack.
+As these behaviors are opaque, the agents' conclusions may not be trusted. We
+present SCARVA a framework designed to produce interpretable reports. SCARVA
+combines advanced agent reasoning with an evidence-collection methodology that
+assesses the agent's analysis and improves its trustworthiness. Specifically,
+the ANALYST performs a software security assessment while SCARVA records every
+tool call, file access, and web request. Then, one or more independent JUDGE
+agents inspect the ANALYST's result and produce an evidence-backed report. We
+evaluate SCARVA on 54 manually curated cases, balanced across exploitable, non-
+exploitable, and vulnerability-free projects, using both open-weight and
+frontier models. The best ANALYST model, Qwen 3.8, reaches 82% balanced accuracy
+and surpasses the evaluated proprietary models. Human annotation validates the
+JUDGE findings: Claude Opus 5.5 performs best, agreeing with annotators in 94%
+of claim checks. Finally, we discuss the most common failure modes of agents on
+supply-chain vulnerability assessment.

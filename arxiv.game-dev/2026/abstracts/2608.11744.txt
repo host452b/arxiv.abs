@@ -1,0 +1,20 @@
+Title: Harnessing LLMs for Document-Guided Fuzzing of Python Libraries
+Authors: Bin Duan, Tarek Mahmud, Meiru Che, Yan Yan, Naipeng Dong, Dan Dongseong Kim, Guowei Yang
+ID: 2608.11744
+URL: https://arxiv.org/abs/2608.11744
+
+Abstract:
+Python libraries underpin deep learning, scientific computing, data analysis,
+and computer vision, making their reliability critical to downstream
+applications. Testing their APIs requires inputs that satisfy both per-parameter
+constraints and dependencies among parameters. Existing approaches either leave
+such constraints implicit in generated programs or rely on library-specific
+parsing rules. This paper introduces VistaFuzz, a document-guided fuzzing
+technique that uses a locally served open-sourced LLM to extract parameter
+specifications from API documents and generate inputs that satisfy both
+parameter constraints and inter-parameter dependencies. We evaluate VistaFuzz on
+7,718 APIs across twelve Python libraries. Inter-parameter relationships occur
+in 40.1\% of tested APIs, and disabling their resolution reduces the valid
+generation rate on those APIs from above 95\% to 31.6\%--52.8\%. VistaFuzz
+reports 74 issues, of which 43 have been confirmed by developers and 29 have
+been fixed.

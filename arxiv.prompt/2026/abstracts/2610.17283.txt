@@ -1,0 +1,23 @@
+Title: The Surprising Expressivity of a Single Neuron with Autoregressive Chain-of-Thought
+Authors: Roey Magen, Nirmit Joshi, Gal Vardi
+ID: 2610.17283
+URL: https://arxiv.org/abs/2610.17283
+
+Abstract:
+The success of autoregressive language models trained with Chain-of-
+Thought~(CoT) supervision raises a fundamental question: How simple can a next-
+token predictor be while still enabling the efficient simulation of general
+computation through its autoregressively generated CoT? Surprisingly, we show
+that a single neuron suffices. For a broad family of activations, including
+threshold and ReLU, a single autoregressive neuron can simulate any feedforward
+circuit with the same activation. Specifically, a size-$s$ circuit on $n$ inputs
+can be simulated by a neuron of dimension $O(ns+s^2)$ using $O(s^2)$ generation
+steps, with both bounds independent of circuit depth and tight under natural
+assumptions. For threshold activations, this improves upon the simulation of
+Joshi et al. (COLT 2025), whose bounds scale exponentially with circuit depth.
+Consequently, autoregressive threshold neurons can simulate polynomial-time
+Turing machines, while remaining efficiently learnable from CoT supervision. Our
+main expressivity result relies on a novel connection to Sidon sets from
+additive combinatorics. As an experimental illustration, we efficiently train a
+single autoregressive ReLU neuron to mimic a neural network teacher with
+nontrivial test accuracy on CIFAR-10.

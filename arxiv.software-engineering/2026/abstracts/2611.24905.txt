@@ -1,0 +1,29 @@
+Title: Batch-Dynamic Coreness and Applications with Logarithmic Work via Balanced Pressures
+Authors: Quinten De Man, Laxman Dhulipala, Kishen N Gowda, Zhongqi Wang
+ID: 2611.24905
+URL: https://arxiv.org/abs/2611.24905
+
+Abstract:
+We give a parallel algorithm that maintains a one-sided
+$(2+\varepsilon)$-approximation of all core numbers under batches of edge
+insertions and deletions. For fixed $\varepsilon>0$, the expected amortized work
+is $O(\log n)$ per edge update, and each batch has deterministic polylogarithmic
+depth. This improves on the previously known $(4+\varepsilon)$-approximation and
+$O(\log^2 n)$ amortized work bounds. This approximation factor approaches the
+factor-two limit for polylogarithmic update and query time under the OMv
+conjecture. Our algorithm is based on assigning each vertex a "pressure" and
+splits each edge's unit load smoothly between its endpoints according to their
+pressures. After each batch of updates, our dynamic algorithm adjusts the
+pressures of vertices in parallel to restore balance between the pressures and
+loads. We show that by maintaining balanced pressures we can obtain good
+approximations of core numbers. Our construction also gives a
+$(1+\varepsilon)$-approximation of the densest-subgraph value with logarithmic
+expected amortized work and supports batch-dynamic maximal matching, clique
+counting, forest decomposition, and coloring in low-arboricity graphs with
+improved or matching work bounds. We give a practical implementation of our
+batch-dynamic coreness algorithm and find that it is able to achieve smaller
+empirical error than the state-of-the-art parallel batch-dynamic implementation,
+while running faster. On six real-world graphs, it runs $32\times$ faster than
+that implementation in geometric mean and $4.1\times$ faster than a state-of-
+the-art heuristic baseline. On three graphs with up to 1.8 billion edges, it is
+$9.2\times$ faster than the heuristic baseline.

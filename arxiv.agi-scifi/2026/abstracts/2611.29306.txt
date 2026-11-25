@@ -1,0 +1,22 @@
+Title: DoppelVet: Comparative Safety Verification for Self-Evolving Agents
+Authors: Yifan Duan, Du Yin, Siyuan Zheng, Chao Xue, Lihuan Li, Flora D. Salim
+ID: 2611.29306
+URL: https://arxiv.org/abs/2611.29306
+
+Abstract:
+Self-evolving agents improve by retaining feedback as reusable memories or
+skills, but every mistaken approval can shape many future behaviors. Two updates
+can provide exactly the same evidence to a verifier yet produce opposite safety
+outcomes, so the verifier cannot distinguish them from that evidence alone. We
+introduce DoppelVet, a verification framework that checks proposed updates
+before they enter an agent's persistent state. Without access to safety labels,
+DoppelVet constructs an alternative that matches every signal used by the
+existing verifier. It replays both updates from the same state and directly
+compares their behaviors in both presentation orders before deciding whether to
+retain the candidate. We evaluate DoppelVet on DoppelVet-Grid and DoppelVet-
+Tool, covering executable programs and natural-language memories. Across nine
+open-weight and proprietary verifiers, DoppelVet raises mean harmful-update
+detection AUC from 0.762 to 0.940 on DoppelVet-Grid and from 0.681 to 0.826 on
+DoppelVet-Tool, outperforming VaG and AgentDoG 1.5. On DoppelVet-Grid, it
+reduces trajectories experiencing degradation from 30.39% to 0.43% over a ten-
+generation self-update loop and leaves no final degradation.

@@ -1,0 +1,27 @@
+Title: AMLBench: A Real-Incident Benchmark for Agentic Blockchain Anti-Money Laundering
+Authors: Qishuang Fu, Hang Zheng, Yuchen Lei, Yuexin Xiang, Qin Wang, Yuanzhe Zhang, Shiping Chen, Andreas Deppeler, Joseph Liu, Ziyao Liu et al.
+ID: 2611.02530
+URL: https://arxiv.org/abs/2611.02530
+
+Abstract:
+Tracing illicit funds on public blockchains remains largely manual. As funds
+move across accounts and undergo asset conversions, they become mixed with other
+inflows, requiring repeated queries and expert judgment to trace. Large language
+model (LLM) agents offer a way to automate this process, but their ability to
+reconstruct case-related transfer networks from limited clues remains unclear.
+To bridge this gap, we present AMLBench, an anti-money laundering (AML)
+benchmark built from 24 real-world cases and 5.05 million Ethereum transfer
+records. For each case, agents start from limited clues and explore these
+transfer records through composable transaction-query and fund-flow analysis
+tools, deciding which accounts and branches to pursue. The final tracing results
+are evaluated against case annotations, while tool interaction logs reveal how
+agents discover and select relevant transfers and at what resource cost. We also
+develop AMLAgent, which integrates fund-tracing guidance and query feedback to
+dynamically guide investigative decisions. With GPT-6 Astra, AMLAgent achieves
+macro averages of 80.82% transfer-level precision and 84.73% query coverage
+across 24 real-world cases. Further analysis of the large-scale Bybit case
+reveals substantial differences in transfer retention and token usage across
+models, even with similar submission precision. AMLBench establishes a
+reproducible benchmark for evaluating both tracing outcomes and investigative
+processes, laying the groundwork for more reliable and efficient autonomous AML
+investigations.

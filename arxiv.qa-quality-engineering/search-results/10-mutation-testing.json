@@ -10,11 +10,336 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:50:28Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 69,
-  "return_count": 69,
+  "total_results": 87,
+  "return_count": 87,
   "papers": [
+    {
+      "id": "2611.09895",
+      "title": "Mutation Testing for Multi-Agent Workflows",
+      "authors": [
+        "Nafiseh Kahani",
+        "Mojtaba Bagherzadeh"
+      ],
+      "abstract": "Multi-agent large language model (LLM) systems are defined by explicit workflows, agents, tools, tool-access rules, and delegation paths. Most evaluations, however, report end-to-end task success rather than whether a test suite can detect faults in this coordination structure, such as a removed delegation, a silently removed restriction, a misrouted tool edge, or a faulty tool implementation. We adapt mutation analysis to this setting, fourteen operators in four families (delegation, allowed-tool, restriction, agent/instruction) perturb a normalized workflow manifest, and three kill criteria score whether a suite catches the change, namely K-Struct on the observed coordination, KOutcome on the task verdict or step sequence, and K-Safety on a forbidden tool call. Every criterion is evaluated by executing each suite against the original and the mutant through the OpenAI Agents SDK, with k=3 repeats and a majority vote. On ten OpenAI Agents SDK-derived workflows (49 reachable agents, 47 tools, 403 obligations), the evaluation executes 29,601 agent runs over a pool of 1,084 mutants. We use T-Struct only as a full-obligation reference point (MSstrict=1.000 under all three criteria) and measure how much the baseline suites miss, the bestperforming one (T-Dev*) reaches 0.717 (K-Struct) and only 0.559 (K-Safety). Restriction-removal (RES-REM) is the least detected fault for the baselines (0.19 to 0.28 vs 1.000). Executing the suites also allows the obligation-preserving operators (TOOL-FAULT, AG-SWAP, AG-PROMPTDROP) to be evaluated. A manifest-only oracle would not witness these changes. In this setting, tasksuccess- style suites catch only about half of permission violations.",
+      "published": "2026-06-25T21:12:25Z",
+      "updated": "2026-06-25T21:12:25Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.09895",
+      "abs_url": "https://arxiv.org/abs/2611.09895",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.36976",
+      "title": "Toward Circuit-Aware Mutation Testing for Quantum Programs: Exact Visibility and Execution Planning",
+      "authors": [
+        "Andriy Miranskyy",
+        "Jose Campos"
+      ],
+      "abstract": "Mutation testing assesses test suites by introducing program changes and checking whether tests detect them. In quantum programs, a surviving mutant may leave program behavior unchanged, produce a change hidden by the chosen input or measurement, or remain undetected because statistical evidence is insufficient. We develop a circuit-aware framework to distinguish these causes and guide execution planning and test changes. The framework covers ideal, noiseless programs and mutations that replace one gate or subcircuit. The method traces how a mutation can affect measured outputs and combines established mathematical checks with statistical estimates. For supported cases, we establish conditions under which a test cannot reveal a mutation and exact formulas for its effect when the required state information is available. Under stated assumptions, we bound the mutation score while retaining surviving and unresolved mutants, and identify a restricted circuit family whose mutation effects admit efficient classical classification. The deliverables include a decision procedure, mathematical guarantees, worked examples of test changes and their implementation requirements, and a small-circuit reference implementation for differential expectation tests. These results help testers decide what to execute, what to change, and what remains unknown. The evidence is limited to proofs and executable examples under the ideal model.",
+      "published": "2026-10-27T10:31:07Z",
+      "updated": "2026-10-27T10:31:07Z",
+      "categories": [
+        "cs.SE",
+        "quant-ph"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.36976",
+      "abs_url": "https://arxiv.org/abs/2610.36976",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.15122",
+      "title": "Targeting the Right Situations: Mutation Testing of Fuzzy-Powered Situation Hyperspace",
+      "authors": [
+        "Nawshin Mannan Proma"
+      ],
+      "abstract": "Ensuring the safety of autonomous Unmanned Aerial Vehicles (UAVs) operating in underground mines is challenging due to the vast and uncertain Operational Design Domain (ODD). Traditional validation approaches, such as random testing, often result in inefficient situation coverage, allocating computational resources to low-risk scenarios while failing to expose critical edge cases. Building on prior work in risk-prioritized Situation Coverage, this paper investigates whether Fuzzy Logic-based risk estimation effectively correlates with real system failures. To this end, we conduct a mutation testing study within our SCALOFT simulation framework. A fixed set of software mutants is systematically injected and evaluated under two testing strategies: (i) uniformly random situation generation and (ii) Fuzzy-Guided risk-prioritized situation generation. Experimental results show that the Fuzzy-Guided approach achieves a higher mutation score and is more effective at exposing difficult-to-detect faults compared to random testing.",
+      "published": "2026-10-10T18:55:12Z",
+      "updated": "2026-11-02T12:11:08Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.15122",
+      "abs_url": "https://arxiv.org/abs/2610.15122",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.37322",
+      "title": "Mubric: Mutation Testing-Guided Rubric Generation for LLM Evaluation",
+      "authors": [
+        "Jiayuxuan Yang",
+        "Jie M. Zhang",
+        "Yiling Lou",
+        "Zhenpeng Chen"
+      ],
+      "abstract": "Rubric-based evaluation is widely used to assess LLM-based systems by decomposing response quality into task-specific scoring criteria. However, automatically generating rubrics that reliably capture task-specific quality requirements remains challenging. We introduce Mubric, a mutation testing-guided approach to rubric generation. Mutation testing, a classic software testing methodology, evaluates a test suite by injecting faults into programs and checking whether the tests detect them. We draw an analogy between test suites and rubrics: if a rubric captures an important quality requirement, introducing a corresponding defect into an otherwise high-quality response should reduce its score. Mubric first mines common defects from real pairs of preferred and dispreferred responses and abstracts these defects into reusable mutation operators, each specifying how to introduce a particular type of response defect. For a new task, it applies relevant operators to a reference response, checks whether the injected defects reduce response quality, and uses insufficiently penalized defects to refine the rubric. We evaluate Mubric on 703 tasks across four representative domains against six advanced rubric generation methods. Mubric achieves the highest overall evaluation accuracy, outperforming the strongest baseline by 7.48 percentage points.",
+      "published": "2026-09-29T12:00:16Z",
+      "updated": "2026-09-29T12:00:16Z",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.37322",
+      "abs_url": "https://arxiv.org/abs/2609.37322",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.35841",
+      "title": "Beyond Rule-Based Mutation Testing: Test-Aware Mutant Generation Using Large Language Models",
+      "authors": [
+        "Nils Kiele",
+        "Zainab Saad",
+        "Zirui Wang",
+        "Steve Drew",
+        "Samira Ebrahimi Kahou"
+      ],
+      "abstract": "Mutation testing evaluates test-suite adequacy by injecting synthetic faults into program code. However, traditional rule-based tools often generate large numbers of trivial, redundant, or equivalent mutants that limit their practical use for identifying gaps in a test suite. While recent large language model (LLM)-based approaches generate more realistic faults, most remain test-blind: The model sees only the source code and cannot reason about what existing tests already cover. We propose test-aware mutant generation, in which an LLM receives the problem statement, canonical solution and base tests in a single prompt, and must generate a nontrivial mutant that passes the base unit tests. We evaluate this approach across a set of five LLMs -- Gemini 3.1 Pro, Gemini 3 Flash, GPT 5.1 Codex Mini, GPT 4.1 Mini, Qwen3-32B -- on the HumanEval and MBPP benchmarks. The extended EvalPlus test suites serve as an automated oracle to verify whether surviving mutants represent genuine bugs. Test-aware prompting yields verified fault rates of 87.7% (HumanEval) and 79.1% (MBPP), meaning these mutants pass all base tests but are caught by the oracle. This vastly outperforms the matched test-blind prompting (which yields only 12.2% and 23.0%, respectively) and the traditional rule-based tool mutmut (4.4% and 5.7%). While fault subtlety (the fraction of extended tests a mutant fails) remains comparable across all three methods, test-awareness minimizes the computational cost per verified fault, compared to test-blind prompting. Exposing an LLM to existing unit tests shifts mutant generation from untargeted bug injection toward effective discovery of weaknesses in an existing test suite. Our work establishes a concrete foundation for future research to scale test-aware mutant generation to production-level environments.",
+      "published": "2026-09-24T17:27:18Z",
+      "updated": "2026-09-24T17:27:18Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.35841",
+      "abs_url": "https://arxiv.org/abs/2609.35841",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.02983",
+      "title": "Boundary-Mutation Testing for Pattern-Based Secret Detection: A Rule-Level Method and Cross-Scanner Evaluation",
+      "authors": [
+        "Shweta Mishra"
+      ],
+      "abstract": "Pattern-based secret scanners are commonly validated with example-based fixtures that fix one variable: the text surrounding a credential. We introduce boundary-mutation testing to vary that context, generating credentials from each rule's own regular expression, embedding them in realistic source contexts, and classifying outcomes at the rule level rather than the tool level, yielding three detection metrics. Applied to three scanners - a 43-rule open-source scanner, Gitleaks 8.21.2, and TruffleHog 3.82.13 - detection in the primary subject holds at >=0.9976 across ten contexts but collapses to 0.5233 when a credential ends in a hyphen. Five rules are affected: two, with fixed-count quantifiers, fail totally and deterministically; three, with variable-count quantifiers, backtrack and match a truncated credential; an entropy fallback rescues some failures but downgrades their severity. We validate a repair restoring full robustness with no new false positives, and report a caution: a plausible first attempt silently regressed two rules, caught only by re-running the same battery. Gitleaks has an unrelated, source-confirmed defect - a hard-coded terminator allowlist causing total misses for most credential types - while TruffleHog shows no boundary fragility but narrowest coverage. We report marginal, not conditional, failure probabilities: one common token format is structurally immune, another fails once in 64; on 292,527 lines of real code, the false-positive ordering inverts relative to the synthetic corpus. Because per-type detection is deterministic, the comparison unit is ten credential types, not hundreds of samples; no recall difference reaches significance, so we report the null result, not a ranking.",
+      "published": "2026-09-02T13:41:50Z",
+      "updated": "2026-09-02T13:41:50Z",
+      "categories": [
+        "cs.CR",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.02983",
+      "abs_url": "https://arxiv.org/abs/2609.02983",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.27100",
+      "title": "Mutation Testing for Reproducibility Safeguards in Machine Learning Research Software: An Empirical Study",
+      "authors": [
+        "Ilya Shulepov"
+      ],
+      "abstract": "Reproducibility in machine-learning research depends on experimental choices such as random seeds, dependency versions, data partitioning, and evaluation configuration. Existing repository validation workflows may execute successfully without detecting changes to such choices. We study this problem using MLReproMutate, research software that applies controlled, reproducibility-relevant mutations to ML research repositories and evaluates them against validation workflows already present in those repositories. We conducted an outcome-blind empirical study of 39 frozen repository-operator cases using four mutation classes: random seed, dependency pin, data split, and cross-validation fold count. Repository revisions, mutation candidates, and validation workflows were fixed before mutation outcomes were observed. Primary execution yielded outcomes for 13 of 39 cases; a bounded restoration procedure increased the combined evaluable set to 24. After excluding one confirmed-equivalent mutation, 23 confirmed non-equivalent mutations remained. The selected validation workflows detected 2 of these 23 mutations, corresponding to an observed detection proportion of 8.7%. These results do not imply that the corresponding repositories are irreproducible. Rather, they show that, in this sample, existing validation workflows often did not detect the particular controlled reproducibility-relevant changes introduced by the study. The findings motivate reproducibility-oriented mutation testing as a complementary way to assess whether research-software safeguards constrain experimentally important choices.",
+      "published": "2026-08-27T13:15:45Z",
+      "updated": "2026-08-27T13:15:45Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.27100",
+      "abs_url": "https://arxiv.org/abs/2608.27100",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.26183",
+      "title": "Four Ways to Forge a Bundle My Own Verifier Calls Clean: Refusal-Site Mutation Testing of an Evidence-Bundle Verifier",
+      "authors": [
+        "Erik Hill"
+      ],
+      "abstract": "I built a protocol whose premise is that a stranger can re-run my claims offline and get the same answer. An outside engineer audited it and broke it: a bundle whose headline numbers were false verified clean, the cheapest forgery four bytes. I merged his fix, then pointed my own instruments at the fixed verifier and found the same defect four more times, in places his audit did not reach. The cheapest is one capital letter. The unifying defect is not cryptographic or exotic: a check that reports success along a path where it never examined anything. Vacuous pass is a working label, not a discovery; Section 4 names the literatures already occupying it. So I stopped collecting anecdotes and measured. At f59fb62, under the extraction rule of Section 6, the verifier exposes 112 refusal sites; 75 could be deleted with the whole suite and every tamper fixture still green, a score of 0.330. Three of the four hand-found forgeries fall in surviving classes; the fourth is an obligation with no refusal site. Scored alone, the sixteen-fixture corpus built to prove the verifier can refuse catches 10. Testing the refusals themselves took it to 0.941, then to 1.000 at 92e4548 over a grown population of 146 sites; those denominators differ and the series between them is non-monotone, so Section 7.5 carries all eleven, not just the five rows of Table 2. Fixing the four found defects instead moved 37/112 to 39/119, leaving the pre-existing sites at 37. Seven times during this study my own measuring tools reported success while measuring nothing; four were built to detect this class, and one returned a perfect 1.000. Every number here is self-measured on a system I wrote, over a registry that is a closed loop of my own repositories; the one external data point is the audit of Section 2.2. That is stated here rather than buried: it is the paper's credibility, not a caveat.",
+      "published": "2026-08-22T07:53:37Z",
+      "updated": "2026-08-22T07:53:37Z",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.26183",
+      "abs_url": "https://arxiv.org/abs/2608.26183",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.24250",
+      "title": "Mutation Testing of Simulink Cyber-Physical System Models: Challenges and Solutions in Practice",
+      "authors": [
+        "Murat Kavak",
+        "Onur Kilincceker",
+        "Serge Demeyer",
+        "Kevin Vandenbroucke",
+        "Halim Abdurrahman Ceylan"
+      ],
+      "abstract": "Several experience reports illustrate that mutation testing is capable of supporting a shift-left testing strategy, especially in industries where late bug discovery incurs very high costs and risks. In the context of cyber-physical systems, a shift left implies that engineers need to test the design models used to simulate, prototype, and analyse the feasibility of the system under design. In this paper, we analyse the challenges we encountered and the lessons we learned when incorporating mutation testing in the context of DUCO, a company producing ventilation systems for buildings. The engineers within DUCO have years of experience with model-based engineering centered around Simulink and StateFlow, including unit tests for their models. During a pilot project with our tool prototype MUT4SLX we learned that equivalent mutants, requirement traceability, and mutation testing for Stateflow represent particular challenges not yet reported in the academic literature.",
+      "published": "2026-08-25T08:48:37Z",
+      "updated": "2026-08-25T08:48:37Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.24250",
+      "abs_url": "https://arxiv.org/abs/2608.24250",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.14315",
+      "title": "Breaking Models to Test the Judge: A Mutation Testing Approach for Semantic Evaluators of Domain Class Diagrams",
+      "authors": [
+        "Kevin Delcourt",
+        "Meriem Ben Chaaben",
+        "Abdelhamid Rouatbi",
+        "Luciano Marchezan",
+        "Houari Sahraoui"
+      ],
+      "abstract": "In software engineering, many semantic modeling tasks lack a unique ground truth, as human judgments are both costly and subjective. This paper explores mutation testing as a scalable alternative for evaluating semantic judges (e.g., LLM-based) of models. We propose a mutation testing approach in which controlled semantic defects are injected into domain class diagrams. Starting from pairs of PlantUML class diagrams and textual system descriptions, we apply mutation operators (e.g., removing a class) to generate faulty variants. A candidate judge is then evaluated based on its ability to detect the injected defects. We define 11 mutation operators for the task of comparing a domain class diagram against a textual description and evaluate the proposed approach against a conventional manual assessment of judgment validity. Across six judge configurations (three LLMs and two prompt variants), the automated mutation testing approach is largely consistent with the manual assessment in identifying the better-performing configurations. The results suggest that mutation testing may serve as a scalable proxy for analyzing semantic judges.",
+      "published": "2026-08-14T13:57:51Z",
+      "updated": "2026-08-14T13:57:51Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.14315",
+      "abs_url": "https://arxiv.org/abs/2608.14315",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.12635",
+      "title": "GateTruth: Auditing the Rigor of RTL Design Benchmarks via Mutation Testing",
+      "authors": [
+        "Meet Bhadra"
+      ],
+      "abstract": "Benchmarks for evaluating large language models on register-transfer-level (RTL) hardware design have proliferated rapidly, yet none reports having applied mutation testing, an established hardware-verification technique for quantifying testbench quality, to ask whether its own testbenches are trustworthy. A testbench that never fails is not evidence of a correct design; it may simply never stimulate the logic that is actually broken. We introduce GateTruth, a mutation-testing engine and methodology for auditing RTL benchmark testbench rigor: inject a deterministic, seeded set of semantic mutants into a reference design and measure what fraction the testbench catches. We validate the methodology against our own 68-task, dual-track reference suite -- 60 specification-to-RTL generation tasks and 8 agentic-repair tasks, scored through a pinned, deterministic synthesis-to-timing flow with correctness enforced as a strict gate -- certifying that 46 of 60 Track A testbenches kill at least 95% of injected mutants under sequential, reproducible execution; we disclose why the other 14 do not, including a Goodhart effect on testbenches revised to pass this gate. We then point the same engine, unmodified, at RTLLM v2.0, a widely adopted external benchmark: of 46 auditable designs, 72% fall below the 95% floor our own suite is held to, and three score 0% outright. A comparable audit of NVIDIA's CVDP benchmark is structurally impossible: its public release withholds reference solutions, removing the golden RTL mutation testing requires. Auditing our own instrument also surfaced a second finding: an initially uniform 4096-token output cap silently truncated three of seven evaluated models, and re-running at 16,384 tokens moved one model from fifth place to first. We argue mutation-kill certification should become a standard reporting requirement for RTL-generation benchmarks generally.",
+      "published": "2026-08-12T22:50:11Z",
+      "updated": "2026-08-12T22:50:11Z",
+      "categories": [
+        "cs.AR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.12635",
+      "abs_url": "https://arxiv.org/abs/2608.12635",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.18582",
+      "title": "Provably Lossless Acceleration of DNN Mutation Testing via Memoization",
+      "authors": [
+        "Ali Ghanbari",
+        "Ben Greenman",
+        "Sasan Tavakkol",
+        "Shibbir Ahmed"
+      ],
+      "abstract": "Mutation analysis has recently reemerged in the context of deep neural networks (DNNs) as a promising, but notoriously costly, approach for assessing test dataset adequacy. Existing techniques speed up DNN mutation testing through lossy approximations that trade efficiency for mutation score accuracy. This paper introduces Mure, the first provably lossless framework for accelerating DNN mutation testing via memoization. Mure is based on the idea that DNN mutants and the original model share substantial redundant computation, so during mutation testing, it executes only the mutated suffixes of each mutant and reuses the common prefix from the original model, which is computed only once. We give a formal account of memoized mutation testing, and prove that Mure is sound, i.e., it produces results equivalent to exhaustive vanilla mutation testing, and identify basic conditions under which speed-up is guaranteed. We have implemented Mure and evaluated it on 15 DNN models of various architectures, complexities, and sizes ranging from a few thousands to millions of parameters. This provides empirical evidence that Mure reduces the computational cost of mutation testing by 44.54%, on average. We also observed that while state-of-the-art techniques tend to yield higher acceleration (up to 88.97%, on average), they come at the cost of some error in mutation score. We further analyze the effect of mutation generation selection ratio on the effectiveness of Mure and observed predictable reductions in memoization opportunities with increasing the percentage of mutated neurons. We observed that Mure offers more than 20% speed-up even when as high as 5% of the neurons are mutated.",
+      "published": "2026-07-20T23:41:24Z",
+      "updated": "2026-07-20T23:41:24Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.18582",
+      "abs_url": "https://arxiv.org/abs/2607.18582",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.05149",
+      "title": "Intent-Based Mutation Testing: From Naturally Written Programming Intents to Mutants",
+      "authors": [
+        "Asma Hamidi",
+        "Ahmed Khanfir",
+        "Mike Papadakis"
+      ],
+      "abstract": "This paper presents intent-based mutation testing, a testing approach that generates mutations by changing the programming intents that are implemented in the programs under test. In contrast to traditional mutation testing, which changes (mutates) the way programs are written, intent mutation changes (mutates) the behavior of the programs by producing mutations that implement (slightly) different intents than those implemented in the original program. The mutations of the programming intents represent possible corner cases and misunderstandings of the program behavior, i.e., program specifications, and thus can capture different classes of faults than traditional (syntax-based) mutation. Moreover, since programming intents can be implemented in different ways, intent-based mutation testing can generate diverse and complex mutations that are close to the original programming intents (specifications) and thus direct testing towards the intent variants of the program behavior/specifications. We implement intent-based mutation testing using Large Language Models (LLMs) that mutate programming intents and transform them into mutants. We evaluate intent-based mutation on 29 programs and show that it generates mutations that are syntactically complex, semantically diverse, and quite different (semantically) from the traditional ones. We also show that 55% of the intent-based mutations are not subsumed by traditional mutations. Overall, our analysis shows that intent-based mutation testing can be a powerful complement to traditional (syntax-based) mutation testing.",
+      "published": "2026-07-06T14:30:02Z",
+      "updated": "2026-07-06T14:30:02Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.05149",
+      "abs_url": "https://arxiv.org/abs/2607.05149",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.03223",
+      "title": "Round-Trip Mutation Testing: Translating Code to Natural Language Intent and back",
+      "authors": [
+        "Asma Hamidi",
+        "Cedric Richter",
+        "Ahmed Khanfir",
+        "Mike Papadakis"
+      ],
+      "abstract": "This paper presents Round-Trip Mutation Testing (RTM), a novel approach that generates mutants from LLM mistranslations between a program code and its intent. Leveraging the generative capability of LLMs from and to programming and natural language, and given an input program, our approach predicts its intent, that is used to generate programs, which when different from the original one, constitute the output mutants. The approach produces additionally mutants, stemming from artificially provoked mistranslations, by mutating the intent prior to the final programs (mutants) generation. Originating from the propagation of small changes in the intent to the code, our intuition is that these programs would present subtle semantic differences from the original one, simulating likely-to-occur faults that could result from specification misunderstandings, and enabling mutation testing. To evaluate RTM, we run it on 40 real buggy methods and evaluate its effectiveness and cost-efficiency in guiding testing towards detecting the bugs. Our results demonstrate the potential of round-trip mutation testing to produce syntactically more diverse mutants, potentially exposing faults that traditional mutation operators fail to reveal. More interestingly, RTM outperforms traditional pattern-based mutation in producing smaller and stronger test-suites, detecting on average over 4 and 1.7 times more faults when selecting only 4 and 30 tests respectively.",
+      "published": "2026-07-03T11:35:58Z",
+      "updated": "2026-07-03T11:35:58Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.03223",
+      "abs_url": "https://arxiv.org/abs/2607.03223",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.26456",
+      "title": "Towards Safety-Aware Mutation Testing for Autonomous Driving Systems",
+      "authors": [
+        "Donghwan Shin"
+      ],
+      "abstract": "Simulation-based testing is essential for ensuring the safety of Autonomous Driving Systems (ADS), yet the community lacks a systematic criterion for determining when we can safely stop additional test scenario generation. Existing coverage metrics typically focus on individual component reliability or treat the ADS as a black box, failing to capture certain component interactions that cause most ADS accidents. While traditional mutation testing provides a falsifiable measure of test adequacy, directly porting code- and deep learning model-level mutations to the corresponding modules of ADS is insufficient. In this vision paper, we propose a paradigm shift toward Safety-Aware Mutation Testing (SAMT). Unlike traditional mutation testing, which creates mutants (i.e., faulty versions of the software under test) by injecting artificial faults into individual components, SAMT systematically injects temporally bounded faults into the messages exchanged between ADS modules to simulate realistic interaction failures. To ensure these mutants represent genuine hazards, we propose deriving mutant generation rules directly from top-down safety engineering frameworks, such as System-Theoretic Process Analysis (STPA). By embedding systems thinking into the mutation testing pipeline, SAMT provides a rigorous mechanism for evaluating test adequacy, enabling automated scenario generation, and guiding ADS repair. We also outline critical open challenges.",
+      "published": "2026-06-24T23:36:04Z",
+      "updated": "2026-06-24T23:36:04Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.26456",
+      "abs_url": "https://arxiv.org/abs/2606.26456",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.05499",
+      "title": "STMutants: A Mutation Testing Dataset for Structured Text Programs in Industrial Automation",
+      "authors": [
+        "Md Humaun Kabir",
+        "Md Rakibul Islam",
+        "Helen H. Lou"
+      ],
+      "abstract": "Mutation testing is widely used to evaluate test-suite effectiveness, yet IEC 61131-3 Structured Text (ST) programs still lack a publicly available benchmark that supports reproducible mutation-based research. This gap is especially important because ST is extensively used in Programmable Logic Controllers (PLCs) that operate in real-time, safety-critical industrial environments, where software faults may cause equipment damage, production loss, or unsafe system behavior. To address this need, we present STMutants, a curated mutation testing dataset for industrial automation software. STMutants contains 110 generated first-order mutants derived from 11 ST programs collected from the OSCAT basic library and industrially relevant sources, of which 108 are retained after observability and equivalence screening. The dataset covers seven mutation operator categories adapted from classical taxonomies for the PLC domain, including value, relational, arithmetic, logical, negation, operation insertion/omission, and initialization faults. Each mutant is constructed through a four-phase methodology: fault-type profiling and operator selection, syntactic transformation, compilability verification, and manual equivalence screening with strong inter-rater agreement (kappa = 0.87). To demonstrate the usefulness of the dataset, we evaluate three large language models (LLMs) in a two-phase setting: test-suite generation followed by mutation kill/survive prediction. Across 108 retained mutants, the models achieve mutation detection accuracies of 86.1%, 94.4%, and 86.1%, respectively, with statistical analysis confirming significant performance differences. By providing the first publicly available mutation benchmark for ST programs, STMutants enables reproducible research on automated test generation, mutation analysis, fault localization, and AI-assisted quality assurance for PLC software.",
+      "published": "2026-06-03T22:47:54Z",
+      "updated": "2026-06-03T22:47:54Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.05499",
+      "abs_url": "https://arxiv.org/abs/2606.05499",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.00107",
+      "title": "Efficient Mutation Testing of Quantum Machine Learning Models",
+      "authors": [
+        "Emma Andrews",
+        "Prabhat Mishra"
+      ],
+      "abstract": "Quantum machine learning integrates the strengths of quantum computing and machine learning, enabling models to learn complex features using fewer parameters than their classical counterparts. Due to the increasing complexity of quantum machine learning models, it is necessary to verify that the implementation of these models satisfy the design specification and be free of bugs and faults. Mutation testing is a promising avenue to identify faulty quantum circuits that do not meet design specifications or contain defects by intentionally inserting faults into the quantum circuit. It is necessary to define mutation operations to inject faults into quantum circuits to ensure that a test suite is robust enough to evaluate an implementation against its design specification. In this paper, we extend mutation testing to quantum machine learning applications, primarily quantum neural network models. Specifically, this paper makes two important contributions. We define new mutation operations for efficient fault insertion compared to state-of-the-art approaches. We also present a directed mutation generation technique to reduce redundant mutant circuits. Extensive experimental evaluation demonstrates that our approach generates a more diverse and representative set of mutants, effectively addressing faults that traditional techniques fail to expose.",
+      "published": "2026-04-30T18:03:11Z",
+      "updated": "2026-04-30T18:03:11Z",
+      "categories": [
+        "quant-ph",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.00107",
+      "abs_url": "https://arxiv.org/abs/2605.00107",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.20706",
+      "title": "QuanForge: A Mutation Testing Framework for Quantum Neural Networks",
+      "authors": [
+        "Minqi Shao",
+        "Shangzhou Xia",
+        "Jianjun Zhao"
+      ],
+      "abstract": "With the growing synergy between deep learning and quantum computing, Quantum Neural Networks (QNNs) have emerged as a promising paradigm by leveraging quantum parallelism and entanglement. However, testing QNNs remains underexplored due to their complex quantum dynamics and limited interpretability. Developing a mutation testing technique for QNNs is promising while requires addressing stochastic factors, including the inherent randomness of mutation operators and quantum measurements. To tackle these challenges, we propose QuanForge, a mutation testing framework specifically designed for QNNs. We first introduce statistical mutation killing to provide a more reliable criterion. QuanForge incorporates nine post-training mutation operators at both gate and parameter levels, capable of simulating various potential errors in quantum circuits. Finally, a mutant generation algorithm is formalized that systematically produces effective mutants, thereby enabling a robust and reliable mutation analysis. Through extensive experiments on benchmark datasets and QNN architectures, we show that QuanForge can effectively distinguish different test suites and localize vulnerable circuit regions, providing insights for data enhancement and structural assessment of QNNs. We also analyze the generation capabilities of different operators and evaluate performance under simulated noisy conditions to assess the practical feasibility of QuanForge for future quantum devices.",
+      "published": "2026-04-22T15:47:44Z",
+      "updated": "2026-04-22T15:47:44Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.20706",
+      "abs_url": "https://arxiv.org/abs/2604.20706",
+      "source": "arxiv"
+    },
     {
       "id": "2105.10016",
       "title": "Testing DBMS Performance with Mutations",
@@ -1142,7 +1467,7 @@
         "Tao Zheng",
         "Zhenyu Chen"
       ],
-      "abstract": "In recent years, Deep Learning (DL) applications in JavaScript environment have become increasingly popular. As the infrastructure for DL applications, JavaScript DL frameworks play a crucial role in the development and deployment. It is essential to ensure the quality of JavaScript DL frameworks. However, the bottleneck of limited computational resources in the JavaScript environment brings new challenges to framework testing. Specifically, JavaScript DL frameworks are equipped with various optimization mechanisms (e.g., cache reuse, inference acceleration) to overcome the bottleneck of limited computational resources. These optimization mechanisms are overlooked by existing methods, resulting in many bugs in JavaScript DL frameworks being missed. To address the above challenges, we propose a mutation-based JavaScript DL framework testing method named DLJSFuzzer. DLJSFuzzer designs 13 tensor mutation rules targeting the cache reuse mechanism to generate test input tensors. Besides, DLJSFuzzer designs eight model mutation rules targeting the inference acceleration mechanism to generate test input models. To evaluate the effectiveness of DLJSFuzzer, we conduct experiments on the most widely-used JavaScript DL framework, TensorFlow.js. The experimental results show that DLJSFuzzer outperforms state-of-the-art methods in both effectiveness and efficiency. DLJSFuzzer successfully detects 21 unique crashes and 126 unique NaN \u0026 Inconsistency bugs. All detected crashes have been reported to the open-source community, with 12 of them already confirmed by developers. Additionally, DLJSFuzzer has improved by over 47% in model generation efficiency and over 91% in bug detection efficiency compared to all baselines.",
+      "abstract": "In recent years, Deep Learning (DL) applications in JavaScript environment have become increasingly popular. As the infrastructure for DL applications, JavaScript DL frameworks play a crucial role in the development and deployment. It is essential to ensure the quality of JavaScript DL frameworks. However, the bottleneck of limited computational resources in the JavaScript environment brings new challenges to framework testing. Specifically, JavaScript DL frameworks are equipped with various optimization mechanisms (e.g., cache reuse, inference acceleration) to overcome the bottleneck of limited computational resources. These optimization mechanisms are overlooked by existing methods, resulting in many bugs in JavaScript DL frameworks being missed. To address the above challenges, we propose a mutation-based JavaScript DL framework testing method named DLJSFuzzer. DLJSFuzzer designs 13 tensor mutation rules targeting the cache reuse mechanism to generate test input tensors. Besides, DLJSFuzzer designs eight model mutation rules targeting the inference acceleration mechanism to generate test input models. To evaluate the effectiveness of DLJSFuzzer, we conduct experiments on the most widely-used JavaScript DL framework, TensorFlow.js. The experimental results show that DLJSFuzzer outperforms state-of-the-art methods in both effectiveness and efficiency. DLJSFuzzer successfully detects 21 unique crashes and 126 unique NaN & Inconsistency bugs. All detected crashes have been reported to the open-source community, with 12 of them already confirmed by developers. Additionally, DLJSFuzzer has improved by over 47% in model generation efficiency and over 91% in bug detection efficiency compared to all baselines.",
       "categories": [
         "cs.SE"
       ],

@@ -1,0 +1,31 @@
+Title: Blocking at the Boundary: Auditing Long-Horizon Agents against Staged Prompt Injection
+Authors: Jingkai Liu, Yufei Han, Xiaoting Lyu, Wei Wang, Ting Yu
+ID: 2610.05163
+URL: https://arxiv.org/abs/2610.05163
+
+Abstract:
+Long-horizon agents consume external content, invoke tools, and modify
+persistent state. Indirect prompt injection can exploit task-specific context,
+propagate across causally connected stages, and alter a consequential action
+while the workflow continues; we term this staged prompt injection. We build an
+automated, feedback-guided attack generation pipeline and apply it to Claude
+Code and Codex in their native runtimes. The confirmed attacks span eight
+workflow scenarios, seven attack goals, and six injection surfaces, showing that
+production agents are vulnerable to context-aware, multi-step injection over
+long horizons. Stopping such attacks requires a decision before each
+consequential action: input screening and completed-run evaluation cannot locate
+the intervention point, and existing pre-action methods use incompatible units
+and labels. We therefore formulate boundary action auditing: given initial
+context, a trajectory prefix, and a fully specified pending message or tool
+call, an auditor predicts Pass or Block before its effect occurs. Pairing
+attacked and benign executions yields a 479-pair, 3,112-unit benchmark. We
+further propose Path-Aligned Attribution (PAA), a training-free auditor that
+decomposes pending actions into operative elements and traces what supplied each
+value and guided each decision. PAA blocks only when the model attributes an
+unwarranted, material effect on an element to an attacker-reachable source that
+either provides unqualified steering or conflicts with visible evidence. Under
+full-benchmark fail-open scoring with Claude Sonnet 5, PAA reaches 86% Block
+recall at a 6-8% false-block rate (FBR), whereas ARGUS reaches 44-47% recall at
+16-33% FBR. Under the same backend, on the tool calls that all three auditors
+natively support, PAA has higher recall and lower FBR than VIGIL and ARGUS; all
+paired 95% confidence intervals exclude zero.

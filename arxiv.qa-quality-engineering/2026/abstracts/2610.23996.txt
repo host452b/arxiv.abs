@@ -1,0 +1,31 @@
+Title: Agentic Interpretation: Harness-Governed Evidence Construction for Software Agents
+Authors: Yifeng He, Yanjun Wang, Siwei Cui, Aritra Sengupta, Murali Krishna Ramanathan
+ID: 2610.23996
+URL: https://arxiv.org/abs/2610.23996
+
+Abstract:
+Software agents answer behavioral questions about code, such as whether a patch
+passes tests or which lines caused a failure. These tasks require repository-
+wide evidence, yet most scaffolds leave intermediate findings in free-form
+trajectories, making them hard to reuse and easy to disconnect from final
+answers. We present Agentic Interpretation (AgInt), a framework for harness-
+governed evidence construction. The model proposes typed records, while a
+deterministic harness admits, grades, and persists them, reports unresolved
+requirements, and licenses answers under task-specific rules. The resulting
+certificate gives the model persistent external state and leaves an auditable
+decision record. Formally, append-only certificate states form a grounding
+lattice ordered by record inclusion, where each admitted record extends the
+state by union. We evaluate AgInt with four models on SWE-bench-Live and DeepSWE
+for patch acceptance and Defects4J and GitBug-Java for fault localization. AgInt
+outperforms the plain agent and Agentic Code Reasoning on all reported patch-
+acceptance metrics and ranks responsible lines higher while inspecting fewer
+irrelevant lines in fault localization. For GLM-5, reject-class F1 rises from
+0.256 to 0.543 on SWE-bench-Live, All@1 rises from 0.140 to 0.400 on Defects4J,
+and wasted inspected lines fall from 31.5 to 11.7 on GitBug-Java. A matched-
+template control separates the mechanism: the persistent scaffold drives most
+fault-localization gains, while the certificate body and gate govern patch-
+acceptance calibration. With execution licensed, AgInt produces harness-
+reproduced witnesses for 293 of 475 null-dereference candidates versus 253 for a
+matched shell agent, and 62 of 117 resource-leak candidates versus 58. Across
+reported efficiency measurements, it uses 35% fewer executions and reduces cost
+per candidate by 59%.

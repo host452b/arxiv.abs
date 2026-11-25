@@ -10,11 +10,93 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:50:18Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 112,
-  "return_count": 112,
+  "total_results": 116,
+  "return_count": 116,
   "papers": [
+    {
+      "id": "2606.20227",
+      "title": "QMFOL: Benchmarking Large Language Model Reasoning via Quantifiable Monadic First-Order Logic Test Case Generation",
+      "authors": [
+        "Xinyi Zheng",
+        "Ling Shi",
+        "Tianlong Yu",
+        "Yongxin Zhao",
+        "Lorenz Goette",
+        "Kailong Wang"
+      ],
+      "abstract": "Large Language Models (LLMs) have made significant progress in reasoning, particularly in deductive reasoning, which is crucial for high-stakes decision-making. As models improve, evaluation benchmarks should evolve to keep pace. However, existing benchmarks lack fine-grained control over logical complexity and struggle to balance semantic diversity with logical consistency. To address these issues, we propose QMFOL, an automated framework for generating monadic first-order logic reasoning tasks with quantifiable and controllable complexity. It constructs formal logical structures using conjunction and disjunction patterns, enabling precise control over reasoning depth, width, label types, and distractors. These structures are then translated into natural language via LLMs, with logical consistency ensured through round-trip verification using an external prover. Based on our framework, we build QMFOLBench, a benchmark comprising 2880 instances with 960 configurations across diverse logical and semantic dimensions. Evaluations on six large reasoning models (LRMs) and two LLMs show that performance degrades and computational overhead increases with rising logical complexity. Models perform better on True-labeled tasks than on False or Unknown ones, and exhibit sensitivity to semantic variation. Overall, QMFOL offers a scalable and reliable approach for constructing deductive reasoning benchmarks with controllable complexity, enabling more precise evaluation of reasoning capabilities in modern language models.",
+      "published": "2026-06-18T13:40:27Z",
+      "updated": "2026-06-18T13:40:27Z",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.20227",
+      "abs_url": "https://arxiv.org/abs/2606.20227",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.06563",
+      "title": "AI-Driven Test Case Generation from Natural Language Requirements: A Survey of Techniques and Research Gaps",
+      "authors": [
+        "Orimoloye Folorunsho",
+        "Hassan Reza"
+      ],
+      "abstract": "Software testing is critical for verifying that systems meet specified requirements, yet remains among the most time-consuming and expensive activities in development. Requirements-based test generation allows test cases to be derived early from requirements artifacts, but generating them directly from natural language is challenging due to inherent ambiguity and imprecision. Recent advances in AI, natural language processing (NLP), and large language models (LLMs) have made automating this pipeline increasingly feasible, while introducing new risks including hallucination, reduced traceability, and inconsistent evaluation. This survey addresses four research questions: what AI and NLP techniques have been proposed for generating test cases from natural language requirements; what tools and frameworks support these approaches; how generated test cases are evaluated; and what research gaps remain. Following Kitchenham and Charters' systematic review guidelines, we searched major scholarly databases spanning 2000-2025 and, after applying strict inclusion criteria, identified 21 primary studies. The literature is organized into three evolutionary eras, revealing that no existing approach simultaneously satisfies six key quality dimensions: automation, ambiguity handling, domain applicability, traceability, evaluation thoroughness, and hallucination control. The survey makes three main contributions: a three-era evolutionary synthesis of AI-based test generation; a six-criteria gap analysis showing no current approach fully addresses all quality dimensions; and four actionable research guidelines targeting hallucination, traceability, complexity sensitivity, and compliance.",
+      "published": "2026-06-04T15:07:23Z",
+      "updated": "2026-06-13T16:07:09Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.06563",
+      "abs_url": "https://arxiv.org/abs/2606.06563",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.00942",
+      "title": "PPO guided Agentic Pipeline for Adaptive Prompt Selection and Test Case Generation",
+      "authors": [
+        "Gourisetty Venkata Sai Koushik",
+        "Dama Aditya",
+        "Mahankali Harish Sai",
+        "Peddi Siddarhta",
+        "Shadab Ahmad",
+        "Vivek Yelleti"
+      ],
+      "abstract": "Developing effective test cases capable of thoroughly exercising large-scale software systems is inherently difficult, especially if such systems have voluminous, complex, and deeply nested source codes. In this work, we present a novel approach for generating test cases using a reinforcement learning-driven agentic framework where Proximal Policy Optimization (PPO) is coupled with an LLM engine to guide prompt selection during test generation. Our approach consists of two phases. In Phase I, the ToT-guided optimization agent partitions and minimizes the source code by removing redundancies without changing the functional behavior of the source code. In Phase II, a PPO-based policy network is trained to solve the problem of selecting prompts among eight different prompting techniques, such as Boundary Value Analysis, Random Fuzzing, etc., based on the inputted 11-dimensional state vector representing the source code complexity metrics and live coverage metrics to direct the LLM engine towards exploring unvisited paths in the program. The PPO agent receives rewards based on a combination of increases in line and branch coverages, penalties for unexplored branches, and rewards for reducing source code length. From experiments conducted on twenty benchmark programs, it is evident that the proposed approach, PPO-LLM, outperforms CBMC, kS-LLM, and kS-LLM++ in terms of branch and line coverage in almost all cases, for various loop bound values ranging from BOUND~1 to BOUND~2000. While at BOUND~1, the coverage of branches is 100\\% using PPO-LLM on the PALS suite, in comparison, it is around 86.8\\% using kS-LLM++. This confirms that adaptive prompt selection driven by PPO substantially outperforms static prompting strategies on PALS type programs.",
+      "published": "2026-05-01T06:19:51Z",
+      "updated": "2026-05-01T06:19:51Z",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.00942",
+      "abs_url": "https://arxiv.org/abs/2605.00942",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.06946",
+      "title": "An empirical study of LoRA-based fine-tuning of large language models for automated test case generation",
+      "authors": [
+        "Milad Moradi",
+        "Ke Yan",
+        "David Colwell",
+        "Rhona Asgari"
+      ],
+      "abstract": "Automated test case generation from natural language requirements remains a challenging problem in software engineering due to the ambiguity of requirements and the need to produce structured, executable test artifacts. Recent advances in LLMs have shown promise in addressing this task; however, their effectiveness depends on task-specific adaptation and efficient fine-tuning strategies. In this paper, we present a comprehensive empirical study on the use of parameter-efficient fine-tuning, specifically LoRA, for requirement-based test case generation. We evaluate multiple LLM families, including open-source and proprietary models, under a unified experimental pipeline. The study systematically explores the impact of key LoRA hyperparameters, including rank, scaling factor, and dropout, on downstream performance. We propose an automated evaluation framework based on GPT-4o, which assesses generated test cases across nine quality dimensions. Experimental results demonstrate that LoRA-based fine-tuning significantly improves the performance of all open-source models, with Ministral-8B achieving the best results among them. Furthermore, we show that a fine-tuned 8B open-source model can achieve performance comparable to pre-fine-tuned GPT-4.1 models, highlighting the effectiveness of parameter-efficient adaptation. While GPT-4.1 models achieve the highest overall performance, the performance gap between proprietary and open-source models is substantially reduced after fine-tuning. These findings provide important insights into model selection, fine-tuning strategies, and evaluation methods for automated test generation. In particular, they demonstrate that cost-efficient, locally deployable open-source models can serve as viable alternatives to proprietary systems when combined with well-designed fine-tuning approaches.",
+      "published": "2026-04-08T11:09:49Z",
+      "updated": "2026-04-08T11:09:49Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.06946",
+      "abs_url": "https://arxiv.org/abs/2604.06946",
+      "source": "arxiv"
+    },
     {
       "id": "2010.04258",
       "title": "Test4Enforcers: Test Case Generation for Software Enforcers",
@@ -1171,7 +1253,7 @@
         "Masumi Morishige",
         "Ryo Koshihara"
       ],
-      "abstract": "Reproducibility and reliability remain pressing challenges for generative AI systems whose behavior can drift with each model update or prompt revision. We introduce GPR-bench, a lightweight, extensible benchmark that operationalizes regression testing for general purpose use cases. GPR-bench couples an open, bilingual (English and Japanese) dataset covering eight task categories (e.g., text generation, code generation, and information retrieval) and 10 scenarios in each task categories (80 total test cases for each language) with an automated evaluation pipeline that employs \"LLM-as-a-Judge\" scoring of correctness and conciseness. Experiments across three recent model versions - gpt-4o-mini, o3-mini, and o4-mini - and two prompt configurations (default versus concise-writing instruction) reveal heterogeneous quality. Our results show that newer models generally improve correctness, but the differences are modest and not statistically significant, suggesting that GPR-bench may not be sufficiently challenging to differentiate between recent model versions. In contrast, the concise-writing instruction significantly enhances conciseness (+12.37 pp, Mann-Whitney U test: p \u003c 0.001, effect size r = 0.2995) with minimal degradations on accuracy (-1.7 pp), demonstrating the effectiveness of prompt engineering. Released under the MIT License, GPR- bench lowers the barrier to initiating reproducibility monitoring and provides a foundation for community-driven extensions, while also raising important considerations about benchmark design for rapidly evolving language models.",
+      "abstract": "Reproducibility and reliability remain pressing challenges for generative AI systems whose behavior can drift with each model update or prompt revision. We introduce GPR-bench, a lightweight, extensible benchmark that operationalizes regression testing for general purpose use cases. GPR-bench couples an open, bilingual (English and Japanese) dataset covering eight task categories (e.g., text generation, code generation, and information retrieval) and 10 scenarios in each task categories (80 total test cases for each language) with an automated evaluation pipeline that employs \"LLM-as-a-Judge\" scoring of correctness and conciseness. Experiments across three recent model versions - gpt-4o-mini, o3-mini, and o4-mini - and two prompt configurations (default versus concise-writing instruction) reveal heterogeneous quality. Our results show that newer models generally improve correctness, but the differences are modest and not statistically significant, suggesting that GPR-bench may not be sufficiently challenging to differentiate between recent model versions. In contrast, the concise-writing instruction significantly enhances conciseness (+12.37 pp, Mann-Whitney U test: p < 0.001, effect size r = 0.2995) with minimal degradations on accuracy (-1.7 pp), demonstrating the effectiveness of prompt engineering. Released under the MIT License, GPR- bench lowers the barrier to initiating reproducibility monitoring and provides a foundation for community-driven extensions, while also raising important considerations about benchmark design for rapidly evolving language models.",
       "categories": [
         "cs.CL",
         "cs.AI"

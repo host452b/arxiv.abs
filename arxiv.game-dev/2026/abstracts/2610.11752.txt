@@ -1,0 +1,25 @@
+Title: 2DGS-Planner: Rasterization-based Path Planning in 2D Gaussian Splatting Map
+Authors: Jiwon Park, Dong-Uk Seo, Hyun Myung
+ID: 2610.11752
+URL: https://arxiv.org/abs/2610.11752
+
+Abstract:
+Gaussian splatting provides an explicit and efficiently rasterizable scene
+representation for robot navigation. However, individual Gaussian primitives may
+not reliably represent obstacles as they are jointly optimized through alpha-
+composited rendering from a finite set of reconstruction views. We propose 2DGS-
+Planner, a path planner for ground robots that reads planning-relevant geometry
+from a 2D Gaussian splatting (2DGS) map through rasterization, rather than
+treating individual Gaussian primitives as obstacles. During offline roadmap
+construction, multi-view attribution converts rendered normal dispersion into
+structural scores for non-ground disks supported by the reconstruction views.
+These scores guide adaptive node sampling on the ground. Path-aligned
+orthographic queries validate candidate edges, while cylindrical queries
+estimate local clearance fields that are cached on the edges. During online
+planning, graph search initializes a route, and path refinement reuses the
+cached fields while accounting for the robot's dimensions and ground
+constraints. Experiments demonstrate improved roadmap connectivity, more
+accurate clearance estimation, and higher planning success compared with the
+tested baselines. These results support rasterization as an effective geometric
+query interface for planning directly on Gaussian maps. Code and data are
+available at https://2dgs-planner.github.io/

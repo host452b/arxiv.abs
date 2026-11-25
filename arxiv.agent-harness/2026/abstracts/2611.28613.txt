@@ -1,0 +1,27 @@
+Title: Internalized Experience: How Training Data Shapes Memory Formation in LLMs
+Authors: Xianxuan Long, Xinnan Dai, Kai Guo, Jiliang Tang
+ID: 2611.28613
+URL: https://arxiv.org/abs/2611.28613
+
+Abstract:
+Parametric memory enables large language models (LLMs) to retain information
+from past experience and reuse it in subsequent tasks. Yet how training data
+supports the internalization of reusable task rules remains unclear. We
+introduce FSMem (Finite-State Machine Memory), a state-transition framework for
+constructing training data and studying how data content and organization shape
+memory formation. We evaluate rule reuse across synthetic worlds, classical
+planning, and code execution through valid-action identification and execution-
+outcome prediction, complemented by next-operation prediction in code. Our
+experiments reveal several systematic learning patterns. Under matched training
+conditions, even unchanged task rules become harder to internalize when learned
+alongside a larger variety of action types; by contrast, scaling the training
+data to provide broader state-action coverage generally improves rule learning.
+We further find that training at a single execution depth produces depth-
+specialized behavior, with models performing best when training and test
+executions have similar lengths. Motivated by this finding, we construct
+cumulative corpora that combine short and long trajectories, which can
+outperform long-trajectory-only training while using fewer training tokens.
+Together, these results demonstrate that the same task rules can be internalized
+differently depending on how execution experience is constructed, and that
+understanding these learning patterns can guide the design of more effective
+training data for parametric memory.

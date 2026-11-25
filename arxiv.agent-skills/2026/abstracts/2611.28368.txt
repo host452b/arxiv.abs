@@ -1,0 +1,31 @@
+Title: Schedule, Rank, Profile: Continuous Evaluation of LLM Agents in Games
+Authors: Martyna Plomecka, Yao Yan, DJ Sterling, Jon Lipovetz, John Schultz, Michael Aaron, Chiamaka Chukwuka, Will Cukierski, Christopher D'Mello, Bovard Doerschuk-Tiberi et al.
+ID: 2611.28368
+URL: https://arxiv.org/abs/2611.28368
+
+Abstract:
+Games are a robust test for large language model agents: they require sequential
+decisions, adversarial or cooperative interaction, state tracking, reasoning
+under uncertainty, and long-horizon planning. However, a one-time game benchmark
+can go stale as models, prompts, environment implementations, and evaluation
+policies change, and refreshing it is costly: full round-robin evaluation scales
+poorly in the number of model pairs, and the resulting outcomes live on
+incompatible per-game scales. We present a framework for continuous evaluation
+of LLM agents in game settings, organized around three coupled components.
+First, an adaptive scheduler that maps pairwise Bradley-Terry uncertainty to
+reduced per-pair match targets, concentrating budget on comparisons that remain
+unresolved. Second, a Unified Leaderboard (ULB) that reduces heterogeneous
+outcomes to pairwise evidence and fits a game-balanced Bradley-Terry model by
+minorization-maximization with bootstrap intervals, so that high-throughput
+games cannot dominate the aggregate ranking. Third, a game skill-profile
+methodology that scores each game along diverse skill dimensions, making the
+capability coverage of the suite explicit and turning game selection into a
+design decision rather than an artifact of availability. In this paper, we
+specify the research design and outcome reduction of the current implementation
+and evaluate the framework on a ten-game suite spanning perfect-information
+board games, imperfect-information games, and social/language settings,
+reporting LLM capability profiles, evaluation-cost savings across model-refresh
+cycles, and an empirical Pareto frontier relating model performance to inference
+cost. As deployed, the scheduler saved 61.7% of episodes; it counted each
+episode in the two team games as four records, overstating their savings, and
+the other eight games save 61.9%.

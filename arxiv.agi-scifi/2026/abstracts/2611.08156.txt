@@ -1,0 +1,31 @@
+Title: La-JEPA: Compact Robot Policies with Latent World Modeling
+Authors: Mateo Clémente, George Z. Xue, Amin Abyaneh, Liheng Ma, Rui Heng Yang, Tongtong Cao, Zhanguang Zhang, Yingxue Zhang
+ID: 2611.08156
+URL: https://arxiv.org/abs/2611.08156
+
+Abstract:
+World-action models adapt pretrained video generators, and vision-language-
+action models build on vision-language backbones, tying policy architecture and
+inference cost to large transformers designed for generation rather than
+control. While recent world-action models mostly scale the video backbone and
+its data, we argue that the choice of latent space is just as critical, and that
+the policy should be trained natively in that space. We introduce Latent Action
+JEPA (La-JEPA), a compact world-action model whose policy transformer is trained
+from scratch in the feature space of a pretrained V-JEPA 2.1 encoder; it
+predicts future features with actions during training and generates only actions
+at inference. Among policies without embodied pretraining, La-JEPA achieves
+state-of-the-art average RoboTwin 2.0 success under both clean-only and full
+training, and state-of-the-art LIBERO-Plus success with corrected instructions,
+while using far fewer parameters than the strongest competitors; with full
+training, its success scales with model size up to 2.1B. Its S and B policies
+run two to five times faster than Fast-WAM and Faster-WAM while outperforming
+both on LIBERO-Plus and RoboTwin 2.0, and La-JEPA outperforms the closest JEPA-
+based methods, LeapBot-WA and JEPA-WAM, without their pretrained policy
+backbones. On four real-robot tasks, its average success is comparable to
+$π_{0.5}$. A design study shows that JEPA features outperform video VAE latents,
+most clearly out of distribution, and that training-time future prediction
+improves the policy even when skipped at inference. Tailoring the policy's
+design, including its latent space, to control can thus matter more than the
+knowledge transferred from a pretrained generative backbone, suggesting that
+robot foundation models may benefit from architectures designed for control
+rather than inherited from generation.

@@ -10,11 +10,70 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:47:30Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 126,
-  "return_count": 126,
+  "total_results": 129,
+  "return_count": 129,
   "papers": [
+    {
+      "id": "2611.12019",
+      "title": "Feeling Easier, Working Harder: Cognitive Load in AI-Assisted Code Comprehension",
+      "authors": [
+        "Maryangela White",
+        "Maximilian Rose",
+        "Matthew Buckman",
+        "Amy McDonnell",
+        "Francisco Ortega",
+        "Bianca Trinkenreich"
+      ],
+      "abstract": "Software developers spend significant time reading and understanding code, increasingly supplemented by generative AI. While these tools aim to reduce the difficulty of reading code, interacting with them introduces a dual-task environment that may impose extraneous cognitive load that is challenging to capture. This study investigates how access to generative AI affects developers' real-time cognitive workload, code comprehension performance, and self-perceived code comprehension strategies. We conducted a 3x2 within-subjects study with 20 novice CS students reviewing Java code snippets of varying lengths with or without AI assistance, followed by an AI-unassisted comprehension quiz. Cognitive workload was continuously captured using a Detection-Response Task (tDRT) during both reading and quiz phases, and compared to post-quiz NASA-TLX and SEQ scores. AI assistance significantly increased objective cognitive workload, raising tDRT reaction times by 11.2%, yet participants' perceived workload remained unchanged. Code comprehension scores were high under both conditions, with no evidence that AI assistance improved comprehension at the difficulty levels evaluated; a ceiling effect limited power to detect benefits on harder tasks. Qualitatively, participants reported trusting the AI conditionally -verifying its output against their own reading for more complex snippets, but directly trusting it for simpler code- and, while many felt their reading process was unchanged, a notable subset shifted toward skimming or reading the AI's explanations in place of the code itself. These findings reveal that developers do not accurately perceive the cognitive resources they expend when managing AI tools. This study provides evidence of added cognitive effort associated with using generative AI, pointing towards a need to account for this dual-task penalty in software engineering tools and education.",
+      "published": "2026-11-09T07:56:58Z",
+      "updated": "2026-11-09T07:56:58Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.12019",
+      "abs_url": "https://arxiv.org/abs/2611.12019",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.19970",
+      "title": "Temporal Adaptive Fine-Tuning for Code Comprehension",
+      "authors": [
+        "Alex Wolf",
+        "Pooja Rani",
+        "Harald C. Gall"
+      ],
+      "abstract": "Repository-level code comprehension question answering (QA) supports developer reasoning over functionality and usage distributed across codebases. However, repository-specialized large language models (LLMs) can become misaligned as code evolves. We study this challenge as temporal repository adaptation: acquiring new knowledge, suppressing obsolete, retaining still-valid, and preserving semantically neighboring knowledge. Existing retrieval, fine-tuning, and model-editing methods address only parts of this problem. We propose Temporal Adaptive Fine-Tuning (TAFT), a novel adaptation approach that treats repository transitions as supervision. TAFT derives temporally grounded QA data from repository transitions, pairs newly valid with obsolete knowledge through preference optimization, and replays transition-conditioned retention examples to preserve still-valid knowledge. We evaluate TAFT on an augmented temporal SWE-bench dataset comprising 255,295 QA entries across ten temporal slices, comparing deferred (Baseline), per-slice retrained (Baseline-Batched), and variants with knowledge anchors along four dimensions: updated knowledge, obsolete-answer suppression, retention, and neighbor stability. TAFT consistently outperforms both the deferred and batched baselines, with an average relative improvement of 18% in updated/suppressed knowledge accuracy, doubled retention accuracy, and roughly 1.5 times the neighbor accuracy. With directly supplied knowledge anchors, TAFT-KANT further improves mean updated/suppressed, retention, and neighbor accuracy over TAFT by 3.55%, 8.35%, and 13.00%, respectively. Overall, TAFT demonstrates its effectiveness across all evaluated areas, effectively enabling code comprehension QA alignment with repository evolution.",
+      "published": "2026-10-14T10:53:35Z",
+      "updated": "2026-10-14T10:53:35Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19970",
+      "abs_url": "https://arxiv.org/abs/2610.19970",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.15948",
+      "title": "TARS: A Theory-of-Mind Agent for Personalized In-IDE Code Comprehension",
+      "authors": [
+        "Leopoldo Todisco",
+        "Antonio Della Porta",
+        "Stefano Lambiase",
+        "Fabio Palomba"
+      ],
+      "abstract": "Code comprehension is one of the most time-consuming tasks in software engineering, yet most LLM-based assistants produce explanations that ignore who is asking and force developers into a disruptive copy-paste workflow. We present TARS, an LLM-powered agent integrated into Visual Studio Code that supports program comprehension through autonomous explanations anchored directly to the code under analysis. Built around a lightweight Theory of Mind paradigm, TARS profiles a developer's expertise, role, and stylistic preferences, then adapts the depth and tone of its explanations accordingly, grounding them in project documentation via Retrieval-Augmented Generation. To evaluate TARS, we conducted a controlled experiment with 18 participants on non-trivial Java snippets. Participants using TARS completed tasks 26\\% faster, reported lower cognitive load, and found the explanations meaningfully adapted to their profiles.",
+      "published": "2026-07-17T13:32:20Z",
+      "updated": "2026-07-17T13:32:20Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.15948",
+      "abs_url": "https://arxiv.org/abs/2607.15948",
+      "source": "arxiv"
+    },
     {
       "id": "2603.07668",
       "title": "The Effect of Code Obfuscation on Human Program Comprehension",
@@ -758,7 +817,7 @@
         "Giovanni Viviani",
         "Gail C. Murphy"
       ],
-      "abstract": "Software developers often rely on natural language text that appears in software engineering artifacts to access critical information as they build and work on software systems. For example, developers access requirements documents to understand what to build, comments in source code to understand design decisions, answers to questions on Q\u0026A sites to understand APIs, and so on. To aid software developers in accessing and using this natural language information, software engineering researchers often use techniques from natural language processing. In this paper, we explore whether frame semantics, a general linguistic approach, which has been used on requirements text, can also help address problems that occur when applying lexicon analysis based techniques to text associated with program comprehension activities. We assess the applicability of generic semantic frame parsing for this purpose, and based on the results, we propose SEFrame to tailor semantic frame parsing for program comprehension uses. We evaluate the correctness and robustness of the approach finding that SEFrame is correct in between 73% and 74% of the cases and that it can parse text from a variety of software artifacts used to support program comprehension. We describe how this approach could be used to enhance existing approaches to identify meaning on intention from software engineering texts.",
+      "abstract": "Software developers often rely on natural language text that appears in software engineering artifacts to access critical information as they build and work on software systems. For example, developers access requirements documents to understand what to build, comments in source code to understand design decisions, answers to questions on Q&A sites to understand APIs, and so on. To aid software developers in accessing and using this natural language information, software engineering researchers often use techniques from natural language processing. In this paper, we explore whether frame semantics, a general linguistic approach, which has been used on requirements text, can also help address problems that occur when applying lexicon analysis based techniques to text associated with program comprehension activities. We assess the applicability of generic semantic frame parsing for this purpose, and based on the results, we propose SEFrame to tailor semantic frame parsing for program comprehension uses. We evaluate the correctness and robustness of the approach finding that SEFrame is correct in between 73% and 74% of the cases and that it can parse text from a variety of software artifacts used to support program comprehension. We describe how this approach could be used to enhance existing approaches to identify meaning on intention from software engineering texts.",
       "categories": [
         "cs.SE"
       ],
@@ -1370,7 +1429,7 @@
         "Bochan Lee",
         "Moble Benedict"
       ],
-      "abstract": "A comprehensive helicopter flight dynamics code is developed based on the UH-60 helicopter and named Texas A\\\u0026M University Rotorcraft Analysis Code (TRAC). This is a complete software package, which could perform trim analysis to autonomous flight simulation and the capability to model any helicopter configuration. Different components of the helicopter such as the main rotor, tail rotor, fuselage, vertical tail, and horizontal tail are modeled individually as different modules in the code and integrated to develop a complete UH-60 model. Since the code is developed on a module basis, it can be easily modified to adopt another component or configure a different helicopter. TRAC can predict the dynamic responses of both the articulated rotor blades and the helicopter fuselage and yields the required pilot control inputs to achieve trim condition for different flight regimes such as hover, forward flight, coordinated turn, climb/descent, etc. These trim results are validated with the test data obtained from the UH-60 flight tests conducted by the US Army. Beyond trim analysis, TRAC can also generate linearized models at various flight conditions based on a first-order Taylor series expansion. The extracted linear models show realistic helicopter dynamic behavior and were used to simulate a fully autonomous flight that involves a UH-60 helicopter approaching a ship and landing on the deck by implementing a Linear Quadratic Regulator (LQR) optimal controller.",
+      "abstract": "A comprehensive helicopter flight dynamics code is developed based on the UH-60 helicopter and named Texas A\\&M University Rotorcraft Analysis Code (TRAC). This is a complete software package, which could perform trim analysis to autonomous flight simulation and the capability to model any helicopter configuration. Different components of the helicopter such as the main rotor, tail rotor, fuselage, vertical tail, and horizontal tail are modeled individually as different modules in the code and integrated to develop a complete UH-60 model. Since the code is developed on a module basis, it can be easily modified to adopt another component or configure a different helicopter. TRAC can predict the dynamic responses of both the articulated rotor blades and the helicopter fuselage and yields the required pilot control inputs to achieve trim condition for different flight regimes such as hover, forward flight, coordinated turn, climb/descent, etc. These trim results are validated with the test data obtained from the UH-60 flight tests conducted by the US Army. Beyond trim analysis, TRAC can also generate linearized models at various flight conditions based on a first-order Taylor series expansion. The extracted linear models show realistic helicopter dynamic behavior and were used to simulate a fully autonomous flight that involves a UH-60 helicopter approaching a ship and landing on the deck by implementing a Linear Quadratic Regulator (LQR) optimal controller.",
       "categories": [
         "eess.SY",
         "cs.RO",
@@ -2777,7 +2836,7 @@
         "Zhen Xie",
         "Hao Wang"
       ],
-      "abstract": "Complex chart understanding tasks demand advanced visual recognition and reasoning capabilities from multimodal large language models (MLLMs). However, current research provides limited coverage of complex chart scenarios and computation-intensive reasoning tasks prevalent in real-world applications. This study proposes an automated multi-stage code-driven pipeline for systematically generating visual reasoning datasets to address these limitations. The pipeline integrates retrieval-augmented generation (RAG) to retrieve professional chart templates and employs chain-of-thought (CoT) strategies to generate reasoning codes that simulate real data distributions, thereby driving chart rendering and question-related statistical computations. Through model-based evaluation, the pipeline enhances chart diversity and data quality. Using this framework, we construct ChartM$^3$, a multi-dimensional and multi-step dataset containing 38K charts and 142K Q\u0026A pairs for training, along with 2,871 high-quality evaluation samples for enabling practical performance assessment. Supervised fine-tuning (SFT) and reinforcement learning (RL) experiments demonstrate that our dataset significantly improves reasoning capabilities and cross-domain generalization performance, enabling smaller models to achieve performance comparable to larger-scale models in complex chart comprehension.",
+      "abstract": "Complex chart understanding tasks demand advanced visual recognition and reasoning capabilities from multimodal large language models (MLLMs). However, current research provides limited coverage of complex chart scenarios and computation-intensive reasoning tasks prevalent in real-world applications. This study proposes an automated multi-stage code-driven pipeline for systematically generating visual reasoning datasets to address these limitations. The pipeline integrates retrieval-augmented generation (RAG) to retrieve professional chart templates and employs chain-of-thought (CoT) strategies to generate reasoning codes that simulate real data distributions, thereby driving chart rendering and question-related statistical computations. Through model-based evaluation, the pipeline enhances chart diversity and data quality. Using this framework, we construct ChartM$^3$, a multi-dimensional and multi-step dataset containing 38K charts and 142K Q&A pairs for training, along with 2,871 high-quality evaluation samples for enabling practical performance assessment. Supervised fine-tuning (SFT) and reinforcement learning (RL) experiments demonstrate that our dataset significantly improves reasoning capabilities and cross-domain generalization performance, enabling smaller models to achieve performance comparable to larger-scale models in complex chart comprehension.",
       "categories": [
         "cs.CV"
       ],

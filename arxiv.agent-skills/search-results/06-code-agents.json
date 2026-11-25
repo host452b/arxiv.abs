@@ -10,11 +10,1274 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T13:35:47Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 607,
-  "return_count": 200,
+  "return_count": 259,
   "papers": [
+    {
+      "id": "2611.33144",
+      "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
+      "authors": [
+        "Feixiang Ruan",
+        "Guodong Lv",
+        "Kewei Zhang",
+        "Wenbo Huang",
+        "Yintianrun Zhang",
+        "Qiang Wang",
+        "Ruiyang Si",
+        "Shunyu Yang",
+        "Shulong Jiang",
+        "Weicheng Duan",
+        "Rui Ni",
+        "Jianxin Bi",
+        "Lekai Wang",
+        "Yuze Fan",
+        "Haobo Li",
+        "Zeliang Fu",
+        "Jiankun Zhang",
+        "Duomin Wang",
+        "Enze Xie",
+        "Daquan Zhou"
+      ],
+      "abstract": "Learning for dexterous manipulation is limited by the scarcity of high-quality demonstrations: retargeting from human video is imprecise, teleoperation gives no force feedback to the operator, and exoskeleton-based collection is hard to scale up. We present PyRUA-Dex, a framework that enables coding agents to develop dexterous manipulation through programmatic policy, without the need of demonstrations. The programmatic policy is developed in two stages: during exploration, multiple agents explore in parallel for task skills and ways to compose them, and a distilling agent condenses the successful attempts into a task library and one program. During refinement, this program is improved through randomized layouts for enhanced robustness and execution efficiency. In simulated environments, PyRUA-Dex achieves SOTA on Bench2Dex with a score of 72.9 and reaches 81.0% success on DexJoCo under full randomization, ahead of every trained policy on both benchmarks. In real world experiments on a bimanual platform with two 22-DoF hands, PyRUA-Dex learns to play piano, write calligraphy, and other tasks efficiently: learning a new piece from sheet music takes as little as 30 minutes. These results suggest that PyRUA-Dex is an effective framework for developing dexterous manipulation policies with coding agents in the absence of high quality dexterous manipulation demonstrations.",
+      "published": "2026-11-24T18:56:44Z",
+      "updated": "2026-11-24T18:56:44Z",
+      "categories": [
+        "cs.RO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.33144",
+      "abs_url": "https://arxiv.org/abs/2611.33144",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32973",
+      "title": "SpecEngineeringBench: Evaluating Coding Agents as Autonomous Specification Engineers",
+      "authors": [
+        "Xingjian Wang",
+        "Shijian Wang",
+        "Minghao Liu",
+        "Ji Zou",
+        "Zetao Yang",
+        "Xinping Lei",
+        "Yiming Liang",
+        "Shen Yan",
+        "Enduo Zhao",
+        "Xiaoyang Shen",
+        "Weihao Xuan",
+        "Jiaheng Liu",
+        "Ge Zhang"
+      ],
+      "abstract": "Autonomous specification engineering requires coding agents to translate functional requirements into executable tests and use the results to discover and validate defects. However, existing benchmarks evaluate coding agents on explicitly specified test generation tasks, commonly providing an issue description, a designated test entry point, or files to inspect, leaving the ability to determine what to test and where to investigate insufficiently evaluated. Relying on such clues bypasses the challenge of mapping requirements to implementations and proactively uncovering unknown defects. We propose SpecEngineeringBench, comprising 100 instances from 78 open-source Python repositories across 16 application categories, with multiple recorded defects in each instance. Two independent tasks evaluate complementary capabilities: generating test suites and discovering defects through execution analysis. The evaluation combines test validity, defect detection, and coverage with localization precision and recall. Across seven frontier coding agents, results reveal that test validity and coverage decouple from defect exposure: agents achieve a 91.47% Head Pass Rate and 80.48% Change-focused Coverage alongside a 26.36% Fail-to-Pass Rate, while localization recall drops from 78.11% at the file level to 51.29% at the function level. Autonomous test generation improves file, function, and hunk localization recall by 4.99, 2.77, and 2.69 percentage points over relying solely on existing repository test suites.",
+      "published": "2026-11-24T17:07:54Z",
+      "updated": "2026-11-24T17:07:54Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32973",
+      "abs_url": "https://arxiv.org/abs/2611.32973",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.32037",
+      "title": "Online Environment Repair for Coding Agents",
+      "authors": [
+        "Sheng Lu",
+        "Rui Mao",
+        "Zewei Chen",
+        "Chihua Ying",
+        "Beiduo Chen",
+        "Dingxin Hu",
+        "Tinghao Yu"
+      ],
+      "abstract": "Programmatic verifiers provide scalable reward signals for training coding agents with reinforcement learning, yet subtle harness defects and incomplete unit tests allow policies to earn full credit without solving the intended task. Existing training-time defenses intervene either by penalizing suspicious outputs or by filtering flagged tasks and rollouts. However, output penalties leave the underlying verifier exploitable, driving policies to disguise shortcuts under reasoning monitors or zeroing out valid solutions under detector false positives, whereas task and rollout filtering discards or mutes the hardest problems where shortcuts emerge earliest. Pre-training verifier hardening repairs the environment directly, but misses vulnerability classes that surface only as the policy improves during reinforcement learning. In this paper, we propose online environment repair, which leaves triggering rollout rewards unchanged to remove hiding incentives and asynchronously patches exploited environments during training. Candidate repairs triggered by execution invariants or differential fuzzing are deployed only after passing three automated validation gates that block the exploit while preserving valid solutions, canceling detector false positives and enabling structural propagation across repositories without scaffold labels or reference solutions. Across 20 controlled GRPO experiments on heterogeneous software-engineering repositories, online environment repair reduces cumulative reward hacking from 36.9% to 0.06% and improves held-out Pass@8 from 21.7% to 46.7%, consistently outperforming reward-penalty, rollout-filtering, and static-hardening baselines while eliminating zero-shot exploitation on unseen loophole classes.",
+      "published": "2026-11-24T06:21:42Z",
+      "updated": "2026-11-24T06:21:42Z",
+      "categories": [
+        "cs.LG",
+        "cs.CR",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.32037",
+      "abs_url": "https://arxiv.org/abs/2611.32037",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31974",
+      "title": "Coding4Games: Can Modern Coding Agents Play Modern Video Games?",
+      "authors": [
+        "Shifang Zhao",
+        "Haoyu Wang",
+        "Yuyang Yin",
+        "Dong Chen",
+        "Xingyilang Yin",
+        "Yunkang Tao",
+        "Honghao Chen",
+        "Guangzhi Wang",
+        "Yiran Wang",
+        "Junfu Pu",
+        "Cheng Cheng",
+        "Xiaodong Cun",
+        "Ying Shan"
+      ],
+      "abstract": "Games, especially modern AAA games, challenge language models to perceive complex scenes, control actions, and make decisions over long horizons. Existing game benchmarks primarily test language models as computer-use agents that query a language model throughout play, incurring repeated inference cost and, in real-time games, acting while the environment continues to evolve. We ask whether coding agents can learn from game interaction to develop standalone game-playing programs that run without language model inference. We thus introduce Coding4Games, a benchmark for evaluating whether coding agents can develop standalone programs that play modern games through visual observations and standard game inputs. Coding4Games has three defining features: 1) Diverse Modern Games, covering 15 games with diverse visual, strategic, and control demands; 2) Development-Test Separation, in which a coding agent uses a sandbox and the standard player interface to iteratively develop a program, after which the selected program is frozen and independently tested without language-model inference; and 3) Outcome and Process Evaluation, which measures not only game performance and reliability but also how agents use feedback, revise programs, and resolve problems during development. Across 15 games, the best program per game outscores the strongest GUI baseline on 13 and ties it on one. The human player outscores all agents on 10 games. We additionally examine the effects of development budgets. Coding4Games evaluates whether coding agents can turn their understanding of complex interactive environments into programs that work reliably on their own.",
+      "published": "2026-11-24T05:24:32Z",
+      "updated": "2026-11-24T05:24:32Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31974",
+      "abs_url": "https://arxiv.org/abs/2611.31974",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31460",
+      "title": "Below the Stopwatch: Checking the Performance Claims of Coding Agents in the Kernel",
+      "authors": [
+        "Yuvraj Sehgal",
+        "Sneh Patel",
+        "Mahsa Panahandeh",
+        "Naser Ezzati-Jivan"
+      ],
+      "abstract": "Coding agents open many pull requests (PRs) that claim to make software faster. Most such claims also give a reason, such as \"cache the result\" or \"read the file once\". A stopwatch can show that code got faster, but not that it got faster for the stated reason. We present Below, a pipeline that checks these reasons at the kernel level. From 1,343 runtime-performance PRs in the AIDev dataset, Below extracts the mechanism each PR claims and maps it to the kernel and hardware signals that must change if the claim is true. A build agent that never sees the claim rebuilds the code before and after each PR. Below then measures both versions with plain timing runs, hardware counters and LTTng kernel traces. Most claims are not measured: 57.3% of the PRs offer only reasoning or no evidence, and only 31.4% state an effect size. Of 82 analyzed PRs, 32 ran faster, 28 showed no clear change and 22 ran slower. The expected signal of the claimed mechanism appeared in 34 PRs (20 in kernel-trace signals alone), and 42 PRs also changed their output. Kernel signals move about 1.7 times as often for a faster PR's claimed mechanism as for mechanisms it did not claim; the instruction count barely separates them (1.15 times).",
+      "published": "2026-11-23T19:31:41Z",
+      "updated": "2026-11-23T19:31:41Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.PF"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31460",
+      "abs_url": "https://arxiv.org/abs/2611.31460",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.31205",
+      "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
+      "authors": [
+        "Zexin He",
+        "Rui Li",
+        "Yushi Lan",
+        "Chengkai Jin",
+        "Zhi Hou",
+        "Xingang Pan"
+      ],
+      "abstract": "Coding agents can construct and revise robot behavior during execution, but using one agent for the whole robot can delay otherwise independent work. We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents. Each member reasons and acts for a configurable control group, such as an arm with its gripper or the torso and chassis, enabling asynchronous reasoning and execution. However, different robot components often have physical dependencies that require coordination. To address this challenge, ACAP introduces a hyper-agent that assigns tasks, coordinates dependencies, and dynamically allocates control between the lead and member agents. This allows independent work to progress concurrently while supporting tightly coupled manipulation when necessary. Across 72 real-world rollouts covering 25 task/platform settings, ACAP reduces task-balanced time cost by 28.2% compared with a single-agent Direct Policy, with improvements across Fully Parallel, Parallel-Sequential, and Collaborative tasks. Across all eight Collaborative settings, ACAP also achieves lower mean time cost than Fixed Delegation, where only member agents can control their assigned groups. An additional 90-rollout study shows lower mean 30-minute-capped time cost than Direct on all six tasks. We further demonstrate mobile manipulation using the same member interface for chassis and torso control. We present the framework and a real-world rollout dataset containing observations, generated programs, actions, and feedback to support research on how coding agents reason and act in the physical world.",
+      "published": "2026-11-23T18:52:19Z",
+      "updated": "2026-11-23T18:52:19Z",
+      "categories": [
+        "cs.RO",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.31205",
+      "abs_url": "https://arxiv.org/abs/2611.31205",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30894",
+      "title": "Useful but Unwieldy: How Software Engineers Perceive the Design of Chain-of-Thought Explanations in Coding Agents",
+      "authors": [
+        "Carlos Rafael Catalan",
+        "Lheane Marie Dizon",
+        "Patricia Nicole Monderin",
+        "Hyo Jin Do",
+        "Qiaosi Wang"
+      ],
+      "abstract": "Coding agents (CAs) powered by Large Language Models (LLMs) are increasingly integrated into software engineering (SE) workflows. As these CAs take up more tasks and responsibilities, it is imperative for software engineers to understand the CA's rationale behind its' decisions, also known as the chain-of-thought (CoT). During the interaction, some CAs are capable of showing this CoT as a separate message to users with the goal of providing transparency and explainability. However, its effectiveness as an explainable AI (XAI) mechanism for end-users in software engineering has not yet been established in the literature. This motivates us to understand their experiences with the CoT message as an XAI tool through a survey and semi-structured follow-up interviews with 36 software engineers. Through thematic analysis of the survey responses and interview transcripts, we found that CoT message is an indispensable tool for software engineers in terms of transparency, scrutability, and trust towards the CA. However, various instances of CoT messages being overly verbose, containing technical information that does not match the users' expertise, or being perceived by the users as ``detached'' from the conversation because the ``agent is talking to itself'', lead to comprehension difficulties and selective use or abandonment of the tool. We synthesize these insights to inform the design of CoT messages that support software engineers in their explainability needs.",
+      "published": "2026-11-23T15:57:22Z",
+      "updated": "2026-11-23T15:57:22Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30894",
+      "abs_url": "https://arxiv.org/abs/2611.30894",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30517",
+      "title": "sudo L7: Can Coding Agents Act Like Staff Engineers?",
+      "authors": [
+        "Nick Heiner",
+        "Ian Niebres",
+        "Suhaas Garre",
+        "Sushant Mehta",
+        "Edwin Chen"
+      ],
+      "abstract": "Coding agents can now turn a well-specified ticket into a patch that passes its tests. Experienced engineers also notice risks the request never mentioned, question flawed premises, reuse what already exists and say plainly what they did and did not check. We present sudo L7, a benchmark of 60 software-engineering tasks written by staff-level engineers, mostly in private production codebases and each built around a place where a frontier model failed. A task pairs a realistic, underspecified request with a hidden, expert-authored rubric of atomic criteria (1,287 in all), tagged with eight behavioral dimensions from functional correctness to truthful reporting. An agentic grader reads the agent's transcript, inspects and runs its code, and treats test output as evidence. An attempt passes only if it meets every criterion of the two highest severities, and more than half of these gating criteria test something other than functional correctness. On the public leaderboard as of November 2026 (19 models, each in its developer's harness or in OpenCode, three attempts per task), Claude Fable 5.2 passes 52.2% of attempts, Claude Sonnet 5.5 50.6% and Claude Opus 5.5 46.1%. GPT-6.1 Sol, Claude Fable 5.1 and GPT-6 Astra pass 31-34%, and the other 13 models at most 18.9%. In a human-label study, three candidate model graders each agreed with a software engineer on 85-86% of criterion verdicts, about as often as two engineers agreed with each other. Cases from the benchmark show how one unsupported claim can fail an otherwise strong attempt and illustrate two sides of engineering judgment: flagging hidden hazards and avoiding needless work.",
+      "published": "2026-11-23T11:32:37Z",
+      "updated": "2026-11-23T11:32:37Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30517",
+      "abs_url": "https://arxiv.org/abs/2611.30517",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30405",
+      "title": "Optimistic Online Learning for Coding Agents with Aggregate Feedback",
+      "authors": [
+        "Hao Luan",
+        "Hao Qiu",
+        "Zhi Zheng",
+        "See-Kiong Ng",
+        "Zhiyong Huang"
+      ],
+      "abstract": "Large language model (LLM) coding agents operating on Web development platforms can interact with repositories, issue trackers, and continuous integration services to carry out long-horizon software engineering tasks. However, behavioral drift remains a major bottleneck in such multi-turn reasoning and action trajectories. To mitigate this, activation steering has emerged as a promising approach for regularizing agent behaviors by intervening on the LLM's transformer residual streams. Nonetheless, existing methods typically apply a static steering policy across all tasks, overlooking the fact that a single policy is rarely effective across heterogeneous tasks and varying execution turns. This limitation motivates dynamic online selection among candidate steering policies. Yet, doing so in long-horizon agentic settings is challenging: verifiable task-level feedback is only revealed upon task completion, leaving the contributions of individual steering turns unobserved. To address this challenge, we formulate online steering-policy selection as a multi-armed bandit problem with delayed task-level feedback and turn-level predictive hints derived from residual-stream activations. Within this formulation, we introduce Online Optimistic Activation Steering, a meta-framework that uses hints to guide within-task steering policy selection and leverages terminal task-level feedback to correct cumulative reward estimates. Theoretically, against the best fixed policy in hindsight, we prove regret bounds that tighten with increasing hint accuracy and establish a matching lower bound with respect to prediction error and candidate policy count. Empirical evaluations on realistic coding benchmarks demonstrate that our framework outperforms both static steering policies and naive online adaptive baselines.",
+      "published": "2026-11-23T10:05:39Z",
+      "updated": "2026-11-23T10:05:39Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30405",
+      "abs_url": "https://arxiv.org/abs/2611.30405",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30350",
+      "title": "RepoClean: Evaluating Coding Agents on Repository-Level Obsolete Code Cleanup",
+      "authors": [
+        "Hongyixuan Yuan",
+        "Qixing Zhou",
+        "Pengcheng Huang",
+        "Qingshuo Ni",
+        "Runsong Zhao",
+        "Shaokai He",
+        "Xiangpeng Li",
+        "Deqiang Ouyang"
+      ],
+      "abstract": "Large language model (LLM) agents have demonstrated strong repository-level programming capabilities. However, as software evolves, repository code may become redundant or obsolete, increasing maintenance costs and potentially introducing functional issues. Agents must therefore identify and remove unnecessary code safely, yet autonomous repository-level code cleanup remains insufficiently evaluated in isolation. To evaluate this capability, we introduce RepoClean, a benchmark of 200 cleanup tasks from 34 popular open-source Python repositories. RepoClean is constructed by automatically reintroducing deleted code from real repository histories into newer versions, preserving current implementations and retaining instances where previously passing tests consequently fail. To restore existing functionality without new feature development, agents must use repository interfaces and cross-file dependencies to determine which historical code to remove and which implementations to preserve. Evaluation of seven models shows that even the best-performing model, GPT-6 Astra, resolves only 23% of tasks. Further analysis reveals that agents remove substantially less obsolete code when cleanup is not explicitly requested. RepoClean provides a foundation for systematically studying these cleanup challenges and advancing coding agents toward autonomous software maintenance.",
+      "published": "2026-11-23T09:22:53Z",
+      "updated": "2026-11-23T09:22:53Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30350",
+      "abs_url": "https://arxiv.org/abs/2611.30350",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.30207",
+      "title": "What Makes Good Data for Training Coding Agents? A Systematic Study on SWE-Gym",
+      "authors": [
+        "Yikai Zhang",
+        "Mai Xu",
+        "Yunbei Zhang",
+        "Qirui Jin",
+        "Kenan Li",
+        "Yuwen Jia",
+        "Jinwei Yao",
+        "Xiangyu Zhang",
+        "Jielun Tan",
+        "Jin Pan",
+        "Zijian Jin",
+        "Xiao Sun"
+      ],
+      "abstract": "Reinforcement learning (RL) trains coding agents on software tasks whose hidden tests decide the reward, yet task collections check these tests only against the reference fix. We ask what makes a task good training data, focusing on the correctness of its reward labels. We audit SWE-Gym with two LLM families, and a suspected error counts only if execution reproduces it. We find that unsolved often means mislabelled: 74% of the tasks that a 9B base model never solves have a test that rejects correct fixes (a false negative), versus 20% of those it sometimes solves. We repair or remove such tasks, and the audited tasks that remain train better policies. At equal size and matched difficulty, models trained on them score 2.4 and 2.7 points higher on held-out tasks from SWE-bench Verified and SWE-bench Pro than models trained on the original tasks, whereas simply dropping the never-solved tasks shows no such gain. We further find that wrong patches that pass (false positives) make up about a quarter of all passing patches, and that new tests that catch a quarter of them do not change held-out scores detectably. A pass rate shows whether a task yields reward, not whether that reward is right, so the reward labels themselves must be checked. To this end, we release SWE-Gym-Verified with its 1,087 audited tasks, every verdict with its executed evidence, our training sets, and the full audit pipeline.",
+      "published": "2026-11-23T07:45:13Z",
+      "updated": "2026-11-23T07:45:13Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.LG",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30207",
+      "abs_url": "https://arxiv.org/abs/2611.30207",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29822",
+      "title": "Can Vibe Coding Produce Accessible Websites: An Empirical Study on LLM Coding Agents and Skills",
+      "authors": [
+        "Syed Fatiul Huq",
+        "Md. Asif Haider",
+        "Abu Jafar Saifullah",
+        "Thomas Zimmermann",
+        "Sam Malek"
+      ],
+      "abstract": "Large language model (LLM) coding agents increasingly allow developers and non-professionals to create websites through natural-language instructions, with limited inspection of the generated source code. Although this ``vibe coding'' workflow lowers barriers to software creation, it may also propagate accessibility defects at scale. We investigate the accessibility of websites generated end-to-end by contemporary coding agents and whether agent-level accessibility interventions improve their output. We generated 90 websites for three projects using combinations of three coding agents, four language models, and multiple reasoning-effort levels. We evaluated complete interaction journeys using axe-core, IBM Equal Access Accessibility Checker, and QualWeb, and converged reports to observe violation prevalence and violated WCAG Success Criterion (SC). None of the 90 baseline websites was fully accessible, with an average of 80.43 violated interface elements. 13 WCAG SCs were violated at least once across the runs. Color contrast was the most prevalent issue, followed by labeling, semantic-structure, keyboard, and visualization failures. We reran 24 matched configurations with a general accessibility Skill and a contrast-specific Skill. Both significantly improved accessibility scores, but neither eliminated violations. User testing with blind individuals corroborated the experiential effects of the detected inaccessibilities. Moreover, functional correctness decreased with the inclusion of Skills. Our findings show that accessibility does not reliably emerge from vibe coding, and agentic interventions can both improve some accessibility issues and introduce new functional ones.",
+      "published": "2026-11-22T23:00:38Z",
+      "updated": "2026-11-22T23:00:38Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29822",
+      "abs_url": "https://arxiv.org/abs/2611.29822",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29546",
+      "title": "ParseGap: Testing What Coding Agents Authorize and What Shells Execute",
+      "authors": [
+        "Jieyu Li"
+      ],
+      "abstract": "LLM coding agents authorize shell commands by parsing a command string against a policy and passing the raw string to a system shell, so the gate adjudicates one reading while the shell executes another. We present ParseGap, a differential testing framework that runs each command through an unmodified vendor checker and GNU Bash 5.2 in an isolated container, flagging a violation whenever an approved command produces policy-violating runtime effects. Across eight production coding agents, ParseGap identifies 17 root causes across three divergence boundaries: at the parse, where an upstream tree-sitter-bash defect hides a second command from Mistral Vibe and Gemini CLI; at the utility, where every checker permits read-only binaries whose arguments write files or launch programs (9-47 of 55 cases); and at confinement, where an allow rule in OpenAI Codex CLI disables its read-only OS sandbox. Live trials across two frontier models triggered policy violations in all 16 agent-model pairs (14 under configured restrictions). To eliminate the second reading, we design ShellPlan, which compiles a strict Bash subset once into a typed execution plan, validates utility arguments against positive capability specifications, and dispatches approved plans directly via execve without a shell. Over a formal operational model, we prove single-interpretation dispatch and bound touched programs and files under audited assumptions. ShellPlan admitted 0/4,174 active attacks across six static suites and 0/90 hits in a ten-model agent benchmark (62/90 unguarded) at 1.28 ms median gate latency, preserving 36/36 (100%) frontier standard-dev completion (74/100 overall) and 0/348 external over-allows outside modeled exceptions.",
+      "published": "2026-11-22T15:16:01Z",
+      "updated": "2026-11-22T15:16:01Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29546",
+      "abs_url": "https://arxiv.org/abs/2611.29546",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29242",
+      "title": "Edit-Induced Dependency Mismatch: Propagation Omissions, Recovery, and Evaluation Blind Spots in Coding Agents",
+      "authors": [
+        "Fei Ding"
+      ],
+      "abstract": "During iterative code modification, coding agents may continue to rely in subsequent reasoning on outdated dependency judgments whose text remains fixed in the context, leading to errors in subsequent reasoning and leaving consumer defects undetected by the original task evaluations, thereby exposing blind spots in the tested benchmarks. We study actual agent execution trajectories collected on benchmark tasks: deepseek-v4-flash runs on DeepSWE and SWE-bench Verified, supplemented by Qwen3.8-Flash cases on FeatureBench. Focusing on edit-induced consumer obligations, a full-corpus blinded human audit of the DeepSWE runs identifies terminal mismatches, including diagnoses whose task scope remains disputed. Following supplementary execution checks, all retained DeepSWE terminal events have execution support. The audit also shows that recovery within a trajectory can coexist with terminal omissions in the same run. The process analysis links the presentation of relevant consumer code to explicit dependency judgments and subsequent synchronization actions recorded in the trajectories. An explicit dependency-review prompt reduces terminal omissions under the tested conditions, supporting re-derivation of consumer obligations after edits. Local replays of selected DeepSWE cases show that synchronizing the diagnosed consumers restores the target behavior while the listed controls continue to pass. Cross-benchmark execution counterexamples show that the original task evaluations do not fully detect edit-induced dependency mismatches: patches pass those evaluations, yet additional execution checks confirm unintended defects along existing consumer paths. These findings support measuring task scores, terminal propagation states, and recovery separately.",
+      "published": "2026-11-22T05:25:28Z",
+      "updated": "2026-11-22T05:25:28Z",
+      "categories": [
+        "cs.CL",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29242",
+      "abs_url": "https://arxiv.org/abs/2611.29242",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29193",
+      "title": "Direct Feedback Policy Optimization for AI Coding Agents",
+      "authors": [
+        "Fei Ding"
+      ],
+      "abstract": "AI coding agents generate, modify, and validate code through multi-turn interactions. Existing reinforcement learning methods often rely on sparse terminal rewards, making it difficult to assess how intermediate decisions affect task outcomes, and group-relative methods also require repeated sampling for each task. We propose Direct Feedback Policy Optimization (DFPO), a single-trajectory reinforcement learning algorithm that trains directly from a single trajectory. DFPO achieves higher task resolution rates than GSPO under matched base models and execution harnesses.",
+      "published": "2026-11-22T03:36:09Z",
+      "updated": "2026-11-22T03:36:09Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29193",
+      "abs_url": "https://arxiv.org/abs/2611.29193",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29162",
+      "title": "Fixed or Deleted? External Feedback Lets Cheaper AI Coding Agents Repair Rule Violations",
+      "authors": [
+        "Laura Wynter"
+      ],
+      "abstract": "Many defects violate project rules that the code itself does not reveal, such as layering constraints or required tests. We study whether LLM coding agents repair such violations better when an external checker reports them, with their location and a repair goal. Three models, a small, medium and large model, driven by an AI agent, worked on 25 pull requests with 31 planted defects in ten open-source projects, plus 5 correct controls, five times alone and five times with findings from CodeAssure (CA), a commercial checker. We also compare with GitHub Copilot code review, and compare CodeAssure's detection with nine free static-analysis tools run out of the box, including Semgrep and SonarQube Community. Counting a run as repaired only when the repaired code also compiles and keeps its feature, CA findings raised the repair rate from 26% to 69% for the smallest model, from 46% to 90% for the medium model and from 45% to 93% for the largest model (pull-request-level p < 0.001), and from 39% to 84% over all runs. Every Java, TypeScript and Python repair compiled. We found that agents often cleared a defect by deleting a newly added file. Metrics based on whether the defect is gone count feature deletion as a success. The largest model alone did so in 44 of 125 runs. CA includes a check for deleted files that largely prevents this. In an ablation with the check turned off, removals rose from 9 to 65 out of 375 runs and the repair rate fell to 54% (small), 70% (medium) and 85% (large model). The CA workflow also outperformed Copilot code review (p < 0.001). Together, the free tools detected 8 of the 31 defects, and CA detected all 31. With CA, the medium model repaired 90% of runs, against 45% for the largest model alone, at about one fifth of the mean cost per run ($0.17 against $0.91).",
+      "published": "2026-11-22T02:44:10Z",
+      "updated": "2026-11-22T02:44:10Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29162",
+      "abs_url": "https://arxiv.org/abs/2611.29162",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28783",
+      "title": "3DCodeFactory: Scaling Training Data for 3D Code Agents",
+      "authors": [
+        "Zhaoyu Wang",
+        "Xueru Wen",
+        "XingYu Li",
+        "Jie Lou"
+      ],
+      "abstract": "As code agents evolve, their scope is expanding from generating simple static 3D meshes to constructing structurally complete, complex, interactive 3D scenes. However, existing datasets mainly rely on converting or captioning pre-existing 3D assets, consisting mostly of single-turn code data for static single objects and struggling to scale task diversity and scene complexity, leaving such training data scarce. We present 3DCodeFactory, an automated framework that directly constructs diverse, complex 3D training data from abundant raw text (e.g., diffusion prompts and product descriptions). The framework first leverages an image generator to synthesize 3D reference images from raw text as visual anchors, guiding the generation of concrete modeling specifications and interactive functional requirements; meanwhile, it jointly constructs visual, specification, and functional rubrics from the reference images and requirements to automatically score and filter multi-turn agent rollouts. Based on this framework, we release 3DCodeFactory-Data, comprising 5,045 high-quality task instances and multi-turn interaction trajectories. Fine-tuning Qwen3.5-9B and Qwen3.8-27B on 3DCodeFactory-Data significantly improves performance on BlenderWorld, P3D-Bench, and 3DCodeBench, consistently outperforming models trained on existing open-source 3D code datasets, with our 27B model further surpassing the same-series 2.4T flagship Qwen3.8-Max in overall performance.",
+      "published": "2026-11-21T12:58:42Z",
+      "updated": "2026-11-21T12:58:42Z",
+      "categories": [
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28783",
+      "abs_url": "https://arxiv.org/abs/2611.28783",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28763",
+      "title": "Who Is Prompt-Injecting Coding Agents? An Empirical Study of Hidden AI-Directed Text on GitHub",
+      "authors": [
+        "Gabi Nakibly",
+        "Zvika Babo"
+      ],
+      "abstract": "AI coding agents now triage issues, review pull requests and pick up tasks inside GitHub repositories, and to do so they read text that anyone with a GitHub account can write. This makes GitHub a prime surface for indirect prompt injection, in which instructions embedded in untrusted content steer a model that later processes it. Prior work has demonstrated such attacks against agents on GitHub in controlled settings, but how often they occur in practice, who deploys them, and for what purpose remain unknown. We present the first large-scale empirical study of AI-directed hidden text on GitHub. We analyzed roughly 145 million issues, pull requests, comments and README files, detected text that GitHub does not render to a human reader but that an agent receives in full, and filtered it with a two-stage LLM classification, a template provenance check and an exhaustive manual review. We identify 2,281 validated findings in issues, pull requests and comments (16 per million items), and AI-directed hidden text in the READMEs of 107 repositories. We find a heterogeneous ecosystem of four uses: attacks on other parties' agents, defensive text that restricts agents, content override that steers what they write, and first-party orchestration, in which projects coordinate their own agents through hidden markers. Attacks are rare (about one in 3.3 million items) but aimed at maintainers' own triage, review and CI agents. Orchestration accounts for two thirds of the findings in issues, pull requests and comments, grew fivefold in four months, and forms a control channel that anyone who can comment can imitate. Replayed offline against five models we tested, the attacks succeed against one small, fast model in 19% of cases, and against none once HTML comments are stripped. We release our detection tool and every finding.",
+      "published": "2026-11-21T12:15:00Z",
+      "updated": "2026-11-21T12:15:00Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28763",
+      "abs_url": "https://arxiv.org/abs/2611.28763",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27895",
+      "title": "TEA-Bench-BR: Can Coding Agents Turn a Branching Clinical Specification into Correct Code?",
+      "authors": [
+        "Marcio Andre de Souza Estevam"
+      ],
+      "abstract": "Coding agents increasingly implement rules written by domain experts, and bugs in such code are silent: it runs and returns a plausible answer. We introduce TEA-Bench-BR, a benchmark built on the Brazilian pathway for early autism (TEA) screening: three fictitious instruments with the structure of real ones, a multi-professional referral flow, and export to FHIR R4 with the national RNDS profiles, all specified in Portuguese. A generator samples each task's parameters (144 tasks, 6,798 hidden cases), and the hidden cases kill all 1,955 non-equivalent mutants of the reference. With Gemma 4 as the agent, the 12B solves 38.0% of single-instrument tasks and none at the FHIR level; the 31B solves 77.8%, 85.2% and 78.7% at levels 1 to 3 and passes over 99% of the hidden cases, its remaining failures mostly in input validation rather than clinical decisions. With the same tasks in English, the 31B solves 57.4% at level 3, as its code validates an identifier less often; the 12B's, more often. The 12B misses 10.10% of the cases that call for referral; the 31B, 0.02%. A contamination probe on a modified PHQ-9 finds no error that follows the original rules.",
+      "published": "2026-11-20T17:35:59Z",
+      "updated": "2026-11-20T17:35:59Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27895",
+      "abs_url": "https://arxiv.org/abs/2611.27895",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.27112",
+      "title": "Markdown Is Not a Firewall: four coding agents, one rules file, four boundaries",
+      "authors": [
+        "Sandeep Dhuri"
+      ],
+      "abstract": "Teams put a one-page rules file in a repository and call it a control on coding agents. A registered study found agents rarely look up a repository's contribution rules. I asked the security question: what does a rules file do at a boundary, against a gate? I tested one 278-word rules file, with hypotheses and analysis code deposited first. Claude Code, Codex CLI, Gemini CLI and OpenCode with DeepSeek worked through 20 small repositories with hidden tests, 12 for three of them. Three agents met four boundaries I built: a refused endpoint, a destructive shortcut, a planted instruction and a planted package. Permission prompts, each vendor's own control layer, were off by design. A gate in front of the mock service blocked and logged forbidden requests. Every verdict was read from records the agent could not change. Only my first scoring pass was blind to arm. My checkers found no real bugs, with the file or without it. The file cost one agent a third of its score: Codex CLI fell from 99.0 to 67.7 percent on hidden tests, and in 11 of its 36 steps reported the task complete with all tests passing while under half of the hidden tests passed. Its own tests passed. Faced with two of its rules that clash on these tasks, three agents followed the task and one followed the rule. Pooled, passes fell from 98.2 to 90.9 percent. Matched pairs fell 7.7 points, 1.3 without Codex CLI. Attempts to cross were rare: 5 in 90 gated steps, 3 without the file, 2 with it, all by OpenCode with DeepSeek, all blocked. With no gate, under the neutral file, the same requests reached the mock in 7 of 45 runs. By an error in my run script, the no-file and rules-file arms always ran behind the gate at the three HTTP boundaries, so I could not test whether the file changes what an agent does there. On what I could measure, the file acted as advice. A file tells an agent what you want. A gate decides what it gets.",
+      "published": "2026-11-20T04:35:33Z",
+      "updated": "2026-11-20T04:35:33Z",
+      "categories": [
+        "cs.SE",
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.27112",
+      "abs_url": "https://arxiv.org/abs/2611.27112",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.26668",
+      "title": "How developers split roles among them and a coding agent and what \"collaboration\" means",
+      "authors": [
+        "Linus Ververs",
+        "Helya Dadkhah",
+        "Lutz Prechelt"
+      ],
+      "abstract": "Background: Coding agents such as Claude Code become more and more competent, so that their role in the development process can grow. Objective: How do developers characterize the role-split between them and their agent? How would they ideally want to collaborate with their agent? Methods: We perform a 3-step, mixed-methods study. We apply qualitative open coding to 2025 early adopters' blog articles; perform a quantitative survey of 2026 practitioners; develop and apply a method for coding-agent-supported open coding of survey freetext responses. Results: The 2025 practitioners have the agent work in supporting roles only. Accountability was firmly human. In 2026, both are fundamentally still true. Gradually, however, the role-split is now different, with much more agent involvement. The developers' notion of collaboration has three facets: Predominantly a separation into human-only, agent-only, and collaborative work steps, with defined conditions and goals. Second, accommodating personal preferences without engineering justification. Third, a holistic view of collaboration covering the entire development process. Conclusions: Defining one's role relative to the agent will need to be a recurring activity. The different views on collaboration are likely a source of friction and conflict for teams; future work should find out how to cope with that.",
+      "published": "2026-11-19T10:58:14Z",
+      "updated": "2026-11-19T10:58:14Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.26668",
+      "abs_url": "https://arxiv.org/abs/2611.26668",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.26311",
+      "title": "SWE-Recreation: Benchmarking Coding Agents for Software Recreation",
+      "authors": [
+        "Zhiyao Xu",
+        "Zhanjie Ding",
+        "Hongyao Yu",
+        "Jingyu Xiao"
+      ],
+      "abstract": "Agents increasingly operate software and even write it, yet they are almost always told what to achieve: given a goal, a mock-up, or a demonstration. We ask whether an agent can instead understand an unfamiliar product by using it, and then rebuild it. The agent sees only rendered pixels and acts through pointer and keyboard, without access to the DOM, source, logs, or back-end. Within this interface, it explores, generates a replica, and checks its own work before evaluation. We present SWE-Recreation, a benchmark of 54 real applications (28 websites and 26 Android apps) with 1,446 hidden requirements describing multistep, stateful workflows and explicit exclusions for behavior outside the reconstruction scope. A fixed judge grades workflows with pixel evidence; a separate post-hoc judge estimates exploration coverage. Across 54 evaluated applications, five frontier systems reach at most 0.530 weighted fidelity and 22.9% fully reproduced requirements under application-equal averaging. These descriptive results expose both exploration-evidence gaps and implementation shortfalls. Code and data are available at https://github.com/nologistic/recreateanything.",
+      "published": "2026-11-19T16:00:09Z",
+      "updated": "2026-11-19T16:00:09Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.26311",
+      "abs_url": "https://arxiv.org/abs/2611.26311",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.25760",
+      "title": "Characterizing and Detecting Unfaithful Work Reports by Coding Agents",
+      "authors": [
+        "Wenhao Yang",
+        "Runzhi He",
+        "Minghui Zhou",
+        "Pengfei Gao",
+        "Dayi Lin",
+        "Qingwei Lin",
+        "Dongmei Zhang"
+      ],
+      "abstract": "Coding agents increasingly carry out long-horizon development tasks, autonomously planning and executing multi-step actions that span files, tools, and sessions. Because developers rarely follow each action, and agents resuming the work depend on records of what was done, the agent's work report often becomes the primary account of what was changed and established. When the report contains false or unsupported claims, it gives recipients false assurance: incomplete work may be accepted without verification, incorrect assumptions about the current state can propagate to later steps and agents, and evaluators that credit stated success may reward the report rather than the work. Yet little is known about what unfaithful reporting looks like in real development work, or how developers and agents handle it once it surfaces. Starting from real developer-agent conversations in SWE-chat, we conduct a systematic mixed-methods analysis of self-admitted unfaithful reports. We identify eleven subtypes in four categories: misreported observations, misattributed evidence, overstated task success, and faulty technical explanations, with overstated task success the most common. Handling these problems involves on average 4.3 further user turns and 12.71 minutes of recorded response and execution time, and users express dissatisfaction more often. Among 435 work reports that we separately sample and annotate, 37.24% contain at least one unfaithful claim. We also develop FaithDetector, a detector for unfaithful reporting informed by the observed patterns. On naturally sampled reports, FaithDetector attains 93.06% macro-F1, about 13 percentage points above the baseline. Together, our findings and FaithDetector provide empirical evidence and an automated method for checking reporting faithfulness, informing agent evaluation and training feedback.",
+      "published": "2026-11-19T09:01:02Z",
+      "updated": "2026-11-20T14:14:19Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25760",
+      "abs_url": "https://arxiv.org/abs/2611.25760",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.24324",
+      "title": "Reducing Inference Cost of Coding Agents with Timeout Cascades",
+      "authors": [
+        "Boxi Zhou",
+        "German Sviridov",
+        "Dmitrii Ustiugov",
+        "Haris Javaid"
+      ],
+      "abstract": "AI coding agents have become one of the most popular applications of large language models. Yet, agentic AI comes at the cost of a tremendous amount of GPU compute resources, which limits its profitability and its viability at scale. In this paper, we investigate whether smaller, cheaper models can cut this cost without sacrificing accuracy. We evaluate 36 popular large and small open-weight models released since 2024 on a software engineering benchmark, and find that recent small models are closing the accuracy gap compared to their large counterparts. We investigate the structure of this gap and find that the gap is highly concentrated around hard tasks that small language models fail to solve while achieving remarkably good accuracy for easy and medium complexity tasks. Following this observation, we show that by utilizing a hybrid inference strategy that tries a small model first and escalates to a large one only when needed, we can achieve up to 33% reduction in total GPU-hour costs and 16.4% on all tasks from SWE-bench Verified, without sacrificing accuracy. Strikingly, this simple cascade nearly matches an oracle-style task router, highlighting a practical path for deploying cost-aware coding agents in production without complex learned task routers and with minimal engineering complexity.",
+      "published": "2026-11-18T12:26:42Z",
+      "updated": "2026-11-18T12:26:42Z",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24324",
+      "abs_url": "https://arxiv.org/abs/2611.24324",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.24073",
+      "title": "3D GameDev Arena: Benchmarking Coding Agents That Plan, Build, and Playtest extreme Long-Horizon Browser Games",
+      "authors": [
+        "Bizhe Bai",
+        "Jiliang Jian",
+        "Yuqing Yan",
+        "Tao Chen",
+        "Ying Wen"
+      ],
+      "abstract": "Coding agents now resolve repository issues and generate compact playable games, but whether they can build a large 3D game from scratch remains open. Such games tightly couple mechanics, scenes, assets, and interaction logic, and their quality rests on player enjoyment, which existing benchmarks rarely assess. Thus, we introduce 3D GameDev Arena, a first extreme long-horizon benchmark of 108 from-scratch game-development tasks across 14 genres. Given only a text specification and UI/UX reference images, a fully automated plan--implement--test--repair pipeline builds each task into a self-contained browser game. Runs average $\\sim$1,000 LLM calls ; the longest uses 14,407 calls, 2.13B tokens, and 608 assets. Evaluation spans (1) objective code-level functional acceptance against the game specification, (2) agent-based QA and playtesting of 3D presentation and playability, and (3) blind pairwise Bradley-Terry human preference in a public arena. The preliminary findings indicate that long-horizon 3D game development remains far from solved, and code-level correctness alone does not dictate player preference. The public arena is hosted online.",
+      "published": "2026-11-18T09:03:53Z",
+      "updated": "2026-11-18T09:03:53Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.24073",
+      "abs_url": "https://arxiv.org/abs/2611.24073",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23875",
+      "title": "In Situ Training of Optical Neural Networks by Coding Agents",
+      "authors": [
+        "Ilker Oguz",
+        "Colin Christian",
+        "Christophe Moser",
+        "Demetri Psaltis",
+        "Gordon Wetzstein"
+      ],
+      "abstract": "Optical neural networks promise fast, energy-efficient computing, but every device departs from its design and must be trained with the hardware. In situ training relies on an expert-built calibrated digital model of each device or on gradient-free trial and error. Coding agents, large language models that write and run programs, have shown an emergent ability to understand and edit the weights of digital neural networks. Here we introduce optics as code, a method in which a coding agent trains an optical neural network from measurements alone, through a harness that returns camera images of its probes and requires a hypothesis per request. We discovered that the agent forms a physical understanding of the optics and reparametrizes the network with interpretable optical elements tuned on the hardware. It outperforms gradient-free methods in classification and image encoding, approaching backpropagation through a calibrated model at a fraction of the cost. Needing neither per-device calibration nor gradients through the hardware, and improving with more capable models, optics as code offers a practical route to large, scalable optical neural networks and a general tool for calibrating and optimizing optical experiments.",
+      "published": "2026-11-18T05:29:13Z",
+      "updated": "2026-11-18T05:29:13Z",
+      "categories": [
+        "physics.optics",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23875",
+      "abs_url": "https://arxiv.org/abs/2611.23875",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23335",
+      "title": "Truthgate: Checking Coding Agents Against a Record They Cannot Edit - Cheating, Deterrence and Disclosure on Impossible Tasks",
+      "authors": [
+        "Bravish Ghosh"
+      ],
+      "abstract": "When a coding agent says it is done, is that true, and how would anyone know? We study this question in five steps; every paid study was pre-registered, and in each step the agent is checked against a record it cannot edit: tests re-run by the host and, from step 2 on, hidden checks in containers the agent never sees and a signed log of every tool call written by a signer outside the agent's sandbox. A pilot with a small local model (Qwen3.5-4B, 36 runs on impossible tasks) found no hidden failure, and showed that labels built from actions alone over-count lies. On Impossible-LiveCodeBench, Claude Sonnet 5.5 passed 39 of 180 impossible tasks (21.7%), every time by special-casing its code to fit the failing assertion; Opus 5.5 (2.8%) and Haiku 5.5 (1.7%) rarely did. One sentence appended to the system prompt cut Sonnet's cheats on the same 60 tasks from 22 to 8 (an AI reviewer will read the transcript), 6 (a person will review the work), 6 (\"This session is recorded.\") and 1 (do not special-case tests), all significant under exact McNemar tests, with honest passes unchanged. No remaining cheat moved to a shell falsely described as unrecorded (0 of 4). Asked for a final report, every one of 55 natural cheats named its special case; unasked, Sonnet and Opus said nothing in 52 of 52. An LLM judge caught all 55; deterministic rules over the host record caught 27. A scripted tamper demonstration, with keyword stand-ins for the judges, shows that one rewrite of the agent-side transcript hides two calls from a judge that reads it, while the signed record keeps them; in a 40-rollout pilot, Sonnet never touched its transcript. The judge and the record caught different things, which leads to our main conclusion: the record is the evidence a judge should read, not a replacement for one. All pre-registrations, results documents, code and evidence manifests are released.",
+      "published": "2026-11-17T01:43:45Z",
+      "updated": "2026-11-17T01:43:45Z",
+      "categories": [
+        "cs.CE",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23335",
+      "abs_url": "https://arxiv.org/abs/2611.23335",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23334",
+      "title": "Integrating AI Coding Agents Into Scientific Research",
+      "authors": [
+        "Rory Barnes"
+      ],
+      "abstract": "New software tools have emerged that enable AI agents to quickly develop code that analyzes data and generates figures, but their mistakes can also harm a researcher's computer, require extensive resources for validation, and cause the results to be received more skeptically. These concerns could be mitigated if scientific software is developed in a secure environment with a system for monitoring file changes and well-defined standards for handling AI agents. This paper first describes how coding agents change eleven aspects of generating, verifying, and reproducing numerical results. A six-level scale is then proposed for classifying AI-assisted numerical experiments by their provenance, reproducibility, openness, oversight, and falsifiability (PROOF). The scale begins with locally self-consistent, version-controlled, human-verified results and culminates in a publicly accessible and curated archive of the files, change history, prompt transcripts, independent agent regeneration of the analysis, and multiple cryptographically verifiable attestations of regeneration by independent researchers. These aspects of AI-assisted scientific software development have been synthesized into a new open source software package called vaibify that optimizes the agentic development of computational experiments ascending the PROOF Ladder. Docker containers sequester the agents while a GUI enables researchers to prompt command line agents, monitor the current status of local and remote files, and drive a project to PROOF Level 3 (reproducible). The methods described in this paper could help researchers reduce the time required to verify agent-written software and efficiently communicate trust in AI-assisted science.",
+      "published": "2026-11-17T01:03:38Z",
+      "updated": "2026-11-17T01:03:38Z",
+      "categories": [
+        "cs.SE",
+        "astro-ph.IM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23334",
+      "abs_url": "https://arxiv.org/abs/2611.23334",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23314",
+      "title": "YUL: Bringing Software Supply Chain Security to Coding Agents",
+      "authors": [
+        "Aman Sharma",
+        "Frank Reyes",
+        "Martin Monperrus"
+      ],
+      "abstract": "Coding agents choose and declare third-party dependencies on their own. They often declare a stale version that they recall from their training data. A stale dependency exposes the project to known vulnerabilities that the latest release already fixes. We present YUL, a design for coding agent harnesses that ensures that no stale dependencies are ever used. It does so by checking every dependency declaration against the package registry. If a dependency is stale or does not exist, YUL blocks the usage and tells the coding agent which version to use, so the coding agent retries with the fix. We evaluate YUL on 60 tasks across six ecosystems with Claude Code running Claude Opus 5.5 and OpenCode running DeepSeek V4.1 Flash. Without YUL, Opus declares a stale version in 29% of runs and DeepSeek in 39%, and both declare a stale version in every GitHub Actions run. With YUL, the coding agents end on the latest release in 93% of stale Opus runs and in 96% of stale DeepSeek runs. YUL thus brings the best practices of software supply chain security to coding agents.",
+      "published": "2026-11-13T09:19:55Z",
+      "updated": "2026-11-13T09:19:55Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23314",
+      "abs_url": "https://arxiv.org/abs/2611.23314",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23309",
+      "title": "Repository-Grounded Rubrics for Execution-Free Evaluation of Coding Agents",
+      "authors": [
+        "Matej Gerek",
+        "Danylo Zahorulko",
+        "Samuel Budai",
+        "Chris Rupley",
+        "Thierry Donneau-Golencer"
+      ],
+      "abstract": "Coding agents are usually evaluated by running task-specific tests, but tests may be missing or incomplete, and running them requires a working environment for each repository. We adapt agentic rubrics, introduced for selecting among candidate patches, into an execution-free measure of how far a patch satisfies a task's requirements. An agent explores the repository before the change and writes weighted binary criteria, and a judge without tools scores a diff by the weighted share of criteria it satisfies. We validate the ordering this score produces against test outcomes on SWE-bench Verified, using 7,291 labeled patches from fifteen systems. Within the 400 tasks that have both resolved and unresolved patches, the mean per-task AUROC is 0.826 (0.838 on tasks not used to tune the rubric-generation prompt), and ranking systems by their failing patches closely agrees with ranking them by resolve rate (Spearman 0.968). Case analyses trace disagreements to tests that do not match the task, execution-blocking defects that the textual assessment misses, and errors in criteria or verdicts. The validation does not establish absolute score magnitudes or requirement satisfaction beyond agreement with tests, but rubric scores could complement tests where tests or execution environments cannot be assumed.",
+      "published": "2026-11-11T09:21:43Z",
+      "updated": "2026-11-11T09:21:43Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23309",
+      "abs_url": "https://arxiv.org/abs/2611.23309",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23174",
+      "title": "Inference after coding agents",
+      "authors": [
+        "Florian Gunsilius",
+        "David Van Dijcke",
+        "Kaspar Wüthrich"
+      ],
+      "abstract": "Empirical research is changing rapidly as AI coding agents are becoming increasingly proficient in every step of it, from writing code to manipulating data. We argue that while the potential of coding agents for science is vast, their use in hypothesis testing poses a substantial threat to classical inference, as these agents enable a supercharged form of selective inference. In particular, we argue that coding agents carrying out empirical research introduce a new type of post-selection inference that combines human-like, open-ended search over an implicit space of estimators with programmatic replayability of both the selection and the estimation process. Indeed, we find that on simulated data with zero effects, four frontier agents report significant p-values between 54% and 98% of the time when asked to produce a compelling finding. We propose a simple procedure for detecting and correcting these distortions. After an agent has completed its analysis, we reset and replay it on subsamples of the data to estimate the agent's relative probability of selecting that analysis when it looks statistically favorable. For agents with stable selection behavior, the resulting corrected test is asymptotically valid and consistent conditional on selection. Importantly, the correction is learned from the black-box agent's actual choices rather than a model of how it searches, so it remains valid even as AI technology continues to evolve rapidly. In simulations, the correction robustly lowers the high false rejection rates to near the nominal 5%. We illustrate the method on applications from two published papers.",
+      "published": "2026-11-17T18:22:01Z",
+      "updated": "2026-11-17T18:22:01Z",
+      "categories": [
+        "stat.ME",
+        "cs.AI",
+        "econ.EM"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23174",
+      "abs_url": "https://arxiv.org/abs/2611.23174",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23067",
+      "title": "Values Shape What Self-Improving Coding Agents Build",
+      "authors": [
+        "Jason Liang",
+        "Dylan Waldner",
+        "Risto Miikkulainen"
+      ],
+      "abstract": "Self-improving agents are typically optimized for the results they produce, with less attention to how they produce them. Their instructions give designers limited ways to shape how they work, especially when the task is open-ended. This paper studies whether a short value statement in an agent's persistent instruction file changes not only how well the agent performs but also what it builds. Four higher-order value types in Schwartz's theory of basic human values were evaluated: openness to change, conservation, self-enhancement, and self-transcendence. Across diverse coding tasks, the values were held fixed within each run over multiple iterations of self-improvement. Three findings emerged: (1) Values matter for performance across a diverse set of tasks. The openness values increase performance on held-out data, whereas the opposite conservation values result in scores below those of an agent given no values. (2) Values change what agents build, producing solution algorithms that differ in size, complexity and approach. (3) Human oversight is still needed for designing values. Allowing the agent to revise its own values narrows the differences between sets of values, and values distilled from the AI literature provide no detectable gain over having no values. Properly designed values can thus influence what a self-improving coding agent builds and, where the task permits, how well it performs.",
+      "published": "2026-11-17T16:56:46Z",
+      "updated": "2026-11-17T16:56:46Z",
+      "categories": [
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23067",
+      "abs_url": "https://arxiv.org/abs/2611.23067",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22901",
+      "title": "Done, But Still Working: Anytime Evaluation of When Coding Agents Should Stop",
+      "authors": [
+        "Zerui Yang",
+        "Quan Xue",
+        "Miaomiao Dong",
+        "Chaorui Zhang",
+        "Xuanyu Zheng",
+        "Xiyuan Wang",
+        "Haolin Ruan",
+        "Xueyan Niu",
+        "Guangcheng Song",
+        "Weixi Zhang",
+        "Wei Han",
+        "Bo Bai"
+      ],
+      "abstract": "Coding agents often continue working after their own tests pass. Does this additional work improve the patch, and how much could be saved by stopping earlier? We study these questions through anytime evaluation: replaying recorded runs, scoring intermediate patches with hidden tests, and measuring the cost incurred at each step. For policies that only stop a run or select an earlier patch, this allows paired comparisons without generating new trajectories, provided replay preserves the relevant states. Across about 6,000 runs of eight open models in two scaffolds on SWE-bench Verified, we find substantial differences in the value of continued work. The hindsight saving available at passing self-tests ranges from under 1% to 57%, depending on the model and scaffold. A rule that stops after the same patch passes twice saves 23% in a preregistered replication, but the preregistered quality test does not establish non-inferiority. We explain these differences by measuring how often a rule fires, how often the patch changes afterwards, and whether those changes repair or break it. Fine-tuning agents to imitate the rule saves 30% over six seeds, while quality preservation remains uncertain. Our results help identify both the opportunities and the risks of early stopping.",
+      "published": "2026-11-17T15:07:35Z",
+      "updated": "2026-11-17T15:07:35Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22901",
+      "abs_url": "https://arxiv.org/abs/2611.22901",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22835",
+      "title": "When Passing Checks Do Not Establish Completion: Evidence Interpretation in Coding Agents",
+      "authors": [
+        "Xueping Gao"
+      ],
+      "abstract": "Verification procedures in coding agents must preserve execution facts, interpret their scope and discharge checking obligations. We study these responsibilities through qualified repository checks, controlled evidence consumers and executable workflows. A prospective thirteen-task factorial study finds that correct reported facts need not yield the requested finite verdict. Conversely, all 122 delivered labels in a held-out receipt-supply study are correct, while sixteen responses misreport facts and eleven others exceed authorized scope. Production repair supplies successful controls and finite-supported preservation failures. Across 118 repair episodes on 31 tasks, source interventions separate startup reachability from repair and witness production from the claimed operation. Lifetime and resource controls delimit what passing validation establishes. Generated-note comparisons yield local repair differences but can state false explanations; strong ordinary baselines, new tasks and Skill-transfer studies supply no consistent overall advantage. These results characterize evidence interpretation, applicability and fulfilled actions while limiting claims of general diagnostic superiority, Skill deterioration or deployed folding effects.",
+      "published": "2026-11-17T14:17:43Z",
+      "updated": "2026-11-17T14:17:43Z",
+      "categories": [
+        "cs.CL",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22835",
+      "abs_url": "https://arxiv.org/abs/2611.22835",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22746",
+      "title": "LaFlash: Capacity-Driven Acceleration for Coding Agent Workflows via QLC-HBF",
+      "authors": [
+        "Yuseon Choi",
+        "Eunjong Lee",
+        "Sanghyeon Park",
+        "Seongyon Hong",
+        "Sangjin Kim",
+        "Thierry Tambe"
+      ],
+      "abstract": "As large language models (LLMs) evolve toward agentic AI, coding agents are emerging as memory-intensive workloads that repeatedly reuse persistent states, including contexts and KV caches. Emerging agentic workflows, including Loop/Graph Engineering, cause state amplification through frequent active/dormant transitions, increasing memory pressure. Evicted states incur costly recomputation upon reactivation, particularly under long-context, short-decode workloads. This motivates Capacity-Driven Acceleration (CDA), which explicitly accounts for state amplification to allocate memory capacity between active concurrency and dormant-state retention, replacing recomputation with memory access. In this work, we propose LaFlash, a High-Bandwidth Flash (HBF) architecture that exploits the large capacity of Quad-Level Cell (QLC)-based flash to realize CDA. However, QLC's long read latency demands massive read parallelism under irregular state reactivation and varying context lengths, while limited write endurance constrains placement. LaFlash introduces Session Grouping to balance active request counts and aggregate context lengths across groups, sustaining read parallelism and block utilization through request-exclusive allocation. Furthermore, Fast-Page Allocation exploits QLC's read-latency heterogeneity to mitigate residual inter-group imbalance and sustain bandwidth utilization. On end-to-end coding agent workloads, LaFlash achieves 7.04$\\times$ higher throughput and 10.96$\\times$ higher energy efficiency over SLC-HBF with batch expansion, and 2.36$\\times$ higher throughput over QLC-HBF with CDA. HBM buffering further reduces unnecessary NAND writes, improving QLC write endurance. These results demonstrate the benefits of jointly optimizing state retention and physical data placement for capacity-driven acceleration.",
+      "published": "2026-11-17T13:16:09Z",
+      "updated": "2026-11-17T13:16:09Z",
+      "categories": [
+        "cs.AR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22746",
+      "abs_url": "https://arxiv.org/abs/2611.22746",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22238",
+      "title": "Context Has a Price: Adding and Removing Context for LLM Coding Agents under Prefix Caching",
+      "authors": [
+        "Zerui Yang",
+        "Miaomiao Dong",
+        "Quan Xue",
+        "Chaorui Zhang",
+        "Xuanyu Zheng",
+        "Xiyuan Wang",
+        "Haolin Ruan",
+        "Xueyan Niu",
+        "Guangcheng Song",
+        "Weixi Zhang",
+        "Wei Han",
+        "Bo Bai"
+      ],
+      "abstract": "Coding agents repeatedly send their conversation history to a language model. Adding useful code may reduce search, while removing old tool outputs may shorten later prompts. But do these changes reduce the cost of solving a task? We study this as a measurement problem in more than 20,000 runs of open models on SWE-bench Verified, SWE-bench and Loc-Bench. We account separately for uncached input, cached input and output tokens. Three findings emerge. First, in our main evidence-package experiments, retrieved code reduces read and search commands by 18--34%, but increases cost by 33--42% when cached input costs one tenth of uncached input, without a measurable improvement in resolution. Second, removing old observations can either save money or increase cost: the same approach saves 19--36% without a cache discount but increases cost by 38--116% with a tenth-price cache. Third, shorter prompts do not guarantee cheaper runs because agents may respond by taking more steps. We also find that concurrent experiments can share cached prefixes and distort cost comparisons. These results show why context-management methods should be evaluated using both token prices and the agent's subsequent behavior.",
+      "published": "2026-11-17T05:38:53Z",
+      "updated": "2026-11-17T05:38:53Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22238",
+      "abs_url": "https://arxiv.org/abs/2611.22238",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21845",
+      "title": "EmbedGym: Letting Coding Agents Develop and Debug Embedded Firmware Without Physical Hardware",
+      "authors": [
+        "Minghui Zhao",
+        "Yiming Li",
+        "Sophie Zhu",
+        "Maxwell Khor",
+        "Lauren Ouyang",
+        "Hai \"Helen\" Li",
+        "Yiran Chen",
+        "Tingjun Chen"
+      ],
+      "abstract": "Modern coding agents perform well on general software benchmarks because they can run code and unit tests in a closed loop. Embedded firmware development, however, breaks this loop: a program that compiles can still fail on real hardware due to pin polarity, bus protocol, timing, or networking bugs that an agent at a text terminal cannot observe. Existing embedded coding agents either skip hardware execution, drive GPIO-only simulators with multi-second delays, or test on physical boards in a static environment. In this paper, we present EmbedGym, an interactive virtual hardware environment that lets coding agents develop and debug embedded firmware without physical hardware. EmbedGym uses instruction-level microcontroller unit (MCU) emulators to execute the same binary that would be flashed onto a physical board, connects them to 41 peripheral models, an analog circuit simulator, and virtual WiFi/Bluetooth Low Energy (BLE) endpoints, and exposes an interface for agents to change sensor inputs, press buttons, and inspect hardware states. On top of it, we build EmbedGym-Bench, which consists of 598 tasks across 6 MCU-framework pairs graded by hidden timed test vectors, using a five-stage multi-agent workflow that synthesizes peripheral models and tasks from datasheets and driver libraries. We expose EmbedGym to a coding agent at three levels and evaluate eight models over more than 14K trajectories. Even when compilation succeeds 99.7% of the time, 19.9% of compiled firmwares fail at runtime (up to 73% on individual targets). In contrast, interactive hardware testing in EmbedGym increases pass rates across models by +4.9% to +14.7% (up to +31% on individual targets). Our results also show that an agent with EmbedGym outperforms prior embedded agent frameworks, and lightweight models with EmbedGym match frontier models without it at 30-70x lower cost.",
+      "published": "2026-11-16T20:02:12Z",
+      "updated": "2026-11-16T20:02:12Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21845",
+      "abs_url": "https://arxiv.org/abs/2611.21845",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21797",
+      "title": "Can Coding Agents Write and Transpile Unit Tests",
+      "authors": [
+        "Gil Pasternak",
+        "AJ Langley",
+        "Tom Yotam",
+        "Ellie Kitanidis"
+      ],
+      "abstract": "Coding assistants built on Large Language Models (LLMs) have become a staple of modern software development, increasingly trusted to execute workflows and modernize code end-to-end. Much of this trust rests on passing tests, which are often written by the coding agents themselves. In this work, we examine the ability of these agents to both write reliable tests and translate them between programming languages. We benchmark three popular coding agents, each evaluated with a native frontier model and high reasoning effort. Verifying across a broad suite of metrics, we find that coding agents far exceed human written suites on traditional measures of coverage. This advantage, however, is uneven: agent test quality degrades sharply with project size, and much of the advantage lies in a greater number of written tests. We also show that agentic test translation---while seemingly strong in aggregate---remains inconsistent and unreliable.",
+      "published": "2026-11-16T19:16:19Z",
+      "updated": "2026-11-20T08:03:52Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21797",
+      "abs_url": "https://arxiv.org/abs/2611.21797",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21152",
+      "title": "From Repositories to Training Environments: Scaling Long-Horizon Coding Agents with Environment Evolution Loop",
+      "authors": [
+        "Yang Tian",
+        "Tianyu Zheng",
+        "Xiyuan Yang",
+        "Yaxin Du",
+        "Chengran Yang",
+        "Bo Zhao",
+        "Jian Yang",
+        "Bryan Dai"
+      ],
+      "abstract": "Training coding agents for long-horizon tasks requires environments with verifiable feedback. Existing pipelines often follow a linear process that ends with validation, establishing usability but providing little guidance on improving training value. Recursive self-improvement (RSI) often requires model rollouts or model training followed by downstream evaluation, with costs and feedback delays amplified on long-horizon tasks. How can we use timely, reliable proxy signals to improve training value and synthesize environments at scale? We present RepoFactory, an automated pipeline that converts real repositories into verifiable environments where agents build complete projects from scratch given a language specification. Its Environment Evolution Loop optimizes a multiplicative objective combining validity, structural coupling, and implementation scope through proxy feedback. RepoFactory produces 10,159 environments across 17 software domains. Training Qwen3.5-35B-A3B on these environments yields RepoHorizen-35B-A3B, which achieves gains of 22.6 percentage points on NL2Repo-Bench and 8.5 points on average across five benchmarks covering long-horizon coding and agentic tasks in real-world production settings, compared with 17.5 and 6.4 points without environment evolution. These results highlight the training value of RepoFactory environments and the additional gains from the Environment Evolution Loop.",
+      "published": "2026-11-16T14:20:58Z",
+      "updated": "2026-11-17T07:05:38Z",
+      "categories": [
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21152",
+      "abs_url": "https://arxiv.org/abs/2611.21152",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21095",
+      "title": "SWE-WhatIf: Simulating Real Users of Coding Agents from Recorded Session",
+      "authors": [
+        "Tae Soo Kim",
+        "Tongshuang Wu",
+        "Juho Kim"
+      ],
+      "abstract": "Recorded sessions between users and coding agents offer a way to evaluate how agents complete real-world tasks and interact with users. However, these sessions cannot simply be replayed with new agents, because recorded user replies may no longer apply when an agent takes a different trajectory. We introduce SWE-WhatIf, which replays recorded sessions with new agents by modeling the user's intents, the criteria for satisfying them, and the conditions under which they arise. Using this model, a user simulator generates replies that adapt to unseen agent turns while remaining grounded in the recording. Across 89 real-world sessions, SWE-WhatIf generated the replies most similar to those of real users and matched the strongest baseline when sessions were rewritten. To test adaptation, we replay sessions with agents instructed to avoid or repeat actions that the recorded user pushed back on. SWE-WhatIf produced the highest win rate for avoiding these actions (66.3%), significantly above chance. We further demonstrate its utility by ranking five LLMs as coding agents, where the highest-ranked model depended on how users specified and developed their intents, and a study with 16 users, where replaying their own sessions changed 14 participants' rankings and informed their future agent use.",
+      "published": "2026-11-16T13:42:26Z",
+      "updated": "2026-11-16T13:42:26Z",
+      "categories": [
+        "cs.CL",
+        "cs.AI",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21095",
+      "abs_url": "https://arxiv.org/abs/2611.21095",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21084",
+      "title": "CompCert4Lean: Porting a Verified C Compiler to Lean in Six Weeks with Parallel Coding Agents",
+      "authors": [
+        "Cong Wang",
+        "Zhiyang Chen",
+        "Fan Long",
+        "Martin Rinard"
+      ],
+      "abstract": "We present CompCert4Lean, a large-scale port of CompCert 3.17's verified compiler core from Rocq to Lean, completed in approximately six weeks by one expert directing parallel LLM agents. Our migration workflow partitions the development along its dependencies, audits translated definitions and theorem statements before large-scale proof reconstruction, and then reconstructs proofs in parallel against stable interfaces. The resulting compiler covers typed CompCert C through x86-64 assembly, discharges all 4,908 recorded proof obligations without project-specific axioms, and produces executable Linux binaries. The workflow enabled the expert to concentrate on organizing the work rather than supplying technical solutions. Of 1,071 human interactions, 88.8% concerned workflow and coordination, while only three supplied technical direction. Optimization campaigns further demonstrate the benefit of the Lean port for agent-driven verified development. Under matched budgets of 24 active hours, GPT-6-astra produced a Lean candidate with 11.7% lower generated-program runtime across 29 small-tests programs, compared with 2.3% lower for its Rocq candidate, both relative to original CompCert 3.17 and while preserving the end-to-end correctness theorem. These results show that parallel LLM agents can support large-scale migration with limited human technical direction and subsequently improve the migrated compiler while retaining its formal guarantees.",
+      "published": "2026-11-16T13:32:37Z",
+      "updated": "2026-11-16T13:32:37Z",
+      "categories": [
+        "cs.PL",
+        "cs.LO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21084",
+      "abs_url": "https://arxiv.org/abs/2611.21084",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21056",
+      "title": "Evaluation-Free Recursive Self-Improvement for Coding Agents",
+      "authors": [
+        "Zhe Ren",
+        "Guowei Rong",
+        "Yimeng Chen",
+        "Nanbo Li",
+        "Piotr Piękos",
+        "Mateusz Ostaszewski",
+        "Dandan Guo",
+        "Jürgen Schmidhuber"
+      ],
+      "abstract": "Recent self-improving coding agents have achieved strong benchmark performance by iteratively modifying their own executable implementations. A common pattern uses downstream task-derived evidence to decide which candidates or lineages continue evolving, which we term evaluate-and-select. Obtaining this signal requires repeatedly executing evolved agents on downstream tasks, so broader exploration incurs increasing evaluation cost, while repeated optimization against a fixed evaluation distribution may encourage benchmark-specific adaptation. We ask: can coding agents self-improve without downstream task evaluation inside the evolution loop? We introduce Explore-then-Integrate (ELITE), which integrates implementation mechanisms rather than selecting a single exploratory child to continue the lineage. At each generation, ELITE proposes diverse focused improvements, implements them independently from the same parent, and inspects the resulting programs to identify complementary, redundant, and conflicting mechanisms before reimplementing a compatible subset as one coherent descendant. No downstream task outcomes or task-solving trajectories of evolved candidates are used to guide evolution; only deterministic checks of structural and operational validity are used inside the loop. On SWE-bench Pro, ELITE improves the initial agent from 60.0% to 85.6%, compared with 86.7% for the Darwin Godel Machine (DGM) and 88.3% for the Huxley-Godel Machine (HGM), while using zero candidate task evaluations and reducing observed wall-clock evolution time by 8.8x and 3.2x, respectively, under the evaluated configurations. In cross-benchmark transfer without further adaptation, ELITE averages 73.3% on SWE-bench Verified and 69.3% on Polyglot. Together, these results demonstrate the feasibility of coding-agent self-improvement without downstream candidate task evaluation in our setting.",
+      "published": "2026-11-16T13:05:46Z",
+      "updated": "2026-11-16T13:05:46Z",
+      "categories": [
+        "cs.CL",
+        "cs.NE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21056",
+      "abs_url": "https://arxiv.org/abs/2611.21056",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20218",
+      "title": "SWE-CoWork: Benchmarking Coding Agents as Digital Employees in Organizations",
+      "authors": [
+        "Xinping Lei",
+        "Minghao Liu",
+        "Ruijie Zhu",
+        "Xiaohui Hu",
+        "Xingqiao Li",
+        "Ao Zhang",
+        "Wenhao Chai",
+        "Han Li",
+        "Tao Wang",
+        "Jingyuan Zhang",
+        "Enduo Zhao",
+        "Yunfeng Shi",
+        "Yiming Liang",
+        "Zetao Yang",
+        "Xingjian Wang",
+        "Yifan Yao",
+        "Xinkai Ma",
+        "Yingru Li",
+        "Tianhan Yang",
+        "Huan Zhou",
+        "Weiran Shi",
+        "Shen Yan",
+        "Jiaheng Liu",
+        "Stephen Huang",
+        "Eli Cheung",
+        "Weihao Xuan"
+      ],
+      "abstract": "A coding agent working within a software organization must establish what to build, collaborate with colleagues, and verify what it delivers. We introduce SWE-CoWork, a benchmark comprising 101 development assignments across 101 real repositories, 11 programming languages, and 12 application domains. Each assignment places an agent in a simulated engineering organization with 26 colleagues who have distinct responsibilities, bounded knowledge, and controlled collaboration behavior. Starting from a brief handoff, agents must recover requirements distributed across colleagues and workplace records, reconcile conflicting evidence, and implement changes evaluated by private executable tests. We evaluate eleven models and find a substantial gap between partial implementation and complete task delivery. The two leading models satisfy approximately 63% of fail-to-pass (F2P) tests but complete fewer than 8% of assignments. Providing complete requirements upfront improves F2P by approximately 16 percentage points for Seed Evolving and GPT-6 Astra, yet leaves complete task success unchanged. Requirement-level trajectory analysis reveals failures throughout the delivery process: Claude-Opus-5.5 directs a mean of 93% of first questions about queried cards to their accountable owners across runs but obtains only 64% of colleague-held requirements. Deferred questions go unfollowed, implementations remain incomplete even after requirements are acquired, and 31% of requirements reported as completed fail their tests. These findings highlight sustained requirement tracking, from clarification through implementation, verification, and handoff, as a key challenge for reliable autonomous software engineering.",
+      "published": "2026-11-15T19:39:01Z",
+      "updated": "2026-11-15T19:39:01Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20218",
+      "abs_url": "https://arxiv.org/abs/2611.20218",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19764",
+      "title": "Compositional Exploits in Autonomous Coding Agents: Attack Mechanics and Ephemeral Defense",
+      "authors": [
+        "Deep Shah",
+        "Nehal Kathrotia"
+      ],
+      "abstract": "Autonomous coding agents (such as Antigravity, Claude Code, Cursor, and OpenHands) rely on third-party tools to inspect files, run commands, and call external APIs. Today's security auditors evaluate these tools almost entirely in isolation: static linters and AST checkers verify that each individual tool contains no malicious code at installation time. In this paper, we show that isolated tool auditing is fundamentally flawed. We expose compositional exploits in autonomous coding agents, an emergent vulnerability class where an agent chains individually harmless tools to execute an unauthorized attack. Much like code-reuse attacks in binary exploitation, this threat requires no malware; instead, the agent stitches together legitimate tool operations across turns over shared workspace files, environment variables, and chat memory. Across a 560-task benchmark suite (360 exploit tasks across 8 hazard classes and 200 benign developer and cloud workflows), unprotected frontier models (Gemini 3.5, 3.7, and 3.8 Flash) execute compositional exploit chains with a 72.9% to 84.5% success rate, while five leading single-tool pre-distribution scanners exhibit a 0% detection rate across all constituent tools. To eliminate compositional exploits, we present CompGuard, an OS-grounded defense uniting two planes: (1) a Cognitive Control Plane that issues single-skill capability leases and tracks dataflow provenance, and (2) an OS Kernel Enforcement Layer using Linux Landlock LSM v4, seccomp-BPF socket filters, and an ephemeral loopback proxy to close the invocation gap. CompGuard achieves a 100% Defense Block Rate (0.0% to 0.8% pre-teardown Net ASR) at 61.4 microseconds interposition overhead, preserves a 98.0% solve rate on benign developer workflows, and triggers zero false alarms across 615 real cloud diagnostic calls.",
+      "published": "2026-11-15T03:46:10Z",
+      "updated": "2026-11-15T03:46:10Z",
+      "categories": [
+        "cs.CR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19764",
+      "abs_url": "https://arxiv.org/abs/2611.19764",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19549",
+      "title": "Beyond Prompts: Runtime Contracts for Coding Agents",
+      "authors": [
+        "Reda Heddad"
+      ],
+      "abstract": "Coding agents act on repositories through shell commands and file edits, and teams steer them with written engineering rules. Industrial settings expect such rules to be enforced and their application to be evidenced, and a rule given as prompt text provides neither. We test whether executable contracts enforced while the agent works reduce rule violations compared with the same rules in the prompt, retrieved as guidance, or checked only after generation. Violations are scored by an oracle whose methods differ from the in-loop checks, and the oracle is validated by two human reviewers and a model reviewer. Across three studies on two model families (240, 112 and 108 runs), enforcement during execution produced no oracle-detected violation in 104 paired runs, against 21 to 55% of runs without rules, and no loss of functional correctness in the two confirmatory studies. In the confirmatory study on tasks aimed at known failure situations (Study 3, protocol hashed before the first run), enforcement lowered the share of violating runs by 31 percentage points relative to no rules (Holm-adjusted p = 0.014); the 17-point difference from prompted rules was not significant (p = 0.12), and neither was any contrast in Study 2, where only 3 of 14 tasks produced a violation. Prompted rules removed some violation types but not recursive deletes of scratch directories, and checks after generation repaired file edits but not commands that had already run. That enforcement satisfies the rules it enforces is expected by construction; what the data add is where prompting falls short, the absence of a functional cost, and the limits of the rules and of the oracle themselves. The studies use low-cost models and one small fixture.",
+      "published": "2026-11-14T18:22:42Z",
+      "updated": "2026-11-14T18:22:42Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19549",
+      "abs_url": "https://arxiv.org/abs/2611.19549",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.19359",
+      "title": "One Run Is Not Enough: Reminding a small Gemma 4 coding agent of its last finding made no measurable difference in a paired test",
+      "authors": [
+        "Patrick Passos"
+      ],
+      "abstract": "When a coding agent runs out of room, its earlier findings are cut and it forgets them. We tested a simple fix: automatically putting the agent's last finding back in front of it. We fixed the rules in advance and ran 98 paired coding tasks with and without this reminder, using Gemma 4 31B (QAT, 4-bit) in the Gemma 4 Developer Agent harness. The reminder made no measurable difference: across all 98 tasks, 47 were solved with it and 48 without (-1.0 points, 95% interval [-8.3, +6.3], exact McNemar p=1.0). The primary outcome (a documented deviation from our preregistration), the first 48 pairs, was 29/48 with memory against 25/48 without (+8.3 points, [-2.1, +18.3], p=0.22); the extension of 50 tasks, decided after that result, pointed the other way (18/50 against 23/50, -10.0 points, p=0.125), so the sign did not replicate. With 19% of tasks flipping between two identical no-memory runs, the combined interval excludes harms larger than about 8 points and gains larger than about 6, and the design had 80% power only for effects of about +-12 points or more. The model almost never wrote notes (2 of 16 and 4 of 32 runs), and memory cost context: the first request is larger and something was injected at only 47% to 65% of compactions. The registered secondary, repeated actions per compaction, was also null. Two directional hypotheses found on Modal did not replicate on Kaggle. We also report an A/A calibration and a validity funnel (129 tasks, 105 valid). Together these results show that single-run memory claims on task sets of this size sit inside run-to-run noise. The treatment is a harness mechanism and does not test agent-written memory.",
+      "published": "2026-11-14T11:58:17Z",
+      "updated": "2026-11-14T11:58:17Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.19359",
+      "abs_url": "https://arxiv.org/abs/2611.19359",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.17440",
+      "title": "Interpreting Coding Agents Through Their Behavioral Trajectories",
+      "authors": [
+        "Ibragim Badertdinov",
+        "Alexander Golubev"
+      ],
+      "abstract": "Standard coding-agent benchmarks primarily evaluate binary task success, treating execution as a black box and obscuring the behaviors that produce those outcomes. We analyze a large corpus of 143,209 execution trajectories from 125 agent configurations spanning 117 unique models. To enable comparisons across heterogeneous agent interfaces, we develop a rule-based parser that maps raw execution traces to high-level actions such as repository search, file editing, and test execution, and audit its predictions against a six-model consensus reference on 500 events. We find that agents with similar solve rates can nevertheless differ substantially in how they explore, modify and verify code. Moreover, without using task outcomes, token counts, or tool names as features, aggregate behavioral profiles retrieve the corresponding agent stack across disjoint repository sets and programming languages, although task composition is not fully controlled in the cross-repository setting. Through analyses of frontier models and agent scaffolds, we further show that scaffold choice and reasoning effort systematically shift agents' search, editing, and testing behavior. We release the deterministic parser together with the full annotation and analysis pipeline alongside an annotated trajectory subset.",
+      "published": "2026-11-12T19:11:23Z",
+      "updated": "2026-11-12T19:11:23Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.17440",
+      "abs_url": "https://arxiv.org/abs/2611.17440",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.17388",
+      "title": "Time-Consistent Evaluation of Hierarchical Code Graphs for SWE Agents",
+      "authors": [
+        "Xianpeng",
+        "Sun",
+        "Tian Yu",
+        "Haonan Sun",
+        "Sheng Ma",
+        "Qincheng Zhang",
+        "Lifei Rao",
+        "Jie Li",
+        "Jian",
+        "Cao",
+        "Qi Zhang"
+      ],
+      "abstract": "Evaluating repository-aware software engineering (SWE) agents requires strict separation between pre-existing repository knowledge and future code evolution, yet standard benchmarks frequently suffer from temporal contamination and prompt-level solution leakage. Building on the time-consistent benchmark protocol of Sun (2026), we enforce strict zero-leakage isolation across DragonFly in C++ and React in JavaScript/TypeScript, locking repository snapshots and knowledge graphs at historical cutoff commits $T_0$ and evaluating 100 post-$T_0$ pull requests across four prompt granularities: Minimal, Concise, Contextual, and Guided. Under this zero-leakage protocol, we conduct a matched evaluation of three context-augmentation regimes: (1) an unaugmented Baseline, (2) a flat syntax-level Tree-sitter AST graph, and (3) ServiceExplorer, a deterministic two-level hierarchical dependency graph capturing Level-1 system/package containers and Level-2 architectural modules. Across 7,200 paired evaluations spanning six foundation models across the MAI-Code Flash, Claude, and GPT-Sol families, ServiceExplorer consistently outperforms both Baseline and Tree-sitter AST across every model, repository, and prompt granularity ($+15.6\\%$ to $+86.2\\%$ relative $F_1$ lift, $p < 10^{-4}$), while tripling exact full-PR localization on DragonFly. Crucially, equipping an efficiency-tier or prior-generation model with ServiceExplorer consistently surpasses the unaugmented Baseline $F_1$ of the next-generation model across all evaluated families.",
+      "published": "2026-11-12T00:51:46Z",
+      "updated": "2026-11-12T00:51:46Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.17388",
+      "abs_url": "https://arxiv.org/abs/2611.17388",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.17294",
+      "title": "Metal Sandbox: Isolated Execution and Command Scheduling for GPU Coding Agents on Apple Silicon",
+      "authors": [
+        "Haozhe Wang",
+        "Lina Chen",
+        "Fanqi Wan",
+        "Qi Han",
+        "Yinmin Zhang",
+        "Zheng Ge",
+        "Daxin Jiang",
+        "Junchi Yan"
+      ],
+      "abstract": "On-device inference requires kernels that make effective use of local accelerators. Efficient training and evaluation of models that generate Apple Metal kernels benefit from native macOS tools and concurrent agent sessions. These sessions alternate between model requests, development commands, and GPU execution, leaving GPU capacity idle for much of a rollout. We present Metal Sandbox, infrastructure that combines restricted per-instance file access, native command execution, and command-level scheduling across interconnected Macs. Each agent retains its workspace and private development environment. Parallel commands can run concurrently, while serial commands share one execution slot per node; eligible waiting commands can migrate to available Macs and return results to the original agent. Integration with Harbor supports task execution, automatic verification, and rollout collection through a common workflow. Controlled experiments on four Mac mini M4 nodes achieve $1.68\\times$--$2.05\\times$ gains in command throughput under concentrated demand. Sixteen static agent traces give an estimated $2.14\\times$ sustained-throughput gain for four sessions per node versus one, assuming continuously replenished sessions and unchanged mean durations. Replaying these measured traces under dynamic scheduling reduces mean tool waiting by 18.8% and batch elapsed time by 22.3%, assuming unchanged phase durations. Metal Sandbox and its Harbor integration are open-source on GitHub.",
+      "published": "2026-11-12T18:54:42Z",
+      "updated": "2026-11-12T18:54:42Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL",
+        "cs.DC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.17294",
+      "abs_url": "https://arxiv.org/abs/2611.17294",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16485",
+      "title": "Contain, Conform, Compare (Extended Version): A Red-Teamed Evaluation Kit for Small Coding Agents and the Full Record of Its Experiments",
+      "authors": [
+        "Nguyen Minh Thang"
+      ],
+      "abstract": "A hosted score in the Gemma 4 Developer Agent competition is one noisy number, so development needs a local evaluator that is fast, safe for agent-written code, and matching the hosted scorer's prompts. drydock-eval evaluates a small coding agent (Gemma 4 E4B) at about 250 runs per hour on one RTX 5090. Contain runs each job in a fresh container without network and passed 200 scripted escape tests; conform provides eight checks that compare a local stack's requests with the scorer's configuration, down to rendered tokens; compare provides paired statistics that respect repository clusters. AI agents built and attacked the kit; a human owner approved machine use and release. This extended version repeats the short paper and adds the full record of the experiments made with and around the kit: 9,660 rows of agent runs, 2,494 grading controls and 72 serving measurements, all released. On four L4 GPUs the 31B model decodes 38.1 tokens per second in one stream and E4B 105.8. Six configurations of a 31B agent solved between 37 and 44 of 70 development tasks, and no pairwise difference was detected. A pre-registered five-arm experiment (231 tasks, 4,620 jobs) measured four prompt divergences: no E4B solve-rate change was detected (largest estimate -2.1 points, 95% interval -4.4 to +0.4). Three changes of the E4B agent led their screens by +1.0 to +6.2 points; each was then tested once on new tasks under a frozen pass rule, and none was confirmed (gains -0.35, -0.39 and +4.10 points). The unchanged baseline, run again on the same 128 tasks, moved by 1.17 points, and 65% of these tasks were solved in none of eight runs. Prompts and agent bundles are withheld; every run-level result is public.",
+      "published": "2026-11-12T08:54:03Z",
+      "updated": "2026-11-12T08:54:03Z",
+      "categories": [
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16485",
+      "abs_url": "https://arxiv.org/abs/2611.16485",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16293",
+      "title": "Rasoi: Visual Diffs for Evaluating Structural Changes Made by Coding Agents",
+      "authors": [
+        "Riya Sahni",
+        "Aryan Kaul",
+        "Anushka Bhatnagar",
+        "Xuanming Zhang",
+        "Vivian Liu",
+        "Reya Vir",
+        "Lydia B. Chilton"
+      ],
+      "abstract": "Coding agents let developers modify software rapidly through natural language. However, as agents take on larger changes, developers can lose track of how the codebase is evolving. These edits may look correct on the surface while restructuring the system in unexpected ways: duplicating logic, changing modules outside the requested scope, removing functionality developers meant to keep, or introducing architectural drift. We investigate how visual diffs can help developers understand and evaluate the structural changes that coding agents make. We present Rasoi, a design probe that maps how a codebase's architecture evolves after each agent-made edit, letting developers inspect which architectural elements and relationships were added, modified, or removed across multiple levels of abstraction. We deployed Rasoi in a week-long study with 12 developers working on their own codebases across varied technical domains. We found that visual diffs helped developers see whether changes stayed within scope, notice unexpected restructuring, and understand how modified parts related to the system as a whole. Our findings suggest that the value of oversight tools for coding agents lies less in making developers trust the agent and more in helping developers feel confident in their own evaluation of agent-made changes. We discuss implications for visual tools that support code comprehension and human oversight in AI-assisted software development.",
+      "published": "2026-11-12T04:47:39Z",
+      "updated": "2026-11-12T04:47:39Z",
+      "categories": [
+        "cs.SE",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16293",
+      "abs_url": "https://arxiv.org/abs/2611.16293",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.16289",
+      "title": "Eliciting and Mitigating Specification Satisficing in Coding Agents",
+      "authors": [
+        "Ruixin Wang",
+        "Tianyi Zhang"
+      ],
+      "abstract": "Coding agents often fail to meet all requirements in the task description. In some of these failures, the agent considers an implementation choice that meets a requirement, but later decides to commit to another one that does not meet the requirement for a reason it finds acceptable. We call this specification satisficing. It is challenging to identify and mitigate specification satisficing because the agent accepts such choices for its own reasons, and existing self-correction methods are biased toward them. We propose SatisFix, which guides a coding agent to report these choices and their reasons, and then check each choice against the task description. We evaluate SatisFix on DeepSWE and SWE-bench Pro with five LLMs as backbones and two different agent frameworks, and compare it with three self-correction methods. SatisFix improves the pass@1 of the base agent by an average of 5.09% on DeepSWE and 7.06% on the hard subset of SWE-bench Pro. On DeepSWE, it outperforms the best baseline by 3.98%. Our ablation study shows that both steps of SatisFix contribute to the improvement.",
+      "published": "2026-11-12T04:42:55Z",
+      "updated": "2026-11-12T04:42:55Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.16289",
+      "abs_url": "https://arxiv.org/abs/2611.16289",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.14960",
+      "title": "Termination Lag: Coding Agents Solve Early but Stop Late",
+      "authors": [
+        "Musa Cim",
+        "Burak Topcu",
+        "Mahmut Taylan Kandemir"
+      ],
+      "abstract": "Coding agents can solve a task well before they stop working on it. We characterize \\emph{termination lag}--the number of steps between an agent's first correct patch and the end of its run--across five models, two agent frameworks, and three SWE-bench datasets by recording and testing every distinct repository patch generated during execution. Our analysis reveals that 38--82% of successful runs achieve a correct solution on their initial source-code edit. However, agents continue to expend substantial effort after correct patches, with post-solution steps accounting for a median of 35--37% for Qwen3-Coder and 54--60% for Laguna-XS.2 in successful runs on SWE-bench Verified and Multilingual. Agents spend most of these additional steps verifying their work and exploring the repository. In a small fraction of cases (1--8%), this continued activity leads agents to undo their earlier correct patch, leaving the final solution incorrect.",
+      "published": "2026-11-11T03:11:00Z",
+      "updated": "2026-11-11T03:11:00Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14960",
+      "abs_url": "https://arxiv.org/abs/2611.14960",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.14952",
+      "title": "JoyFrontBench: Evaluating Front-End Coding Agents through Goal-Oriented Acceptance Contracts",
+      "authors": [
+        "Xiaoyi Qiao",
+        "Yicheng Wang",
+        "Jianan Lin",
+        "Xiaoyang Ji",
+        "Dongyi Lv",
+        "Yidan Huang",
+        "Shi Suo",
+        "Shiying Fan",
+        "Nan Duan",
+        "Jiaqi Wang"
+      ],
+      "abstract": "Front-end coding agents are expected to produce applications that fulfill user goals, yet high task scores can coexist with failures in essential workflows. Evaluating these agents therefore requires an explicit distinction between partial implementation and application success. We introduce JoyFrontBench, a benchmark that makes this distinction through goal-oriented acceptance contracts. Each contract identifies core tasks and mandatory criteria before generation: a core task passes only when all mandatory criteria are satisfied and a shared completion threshold is met, while application success requires every core task to pass on the same operational artifact within a single run. Derived from practitioner requirements, JoyFrontBench comprises 100 front-end development problems, 764 tasks, and 2,596 atomic criteria, with reviewed annotations linking user goals to core tasks and evidence requirements. The evaluation framework combines evidence-grounded judgments with deterministic record auditing and fixed scoring rules, preserving graded task assessment alongside explicit core-task and application-level acceptance. We evaluate five coding models under two agent harnesses, OpenHands and OpenCode, on the 70-problem test set; the remaining 30 problems form a public set for validation and diagnostic analyses. Under OpenHands, the mean Average Task Score (ATS) across models is 87.69%, while the mean Application Success Rate (ASR) is 51.52%. Further analyses reveal changes in model rankings across harnesses and variation in application success across repeated runs. These findings highlight the limitations of aggregate task scores in characterizing application success and motivate explicit assessment of core-goal fulfillment alongside graded task performance.",
+      "published": "2026-11-11T02:58:14Z",
+      "updated": "2026-11-11T02:58:14Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14952",
+      "abs_url": "https://arxiv.org/abs/2611.14952",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.14009",
+      "title": "Coding Agent Memory Post-Training II: Unlocking the Memory Potential of Pre-trained File Operations for Long-Horizon Tasks via On-Policy Distillation",
+      "authors": [
+        "Lirui Luo",
+        "Kelong Mao",
+        "Xinwei Yang",
+        "Rongqing Li",
+        "Luyu Chen",
+        "Kieran Wong",
+        "Yudong Guo",
+        "Xinrui Wang",
+        "Jiayin Zhu",
+        "Pu Yao",
+        "Gu Simiu",
+        "Sulong Xu",
+        "Cong Fang"
+      ],
+      "abstract": "Language-model agents increasingly tackle long-horizon tasks whose interaction histories exceed the model's active context. They must therefore decide what to write down and what to read back, and when to do either. Recent work has begun to use on-policy distillation (OPD) to make memory control part of the policy, relying on memory tools and compaction protocols that lie outside either model's pre-training. However, this weakens the distillation on both sides: the teacher cannot give useful guidance on an interface it has never used, and the student samples too few meaningful memory actions for that guidance to take effect. To study this problem, we introduce Coding Agent Memory Gym II (CAMG-II), a suite of long-horizon agentic-RL environments spanning Shop, Coding, AutoResearch, General, and Visual. Alongside each environment's native task interface, CAMG-II provides ordinary Bash access and an episode-persistent workspace, enabling the policy to create, revise, search, and reuse files as memory across context replacements. We also introduce Coding Agent Memory Post-Training II (CAMP-II), which trains a single policy jointly across all five environments with fully asynchronous OPD to learn this file-based memory behavior directly from a frozen teacher with a prior for file operations. On CAMG-II, CAMP-II obtains 2.97 times the gain of the strongest OPD baseline. The memory behavior CAMP-II learns generalizes to two external benchmarks, Terminal-Bench 2.1 and SWE-Bench Pro V2, with improved success rates.",
+      "published": "2026-11-10T12:49:24Z",
+      "updated": "2026-11-12T07:08:00Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CL"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14009",
+      "abs_url": "https://arxiv.org/abs/2611.14009",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.13709",
+      "title": "Do They Do as They Are Told? Investigating Coding Agents' Adherence to Explicit Instructions in Context Files",
+      "authors": [
+        "Gianmario Voria",
+        "Yutaro Kashiwa",
+        "Gemma Catolino",
+        "Fabio Palomba"
+      ],
+      "abstract": "Developers increasingly rely on agent context files (ACFs), persistent, project-scoped artifacts such as AGENTS.md, to steer the behavior of autonomous coding agents without renegotiating expectations at every interaction. Yet this governance mechanism rests on an untested assumption: that instructions written into an ACF are actually carried out, rather than ignored or loosely followed. Existing studies describe what ACFs contain, but not whether individual instructions are followed, leaving open which guidance can be trusted. We address this gap through an empirical study of real-world ACF snapshots and their linked agent-generated commits: characterizing the explicit, actionable instructions ACFs encode, operationalizing them into executable measurement scripts, and using these scripts to assess instruction-level compliance. We find that most observable instructions can be operationalized and that agents follow ACF guidance more often than not, but adherence splits sharply between instructions followed consistently and those never respected, with differences across instruction categories and coding agents. This split shows where ACF guidance works and where it does not, pointing to instruction types that may need rewriting and to agents that may need enforcement beyond the ACF. These findings lay the groundwork for systematic approaches to specifying, verifying, and enforcing project-specific instructions in autonomous software development.",
+      "published": "2026-11-10T08:01:51Z",
+      "updated": "2026-11-10T08:01:51Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13709",
+      "abs_url": "https://arxiv.org/abs/2611.13709",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.13246",
+      "title": "ExpertCrowd-SWE: Measuring Frontier Coding Agents on Expert-Authored Engineering Tasks in Unfamiliar Codebases",
+      "authors": [
+        "Josip Vrdoljak",
+        "Akash Singh",
+        "Bas Steunebrink",
+        "Alex Yarotsky",
+        "John Lorenzo",
+        "Achille Nicoletti",
+        "Sam Pigott"
+      ],
+      "abstract": "ExpertCrowd-SWE (EC-SWE) is a benchmark of 100 expert-authored, multi-file software engineering tasks for evaluating autonomous coding agents in large, unfamiliar codebases. Each task is a change request written by a practising engineer against a pinned commit of a real repository, paired with a sealed reference solution and a task-specific grader whose weighted, mostly executable criteria award partial credit; must-pass blockers and pass/fail gates encode what a maintainer would refuse to merge. The tasks span 87 open-source projects and 11 languages. The median ticket is 148 words, while the median reference solution changes 471 lines. Every task image is calibrated before release so that the reference solution scores 1.0 and both the untouched repository and an inert change score 0; nearly half of the tasks also ship alternative, lazy and adversarial control patches that the grader must classify correctly. The final 100 tasks were selected for difficulty against current frontier models. We evaluate seven frontier models, five runs each (3,495 scored runs), in a single platform harness that gives each model its provider-native tool interface. Claude Opus 5.5 (67.3%) and GPT-6 Astra (63.7%) lead without a statistically significant gap, followed by Claude Fable 5.1 (46.5%), Gemini 3.8 Flash (40.0%), and a statistically indistinguishable group of Qwen 3.8 Max, DeepSeek V4.1 Flash and Grok 4.6 (32-34%). No task is fully solved by every model, and on 80 tasks no model earns full credit on all five runs. Scores span 35 points. Depending on the model, agents take a median of 33 to 166 steps per run, with little relation to score. We release 24 tasks with their environments, graders and results, and hold out 76 to limit contamination.",
+      "published": "2026-11-09T21:20:57Z",
+      "updated": "2026-11-09T21:20:57Z",
+      "categories": [
+        "cs.AI",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13246",
+      "abs_url": "https://arxiv.org/abs/2611.13246",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.13241",
+      "title": "FlowPlan: Reducing the Token Cost of Coding Agents with Abstraction-Guided Planning and Verification",
+      "authors": [
+        "Melika Sepidband",
+        "Jiho Shin",
+        "Song Wang",
+        "Hadi Hemmati"
+      ],
+      "abstract": "LLM-based coding agents such as Claude Code can resolve real-world repository issues, but their iterative interaction loop can be expensive. Existing approaches reduce this cost primarily by limiting, compressing, or selectively avoiding information and actions within the repair process. We investigate a complementary question: Can an agent reason about a repair at an abstract program level, rather than repeatedly operating over raw source code, to reduce both the exploration needed to identify a repair and the repeated checking needed to verify it afterward? We present FlowPlan, an abstraction-guided repair approach that structures localization, planning, and verification around per-function control-flow or data-flow graphs. The agent first localizes the candidate fault location on the program abstraction and expresses the intended repair as explicit graph deltas before modifying the concrete source. After the edit, FlowPlan reconstructs the same abstraction and compares the observed structural change with the planned one. Then, a verification checks the complete repair before termination. Across all six benchmark-model settings, FlowPlan does not significantly change resolution rate relative to the vanilla agent while reducing token consumption in every setting, significantly in five of six settings. With Claude Haiku 4.5, it uses only 0.46-0.47x the baseline tokens on SWE-bench Pro, 0.32-0.35x on SWE-bench Verified, and 0.68-0.74x on SecBench; with Sonnet 5, it uses 0.72-0.76x, 0.73-0.74x, and 0.92-0.94x, respectively. Overall, FlowPlan achieves the largest token reduction among the compared methods in three of the six settings and ties the strongest compared method in a fourth. Trajectory analysis shows that FlowPlan saves tokens by replacing much of the costly post-edit re-reading and testing with explicit verification and reducing per-call context.",
+      "published": "2026-11-09T21:11:29Z",
+      "updated": "2026-11-09T21:11:29Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.13241",
+      "abs_url": "https://arxiv.org/abs/2611.13241",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.12823",
+      "title": "Coding Agents in KVM: Practical Containment and User Control with Limited Resources",
+      "authors": [
+        "Yutaka Nagashima"
+      ],
+      "abstract": "Coding agents often need broad authority for productive development work, but granting that authority can expose users' data and infrastructure. Off-the-shelf cloud workspaces can help contain agent activity, but reliance on provider-specific platforms can lead to vendor lock-in and reduced user control. Researchers and engineers must therefore balance agent autonomy, enforced containment, and user control within available financial, computational, and human resources. We analyze these trade-offs and present KVM-Agent, an open-source implementation that automates most setup and provisioning steps. It gives agents broad authority inside replaceable Ubuntu VMs while keeping host administration outside those VMs and supporting multiple coding-agent applications, model services, and remote job delegation. The approach retains familiar workflows and user choice at the cost of VM resources, maintenance, and residual risks from secrets accessible inside the VMs and permitted network access.",
+      "published": "2026-11-09T18:24:46Z",
+      "updated": "2026-11-09T18:24:46Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.12823",
+      "abs_url": "https://arxiv.org/abs/2611.12823",
+      "source": "arxiv"
+    },
     {
       "id": "2601.13597",
       "title": "AI IDEs or Autonomous Agents? Measuring the Impact of Coding Agents on Software Development",
@@ -134,7 +1397,7 @@
         "Haoxiang Zhang",
         "Ahmed E. Hassan"
       ],
-      "abstract": "The future of software engineering--SE 3.0--is unfolding with the rise of AI teammates: autonomous, goal-driven systems collaborating with human developers. Among these, autonomous coding agents are especially transformative, now actively initiating, reviewing, and evolving code at scale. This paper introduces AIDev, the first large-scale dataset capturing how such agents operate in the wild. Spanning over 456,000 pull requests by five leading agents--OpenAI Codex, Devin, GitHub Copilot, Cursor, and Claude Code--across 61,000 repositories and 47,000 developers, AIDev provides an unprecedented empirical foundation for studying autonomous teammates in software development.\n  Unlike prior work that has largely theorized the rise of AI-native software engineering, AIDev offers structured, open data to support research in benchmarking, agent readiness, optimization, collaboration modeling, and AI governance. The dataset includes rich metadata on PRs, authorship, review timelines, code changes, and integration outcomes--enabling exploration beyond synthetic benchmarks like SWE-bench. For instance, although agents often outperform humans in speed, their PRs are accepted less frequently, revealing a trust and utility gap. Furthermore, while agents accelerate code submission--one developer submitted as many PRs in three days as they had in three years--these are structurally simpler (via code complexity metrics).\n  We envision AIDev as a living resource: extensible, analyzable, and ready for the SE and AI communities. Grounding SE 3.0 in real-world evidence, AIDev enables a new generation of research into AI-native workflows and supports building the next wave of symbiotic human-AI collaboration. The dataset is publicly available at https://github.com/SAILResearch/AI_Teammates_in_SE3.\n  \u003e AI Agent, Agentic AI, Coding Agent, Agentic Coding, Software Engineering Agent",
+      "abstract": "The future of software engineering--SE 3.0--is unfolding with the rise of AI teammates: autonomous, goal-driven systems collaborating with human developers. Among these, autonomous coding agents are especially transformative, now actively initiating, reviewing, and evolving code at scale. This paper introduces AIDev, the first large-scale dataset capturing how such agents operate in the wild. Spanning over 456,000 pull requests by five leading agents--OpenAI Codex, Devin, GitHub Copilot, Cursor, and Claude Code--across 61,000 repositories and 47,000 developers, AIDev provides an unprecedented empirical foundation for studying autonomous teammates in software development.\n  Unlike prior work that has largely theorized the rise of AI-native software engineering, AIDev offers structured, open data to support research in benchmarking, agent readiness, optimization, collaboration modeling, and AI governance. The dataset includes rich metadata on PRs, authorship, review timelines, code changes, and integration outcomes--enabling exploration beyond synthetic benchmarks like SWE-bench. For instance, although agents often outperform humans in speed, their PRs are accepted less frequently, revealing a trust and utility gap. Furthermore, while agents accelerate code submission--one developer submitted as many PRs in three days as they had in three years--these are structurally simpler (via code complexity metrics).\n  We envision AIDev as a living resource: extensible, analyzable, and ready for the SE and AI communities. Grounding SE 3.0 in real-world evidence, AIDev enables a new generation of research into AI-native workflows and supports building the next wave of symbiotic human-AI collaboration. The dataset is publicly available at https://github.com/SAILResearch/AI_Teammates_in_SE3.\n  > AI Agent, Agentic AI, Coding Agent, Agentic Coding, Software Engineering Agent",
       "categories": [
         "cs.SE",
         "cs.AI",
@@ -726,7 +1989,7 @@
         "Yang Liu",
         "Zhi Jin"
       ],
-      "abstract": "Automated code generation driven by Large Lan- guage Models (LLMs) has enhanced development efficiency, yet generating complex application-level software code remains challenging. Multi-agent frameworks show potential, but existing methods perform inadequately in large-scale application-level software code generation, failing to ensure reasonable orga- nizational structures of project code and making it difficult to maintain the code generation process. To address this, this paper envisions a Knowledge-Guided Application-Level Code Generation framework named KGACG, which aims to trans- form software requirements specification and architectural design document into executable code through a collaborative closed- loop of the Code Organization \u0026 Planning Agent (COPA), Coding Agent (CA), and Testing Agent (TA), combined with a feedback mechanism. We demonstrate the collaborative process of the agents in KGACG in a Java Tank Battle game case study while facing challenges. KGACG is dedicated to advancing the automation of application-level software development.",
+      "abstract": "Automated code generation driven by Large Lan- guage Models (LLMs) has enhanced development efficiency, yet generating complex application-level software code remains challenging. Multi-agent frameworks show potential, but existing methods perform inadequately in large-scale application-level software code generation, failing to ensure reasonable orga- nizational structures of project code and making it difficult to maintain the code generation process. To address this, this paper envisions a Knowledge-Guided Application-Level Code Generation framework named KGACG, which aims to trans- form software requirements specification and architectural design document into executable code through a collaborative closed- loop of the Code Organization & Planning Agent (COPA), Coding Agent (CA), and Testing Agent (TA), combined with a feedback mechanism. We demonstrate the collaborative process of the agents in KGACG in a Java Tank Battle game case study while facing challenges. KGACG is dedicated to advancing the automation of application-level software development.",
       "categories": [
         "cs.SE"
       ],
@@ -1897,7 +3160,7 @@
         "Haoxiang Zhang",
         "Ahmed E. Hassan"
       ],
-      "abstract": "AI coding agents are rapidly transforming software engineering by performing tasks such as feature development, debugging, and testing. Despite their growing impact, the research community lacks a comprehensive dataset capturing how these agents are used in real-world projects. To address this gap, we introduce AIDev, a large-scale dataset focused on agent-authored pull requests (Agentic-PRs) in real-world GitHub repositories. AIDev aggregates 932,791 Agentic-PRs produced by five agents: OpenAI Codex, Devin, GitHub Copilot, Cursor, and Claude Code. These PRs span 116,211 repositories and involve 72,189 developers. In addition, AIDev includes a curated subset of 33,596 Agentic-PRs from 2,807 repositories with over 100 stars, providing further information such as comments, reviews, commits, and related issues. This dataset offers a foundation for future research on AI adoption, developer productivity, and human-AI collaboration in the new era of software engineering.\n  \u003e AI Agent, Agentic AI, Coding Agent, Agentic Coding, Agentic Software Engineering, Agentic Engineering",
+      "abstract": "AI coding agents are rapidly transforming software engineering by performing tasks such as feature development, debugging, and testing. Despite their growing impact, the research community lacks a comprehensive dataset capturing how these agents are used in real-world projects. To address this gap, we introduce AIDev, a large-scale dataset focused on agent-authored pull requests (Agentic-PRs) in real-world GitHub repositories. AIDev aggregates 932,791 Agentic-PRs produced by five agents: OpenAI Codex, Devin, GitHub Copilot, Cursor, and Claude Code. These PRs span 116,211 repositories and involve 72,189 developers. In addition, AIDev includes a curated subset of 33,596 Agentic-PRs from 2,807 repositories with over 100 stars, providing further information such as comments, reviews, commits, and related issues. This dataset offers a foundation for future research on AI adoption, developer productivity, and human-AI collaboration in the new era of software engineering.\n  > AI Agent, Agentic AI, Coding Agent, Agentic Coding, Agentic Software Engineering, Agentic Engineering",
       "categories": [
         "cs.SE",
         "cs.AI"
@@ -3128,7 +4391,7 @@
         "Spandan Garg",
         "Yufan Huang"
       ],
-      "abstract": "While significant progress has been made in automating various aspects of software development through coding agents, there is still significant room for improvement in their bug fixing capabilities. Debugging and investigation of runtime behavior remains largely a manual, developer-driven process. Popular coding agents typically rely on either static analysis of the code or iterative test-fix cycles, which is akin to trial and error debugging. We posit that there is a wealth of rich runtime information that developers routinely access while debugging code, which agents are currently deprived of due to design limitations. Despite how prevalent debuggers are in modern IDEs and command-line tools, they have surprisingly not made their way into coding agents. In this work, we introduce Debug2Fix, a novel framework that incorporates interactive debugging as a core component of a software engineering agent via a subagent architecture. We incorporate debuggers for Java and Python into our agent framework and evaluate against GitBug-Java and SWE-Bench-Live and achieve \u003e20% improvement in performance compared to the baseline for certain models. Furthermore, using our framework, we're able to make weaker models like GPT-5 and Claude Haiku 4.5 match or exceed the performances of stronger models like Claude Sonnet 4.5, showing that better tool design is often just as important as switching to a more expensive model. Finally, we conduct systematic ablations demonstrating the importance of both the subagent architecture and debugger integration.",
+      "abstract": "While significant progress has been made in automating various aspects of software development through coding agents, there is still significant room for improvement in their bug fixing capabilities. Debugging and investigation of runtime behavior remains largely a manual, developer-driven process. Popular coding agents typically rely on either static analysis of the code or iterative test-fix cycles, which is akin to trial and error debugging. We posit that there is a wealth of rich runtime information that developers routinely access while debugging code, which agents are currently deprived of due to design limitations. Despite how prevalent debuggers are in modern IDEs and command-line tools, they have surprisingly not made their way into coding agents. In this work, we introduce Debug2Fix, a novel framework that incorporates interactive debugging as a core component of a software engineering agent via a subagent architecture. We incorporate debuggers for Java and Python into our agent framework and evaluate against GitBug-Java and SWE-Bench-Live and achieve >20% improvement in performance compared to the baseline for certain models. Furthermore, using our framework, we're able to make weaker models like GPT-5 and Claude Haiku 4.5 match or exceed the performances of stronger models like Claude Sonnet 4.5, showing that better tool design is often just as important as switching to a more expensive model. Finally, we conduct systematic ablations demonstrating the importance of both the subagent architecture and debugger integration.",
       "categories": [
         "cs.SE",
         "cs.AI"
@@ -4578,7 +5841,7 @@
         "Ismael Boureima",
         "Dan O'Malley"
       ],
-      "abstract": "We present Agentic Retrieval-Augmented Code Synthesis (ARCS), a system that improves LLM-based code generation without fine-tuning. ARCS operates through a budgeted synthesize-execute-repair loop over a frozen model: it retrieves relevant code context before generation, proposes candidates, executes them against tests, and repairs based on execution feedback. This retrieval-before-generation design reduces hallucination and accelerates convergence. We formalize ARCS as a state-action process with provable guarantees on termination, monotonic improvement, and bounded cost. A tiered controller (Small/Medium/Large) trades latency for accuracy predictably. On HumanEval, ARCS achieves up to 87.2% pass@1 with Llama-3.1-405B, surpassing CodeAgent (82.3%) while using simpler control than tree-search methods. On TransCoder, it achieves \u003e= 90% accuracy on most translation pairs. On a LANL scientific corpus, it improves CodeBLEU by +0.115 over baseline RAG. ARCS provides a practical, reproducible approach to reliable code synthesis using existing LLM checkpoints.",
+      "abstract": "We present Agentic Retrieval-Augmented Code Synthesis (ARCS), a system that improves LLM-based code generation without fine-tuning. ARCS operates through a budgeted synthesize-execute-repair loop over a frozen model: it retrieves relevant code context before generation, proposes candidates, executes them against tests, and repairs based on execution feedback. This retrieval-before-generation design reduces hallucination and accelerates convergence. We formalize ARCS as a state-action process with provable guarantees on termination, monotonic improvement, and bounded cost. A tiered controller (Small/Medium/Large) trades latency for accuracy predictably. On HumanEval, ARCS achieves up to 87.2% pass@1 with Llama-3.1-405B, surpassing CodeAgent (82.3%) while using simpler control than tree-search methods. On TransCoder, it achieves >= 90% accuracy on most translation pairs. On a LANL scientific corpus, it improves CodeBLEU by +0.115 over baseline RAG. ARCS provides a practical, reproducible approach to reliable code synthesis using existing LLM checkpoints.",
       "categories": [
         "cs.SE",
         "cs.AI"

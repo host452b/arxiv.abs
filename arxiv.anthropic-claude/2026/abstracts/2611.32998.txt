@@ -1,0 +1,22 @@
+Title: First-Hit Photoconsistency for Neural Surface Reconstruction
+Authors: Gabriel Lenain, Edmond Boyer, Jean Ponce
+ID: 2611.32998
+URL: https://arxiv.org/abs/2611.32998
+
+Abstract:
+Recent neural implicit and Gaussian splatting approaches have achieved
+impressive results in multi-view surface reconstruction. However, jointly
+optimizing geometry and appearance introduces ambiguities. A parametric
+appearance model can compensate for geometric errors, reproducing the input
+images accurately without an accurate surface. We demonstrate accurate neural
+implicit surface reconstruction using only multi-view patch photoconsistency
+with geometry-based visibility, without volumetric rendering or parametric
+appearance models. For each reference ray, sphere tracing computes the first
+surface intersection. Its position and normal define a local patch whose
+photoconsistency is evaluated across visible neighboring views using colors
+sampled directly from the input images. For efficient sphere tracing, we use a
+1-Lipschitz multi-layer perceptron. We use a single photoconsistency loss,
+without foreground masks or auxiliary geometric regularization. Experiments show
+that our method achieves the lowest mean Chamfer distance on BlendedMVS (BMVS)
+among compared methods and matches the geometric accuracy of leading
+reconstruction methods on DTU.

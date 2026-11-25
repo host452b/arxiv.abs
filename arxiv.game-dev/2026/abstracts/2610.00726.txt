@@ -1,0 +1,26 @@
+Title: Where the Body Keeps the Beat: Structured Motion Conditioning and Music Dynamics Supervision for Dance-to-Music Generation
+Authors: Changchang Sun, Lu Cheng, Yan Yan
+ID: 2610.00726
+URL: https://arxiv.org/abs/2610.00726
+
+Abstract:
+Dance-to-music (D2M) generation aims to synthesize musically plausible
+soundtracks whose temporal structure aligns with a given dance performance.
+Representative D2M methods do not explicitly distinguish motion cues across body
+parts and frequency bands, while standard flow matching lacks a dedicated
+objective for supervising local music-latent dynamics. To address these issues,
+we propose Dyna2Music, a latent flow-matching framework that combines structured
+motion conditioning with explicit supervision of music-latent dynamics. An
+empirical analysis on AIST++ quantifies how spatial partitioning and frequency
+separation affect raw music-to-kinematic beat alignment and motion-reference
+density, informing the conditioning design. Accordingly, Dyna2Music decomposes
+joint velocities into slow and fast components and hierarchically fuses the
+resulting part-wise motion energy with pretrained joint features to condition
+music generation. To complement this representation, we introduce latent
+dynamics consistency (LDC), an auxiliary objective that matches adjacent-frame
+change magnitudes between a single-step clean-latent estimate and the paired
+reference. LDC makes local music-latent variation an explicit training target
+without adding trainable parameters or inference computation. Dyna2Music
+supports variable-length music generation, and experiments on AIST++ and TikTok
+demonstrate improved rhythmic alignment and audio quality over representative
+D2M baselines.

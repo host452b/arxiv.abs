@@ -1,0 +1,24 @@
+Title: Suspected Until Inspected: Neuro-Symbolic Detection of Broken Access Control in Server-Side Web Applications
+Authors: Chengyao Yang, Zifeng Kang, Dongqi Han, Shihong Zou
+ID: 2611.27270
+URL: https://arxiv.org/abs/2611.27270
+
+Abstract:
+Broken access control (BAC) has topped the OWASP Top 10 since 2021.
+Unfortunately, a decade of detectors still leaves a gap on every front. Static
+analyzers are tied to one language or framework, dynamic testers cover only the
+endpoints they manage to exercise, and LLM-based auditors leave the final
+verdict to an error-prone model. In this paper, we design and implement FLINT, a
+neuro-symbolic framework that detects BAC in server-side web applications
+without language- or framework-specific rules. Our key insight is to separate
+the proposal from the verdict -- an LLM may flag any data access as needing a
+guard, but only a symbolically verified check can clear it. The neural component
+enumerates every endpoint and distills each, via demand-driven code slicing,
+into an authorization certificate whose claims are all grounded in cited code.
+The symbolic component verifies each claimed check through origin tracing and a
+lattice-based interprocedural dataflow analysis, so that no access is cleared on
+the model's word. When applied to popular real-world open-source applications,
+including Gitea, Grafana, and Strapi, FLINT detected 112 zero-day, exploitable
+BAC vulnerabilities, 30 of them in projects with over 20,000 GitHub stars. We
+have responsibly disclosed all of them to the developers. Mattermost, for
+example, has already confirmed our report and is assigning a CVE identifier.

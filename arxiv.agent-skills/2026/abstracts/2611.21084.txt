@@ -1,0 +1,26 @@
+Title: CompCert4Lean: Porting a Verified C Compiler to Lean in Six Weeks with Parallel Coding Agents
+Authors: Cong Wang, Zhiyang Chen, Fan Long, Martin Rinard
+ID: 2611.21084
+URL: https://arxiv.org/abs/2611.21084
+
+Abstract:
+We present CompCert4Lean, a large-scale port of CompCert 3.17's verified
+compiler core from Rocq to Lean, completed in approximately six weeks by one
+expert directing parallel LLM agents. Our migration workflow partitions the
+development along its dependencies, audits translated definitions and theorem
+statements before large-scale proof reconstruction, and then reconstructs proofs
+in parallel against stable interfaces. The resulting compiler covers typed
+CompCert C through x86-64 assembly, discharges all 4,908 recorded proof
+obligations without project-specific axioms, and produces executable Linux
+binaries. The workflow enabled the expert to concentrate on organizing the work
+rather than supplying technical solutions. Of 1,071 human interactions, 88.8%
+concerned workflow and coordination, while only three supplied technical
+direction. Optimization campaigns further demonstrate the benefit of the Lean
+port for agent-driven verified development. Under matched budgets of 24 active
+hours, GPT-6-astra produced a Lean candidate with 11.7% lower generated-program
+runtime across 29 small-tests programs, compared with 2.3% lower for its Rocq
+candidate, both relative to original CompCert 3.17 and while preserving the end-
+to-end correctness theorem. These results show that parallel LLM agents can
+support large-scale migration with limited human technical direction and
+subsequently improve the migrated compiler while retaining its formal
+guarantees.

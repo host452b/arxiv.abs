@@ -1,0 +1,23 @@
+Title: Analyzing Single-Bit Flips on LLMs and Their Backbone-Matched VLMs
+Authors: Xiaomeng Wang, Martha Larson, Zhuoran Liu, Zhengyu Zhao
+ID: 2611.32503
+URL: https://arxiv.org/abs/2611.32503
+
+Abstract:
+Open-weight large language models (LLMs) enable offline weight analysis and are
+reused as backbones in vision-language models (VLMs), increasing the risk of
+bit-flip attacks that manipulate stored weight bits to induce malicious model
+behavior. An adversary could identify vulnerable bits on a public LLM and later
+flip the same locations in a deployed LLM or its backbone-matched VLMs. A
+single-bit flip is particularly practical in this setting because it is easier
+to achieve under hardware fault attacks than multi-bit flips. However, existing
+selectors are mostly limited to multi-bit flips, without in-depth analysis of
+single-bit flips. In this paper, we adapt representative data-free and data-
+based bit selectors to identify candidate bits. We evaluate each bit
+independently on source LLMs and at the same logical coordinates in backbone-
+matched VLMs (without re-search), considering both performance degradation and
+prediction patterns across multiple inputs. Results show impact of single-bit
+flips varies across selectors on LLMs and their backbone-matched VLMs. A single-
+bit flip can make the model tend to produce a repeated output string across
+different inputs. Our robustness analysis reveals vulnerabilities in terms of
+performance and prediction patterns.

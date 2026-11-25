@@ -1,0 +1,26 @@
+Title: Emergent Structure in the Marginal Attention Space of Language Models
+Authors: Valentino Maiorca, Walter Nelson, Francesco Locatello
+ID: 2610.03109
+URL: https://arxiv.org/abs/2610.03109
+
+Abstract:
+While representation similarity across independently trained language models is
+well-documented, how internal mechanics such as attention behave across models
+remains far less characterized. Inspired by this gap, we examine the structure
+of post-softmax attention weights by marginalizing over query positions, mapping
+them into a joint token-head "marginal attention space". Evaluating across 60+
+diverse LLMs, we find that different properties emerge when reducing this space
+along its token and head axes. When reduced token-wise, marginal attention
+yields a text-intrinsic signal robustly conserved across models. To explain this
+property, we empirically connect marginal attention to the input-output Jacobian
+of the network, and prove theoretically that under a smoothness assumption,
+models with similar next-token distributions are guaranteed to have similar
+input-output Jacobian statistics. When reduced head-wise, it forms a model-
+private signature conserved across documents. Practically, this provides a
+natural way to estimate a per-head budget for key-value (KV) cache eviction,
+effectively decoupling model-specific budget allocation from text-intrinsic
+token scoring. On standard eviction benchmarks, a per-head budget precomputed
+offline on pretraining text, combined with a training-free token score, shows
+competitive performance with methods that recompute the budget on every document
+or train it per target. Code available at https://github.com/Flegyas/marginal-
+attention

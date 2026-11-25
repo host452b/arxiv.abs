@@ -1,0 +1,24 @@
+Title: Bounded Autonomy: A Trust-Anchored Defense Against Resource-Exhaustion Attacks on Tool-Augmented LLM Agents
+Authors: Ziyuan Chen, Yueming Lyu, Songze Li, Huafeng Chen, Caifeng Shan
+ID: 2611.30383
+URL: https://arxiv.org/abs/2611.30383
+
+Abstract:
+Tool-augmented Large Language Model (LLM) agents are vulnerable to resource-
+exhaustion attacks that amplify model-token consumption through persistent
+context amplification, large tool output amplification, and error-induced
+agentic loops. Despite growing attention to agent security and resource-abuse
+risks, a systematic defense framework specifically targeting these attacks
+remains lacking. Meanwhile, existing general-purpose agent defense frameworks,
+which address a broader range of security threats, often rely on prompt-level
+safeguards or coarse-grained resource limits and lack deterministic runtime
+mechanisms for controlling token consumption. They also provide limited support
+for balancing fault recovery against the risk of repeated resource-consuming
+execution. To address these limitations, we propose a trust-anchored closed-loop
+defense framework consisting of four phases: certificate-guided orchestration
+with deterministic handoffs, calibrated one-time node budgeting, Gateway-based
+runtime enforcement, and bounded recovery through a shared, non-resettable
+recovery pool. By accounting for both input and output tokens across all model
+invocations, our experiments demonstrate that the framework bounds cumulative
+token consumption, mitigates resource-amplification attacks, and preserves
+benign task utility under trusted execution assumptions.

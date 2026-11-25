@@ -1,0 +1,25 @@
+Title: Round-Trip Mutation Testing: Translating Code to Natural Language Intent and back
+Authors: Asma Hamidi, Cedric Richter, Ahmed Khanfir, Mike Papadakis
+ID: 2607.03223
+URL: https://arxiv.org/abs/2607.03223
+
+Abstract:
+This paper presents Round-Trip Mutation Testing (RTM), a novel approach that
+generates mutants from LLM mistranslations between a program code and its
+intent. Leveraging the generative capability of LLMs from and to programming and
+natural language, and given an input program, our approach predicts its intent,
+that is used to generate programs, which when different from the original one,
+constitute the output mutants. The approach produces additionally mutants,
+stemming from artificially provoked mistranslations, by mutating the intent
+prior to the final programs (mutants) generation. Originating from the
+propagation of small changes in the intent to the code, our intuition is that
+these programs would present subtle semantic differences from the original one,
+simulating likely-to-occur faults that could result from specification
+misunderstandings, and enabling mutation testing. To evaluate RTM, we run it on
+40 real buggy methods and evaluate its effectiveness and cost-efficiency in
+guiding testing towards detecting the bugs. Our results demonstrate the
+potential of round-trip mutation testing to produce syntactically more diverse
+mutants, potentially exposing faults that traditional mutation operators fail to
+reveal. More interestingly, RTM outperforms traditional pattern-based mutation
+in producing smaller and stronger test-suites, detecting on average over 4 and
+1.7 times more faults when selecting only 4 and 30 tests respectively.

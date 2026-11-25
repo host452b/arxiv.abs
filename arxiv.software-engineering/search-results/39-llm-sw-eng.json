@@ -10,11 +10,982 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:49:08Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 909,
-  "return_count": 200,
+  "return_count": 248,
   "papers": [
+    {
+      "id": "2611.30621",
+      "title": "AgentBouncer: Defending Software Engineering Agents via Dynamic System-Call Mediation",
+      "authors": [
+        "Pascal Joos",
+        "Michael Pradel"
+      ],
+      "abstract": "Software engineering (SE) agents can complete diverse engineering tasks by interacting with the development environment via tools that access files, run commands, and download resources. Unfortunately, the same ability that makes SE agents useful also makes them prone to performing unintended malicious actions through prompt injections, malicious tools, or supply-chain attacks. Existing defenses that analyze the agent trajectory may fail to detect such attacks, as they inspect only the initial prompt and the sequence of tool calls, but not the actual actions that are executed in the environment. This paper presents AgentBouncer, a novel runtime enforcement system that prevents SE agents from performing malicious actions by mediating, and if necessary denying, system calls that agents trigger via tool calls. The core of AgentBouncer is an LLM arbiter that judges system calls along two axes, necessity and safety for the current task. It denies unsafe system calls, and the less necessary a system call appears, the more certain the arbiter has to be about its safety to allow it. To manage runtime overhead, preseeded policy rules and hierarchy-aware caching ensure that the LLM arbiter is only invoked for key decisions. We evaluate AgentBouncer on a dataset of 340 attacks on the development environment, covering four attack vectors, combined with benign issue resolution tasks from SWE-bench Verified. AgentBouncer reduces the attack success rate from 99.41% for an unsupervised agent to 10.59%, which is 18.23-73.53 percentage points lower than competitive state-of-the-art defenses. At the same time, AgentBouncer preserves the task success rate of the agent, with only 0.25% failed benign tool calls. Per benign task, AgentBouncer adds 47 seconds and USD 0.0036 in LLM costs to an unsupervised agent, whereas the closest existing runtime defense adds 4.5x as much time and 9.6x as much cost.",
+      "published": "2026-11-23T12:54:45Z",
+      "updated": "2026-11-23T12:54:45Z",
+      "categories": [
+        "cs.CR",
+        "cs.MA",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.30621",
+      "abs_url": "https://arxiv.org/abs/2611.30621",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.29853",
+      "title": "Landscape and Taxonomy of Prompt Engineering Patterns in Software Engineering",
+      "authors": [
+        "Yuya Sasaki",
+        "Hironori Washizaki",
+        "Jialong Li",
+        "Nobukazu Yoshioka",
+        "Naoyasu Ubayashi",
+        "Yoshiaki Fukazawa"
+      ],
+      "abstract": "Advancements in large language models (LLMs) have enhanced their ability to handle ambiguous user instructions. However, effective prompt patterns remain crucial for usability and comprehension. This article presents a taxonomy of prompt engineering patterns for software engineering. It is based on a systematic literature review that was conducted in early 2023, when LLMs still faced significant limitations in context length and inference capabilities. Our study explores techniques that enhance the usability and reliability of LLMs, emphasizing the ongoing importance of well-designed prompts in optimizing task performance. Our findings highlight the critical role of prompt patterns in maximizing LLM's potential, even as their capabilities continue to evolve.",
+      "published": "2026-11-23T00:23:04Z",
+      "updated": "2026-11-23T00:23:04Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.29853",
+      "abs_url": "https://arxiv.org/abs/2611.29853",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.28996",
+      "title": "\"What Should I Do?\" Guidelines for Responsibly Integrating AI in Software Engineering",
+      "authors": [
+        "Rudrajit Choudhuri",
+        "Fatima A. Moussaoui",
+        "Carmen Badea",
+        "Christian Bird",
+        "Jenna L. Butler",
+        "Brian Houck",
+        "Margaret Burnett",
+        "Anita Sarma"
+      ],
+      "abstract": "Speculations abound about the \"right\" ways for developers to integrate AI into their software engineering (SE) work, but the evidence that exists is sparse and contradictory. Yet, developers are held responsible for the products they ship with (or without) AI's help, so they need to integrate AI in responsible ways. To address this gap, we conducted a two-phase, large-scale investigation with 1,118 developers at Microsoft, GitHub, and Pfizer. In Phase 1, we surveyed 860 developers at Microsoft on where they sought and resisted AI support in their daily work, and from their accounts, synthesized 35 developer-facing guidelines: 29 across five categories of SE work and 6 cross-cutting ones. A year later, as AI capabilities and developers' experiences co-evolved, we validated them in Phase 2 with 258 developers in technology (Microsoft, GitHub) and biopharmaceutical (Pfizer) domains. Developers in our study found the guidelines clearly worded (92%) and relevant to their work (91%), and most wanted to adopt them in their own work (89%). We also report how developers described operationalizing these guidelines in practice: using AI to refine their craft and delegate verifiable work, while keeping judgment and accountability for themselves. For relationship-centric work, endorsement varied with developers' domain and their SE and AI experience. Overall, we offer concrete advice from in-the-trenches developers to other in-the-trenches developers, and a shared vocabulary that engineering teams can adopt to integrate AI well in their work.",
+      "published": "2026-11-21T19:14:10Z",
+      "updated": "2026-11-21T19:14:10Z",
+      "categories": [
+        "cs.SE",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.28996",
+      "abs_url": "https://arxiv.org/abs/2611.28996",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23876",
+      "title": "SWE-growth: Teacher-Guided Adaptive Self-Play for Software Engineering Agents",
+      "authors": [
+        "Songshi Liang",
+        "Zixuan Huang",
+        "Mingxuan Song",
+        "Haoyu Tang",
+        "Shusheng Xu",
+        "Tongkai Yang",
+        "Zihe Wang",
+        "Rui Yan"
+      ],
+      "abstract": "Self-play offers a scalable way to train software engineering agents by generating repository-level repair tasks. However, with binary repair rewards and finite rollout budgets, all-fail groups provide no reward-based group-relative advantage. Such tasks may still offer learning opportunities when a Teacher can provide verified repairs absent from the Student's own attempts. We introduce SWE-Growth, a teacher-guided adaptive self-play framework that uses verified Teacher outcomes to identify learning opportunities for the current Student. Tasks with all students failure but reliable Teacher success provide demonstrations for supervised fine-tuning (SFT), and post-SFT Student rollouts identify mixed-outcome tasks with a positive Teacher--Student gap for reinforcement learning. Task eligibility also guides Injector updates, connecting Student training with subsequent task generation. Starting from 101 seed issues, \\textsc{SWE-Growth} improves Qwen3-Coder-30B-A3B-Instruct from 27.7% to 31.7% on SWE-bench Pro and from 11.0% to 17.2% on held-out TerminalBench 2.1 by Round~2. It exceeds Student-only self-play by 2.6 and 4.1 percentage points, respectively, and Teacher-augmented self-play by 1.8 and 2.5 points under approximately matched budgets. These results support adapting both supervision and task selection to the Student's evolving repair capability.",
+      "published": "2026-11-18T05:29:18Z",
+      "updated": "2026-11-18T05:29:18Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23876",
+      "abs_url": "https://arxiv.org/abs/2611.23876",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23312",
+      "title": "AppSec Core: An Ontology for Security-by-Design Software Engineering",
+      "authors": [
+        "Pedro Farinha"
+      ],
+      "abstract": "When engineers or coding agents change an application, a dependency, a configuration or a build pipeline, they need to know three things: which security rules apply, how to meet them, and what evidence to leave. Today the answers are spread over many standards, frameworks, laws and lists of weaknesses, and each one uses its own words and level of detail. This paper presents AppSec Core, a model of the security work that engineers do. It says what must be true, which practices get there, which mechanisms do the job and which artefacts show that it was done. It has 259 elements in ten domains. We built it from a security-by-design manual written from practice, and then checked it against 31 outside sources, ten of them about AI systems and agents. Along the way we made three changes, which added five objectives and made one domain wider. We did not need a new domain. Most objectives are backed by several sources: the typical objective is used by six of the twenty technical sources, and 194 of the 202 objectives, practices and mechanisms are linked to items in the sources. For the domain of a change, the model gives back a closed set of typed elements, and for a source, it gives back the objectives that the source points to. We keep the model apart from the manual, the selection rules and the server that delivers the result, and we follow one change, adding a third-party package, through all four. When a code generator received the requirements, the share of security tests passed on a public benchmark went from 77.4% to 93.0%. On a second benchmark, the result was close to that of the benchmark's own \"oracle\" prompt, which is written with the tests in mind.",
+      "published": "2026-11-12T15:17:38Z",
+      "updated": "2026-11-12T15:17:38Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23312",
+      "abs_url": "https://arxiv.org/abs/2611.23312",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.23260",
+      "title": "Software Engineering for LLM-Based Agents: A Lifecycle-Oriented Survey",
+      "authors": [
+        "Yifei Ge",
+        "Yalin Feng",
+        "Weisong Sun",
+        "Junjie Shi",
+        "Zhenpeng Chen",
+        "Chunrong Fang",
+        "Zhihong Zhao",
+        "Zhenyu Chen",
+        "Yang Liu",
+        "Zhi Jin"
+      ],
+      "abstract": "Large language model (LLM)-based Agents perform tasks through tool use and interaction with external environments. Public engineering guidance commonly begins with a target task, selects a suitable workflow or autonomous Agent design, and refines prompts, tools, and execution strategies using task outcomes, latency, and cost. When delivered as software systems, Agents must also satisfy stakeholder requirements, action boundaries, quality checks, and maintenance needs. Model-directed execution can vary across runs, failures can span model decisions and tools, and changes to prompts, models, or interfaces can affect previously accepted behavior. This survey examines how LLM-based Agents are engineered across five software lifecycle stages: Requirements Engineering, Architecture and Design, Implementation and Integration, Testing and Assurance, and Maintenance and Evolution. Based on a main collection of 355 papers, we compare the engineering problems addressed, explain how methods and practices work, and examine their reported evaluations and limitations within each stage. We synthesize how existing research supports Agent development activities and identify open problems and research directions. The result is a lifecycle-oriented reference for understanding, selecting, and further developing methods for engineering Agent software.",
+      "published": "2026-10-03T02:55:36Z",
+      "updated": "2026-10-03T02:55:36Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.23260",
+      "abs_url": "https://arxiv.org/abs/2611.23260",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.22905",
+      "title": "Think Before You Code: A Benchmark for Testing LLMs on Software Engineering Deliberation",
+      "authors": [
+        "Ashman Mehra"
+      ],
+      "abstract": "Think Before You Code (TBYC) is a benchmark pipeline for studying whether code-focused language models can reason about software issues in ways that resemble human engineering deliberation. The benchmark curates GitHub issue discussions into structured records, extracts human discussion artifacts such as problems, solutions, constraints, rationales, and trade-offs, and then prompts models to generate issue-level \"thoughts\" using retrieved code context and few-shot examples. It converts model responses back into the same artifact space and evaluates them against human annotations using complementary metrics for artifact type detection, metadata matching, tag overlap, and semantic summary similarity. Beyond scoring, this study includes visualization, leaderboard, and baseline tools that make it possible to compare models, prompting strategies, and extraction methods across repositories and issues. Think Before You Code is an end-to-end evaluation environment for measuring how closely LLM software reasoning aligns with human strategic judgment.",
+      "published": "2026-11-17T15:09:42Z",
+      "updated": "2026-11-17T15:09:42Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.22905",
+      "abs_url": "https://arxiv.org/abs/2611.22905",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.21515",
+      "title": "Beyond Leaderboard Ranks: Selecting Software Engineering Agents Under Budget Constraints",
+      "authors": [
+        "Srinath Srinivasan",
+        "Tim Menzies"
+      ],
+      "abstract": "Teams that adopt LLM agents for issue resolution must decide which agent to pay for, and how much to spend finding out. Leaderboard ranks give weak evidence for this decision. Accuracy differences may be statistically unresolved, reported costs may be inconsistent, and evaluating candidate agents can itself be expensive. We investigate budget-constrained agent selection using 58,197 run--task records extracted from the Holistic Agent Leaderboard (HAL), focusing on SWE-bench and six additional benchmarks. Across seven benchmarks, 27 of 35 steps along the accuracy--cost Pareto frontiers are statistically unresolved. On SWE-bench, a run costing $34.16 trails the $170.78 leader by 14.6 percentage points, but the available tasks cannot statistically distinguish their accuracy. Reported costs also differ from standardized token-based estimates by up to 11.7x, while selective task evaluation can bias estimates of full-benchmark execution cost. We therefore compare evaluation strategies under explicit evaluation budgets and deployment-cost caps. Under advance knowledge of task costs, successive halving reaches our uncertainty-aware selection target on SWE-bench using 6.6% of exhaustive evaluation spend, achieving the lowest cost on six of seven benchmarks and tying on the seventh. Its advantage narrows when task costs are unknown before execution or exact-best selection is required. Our findings motivate decision-oriented agent evaluation that accounts for accuracy uncertainty, validates execution costs, and compares complex selection methods against simple adaptive allocation.",
+      "published": "2026-11-16T18:10:37Z",
+      "updated": "2026-11-16T18:10:37Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.21515",
+      "abs_url": "https://arxiv.org/abs/2611.21515",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20873",
+      "title": "Re-Reading Is Not Free: Token Traces and Cache-Aware Energy Estimation for LLM Agents in Software Engineering",
+      "authors": [
+        "Tina Vartziotis",
+        "Ketevan Peranidze",
+        "Rodopi Kosteli",
+        "Ezgi Sarikayak",
+        "George Dasoulas",
+        "Michael Keckeisen",
+        "Sotirios Kotsopoulos",
+        "Francesca Dominici"
+      ],
+      "abstract": "As large language models (LLMs) evolve from conversational assistants into autonomous agents embedded in software development workflows, estimating their environmental footprint requires moving beyond conventional token-based accounting. Existing energy estimators focus on isolated request-response interactions, overlooking the repeated processing of accumulated context, cache reuse, and work delegated to subagents. We analyze nearly one billion tokens collected across 42 sessions and 752 task episodes over ten weeks of real-world AI-assisted software development. Cached-context reads make up 94.8% of all API-reported tokens, while uncached input accounts for only 0.017%; for every generated token, approximately 260 cached tokens are read. Context grows 5.3-fold over a session compared with 1.4-fold within individual tasks. To quantify the energy implications, we extend an existing analytical inference-energy model to account for cached-context processing, yielding a cache-aware hybrid estimator. It estimates approximately 250 kWh for the workload, compared with approximately 10 kWh from the output-based estimator EcoLogits, a 25-fold difference largely driven by cached-context reads. Neither estimator has been validated on long cached contexts, but no modeling assumption we varied closes the gap. Starting each task from a fresh context would lower our estimate by about 60%. We also find that parent-session logs report only a subagent's final internal call, undercounting delegated tokens by a factor of ten; for this workload the correction changes the energy estimate by about 5%, but token-volume studies are fully exposed to it. Our findings expose a substantial gap between how current energy estimators and agentic workloads treat context, highlighting the need for workflow-level energy accounting that captures context accumulation, cache reuse, and delegated execution.",
+      "published": "2026-11-16T10:48:02Z",
+      "updated": "2026-11-16T10:48:02Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20873",
+      "abs_url": "https://arxiv.org/abs/2611.20873",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.20033",
+      "title": "The Hidden Methodological Layer: Uncovering Threats to Validity in LLM-Assisted Empirical Software Engineering",
+      "authors": [
+        "Victória Gomes",
+        "Fabio Palomba",
+        "Robert Feldt",
+        "Thomas Zimmermann",
+        "David Lo",
+        "Rodrigo Spinola"
+      ],
+      "abstract": "Context: Large Language Models (LLMs) are increasingly embedded in empirical software engineering (ESE) workflows, supporting tasks such as classification, coding, extraction, synthesis, and evaluation. Their probabilistic and opaque behavior, however, introduces methodological concerns that may affect empirical rigor. Aims: This paper investigates threats to validity introduced by LLM-assisted empirical workflows and examines how LLM interactions influence empirical studies. Method: We conducted a secondary analysis of 50 primary studies comprising 69 LLM-assisted research tasks identified through a systematic literature review. We examined the extent to which LLM-related threats were reported, how these threats were characterized, and how they related to established validity dimensions. Results: LLM-related threats remain substantially underreported. We identified recurring threats including classification errors, prompt-dependent interpretation, workflow instability, evaluator bias, downstream propagation of outputs, and model dependence. These threats can affect multiple validity dimensions depending on where and how LLM outputs enter the workflow. Conclusion: We introduce the concept of hidden methodological layer as a conceptual lens for understanding how LLMs influence empirical software engineering workflows. We argue that rigorous LLM-assisted ESE requires making prompts, model configurations, interaction protocols, validation procedures, and downstream reuse of LLM-generated outputs visible as part of the research method.",
+      "published": "2026-11-15T14:24:19Z",
+      "updated": "2026-11-15T14:24:19Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.20033",
+      "abs_url": "https://arxiv.org/abs/2611.20033",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.15797",
+      "title": "Early Reflections on How Large Language Models are Reshaping Software Engineering Research",
+      "authors": [
+        "David Williams",
+        "Michail Kyrkos",
+        "Max Hort",
+        "Maria Kechagia",
+        "Justyna Petke",
+        "Federica Sarro"
+      ],
+      "abstract": "Large language models (LLMs) are radically reshaping software engineering (SE) research. Yet, their steep financial and computational costs raise questions about who participates in that change, and who does not. By analysing all 1,918 papers published in the ICSE 2019-2026 Research and SEIP tracks, we uncover a shifting and highly concentrated research landscape. China and the US dominate LLM-based SE research, appearing in 74% of LLM-based publications between 2023-2026, yet they diverge sharply in their use of commercial versus open-weight models. Beneath this national dominance lies extreme institutional concentration: just 5 institutions in China and 7 in the US appear in more than half of their respective nations' LLM-based output. In the US, only half of the unique institutions active in 2023-2026 participated in LLM-based research, whereas Singapore displays broader usage, with 11 of 15 active institutions participating in LLM-based work. Furthermore, across 2023-2026 Research-track papers, industry involvement is more prevalent in LLM-based work (23.4% vs 16.9%), and academia-only papers make up a smaller share (63.4% vs 70.9%). Crucially, we expose a gap in model usage across industry and academia. SEIP track papers lean strongly towards commercial LLMs, with 77.4% featuring them and 40.5% using them exclusively. In contrast, only 21.2% of Research-track work relies strictly on commercial models, making greater use of open-weight models that typically support more sustainable and reproducible experiments. However, this divide warrants reflection on the extent to which SE research aligns with industry practice.",
+      "published": "2026-11-11T18:10:56Z",
+      "updated": "2026-11-11T18:10:56Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.15797",
+      "abs_url": "https://arxiv.org/abs/2611.15797",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.14578",
+      "title": "Designing Collaborative Virtual Environments for Software Engineering Education",
+      "authors": [
+        "Filipe Fernandes",
+        "Cláudia Werner"
+      ],
+      "abstract": "Collaborative virtual environments offer opportunities to make software models available for shared inspection, but educational design and usability need to be examined separately from claims of learning effectiveness. This article presents MetaSEE, an approach connecting requirements guidance, a Web XR feature model, a reusable UML component, and a browser-based multiuser platform. We synthesize documented formative evaluations of the framework (16 participations), feature model (15), UML component (9), and platform (14). These counts represent evaluation participations; the same 12 developers took part in the first two evaluations. The principal platform study involved six teachers working individually and eight students working in four pairs through desktop or notebook computers, keyboard, and mouse. The documentary synthesis traces educational intentions to implemented features and reported difficulties. Participants identified potential value in shared modeling and simulation, alongside navigation, interaction, visualization, and distraction concerns. A numerical audit reconstructs a student System Usability Scale mean of 67.50 from published item frequencies, conflicting with the reported 79.38; an incomplete teacher item distribution prevents recovery of that group's overall mean. The contribution is a traceable account of educational design and formative limitations, with practical implications for onboarding, model readability, collaboration, and evaluation reporting. The evidence supports bounded feasibility and perceived usefulness, without establishing learning gains, sustained engagement, or adoption.",
+      "published": "2026-11-10T03:01:31Z",
+      "updated": "2026-11-10T03:01:31Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.14578",
+      "abs_url": "https://arxiv.org/abs/2611.14578",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.12991",
+      "title": "Specializing Meta Multi-Objectivization as Baseline for Software Engineering Optimization",
+      "authors": [
+        "Chengjie Chuan",
+        "Pengzhou Chen",
+        "Tao Chen"
+      ],
+      "abstract": "Given the discrete nature of many software engineering (SE) optimization problems, trapping at local optima remains a crucial issue in the optimizer designs. Meta Multi-Objectivization (MMO) is an optimization model for overcoming local optima by introducing an extra, auxiliary objective. Yet, MMO is originally designed only for configuration tuning, leaving its suitability for other SE problems in doubt, particularly regarding the choice of the auxiliary objective. In this paper, we study the possibility and resolution for specializing MMO as a general baseline across a range of SE optimization problems, making it a fundamental counterpart for future SE optimizers that seek to mitigate the issue of local optima. We do so by providing both theoretical remit and empirical evidence: we analytically show how the choice of the auxiliary objective is crucial while demonstrating the effectiveness of MMO under nine SE optimization problems comprising 212 cases when the right one can be chosen, i.e., MMO is able to outperform the other state-of-the-art and general-purpose optimizers in 79% and 94% of the cases, respectively. Drawing on the theoretical understanding and empirical findings, we then propose L2RAC, a tool that automatically recommends the best auxiliary objective choice for a given SE problem/case, hence helping to specialize MMO therein. Through extensive experiments, we reveal that, in general, L2RAC can more accurately rank the choice of auxiliary objective for MMO under a case than other guesses by up to 60%, saving as much as 99% of the cost that would otherwise be required to conduct trial-and-error when using MMO.",
+      "published": "2026-11-08T10:43:08Z",
+      "updated": "2026-11-08T10:43:08Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.12991",
+      "abs_url": "https://arxiv.org/abs/2611.12991",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.12646",
+      "title": "Surrendering and Reclaiming Judgment: How Software Engineering Students Experience AI Reliance",
+      "authors": [
+        "Nathan Cassee",
+        "Umit Akirmak",
+        "Luiz Guerra",
+        "Margaret-Anne Storey",
+        "Neil Ernst"
+      ],
+      "abstract": "Software architecture is one of the skills novice developers must master to succeed in industry, and as AI disrupts software development, it is also transforming how students learn architecture. Existing work on how students and novices work with AI has mostly focused on small programming exercises or on students' perceptions of AI, so little is known about how students experience AI as they learn software architecture in larger team projects. We report on an exploratory case study of 43 senior software engineering students who used AI throughout a semester-long, team-based software architecture project. We combined surveys with focus groups and analyzed the focus group transcripts and the open survey responses through Braun and Clarke's reflexive thematic analysis. We constructed two themes. The first, Surrendering Judgment to AI, traces how participants' reliance on AI deepened as they used it to architect and implement their systems, until they surrendered their judgment and became stuck in a codebase they had created but could not understand, which made them rely on AI even more. Participants described feeling ashamed, frustrated, and emotionally disconnected from their work, a toll that, in our reading, left them with even less reason to break their reliance. The second, Applying Human Judgment, centers on participants who kept or reclaimed their judgment: the knowledge and experience it rested on, and the strategies they used to apply it. Participants' accounts suggest that relaxed deadlines and a lecture and lab on working with AI gave them room to acquire knowledge and reclaim judgment. Given the expectations placed on junior developers and the widespread adoption of AI, we believe these first-hand accounts can help software engineering education and industry adopt AI in ways that preserve novice developers' judgment, ownership, and motivation.",
+      "published": "2026-11-09T16:18:57Z",
+      "updated": "2026-11-09T16:18:57Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.12646",
+      "abs_url": "https://arxiv.org/abs/2611.12646",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.07772",
+      "title": "Adapt the Object to the Subject: Representative Study Material for Empirical Software Engineering",
+      "authors": [
+        "Max Unterbusch",
+        "Julian Frattini",
+        "Michael Mircea",
+        "Alexander Korn",
+        "Kurt Schneider",
+        "Jonathan Ullrich",
+        "Andreas Vogelsang"
+      ],
+      "abstract": "External validity is a central concern in empirical software engineering, yet the debate has largely focused on whether study participants are representative. How well the study objects they reason about - code, models, or requirements - are representative of each participant's own work is often overlooked. Practitioners' own artifacts would be ideal, but are often out of reach, so researchers sample from public datasets or construct objects artificially. Whether this lack of subject-object fit affects participants' ability to act on the material remains unknown. We take a first step toward answering this question for requirements. We propose an approach that uses an LLM to generate context-adapted synthetic requirements just-in-time during an online survey from a short, participant-supplied context description, optionally injecting requirements smells as controlled stimuli. To validate the approach, we conducted a controlled experiment with 31 industry practitioners in a 2x2 design that crosses stimulus generation (static vs. synthetic) with quality (clean vs. smelly). Each participant rated the perceived representativeness and assessability of 20 requirements. Using Bayesian data analysis within a statistical causal-inference framework, we find that perceived representativeness has a strong positive effect on assessability. Synthetic requirements are rated as more representative and, primarily due to this gain, more assessable than static ones sourced from public datasets; smell injection leaves both perceptions unchanged. Our results support treating a lack of study-object representativeness as a first-class validity threat and position context-adapted synthetic study objects as a practical addition to the empirical methodology toolbox.",
+      "published": "2026-11-05T10:11:33Z",
+      "updated": "2026-11-05T10:11:33Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.07772",
+      "abs_url": "https://arxiv.org/abs/2611.07772",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.07286",
+      "title": "How Should Agents See Code? Rethinking Code Representations for Agentic Software Engineering",
+      "authors": [
+        "Melika Sepidband",
+        "Jiho Shin",
+        "Song Wang",
+        "Hadi Hemmati"
+      ],
+      "abstract": "LLM agents are increasingly used for repository-level software engineering tasks. However, most agents still access repositories through raw files, lexical search, and shell commands, treating code primarily as text. This paper investigates map-based code-representation workflows as a design variable in agentic software engineering, examining how different repository views change agents' retrieval behavior, task success, token use, and latency. In this paper, we study five code-representation workflows: abstract syntax trees, call graphs, module dependencies, documentation-enriched search, and a hybrid workflow that combines them. Each workflow exposes a repository map that the agent can query during a task. We evaluate Claude Code with Haiku 4.5 against a raw-tool baseline on four repository-level tasks: fault localization with LinuxFLBench, repository-level code generation and repair with SWE-bench Pro, test generation with SWT-bench, and security patching with SecBench. The results show that representation workflows are most useful as token-saving tools when localization is the bottleneck, while their success gains narrow when the decisive step is patch or test authoring. On LinuxFLBench, all five workflows improve recall@10 over the baseline (0.757-0.829 vs. 0.717) and reduce token usage by 25-39%. On SWE-bench Pro, resolution remains close to the baseline (44.3-50.6% vs. 49.0%) while token usage drops by 17-26%. On SecBench, Callgraph has the highest patch-resolution rate in this sample (34.3% vs. 28.9%) and uses fewer tokens, but all workflows increase latency. On SWT-bench, Hybrid and Docs have the highest reproducing-test rates in this sample (47.8% and 47.2% vs. 44.7%), but all workflows use more tokens and take longer. Overall, map-based workflows change both what the agent inspects and how much it spends, but their benefits are task-dependent rather than universal.",
+      "published": "2026-11-05T01:08:43Z",
+      "updated": "2026-11-05T01:08:43Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.07286",
+      "abs_url": "https://arxiv.org/abs/2611.07286",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.04383",
+      "title": "Disposable Implementations: What Is Software Engineering For?",
+      "authors": [
+        "Christoph Treude"
+      ],
+      "abstract": "Existing implementations are usually maintained for most of their life and replaced only as an exception. Coding agents may change that. If agents can produce new implementations from requirements, tests, architectural constraints, and operational records that survive replacement, changing a system may no longer require modifying its existing codebase. We call this process regeneration. An implementation is disposable when regeneration becomes a routine alternative to maintenance. Regenerating and verifying a clean implementation from current requirements and tests may be cheaper than having agents navigate (and potentially compound) existing technical debt, and could eliminate much of that debt. Yet existing code may contain knowledge absent from the preserved artifacts, including safeguards introduced after failures and assumptions that were never documented. A regenerated implementation may pass the available tests and still lose behavior that matters in production. This leaves open how to establish continuity across replacements and whether regeneration reduces maintenance effort or shifts it to the artifacts and processes that support it. We examine these questions through an exploratory review of practitioner literature. Published examples show that agents can replace existing implementations, but do not establish that repeated regeneration is safe or economical. If implementations become disposable, what should software engineering preserve?",
+      "published": "2026-11-03T06:14:45Z",
+      "updated": "2026-11-03T06:14:45Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04383",
+      "abs_url": "https://arxiv.org/abs/2611.04383",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.03231",
+      "title": "Specification-Driven Governance for Fairness-by-Design in Agentic Software Engineering: How Far Can We Go?",
+      "authors": [
+        "Alfonso Cannavale",
+        "Alessandra Parziale",
+        "Valeria Pontillo",
+        "Patrizio Pelliccione",
+        "Andrea De Lucia",
+        "Fabio Palomba"
+      ],
+      "abstract": "Agentic AI is shifting developers' responsibilities from software implementation to software governance. While this paradigm improves productivity, it also raises challenges in ensuring that autonomous coding agents preserve developers' intentions. Among these, operationalizing fairness-by-design is largely unexplored, as existing approaches provide limited support for representing and propagating fairness requirements throughout agentic development workflows. In this paper, we investigate whether specification-driven development can operationalize fairness-by-design in the agentic development of machine learning systems. We study three coding agents on four machine learning applications, using four prompts that progressively operationalize fairness through nine Fairness Specification Elements, and analyze the traceability of fairness requirements across the generated artifacts, the fairness-accuracy trade-off of the resulting models, and the agents' design decisions and rationales. The results show that when fairness is operationalized, agents capture almost all fairness requirements in the specification (97.22%) and preserve most of them in the code (82.41%). However, the resulting models are not significantly fairer, as agents implement fairness as a post-hoc audit that neither shapes training nor prevents model delivery. Specifications thus make fairness traceable, but not enforceable, calling for fairness specifications that state what agents should do when requirements are not met, and for workflows that make the fairness decisions agents delegate to developers explicit.",
+      "published": "2026-11-02T14:48:34Z",
+      "updated": "2026-11-02T14:48:34Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.03231",
+      "abs_url": "https://arxiv.org/abs/2611.03231",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.02285",
+      "title": "Modern Software Engineering with Verification Agents: A Spec-First Architecture for Autonomous Synthesis, Verification IRs, and Organizational Scale",
+      "authors": [
+        "Jason Hickey"
+      ],
+      "abstract": "When autonomous coding agents synthesize implementation code, formal specifications, and mechanical proofs simultaneously, the software engineering hierarchy inverts: the formal specification becomes the primary human-reviewed artifact, while source code and proof scripts become disposable build outputs. This paper presents an end-to-end architecture for agent-authored, formally verified software engineering. First, we establish a logic-agnostic foundation combining a spec-first stack inversion, a zero-code-review workflow gated by automated continuous integration (CI) checks, and a minimal Verification Intermediate Representation (VIR) lowered via a thin, verified translator. Second, we pair an extensional Computational Type Theory (CTT) specification layer with Higher-Order Abstract Syntax (HOAS) and linear resource typing in the VIR--eliminating rewrite friction for synthesis agents while defining an experiment, its protocol frozen before the first reader, to measure whether removing boundary coercions improves human specification readability. Third, we scale collaboration across multi-team organizations using Personal Spec-Copilots and a Shared Synthesis Fleet that detects cross-team Semantic Merge Conflicts and fuses modular contracts into zero-copy binaries. We illustrate this architecture on a zero-copy authenticated message router and distinguish our existing empirical baselines (salt, SaltBench, x86lean, and MetaPRL) from newly proposed components.",
+      "published": "2026-11-01T23:29:34Z",
+      "updated": "2026-11-01T23:29:34Z",
+      "categories": [
+        "cs.SE",
+        "cs.LO"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.02285",
+      "abs_url": "https://arxiv.org/abs/2611.02285",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.39468",
+      "title": "Soei: Structured Observability of Evidence and Intent for Multi-Agent AI Software Engineering",
+      "authors": [
+        "Mohammed Nayeem Khan",
+        "K S Sarun Kumar"
+      ],
+      "abstract": "AI coding agents now do long, multi-step and multi-session software work with little supervision. When a developer comes back to that work, the useful question is not what the model said but what was actually done, by whom, and whether it is finished. We study this in three parts. First, we verify Agenttrail, an open-source local observability tool for coding agents, against its source at commit e4ba2da: nine documented constants and mechanisms hold at file-and-line level, two event pipelines are never unified, and its Map service has an unauthenticated local mutation surface. Second, we run a prototype of our system on 45 real coding-agent sessions (102,233 records, 20,577 tool executions, 2,336 human-to-agent episodes). With a blind-audited classifier (precision 83.3% and 96.7%) we estimate that 23.4% (95% CI 17.1 to 35.7) of code-editing episodes end with no independent check after the last edit, and that 57.8% of to-dos the agent marked complete after editing had no proof in between. A 10-minute timing heuristic for session hand-offs recovers 6 of the 24 session pairs that content lineage links. 42% of sessions run longer than 24 hours, 48.1% of transcript bytes lie past a 2 MiB replay bound, and 1,326 records in 16 sessions contain credential-like strings. Third, we propose Soei (Structured Observability of Evidence and Intent): an acknowledgement-aware event schema, a hash-chained local ledger, a W3C PROV-aligned graph, calibrated inference for attribution and lineage, and a verification layer that keeps a claim of completion apart from proof. On the same corpus the ledger is 20% of raw size, holds no content or credentials, verifies at about 126k events/s, detects tampering and replays deterministically. We position the work against concurrent 2026 proposals and define autonomy levels with evidence gates and harness metrics baselined on our data.",
+      "published": "2026-10-29T06:40:12Z",
+      "updated": "2026-10-29T06:40:12Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.39468",
+      "abs_url": "https://arxiv.org/abs/2610.39468",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.39406",
+      "title": "QSoftCore: A Conceptual Foundation for Quantum Software Engineering",
+      "authors": [
+        "Tao Yue",
+        "Yuechen Li",
+        "Man Zhang"
+      ],
+      "abstract": "Quantum software engineering (QSE) requires understanding application requirements, quantum programs and algorithms, quantum computation paradigms, executions, and deployment. However, relevant quantum computing (QC) concepts are often defined across physical, mathematical, and paradigm-specific levels of abstraction, making it difficult for the QSE community and hence proposed methods to refer to them consistently. To this end, we present QSoftCore, a conceptual model that reorganizes established QC concepts from a software engineering perspective and connects quantum applications, computational problems, algorithms, configurations, programs, and paradigm-specific computation specifications with state evolution, execution results, and backends. Our assessment against QSE literature across key software engineering activities indicates that QSoftCore provides shared QC referents for quantum computations, executions, deployment configurations, backends, and measurement evidence across the QSE lifecycle.",
+      "published": "2026-10-29T05:42:55Z",
+      "updated": "2026-10-29T05:42:55Z",
+      "categories": [
+        "cs.SE",
+        "quant-ph"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.39406",
+      "abs_url": "https://arxiv.org/abs/2610.39406",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.37340",
+      "title": "Mind the Intent Gap: A Methodology for Collaborative Agent-Driven Software Engineering",
+      "authors": [
+        "Nicolas Tacheny",
+        "Tom Mens",
+        "Saïd Mahmoudi"
+      ],
+      "abstract": "AI agents have entered software teams, first as tools and now as team members. They produce in minutes what used to take days, yet the expected gain in delivery often fails to appear. We argue that they are entering processes designed for people, which quietly relied on people to cover three of their weaknesses. The team's intent was never fully written down, because colleagues filled the gaps. An AI agent fills them too, though by guessing, and drifts from what the team had in mind. The reasoning behind each deliverable was already lost from one step to the next, and AI agents now inflate and deflate the documents passed along. The reasoning people did alone was partly private and now moves into AI tools that keep it private by nature. We present CAIA, for Collaborative Agentic Intent Alignment, a methodology for software teams that brings agents into the way they work. A knowledge base describes the product that a project maintains. For each Change, a micro-team aligns on its intent before agents evolve the product and propose updates to the Knowledge Base. The proposed CAIA methodology emerged from an industrial need and is already in use at Ni2, with a platform built to support it. We present the methodology and outline our plans to evaluate it further.",
+      "published": "2026-10-27T14:47:14Z",
+      "updated": "2026-10-27T14:47:14Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.37340",
+      "abs_url": "https://arxiv.org/abs/2610.37340",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.37283",
+      "title": "BenchMeUp: Building Software Engineering Benchmarks from Natural-Language Specifications",
+      "authors": [
+        "Islem Bouzenia",
+        "Michael Pradel"
+      ],
+      "abstract": "Software-engineering research relies on benchmarks that evaluate new techniques on a set of problem instances. Unfortunately, manually constructing benchmarks is labor-intensive, as researchers must find suitable instances, prepare execution environments, establish expected outcomes, and validate correctness. This paper presents BenchMeUp, an approach for automatically creating software-engineering benchmarks from natural-language specifications. Given a specification defining the desired instances, data sources, and evaluation procedures, BenchMeUp generates search rules and a construction plan, invokes parallel LLM agents that identify candidate instances and construct executable instances, validates the results in fresh execution environments, and packages the instances behind a unified command-line interface. We evaluate the approach on four tasks: program repair, issue reproduction, compiler autotuning, and fixing static-analysis warnings. Targeting 50 instances per task (200 in total), BenchMeUp constructs 198 instances, of which 196 (99\\%) are successfully packaged. Search and construction take 36 minutes and \\$0.79 per instance, on average. Evaluating eight existing techniques on the generated benchmarks, we find that 189 of 196 packaged instances (96\\%) support end-to-end evaluation, allowing users to study the effectiveness of the techniques. Checking every constructed instance against its source, the specification, and its expected outcome, we find that 180 of 198 (91\\%) meet all criteria, compared with 10 of 200 instances delivered by Codex (general-purpose coding agent). Overall, we show that LLM-based agents can automate benchmark construction across diverse software-engineering tasks and produce executable instances that existing techniques can use, while validity beyond execution still needs to be checked.",
+      "published": "2026-10-27T14:09:04Z",
+      "updated": "2026-10-27T14:09:04Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.37283",
+      "abs_url": "https://arxiv.org/abs/2610.37283",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.35982",
+      "title": "Generation and Verification: Human-Agent Collaboration for Safety-Critical Automotive Software Engineering",
+      "authors": [
+        "Elizaveta Zinovyeva",
+        "Aiham Taleb",
+        "Nikita Kozodoi",
+        "Daniel Schleicher",
+        "Amir Mahdi Namazi",
+        "Martin Kraus",
+        "Levent Kent",
+        "Brian Jensen"
+      ],
+      "abstract": "Research on coding agents mainly focuses on generation quality. Yet, safety-critical automotive software makes two additional demands. It prioritizes verification, since every change is reviewed, traced to a requirement, and checked against industry standards such as MISRA and AUTOSAR before it can be committed. It is also a narrow domain, written against layered architectures, embedded resource constraints, and organization-specific interface conventions that are scarce in the data general-purpose LLMs are trained on. We present a coding assistant for automotive C/C++ that addresses both demands. First, it exposes three tools to the user over the Model Context Protocol (generate, edit, and verify), allowing developers to run verify on any code on demand rather than relying on the agent to check its own output. Second, rather than using a general-purpose model, we customize the underlying LLM for the automotive domain through prompt engineering and fine-tuning. We construct a dataset from automotive production code of AUMOVIO, where each function is paired with the requirement texts and Unified Modeling Language (UML) behavior it must satisfy. In a two-week pilot on active production projects, developers report verify as the most-used tool and confirm using it on their own code and not only on generated output. Comparing model customization strategies, 75% prefer the faster prompt-engineered configuration. MISRA- and AUTOSAR-inspired pattern checkers indicate that prompt engineering achieves a lower number of violations on C, while fine-tuning shows better conformance with architecture patterns for C++.",
+      "published": "2026-10-26T11:04:55Z",
+      "updated": "2026-10-26T11:04:55Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.35982",
+      "abs_url": "https://arxiv.org/abs/2610.35982",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.35496",
+      "title": "The Hidden Costs of Forgetting: A Study of Trajectory Deletion in Software Engineering Agents",
+      "authors": [
+        "Fernando Vallecillos-Ruiz",
+        "Islem Bouzenia",
+        "Michael Pradel",
+        "Leon Moonen"
+      ],
+      "abstract": "Software engineering agents resend their entire trajectory to an LLM at every turn, motivating online trajectory reduction. Prior work shows that randomly deleting 75% of tokens in old turns may preserve agent effectiveness, but it remains unclear why, how agents compensate for missing content, and whether it actually reduces costs. This paper presents an empirical study of 42 trajectory-reduction configurations, focusing on effectiveness, agent behavior, and cost. We systematically explore deleting content from old turns by varying the scope, granularity, amount, and timing of deletion across 9,400 runs with two state-of-the-art agents on SWE-bench Verified. We find deleting large amounts of trajectory content (e.g., up to 100% of reasoning text) can preserve overall effectiveness. Importantly, such deletion must be applied with a delay, as immediate deletion tends to significantly degrade effectiveness. Agents often compensate for deleted content by re-fetching it, increasing both the number of turns taken and the input/output tokens. Whether trajectory reduction reduces costs depends on the pricing model: Under a flat pricing model, estimated costs fall in 26 of 42 evaluations. Surprisingly, under a caching-aware pricing model, zero evaluations yield lower costs, since reducing the trajectory breaks the cached prefix billed at a lower rate. Our findings have three implications: First, token counts alone are misleading; trajectory reduction techniques must consider overall costs under a realistic pricing model. Second, analyzing trajectories is crucial to understand agent behavior, as end-to-end effectiveness hides differences such as excessive re-fetching. Finally, these results highlight the need for future work on memory management to reduce costs without sacrificing effectiveness.",
+      "published": "2026-10-26T14:25:17Z",
+      "updated": "2026-10-26T14:25:17Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.35496",
+      "abs_url": "https://arxiv.org/abs/2610.35496",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.35348",
+      "title": "Toward Evidence-Based Agentic Software Engineering",
+      "authors": [
+        "Sebastian Baltes",
+        "Christoph Treude"
+      ],
+      "abstract": "Task success rates and execution costs of agentic coding tools depend on both model and harness. The harness manages context, provides tools, and runs the agent loop. In empirical software engineering (SE) studies, comparisons that change model and harness together cannot isolate their effects. We qualitatively annotated 325 experiments reported in 146 peer-reviewed full papers published between 2025 and 2026. We examined the reported configurations and whether comparisons isolated harness effects, including harness configuration and version, model, tasks, and user interaction. The exact version of every harness used was reported for only 15 experiments. For five, the paper reported when the experiments were run, and for 31, authors shared execution traces for every session. Of the 226 experiments comparing harnesses, 35 never varied the harness in isolation. Based on this analysis, we derive requirements for a reference harness that the SE community can use for experiments. We call on the community to report all degrees of freedom of experiments with agentic coding tools and on SE venues to pilot dedicated tracks or special issues around a specified reference harness release. In these tracks, papers would hold the harness version fixed and vary features through separately versioned extensions to isolate feature effects and test their interactions.",
+      "published": "2026-10-26T12:40:23Z",
+      "updated": "2026-10-26T12:40:23Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.35348",
+      "abs_url": "https://arxiv.org/abs/2610.35348",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.34573",
+      "title": "Software Engineering for AI-Driven Science",
+      "authors": [
+        "Lukas Twist",
+        "Xinjian Wu",
+        "Jingzhi Gong",
+        "Shuyin Ouyang",
+        "Ying Xiao",
+        "Benedetta Donato",
+        "Yaoqi Guo",
+        "Zhenpeng Chen",
+        "Leonardo Mariani",
+        "Helen Yannakoudakis",
+        "Jie M. Zhang"
+      ],
+      "abstract": "AI has made significant contributions to scientific discovery. Autonomous agents can now independently analyse complex problems, design experiments, write and execute code, analyse findings, and derive scientific conclusions. Nevertheless, errors in AI-generated code, experimental procedures, or evidence interpretation can lead to invalid research conclusions, undermining the reliability and reproducibility of automated scientific discovery. In this vision paper, we propose Software Engineering for AI-Driven Science (SE4AI4Sci) as an emerging research area for addressing this challenge. As an organising framework, we introduce the Scientific Assurance Chain, connecting intent, experimental design, implementation, execution, evidence, and claim. Through six documented failures in recent AI-for-science systems, we show where this chain can break, where existing assurance mechanisms fall short, and what new research challenges follow. We also outline a research agenda for adapting and extending software engineering techniques across the chain.",
+      "published": "2026-10-25T21:14:20Z",
+      "updated": "2026-10-25T21:14:20Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.34573",
+      "abs_url": "https://arxiv.org/abs/2610.34573",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.34239",
+      "title": "Honesty Testing of LLMs and AI Agents: A Vision for Software Engineering",
+      "authors": [
+        "Ying Xiao",
+        "Xinjian Wu",
+        "Lukas Twist",
+        "Yaoqi Guo",
+        "Yepang Liu",
+        "Zhenpeng Chen",
+        "Jie M. Zhang"
+      ],
+      "abstract": "Human oversight of large language models (LLMs) and artificial intelligence (AI) agents increasingly depends on their reports. Claims that conflict with a system's own judgments can conceal failures, prevent timely intervention, and contribute to severe harm. Greater autonomy makes faithful reporting increasingly important for maintaining human control. In this vision paper, we propose honesty testing of LLMs and AI agents as a new research area in software engineering. Building on existing honesty evaluations, our goal is to make faithful reporting a software quality requirement that developers can specify, test, and maintain. We define honesty bugs as behavioural defects in which an LLM or AI agent, when required to communicate faithfully, makes an explicit claim that conflicts with its own judgment at the time of reporting. We present an initial framework covering LLM-level testing under controlled inputs and agent-level testing of complete systems. The framework connects these levels to testing workflows and oracle evidence. We identify research directions in benchmarks, model and harness analysis, oracle construction, and lifecycle testing to support effective oversight alongside task correctness.",
+      "published": "2026-10-25T12:11:07Z",
+      "updated": "2026-10-27T08:52:50Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.34239",
+      "abs_url": "https://arxiv.org/abs/2610.34239",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.33851",
+      "title": "Software Engineering LLMs: Why We Need Them and How Software Engineering Helps Build Them",
+      "authors": [
+        "Amir M. Ebrahimi",
+        "Mohammed Mehedi Hasan",
+        "Seyed Shayan Daneshvar",
+        "Jiahuei Lin",
+        "Gopi Krishnan Rajbahadur",
+        "Ahmed E. Hassan"
+      ],
+      "abstract": "Software engineering (SE) expertise can shape how coding large language models (LLMs) are trained and which engineering capabilities they acquire. We examine this role through an industrial case study of capability-focused training for a 92B-parameter coding LLM serving more than 100,000 developers. We demonstrate how established SE knowledge can guide the selection of engineering capabilities, the construction of verifiable training data, and the evaluation of model improvements. To target repository-level refactoring, we developed RefactorForge, a pipeline that combines refactoring knowledge, established SE tools, and verification techniques to construct training data. Across 306 Python repositories, RefactorForge generated 5,704 executable tasks and retained 4,572 verified teacher trajectories totaling 72.51 million tokens. Incremental supervised fine-tuning on these trajectories, accounting for 0.46% of the preceding coding mixture's tokens, improved RefactorBench performance by 18.00 percentage points and SWE-Bench ProMax performance by 7.06 points. Under OpenCode, these improvements extended to SWE issue resolution, with gains of 4.97 points on SWE-Bench Verified and 1.23 points on SWE-Bench Pro. Improvements also persisted across other coding-agent harnesses, while greenfield repository generation showed mixed results. We report lessons from constructing capability-focused training data and evaluating its effects across engineering workloads. Building on this industrial experience, we propose a research agenda for expanding SE's role in transforming coding LLMs into SE LLMs: incorporating SE knowledge into model training, applying engineering methods to model development and maintenance, and systematically defining the engineering capabilities these models should acquire.",
+      "published": "2026-10-24T18:45:18Z",
+      "updated": "2026-10-24T18:45:18Z",
+      "categories": [
+        "cs.SE",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.33851",
+      "abs_url": "https://arxiv.org/abs/2610.33851",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.32686",
+      "title": "OpenDraco: A Platform for Engineering and Experimenting with Configurable Multi-Agent Architectures for Software Engineering",
+      "authors": [
+        "Xiang Feng Ye Pan",
+        "Vincenzo De Martino",
+        "Matias Martinez"
+      ],
+      "abstract": "Experimenting with LLM-based multi-agent systems (MAS) involves an iterative cycle of modeling configurations, executing and evaluating them, comparing results, and refining system designs. Existing approaches provide limited end-to-end support for this experimentation lifecycle. We present OpenDraco, an open-source platform that integrates these activities into a single workflow. OpenDraco represents agents, prompts, tools, models, parameters, and communication topology in exportable, versioned JSON specifications, translated into executable LangGraph workflows supporting different interaction structures. Users can modify and re-evaluate configurations using local or cloud-based LLMs. We instantiate OpenDraco for automated program repair (APR) and evaluate a sequential baseline and seven reconstructed configurations on synthetic and real-world SWE-bench Lite issues. The results reveal substantial cost differences among configurations with similar repair outcomes, while the baseline resolves 12 of 77 SWE-bench issues using open-source LLMs. Additional proof-of-concept tasks illustrate applicability beyond APR. OpenDraco supports iterative experimentation with heterogeneous MAS configurations, enabling researchers to examine their outcomes and costs within a common environment. Demonstration video: https://youtu.be/278sOR4lBEk.",
+      "published": "2026-10-23T14:17:18Z",
+      "updated": "2026-10-23T14:17:18Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32686",
+      "abs_url": "https://arxiv.org/abs/2610.32686",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.32118",
+      "title": "Beyond Correctness: How Novice Software Engineering Students Exercise Oversight of Generative AI",
+      "authors": [
+        "Ali Shakiba",
+        "Thomas Chaffey"
+      ],
+      "abstract": "Generative AI (GenAI) is shifting software engineering students' work from producing artefacts towards evaluating and supervising AI-generated outputs. However, little is known about what characteristics students identify in outputs when reporting interventions, or how they exercise oversight during authentic software engineering work. We analysed 962 student-AI interaction turns documented by 145 first-year software engineering students through structured AI Journals, including 172 student-declared interventions. Using a multi-dimensional coding framework, we characterised the output characteristics identified in these reported interventions, students' reasons for intervening, the actions they took, and how those actions were enacted. Fitness problems were identified in 74.4% of interventions, compared with 16.9% involving correctness problems, indicating that oversight more often concerned whether plausible AI outputs were suitable for the engineering task than whether they contained explicit errors. Among classifiable interventions, students most frequently modified generated outputs (51.0%) or refined their prompts (28.2%), with both response types commonly associated with engineering fit. Within-student analysis further showed that outputs perceived as containing minor flaws were associated with lower evaluation confidence than outputs perceived as perfect. Taken together, these findings characterise novice AI oversight as a process that extends beyond error detection to encompass both judgement of fitness for purpose and active intervention in AI-assisted engineering work.",
+      "published": "2026-10-23T03:38:17Z",
+      "updated": "2026-10-27T05:39:54Z",
+      "categories": [
+        "cs.SE",
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.32118",
+      "abs_url": "https://arxiv.org/abs/2610.32118",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.31306",
+      "title": "Superintelligent Software Engineering: Governance That Scales with Capability",
+      "authors": [
+        "Mohammad Mehdi Gholinejad"
+      ],
+      "abstract": "Software agents are being trained to exceed human engineers; we argue that capability alone does not produce better software engineering. We define superintelligent software engineering as the discipline of building and evolving software with agents whose capability exceeds that of human engineers, in which governance (gates, contracts, decisions and decay control) scales with capability. The argument rests on three claims. First, correctness in a project rests on decisions and contracts that the code does not carry. Second, knowledge decays. Third, once an agent outpaces its reviewers, reading catches a shrinking share of the changes built on stale knowledge. A simple model shows that, past a fixed review capacity, escaping changes grow linearly with throughput while the share that reading catches falls toward zero; governance can lower the slope, capability alone cannot. An exploratory snapshot of 452 of the most-starred public GitHub repositories finds a root-level or .github agent context file in 48.67% (95% confidence interval 44.1 to 53.3); in the median file that names repository paths, 9.5% to 22% of those paths do not resolve, depending on how a reference is read. We then present OSTEON, a discipline for the regime, archived on Zenodo under DOI 10.5281/zenodo.23436020 as a plugin for Claude Code. In OSTEON, each project gets a governed knowledge repository of decisions and contracts, every change is checked mechanically against it, and the knowledge itself is checked for decay at every session start; planning is gated, and sessions record what they learn without writing rules. We report no measured effect of OSTEON, mark claims about its mechanisms as opinion and the author's practice heuristics as design rationale, and state the questions that would falsify the thesis.",
+      "published": "2026-10-22T14:04:13Z",
+      "updated": "2026-10-29T23:19:56Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.31306",
+      "abs_url": "https://arxiv.org/abs/2610.31306",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.30916",
+      "title": "When Code Gets Cheap, Evaluation Gets Scarce: An Experience Report on AI-Assisted Agile Software Engineering",
+      "authors": [
+        "Barbara Weber",
+        "Olaf Zimmermann",
+        "Marco Franceschetti"
+      ],
+      "abstract": "Coding assistants are widely reported to speed up code production; most accounts stop there. We report the end-to-end construction and deployment of a compliance-critical, human-in-the-loop exam-grading system, built by a single developer who wrote no code by hand, protected by a gated process from stakeholder persona to audited behavior. The initial system was built in three working days and could grade a real cohort. We draw one claim from this experience: AI changes software engineering less by making programming faster than by changing what is scarce. Writing code becomes abundant. Reliable evaluation-knowing whether a result is correct and meets the actual need-remains necessary at every iteration and becomes the binding constraint. Engineering judgment remains a second scarcity. Several defects passed the test suite: they sat at the boundaries the tests had mocked, the browser and the language-model API, or appeared only in real use. Deployment exposed assumptions that local tests had missed. Moreover, an AI assistant acting across many steps bypassed process checkpoints until we made them enforceable gates. All of this was observed in a triple union: the developer was also the end user and domain expert, making expert judgment immediately available and evaluation as cheap as it can be. This favors the iteration gains, which may shrink where evaluation requires additional people or expertise, but makes the case a hard test for evaluation scarcity: evaluation still constrained progress. We draw five lessons: run a gated, traceable construction process; specify what is knowable and discover the rest against a running prototype; validate in the real environment; gate the assistant, not only the work; record decisions with their assumptions and the process state the assistant forgets. A second project showed similar patterns; an independent single-expert case corroborates the shift.",
+      "published": "2026-10-22T08:35:55Z",
+      "updated": "2026-10-22T08:35:55Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.30916",
+      "abs_url": "https://arxiv.org/abs/2610.30916",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.23632",
+      "title": "Empirical Insights from AI-Powered Software Engineering in Practice",
+      "authors": [
+        "Tina Mersch",
+        "Jack Johns",
+        "Steffen Klepke",
+        "Hanya Elhashemy",
+        "Artur Signell",
+        "Robin Gröpler",
+        "Klaus Schmid"
+      ],
+      "abstract": "Generative Artificial Intelligence (GenAI) is becoming indispensable in future software engineering. Its application spans a wide spectrum - from assisted development to autonomous software engineering, requiring organizations to address associated risks and challenges. This paper investigates these issues through three case studies, highlighting practical problems encountered during GenAI integration. Based on these findings, it provides targeted recommendations for managing risks and ensuring reliable outcomes. This paper provides guidance for effective and responsible GenAI adoption in software engineering based on empirical insights.",
+      "published": "2026-10-16T15:37:58Z",
+      "updated": "2026-10-16T15:37:58Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.23632",
+      "abs_url": "https://arxiv.org/abs/2610.23632",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.22544",
+      "title": "SIEVE: A Parameterized GitHub Corpus Builder for Software Engineering Research",
+      "authors": [
+        "Musfiqur Rahman",
+        "Mahi Begoug",
+        "Emad Shihab"
+      ],
+      "abstract": "Software engineering research increasingly relies on large, richly annotated corpora of real-world code. Still, researchers typically assemble these with ad-hoc scripts or static, pre-built datasets that offer no control over corpus composition. This leaves a gap for a reusable tool that goes below the repository level and builds annotated, function- and class-level code corpora under researcher-specified criteria. We present SIEVE (Software Ingestion & Extraction for Verifiable Evaluation), an open-source, parameterized GitHub corpus builder that, unlike repository-level mining tools, works at code granularity: it locates individual functions, methods, and classes in repositories and extracts them as records, giving direct control over corpus construction based on several criteria, including widely used programming languages (Python, Java, JavaScript, C++), repository quality, and creation date. To support software engineering research and LLM evaluation on real-world code, SIEVE extracts CodeSearchNet- and OpenClassGen-compatible records, each annotated with 22 structural metrics and AST-derived features, and optionally with a CodeBERT-based P(AI-generated) score (F1=0.9478, AUROC=0.9902), alongside the third-party dependencies declared in each repository's package manifest. These annotations enable researchers to conduct structural analyses, investigate code dependencies, assess AI-generated code, and construct customized benchmarks for evaluating LLMs, including under temporal constraints. A manual validation of 400 records in four languages and two granularities shows 100% accuracy in code metrics and import detection, 99.0% in source completeness, and 99.5% in metadata accuracy. SIEVE is publicly available with a live demo at https://mrahman2025-sieve.hf.space.",
+      "published": "2026-10-15T18:42:31Z",
+      "updated": "2026-10-15T18:42:31Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.22544",
+      "abs_url": "https://arxiv.org/abs/2610.22544",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.20038",
+      "title": "SWE-Nexus: Automated Composition of Software Engineering Tasks from Test Execution",
+      "authors": [
+        "Songwei Yu",
+        "Ziqi Miao",
+        "Jingxuan Xu",
+        "Junhao Fan",
+        "Haoyang Huang",
+        "Yuan Xiong",
+        "Zihang Xu",
+        "Weihao Li",
+        "Wenqiang Zhu",
+        "Yuechen Luo",
+        "Xinshun Feng",
+        "Yanan Wu",
+        "Ken Deng"
+      ],
+      "abstract": "Historical code changes provide convenient task boundaries, but do not identify which production functions selected tests exercise or support composing validated behaviors beyond a single change. We present SWE-Nexus, a fully automated pipeline that constructs repository-level implementation tasks from test execution. Four construction agents select tests, adapt tracing and evaluation protocols to each repository, and generate behavioral specifications. For each selected test file, tracing records an observed execution footprint of production function bodies. A scope is retained only if all expected scoring points pass in the original repository and masking the traced bodies causes at least one failure or error. Compatible scopes are composed deterministically, with shared functions counted once and every constituent test file revalidated under the complete combined mask. The benchmark contains 600 tasks from 105 repositories across six programming languages, including 116 atomic and 484 composite tasks. We evaluate 12 models under three agent scaffolds. The best configuration resolves 37.8% of tasks in one attempt, and scope-weighted scoring measures partial recovery. SWE-Nexus enables task construction from validated behavior beyond individual historical changes.",
+      "published": "2026-10-14T11:45:59Z",
+      "updated": "2026-10-15T14:01:09Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.20038",
+      "abs_url": "https://arxiv.org/abs/2610.20038",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.19961",
+      "title": "Taming the Online Software Engineering Tongue: Detecting and Reducing Offensive Language in Software Communities",
+      "authors": [
+        "Jithin Cheriyan",
+        "Bastin Tony Roy Savarimuthu",
+        "Stephen Cranefield"
+      ],
+      "abstract": "Online Software Engineering (SE) communities such as Stack Overflow have become unwelcoming and hostile spaces, as evidenced by the presence of rude and offensive comments that are detrimental to the emotional wellbeing of participants. The main objective of this work is to investigate the prevalence and nature of offensive language in online SE communities, and develop approaches to classify them with the ultimate goal of reducing offensive language by proposing an Offensive Language Reduction System (OLRSSE) that has the ability to detect, classify, and explain to the poster why a comment is offensive and also propose non-offensive alternative suggestions. Using data from 130,000 user comments on discussions held in four prominent SE platforms: Stack Overflow, GitHub, Gitter and Slack, we developed six sets of twelve (72 in total) different machine learning models (both traditional and deep learning). The F1-Score of the best performing models in the system ranges from 0.56 to 0.94, with an average F1-Score of 0.85, predominantly using BERT as the primary model for various classification tasks. Also, two language-based models were developed for paraphrasing offensive to non-offensive comments. The overall utility of the OLRS-SE was evaluated using user studies with 30 participants, which showed that the developed system is easy to use and also effective in reducing offensive language. Investigating the capabilities of different large language models for offensive language reduction is a promising avenue for future research.",
+      "published": "2026-10-14T10:47:10Z",
+      "updated": "2026-10-14T10:47:10Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.19961",
+      "abs_url": "https://arxiv.org/abs/2610.19961",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.14405",
+      "title": "SPROUT: Scaling Agentic Reinforcement Learning for Long-Horizon Software Engineering",
+      "authors": [
+        "Mengyang Liu",
+        "Weiming Wang",
+        "Haixin Nan",
+        "Yu Wu",
+        "Peize Li",
+        "Shihong Huang",
+        "Xuning He",
+        "Xue Jiang",
+        "Yihong Dong"
+      ],
+      "abstract": "Reinforcement learning (RL) has driven substantial progress in coding agents by relying on verified successful trajectories as learning signals. However, such trajectories are scarce in long-horizon software engineering tasks, where a minor error can invalidate the entire rollout. Repeatedly restarting from the initial state is commonly used yet inefficient, and resetting only the context with working directory misses state changes such as installed dependencies. Therefore, branching from intermediate steps to preserve earlier progress requires restoring both the agent context and execution environments. In this paper, we present SPROUT (SnaPshot-based RollOUT), an agentic RL rollout framework that scales long-horizon coding tasks by resuming and branching from intermediate states. Specifically, SPROUT was built on top of a lightweight infrastructure that checkpoints both the filesystem and the agent context after each assistant turn. A verifier-guided backtracking policy then selects where to resume a failed attempt and how to proceed. Extensive experiments on long-horizon coding tasks show that SPROUT achieves up to 23.6% improvement over pass@k across various LLMs, while using $32$--$52%$ of their tokens. For RL training of Qwen3.8-27B, SPROUT stably outperforms standard GRPO by $13.9$ points on three long-horizon coding benchmarks while cutting the time per training step by $39.5%$. SPROUT thus makes RL on long-horizon coding tasks both more effective and cheaper to scale.",
+      "published": "2026-10-09T23:58:44Z",
+      "updated": "2026-10-09T23:58:44Z",
+      "categories": [
+        "cs.SE",
+        "cs.CL",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.14405",
+      "abs_url": "https://arxiv.org/abs/2610.14405",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.11482",
+      "title": "Evaluating Local Language Model Agents for Data Engineering: An Empirical Software Engineering Study of Mobility Workflows",
+      "authors": [
+        "Jorge García-Carrasco",
+        "Javier Sanchis",
+        "Alejandro Reina-Reina",
+        "Alejandro Maté",
+        "Juan Trujillo"
+      ],
+      "abstract": "Context: Large language model (LLM) agents are increasingly used as software and data-engineering assistants, yet evidence about locally deployable open-weight agents remains limited. Existing evaluations often emphasise textual responses or isolated code rather than complete engineering artifacts. Objectives: We evaluate whether local LLM agents can produce correct and reliable data-engineering artifacts, isolate the contribution of a closed-loop workspace and of input-structure knowledge, and examine trade-offs in runtime, cost, and failure behaviour. Methods: We introduce a benchmark of fifteen mobility data-engineering tasks with deterministic checkers for the scripts, tables, structured files, figures, and reports they produce. Sixteen configurations from six model families are evaluated in three conditions (chat-only, chat-schema, agent-with-tools) with five repetitions per model, condition, and task, yielding 3,600 scored attempts on a consumer-grade GPU. Results: A 4-billion-parameter model at 4-bit reaches 77.3%, a 9-billion-parameter model 80.0% within about 6.5 GB, and a 12-billion-parameter model from another family 81.3%, against 98.7% for the highest-scoring configuration, which solves 14 of 15 tasks in all five repetitions. Above two billion parameters the workspace loop raises pass rates by 24.0 to 65.3 points over uninformed one-shot generation, and its contribution exceeds that of the input-structure summary in eleven of fifteen tasks. Conclusion: Open-weight models that fit on one consumer GPU support a meaningful share of data-engineering work once given a workspace loop, although capability still separates usable from unusable configurations and high-stakes outputs need validation. Being mobility-specific and checker-based, the benchmark characterizes the evaluated configurations, not all data-engineering practice.",
+      "published": "2026-10-08T08:26:46Z",
+      "updated": "2026-11-11T15:24:25Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.DB",
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.11482",
+      "abs_url": "https://arxiv.org/abs/2610.11482",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.10633",
+      "title": "Has LLM Screening Performance Stalled in Software Engineering Systematic Reviews?",
+      "authors": [
+        "Aleksi Huotala",
+        "Miikka Kuutila",
+        "Mika Mäntylä"
+      ],
+      "abstract": "Screening in systematic reviews (SRs) is manual and time-consuming. Prior work has explored large language models (LLMs) for automating this step, but LLMs are evolving rapidly, so earlier performance claims may no longer accurately reflect their screening performance. We used an existing software engineering SR screening benchmark (SESR-Eval) as our data. We also power-sampled a new, smaller dataset (SESR-Eval-Mini) that allows evaluation at lower costs. Using this data, we evaluated eight new LLMs for screening performance. Additionally, we tested different prompts, analyzed LLM agreement in screening decisions and criteria, and examined the effect of refining the inclusion and exclusion criteria on screening performance. The eight new LLMs performed marginally better than the seven old ones: avg. MCC across secondary studies rose from 0.347 to 0.365. Differences between secondary studies are still bigger than between LLMs. Computing the overall screening decision from criterion-level decisions degraded screening performance only slightly. LLMs generally agree with each other in their corresponding screening decisions (mean Gwet's AC1 = 0.830), though certain inclusion and exclusion criteria showed larger disagreement than others. Refining the inclusion and exclusion criteria slightly improved recall and made decisions easier for some LLMs, but overall impacts of criteria refinement were modest. LLMs are not yet ready to replace humans in paper screening and the advantages new, more costly models bring, appear to be very limited. Agent-based approaches, prompt engineering, and further criteria refinement are three potential future research avenues.",
+      "published": "2026-10-07T13:25:54Z",
+      "updated": "2026-10-07T13:25:54Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10633",
+      "abs_url": "https://arxiv.org/abs/2610.10633",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.10226",
+      "title": "Why Software Engineering Is Indispensable in the Age of Coding Agents",
+      "authors": [
+        "Alfonso Fuggetta"
+      ],
+      "abstract": "Can AI make Software Engineering (SE) -- the discipline -- obsolete? And can it make software engineers -- the professionals -- redundant? This paper argues that the rise of capable AI coding agents makes SE and software engineers essential, not obsolete: the missing foundation without which AI-assisted development produces misleadingly plausible, unverifiable, and ultimately untrustworthy software. Three structural properties of large language models (probabilistic generation, agnosticism, and semantic statelessness) create a structural vacuum that no amount of training can eliminate. Filling it requires four knowledge levers: methodological knowledge, domain knowledge, design choices, and process choices. All four must be reified as persistent artifacts, and each requires the software engineer as methodologist, mediator, and custodian.",
+      "published": "2026-10-07T15:17:37Z",
+      "updated": "2026-10-11T15:43:45Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.10226",
+      "abs_url": "https://arxiv.org/abs/2610.10226",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.09995",
+      "title": "Designing Collaborative AI-Driven Workflows for Scientific Software Engineering",
+      "authors": [
+        "Akash Dhruv",
+        "Max Knobbe",
+        "Pedro Machado",
+        "Anshu Dubey"
+      ],
+      "abstract": "Agentic artificial intelligence systems can carry out a broad range of tasks in software engineering and scientific research, from writing and translating code to running workflows for data analysis and visualization. In scientific computing, the difficulty is verifying that agent-generated code is both correct and understandable to teams whose members bring different areas of expertise. We therefore argue that these systems are best used within collaborative team structures rather than as full automation. In the workflows we propose, domain experts write the specification and plan, and agents operate under a deterministic orchestration pattern to write the target code. Each stage ends with a numerical comparison against the reference code and requires human review and approval before the next begins. We evaluate these workflows on the translation of a large high-energy physics application from Fortran to C++, running the same task under different orchestrators, design patterns, and models. Across fourteen experiments, a simple author--reviewer loop with enforced limits completed a comparable number of files to a multi-agent workflow at about one-third of the cost per file.",
+      "published": "2026-10-07T12:55:07Z",
+      "updated": "2026-10-13T16:03:47Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.09995",
+      "abs_url": "https://arxiv.org/abs/2610.09995",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.08896",
+      "title": "Psychological Safety in Software Engineering Teams: A Systematic Mapping Study of Team Processes and Performance",
+      "authors": [
+        "Adnan Manzoor",
+        "Muhammad Azeem Akbar",
+        "Jussi Kasurinen",
+        "Muhammad Hamza",
+        "Aakash Ahmad",
+        "Abdul Razzaq"
+      ],
+      "abstract": "Context: Psychological safety is an important human and behavioral factor in software development teams, supporting collaboration, knowledge sharing, interpersonal risk-taking, and learning. However, evidence in software engineering remains fragmented across team processes, performance outcomes, contextual conditions, barriers. Objective: This study maps literature on psychological safety in software engineering, examining its conceptualization, associations with team performance and processes, contextual influences, barriers, and strengthening strategies. Method: We conducted a systematic mapping study following established software engineering guidelines. We analyzed 112 primary studies published between 2006 and June 2026 using descriptive statistics and thematic analysis across six research questions. Results: Psychological safety emerges as a multidimensional, context-dependent, team-level construct characterized by interpersonal risk-taking, open communication, collaboration, learning, trust, and supportive interaction. It is predominantly associated with productivity, software quality, innovation, team satisfaction, collaboration, communication, and decision-making. These relationships are shaped by leadership, organizational culture, work environment, trust, and sociocultural and individual conditions. Recurring barriers include communication problems, organizational constraints, leadership issues, diversity and inclusion challenges, and workload pressures. Although diverse practices are reported, evidence of their effectiveness and long-term sustainability remains limited. Conclusion: Psychological safety is a multidimensional, context-dependent team-level construct associated with team interaction and performance. This study highlights the need for longitudinal, context-sensitive research on psychological safety interventions in software development environments.",
+      "published": "2026-10-06T16:48:56Z",
+      "updated": "2026-10-06T16:48:56Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.08896",
+      "abs_url": "https://arxiv.org/abs/2610.08896",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.07898",
+      "title": "FC-SWE: Failure-Conditioned RL for Long-Horizon Software Engineering Agents",
+      "authors": [
+        "Jia Liufu",
+        "Bin Hu",
+        "Linglin Jing",
+        "Terry Kong",
+        "Yuki Huang",
+        "Ashwath Aithal",
+        "Wenming Yang",
+        "Jun Yang"
+      ],
+      "abstract": "Repository-level software engineering (SWE) is a challenging long-horizon setting: agents must reason over extended interactions, use tools, and adapt to stateful environments. Recent work trains SWE agents with reinforcement learning methods such as Group Relative Policy Optimization (GRPO), which independently sample multiple trajectories per issue, test the resulting patches, and compare terminal rewards within a fixed group. However, this training setup does not reuse verifier feedback from failed patches as context for subsequent attempts, even though this feedback contains valuable diagnostic information about what went wrong. Training on recovery trajectories is challenging because the preceding outcome determines whether the next trajectory is generated, while the failed execution determines its conditioning context. We introduce FC-SWE, a failure-conditioned RL framework that incorporates recovery attempts into policy training. After a patch fails verification, FC-SWE restores the repository to its original task state and uses the failed patch and verifier feedback as context for a recovery trajectory. FC-SWE adapts GRPO to these chains of complete, multi-turn tool-use trajectories through two mechanisms. Trajectory-local rewards preserve each attempt's verifier outcome, preventing recovery success from rewarding an earlier failed patch. Active-set advantage estimation forms a comparison group from all initial and recovery trajectories actually executed for the same issue, so failed attempts remain in the group while unexecuted attempts are excluded. On all 500 SWE-bench Verified tasks under a verifier-assisted protocol, FC-SWE with Qwen3.5-4B and SWE-agent achieves 41.7% Resolved@1 and 52.8% Resolved@2, compared with 38.9% and 48.5% for GRPO. Although trained with at most two attempts per chain, FC-SWE reaches 70.7% Resolved@11 under an eleven-attempt test-time budget.",
+      "published": "2026-10-06T07:44:12Z",
+      "updated": "2026-10-06T07:44:12Z",
+      "categories": [
+        "cs.LG",
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.07898",
+      "abs_url": "https://arxiv.org/abs/2610.07898",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.07832",
+      "title": "Harness Engineering for Software Engineering via Modular Executable Dev-Primitives",
+      "authors": [
+        "Haibo Jin",
+        "Xinjie Li",
+        "Peng Kuang",
+        "Haohan Wang"
+      ],
+      "abstract": "Large language models (LLMs) equipped with terminal access have demonstrated strong capabilities in automating software engineering tasks. However, existing agents remain brittle on long-horizon workflows, where they must repeatedly reconstruct program state scattered across source files, configurations, tests, dependencies, and runtime behavior, leading to increasingly long interaction histories, context explosion, and semantic drift. Large repositories further complicate the identification of task-relevant components. To address these challenges, we introduce \\textbf{Dev-Primitives} (\\emph{Development Primitives}), a modular and executable abstraction that transforms repository components from passive software artifacts into active participants in software engineering. Each Dev-Primitive pairs a repository artifact with a resident LLM, which gives the artifact an agent-native interface grounded in its own implementation and dependencies, enabling natural-language reasoning, inter-component communication, and localized self-modification. Building on Dev-Primitives, we propose \\textbf{HERMES}, a Harness Engineering framework for software engineeRing via Modular Executable Dev-PrimitiveS, which instantiates these primitives at repository scale through a dependency-aware dynamic activation mechanism and a bug diagnosis mechanism that maps execution evidence back to the components that must be revised. Extensive experiments on four software engineering benchmarks demonstrate that HERMES outperforms matched baseline harnesses by 12.4\\% on average. Moreover, when paired with strong activation and diagnosis models, HERMES, even with Qwen3-8B Dev-Primitives, remains within 4.5\\% of the homogeneous GPT-5.6 Sol configuration across all four benchmarks, while reducing inference cost by 26.2\\% on Terminal-Bench 4.0, highlighting the importance of harness design in software engineering agents.",
+      "published": "2026-10-06T06:32:11Z",
+      "updated": "2026-10-06T06:32:11Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI",
+        "cs.CL",
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.07832",
+      "abs_url": "https://arxiv.org/abs/2610.07832",
+      "source": "arxiv"
+    },
+    {
+      "id": "2610.03953",
+      "title": "Characterizing Open-Source Video Games from a Software Engineering Perspective",
+      "authors": [
+        "Henrique Mandelli Canella",
+        "Yohan Duarte",
+        "Cristiano Politowski",
+        "Vinicius Durelli",
+        "Andre Takeshi Endo"
+      ],
+      "abstract": "Video games hold a prominent role in the entertainment industry, which constitutes a multibillion-dollar global market. Within this ecosystem, independent studios, small teams, and solo developers operate with constrained budgets while making their games available through platforms such as itch.io, where many projects are also available as open-source. Where even if the project is fully released, other developers can still have access to the development process through the source code, helping other developers to develop their own games. These open-source games also constitute a valuable corpus for empirical software engineering research, offering transparent access to development artifacts that are typically inaccessible in commercial projects. This study characterizes open-source video games from a Software Engineering standpoint, focusing on their genres, popularity, repository activity, implementation characteristics, and testing practices. To this end, we extracted metadata from 491 video games from itch.io, published as open-source projects in GitHub. The results indicate that open-source games predominantly fall within limited genres (Puzzle, Action, and Platformer), that player ratings, when available, tend to be high, bringing a perception that the community receives well those kind of games, that repositories are largely dormant or minimally maintained, that the majority of these projects adopt either Godot or Unity as their game engine, and that documentation of testing-related practices is seldom included. The results offer insights into the development of open-source video games and may contribute to advancing software engineering practices and tools designed for small teams and independent game developers.",
+      "published": "2026-10-02T19:10:43Z",
+      "updated": "2026-10-02T19:10:43Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2610.03953",
+      "abs_url": "https://arxiv.org/abs/2610.03953",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.26275",
+      "title": "Agentic AI in the Software Development Lifecycle: Architecture, Empirical Evidence, and the Reshaping of Software Engineering",
+      "authors": [
+        "Happy Bhati"
+      ],
+      "abstract": "The arrival of large language models (LLMs) capable of multi-step reasoning, tool use, and long-horizon planning has produced a qualitative shift in software engineering. Where earlier code-completion tools such as GitHub Copilot operated at the granularity of a line or function, modern agentic systems -- Claude Code, OpenAI Codex CLI, Google Jules, Devin, OpenHands, SWE-agent, MetaGPT, ChatDev, and DeepMind's AlphaEvolve -- operate at the granularity of a repository, a feature, or an algorithm. We synthesize work from Anthropic, OpenAI, Google DeepMind, Microsoft Research, Princeton, Stanford, and the broader academic community to characterize this transition. We propose a six-layer reference architecture for agentic software engineering systems, contrast a traditional Software Development Lifecycle (SDLC) with an emerging Agentic SDLC (A-SDLC), and consolidate empirical evidence on performance (a rise from 1.96% to 78.4% on SWE-bench Verified between October 2023 and April 2026), productivity (13.6%-55.8% time savings across controlled studies), and labor-market impact (49% of jobs sampled by Anthropic in 2026 saw AI used for at least a quarter of their tasks). We argue that the central object of inquiry has shifted from code generation to delegated execution under human supervision, and we identify five open problems -- evaluation, governance, technical debt, skill redistribution, and the economics of attention -- that will determine whether the agentic transition is net-positive for the discipline.",
+      "published": "2026-04-29T04:06:47Z",
+      "updated": "2026-04-29T04:06:47Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.26275",
+      "abs_url": "https://arxiv.org/abs/2604.26275",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.20436",
+      "title": "Shift-Up: A Framework for Software Engineering Guardrails in AI-native Software Development -- Initial Findings",
+      "authors": [
+        "Petrus Lipsanen",
+        "Liisa Rannikko",
+        "François Christophe",
+        "Konsta Kalliokoski",
+        "Vlad Stirbu",
+        "Tommi Mikkonen"
+      ],
+      "abstract": "Generative AI (GenAI) is reshaping software engineering by shifting development from manual coding toward agent-driven implementation. While vibe coding promises rapid prototyping, it often suffers from architectural drift, limited traceability, and reduced maintainability. Applying the design science research (DSR) methodology, this paper proposes Shift-Up, a framework that reinterprets established software engineering practices, like executable requirements (BDD), architectural modeling (C4), and architecture decision records (ADRs), as structural guardrails for GenAI-native development. Preliminary findings from our exploratory evaluation compare unstructured vibe coding, structured prompt engineering, and the Shift-Up approach in the development of a web application. These findings indicate that embedding machine-readable requirements and architectural artifacts stabilizes agent behavior, reduces implementation drift, and shifts human effort toward higher-level design and validation activities. The results suggest that traditional software engineering artifacts can serve as effective control mechanisms in AI-assisted development.",
+      "published": "2026-04-22T10:55:57Z",
+      "updated": "2026-04-22T10:55:57Z",
+      "categories": [
+        "cs.SE",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.20436",
+      "abs_url": "https://arxiv.org/abs/2604.20436",
+      "source": "arxiv"
+    },
     {
       "id": "2506.14683",
       "title": "Unified Software Engineering Agent as AI Software Engineer",
@@ -45,7 +1016,7 @@
         "Petra Heck",
         "Gerard Schouten"
       ],
-      "abstract": "In industry as well as education as well as academics we see a growing need for knowledge on how to apply machine learning in software applications. With the educational programme ICT \u0026 AI at Fontys UAS we had to find an answer to the question: \"How should we educate software engineers to become AI engineers?\" This paper describes our educational programme, the open source tools we use, and the literature it is based on. After three years of experience, we present our lessons learned for both educational institutions and software engineers in practice.",
+      "abstract": "In industry as well as education as well as academics we see a growing need for knowledge on how to apply machine learning in software applications. With the educational programme ICT & AI at Fontys UAS we had to find an answer to the question: \"How should we educate software engineers to become AI engineers?\" This paper describes our educational programme, the open source tools we use, and the literature it is based on. After three years of experience, we present our lessons learned for both educational institutions and software engineers in practice.",
       "categories": [
         "cs.SE",
         "cs.AI"
@@ -401,7 +1372,7 @@
       "authors": [
         "Abhik Roychoudhury"
       ],
-      "abstract": "AI agents have recently shown significant promise in software engineering. Much public attention has been transfixed on the topic of code generation from Large Language Models (LLMs) via a prompt. However, software engineering is much more than programming, and AI agents go far beyond instructions given by a prompt.\n  At the code level, common software tasks include code generation, testing, and program repair. Design level software tasks may include architecture exploration, requirements understanding, and requirements enforcement at the code level. Each of these software tasks involves micro-decisions which can be taken autonomously by an AI agent, aided by program analysis tools. This creates the vision of an AI software engineer, where the AI agent can be seen as a member of a development team.\n  Conceptually, the key to successfully developing trustworthy agentic AI-based software workflows will be to resolve the core difficulty in software engineering - the deciphering and clarification of developer intent. Specification inference, or deciphering the intent, thus lies at the heart of many software tasks, including software maintenance and program repair. A successful deployment of agentic technology into software engineering would involve making conceptual progress in such intent inference via agents.\n  Trusting the AI agent becomes a key aspect, as software engineering becomes more automated. Higher automation also leads to higher volume of code being automatically generated, and then integrated into code-bases. Thus to deal with this explosion, an emerging direction is AI-based verification and validation (V \u0026 V) of AI generated code. We posit that agentic software workflows in future will include such AIbased V\u0026V.",
+      "abstract": "AI agents have recently shown significant promise in software engineering. Much public attention has been transfixed on the topic of code generation from Large Language Models (LLMs) via a prompt. However, software engineering is much more than programming, and AI agents go far beyond instructions given by a prompt.\n  At the code level, common software tasks include code generation, testing, and program repair. Design level software tasks may include architecture exploration, requirements understanding, and requirements enforcement at the code level. Each of these software tasks involves micro-decisions which can be taken autonomously by an AI agent, aided by program analysis tools. This creates the vision of an AI software engineer, where the AI agent can be seen as a member of a development team.\n  Conceptually, the key to successfully developing trustworthy agentic AI-based software workflows will be to resolve the core difficulty in software engineering - the deciphering and clarification of developer intent. Specification inference, or deciphering the intent, thus lies at the heart of many software tasks, including software maintenance and program repair. A successful deployment of agentic technology into software engineering would involve making conceptual progress in such intent inference via agents.\n  Trusting the AI agent becomes a key aspect, as software engineering becomes more automated. Higher automation also leads to higher volume of code being automatically generated, and then integrated into code-bases. Thus to deal with this explosion, an emerging direction is AI-based verification and validation (V & V) of AI generated code. We posit that agentic software workflows in future will include such AIbased V&V.",
       "categories": [
         "cs.SE",
         "cs.AI"
@@ -1070,7 +2041,7 @@
         "Haoxiang Zhang",
         "Ahmed E. Hassan"
       ],
-      "abstract": "The future of software engineering--SE 3.0--is unfolding with the rise of AI teammates: autonomous, goal-driven systems collaborating with human developers. Among these, autonomous coding agents are especially transformative, now actively initiating, reviewing, and evolving code at scale. This paper introduces AIDev, the first large-scale dataset capturing how such agents operate in the wild. Spanning over 456,000 pull requests by five leading agents--OpenAI Codex, Devin, GitHub Copilot, Cursor, and Claude Code--across 61,000 repositories and 47,000 developers, AIDev provides an unprecedented empirical foundation for studying autonomous teammates in software development.\n  Unlike prior work that has largely theorized the rise of AI-native software engineering, AIDev offers structured, open data to support research in benchmarking, agent readiness, optimization, collaboration modeling, and AI governance. The dataset includes rich metadata on PRs, authorship, review timelines, code changes, and integration outcomes--enabling exploration beyond synthetic benchmarks like SWE-bench. For instance, although agents often outperform humans in speed, their PRs are accepted less frequently, revealing a trust and utility gap. Furthermore, while agents accelerate code submission--one developer submitted as many PRs in three days as they had in three years--these are structurally simpler (via code complexity metrics).\n  We envision AIDev as a living resource: extensible, analyzable, and ready for the SE and AI communities. Grounding SE 3.0 in real-world evidence, AIDev enables a new generation of research into AI-native workflows and supports building the next wave of symbiotic human-AI collaboration. The dataset is publicly available at https://github.com/SAILResearch/AI_Teammates_in_SE3.\n  \u003e AI Agent, Agentic AI, Coding Agent, Agentic Coding, Software Engineering Agent",
+      "abstract": "The future of software engineering--SE 3.0--is unfolding with the rise of AI teammates: autonomous, goal-driven systems collaborating with human developers. Among these, autonomous coding agents are especially transformative, now actively initiating, reviewing, and evolving code at scale. This paper introduces AIDev, the first large-scale dataset capturing how such agents operate in the wild. Spanning over 456,000 pull requests by five leading agents--OpenAI Codex, Devin, GitHub Copilot, Cursor, and Claude Code--across 61,000 repositories and 47,000 developers, AIDev provides an unprecedented empirical foundation for studying autonomous teammates in software development.\n  Unlike prior work that has largely theorized the rise of AI-native software engineering, AIDev offers structured, open data to support research in benchmarking, agent readiness, optimization, collaboration modeling, and AI governance. The dataset includes rich metadata on PRs, authorship, review timelines, code changes, and integration outcomes--enabling exploration beyond synthetic benchmarks like SWE-bench. For instance, although agents often outperform humans in speed, their PRs are accepted less frequently, revealing a trust and utility gap. Furthermore, while agents accelerate code submission--one developer submitted as many PRs in three days as they had in three years--these are structurally simpler (via code complexity metrics).\n  We envision AIDev as a living resource: extensible, analyzable, and ready for the SE and AI communities. Grounding SE 3.0 in real-world evidence, AIDev enables a new generation of research into AI-native workflows and supports building the next wave of symbiotic human-AI collaboration. The dataset is publicly available at https://github.com/SAILResearch/AI_Teammates_in_SE3.\n  > AI Agent, Agentic AI, Coding Agent, Agentic Coding, Software Engineering Agent",
       "categories": [
         "cs.SE",
         "cs.AI",

@@ -1,0 +1,28 @@
+Title: Don't Miss the Forest for the Trees: Zero-Shot Skeleton Action Recognition with Hyperbolic Hierarchical Semantic Prototypes
+Authors: Zixiao Jin, Siyu Zhu, Feng Ding, Haisheng Fu, Xin Dong, Shankai Chen, Jie Liang
+ID: 2611.31877
+URL: https://arxiv.org/abs/2611.31877
+
+Abstract:
+Zero-shot skeleton-based action recognition is evaluated almost exclusively on
+flat leaf labels, which leaves open whether a representation also grounds the
+broader concepts that contain an action in skeleton motion. We find that strong
+leaf alignment does not carry over to them: when ancestor concepts are scored
+directly under independent decoding, eight flat methods with 57.86-73.29% mean
+leaf Top-1 reach only 6.15-31.21% mean full-path accuracy across four NTU RGB+D
+splits. We propose the Hyperbolic Hierarchical Semantic Prototype ($H^2SP$)
+framework, which represents every node of an action taxonomy in the Lorentz
+model of hyperbolic space. First, instead of learning a free vector per node,
+$H^2SP$ synthesizes hierarchy-aware prototypes by recursive parent-child
+geodesic interpolation under a single tree-wide gate. Second, tangent-space
+semantic and distributional alignment on seen classes anchor the leaf prototypes
+in skeleton motion. Third, a soft entailment-cone regularizer encourages
+directional parent-child inclusion, propagating this motion grounding to
+ancestor concepts. We evaluate hierarchical concept prediction under independent
+and cascade decoding, and transfer to an alternative taxonomy without
+retraining. Across the four splits, $H^2SP$ attains the best mean independent
+and cascade full-path accuracy among the evaluated methods, at a comparable leaf
+Top-1 of 72.40%. Transferred to the alternative taxonomy, it outperforms both
+flat baselines and the same-tree Euclidean control across every split and
+decoding mode, indicating that its concept-level correspondence extends beyond
+the training taxonomy.

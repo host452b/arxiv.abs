@@ -1,0 +1,23 @@
+Title: Megakernel vs Wavefront GPU Path Tracing
+Authors: Rafael Padilla, Kyle Webster, Austin Kim
+ID: 2605.27323
+URL: https://arxiv.org/abs/2605.27323
+
+Abstract:
+Over the last decade, advances in GPU hardware have been driven in large part by
+the demands of real-time graphics, culminating in dedicated hardware ray tracing
+cores (RT cores). These units accelerate ray scene intersection queries directly
+in hardware, making physically based ray tracing algorithms increasingly
+practical for interactive applications. This paper compares and analyzes the
+performance of two ray-based rendering algorithms: forward path tracing (PT) and
+wavefront path tracing (WPT). GPU-based PT computes the color of each pixel by
+having each thread trace a single path to completion, naturally leading to a
+megakernel approach - while WPT maintains state buffers between specialized
+kernel invocations to trace path stages simultaneously. We find that WPT affords
+a ~16% speedup over PT in our implementation. By analyzing traces from NVIDIA
+Nsight Graphics, we attributed this speedup to WPT's improved cache locality
+compared to PT. We also find that our implementation does not achieve maximum
+GPU throughput across any of its units, suggesting that communication and memory
+latency, as well as synchronization, are the limiting factors. Finally, we
+address potential algorithmic improvements and future work for real-time path
+tracing implementation for practical applications.

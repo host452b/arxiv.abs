@@ -1,0 +1,27 @@
+Title: TaskVICL: Task-Conditioned Decoder States for Visual In-Context Learning
+Authors: Chenyang Wang, Jiamo Hu, Chengrui Wu, Lingyue Chen, Jianguo Chen, Xun Xu, Xulei Yang
+ID: 2611.28081
+URL: https://arxiv.org/abs/2611.28081
+
+Abstract:
+The usefulness of an in-context demonstration for a vision-language model (VLM)
+depends on both the query image and the task posed about it. Common retrievers
+rank examples by image similarity and ignore the task, while task-aware
+alternatives require answer generation, external encoders or retriever training.
+We ask whether the frozen target VLM's own decoder states, read before it
+answers, can select demonstrations directly. TaskVICL represents each image and
+task by a task-conditioned processing signature: the hidden states at the final
+input position across all decoder layers. Its training-free variant, TaskVICL-
+Raw, averages cosine similarities between corresponding layer states and passes
+the retrieved examples with their reference answers to the same VLM. Across two
+VLMs and eight classification and visual question answering datasets, Raw
+achieves the highest average accuracy among training-free retrievers, exceeding
+the strongest baseline by 3.30 points on Qwen3-VL and 1.41 on InternVL3.5, with
+gains carrying over to Gemma-3-12B. When the same NICO++ image is asked about
+its object or its context, Raw retrieves largely different demonstrations for
+the two questions and outperforms an image retriever given task-matched
+demonstrations. A lightweight shared projection, TaskVICL-Proj, adds further
+gains on classification. Controls show that task text at extraction drives most
+of the gains, and attention analysis describes how it shifts attention toward
+the classified object. These results support the target VLM's internal states as
+a practical basis for task-aware demonstration retrieval.

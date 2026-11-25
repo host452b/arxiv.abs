@@ -2,7 +2,7 @@
 
 # arxiv.software-engineering — Software Engineering Research Abstracts (2020–2026)
 
-> **Source:** 4,418 unique arXiv abstracts from 42 keyword searches (6,822 raw results, deduplicated), cs category, 2020–2026, sorted by relevance.
+> **Source:** 5,304 unique arXiv abstracts from 42 keyword searches (6,822 raw results, deduplicated), cs category, 2020–2026, sorted by relevance.
 > **Coverage:** Frontend & UX, Software Architecture, Code Quality, Requirements, DevOps, Security, Performance, AI-Assisted Development, Software Philosophy.
 
 ---
@@ -18,9 +18,9 @@
 | 2024 | 948 | [2024/abstracts/](2024/abstracts/) |
 | 2025 | 1,160 | [2025/abstracts/](2025/abstracts/) |
 | 2026 | 269 | [2026/abstracts/](2026/abstracts/) |
-| **Total** | **4,418** | |
+| **Total** | **5,304** | |
 
-> 6,822 raw results → 4,418 unique papers after deduplication. 2024–2026 = 2,377 papers (54% of corpus), reflecting accelerating publication rates.
+> 6,822 raw results → 5,304 unique papers after deduplication. 2024–2026 = 2,377 papers (54% of corpus), reflecting accelerating publication rates.
 
 ---
 

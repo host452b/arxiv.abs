@@ -1,0 +1,31 @@
+Title: Sign Here: Attributing a Source for a More Trustworthy Software Supply Chain
+Authors: Derek Garcia
+ID: 2610.28794
+URL: https://arxiv.org/abs/2610.28794
+
+Abstract:
+Software supply chain attacks continue to be on the rise, exploiting the trust
+that helps open source ecosystems thrive. Recent incidents like the Shai-Hulud
+worm and the Axios compromise demonstrate that a single malicious package can
+have wide reaching and devastating impacts overnight. These high profile attacks
+can be traced back to the same culprit: package registries. Although they are a
+useful convenience to pull prebuilt packages from, is such a commonly exploited
+component of the software supply chain worth the risk? In this paper, we
+investigate whether removing the registry from the developer workflow by
+building packages directly from source can serve as a malware prevention
+strategy - effectively removing an entire attack surface. Our hypothesis is that
+malicious packages avoid attributing a source to minimize visibility, while
+benign packages seek exposure and therefore link to their repositories. We
+evaluate this through three research questions: how effective is building from
+source at avoiding malware, how feasible is it to build from source in the
+current state of the supply chain, and how the building from source strategy
+compares to state-of-the-art security scanners. To do so, we (1) construct an
+aggregate dataset of 47,066 malicious packages from four academic and one
+industry malicious datasets source across npm and PyPI ecosystems, (2) build a
+snapshot index of all 3.9 million npm and 764 thousand PyPI packages, and (3)
+analyze all malicious samples alongside a statistically significant sample of
+16,569 packages from each registry, totaling 33,138 packages. We find that
+simply checking for a source has a success rate between 87.7 and 99.9 percent of
+preventing malware, depending on the level of source vetting. Consequently,
+there is a significant lack of transparency within benign packages, with only
+47.4 percent attributing a source an end user could build from.

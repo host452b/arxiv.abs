@@ -1,0 +1,32 @@
+Title: Impact of Edge Software Evolution on Audio Tagging Models: An Empirical Study on NVIDIA Jetson Orin Nano
+Authors: Guillem Fustier-Castillo, Ruben Ribes-Serrano, Jordi Grau-Haro, Marta Garcia-Ballesteros, Javier Naranjo-Alcazar
+ID: 2611.26831
+URL: https://arxiv.org/abs/2611.26831
+
+Abstract:
+Audio tagging is a fundamental task in machine listening, enabling the automatic
+identification of acoustic events in applications such as intelligent
+monitoring, industrial inspection, environmental sensing, and smart
+environments. As these applications increasingly migrate to edge platforms,
+deployment-oriented metrics such as latency, energy consumption, and resource
+utilization become critical alongside predictive performance. However, most
+existing studies evaluate audio tagging models under a single software
+environment, overlooking the potential impact of software stack evolution on
+deployment efficiency. This paper investigates how software ecosystem updates
+affect the execution characteristics of state-of-the-art audio tagging
+architectures on edge devices. We evaluate representative convolutional and
+Transformer-based models, including PANNs (CNN and ResNet variants), AST, and
+PaSST, on an NVIDIA Jetson Orin Nano platform using two generations of NVIDIA's
+software ecosystem: JetPack 6.2 and JetPack 7.2. Under identical hardware
+conditions, we analyze inference latency, energy consumption, CPU/GPU
+utilization, and memory footprint across multiple inference backends and power
+modes. The results show that software stack evolution can substantially affect
+deployment performance. JetPack 7.2 reduces latency and energy consumption by
+more than 50% for several convolutional architectures when combined with
+TensorRT, while significantly increasing GPU utilization. In contrast, AST
+exhibits only marginal gains, whereas PaSST shows intermediate behavior. These
+findings demonstrate that software evolution is a critical factor in Edge AI
+evaluation and can alter the relative deployment efficiency of competing
+architectures. Consequently, software stack versions should be explicitly
+considered when benchmarking and selecting audio tagging models for embedded
+deployment.

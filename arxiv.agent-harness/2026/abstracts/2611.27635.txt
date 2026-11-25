@@ -1,0 +1,31 @@
+Title: Report2Alpha-Bench: Evaluating LLM Agents on End-to-End Quantitative Research
+Authors: Yun Zhang, Hui Yang, Wei Meng
+ID: 2611.27635
+URL: https://arxiv.org/abs/2611.27635
+
+Abstract:
+We evaluate whether LLM agents can independently carry out a several-hour
+quantitative research project: read a brokerage research report, make a plan,
+and over 7 rounds of iteration propose hypotheses, write factor code and improve
+it from backtest feedback, seeing only 2022-2023 market data. Like Terminal-
+Bench-Science, the task evaluates overall research ability; unlike it, there is
+no directly checkable unique answer: the model must repeatedly propose
+hypotheses on very noisy data, revise its understanding from experiments,
+disentangle multiple factors and design ablations without overfitting in-sample,
+much like complex real-world decisions with many interacting factors. After the
+research, a fixed rule using only 2022-2023 results selects a low-correlated
+factor pool from all candidates the model produced, and scores it on unseen
+2024-2025 data after removing common style returns such as size and momentum;
+the same rule on round-0 candidates alone gives a report baseline that
+"implements the report without iterating". We run gpt-6.1-sol (reasoning effort
+xhigh), gpt-6.1-terra (xhigh), muse-spark-1.3 (xhigh) and deepseek-v4.1-flash
+(max) once on each of 7 reports. Of the 28 runs, 19 factor pools pass the
+usability threshold; the average score is 48.4 (0-100 scale), against 25.4 for
+the report baseline and 35.9 for the models' own picks. From similar report
+baselines (17.0-31.0), the models separate after iteration to 74.7
+(gpt-6.1-sol), 56.6 (gpt-6.1-terra), 35.8 (deepseek-v4.1-flash) and 26.2 (muse-
+spark-1.3); their candidates look equally good in training and diverge only in
+testing, with the leaders proposing more diverse ideas per round and ending with
+more effective factors in the pool. Evaluating research agents thus requires
+scoring on frozen future data after removing styles, and measuring "what the
+research produced" separately from "what was finally picked".

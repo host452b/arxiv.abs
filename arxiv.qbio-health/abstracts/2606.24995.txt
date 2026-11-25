@@ -1,0 +1,24 @@
+Title: Are Tabular Foundation Models Robust to Realistic Query Distribution Shifts in Microbiome Data?
+Authors: Giulia Perciballi, Ahmad Fall, Federica Granese, Edi Prifti, Jean-Daniel Zucker
+ID: 2606.24995
+URL: https://arxiv.org/abs/2606.24995
+
+Abstract:
+Tabular foundation models (TFMs) achieve strong performance on microbiome
+abundance data, yet their robustness under realistic distribution shift remains
+poorly characterized. We introduce a benchmark that evaluates the robustness of
+TFMs to biologically inspired perturbations across six gut microbiome datasets
+spanning four disease contexts. In this in-context learning setting, models
+receive unperturbed support sets as context and are evaluated on perturbed query
+samples. To isolate robustness beyond "shortcut" features, we preserve the most
+discriminative taxa and apply three controlled perturbation strategies: (i)
+removal of high-abundance (uninformative) taxa, (ii) sparsification via
+increased zero-inflation, and (iii) zero-imputation via spurious non-zero
+injections. Our results show that protecting discriminative features is
+insufficient to guarantee stability under support-query shift: across datasets,
+all perturbations degrade model performance, with zero-imputation consistently
+the most harmful, indicating that corrupting global feature structure can break
+generalization even when key taxa are retained. Sparsification
+disproportionately affects TFMs relative to a classical random forest baseline,
+suggesting greater sensitivity to zero-inflation-type shifts. The code is
+publicly available at: https://github.com/UMMISCO/metagenomics-fm/.

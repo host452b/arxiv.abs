@@ -10,11 +10,285 @@
     "from": "",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T14:43:34Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
   "total_results": 504,
-  "return_count": 200,
+  "return_count": 214,
   "papers": [
+    {
+      "id": "2611.25774",
+      "title": "DS2Agent: Holistic Device Agents for Accelerated Embedded Board-Level Design",
+      "authors": [
+        "Hongbin Yang",
+        "Chi Zhang",
+        "Yinhao Xiao",
+        "Runyu Pan",
+        "Yanni Yang",
+        "Xiuzhen Cheng"
+      ],
+      "abstract": "Embedded board-level development demands extensive expertise, from component selection and device characteristics to interface configuration, driver writing, and system composition. Recently, LLM-based agents have shown strong capabilities, raising the prospect of automating board-level design tasks. However, existing agents either target chip-level design or treat datasheets as static text, offering little guidance on whether a specific component should---or even could---be used for a given board-level design. Moreover, without touching real hardware, they hallucinate incorrect details. To fill this gap, we present {\\setlength{\\fboxsep}{1pt}\\href{https://anonymous.4open.science/r/DS2Agent-9FE8/}{\\fcolorbox{blue}{white}{DS2Agent}}}, an open-source framework that constructs interactive agents from device datasheets. Each agent comprises three models: a knowledge model supporting retrieval and question answering; a digital-twin model capturing the physical functionality of the device; and an interface model supporting driver development and system integration. To suppress hallucinations, we also allow optional connections to real devices, so that the agent can calibrate its internalized knowledge against the device. We evaluate DS2Agent on ten devices spanning seven functional categories. Compared with the baseline, the DS2Agent-augmented agent improves the question-answering score from 87 to 97 out of 100 while using 44.8\\% fewer tokens. For driver generation, it reduces average token usage per device by 72.9\\%. For system integration, it reduces total token usage across three FreeRTOS applications by 29.7\\%.",
+      "published": "2026-11-19T09:09:58Z",
+      "updated": "2026-11-19T09:09:58Z",
+      "categories": [
+        "cs.MA"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.25774",
+      "abs_url": "https://arxiv.org/abs/2611.25774",
+      "source": "arxiv"
+    },
+    {
+      "id": "2611.12324",
+      "title": "How Many Exposures Does a World Model Need? Learning Unseen Game Mechanics at Test Time",
+      "authors": [
+        "Ku Onoda",
+        "Haruto Kawano",
+        "Shota Takashiro",
+        "Kohei Hayashi"
+      ],
+      "abstract": "World models enable agents to plan and learn from imagined experience, but in an unfamiliar environment they must learn its mechanics from limited interaction. A mechanic is a rule for how an action or an interaction changes part of the environment. Each occurrence of a mechanic that the model observes is one exposure. We ask how many exposures a world model needs to predict the effects of a new environment's mechanics. We address this question on ARC-AGI-3, a benchmark of interactive games defined by their programs. We introduce MechEval, which labels 69 recurring mechanics across 20 games from these programs. It scores each prediction on the cells the mechanic changes at each exposure. As a test bed, we build WARC (World model for ARC-AGI-3), a 35M-parameter vision transformer that is pretrained on other games and updates all of its parameters after each transition. On held-out games, WARC learns to predict four in five mechanics with at least 80% accuracy on the cells they change and keeps that accuracy to the end of the recordings. Half of them reach that accuracy within about 80 exposures, in a single play of the game, and without updates only one in seven does at all. In closed-loop play on the public games, WARC-Agent, which pairs WARC with a fixed graph explorer, triples the explorer's official efficiency score from 0.15 to 0.46, mostly through test-time training. On the hidden games of the Kaggle leaderboard, our entry scores 0.20.",
+      "published": "2026-11-09T12:45:40Z",
+      "updated": "2026-11-09T12:45:40Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.12324",
+      "abs_url": "https://arxiv.org/abs/2611.12324",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.39564",
+      "title": "A2Z GameSpec-Bench: How Faithfully Can Coding Agents Generate Games from Game Design Specifications?",
+      "authors": [
+        "Seonho Lee",
+        "Wonryeol Jeong",
+        "Alberto Cereser",
+        "Inha Kang",
+        "Hyeonjong Kim",
+        "Seungmin Kwak",
+        "Dongmin Park"
+      ],
+      "abstract": "Delegating complete application development to coding agents requires preserving the intended design rather than simply producing plausible outputs through naive prompting. Game development provides a demanding testbed, as long-form Game Design Documents (GDDs) describe requirements that must work together across game logic, visual rendering, and player interactions. However, existing game-development benchmarks typically use compact specifications and provide limited support for evaluating interdependent requirements across these aspects in long-form GDDs. We introduce A2Z GameSpec-Bench, a benchmark of 100 long-form GDDs for evaluating end-to-end game development by agents. We measure faithfulness by checking whether the game satisfies the GDD requirements and preserves the relationships among them. Each GDD is turned into a dependency-aware contract that contains rules, constraints, and prerequisite relations. Following game-development practices, we combine source-code inspection with agent-generated test policies for scenario-based replay and adaptive playtesting. The contract remains fixed across agents and revision rounds, while judgments and evidence linked to the same requirements support consistent comparison and failure detection. Our evaluations show that current agents struggle to jointly satisfy interdependent requirements across code implementation and actual play. Requirement-specific feedback improves GDD Fidelity by 10.9% relative to self-revision after two rounds. A2Z GameSpec-Bench assesses end-to-end specification-following ability beyond implementation judgments and provides targeted feedback to support more faithful game development. Code and datasets are available at https://a2z-gamespec-bench.github.io.",
+      "published": "2026-09-30T12:00:50Z",
+      "updated": "2026-09-30T12:00:50Z",
+      "categories": [
+        "cs.AI",
+        "cs.CV"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.39564",
+      "abs_url": "https://arxiv.org/abs/2609.39564",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.13162",
+      "title": "The Landscape of Misinformation Literacy Games: A Systematic Mapping Review of Game Designs and Evaluation Practices",
+      "authors": [
+        "Omed Abed",
+        "Smi Hinterreiter",
+        "Sijia Guo",
+        "Isao Echizen",
+        "Timo Spinde",
+        "Matteo Große-Kampmann"
+      ],
+      "abstract": "This systematic mapping review examines 54 gamified interventions aimed at combating misinformation. We analyze the theoretical frameworks, game design, and media contexts of academic and non-academic games. The results indicate a field dominated by web-based simulations and trivia formats. While psychological inoculation is a prominent theoretical framework in the field, most interventions prioritize content-discernment tasks over proactive prebunking strategies. We identify systematic gaps in the identified games. Current interventions remain largely text-centric, focusing on news articles and text-based content, despite the growing use of audiovisual content (e.g., short videos) in the digital landscape. We conclude our study by discussing implications for addressing the evolving, multimodal nature of potentially misleading content using gamified interventions.",
+      "published": "2026-07-20T08:22:17Z",
+      "updated": "2026-07-20T08:22:17Z",
+      "categories": [
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.13162",
+      "abs_url": "https://arxiv.org/abs/2609.13162",
+      "source": "arxiv"
+    },
+    {
+      "id": "2609.03169",
+      "title": "Signal-Driven Pervasive Game Design: The LifeSync-Games Framework as a Player Experience Integration Layer",
+      "authors": [
+        "J. Macías-Cáceres",
+        "F. Gutiérrez-Vela",
+        "P. Paderewski-Rodriguez",
+        "R. González-Ibáñez"
+      ],
+      "abstract": "Pervasive games extend the magic circle across spatial, temporal, and social dimensions, yet treat the player's physiological and cognitive state as a passive receptor rather than an active signal. This paper presents LifeSync-Games (LSG), a framework that (unlike proposals treating player signals as an additional dimension), operationalizes them as a Player Experience Integration Layer (PEIL) acting transversally across the three existing pervasive dimensions through verified real-world signals: physical activity, sleep quality, memory, and decision speed. The framework introduces a gamified integration artifact (the LSG portal) that mediates the real <-> virtual exchange through redeemable points, real-world missions, and structural gamification. Five HCI design principles grounded in Self-Determination Theory and Flow Theory are proposed, instantiated across six commercial video games, together with a study protocol (n = 70-80 participants, quasi-experimental design). This paper reports the design stage of LSG: rule thresholds and portal parameters are design decisions pending empirical calibration; no data collection has yet been conducted. The main contribution is a theoretically grounded framework and validation protocol positioning player-sensitive integration as the mechanism enabling pervasive games to respond to the player's actual biological and cognitive state.",
+      "published": "2026-09-02T21:12:38Z",
+      "updated": "2026-09-02T21:12:38Z",
+      "categories": [
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2609.03169",
+      "abs_url": "https://arxiv.org/abs/2609.03169",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.22427",
+      "title": "Probing How Users Interact with Turn-Level Design Frictions for AI Chatbots",
+      "authors": [
+        "Helen Weixu Chen",
+        "Katy Ilonka Gero"
+      ],
+      "abstract": "AI chatbots can help people write faster, but they can also encourage overreliance by making it easy to turn minimal input into usable text. We study turn-level design friction: intentional constraints added to each chatbot exchange that slow, limit, or redirect how users request, access, or use model responses. We designed six friction probes, organized around three mechanisms: eliciting user contribution, restricting access to generated content, and reshaping system output. In a within-subject study with 24 participants, all six probes increased workload, task duration, and perceived ownership relative to a conventional AI chatbot, while their effects on recall and recognition were more selective. We further found that participants adapted to friction in different ways, and that the same constraint could support or obstruct involvement depending on users' goals and workflows.",
+      "published": "2026-08-23T14:05:09Z",
+      "updated": "2026-08-23T14:05:09Z",
+      "categories": [
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.22427",
+      "abs_url": "https://arxiv.org/abs/2608.22427",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.12216",
+      "title": "\"Pharos Night: Crown Pursuit\": An AI-Native Deck-Building and Tactical Arena Game Design Based on Multi-Agent Systems",
+      "authors": [
+        "Ting-Chen Hsu",
+        "Jueyao Liu",
+        "Yanzi Zhou",
+        "Jiangxu Lin",
+        "Haoyu Xu",
+        "Yuwen Liu",
+        "Yanjia Liu",
+        "Bangjing Xu"
+      ],
+      "abstract": "With advancements in generative AI technology, an increasing number of researchers have begun exploring AI-native games in which gameplay rules are directly driven by generative AI. This paper presents \"Pharos Night: Crown Pursuit,\" an AI-native deck-building and tactical arena game based on a multi-agent system. The game uses large language models to generate materials and cards, support NPC decision-making, and mediate natural-language interactions. During play, players collect materials, describe desired card effects in natural language, and choose whether to negotiate or fight with NPCs in the arena. To constrain model-generated outcomes, the system parses responses as structured JSON, constructs card effects from predefined mechanics, and maps qualitative effect levels to designer-specified numerical values. A small-scale playtest with 13 participants suggests that the system can provide strategically meaningful and engaging AI-driven gameplay, while also revealing challenges related to predictability, transparency, and player control. This work demonstrates the potential of multi-agent generative AI systems for creating more emergent digital game experiences.",
+      "published": "2026-08-12T16:10:03Z",
+      "updated": "2026-08-12T16:10:03Z",
+      "categories": [
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.12216",
+      "abs_url": "https://arxiv.org/abs/2608.12216",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.09638",
+      "title": "Avalon-ToM-Bench: Evaluating Fine-Grained Theory of Mind via Asymmetric Game Mechanics",
+      "authors": [
+        "Yen-Shan Chen",
+        "Yu Chian Duan",
+        "Chih-En Kuo",
+        "Jian-Bin Wu",
+        "Yun-Nung Chen"
+      ],
+      "abstract": "Theory of Mind (ToM) is essential for agent interactions, yet existing evaluations either rely on static scenarios that oversimplify mental-state reasoning or interactive settings that provide limited diagnostic insight. We present Avalon-ToM-Bench, a fine-grained benchmark that operationalizes ToM through the asymmetric-information mechanics of The Resistance: Avalon. Rather than evaluating end-to-end gameplay, it decomposes ToM into a 2$\\times$2 taxonomy -- epistemic versus motivational reasoning crossed with inference versus action -- using human-crafted, perspective-constrained queries. Benchmarking 28 LLMs reveals three insights: 1) Reasoning, not knowledge. Models show strong game-rule comprehension but markedly weaker ToM abilities, isolating failures to social reasoning rather than missing domain knowledge. 2) Expression, not representation. Mechanistic analyses via linear probing and activation steering show that models frequently represent correct mental-state inferences in their hidden states but fail to express them during generation -- linear probes recover 77-82% accuracy versus 62-70% from the models' own chain-of-thought. 3) Policy, not deliberation. Dedicated reasoning training yields substantial improvements whereas test-time chain-of-thought provides only marginal gains (+11.0 versus +1.1 points on average), suggesting that robust ToM depends on a learned reasoning policy rather than increased inference-time deliberation.",
+      "published": "2026-08-10T14:19:08Z",
+      "updated": "2026-08-10T14:19:08Z",
+      "categories": [
+        "cs.AI",
+        "cs.CL",
+        "cs.CY",
+        "cs.GT"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.09638",
+      "abs_url": "https://arxiv.org/abs/2608.09638",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.02067",
+      "title": "Cross-Layer Optimization and System-Level Design of Next-Generation Wireless Networks via Intelligent RAN Control",
+      "authors": [
+        "Maria Tsampazi"
+      ],
+      "abstract": "Recent years have seen the evolution of the traditional Radio Access Network (RAN) toward more open, programmable, disaggregated, and intelligent architectures, known as an Open RAN. Future Next Generation (NextG) networks are envisioned to be AI-native, enabling data-driven closed-loop optimization of Base Station resources, while Reconfigurable Intelligent Surfaces (RIS) emerge as key enablers for wireless propagation and spectral efficiency toward 6G and beyond. This dissertation focuses on the design, optimization, and experimental evaluation of NextG RANs integrating Open RAN principles, data-driven control loops, and intelligent resource allocation. The work emphasizes cross-layer optimization, including energy-efficient power control, and explores AI-driven network slicing, scheduling, and link adaptation, demonstrating NextG RANs reconfigurable in real time to meet 6G requirements, first analyzing architectural enablers and modeling frameworks, then prototyping and evaluating solutions on experimental platforms and Digital Twins. Main contributions include: (i) Deep Reinforcement Learning (DRL) solutions for network slicing and scheduling; (ii) PandORA, a framework for automatic design, training, and deployment of DRL-based Open RAN applications on the Colosseum wireless network emulator; (iii) physical-layer RIS channel modeling and optimized resource allocation across spectrum bands; (iv) system-level evaluation of RIS-assisted channels for eMBB and URLLC traffic; (v) integration of RIS within Open RAN; (vi) online RL solutions for link adaptation; and (vii) spectrum sharing between cellular and Non-Terrestrial Network links via power control and beamforming. This work provides algorithmic designs, frameworks, and validation from simulation and hardware-in-the-loop emulation to over-the-air 5G testbed experiments, addressing industry and academic needs for wireless research.",
+      "published": "2026-08-03T11:10:50Z",
+      "updated": "2026-08-06T13:47:00Z",
+      "categories": [
+        "cs.NI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.02067",
+      "abs_url": "https://arxiv.org/abs/2608.02067",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.23026",
+      "title": "All in One: Generative Modeling as Mean-Field Game Design",
+      "authors": [
+        "Kun Zhao",
+        "Xu Chen"
+      ],
+      "abstract": "Mean-field games (MFGs) offer a unifying lens on continuous-time generative modeling: a cost tuple recovering twelve prominent models---Continuous Normalizing Flows, OT-Flow, Score-based Models, Schrödinger Bridges, and more---as special cases of one variational problem. Yet two dimensions of this space remain entirely unexplored: the interaction term $\\mathcal{I}$ is set to zero in many existing models, and the rich family of MFG solvers has never been applied to generative modeling. We address both gaps with MFGLab an open-source PyTorch library whose primary API is the cost tuple: all twelve models are specified by four composable cost functions, and the training loop, log-Jacobian, and reverse-ODE sampler are shared automatically. We additionally propose DI-Flow, a novel cost design that uses a differentiable entropy functional to encourage mode coverage, and provide learning-based MFG solvers that substantially outperform neural training on stochastic-dynamics rows. Experiments on two 2-D benchmarks confirm that the unified API is lossless relative to hand-coded implementations.",
+      "published": "2026-07-25T03:57:31Z",
+      "updated": "2026-07-25T03:57:31Z",
+      "categories": [
+        "cs.LG",
+        "cs.AI"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.23026",
+      "abs_url": "https://arxiv.org/abs/2607.23026",
+      "source": "arxiv"
+    },
+    {
+      "id": "2607.09196",
+      "title": "Application of machine learning to monster level prediction in tabletop RPG game design",
+      "authors": [
+        "Jolanta Śliwa",
+        "Jakub Adamczyk"
+      ],
+      "abstract": "Designing balanced adversaries is a central but labor-intensive task in tabletop role-playing game (TTRPG) development. In systems such as Pathfinder, each monster is described by many numerical attributes that jointly determine its power, summarized as an ordinal level. We investigate whether machine learning can support designers by predicting this level from a monster's attributes, framing the task as tabular ordinal regression. We introduce what is, to our knowledge, the first dataset built specifically for TTRPG monster-level prediction, derived from publicly available Pathfinder Second Edition data. Using it, we compare classical regression models with rounding schemes, dedicated tabular ordinal regression algorithms, and neural networks with ordinal-aware losses. To mirror real design workflows, we evaluate all models under chronological and expanding-window protocols with several complementary metrics. Results show that tree-based ensembles outperform linear models and neural approaches, achieving near-perfect ordinal ranking and high predictive accuracy. Explainable AI analyses, such as feature importance and error distributions, show that the model is aligned with human intuition and follows patterns grounded in game rules. Together, these results show that machine learning can reliably approximate designer judgments and serve as an effective computer-aided tool for monster balancing and broader TTRPG system design.",
+      "published": "2026-07-10T08:39:53Z",
+      "updated": "2026-08-24T18:23:58Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2607.09196",
+      "abs_url": "https://arxiv.org/abs/2607.09196",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.29511",
+      "title": "Reinforcement Learning in Super Mario Bros: Curriculum, Pedagogy, and Optimal Level Design in World 1-1",
+      "authors": [
+        "Jesse Ponnock",
+        "Lucas Ho"
+      ],
+      "abstract": "World 1-1 of Super Mario Bros is widely celebrated as a masterclass in game design: its progressive structure is credited with teaching players core mechanics through the level itself. We ask whether that structure is empirically measurable using reinforcement learning. We implement World 1-1 from scratch as a fully discrete environment and compare four algorithms -- Q-Learning, SARSA, Monte Carlo, and Deep Q-Network (DQN) -- across three progressively complex versions of the same level. Monte Carlo emerges as the strongest agent (94.9% $\\pm$ 1.5% win rate), outperforming DQN (76.4% $\\pm$ 3.4%) by learning to maximize intermediate rewards along winning paths rather than taking the most direct route. We then use Monte Carlo in a curriculum experiment permuting World 1-1's six canonical segments across twelve conditions. Canonical ordering converges fastest, achieves the highest learning efficiency, and is the only condition with zero catastrophic failures; no random permutation matches all three criteria simultaneously. These results provide, to the best of our knowledge, the first empirical validation that World 1-1's canonical design encodes genuine pedagogical structure: one that measurably accelerates learning and cannot be replicated by chance.",
+      "published": "2026-06-28T17:17:23Z",
+      "updated": "2026-06-28T17:17:23Z",
+      "categories": [
+        "cs.LG"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.29511",
+      "abs_url": "https://arxiv.org/abs/2606.29511",
+      "source": "arxiv"
+    },
+    {
+      "id": "2606.03857",
+      "title": "A Novel Procedural Generation for Level Design of Mansions and Dungeons",
+      "authors": [
+        "Isaac Fiuza Vieira",
+        "Kathya Silvia Collazos Linares",
+        "Esteban Walter Gonzalez Clua",
+        "Érick Oliveira Rodrigues"
+      ],
+      "abstract": "Procedural Content Generation (PCG) has become an essential technique in game development due to its ability to reduce production time and cost while increasing replayability and variety. However, when not aligned with level design principles, PCG can lead to incoherent spatial structures and poor gameplay experiences. Objective: This work proposes a PCG method guided by level design principles to generate structured indoor environments - such as houses, mansions, and dungeons - aiming to ensure both architectural coherence and navigability. Methodology: The method is divided into three main stages: segmentation of the space using Binary Space Partitioning (BSP); logical connection of rooms based on graph traversal to prevent redundant links; and a post-processing stage responsible for cleaning structural artifacts and improving visual cohesion. The methodology allows parameterization of room area and shape, with randomness controlled via seeds for reproducibility. Results: Two experiments were conducted. The first demonstrated the flexibility of the methodology under different seeds and parameter configurations. The second evaluated the navigability of generated maps by verifying connectivity using Breadth-First Search (BFS). In this test, 100,000 maps were generated, and with suitable parameters, over 91% of them achieved complete connectivity.",
+      "published": "2026-06-02T16:32:27Z",
+      "updated": "2026-06-02T16:32:27Z",
+      "categories": [
+        "cs.GR"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2606.03857",
+      "abs_url": "https://arxiv.org/abs/2606.03857",
+      "source": "arxiv"
+    },
+    {
+      "id": "2605.09767",
+      "title": "LLMs are the Ideal Candidate for Mixed-Initiative Game Design Pillar Workflows",
+      "authors": [
+        "Julian Geheeb",
+        "Marvin Julian Schwarz",
+        "Daniel Dyrda",
+        "Georg Groh"
+      ],
+      "abstract": "Game Design Pillars are natural language artifacts commonly used in game development to communicate a project's core vision and ensure a coherent player experience. Their linguistic nature aligns well with the strengths of Large Language Models (LLMs), which excel at generating and interpreting natural language, making them strong candidates for supporting mixed-initiative workflows centered on design pillars. In this study, we introduce a formal definition of game design pillars, present an initial prototype -- SPINE -- and investigate the utility of LLMs in the creation and decision-making processes associated with pillar-driven workflows. We begin with a pre-study to identify an appropriate model, comparing \\texttt{gemini-2.0-flash} and \\texttt{GPT-4o-mini}. Results show that Gemini is better suited to our tasks due to its greater output variety and consistency. We then conduct a case study by deploying the tool at a local game jam. Findings indicate positive reception and clear value in integrating SPINE into early-stage development. Finally, we interview four experts, demonstrating the tool and allowing them to experiment with it in a controlled environment. While individual perspectives vary, the overall perception is encouraging and supports our intuition: LLMs can meaningfully contribute to game design pillar workflows. These early findings highlight the potential of formalizing pillar-driven design as a research space and point toward several promising avenues for future work.",
+      "published": "2026-05-10T21:27:40Z",
+      "updated": "2026-08-04T20:42:56Z",
+      "categories": [
+        "cs.HC"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2605.09767",
+      "abs_url": "https://arxiv.org/abs/2605.09767",
+      "source": "arxiv"
+    },
     {
       "id": "2408.05146",
       "title": "Performative Prediction on Games and Mechanism Design",
@@ -640,7 +914,7 @@
         "Thomas A. Henzinger",
         "Đorđe Žikelić"
       ],
-      "abstract": "In two-player games on graphs, the players move a token through a graph to produce an infinite path, which determines the winner or payoff of the game. We study {\\em bidding games} in which the players bid for the right to move the token. Several bidding rules were studied previously. In {\\em Richman} bidding, in each round, the players simultaneously submit bids, and the higher bidder moves the token and pays the other player. {\\em Poorman} bidding is similar except that the winner of the bidding pays the \"bank\" rather than the other player. {\\em Taxman} bidding spans the spectrum between Richman and poorman bidding. They are parameterized by a constant $τ\\in [0,1]$: portion $τ$ of the winning bid is paid to the other player, and portion $1-τ$ to the bank. We present, for the first time, results on {\\em infinite-duration} taxman games. Our most interesting results concern quantitative taxman games, namely {\\em mean-payoff} games, where poorman and Richman bidding differ. A central quantity in these games is the {\\em ratio} between the two players' initial budgets. While in poorman mean-payoff games, the optimal payoff a player can guarantee depends on the initial ratio, in Richman bidding, the payoff depends only on the structure of the game. In both games the optimal payoffs can be found using (different) probabilistic connections with {\\em random-turn based} games in which in each turn, a coin is tossed to determine which player moves. The payoff with Richman bidding equals the payoff of a random-turn based game with an un-biased coin, and with poorman bidding, the coin is biased according to the initial budget ratio. We give a complete classification of mean-payoff taxman games using a probabilistic connection. Our results show that Richman bidding is the exception; namely, for every $τ\u003c1$, the value of the game depends on the initial ratio.",
+      "abstract": "In two-player games on graphs, the players move a token through a graph to produce an infinite path, which determines the winner or payoff of the game. We study {\\em bidding games} in which the players bid for the right to move the token. Several bidding rules were studied previously. In {\\em Richman} bidding, in each round, the players simultaneously submit bids, and the higher bidder moves the token and pays the other player. {\\em Poorman} bidding is similar except that the winner of the bidding pays the \"bank\" rather than the other player. {\\em Taxman} bidding spans the spectrum between Richman and poorman bidding. They are parameterized by a constant $τ\\in [0,1]$: portion $τ$ of the winning bid is paid to the other player, and portion $1-τ$ to the bank. We present, for the first time, results on {\\em infinite-duration} taxman games. Our most interesting results concern quantitative taxman games, namely {\\em mean-payoff} games, where poorman and Richman bidding differ. A central quantity in these games is the {\\em ratio} between the two players' initial budgets. While in poorman mean-payoff games, the optimal payoff a player can guarantee depends on the initial ratio, in Richman bidding, the payoff depends only on the structure of the game. In both games the optimal payoffs can be found using (different) probabilistic connections with {\\em random-turn based} games in which in each turn, a coin is tossed to determine which player moves. The payoff with Richman bidding equals the payoff of a random-turn based game with an un-biased coin, and with poorman bidding, the coin is biased according to the initial budget ratio. We give a complete classification of mean-payoff taxman games using a probabilistic connection. Our results show that Richman bidding is the exception; namely, for every $τ<1$, the value of the game depends on the initial ratio.",
       "categories": [
         "cs.GT",
         "cs.LO"
@@ -2110,7 +2384,7 @@
         "Thanasis Lianeas",
         "Paul G. Spirakis"
       ],
-      "abstract": "In routing games, the network performance at equilibrium can be significantly improved if we remove some edges from the network. This counterintuitive fact, widely known as Braess's paradox, gives rise to the (selfish) network design problem, where we seek to recognize routing games suffering from the paradox, and to improve the equilibrium performance by edge removal. In this work, we investigate the computational complexity and the approximability of the network design problem for non-atomic bottleneck routing games, where the individual cost of each player is the bottleneck cost of her path, and the social cost is the bottleneck cost of the network. We first show that bottleneck routing games do not suffer from Braess's paradox either if the network is series-parallel, or if we consider only subpath-optimal Nash flows. On the negative side, we prove that even for games with strictly increasing linear latencies, it is NP-hard not only to recognize instances suffering from the paradox, but also to distinguish between instances for which the Price of Anarchy (PoA) can decrease to 1 and instances for which the PoA is as large as Ω(n^{0.121}) and cannot improve by edge removal. Thus, the network design problem for such games is NP-hard to approximate within a factor of O(n^{0.121-\\eps}), for any constant \\eps \u003e 0. On the positive side, we show how to compute an almost optimal subnetwork w.r.t. the bottleneck cost of its worst Nash flow, when the worst Nash flow in the best subnetwork routes a non-negligible amount of flow on all used edges. The running time is determined by the total number of paths, and is quasipolynomial when the number of paths is quasipolynomial.",
+      "abstract": "In routing games, the network performance at equilibrium can be significantly improved if we remove some edges from the network. This counterintuitive fact, widely known as Braess's paradox, gives rise to the (selfish) network design problem, where we seek to recognize routing games suffering from the paradox, and to improve the equilibrium performance by edge removal. In this work, we investigate the computational complexity and the approximability of the network design problem for non-atomic bottleneck routing games, where the individual cost of each player is the bottleneck cost of her path, and the social cost is the bottleneck cost of the network. We first show that bottleneck routing games do not suffer from Braess's paradox either if the network is series-parallel, or if we consider only subpath-optimal Nash flows. On the negative side, we prove that even for games with strictly increasing linear latencies, it is NP-hard not only to recognize instances suffering from the paradox, but also to distinguish between instances for which the Price of Anarchy (PoA) can decrease to 1 and instances for which the PoA is as large as Ω(n^{0.121}) and cannot improve by edge removal. Thus, the network design problem for such games is NP-hard to approximate within a factor of O(n^{0.121-\\eps}), for any constant \\eps > 0. On the positive side, we show how to compute an almost optimal subnetwork w.r.t. the bottleneck cost of its worst Nash flow, when the worst Nash flow in the best subnetwork routes a non-negligible amount of flow on all used edges. The running time is determined by the total number of paths, and is quasipolynomial when the number of paths is quasipolynomial.",
       "categories": [
         "cs.GT"
       ],
@@ -2949,7 +3223,7 @@
     },
     {
       "id": "2511.00084",
-      "title": "Application of predictive machine learning in pen \u0026 paper RPG game design",
+      "title": "Application of predictive machine learning in pen & paper RPG game design",
       "authors": [
         "Jolanta Śliwa"
       ],

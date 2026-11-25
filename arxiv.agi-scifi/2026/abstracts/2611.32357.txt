@@ -1,0 +1,21 @@
+Title: CriticJEPA: World Models Are Better Critics Than Optimizers
+Authors: Xvyuan Liu, Jianjie Fang, Honglin Zhang, Zhaolu Wang, Xin Zhang, Wei Wu, Fengli Xu, Chen Gao, Yong Li
+ID: 2611.32357
+URL: https://arxiv.org/abs/2611.32357
+
+Abstract:
+Visual world models enable goal-directed planning by predicting action outcomes.
+Gradient-based planners optimize actions to lower predicted goal cost, but
+continued optimization can exploit prediction errors after execution stops
+improving. Comparing plans requires informative relative scores; improving them
+also requires reliable update directions. Exact-state execution reveals that a
+frozen hierarchical world model ranks goal-conditioned proposals even when its
+rankings among outputs of prolonged gradient search are uninformative. Effective
+planning pairs goal-directed candidates with predictions that distinguish their
+outcomes. We introduce CriticJEPA, which learns goal-conditioned flow proposals
+from reward-free trajectories and uses frozen rollouts to select among them at
+every hierarchy level. Forward selection forms a complete planner; short
+anchored updates refine candidates before selection. Across visual navigation
+and manipulation, CriticJEPA increases success at a fraction of the planning
+compute, transferring shared settings across independently trained models,
+hierarchy depths, and unseen tasks while keeping every world-model weight fixed.

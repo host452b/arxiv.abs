@@ -1,0 +1,27 @@
+Title: TATG: Tracking-Aware Testing Objective for LLM-based Test Generation
+Authors: Guancheng Wang, Qinghua Xu, Lionel Briand
+ID: 2607.03194
+URL: https://arxiv.org/abs/2607.03194
+
+Abstract:
+Complex Java methods challenge automated unit test generation, as achieving high
+coverage and fault detection requires satisfying intricate testing requirements
+involving program states, execution paths, and assertions. Existing LLM-based
+approaches leverage program context, static analysis, and dynamic feedback but
+lack explicit tracking of individual testing requirements across iterations,
+potentially leading to redundant generation and unresolved testing objectives.
+We present TATG, a tracking-aware LLM-based unit test generation framework that
+unifies structural coverage and mutation-based fault detection. TATG introduces
+a structured objective representation capturing testing requirements derived
+from static analysis and dynamic feedback, enabling fine-grained tracking of
+their satisfaction status. It employs a two-stage workflow that first improves
+structural coverage and subsequently strengthens assertions through mutation-
+guided hardening. We evaluate TATG on 141 complex Java methods against state-of-
+the-art baselines, including KTester and PANTA. Results show average
+improvements of 22.15, 20.14, and 37.66 percentage points in line coverage,
+branch coverage, and mutation score, respectively. TATG also outperforms
+general-purpose coding assistants, including Codex and Claude Code, under the
+same open-weight model configurations, achieving higher average coverage and
+mutation scores while generating fewer tests and consuming fewer tokens. These
+findings highlight the value of explicitly tracking testing objectives for
+effective LLM-based test generation.

@@ -1,0 +1,25 @@
+Title: Vx: A Programming Language for Scalable, Maintainable and Secure Systems
+Authors: Aditya Kumar
+ID: 2611.32217
+URL: https://arxiv.org/abs/2611.32217
+
+Abstract:
+A program for a modern machine runs on several kinds of chips. Its memory
+spaces, links and capacities are invisible to the compilers of today. So a host
+that reads device memory, a working set that does not fit, or a data race shows
+up only when the program runs. Vx is a systems programming language that puts
+these facts in the program text. A machine is a source file of declarations. A
+value's type says which memory it lives in. Apart from one stated exception, a
+function's signature is the whole contract that its callers see. A flag lists
+the code and the facts that the compiler trusts without a proof. This report is
+a tour of the language at one commit. It describes six design principles, the
+core language, and the features that serve three qualities. Vx is scalable
+because one program text runs across machines, cores and GPU threads. With an
+option, the compiler also checks its function bodies in parallel. It is
+maintainable because a signature is the contract of a function and most
+diagnostics have codes. The output of the parallel compiler does not depend on
+the number of threads. It is secure because safe code has ownership, borrow,
+race and placement checks, and in safe code, a file or a socket of the standard
+library opens only with a right. For every feature, the report gives its status
+and the evidence for it. It also lists where the implementation does not yet
+meet the design.

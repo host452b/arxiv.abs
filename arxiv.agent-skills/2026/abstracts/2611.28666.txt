@@ -1,0 +1,25 @@
+Title: RecallWorld: Episodic Memory for Persistent Embodied Video World Models
+Authors: Sarosij Bose, Gitika Karumuri, Chenqi Li, Allen Tu, Srikumar Sastry, Mellon Zhang, Avinash Ravichandran, Alexander Schwing, Konstantinos Karydis, Amit K. Roy Chowdhury
+ID: 2611.28666
+URL: https://arxiv.org/abs/2611.28666
+
+Abstract:
+Video world models generate plausible novel views but often lack persistent
+memory, failing to preserve a place's geometry and appearance when an agent
+revisits a scene. A central challenge is how previous views should be
+effectively used for creating memory. Reconstructing them independently
+underutilizes geometric constraints between nearby views, while repeatedly
+reconstructing a growing history can propagate later prediction errors into
+earlier geometry. We introduce RecallWorld, a persistent embodied video world
+model that jointly reconstructs short multi-view episodes into Scenelets while
+keeping geometry independent across episodes. Starting from a single source
+image, camera-aware ray lifting places perspective and native fisheye images in
+a common world frame, retaining wide-field content for perspective generation.
+Each generated segment extends the Scenelet memory and conditions subsequent
+generation. Coverage-based retrieval selects complementary Scenelets from the
+full history, while target-view visibility is resolved geometrically before
+appearance fusion, providing consistent memory conditioning for guiding
+subsequent generation. Across four datasets, RecallWorld improves revisit PSNR
+over the strongest evaluated baseline by 2.6 dB on partial revisits and 3.9 dB
+on full cycles, demonstrating substantially stronger preservation of scene
+identity across exploration and return.

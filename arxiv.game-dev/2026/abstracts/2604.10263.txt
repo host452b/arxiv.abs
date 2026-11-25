@@ -1,0 +1,18 @@
+Title: Infernux: A Python-Native Game Engine with JIT-Accelerated Scripting
+Authors: Lizhe Chen
+ID: 2604.10263
+URL: https://arxiv.org/abs/2604.10263
+
+Abstract:
+This report describes Infernux, an open-source game engine that pairs a
+C++17/Vulkan real-time core with a Python production layer connected through a
+single pybind11 boundary. To close the throughput gap between Python scripting
+and native-code engines, Infernux combines two established techniques - batch-
+oriented data transfer and JIT compilation - into a cohesive engine-level
+integration: (i) a batch data bridge that transfers per-frame state into
+contiguous NumPy arrays in one boundary crossing, and (ii) an optional JIT path
+via Numba that compiles annotated update functions to LLVM machine code with
+automatic loop parallelization. We compare against Unity 6 as a reference on
+three workloads; readers should note differences in shading complexity, draw-
+call batching, and editor tooling maturity between the two engines. Infernux is
+MIT-licensed and available at https://chenlizheme.github.io/Infernux/.

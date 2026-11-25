@@ -1,0 +1,28 @@
+Title: Deja Vu at Scale: Paraphrase-Robust Detection of Duplicate Gherkin Steps in Behaviour-Driven Software Testing with Sentence-Transformer Embeddings and a 1.1M-Step Open Benchmark
+Authors: Ali Hassaan Mughal, Noor Fatima, Muhammad Bilal
+ID: 2604.20462
+URL: https://arxiv.org/abs/2604.20462
+
+Abstract:
+Context. Behaviour-Driven Development (BDD) suites in Gherkin accumulate step-
+text duplication with documented maintenance cost. Prior detectors either
+require runnable tests or are single-organisation, leaving a gap: a static,
+paraphrase-robust, step-level detector and a public benchmark to calibrate it.
+Objective. We release (i) the largest cross-organisational BDD step corpus to
+date, (ii) a labelled pair-level calibration benchmark, and (iii) a four-
+strategy detector with a consolidation-savings model linking clusters to ISO/IEC
+25010 maintainability sub-characteristics. Method. The corpus contains 347
+public GitHub repositories, 23,667 .feature files, and 1,113,616 Gherkin steps,
+SPDX-tagged. The detector layers exact hashing, normalised Levenshtein,
+sentence-transformer cosine, and a Levenshtein-banded hybrid. Calibration uses
+1,020 manually labelled step pairs under a released rubric (60-pair overlap,
+Fleiss kappa = 0.84). We report precision, recall, and F1 with bootstrap 95% CIs
+under the primary rubric and a score-free relabelling, and benchmark against
+SourcererCC-style and NiCad-style lexical baselines. Results. Step-weighted
+exact-duplicate rate is 80.2%; median-repository rate is 58.6% (Spearman rho =
+0.51). The top hybrid cluster has 20,737 occurrences across 2,245 files. Near-
+exact reaches F1 = 0.822 on score-free labels; semantic F1 = 0.906 under the
+primary rubric reflects a disclosed stratification artefact. Lexical baselines
+reach F1 = 0.761 and 0.799. The savings model estimates 893,357 corpus-wide
+eliminable step occurrences; on the median repository 62.5% of step lines are
+eliminable.

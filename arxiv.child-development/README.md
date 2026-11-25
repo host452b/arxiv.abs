@@ -3,7 +3,7 @@
 A curated collection of academic papers on **child development, parenting, and education**, organized by 3-year age brackets from birth through age 18. Applies 80/20 Pareto analysis to identify the 20% of key levers that drive 80% of developmental outcomes.
 
 - **Time span**: 2010–2026
-- **Total unique papers**: 5,072
+- **Total unique papers**: 5,156
 - **Search files**: 37 topic searches
 - **Age brackets**: 6 stages × 3-year intervals
 

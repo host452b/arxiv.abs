@@ -1,0 +1,24 @@
+Title: The Image Still Has a Say: Final-Answer Repair for Multimodal Chain-of-Thought
+Authors: Yulan Pan, Xiaoyu Xu, Zhihong Shen
+ID: 2610.17663
+URL: https://arxiv.org/abs/2610.17663
+
+Abstract:
+Although chain-of-thought prompting has improved multimodal reasoning, it is
+still difficult to produce correct final answers, as the reasoning can drift
+away from the image. Besides, the trace is already fixed when the answer is
+generated, leaving no room for self-correction. Considering the image is still
+available at the final-answer step, we think it is reasonable to fix the answer
+there without rewriting the reasoning. As such, the problem becomes to correct
+the final answer using the image under fixed reasoning. Unlike methods that
+improve trace generation through training, resampling, or decoding-time
+grounding, we repair the final-answer readout while keeping the reasoning trace
+fixed. The motivation is based on our finding that a wrong option can become
+prematurely committed in the reasoning while the correct option still has
+stronger image support in middle-to-deep layers. Thus, we propose Text-to-Visual
+Evidence Reallocation (TVER), a training-free method for final-answer repair.
+Specifically, TVER selects answer-related text and question-matched image
+patches, and moves bounded attention from text to patches. Furthermore, the
+patches are chosen in a middle-to-deep layer window based on question relevance.
+Our method improves answers across benchmarks and backbones, with gains in both
+multiple-choice and open-answer evaluations.

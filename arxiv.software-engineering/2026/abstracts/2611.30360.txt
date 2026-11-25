@@ -1,0 +1,22 @@
+Title: ArguShield: Enforcing Minimum-Necessary Disclosure in Tool-Calling LLM Agents
+Authors: Ying Fu, Yulong Fu
+ID: 2611.30360
+URL: https://arxiv.org/abs/2611.30360
+
+Abstract:
+Large language model agents increasingly use third-party tools to complete user
+tasks. Even without malicious intent, they may fill broad or weakly constrained
+fields with private information that is unnecessary or inappropriate for the
+receiving tool. Such calls can satisfy the tool schema and complete the task,
+yet still violate minimum-necessary disclosure. We introduce ArguShield, a
+mediation layer that intercepts proposed tool calls before execution. It
+evaluates each candidate value using three signals: Value Provenance, Task
+Relevance, and Disclosure Boundary. ArguShield releases justified values, defers
+values that need user confirmation, and withholds those outside the permitted
+scope. We evaluate ArguShield with four tool-calling models on ArgPrivBench, a
+benchmark of 120 tasks across Travel, Shopping, and Healthcare. Unprotected
+agents frequently over-disclose private information despite high task success.
+Prompt-only protection reduces unauthorized disclosure but substantially lowers
+task success. ArguShield reduces unauthorized silent release to 9% on Standard
+tasks and 6% on High-risk tasks while preserving recoverable task success under
+simulated user confirmation.

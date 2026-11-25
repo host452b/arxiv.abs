@@ -1,0 +1,31 @@
+Title: Scalable Placement for Disaggregated LLM Serving on Heterogeneous Edge Fleets
+Authors: Truong-Thanh Le, Hoang-Loc La, Amir Taherkordi, Frank Eliassen, Phuong Hoai Ha
+ID: 2611.32881
+URL: https://arxiv.org/abs/2611.32881
+
+Abstract:
+Serving large language models (LLMs) at the edge is increasingly desirable for
+privacy-sensitive applications and scenarios that require data to remain on
+local devices. However, edge environments are constrained by limited
+computational resources and exhibit substantial device heterogeneity, making
+efficient LLM serving challenging. These limitations become particularly
+pronounced under bursty demand, where congestion and queue buildup can
+significantly increase response latency. Replicating the model into multiple
+pipeline instances can improve serving capacity and reduce congestion. Yet,
+deciding how devices should be grouped into replicas, assigning replicas to
+prefill or decode functions, and partitioning model layers across heterogeneous
+devices jointly creates a large combinatorial optimization problem. We present
+Spade, a scalable and runtime-efficient placement planner for disaggregated LLM
+serving with pipeline replication across heterogeneous edge clusters. Spade
+introduces a dominance-based pruning technique that discards inferior replica
+candidates and recursively eliminates larger candidates that contain them,
+dramatically shrinking the search space. It further combines a water-filling
+approach for layer partitioning with a bounded multidimensional knapsack
+formulation that optimizes placement under a congestion-aware objective. On a
+synthetic fleet of 30 devices spanning five hardware classes, Spade finds the
+optimal placement in 441ms. In contrast, a genetic-search baseline augmented
+with dynamic-programming partitioning requires approximately two hours and still
+produces solutions with a 19.7% worse congestion objective. When evaluated on
+fleets containing ten device types, Spade's pruning strategy eliminates 99.6% of
+candidate placements while yielding the same surviving candidate set as
+exhaustive enumeration.

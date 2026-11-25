@@ -1,0 +1,28 @@
+Title: Constraint-Aware Evaluation of Reinforcement Learning and Unsupervised Anomaly Detection for Security Operations Alert Triage
+Authors: Radityo Ghifiardi, Rifny Rachman
+ID: 2611.05746
+URL: https://arxiv.org/abs/2611.05746
+
+Abstract:
+Security Operations Centers (SOCs) must identify real threats from large alert
+streams, but limited analyst capacity means that unnecessary escalations can
+delay more serious investigations. Existing studies often frame SOC alert triage
+as classification or anomaly detection, but both views are incomplete for
+production SOCs, where the central problem is selecting alerts worth escalating
+under limited capacity, asymmetric error costs, and workload constraints. This
+paper addresses that gap by formalizing alert triage as a constrained decision
+problem and evaluating three approaches: an offline reinforcement learning
+policy trained on alert embeddings, an Isolation Forest model built on
+operational features, and an autoencoder trained on historical benign alerts.
+These methods represent different triage assumptions: learning actions from
+reward, isolating unusual operational patterns, and detecting deviations from
+benign behavior. We evaluate all methods on 74,909 analyst-labeled production
+alerts under a strict temporal split and benign-escalation constraint. Because
+the test set contains 503 unique feature patterns, we primarily rank clusters of
+similar alerts. At the main operating point, all three methods satisfy the
+constraint, with the reinforcement learning policy achieving the lowest benign-
+escalation fraction at 0.000, compared with 0.007 for the autoencoder and 0.041
+for Isolation Forest. The methods also prioritize largely different alert
+clusters, showing complementary rather than redundant coverage. These results
+suggest that production SOC triage can benefit from constraint-aware evaluation
+and combined or adaptive deployment of different model families.

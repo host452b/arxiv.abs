@@ -1,0 +1,24 @@
+Title: Reward Shaping and Action Masking for Compositional Tasks using Behavior Trees and LLMs
+Authors: Nicholas Potteiger, Ankita Samaddar, Taylor T. Johnson, Xenofon Koutsoukos
+ID: 2605.05795
+URL: https://arxiv.org/abs/2605.05795
+
+Abstract:
+Decomposing complex tasks into a sequence of simpler subtasks can improve
+learning efficiency for an autonomous agent. Reinforcement learning (RL) can be
+used to optimize agent policies to complete subtasks, but requires well-defined
+subtask rewards and benefits from action masking. Recent work uses large
+language models (LLMs) to automate reward shaping and action masking, however
+none of them fully address reactivity to subtask failure and modularity to
+varying objects for compositional tasks. To overcome these challenges, we
+develop masking reward behavior tree (MRBT), a symbolic structure used as a
+reactive and modular reward and action mask function. We design an MRBT template
+and derive logical specifications to construct and verify MRBTs for a sequence
+of object-interaction subtasks. Further, we develop an automated pipeline that
+uses an LLM to generate MRBTs robust to varying task objects, an SMT-solver to
+verify correctness of specifications, and a neurosymbolic RL loop to train
+agents on compositional tasks. Experiments demonstrate successful generation and
+refinement of five MRBTs, consistently improving training efficiency and task
+success rates over baselines and MRBTs without action masking. We further
+highlight three advantages of MRBTs: transferability, modularity, and
+verifiability.

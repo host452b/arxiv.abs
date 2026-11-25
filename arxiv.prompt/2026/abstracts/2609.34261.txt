@@ -1,0 +1,29 @@
+Title: RoboICL: Embodied In-Context Learning with GPT-6 Astra
+Authors: Fangcheng Liu, Yeqing Shen, Anda Cheng, Weishi Mi, Chao Tang, Chenyuan Liu, Yushun Xiang, Tingguang Li, Yong-Lu Li, Yehui Tang
+ID: 2609.34261
+URL: https://arxiv.org/abs/2609.34261
+
+Abstract:
+General-purpose vision-language models offer a promising way to zero-shot robot
+control: \gptastra{} excels at open-ended and language- or image-conditioned
+manipulation but remains substantially weaker on high-precision and long-horizon
+tasks. We introduce \emph{RoboICL}, an in-context robot-control framework that
+narrows these gaps without robot-specific parameter updates or a learned VLA.
+RoboICL separates \emph{demonstration context}, which provides recorded examples
+when available, from \emph{interaction memory}, which accumulates the model's
+own actions and observed outcomes. Both use a shared observation--action--
+receipt--observation grammar. To preserve experience across task stages, RoboICL
+combines sampled demonstration blocks with bounded anchored memory. Fixed
+anchors keep earlier rollout interactions available for in-context learning,
+while the latest interaction supports immediate error correction. Across 30
+RoboDojo tasks, using zero shot for Open and one demonstration elsewhere,
+RoboICL improves on official zero-shot \gptastra{} by 20--27 progress-score
+points in every category. It leads the leaderboard baselines on Memory and Open,
+achieves comparable performance to the strongest Precision baseline, and remains
+competitive on Long-Horizon. Its 30-task Overall score is 50.64, versus 33.68
+for the strongest baseline. On a separate ten-task subset, RoboICL scores 60.60,
+within 2.00 points of the $π_{0.5}$ + \gptastra{} hybrid approach. On three
+real-robot tasks, mean progress rises from 14.45 at zero shot to 63.33 at one
+shot and 78.89 at three shots. On two development tasks, optional Jev-gated
+action reuse reduces \gptastra{} calls by 33--48\%. Code is available at
+\href{https://github.com/Mosi-AI/RoboICL}{https://github.com/Mosi-AI/RoboICL}.

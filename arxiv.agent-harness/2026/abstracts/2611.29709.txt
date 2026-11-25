@@ -1,0 +1,21 @@
+Title: Cache the Knowledge, Not Just the Prompt: Dynamic Datalog as the Action Language for LLM Agents
+Authors: Bruno Rucy Carneiro Alves de Lima, Victor Henrique Cabral Pinheiro
+ID: 2611.29709
+URL: https://arxiv.org/abs/2611.29709
+
+Abstract:
+An LLM agent that answers questions about a knowledge graph writes a program per
+question, and its tools evaluate each from scratch. We give the agent a Datalog
+REPL, a session over a dynamic Datalog engine, in which rules are inserted and
+retracted like facts while derived facts stay current. Prompt caching reuses the
+model's processing of what a session shares, and the Datalog REPL reuses the
+evaluation of it. On chains of questions over three knowledge graphs, agents
+reuse a relation that the REPL keeps in 179 of 180 cases, with two models, and
+write fewer output tokens: SQL and Python agents write 23 to 82% more. With SQL
+tables or a Python namespace, Claude Haiku 5.5 stores almost nothing for later
+questions, and a chain of seven questions at 13 million facts takes it a median
+of 48 and 56 s, against 31 s with the REPL. Claude Opus 5.5 matches the REPL by
+storing tables in SQL, and when the data changes it stores views, which are
+evaluated again at every read. A relation that the REPL keeps is read like a
+table and stays current like a view. Datalog is a niche language beside SQL and
+Python, and with thinking enabled the models answer as accurately with it.

@@ -10,11 +10,89 @@
     "from": "2020-01",
     "to": "",
     "max": 200,
-    "searched_at": "2026-03-25T16:50:42Z"
+    "searched_at": "2026-11-26T00:00:00Z"
   },
-  "total_results": 72,
-  "return_count": 72,
+  "total_results": 76,
+  "return_count": 76,
   "papers": [
+    {
+      "id": "2611.04769",
+      "title": "RESTberus: Trace-Aware Benchmarking of Automated REST API Testing Tools Across Microservice Dependencies",
+      "authors": [
+        "John Toniutti",
+        "Massimiliano Baldo",
+        "Marino Miculan",
+        "Vincenzo Riccio"
+      ],
+      "abstract": "Existing REST API testing benchmarks focus on isolated services, overlooking failures arising from interactions with downstream dependencies. In microservice systems, response bodies and entry-point operations alone cannot reliably distinguish failures, compromising tool comparisons. We present RESTberus, a Kubernetes-based benchmarking platform for black-box REST API testing tools on deployed microservice systems. By complementing API-level evidence with distributed traces, RESTberus can distinguish failures manifesting in the target service from those manifesting in downstream dependencies. Across six tools on two microservice benchmarks, our trace-aware deduplication strategy achieves 87.1% accuracy, outperforming baselines from prior work by 10-13 percentage points. Our empirical study shows that all tools expose downstream failures, accounting for 11.7% of estimated unique failures on average, which isolated-service benchmarks cannot expose. On single-service benchmarks, RESTberus produces statistically equivalent results to RESTgym, demonstrating that integration-level assessments can preserve compatibility with existing tools and comparability with prior evaluations.",
+      "published": "2026-11-03T12:13:15Z",
+      "updated": "2026-11-03T12:13:15Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2611.04769",
+      "abs_url": "https://arxiv.org/abs/2611.04769",
+      "source": "arxiv"
+    },
+    {
+      "id": "2608.17546",
+      "title": "REST API Testing with Verified LLM-Inferred Dependencies and Response-Driven Refinement",
+      "authors": [
+        "Tu Nguyen",
+        "Thanh Nguyen",
+        "Huy Nguyen",
+        "Viet Nguyen",
+        "Tien N. Nguyen",
+        "Vu Nguyen"
+      ],
+      "abstract": "Testing RESTful APIs requires generating sequences of API calls that satisfy dependencies among operations, parameters, and runtime-created resources. Recent LLM-based approaches infer such dependencies and generate test sequences from OpenAPI specifications, but they often treat LLM-inferred relationships as correct without execution-based validation. This can introduce spurious dependencies, miss feasible operation chains, and produce infeasible tests. In this paper, we propose APIPilot}, an execution-validated framework for REST API testing. APIPilot first derives candidate producer-consumer dependencies from OpenAPI specifications using structural heuristics and LLM-based semantic reasoning. It then treats these dependencies as hypotheses and validates them through concrete API executions before using them for test generation. The validated dependencies are organized into a dependency graph from which APIPilot constructs coverage-aware workflows via bounded top-k graph traversal, separating semantic dependency inference from sequence construction. To improve subsequent tests, APIPilot further performs response-driven refinement: runtime responses are analyzed to update resource pools, adjust input-generation constraints, and prune or revise invalid dependency mappings. Empirical evaluation on 16 real-world REST API services shows that APIPilot achieves 92.3% operation coverage, up to 58.6% code coverage, and an 88.1% workflow execution success rate, outperforming both LLM-based and traditional REST API testing baselines. APIPilot also detects 197 unique 5xx failures and specification-execution mismatches, demonstrating the benefit of grounding dependency inference in execution feedback.",
+      "published": "2026-08-18T09:07:10Z",
+      "updated": "2026-08-20T01:07:24Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2608.17546",
+      "abs_url": "https://arxiv.org/abs/2608.17546",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.08633",
+      "title": "Systematic API Testing Through Model Checking and Executable Contracts",
+      "authors": [
+        "Ana Ribeiro",
+        "Margarida Mamede",
+        "Carla Ferreira"
+      ],
+      "abstract": "Automated black-box testing of APIs typically relies on interface specifications that define available operations and data schemas, but offer limited or no behavioural semantics. This semantic gap amplifies the test-oracle problem and limits the generation of effective, stateful call sequences. We introduce IcePick, a framework that achieves systematic state-space coverage for API testing by leveraging model checking. IcePick uses TLA+ to formally model API state evolution, employs the TLC model checker to exhaustively explore reachable states, and generates test sequences that provably cover the behavioural model. To mitigate state-space explosion and improve sequence extraction, we introduce a coverage-guided breadth-first traversal of the TLC state-space graph. To address oracle limitations beyond HTTP status codes, we propose Glacier, a first-order logic contract language that enriches API specifications with executable semantic contracts, enabling automated behavioural verification during test execution. We evaluate IcePick on EvoMaster Benchmark systems, demonstrating that model-checking-guided exploration achieves complete state coverage and reveals faults in multi-operation interactions. We also analyse scalability to characterise practical limits and applicability requirements. Overall, IcePick provides reproducible test suites with strong coverage guarantees for critical API-based systems.",
+      "published": "2026-04-09T17:00:42Z",
+      "updated": "2026-04-09T17:00:42Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.08633",
+      "abs_url": "https://arxiv.org/abs/2604.08633",
+      "source": "arxiv"
+    },
+    {
+      "id": "2604.08007",
+      "title": "Log-based, Business-aware REST API Testing",
+      "authors": [
+        "Ding Yang",
+        "Ruixiang Qian",
+        "Zhao Wei",
+        "Zhenyu Chen",
+        "Chunrong Fang"
+      ],
+      "abstract": "REST APIs enable collaboration among microservices. A single fault in a REST API can bring down the entire microservice system and cause significant financial losses, underscoring the importance of REST API testing. Effectively testing REST APIs requires thoroughly exercising the functionalities behind them. To this end, existing techniques leverage REST specifications (e.g., Swagger or OpenAPI) to generate test cases. Using the resource constraints extracted from specifications, these techniques work well for testing simple, business-insensitive functionalities, such as resource creation, retrieval, update, and deletion. However, for complex, business-sensitive functionalities, these specification-based techniques often fall short, since exercising such functionalities requires additional business constraints that are typically absent from REST specifications. In this paper, we present LoBREST, a log-based, business-aware REST API testing technique that leverages historical request logs (HRLogs) to effectively exercise the business-sensitive functionalities behind REST APIs. To obtain compact operation sequences that preserve clean and complete business constraints, LoBREST first employs a locality-slicing strategy to partition HRLogs into smaller slices. Then, to ensure the effectiveness of the obtained slices, LoBREST enhances them in two steps: (1) adding slices for operations missing from HRLogs, and (2) completing missing resources within the slices. Finally, to improve test adequacy, LoBREST uses these enhanced slices as initial seeds to perform business-aware fuzzing. LoBREST outperformed eight tools (including Arat-rl, Morest, and Deeprest) across 17 real-world services. It achieved top operation coverage on 16 services and line coverage on 15, averaging 2.1x and 1.2x improvements over the runner-up. LoBREST detected 108 5XX bugs, including 38 found by no other tool.",
+      "published": "2026-04-09T09:10:07Z",
+      "updated": "2026-04-09T09:10:07Z",
+      "categories": [
+        "cs.SE"
+      ],
+      "pdf_url": "https://arxiv.org/pdf/2604.08007",
+      "abs_url": "https://arxiv.org/abs/2604.08007",
+      "source": "arxiv"
+    },
     {
       "id": "2305.14692",
       "title": "Carving UI Tests to Generate API Tests and API Specification",

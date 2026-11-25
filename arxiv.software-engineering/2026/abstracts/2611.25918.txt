@@ -1,0 +1,31 @@
+Title: From Code Review Comments to Reuse in Production: An Industrial Study of Extracted Rules
+Authors: Mutsuha Asada, Yuhei Nakasaka, Keito Tabuchi, Shinpei Hayashi
+ID: 2611.25918
+URL: https://arxiv.org/abs/2611.25918
+
+Abstract:
+Much organization-specific code review knowledge remains embedded in comments on
+individual changes, and recent systems reuse it by turning those comments into
+rules a language model applies to later changes. Teams must then decide which
+rules to keep, and the evidence at hand is how often the system's later comments
+name each rule. Tracing the rules of one such system, Kleene, through 65 days of
+production use, we found that such a count does not show what a rule
+contributed. A rule attribution indicates neither whether the source content was
+preserved nor whether the comment requested a change. Of 56 clauses in 12 rules
+that later comments named as their reason, 2 were explicit in a source review
+thread, 38 added conditions to a corresponding passage, and 16 had no passage we
+could locate; 45 of 79 further comments naming those rules requested no change,
+27 of them while stating that the rule applied. On 20 constructed code changes,
+a reviewer model given only the unedited source thread met the detection
+criteria on 8 of the 10 that require a report, against 10 of 10 with the
+extracted rule, a difference whose confidence interval includes zero. Stage
+counts locate where rules drop out but not why: of 464 rules deployed while the
+rule-based reviewer subagent ran in their repository, 259 (55.8%) were named,
+195 (42.0%) produced a comment that was not withheld, and 94 (20.3%) one with a
+recorded code change; the largest reduction occurred before any rule was named.
+Nor did the deployment-time properties we tested settle the choice in advance:
+retaining the top-ranked half preserved 53.8% of the rules that later produced a
+non-withheld comment, against 49.2% at random, a difference whose confidence
+interval includes zero. Judging extracted rules therefore calls for recording
+each stage separately and comparing each rule against the threads it was
+extracted from.

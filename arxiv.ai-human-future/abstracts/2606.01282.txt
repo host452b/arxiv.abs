@@ -1,0 +1,26 @@
+Title: KG-FairDiff: Knowledge Graph-Guided Prompt Refinement for Demographically Fair Text-to-Image Generation
+Authors: Farbod Davoodi, Seyed Reza Tavakoli Shiyadeh, Pooria Safaei, Sana Harighi, Parsa Gholami, Amirali Amini, Kimia Vanaei, Emad Firoozi, Parham Abed Azad, Babak Khalaj et al.
+ID: 2606.01282
+URL: https://arxiv.org/abs/2606.01282
+
+Abstract:
+Text-to-Image (TTI) systems are now everyday infrastructure for journalism,
+education, advertising, and public communication, and the demographic and
+cultural stereotypes they inherit from training data (rendering women, people of
+colour, older adults, and non-Western cultures as under-represented or
+caricatured) become a population-level harm at deployment scale. Existing
+mitigations either require costly retraining, infeasible for the closed-source
+backbones that dominate consumer products, or rely on fixed demographic
+templates that ignore cultural context. We present KG-FairDiff, a model-
+agnostic, inference-time framework that formalises fairness-aware prompt
+refinement as a constrained optimisation problem and operationalises it as a
+closed-loop pipeline: a knowledge graph of ~1,200 culture- and bias-related
+triples retrieves structured context, an LLM rewriter proposes refinements, and
+a validator accepts only prompts that reduce a divergence-based fairness loss
+while preserving semantic fidelity to the user's original intent. We prove a
+finite-termination bound for the refinement loop, contribute a mathematically
+consistent evaluation suite linking Bias-P/Bias-W to divergence from target
+distributions and ENS to KL divergence, and audit eight widely-deployed backbone
+generators. KG-FairDiff substantially reduces gender, race, age, and
+intersectional disparities while preserving prompt semantics, offering a
+practical, deployment-ready route to more equitable generative AI.

@@ -1,0 +1,31 @@
+Title: Right Tool, Wrong Parameters: Defending LLM Agents Against Parameter Poisoning
+Authors: Yao Wang, Zehua Ma, Weiming Zhang, Han Fang
+ID: 2611.04673
+URL: https://arxiv.org/abs/2611.04673
+
+Abstract:
+Indirect Prompt Injection (IPI) poses a critical threat to LLM agents. Existing
+defenses largely focus on whether an injection induces a new tool invocation or
+unintended action. In this paper, we study a different attack surface, parameter
+poisoning, where the attacker preserves the intended action but manipulates one
+or more tool arguments, such as a recipient or other task-critical value. Such
+attacks are difficult to detect because no new action is introduced, while
+parameter changes themselves are often legitimate parts of the user's request.
+Our key insight is that the legitimacy of a parameter change should be
+determined by the trust of the information flow that produces it under the user
+query. The query induces a task-specific trust hierarchy over available
+information fields: some are trusted to determine particular parameters, while
+others should have little or no influence. Based on this insight, we propose
+AuthorityFlow, a three-stage parameter-level defense. First, it interprets the
+user query to construct a task-specific trust hierarchy over the information
+fields available to the agent. Second, for each tool argument, it traces the
+information flow that produces its current value and attributes the value to its
+supporting field. Finally, it accepts the value only when that field is trusted
+to determine the parameter under the current task, allowing high-trust changes
+while flagging low-trust influence as potential parameter poisoning. We further
+introduce FactAuthBench for evaluating parameter poisoning in LLM agents.
+Without defense, the attack success rate reaches 93.06%. AuthorityFlow reduces
+it to 9.03%, while retaining 82.64% benign task utility compared with 90.28%
+without defense. Our results show that effective IPI defense requires reasoning
+not only about what action an agent takes, but also about which information is
+trusted to determine its parameters.

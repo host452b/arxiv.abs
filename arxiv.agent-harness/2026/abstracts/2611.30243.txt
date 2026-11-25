@@ -1,0 +1,24 @@
+Title: Can Search Agents Correct Their Own Errors? Evaluating Retrieval, Evidence Delivery, and Answer Completion
+Authors: Venkata Pagadala, K. Rajasekhara Rao, Pratyay Ganguly
+ID: 2611.30243
+URL: https://arxiv.org/abs/2611.30243
+
+Abstract:
+A search agent can leave an earlier error unresolved by missing the right
+source, overlooking a relevant passage, or failing to revise and deliver the
+answer after receiving the evidence. We evaluate these possibilities on
+BrowseComp-Plus by replaying each model's own wrong closed-book answer in
+conversation and intervening on what evidence reaches the model. In a supplied-
+evidence study spanning four open-weight checkpoints, 709 questions and 26,665
+test conditions, a confident assistant prior reduced Nemotron's paired accuracy
+by 16.1 percentage points despite answer-bearing passages in context. When the
+user insisted on the prior, accuracy fell by 32.9 points for Nemotron and 12.6
+for gpt-oss. Among gpt-oss responses that lost correctness in that condition,
+abstention was more common than repeating the prior. In separate search
+interventions with Qwen3.5 and Nemotron, placing a gold page first often left
+the decisive source unopened. Delivering a decisive passage in context improved
+accuracy over neutral delivery by 51.0 percentage points for Qwen3.5 and 22.4
+for Nemotron. Even with the passage in context, Nemotron exhausted its search
+budget and returned no answer in 19 of 51 episodes. The tests distinguish
+failures of retrieval, passage delivery, correction and answer completion,
+giving system builders a way to test which changes resolve a recurring error.

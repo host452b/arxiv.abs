@@ -1,0 +1,23 @@
+Title: DSpec2Test: Specification-Driven Test Generation in Dafny
+Authors: Sofia Vieira Pinto, Álvaro F. Silva, João Pascoal Faria, Alexandra Mendes
+ID: 2609.29713
+URL: https://arxiv.org/abs/2609.29713
+
+Abstract:
+Verification-aware languages, such as Dafny, integrate logical constructs into
+code and enable automatic verification of program correctness. However, tests
+remain helpful in scenarios that verification alone does not address (e.g., to
+support test-driven development). Existing Dafny test generation tools are
+implementation-based, limiting their applicability in this context. We present
+DSpec2Test, a specification-driven test generation tool for Dafny that
+automatically derives tests from formal specifications, without considering
+implementation details. Our tool extends Dafny's generate-tests command with a
+new blackbox mode based on Disjunctive Normal Form (DNF) equivalence class
+partitioning and optional Boundary Value Analysis (BVA). DSpec2Test relies on
+the Z3 SMT solver to synthesize inputs and expected outputs that meet the
+specification-derived constraints. We evaluate DSpec2Test on programs from
+DafnyBench mutated using MutDafny and compare it against Dafny's existing
+implementation-driven Block mode. DSpec2Test achieves a 93.9% mutation kill rate
+on a dataset of 131 mutants, outperforming Block's 82.4%, and uniquely killing
+17 mutants. These results suggest that specification-driven testing is an
+effective and complementary approach for testing Dafny programs.

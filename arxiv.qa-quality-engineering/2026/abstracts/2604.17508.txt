@@ -1,0 +1,23 @@
+Title: Augmenting unit test suites from integration tests
+Authors: Katerina Paltoglou, Vassilis E. Zafeiris
+ID: 2604.17508
+URL: https://arxiv.org/abs/2604.17508
+
+Abstract:
+We propose a method that employs static and dynamic analysis for augmenting a
+test suite with automatically generated unit tests. The method is most suitable
+for test suites where the stratification of unit, integration and system tests
+does not conform to the recommended test pyramid structure: numerous unit tests
+providing high code coverage and forming the base, fewer integration tests in
+the middle that verify component collaboration, and far fewer system or UI tests
+at the top that exercise acceptance or other scenarios of use. Instead,
+integration and system tests represent the majority of test cases, resulting in
+coarse-grained tests with limited fault localization and longer execution times.
+The method leverages integration tests, exercising a component and its
+dependencies, to generate unit tests that verify component dependencies in
+isolation. We showcase and empirically evaluate the proposed method in the
+Node.js platform, although it can be ported and adapted to other languages and
+platforms. The evaluation is based on a research prototype implemented as a
+Node.js tool and is conducted in the context of twelve open source JS
+applications (benchmark projects). Evaluation results support the effectiveness
+and practicality of our approach.
